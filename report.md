@@ -1,0 +1,11825 @@
+# ComfyUI 存活节点
+
+扫描时间: 2026-06-13 19:22:15
+
+共 275 台
+
+## 总览
+
+| # | 地址 | 版本 | GPU | 显存 | 空闲 | 历史 | 管理 | 节点 | 工作流 | 模型数 | LoRA数 |
+|---|------|------|-----|------|------|------|------|------|--------|--------|--------|
+| 1 | 109.74.49.68:8199 | 0.19.1 | H200 | 140 GB | 139 GB | ✓ | - | 0 | 2 | 0 | 0 |
+| 2 | 121.125.78.191:8188 | 0.19.1 | H100 | 79 GB | 77 GB | ✓ | - | 0 | 1 | 4 | 2 |
+| 3 | 203.252.149.114:8188 | 0.4.0 | H100 | 79 GB | 36 GB | ✓ | - | 0 | 0 | 8 | 4 |
+| 4 | 118.191.0.226:8188 | 0.15.0 | A800 | 79 GB | 79 GB | ✓ | - | 0 | 0 | 13 | 0 |
+| 5 | 115.190.79.65:8188 | 0.3.49 | A100 | 79 GB | 10 GB | ✓ | - | 0 | 12 | 6 | 0 |
+| 6 | 135.181.63.198:8188 | 0.3.66 | A100 | 79 GB | 74 GB | ✓ | - | 0 | 3 | 2 | 2 |
+| 7 | 14.103.167.239:8032 | 0.21.1 | A100 | 79 GB | 47 GB | - | - | 25 | 0 | 25 | 256 |
+| 8 | 20.163.11.129:8000 | 0.3.66 | A100 | 79 GB | 59 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 9 | 195.209.212.24:8188 | 0.3.67 | A100 | 79 GB | 79 GB | ✓ | - | 0 | 0 | 3 | 4215 |
+| 10 | 195.209.212.97:8188 | 0.3.67 | A100 | 79 GB | 79 GB | ✓ | - | 0 | 2 | 3 | 4215 |
+| 11 | 195.209.212.200:8188 | 0.3.67 | A100 | 79 GB | 79 GB | ✓ | - | 0 | 0 | 3 | 4215 |
+| 12 | 68.154.73.98:8188 | 0.13.0 | A100 | 79 GB | 49 GB | ✓ | - | 0 | 2 | 4 | 2 |
+| 13 | 8.216.8.243:8188 | 0.10.0 | A100 | 79 GB | 78 GB | ✓ | - | 0 | 0 | 3 | 3 |
+| 14 | 120.240.155.198:8191 | 0.18.1 | A100 | 39 GB | 38 GB | ✓ | - | 30 | 15 | 14 | 12 |
+| 15 | 120.240.155.198:8567 | 0.20.1 | A100 | 39 GB | 38 GB | ✓ | - | 45 | 19 | 178 | 419 |
+| 16 | 120.240.155.198:8123 | 0.20.1 | A100 | 39 GB | 38 GB | ✓ | ✓ | 28 | 31 | 178 | 419 |
+| 17 | 36.139.149.26:3002 | 0.18.5 | A100 | 39 GB | 39 GB | ✓ | - | 0 | 8 | 14 | 9 |
+| 18 | 36.139.149.26:3001 | 0.18.5 | A100 | 39 GB | 39 GB | ✓ | - | 0 | 11 | 14 | 9 |
+| 19 | 36.212.96.205:7000 | 0.21.1 | A100 | 39 GB | 39 GB | - | ✓ | 5 | 0 | 3 | 2 |
+| 20 | 152.136.239.201:10002 | 0.19.3 | H20 | 95 GB | 69 GB | ✓ | - | 0 | 23 | 88 | 47 |
+| 21 | 116.235.33.70:8000 | 0.24.0 | RTX PRO 6000 BB | 96 GB | 68 GB | ✓ | - | 0 | 82 | 38 | 157 |
+| 22 | 69.222.178.130:8000 | 0.22.3 | RTX PRO 6000 BB | 96 GB | 43 GB | ✓ | - | 0 | 69 | 62 | 42 |
+| 23 | 46.225.241.162:9090 | 0.22.0 | RTX PRO 6000 BB | 95 GB | 49 GB | ✓ | - | 0 | 6 | 0 | 0 |
+| 24 | https://virtucomfy.ddns.net | 0.24.0 | RTX PRO 6000 BB | 95 GB | 94 GB | ✓ | - | 0 | 12 | 64 | 73 |
+| 25 | 175.13.32.45:8004 | 0.3.50 | RTX 5880 Ada | 48 GB | 47 GB | - | ✓ | 6 | 2 | 1 | 0 |
+| 26 | 59.110.66.181:8187 | 0.19.1 | RTX 5880 Ada | 48 GB | 42 GB | ✓ | - | 0 | 1 | 10 | 11 |
+| 27 | 59.110.66.181:8188 | 0.19.1 | RTX 5880 Ada | 48 GB | 46 GB | ✓ | - | 0 | 1 | 10 | 11 |
+| 28 | 117.50.196.121:8800 | 0.12.2 | RTX 5090 | 32 GB | 29 GB | ✓ | ✓ | 20 | 0 | 2 | 802 |
+| 29 | 117.50.173.113:8800 | 0.12.2 | RTX 5090 | 32 GB | 16 GB | ✓ | ✓ | 10 | 0 | 2 | 802 |
+| 30 | 117.50.189.68:8800 | 0.12.2 | RTX 5090 | 32 GB | 27 GB | ✓ | ✓ | 10 | 0 | 2 | 802 |
+| 31 | 121.170.152.230:20201 | 0.3.56 | RTX 5090 | 32 GB | 19 GB | ✓ | ✓ | 39 | 47 | 5 | 56 |
+| 32 | 218.206.54.92:8000 | 0.22.3 | RTX 5090 | 32 GB | 14 GB | ✓ | - | 0 | 11 | 9 | 6 |
+| 33 | 59.56.243.146:8187 | 0.20.1 | RTX 5090 | 32 GB | 9 GB | ✓ | - | 49 | 11 | 6 | 3 |
+| 34 | 95.31.177.71:10000 | 0.24.1 | RTX 5090 | 32 GB | 30 GB | ✓ | - | 107 | 27 | 38 | 181 |
+| 35 | 111.230.55.243:2601 | 0.22.0 | RTX 5090 | 31 GB | 12 GB | ✓ | ✓ | 165 | 2 | 49 | 137 |
+| 36 | 104.232.177.178 | 0.24.0 | RTX 5090 | 31 GB | 30 GB | - | - | 0 | 0 | 12 | 4 |
+| 37 | 110.93.240.151:8194 | 0.17.0 | RTX 5090 | 31 GB | 31 GB | - | ✓ | 12 | 4 | 11 | 10 |
+| 38 | 139.196.222.153:8080 | 0.22.0 | RTX 5090 | 31 GB | 28 GB | ✓ | - | 8 | 9 | 15 | 7 |
+| 39 | 182.18.83.37:8188 | 0.20.1 | RTX 5090 | 31 GB | 22 GB | ✓ | - | 0 | 0 | 3 | 1 |
+| 40 | 211.217.209.154:8188 | 0.4.0 | RTX 5090 | 31 GB | 31 GB | ✓ | - | 0 | 0 | 9 | 9 |
+| 41 | 185.151.187.85:8188 | 0.24.0 | RTX 5090 | 31 GB | 31 GB | ✓ | ✓ | 12 | 1 | 2 | 6 |
+| 42 | 202.91.45.198:8188 | 0.3.76 | RTX 5090 | 31 GB | 19 GB | ✓ | - | 0 | 2 | 12 | 4 |
+| 43 | 38.247.184.100:8070 | 0.21.1 | RTX 5090 | 31 GB | 13 GB | ✓ | ✓ | 9 | 1 | 3 | 1 |
+| 44 | comfy.urg.co.kr | 0.20.1 | RTX 5090 | 31 GB | 31 GB | - | - | 0 | 6 | 9 | 3 |
+| 45 | ai-image.xante.com | 0.24.0 | RTX 5090 | 31 GB | 30 GB | - | - | 0 | 0 | 12 | 4 |
+| 46 | https://comfy.urg.co.kr | 0.20.1 | RTX 5090 | 31 GB | 31 GB | - | - | 0 | 6 | 9 | 3 |
+| 47 | https://host01.xante.net | 0.24.0 | RTX 5090 | 31 GB | 30 GB | - | - | 0 | 0 | 12 | 4 |
+| 48 | https://ai-image.xante.com | 0.24.0 | RTX 5090 | 31 GB | 30 GB | - | - | 0 | 0 | 12 | 4 |
+| 49 | sd.nhatquangholding.com | 0.19.3 | RTX 5090 | 31 GB | 7 GB | - | - | 0 | 0 | 4 | 0 |
+| 50 | 111.0.130.56:5000 | 0.22.0 | L40 | 44 GB | 28 GB | ✓ | ✓ | 6 | 1 | 0 | 0 |
+| 51 | 220.202.33.50:8188 | 0.3.77 | L40 | 44 GB | 39 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 52 | 116.228.88.61:4000 | 0.19.1 | A40 | 44 GB | 13 GB | ✓ | - | 0 | 8 | 27 | 3 |
+| 53 | 14.204.16.41:8443 | 0.24.0 | L20 | 89 GB | 50 GB | ✓ | ✓ | 1 | 1 | 7 | 4 |
+| 54 | 121.5.99.163:8188 | 0.10.0 | L20 | 45 GB | 26 GB | - | - | 0 | 0 | 9 | 0 |
+| 55 | 118.195.150.136:8188 | 0.18.5 | L20 | 44 GB | 40 GB | - | ✓ | 13 | 1 | 2 | 1 |
+| 56 | 180.152.20.170:8188 | 0.19.3 | L20 | 44 GB | 44 GB | ✓ | - | 0 | 0 | 1 | 5 |
+| 57 | 47.102.125.110:8000 | 0.22.0 | L20 | 44 GB | 1 GB | - | - | 0 | 4 | 5 | 2 |
+| 58 | 8.146.234.84:8188 | 0.18.0 | L20 | 44 GB | 25 GB | ✓ | - | 0 | 4 | 9 | 5 |
+| 59 | 47.111.24.114:8080 | 0.22.0 | L20 | 44 GB | 44 GB | ✓ | - | 1 | 2 | 11 | 24 |
+| 60 | https://cfy.sametimes.cn | 0.21.1 | L20 | 44 GB | 40 GB | - | - | 0 | 30 | 12 | 10 |
+| 61 | 92.124.120.67:8000 | 0.24.1 | RTX 4090 | 48 GB | 45 GB | ✓ | - | 0 | 27 | 6 | 26 |
+| 62 | 103.91.177.130:8188 | 0.8.2 | RTX 4090 | 47 GB | 39 GB | ✓ | - | 0 | 0 | 20 | 5 |
+| 63 | 182.140.218.229:20000 | 0.3.46 | RTX 4090 | 47 GB | 47 GB | ✓ | - | 0 | 0 | 4 | 2 |
+| 64 | 60.13.232.230:8002 | 0.20.1 | RTX 4090 | 47 GB | 39 GB | ✓ | - | 5 | 4 | 248 | 211 |
+| 65 | 87.228.124.214:8189 | 0.18.1 | RTX 4090 | 47 GB | 47 GB | - | - | 0 | 9 | 4 | 18 |
+| 66 | https://183.56.151.48:7078 | 0.17.0 | RTX 4090 | 47 GB | 3 GB | - | - | 1 | 0 | 0 | 0 |
+| 67 | https://183.60.251.114:7078 | 0.17.0 | RTX 4090 | 47 GB | 3 GB | - | - | 1 | 0 | 0 | 0 |
+| 68 | 117.50.198.233:8184 | 0.17.2 | RTX 4090 | 24 GB | 23 GB | ✓ | - | 0 | 0 | 1 | 1 |
+| 69 | 112.95.77.24:8188 | 0.3.68 | RTX 4090 | 24 GB | 23 GB | - | - | 0 | 3 | 8 | 5 |
+| 70 | 118.253.159.40:8188 | 0.3.51 | RTX 4090 | 24 GB | 4 GB | - | - | 0 | 1 | 2 | 1 |
+| 71 | 117.50.198.233:8183 | 0.17.2 | RTX 4090 | 24 GB | 23 GB | ✓ | - | 0 | 0 | 1 | 1 |
+| 72 | 117.50.198.233:8181 | 0.17.2 | RTX 4090 | 24 GB | 23 GB | ✓ | - | 0 | 0 | 1 | 1 |
+| 73 | 101.37.126.72:6007 | 0.20.1 | RTX 4090 | 24 GB | 23 GB | ✓ | - | 0 | 1 | 3 | 18 |
+| 74 | 106.75.127.95:8800 | 0.11.1 | RTX 4090 | 24 GB | 14 GB | ✓ | - | 0 | 0 | 2 | 24 |
+| 75 | 122.228.40.58:7000 | 0.3.75 | RTX 4090 | 24 GB | 19 GB | ✓ | ✓ | 18 | 36 | 14 | 2 |
+| 76 | 117.50.250.44:8800 | 0.6.0 | RTX 4090 | 24 GB | 10 GB | ✓ | - | 0 | 0 | 1 | 18 |
+| 77 | 117.50.198.233:8188 | 0.17.2 | RTX 4090 | 24 GB | 23 GB | ✓ | - | 0 | 0 | 1 | 1 |
+| 78 | 117.50.198.233:8185 | 0.17.2 | RTX 4090 | 24 GB | 23 GB | ✓ | - | 0 | 0 | 1 | 1 |
+| 79 | 117.50.198.233:8187 | 0.17.2 | RTX 4090 | 24 GB | 23 GB | ✓ | - | 0 | 0 | 1 | 1 |
+| 80 | 101.200.217.56:50100 | 0.18.5 | RTX 4090 | 24 GB | 22 GB | - | - | 0 | 153 | 86 | 250 |
+| 81 | 116.11.186.115:8188 | 0.3.68 | RTX 4090 | 24 GB | 3 GB | - | - | 0 | 0 | 1 | 0 |
+| 82 | 117.50.198.233:8186 | 0.17.2 | RTX 4090 | 24 GB | 23 GB | ✓ | - | 0 | 0 | 1 | 1 |
+| 83 | 117.50.198.233:8182 | 0.17.2 | RTX 4090 | 24 GB | 23 GB | ✓ | - | 0 | 0 | 1 | 1 |
+| 84 | 119.145.30.205:8188 | 0.3.68 | RTX 4090 | 24 GB | 14 GB | ✓ | - | 0 | 4 | 3 | 12 |
+| 85 | 115.68.56.56:50001 | 0.3.67 | RTX 4090 | 24 GB | 23 GB | ✓ | ✓ | 5 | 4 | 0 | 13 |
+| 86 | 128.14.24.137:8188 | 0.3.64 | RTX 4090 | 24 GB | 14 GB | ✓ | - | 0 | 1 | 2 | 2 |
+| 87 | 183.232.248.105:8188 | v0.2.2 | RTX 4090 | 24 GB | 22 GB | - | - | 0 | 0 | 6 | 17 |
+| 88 | 183.232.248.113:8188 | v0.2.2 | RTX 4090 | 24 GB | 22 GB | ✓ | - | 0 | 0 | 6 | 18 |
+| 89 | 183.232.248.121:8188 | v0.2.2 | RTX 4090 | 24 GB | 22 GB | ✓ | - | 0 | 0 | 6 | 18 |
+| 90 | 183.232.248.97:8188 | v0.2.2 | RTX 4090 | 24 GB | 16 GB | ✓ | - | 0 | 0 | 6 | 20 |
+| 91 | 183.232.248.107:8188 | v0.2.2 | RTX 4090 | 24 GB | 16 GB | ✓ | - | 0 | 0 | 6 | 16 |
+| 92 | 134.249.117.157:8188 | 0.3.26 | RTX 4090 | 24 GB | 19 GB | - | - | 46 | 63 | 157 | 904 |
+| 93 | 218.201.86.227:8188 | 0.3.26 | RTX 4090 | 24 GB | 5 GB | ✓ | - | 0 | 1 | 9 | 9 |
+| 94 | 221.226.232.9:8388 | 0.14.1 | RTX 4090 | 24 GB | 23 GB | - | ✓ | 11 | 0 | 6 | 4 |
+| 95 | 222.186.161.122:8388 | 0.19.3 | RTX 4090 | 24 GB | 18 GB | - | - | 0 | 6 | 1 | 1 |
+| 96 | 36.170.21.108:8090 | 0.18.1 | RTX 4090 | 24 GB | 12 GB | ✓ | ✓ | 25 | 0 | 24 | 47 |
+| 97 | 47.106.162.84:8188 | 0.3.51 | RTX 4090 | 24 GB | 22 GB | ✓ | - | 16 | 76 | 39 | 66 |
+| 98 | 60.188.108.56:18081 | 0.19.0 | RTX 4090 | 24 GB | 23 GB | ✓ | - | 0 | 1 | 3 | 5 |
+| 99 | 94.159.81.61:8188 | 0.20.1 | RTX 4090 | 24 GB | 22 GB | ✓ | - | 0 | 6 | 33 | 22 |
+| 100 | 76.242.71.253:8188 | 0.18.5 | RTX 4090 | 24 GB | 22 GB | - | ✓ | 49 | 1 | 31 | 99 |
+| 101 | edipresso.com | 0.14.1 | RTX 4090 | 24 GB | 1 GB | - | ✓ | 23 | 37 | 34 | 390 |
+| 102 | https://56c4900261e42554-8188.us-ca-1.gpu-instance.novita.ai | 0.20.1 | RTX 4090 | 24 GB | 7 GB | ✓ | ✓ | 6 | 3 | 34 | 91 |
+| 103 | comfyui.acroxerdev.com | 0.18.5 | RTX 4090 | 23 GB | 22 GB | - | ✓ | 47 | 0 | 0 | 0 |
+| 104 | https://comfyui.acroxerdev.com | 0.18.5 | RTX 4090 | 23 GB | 22 GB | - | ✓ | 47 | 0 | 0 | 0 |
+| 105 | 219.146.211.51:10001 | 0.21.1 | RTX 4090 | 22 GB | 21 GB | ✓ | - | 0 | 6 | 17 | 9 |
+| 106 | 120.46.79.159:8081 | 0.22.0 | RTX 4090 | 16 GB | 6 GB | ✓ | - | 0 | 6 | 15 | 3 |
+| 107 | 115.190.117.23:8188 | 0.11.1 | A30 | 23 GB | 17 GB | ✓ | - | 0 | 5 | 3 | 0 |
+| 108 | 106.14.145.226:7003 | 0.19.3 | RTX 5080 | 16 GB | 13 GB | ✓ | - | 0 | 21 | 3 | 6 |
+| 109 | 122.117.65.251:8899 | 0.5.1 | RTX 5080 | 16 GB | 15 GB | - | ✓ | 97 | 2 | 55 | 87 |
+| 110 | 111.230.42.200:8188 | 0.18.2 | RTX A5000 | 24 GB | 23 GB | ✓ | - | 69 | 35 | 38 | 46 |
+| 111 | 211.206.164.162:8188 | 0.3.71 | RTX A5000 | 24 GB | 1 GB | ✓ | - | 0 | 0 | 9 | 29 |
+| 112 | 69.197.187.136:8177 | 0.16.4 | RTX A5000 | 24 GB | 2 GB | ✓ | - | 0 | 0 | 1 | 0 |
+| 113 | 112.30.64.174:1234 | 0.24.1 | RTX 5070 Ti | 16 GB | 9 GB | ✓ | ✓ | 70 | 38 | 76 | 274 |
+| 114 | 175.209.141.222:8188 | 0.22.0 | RTX 5070 Ti | 16 GB | 8 GB | ✓ | ✓ | 4 | 8 | 19 | 4 |
+| 115 | 195.122.224.90:8188 | 0.20.1 | RTX 5070 Ti | 16 GB | 15 GB | ✓ | - | 10 | 7 | 53 | 33 |
+| 116 | 92.169.201.215:9999 | 0.24.0 | RTX 5070 Ti | 16 GB | 15 GB | ✓ | - | 59 | 17 | 175 | 237 |
+| 117 | 106.55.104.134:8188 | 0.17.1 | RTX 5070 | 12 GB | 7 GB | ✓ | ✓ | 64 | 16 | 11 | 23 |
+| 118 | 55555.uicp.vip:8188 | 0.22.0 | RTX 4080 | 12 GB | 11 GB | ✓ | - | 0 | 26 | 10 | 6 |
+| 119 | 115.190.79.59:8188 | v0.3.5-10-g82c53085 | A10 | 22 GB | 3 GB | - | - | 0 | 0 | 5 | 0 |
+| 120 | 106.12.107.238:8188 | 0.12.3 | A10 | 22 GB | 22 GB | ✓ | ✓ | 87 | 20 | 38 | 93 |
+| 121 | 115.190.250.229:8188 | 0.22.0 | A10 | 22 GB | 5 GB | ✓ | - | 0 | 2 | 2 | 2 |
+| 122 | 8.147.108.18:8188 | 0.3.29 | A10 | 22 GB | 3 GB | ✓ | - | 0 | 2 | 2 | 0 |
+| 123 | https://52.31.126.103 | 0.18.1 | A10G | 22 GB | 5 GB | ✓ | - | 0 | 0 | 2 | 60 |
+| 124 | 14.224.131.103:8188 | 0.24.0 | RTX 4070 Ti | 16 GB | 2 GB | ✓ | ✓ | 66 | 0 | 38 | 25 |
+| 125 | 39.103.60.26:6060 | 0.18.0 | RTX 4070 Ti | 16 GB | 15 GB | ✓ | ✓ | 16 | 260 | 0 | 0 |
+| 126 | 39.103.60.26:6061 | 0.18.0 | RTX 4070 Ti | 16 GB | 15 GB | ✓ | ✓ | 16 | 260 | 0 | 0 |
+| 127 | 218.244.143.103:9090 | 0.21.1 | RTX 5060 Ti | 16 GB | 15 GB | ✓ | ✓ | 18 | 0 | 0 | 0 |
+| 128 | 218.154.32.228:8188 | 0.19.0 | RTX 4070 | 12 GB | 5 GB | ✓ | - | 0 | 8 | 19 | 129 |
+| 129 | 49.234.47.145:8188 | 0.16.4 | RTX 4070 | 12 GB | 10 GB | ✓ | - | 0 | 0 | 3 | 0 |
+| 130 | 99.248.243.237:8188 | 0.18.1 | RTX 4070 | 12 GB | 5 GB | ✓ | - | 0 | 2 | 80 | 0 |
+| 131 | 139.224.101.90:8087 | 0.19.3 | RTX 4060 Ti | 16 GB | 15 GB | - | - | 43 | 16 | 24 | 35 |
+| 132 | 84.150.208.101 | 0.21.1 | RTX 4060 Ti | 16 GB | 15 GB | - | - | 0 | 0 | 3 | 0 |
+| 133 | https://comfy.fiiniday.de | 0.21.1 | RTX 4060 Ti | 16 GB | 15 GB | - | - | 0 | 0 | 3 | 0 |
+| 134 | 117.50.221.40:8080 | 0.13.0 | RTX 3090 | 24 GB | 5 GB | ✓ | ✓ | 30 | 13 | 4 | 3 |
+| 135 | 118.24.135.6:12300 | 0.20.1 | RTX 3090 | 24 GB | 23 GB | ✓ | - | 0 | 8 | 6 | 5 |
+| 136 | 1.94.100.162:8188 | 0.3.40 | RTX 3090 | 24 GB | 23 GB | - | - | 0 | 0 | 0 | 0 |
+| 137 | 121.225.154.49:18000 | 0.18.1 | RTX 3090 | 24 GB | 23 GB | - | - | 0 | 0 | 0 | 0 |
+| 138 | 104.36.85.28:8188 | v0.2.4-6-g5281090 | RTX 3090 | 24 GB | 20 GB | ✓ | - | 0 | 2 | 26 | 6 |
+| 139 | 104.36.86.2:8188 | v0.2.2-94-g614377a | RTX 3090 | 24 GB | 14 GB | ✓ | - | 0 | 0 | 11 | 3 |
+| 140 | 1.4.215.150:8190 | 0.24.0 | RTX 3090 | 24 GB | 5 GB | ✓ | - | 0 | 22 | 65 | 939 |
+| 141 | 1.4.215.150:8187 | 0.22.0 | RTX 3090 | 24 GB | 9 GB | ✓ | - | 0 | 108 | 559 | 1494 |
+| 142 | 116.91.115.166:8189 | 0.18.1 | RTX 3090 | 24 GB | 15 GB | ✓ | - | 0 | 3 | 6 | 6 |
+| 143 | 14.17.107.52:8082 | 0.22.1 | RTX 3090 | 24 GB | 17 GB | ✓ | ✓ | 16 | 0 | 9 | 4 |
+| 144 | 14.17.107.52:8080 | 0.22.1 | RTX 3090 | 24 GB | 17 GB | ✓ | ✓ | 16 | 0 | 9 | 4 |
+| 145 | 222.88.152.130:8188 | 0.3.75 | RTX 3090 | 24 GB | 23 GB | - | ✓ | 36 | 65 | 19 | 41 |
+| 146 | 162.239.59.179:8188 | 0.24.1 | RTX 3090 | 24 GB | 16 GB | ✓ | - | 0 | 8 | 19 | 198 |
+| 147 | 151.241.228.227 | 0.22.1 | RTX 3090 | 24 GB | 18 GB | - | - | 31 | 0 | 5 | 6 |
+| 148 | 220.117.140.31:8188 | 0.21.1 | RTX 3090 | 24 GB | 20 GB | ✓ | ✓ | 31 | 177 | 69 | 67 |
+| 149 | 220.70.6.210:8188 | 0.19.0 | RTX 3090 | 24 GB | 18 GB | ✓ | - | 0 | 0 | 1 | 0 |
+| 150 | 51.250.105.179:8188 | 0.3.67 | RTX 3090 | 24 GB | 17 GB | - | - | 0 | 23 | 7 | 16 |
+| 151 | 81.29.134.117:8188 | 0.10.0 | RTX 3090 | 24 GB | 21 GB | ✓ | - | 0 | 0 | 1 | 0 |
+| 152 | 94.236.201.99:8188 | 0.18.1 | RTX 3090 | 24 GB | 21 GB | ✓ | - | 0 | 6 | 10 | 2 |
+| 153 | comfy.thesoom.com | 0.21.1 | RTX 3090 | 24 GB | 12 GB | - | - | 0 | 0 | 1 | 0 |
+| 154 | ai.tigron.dev | 0.19.1 | RTX 3090 | 24 GB | 22 GB | - | - | 0 | 0 | 15 | 17 |
+| 155 | https://comfy.icecubelab.com | 0.24.1 | RTX 3090 | 24 GB | 16 GB | ✓ | - | 1 | 14 | 15 | 19 |
+| 156 | https://comfy.thesoom.com | 0.21.1 | RTX 3090 | 24 GB | 12 GB | - | - | 0 | 0 | 1 | 0 |
+| 157 | https://ai.tigron.dev | 0.19.1 | RTX 3090 | 24 GB | 22 GB | - | - | 0 | 0 | 15 | 17 |
+| 158 | https://comfyui.demetrisamantium.com | 0.21.0 | RTX 3090 | 24 GB | 23 GB | - | - | 14 | 0 | 29 | 681 |
+| 159 | 113.240.94.253:8188 | 0.10.0 | RTX 3090 | 23 GB | 23 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 160 | 178.63.101.28:8188 | 0.3.68 | RTX 4000 SFF | 20 GB | 5 GB | ✓ | - | 0 | 7 | 5 | 3 |
+| 161 | 178.63.40.142:5001 | 0.18.2 | RTX 4000 SFF | 20 GB | 5 GB | ✓ | ✓ | 22 | 6 | 2 | 6 |
+| 162 | 5.9.24.54:8088 | 0.18.1 | RTX 4000 SFF | 20 GB | 19 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 163 | 122.166.121.35:8188 | 0.11.1 | RTX 4000 | 23 GB | 23 GB | ✓ | - | 0 | 0 | 5 | 3 |
+| 164 | https://frp-try.com:57211 | 0.19.2 | Tesla V100 | 32 GB | 26 GB | ✓ | - | 46 | 27 | 19 | 72 |
+| 165 | 34.7.185.85:8188 | 0.18.1 | Tesla V100 | 16 GB | 9 GB | ✓ | - | 0 | 2 | 1 | 4 |
+| 166 | 31.163.192.193:8000 | 0.18.5 | Tesla V100 | 16 GB | 15 GB | ✓ | - | 0 | 13 | 8 | 13 |
+| 167 | img.jiufangbz.top | 0.13.0 | RTX 3080 | 20 GB | 15 GB | - | - | 15 | 33 | 21 | 331 |
+| 168 | https://img.jiufangbz.top | 0.13.0 | RTX 3080 | 20 GB | 15 GB | - | - | 15 | 33 | 21 | 331 |
+| 169 | 103.143.207.167:8188 | 0.16.4 | RTX A4000 | 16 GB | 9 GB | ✓ | - | 0 | 1 | 4 | 0 |
+| 170 | 69.197.174.136:8186 | 0.20.1 | RTX A4000 | 16 GB | 4 GB | ✓ | - | 0 | 0 | 1 | 0 |
+| 171 | 175.206.228.195:8145 | 0.17.0 | RTX 3070 | 8 GB | 7 GB | ✓ | - | 0 | 2 | 2 | 454 |
+| 172 | 58.33.163.154:58000 | 0.22.2 | RTX 3070 | 8 GB | 7 GB | - | - | 0 | 4 | 3 | 3 |
+| 173 | 112.217.190.10:6008 | 0.18.1 | GB10 | 122 GB | 59 GB | ✓ | - | 0 | 0 | 1 | 2 |
+| 174 | 87.31.88.253:8188 | 0.19.3 | GB10 | 122 GB | 44 GB | ✓ | ✓ | 24 | 12 | 10 | 35 |
+| 175 | https://121.154.242.94:8443 | 0.22.0 | GB10 | 122 GB | 106 GB | - | - | 0 | 1 | 39 | 83 |
+| 176 | 165.246.44.113:8188 | 0.18.1 | GB10 | 120 GB | 27 GB | ✓ | - | 0 | 0 | 1 | 0 |
+| 177 | 104.57.157.253:8180 | 0.22.0 | RTX 3060 | 12 GB | 7 GB | ✓ | - | 0 | 1 | 6 | 0 |
+| 178 | 175.206.228.195:8188 | 0.22.0 | RTX 3060 | 12 GB | 8 GB | ✓ | - | 0 | 0 | 2 | 454 |
+| 179 | 175.198.225.51:8188 | 0.15.0 | RTX 3060 | 12 GB | 10 GB | ✓ | - | 0 | 0 | 5 | 21 |
+| 180 | 175.198.225.51:8189 | 0.15.0 | RTX 3060 | 12 GB | 11 GB | ✓ | - | 0 | 4 | 17 | 21 |
+| 181 | 47.108.156.108:8188 | 0.19.4 | RTX 3060 | 12 GB | 11 GB | ✓ | ✓ | 42 | 27 | 17 | 27 |
+| 182 | 74.76.34.7:8188 | 0.22.0 | RTX 3060 | 12 GB | 11 GB | ✓ | - | 0 | 0 | 2 | 0 |
+| 183 | https://153.33.31.158 | 0.24.1 | RTX 3060 | 12 GB | 12 GB | ✓ | - | 0 | 0 | 1 | 5 |
+| 184 | https://94.127.216.47:8188 | 0.24.1 | RTX 3060 | 12 GB | 4 GB | ✓ | ✓ | 31 | 16 | 7 | 36 |
+| 185 | 217.119.193.25:5001 | 0.18.2 | RTX 2080 | 8 GB | 7 GB | ✓ | ✓ | 20 | 0 | 1 | 2 |
+| 186 | 115.190.216.210:8189 | 0.22.0 | L4 | 22 GB | 7 GB | ✓ | - | 0 | 23 | 15 | 12 |
+| 187 | 115.190.216.210:8188 | 0.22.0 | L4 | 22 GB | 7 GB | ✓ | - | 0 | 16 | 15 | 12 |
+| 188 | 188.208.141.8:8188 | 0.18.1 | L4 | 22 GB | 2 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 189 | 34.42.237.105 | 0.3.59 | L4 | 22 GB | 17 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 190 | 173.61.254.113:8188 | 0.18.5 | RTX 2070 | 8 GB | 2 GB | ✓ | - | 37 | 6 | 23 | 328 |
+| 191 | 95.169.202.102:8188 | v0.2.7 | RTX 2000 Ada | 16 GB | 9 GB | ✓ | - | 0 | 0 | 6 | 4 |
+| 192 | 20.127.39.230:8188 | 0.3.66 | Tesla T4 | 16 GB | 13 GB | ✓ | - | 0 | 1 | 1 | 3 |
+| 193 | comfy.udpage.com | 0.21.0 | Tesla T4 | 15 GB | 15 GB | ✓ | - | 0 | 2 | 2 | 0 |
+| 194 | 192.98.127.73:8188 | 0.5.1 | Tesla P4 | 7 GB | 2 GB | ✓ | - | 0 | 8 | 2 | 3 |
+| 195 | 165.154.152.18:9100 | 0.5.1 | MetaX C500 | 64 GB | 30 GB | - | ✓ | 8 | 0 | 6 | 5 |
+| 196 | 159.255.232.245:8188 | 0.3.44 | GTX 1060 | 6 GB | 5 GB | ✓ | - | 0 | 1 | 7 | 0 |
+| 197 | 165.173.14.65:8188 | v0.3.7-33-g6d1a3f7 | AMD | 16 GB | 10 GB | - | - | 0 | 0 | 1 | 0 |
+| 198 | 221.155.195.42:8189 | 0.19.0 | AMD | 12 GB | 12 GB | - | - | 0 | 2 | 2 | 1 |
+| 199 | 85.3.195.101 | 0.24.1 | MPS | 96 GB | 76 GB | ✓ | ✓ | 4 | 6 | 16 | 19 |
+| 200 | 121.168.243.67:8999 | 0.20.1 | MPS | 32 GB | 18 GB | ✓ | ✓ | 70 | 3 | 20 | 18 |
+| 201 | 175.211.148.251:8188 | 0.21.1 | MPS | 24 GB | 4 GB | ✓ | ✓ | 14 | 10 | 5 | 2 |
+| 202 | 211.223.5.82:8188 | 0.24.0 | Intel Arc | 16 GB | 14 GB | ✓ | ✓ | 48 | 4 | 9 | 16 |
+| 203 | 80.147.139.148:8188 | 0.19.1 | MPS | 16 GB | 9 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 204 | 153.126.158.21:8188 | 0.14.1 | CPU | 956 MB | 368 MB | ✓ | - | 0 | 0 | 1 | 0 |
+| 205 | 120.209.217.11:30001 | 0.19.1 | CPU | 504 GB | 465 GB | ✓ | - | 18 | 40 | 24 | 17 |
+| 206 | https://94.130.223.40:8443 | 0.21.1 | CPU | 251 GB | 240 GB | - | - | 0 | 1 | 2 | 2 |
+| 207 | 89.169.110.216:8188 | 0.14.1 | CPU | 197 GB | 161 GB | ✓ | - | 0 | 5 | 0 | 0 |
+| 208 | 89.169.110.216:8189 | 0.14.1 | CPU | 197 GB | 161 GB | ✓ | - | 0 | 5 | 0 | 0 |
+| 209 | 91.99.156.133:8188 | 0.19.3 | CPU | 126 GB | 92 GB | ✓ | - | 0 | 2 | 3 | 0 |
+| 210 | 23.248.226.250:8188 | 0.19.0 | CPU | 63 GB | 58 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 211 | 23.248.226.251:8188 | 0.19.0 | CPU | 63 GB | 58 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 212 | 23.248.226.253:8188 | 0.19.0 | CPU | 63 GB | 58 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 213 | 23.248.226.254:8188 | 0.19.0 | CPU | 63 GB | 58 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 214 | 23.248.226.252:8188 | 0.19.0 | CPU | 63 GB | 58 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 215 | 89.40.177.58:8188 | 0.4.0 | CPU | 63 GB | 55 GB | ✓ | - | 0 | 0 | 1 | 0 |
+| 216 | 95.217.33.142:8188 | 0.4.0 | CPU | 62 GB | 27 GB | ✓ | - | 0 | 0 | 1 | 0 |
+| 217 | 75.119.159.242:7654 | 0.18.0 | CPU | 47 GB | 38 GB | ✓ | - | 0 | 16 | 0 | 0 |
+| 218 | 75.119.155.9:8188 | 0.7.0 | CPU | 47 GB | 39 GB | ✓ | - | 0 | 0 | 2 | 0 |
+| 219 | 70.30.144.161 | 0.20.1 | CPU | 47 GB | 15 GB | ✓ | - | 0 | 2 | 7 | 1 |
+| 220 | https://70.30.144.161 | 0.20.1 | CPU | 47 GB | 15 GB | ✓ | - | 0 | 2 | 7 | 1 |
+| 221 | 51.75.202.31:8188 | 0.24.0 | CPU | 46 GB | 40 GB | ✓ | - | 0 | 0 | 2 | 0 |
+| 222 | 64.44.166.185:8188 | 0.18.1 | CPU | 34 GB | 24 GB | ✓ | - | 0 | 0 | 1 | 0 |
+| 223 | 113.44.231.98:8188 | 0.6.0 | CPU | 31 GB | 21 GB | - | - | 0 | 0 | 0 | 0 |
+| 224 | 168.231.101.9:8188 | 0.3.52 | CPU | 31 GB | 21 GB | ✓ | - | 0 | 1 | 7 | 2 |
+| 225 | 151.185.43.115:10001 | 0.14.1 | CPU | 29 GB | 17 GB | ✓ | - | 0 | 1 | 0 | 0 |
+| 226 | 151.185.43.115:10002 | 0.14.1 | CPU | 29 GB | 17 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 227 | 213.32.22.43:8188 | 0.18.1 | CPU | 23 GB | 16 GB | ✓ | - | 0 | 0 | 1 | 0 |
+| 228 | 89.168.69.237:8188 | 0.11.1 | CPU | 23 GB | 13 GB | ✓ | - | 0 | 0 | 1 | 0 |
+| 229 | 111.170.58.38:8002 | 0.19.3 | CPU | 16 GB | 10 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 230 | 111.170.58.38:8003 | 0.19.3 | CPU | 16 GB | 10 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 231 | 112.118.57.75:8188 | 0.18.1 | CPU | 16 GB | 6 GB | ✓ | - | 0 | 0 | 1 | 0 |
+| 232 | 111.170.58.38:8001 | 0.19.3 | CPU | 16 GB | 10 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 233 | 103.167.2.61:8188 | 0.18.1 | CPU | 16 GB | 13 GB | ✓ | - | 0 | 1 | 2 | 0 |
+| 234 | 20.244.80.13:8188 | 0.12.3 | CPU | 16 GB | 10 GB | ✓ | - | 0 | 0 | 2 | 1 |
+| 235 | 123.56.225.154:8190 | 0.18.1 | CPU | 15 GB | 11 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 236 | 129.211.191.218 | 0.18.1 | CPU | 15 GB | 8 GB | ✓ | - | 10 | 9 | 0 | 0 |
+| 237 | 101.96.203.51:8188 | 0.20.1 | CPU | 8 GB | 6 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 238 | 110.40.205.169:8188 | 0.18.2 | CPU | 8 GB | 6 GB | - | ✓ | 44 | 5 | 0 | 0 |
+| 239 | 120.25.63.187:8111 | 0.21.0 | CPU | 8 GB | 6 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 240 | 129.204.230.167:11001 | 0.24.0 | CPU | 8 GB | 1 GB | ✓ | - | 0 | 4 | 0 | 0 |
+| 241 | 222.98.121.221:8000 | 0.19.3 | CPU | 8 GB | 4 GB | ✓ | - | 0 | 10 | 0 | 0 |
+| 242 | 161.97.79.38:8188 | 0.20.1 | CPU | 8 GB | 1 GB | ✓ | ✓ | 11 | 0 | 1 | 1 |
+| 243 | 67.215.228.117:8188 | 0.18.1 | CPU | 8 GB | 6 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 244 | 89.167.82.184:8188 | 0.19.3 | CPU | 8 GB | 3 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 245 | 85.10.136.8:8188 | 0.19.3 | CPU | 8 GB | 3 GB | ✓ | - | 0 | 0 | 1 | 0 |
+| 246 | comfy.juncopineiro.com | 0.19.3 | CPU | 8 GB | 5 GB | - | - | 0 | 3 | 3 | 1 |
+| 247 | https://comfy.juncopineiro.com | 0.19.3 | CPU | 8 GB | 5 GB | - | - | 0 | 3 | 3 | 1 |
+| 248 | https://43.161.225.196 | 0.21.1 | CPU | 8 GB | 6 GB | ✓ | - | 0 | 0 | 0 | 0 |
+| 249 | 47.239.252.9:8188 | 0.12.2 | CPU | 7 GB | 3 GB | - | - | 0 | 0 | 0 | 0 |
+| 250 | 47.83.192.121:8188 | 0.12.2 | CPU | 7 GB | 4 GB | - | - | 0 | 0 | 0 | 0 |
+| 251 | 154.64.253.195:8000 | 0.20.1 | CPU | 4 GB | 2 GB | ✓ | - | 0 | 3 | 0 | 0 |
+| 252 | 212.85.249.172:8188 | 0.3.68 | CPU | 4 GB | 2 GB | ✓ | ✓ | 27 | 2 | 0 | 0 |
+| 253 | 89.167.98.40:5006 | 0.20.1 | CPU | 4 GB | 2 GB | ✓ | - | 0 | 0 | 2 | 0 |
+| 254 | 109.94.211.223:8188 | 0.17.0 | CPU | 2 GB | 382 MB | ✓ | - | 0 | 0 | 1 | 0 |
+| 255 | 39.97.238.88:81 | 0.16.3 | CPU | 2 GB | 637 MB | ✓ | - | 0 | 5 | 0 | 0 |
+| 256 | 43.135.144.34:8188 | 0.19.0 | CPU | 2 GB | 439 MB | ✓ | - | 0 | 2 | 0 | 0 |
+| 257 | 43.134.28.233:8188 | 0.18.1 | CPU | 2 GB | 412 MB | ✓ | - | 0 | 0 | 0 | 0 |
+| 258 | 77.73.232.244:8188 | 0.17.0 | CPU | 2 GB | 361 MB | ✓ | - | 0 | 0 | 1 | 0 |
+| 259 | 89.169.166.140:8188 | 0.18.1 | CPU | 2 GB | 391 MB | ✓ | - | 0 | 0 | 0 | 0 |
+| 260 | https://comfy.quiqstory.com | 0.17.0 | CPU | 2 GB | 931 MB | ✓ | - | 0 | 0 | 0 | 0 |
+| 261 | 122.165.241.167:8188 | ? | - | - | - | ✓ | - | 0 | 0 | 7 | 0 |
+| 262 | 8.156.73.75 | ? | - | - | - | - | - | 0 | 0 | 0 | 0 |
+| 263 | 45.120.119.143:8188 | ? | - | - | - | - | - | 0 | 0 | 0 | 0 |
+| 264 | 73.185.58.213:8188 | ? | - | - | - | - | - | 0 | 0 | 0 | 0 |
+| 265 | comfyui.wangl.ai | ? | - | - | - | - | - | 0 | 0 | 0 | 0 |
+| 266 | cloud.comfy.org | ? | - | - | - | - | - | 0 | 0 | 0 | 0 |
+| 267 | https://8.156.73.75 | ? | - | - | - | - | - | 0 | 0 | 0 | 0 |
+| 268 | https://cloud.comfy.org | ? | - | - | - | - | - | 0 | 0 | 0 | 0 |
+| 269 | comfyai.org | ? | - | - | - | - | - | 0 | 0 | 0 | 0 |
+| 270 | https://stagingcloud.comfy.org | ? | - | - | - | - | - | 0 | 0 | 0 | 0 |
+| 271 | stagingcloud.comfy.org | ? | - | - | - | - | - | 0 | 0 | 0 | 0 |
+| 272 | https://www.comfyai.org | ? | - | - | - | - | - | 0 | 0 | 0 | 0 |
+| 273 | https://hackathon.luckgate.shop | ? | - | - | - | - | - | 0 | 0 | 0 | 0 |
+| 274 | https://comfyui.sylphid.ovh | ? | - | - | - | - | - | 0 | 0 | 0 | 0 |
+| 275 | www.comfyai.org | ? | - | - | - | - | - | 0 | 0 | 0 | 0 |
+
+---
+
+## 详情
+
+### 1. 109.74.49.68:8199
+
+- **版本**: 0.19.1
+- **GPU**: H200 (cuda:0 NVIDIA H200 : cudaMallocAsync)
+- **显存**: 140 GB (空闲 139 GB)
+- **内存**: 1 TB (空闲 1 TB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (2):
+  - seedvr_upscale.json
+  - upscale_only.json
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 2. 121.125.78.191:8188
+
+- **版本**: 0.19.1
+- **GPU**: H100 (cuda:0 NVIDIA H100 PCIe : cudaMallocAsync)
+- **显存**: 79 GB (空闲 77 GB)
+- **内存**: 432 GB (空闲 408 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (1):
+  - video_wan2_2_14B_t2v.json
+- **模型** (4):
+  - v1-5-pruned-emaonly-fp16.safetensors
+  - wan2.1_t2v_1.3B_fp16.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (2 个, 前10):
+  - wan2.2_t2v_lightx2v_4steps_lora_v1.1_high_noise.safetensors
+  - wan2.2_t2v_lightx2v_4steps_lora_v1.1_low_noise.safetensors
+- **CLIP**: umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: wan_2.1_vae.safetensors, pixel_space
+
+### 3. 203.252.149.114:8188
+
+- **版本**: 0.4.0
+- **GPU**: H100 (cuda:0 NVIDIA H100 PCIe : cudaMallocAsync)
+- **显存**: 79 GB (空闲 36 GB)
+- **内存**: 251 GB (空闲 215 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (8):
+  - umt5_xxl_fp8_e4m3fn_scaled.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan_2.1_vae.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_high_lighting_v2.0.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_low_lighting_v2.0.safetensors
+- **LoRA** (4 个, 前10):
+  - Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors
+  - Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
+- **CLIP**: nsfw_wan_umt5-xxl_fp8_scaled.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: wan_2.1_vae.safetensors, pixel_space
+
+### 4. 118.191.0.226:8188
+
+- **版本**: 0.15.0
+- **GPU**: A800 (cuda:0 NVIDIA A800 80GB PCIe : cudaMallocAsync)
+- **显存**: 79 GB (空闲 79 GB)
+- **内存**: 1007 GB (空闲 830 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (13):
+  - model-00001-of-00002.safetensors
+  - model-00002-of-00002.safetensors
+  - model.safetensors-00001-of-00001.safetensors
+  - model.safetensors-00001-of-00001.safetensors
+  - acestep_v1.5_turbo.safetensors
+  - acestep_v1.5_xl_turbo_bf16.safetensors
+  - flux-2-klein-9b-fp8.safetensors
+  - flux1-dev.safetensors
+  - flux1-fill-dev.safetensors
+  - hunyuan3d-dit-v2-0-fp16.safetensors
+  - lotus-depth-d-v-1-1-fp16.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: model.safetensors
+- **VAE**: pixel_space
+
+### 5. 115.190.79.65:8188
+
+- **版本**: 0.3.49
+- **GPU**: A100 (cuda:0 NVIDIA A100-SXM4-80GB : cudaMallocAsync)
+- **显存**: 79 GB (空闲 10 GB)
+- **内存**: 964 GB (空闲 821 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (12):
+  - xl_wan2.1_i2v_14b_720P.json
+  - kontext 图生图（一致性）.json
+  - kontext素材融合.json
+  - wan2.1_i2v_14b_720P.json
+  - 首尾帧_wan2.1_flf2v_720_f16.json
+  - 哥特风_ai图片风格化.json
+  - 赛博朋克_ai照片风格化.json
+  - ai_照片风格化_flux_redux_model.json
+  - qwen_image文生图（支持中文）.json
+  - 图生图_flux_dev_t5fp16.json
+  - 春节_ai照片风格化.json
+  - 文生图_flux_dev_t5fp16.json
+- **模型** (6):
+  - flux1-dev-kontext_fp8_scaled.safetensors
+  - flux1-dev.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - wan2.1_flf2v_720p_14B_fp16.safetensors
+  - wan2.1_i2v_480p_14B_bf16.safetensors
+  - wan2.1_i2v_720p_14B_fp16.safetensors
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: clip_l.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, qwen_image_vae.safetensors, wan_2.1_vae.safetensors
+
+### 6. 135.181.63.198:8188
+
+- **版本**: 0.3.66
+- **GPU**: A100 (cuda:0 NVIDIA A100-SXM4-80GB : cudaMallocAsync)
+- **显存**: 79 GB (空闲 74 GB)
+- **内存**: 117 GB (空闲 111 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (3):
+  - Qwen-IE-2509_Inpaint_with_4step_lightningLORA.json
+  - Unsaved Workflow.json
+  - workflow.json
+- **模型** (2):
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+- **LoRA** (2 个, 前10):
+  - Qwen-Image-Lightning-4steps-V1.0.safetensors
+  - qwen_image_edit_inpainting.safetensors
+- **CLIP**: qwen_2.5_vl_7b_fp8_scaled.safetensors
+- **VAE**: qwen_image_vae.safetensors, pixel_space
+
+### 7. 14.103.167.239:8032
+
+- **版本**: 0.21.1
+- **GPU**: A100 (cuda:0 NVIDIA A100-SXM4-80GB : cudaMallocAsync)
+- **显存**: 79 GB (空闲 47 GB)
+- **内存**: 482 GB (空闲 448 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 25
+- **工作流** (0): 无
+- **模型** (25):
+  - 人像摄影-电商模特_棚拍-超质感-服装电商_2.0.safetensors
+  - AWPortrait FL_bf16.safetensors
+  - Wan14BT2VFusioniX_Phantom_fp16.safetensors
+  - Wan14BT2VFusioniX_fp16_.safetensors
+  - Wan14Bi2vFusioniX_fp16.safetensors
+  - Wan2_1-Wan-I2V-MAGREF-14B_fp8_e4m3fn.safetensors
+  - acestep_v1.5_xl_merge_base_turbo_ta_0.5.safetensors
+  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
+  - flux1-canny-dev.safetensors
+  - flux1-depth-dev.safetensors
+  - flux1-dev.safetensors
+  - flux1-fill-dev.safetensors
+  - flux1-kontext-dev.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - qwen_image_2512_bf16.safetensors
+  - qwen_image_bf16.safetensors
+  - qwen_image_edit_2509_bf16.safetensors
+  - qwen_image_edit_2511_bf16.safetensors
+  - qwen_image_edit_bf16.safetensors
+  - wan2.1_i2v_480p_14B_fp16.safetensors
+  - wan2.1_i2v_720p_14B_fp16.safetensors
+  - z_image_bf16.safetensors
+  - z_image_turbo_bf16.safetensors
+  - 白粉笔_Flxu_写实大模型_V1.0.safetensors
+- **LoRA** (256 个, 前10):
+  - 01-datiao.safetensors
+  - 01-dingzhu.safetensors
+  - 01-loukongxiu.safetensors
+  - 01-taiyanggan.safetensors
+  - 01-tangzuan.safetensors
+  - 250829hobbs-v2.safetensors
+  - 260507hobbs_dress_v2-step00018000.safetensors
+  - F-vector logo, Stylized 你想生成的画面,with text “你想生成的文字（英文）”,.safetensors
+  - F.1 皮肤纹理质感增强-去油_v1.safetensors
+  - F.细节质感提升flim rendering.safetensors
+- **CLIP**: ViT-L-14-TEXT-detail-improved-hiT-GmP-HF.safetensors, clip_g.safetensors, clip_l.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_0.6b_ace15-fp8.safetensors, qwen_2.5_vl_7b.safetensors, qwen_3_4b.safetensors, qwen_4b_ace15-fp8.safetensors, model.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ace_1.5_vae.safetensors, ae.safetensors, qwen_image_vae.safetensors, sdxl_vae.safetensors, wan_2.1_vae.safetensors, taesdxl, taef1, pixel_space
+
+### 8. 20.163.11.129:8000
+
+- **版本**: 0.3.66
+- **GPU**: A100 (cuda:0 NVIDIA A100 80GB PCIe : native)
+- **显存**: 79 GB (空闲 59 GB)
+- **内存**: 216 GB (空闲 196 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 9. 195.209.212.24:8188
+
+- **版本**: 0.3.67
+- **GPU**: A100 (cuda:0 NVIDIA A100 80GB PCIe : cudaMallocAsync)
+- **显存**: 79 GB (空闲 79 GB)
+- **内存**: 125 GB (空闲 115 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (3):
+  - Wan2.2_T2V_Low_Noise_14B_VACE_fp16.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (4215 个, 前10):
+  - adapter_model.safetensors
+  - adapter_model.safetensors
+  - adapter_model.safetensors
+  - adapter_model.safetensors
+  - layer_00-model_states.pt
+  - layer_01-model_states.pt
+  - layer_02-model_states.pt
+  - layer_03-model_states.pt
+  - layer_04-model_states.pt
+  - layer_05-model_states.pt
+- **CLIP**: umt5-xxl-enc-bf16.safetensors
+- **VAE**: Wan2_1_VAE_bf16.safetensors, pixel_space
+
+### 10. 195.209.212.97:8188
+
+- **版本**: 0.3.67
+- **GPU**: A100 (cuda:0 NVIDIA A100 80GB PCIe : cudaMallocAsync)
+- **显存**: 79 GB (空闲 79 GB)
+- **内存**: 125 GB (空闲 111 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (2):
+  - 03_wan_vace_render_mask.json
+  - 02_mask_green_05.json
+- **模型** (3):
+  - Wan2.2_T2V_Low_Noise_14B_VACE_fp16.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (4215 个, 前10):
+  - adapter_model.safetensors
+  - adapter_model.safetensors
+  - adapter_model.safetensors
+  - adapter_model.safetensors
+  - layer_00-model_states.pt
+  - layer_01-model_states.pt
+  - layer_02-model_states.pt
+  - layer_03-model_states.pt
+  - layer_04-model_states.pt
+  - layer_05-model_states.pt
+- **CLIP**: umt5-xxl-enc-bf16.safetensors
+- **VAE**: Wan2_1_VAE_bf16.safetensors, pixel_space
+
+### 11. 195.209.212.200:8188
+
+- **版本**: 0.3.67
+- **GPU**: A100 (cuda:0 NVIDIA A100 80GB PCIe : cudaMallocAsync)
+- **显存**: 79 GB (空闲 79 GB)
+- **内存**: 125 GB (空闲 120 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (3):
+  - Wan2.2_T2V_Low_Noise_14B_VACE_fp16.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (4215 个, 前10):
+  - adapter_model.safetensors
+  - adapter_model.safetensors
+  - adapter_model.safetensors
+  - adapter_model.safetensors
+  - layer_00-model_states.pt
+  - layer_01-model_states.pt
+  - layer_02-model_states.pt
+  - layer_03-model_states.pt
+  - layer_04-model_states.pt
+  - layer_05-model_states.pt
+- **CLIP**: umt5-xxl-enc-bf16.safetensors
+- **VAE**: Wan2_1_VAE_bf16.safetensors, pixel_space
+
+### 12. 68.154.73.98:8188
+
+- **版本**: 0.13.0
+- **GPU**: A100 (cuda:0 NVIDIA A100 80GB PCIe : cudaMallocAsync)
+- **显存**: 79 GB (空闲 49 GB)
+- **内存**: 216 GB (空闲 193 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (2):
+  - qwen_imgedit.json
+  - qwen_txt2img.json
+- **模型** (4):
+  - flux1-schnell.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+- **LoRA** (2 个, 前10):
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Lightning-4steps-V1.0.safetensors
+- **CLIP**: clip_l.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, t5xxl_fp16.safetensors
+- **VAE**: ae.safetensors, qwen_image_vae.safetensors, pixel_space
+
+### 13. 8.216.8.243:8188
+
+- **版本**: 0.10.0
+- **GPU**: A100 (cuda:0 NVIDIA A100-SXM4-80GB : cudaMallocAsync)
+- **显存**: 79 GB (空闲 78 GB)
+- **内存**: 245 GB (空闲 201 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (3):
+  - flux-2-klein-9b-fp8.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (3 个, 前10):
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
+- **CLIP**: qwen_3_8b_fp8mixed.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: flux2-vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 14. 120.240.155.198:8191
+
+- **版本**: 0.18.1
+- **GPU**: A100 (cuda:0 NVIDIA A100-PCIE-40GB : cudaMallocAsync)
+- **显存**: 39 GB (空闲 38 GB)
+- **内存**: 1007 GB (空闲 670 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 30
+- **工作流** (15):
+  - nunchaku-qwen-image.json
+  - nunchaku-qwen-image-edit-2509-lightning.json
+  - z_image_turbo_example.json
+  - 手办换头v1.5_backup.json
+  - 手办换头v2.0.json
+  - 拖拽编辑溶图.json
+  - 手办换发型五官.json
+  - Helios-Distilled-I2V.json
+  - Helios-Distilled-I2V-2.json
+  - video_wan2_2_14B_i2v.json
+  - qwen_image_edit_2511.json
+  - I2V_T2V_Basic_Custom_Audio.json
+  - I2V_T2V_Basic.json
+  - image_qwen_image_edit_2509.json
+  - qwen换头v2.0.json
+- **模型** (14):
+  - Helios-Distilled_comfyui_fp32.safetensors
+  - MelBandRoformer_fp16.safetensors
+  - Qwen-Image-Edit-2511-FP8_e4m3fn.safetensors
+  - flux-2-klein-4b.safetensors
+  - ltx-2.3-22b-dev_transformer_only_fp8_scaled.safetensors
+  - ltx-2.3-22b-distilled_transformer_only_fp8_scaled.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - svdq-int4_r32-qwen-image-edit-2509-lightningv2.0-4steps.safetensors
+  - svdq-int4_r32-qwen-image-lightningv1.0-4steps.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (12 个, 前10):
+  - Put it here_Qwen edit_V2.0.safetensors
+  - Qwen-Image-Edit-2509-Lightning-8steps-V1.0-fp32.safetensors
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Lightning-4steps-V2.0.safetensors
+  - Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors
+  - Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors
+  - jingxiuv1.0.safetensors
+  - ltx-2.3-22b-distilled-lora-dynamic_fro09_avg_rank_105_bf16.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
+- **CLIP**: gemma_3_12B_it_fpmixed.safetensors, ltx-2.3_text_projection_bf16.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, ae.safetensors, flux2-vae.safetensors, qwen_image_vae.safetensors, taeltx2_3.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 15. 120.240.155.198:8567
+
+- **版本**: 0.20.1
+- **GPU**: A100 (cuda:0 NVIDIA A100-PCIE-40GB : cudaMallocAsync)
+- **显存**: 39 GB (空闲 38 GB)
+- **内存**: 1007 GB (空闲 670 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 45
+- **工作流** (19):
+  - 21耳饰自动手持穿戴api (1).json
+  - 21耳饰自动手持穿戴api (1) (1) (1) (4).json
+  - 首饰环拍.json
+  - 首饰环拍_首尾帧.json
+  - 首饰环拍_首尾帧_su.json
+  - 耳饰摆放输入背景图固定遮罩 (1) (3).json
+  - 17饰品图生成眼镜_0528_自用.json
+  - 首饰环拍_首尾帧_su_0526.json
+  - 1饰品图生成耳饰.json
+  - 耳饰摆放输入背景图固定遮罩 (1) (2).json
+  - 耳饰摆放输入背景图固定遮罩-0529 (1).json
+  - 18眼镜自动穿戴_0529.json
+  - 耳饰摆放输入背景图固定遮罩.json
+  - 6.1+耳饰组图工作流+(2)+(2).json
+  - 耳饰摆放工作流_批量提示词_20260412.json
+  - 24饰品图生成耳饰-光影模式api+(1).json
+  - 24饰品图生成耳饰-光影模式api-0610 (2).json
+  - 耳饰组图16步-0611.json
+  - 24饰品图生成耳饰-光影模式api (1).json
+- **模型** (178):
+  - IPDESIGN_3D可爱化模型V4.0.safetensors
+  - 14b_oil_motion_preview1.0.safetensors
+  - 360_epoch20.safetensors
+  - AWPortrait_XL_ver1.1.safetensors
+  - DD-made-of-clay-XL-v2.safetensors
+  - DSYS-真实美女-SDXL人像摄影_V1.0.safetensors
+  - DisneyRealCartoonMix.safetensors
+  - EnvyZoomSliderXL01.safetensors
+  - F.1-Fill-fp16_InpaintOutpaint_1.0.safetensors
+  - Flux-Fill-dev-fp8_黑森林官方重绘模型_fp8_e4m3fn.safetensors
+  - ICEdit-normal-LoRA_1.safetensors
+  - Indigo_Furry_Mix_XL_NoobAI_VPR_Ⅷ_8_VPR8.safetensors
+  - Kolors-ControlNet-Canny.safetensors
+  - OpenPoseXL2.safetensors
+  - PVCStyleModelDreamy_beta12.safetensors
+  - PVC_style_transfer.safetensors
+  - Plant_Milk_🌿_-_Model_Suite_Walnut.safetensors
+  - Qwen-Rapid-AIO-NSFW-v18.safetensors
+  - Qwen_Image_Edit_2509_bf16.safetensors
+  - Qwen_Image_Nunchaku_r128_提速模型_4步int4_r128.safetensors
+  - Qwen_Qwen-Image-Edit-2509_fp8.safetensors
+  - SDXL_BetterFaces-LoRA_v1.safetensors
+  - SHMILY油画_v2.1.safetensors
+  - SUPIR-v0F.ckpt
+  - SUPIR-v0F_fp16.safetensors
+  - SUPIR-v0Q.ckpt
+  - Snoopy-Charlie-Brown-Flux-LoRA.safetensors
+  - Wan2_1-T2V-14B_fp8_e4m3fn.safetensors
+  - Wan2_1-VACE_module_14B_fp8_e4m3fn.safetensors
+  - Wan2_1_VAE_bf16.safetensors
+  - WanxiangXLSuperRealisticV8.4_V8.4.safetensors
+  - XL0.35_PRO.safetensors
+  - ae.safetensors
+  - aziibpixelmix_v10.safetensors
+  - UNet.pth
+  - chatglm3-8bit.safetensors
+  - cinematicredmond_v10.safetensors
+  - clip_l.safetensors
+  - control-lora-canny-rank256.safetensors
+  - control-lora-depth-rank128.safetensors
+  - control_v11p_sd15_openpose_fp16.safetensors
+  - control_v11p_sd15_softedge_fp16.safetensors
+  - controlnet_union_sdxl_1.0.safetensors
+  - depth_anything_v2_vitl.pth
+  - diffusers_xl_canny_full.safetensors
+  - dreamshaper_8_v8.safetensors
+  - epicphotogasm_v1.safetensors
+  - flux1-depth-dev.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux1-dev.sft
+  - flux1-redux-dev.safetensors
+  - flux1-schnell-fp8.safetensors
+  - fluxFillFP8_v10.safetensors
+  - hakushiMix_v141.safetensors
+  - hidream_o1_image_fp8_scaled.safetensors
+  - dw-ll_ucoco_384_bs5.torchscript.pt
+  - huimengshuicai_v1.0.safetensors
+  - iclight_sd15_fc.safetensors
+  - illustriousxlMmmix_v80.safetensors
+  - diffusion_pytorch_model.safetensors
+  - ip-adapter_pulid_sdxl_fp16.safetensors
+  - ip-adapter_sd15.safetensors
+  - juggernautXL_juggXIByRundiffusion.safetensors
+  - juggernautXL_v8Rundiffusion.safetensors
+  - juggernautXL_v9Rdphoto2Lightning.safetensors
+  - leosamsHelloworldSDXL_helloworldSDXL40.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - ltx-video-2b-v0.9.5.safetensors
+  - majicMIXrealistic麦橘写实_v7.safetensors
+  - majicflus_v1.safetensors
+  - majicmixRealistic_v7.safetensors
+  - mistoLine_rank256.safetensors
+  - pulid_flux_v0.9.0.safetensors
+  - pytorch_lora_weights.safetensors
+  - qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - realcartoonPixar_v9.safetensors
+  - realisticVisionV51_v51VAE.safetensors
+  - realisticVisionV60B1_v51VAE.safetensors
+  - sam3.1_multiplex_fp16.safetensors
+  - sd_xl_base_1.0.safetensors
+  - sigclip_vision_patch14_384.safetensors
+  - isnetis.ckpt
+  - svd_xt.safetensors
+  - t5xxl_fp16.safetensors
+  - t5xxl_fp8_e4m3fn.safetensors
+  - mobilenet_v2-b0353104.pth
+  - v1-5-pruned-emaonly-fp16.safetensors
+  - v1-5-pruned.safetensors
+  - vae-ft-mse-840000-ema-pruned.safetensors
+  - wan2.1_Vace_1.3B_preview_bf16.safetensors
+  - wildcardxXLANIMATION_wildcardxXLANIMATION.safetensors
+  - 【F.1】2D美式卡通游戏插画风格_v1.safetensors
+  - 万物调节丨Flux Texture  质感增强器_V1.0.safetensors
+  - 万相2.2写实大模型-fp8量化版_Wan2.2_t2v_14B_fp8_scaled_v1.safetensors
+  - 中秋海报_月饼—设计旅行者_v1.0.safetensors
+  - 全网首发__pvc手办风格转换模型_v3.0（材质增强版）.safetensors
+  - 动漫光影-AniShadow_[无需lora，自带画风和热门角色]_V5.safetensors
+  - F.1-Fill-fp16_Inpaint_Outpaint_1.0.safetensors
+  - FLUX大模型_二次元_雅致细腻_V2.safetensors
+  - FireRed-Image-Edit-1.1-transformer.safetensors
+  - model.safetensors
+  - model.safetensors
+  - IPDESIGN_3D可爱化模型V4.0.safetensors
+  - Kolors_diffusion_pytorch_model.fp16.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn_scaled.safetensors
+  - Qwen-Image-Edit-2509_fp8_e4m3fn.safetensors
+  - Qwen-Image-Edit-2511-FP8_e4m3fn.safetensors
+  - Qwen-Rapid-AIO_Qwen-Image-Edit-2511_V20.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - TurboWan2.2-I2V-A14B-high-720P-quant.pth
+  - TurboWan2.2-I2V-A14B-low-720P-quant.pth
+  - Wan2.2_Remix_NSFW_i2v_14b_high_lighting_fp8_e4m3fn_v3.0.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_low_lighting_fp8_e4m3fn_v3.0.safetensors
+  - Wan2_1-FLF2V-14B-720P_fp8_e4m3fn.safetensors
+  - Wan2_1-I2V-14B-480P_fp8_e4m3fn.safetensors
+  - Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors
+  - Wan2_1-InfiniTetalk-Single_fp16.safetensors
+  - Wan2_1-InfiniteTalk-Multi_fp16.safetensors
+  - Wan2_1-MiniMaxRemover_1_3B_fp16.safetensors
+  - Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-T2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-T2V-A14B_HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-TI2V-5B-FastWanFullAttn_bf16.safetensors
+  - LongCat_TI2V_comfy_bf16.safetensors
+  - LongCat_TI2V_comfy_fp8_e4m3fn_scaled_KJ.safetensors
+  - LongCat_refinement_lora_rank128_bf16.safetensors
+  - aniWan2114BFp8E4m3fn_i2v480pNew.safetensors
+  - diffusion_pytorch_model.fp16.safetensors
+  - ernie-image-turbo.safetensors
+  - ernie-image.safetensors
+  - flux-2-klein-4b-4096.safetensors
+  - flux-2-klein-4b.safetensors
+  - flux-2-klein-9b.safetensors
+  - flux-2-klein-base-4b-fp8.safetensors
+  - flux-2-klein-base-9b-fp8.safetensors
+  - flux1-canny-dev.safetensors
+  - flux1-dev-fp8-KJ.safetensors
+  - flux1-fill-dev.safetensors
+  - flux1-kontext-dev-fp8-e4m3fn.safetensors
+  - hunyuan_video_I2V_720_fixed_fp8_e4m3fn.safetensors
+  - hunyuanvideo1.5_480p_i2v_step_distilled_fp8_scaled.safetensors
+  - hunyuanvideo1.5_720p_i2v_cfg_distilled_fp8_scaled.safetensors
+  - hunyuanvideo1.5_720p_i2v_fp16.safetensors
+  - hunyuanvideo1.5_720p_sr_distilled_fp8_scaled.safetensors
+  - hy1.5_t2v_480p_scaled_fp8_e4m3_lightx2v_4step.safetensors
+  - hy15_720p_i2v_fp8_e4m3_lightx2v_comfyui.safetensors
+  - ideogram4_fp8_scaled.safetensors
+  - ideogram4_unconditional_fp8_scaled.safetensors
+  - lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors
+  - model.safetensors
+  - open-clip-xlm-roberta-large-vit-huge-14_visual_fp16.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_fp8_e4m3fn_scaled_lightning.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - qwen_image_edit_2511_fp8mixed_old.safetensors
+  - smoothMixWan22I2VT2V_i2vHigh.safetensors
+  - smoothMixWan22I2VT2V_i2vLow.safetensors
+  - flux2_dev_fp8mixed.safetensors
+  - svdq-int4_r32-flux.1-kontext-dev.safetensors
+  - Wan2_1-FLF2V-14B-720P_fp8_e4m3fn.safetensors
+  - Wan2_1-I2V-14B-480P_fp8_e4m3fn.safetensors
+  - Wan2_1-T2V-14B_fp8_e4m3fn.safetensors
+  - wan2.1_Vace_1.3B_preview_bf16.safetensors
+  - wan2.2_i2v_high_noise_14B_fp16.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp16.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp16.safetensors
+  - wan2.2_t2v_low_noise_14B_fp16.safetensors
+  - wan2114BFusionx_fusionxImage2video.safetensors
+  - z_image_bf16.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (419 个, 前10):
+  - 14b_oil_motion_preview1.0.safetensors
+  - 191古典油画风1.5_V1.0.safetensors
+  - 2.5D效果_v1.0.safetensors
+  - 360_epoch20.safetensors
+  - 3D卡通人物形象_FLUX-V1.safetensors
+  - 3D卡通职场精英_v1.0.safetensors
+  - 3D角色：Q版动漫人物-呆萌可爱-3D_Character_v1.safetensors
+  - 80年代怀旧老照片风格场景_v1.0_flux.safetensors
+  - 95E5B4BDE6A2.safetensors
+  - ACE++ comfyui_subject_lora16_comfyui_subject.safetensors
+- **CLIP**: EVA02_CLIP_L_336_psz14_s6B.pt, byt5_small_glyphxl_fp16.safetensors, model.safetensors, clip_l.safetensors, clip_vision_h.safetensors, ernie-image-prompt-enhancer.safetensors, gemma4_e4b_it_fp8_scaled.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, gemma_3_12B_it_fp8_e4m3fn.safetensors, ministral-3-3b.safetensors, models_clip_open-clip-xlm-roberta-large-vit-huge-14.pth, models_t5_umt5-xxl-enc-bf16_fully_uncensored.safetensors, nsfw_wan_umt5-xxl_fp8_scaled.safetensors, open-clip-xlm-roberta-large-vit-huge-14.safetensors, qwen2.5vl-7b-bf16.safetensors, qwen3vl_8b_fp8_scaled.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors, clip_l.safetensors, t5xxl_fp8_e4m3fn.safetensors, model.safetensors, mistral_3_small_flux2_fp8.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5-xxl-enc-bf16.safetensors, umt5-xxl-enc-fp8_e4m3fn.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: UltraFlux-vae_v1.safetensors, Wan2_1_VAE_bf16.safetensors, ae.safetensors, ae.sft, diffusion_pytorch_model.bin, diffusion_pytorch_model.safetensors, flux2-vae.safetensors, hunyuan_video_vae_bf16.safetensors, hunyuanvideo15_vae_fp16.safetensors, kolors_fp16.safetensors, qwen_image_vae.safetensors, realisticVisionV51_v51VAE.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, wan2.2_vae.safetensors, wan_2.1_vae.safetensors, zimage_ae.safetensors, pixel_space
+
+### 16. 120.240.155.198:8123
+
+- **版本**: 0.20.1
+- **GPU**: A100 (cuda:0 NVIDIA A100-PCIE-40GB : cudaMallocAsync)
+- **显存**: 39 GB (空闲 38 GB)
+- **内存**: 1007 GB (空闲 670 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 28
+- **工作流** (31):
+  - 胸针自动穿戴（flux-2）.json
+  - 换装（flux-2）.json
+  - Flux2 Klein 超级多合一_文生图、单_多图编辑、重绘_扩图、多角度.json
+  - 饰品图生成脐钉_20260526.json
+  - 17图片理解_vlm.json
+  - 饰品图生成脐钉_20260529-dev.json
+  - 饰品图生成脐钉_20260601-dev.json
+  - 脐钉自动穿戴_20260601-dev.json
+  - Image Edit (Qwen 2511) - Sample.json
+  - 脐钉替换api_局部重绘.json
+  - 脐钉自动穿戴_20260602-dev.json
+  - 1饰品图生成耳饰.json
+  - 1饰品图生成耳饰api_20260603-solution-b-image3.json
+  - 1饰品图生成耳饰api_20260603-solution-c-mask-edit.json
+  - 1饰品图生成耳饰api_20260603-pose-02.json
+  - 1饰品图生成耳饰_20260603.json
+  - 1饰品图生成耳饰_20260605-pose-04.json
+  - 13饰品图生成手串api.json
+  - qwen 产品&人物多角度控制.json
+  - Playground.json
+  - 13饰品图生成手串_20260609.json
+  - 图像编辑_Qwen2509.json
+  - 16胸针自动穿戴_20260520_remove-pin.json
+  - 提取遮罩.json
+  - 图片理解.json
+  - Nano Banana.json
+  - 遮罩提取.json
+  - 图像局部绘制_Qwen2509.json
+  - 16胸针自动穿戴_V1.2.json
+  - QwenVL.json
+  - 16胸针自动穿戴_V1.2-五角星.json
+- **模型** (178):
+  - IPDESIGN_3D可爱化模型V4.0.safetensors
+  - 14b_oil_motion_preview1.0.safetensors
+  - 360_epoch20.safetensors
+  - AWPortrait_XL_ver1.1.safetensors
+  - DD-made-of-clay-XL-v2.safetensors
+  - DSYS-真实美女-SDXL人像摄影_V1.0.safetensors
+  - DisneyRealCartoonMix.safetensors
+  - EnvyZoomSliderXL01.safetensors
+  - F.1-Fill-fp16_InpaintOutpaint_1.0.safetensors
+  - Flux-Fill-dev-fp8_黑森林官方重绘模型_fp8_e4m3fn.safetensors
+  - ICEdit-normal-LoRA_1.safetensors
+  - Indigo_Furry_Mix_XL_NoobAI_VPR_Ⅷ_8_VPR8.safetensors
+  - Kolors-ControlNet-Canny.safetensors
+  - OpenPoseXL2.safetensors
+  - PVCStyleModelDreamy_beta12.safetensors
+  - PVC_style_transfer.safetensors
+  - Plant_Milk_🌿_-_Model_Suite_Walnut.safetensors
+  - Qwen-Rapid-AIO-NSFW-v18.safetensors
+  - Qwen_Image_Edit_2509_bf16.safetensors
+  - Qwen_Image_Nunchaku_r128_提速模型_4步int4_r128.safetensors
+  - Qwen_Qwen-Image-Edit-2509_fp8.safetensors
+  - SDXL_BetterFaces-LoRA_v1.safetensors
+  - SHMILY油画_v2.1.safetensors
+  - SUPIR-v0F.ckpt
+  - SUPIR-v0F_fp16.safetensors
+  - SUPIR-v0Q.ckpt
+  - Snoopy-Charlie-Brown-Flux-LoRA.safetensors
+  - Wan2_1-T2V-14B_fp8_e4m3fn.safetensors
+  - Wan2_1-VACE_module_14B_fp8_e4m3fn.safetensors
+  - Wan2_1_VAE_bf16.safetensors
+  - WanxiangXLSuperRealisticV8.4_V8.4.safetensors
+  - XL0.35_PRO.safetensors
+  - ae.safetensors
+  - aziibpixelmix_v10.safetensors
+  - UNet.pth
+  - chatglm3-8bit.safetensors
+  - cinematicredmond_v10.safetensors
+  - clip_l.safetensors
+  - control-lora-canny-rank256.safetensors
+  - control-lora-depth-rank128.safetensors
+  - control_v11p_sd15_openpose_fp16.safetensors
+  - control_v11p_sd15_softedge_fp16.safetensors
+  - controlnet_union_sdxl_1.0.safetensors
+  - depth_anything_v2_vitl.pth
+  - diffusers_xl_canny_full.safetensors
+  - dreamshaper_8_v8.safetensors
+  - epicphotogasm_v1.safetensors
+  - flux1-depth-dev.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux1-dev.sft
+  - flux1-redux-dev.safetensors
+  - flux1-schnell-fp8.safetensors
+  - fluxFillFP8_v10.safetensors
+  - hakushiMix_v141.safetensors
+  - hidream_o1_image_fp8_scaled.safetensors
+  - dw-ll_ucoco_384_bs5.torchscript.pt
+  - huimengshuicai_v1.0.safetensors
+  - iclight_sd15_fc.safetensors
+  - illustriousxlMmmix_v80.safetensors
+  - diffusion_pytorch_model.safetensors
+  - ip-adapter_pulid_sdxl_fp16.safetensors
+  - ip-adapter_sd15.safetensors
+  - juggernautXL_juggXIByRundiffusion.safetensors
+  - juggernautXL_v8Rundiffusion.safetensors
+  - juggernautXL_v9Rdphoto2Lightning.safetensors
+  - leosamsHelloworldSDXL_helloworldSDXL40.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - ltx-video-2b-v0.9.5.safetensors
+  - majicMIXrealistic麦橘写实_v7.safetensors
+  - majicflus_v1.safetensors
+  - majicmixRealistic_v7.safetensors
+  - mistoLine_rank256.safetensors
+  - pulid_flux_v0.9.0.safetensors
+  - pytorch_lora_weights.safetensors
+  - qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - realcartoonPixar_v9.safetensors
+  - realisticVisionV51_v51VAE.safetensors
+  - realisticVisionV60B1_v51VAE.safetensors
+  - sam3.1_multiplex_fp16.safetensors
+  - sd_xl_base_1.0.safetensors
+  - sigclip_vision_patch14_384.safetensors
+  - isnetis.ckpt
+  - svd_xt.safetensors
+  - t5xxl_fp16.safetensors
+  - t5xxl_fp8_e4m3fn.safetensors
+  - mobilenet_v2-b0353104.pth
+  - v1-5-pruned-emaonly-fp16.safetensors
+  - v1-5-pruned.safetensors
+  - vae-ft-mse-840000-ema-pruned.safetensors
+  - wan2.1_Vace_1.3B_preview_bf16.safetensors
+  - wildcardxXLANIMATION_wildcardxXLANIMATION.safetensors
+  - 【F.1】2D美式卡通游戏插画风格_v1.safetensors
+  - 万物调节丨Flux Texture  质感增强器_V1.0.safetensors
+  - 万相2.2写实大模型-fp8量化版_Wan2.2_t2v_14B_fp8_scaled_v1.safetensors
+  - 中秋海报_月饼—设计旅行者_v1.0.safetensors
+  - 全网首发__pvc手办风格转换模型_v3.0（材质增强版）.safetensors
+  - 动漫光影-AniShadow_[无需lora，自带画风和热门角色]_V5.safetensors
+  - F.1-Fill-fp16_Inpaint_Outpaint_1.0.safetensors
+  - FLUX大模型_二次元_雅致细腻_V2.safetensors
+  - FireRed-Image-Edit-1.1-transformer.safetensors
+  - model.safetensors
+  - model.safetensors
+  - IPDESIGN_3D可爱化模型V4.0.safetensors
+  - Kolors_diffusion_pytorch_model.fp16.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn_scaled.safetensors
+  - Qwen-Image-Edit-2509_fp8_e4m3fn.safetensors
+  - Qwen-Image-Edit-2511-FP8_e4m3fn.safetensors
+  - Qwen-Rapid-AIO_Qwen-Image-Edit-2511_V20.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - TurboWan2.2-I2V-A14B-high-720P-quant.pth
+  - TurboWan2.2-I2V-A14B-low-720P-quant.pth
+  - Wan2.2_Remix_NSFW_i2v_14b_high_lighting_fp8_e4m3fn_v3.0.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_low_lighting_fp8_e4m3fn_v3.0.safetensors
+  - Wan2_1-FLF2V-14B-720P_fp8_e4m3fn.safetensors
+  - Wan2_1-I2V-14B-480P_fp8_e4m3fn.safetensors
+  - Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors
+  - Wan2_1-InfiniTetalk-Single_fp16.safetensors
+  - Wan2_1-InfiniteTalk-Multi_fp16.safetensors
+  - Wan2_1-MiniMaxRemover_1_3B_fp16.safetensors
+  - Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-T2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-T2V-A14B_HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-TI2V-5B-FastWanFullAttn_bf16.safetensors
+  - LongCat_TI2V_comfy_bf16.safetensors
+  - LongCat_TI2V_comfy_fp8_e4m3fn_scaled_KJ.safetensors
+  - LongCat_refinement_lora_rank128_bf16.safetensors
+  - aniWan2114BFp8E4m3fn_i2v480pNew.safetensors
+  - diffusion_pytorch_model.fp16.safetensors
+  - ernie-image-turbo.safetensors
+  - ernie-image.safetensors
+  - flux-2-klein-4b-4096.safetensors
+  - flux-2-klein-4b.safetensors
+  - flux-2-klein-9b.safetensors
+  - flux-2-klein-base-4b-fp8.safetensors
+  - flux-2-klein-base-9b-fp8.safetensors
+  - flux1-canny-dev.safetensors
+  - flux1-dev-fp8-KJ.safetensors
+  - flux1-fill-dev.safetensors
+  - flux1-kontext-dev-fp8-e4m3fn.safetensors
+  - hunyuan_video_I2V_720_fixed_fp8_e4m3fn.safetensors
+  - hunyuanvideo1.5_480p_i2v_step_distilled_fp8_scaled.safetensors
+  - hunyuanvideo1.5_720p_i2v_cfg_distilled_fp8_scaled.safetensors
+  - hunyuanvideo1.5_720p_i2v_fp16.safetensors
+  - hunyuanvideo1.5_720p_sr_distilled_fp8_scaled.safetensors
+  - hy1.5_t2v_480p_scaled_fp8_e4m3_lightx2v_4step.safetensors
+  - hy15_720p_i2v_fp8_e4m3_lightx2v_comfyui.safetensors
+  - ideogram4_fp8_scaled.safetensors
+  - ideogram4_unconditional_fp8_scaled.safetensors
+  - lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors
+  - model.safetensors
+  - open-clip-xlm-roberta-large-vit-huge-14_visual_fp16.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_fp8_e4m3fn_scaled_lightning.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - qwen_image_edit_2511_fp8mixed_old.safetensors
+  - smoothMixWan22I2VT2V_i2vHigh.safetensors
+  - smoothMixWan22I2VT2V_i2vLow.safetensors
+  - flux2_dev_fp8mixed.safetensors
+  - svdq-int4_r32-flux.1-kontext-dev.safetensors
+  - Wan2_1-FLF2V-14B-720P_fp8_e4m3fn.safetensors
+  - Wan2_1-I2V-14B-480P_fp8_e4m3fn.safetensors
+  - Wan2_1-T2V-14B_fp8_e4m3fn.safetensors
+  - wan2.1_Vace_1.3B_preview_bf16.safetensors
+  - wan2.2_i2v_high_noise_14B_fp16.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp16.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp16.safetensors
+  - wan2.2_t2v_low_noise_14B_fp16.safetensors
+  - wan2114BFusionx_fusionxImage2video.safetensors
+  - z_image_bf16.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (419 个, 前10):
+  - 14b_oil_motion_preview1.0.safetensors
+  - 191古典油画风1.5_V1.0.safetensors
+  - 2.5D效果_v1.0.safetensors
+  - 360_epoch20.safetensors
+  - 3D卡通人物形象_FLUX-V1.safetensors
+  - 3D卡通职场精英_v1.0.safetensors
+  - 3D角色：Q版动漫人物-呆萌可爱-3D_Character_v1.safetensors
+  - 80年代怀旧老照片风格场景_v1.0_flux.safetensors
+  - 95E5B4BDE6A2.safetensors
+  - ACE++ comfyui_subject_lora16_comfyui_subject.safetensors
+- **CLIP**: EVA02_CLIP_L_336_psz14_s6B.pt, byt5_small_glyphxl_fp16.safetensors, model.safetensors, clip_l.safetensors, clip_vision_h.safetensors, ernie-image-prompt-enhancer.safetensors, gemma4_e4b_it_fp8_scaled.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, gemma_3_12B_it_fp8_e4m3fn.safetensors, ministral-3-3b.safetensors, models_clip_open-clip-xlm-roberta-large-vit-huge-14.pth, models_t5_umt5-xxl-enc-bf16_fully_uncensored.safetensors, nsfw_wan_umt5-xxl_fp8_scaled.safetensors, open-clip-xlm-roberta-large-vit-huge-14.safetensors, qwen2.5vl-7b-bf16.safetensors, qwen3vl_8b_fp8_scaled.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors, clip_l.safetensors, t5xxl_fp8_e4m3fn.safetensors, model.safetensors, mistral_3_small_flux2_fp8.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5-xxl-enc-bf16.safetensors, umt5-xxl-enc-fp8_e4m3fn.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: UltraFlux-vae_v1.safetensors, Wan2_1_VAE_bf16.safetensors, ae.safetensors, ae.sft, diffusion_pytorch_model.bin, diffusion_pytorch_model.safetensors, flux2-vae.safetensors, hunyuan_video_vae_bf16.safetensors, hunyuanvideo15_vae_fp16.safetensors, kolors_fp16.safetensors, qwen_image_vae.safetensors, realisticVisionV51_v51VAE.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, wan2.2_vae.safetensors, wan_2.1_vae.safetensors, zimage_ae.safetensors, pixel_space
+
+### 17. 36.139.149.26:3002
+
+- **版本**: 0.18.5
+- **GPU**: A100 (cuda:0 NVIDIA A100-PCIE-40GB : cudaMallocAsync)
+- **显存**: 39 GB (空闲 39 GB)
+- **内存**: 629 GB (空闲 548 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (8):
+  - 竖屏场景-文生图 .json
+  - 一致性人物场景融合-图生图-QwenOmni.json
+  - 横屏场景-文生图.json
+  - 横屏场景-参考图生图.json
+  - Qwen-2511一致性人物场景融合2.json
+  - 一致性人物场景融合-图生图.json
+  - ltx2.3 首尾帧视频音频 图生视频 .json
+  - 角色-文生图.app.json
+- **模型** (14):
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - v1-5-pruned-emaonly.safetensors
+  - Wan2_1-I2V-14B-480p_fp8_e4m3fn_scaled_KJ.safetensors
+  - ltx-2.3-22b-distilled_transformer_only_bf16.safetensors
+  - flux-2-klein-9b.safetensors
+  - ltx-2.3-22b-distilled_transformer_only_bf16.safetensors
+  - ltx-2.3-22b-distilled_transformer_only_fp8_input_scaled.safetensors
+  - qwen_image_edit_2511_bf16.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2509_bf16.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+  - wan2.2_i2v_high_noise_14B_fp16.safetensors
+  - wan2.2_i2v_low_noise_14B_fp16.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (9 个, 前10):
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-fp32.safetensors
+  - Qwen-Image-Edit-Lightning-8steps-V1.0-bf16.safetensors
+  - gemma-3-12b-it-abliterated_lora_rank64_bf16.safetensors
+  - lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors
+  - ltx-2.3-22b-distilled-lora-384.safetensors
+  - ltx2.3-transition.safetensors
+  - qwen-image-edit-2511-multiple-angles-lora.safetensors
+  - 仙侠风格.safetensors
+  - 多角度.safetensors
+- **CLIP**: gemma_3_12B_it_fp4_mixed.safetensors, gemma_3_12B_it_fp8_e4m3fn.safetensors, ltx-2.3_text_projection_bf16.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, LTX2_audio_vae_bf16.safetensors, Wan2_1_VAE_bf16.safetensors, ae.safetensors, flux2-vae.safetensors, qwen_image_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 18. 36.139.149.26:3001
+
+- **版本**: 0.18.5
+- **GPU**: A100 (cuda:0 NVIDIA A100-PCIE-40GB : cudaMallocAsync)
+- **显存**: 39 GB (空闲 39 GB)
+- **内存**: 629 GB (空闲 548 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (11):
+  - 竖屏场景-文生图 .json
+  - 横屏场景-文生图.json
+  - 一致性人物场景融合-5图.json
+  - 横屏场景-参考图生图.json
+  - 一致性人物场景融合-4图.json
+  - Qwen-2511一致性人物场景融合2.json
+  - 一致性人物场景融合-2图.json
+  - 一致性人物场景融合-图生图.json
+  - ltx2.3 首尾帧视频音频 图生视频 .json
+  - 角色-文生图.app.json
+  - 场景多角度.json
+- **模型** (14):
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - v1-5-pruned-emaonly.safetensors
+  - Wan2_1-I2V-14B-480p_fp8_e4m3fn_scaled_KJ.safetensors
+  - ltx-2.3-22b-distilled_transformer_only_bf16.safetensors
+  - flux-2-klein-9b.safetensors
+  - ltx-2.3-22b-distilled_transformer_only_bf16.safetensors
+  - ltx-2.3-22b-distilled_transformer_only_fp8_input_scaled.safetensors
+  - qwen_image_edit_2511_bf16.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2509_bf16.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+  - wan2.2_i2v_high_noise_14B_fp16.safetensors
+  - wan2.2_i2v_low_noise_14B_fp16.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (9 个, 前10):
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-fp32.safetensors
+  - Qwen-Image-Edit-Lightning-8steps-V1.0-bf16.safetensors
+  - gemma-3-12b-it-abliterated_lora_rank64_bf16.safetensors
+  - lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors
+  - ltx-2.3-22b-distilled-lora-384.safetensors
+  - ltx2.3-transition.safetensors
+  - qwen-image-edit-2511-multiple-angles-lora.safetensors
+  - 仙侠风格.safetensors
+  - 多角度.safetensors
+- **CLIP**: gemma_3_12B_it_fp4_mixed.safetensors, ltx-2.3_text_projection_bf16.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, LTX2_audio_vae_bf16.safetensors, Wan2_1_VAE_bf16.safetensors, ae.safetensors, flux2-vae.safetensors, qwen_image_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 19. 36.212.96.205:7000
+
+- **版本**: 0.21.1
+- **GPU**: A100 (cuda:0 NVIDIA A100-PCIE-40GB : cudaMallocAsync)
+- **显存**: 39 GB (空闲 39 GB)
+- **内存**: 629 GB (空闲 619 GB)
+- **历史**: 无
+- **管理面板**: 有
+- **自定义节点数**: 5
+- **工作流** (0): 无
+- **模型** (3):
+  - hunyuanvideo1.5_720p_i2v_fp16.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (2 个, 前10):
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
+- **CLIP**: byt5_small_glyphxl_fp16.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: hunyuanvideo15_vae_fp16.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 20. 152.136.239.201:10002
+
+- **版本**: 0.19.3
+- **GPU**: H20 (cuda:0 NVIDIA H20 : cudaMallocAsync)
+- **显存**: 95 GB (空闲 69 GB)
+- **内存**: 618 GB (空闲 475 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (23):
+  - 水中2.json
+  - very nice3.json
+  - 水中3.json
+  - 002 flux2-klein 1.json
+  - 002 flux 文生图.json
+  - 水中4.json
+  - 002 flux 局部重绘 1.json
+  - 002 flux2-klein.json
+  - 001 analyse_image.json
+  - 双手.json
+  - very nice.json
+  - 002 flux2-klein 2.json
+  - 002 flux2-klein (场景).json
+  - 000 qwen 4步.json
+  - 水中1.json
+  - very nice2.json
+  - 000 qwen-edit.json
+  - 004 wan系列.json
+  - 000 qwen 视角.json
+  - 003 video_wan2.1_fusionx.json
+  - 000 qwen 8步 controlnet.json
+  - 002 flux1 fill 外补.json
+  - 002 flux 局部重绘.json
+- **模型** (88):
+  - epicrealism_naturalSinRC1VAE.safetensors
+  - majicMIX realistic 麦橘写实_v7.safetensors
+  - realisticVisionV60B1_v60B1VAE.safetensors
+  - 老王_Architecutral_MIX V0.5_V0.5.safetensors
+  - AWPainting_v1.2.safetensors
+  - GhostMix_V2.0.safetensors
+  - ReVAnimated_v122_V122.safetensors
+  - aamAnyloraAnimeMixAnime_v1.safetensors
+  - darkSushiMixMix_225D.safetensors
+  - kakarot25DCozy_cozy.safetensors
+  - meinamix_meinaV11.safetensors
+  - realcartoonPixar_v10.safetensors
+  - revAnimated_v122.safetensors
+  - revAnimated_v2Rebirth.safetensors
+  - 全网首发｜SHMILY油画风_v2.1(不仅是人物）.safetensors
+  - Film Photography佬鼠摄影_胶片摄影_v1.safetensors
+  - majicMIX alpha 麦橘男团_v2.0.safetensors
+  - 【LiblibAI首发】追梦女孩Dream Girl_7.0advance.safetensors
+  - 潮汐摄影风大模型_v1.0.safetensors
+  - 真实beautifulMIX_v2.0.safetensors
+  - 3dAnimationDiffusion_v10.safetensors
+  - blindbox_v1_mix.safetensors
+  - LEOSAM HelloWorld 新世界 _ SDXL大模型_v6.0.safetensors
+  - MOHAWK_v20.safetensors
+  - dreamshaperXL_alpha2Xl10.safetensors
+  - juggernautXL_v7Rundiffusion.safetensors
+  - juggernautXL_v9Rundiffusionphoto2.safetensors
+  - juggernautXL_v9rdphoto2Inpaint.safetensors
+  - leosamsHelloworldXL_helloworldXL70.safetensors
+  - 奇幻骇客_白棱XL_v1029.safetensors
+  - SUPIR-v0Q.ckpt
+  - SUPIR-v0Q_fp16.safetensors
+  - ltx-2-19b-dev-fp8.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - AWPainting XL_1.0.safetensors
+  - Dream Anime XL _ 筑梦动漫XL_v2.0 - 漫笔爱恋.safetensors
+  - animagineXLV31_v31.safetensors
+  - F.1 Kontext dev_fp16.safetensors
+  - F.1 Kontext dev_fp8.safetensors
+  - flux-2-klein-4b-fp8.safetensors
+  - flux-2-klein-4b.safetensors
+  - flux-2-klein-9b-fp8.safetensors
+  - flux-2-klein-9b.safetensors
+  - FLUX.1-dev.sft
+  - FLUX.1-schnell.sft
+  - FramePackI2V_HY_fp8_e4m3fn.safetensors
+  - iclight_sd15_fbc_unet_ldm.safetensors
+  - iclight_sd15_fc_unet_ldm.safetensors
+  - iclight_sd15_fcon.safetensors
+  - MelBandRoformer_fp16.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_bf16.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - Wan2.1-14B-T2V-FusionX-VACE-FP8_e4m3fn.safetensors
+  - wan2114BFusionx_fusionxImage2video.safetensors
+  - wan2114BFusionx_fusionxText2video.safetensors
+  - Wan2_1-VACE_module_14B_fp8_e4m3fn.safetensors
+  - Wan2_1-VACE_module_1_3B_bf16.safetensors
+  - Wan21-14B-SCAIL-preview_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_1-S2V-14B_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_2-S2V-14B_fp8_e4m3fn_scaled_KJ.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux1-dev.safetensors
+  - flux1-fill-dev.safetensors
+  - flux1-krea-dev-fp8.safetensors
+  - flux1-schnell-fp8.safetensors
+  - ltx-2.3-22b-distilled_transformer_only_fp8_input_scaled_v3.safetensors
+  - pyramid_flow_miniflux_bf16_v2.safetensors
+  - WanT2V_MasterModel.safetensors
+  - Wan2_1-I2V-14B-480P_fp8_e4m3fn.safetensors
+  - Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors
+  - Wan2_1-T2V-14B_fp8_e4m3fn.safetensors
+  - Wan2_1-T2V-1_3B_fp8_e4m3fn.safetensors
+  - Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-Animate-14B_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_2-Fun-Control-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-Fun-Control-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-S2V-14B_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-T2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-T2V-A14B_HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - wan2.2_i2v_A14b_high_noise_scaled_fp8_e4m3_lightx2v_4step_comfyui.safetensors
+  - wan2.2_i2v_A14b_low_noise_scaled_fp8_e4m3_lightx2v_4step_comfyui.safetensors
+  - wan2.2_ti2v_5B_fp16.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (47 个, 前10):
+  - F.1手部优化-手指修复-手部特写-精致手模_V1.safetensors
+  - F.1- 未来超级跑车_F.1- 未来超级跑车.safetensors
+  - Flux Dev 4-step.safetensors
+  - ICEdit-MoE-LoRA.safetensors
+  - pytorch_lora.safetensors
+  - ltx-2-19b-distilled-lora-384.safetensors
+  - ltx-2-19b-ic-lora-detailer.safetensors
+  - ltx-2-19b-lora-camera-control-dolly-in.safetensors
+  - ltx-2-19b-lora-camera-control-dolly-left.safetensors
+  - ltx-2-19b-lora-camera-control-dolly-out.safetensors
+- **CLIP**: PowerPaint_model.safetensors, clip_l.safetensors, clip_vision_l.safetensors, gemma_3_12B_it_fp8_e4m3fn.safetensors, llava_llama3_fp8_scaled.safetensors, ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors, ltx-2.3_text_projection_bf16.safetensors, model.safetensors, pytorch_model.bin, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors, model.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5-xxl-enc-fp8_e4m3fn.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors, v1-5-pruned.safetensors
+- **VAE**: LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, Wan2.2_VAE.pth, Z-image-vae.safetensors, ae.safetensors, animevae.pt, autoencoder_fix_kl-f8-trinart_characters.ckpt, diffusion_pytorch_model.bin, diffusion_pytorch_model.safetensors, flux-ae.sft, flux2-vae.safetensors, hunyuan_video_vae_bf16.safetensors, kl-f8-anime.ckpt, kl-f8-anime.pt, kl-f8-anime2.ckpt, kolorsVAE_fp16Safetensors.safetensors, orangemix.vae.pt, pyramid_flow_vae_bf16.safetensors, qwen_image_vae.safetensors, sdxl_vae.safetensors, sdxl_vae_fp16fix.safetensors, taeltx2_3.safetensors, vae-ft-ema-560000-ema-pruned.ckpt, vae-ft-mse-840000-ema-pruned.safetensors, vaeFtMse840000Ema_v10.safetensors, wan_2.1_vae.safetensors, taesd, taesdxl, taesd3, taef1, pixel_space
+
+### 21. 116.235.33.70:8000
+
+- **版本**: 0.24.0
+- **GPU**: RTX PRO 6000 BB (cuda:0 NVIDIA RTX PRO 6000 Blackwell Workstation Edition : cudaMallocAsync)
+- **显存**: 96 GB (空闲 68 GB)
+- **内存**: 63 GB (空闲 29 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (82):
+  -  kontext 局部重绘.json
+  - (KJ版)Wan2.2图生视频超级加速版V4（进一步提升速度）.json
+  - 1.json
+  - 11.json
+  - 123.json
+  - 222.json
+  - 3.json
+  - 3d_triposplat_image_to_gaussian_splat.json
+  - 3d模型角度截图.json
+  - 4图参考.json
+  - Aio.json
+  - Anima.json
+  - Bernini_testing_video_edit_02.json
+  - Depth Anything V3.json
+  - depth.json
+  - edit_anything_with_ref_or_motion_transfer_v0.1.json
+  - Fill+Redux.json
+  - Flux Kontext Dev双图模式.json
+  - Flux.2-Klein-图像编辑.json
+  - Flux.2-Klein-文生图.json
+  - flux2 参考局部重绘.json
+  - HyperLoRA-T2I.json
+  - image_firered_image_edit1_1.json
+  - image_flux2.json
+  - image_qwen_image_edit_2511.json
+  - image_z_image_turbo.json
+  - IMG2IMG-ADetailer-v5.0-vslinx.json
+  - LG relight.json
+  - LTX+2.3++首中尾三图+多图+.json
+  - LTX-2.3_ICLoRA_cameraman.json
+  - LTX-2.3_MSR_sample_workflow_V1.json
+  - ltx2.3 控制视频1.json
+  - ltx2.3-ic-lora-cameraman.json
+  - ltx23_edit_anything_v1.1.json
+  - LTXV2.0 Uncensored Video Generation Workflow.json
+  - man.json
+  - manga2anime.json
+  - mochawan2.1.json
+  - nunchaku.json
+  - pixal3d.json
+  - pixal3d_cam_control.json
+  - pixel.json
+  - qwen 参照光影.json
+  - qwen-image-edit.json
+  - qwen3Vl提示词生成.json
+  - qwenedit 局部重绘.json
+  - qwen_t2i_subgraphed.json
+  - Q版动漫小人跳舞工作流.json
+  - sam3.json
+  - Sample_SDXL.json
+  - SeedVR2_HD_video_upscale.json
+  - SeedVR2_simple_image_upscale.json
+  - sharp_exif 3d泼溅.json
+  - text.json
+  - Trellis2geometry_only.json
+  - Trellis2geometry_texture.json
+  - TXT2IMG-ADetailer-v4.5-vslinx.json
+  - TXT2IMG-ADetailer-v5.0-vslinx.json
+  - video_ltx2_3_i2v1 2.json
+  - video_ltx2_3_i2v1.json
+  - video_ltx2_3_i2v2.json
+  - video_ltx2_3_id_lora.json
+  - video_ltx2_3_id_lora1.json
+  - video_wanmove_480p.json
+  - vram.json
+  - wan2.2_LIGHTNING-EDITION_long-video_FP8GGUF.json
+  - wan2.2视频高清修复.json
+  - Wan21_SCAIL2_Testing.2.json
+  - wanvideo2_2_I2V_A14B_example_WIP.json
+  - wanvideo_2_1_14B_I2V_example_03.json
+  - wanvideo_SteadyDancer_example_01.json
+  - wanvideo_WanAnimate_example_01.json
+  - wanvideo_WanMove_I2V_example_01.json
+  - 写实&动漫人物一键12表情&单独表情切换生成 qwem_edit_2511.json
+  - 双截棍扩图.json
+  - 反推提示词.json
+  - 外扩图片.json
+  - 舞蹈姿势骨架匹配工作流.json
+  - 表情.json
+  - 裁切.json
+  - 视频剪切.json
+  - 解码.json
+- **模型** (38):
+  - 10Eros_v1-fp8mixed_learned.safetensors
+  - 2D_Pixel_Sprites.safetensors
+  - Anything-V3.0-pruned-fp16.safetensors
+  - BSSEquinoxILSemi_v50.safetensors
+  - Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors
+  - RealVisXL_v4_BakedVAE.safetensors
+  - SUPIR-v0F_fp16.safetensors
+  - SUPIR-v0Q_fp16.safetensors
+  - awpainting_v14.safetensors
+  - hunyuan_3d_v2.1.safetensors
+  - ltx-2.3-22b-distilled-1.1.safetensors
+  - novaAnimeXL_ilV150.safetensors
+  - photon_v1.safetensors
+  - ponyDiffusionV6XL_v6StartWithThisOne.safetensors
+  - sam3.1_multiplex_fp16.safetensors
+  - waiIllustriousSDXL_v160.safetensors
+  - waiIllustriousSDXL_v170.safetensors
+  - Anything-V5.safetensors
+  - FireRed-Image-Edit-1.1-transformer.safetensors
+  - iclight_sd15_fbc.safetensors
+  - iclight_sd15_fc.safetensors
+  - iclight_sd15_fcon.safetensors
+  - Wan21-WanMove_fp8_scaled_e4m3fn_KJ.safetensors
+  - Wan21_SteadyDancer_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_1-VACE_module_14B_fp8_e4m3fn.safetensors
+  - Wan2_1_mocha-14B-preview_fp8_e4m3fn_scaled_KJ.safetensors
+  - anima-base-v1.0.safetensors
+  - flux-2-klein-4b.safetensors
+  - flux-2-klein-9b-kv-fp8.safetensors
+  - flux-2-klein-9b.safetensors
+  - iclight_sd15_fc_unet_ldm.safetensors
+  - lucy-edit-dev-cui-fp16.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - triposplat_fp16.safetensors
+  - wan2.1_14B_SCAIL_2_fp8_scaled.safetensors
+  - wan2.2_bernini_r_high_noise_fp16.safetensors
+  - wan2.2_bernini_r_low_noise_fp16.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (157 个, 前10):
+  - AIIlustOjisan_AnimaP_v01.safetensors
+  - ANIRL-EQ-000004.safetensors
+  - Ahegao_flux.safetensors
+  - BallsDeep-IL-V2.2-S.safetensors
+  - Characters_Expression_Sheet.safetensors
+  - Convert the image to ChatGPT 4o style pixel art_kontext.safetensors
+  - Convert to a realistic art style-KontextLoRA.safetensors
+  - ElinSprite_AnimaBaseV10_byKonan.safetensors
+  - FComic_HardCore_IL_V2.safetensors
+  - FLUX MysticXXX-v6.safetensors
+- **CLIP**: EVA02_CLIP_L_336_psz14_s6B.pt, awq-int4-flux.1-t5xxl.safetensors, clip_l.safetensors, gemma312BAbliterated_v10aExperimental.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, ltx-2.3-22b-distilled_embeddings_connectors.safetensors, mistral_3_small_flux2_bf16.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_06b_base.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp4mixed.safetensors, qwen_3_8b_fp8mixed.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors, umt5-xxl-enc-bf16.safetensors, umt5-xxl-encoder-fp8.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: Wan2_1_VAE_bf16.safetensors, ae.safetensors, flux2-vae.safetensors, full_encoder_small_decoder.safetensors, qwen_image_vae.safetensors, sdxl_vae.safetensors, taeltx2_3.safetensors, triposplat_vae_decoder_fp16.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, wan2.2_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 22. 69.222.178.130:8000
+
+- **版本**: 0.22.3
+- **GPU**: RTX PRO 6000 BB (cuda:0 NVIDIA RTX PRO 6000 Blackwell Workstation Edition : native)
+- **显存**: 96 GB (空闲 43 GB)
+- **内存**: 95 GB (空闲 1 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (69):
+  - 0 fat ass as fuck.json
+  - audio_ace_step_1_5_checkpoint.json
+  - audio_ace_step_1_5_split_4b.json
+  - AVFAV.json
+  - bigtest.json
+  - ComfyUI_00022_.json
+  - ComfyUI_00048_.json
+  - ComfyUI_00060_.json
+  - ComfyUI_00141_.json
+  - ComfyUI_02934_.json
+  - dragonanim.json
+  - dualgpuwan.json
+  - dumbany.json
+  - elaraexperiment1.json
+  - ELARAS FIRST TEASE 2.2.json
+  - excellent multiangle!.json
+  - eyebayyls.json
+  - fat ass as fuck.json
+  - flux1_krea_dev.json
+  - forever33.json
+  - framerate increase.json
+  - geezfunk.json
+  - hahah22.json
+  - hidream_e1_1.json
+  - iliketoflykites.json
+  - imagemixhires.json
+  - image_omnigen2_t2i.json
+  - infinatesky.json
+  - jojoijo (2).json
+  - kreainsane9loras.json
+  - LAST IMAGE AND FPS UPSCALE.json
+  - loldklol.json
+  - Lpingpong.json
+  - LTX-2 GGUF I2V Workflow.json
+  - ltx2 weqd.json
+  - ltx2.3 first last with audio synx.json
+  - markwtf.json
+  - masterowned.json
+  - morningsun.json
+  - nailedewd.json
+  - nedistro.json
+  - newaudio.json
+  - peepaws2.json
+  - pocca.json
+  - poopiesss.json
+  - Qwen_Edit_Raylight.json
+  - scaledshit.json
+  - sillywis.json
+  - stp4.json
+  - suckass.json
+  - thats want vs.json
+  - thatstheone.json
+  - the big ltx2.json
+  - THE SINGING AUDIO TO VIDEO.json
+  - thefirst.json
+  - thewoman.json
+  - thirdpart.json
+  - tostart.json
+  - Unsaved Workflow (2).json
+  - VIDEO UPSCALER.json
+  - video_ltx2_3_i2v with chunked.json
+  - video_ltx2_3_i2v.json
+  - video_ltx2_3_ia2v AWESOME.json
+  - WE GONNA MAKE IT WORK!.json
+  - wirerepai.json
+  - wtf55.json
+  - wtfff.json
+  - wth.json
+  - yesyesyesyes.json
+- **模型** (62):
+  - ace_step_1.5_turbo_aio.safetensors
+  - ace_step_v1_3.5b.safetensors
+  - dreamshaper_8.safetensors
+  - flux1-dev-fp8.safetensors
+  - hunyuan_3d_v2.1.safetensors
+  - ltx-2-19b-dev-fp8.safetensors
+  - ltx-2-19b-distilled.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - ltx-2.3-22b-dev.safetensors
+  - ltx-2.3-22b-distilled-fp8.safetensors
+  - ltx-video-2b-v0.9.5.safetensors
+  - ltxv-2b-0.9.6-distilled-04-25.safetensors
+  - sd3.5_large_fp8_scaled.safetensors
+  - stable-audio-open-1.0.safetensors
+  - stable_audio_3_medium.safetensors
+  - sulphur_dev_bf16.safetensors
+  - sulphur_dev_fp8mixed.safetensors
+  - sulphur_lora_rank_768.safetensors
+  - v1-5-pruned-emaonly-fp16.safetensors
+  - FireRed-Image-Edit-1.1-transformer.safetensors
+  - Wan2_1-I2V-14B-480p_fp8_e4m3fn_scaled_KJ.safetensors
+  - acestep_v1.5_turbo.safetensors
+  - acestep_v1.5_xl_sft_bf16.safetensors
+  - acestep_v1.5_xl_turbo_bf16.safetensors
+  - chroma-radiance-x0.safetensors
+  - chrono_edit_14B_fp16.safetensors
+  - ernie-image-turbo.safetensors
+  - flux-2-klein-4b.safetensors
+  - flux-2-klein-9b-fp8.safetensors
+  - flux-2-klein-base-4b-fp8.safetensors
+  - flux-2-klein-base-4b.safetensors
+  - flux-2-klein-base-9b-fp8.safetensors
+  - flux-2-klein-base-9b.safetensors
+  - flux.1-fill-dev-OneReward-transformer_fp8.safetensors
+  - flux1-dev.safetensors
+  - flux1-fill-dev.safetensors
+  - flux1-krea-dev_fp8_scaled.safetensors
+  - flux2_dev_fp8mixed.safetensors
+  - hidream_e1_1_bf16.safetensors
+  - hidream_e1_full_bf16.safetensors
+  - hidream_i1_full_fp8.safetensors
+  - humo_17B_fp8_e4m3fn.safetensors
+  - hunyuanvideo1.5_1080p_sr_distilled_fp16.safetensors
+  - hunyuanvideo1.5_720p_i2v_fp16.safetensors
+  - hunyuanvideo15_vae_fp16.safetensors
+  - longcat_image_bf16.safetensors
+  - lotus-depth-d-v1-1.safetensors
+  - omnigen2_fp16.safetensors
+  - ovis_image_bf16.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_bf16.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - wan2.1_vace_1.3B_fp16.safetensors
+  - wan2.1_vace_14B_fp16.safetensors
+  - wan2.2_fun_control_5B_bf16.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_s2v_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_ti2v_5B_fp16.safetensors
+- **LoRA** (42 个, 前10):
+  - FireRed-Image-Edit-1.0-Lightning-8steps-v1.0.safetensors
+  - Flux_2-Turbo-LoRA_comfyui.safetensors
+  - Jesse 2.0.safetensors
+  - LTX2.3Animated.safetensors
+  - MoXinV1.safetensors
+  - Qwen-Image-Edit-2509-Light-Migration.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2509-Lightning-8steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Lightning-4steps-V1.0.safetensors
+- **CLIP**: byt5_small_glyphxl_fp16.safetensors, clip_g_hidream.safetensors, clip_l.safetensors, clip_l_hidream.safetensors, ernie-image-prompt-enhancer.safetensors, gemma-3-12b-it-abliterated_heretic_lora_rank64_bf16.safetensors, gemma-3-12b-it-abliterated_lora_rank64_bf16.safetensors, gemma_3_12B_it.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, llama_3.1_8b_instruct_fp8_scaled.safetensors, ministral-3-3b.safetensors, mistral_3_small_flux2_bf16.safetensors, ovis_2.5.safetensors, qwen3.5_2b_bf16.safetensors, qwen_0.6b_ace15.safetensors, qwen_1.7b_ace15.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_2.5_vl_fp16.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors, qwen_4b_ace15.safetensors, t5-base.safetensors, t5gemma_b_b_ul2.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: Wan2_1_VAE_bf16.safetensors, ace_1.5_vae.safetensors, ae.safetensors, flux2-vae.safetensors, hunyuanvideo15_vae_fp16.safetensors, qwen_image_vae.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, wan2.2_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 23. 46.225.241.162:9090
+
+- **版本**: 0.22.0
+- **GPU**: RTX PRO 6000 BB (cuda:0 NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition : cudaMallocAsync)
+- **显存**: 95 GB (空闲 49 GB)
+- **内存**: 251 GB (空闲 175 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (6):
+  - Image_edit_9b_distilled.json
+  - image_gen_9b.json
+  - image_edit.json
+  - image_gen.json
+  - Flux2_klein_image_edit_9b_distilled.json
+  - image_flux2_text_to_image_9b.json
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: qwen_3_8b_fp8mixed.safetensors
+- **VAE**: flux2-vae.safetensors, full_encoder_small_decoder.safetensors, pixel_space
+
+### 24. https://virtucomfy.ddns.net
+
+- **版本**: 0.24.0
+- **GPU**: RTX PRO 6000 BB (cuda:0 NVIDIA RTX PRO 6000 Blackwell Workstation Edition : cudaMallocAsync)
+- **显存**: 95 GB (空闲 94 GB)
+- **内存**: 188 GB (空闲 79 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (12):
+  - LTX Director Workflow_v3 with image reference.json
+  - Flux2_klein_9b_manga_colorization.json
+  - Image Reference to video LTX LiconMSR.json
+  - Easyillust_I2V.json
+  - video_ltx2_3_ia2v.json
+  - video_ltx2_3_i2v.json
+  - video_wan_vace_14B_v2v.json
+  - image_ideogram4_t2i.json
+  - LTX2.3 DIRECTOR GGUF 12GB.json
+  - VNCCS_3.0_Step1_CharacterCloner.json
+  - Action Library Pose Generation Multi-View Multi-Angle Multi-Perspective Qwen_Edit_2511.json
+  - ltx23SeedHunter_v15.json
+- **模型** (64):
+  - AnythingV5V3_v5PrtRE.safetensors
+  - Qwen-Rapid-AIO-NSFW-v17.safetensors
+  - SUPIR-v0F_fp16.safetensors
+  - hunyuan3d-dit-v2-mv.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - ltx-2.3-22b-distilled-fp8.safetensors
+  - model.safetensors
+  - novaAnimeXL_ilV180.safetensors
+  - ponyDiffusionV6XL_v6StartWithThisOne.safetensors
+  - sam3.1_multiplex_fp16.safetensors
+  - juggernaut_reborn.safetensors
+  - sd_xl_base_1.0_0.9vae.safetensors
+  - stable-audio-3-small-music-base .safetensors
+  - stable_audio_3_medium.safetensors
+  - stable_audio_3_medium_base.safetensors
+  - v1-5-pruned-emaonly-fp16.safetensors
+  - waiIllustriousSDXL_v170.safetensors
+  - 10Eros_v1_bf16.safetensors
+  - flux1-dev-kontext_fp8_scaled.safetensors
+  - NewBie-Image-Exp0.1-bf16.safetensors
+  - Wan2_1-I2V-14B-480p_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_1-T2V-1_3B_bf16.safetensors
+  - Wan2_1-VACE_module_1_3B_bf16.safetensors
+  - Wan22_Bernini_HIGH_fp16.safetensors
+  - Wan22_Bernini_LOW_fp16.safetensors
+  - acestep_v1.5_turbo.safetensors
+  - animaOfficial_preview3Base.safetensors
+  - anima_baseV10.safetensors
+  - capybara_v0.1.safetensors
+  - flux-2-klein-9b-kv.safetensors
+  - flux-2-klein-9b.safetensors
+  - flux-2-klein-base-4b-fp8.safetensors
+  - flux-2-klein-base-9b-fp8.safetensors
+  - flux1-fill-dev.safetensors
+  - flux-2-klein-9b-kv-fp8.safetensors
+  - fluxSigmaVision_fp16.safetensors
+  - ideogram 4.0.safetensors
+  - ideogram4_fp8_scaled.safetensors
+  - ideogram4_unconditional_fp8_scaled.safetensors
+  - lance_3b.safetensors
+  - lance_3b_video.safetensors
+  - ltx-2.3-22b-dev.safetensors
+  - ltx-2.3-22b-distilled_transformer_only_fp8_input_scaled_v3.safetensors
+  - model-00001-of-00002.safetensors
+  - pid_flux1_1024_to_4096_4step_bf16.safetensors
+  - pid_flux2_1024_to_4096_4step_2606_bf16.safetensors
+  - pid_flux2_512_to_2048_4step_bf16.safetensors
+  - qwen_image_2512_bf16.safetensors
+  - qwen_image_edit_2509_fp8mixed.safetensors
+  - qwen_image_edit_2511_bf16.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - triposplat_fp16.safetensors
+  - void_pass1.safetensors
+  - void_pass2.safetensors
+  - wan-14B_vace_skyreels_v3_R2V_e4m3fn_v1.safetensors
+  - wan2.1_t2v_14B_fp16.safetensors
+  - wan2.1_t2v_14B_fp8_scaled.safetensors
+  - wan2.1_vace_1.3B_fp16.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_fun_camera_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_fun_camera_low_noise_14B_fp8_scaled.safetensors
+  - z-anime-base-bf16.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (73 个, 前10):
+  - dmd2_sdxl_4step_lora_fp16.safetensors
+  - Flux2-Klein-9B-consistency-V2.safetensors
+  - mimimeter.safetensors
+  - Klein-consistency.safetensors
+  - LTX-2.3-OmniNFT-RL-Lora_bf16.safetensors
+  - LTX2_AnimeStyleV2.safetensors
+  - Ltx2.3-Licon-VBVR-I2V-390K-R32.safetensors
+  - PanelPainter_v3_Qwen2511.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-fp32.safetensors
+- **CLIP**: ViT-L-14-BEST-smooth-GmP-ft.safetensors, byt5_small_glyphxl_fp16.safetensors, clip_g.safetensors, clip_l.safetensors, gemma_3_12B_it.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, gemma_3_12B_it_fp8_scaled.safetensors, gemma_3_4b_it_bf16.safetensors, jina_clip_v2_bf16.safetensors, ltx-2.3_text_projection_bf16.safetensors, gemma_2_2b_it_elm_bf16.safetensors, qwen3.5_2b_bf16.safetensors, qwen3vl_8b_fp8_scaled.safetensors, qwen_0.6b_ace15.safetensors, qwen_2.5_vl_7b.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_06b_base.safetensors, qwen_3_06b_baseanima.safetensors, qwen_3_4b.safetensors, qwen_3_4b_fp4_flux2.safetensors, qwen_3_8b_fp8mixed.safetensors, qwen_4b_ace15.safetensors, t5gemma_b_b_ul2.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors, umt5-xxl-enc-bf16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, Qwen2.5-VL-ViT.safetensors, Qwen2D_VAE.safetensors, Wan2_1_VAE_bf16.safetensors, ace_1.5_vae.safetensors, ae.safetensors, cogvideox_vae.safetensors, flux2-vae.safetensors, flux_ae.safetensors, hunyuanvideo15_vae_fp16.safetensors, ltx-2-19b-dev_audio_vae.safetensors, ltx-2-19b-dev_video_vae.safetensors, qwen_image_vae.safetensors, taeltx2_3.safetensors, triposplat_vae_decoder_fp16.safetensors, wan_2.1_vae.safetensors, wan_alpha_2.1_vae_alpha_channel.safetensors, wan_alpha_2.1_vae_rgb_channel.safetensors, pixel_space
+
+### 25. 175.13.32.45:8004
+
+- **版本**: 0.3.50
+- **GPU**: RTX 5880 Ada (cuda:0 NVIDIA RTX 5880 Ada Generation : cudaMallocAsync)
+- **显存**: 48 GB (空闲 47 GB)
+- **内存**: 251 GB (空闲 102 GB)
+- **历史**: 无
+- **管理面板**: 有
+- **自定义节点数**: 6
+- **工作流** (2):
+  - my-Kontext-电商场景生成.json
+  - 原来-Kontext-电商场景生成.json
+- **模型** (1):
+  - flux1-kontext-dev-fp8-e5m2.safetensors
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: clip_l.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: ae.safetensors
+
+### 26. 59.110.66.181:8187
+
+- **版本**: 0.19.1
+- **GPU**: RTX 5880 Ada (cuda:0 NVIDIA RTX 5880 Ada Generation : cudaMallocAsync)
+- **显存**: 48 GB (空闲 42 GB)
+- **内存**: 511 GB (空闲 409 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (1):
+  - Unsaved Workflow.json
+- **模型** (10):
+  - dreamshaper_8_v8.safetensors
+  - juggernaut_aftermath.safetensors
+  - MelBandRoformer_fp16.safetensors
+  - Wan2_1-I2V-14B-480P_fp8_e4m3fn.safetensors
+  - Wan2_1-T2V-14B_fp8_e4m3fn.safetensors
+  - Wan2_1-VACE_module_14B_bf16.safetensors
+  - qwen_image_edit_2511_bf16.safetensors
+  - smoothMixWan22I2VT2V_i2vHigh.safetensors
+  - smoothMixWan22I2VT2V_t2vHighV20.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (11 个, 前10):
+  - Put it here_Qwen edit_V2.0.safetensors
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - SVI_v2_PRO_Wan2.2-I2V-A14B_HIGH_lora_rank_128_fp16.safetensors
+  - SVI_v2_PRO_Wan2.2-I2V-A14B_LOW_lora_rank_128_fp16.safetensors
+  - ThinkPadx9_zimageTurbo_model.safetensors
+  - consistence_edit_v2.safetensors
+  - latent-consistencylcm-lora-sdv1-5.safetensors
+  - lightx2v_I2V_14B_480p_cfg_step_distill_rank128_bf16(1).safetensors
+  - lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors
+  - qwen-image-edit-2511-multiple-angles-lora.safetensors
+- **CLIP**: clip_l.safetensors, open-clip-xlm-roberta-large-vit-huge-14_fp16.safetensors, qwen_2.5_vl_7b.safetensors, qwen_3_4b.safetensors, stable-diffusion-2-1-clip-fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5-xxl-enc-bf16.safetensors, umt5_xxl_fp16_org.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: Wan2_1_VAE_bf16.safetensors, Z-vae.safetensors, ae.safetensors, qwen_image_vae.safetensors, wan_2.1_vae_comfyorg.safetensors, pixel_space
+
+### 27. 59.110.66.181:8188
+
+- **版本**: 0.19.1
+- **GPU**: RTX 5880 Ada (cuda:0 NVIDIA RTX 5880 Ada Generation : cudaMallocAsync)
+- **显存**: 48 GB (空闲 46 GB)
+- **内存**: 511 GB (空闲 409 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (1):
+  - Unsaved Workflow.json
+- **模型** (10):
+  - dreamshaper_8_v8.safetensors
+  - juggernaut_aftermath.safetensors
+  - MelBandRoformer_fp16.safetensors
+  - Wan2_1-I2V-14B-480P_fp8_e4m3fn.safetensors
+  - Wan2_1-T2V-14B_fp8_e4m3fn.safetensors
+  - Wan2_1-VACE_module_14B_bf16.safetensors
+  - qwen_image_edit_2511_bf16.safetensors
+  - smoothMixWan22I2VT2V_i2vHigh.safetensors
+  - smoothMixWan22I2VT2V_t2vHighV20.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (11 个, 前10):
+  - Put it here_Qwen edit_V2.0.safetensors
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - SVI_v2_PRO_Wan2.2-I2V-A14B_HIGH_lora_rank_128_fp16.safetensors
+  - SVI_v2_PRO_Wan2.2-I2V-A14B_LOW_lora_rank_128_fp16.safetensors
+  - ThinkPadx9_zimageTurbo_model.safetensors
+  - consistence_edit_v2.safetensors
+  - latent-consistencylcm-lora-sdv1-5.safetensors
+  - lightx2v_I2V_14B_480p_cfg_step_distill_rank128_bf16(1).safetensors
+  - lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors
+  - qwen-image-edit-2511-multiple-angles-lora.safetensors
+- **CLIP**: clip_l.safetensors, open-clip-xlm-roberta-large-vit-huge-14_fp16.safetensors, qwen_2.5_vl_7b.safetensors, qwen_3_4b.safetensors, stable-diffusion-2-1-clip-fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5-xxl-enc-bf16.safetensors, umt5_xxl_fp16_org.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: Wan2_1_VAE_bf16.safetensors, Z-vae.safetensors, ae.safetensors, qwen_image_vae.safetensors, wan_2.1_vae_comfyorg.safetensors, pixel_space
+
+### 28. 117.50.196.121:8800
+
+- **版本**: 0.12.2
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 32 GB (空闲 29 GB)
+- **内存**: 95 GB (空闲 55 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 20
+- **工作流** (0): 无
+- **模型** (2):
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (802 个, 前10):
+  - BestTopFacefuck_high_noise.safetensors
+  - BestTopFacefuck_low_noise.safetensors
+  - BreastExpansionV_high_noise.safetensors
+  - BreastExpansionV_low_noise.safetensors
+  - ChristmasThighFuck_high_noise.safetensors
+  - ChristmasThighFuck_low_noise.safetensors
+  - CowgirlBackView_high_noise.safetensors
+  - CowgirlBackView_low_noise.safetensors
+  - Cumlesspress_high_noise.safetensors
+  - Cumlesspress_low_noise.safetensors
+- **CLIP**: umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: wan_2.1_vae.safetensors, taesd, taesdxl, taesd3, taef1, pixel_space
+
+### 29. 117.50.173.113:8800
+
+- **版本**: 0.12.2
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 32 GB (空闲 16 GB)
+- **内存**: 95 GB (空闲 51 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 10
+- **工作流** (0): 无
+- **模型** (2):
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (802 个, 前10):
+  - BestTopFacefuck_high_noise.safetensors
+  - BestTopFacefuck_low_noise.safetensors
+  - BreastExpansionV_high_noise.safetensors
+  - BreastExpansionV_low_noise.safetensors
+  - ChristmasThighFuck_high_noise.safetensors
+  - ChristmasThighFuck_low_noise.safetensors
+  - CowgirlBackView_high_noise.safetensors
+  - CowgirlBackView_low_noise.safetensors
+  - Cumlesspress_high_noise.safetensors
+  - Cumlesspress_low_noise.safetensors
+- **CLIP**: umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: wan_2.1_vae.safetensors, taesd, taesdxl, taesd3, taef1, pixel_space
+
+### 30. 117.50.189.68:8800
+
+- **版本**: 0.12.2
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 32 GB (空闲 27 GB)
+- **内存**: 95 GB (空闲 51 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 10
+- **工作流** (0): 无
+- **模型** (2):
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (802 个, 前10):
+  - BestTopFacefuck_high_noise.safetensors
+  - BestTopFacefuck_low_noise.safetensors
+  - BreastExpansionV_high_noise.safetensors
+  - BreastExpansionV_low_noise.safetensors
+  - ChristmasThighFuck_high_noise.safetensors
+  - ChristmasThighFuck_low_noise.safetensors
+  - CowgirlBackView_high_noise.safetensors
+  - CowgirlBackView_low_noise.safetensors
+  - Cumlesspress_high_noise.safetensors
+  - Cumlesspress_low_noise.safetensors
+- **CLIP**: umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: wan_2.1_vae.safetensors, taesd, taesdxl, taesd3, taef1, pixel_space
+
+### 31. 121.170.152.230:20201
+
+- **版本**: 0.3.56
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 32 GB (空闲 19 GB)
+- **内存**: 61 GB (空闲 39 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 39
+- **工作流** (47):
+  - ccc.json
+  - Face Swap Test.json
+  - Florence Test.json
+  - Flux Pulid Face Swap with Hand Fix.json
+  - flux pulid v3.json
+  - FLUX.1 Kontext [dev] 실사화.json
+  - Overlay Test.json
+  - [Flux] gguf PuLID with Inpaint.json
+  - [UA] Test - 3Step.json
+  - [유엔젤] Swap Test.json
+  - [유엔젤] 실사화.json
+  - [유엔젤] 아트 스타일 변경.json
+  - [유엔젤] 캐릭터화 - Acc only.json
+  - [유엔젤] 캐릭터화 v1.json
+  - [유엔젤] 캐릭터화 v2.json
+  - [유엔젤] 캐릭터화 v3.json
+  - [유엔젤] 캐릭터화.json
+  - 다중_캐릭터화_v260119.json
+  - 다중_캐릭터화_v260121.json
+  - 다중_캐릭터화_v260123.json
+  - 유아_캐릭터화_v251118.json
+  - 유아_캐릭터화_v251127.json
+  - 유아_캐릭터화_v251201_Experimental.json
+  - 유아_캐릭터화_v251211.json
+  - 유아_캐릭터화_v260107.json
+  - 유아_캐릭터화_v260123.json
+  - 유아_캐릭터화_v260129.json
+  - 유아_캐릭터화_v260208.json
+  - 유아_캐릭터화_v260209.json
+  - 유아_캐릭터화_v260311.json
+  - 유아_캐릭터화_v260316.json
+  - 유아_캐릭터화_리메이크_v260205.json
+  - 유아_캐릭터화_리메이크_v260206.json
+  - 초등_캐릭터화_Server_251118.json
+  - 초등_캐릭터화_v251126.json
+  - 초등_캐릭터화_v251127.json
+  - 초등_캐릭터화_v251205.json
+  - 초등_캐릭터화_v251211.json
+  - 초등_캐릭터화_v260102.json
+  - 초등_캐릭터화_v260106.json
+  - 초등_캐릭터화_v260107-PlaceIt.json
+  - 초등_캐릭터화_v260109.json
+  - 캐릭터화_Server_v250924.json
+  - 캐릭터화_Server_v251022.json
+  - 캐릭터화_Server_v251029.json
+  - 캐릭터화_Server_v251111.json
+  - 캐릭터화_Server_v251113.json
+- **模型** (5):
+  - svdq-int4_r32-flux.1-kontext-dev.safetensors
+  - Kijai-flux1-dev-fp8-e4m3fn.safetensors
+  - flux1-dev-kontext_fp8_scaled.safetensors
+  - svdq-fp4_r32-flux.1-dev.safetensors
+  - svdq-fp4_r32-flux.1-kontext-dev.safetensors
+- **LoRA** (56 个, 前10):
+  - F.1高清摄影系列_HDR_v1.safetensors
+  - diffusion_pytorch_model.safetensors
+  - Hand v2.safetensors
+  - [0]_3D illustration v1.0.safetensors
+  - [1]_E-Pixar3D.safetensors
+  - [2]_Flux 3D Animation Style LoRA.safetensors
+  - [3]_C hildren's Crayon Drawing Style.safetensors
+  - [4]_cute crayon.safetensors
+  - [Try1]_【3D chibi toy】Air dry clay style - FLUX.safetensors
+  - [Try2]_Hand painted stickers.safetensors
+- **CLIP**: EVA02_CLIP_L_336_psz14_s6B.pt, awq-int4-flux.1-t5xxl.safetensors, clip_l.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, taesd, taesdxl, taesd3, taef1
+
+### 32. 218.206.54.92:8000
+
+- **版本**: 0.22.3
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 32 GB (空闲 14 GB)
+- **内存**: 63 GB (空闲 23 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (11):
+  - fenjietuceng.json
+  - Unsaved Workflow.json
+  - xyhcpjx.json
+  - xyhcpjxapi.json
+  - xyhrongtu.json
+  - zuiqiangkoutu.json
+  - [提示词版]Flux-2-Klein-9B 万能产品修图  万物精修 产品渲染质感精修 电商产品修复v1.0.json
+  - 产品溶图打光_海报合成_产品打光_电商换背景_图片合成万物溶图V1.0.json
+  - 产品溶图打光_海报合成_产品打光_电商换背景_图片合成万物溶图V2.0.json
+  - 产品溶图打光_海报合成_产品打光_电商换背景_图片合成万物溶图V2.1.json
+  - 无损放大【显存16G】.json
+- **模型** (9):
+  - sd_xl_base_1.0.safetensors
+  - FLUX.2_dev_fp8-急速量化版_Mixed会员版.safetensors
+  - FLUX1-全能写实.safetensors
+  - Kontext_fp8.safetensors
+  - flux-2-klein-9b-fp8.safetensors
+  - flux1-dev.safetensors
+  - flux2-dev_fp8matmulmixed.safetensors
+  - 图片编辑模型_fp8.safetensors
+  - 最强flux1-krea-dev-Q4_1-GGUF_Q4_1.safetensors
+- **LoRA** (6 个, 前10):
+  - FLUX1_lora_Flux-Dev-4-step.safetensors
+  - Kontext-产品溶图打光_Kontext电商产品溶图V2.safetensors
+  - Kontext-自动纠正透视产品溶图融图_V1.safetensors
+  - Kontext_Lora_产品精修.safetensors
+  - kontext_全能溶图打光丨融图丨打光丨合成丨产品换背景_v1.0.safetensors
+  - kontext产品溶图打光_海报合成_产品打光_电商换背景_图片合成_溶图光影重绘_V1.0.safetensors
+- **CLIP**: FLUX1_clip_l.safetensors, FLUX1_clip_t5xxl_fp8_e4m3fn.safetensors, Kontext_clip_l.safetensors, Kontext_clip_t5xxl_fp8_e4m3fn_scaled.safetensors, clip_l.safetensors, qwen_3_8b_fp8mixed .safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: diffusion_pytorch_model.safetensors, FLUX1-vae.safetensors, Kontext-vae.safetensors, ae.safetensors, taesd3, taesdxl, taef1, taesd, pixel_space
+
+### 33. 59.56.243.146:8187
+
+- **版本**: 0.20.1
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 D : cudaMallocAsync)
+- **显存**: 32 GB (空闲 9 GB)
+- **内存**: 63 GB (空闲 44 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 49
+- **工作流** (11):
+  - 优化-工作流-图生图-批量.json
+  - 优化-工作流-图裂变1.0（平铺+白底）.json
+  - 优化-工作流-图裂变2.0（模特）.json
+  - 优化-工作流-洗图-批量.json
+  - 工作流-传文本-文生图-批量.json
+  - 工作流-去除背景.json
+  - 工作流-提取印花-v2.0.json
+  - 工作流-放大-批量.json
+  - 工作流-文字替换-单张.json
+  - 提取印花-单张.json
+  - 精准抠图-单张.json
+- **模型** (6):
+  - flux1-dev-fp8.safetensors
+  - juggernautXL_v8Rundiffusion.safetensors
+  - SUPIR-v0F_fp16.safetensors
+  - flux1-kontext-dev.safetensors
+  - Qwen-Image-Edit-2509_fp8_e4m3fn.safetensors
+  - flux1-dev-kontext_fp8_scaled.safetensors
+- **LoRA** (3 个, 前10):
+  - mask-印花提取.safetensors
+  - 提取纹理extract_texture_qwen_image_edit_2509_V1.safetensors
+  - Qwen-Image-Edit-Lightning-4steps-V1.0.safetensors
+- **CLIP**: clip_l.safetensors, qwen_2.5_vl_7b.safetensors, t5xxl_fp8_e4m3fn.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.sft, ae.safetensors, qwen_image_vae.safetensors, taesd, taesdxl, taesd3, taef1, pixel_space
+
+### 34. 95.31.177.71:10000
+
+- **版本**: 0.24.1
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 32 GB (空闲 30 GB)
+- **内存**: 31 GB (空闲 16 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 107
+- **工作流** (27):
+  -  Lonecat's ILLU NSFW 8 run Original_00104_.json
+  - 2026-05-20-172541_DasiwaIllustriousAnime_alluringabyss_3464641207.json
+  - Anima Enhancer version 8.0.json
+  - Anima Enhancer version 9.0.json
+  - clean_workflow_paths.py
+  - DasiWA HttpS.json
+  - DaSiWa WAN 2.2 i2v FastFidelity C-AiO-78.json
+  - DA_SDXL_Main_v17.3.json
+  - Flux 2 klein edit.json
+  - Flux.2 AIO Pro Simple v3.1 (2).json
+  - Flux.2-klein - мультипоза.json
+  - FLUX2-DEV-KLEIN_4_and_9B_1_click_multiple_character_angles-v1.0.json
+  - ideogram_uncencored.json
+  - image_qwen_image_layered_control.json
+  - inpaint.json
+  - Klein_9b swap-a-roni (Можно лицо менять).json
+  - Lonecat's ILLU NSFW 8.1.json
+  - Moody F2K Edit Workflow - V2 (неплохой редактор, можно делать инпейнт отпейнт).json
+  - professionalBackground_v14.json
+  - Qwen Edit 2511 Multi-Edit-v1.json
+  - Qwen edit.json
+  - Qwenn_Edit_2511_SeedVR2_Upscaling.json
+  - SeedVR2_1080p_video_upscale_interpolation_v11.json
+  - tagger.json
+  - UltimateWorkflowSuperComplete_XL_V3_Crix.json
+  - WAN 2.2 Smooth Workflow v5.0.json
+  - Персонаж с разных сторон .json
+- **模型** (38):
+  - DasiwaIllustriousAnime_alluringabyss.safetensors
+  - hunyuan_3d_v2.1.safetensors
+  - DasiwaIllustriousAnime_epitaphecstasy.safetensors
+  - animayhemPaleRider_v30PlainsDrifter.safetensors
+  - novaAnimeXL_ilV160.safetensors
+  - oneObsession_v20Bold.safetensors
+  - ilustmix_v10.safetensors
+  - cyberrealisticPony_v170.safetensors
+  - illustriousRealism_ilXL10V40.safetensors
+  - raMix_v10.safetensors
+  - BSSEquinoxILSemi_v40.safetensors
+  - perfectdeliberate_v8.safetensors
+  - throwingPastaScampi_v20.safetensors
+  - indigoVoidFurryFusedXL_noobaiV30.safetensors
+  - aMixIllustrious_aMix.safetensors
+  - cyberrealisticFlux_v21.safetensors
+  - divingIllustrious_nijiMutedColorReal.safetensors
+  - electrumCinnamonBeta_electrumCinnamon.safetensors
+  - electrumCinnamonBeta_electrumCinnamonV20.safetensors
+  - ilustmix_v70Cinematic.safetensors
+  - matureCitronIL_Unstable20.safetensors
+  - miaomiaoRealskin_epsV14.safetensors
+  - naixlMmmmix_v50.safetensors
+  - nova3DCGXL_ilV80.safetensors
+  - DasiwaWAN22I2V14BLightspeed_boundbiteHighV10.safetensors
+  - DasiwaWAN22I2V14BLightspeed_boundbiteLowV10.safetensors
+  - Moody-Desire-V2_pro_fp8.safetensors
+  - Moody-Desire-v2-edit%2Bheadswap-FP8.safetensors
+  - animosity_animaV20Base.safetensors
+  - bagOfHoldingAnima_v1.safetensors
+  - dasiwaAnima_luminousLabyrinthV1.safetensors
+  - florence-2-large-florence-2-large-nsfw-pretrain-gt.safetensors
+  - ideogram4_fp8_scaled.safetensors
+  - ideogram4_unconditional_fp8_scaled.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - riMixIllustriousAnima_riMixAnima.safetensors
+  - svdq-int4_r32-sdxl.safetensors
+  - triposplat_fp16.safetensors
+- **LoRA** (181 个, 前10):
+  - 0064 translucent temptation_v1_pony.safetensors
+  - 748cm_illu.safetensors
+  - 7EVJKE6AWHC97YRGCFZ09BRJX0.safetensors
+  - 8.BSS_Detail_Enhancer_v3Best.safetensors
+  - 96YOTTEA_IL.safetensors
+  - ALL-IN-ONE_PORN.safetensors
+  - ALTGRL(CYBERILL).safetensors
+  - AddMicroDetails_Illustrious_v5.safetensors
+  - AddMicroDetails_Illustrious_v6.safetensors
+  - Ass Size Slider - Illustrious.safetensors
+- **CLIP**: Qwen3-0.6B-abliterated.safetensors, ViT-L-14-BEST-smooth-GmP-ft.safetensors, clip_g.safetensors, clip_g_hidream.safetensors, clip_l.safetensors, clip_l_hidream.safetensors, google_t5-v1_1-xxl_encoderonly-fp8_e4m3fn.safetensors, llama_3.1_8b_instruct_fp8_scaled.safetensors, nsfw_wan_umt5-xxl_fp8_scaled.safetensors, open-clip-xlm-roberta-large-vit-huge-14_visual_fp16.safetensors, qwen3vl_8b_fp8_scaled.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_8b_fp4mixed.safetensors, qwen_3_8b_fp8mixed.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors, t5xxl_um_fp16.safetensors, t5xxl_um_fp8_e4m3fn_scaled.safetensors, umt5-xxl-enc-fp8_e4m3fn.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: Wan2_1_VAE_bf16.safetensors, ae.safetensors, clip_l.safetensors, flux2_vae.safetensors, google_t5-v1_1-xxl_encoderonly-fp8_e4m3fn.safetensors, qwen_image_layered_vae.safetensors, qwen_image_vae.safetensors, sdxl_vae.safetensors, triposplat_vae_decoder_fp16.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, wan_2.1_vae.safetensors, taesd3, taesd, taef1, taesdxl, pixel_space
+
+### 35. 111.230.55.243:2601
+
+- **版本**: 0.22.0
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 31 GB (空闲 12 GB)
+- **内存**: 125 GB (空闲 108 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 165
+- **工作流** (2):
+  - 1官流 wan22_animate 循环长视频动作迁移.json
+  - 反推图生图_V3.json
+- **模型** (49):
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - Qwen-Rapid-AIO-SFW-v23.safetensors
+  - LBM_relighting.safetensors
+  - Wan22_Bernini_HIGH_fp8_e4m3fn_scaled.safetensors
+  - Wan22_Bernini_LOW_fp8_e4m3fn_scaled.safetensors
+  - ditto_global_comfy.safetensors
+  - ditto_global_style_comfy.safetensors
+  - ditto_sim2real_comfy.safetensors
+  - flux-dev-fp8.safetensors
+  - 猫吖 F.1 _真实_DEV_FP8_T5_vae.safetensors
+  - Flux2-Klein-9B-True-v2 .safetensors
+  - flux-2-klein-9b-kv.safetensors
+  - flux-2-klein-9b.safetensors
+  - iclight_sd15_fbc_unet_ldm.safetensors
+  - iclight_sd15_fc_unet_ldm.safetensors
+  - iclight_sd15_fcon.safetensors
+  - ideogram4_fp8_scaled.safetensors
+  - ideogram4_unconditional_fp8_scaled.safetensors
+  - Wan2_1-InfiniteTalk-Multi_fp16.safetensors
+  - Wan2_1-InfiniteTalk-Single_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-Animate-14B_fp8_v2.safetensors
+  - Wan2_2-I2V-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-T2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-T2V-A14B_HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - flux1-kontext-dev-fp8-e4m3fn.safetensors
+  - ltx-2.3-22b-dev_transformer_only_fp8_scaled.safetensors
+  - MelBandRoformer_fp16.safetensors
+  - MelBandRoformer_fp32.safetensors
+  - WanVideo_2_1_Multitalk_14B_fp8_e4m3fn.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - FireRed-Image-Edit-1.1-transformer_fp8-e4m3fn.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - DasiwaWAN22I2V14BV8V1_tastysinHighV81.safetensors
+  - DasiwaWAN22I2V14BV8V1_tastysinLowV81.safetensors
+  - Wan14Bi2vFusioniX.safetensors
+  - Wan21-14B-SCAIL-preview_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_1-I2V-14B-480P_fp8_e4m3fn.safetensors
+  - Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors
+  - Wan2_1-MiniMaxRemover_1_3B_fp16.safetensors
+  - Wan2_1-T2V-14B_fp8_e4m3fn.safetensors
+  - Wan2_2_Fun_VACE_module_A14B_HIGH_bf16.safetensors
+  - Wan2_2_Fun_VACE_module_A14B_LOW_bf16.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_文生_high_14B_fp8_scaled.safetensors
+  - Zimage_by_RunDiffusion.safetensors
+  - red-a-image-turbo.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (137 个, 前10):
+  - 2511-multiple-换角度.safetensors
+  - AnythingtoRealCharacters2511_20.safetensors
+  - FireRed-Image-Edit-1.0-Lightning-8steps-v1.2.safetensors
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-fp32.safetensors
+  - Qwen2511生成超写实人像-人像细节修复_HRP_20.safetensors
+  - 人像写真美颜编辑-千问Edit-2511_v1.safetensors
+  - 写实摄影-Qwen-2511_v1.safetensors
+  - 摄影极致-2511_v1.safetensors
+  - wan2.2_t2v_A14b_high_noise_lora_rank64_lightx2v_4step_1217.safetensors
+- **CLIP**: CLIPtion_20241219_fp16.safetensors, EVA02_CLIP_L_336_psz14_s6B.pt, model.safetensors, pytorch_model.bin, clip_l.safetensors, stable-diffusion-2-1-clip-fp16.safetensors, stable-diffusion-2-1-clip.safetensors, gemma_3_12B_it.safetensors, ltx-2.3_text_projection_bf16.safetensors, qwen3vl_8b_fp8_scaled.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_8b.safetensors, model(1).safetensors, model.safetensors, stable-diffusion-2-1-clip.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, models_clip_open-clip-xlm-roberta-large-vit-huge-14.pth, open-clip-xlm-roberta-large-vit-huge-14_fp16.safetensors, open-clip-xlm-roberta-large-vit-huge-14_visual_fp32.safetensors, umt5-xxl-enc-bf16.safetensors, umt5-xxl-enc-fp8_e4m3fn.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ComfyUI-wan2.2_vae.safetensors, UltraFlux-vae_v1.safetensors, Wan2_1_VAE_bf16.safetensors, ae.safetensors, ae.sft, flux2-vae.safetensors, LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, qwen_image_layered_vae.safetensors, qwen_image_vae.safetensors, qwen_lora_vae.safetensors, wan_2.1_vae.safetensors, z-image-vae.safetensors, taef1, taesd3, taesd, taesdxl, pixel_space
+
+### 36. 104.232.177.178
+
+- **版本**: 0.24.0
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 31 GB (空闲 30 GB)
+- **内存**: 125 GB (空闲 118 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (12):
+  - flux1-schnell-fp8.safetensors
+  - mdjrny-v4.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2511-FP8_e4m3fn.safetensors
+  - flux1-dev-kontext_fp8_scaled.safetensors
+  - flux1-dev.safetensors
+  - qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_fp8_e4m3fn_scaled_lightning_8steps_v1.0.safetensors
+  - qwen_image_fp8mixed.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (4 个, 前10):
+  - QWEN_EDIT_ACTION_V1.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - illustration-1.0-qwen-image.safetensors
+- **CLIP**: clip_l.safetensors, qwen_2.5_vl_7b.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, qwen_image_vae.safetensors, pixel_space
+
+### 37. 110.93.240.151:8194
+
+- **版本**: 0.17.0
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 31 GB (空闲 31 GB)
+- **内存**: 62 GB (空闲 54 GB)
+- **历史**: 无
+- **管理面板**: 有
+- **自定义节点数**: 12
+- **工作流** (4):
+  - EnglishTTSAPI2.0 (1).json
+  - ImageGeneration.json
+  - avatar_api (1) (3).json
+  - avatar_api (1) (2) (1).json
+- **模型** (11):
+  - ltx-2-19b-dev-fp8.safetensors
+  - ltx-2-19b-distilled-fp8.safetensors
+  - ltx-2-3-22b-audio_vae.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - MelBandRoformer_fp32.safetensors
+  - flux2_dev_fp8mixed.safetensors
+  - ltx-2-3-22b-dev-model.safetensors
+  - ltx-2-3-22b-distill-model.safetensors
+  - MelBandRoformer_fp16.safetensors
+  - melband_roformer_base.ckpt
+  - melband_roformer_big_beta4.ckpt
+- **LoRA** (10 个, 前10):
+  - HeroCam_LTX2_bucket113_step_1500.safetensors
+  - Wan21_I2V_14B_lightx2v_cfg_step_distill_lora_rank64.safetensors
+  - lightx2v_12v_14B_480p.safetensors
+  - gemma-3-12b-it-abliterated_lora_rank64_bf16.safetensors
+  - ltx-2-19b-distilled-lora-384(1).safetensors
+  - ltx-2-19b-distilled-lora-384.safetensors
+  - ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors
+  - ltx-2-19b-ic-lora-detailer.safetensors
+  - ltx-2-19b-lora-camera-control-dolly-left.safetensors
+  - ltx-2.3-22b-distilled-lora-384.safetensors
+- **CLIP**: gemma_3_12B_it.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, ltx-2-19b-embeddings_connector_distill_bf16.safetensors, ltx-2-3-22b-text_encoder.safetensors, mistral_3_small_flux2_fp8.safetensors, umt5_xxl_fp16.safetensors
+- **VAE**: LTX2_audio_vae_bf16(1).safetensors, LTX2_audio_vae_bf16.safetensors, LTX2_video_vae_bf16(1).safetensors, LTX2_video_vae_bf16.safetensors, flux2-vae.safetensors, ltx-2-19b-dev_audio_vae.safetensors, ltx-2-3-22b-VAE.safetensors, ltx-2-3-22b-audio_vae (1).safetensors, Wan2_1_VAE_bf16.safetensors, pixel_space
+
+### 38. 139.196.222.153:8080
+
+- **版本**: 0.22.0
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 31 GB (空闲 28 GB)
+- **内存**: 62 GB (空闲 39 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 8
+- **工作流** (9):
+  - gsl_starter_1_1.json
+  - image_qwen_image_edit_2509.json
+  - image_z_image_turbo_fun_union_controlnet.json
+  - sdxl_revision_text_prompts.json
+  - start.json
+  - text2video.json
+  - text_to_image_to_3d.json
+  - video_ltx2_3_i2v.json
+  - video_wan2_2_14B_t2v (2).json
+- **模型** (15):
+  - RealVisXL_V5.0_fp16.safetensors
+  - v1-5-pruned-emaonly.ckpt
+  - dreamshaper_8.safetensors
+  - hunyuan_3d_v2.1.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - sd_xl_base_1.0.safetensors
+  - v1-5-pruned-emaonly-fp16.safetensors
+  - flux-2-klein-4b-fp8.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (7 个, 前10):
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Lightning-4steps-V1.0.safetensors
+  - ltx-2.3-22b-distilled-lora-384.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
+  - wan2.2_t2v_lightx2v_4steps_lora_v1.1_high_noise.safetensors
+  - wan2.2_t2v_lightx2v_4steps_lora_v1.1_low_noise.safetensors
+- **CLIP**: clip_l.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, flux2-vae.safetensors, qwen_image_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 39. 182.18.83.37:8188
+
+- **版本**: 0.20.1
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 31 GB (空闲 22 GB)
+- **内存**: 1 TB (空闲 1 TB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (3):
+  - flux1-dev.safetensors
+  - WanT2V_MasterModel.safetensors
+  - wan2.1_i2v_14b_480p_fp8.safetensors
+- **LoRA** (1 个, 前10):
+  - comicstrips_flux_lora_v1.safetensors
+- **CLIP**: clip_l.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 40. 211.217.209.154:8188
+
+- **版本**: 0.4.0
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 31 GB (空闲 31 GB)
+- **内存**: 125 GB (空闲 113 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (9):
+  - ltx-video-2b-v0.9.5.safetensors
+  - flux2_dev_fp8mixed.safetensors
+  - z_image_turbo_bf16.safetensors
+  - wan2.2_i2v_high_noise_14B_fp16.safetensors
+  - wan2.2_i2v_low_noise_14B_fp16.safetensors
+  - wan2.2_ti2v_5B_fp16.safetensors
+  - wan2.1_i2v_480p_14B_fp16.safetensors
+  - wan2.1_i2v_720p_14B_fp16.safetensors
+  - wan2.1_t2v_1.3B_fp16.safetensors
+- **LoRA** (9 个, 前10):
+  - Detailed_imperfect_skin_faces_and_torso_for_FLUX-000025_1066446.safetensors
+  - Diffused light glamour photography style_1338701.safetensors
+  - FLUX_FD-FelldudeNudeMix64_869974.safetensors
+  - breast-size2_932482.safetensors
+  - change_clothes_to_nothing_000012800.safetensors
+  - curvy_1202097.safetensors
+  - flux-lora-000006_2036022.safetensors
+  - photorealistic_nude_871318.safetensors
+  - pussydiffusion-f1_1101748.safetensors
+- **CLIP**: clip_l.safetensors, clip_vision_h.safetensors, mistral_3_small_flux2_fp8.safetensors, qwen_3_4b.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, ae.safetensors, flux2-vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 41. 185.151.187.85:8188
+
+- **版本**: 0.24.0
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 31 GB (空闲 31 GB)
+- **内存**: 59 GB (空闲 52 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 12
+- **工作流** (1):
+  - LTX_2.3_i2v_00363_.прыгаетНаМужч.загрузка.json
+- **模型** (2):
+  - 10Eros_v1-fp8mixed_learned.safetensors
+  - snofsSexNudesAndOtherFunStuff_v14Distilled.safetensors
+- **LoRA** (6 个, 前10):
+  - LTX-2.3-OmniNFT-RL-Lora_bf16.safetensors
+  - LTX2.3_Crisp_Enhance.safetensors
+  - Ltx2.3-Licon-VBVR-I2V-390K-R32.safetensors
+  - full_encoder_small_decoder.safetensors
+  - ltx-2.3-22b-distilled-lora-1.1_fro90_ceil72_condsafe.safetensors
+  - ltx-2.3-id-lora-celebvhq-3k.safetensors
+- **CLIP**: gemma_3_12B_it_fp8_e4m3fn.safetensors, qwen_3_8b_fp8mixed.safetensors
+- **VAE**: full_encoder_small_decoder.safetensors, pixel_space
+
+### 42. 202.91.45.198:8188
+
+- **版本**: 0.3.76
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 31 GB (空闲 19 GB)
+- **内存**: 251 GB (空闲 167 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (2):
+  - smilegeni2d-gen2.json
+  - James Face Setup.json
+- **模型** (12):
+  - hunyuan_3d_v2.1.safetensors
+  - sd_xl_base_1.0_inpainting_0.1.safetensors
+  - svd.safetensors
+  - flux2_dev_fp8mixed.safetensors
+  - hunyuan3d-dit-v2-0-fp16.safetensors
+  - hunyuanvideo1.5_1080p_sr_distilled_fp16.safetensors
+  - hunyuanvideo1.5_720p_i2v_fp16.safetensors
+  - hunyuanvideo1.5_720p_t2v_fp16.safetensors
+  - wan2.1_vace_1.3B_fp16.safetensors
+  - wan2.1_vace_14B_fp16.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (4 个, 前10):
+  - Wan21_CausVid_14B_T2V_lora_rank32.safetensors
+  - Wan21_CausVid_bidirect2_T2V_1_3B_lora_rank32.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
+- **CLIP**: byt5_small_glyphxl_fp16.safetensors, mistral_3_small_flux2_bf16.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: flux2-vae.safetensors, hunyuanvideo15_vae_fp16.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 43. 38.247.184.100:8070
+
+- **版本**: 0.21.1
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 31 GB (空闲 13 GB)
+- **内存**: 88 GB (空闲 55 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 9
+- **工作流** (1):
+  - video_ltx2_i2v_distilled_URL_final.json
+- **模型** (3):
+  - ltx-2-19b-distilled.safetensors
+  - ltx-2-19b-dev-fp8.safetensors
+  - ltx-2.3-22b-distilled_transformer_only_fp8_input_scaled_v3.safetensors
+- **LoRA** (1 个, 前10):
+  - ltx-2-19b-distilled-lora-384.safetensors
+- **CLIP**: gemma_3_12B_it_fp4_mixed.safetensors, ltx-2.3_text_projection_bf16.safetensors
+- **VAE**: LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, pixel_space
+
+### 44. comfy.urg.co.kr
+
+- **版本**: 0.20.1
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 31 GB (空闲 31 GB)
+- **内存**: 60 GB (空闲 56 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (6):
+  - 텍스트로애니메이션이미지생성.json
+  - 텍스트로오디오생성.json
+  - 이미지로비디오생성.json
+  - 누끼이미지생성.json
+  - 이미지로이미지생성.json
+  - 텍스트로실사이미지생성.json
+- **模型** (9):
+  - NetaYumev35_pretrained_all_in_one.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - sam3.1_multiplex_fp16.safetensors
+  - acestep_v1.5_xl_base_bf16.safetensors
+  - flux1-dev-kontext_fp8_scaled.safetensors
+  - flux1-dev.safetensors
+  - flux1-fill-dev.safetensors
+  - flux2_dev_fp8mixed.safetensors
+  - wan2.1_vace_14B_fp16.safetensors
+- **LoRA** (3 个, 前10):
+  - Flux_2-Turbo-LoRA_comfyui.safetensors
+  - Wan21_CausVid_14B_T2V_lora_rank32.safetensors
+  - ltx-2.3-22b-distilled-lora-384.safetensors
+- **CLIP**: clip_l.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, mistral_3_small_flux2_bf16.safetensors, qwen_0.6b_ace15.safetensors, qwen_4b_ace15.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors, umt5_xxl_fp16.safetensors
+- **VAE**: ace_1.5_vae.safetensors, ae.safetensors, full_encoder_small_decoder.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 45. ai-image.xante.com
+
+- **版本**: 0.24.0
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 31 GB (空闲 30 GB)
+- **内存**: 125 GB (空闲 118 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (12):
+  - flux1-schnell-fp8.safetensors
+  - mdjrny-v4.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2511-FP8_e4m3fn.safetensors
+  - flux1-dev-kontext_fp8_scaled.safetensors
+  - flux1-dev.safetensors
+  - qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_fp8_e4m3fn_scaled_lightning_8steps_v1.0.safetensors
+  - qwen_image_fp8mixed.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (4 个, 前10):
+  - QWEN_EDIT_ACTION_V1.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - illustration-1.0-qwen-image.safetensors
+- **CLIP**: clip_l.safetensors, qwen_2.5_vl_7b.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, qwen_image_vae.safetensors, pixel_space
+
+### 46. https://comfy.urg.co.kr
+
+- **版本**: 0.20.1
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 31 GB (空闲 31 GB)
+- **内存**: 60 GB (空闲 56 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (6):
+  - 텍스트로애니메이션이미지생성.json
+  - 텍스트로오디오생성.json
+  - 이미지로비디오생성.json
+  - 누끼이미지생성.json
+  - 이미지로이미지생성.json
+  - 텍스트로실사이미지생성.json
+- **模型** (9):
+  - NetaYumev35_pretrained_all_in_one.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - sam3.1_multiplex_fp16.safetensors
+  - acestep_v1.5_xl_base_bf16.safetensors
+  - flux1-dev-kontext_fp8_scaled.safetensors
+  - flux1-dev.safetensors
+  - flux1-fill-dev.safetensors
+  - flux2_dev_fp8mixed.safetensors
+  - wan2.1_vace_14B_fp16.safetensors
+- **LoRA** (3 个, 前10):
+  - Flux_2-Turbo-LoRA_comfyui.safetensors
+  - Wan21_CausVid_14B_T2V_lora_rank32.safetensors
+  - ltx-2.3-22b-distilled-lora-384.safetensors
+- **CLIP**: clip_l.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, mistral_3_small_flux2_bf16.safetensors, qwen_0.6b_ace15.safetensors, qwen_4b_ace15.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors, umt5_xxl_fp16.safetensors
+- **VAE**: ace_1.5_vae.safetensors, ae.safetensors, full_encoder_small_decoder.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 47. https://host01.xante.net
+
+- **版本**: 0.24.0
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 31 GB (空闲 30 GB)
+- **内存**: 125 GB (空闲 118 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (12):
+  - flux1-schnell-fp8.safetensors
+  - mdjrny-v4.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2511-FP8_e4m3fn.safetensors
+  - flux1-dev-kontext_fp8_scaled.safetensors
+  - flux1-dev.safetensors
+  - qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_fp8_e4m3fn_scaled_lightning_8steps_v1.0.safetensors
+  - qwen_image_fp8mixed.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (4 个, 前10):
+  - QWEN_EDIT_ACTION_V1.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - illustration-1.0-qwen-image.safetensors
+- **CLIP**: clip_l.safetensors, qwen_2.5_vl_7b.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, qwen_image_vae.safetensors, pixel_space
+
+### 48. https://ai-image.xante.com
+
+- **版本**: 0.24.0
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 31 GB (空闲 30 GB)
+- **内存**: 125 GB (空闲 118 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (12):
+  - flux1-schnell-fp8.safetensors
+  - mdjrny-v4.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2511-FP8_e4m3fn.safetensors
+  - flux1-dev-kontext_fp8_scaled.safetensors
+  - flux1-dev.safetensors
+  - qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_fp8_e4m3fn_scaled_lightning_8steps_v1.0.safetensors
+  - qwen_image_fp8mixed.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (4 个, 前10):
+  - QWEN_EDIT_ACTION_V1.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - illustration-1.0-qwen-image.safetensors
+- **CLIP**: clip_l.safetensors, qwen_2.5_vl_7b.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, qwen_image_vae.safetensors, pixel_space
+
+### 49. sd.nhatquangholding.com
+
+- **版本**: 0.19.3
+- **GPU**: RTX 5090 (cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync)
+- **显存**: 31 GB (空闲 7 GB)
+- **内存**: 60 GB (空闲 30 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (4):
+  - flux1-dev-fp8.safetensors
+  - juggernautXL_v10.safetensors
+  - sd3.5_large.safetensors
+  - sd3.5_medium.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 50. 111.0.130.56:5000
+
+- **版本**: 0.22.0
+- **GPU**: L40 (cuda:0 NVIDIA L40 : cudaMallocAsync)
+- **显存**: 44 GB (空闲 28 GB)
+- **内存**: 251 GB (空闲 204 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 6
+- **工作流** (1):
+  - image_seg_text.json
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 51. 220.202.33.50:8188
+
+- **版本**: 0.3.77
+- **GPU**: L40 (cuda:0 NVIDIA L40 : cudaMallocAsync)
+- **显存**: 44 GB (空闲 39 GB)
+- **内存**: 1007 GB (空闲 912 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 52. 116.228.88.61:4000
+
+- **版本**: 0.19.1
+- **GPU**: A40 (cuda:0 NVIDIA A40 : cudaMallocAsync)
+- **显存**: 44 GB (空闲 13 GB)
+- **内存**: 125 GB (空闲 108 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (8):
+  - LTX2.3.json
+  - 合成图片.json
+  - 最强动漫模型DaSiWa8.1视频流-支持单图+_双图+_+三图+出视频.json
+  - 图生视频.json
+  - 12.json
+  - tts.json
+  - LTX2.3+超强图生视频+最强开源.json
+  - 数字人.json
+- **模型** (27):
+  - epicrealism_naturalSinRC1VAE.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - ltx-2.3-22b-dev.safetensors
+  - diffusion_pytorch_model-00001-of-00007.safetensors
+  - diffusion_pytorch_model-00002-of-00007.safetensors
+  - diffusion_pytorch_model-00003-of-00007.safetensors
+  - diffusion_pytorch_model-00004-of-00007.safetensors
+  - diffusion_pytorch_model-00005-of-00007.safetensors
+  - diffusion_pytorch_model-00006-of-00007.safetensors
+  - diffusion_pytorch_model-00007-of-00007.safetensors
+  - models_clip_open-clip-xlm-roberta-large-vit-huge-14.pth
+  - DasiwaWAN22I2V14BV8V1_tastysinHighV81.safetensors
+  - DasiwaWAN22I2V14BV8V1_tastysinLowV81.safetensors
+  - MelBandRoformer_fp16.safetensors
+  - Wan2.1-I2V-14B-720P.safetensors
+  - diffusion_pytorch_model-00001-of-00007.safetensors
+  - diffusion_pytorch_model-00002-of-00007.safetensors
+  - diffusion_pytorch_model-00003-of-00007.safetensors
+  - diffusion_pytorch_model-00004-of-00007.safetensors
+  - diffusion_pytorch_model-00005-of-00007.safetensors
+  - diffusion_pytorch_model-00006-of-00007.safetensors
+  - diffusion_pytorch_model-00007-of-00007.safetensors
+  - Wan2_1-I2V-14B-480p_fp8_e4m3fn_scaled_KJ.safetensors
+  - wan2.1_i2v_480p_scaled_fp8_e4m3_lightx2v_4step_comfyui.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_ti2v_5B_fp16.safetensors
+- **LoRA** (3 个, 前10):
+  - ltx-2.3-22b-distilled-lora-384.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
+- **CLIP**: gemma_3_12B_it_fp8_e4m3fn.safetensors, ltx-2.3_text_projection_bf16.safetensors, models_clip_open-clip-xlm-roberta-large-vit-huge-14.pth, models_t5_umt5-xxl-enc-bf16.pth, umt5-xxl-enc-fp8_e4m3fn.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, Wan2.1_VAE.pth, taeltx2_3.safetensors, wan2.2_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 53. 14.204.16.41:8443
+
+- **版本**: 0.24.0
+- **GPU**: L20 (cuda:0 NVIDIA L20 : cudaMallocAsync)
+- **显存**: 89 GB (空闲 50 GB)
+- **内存**: 566 GB (空闲 509 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 1
+- **工作流** (1):
+  - Ideogram_4.0.文生图工作流.json
+- **模型** (7):
+  - ltx-2.3-22b-distilled-fp8.safetensors
+  - ltxv-13b-0.9.8-distilled-fp8.safetensors
+  - ideogram4_fp8_scaled.safetensors
+  - ideogram4_unconditional_fp8_scaled.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (4 个, 前10):
+  - gemma-3-12b-it-abliterated_lora_rank64_bf16.safetensors
+  - ltx-2.3-22b-distilled-lora-384-1.1.safetensors
+  - wan2.2_t2v_lightx2v_4steps_lora_v1.1_high_noise.safetensors
+  - wan2.2_t2v_lightx2v_4steps_lora_v1.1_low_noise.safetensors
+- **CLIP**: clip_l.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, qwen3vl_8b_fp8_scaled.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: flux2-vae.safetensors, ltxv-vae.safetensors, qwen_image_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 54. 121.5.99.163:8188
+
+- **版本**: 0.10.0
+- **GPU**: L20 (cuda:0 NVIDIA L20 : cudaMallocAsync)
+- **显存**: 45 GB (空闲 26 GB)
+- **内存**: 184 GB (空闲 154 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (9):
+  - FLUX.2-klein-9b-fp8-v2_flux2 Klein b9.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux-2-klein-base-9b-fp8.safetensors
+  - flux-2-klein-base-9b.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux1FillDevFp8_v10.safetensors
+  - fluxKleinFP8_flux2KleinBase9bFp8.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - svdq-int4_r32-flux.1-dev.safetensors
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: clip_l.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_8b.safetensors, qwen_3_8b_fp8mixed (1).safetensors, qwen_3_8b_fp8mixed.safetensors, t5xxl_fp8_e4m3fn.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: ae.safetensors, ae.safetensors, flux2-vae.safetensors, klF8Anime2_klF8Anime2VAE.pt, qwen_image_vae.safetensors, pixel_space
+
+### 55. 118.195.150.136:8188
+
+- **版本**: 0.18.5
+- **GPU**: L20 (cuda:0 NVIDIA L20 : cudaMallocAsync)
+- **显存**: 44 GB (空闲 40 GB)
+- **内存**: 92 GB (空闲 84 GB)
+- **历史**: 无
+- **管理面板**: 有
+- **自定义节点数**: 13
+- **工作流** (1):
+  - 8_Wan2.2-S2V 音频驱动视频生成.json
+- **模型** (2):
+  - wan2.2_s2v_14B_bf16.safetensors
+  - wan2.2_s2v_14B_fp8_scaled.safetensors
+- **LoRA** (1 个, 前10):
+  - wan2.2_t2v_lightx2v_4steps_lora_v1.1_high_noise.safetensors
+- **CLIP**: umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: wan_2.1_vae.safetensors, taesd, taesdxl, taesd3, taef1, pixel_space
+
+### 56. 180.152.20.170:8188
+
+- **版本**: 0.19.3
+- **GPU**: L20 (cuda:0 NVIDIA L20 : cudaMallocAsync)
+- **显存**: 44 GB (空闲 44 GB)
+- **内存**: 503 GB (空闲 464 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - NoobAI-XL-Vpred-v1.0.safetensors
+- **LoRA** (5 个, 前10):
+  - MeMax6-noob-vpred.safetensors
+  - NOOB_vp1_detailer_by_volnovik_v1.safetensors
+  - USNR_STYLE_NB_Vpred_V3-000019.safetensors
+  - illustrious_flat_color_v2.safetensors
+  - lineless4NoobV2.safetensors
+- **VAE**: pixel_space
+
+### 57. 47.102.125.110:8000
+
+- **版本**: 0.22.0
+- **GPU**: L20 (cuda:0 NVIDIA L20 : cudaMallocAsync)
+- **显存**: 44 GB (空闲 1 GB)
+- **内存**: 1 TB (空闲 1 TB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (4):
+  - 文生图.json
+  - wan2.2 图生视频.json
+  - 图生图.json
+  - 03_video_wan2_2_14B_i2v_subgraphed.json
+- **模型** (5):
+  - ltx-video-2b-v0.9.5.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (2 个, 前10):
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
+- **CLIP**: clip_l.safetensors, t5xxl_fp16.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 58. 8.146.234.84:8188
+
+- **版本**: 0.18.0
+- **GPU**: L20 (cuda:0 NVIDIA L20 : cudaMallocAsync)
+- **显存**: 44 GB (空闲 25 GB)
+- **内存**: 247 GB (空闲 223 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (4):
+  - video_wan2_2_14B_s2v -口播.json
+  - video_wan2_2_5B_fun_control.json
+  - video_wan2_2_14B_t2v.json
+  - 03_video_wan2_2_14B_i2v_subgraphed.json
+- **模型** (9):
+  - Wan2_2-S2V-14B_fp8_e4m3fn_scaled_KJ.safetensors
+  - wan2.2_fun_control_5B_bf16.safetensors
+  - wan2.2_fun_control_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_fun_control_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_s2v_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (5 个, 前10):
+  - liyuegirl.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
+  - wan2.2_t2v_lightx2v_4steps_lora_v1.1_high_noise.safetensors
+  - wan2.2_t2v_lightx2v_4steps_lora_v1.1_low_noise.safetensors
+- **CLIP**: umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: wan2.2_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 59. 47.111.24.114:8080
+
+- **版本**: 0.22.0
+- **GPU**: L20 (cuda:0 NVIDIA L20 : cudaMallocAsync)
+- **显存**: 44 GB (空闲 44 GB)
+- **内存**: 61 GB (空闲 33 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 1
+- **工作流** (2):
+  - 单车图_一阶段工作流.json
+  - 单车图_二阶段工作流.json
+- **模型** (11):
+  - firered_image_edit_1.0_bf16.safetensors
+  - qwen_image_edit_2509_bf16.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2509_fp8mixed.safetensors
+  - qwen_image_edit_2511_bf16.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - qwen_image_edit_bf16.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+  - z-image-turbo_fp8_scaled_e4m3fn_KJ.safetensors
+  - z-image-turbo_fp8_scaled_e5m2_KJ.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (24 个, 前10):
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-fp32.safetensors
+  - Qwen-Image-Edit-2509-Lightning-8steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2509-Lightning-8steps-V1.0-fp32.safetensors
+  - Qwen-Image-Edit-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-Lightning-4steps-V1.0.safetensors
+  - Qwen-Image-Edit-Lightning-8steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-Lightning-8steps-V1.0.safetensors
+  - Qwen-Image-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Lightning-4steps-V1.0.safetensors
+- **CLIP**: qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors
+- **VAE**: ae.safetensors, qwen_image_vae.safetensors, pixel_space
+
+### 60. https://cfy.sametimes.cn
+
+- **版本**: 0.21.1
+- **GPU**: L20 (cuda:0 NVIDIA L20 : cudaMallocAsync)
+- **显存**: 44 GB (空闲 40 GB)
+- **内存**: 251 GB (空闲 200 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (30):
+  - 美团工作流(长3) -4.json
+  - 10秒跳舞视频-1.json
+  - Wan2.2 FP8.json
+  - 美团工作流(示例).json
+  - 美团工作流(长3).json
+  - Flux-9B-1.json
+  - 优化提示词.json
+  - FLUX-Klein 原工作流.json
+  - 美团工作流(长).json
+  - 宣传视频-3.json
+  - FLUX-Klein 3图融合工作流-3.json
+  - 夹心糖-绿-正面.json
+  - 优化提示词-2.json
+  - 美团工作流(长3) -3.json
+  - 宣传视频-1.json
+  - 宣传视频-2.json
+  - FLUX-Klein 3图融合工作流-2.json
+  - Flux-1.json
+  - 动作迁移（plus加时长版）人物替换Wan Animate2.2主体混合mix魔改加速版V1.json
+  - 运动-1.json
+  - 美团工作流(长4).json
+  - wan_worker.json
+  - 图生图-1.json
+  - Wan2.2 FP8 -2.json
+  - SkyReels-V2-1.json
+  - 纯色背景测试-1.json
+  - 美团工作流(长3) -2.json
+  - 运动-2.json
+  - wanvideo_2_1_14B_I2V_InfiniteTalk_example_03.json
+  - 美团工作流(长2).json
+- **模型** (12):
+  - SkyReels_model.safetensors
+  - model.safetensors
+  - model.safetensors
+  - diffusion_pytorch_model.safetensors
+  - diffusion_pytorch_model.safetensors
+  - model.safetensors
+  - Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors
+  - MelBandRoformer_fp16.safetensors
+  - flux-2-klein-base-4b.safetensors
+  - flux-2-klein-base-9b.safetensors
+  - infinitetalk.safetensors
+  - model.safetensors
+- **LoRA** (10 个, 前10):
+  - flux-2-klein-NSFW.safetensors
+  - flux1-krea-dev_extracted_lora_rank_512-fp16.safetensors
+  - lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors
+  - high_noise_model.safetensors
+  - low_noise_model.safetensors
+  - FastWan_T2V_14B_480p_lora_rank_128_bf16.safetensors
+  - Wan2.2-Fun-A14B-InP-LOW-HPS2.1_resized_dynamic_avg_rank_15_bf16.safetensors
+  - Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors
+  - Wan21_PusaV1_LoRA_14B_rank512_bf16.safetensors
+  - WanAnimate_relight_lora_fp16.safetensors
+- **CLIP**: SkyReels_models_t5_umt5-xxl-enc-bf16.pth, model-00001-of-00004.safetensors, model-00002-of-00004.safetensors, model-00003-of-00004.safetensors, model-00004-of-00004.safetensors, models_t5_umt5-xxl-enc-bf16.pth, qwen_3_4b.safetensors, qwen_3_9b.safetensors, umt5-xxl-enc-bf16.safetensors, umt5_fp8.safetensors
+- **VAE**: SkyReels_VAE.pth, Wan2.1_VAE.pth, Wan2_1_VAE_fp32.safetensors, flux2-9b-vae.safetensors, flux2-vae.safetensors, vae_fp8.safetensors, pixel_space
+
+### 61. 92.124.120.67:8000
+
+- **版本**: 0.24.1
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 48 GB (空闲 45 GB)
+- **内存**: 95 GB (空闲 58 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (27):
+  - 12312312312222.json
+  - DasiwaLTX23WorkflowsI2VFLF2V_omniforgeCLTX23V38.json
+  - Directo.json
+  - droz_LTX-2_SharkSampling_v6.json
+  - droz_LTX-2_SharkSampling_v6213123.json
+  - LTX I2V First Last Frame 3 Stage Workflow v6.json
+  - LTX I2V First Last Frame 3 Stage Workflow v7.json
+  - LTX-2.3_-_FML2V_First_Middle_Last_Frame_Guider.json
+  - LTX-2.3_-_V2V_Extend_Any_Video.json
+  - ltx2.3-restyle-ic-lora.json
+  - ltx2.3-restyle-ic-lora2.json
+  - ltx23_anime2real_v1.json
+  - seedvr2 upscale (1).json
+  - SeedVR2_HD_video_upscale (1).json
+  - SeedVR2_HD_video_upscale.json
+  - super_simple_t2v.json
+  - Unsaved Workflow (2).json
+  - Unsaved Workflow (4).json
+  - Unsaved Workflow.json
+  - video_ltx2_3_flf2v.json
+  - video_ltx2_3_i2v.json
+  - video_ltx2_3_i2v12.json
+  - video_ltx2_3_i2v123.json
+  - video_ltx2_3_i2v1234.json
+  - video_ltx2_3_i2v3.json
+  - video_ltx2_3_i2v31.json
+  - video_ltx2_3_t2v.json
+- **模型** (6):
+  - DasiwaLTX23_goldenLaceV3.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - MelBandRoformer_fp16.safetensors
+  - lotus-depth-d-v1-1.safetensors
+  - ltx-2.3-22b-dev_audio_vae.safetensors
+  - ltx-2.3-22b-dev_video_vae.safetensors
+- **LoRA** (26 个, 前10):
+  - 2511-AnyPose-base-000006250.safetensors
+  - 852654_LTX2.3-22B_ReStyle_IC-LoRA_8000_v0.1.safetensors
+  - 874132-ltx2-Nfj1nx_29000.safetensors
+  - BreastASMR_000005000.safetensors
+  - LTX-2 Posing Dynamics.safetensors
+  - LTX-2.3-OmniNFT-RL-Lora_bf16.safetensors
+  - LTX-2.3-danceV2.comfy.safetensors
+  - LTX-2_3_Judy_Hopps_lora_v1.safetensors
+  - LTX23-GalaxyAce.safetensors
+  - boobs_klein.safetensors
+- **CLIP**: clip_l.safetensors, gemma_3_12B_it.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, ltx-2-19b-embeddings_connector_dev_bf16.safetensors, ltx-2.3-22b-dev_embeddings_connectors.safetensors, ltx-2.3_text_projection_bf16.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, LTX2_audio_vae_bf16.safetensors, LTX2_video_vae_bf16.safetensors, ema_vae.pth, flux2-vae.safetensors, hunyuan_video_vae_bf16.safetensors, ltx-2.3-22b-dev_audio_vae.safetensors, ltx-2.3-22b-dev_video_vae.safetensors, qwen_image_vae.safetensors, taeltx2_3.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, pixel_space
+
+### 62. 103.91.177.130:8188
+
+- **版本**: 0.8.2
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 47 GB (空闲 39 GB)
+- **内存**: 125 GB (空闲 71 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (20):
+  - Realistic_Vision_V5.1.safetensors
+  - ace_step_v1_3.5b.safetensors
+  - hunyuan_3d_v2.1.safetensors
+  - stable-audio-open-1.0.safetensors
+  - 3H混合超细节机甲-mac-MIX5_v5.0.safetensors
+  - CartoonMix_V1.0.safetensors
+  - hunyuanvideo1.5_1080p_sr_distilled_fp16.safetensors
+  - hunyuanvideo1.5_480p_t2v_cfg_distilled_fp8_scaled.safetensors
+  - hunyuanvideo1.5_720p_i2v_fp16.safetensors
+  - hunyuanvideo1.5_720p_t2v_fp16.safetensors
+  - lotus-depth-d-v1-1.safetensors
+  - lu简笔画风卡通模型_v2.safetensors
+  - omnigen2_fp16.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - sd_xl_base_1.0.safetensors
+  - v1-5-pruned-emaonly.safetensors
+  - z_image_turbo_bf16.safetensors
+  - 【慌慌】场景原画_游戏CG_横竖尺寸皆可_稳定生成_v1.0 笔触场景.safetensors
+  - 可爱树脂盲盒SD1.5_v1.safetensors
+  - 沙盒场景_1.ckpt
+- **LoRA** (5 个, 前10):
+  - Qwen-Image-Lightning-4steps-V1.0.safetensors
+  - Z-image-turbo Visual Merchandising.safetensors
+  - markerSketch.safetensors
+  - pixel_art_style_z_image_turbo.safetensors
+  - qwen_image_union_diffsynth_lora.safetensors
+- **CLIP**: byt5_small_glyphxl_fp16.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_2.5_vl_fp16.safetensors, qwen_3_4b.safetensors, t5-base.safetensors
+- **VAE**: ae.safetensors, flux2-vae.safetensors, hunyuanvideo15_vae_fp16.safetensors, qwen_image_vae.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, pixel_space
+
+### 63. 182.140.218.229:20000
+
+- **版本**: 0.3.46
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 47 GB (空闲 47 GB)
+- **内存**: 944 GB (空闲 285 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (4):
+  - Wan2_2-I2V-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-T2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-T2V-A14B_HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+- **LoRA** (2 个, 前10):
+  - Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors
+  - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
+- **CLIP**: open-clip-xlm-roberta-large-vit-huge-14_visual_fp16.safetensors, umt5-xxl-enc-bf16.safetensors
+- **VAE**: Wan2_1_VAE_bf16.safetensors
+
+### 64. 60.13.232.230:8002
+
+- **版本**: 0.20.1
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 47 GB (空闲 39 GB)
+- **内存**: 1007 GB (空闲 897 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 5
+- **工作流** (4):
+  - image_qwen_image_edit_2509.json
+  - Job 0a6695eb-ae47-4345-bc35-648d621d0eb7.json
+  - Job 96754f63-f3c4-4cd9-a731-e6c4189081b6 (2).json
+  - 一键分镜生成.json
+- **模型** (248):
+  - 2D_Pixel_Sprites(2D像素)_1.0.safetensors
+  - DreamShaper_XL_v2.1_Turbo_v2.1_Turbo.safetensors
+  - FT_二次元国风人物_1.0.safetensors
+  - GhostMix鬼混_V2.0.safetensors
+  - Hyper3d.safetensors
+  - Inpainting-Hyper3d.safetensors
+  - LEOSAM HelloWorld 新世界 _ SDXL大模型_v7.0.safetensors
+  - ace_step_v1_3.5b.safetensors
+  - animagine-xl-3.1.safetensors
+  - hunyuan_3d_v2.1.safetensors
+  - juggernautXL_juggXIByRundiffusion.safetensors
+  - juggernautXL_v9Rdphoto2Lightning.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - ltx-video-2b-v0.9.5.safetensors
+  - majicMIX realistic 麦橘写实_v7.safetensors
+  - sd_xl_base_1.0.safetensors
+  - sdxl-6-real-dream.safetensors
+  - svd_xt.safetensors
+  - wan2.2-i2v-rapid-aio-v10-nsfw.safetensors
+  - wan2.2-i2v-rapid-aio-v10.safetensors
+  - wan2.2-rapid-mega-aio-nsfw-v12.1.safetensors
+  - wan2.2-rapid-mega-aio-nsfw-v12.safetensors
+  - wan2.2-rapid-mega-aio-v12.safetensors
+  - wan2.2-t2v-rapid-aio-v10-nsfw.safetensors
+  - wan2.2-t2v-rapid-aio-v10.safetensors
+  - 林鹤-人像光影摄影极限写实真实感大模型_V2.6.1.safetensors
+  - 比鲁斯建筑室内通用大模型SD1.5_SD1.5.safetensors
+  - 麒麟-revAnimated_v122_V1.2.2.safetensors
+  - F.1-Fill-fp16_Inpaint%26Outpaint_1.0.safetensors
+  - FLUX.1-Fill-dev_fp8.safetensors
+  - model-00001-of-00005.safetensors
+  - model-00002-of-00005.safetensors
+  - model-00003-of-00005.safetensors
+  - model-00004-of-00005.safetensors
+  - model-00005-of-00005.safetensors
+  - diffusion_pytorch_model.safetensors
+  - diffusion_pytorch_model.safetensors
+  - LongCat_TI2V_comfy_fp8_e4m3fn_scaled_KJ.safetensors
+  - Phantom-Wan-14B_fp16.safetensors
+  - Phantom-Wan-14B_fp8_e4m3fn.safetensors
+  - Phantom-Wan-1_3B_fp16.safetensors
+  - Phantom-Wan-1_3B_fp32.safetensors
+  - WAN2.2-dasiwa-I2V-14B_High_midnightflirt.safetensors
+  - WAN2.2-dasiwa-I2V-14B_LOW_midnightflirt.safetensors
+  - Wan2.1_T2V_14B_FusionX_VACE-FP16.safetensors
+  - Wan2.1_T2V_14B_FusionX_VACE-FP8.safetensors
+  - Wan2.1_T2V_14B_FusionX_VACE-FP8_e4m3fn.safetensors
+  - Wan2.1_T2V_14B_FusionX_VACE-FP8_e5m2.safetensors
+  - Wan2.2-Fun-A14B-InP-high-noise-MPS.safetensors
+  - Wan2.2-Fun-A14B-InP-low-noise-HPS2.1.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_high_lighting_v2.0.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_low_lighting_v2.0.safetensors
+  - Wan2.2_Remix_SFW_t2v_14b_high_lighting_v1.0_dyno.safetensors
+  - Wan2.2_Remix_SFW_t2v_14b_low_lighting_v1.0.safetensors
+  - Wan21-14B-SCAIL-preview_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan21-WanMove_fp8_scaled_e4m3fn_KJ.safetensors
+  - Wan21_SteadyDancer_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan21_Uni3C_controlnet_fp16.safetensors
+  - Wan22_Bernini_HIGH_fp8_e4m3fn_scaled.safetensors
+  - Wan22_Bernini_LOW_fp8_e4m3fn_scaled.safetensors
+  - Wan2_1-14B-I2V_ChronoEdit_fp8_scaled_KJ.safetensors
+  - Wan2_1-AccVideo-T2V-14B_fp8_e4m3fn.safetensors
+  - Wan2_1-Anisora-I2V-480P-14B_fp16.safetensors
+  - Wan2_1-Anisora-I2V-480P-14B_fp8_e4m3fn.safetensors
+  - Wan2_1-FLF2V-14B-720P_fp16.safetensors
+  - Wan2_1-FLF2V-14B-720P_fp8_e4m3fn.safetensors
+  - Wan2_1-HuMo-14B_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_1-HuMo-14B_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_1-I2V-14B-480P_fp8_e4m3fn.safetensors
+  - Wan2_1-I2V-14B-480P_fp8_e5m2.safetensors
+  - Wan2_1-I2V-14B-480p_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_1-I2V-14B-480p_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors
+  - Wan2_1-I2V-14B-720P_fp8_e5m2.safetensors
+  - Wan2_1-I2V-14B-720p_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_1-I2V-14B-720p_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_1-I2V-14B-AniSoraV3_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_1-I2V-14B-AniSoraV3_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_1-I2V-14B-Bindweave_fp8_scaled_KJ.safetensors
+  - Wan2_1-I2V-14B-MAGREF_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_1-I2V-14B-MAGREF_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_1-I2V-14B-MTV-Crafter_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_1-I2V-14B-VAP_module_fp8_scaled_KJ.safetensors
+  - Wan2_1-I2V-ATI-14B_fp16.safetensors
+  - Wan2_1-I2V-ATI-14B_fp8_e4m3fn.safetensors
+  - Wan2_1-I2V-ATI-14B_fp8_e5m2.safetensors
+  - Wan2_1-InfiniteTalk-Multi_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_1-InfiniteTalk-Multi_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_1-InfiniteTalk-Single_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_1-InfiniteTalk-Single_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_1-MiniMaxRemover_1_3B_fp16.safetensors
+  - Wan2_1-MoviiGen1_1_fp16.safetensors
+  - Wan2_1-MoviiGen1_1_fp8_e4m3fn.safetensors
+  - Wan2_1-S2V-14B_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_1-T2V-14B-FastWan-480p_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_1-T2V-14B-Phantom_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_1-T2V-14B-Phantom_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_1-T2V-14B_CausVid_fp8_e4m3fn.safetensors
+  - Wan2_1-T2V-14B_fp8_e4m3fn.safetensors
+  - Wan2_1-T2V-14B_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_1-T2V-14B_fp8_e5m2.safetensors
+  - Wan2_1-T2V-14B_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_1-T2V-1_3B_bf16.safetensors
+  - Wan2_1-T2V-1_3B_fp32.safetensors
+  - Wan2_1-T2V-1_3B_fp8_e4m3fn.safetensors
+  - Wan2_1-T2V_FastWan_1_3B_bf16.safetensors
+  - Wan2_1-VACE-module-14B_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_1-VACE_module_14B_bf16.safetensors
+  - Wan2_1-VACE_module_14B_fp8_e4m3fn.safetensors
+  - Wan2_1-VACE_module_1_3B_bf16.safetensors
+  - Wan2_1-Wan-I2V-MAGREF-14B_fp8_e4m3fn.safetensors
+  - Wan2_1_VACE_1_3B_preview_bf16.safetensors
+  - Wan2_1_kwai_recammaster_1_3B_step20000_bf16.safetensors
+  - Wan2_1_mocha-14B-preview_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-5B-Ovi_960x960_10s_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-5B-Ovi_960x960_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-Animate-14B_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_2-Animate-14B_fp8_scaled_e4m3fn_KJ_v2.safetensors
+  - Wan2_2-Animate-14B_fp8_scaled_e5m2_KJ_v2.safetensors
+  - Wan2_2-Fun-Control-A14B-HIGH_fp8_e4m3fn_scaled_KJ_fixed.safetensors
+  - Wan2_2-Fun-Control-A14B-HIGH_fp8_e5m2_scaled_KJ_fixed.safetensors
+  - Wan2_2-Fun-Control-A14B-LOW_fp8_e4m3fn_scaled_KJ_fixed.safetensors
+  - Wan2_2-Fun-Control-A14B-LOW_fp8_e5m2_scaled_KJ_fixed.safetensors
+  - Wan2_2-Fun-Control-Camera-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-Fun-Control-Camera-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-Fun-InP-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-Fun-InP-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-HIGH_bf16.safetensors
+  - Wan2_2-I2V-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-HIGH_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-LOW_bf16.safetensors
+  - Wan2_2-I2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-LOW_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_2-I2V_AniSoraV3_2_HIGH_14B_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V_AniSoraV3_2_LOW_14B_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-S2V-14B_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-T2V-A14B-HIGH-HoloCine-full_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-T2V-A14B-HIGH_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_2-T2V-A14B-LOW-HoloCine-full_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-T2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-T2V-A14B-LOW_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_2-T2V-A14B_HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-TI2V-5B_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-TI2V-5B_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_2_Fun_VACE_module_A14B_HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2_Fun_VACE_module_A14B_HIGH_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_2_Fun_VACE_module_A14B_LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2_Fun_VACE_module_A14B_LOW_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_2_Ovi_Audio_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2_Ovi_Video_fp8_e4m3fn_scaled_KJ.safetensors
+  - WanVideo_2_1_Multitalk_14B_fp8_e4m3fn.safetensors
+  - ace1.5.safetensors
+  - aniWan2114BFp8E4m3fn_i2v480p.safetensors
+  - aniWan2114BFp8E4m3fn_t2v.safetensors
+  - aniWan2114BFp8E4m3fn_t2v13B.safetensors
+  - aniWan2114B_I2V_720p.safetensors
+  - chrono_edit_14B_fp16.safetensors
+  - ditto_global_comfy.safetensors
+  - flux-2-klein-4b-fp8.safetensors
+  - flux-2-klein-4b.safetensors
+  - flux-2-klein-9b-fp8.safetensors
+  - flux-2-klein-9b.safetensors
+  - flux-fill-OneReward.safetensors
+  - flux.1-fill-dev-OneReward_bf16.safetensors
+  - flux.1-fill-dev-OneReward_fp16.safetensors
+  - flux.1-fill-dev-OneReward_fp8.safetensors
+  - flux1-canny-dev-fp16.safetensors
+  - flux1-canny-dev-fp8.safetensors
+  - flux1-canny-dev.safetensors
+  - flux1-depth-dev-fp16.safetensors
+  - flux1-depth-dev-fp8.safetensors
+  - flux1-dev-fp16.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux1-dev-kontext_fp8_scaled.safetensors
+  - flux1-dev.safetensors
+  - flux1-fill-dev-fp16.safetensors
+  - flux1-fill-dev-fp8.safetensors
+  - flux1-fill-dev.safetensors
+  - flux1-kontext-dev-fp16.safetensors
+  - flux1-krea-dev_fp8_scaled.safetensors
+  - flux1-redux-dev.safetensors
+  - flux1-schnell-fp16.safetensors
+  - flux1-schnell-fp8.safetensors
+  - flux2_dev_fp8mixed.safetensors
+  - flux_dev_fp8_scaled.safetensors
+  - hunyuan3d-dit-v2-0-fp16.safetensors
+  - lotus-depth-d-v1-1.safetensors
+  - ltx-2.3-22b-distilled_transformer_only_fp8_input_scaled_v3.safetensors
+  - ovis_image_bf16.safetensors
+  - qwen_image_bf16.safetensors
+  - qwen_image_edit_2509_bf16.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn_scaled.safetensors
+  - qwen_image_edit_2511_bf16.safetensors
+  - qwen_image_edit_2511_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - qwen_image_edit_bf16.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - qwen_image_fp8_e4m3fn_scaled.safetensors
+  - qwen_image_layered_bf16.safetensors
+  - runkai_edit.safetensors
+  - smoothMixWan22I2V14B_i2vHigh.safetensors
+  - smoothMixWan22I2V14B_i2vLow.safetensors
+  - smoothMixWan22I2VT2V_t2vHighV20.safetensors
+  - smoothMixWan22I2VT2V_t2vLowV20.safetensors
+  - wan2.1_infiniteTalk_multi_fp16.safetensors
+  - wan2.1_infiniteTalk_single_fp16.safetensors
+  - svdq-fp4_r32-flux.1-dev.safetensors
+  - svdq-fp4_r32-flux.1-kontext-dev.safetensors
+  - svdq-int4_r32-flux.1-dev.safetensors
+  - svdq-int4_r32-flux.1-kontext-dev.safetensors
+  - svdq-int4_r32-qwen-image-lightningv1.1-8steps.safetensors
+  - wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors
+  - wan2.2_animate_14B_bf16.safetensors
+  - wan2.2_fun_camera_high_noise_14B_bf16.safetensors
+  - wan2.2_fun_camera_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_fun_camera_low_noise_14B_bf16.safetensors
+  - wan2.2_fun_camera_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_fun_control_5B_bf16.safetensors
+  - wan2.2_fun_control_high_noise_14B_bf16.safetensors
+  - wan2.2_fun_control_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_fun_control_low_noise_14B_bf16.safetensors
+  - wan2.2_fun_control_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_fun_inpaint_5B_bf16.safetensors
+  - wan2.2_fun_inpaint_high_noise_14B_bf16.safetensors
+  - wan2.2_fun_inpaint_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_fun_inpaint_low_noise_14B_bf16.safetensors
+  - wan2.2_fun_inpaint_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_fun_vace_high_noise_14B_bf16.safetensors
+  - wan2.2_fun_vace_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_fun_vace_low_noise_14B_bf16.safetensors
+  - wan2.2_fun_vace_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_high_noise_14B_fp16.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp16.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_s2v_14B_bf16.safetensors
+  - wan2.2_s2v_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp16.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp16.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_ti2v_5B_fp16.safetensors
+  - wan2114BFusionx_fusionxImage2video.safetensors
+  - z_image_turbo_bf16.safetensors
+  - 最美婚纱_2.0.safetensors
+- **LoRA** (211 个, 前10):
+  - (LIb首发)CG古风大场景类_v2.0.safetensors
+  - 1.5-写意国画儿-经典怀旧人物画_经典怀旧—写意国画儿人物V1.safetensors
+  - 213_000000900_high_noise.safetensors
+  - 213_000000900_low_noise.safetensors
+  - 2511_000003000.safetensors
+  - 2511_000005000.safetensors
+  - 2511_000009570.safetensors
+  - 2511_000012810A100颜色.safetensors
+  - 2511_000015210A100.safetensors
+  - 2511解决偏差.safetensors
+- **CLIP**: EVA02_CLIP_L_336_psz14_s6B.pt, clip-vit-large-patch14.safetensors, clip_l.safetensors, clip_l_TEXT_detail_improved.safetensors, gemma_3_12B_it.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, gemma_3_12B_it_fp8_e4m3fn.safetensors, ltx-2-19b-embeddings_connector_dev_bf16.safetensors, ltx-2.3_text_projection_bf16.safetensors, mistral_3_small_flux2_bf16.safetensors, mistral_3_small_flux2_fp8.safetensors, models_clip_open-clip-xlm-roberta-large-vit-huge-14.pth, open-clip-xlm-roberta-large-vit-huge-14_visual_fp16.safetensors, open-clip-xlm-roberta-large-vit-huge-14_visual_fp32.safetensors, ovis_2.5.safetensors, qwen_0.6b_ace15.safetensors, qwen_1.7b_ace15.safetensors, qwen_2.5_vl_7b.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors, runkai_vl_fp8.safetensors, model.safetensors, qwen_3_8b_fp8mixed.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors, t5xxl_fp8_scaled.safetensors, umt5-xxl-enc-bf16.safetensors, umt5-xxl-enc-fp8_e4m3fn.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, Wan2_1_VAE_bf16.safetensors, Wan2_1_VAE_fp32.safetensors, Wan2_2_VAE_bf16.safetensors, ace_1.5_vae.safetensors, ae.safetensors, flux2-vae.safetensors, qwen_image_layered_vae.safetensors, qwen_image_vae.safetensors, runkai_vae.safetensors, sdxl_vae.safetensors, taeltx2_3.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, wan2.2_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 65. 87.228.124.214:8189
+
+- **版本**: 0.18.1
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 47 GB (空闲 47 GB)
+- **内存**: 125 GB (空闲 121 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (9):
+  - stacy_april_kate.json
+  - julie_april.json
+  - lina_april.json
+  - video_ltx2_3_i2v.json
+  - una_april.json
+  - test.json
+  - marianna_april.json
+  - test1.json
+  - stacy_april.json
+- **模型** (4):
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - model2.safetensors
+  - moodyProMix_zitV12DPO.safetensors
+  - z_image_turbo.safetensors
+- **LoRA** (18 个, 前10):
+  - ChaseInfinity_ZimageTurbo.safetensors
+  - DENISE_SYNTH_zimg_v1.safetensors
+  - FZXTSS9MFQBP0RKFF1MGXHS1W0.safetensors
+  - QGVJNVQBYVJ0S2TRKZ005EF980.safetensors
+  - TGZW383YGE7RTN4ZTNPAM4FT50.safetensors
+  - ULRIKANB_SYNTH_zimg_v1.safetensors
+  - White_short_ZiT.safetensors
+  - ameg2_con_char.safetensors
+  - brit-woman.safetensors
+  - gemma-3-12b-it-abliterated_lora_rank64_bf16.safetensors
+- **CLIP**: gemma_3_12B_it_fp4_mixed.safetensors, z_image_turbo_text_encoder.safetensors
+- **VAE**: z_image_turbo_vae.safetensors, pixel_space
+
+### 66. https://183.56.151.48:7078
+
+- **版本**: 0.17.0
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 D : cudaMallocAsync)
+- **显存**: 47 GB (空闲 3 GB)
+- **内存**: 125 GB (空闲 117 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 1
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 67. https://183.60.251.114:7078
+
+- **版本**: 0.17.0
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 D : cudaMallocAsync)
+- **显存**: 47 GB (空闲 3 GB)
+- **内存**: 125 GB (空闲 117 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 1
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 68. 117.50.198.233:8184
+
+- **版本**: 0.17.2
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 23 GB)
+- **内存**: 432 GB (空闲 411 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (1 个, 前10):
+  - pixel_art_style_z_image_turbo.safetensors
+- **CLIP**: qwen_3_4b.safetensors
+- **VAE**: ae.safetensors, pixel_space
+
+### 69. 112.95.77.24:8188
+
+- **版本**: 0.3.68
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 23 GB)
+- **内存**: 62 GB (空闲 57 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (3):
+  - video_wan2_2_14B_flf2v.json
+  - 03_video_wan2_2_14B_i2v_subgraphed.json
+  - 去眼镜工作流.json
+- **模型** (8):
+  - F.1-kontext-dev-fp8-e4m3fn版_dev-fp8-e4m3fn.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors
+  - wan2.2_fun_inpaint_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_fun_inpaint_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (5 个, 前10):
+  - HIRO融媒体3D卡通真实感数字人丨可照片转换_v1.0.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
+  - 【网红】真实感小红书美女日常_1.0.safetensors
+  - 写实｜真实感女孩_v1.safetensors
+- **CLIP**: clip_l.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.sft, qwen_image_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 70. 118.253.159.40:8188
+
+- **版本**: 0.3.51
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 4 GB)
+- **内存**: 125 GB (空闲 70 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (1):
+  - VibeVoice_example.json
+- **模型** (2):
+  - qwen_image_distill_full_fp8_e4m3fn.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+- **LoRA** (1 个, 前10):
+  - Qwen-Image-Lightning-8steps-V1.0.safetensors
+- **CLIP**: qwen_2.5_vl_7b_fp8_scaled.safetensors
+- **VAE**: qwen_image_vae.safetensors
+
+### 71. 117.50.198.233:8183
+
+- **版本**: 0.17.2
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 23 GB)
+- **内存**: 432 GB (空闲 411 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (1 个, 前10):
+  - pixel_art_style_z_image_turbo.safetensors
+- **CLIP**: qwen_3_4b.safetensors
+- **VAE**: ae.safetensors, pixel_space
+
+### 72. 117.50.198.233:8181
+
+- **版本**: 0.17.2
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 23 GB)
+- **内存**: 432 GB (空闲 411 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (1 个, 前10):
+  - pixel_art_style_z_image_turbo.safetensors
+- **CLIP**: qwen_3_4b.safetensors
+- **VAE**: ae.safetensors, pixel_space
+
+### 73. 101.37.126.72:6007
+
+- **版本**: 0.20.1
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 D : cudaMallocAsync)
+- **显存**: 24 GB (空闲 23 GB)
+- **内存**: 1007 GB (空闲 948 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (1):
+  - gpt low.json
+- **模型** (3):
+  - Flux2-Klein-9B-True-v2-fp8mixed.safetensors
+  - flux-2-klein-9b-fp8.safetensors
+  - flux-2-klein-9b-kv-fp8.safetensors
+- **LoRA** (18 个, 前10):
+  - Flux2-Klein-9B-一致性V2.safetensors
+  - f2k_9B_lcs_consist_20260415.safetensors
+  - klein_9B_Turbo_r128.safetensors
+  - F2K9B-3D可爱盲盒-v1_000003750.safetensors
+  - F2K9B-小人插画-v1_000002500.safetensors
+  - F2K9B-美式动漫-v1_000003000.safetensors
+  - F2K9B-随意蜡笔-v1_000003250.safetensors
+  - 唐朝写真-男文人-KB2_v2_000002000.safetensors
+  - 唐装-女款-KB2_v2-4000.safetensors
+  - 宋代服饰男-KB2_v1_000002000.safetensors
+- **CLIP**: qwen_3_8b_fp8mixed.safetensors
+- **VAE**: flux2-vae.safetensors, pixel_space
+
+### 74. 106.75.127.95:8800
+
+- **版本**: 0.11.1
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 14 GB)
+- **内存**: 62 GB (空闲 32 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (2):
+  - flux-2-klein-base-9b.safetensors
+  - svdq-int4_r32-flux.1-kontext-dev.safetensors
+- **LoRA** (24 个, 前10):
+  - 10mm_tif_fp32_000017000.safetensors
+  - 15mm_000003500.safetensors
+  - 15mm_1225_000007000.safetensors
+  - 15mm_tif_fp32_000020000.safetensors
+  - 1mm_0113_000014000.safetensors
+  - 1mm_1225_000012000.safetensors
+  - 1mm_fp32_000019000.safetensors
+  - 1mm_jnp_000003250.safetensors
+  - 3mm_000007000.safetensors
+  - 3mm_1225_000012000.safetensors
+- **CLIP**: clip_l.safetensors, qwen3_8b.safetensors, t5xxl_fp16.safetensors
+- **VAE**: ae.safetensors, flux2-vae.safetensors, pixel_space
+
+### 75. 122.228.40.58:7000
+
+- **版本**: 0.3.75
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 19 GB)
+- **内存**: 125 GB (空闲 104 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 18
+- **工作流** (36):
+  - 千问Qwen Edit-2511偏移修正流（单图适用）.json
+  - custom_edit.json
+  - native-hidream-i1-dev-fp8.json
+  - generate_by_style (Copy).json
+  - garment_0.4.json
+  - style_ref0.6.json
+  - text2img_model_qwen.json
+  - JoyCaption3+最新反推，批量打标工作流.json
+  - hy3dv2.0.json
+  - ai-video1.json
+  - 【大炮精选】Kontext+多图融合一致性【+多图组合版】.json
+  - 根据线稿得到服装.json
+  - uv图.json
+  - image_qwen_image.json
+  - 试衣.json
+  - garment_model.json
+  - 123.json
+  - 风格参考.json
+  - generate_by_style (Copy) (Copy).json
+  - z_image_turbo文生图示例工作流.json
+  - text2img0.6.json
+  - image_qwen_image_edit.json
+  - z-image_turbo.json
+  - extract_line_0.1.json
+  - extract_line_0.1 (Copy).json
+  - flux_redux_model_example.json
+  - tiger_eagle10.json
+  - flux_kontext_dev_basic.json
+  - 生成线稿.json
+  - get.json
+  - style_ref.json
+  - generate_by_line.json
+  - 图像编辑.json
+  - 【Work-Fisher】【11.27】Z-IMAGE：小而美图像模型合集：文生图、自动反推洗图.json
+  - 千问Qwen Edit 2509-工作流整合.json
+  - hy3dtest.json
+- **模型** (14):
+  - hunyuan3d-dit-v2-0-turbo.safetensors
+  - Hunyuan3D-2mv-turbo.safetensors
+  - Qwen-Image-Edit-2509_fp8_e4m3fn.safetensors
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - flux1-dev-kontext_fp8_scaled.safetensors
+  - flux1-dev.safetensors
+  - hidream_i1_dev_fp8.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_distill_full_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_bf16.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - z-image-turbo-fp8-e4m3fn.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (2 个, 前10):
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Lightning-4steps-V2.0.safetensors
+- **CLIP**: clip_g_hidream.safetensors, clip_l.safetensors, clip_l_hidream.safetensors, llama_3.1_8b_instruct_fp8_scaled.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: ae.safetensors, qwen_image_vae.safetensors, pixel_space
+
+### 76. 117.50.250.44:8800
+
+- **版本**: 0.6.0
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 10 GB)
+- **内存**: 62 GB (空闲 46 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - svdq-int4_r32-flux.1-kontext-dev.safetensors
+- **LoRA** (18 个, 前10):
+  - 10mm_tif_fp32_000017000.safetensors
+  - 15mm_1225_000007000.safetensors
+  - 15mm_tif_fp32_000020000.safetensors
+  - 1mm_0113_000014000.safetensors
+  - 1mm_1225_000012000.safetensors
+  - 1mm_fp32_000019000.safetensors
+  - 3mm_1225_000012000.safetensors
+  - 5mm_tif_fp32_000017000.safetensors
+  - 8mm_1225_000015000.safetensors
+  - FLUX.1-Turbo-Alpha.safetensors
+- **CLIP**: clip_l.safetensors, t5xxl_fp16.safetensors
+- **VAE**: ae.safetensors, pixel_space
+
+### 77. 117.50.198.233:8188
+
+- **版本**: 0.17.2
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 23 GB)
+- **内存**: 432 GB (空闲 411 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (1 个, 前10):
+  - pixel_art_style_z_image_turbo.safetensors
+- **CLIP**: qwen_3_4b.safetensors
+- **VAE**: ae.safetensors, pixel_space
+
+### 78. 117.50.198.233:8185
+
+- **版本**: 0.17.2
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 23 GB)
+- **内存**: 432 GB (空闲 411 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (1 个, 前10):
+  - pixel_art_style_z_image_turbo.safetensors
+- **CLIP**: qwen_3_4b.safetensors
+- **VAE**: ae.safetensors, pixel_space
+
+### 79. 117.50.198.233:8187
+
+- **版本**: 0.17.2
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 23 GB)
+- **内存**: 432 GB (空闲 411 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (1 个, 前10):
+  - pixel_art_style_z_image_turbo.safetensors
+- **CLIP**: qwen_3_4b.safetensors
+- **VAE**: ae.safetensors, pixel_space
+
+### 80. 101.200.217.56:50100
+
+- **版本**: 0.18.5
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 22 GB)
+- **内存**: 63 GB (空闲 51 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (153):
+  - (前置)pose_remapping骨骼重映射.json
+  - 2024.10.22flux+PuLID指定人脸出图.json
+  - 3DworkFLow (1).json
+  - 3DworkFLow (Copy).json
+  - 3DworkFLow.json
+  - aa (2).json
+  - aa.json
+  - ChangePose.json
+  - Comfyui_Sound.json
+  - ComfyUI_temp_cecai_00002_.json
+  - flux-Klein-OpenPose姿势参考.json
+  - Flux2-klein-9B单图+双图编辑+多风格转换+多角色多视觉创作设计.json
+  - flux_kontext_dev_basic (1).json
+  - flux_kontext_dev_basic.json
+  - flux_lora_简单文生图.json
+  - Full_Workflow.json
+  - HunyuanMotion (Copy).json
+  - HunyuanMotion.json
+  - imagetoRigging (2).json
+  - image_qwen_image_controlnet_patch.json
+  - image_qwen_image_edit_2511_multiangle_camera.json
+  - image_z_image_turbo (3).json
+  - Infinite+Talk-数字人对口型唱歌 (Copy).json
+  - Infinite+Talk-数字人对口型唱歌.json
+  - Infinite+Talk-数字人对口型唱歌_simple.json
+  - infinitetalk单人 (2).json
+  - infinitetalk对口型工作流 (Copy).json
+  - infinitetalk对口型工作流.json
+  - KL_Optimal (2).json
+  - kl_optimal测试V1_new.json
+  - kl_optimal测试V1_new_FULL.json
+  - kl_optimal测试V2_Simple.json
+  - LTX++首尾帧视频+关键帧视频+.json
+  - LTX2.0-【首尾帧】 (1).json
+  - LTX2.0-【首尾帧】 (Copy) (2).json
+  - LTX2.0首尾帧_首中尾帧生视频V1（附自动生提示词） 适合人物开车，动态适宜 (1).json
+  - LTX2.0首尾帧_首中尾帧生视频V1（附自动生提示词） 适合人物开车，动态适宜 (2).json
+  - LTX2.0首尾帧_首中尾帧生视频V1（附自动生提示词） 适合人物开车，动态适宜.json
+  - LTX2.0首尾帧生视频V3_极速优化版_三次采样（支持自动提示词） (1).json
+  - LTX2.0首尾帧生视频V3_极速优化版_三次采样（支持自动提示词）.json
+  - LTX2.3--图生音视频.json
+  - LTX2.3图生视频 (1).json
+  - LTX2.3图生视频.json
+  - LTX2.3首尾帧+丝滑转场Plus版工作流 (1) (1) (3).json
+  - LTX2.3首尾帧+丝滑转场Plus版工作流 (1) (1).json
+  - LTX2.3首尾帧+丝滑转场Plus版工作流 (1).json
+  - LTX_2_首尾帧工作流.json
+  - LTX_2首尾帧工作流 (2).json
+  - LTX_2首尾帧工作流.json
+  - lu-Qwen_edit图像编辑(多图融合) (1).json
+  - lu_flux_kontext_dev_basic.json
+  - mmAudio.json
+  - old.json
+  - OneToAll视频姿势参考（骨骼绑定） (Copy).json
+  - OneToAll视频姿势参考（骨骼绑定）.json
+  - outOpenPose.json
+  - PANG实时绘画工作流 (2).json
+  - PANG实时绘画工作流-1 (2).json
+  - PANG实时绘画工作流-1 (3).json
+  - PANG实时绘画工作流-1 (Copy).json
+  - PANG实时绘画工作流-1.json
+  - QWEB多视角 (Copy).json
+  - QWEB多视角.json
+  - Qwen+DWOpenPose角色动作迁移.json
+  - Qwen-文生图常用流 (1).json
+  - Qwen-文生图常用流.json
+  - QwenKontext_getXYZ.json
+  - QwenVL-image2txt.json
+  - Qwen_模型补丁_DiffsynthControlnet_局部修复工作流1.0 (1).json
+  - Redux+FluxFill1231313.json
+  - Remix+v2多图首尾帧_手动配置.json
+  - Remix+图生视频++v2+首帧尾帧首尾帧++手动.json
+  - repainter.json
+  - rigging (1).json
+  - rigging (3).json
+  - rigging.json
+  - Rot360.json
+  - SAM3DB-rigged_mesh_manipulation.json
+  - SAM3DB-rigging.json
+  - SAM3DB-workflow.json
+  - SCAIL+SDPose+Uni3C动作、运镜最强迁移，单人、多人、非人 (1).json
+  - SCAIL+SDPose+Uni3C动作、运镜最强迁移，单人、多人、非人 (2).json
+  - SCAIL+SDPose+Uni3C动作、运镜最强迁移，单人、多人、非人 (3).json
+  - SCAIL+SDPose+Uni3C动作、运镜最强迁移，单人、多人、非人 (Copy) (Copy).json
+  - SCAIL+SDPose+Uni3C动作、运镜最强迁移，单人、多人、非人 (Copy).json
+  - SCAIL_preprocess_example_01.json
+  - SCAIL，支持丝滑转身，支持双人对打.json
+  - SD1.5图生图+canny风景.json
+  - sd插件放大.json
+  - SeedVR2_simple_image_upscale.json
+  - seethrough-basic.json
+  - time-to-move（+TTM）视频引导生成 (2).json
+  - TTS2.json
+  - TTS2_workflow.json
+  - Unsaved Workflow (3).json
+  - Unsaved Workflow (4).json
+  - Unsaved Workflow (7).json
+  - Unsaved Workflow.json
+  - video_imagetoimage.json
+  - WAN+图生视频lora+hunyuan3D+2.0mv单张图生成精细3D模型.json
+  - wan-regenerated_00033_.json
+  - Wan2.2 Animate 动作迁移V3 2026年1月26日-B站小珠光(1).json
+  - Wan2.2+首尾帧+VBVR+lora逻辑推理增强 (2).json
+  - Wan2.2+首尾帧+VBVR+lora逻辑推理增强.json
+  - Wan2.2Animate：角色、动作、表情的三位一体！全维角色重塑，影随心动的迁移艺术.json
+  - wan2.2_重绘（增加细节）.json
+  - wan2.2_重绘（增加细节）含高级采样方案 (Copy) (2).json
+  - wan2.2_重绘（增加细节）含高级采样方案.json
+  - wan21+wan22_指定运镜工作流，精确控制运镜 (1).json
+  - wan21+wan22_指定运镜工作流，精确控制运镜.json
+  - Wanmove轨迹控制运动 (Copy).json
+  - Wanmove轨迹控制运动.json
+  - 【AI代码侠土豆】V2V-Infinitetalk视频转数字人.json
+  - 【LTX2.0-首尾帧视频】全自动（Plus48G） (4).json
+  - 【LTX2.3-首尾帧频】全自动（1.0版本）.json
+  - 【Work-FIsh】WAN2.2-RemixV2-I2V首尾帧视频.json
+  - 【遇见AI】SD1.5基础图生图工作流.json
+  - 一键IPAdapter风格迁移 (2).json
+  - 人物完美替换姿态迁移换场景换动作+面部修复+高清放大.json
+  - 人物迁移(指定姿势).json
+  - 保留人物衣服一致性换背景换姿势.json
+  - 制作多视角图片V2.json
+  - 动作迁移2.0SteadDancer（支持动漫人物）t人物一致性加强版（10s+） (1) (1).json
+  - 动作迁移2.0SteadDancer（支持动漫人物）t人物一致性加强版（10s+） (1).json
+  - 动作迁移2.0SteadDancer（支持动漫人物）t人物一致性加强版（10s+） (2).json
+  - 动作迁移二次元优化版 (1).json
+  - 动作迁移二次元优化版 (Copy) (2).json
+  - 动作迁移二次元优化版.json
+  - 单图生成lora工作流 (2).json
+  - 单图生成lora工作流 (Copy).json
+  - 姿态迁移qwenedit-anypose (1).json
+  - 姿态迁移qwenedit-anypose (Copy).json
+  - 姿态迁移qwenedit-anypose.json
+  - 姿态迁移工作流.json
+  - 影视剧替换人物第二步：视频驱动图片（可多人） (2).json
+  - 影视剧替换人物第二步：视频驱动图片（可多人）.json
+  - 扩图.json
+  - 新建 文本文档 (7).json
+  - 最强换脸工作流（带放大功能）.json
+  - 服装电商（2_5）：图-换脸+换装+换姿势+换背景+_+Redux+FluxFill (1).json
+  - 服装电商（2_5）：图-换脸+换装+换姿势+换背景+_+Redux+FluxFill.json
+  - 服装电商（2_5）：图-换脸+换装+换姿势+换背景+_+Redux+FluxFill1231313.json
+  - 表情调整.json
+  - 读小说用这个1111.json
+  - 首尾帧-wan2.2.json
+  - 首尾帧视频WAN2.2高质量版v2.0（支持10s以上） (2).json
+  - 首尾帧视频生成_多帧视频生成_SmoothMix2.0.json
+  - 🕵🏻REMIX+V2+首-中-尾三帧视频【可破限】🕵🏻.json
+  - 🚵Smooth+Mix+wan2.2+高动态电影质感模型+图生视频【动态升级版V2】🚵.json
+  - 🚵Smooth+Mix+wan2.2+高动态电影质感模型+首尾帧视频🚵.json
+  - 🤖Time+to+Move轨迹遮罩视频自动生成工具🤖 (2).json
+  - 🤖Time+to+Move轨迹遮罩视频自动生成工具🤖_NEW (Copy) (2).json
+  - 🤖Time+to+Move轨迹遮罩视频自动生成工具🤖_NEW.json
+- **模型** (86):
+  - 3D角色设计PLUS.safetensors
+  - IP DESIGN _ 3D可爱化模型_V4.0.safetensors
+  - 梦与3D卡通.fp16.safetensors
+  - Flux.1-dev-fp8_unet_vae_clip_F.1.safetensors
+  - flux1-dev-fp8.safetensors
+  - XL终极欧卡v2.safetensors
+  - 万享XL真人_2.5D.safetensors
+  - 万享XL进阶_2.5D版_V7.0.safetensors
+  - Quadratic Anime_V1.safetensors
+  - XL现代都市漫画.safetensors
+  - XL终极漫画平涂.safetensors
+  - animaPencilXL_v100.safetensors
+  - 万享XL典藏版_V6.0.safetensors
+  - 万享XL进阶版_V8.0.safetensors
+  - 糖果森林_XL_anime_style_v1.1.safetensors
+  - 绪儿已成精_动漫XL_V1.safetensors
+  - XL科幻纪元.safetensors
+  - juggernautXL_version6Rundiffusion.safetensors
+  - 万享XL_超写实摄影_V8.4.safetensors
+  - 万享_多类闪电大模型_V8.0.safetensors
+  - 绪儿-一青十色XL_V3.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - 偏写实漫画.safetensors
+  - 古风小说推文人设.safetensors
+  - 巧克力森林 _ 2.5D chibi Style _ v1.0.safetensors
+  - 幻想森林 _ 2.5D art style _v2.0.safetensors
+  - 普通2.5D.safetensors
+  - Dream_and_Daily_v3 梦与日常v3版本.safetensors
+  - Dream_and_reality.safetensors
+  - wuhua1.5_realistic.safetensors
+  - 万享超写实_1.5大模型_V1.safetensors
+  - 叶绿体写实.safetensors
+  - 极致写实·黑白摄影_sd1.5版.safetensors
+  - 梦幻森林 _ Photorealistic Style_v2.4..safetensors
+  - 清代宫廷人设.safetensors
+  - 绪儿已成精 红蓝幻想 V2.safetensors
+  - AnyBuild 室内设计与建筑外观_v1.0.ckpt
+  - Avontan_场景.safetensors
+  - Avontan_顶视角_v1.0.safetensors
+  - Avontan_顶视角_v2.0.safetensors
+  - Avontan_Q版.safetensors
+  - 多重风格角色立绘v2.safetensors
+  - 糖果森林 _ Kids Illustration Style_v2.0.safetensors
+  - 超凡欧卡.safetensors
+  - Avontan_国风_v1.0.safetensors
+  - Avontan_国风_v2.0.safetensors
+  - 万享动漫_LCM新模型.safetensors
+  - 厚涂插画_v1.0.safetensors
+  - 叶绿体次元MIX_v1.0.safetensors
+  - 绪儿已成精_动漫V3 复古风.safetensors
+  - 霸道总裁.safetensors
+  - Avontan_二次元.safetensors
+  - 静谧森林_flat illustration style_v1.0.safetensors
+  - 2D平涂漫画.safetensors
+  - Avontan_卡通_v1.0.safetensors
+  - 平涂硬边.safetensors
+  - 漫画人物2.safetensors
+  - Avontan_儿童插画.safetensors
+  - 废土世界 Wasteland.safetensors
+  - 数字森林 _ e-Commerce Style_v1.0.safetensors
+  - 极简孟菲斯空间.safetensors
+  - 电商场景MIX_V2.safetensors
+  - F.1 Kontext dev_fp8.safetensors
+  - flux1-dev-fp8.safetensors
+  - Flux Fill dev_fp8_e4m3fn.safetensors
+  - Wan21-OneToAllAnimation_fp8_e4m3fn_scaled_KJ.safetensors
+  - qwenEdit2511FP8_v10.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_bf16.safetensors
+  - Wan2_2-Animate-14B_fp8_scaled_e4m3fn_KJ_v2.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_high_lighting_v2.0.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_low_lighting_v2.0.safetensors
+  - Wan21-14B-SCAIL-preview_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan21-WanMove_fp8_scaled_e4m3fn_KJ.safetensors
+  - Wan21_SteadyDancer_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_1-I2V-14B-480p_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - flux-2-klein-9b.safetensors
+  - flux1-fill-dev.safetensors
+  - hunyuan3d-dit-v2-1-fp16.ckpt
+  - Wan2_1-InfiniTetalk-Single_fp16.safetensors
+  - ltx-2.3-22b-distilled_transformer_only_fp8_input_scaled.safetensors
+  - wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (250 个, 前10):
+  - 2.5D古风武侠立绘v1.safetensors
+  - 2.5D古风武侠立绘v2.safetensors
+  - 2d sanshitu.safetensors
+  - donghuasanshitu.safetensors
+  - 3D风格_手办_可爱_v1.safetensors
+  - YLT_3D可爱风格_v1.0.safetensors
+  - 商业3D人物库_3D_character_v1.0.safetensors
+  - 多巴胺女孩3D_V1.safetensors
+  - 大理石纹理.safetensors
+  - 潮玩Play_V1.safetensors
+- **CLIP**: adapter_model.safetensors, adapter_model.safetensors, Qwen3-8B_fp8.safetensors, clip_l.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, clip-vit-large-patch14.safetensors, clip_l.safetensors, gemma_3_12B_it_fp8_e4m3fn.safetensors, ltx-2.3_text_projection_bf16.safetensors, model-00001-of-00004.safetensors, model-00002-of-00004.safetensors, model-00003-of-00004.safetensors, model-00004-of-00004.safetensors, consolidated.00.pth, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_8b.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5-xxl-enc-bf16.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, Hunyuan3D-vae-v2-1-fp16.ckpt, LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, ae.safetensors, flux2-vae.safetensors, qwen_image_vae.safetensors, sdxl_vae_fp16fix.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 81. 116.11.186.115:8188
+
+- **版本**: 0.3.68
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 3 GB)
+- **内存**: 503 GB (空闲 487 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - svd_xt_1_1.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 82. 117.50.198.233:8186
+
+- **版本**: 0.17.2
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 23 GB)
+- **内存**: 432 GB (空闲 411 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (1 个, 前10):
+  - pixel_art_style_z_image_turbo.safetensors
+- **CLIP**: qwen_3_4b.safetensors
+- **VAE**: ae.safetensors, pixel_space
+
+### 83. 117.50.198.233:8182
+
+- **版本**: 0.17.2
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 23 GB)
+- **内存**: 432 GB (空闲 411 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (1 个, 前10):
+  - pixel_art_style_z_image_turbo.safetensors
+- **CLIP**: qwen_3_4b.safetensors
+- **VAE**: ae.safetensors, pixel_space
+
+### 84. 119.145.30.205:8188
+
+- **版本**: 0.3.68
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 D : cudaMallocAsync)
+- **显存**: 24 GB (空闲 14 GB)
+- **内存**: 31 GB (空闲 4 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (4):
+  - 图生图.json
+  - image_qwen_image_user_lora.json
+  - image_qwen_image_edit_2511.json
+  - image_qwen_image.json
+- **模型** (3):
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_fp8_e4m3fn_scaled_lightning_comfyui.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+- **LoRA** (12 个, 前10):
+  - HULU-Image-Edit.safetensors
+  - HULU-Image.safetensors
+  - 佛像.safetensors
+  - 六福.safetensors
+  - 卷草纹.safetensors
+  - 君佩.safetensors
+  - 拉丝.safetensors
+  - 泛化.safetensors
+  - 泛化100.safetensors
+  - 花丝.safetensors
+- **CLIP**: qwen_2.5_vl_7b_fp8_scaled.safetensors
+- **VAE**: qwen_image_vae.safetensors, pixel_space
+
+### 85. 115.68.56.56:50001
+
+- **版本**: 0.3.67
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 23 GB)
+- **内存**: 62 GB (空闲 57 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 5
+- **工作流** (4):
+  - workflow-flux-schnell.json
+  - workflow-flux-dev-fp8.json
+  - workflow-flux-schnell-fp8.json
+  - workflow-flux-dev.json
+- **模型** (0): 无
+- **LoRA** (13 个, 前10):
+  - bonita.safetensors
+  - elmuchacreambottle.safetensors
+  - elmuchaskinbottle.safetensors
+  - elmuchaskinbottlebox.safetensors
+  - elmuchaskinbox.safetensors
+  - greek-yogurt-v1.safetensors
+  - greek-yogurt-v2.safetensors
+  - ioniq5n_v1.safetensors
+  - kona_voyage_tm6_v1.safetensors
+  - lunarcushion.safetensors
+- **CLIP**: clip_l.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: ae.safetensors, ae.safetensors, pixel_space
+
+### 86. 128.14.24.137:8188
+
+- **版本**: 0.3.64
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 14 GB)
+- **内存**: 62 GB (空闲 30 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (1):
+  - +Wan2.2+All+In+One+NSFW+With+CineScale(High+Res) (可出).json
+- **模型** (2):
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (2 个, 前10):
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
+- **CLIP**: umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: wan_2.1_vae.safetensors, pixel_space
+
+### 87. 183.232.248.105:8188
+
+- **版本**: v0.2.2
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 22 GB)
+- **内存**: 0 (空闲 0)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (6):
+  - 25D朦胧美MAX.safetensors
+  - WA-illustrious-SDXL_v14.safetensors
+  - WAI_NSFW-illustrious-SDXL_v14.safetensors
+  - 古风乙游男_v1.safetensors
+  - 平涂二次元风格_v4.safetensors
+  - 美宣风格大模型.safetensors
+- **LoRA** (17 个, 前10):
+  - DT_游戏立绘（薄涂）_ill1.0_Lora版.safetensors
+  - honghong.safetensors
+  - lcm-lora-sdv1-5pytorch_lora_weights.safetensors
+  - lcm-lora-sdxl pytorch_lora_weights.safetensors
+  - lcm-lora-ssd-1b.safetensors
+  - wrzy_v0.2-000030.safetensors
+  - yuanzi.safetensors
+  - z3画风_illv0.1.safetensors
+  - 乙游男脸.safetensors
+  - 唐三_V1.0.safetensors
+- **VAE**: animevae.pt, sdxl_vae_fp16fix.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, taesd, taesdxl, taesd3, taef1
+
+### 88. 183.232.248.113:8188
+
+- **版本**: v0.2.2
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 22 GB)
+- **内存**: 0 (空闲 0)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (6):
+  - 25D朦胧美MAX.safetensors
+  - WA-illustrious-SDXL_v14.safetensors
+  - WAI_NSFW-illustrious-SDXL_v14.safetensors
+  - 古风乙游男_v1.safetensors
+  - 平涂二次元风格_v4.safetensors
+  - 美宣风格大模型.safetensors
+- **LoRA** (18 个, 前10):
+  - DT_游戏立绘（薄涂）_ill1.0_Lora版.safetensors
+  - honghong.safetensors
+  - lcm-lora-sdv1-5pytorch_lora_weights.safetensors
+  - lcm-lora-sdxl pytorch_lora_weights.safetensors
+  - lcm-lora-ssd-1b-eff67f75e97d.safetensors
+  - lcm-lora-ssd-1b.safetensors
+  - wrzy_v0.2-000030.safetensors
+  - yuanzi.safetensors
+  - z3画风_illv0.1.safetensors
+  - 乙游男脸.safetensors
+- **VAE**: animevae.pt, sdxl_vae_fp16fix.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, taesd, taesdxl, taesd3, taef1
+
+### 89. 183.232.248.121:8188
+
+- **版本**: v0.2.2
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 22 GB)
+- **内存**: 0 (空闲 0)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (6):
+  - 25D朦胧美MAX.safetensors
+  - WA-illustrious-SDXL_v14.safetensors
+  - WAI_NSFW-illustrious-SDXL_v14.safetensors
+  - 古风乙游男_v1.safetensors
+  - 平涂二次元风格_v4.safetensors
+  - 美宣风格大模型.safetensors
+- **LoRA** (18 个, 前10):
+  - DT_游戏立绘（薄涂）_ill1.0_Lora版.safetensors
+  - L0LSPL4SH_IllustriousXLv01.safetensors
+  - honghong.safetensors
+  - lcm-lora-sdv1-5pytorch_lora_weights.safetensors
+  - lcm-lora-sdxl pytorch_lora_weights.safetensors
+  - lcm-lora-ssd-1b.safetensors
+  - wrzy_v0.2-000030.safetensors
+  - yuanzi.safetensors
+  - z3画风_illv0.1.safetensors
+  - 乙游男脸.safetensors
+- **VAE**: animevae.pt, sdxl_vae_fp16fix.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, taesd, taesdxl, taesd3, taef1
+
+### 90. 183.232.248.97:8188
+
+- **版本**: v0.2.2
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 16 GB)
+- **内存**: 0 (空闲 0)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (6):
+  - 25D朦胧美MAX.safetensors
+  - WAI_NSFW-illustrious-SDXL_v14.safetensors
+  - 二次元大模型.safetensors
+  - 古风乙游男_v1.safetensors
+  - 平涂二次元风格_v4.safetensors
+  - 美宣风格大模型.safetensors
+- **LoRA** (20 个, 前10):
+  - DT_游戏立绘（薄涂）_ill1.0_Lora版.safetensors
+  - DaiMubai-000030.safetensors
+  - DuGuyan.safetensors
+  - L0LSPL4SH_IllustriousXLv01.safetensors
+  - honghong.safetensors
+  - lcm-lora-sdv1-5pytorch_lora_weights.safetensors
+  - lcm-lora-sdxl pytorch_lora_weights.safetensors
+  - lcm-lora-ssd-1b.safetensors
+  - wrzy_v0.2-000030.safetensors
+  - yuanzi.safetensors
+- **VAE**: animevae.pt, sdxl_vae_fp16fix.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, taesd, taesdxl, taesd3, taef1
+
+### 91. 183.232.248.107:8188
+
+- **版本**: v0.2.2
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 16 GB)
+- **内存**: 0 (空闲 0)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (6):
+  - epicrealism_naturalSinRC1VAE.safetensors
+  - epicrealism_pureEvolutionV5-inpainting.safetensors
+  - 二次元大模型.safetensors
+  - 古风乙游男_v1.safetensors
+  - 平涂二次元风格_v4.safetensors
+  - 美宣插画大模型.safetensors
+- **LoRA** (16 个, 前10):
+  - DT_游戏立绘（薄涂）_ill1.0_Lora版.safetensors
+  - L0LSPL4SH_IllustriousXLv01.safetensors
+  - add_detail.safetensors
+  - honghong.safetensors
+  - lcm-lora-sdv1-5pytorch_lora_weights.safetensors
+  - lcm-lora-sdxl pytorch_lora_weights.safetensors
+  - lcm-lora-ssd-1b.safetensors
+  - z3画风_illv0.1.safetensors
+  - 乙游男脸.safetensors
+  - 唐三_V1.0.safetensors
+- **VAE**: animevae.pt, sdxl_vae_fp16fix.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, taesd, taesdxl, taesd3, taef1
+
+### 92. 134.249.117.157:8188
+
+- **版本**: 0.3.26
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 19 GB)
+- **内存**: 62 GB (空闲 57 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 46
+- **工作流** (63):
+  - 008 - Simple Hunyuan Video Workflow v1.2 T2I.json
+  - image_to_video_wan_720p_example.json
+  - 007 - Breast Squeeze and Lactation .json
+  - 21-03-2025.json
+  - 034 -  Sucking.json
+  - wan21LowVramComfyUI-5sec.json
+  - 022 - sex.json
+  - 002 - missionary - sex.json
+  - Workflow made by Hearmeman.json
+  - 036- SEX - ----.json
+  - wan21LowVramComfyUI-2.json
+  - 019 - hunyuan - i2v.json
+  - uniq-wan2.1-02.json
+  - 031 - Breast Squeeze and Lactation - H.json
+  - convert-png-to-mp4.json
+  - 016 - upscale images.json
+  - image_to_video_wan_480p_base.json
+  - Simple Hunyuan Video Workflow v1.2 T2I.json
+  - image_to_video_wan_720p_(1280x720).json
+  - 3.json
+  - 025 multi-controlnet-sdxl.json
+  - wan21LowVramComfyUI-2-(512x752)-5sec-lora)-notes.json
+  - image_to_video_wan_480p_base_First.json
+  - 012- Breast Squeeze and Lactation .json
+  - 000-notes.json
+  - new-and-big-2.json
+  - 027 - Sucking  - wan2.1-i2v-14b-720p-Q8_0.gguf.json
+  - 020 - unknown.json
+  - 029 - titsfuck  - wan2.1-i2v-14b-720p-Q8_0.gguf.json
+  - 2.json
+  - 005 - Breast Squeeze and Lactation - W.json
+  - wan21LowVramComfyUI-2-(512x752)-5sec-lora).json
+  - 020 unknown.json
+  - uniq-wan2.1-01.json
+  - Notes.json
+  - 033 - Sucking  - wan2.1-i2v-14b-720p-Q8_0.gguf.json
+  - 015 - masturb.json
+  - ComfyUI_00146_.json
+  - 001 - breasts - dance.json
+  - image_to_video_wan_480p_example (2).json
+  - 026 multi-controlnet-sdxl-loras.json
+  - 009 - txt2video.json
+  - new-and-big-3.json
+  - 030 - titsfuck - best  - wan2.1-i2v-14b-720p-Q8_0.gguf.json
+  - 017 - missionary - sex.json
+  - 028 - missionary - sex.json
+  - 032 - text_to_video_wan_480p_base.json
+  - 013 - Breast Squeeze and Lactation.json
+  - 23-03-2024 - Hunyuan_I2V_OfficialNative-BySam.json
+  - 006 - breasts - dance -W.json
+  - 023 - 1.5 with Controlnet (Canny, Depth, OpenPose, Lineart).json
+  - 014 - Play with breasts.json
+  - image_to_video_wan_480p_example (3).json
+  - 4.json
+  - 024 - model.json
+  - 027 - Sucking .json
+  - new-and-big.json
+  - 003 - grub breasts.json
+  - convert-png-to-mp4-with-upscale.json
+  - image_to_video_wan_720p_dance.json
+  - 004 - breasts - dance.json
+  - 010 - Simple Hunyuan Video Workflow v1.2 T2I.json
+  - 011 - Simple Hunyuan Video Workflow v1.2 T2I.json
+- **模型** (157):
+  - 0.5(0.5(sdxl_bbbSDXL_bbbBetaV2) + 0.5(sdxl_lifeIsGood_v1)) + 0.5(pyrosNSFWSDXL_v04).safetensors
+  - 0.5(0.7(0.7(disneyPixarCartoon_v10) + 0.3(puffy_v20)) + 0.3(babes_20)) + 0.5(tameheadmix_v04).safetensors
+  - 0.5(albedobaseXL_v13) + 0.5(sdxl_lifeIsGood_v1).safetensors
+  - 0.5(picxCute_10) + 0.5(0.7(0.7(darelitesFantasyLeaning_toanimemix) + 0.3(epicMixAnimeNSFW_v4Vibrant)) + 0.3(tameheadmix_v04)).safetensors
+  - 0.5(picxCute_10) + 0.5(tameheadmix_v04).safetensors
+  - 0.5(ponyRealism_v21MainVAE) + 0.5(0.7(0.7(0.5(sdxl_bbbSDXL_bbbBetaV2) + 0.5(sdxl_lifeIsGood_v1)) + 0.3(pyrosNSFWSDXL_v04)) + 0.3(0.5(sdxl_bbbSDXL_bbbBetaV2) + 0.5(sdxl_lifeIsGood_v1))).safetensors
+  - 0.5(revAnimated_v11) + 0.5(tameheadmix_v04).safetensors
+  - 0.5(sdxl_bbbSDXL_bbbBetaV2) + 0.5(0.7(sdxl_bbbSDXL_bbbBetaV2) + 0.3(sdxl_lifeIsGood_v1)).safetensors
+  - 0.5(sdxl_bbbSDXL_bbbBetaV2) + 0.5(sdxl_lifeIsGood_v1).safetensors
+  - 0.6(0.7(0.7(0.5(sdxl_bbbSDXL_bbbBetaV2) + 0.5(sdxl_lifeIsGood_v1)) + 0.3(pyrosNSFWSDXL_v04)) + 0.3(0.5(sdxl_bbbSDXL_bbbBetaV2) + 0.5(sdxl_lifeIsGood_v1))) + 0.4(sdxl_ponyDiffusionV6XL_v6StartWithThisOne).safetensors
+  - 0.7(0.3(perfectWorld_v2Baked) + 0.7(abyssorangemix35MilkCow_a3)) + 0.3(tameheadmix_v055).safetensors
+  - 0.7(0.5(0.5(sdxl_bbbSDXL_bbbBetaV2) + 0.5(sdxl_lifeIsGood_v1)) + 0.5(pyrosNSFWSDXL_v04)) + 0.3(sdxl_ponyDiffusionV6XL_v6StartWithThisOne).safetensors
+  - 0.7(0.5(sdxl_bbbSDXL_bbbBetaV2) + 0.5(sdxl_lifeIsGood_v1)) + 0.3(pyrosNSFWSDXL_v04).safetensors
+  - 0.7(0.7(0.5(sdxl_bbbSDXL_bbbBetaV2) + 0.5(sdxl_lifeIsGood_v1)) + 0.3(pyrosNSFWSDXL_v04)) + 0.3(0.5(sdxl_bbbSDXL_bbbBetaV2) + 0.5(sdxl_lifeIsGood_v1)).safetensors
+  - 0.7(0.7(0.7(disneyPixarCartoon_v10) + 0.3(puffy_v20)) + 0.3(babes_20)) + 0.3(tameheadmix_v04).safetensors
+  - 0.7(Zoltraak_mix6-nsfw) + 0.3(tameheadmix_v055).safetensors
+  - 0.7(abyssorangemix35MilkCow_a3) + 0.3(tameheadmix_v04).safetensors
+  - 0.7(albedobaseXL_v13) + 0.3(sdxl_lifeIsGood_v1).safetensors
+  - 0.7(hassakuHentaiModel_v12) + 0.3(tameheadmix_v055).safetensors
+  - 0.7(meichidarkMix_meichidarkV45) + 0.3(0.7(0.7(perfectWorld_v2Baked) + 0.3(epicMixAnimeNSFW_v4Vibrant)) + 0.3(tameheadmix_v04)).safetensors
+  - 0.7(meichidarkMix_meichidarkV45) + 0.3(tameheadmix_v04).safetensors
+  - 0.7(perfectWorld_v4Baked) + 0.3(0.7(0.7(darelitesFantasyLeaning_toanimemix) + 0.3(epicMixAnimeNSFW_v4Vibrant)) + 0.3(tameheadmix_v04)).safetensors
+  - 0.7(perfectWorld_v4Baked) + 0.3(tameheadmix_v055).safetensors
+  - 0.7(ponyRealism_v21MainVAE) + 0.3(0.7(sdxl_bbbSDXL_bbbBetaV2) + 0.3(sdxl_lifeIsGood_v1)).safetensors
+  - 0.7(pyrosNSFWSDXL_v04) + 0.3(sdxl_lifeIsGood_v1).safetensors
+  - 0.7(realisticLatexGirls_) + 0.3(tameheadmix_v055).safetensors
+  - 0.7(revAnimated_v11) + 0.3(tameheadmix_v04).safetensors
+  - 0.7(sdxl_bbbSDXL_bbbBetaV2) + 0.3(sdxl_lifeIsGood_v1).safetensors
+  - 0.7(sdxl_ponyDiffusionV6XL_v6StartWithThisOne) + 0.3(sdxl_pony_revEnginePonyxl_v10).safetensors
+  - 0.7(sdxl_pony_prefectIllustriousXL_v10) + 0.3(sdxl_pony_ponyDiffusionV6XL_v6StartWithThisOne).safetensors
+  - 0.7(sdxl_pony_realDream_sdxlPony11) + 0.3(sdxl_pony_ponyDiffusionV6XL_v6StartWithThisOne).safetensors
+  - 0.7(sdxl_pony_waiREALCN_v10) + 0.3(sdxl_pony_ponyDiffusionV6XL_v6StartWithThisOne).safetensors
+  - 0.7(unstableBarbie_v10) + 0.3(darelitesFantasyLeaning_toanimemix).safetensors
+  - 0.7(unstableBarbie_v10) + 0.3(epicMixAnimeNSFW_v4Vibrant).safetensors
+  - 0.7(unstableBarbie_v10) + 0.3(perfectWorld_v4Baked).safetensors
+  - aziibpixelmix_v10.safetensors
+  - 3RDEdNEWILLUSTRO_illustroV3.safetensors
+  - Gay_NSFW_SDXL-000001.safetensors
+  - Gay_anal_sex.safetensors
+  - dreamshaper_xl_v2.1.safetensors
+  - sd_xl_base_1.0.safetensors
+  - sd_xl_refiner_1.0.safetensors
+  - abyssorangemix3AOM3_aom3a1b.safetensors
+  - albedobaseXL_v13.safetensors
+  - based64_v3.safetensors
+  - chinaDollLikeness_v10.safetensors
+  - colorburstXL_ponyV10.safetensors
+  - counterfeitV30_v30.safetensors
+  - cyberrealistic_v33.safetensors
+  - epicMixAnimeNSFW_v4Vibrant.ckpt
+  - flux1-dev-fp8.safetensors
+  - galenaREDUX_v20.safetensors
+  - hassakuHentaiModel_v12.safetensors
+  - homofidelisXL_v30SDXL.safetensors
+  - hunyuan_video_vae_bf16.safetensors
+  - clip_l.safetensors
+  - llava_llama3_fp8_scaled.safetensors
+  - llava_llama3_vision.safetensors
+  - hunyuanVideoSafetensors_comfyDiffusionBF16.safetensors
+  - hunyuanVideoSafetensors_comfyDiffusionFP8.safetensors
+  - juggernautXL_v7Rundiffusion.safetensors
+  - kizukiAnimeHentai_animeHentaiV3.safetensors
+  - koji_v2.safetensors
+  - koreanDollLikeness.safetensors
+  - meichidarkMix_meichidarkV5.safetensors
+  - mfcgPaintjob_v20.safetensors
+  - musesThalia_musesThaliaV3.safetensors
+  - olympus_v30.safetensors
+  - perfectdeliberate_v5.safetensors
+  - plasticrealism_v10.safetensors
+  - ponyRealism_v21MainVAE.safetensors
+  - pyrosNSFWSDXL_v04.safetensors
+  - sakushimixFinished_sakushimixFinal.safetensors
+  - 0.5(xxmix9realistic_v40) + 0.5(perfectWorld_v4Baked).safetensors
+  - 0.7(0.5(xxmix9realistic_v40) + 0.5(perfectWorld_v4Baked)) + 0.3(tameheadmix_v04).safetensors
+  - 0.7(0.7(0.7(darelitesFantasyLeaning_toanimemix) + 0.3(epicMixAnimeNSFW_v4Vibrant)) + 0.3(tameheadmix_v04)) + 0.3(abyssorangemix2_Hard).safetensors
+  - 0.7(0.7(darelitesFantasyLeaning_toanimemix) + 0.3(epicMixAnimeNSFW_v4Vibrant)) + 0.3(tameheadmix_v055).safetensors
+  - 0.7(0.7(perfectWorld_v4Baked) + 0.3(epicMixAnimeNSFW_v4Vibrant)) + 0.3(Zoltraak_mix6-nsfw).ckpt
+  - 0.7(0.7(perfectWorld_v4Baked) + 0.3(epicMixAnimeNSFW_v4Vibrant)) + 0.3(tameheadmix_v04).ckpt
+  - 0.7(3moonDollAnime_3moonDollAnime) + 0.3(tameheadmix_v04).safetensors
+  - 0.7(abyssorangemix2_Hard) + 0.3(tameheadmix_v04).safetensors
+  - 0.7(darelitesFantasyLeaning_toanimemix) + 0.3(tameheadmix_v04).safetensors
+  - 0.7(epicMixAnimeNSFW_v4Vibrant) + 0.3(tameheadmix_v04).safetensors
+  - 0.7(epicMixAnimeNSFW_v4Vibrant) + 0.3(tameheadmix_v055).safetensors
+  - 0.7(majicmixRealistic_v6) + 0.3(0.7(0.7(darelitesFantasyLeaning_toanimemix) + 0.3(epicMixAnimeNSFW_v4Vibrant)) + 0.3(tameheadmix_v04)).safetensors
+  - 0.9(0.5(xxmix9realistic_v40) + 0.5(perfectWorld_v4Baked)) + 0.1(tameheadmix_v04).safetensors
+  - counterfeitV30_25.safetensors
+  - realisticVisionV60B1_v51HyperVAE.safetensors
+  - BB-000011.TA_trained.safetensors
+  - LahMysteriousSDXL_v40.safetensors
+  - acornIsBoningXL_v10.safetensors
+  - bbbSDXL_bbbBetaV2.safetensors
+  - duchaitenReal3dNSFW_v10.safetensors
+  - everclearPNYByZovya_v2VAE.safetensors
+  - gurilamashXXXSDXL_v20.safetensors
+  - hanamomopony_v14.safetensors
+  - anbanIllus_v20.safetensors
+  - code114xlNSFW_v10.safetensors
+  - divingIllustriousReal_v20VAE.safetensors
+  - ntrMIXIllustriousXL_v40.safetensors
+  - prefectIllustriousXL_v10.safetensors
+  - prefectiousXLNSFW_v10.safetensors
+  - reijality_v10.safetensors
+  - sloppyMessyMix_sloppyMessyMixV1.safetensors
+  - unholyDesireMixSinister_v40.safetensors
+  - waiNSFWIllustrious_v110.safetensors
+  - waiNSFWIllustrious_v80.safetensors
+  - waiNSFWIllustrious_v90.safetensors
+  - iniverseMixSFWNSFW_guofengXLV15.safetensors
+  - lifeIsGood_v1.safetensors
+  - 2dnPony_v10.safetensors
+  - accidental.safetensors
+  - astraaliKarvapillu_v2.safetensors
+  - autismmixSDXL_autismmixPony.safetensors
+  - boleromixPony_v14.safetensors
+  - ceiiMixPDXL_v11.safetensors
+  - cyberrealisticPony_v85.safetensors
+  - duchaitenPonyReal_ponyRealV11Fix.safetensors
+  - duchaitenPonyReal_v20.safetensors
+  - duchaitenPonyXLNo_ponyNoScoreV40.safetensors
+  - featurelessMixPony_v10.safetensors
+  - gdpPonyxl_v11.safetensors
+  - goddessOfRealism_gorPONYV2artFixVAE.safetensors
+  - hova.safetensors
+  - krealaModel_v20.safetensors
+  - meichidarkmixReload_meichidarkanimv2Lust.safetensors
+  - momoiropony_v14.safetensors
+  - nahis.safetensors
+  - ponyDiffusionV6XL_v6StartWithThisOne.safetensors
+  - ponyFaetality_v11.safetensors
+  - ponyRealism_V22MainVAE.safetensors
+  - prefectPonyXL_v3.safetensors
+  - realDream_sdxlPony11.safetensors
+  - realismByStableYogi_v40FP16.safetensors
+  - revEnginePonyxl_v10.safetensors
+  - skibidimix_v10.safetensors
+  - speciosaRealistica_v12.safetensors
+  - tPonynai3_v30.safetensors
+  - waiANINSFWPONYXL_v130.safetensors
+  - waiANINSFWPONYXL_v70.safetensors
+  - waiREALCN_v10.safetensors
+  - waiREALMIX_v11.safetensors
+  - zyntoonSemiRealistic_v10.safetensors
+  - pornmasterPro_noobV18VAE.safetensors
+  - realvisxlV40_v40Bakedvae.safetensors
+  - waiNSFWIllustrious_v130.safetensors
+  - suikamixHentaiMode_suikamixVer2Pruned.safetensors
+  - tameheadmix_v055.safetensors
+  - unstableBarbie_v10.safetensors
+  - v1-5-pruned-emaonly.safetensors
+  - wan2.1_i2v_720p_14B_fp16.safetensors
+  - flux1-kontext-dev-fp8-e4m3fn.safetensors
+  - hunyuanVideoSafetensors_comfyDiffusionBF16.safetensors
+  - hunyuanVideoSafetensors_comfyDiffusionFP8.safetensors
+  - wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors
+  - wan2.1_i2v_720p_14B_fp8_e4m3fn.safetensors
+  - wan2.1_t2v_14B_fp8_e4m3fn.safetensors
+- **LoRA** (904 个, 前10):
+  - pixel-art-xl-v1.0.safetensors
+  - pixel-art-xl-v1.1.safetensors
+  - 1600sLORA.pt
+  - 2011RacingMiku_v11.safetensors
+  - 2Bout_SD15-000006.safetensors
+  - AD.safetensors
+  - AishwaryaRay-000009.safetensors
+  - Ariel_character-20.safetensors
+  - AtomicTwinDogu.safetensors
+  - Bareback.safetensors
+- **CLIP**: clip_l.safetensors, llava_llama3_fp8_scaled.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ClearVAE_V2.3_fp16.pt, ae.safetensors, boleromixPony_v141VAE.safetensors, hassakuhentaimodelV13_v1.pt, hunyuan_video_vae_bf16.safetensors, klF8Anime2_klF8Anime2VAE.pt, orangemix.vae.pt, sdxl_vae.safetensors, sdxl_vae_fp16_fix.safetensors, vae-ft-mse-840000-ema-pruned.ckpt, vae-ft-mse-840000-ema-pruned.safetensors, wan_2.1_vae.safetensors, xlVAEC_c0.safetensors, xlVAEC_f1.safetensors
+
+### 93. 218.201.86.227:8188
+
+- **版本**: 0.3.26
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 5 GB)
+- **内存**: 251 GB (空闲 221 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (1):
+  - flux.json
+- **模型** (9):
+  - DreamShaper_XL_v2.1_Turbo.safetensors
+  - anythingXL.safetensors
+  - cetusMix_v4.safetensors
+  - counterfeitV30_v30.safetensors
+  - dreamshaper_8.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux1-dev.safetensors
+  - stable-diffusion-xl-base-1.0.safetensors
+  - flux1-kontext-dev.safetensors
+- **LoRA** (9 个, 前10):
+  - ._FLUX-dev-lora-Logo-Design.safetensors
+  - ._Harrlogos_v2.0.safetensors
+  - ._pytorch_lora_weights.safetensors
+  - FLUX-dev-lora-Logo-Design.safetensors
+  - Harrlogos_v2.0.safetensors
+  - LogoRedmond15V-LogoRedmAF-Logo.safetensors
+  - LogoRedmondV2-Logo-LogoRedmAF.safetensors
+  - RoundLogo_XL_E10R16.safetensors
+  - pytorch_lora_weights.safetensors
+- **CLIP**: clip_l.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: ae.safetensors, vae-ft-mse-840000-ema-pruned.safetensors
+
+### 94. 221.226.232.9:8388
+
+- **版本**: 0.14.1
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 23 GB)
+- **内存**: 503 GB (空闲 471 GB)
+- **历史**: 无
+- **管理面板**: 有
+- **自定义节点数**: 11
+- **工作流** (0): 无
+- **模型** (6):
+  - wan2.2_fun_inpaint_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_fun_inpaint_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (4 个, 前10):
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
+  - wan2.2_t2v_lightx2v_4steps_lora_v1.1_high_noise.safetensors
+  - wan2.2_t2v_lightx2v_4steps_lora_v1.1_low_noise.safetensors
+- **CLIP**: umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: wan_2.1_vae.safetensors, taesd, taesdxl, taesd3, taef1, pixel_space
+
+### 95. 222.186.161.122:8388
+
+- **版本**: 0.19.3
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 18 GB)
+- **内存**: 503 GB (空闲 416 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (6):
+  - 00000000-0000-0000-0000-000000001244_workflow.json
+  - flux_kontext_dev_basic.json
+  - flux_zoom_out_workflow.json
+  - zoom_out.json
+  - zoom.json
+  - flux_zoom_out_workflow (3).json
+- **模型** (1):
+  - flux1-kontext-dev.safetensors
+- **LoRA** (1 个, 前10):
+  - flux-kontext-zoom-out.safetensors
+- **CLIP**: clip_l.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: ae.safetensors, pixel_space
+
+### 96. 36.170.21.108:8090
+
+- **版本**: 0.18.1
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 12 GB)
+- **内存**: 503 GB (空闲 444 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 25
+- **工作流** (0): 无
+- **模型** (24):
+  - ltx-2.3-22b-dev-dare-merged-distilled-1.1-fp8mixed_learned.safetensors
+  - ltx-2.3-22b-dev-dare-merged-distilled-1.1.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - ltx-2.3-22b-distilled-1.1_transformer_only_fp8_scaled.safetensors
+  - ltx-2.3-22b-distilled-fp8.safetensors
+  - RedcraftCads_jun1_CommercialAdvertisingDesign.safetensors
+  - svdq-fp4_r32-flux.1-schnell.safetensors
+  - flux-2-klein-4b.safetensors
+  - flux-2-klein-9b-fp8.safetensors
+  - flux-2-klein-9b.safetensors
+  - ideogram4_fp8_scaled.safetensors
+  - ideogram4_unconditional_fp8_scaled.safetensors
+  - ltx-2.3-22b-distilled_transformer_only_fp8_input_scaled_v3.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_bf16.safetensors
+  - BEYOND REALITY SUPER Z IMAGE 3.0 淡妆浓抹 BF16.safetensors
+  - acestep_v1.5_xl_sft_bf16.safetensors
+  - qwen-nunchaku-极速模型.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - DasiwaWAN22I2V14BLightspeed_tastysinLowV81.safetensors
+  - wan2.2_i2v_A14b_high_noise_scaled_fp8_e4m3_lightx2v_4step_comfyui-1f57a22f5261.safetensors
+  - wan2.2_i2v_A14b_high_noise_scaled_fp8_e4m3_lightx2v_4step_comfyui.safetensors
+  - wan22I2VLLSDasiwaNm.low.safetensors
+- **LoRA** (47 个, 前10):
+  - Klein 一致性增强.safetensors
+  - Kook_Flux_klein_亚洲人像.safetensors
+  - f2k_consis.safetensors
+  - realistic.safetensors
+  - LTX-2-Image2Vid-Adapter.safetensors
+  - LTX-2.3-22b-AV-LoRA-talking-head-v1.safetensors
+  - LTX-2.3-Licon-MSR-V1.safetensors
+  - LTX-2.3OmniCine_Preview0.1.safetensors
+  - LTX2.3_Crisp_Enhance.safetensors
+  - LTX2.3_Reasoning_V1.safetensors
+- **CLIP**: EVA02_CLIP_L_336_psz14_s6B.pt, gemma_3_12B_it_heretic_fp8_e4m3fn.safetensors, ltx-2.3_text_projection_bf16.safetensors, clip_l.safetensors, gemma_3_12B_it.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, gemma_3_12B_it_fp8_e4m3fn.safetensors, gemma_3_12B_it_heretic_fp8_e4m3fn.safetensors, nsfw_wan_umt5-xxl_fp8_scaled.safetensors, open-clip-xlm-roberta-large-vit-huge-14_visual_fp32.safetensors, qwen3vl_8b_fp8_scaled.safetensors, qwen_0.6b_ace15.safetensors, qwen_3_8b.safetensors, qwen_3_8b_fp8mixed.safetensors, qwen_4b_ace15.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: flux2-vae.safetensors, LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, LTX2_audio_vae_bf16.safetensors, ae.safetensors, qwen_image_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 97. 47.106.162.84:8188
+
+- **版本**: 0.3.51
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 D : cudaMallocAsync)
+- **显存**: 24 GB (空闲 22 GB)
+- **内存**: 127 GB (空闲 73 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 16
+- **工作流** (76):
+  - 001.json
+  - 2024.07.18一键更换材质.json
+  - CG迷：Flux产品迁移工作流(3).json
+  - comfyapi_base-bak.json
+  - comfyapi_base.json
+  - comfyapi_outwall-5.23.json
+  - comfyui_inwall.json
+  - Florence2+Sam2不规则窗型识别5.json
+  - FLUX-+局部重绘-事后修复.json
+  - FLUX万物消除基础fill版本.json
+  - flux局部边框重绘极简流.json
+  - flux局部重绘极简流.json
+  - fooocus+flux-事前物品移除.json
+  - fooocus+flux-抹除工作流.json
+  - Fooocus移除物体(普通场景)速度快-瑜明.json
+  - nano-banana 室内线稿生成效果图 (Copy).json
+  - nano-banana 室内线稿生成效果图.json
+  - Qwen-image-edit图生图基础工作流.json
+  - qwen_image文生图工作流.json
+  - Qwen局部重绘工作流.json
+  - supir-高清放大.json
+  - Tripo三视图建模.json
+  - wan2.2-图转视频-use.json
+  - wan2.2-图转视频.json
+  - Workflow (2).json
+  - workflow-icedit-normal-lora-flux-fill-QFmaWNKsQo3P5liYz4RB-datou-openart.ai.json
+  - workflow-icedit-normal-lora-flux-fill-QFmaWNKsQo3P5liYz4RB-datou-openart（改）.ai.json
+  - 【chord】ai生成PBR贴图.json
+  - 【手机版ai】新渲染节点-修改.json
+  - 【手机版ai】新渲染节点.json
+  - 【杰哥用】nano banana pro.json
+  - 【正式环境用】wan2.2-图转视频 .json
+  - 一键去背景（升级版）.json
+  - 一键家具添加器.json
+  - 一键家具添加器（自动生成遮罩）.json
+  - 万物图片转线稿.json
+  - 三视图生成-混元3D.json
+  - 不规则窗型识别.json
+  - 不规则窗型识别2.json
+  - 产品材质更换丨支持在线一键生成.json
+  - 优化毛坯转精装5.29 - 副本.json
+  - 优化毛坯转精装5.29-改家具.json
+  - 优化毛坯转精装5.29.json
+  - 优化毛坯转精装5.30----.json
+  - 入户门快速合成.json
+  - 单图生成-混元3D.json
+  - 图像分析.json
+  - 图像识别窗框.json
+  - 图文纸媒排版手绘专用放大模型.json
+  - 图片提取提示词生成家具效果.json
+  - 增强型材参数comfyapi_outwall.json
+  - 室内、建筑设计高清修复_放大.json
+  - 家具图片提示词生成精装效果图.json
+  - 局部材质转换.json
+  - 局部绘制生成家具5.28.json
+  - 局部绘制生成家具5.30-改.json
+  - 工作流拆解01.json
+  - 抠出主体.json
+  - 接入PS扩图和擦除物体.json
+  - 提示词加权重生成家具模型.json
+  - 提示词添加家具局部重绘丨fill.json
+  - 提示词生成家具5.28.json
+  - 新电脑版AI_无参考图-use.json
+  - 新电脑版AI_无参考图.json
+  - 新电脑版AI_有参考图 .json
+  - 新电脑版AI_有参考图-use.json
+  - 最新版本-Segment Anything 2智能遮罩工作流.json
+  - 材质更换丨手动涂抹2.0版本.json
+  - 材质替换工作流.json
+  - 毛坯变精装.json
+  - 测试连通工作流（毛坯 -_ 精装）.json
+  - 混元3D-多角度图片生成3D模型.json
+  - 窗型识别.json
+  - 识别窗户工作流-1.json
+  - 追加精准线框（毛坯 -_ 精装）.json
+  - 门窗识别工作流.json
+- **模型** (39):
+  - ARC空间设计师XL _ 室内建筑景观设计大模型0.45_ARC_0.46.safetensors
+  - AiARTiST UNIT XL 基础单元 CADS2兼容版-HyperCFGfix.safetensors
+  - AiARTiST XL 基础单元 CADS2LoRA兼容版_HyperSD_STEPS8_CFG1.safetensors
+  - AiARTiST XL 基础单元 CADS2LoRA兼容版_UNIT1.safetensors
+  - FLUX1-dev-fp8_e4m3fn.safetensors
+  - FLUX1-dev-fp8_e4m3fn.safetensors
+  - HXZmix_室内外设计XL_v1.safetensors
+  - Leosam_HelloWorldXL_v7.safetensors
+  - SD_XL室内设计大模型（老陈）_V2.0.safetensors
+  - SUPIR-v0Q.ckpt
+  - chord_v1.safetensors
+  - imp_v10.safetensors
+  - juggernautXL_v9Rdphoto2Lightning.safetensors
+  - majicmixRealistic_v7.safetensors
+  - maturemalemix_v14.safetensors
+  - sd_xl_turbo_1.0_fp16.safetensors
+  - toonyou_beta6.safetensors
+  - ts_sd_室内大模型.safetensors
+  - ts_sd_我爱我家interior_smgs_V1.0.safetensors
+  - 写实建筑效果_v1.0.safetensors
+  - 星梦·线稿手绘大模型XL_角色设计_V7.safetensors
+  - 鲤鱼室内效果图模型xl-v1_v1.safetensors
+  - flux1-fill-dev-fp8.safetensors
+  - flux1-fill-dev.safetensors
+  - fluxFillFP8_v10.safetensors
+  - 家居大模型FLUX.1-dev-fp8_1.0.safetensors
+  - LCM_Dreamshaper_v7_4k.safetensors
+  - LCM_SDXL.safetensors
+  - LCM_SDXL_FP16.safetensors
+  - LCM_SSD-1B.safetensors
+  - flux1-dev-kontext_fp8_scaled.safetensors
+  - flux1-kontext-dev.safetensors
+  - iclight_sd15_fbc.safetensors
+  - iclight_sd15_fc.safetensors
+  - iclight_sd15_fcon.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (66 个, 前10):
+  - CCD风格室内.safetensors
+  - couple-profile.safetensors
+  - film-storyboard.safetensors
+  - font-design.safetensors
+  - home-decoration.safetensors
+  - portrait-illustration.safetensors
+  - portrait-photography.safetensors
+  - ppt-templates.safetensors
+  - sandstorm-visual-effect.safetensors
+  - sparklers-visual-effect.safetensors
+- **CLIP**: clip_l.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors, ViT-L-14.pt, qwen_2.5_vl_7b_fp8_scaled.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors, v1-5-pruned.safetensors
+- **VAE**: ConsistencyDecoder.pt, ae.sft, animevae.pt, kl-f8-anime2.ckpt, qwen_image_vae.safetensors, sdxl_0.9_vae.safetensors, sdxl_vae.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, wan_2.1_vae.safetensors, taesd, taesdxl
+
+### 98. 60.188.108.56:18081
+
+- **版本**: 0.19.0
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 23 GB)
+- **内存**: 1007 GB (空闲 651 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (1):
+  - 材质修改模板.json
+- **模型** (3):
+  - multiple_character_angles_qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_bf16.safetensors
+- **LoRA** (5 个, 前10):
+  - Qwen-Edit-2509-Multiple-angles.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - multiple_character_angles_Qwen-Edit-2509-Multiple-angles.safetensors
+  - multiple_character_angles_Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+- **CLIP**: multiple_character_angles_qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors
+- **VAE**: multiple_character_angles_qwen_image_vae.safetensors, qwen_image_vae.safetensors, pixel_space
+
+### 99. 94.159.81.61:8188
+
+- **版本**: 0.20.1
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 22 GB)
+- **内存**: 62 GB (空闲 51 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (6):
+  - horizontal_to_vertical_flux_fill.json
+  - flux_dev_full_text_to_image.json
+  - anystyle.json
+  - image_to_style_workflow_api.json
+  - Vertical.json
+  - no_face_image_style.json
+- **模型** (33):
+  - aziibpixelmix_v10.safetensors
+  - CHEYENNE_v16.safetensors
+  - ESRGAN-Valar-4x.pth
+  - DreamShaper.safetensors
+  - MeinaMix.safetensors
+  - ghostmix_v20Bakedvae.safetensors
+  - majicMIX_realistic.safetensors
+  - realisticVisionV60B1_v51VAE.safetensors
+  - dreamshaper_xl_v2.1.safetensors
+  - sd_xl_base_1.0.safetensors
+  - sd_xl_refiner_1.0.safetensors
+  - arthemyComics_v70.safetensors
+  - blackAndWhite_mangaStyle 2.safetensors
+  - blackAndWhite_mangaStyle.safetensors
+  - disneyPixarCartoon_v10.safetensors
+  - epicrealism_pureEvolutionV5-inpainting.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux1-schnell-fp8.safetensors
+  - jibMixRealisticXL_v10Lightning46Step.safetensors
+  - realDream_15SD15.safetensors
+  - realDream_sdxlLightning1LowCFG.safetensors
+  - realdreamlightning.safetensors
+  - realisticVisionV51_v51VAE-inpainting.safetensors
+  - ultimatepixartoon_v20.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux_dev_fp8_scaled_diffusion_model.safetensors
+  - redcraftCADSUpdatedJUN29_redKKingOfHearts.safetensors
+  - flux1-dev-kontext_fp8_scaled.safetensors
+  - flux1-dev.safetensors
+  - flux1-fill-dev.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - z_image_bf16.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (22 个, 前10):
+  - pixel-art-xl-v1.0.safetensors
+  - pixel-art-xl-v1.1.safetensors
+  - CinematicStyleFlux_v1.safetensors
+  - Cruella_Deville.safetensors
+  - DB.safetensors
+  - FilmVelvia3.safetensors
+  - FluxMythSharpL1nes.safetensors
+  - Portrait_SoloLoRA_ZIBv1.safetensors
+  - Qwen-Image-Lightning-8steps-V2.0-bf16.safetensors
+  - StudioGhibli.Redmond-StdGBRRedmAF-StudioGhibli.safetensors
+- **CLIP**: EVA02_CLIP_L_336_psz14_s6B.pt, clip_l.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, ae.safetensors, qwen_image_vae.safetensors, vae-ft-mse-840000-ema-pruned.ckpt, vae-ft-mse-840000-ema-pruned.safetensors, pixel_space
+
+### 100. 76.242.71.253:8188
+
+- **版本**: 0.18.5
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : native)
+- **显存**: 24 GB (空闲 22 GB)
+- **内存**: 31 GB (空闲 21 GB)
+- **历史**: 无
+- **管理面板**: 有
+- **自定义节点数**: 49
+- **工作流** (1):
+  - Unsaved Workflow (2).json
+- **模型** (31):
+  - 10Eros_v1-fp8mixed_learned.safetensors
+  - Qwen-Rapid-AIO-NSFW-v23.safetensors
+  - RealVisXL_V5.0_fp16.safetensors
+  - babesByStableYogiSDXL_v60FP16.safetensors
+  - babesIllustrious_v55_fp16.safetensors
+  - cyberIllustrious_v10_redux.safetensors
+  - instruct-pix2pix-00-22000.safetensors
+  - intorealismUltra_v80.safetensors
+  - intorealismUltra_v90.safetensors
+  - juggernautXL_v9.safetensors
+  - lustifySDXLNSFW_v7.safetensors
+  - pornmasterPro_realismILV4.safetensors
+  - realismIllustriousBy_v50FP16.safetensors
+  - realism_sdxl_yogi_v8.safetensors
+  - realvisxlV50_Lightning.safetensors
+  - ultraRealisticByStable_v20FP16.safetensors
+  - yiffymix_v64Noobxl.safetensors
+  - DasiwaWAN22I2V14BBoundbiteV10_q8High.gguf
+  - DasiwaWAN22I2V14BSynthseduction_q8High.gguf
+  - DasiwaWAN22I2V14BTruevision_synthseductionHighV9.safetensors
+  - Wan2_2-I2V-High-DaSiWa-TastySin-q8.gguf
+  - DasiwaWAN22I2V14BBoundbiteV10_q8Low.gguf
+  - DasiwaWAN22I2V14BSynthseduction_q8Low.gguf
+  - DasiwaWAN22I2V14BTruevision_synthseductionLowV9.safetensors
+  - Wan2_2-I2V-Low-DaSiWa-TastySin-q8.gguf
+  - Wan2.2_Remix_NSFW_i2v_14b_high_lighting_fp8_e4m3fn_v3.0.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_low_lighting_fp8_e4m3fn_v3.0.safetensors
+  - Wan21-OneToAllAnimation_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-Animate-14B_fp8_scaled_e4m3fn_KJ_v2.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (99 个, 前10):
+  - Bimbo_Makeup_By_Stable_Yogi_SDXL.safetensors
+  - BoobPhysics_WAN_v7_i2v.safetensors
+  - BoobSlider_Wan2.2_v1_high.safetensors
+  - Cosine_freck.safetensors
+  - DR34ML4Y_AllInOne_I2V_14B_HIGH.safetensors
+  - DR34ML4Y_I2V_14B_HIGH.safetensors
+  - DR34ML4Y_I2V_14B_LOW_V2.safetensors
+  - DaSiWa_Wan22_High_Deepthroat_v11.safetensors
+  - Detail_Tweaker_XL.safetensors
+  - Dramatic_Lighting_Slider.safetensors
+- **CLIP**: EVA02_CLIP_L_336_psz14_s6B.pt, clip_l.safetensors, gemma_3_12B_it_fp8_e4m3fn.safetensors, nsfw_wan_umt5-xxl_bf16.safetensors, nsfw_wan_umt5-xxl_fp8_scaled.safetensors, nsfw_wan_umt5-xxl_fp8_scaled.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b_fp8_mixed.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5-xxl-enc-fp8_e4m3fn.safetensors
+- **VAE**: ae.safetensors, qwen_image_vae.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 101. edipresso.com
+
+- **版本**: 0.14.1
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 1 GB)
+- **内存**: 94 GB (空闲 68 GB)
+- **历史**: 无
+- **管理面板**: 有
+- **自定义节点数**: 23
+- **工作流** (37):
+  - upload-rmbg.json
+  - w_i2v_480_97_768_1024.json
+  - character_sheet.json
+  - base64-rmbg.json
+  - pick score.json
+  - flux_fill_text_removal.json
+  - woman_20_3-SavePoses_00018_.json
+  - TTS_Qwen3.json
+  - flux_dev_fp8.json
+  - 데이터셋16장원클릭_hi.json
+  - CHARACTER_SHEET_33.json
+  - CHARACTER_SHEET2.json
+  - image_random.json
+  - w_i2v_480_aiin-2_.json
+  - ComfyUI_00013_준호.json
+  - w_i2v_480_aiin-1024.json
+  - url-upscale.json
+  - Consistent_Face_v1.1 2.json
+  - FLUX+PULID simple.json
+  - Unsaved Workflow.json
+  - one_click_16_hi.json
+  - upscale_video.json
+  - SHEET_Aiin.json
+  - Wan 2.2 Lightx2v Super Fast.json
+  - SHORTS_MEMORY.json
+  - Character_sheet_11.json
+  - image_random2.json
+  - flux-lora.json
+  - SDXL txt2img-DetailDaemon.json
+  - video_wan2_2_14B_flf2v.json
+  - 데이터셋16장원클릭.json
+  - w_i2v_480_aiin-2.json
+  - scene_7_adAgWDwplvY_00003_.json
+  - wan2.2.json
+  - text_removal_simple.json
+  - wanvideo_multitalk_basic.json
+  - hidream_i1_full.json
+- **模型** (34):
+  - 0.3(CYO_joseonXL_v1.0) + 0.7(CYO2_joseonXL_v1.1).safetensors
+  - ANI_joseonXL_v1.0.safetensors
+  - BDR7_ani3.safetensors
+  - BKY_joseonXL_v1.0.safetensors
+  - INK_joseonXL_v1.0.safetensors
+  - NSH_joseon_v1.0.safetensors
+  - RET_joseonXL_v1.0.safetensors
+  - sd_xl_turbo_1.0.safetensors
+  - cmp5_2_MIX.safetensors
+  - flux1-dev-bnb-nf4-v2.safetensors
+  - flux_dev.safetensors
+  - joseon_sdxl_v2.0.safetensors
+  - modern_sdxl_v1.0.safetensors
+  - sd_xl_base_1.0.safetensors
+  - whitexlRealisticmix_alpha01.safetensors
+  - SDVN11-Ghibli-Flux-fp8.safetensors
+  - wan2.1_i2v_720p_14B_fp8_e4m3fn.safetensors
+  - wan2.1_i2v_720p_14B_fp8_scaled.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux1-dev-kontext_fp8_scaled.safetensors
+  - flux1-fill-dev-fp8.safetensors
+  - flux1-schnell.safetensors
+  - hidreamI1FullFp8_v10.safetensors
+  - hidream_i1_dev_fp8.safetensors
+  - hidream_i1_fast_fp8.safetensors
+  - hidream_i1_full_fp8.safetensors
+  - majicFlus_v1.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors
+  - wan2.1_i2v_480p_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_ti2v_5B_fp16.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (390 个, 前10):
+  - boy_cheol-min.safetensors
+  - girl-seoa.safetensors
+  - man-cheolmin.safetensors
+  - man-donghyuk.safetensors
+  - man-han-gyeol.safetensors
+  - man-jaejin.safetensors
+  - man-minhyeong.safetensors
+  - man-yeonggeun.safetensors
+  - old-man-hyunbae.safetensors
+  - old-man-jeonggil.safetensors
+- **CLIP**: ViT-L-14-BEST-smooth-GmP-TE-only-HF-format.safetensors, clip_g_hidream.safetensors, clip_l.safetensors, clip_l_hidream.safetensors, llama_3.1_8b_instruct_fp8_scaled.safetensors, qwen_3_4b.safetensors, t5xxl_fp8_e4m3fn.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors, umt5-xxl-enc-fp8_e4m3fn.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, flux_ae.safetensors, qwen_image_vae.safetensors, sdxl_vae.safetensors, wan2.2_vae.safetensors, wan_2.1_vae.safetensors, z_image_ae.safetensors, pixel_space
+
+### 102. https://56c4900261e42554-8188.us-ca-1.gpu-instance.novita.ai
+
+- **版本**: 0.20.1
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 7 GB)
+- **内存**: 503 GB (空闲 434 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 6
+- **工作流** (3):
+  - 2D graphics.json
+  - 彩色几何.json
+  - 自定义服饰抠图.json
+- **模型** (34):
+  - AWPainting_v1.2.safetensors
+  - AWPortrait XL_1.1.safetensors
+  - BiRefNet-general-epoch_244.pth
+  - Dream_and_Fantasy 梦与幻想（更精美的二次元）_v1.0.safetensors
+  - LEOSAM AIArt 兔狲插画 SDXL大模型_v2.safetensors
+  - RealitiesEdgeXLSDXL_TURBOXLV2.safetensors
+  - SiyueMangaMIX1.0_1.0.safetensors
+  - animagineXL40_v4Opt_4Opt.safetensors
+  - awpainting_v12.safetensors
+  - ertonghuiben _ CrayonPaiting v2_v2.safetensors
+  - flux1-dev-fp8.safetensors
+  - helloFlatArt_扁平插画.safetensors
+  - lujianbihuav2.fp16.safetensors
+  - revAnimated_v122.safetensors
+  - sd_xl_base_1.0.safetensors
+  - tangbohuPixarStyle_0723.safetensors
+  - FLUX1.0-dev-NF4_dev-bnb-nf4-v2.safetensors
+  - mm_sd_v15.ckpt
+  - mm_sd_v15_v2.ckpt
+  - mm_sdxl_hs.safetensors
+  - mm_sdxl_v10_beta.safetensors
+  - v3_sd15_mm.ckpt
+  - 二次元新海诚风格-V1_二次元新海诚风格-V1.safetensors
+  - 沙雕动画-SDXL _沙雕动画-SDXL V2.safetensors
+  - 扁平艺术插画_1.0.safetensors
+  - 星梦·线稿手绘大模型XL_角色设计_V7.safetensors
+  - F.1-3D卡通风格大模型Ultra_v2.0.safetensors
+  - FLUX.1 Kontext Dev_fp8.safetensors
+  - flux-vae-bf16.safetensors
+  - flux1-dev-fp8-e4m3fn.safetensors
+  - flux1-dev-fp8-e5m2.safetensors
+  - flux1-schnell-fp8-e4m3fn.safetensors
+  - flux_shakker_labs_union_pro-fp8_e4m3fn.safetensors
+  - niji-动漫二次元加强版_f.1d.safetensors
+- **LoRA** (91 个, 前10):
+  - AgainAnimalEyes加强动物眼睛效果_v1.safetensors
+  - American_retro_logo.safetensors
+  - Clan_Sticker_Style.safetensors
+  - Colorwater_v4.safetensors
+  - F.1 - One-Click Creative Template_1.safetensors
+  - F.1 _ 圣诞贴纸物料四宫格_V1.safetensors
+  - F.1 【动漫风格】吉卜力 _ Ghibli Style_v1.0.safetensors
+  - F.1 万圣节海报插画风格_ KStyle_节日海报设计 _F.1 万圣节海报插画风格_ KStyle_节日海报设计.safetensors
+  - F.1 插画 _ 圣诞 _ 异想_插画设计_圣诞节V1.0.safetensors
+  - F.1 超可爱卡哇伊二次元_v1.0.safetensors
+- **CLIP**: EVA01_CLIP_g_14_plus_psz14_s11B.pt, EVA01_CLIP_g_14_psz14_s11B.pt, EVA01_g_psz14.pt, EVA02_B_psz14to16.pt, EVA02_CLIP_B_psz16_s8B.pt, EVA02_CLIP_E_psz14_plus_s9B.pt, EVA02_CLIP_E_psz14_s4B.pt, EVA02_CLIP_L_psz14_224to336.pt, EVA02_CLIP_L_psz14_s4B.pt, EVA02_E_psz14.pt, EVA02_L_psz14.pt, EVA02_CLIP_L_336_psz14_s6B.pt, ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors, clip_l.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors, model.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: flux1-schnell.safetensors, model.safetensors, model-00001-of-00002.safetensors, model-00002-of-00002.safetensors, diffusion_pytorch_model-00001-of-00003.safetensors, diffusion_pytorch_model-00002-of-00003.safetensors, diffusion_pytorch_model-00003-of-00003.safetensors, diffusion_pytorch_model.safetensors, ae.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, pixel_space
+
+### 103. comfyui.acroxerdev.com
+
+- **版本**: 0.18.5
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 23 GB (空闲 22 GB)
+- **内存**: 62 GB (空闲 58 GB)
+- **历史**: 无
+- **管理面板**: 有
+- **自定义节点数**: 47
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: taesd, taesdxl, taesd3, taef1, pixel_space
+
+### 104. https://comfyui.acroxerdev.com
+
+- **版本**: 0.18.5
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 23 GB (空闲 22 GB)
+- **内存**: 62 GB (空闲 58 GB)
+- **历史**: 无
+- **管理面板**: 有
+- **自定义节点数**: 47
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: taesd, taesdxl, taesd3, taef1, pixel_space
+
+### 105. 219.146.211.51:10001
+
+- **版本**: 0.21.1
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync)
+- **显存**: 22 GB (空闲 21 GB)
+- **内存**: 1007 GB (空闲 990 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (6):
+  - FLUX.2-dev-Turbo-Workflow.json
+  - Flux2_Dev_TurboLoRA_Workflow_A_target_board_layout_style_switch.json
+  - LTX-2.3_MSR_sample_workflow_V1.json
+  - video_ltx2_3_flf2v.json
+  - video_ltx2_3_i2v.json
+  - z-image-base.json
+- **模型** (17):
+  - hidream_o1_image_bf16.safetensors
+  - hidream_o1_image_dev_fp8_scaled.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - ltx-2.3-22b-distilled-1.1.safetensors
+  - sd3.5_large.safetensors
+  - sd_xl_base_1.0.safetensors
+  - sd_xl_refiner_1.0.safetensors
+  - Wan2_1_SkyreelsA2_fp8_e4m3fn.safetensors
+  - Wan2_1-T2V-14B-Phantom_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_1-T2V-14B-Phantom_fp8_e4m3fn_scaled_KJ.safetensors
+  - flux2_dev_fp8mixed.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - wan2.1_vace_14B_fp16.safetensors
+  - wan2.2_ti2v_5B_fp16.safetensors
+  - z_image_bf16.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (9 个, 前10):
+  - Flux_2-Turbo-LoRA_comfyui.safetensors
+  - LTX-2.3-Licon-MSR-V1.safetensors
+  - LTX2.3-Licon-MSR-test_version.safetensors
+  - Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors
+  - Wan21_CausVid_14B_T2V_lora_rank32.safetensors
+  - lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank64_bf16.safetensors
+  - lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank64_bf16_.safetensors
+  - ltx-2.3-22b-distilled-lora-384.safetensors
+  - ltx2.3-transition.safetensors
+- **CLIP**: clip_g.safetensors, clip_l.safetensors, gemma4_e4b_it_fp8_scaled.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, gemma_3_12B_it_fp8_scaled.safetensors, mistral_3_small_flux2_fp8.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, t5xxl_fp16.safetensors, umt5-xxl-enc-bf16.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, flux2-vae.safetensors, qwen_image_vae.safetensors, sdxl_vae.safetensors, wan2.2_vae.safetensors, wan_2.1_vae.safetensors, Wan2_1_VAE_bf16.safetensors, taef1, taesd, taef2, taesdxl, taesd3, pixel_space
+
+### 106. 120.46.79.159:8081
+
+- **版本**: 0.22.0
+- **GPU**: RTX 4090 (cuda:0 NVIDIA GeForce RTX 4090 Laptop GPU : native)
+- **显存**: 16 GB (空闲 6 GB)
+- **内存**: 31 GB (空闲 7 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (6):
+  - flux1_beauty (2).json
+  - 图生视频_混元I2V.json
+  - 漫剧分镜_3DCG国漫.json
+  - 漫剧分镜_SD15.json
+  - 漫剧分镜_角色LoRA.json
+  - 风格测试_2D动画漫剧.json
+- **模型** (15):
+  - Counterfeit-V2.5_fp16.safetensors
+  - Realistic_Vision_V6.0_NV_B1_fp16.safetensors
+  - dreamshaper_8.safetensors
+  - flux1-dev-fp8.safetensors
+  - majicmixRealistic_v7.safetensors
+  - meinamix_meinaV11.safetensors
+  - sd_xl_base_1.0.safetensors
+  - v1-5-pruned-emaonly.safetensors
+  - flux-2-klein-4b.safetensors
+  - flux1-dev-fp8-converted.pt
+  - hunyuan_video_I2V_720_fixed_fp8_e4m3fn.safetensors
+  - hunyuanvideo1.5_720p_i2v_fp16.safetensors
+  - diffusion_pytorch_model-00001-of-00003.safetensors
+  - diffusion_pytorch_model-00002-of-00003.safetensors
+  - diffusion_pytorch_model-00003-of-00003.safetensors
+- **LoRA** (3 个, 前10):
+  - 林月如.safetensors
+  - 灵儿.safetensors
+  - 逍遥.safetensors
+- **CLIP**: clip_l.safetensors, byt5_small_glyphxl_fp16.safetensors, clip_l.safetensors, llava_llama3_fp8_scaled.safetensors, qwen3_4b_flux2.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, t5xxl_fp8_e4m3fn.safetensors, models_t5_umt5-xxl-enc-bf16.pth, umt5xxl.safetensors, umt5xxl_converted.safetensors, umt5xxl_final.safetensors
+- **VAE**: ae.safetensors, flux2-vae.safetensors, hunyuan_video_vae_bf16.safetensors, hunyuanvideo15_vae_fp16.safetensors, Wan2.2_VAE.pth, pixel_space
+
+### 107. 115.190.117.23:8188
+
+- **版本**: 0.11.1
+- **GPU**: A30 (cuda:0 NVIDIA A30 : cudaMallocAsync)
+- **显存**: 23 GB (空闲 17 GB)
+- **内存**: 230 GB (空闲 187 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (5):
+  - img2img_single.json
+  - flux2_klein_4b.json
+  - img2img_double.json
+  - Unsaved Workflow.json
+  - text2img.json
+- **模型** (3):
+  - flux-2-klein-4b-fp8.safetensors
+  - flux-2-klein-4b.safetensors
+  - flux-2-klein-base-4b-fp8.safetensors
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: qwen_3_4b.safetensors, model-00001-of-00002.safetensors, model-00002-of-00002.safetensors
+- **VAE**: flux2-vae.safetensors, pixel_space
+
+### 108. 106.14.145.226:7003
+
+- **版本**: 0.19.3
+- **GPU**: RTX 5080 (cuda:0 NVIDIA GeForce RTX 5080 : cudaMallocAsync)
+- **显存**: 16 GB (空闲 13 GB)
+- **内存**: 47 GB (空闲 11 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (21):
+  - 03_video_wan2_2_14B_i2v_subgraphed.json
+  - default_sheep.json
+  - GS-LTX2.3-MSR- 多参.json
+  - LTX2.3_prompt_relay图生视频工作流.json
+  - test.json
+  - test图生视频面部锁定.json
+  - video_wan2_2_14B_i2v.json
+  - Wan2.2-Smooth Mix图生视频 .json
+  - Wan2.2_lightx2v_Distill_i2v .json
+  - z-image+wan2.2古风韵味.json
+  - Zimage Turbo 极致真实摄影人像工作流_文生图_SeedVR调参版1.json
+  - 动作迁移延长77_3.json
+  - 动漫短剧全自动工作流V4.1.json
+  - 半手动版 _ 动态漫自定义角色 _ 音色 _ 分镜 _ 台词 _ 视频.json
+  - 古风生成.json
+  - 图片和音频生成视频.json
+  - 图片编辑--真实版本.json
+  - 多角度角色.json
+  - 真实.json
+  - 超级王炸(低显存电脑福音)-肥猴分段队列工作流(自动拼接长视频)8G显存也能跑    NSFW神级插件.json
+  - 首尾帧视频.json
+- **模型** (3):
+  - ltx-2.3-22b-distilled-1.1.safetensors
+  - ltx-2.3-22b-distilled-1.1_transformer_only_fp8_scaled.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (6 个, 前10):
+  - Kook_Qwen_V3极致真实.safetensors
+  - Kook_Zimage_真实幻想_Turbo.safetensors
+  - LTX-2.3-Licon-MSR-V1.safetensors
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors
+  - ZIT_Midjourney_Luneva_Cinematic_v1_r128.safetensors
+- **CLIP**: qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, ltx-2.3_text_projection_bf16.safetensors, qwen_3_4b.safetensors
+- **VAE**: qwen_image_vae.safetensors, ae.sft, pixel_space
+
+### 109. 122.117.65.251:8899
+
+- **版本**: 0.5.1
+- **GPU**: RTX 5080 (cuda:0 NVIDIA GeForce RTX 5080 : cudaMallocAsync)
+- **显存**: 16 GB (空闲 15 GB)
+- **内存**: 125 GB (空闲 110 GB)
+- **历史**: 无
+- **管理面板**: 有
+- **自定义节点数**: 97
+- **工作流** (2):
+  - Illustration.json
+  - Unsaved Workflow (3).json
+- **模型** (55):
+  - Qwen-Rapid-AIO-NSFW-v23.safetensors
+  - dreamshaper_xl_v2.1.safetensors
+  - sd_xl_refiner_1.0.safetensors
+  - XLGufengxl_gufengxl10.safetensors
+  - albedobaseXL_v21.safetensors
+  - artUniverse_sdxlV60.safetensors
+  - artUniverse_v70SDXL.safetensors
+  - bridgetoonsTurbotoon_v20.safetensors
+  - dreamshaperXL_lightningDPMSDE.safetensors
+  - dreamshaperXL_v21TurboDPMSDE.safetensors
+  - ipDESIGN3D_v31.safetensors
+  - juggernautXL_juggXIByRundiffusion.safetensors
+  - juggernautXL_v9Rdphoto2Lightning.safetensors
+  - leosamsHelloworldXL_helloworldXL70.safetensors
+  - ltx-2-19b-dev-fp8.safetensors
+  - ltx-2-19b-dev.safetensors
+  - realcartoonXL_v6.safetensors
+  - realismEngineSDXL_v30VAE.safetensors
+  - realismIllustriousBy_v50FP16.safetensors
+  - realvisxlV50_v50LightningBakedvae.safetensors
+  - revAnimated_v122EOL.safetensors
+  - samaritan3dCartoon_v40SDXL.safetensors
+  - flux1-canny-dev.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux1-kontext-dev-fp8-e4m3fn.safetensors
+  - svdq-fp4_r32-flux.1-canny-dev.safetensors
+  - svdq-fp4_r32-flux.1-depth-dev.safetensors
+  - svdq-fp4_r32-flux.1-dev-colossusv12.safetensors
+  - svdq-fp4_r32-flux.1-fill-dev.safetensors
+  - svdq-fp4_r32-flux.1-schnell.safetensors
+  - FramePackI2V_HY_bf16.safetensors
+  - FramePackI2V_HY_fp8_e4m3fn.safetensors
+  - diffusion_pytorch_model.fp16.safetensors
+  - flux-hyp8-fp8.safetensors
+  - flux1-dev-fp8-e5m2.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux1-dev.sft
+  - flux1-fill-dev.safetensors
+  - flux1-kontext-dev.safetensors
+  - flux1-krea-dev.safetensors
+  - flux1-schnell-fp8-e4m3fn.safetensors
+  - flux2_dev_fp8mixed.safetensors
+  - hunyuan_video_720_fp8_e4m3fn.safetensors
+  - oms_diffusion_768.safetensors
+  - svdq-fp4_r128-qwen-image-edit-2509-lightningv2.0-4steps.safetensors
+  - svdq-fp4_r128-qwen-image.safetensors
+  - svdq-fp4_r32-flux.1-kontext-dev.safetensors
+  - svdq-fp4_r32-flux.1-krea-dev.safetensors
+  - svdq-fp4_r32-qwen-image-edit-lightningv1.0-4steps.safetensors
+  - svdq-fp4_r32-qwen-image-edit-lightningv1.0-8steps.safetensors
+  - svdq-fp4_r32-qwen-image-edit.safetensors
+  - svdq-fp4_r32-qwen-image.safetensors
+  - svdq-int4_r32-flux.1-kontext-dev.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+- **LoRA** (87 个, 前10):
+  - 'Improved Amateur Realism' - v9 - [STYLE] [LORA] [FLUX] - spectrum_0001 by 'AI_Characters'.safetensors
+  - 'Semi-Realistic Digital Concept Art' - v2 - [STYLE] [LORA] [FLUX] - spectrum_0014 by 'AI_Characters'.safetensors
+  - 3D模型丨可爱化SDXL版_v2.0.safetensors
+  - 3d_render_pdxl_goofy.safetensors
+  - CLAYMATE_V2.03_.safetensors
+  - Cute_3d_Cartoon_Flux.safetensors
+  - DD-made-of-clay-XL-v2 (1).safetensors
+  - DD-made-of-clay-XL-v2.safetensors
+  - EldritchCharcoalXL1.1.safetensors
+  - FLUX.1-Turbo-Alpha.safetensors
+- **CLIP**: EVA01_CLIP_g_14_plus_psz14_s11B.pt, EVA02_CLIP_L_336_psz14_s6B.pt, LLM2CLIP-EVA02-L-14-336.pt, Long-ViT-L-14-GmP-SAE-TE-only.safetensors, ViT-L-14-BEST-smooth-GmP-ft.safetensors, ViT-L-14-TEXT-detail-improved-hiT-GmP-HF.safetensors, clip_g.safetensors, clip_l.safetensors, clip_vision_g.safetensors, gemma_3_12B_it.safetensors, ip-adapter_sd15.pth, llava_llama3_fp8_scaled.safetensors, mistral_3_small_flux2_bf16.safetensors, mistral_3_small_flux2_fp8.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, t5xxl_fp8_e4m3fn.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, Qwen_Image-VAE.safetensors, ae.safetensors, flat2DAnimerge_v45Sharp.safetensors, flux2-vae.safetensors, fluxVaeSft_aeSft.sft, hunyuan_video_vae_bf16.safetensors, kl-f8-anime2.safetensors, klF8Anime2VAE_klF8Anime2VAE.safetensors, qwen_image_vae.safetensors, sdxlVAE_sdxlVAE.safetensors, sdxl_vae.safetensors, vae-ft-mse-840000-ema-pruned.ckpt, wan21-vae.safetensors, xlVAEC_c91.safetensors, taesd, taesdxl, taesd3, taef1, pixel_space
+
+### 110. 111.230.42.200:8188
+
+- **版本**: 0.18.2
+- **GPU**: RTX A5000 (cuda:0 NVIDIA RTX A5000 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 23 GB)
+- **内存**: 63 GB (空闲 56 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 69
+- **工作流** (35):
+  - flux.2-klein-多图图生图.json
+  - image_qwen_Image_2512 (2).json
+  - LTX2.3 原版 I2V Customer Audio 0611.json
+  - LTX2.3-分镜融合导演台0609.json
+  - LTX2.3-分镜融合导演台0610.json
+  - LTX2.3分镜融合导演台.json
+  - LTX2.3分镜语音生视频.json
+  - LTX2.3分镜语音生视频（无对话）.json
+  - LTX2.3导演台.json
+  - LTX2.3最强漫剧工作流最新版.json
+  - qwen-image-edit-三图图生图.json
+  - qwen-image-edit-下一幕分镜.json
+  - qwen-image-edit-单图出分镜图.json
+  - qwen-image-edit-单图出多角度图.json
+  - qwen-image-edit-单图图生图.json
+  - qwen-image-edit-导演镜头控制.json
+  - qwen-image-文生图（TOP1）.json
+  - Qwen3-TTS+多人对话+全自动&半自动+有声小说.json
+  - qwen3-tts-单人声音.json
+  - sd3.5_simple_example.json
+  - video_capybara_v0_1_image_to_video.json
+  - Wan2.2 SVI Pro长视频生成工作流.json
+  - wan2.2-单图生视频.json
+  - wan2.2-单图自动提示词生成视频.json
+  - wan2.2-单图自定义提示词生视频.json
+  - wan2.2-文生视频.json
+  - wan2.2-首中尾帧自动提示词生成视频.json
+  - wan2.2-首尾帧生成视频.json
+  - wan22_SVI_Pro长视频优化版.json
+  - 快速写实文生图(qwen).json
+  - 提示词扩展-仅支持wan.json
+  - 自定义文生图-qwen-image.json
+  - 自定义文生图-z-image-放大.json
+  - 自定义文生图-z-image.json
+  - 音频合并.json
+- **模型** (38):
+  - ltx-2-19b-dev-fp8.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - sd3.5_large_fp8_scaled.safetensors
+  - v1-5-pruned-emaonly-fp16.safetensors
+  - DasiwaWAN22I2V14BLightspeed_synthseductionHighV9.safetensors
+  - DasiwaWAN22I2V14BLightspeed_synthseductionLowV9.safetensors
+  - FLUX.1-dev-fp8.safetensors
+  - MelBandRoformer_fp32.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_high_lighting_fp8_e4m3fn_v2.1.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_high_lighting_fp8_e4m3fn_v3.0.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_low_lighting_fp8_e4m3fn_v2.1.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_low_lighting_fp8_e4m3fn_v3.0.safetensors
+  - Wan2_2-I2V-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - capybara_v0.1.safetensors
+  - flux-2-klein-9b-fp8.safetensors
+  - flux-2-klein-9b.safetensors
+  - iclight_sd15_fc.safetensors
+  - ltx-2.3-22b-distilled-1.1_transformer_only_fp8_scaled.safetensors
+  - qwen-image-edit-2511-Q8_0.gguf
+  - qwen_3_8b_fp8mixed.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - smoothMixWan2214BI2V_i2vV20High.safetensors
+  - smoothMixWan2214BI2V_i2vV20Low.safetensors
+  - wan2.2_fun_control_5B_bf16.safetensors
+  - wan2.2_fun_inpaint_5B_bf16.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_s2v_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_ti2v_5B_fp16.safetensors
+  - z-image-turbo-fp8-e4m3fn.safetensors
+  - z_image_bf16.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (46 个, 前10):
+  - LTX-2.3-Licon-MSR-V1.safetensors
+  - LTX-2.3-OmniNFT-RL-Lora_bf16.safetensors
+  - LTX2.3_Crisp_Enhance.safetensors
+  - Ltx2.3-Licon-VBVR-I2V-240K-R32.safetensors
+  - Ltx2.3-Licon-VBVR-I2V-390K-R32.safetensors
+  - Qwen-Edit-2509-Multiple-angles.safetensors
+  - Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors
+  - Qwen-Image-2512-Turbo-LoRA-animation-2-Steps_20.safetensors
+  - Qwen-Image-Edit-2509-Anything2RealAlpha.safetensors
+  - Qwen-Image-Edit-2509-Light-Migration.safetensors
+- **CLIP**: Qwen2.5_3B_instruct_bf16.safetensors, Qwen2.5_7B_instruct_bf16.safetensors, byt5_small_glyphxl_fp16.safetensors, clip_l.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, gemma_3_12B_it_fp8_e4m3fn.safetensors, gemma_3_12B_it_fp8_scaled.safetensors, ltx-2.3_text_projection_bf16.safetensors, qwen_2.5_vl_7b.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, ae.safetensors, flux-ae.safetensors, flux2-vae.safetensors, hunyuanvideo15_vae_fp16.safetensors, qwen_image_vae.safetensors, taeltx2_3.safetensors, wan2.2_vae.safetensors, wan_2.1_vae.safetensors, z-image-turbo-vae.safetensors, z-image-ultraflux-vae_v1.safetensors, z-image-vae.safetensors, taesd, taesdxl, taesd3, taef1, pixel_space
+
+### 111. 211.206.164.162:8188
+
+- **版本**: 0.3.71
+- **GPU**: RTX A5000 (cuda:0 NVIDIA RTX A5000 : native)
+- **显存**: 24 GB (空闲 1 GB)
+- **内存**: 188 GB (空闲 92 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (9):
+  - flux1-dev-fp8.safetensors
+  - illustrious-fp8-SEMImergeij.safetensors
+  - flux1-dev-fp8-MYHuman_墨幽随拍.safetensors
+  - flux1-dev-fp8-XE Pixel Flux.safetensors
+  - flux1-dev-fp8-artsyDream.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (29 个, 前10):
+  - Apartment modernist.safetensors
+  - Aqplanet.safetensors
+  - Architectural Style.safetensors
+  - Cartoon Snake Baby.safetensors
+  - Chinese-style flower-and-bird.safetensors
+  - Cute Japanese Poster.safetensors
+  - Cyberpunk Interior (Architecture).safetensors
+  - Food Advertising Photography Art.safetensors
+  - Ghibli GPT.safetensors
+  - Groot.safetensors
+- **CLIP**: clip_l.safetensors, t5xxl_fp16.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, diffusion_pytorch_model.fp16.safetensors, flux-schnell-vae.safetensors, wan2.2_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 112. 69.197.187.136:8177
+
+- **版本**: 0.16.4
+- **GPU**: RTX A5000 (cuda:0 NVIDIA RTX A5000 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 2 GB)
+- **内存**: 125 GB (空闲 110 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - svdq-int4_r128-qwen-image-edit-2509-lightningv2.0-4steps.safetensors
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: qwen_2.5_vl_7b_fp8_scaled.safetensors
+- **VAE**: qwen_image_vae.safetensors, pixel_space
+
+### 113. 112.30.64.174:1234
+
+- **版本**: 0.24.1
+- **GPU**: RTX 5070 Ti (cuda:0 NVIDIA GeForce RTX 5070 Ti : cudaMallocAsync)
+- **显存**: 16 GB (空闲 9 GB)
+- **内存**: 61 GB (空闲 40 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 70
+- **工作流** (38):
+  - 001-高清放大.json
+  - 001Anime.json
+  - 001Anime图像反推多层放大 .json
+  - 001双ksampler多层放大API.json
+  - 001图像反推controlNet放大.json
+  - 001图像反推多层放大.json
+  - 001图像反推放大1.json
+  - 001图像反推放大2.json
+  - 001图像反推放大3.json
+  - 001图像反推放大4.json
+  - 001图像反推放大5双ksampler.json
+  - 001真人图像反推放大5双ksampler.json
+  - Aaalice的工作流_一键包_v12.2_正式版.cpack (1).json
+  - Aaalice的工作流_一键包_v13.2_正式版.json
+  - DyPe and Z-Image Turbo for High Quality Text to Image (Basic).json
+  - DyPe and Z-Image Turbo for High Quality Text to Image (Selector).json
+  - DyPe and Z-Image Turbo for High Quality Text to Image.json
+  - DyPe and Z-Image Turbo for High Quality Text to Image2.json
+  - hires_fix 高细节 图像反推.json
+  - hires_fix 高细节 图像反推2.json
+  - hires_fix 高细节 图像反推3.json
+  - hires_fix.json
+  - hires_fix_45degree.json
+  - IPA.json
+  - My Workflow01.json
+  - Qwen-Image-Edit 2509：人物多视角.json
+  - Qwen-Image-Edit 2509：人物多视角，超强一致性，一眼定型，多维呈现！.json
+  - SAM3.json
+  - SDXL - LORA TESTER 2.0.json
+  - sillytavern用API.json
+  - Unsaved Workflow (2) (1).json
+  - Unsaved Workflow (2).json
+  - Unsaved Workflow.json
+  - Wan2.2_I2V_14B_gguf.json
+  - workflow_api.json
+  - ZIT - UNet.json
+  - ZIT.json
+  - 高清放大.json
+- **模型** (76):
+  - JANKUTrainedChenkinNoobai_v777.safetensors
+  - JANKUTrainedNoobaiRouwei_v69.safetensors
+  - WAI-illustrious-SDXL_17.safetensors
+  - hassakuXLIllustrious_v32.safetensors
+  - hdaRainbowIllus_v14AnimeEdition.safetensors
+  - illustriousnxtXLBy_v20.safetensors
+  - miaomiaoHarem_v195.safetensors
+  - miaomiaoHarem_v200.safetensors
+  - novaAnimeXL_ilV150.safetensors
+  - novaMatureXL_v35.safetensors
+  - obsidianAnise_obsidianAniseV10.safetensors
+  - oneObsession_v19.safetensors
+  - plantMilkModelSuite_hempII.safetensors
+  - plantMilkModelSuite_walnut.safetensors
+  - prefectIllustriousXL_v5.safetensors
+  - prefectIllustriousXL_v60.safetensors
+  - rinFlanimeIllustrious_v30.safetensors
+  - waiIllustriousSDXL_v160.safetensors
+  - beretMixManga_v20.safetensors
+  - bismuthIllustrious_v60.safetensors
+  - miaomiaoPixel_vPred11.safetensors
+  - miaomiaoRealskin_epsV11.safetensors
+  - mistbloomSDXLILL_v21.safetensors
+  - oneObsessionBranch_matureMAXEPS.safetensors
+  - oneObsessionBranch_v7Matureeps.safetensors
+  - cinematic photography detailed illu xl v5.safetensors
+  - cuteRetroGirl_v20.safetensors
+  - anikawaxl_v2.safetensors
+  - auroraMixNoobaiStyle_v10.safetensors
+  - dupliCatFlatObsession_obsV10.safetensors
+  - hinanomix_v40.safetensors
+  - kiradepth_v12.safetensors
+  - kittenTower_v10EpsPred.safetensors
+  - molKeunMix_deepnavyV2EPS.safetensors
+  - qlab_lethe.safetensors
+  - smoothMixNoobai_noobaiV40.safetensors
+  - solmeleonNoobaiXLEPSV11_noobaiXLEPSV11.safetensors
+  - talesHentai_v20.safetensors
+  - unholyDesireMixCrimson_v50.safetensors
+  - animusmixV10_v10.safetensors
+  - miaomiaoRealskin_vPredV11.safetensors
+  - ntdmix_v20.safetensors
+  - tNoobnai3_v9.safetensors
+  - waiSHUFFLENOOB_vPred04.safetensors
+  - wais0ftmix_v20.safetensors
+  - 2dn_animeV3.safetensors
+  - perfectrsbmixNoobai_v211.safetensors
+  - unholyDesireMixFoolS_v60.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - next-scene_lora-v2-3000.safetensors
+  - animagineXL40_v40.safetensors
+  - animagineXL40_v4Opt.safetensors
+  - edit_0928_lora_step40000.safetensors
+  - next_scene_lora_v1-step00004000.safetensors
+  - WAI-illustrious-SDXL_17.safetensors
+  - wav2vec2_large_english_fp16.safetensors
+  - DasiwaWAN22I2V14BV8V1_midnightflirtHighV7.safetensors
+  - DasiwaWAN22I2V14BV8V1_midnightflirtLowV7.safetensors
+  - wan22EnhancedNSFWCameraPrompt_nsfwFASTMOVEV2FP8H.safetensors
+  - wan22EnhancedNSFWCameraPrompt_nsfwFASTMOVEV2FP8L.safetensors
+  - wan22I2V10StepsNSFW_fp8Highnoise10.safetensors
+  - wan22I2V10StepsNSFW_fp8Lownoise10.safetensors
+  - wan22RemixT2VI2V_i2vHighV20.safetensors
+  - wan22RemixT2VI2V_t2vLowV20.safetensors
+  - umt5_xxl_fp8_e4m3fn_scaled.safetensors
+  - anima_baseV10.safetensors
+  - hosekiLustrousmixAnima_animaV10.safetensors
+  - miaomiaoHarem_animaBase.safetensors
+  - novaAnimeAM_v15.safetensors
+  - novaAnimeAM_v20.safetensors
+  - summerHamster_v10.safetensors
+  - Qwen-Image-Edit-2511-FP8_e4m3fn.safetensors
+  - zImage_turbo.safetensors
+  - Pruned Model bf16.safetensors
+  - Pruned Model fp16.safetensors
+  - Pruned Model fp8.safetensors
+- **LoRA** (274 个, 前10):
+  - akipekoanima_v1_1-step00003000.safetensors
+  - anima-highres-aesthetic-boost.safetensors
+  - anima-turbo-lora-v0.2.safetensors
+  - anima-base-1-masterpiece-v51.safetensors
+  - anima_context_detailer_base10.safetensors
+  - BlueArchiveStyleB1.safetensors
+  - ahemaru_AnimaP_v01.safetensors
+  - channelv2.safetensors
+  - efto_AnimaB_v01.safetensors
+  - rucarachiv4-6.safetensors
+- **CLIP**: gemma_3_4b_it_bf16.safetensors, jina_clip_v2_bf16.safetensors, newbieImage_gemma34BIt.safetensors, newbieImage_jinaClipV2.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_06b_base.safetensors, qwen_3_4B.safetensors, qwen_3_4b.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors, zImage_textEncoder.safetensors
+- **VAE**: ae.safetensors, clearvaeSD15_v23.safetensors, neptuniaXLILNAIVAE_contrastColors.safetensors, newbieImage_vae.safetensors, pppanimixVAE_ilxl.safetensors, qwen_image_vae.safetensors, sdxlVAE_sdxlVAE.safetensors, vaeFtMse840000EmaPruned_vaeFtMse840k.safetensors, vaeKlF8Anime2_klF8Anime2VAE.safetensors, wan_2.1_vae.safetensors, zImage_vae.safetensors, pixel_space
+
+### 114. 175.209.141.222:8188
+
+- **版本**: 0.22.0
+- **GPU**: RTX 5070 Ti (cuda:0 NVIDIA GeForce RTX 5070 Ti : cudaMallocAsync)
+- **显存**: 16 GB (空闲 8 GB)
+- **内存**: 31 GB (空闲 23 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 4
+- **工作流** (8):
+  - 55_LTX 2.3_sulphur_i2v.json
+  - 55_LTX 2.3_sulphur_t2v.json
+  - dreamshaperxl_turbo_t2i.json
+  - flux2_dev_t2i.json
+  - juggernaut_x_nsfw_t2i.json
+  - wan22_nsfw_i2v_14B.json
+  - wan22_nsfw_t2v_14B.json
+  - wan22_t2v_14B.json
+- **模型** (19):
+  - CounterfeitXL-V1.0.safetensors
+  - DreamShaperXL_Turbo_v2_1.safetensors
+  - Juggernaut-X-RunDiffusion-NSFW.safetensors
+  - autismmixSDXL_autismmixConfetti.safetensors
+  - hidream_o1_image_dev_fp8_scaled.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - ltx-2.3-22b-distilled-fp8.safetensors
+  - sulphur_dev_fp8mixed.safetensors
+  - sulphur_dev_model_fp8mixed.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_high_lighting_fp8_e4m3fn_v2.1.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_low_lighting_fp8_e4m3fn_v2.1.safetensors
+  - Wan2.2_Remix_NSFW_t2v_14b_high_lighting_v2.0.safetensors
+  - Wan2.2_Remix_NSFW_t2v_14b_low_lighting_v2.0.safetensors
+  - flux1-schnell-fp8.safetensors
+  - flux2_dev_fp8mixed.safetensors
+  - ltx-2.3-22b-distilled-1.1_transformer_only_fp8_scaled.safetensors
+  - sulphur_dev_model_fp8mixed.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (4 个, 前10):
+  - LogoRedmondV2.safetensors
+  - ip-adapter-faceid-plusv2_sdxl_lora.safetensors
+  - ltx-2.3-22b-distilled-lora-1.1_fro90_ceil72_condsafe.safetensors
+  - sulphur_lora_rank_768.safetensors
+- **CLIP**: clip_l.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, mistral_3_small_flux2_fp8.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: flux2-vae.safetensors, ltx-2-3-22b-VAE.safetensors, sdxl_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 115. 195.122.224.90:8188
+
+- **版本**: 0.20.1
+- **GPU**: RTX 5070 Ti (cuda:0 NVIDIA GeForce RTX 5070 Ti : cudaMallocAsync)
+- **显存**: 16 GB (空闲 15 GB)
+- **内存**: 63 GB (空闲 52 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 10
+- **工作流** (7):
+  - audio_ace.json
+  - audio_ace_step1_5_xl_turbo.json
+  - CosyVoice-TTS.json
+  - edit.json
+  - EDITKV.json
+  - nsfw.json
+  - SeedVR2_Upscale.json
+- **模型** (53):
+  - DreamShaperXL_Turbo_v2_1.safetensors
+  - ace_step_1.5_turbo_aio.safetensors
+  - analogMadnessSDXL_xl5.safetensors
+  - beretMixReal_v100.safetensors
+  - cyberrealisticPony_v160 (1).safetensors
+  - cyberrealisticPony_v160.safetensors
+  - cyberrealisticXL_v58.safetensors
+  - cyberrealistic_final.safetensors
+  - cyberrealistic_final_FP16.safetensors
+  - flux_dev.safetensors
+  - getphatFLUXReality_v8.safetensors
+  - hunyuan_3d_v2.1.safetensors
+  - juggernautXL_ragnarokBy.safetensors
+  - ltx-2-19b-dev-fp8.safetensors
+  - ltx-2-19b-distilled-fp8.safetensors
+  - lustifySDXLNSFW_oltONELASTTIME.safetensors
+  - pornmaster_proSDXLV7.safetensors
+  - realismByStableYogi_v5XLFP16.safetensors
+  - sd_xl_base_1.0.safetensors
+  - sd_xl_refiner_1.0.safetensors
+  - sd_xl_turbo_1.0_fp16.safetensors
+  - ultraRealisticByStable_v20FP16.safetensors
+  - wildcardxXLANIMATION_wildcardxXLANIMATION.safetensors
+  - wan2.2_animate_14B_bf16.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp16.safetensors
+  - Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors
+  - acestep_v1.5_turbo.safetensors
+  - acestep_v1.5_xl_turbo_bf16.safetensors
+  - darkBeastMar0326Latest_darkblitzZIT5steps.safetensors
+  - darkBeastMar0326Latest_dbkleinv2BFS.safetensors
+  - darkBeastMar0326Latest_hyperbeastSDXXL.safetensors
+  - flux-2-klein-4b-fp8.safetensors
+  - flux-2-klein-4b-nvfp4.safetensors
+  - flux-2-klein-4b.safetensors
+  - flux-2-klein-9b-fp8.safetensors
+  - flux-2-klein-9b-kv.safetensors
+  - flux-2-klein-9b-nvfp4.safetensors
+  - flux-2-klein-9b.safetensors
+  - flux-2-klein-base-4b.safetensors
+  - flux-2-klein-base-9b-fp8.safetensors
+  - flux-2-klein-base-9b-nvfp4.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux1-dev-kontext_fp8_scaled.safetensors
+  - flux1-dev.safetensors
+  - flux1-krea-dev_fp8_scaled.safetensors
+  - flux2_dev_fp8mixed.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+  - z-image-turbo_fp8_scaled_e5m2_KJ.safetensors
+  - z_image_bf16.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (33 个, 前10):
+  - DR34ML4Y_I2V_14B_HIGH.safetensors
+  - DR34ML4Y_I2V_14B_LOW.safetensors
+  - Flux_2-Turbo-LoRA_comfyui.safetensors
+  - MIGUNOVK9.safetensors
+  - MovieClips_Klein9B_copy_000000880.safetensors
+  - NSFW-22-H-e8.safetensors
+  - NSFW-22-L-e8.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-Lightning-4steps-V1.0-bf16.safetensors
+  - pytorch_lora_weights.safetensors
+- **CLIP**: Huihui-Qwen3-4B-abliterated-v2_fp8mixed.safetensors, clip_l.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, gemma_3_12B_it_fp8_e4m3fn.safetensors, ltx-2-19b-embeddings_connector_dev_bf16.safetensors, mistral_3_small_flux2_bf16.safetensors, qwen_0.6b_ace15.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_8b.safetensors, qwen_3_8b_fp8mixed.safetensors, qwen_4b_ace15.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: LTX2_video_vae_bf16.safetensors, ace_1.5_vae.safetensors, ae.safetensors, flux2-vae.safetensors, flux_vae.safetensors, qwen_image_vae.safetensors, wan_2.1_vae.safetensors, taesd, taesdxl, taesd3, taef1, pixel_space
+
+### 116. 92.169.201.215:9999
+
+- **版本**: 0.24.0
+- **GPU**: RTX 5070 Ti (cuda:0 NVIDIA GeForce RTX 5070 Ti : cudaMallocAsync)
+- **显存**: 16 GB (空闲 15 GB)
+- **内存**: 63 GB (空闲 56 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 59
+- **工作流** (17):
+  - da3_advanced.json
+  - da3_advanced_3d.json
+  - da3_advanced_3d_multiview.json
+  - da3_bas_relief.json
+  - da3_simple.json
+  - da3_video_multiview_depth.json
+  - flux1_krea_dev_NSFW_JP.json
+  - flux_fill_outpaint_example.json
+  - goshniiAI-Z Image Turbo-2Upscale (UPDATED).json
+  - image-to-image-with-z-image-turbo.json
+  - image_flux2_text_to_image_JP.json
+  - image_qwen_Image_2512_JP.json
+  - JP SEEDVR Upscale.json
+  - LTX23_1080p_I2V_with_upscale_introactors_previous_movie.json
+  - SVI-Wan22-1207-JP!.json
+  - video_kandinsky5_i2v.json
+  - video_wan2_2_14B_i2v.json
+- **模型** (175):
+  - 90sfilmstockWorld_v10.safetensors
+  - HB-Fantasy1.5.safetensors
+  - NetaYumev35_pretrained_all_in_one.safetensors
+  - NsfwPovAllInOneLoraSdxl-000009.safetensors
+  - absolutereality_v181.safetensors
+  - abyssorangemix3AOM3_aom3a1b.safetensors
+  - aimrimPonyXL_v20Lightning.safetensors
+  - analogDiffusion_10Safetensors.safetensors
+  - animergePonyXL_v30.safetensors
+  - asFantasyTraditionalPainting_v18.safetensors
+  - beautifulRealistic_v7.safetensors
+  - betterThanWords_v30.safetensors
+  - chilloutmix_NiPrunedFp32Fix.safetensors
+  - colossusProjectXLSFW_12cExperimental3.safetensors
+  - comicsblend_V1.ckpt
+  - counterfeitV30_v30.safetensors
+  - cyberrealistic_v33.safetensors
+  - cyberrealistic_v50.safetensors
+  - cyberrealistic_v60.safetensors
+  - cyberrealistic_v80.safetensors
+  - deliberateRealistic_v10.safetensors
+  - deliberate_v3.safetensors
+  - dreamlikePhotoreal20_dreamlikePhotoreal20.safetensors
+  - dreamshaper_8.safetensors
+  - epicphotogasm_ultimateFidelity.safetensors
+  - epicphotogasm_x.safetensors
+  - epicrealismXL_vxviLastfameRealism.safetensors
+  - epicrealism_naturalSinRC1VAE.safetensors
+  - ghostmix_v20Bakedvae.safetensors
+  - goddessOfRealism_gorPONYV10.safetensors
+  - goddessOfRealism_gorPONYV2artFixVAE.safetensors
+  - goddessOfRealism_gorPONYV3VAE.safetensors
+  - henmixReal_v40.safetensors
+  - henmixReal_v6b.safetensors
+  - huslyorealismxl_v2.safetensors
+  - juggernautXL_juggXIByRundiffusion.safetensors
+  - juggernautXL_v8Rundiffusion.safetensors
+  - juggernautXL_version5.safetensors
+  - leosamsFilmgirlUltra_ultraBaseModel.safetensors
+  - leosamsHelloworldXL_helloworldXL70.safetensors
+  - lofi_v5Final.safetensors
+  - lsillustration_v10.safetensors
+  - ltx-2-19b-dev-fp4_diffusion_model.safetensors
+  - ltx-2-19b-dev-fp8.safetensors
+  - ltx-2-19b-distilled-fp8.safetensors
+  - ltx-2-19b-distilled.safetensors
+  - lustifySDXLNSFW_endgame.safetensors
+  - lustifySDXLNSFW_ggwpV7.safetensors
+  - majicmixRealistic_betterV2V25.safetensors
+  - majicmixRealistic_v7.safetensors
+  - majicmixSombre_v20.safetensors
+  - miniaturusPotentia_v03.safetensors
+  - modelshoot-1.0.safetensors
+  - modelshootStyle_modelshoot10.ckpt
+  - natvisNaturalVision_v27.safetensors
+  - neverendingDreamNED_v122BakedVae.safetensors
+  - openjourney-v4.ckpt
+  - perfectdeliberate_v5.safetensors
+  - ponyRealism_V23ULTRA.safetensors
+  - realDream_sdxlPony11.safetensors
+  - realDream_sdxlPony18.safetensors
+  - realDream_sdxlPony9.safetensors
+  - realismByStableYogi_ponyV3VAE.safetensors
+  - realismByStableYogi_v60FP16.safetensors
+  - realisticStockPhoto_v20.safetensors
+  - realisticStockPhoto_v30SD15.safetensors
+  - realisticVisionV51_v51VAE.safetensors
+  - realisticVisionV60B1_v51HyperVAE.safetensors
+  - realvisxlV40_v40LightningBakedvae.safetensors
+  - realvisxlV50_v50LightningBakedvae.safetensors
+  - sdXL_v10Refiner.safetensors
+  - sdXL_v10VAEFix.safetensors
+  - sd_xl_refiner_1.0.safetensors
+  - sdxlHK_v075.safetensors
+  - sdxl_vae.safetensors
+  - tComicV35_v35.safetensors
+  - uberRealisticPornMerge_urpmv13.safetensors
+  - uberRealisticPornMerge_v23Final.safetensors
+  - uberRealisticPornMerge_v23Inpainting.safetensors
+  - v1-5-pruned-emaonly.ckpt
+  - v1-5-pruned-emaonly.safetensors
+  - v15PrunedEmaonly_v15PrunedEmaonly.safetensors
+  - xxmix9realisticsdxl_v10.safetensors
+  - zavychromaxl_v100.safetensors
+  - zavychromaxl_v90.safetensors
+  - 251018_MICKMUMPITZ_QWEN-EDIT_360_03.safetensors
+  - Chroma1-HD-fp8_scaled_rev2.safetensors
+  - Chroma1-Radiance-v0.3.safetensors
+  - Chroma1-Radiance-x0-20251221-fp8mixed.safetensors
+  - IllustrationJuanerGhibli_v10.safetensors
+  - IllustrationJuanerGhibli_v20.safetensors
+  - LTX2_video_vae_bf16.safetensors
+  - MelBandRoformer_fp32.safetensors
+  - MiaoshouAIFlorence-2-base-PromptGen-v1.5.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_high_lighting_v2.0.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_low_lighting_v2.0.safetensors
+  - Wan21-OneToAllAnimation_1_3B_v2_fp16.safetensors
+  - Wan21-OneToAllAnimation_fp16.safetensors
+  - Wan21-OneToAllAnimation_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan21-WanMove_fp8_scaled_e4m3fn_KJ.safetensors
+  - Wan2_1-I2V-14B-480p_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-Animate-14B_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_2-Animate-14B_fp8_scaled_e5m2_KJ_v2.safetensors
+  - Wan2_2-T2V-A14B-HIGH-HoloCine-full_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-T2V-A14B-LOW-HoloCine-full_fp8_e4m3fn_scaled_KJ.safetensors
+  - acestep_v1.5_turbo.safetensors
+  - capybara_v0.1.safetensors
+  - chroma-radiance-x0.safetensors
+  - chrono_edit_14B_fp16.safetensors
+  - colossusProjectFlux_v50AIO.safetensors
+  - cyberrealisticFlux_v25.safetensors
+  - flux-2-klein-4b-fp8.safetensors
+  - flux-2-klein-4b.safetensors
+  - flux-2-klein-9b-fp8.safetensors
+  - flux-2-klein-9b-kv-fp8.safetensors
+  - flux-2-klein-base-4b-fp8.safetensors
+  - flux-2-klein-base-9b-fp8.safetensors
+  - flux.1-dev-SRPO-fp8.safetensors
+  - flux.1-fill-dev-OneReward-transformer_fp8.safetensors
+  - flux1-canny-dev.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux1-fill-dev.safetensors
+  - flux1-krea-dev_fp8_scaled.safetensors
+  - flux1KreaDev_fp8E4m3fn.safetensors
+  - flux2_dev_fp8mixed.safetensors
+  - fluxcstasyV1Fp16Fp8NF4_fp16V10.safetensors
+  - fluxedUpFluxNSFW_51FP8.safetensors
+  - fuxCapacityNSFWPornFlux_50.safetensors
+  - genovaAPEX_plus.safetensors
+  - genovaAPEX_s.safetensors
+  - hidream_i1_full_fp8.safetensors
+  - hunyuan_video_image_to_video_720p_bf16.safetensors
+  - hunyuanvideo1.5_1080p_sr_distilled_fp16.safetensors
+  - hunyuanvideo1.5_720p_i2v_cfg_distilled_fp8_scaled.safetensors
+  - hunyuanvideo1.5_720p_i2v_fp16.safetensors
+  - ideogram4_fp8_scaled.safetensors
+  - ideogram4_nvfp4_mixed.safetensors
+  - ideogram4_unconditional_fp8_scaled.safetensors
+  - ideogram4_unconditional_nvfp4_mixed.safetensors
+  - kandinsky5lite_i2v_5s.safetensors
+  - kandinsky5lite_t2i.safetensors
+  - kr345rp0_bpo20.safetensors
+  - locoFluxV2_v2.safetensors
+  - longcat_image_bf16.safetensors
+  - lotus-depth-d-v1-1.safetensors
+  - ltx-2-19b-distilled-fp8_transformer_only.safetensors
+  - ltx-2-19b-phr00tmerge-nsfw-v6.safetensors
+  - ltx-2-spatial-upscaler-x2-1.0.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - moxieFusionFlux_v16D.safetensors
+  - nepotism_xDit.safetensors
+  - perfecthumansexy_v50.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - shuttle-3-diffusion.safetensors
+  - shuttle-3.1-aesthetic-fp8.safetensors
+  - unstableEvolution_Fp811GB.safetensors
+  - wan2.1_i2v_480p_14B_fp16.safetensors
+  - wan2.2_fun_camera_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_fun_camera_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_ti2v_5B_fp16.safetensors
+  - wan22RemixT2VI2V_i2vHighV20.safetensors
+  - wan22RemixT2VI2V_i2vLowV20.safetensors
+  - z-image-turbo_fp8_scaled_e4m3fn_KJ.safetensors
+  - z_image_bf16.safetensors
+  - z_image_turbo_bf16.safetensors
+  - z_image_turbo_fp8_e4m3fn.safetensors
+  - z_image_turbo_fp8_e5m2.safetensors
+- **LoRA** (237 个, 前10):
+  - 22-nsfw-HIGH-e6.safetensors
+  - 23High noise-Cumshot Aesthetics.safetensors
+  - 56Low noise-Cumshot Aesthetics.safetensors
+  - BeautyNwsjMajic2-01.safetensors
+  - BetterTitfuck_v4_July2025.safetensors
+  - Body_weight_slider_ILXL.safetensors
+  - BouncingForwardBendsV01.safetensors
+  - Breast Slider - Pony_alpha1.0_rank4_noxattn_last.safetensors
+  - Brightness Adjustment_B_1.1.safetensors
+  - Brunette-37_PONY.safetensors
+- **CLIP**: byt5_small_glyphxl_fp16.safetensors, clip_g_hidream.safetensors, clip_l.safetensors, clip_l_hidream.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, gemma_3_12B_it_fp8_e4m3fn.safetensors, gemma_3_12B_it_fp8_scaled.safetensors, gemma_3_12B_it_nvfp4_uncalibrated.safetensors, llama_3.1_8b_instruct_fp8_scaled.safetensors, llava_llama3_fp16.safetensors, llava_llama3_fp8_scaled.safetensors, ltx-2-19b-dev-fp4_projections_only.safetensors, ltx-2-19b-embeddings_connector_dev_bf16.safetensors, ltx-2-19b-embeddings_connector_distill_bf16.safetensors, ltx-2.3_text_projection_bf16.safetensors, mistral_3_small_flux2_bf16.safetensors, mistral_3_small_flux2_fp8.safetensors, qwen3vl_8b_fp8_scaled.safetensors, qwen3vl_8b_nvfp4.safetensors, qwen_0.6b_ace15.safetensors, qwen_1.7b_ace15.safetensors, qwen_2.5_vl_7b.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_4b_fp4_mixed.safetensors, qwen_3_4b_fp8_mixed.safetensors, qwen_3_8b_fp8mixed.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors, umt5-xxl-enc-bf16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, LTX2_audio_vae_bf16.safetensors, LTX2_video_vae_bf16.safetensors, Wan2.1_VAE_upscale2x_imageonly_real_v1.safetensors, Wan2_1_VAE_bf16.safetensors, ace_1.5_vae.safetensors, ae.safetensors, flux2-vae.safetensors, flux_vae.safetensors, hunyuan_video_vae_bf16.safetensors, hunyuanvideo15_vae_fp16.safetensors, ltx-2-19b-dev-fp4_video_vae.safetensors, qwen_image_vae.safetensors, shuttle_vae.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, wan2.2_vae.safetensors, wan_2.1_vae.safetensors, taef1, taesd3, taesd, taesdxl, pixel_space
+
+### 117. 106.55.104.134:8188
+
+- **版本**: 0.17.1
+- **GPU**: RTX 5070 (cuda:0 NVIDIA GeForce RTX 5070 : cudaMallocAsync)
+- **显存**: 12 GB (空闲 7 GB)
+- **内存**: 31 GB (空闲 3 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 64
+- **工作流** (16):
+  - 06 Wan2.2 Animate 动作迁移V5 2026年3月17日-B站小珠光.json
+  - 2026年4月25日视频水印移除流-B站小珠光.json
+  - 2半手动版 _ 动态漫自定义角色 _ 音色 _ 分镜 _ 台词 _ 视频_备份.json
+  - image_z_image.json
+  - SVI-Pro-Workflow原子图流.json
+  - z-image-turbo.json
+  - zimage-bf16.json
+  - 动漫短剧全自动工作流V4.1(1).json
+  - 半手动版 _ 动态漫自定义角色 _ 音色 _ 分镜 _ 台词 _ 视频.json
+  - 单图编辑_qwen.json
+  - 图片高清化到2048.json
+  - 大凯辰光SVI-V2.0-Pro-长视频流（非子图）.json
+  - 拖入打开工作流.json
+  - 融图 (Copy).json
+  - 融图.json
+  - 融图auto.json
+- **模型** (11):
+  - ltx-2.3-22b-dev.safetensors
+  - DasiwaWAN22I2V14BLightspeed_synthseductionHighV9.safetensors
+  - DasiwaWAN22I2V14BLightspeed_synthseductionLowV9.safetensors
+  - flux-2-klein-9b.safetensors
+  - Wan2_2-Animate-14B_fp8_scaled_e4m3fn_KJ_v2.safetensors
+  - Wan2_1-I2V-14B-480p_fp8_e4m3fn_scaled_KJ.safetensors
+  - wan2.1_i2v_480p_scaled_fp8_e4m3_lightx2v_4step_comfyui.safetensors
+  - ltx-2.3-22b-distilled_transformer_only_fp8_scaled.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - z-image-turbo-fp8-e4m3fn.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (23 个, 前10):
+  - AniEdit9B_v2.safetensors
+  - Qwen-Image-2512-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Lightning-8steps-V1.1.safetensors
+  - Multiple-angles_镜头转换_Qwen-Edit.safetensors
+  - Qwen-Image-Edit-2509-Lightning-8steps-V1.0-bf16.safetensors
+  - SVI_v2_PRO_Wan2.2-I2V-A14B_HIGH_lora_rank_128_fp16.safetensors
+  - SVI_v2_PRO_Wan2.2-I2V-A14B_LOW_lora_rank_128_fp16.safetensors
+  - FastWan_T2V_14B_480p_lora_rank_128_bf16.safetensors
+  - Wan2.2-Fun-A14B-InP-low-noise-HPS2.1.safetensors
+  - Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors
+- **CLIP**: mistral_3_small_flux2_fp8.safetensors, gemma_3_12B_it_fp8_e4m3fn.safetensors, gemma_3_12B_it_fp8_scaled.safetensors, ltx-2.3_text_projection_bf16.safetensors, model.safetensors, qwen_2.5_vl_7b.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors, t5xxl_fp16.safetensors, umt5-xxl-enc-bf16.safetensors, umt5-xxl-enc-fp8_e4m3fn.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: UltraFlux-vae_v1.safetensors, Wan2_1_VAE_bf16.safetensors, ae.safetensors, diffusion_pytorch_model.safetensors, ema_vae_fp16.safetensors, flux2-vae.safetensors, qwen_image_vae.safetensors, LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, wan_2.1_vae.safetensors, wan_2.1_vae_fp32.safetensors, pixel_space
+
+### 118. 55555.uicp.vip:8188
+
+- **版本**: 0.22.0
+- **GPU**: RTX 4080 (cuda:0 NVIDIA GeForce RTX 4080 Laptop GPU : cudaMallocAsync)
+- **显存**: 12 GB (空闲 11 GB)
+- **内存**: 63 GB (空闲 34 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (26):
+  - S2V+控制+Framepack+ContextWindow长视频工作流.json
+  - Wan2.1_VACE首尾帧v3_12G_30系以上.json
+  - Wan2.1_VACE首尾帧v3_8G_20系以下.json
+  - Wan2.1_VACE首尾帧v3_8G_30系以上.json
+  - Wan2.1_图生视频v3_12G_30系以上.json
+  - Wan2.1_图生视频v3_8G_20系以下.json
+  - Wan2.1_图生视频v3_8G_30系以上.json
+  - Wan2.1_首尾帧v3_12G_30系以上.json
+  - Wan2.1_首尾帧v3_8G_20系以下.json
+  - Wan2.1_首尾帧v3_8G_30系以上.json
+  - 图片修改.json
+  - 图片制作2.json
+  - 图片制作2快.json
+  - 图片放大2.json
+  - 图片生成视频2.json
+  - 宣传图.json
+  - 文生视频.json
+  - 歌曲生成2.json
+  - 照片变手办2.json
+  - 照片转画作.json
+  - 真实感-wan2.2+动作迁移.json
+  - 短剧.json
+  - 短剧2.json
+  - 视频生成2.json
+  - 音图生视频.json
+  - 音频图片生成视频.json
+- **模型** (10):
+  - ace_step_1.5_turbo_aio.safetensors
+  - ltx-2-19b-dev-fp8.safetensors
+  - ltx-2-19b-dev.safetensors
+  - ltx-2-19b-distilled.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - ltx-2.3-22b-distilled-fp8.safetensors
+  - Wan2_1-I2V-14B-480p_fp8_e4m3fn_scaled_KJ.safetensors
+  - acestep_v1.5_turbo.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (6 个, 前10):
+  - Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors
+  - gemma-3-12b-it-abliterated_lora_rank64_bf16.safetensors
+  - lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors
+  - ltx-2-19b-distilled-lora-384.safetensors
+  - ltx-2-19b-lora-camera-control-dolly-left.safetensors
+  - ltx-2.3-22b-distilled-lora-384.safetensors
+- **CLIP**: clip_l.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, qwen_0.6b_ace15.safetensors, qwen_1.7b_ace15.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_2.5_vl_fp16.safetensors, qwen_3_4b.safetensors, t5-base.safetensors, umt5-xxl-enc-fp8_e4m3fn.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: Wan2_1_VAE_bf16.safetensors, ace_1.5_vae.safetensors, ae.safetensors, hunyuan_video_vae_bf16.safetensors, qwen_image_vae.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, wan2.2_vae.safetensors, wan_2.1_vae.safetensors, taesd3, taef1, taesdxl, taesd, pixel_space
+
+### 119. 115.190.79.59:8188
+
+- **版本**: v0.3.5-10-g82c53085
+- **GPU**: A10 (cuda:0 NVIDIA A10 : cudaMallocAsync)
+- **显存**: 22 GB (空闲 3 GB)
+- **内存**: 440 GB (空闲 404 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (5):
+  - model.safetensors
+  - realcartoonXL_v7.safetensors
+  - 插画动漫二次元SDXL_NSFW20_V2.0.safetensors
+  - 花火动漫二次元_1.0.safetensors
+  - 花火动漫二次元_Animagine XL 4.0版_1.0.safetensors
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: model.safetensors
+
+### 120. 106.12.107.238:8188
+
+- **版本**: 0.12.3
+- **GPU**: A10 (cuda:0 NVIDIA A10 : cudaMallocAsync)
+- **显存**: 22 GB (空闲 22 GB)
+- **内存**: 251 GB (空闲 197 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 87
+- **工作流** (20):
+  - 01背景替换_局部重绘.json
+  - bdsd_material_replace.json
+  - 电商产品主图2.json
+  - 线稿+参考图片风格.json
+  - 01CXY背景替换_局部重绘.json
+  - CXY效果图细节增强（flux洗图+细节迁移+高清修复）.json
+  - 3-1-1_三视图.json
+  - CXY高清放大（TTP)-效果极佳.json
+  - 材质替换.json
+  - CXY材质替换V2（可蒙版文字选取区域）.json
+  - CXY-电商产品换背景V5.5+ICLight保留产品文字.json
+  - 02高清放大（TTP)-效果极佳，无需调参数.json
+  - bdsd_line_redraw.json
+  - 03场景季节变换（效果不稳定，一般都还好）.json
+  - 00真实感融图-光影背景融合.json
+  - 一键生成趣味贴纸头像.json
+  - CXY KONTEXT(改变四季、时间点）.json
+  - 物品消除_移除_去水印.json
+  - 基础工作流课程.json
+  - CXY抠图（四种相对较好）.json
+- **模型** (38):
+  - chilloutmix_NiPrunedFp32Fix.safetensors
+  - 01_sd_xl_base_1.0.safetensors
+  - LandscapeBINGv1.0.safetensors
+  - Lanzzzy_AHRender_v1.0.ckpt
+  - ReVAnimated_v122_V122.safetensors
+  - sdxlFixedvaeFp16Remove_baseFxiedVaeV2Fp16.safetensors
+  - 01_百变_景观_效果landscapebingV10V10_landscapebingV10.safetensors
+  - 02_森林花园_景观_效果landscapesupermix_v21.safetensors
+  - LandscapeBING v1.0_冰醋酸 百变景观v1.0_v1.0.safetensors
+  - majicMIX realistic 麦橘写实_v7.safetensors
+  - 01_酷炫_体块_效果MrMcFanyongV1512_mrMcFanyongV1512.safetensors
+  - 02_现代真实_建筑_效果architectureExterior_v40Exterior.safetensors
+  - 03_现代美学_建筑_效果architectureExterior_v60.safetensors
+  - 04_建筑_效果dvarchMultiPrompt_dvarchExterior.safetensors
+  - 01_中国山水风_景观_效果locsChinaLandscapes.ckpt
+  - 01_清新_公园_效果landscapeRendering_v10.ckpt
+  - 01_真实_枯山水_庭院_效果lattezenLandscape_v10.safetensors
+  - 01_公园景观_平面图landscapeGraphic_landscapePlanLJY.safetensors
+  - Adam-Real_Arch丨建筑写实-室内外FLUX_V1.safetensors
+  - ArchitectureRealMixV1.1.safetensors
+  - landscapebingV1.safetensors
+  - landscapesupermix_v21.safetensors
+  - laowang_ARCH_MIX_V0.5.safetensors
+  - revAnimated_v2Rebirth.safetensors
+  - 比鲁斯建筑室内通用大模型SD1.5_SD1.5.safetensors
+  - juggernautXL_v9-Lightning_4S_V9 + RDPhoto 2.safetensors
+  - 比鲁斯大型建筑大模型XL0.35_PRO.safetensors
+  - ArchitectureRealMixV1.1.safetensors
+  - FLUX1-dev.sft
+  - flux-2-klein-9b.safetensors
+  - iclight_sd15_fbc_unet_ldm.safetensors
+  - iclight_sd15_fc_unet_ldm.safetensors
+  - landscapebingV1.safetensors
+  - landscapesupermix_v21.safetensors
+  - laowang_ARCH_MIX_V0.5.safetensors
+  - revAnimated_v2Rebirth.safetensors
+  - svdq-int4_r32-flux.1-dev.safetensors
+  - svdq-int4_r32-flux.1-kontext-dev.safetensors
+- **LoRA** (93 个, 前10):
+  - 01大阳 枯山水景观_SDXL.safetensors
+  - 02水景、园路JJsLandscape_SDXL.safetensors
+  - 03滨水步道JJsEcology_Park_SDXL.safetensors
+  - 04市政人行步道JJsStreetScape_SDXL-000004.safetensors
+  - 05冷色调拼贴风格效果LACollageStyle_V15.safetensors
+  - 06城市公园鸟瞰图Landscape_V2.safetensors
+  - 01规划平面图JJsSitePlan_SDXL.safetensors
+  - 02曲线平面图landscapeplan-v10.safetensors
+  - 01现代建筑aarg_aerial-SDXL-000008.safetensors
+  - 02城市建筑鸟瞰JJsArchiviz_Birdview_SDXL.safetensors
+- **CLIP**: EVA02_CLIP_L_336_psz14_s6B.pt, clip_l.safetensors, model.fp16.safetensors, model.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: FLUX.1_FLUX.1-vae.sft, FLUX1-dev-fp8_e4m3fn.safetensors, ae.safetensors, animevae.pt, flux2_vae.safetensors, kl-f8-anime2.ckpt, qwen_image_layered_vae.safetensors, sdxl_vae.safetensors, sdxl_vae_fp16fix.safetensors, vae-84m-pruned_2.0.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, taesd, taesdxl, taesd3, taef1, pixel_space
+
+### 121. 115.190.250.229:8188
+
+- **版本**: 0.22.0
+- **GPU**: A10 (cuda:0 NVIDIA A10 : cudaMallocAsync)
+- **显存**: 22 GB (空闲 5 GB)
+- **内存**: 110 GB (空闲 69 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (2):
+  - 官方新版数字人.json
+  - ImgAudio2Detail-InfiniteTalk.json
+- **模型** (2):
+  - Wan2_1-I2V-14B-480P_fp8_e4m3fn.safetensors
+  - Wan2_1-I2V-14B-480p_fp8_e4m3fn_scaled_KJ.safetensors
+- **LoRA** (2 个, 前10):
+  - Wan21_I2V_14B_lightx2v_cfg_step_distill_lora_rank64.safetensors
+  - lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors
+- **CLIP**: umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: wan_2.1_vae.safetensors, pixel_space
+
+### 122. 8.147.108.18:8188
+
+- **版本**: 0.3.29
+- **GPU**: A10 (cuda:0 NVIDIA A10 : cudaMallocAsync)
+- **显存**: 22 GB (空闲 3 GB)
+- **内存**: 58 GB (空闲 42 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (2):
+  - Flux-Schnell-ComfyUI-Workflow.json
+  - Unsaved Workflow.json
+- **模型** (2):
+  - flux1-schnell-fp8.safetensors
+  - flux1-schnell.safetensors
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: clip_l.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: ae.safetensors
+
+### 123. https://52.31.126.103
+
+- **版本**: 0.18.1
+- **GPU**: A10G (cuda:0 NVIDIA A10G : cudaMallocAsync)
+- **显存**: 22 GB (空闲 5 GB)
+- **内存**: 30 GB (空闲 6 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (2):
+  - RealVisXL_V4.0.safetensors
+  - flux1-dev-fp8.safetensors
+- **LoRA** (60 个, 前10):
+  - flux_antiblur_lora.safetensors
+  - flux_realism_lora.safetensors
+  - lora_193bb6bd-f147-4c1d-ade7-a28ba0b44dd9.safetensors
+  - lora_2b1f6749-bd86-4fcd-85a7-42e50f03c3b7-step00000005.safetensors
+  - lora_2b1f6749-bd86-4fcd-85a7-42e50f03c3b7-step00000010.safetensors
+  - lora_2b1f6749-bd86-4fcd-85a7-42e50f03c3b7.safetensors
+  - lora_2bd5adca-357a-48eb-9ab9-eb0101b84ecd-step00000005.safetensors
+  - lora_2bd5adca-357a-48eb-9ab9-eb0101b84ecd-step00000010.safetensors
+  - lora_2bd5adca-357a-48eb-9ab9-eb0101b84ecd.safetensors
+  - lora_3c0c5dc5-9bc5-4292-80d0-6364b0945188-step00000005.safetensors
+- **CLIP**: clip_l.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: ae.safetensors, sdxl_vae.safetensors, pixel_space
+
+### 124. 14.224.131.103:8188
+
+- **版本**: 0.24.0
+- **GPU**: RTX 4070 Ti (cuda:0 NVIDIA GeForce RTX 4070 Ti SUPER : cudaMallocAsync)
+- **显存**: 16 GB (空闲 2 GB)
+- **内存**: 31 GB (空闲 8 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 66
+- **工作流** (0): 无
+- **模型** (38):
+  - aziibpixelmix_v10.safetensors
+  - CHEYENNE_v16.safetensors
+  - DreamShaperXL_Lightning.safetensors
+  - PVCStyleModelMovable_v41.safetensors
+  - ReminiClay clay style _ SDXL_V1.0.safetensors
+  - DreamShaper.safetensors
+  - MeinaMix.safetensors
+  - ghostmix_v20Bakedvae.safetensors
+  - majicMIX_realistic.safetensors
+  - realisticVisionV60B1_v51VAE.safetensors
+  - dreamshaper_xl_v2.1.safetensors
+  - sd_xl_base_1.0.safetensors
+  - sd_xl_refiner_1.0.safetensors
+  - XLHxzmixInteriorAnd_v10.safetensors
+  - animagineXLV31_v31.safetensors
+  - asianrealisticSdlife_v40-fp16-no-ema.safetensors
+  - aziibpixelmix_v10.safetensors
+  - epicphotogasm_v1.safetensors
+  - epicrealismXL_v8Kiss.safetensors
+  - flat2DAnimerge_v45Sharp.safetensors
+  - flux1-schnell-fp8.safetensors
+  - jjsInteriorModelMix_v10.safetensors
+  - ltx-2-19b-dev-fp8.safetensors
+  - ponyRealism_V23ULTRA.safetensors
+  - sd-v1-5-inpainting.ckpt
+  - sd_xl_base_1.0.safetensors
+  - v1-5-pruned-emaonly.safetensors
+  - v1-5-pruned.safetensors
+  - z_image_turbo_fp8.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux1-kontext-dev-fp8-e4m3fn.safetensors
+  - Wan2.2_Remix_t2v_14b_high_lighting_v0.9_dyno.safetensors
+  - Wan2.2_Remix_t2v_14b_low_lighting_v0.9.safetensors
+  - flux-2-klein-base-9b-fp8.safetensors
+  - flux1-dev-kontext_fp8_scaled.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (25 个, 前10):
+  - pixel-art-xl-v1.0.safetensors
+  - pixel-art-xl-v1.1.safetensors
+  - GTA5_Artwork.safetensors
+  - Hyper-SD15-4steps-lora.safetensors
+  - Hyper-SD15-8steps-lora.safetensors
+  - KLEIN-Unchained-V2.safetensors
+  - Mystic-XXX-ZIT-V5.safetensors
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-fp32.safetensors
+  - RealisticSnapshot-Zimage-Turbov5.safetensors
+  - StudioGhibli.Redmond-StdGBRRedmAF-StudioGhibli.safetensors
+- **CLIP**: EVA02_CLIP_L_336_psz14_s6B.pt, clip_l.safetensors, mistral_3_small_flux2_fp8.safetensors, nsfw_wan_umt5-xxl_fp8_scaled.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, diffusion_pytorch_model.bin, diffusion_pytorch_model.safetensors, flux2-vae.safetensors, qwen_image_vae.safetensors, sdxl_vae.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 125. 39.103.60.26:6060
+
+- **版本**: 0.18.0
+- **GPU**: RTX 4070 Ti (cuda:0 NVIDIA GeForce RTX 4070 Ti SUPER : cudaMallocAsync)
+- **显存**: 16 GB (空闲 15 GB)
+- **内存**: 63 GB (空闲 33 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 16
+- **工作流** (260):
+  - 2.11-熊猫基地-笋子塔春日-吧唧(纪念币).json
+  - 2.11-熊猫基地-铜版画全家福-吧唧(纪念币).json
+  - 2.11-熊猫基地-铜版画全家福-明信片.json
+  - 2.11-熊猫基地-铜版画全家福-横版冰箱贴.json
+  - 2.5.json
+  - 3.1.json
+  - CBD-城市时尚-吧唧.json
+  - CBD-城市时尚-明信片.json
+  - CBD-城市时尚-通版冰箱贴.json
+  - CBD-时空之门-吧唧.json
+  - CBD-时空之门-明信片.json
+  - CBD-时空之门-通版冰箱贴.json
+  - CBD-未来城市-吧唧.json
+  - CBD-未来城市-明信片.json
+  - CBD-未来城市-通版冰箱贴.json
+  - CBD-永不落幕-吧唧.json
+  - CBD-永不落幕-明信片.json
+  - CBD-永不落幕-通版冰箱贴.json
+  - CBD-相遇北京-吧唧.json
+  - CBD-相遇北京-明信片.json
+  - CBD-相遇北京-通版冰箱贴.json
+  - CBD-科技创新-吧唧.json
+  - CBD-科技创新-明信片.json
+  - CBD-科技创新-通版冰箱贴.json
+  - CBD-论坛主角-吧唧.json
+  - CBD-论坛主角-明信片.json
+  - CBD-论坛主角-通版冰箱贴.json
+  - CBD-都市文艺-吧唧.json
+  - CBD-都市文艺-明信片.json
+  - CBD-都市文艺-通版冰箱贴.json
+  - CBD-金融开放-吧唧.json
+  - CBD-金融开放-明信片.json
+  - CBD-金融开放-通版冰箱贴.json
+  - 中关村-3D风格-冰箱贴.json
+  - 中关村-3D风格-吧唧.json
+  - 中关村-写实风格-冰箱贴.json
+  - 中关村-写实风格-吧唧.json
+  - 中关村-动漫风格-冰箱贴.json
+  - 中关村-动漫风格-吧唧.json
+  - 中关村-机甲风格-冰箱贴.json
+  - 中关村-机甲风格-吧唧.json
+  - 中关村-线q-冰箱贴.json
+  - 中关村-线q-吧唧.json
+  - 中关村-线漫-冰箱贴 (Copy).json
+  - 中关村-线漫-冰箱贴.json
+  - 中关村-线漫-吧唧.json
+  - 中发展-3D科技-冰箱贴.json
+  - 中发展-Q版集团-吧唧.json
+  - 中发展-手绘科技-吧唧.json
+  - 中发展-手绘集团-冰箱贴.json
+  - 内蒙-3D博物馆-吧唧.json
+  - 内蒙-3D博物馆-通版冰箱贴.json
+  - 内蒙-Q版丝绸大道-吧唧.json
+  - 内蒙-Q版丝绸大道-通版冰箱贴.json
+  - 内蒙-Q版骆驼-吧唧.json
+  - 内蒙-Q版骆驼-通版冰箱贴.json
+  - 内蒙-博物馆奇幻-吧唧.json
+  - 内蒙-博物馆奇幻-通版冰箱贴.json
+  - 内蒙-博物馆探险-吧唧.json
+  - 内蒙-博物馆探险-通版冰箱贴.json
+  - 内蒙-古长城插画-吧唧.json
+  - 内蒙-古长城插画-通版冰箱贴.json
+  - 内蒙-如意卷草纹-吧唧.json
+  - 内蒙-如意卷草纹-通版冰箱贴.json
+  - 内蒙-岩画-吧唧.json
+  - 内蒙-岩画-通版冰箱贴.json
+  - 内蒙-插画花海-吧唧.json
+  - 内蒙-插画花海-通版冰箱贴.json
+  - 内蒙-未来城市幻想-吧唧.json
+  - 内蒙-未来城市幻想-通版冰箱贴.json
+  - 内蒙-极光夜景-吧唧.json
+  - 内蒙-极光夜景-通版冰箱贴.json
+  - 内蒙-浮雕纪念章-吧唧.json
+  - 内蒙-浮雕纪念章-通版冰箱贴.json
+  - 内蒙-纸艺风格-吧唧.json
+  - 内蒙-纸艺风格-通版冰箱贴.json
+  - 内蒙-艺术插画-吧唧.json
+  - 内蒙-艺术插画-通版冰箱贴.json
+  - 内蒙-草原野餐-吧唧.json
+  - 内蒙-草原野餐-通版冰箱贴.json
+  - 内蒙-草原风筝-吧唧.json
+  - 内蒙-草原风筝-通版冰箱贴.json
+  - 内蒙-草原马-吧唧.json
+  - 内蒙-草原马-通版冰箱贴.json
+  - 内蒙-草原骑马-吧唧.json
+  - 内蒙-草原骑马-通版冰箱贴.json
+  - 内蒙-马头琴插画-吧唧.json
+  - 内蒙-马头琴插画-通版冰箱贴.json
+  - 卢米埃-红墙熊猫-吧唧.json
+  - 卢米埃-红墙熊猫-明信片.json
+  - 卢米埃-红墙熊猫-通版冰箱贴.json
+  - 卢米埃-财神服cos-吧唧.json
+  - 卢米埃-财神服cos-明信片.json
+  - 卢米埃-财神服cos-通版冰箱贴.json
+  - 合野-企鹅-吧唧.json
+  - 合野-企鹅-明信片.json
+  - 合野-企鹅-通版冰箱贴.json
+  - 合野-全家福-吧唧.json
+  - 合野-全家福-明信片.json
+  - 合野-全家福-通版冰箱贴.json
+  - 合野-卡皮巴拉-吧唧.json
+  - 合野-卡皮巴拉-明信片.json
+  - 合野-卡皮巴拉-通版冰箱贴.json
+  - 合野-大象-吧唧.json
+  - 合野-大象-明信片.json
+  - 合野-大象-通版冰箱贴.json
+  - 合野-小熊猫-吧唧.json
+  - 合野-小熊猫-明信片.json
+  - 合野-小熊猫-通版冰箱贴.json
+  - 合野-猩猩-吧唧.json
+  - 合野-猩猩-明信片.json
+  - 合野-猩猩-通版冰箱贴.json
+  - 合野-长臂猿-吧唧.json
+  - 合野-长臂猿-明信片.json
+  - 合野-长臂猿-通版冰箱贴.json
+  - 大兴-⽉季博物馆(一)-通版冰箱贴.json
+  - 大兴-⽉季博物馆(二)-通版冰箱贴.json
+  - 大兴-北京野⽣动物园(一)-吧唧.json
+  - 大兴-北京野⽣动物园(一)-明信片.json
+  - 大兴-北京野⽣动物园(一)-视频.json
+  - 大兴-北京野⽣动物园(一)-通版冰箱贴.json
+  - 大兴-北京野⽣动物园(三)-吧唧.json
+  - 大兴-北京野⽣动物园(三)-明信片.json
+  - 大兴-北京野⽣动物园(三)-视频.json
+  - 大兴-北京野⽣动物园(三)-通版冰箱贴.json
+  - 大兴-北京野⽣动物园(二)-吧唧.json
+  - 大兴-北京野⽣动物园(二)-明信片.json
+  - 大兴-北京野⽣动物园(二)-通版冰箱贴.json
+  - 大兴-北京野⽣动物园(四)-吧唧.json
+  - 大兴-北京野⽣动物园(四)-明信片.json
+  - 大兴-北京野⽣动物园(四)-视频.json
+  - 大兴-北京野⽣动物园(四)-通版冰箱贴.json
+  - 大兴-大兴机场(一)-吧唧.json
+  - 大兴-大兴机场(一)-明信片.json
+  - 大兴-大兴机场(一)-视频.json
+  - 大兴-大兴机场(一)-通版冰箱贴.json
+  - 大兴-大兴机场(三)-吧唧.json
+  - 大兴-大兴机场(三)-明信片.json
+  - 大兴-大兴机场(三)-通版冰箱贴.json
+  - 大兴-大兴机场(二)-吧唧.json
+  - 大兴-大兴机场(二)-明信片.json
+  - 大兴-大兴机场(二)-视频.json
+  - 大兴-大兴机场(二)-通版冰箱贴.json
+  - 大兴-康庄公园(一)-吧唧.json
+  - 大兴-康庄公园(一)-明信片.json
+  - 大兴-康庄公园(一)-视频.json
+  - 大兴-康庄公园(一)-通版冰箱贴.json
+  - 大兴-康庄公园(三)-吧唧.json
+  - 大兴-康庄公园(三)-明信片.json
+  - 大兴-康庄公园(三)-视频.json
+  - 大兴-康庄公园(三)-通版冰箱贴.json
+  - 大兴-康庄公园(二)-吧唧.json
+  - 大兴-康庄公园(二)-明信片.json
+  - 大兴-康庄公园(二)-视频.json
+  - 大兴-康庄公园(二)-通版冰箱贴.json
+  - 大兴-文化馆(一)-吧唧.json
+  - 大兴-文化馆(一)-明信片.json
+  - 大兴-文化馆(一)-通版冰箱贴.json
+  - 大兴-文化馆(三)-吧唧.json
+  - 大兴-文化馆(三)-明信片.json
+  - 大兴-文化馆(三)-通版冰箱贴.json
+  - 大兴-文化馆(二)-吧唧.json
+  - 大兴-文化馆(二)-明信片.json
+  - 大兴-文化馆(二)-视频.json
+  - 大兴-文化馆(二)-通版冰箱贴.json
+  - 大兴-月季博物馆(一)-吧唧.json
+  - 大兴-月季博物馆(一)-明信片.json
+  - 大兴-月季博物馆(一)-视频.json
+  - 大兴-月季博物馆(二)-吧唧.json
+  - 大兴-月季博物馆(二)-明信片.json
+  - 大兴-月季博物馆(二)-视频.json
+  - 大熊猫竹林写实.json
+  - 宁德-两人-汽车 (logo) (1).json
+  - 宁德-两人-汽车 (logo).json
+  - 宁德-两人-轮船 (logo).json
+  - 宁德-两人-轮船 改.json
+  - 宁德-两人-飞机 (logo).json
+  - 宁德-单人-汽车 (logo).json
+  - 宁德-单人-轮船 (logo).json
+  - 宁德-单人-轮船改.json
+  - 宁德-单人-飞机 (logo).json
+  - 宁德视频-单人.json
+  - 宁德视频-双人.json
+  - 测试宁德视频.json
+  - 火财神-横版冰箱贴.json
+  - 石景山-3D石景山-吧唧.json
+  - 石景山-3D石景山-照片.json
+  - 石景山-工业遗址3DQ版-吧唧.json
+  - 石景山-工业遗址3DQ版-照片.json
+  - 石景山-插画佛塔-吧唧.json
+  - 石景山-插画佛塔-照片.json
+  - 石景山-插画游乐园-吧唧.json
+  - 石景山-插画游乐园-照片.json
+  - 石景山-滑雪大跳台Q版卡通-吧唧.json
+  - 石景山-滑雪大跳台Q版卡通-照片.json
+  - 石景山-赛博首钢-吧唧.json
+  - 石景山-赛博首钢-照片.json
+  - 银子岩-银子岩五财神-吧唧-土.json
+  - 银子岩-银子岩五财神-吧唧-木.json
+  - 银子岩-银子岩五财神-吧唧-水.json
+  - 银子岩-银子岩五财神-吧唧-火.json
+  - 银子岩-银子岩五财神-吧唧-金.json
+  - 银子岩-银子岩五财神-明信片-火.json
+  - 银子岩-银子岩五财神-横版冰箱贴-土.json
+  - 银子岩-银子岩五财神-横版冰箱贴-木.json
+  - 银子岩-银子岩五财神-横版冰箱贴-水.json
+  - 银子岩-银子岩五财神-横版冰箱贴-火.json
+  - 银子岩-银子岩五财神-横版冰箱贴-金.json
+  - 银子岩-银子岩五财神-通版冰箱贴-土.json
+  - 银子岩-银子岩五财神-通版冰箱贴-木.json
+  - 银子岩-银子岩五财神-通版冰箱贴-水.json
+  - 银子岩-银子岩五财神-通版冰箱贴-火.json
+  - 银子岩-银子岩五财神-通版冰箱贴-金.json
+  - 首图-天坛-吧唧.json
+  - 首图-天坛-明信片.json
+  - 首图-天坛-通版冰箱贴.json
+  - 首图-故宫-吧唧.json
+  - 首图-故宫-明信片.json
+  - 首图-故宫-通版冰箱贴.json
+  - 首图-熊猫自拍-吧唧.json
+  - 首图-熊猫自拍-明信片.json
+  - 首图-熊猫自拍-通版冰箱贴.json
+  - 首图-熊猫花海-吧唧.json
+  - 首图-熊猫花海-明信片.json
+  - 首图-熊猫花海-通版冰箱贴.json
+  - 首图-熊猫财神-吧唧.json
+  - 首图-熊猫财神-明信片.json
+  - 首图-熊猫财神-通版冰箱贴.json
+  - 首图-熊猫野餐-吧唧.json
+  - 首图-熊猫野餐-明信片.json
+  - 首图-熊猫野餐-通版冰箱贴.json
+  - 首图-长城-吧唧.json
+  - 首图-长城-明信片.json
+  - 首图-长城-通版冰箱贴.json
+  - 首图-长城中字-明信片.json
+  - 首图-长城中字-通版冰箱贴.json
+  - 首图-长城英字-明信片.json
+  - 首图-长城英字-通版冰箱贴.json
+  - 首图-鸟巢-吧唧.json
+  - 首图-鸟巢-明信片.json
+  - 首图-鸟巢-通版冰箱贴.json
+  - 首图-鸟巢中字-明信片.json
+  - 首图-鸟巢中字-通版冰箱贴.json
+  - 首图-鸟巢英字-明信片.json
+  - 首图-鸟巢英字-通版冰箱贴.json
+  - 香山-红星3D-吧唧.json
+  - 香山-红星3D-明信片.json
+  - 香山-红星3D-通版冰箱贴.json
+  - 香山-红星手绘-吧唧.json
+  - 香山-红星手绘-明信片.json
+  - 香山-红星手绘-通版冰箱贴.json
+  - 香山-红色写实-吧唧.json
+  - 香山-红色写实-明信片.json
+  - 香山-红色写实-通版冰箱贴.json
+  - 香山-雄关漫道-吧唧.json
+  - 香山-雄关漫道-明信片.json
+  - 香山-雄关漫道-通版冰箱贴.json
+  - 香山-雪地长征-吧唧.json
+  - 香山-雪地长征-明信片.json
+  - 香山-雪山长征-通版冰箱贴.json
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: taesd, taesdxl, taesd3, taef1, pixel_space
+
+### 126. 39.103.60.26:6061
+
+- **版本**: 0.18.0
+- **GPU**: RTX 4070 Ti (cuda:0 NVIDIA GeForce RTX 4070 Ti SUPER : cudaMallocAsync)
+- **显存**: 16 GB (空闲 15 GB)
+- **内存**: 63 GB (空闲 33 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 16
+- **工作流** (260):
+  - 2.11-熊猫基地-笋子塔春日-吧唧(纪念币).json
+  - 2.11-熊猫基地-铜版画全家福-吧唧(纪念币).json
+  - 2.11-熊猫基地-铜版画全家福-明信片.json
+  - 2.11-熊猫基地-铜版画全家福-横版冰箱贴.json
+  - 2.5.json
+  - 3.1.json
+  - CBD-城市时尚-吧唧.json
+  - CBD-城市时尚-明信片.json
+  - CBD-城市时尚-通版冰箱贴.json
+  - CBD-时空之门-吧唧.json
+  - CBD-时空之门-明信片.json
+  - CBD-时空之门-通版冰箱贴.json
+  - CBD-未来城市-吧唧.json
+  - CBD-未来城市-明信片.json
+  - CBD-未来城市-通版冰箱贴.json
+  - CBD-永不落幕-吧唧.json
+  - CBD-永不落幕-明信片.json
+  - CBD-永不落幕-通版冰箱贴.json
+  - CBD-相遇北京-吧唧.json
+  - CBD-相遇北京-明信片.json
+  - CBD-相遇北京-通版冰箱贴.json
+  - CBD-科技创新-吧唧.json
+  - CBD-科技创新-明信片.json
+  - CBD-科技创新-通版冰箱贴.json
+  - CBD-论坛主角-吧唧.json
+  - CBD-论坛主角-明信片.json
+  - CBD-论坛主角-通版冰箱贴.json
+  - CBD-都市文艺-吧唧.json
+  - CBD-都市文艺-明信片.json
+  - CBD-都市文艺-通版冰箱贴.json
+  - CBD-金融开放-吧唧.json
+  - CBD-金融开放-明信片.json
+  - CBD-金融开放-通版冰箱贴.json
+  - 中关村-3D风格-冰箱贴.json
+  - 中关村-3D风格-吧唧.json
+  - 中关村-写实风格-冰箱贴.json
+  - 中关村-写实风格-吧唧.json
+  - 中关村-动漫风格-冰箱贴.json
+  - 中关村-动漫风格-吧唧.json
+  - 中关村-机甲风格-冰箱贴.json
+  - 中关村-机甲风格-吧唧.json
+  - 中关村-线q-冰箱贴.json
+  - 中关村-线q-吧唧.json
+  - 中关村-线漫-冰箱贴 (Copy).json
+  - 中关村-线漫-冰箱贴.json
+  - 中关村-线漫-吧唧.json
+  - 中发展-3D科技-冰箱贴.json
+  - 中发展-Q版集团-吧唧.json
+  - 中发展-手绘科技-吧唧.json
+  - 中发展-手绘集团-冰箱贴.json
+  - 内蒙-3D博物馆-吧唧.json
+  - 内蒙-3D博物馆-通版冰箱贴.json
+  - 内蒙-Q版丝绸大道-吧唧.json
+  - 内蒙-Q版丝绸大道-通版冰箱贴.json
+  - 内蒙-Q版骆驼-吧唧.json
+  - 内蒙-Q版骆驼-通版冰箱贴.json
+  - 内蒙-博物馆奇幻-吧唧.json
+  - 内蒙-博物馆奇幻-通版冰箱贴.json
+  - 内蒙-博物馆探险-吧唧.json
+  - 内蒙-博物馆探险-通版冰箱贴.json
+  - 内蒙-古长城插画-吧唧.json
+  - 内蒙-古长城插画-通版冰箱贴.json
+  - 内蒙-如意卷草纹-吧唧.json
+  - 内蒙-如意卷草纹-通版冰箱贴.json
+  - 内蒙-岩画-吧唧.json
+  - 内蒙-岩画-通版冰箱贴.json
+  - 内蒙-插画花海-吧唧.json
+  - 内蒙-插画花海-通版冰箱贴.json
+  - 内蒙-未来城市幻想-吧唧.json
+  - 内蒙-未来城市幻想-通版冰箱贴.json
+  - 内蒙-极光夜景-吧唧.json
+  - 内蒙-极光夜景-通版冰箱贴.json
+  - 内蒙-浮雕纪念章-吧唧.json
+  - 内蒙-浮雕纪念章-通版冰箱贴.json
+  - 内蒙-纸艺风格-吧唧.json
+  - 内蒙-纸艺风格-通版冰箱贴.json
+  - 内蒙-艺术插画-吧唧.json
+  - 内蒙-艺术插画-通版冰箱贴.json
+  - 内蒙-草原野餐-吧唧.json
+  - 内蒙-草原野餐-通版冰箱贴.json
+  - 内蒙-草原风筝-吧唧.json
+  - 内蒙-草原风筝-通版冰箱贴.json
+  - 内蒙-草原马-吧唧.json
+  - 内蒙-草原马-通版冰箱贴.json
+  - 内蒙-草原骑马-吧唧.json
+  - 内蒙-草原骑马-通版冰箱贴.json
+  - 内蒙-马头琴插画-吧唧.json
+  - 内蒙-马头琴插画-通版冰箱贴.json
+  - 卢米埃-红墙熊猫-吧唧.json
+  - 卢米埃-红墙熊猫-明信片.json
+  - 卢米埃-红墙熊猫-通版冰箱贴.json
+  - 卢米埃-财神服cos-吧唧.json
+  - 卢米埃-财神服cos-明信片.json
+  - 卢米埃-财神服cos-通版冰箱贴.json
+  - 合野-企鹅-吧唧.json
+  - 合野-企鹅-明信片.json
+  - 合野-企鹅-通版冰箱贴.json
+  - 合野-全家福-吧唧.json
+  - 合野-全家福-明信片.json
+  - 合野-全家福-通版冰箱贴.json
+  - 合野-卡皮巴拉-吧唧.json
+  - 合野-卡皮巴拉-明信片.json
+  - 合野-卡皮巴拉-通版冰箱贴.json
+  - 合野-大象-吧唧.json
+  - 合野-大象-明信片.json
+  - 合野-大象-通版冰箱贴.json
+  - 合野-小熊猫-吧唧.json
+  - 合野-小熊猫-明信片.json
+  - 合野-小熊猫-通版冰箱贴.json
+  - 合野-猩猩-吧唧.json
+  - 合野-猩猩-明信片.json
+  - 合野-猩猩-通版冰箱贴.json
+  - 合野-长臂猿-吧唧.json
+  - 合野-长臂猿-明信片.json
+  - 合野-长臂猿-通版冰箱贴.json
+  - 大兴-⽉季博物馆(一)-通版冰箱贴.json
+  - 大兴-⽉季博物馆(二)-通版冰箱贴.json
+  - 大兴-北京野⽣动物园(一)-吧唧.json
+  - 大兴-北京野⽣动物园(一)-明信片.json
+  - 大兴-北京野⽣动物园(一)-视频.json
+  - 大兴-北京野⽣动物园(一)-通版冰箱贴.json
+  - 大兴-北京野⽣动物园(三)-吧唧.json
+  - 大兴-北京野⽣动物园(三)-明信片.json
+  - 大兴-北京野⽣动物园(三)-视频.json
+  - 大兴-北京野⽣动物园(三)-通版冰箱贴.json
+  - 大兴-北京野⽣动物园(二)-吧唧.json
+  - 大兴-北京野⽣动物园(二)-明信片.json
+  - 大兴-北京野⽣动物园(二)-通版冰箱贴.json
+  - 大兴-北京野⽣动物园(四)-吧唧.json
+  - 大兴-北京野⽣动物园(四)-明信片.json
+  - 大兴-北京野⽣动物园(四)-视频.json
+  - 大兴-北京野⽣动物园(四)-通版冰箱贴.json
+  - 大兴-大兴机场(一)-吧唧.json
+  - 大兴-大兴机场(一)-明信片.json
+  - 大兴-大兴机场(一)-视频.json
+  - 大兴-大兴机场(一)-通版冰箱贴.json
+  - 大兴-大兴机场(三)-吧唧.json
+  - 大兴-大兴机场(三)-明信片.json
+  - 大兴-大兴机场(三)-通版冰箱贴.json
+  - 大兴-大兴机场(二)-吧唧.json
+  - 大兴-大兴机场(二)-明信片.json
+  - 大兴-大兴机场(二)-视频.json
+  - 大兴-大兴机场(二)-通版冰箱贴.json
+  - 大兴-康庄公园(一)-吧唧.json
+  - 大兴-康庄公园(一)-明信片.json
+  - 大兴-康庄公园(一)-视频.json
+  - 大兴-康庄公园(一)-通版冰箱贴.json
+  - 大兴-康庄公园(三)-吧唧.json
+  - 大兴-康庄公园(三)-明信片.json
+  - 大兴-康庄公园(三)-视频.json
+  - 大兴-康庄公园(三)-通版冰箱贴.json
+  - 大兴-康庄公园(二)-吧唧.json
+  - 大兴-康庄公园(二)-明信片.json
+  - 大兴-康庄公园(二)-视频.json
+  - 大兴-康庄公园(二)-通版冰箱贴.json
+  - 大兴-文化馆(一)-吧唧.json
+  - 大兴-文化馆(一)-明信片.json
+  - 大兴-文化馆(一)-通版冰箱贴.json
+  - 大兴-文化馆(三)-吧唧.json
+  - 大兴-文化馆(三)-明信片.json
+  - 大兴-文化馆(三)-通版冰箱贴.json
+  - 大兴-文化馆(二)-吧唧.json
+  - 大兴-文化馆(二)-明信片.json
+  - 大兴-文化馆(二)-视频.json
+  - 大兴-文化馆(二)-通版冰箱贴.json
+  - 大兴-月季博物馆(一)-吧唧.json
+  - 大兴-月季博物馆(一)-明信片.json
+  - 大兴-月季博物馆(一)-视频.json
+  - 大兴-月季博物馆(二)-吧唧.json
+  - 大兴-月季博物馆(二)-明信片.json
+  - 大兴-月季博物馆(二)-视频.json
+  - 大熊猫竹林写实.json
+  - 宁德-两人-汽车 (logo) (1).json
+  - 宁德-两人-汽车 (logo).json
+  - 宁德-两人-轮船 (logo).json
+  - 宁德-两人-轮船 改.json
+  - 宁德-两人-飞机 (logo).json
+  - 宁德-单人-汽车 (logo).json
+  - 宁德-单人-轮船 (logo).json
+  - 宁德-单人-轮船改.json
+  - 宁德-单人-飞机 (logo).json
+  - 宁德视频-单人.json
+  - 宁德视频-双人.json
+  - 测试宁德视频.json
+  - 火财神-横版冰箱贴.json
+  - 石景山-3D石景山-吧唧.json
+  - 石景山-3D石景山-照片.json
+  - 石景山-工业遗址3DQ版-吧唧.json
+  - 石景山-工业遗址3DQ版-照片.json
+  - 石景山-插画佛塔-吧唧.json
+  - 石景山-插画佛塔-照片.json
+  - 石景山-插画游乐园-吧唧.json
+  - 石景山-插画游乐园-照片.json
+  - 石景山-滑雪大跳台Q版卡通-吧唧.json
+  - 石景山-滑雪大跳台Q版卡通-照片.json
+  - 石景山-赛博首钢-吧唧.json
+  - 石景山-赛博首钢-照片.json
+  - 银子岩-银子岩五财神-吧唧-土.json
+  - 银子岩-银子岩五财神-吧唧-木.json
+  - 银子岩-银子岩五财神-吧唧-水.json
+  - 银子岩-银子岩五财神-吧唧-火.json
+  - 银子岩-银子岩五财神-吧唧-金.json
+  - 银子岩-银子岩五财神-明信片-火.json
+  - 银子岩-银子岩五财神-横版冰箱贴-土.json
+  - 银子岩-银子岩五财神-横版冰箱贴-木.json
+  - 银子岩-银子岩五财神-横版冰箱贴-水.json
+  - 银子岩-银子岩五财神-横版冰箱贴-火.json
+  - 银子岩-银子岩五财神-横版冰箱贴-金.json
+  - 银子岩-银子岩五财神-通版冰箱贴-土.json
+  - 银子岩-银子岩五财神-通版冰箱贴-木.json
+  - 银子岩-银子岩五财神-通版冰箱贴-水.json
+  - 银子岩-银子岩五财神-通版冰箱贴-火.json
+  - 银子岩-银子岩五财神-通版冰箱贴-金.json
+  - 首图-天坛-吧唧.json
+  - 首图-天坛-明信片.json
+  - 首图-天坛-通版冰箱贴.json
+  - 首图-故宫-吧唧.json
+  - 首图-故宫-明信片.json
+  - 首图-故宫-通版冰箱贴.json
+  - 首图-熊猫自拍-吧唧.json
+  - 首图-熊猫自拍-明信片.json
+  - 首图-熊猫自拍-通版冰箱贴.json
+  - 首图-熊猫花海-吧唧.json
+  - 首图-熊猫花海-明信片.json
+  - 首图-熊猫花海-通版冰箱贴.json
+  - 首图-熊猫财神-吧唧.json
+  - 首图-熊猫财神-明信片.json
+  - 首图-熊猫财神-通版冰箱贴.json
+  - 首图-熊猫野餐-吧唧.json
+  - 首图-熊猫野餐-明信片.json
+  - 首图-熊猫野餐-通版冰箱贴.json
+  - 首图-长城-吧唧.json
+  - 首图-长城-明信片.json
+  - 首图-长城-通版冰箱贴.json
+  - 首图-长城中字-明信片.json
+  - 首图-长城中字-通版冰箱贴.json
+  - 首图-长城英字-明信片.json
+  - 首图-长城英字-通版冰箱贴.json
+  - 首图-鸟巢-吧唧.json
+  - 首图-鸟巢-明信片.json
+  - 首图-鸟巢-通版冰箱贴.json
+  - 首图-鸟巢中字-明信片.json
+  - 首图-鸟巢中字-通版冰箱贴.json
+  - 首图-鸟巢英字-明信片.json
+  - 首图-鸟巢英字-通版冰箱贴.json
+  - 香山-红星3D-吧唧.json
+  - 香山-红星3D-明信片.json
+  - 香山-红星3D-通版冰箱贴.json
+  - 香山-红星手绘-吧唧.json
+  - 香山-红星手绘-明信片.json
+  - 香山-红星手绘-通版冰箱贴.json
+  - 香山-红色写实-吧唧.json
+  - 香山-红色写实-明信片.json
+  - 香山-红色写实-通版冰箱贴.json
+  - 香山-雄关漫道-吧唧.json
+  - 香山-雄关漫道-明信片.json
+  - 香山-雄关漫道-通版冰箱贴.json
+  - 香山-雪地长征-吧唧.json
+  - 香山-雪地长征-明信片.json
+  - 香山-雪山长征-通版冰箱贴.json
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: taesd, taesdxl, taesd3, taef1, pixel_space
+
+### 127. 218.244.143.103:9090
+
+- **版本**: 0.21.1
+- **GPU**: RTX 5060 Ti (cuda:0 NVIDIA GeForce RTX 5060 Ti : cudaMallocAsync)
+- **显存**: 16 GB (空闲 15 GB)
+- **内存**: 31 GB (空闲 19 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 18
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 128. 218.154.32.228:8188
+
+- **版本**: 0.19.0
+- **GPU**: RTX 4070 (cuda:0 NVIDIA GeForce RTX 4070 SUPER : cudaMallocAsync)
+- **显存**: 12 GB (空闲 5 GB)
+- **内存**: 31 GB (空闲 5 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (8):
+  - V7.5.json
+  - V7.json
+  - V75.json
+  - zit 워크플로.json
+  - ZIT웹리스.json
+  - ZIT웹리스2.json
+  - 웹리스.json
+  - 청원고.json
+- **模型** (19):
+  - Z-Image-Turbo-Fun-Controlnet-Union.safetensors
+  - ltx-2.3-22b-distilled-lora-dynamic_fro09_avg_rank_105_bf16.safetensors
+  - ltx2310eros_beta.safetensors
+  - moodyPornMix_zitV10DPO.safetensors
+  - qwen_3_4b.safetensors
+  - waiIllustriousSDXL_v160.safetensors
+  - waiNSFWIllustrious_v140.safetensors
+  - zImageTurbo_turbo.safetensors
+  - z_image_turbo_bf16.safetensors
+  - ae.safetensors
+  - moodyProMix_zitV12DPO.safetensors
+  - moodyProMix_zitV13.safetensors
+  - moodyRealMix_zitV7Global.safetensors
+  - moodyWildMixZIBZID_v40BASE40STEPSCFG4.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+  - zenijiMixZitNeo_v10.safetensors
+- **LoRA** (129 个, 前10):
+  - 4rm_squ33z3.safetensors
+  - 50s_scifi_wan_high_30.safetensors
+  - 50s_scifi_wan_low_30.safetensors
+  - AntiBlur.safetensors
+  - BoobSlider_WAN14_V1.safetensors
+  - EroticDance.safetensors
+  - FusionX_FaceNaturalizer.safetensors
+  - I2V-tittydrop-e26.safetensors
+  - InniePussy_Z.safetensors
+  - Insatgirlv2.3_low.safetensors
+- **CLIP**: gemma_3_12B_it_fp8_e4m3fn.safetensors, qwen_3_4b.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors, zImageTurbo_textEncoder.safetensors
+- **VAE**: ae.safetensors, wan_2.1_vae.safetensors, zImageTurbo_vae.safetensors, taesd, taesdxl, taesd3, taef1, pixel_space
+
+### 129. 49.234.47.145:8188
+
+- **版本**: 0.16.4
+- **GPU**: RTX 4070 (cuda:0 NVIDIA GeForce RTX 4070 : cudaMallocAsync)
+- **显存**: 12 GB (空闲 10 GB)
+- **内存**: 31 GB (空闲 6 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (3):
+  - DreamShaper_8_pruned.safetensors
+  - Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors
+  - NoobAI-XL-v1.0.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 130. 99.248.243.237:8188
+
+- **版本**: 0.18.1
+- **GPU**: RTX 4070 (cuda:0 NVIDIA GeForce RTX 4070 : cudaMallocAsync)
+- **显存**: 12 GB (空闲 5 GB)
+- **内存**: 31 GB (空闲 26 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (2):
+  - fast-workflow.json
+  - luna-workflow.json
+- **模型** (80):
+  - alchemistMixPretty_v30.safetensors
+  - alchemistMixRealHentai_v60Homunculus.safetensors
+  - babesIllustriousBy_v55FP16.safetensors
+  - cyberrealistic_v100Redux.safetensors
+  - illustriousRealismBy_v10VAE.safetensors
+  - ilustrealdollij_v10.safetensors
+  - ilustrealism_v10.safetensors
+  - ilustrealmix_v21.safetensors
+  - novaAsianXL_illustriousV70.safetensors
+  - novaRealityXL_ilV90.safetensors
+  - perfectdeliberate_v10RL.safetensors
+  - realismIllustriousBy_v50FP16.safetensors
+  - redcraftMar0826LatestZib_illust3relustion.safetensors
+  - unnamedixlRealisticModel_v5.safetensors
+  - illustrijBTTR_v10.safetensors
+  - illustrijEVO_lvl3.safetensors
+  - illustrijGEN_2.safetensors
+  - illustrijGEN_3.safetensors
+  - illustrijQuill_v1.safetensors
+  - illustrijRefCore_no1.safetensors
+  - illustrij_v10.safetensors
+  - illustrij_v11.safetensors
+  - illustrij_v12.safetensors
+  - illustrij_v13.safetensors
+  - illustrij_v14.safetensors
+  - illustrij_v15.safetensors
+  - illustrij_v16.safetensors
+  - illustrij_v17.safetensors
+  - illustrij_v18.safetensors
+  - illustrij_v19.safetensors
+  - illustrij_v20.safetensors
+  - illustrij_v21.safetensors
+  - lumenfallCrystalClear_v21HyperTuned.safetensors
+  - lumenfallCrystalClear_v30.safetensors
+  - lumenfallCrystalClear_v40.safetensors
+  - lumenfallEchoesOf_v10.safetensors
+  - lumenfallLivingComic_v10.safetensors
+  - lumenfallNextgen_v10.safetensors
+  - lumenfallScentOfA_v10.safetensors
+  - lumenfallUE5_v10.safetensors
+  - perfectdeliberate_v90.safetensors
+  - place2play_no1.safetensors
+  - pleasurechest_v1.safetensors
+  - pleasurechest_v2.safetensors
+  - uncannyValley_Noob3dV2.safetensors
+  - uncannyValley_VPredV1.safetensors
+  - ponyDiffusionV6XL_v6StartWithThisOne.safetensors
+  - alchemistMixPhotoreal_v30.safetensors
+  - alchemistMixRealHentai_v60Homunculus.safetensors
+  - asianRealismByStable_v30FP16.safetensors
+  - bemypony_Photo4.safetensors
+  - cyberrealisticPony_v160.safetensors
+  - likeRealityPonyBy_v60VAE.safetensors
+  - ponyBadmilkRealism_v10.safetensors
+  - ponyRealism_V22.safetensors
+  - ponyRealism_V23ULTRA.safetensors
+  - realismByStableYogi_ponyV3VAE.safetensors
+  - uncannyValley_v4Realistic.safetensors
+  - realisticVisionV60B1_v51HyperInpaintVAE.safetensors
+  - realisticVisionV60B1_v51HyperVAE.safetensors
+  - counterfeitV30_v30.safetensors
+  - dreamshaper_631BakedVae.safetensors
+  - dreamshaper_7.safetensors
+  - dreamshaper_8.safetensors
+  - dreamshaper_8LCM.safetensors
+  - juggernaut_aftermath.safetensors
+  - juggernaut_reborn.safetensors
+  - majicmixRealistic_v7.safetensors
+  - perfectWorld_v6Baked.safetensors
+  - realisticVisionV60B1_v51VAE.safetensors
+  - atomixXL_v40.safetensors
+  - dreamshaperXL_lightningDPMSDE.safetensors
+  - juggernautXL_juggXILightningByRD.safetensors
+  - realvisxlV50_v50LightningBakedvae.safetensors
+  - dreamshaperXL_alpha2Xl10.safetensors
+  - juggernautXL_juggXIByRundiffusion.safetensors
+  - juggernautXL_ragnarokBy.safetensors
+  - realcartoonPixar_v12.safetensors
+  - realcartoonXL_v7.safetensors
+  - ziovXLScifiGiantRobotsSky_v10.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: sdxl_vae.safetensors, ae.safetensors, pixel_space
+
+### 131. 139.224.101.90:8087
+
+- **版本**: 0.19.3
+- **GPU**: RTX 4060 Ti (cuda:0 NVIDIA GeForce RTX 4060 Ti : cudaMallocAsync)
+- **显存**: 16 GB (空闲 15 GB)
+- **内存**: 31 GB (空闲 16 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 43
+- **工作流** (16):
+  - 3. 算法放大（后期处理）工作流.json
+  - 5. ControlNet基本工作流（含Openpose预处理）.json
+  - ComfyUI之抠图之王Birefnet II抠图工作流.json
+  - Flux_ControlNet工作流.json
+  - image2_8Agnle.json
+  - image_to_video_wan_720p_example.json
+  - Klein9B_无限分镜工作流.json
+  - t2i_ghibli_workflow_480P.json
+  - text_to_video_wan.json
+  - txt2vedio_standard.json
+  - Wan2.1_14b_i2v_native.json
+  - Wan2.1_I2V_14B_Lora_Voice.json
+  - wan2.1_lora_comfyui_native.json
+  - WanVideoWrapper.json
+  - wanvideo_2_1_14B_WanMove_I2V_example_01.json
+  - 【Wan2.1系列】TeaCache视频生成加速外挂.json
+- **模型** (24):
+  - 3Guofeng3_v34.safetensors
+  - Birefnet.safetensors
+  - counterfeitV30_v30.safetensors
+  - diffusion_pytorch_model.safetensors
+  - dreamshaper_8.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux1-schnell-fp8.safetensors
+  - lofi_v5Final.safetensors
+  - majicMIX realistic 麦橘写实_v7.safetensors
+  - neverendingDreamNED_v122BakedVae.safetensors
+  - novaFurryXL_illustriousV9b.safetensors
+  - protogenX34Photorealism_protogenX34.safetensors
+  - realisticVisionV51_v51VAE_2.safetensors
+  - realisticVisionV60B1_v51HyperVAE.safetensors
+  - anything-v5.safetensors
+  - Wan21-WanMove_fp8_scaled_e4m3fn_KJ.safetensors
+  - flux-2-klein-9b-fp8.safetensors
+  - flux1-dev-kontext_fp8_scaled.safetensors
+  - flux1-kontext-dev.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors
+  - wan2.1_i2v_720p_14B_fp8_e4m3fn.safetensors
+  - wan2.1_t2v_1.3B_fp16.safetensors
+  - wan2.2_ti2v_5B_fp16.safetensors
+- **LoRA** (35 个, 前10):
+  - 1-Papyloop-CastleBreizh-V9.safetensors
+  - 360DegreeTrackingE25.safetensors
+  - Bilgewater V2.safetensors
+  - CharTurn_v4-000003.safetensors
+  - CiviFur-30.safetensors
+  - ConceptScene_B_v2.safetensors
+  - FN-CollectionIP_XL-V1.0.safetensors
+  - Pecha_Swords_LORA_V1.2.safetensors
+  - Plague_Abomination__World_of_Warcraft.safetensors
+  - Qwen-Edit-2509-Multiple-angles.safetensors
+- **CLIP**: clip_l.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_8b_fp8mixed.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, flux2-vae.safetensors, qwen_image_vae.safetensors, animevae.pt, sdXL_v10VAEFix.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, wan2.2_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 132. 84.150.208.101
+
+- **版本**: 0.21.1
+- **GPU**: RTX 4060 Ti (cuda:0 NVIDIA GeForce RTX 4060 Ti : cudaMallocAsync)
+- **显存**: 16 GB (空闲 15 GB)
+- **内存**: 31 GB (空闲 23 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (3):
+  - sd_xl_base_1.0.safetensors
+  - sd_xl_refiner_1.0.safetensors
+  - hunyuanvideo1.5_720p_t2v_fp16.safetensors
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: byt5_small_glyphxl_fp16.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors
+- **VAE**: hunyuanvideo15_vae_fp16.safetensors, sdxl_vae.safetensors, pixel_space
+
+### 133. https://comfy.fiiniday.de
+
+- **版本**: 0.21.1
+- **GPU**: RTX 4060 Ti (cuda:0 NVIDIA GeForce RTX 4060 Ti : cudaMallocAsync)
+- **显存**: 16 GB (空闲 15 GB)
+- **内存**: 31 GB (空闲 23 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (3):
+  - sd_xl_base_1.0.safetensors
+  - sd_xl_refiner_1.0.safetensors
+  - hunyuanvideo1.5_720p_t2v_fp16.safetensors
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: byt5_small_glyphxl_fp16.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors
+- **VAE**: hunyuanvideo15_vae_fp16.safetensors, sdxl_vae.safetensors, pixel_space
+
+### 134. 117.50.221.40:8080
+
+- **版本**: 0.13.0
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 5 GB)
+- **内存**: 62 GB (空闲 17 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 30
+- **工作流** (13):
+  - Flux2KLEIN_2.json
+  - da3_video_multiview_depth.json
+  - 终极一键换头+精细换脸lora版无大头超快速.json
+  - img2img_test-202605060040.json
+  - Flux2KLEIN_0.json
+  - da3_simple.json
+  - flux2-klein-局部重绘.json
+  - Flux2KLEIN_1.json
+  - da3_advanced_3d_multiview.json
+  - flux.2-klein-风格转换.json
+  - da3_bas_relief.json
+  - da3_advanced_3d.json
+  - da3_advanced.json
+- **模型** (4):
+  - flux1-schnell.safetensors
+  - realvisxlV50_v50Bakedvae.safetensors
+  - sd3.5_medium.safetensors
+  - sd_xl_base_1.0.safetensors
+- **LoRA** (3 个, 前10):
+  - anime_style.safetensors
+  - bfs_head_v1_flux-klein_9b_step3500_rank128.safetensors
+  - 动漫转真人.safetensors
+- **CLIP**: clip_l.safetensors, mistral_3_small_flux2_fp8.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: ae_flux1.safetensors, ae_flux2.safetensors, sd3_vae.safetensors, taesd, taesdxl, taesd3, taef1, pixel_space
+
+### 135. 118.24.135.6:12300
+
+- **版本**: 0.20.1
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 23 GB)
+- **内存**: 31 GB (空闲 26 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (8):
+  - img2img-controlnet-sd15-depth-midas.json
+  - inpaint-sd-model.json
+  - inpaint-controlnet-15-1.json
+  - text2image.json
+  - img2img-placement.json
+  - img2img_workflow.json
+  - img2img-combine.json
+  - img2img-sam.json
+- **模型** (6):
+  - Realistic_Vision_V5.1-inpainting.ckpt
+  - blue_pencil-XL-v3.1.0.safetensors
+  - juggernaut_reborn.safetensors
+  - realisticVisionV51写实.safetensors
+  - sd3_medium_incl_clips_t5xxlfp16.safetensors
+  - svdq-int4_r32-flux.1-fill-dev.safetensors
+- **LoRA** (5 个, 前10):
+  - Winter_Hanfu.safetensors
+  - ip-adapter-faceid-plusv2_sd15_lora.safetensors
+  - ip-adapter-faceid-plusv2_sdxl_lora.safetensors
+  - ip-adapter-faceid_sd15_lora.safetensors
+  - ip-adapter-faceid_sdxl_lora.safetensors
+- **CLIP**: clip_l.safetensors, model.safetensors, pytorch_model.bin, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: ae.safetensors, flux-ae.sft, vae-ft-mse-840000-ema-pruned.bin, pixel_space
+
+### 136. 1.94.100.162:8188
+
+- **版本**: 0.3.40
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 23 GB)
+- **内存**: 251 GB (空闲 229 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 137. 121.225.154.49:18000
+
+- **版本**: 0.18.1
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 23 GB)
+- **内存**: 206 GB (空闲 197 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: Wan2_1_VAE_bf16.safetensors, pixel_space
+
+### 138. 104.36.85.28:8188
+
+- **版本**: v0.2.4-6-g5281090
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 20 GB)
+- **内存**: 58 GB (空闲 48 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (2):
+  - Unsaved Workflow.json
+  - Unsaved Workflow (2).json
+- **模型** (26):
+  - 0001softrealistic_v82egvaebaked.safetensors
+  - Alouarn_2.5D.safetensors
+  - CyberRealisticPony_V65.safetensors
+  - CyberRealistic_V4.2_LCM.safetensors
+  - FLUX.1-dev-fp8.safetensors
+  - FiaMix%20Reboot%20V11.1.safetensors
+  - NUKEPonyPixarStyle_v2S.safetensors
+  - Realistic_Vision.safetensors
+  - Xiu%20Ying%20Wei%20realistic.safetensors
+  - animagine-xl-3.0.safetensors
+  - c4pacitor_dV11.safetensors
+  - ccmA2Vermouth00001.DxE2.safetensors
+  - cyberrealisticpony.n9dR.safetensors
+  - flux1DevFp8.B6Vo.safetensors
+  - meina20V1120.Usvv.safetensors
+  - realDream_sdxlPony12.safetensors
+  - realNotRealNSFW_v10.safetensors
+  - realNotRealNSFW_v10b.safetensors
+  - realdosmix_.safetensors
+  - realisticDigital_v60.safetensors
+  - realisticMixXL_v10.safetensors
+  - realisticStockPhoto_v10.safetensors
+  - realisticStockPhoto_v30SD15.safetensors
+  - realspice_v40.safetensors
+  - sd3MediumInclClips.RgfW.safetensors
+  - sd3_medium_incl_clips.safetensors
+- **LoRA** (6 个, 前10):
+  - Festive_Bokeh_Anime.safetensors
+  - Fluxanime.safetensors
+  - Midjourney_Whisper_FLUX_LoRA.safetensors
+  - Oil_Painting_Mix.safetensors
+  - Outlined_Vibrant_Anime_Flux_Lora_style.safetensors
+  - modern-anime-lora.safetensors
+- **VAE**: vae-ft-mse-840000-ema-pruned.safetensors
+
+### 139. 104.36.86.2:8188
+
+- **版本**: v0.2.2-94-g614377a
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 14 GB)
+- **内存**: 58 GB (空闲 40 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (11):
+  - Alouarn_2.5D.safetensors
+  - CyberRealisticPony_V65.safetensors
+  - FLUX.1-dev-fp8.safetensors
+  - FiaMix%20Reboot%20V11.1.safetensors
+  - NUKEPonyPixarStyle_v2S.safetensors
+  - animagine-xl-3.0.safetensors
+  - cyberrealisticpony.n9dR.safetensors
+  - realDream_sdxlPony12.safetensors
+  - realNotRealNSFW_v10.safetensors
+  - realNotRealNSFW_v10b.safetensors
+  - realisticStockPhoto_v10.safetensors
+- **LoRA** (3 个, 前10):
+  - Midjourney_Whisper_FLUX_LoRA.safetensors
+  - Oil_Painting_Mix.safetensors
+  - Outlined_Vibrant_Anime_Flux_Lora_style.safetensors
+- **VAE**: vae-ft-mse-840000-ema-pruned.safetensors
+
+### 140. 1.4.215.150:8190
+
+- **版本**: 0.24.0
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 5 GB)
+- **内存**: 60 GB (空闲 43 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (22):
+  - bad.json
+  - tiki2.json
+  - flux1green.json
+  - fulx1green2.json
+  - tiki.json
+  - lights.json
+  - qwen baroque.json
+  - p.json
+  - v5-beachwalker.json
+  - qwen image.json
+  - hair418-face-a.json
+  - monster2.json
+  - monster.json
+  - red1.json
+  - jedi.json
+  - ex8thaibob.json
+  - pantene4_baroque.json
+  - hsample1.json
+  - fem.json
+  - hsample2.json
+  - red6.json
+  - qwen futa.json
+- **模型** (65):
+  - flux1-dev-fp8.safetensors
+  - fluxUnchainedBySCG_hyfu8StepHybridV10.safetensors
+  - jibMixFlux_12gb_v12SRPO.safetensors
+  - jibMixFlux_23gb_v12SRPO.safetensors
+  - jibMixFlux_v8AccentueightNSFW.safetensors
+  - NetaYumev35_pretrained_all_in_one.safetensors
+  - absolutereality_v181.safetensors
+  - beautifulRealistic_v7.safetensors
+  - dreamshaper_8.safetensors
+  - epicrealism_naturalSinRC1VAE.safetensors
+  - hardcandy_v2.safetensors
+  - majicmixRealistic_v7.safetensors
+  - realcartoonRealistic_v17.safetensors
+  - realisticVisionV60B1_v51VAE.safetensors
+  - redwater_703.safetensors
+  - xxmix9realistic_v40.safetensors
+  - ace_step_v1_3.5b.safetensors
+  - flux1-dev.safetensors
+  - ltx-2-19b-dev-fp8.safetensors
+  - ltx-2-19b-distilled.safetensors
+  - SDXLFaetastic_v24.safetensors
+  - artUniverse_sdxlV60.safetensors
+  - juggernautXL_ragnarokBy.safetensors
+  - notRealRealisticSDXL_v12.safetensors
+  - protovisionXLHighFidelity3D_releaseV660Bakedvae.safetensors
+  - realcartoonXL_v7.safetensors
+  - Chroma1-HD-fp8mixed.safetensors
+  - anima-preview3-base.safetensors
+  - byt5_small_glyphxl_fp16.safetensors
+  - capybara_v0.1.safetensors
+  - ernie-image-turbo.safetensors
+  - flux-2-klein-4b.safetensors
+  - flux-2-klein-9b-fp8.safetensors
+  - flux-2-klein-base-4b.safetensors
+  - flux-2-klein-base-9b-fp8.safetensors
+  - flux-2-klein-base-9b.safetensors
+  - flux1-dev2pro-fp16.safetensors
+  - flux1-krea-dev_fp8_scaled.safetensors
+  - flux2_dev_fp8mixed.safetensors
+  - hidream_e1_1_bf16.safetensors
+  - hidream_e1_full_bf16.safetensors
+  - hidream_i1_dev_fp8.safetensors
+  - hidream_i1_fast_fp8.safetensors
+  - hidream_i1_full_fp8.safetensors
+  - hunyuan_video_t2v_720p_bf16.safetensors
+  - hunyuanvideo1.5_1080p_sr_distilled_fp16.safetensors
+  - hunyuanvideo1.5_720p_i2v_fp16.safetensors
+  - hunyuanvideo1.5_720p_t2v_fp16.safetensors
+  - ideogram4_fp8_scaled.safetensors
+  - ideogram4_unconditional_fp8_scaled.safetensors
+  - illustration-1.0-qwen-image.safetensors
+  - kandinsky5lite_t2i.safetensors
+  - longcat_image_bf16.safetensors
+  - omnigen2_fp16.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - qwen_image_vae.safetensors
+  - vintageBeauties_flux2Klein9BV2.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_s2v_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+  - z_image_bf16.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (939 个, 前10):
+  - AlineRiscadoQuiron_FLUX-000001.safetensors
+  - Alternative_Shoes_Flux.safetensors
+  - AndroFlux-v15-1900.safetensors
+  - AndroFlux-v19.safetensors
+  - AndroFlux-v26.safetensors
+  - Bible Black Adult animation style v2-step00005000.safetensors
+  - Bloodrayne_Realistic-GMR.safetensors
+  - BodyLicious_Flux-V2.safetensors
+  - COF4-beta12-000017.safetensors
+  - Comic_Collection_Flux.safetensors
+- **CLIP**: Qwen2.5-VL-7B-Instruct-abliterated.safetensors, byt5_small_glyphxl_fp16.safetensors, clip_g_hidream.safetensors, clip_l.safetensors, clip_l_hidream.safetensors, ernie-image-prompt-enhancer.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, llama_3.1_8b_instruct_fp8_scaled.safetensors, llava_llama3_fp8_scaled.safetensors, ministral-3-3b.safetensors, mistral_3_small_flux2_bf16.safetensors, model.safetensors, model-00001-of-00004.safetensors, model-00002-of-00004.safetensors, model-00003-of-00004.safetensors, model-00004-of-00004.safetensors, qwen3vl_8b_fp8_scaled.safetensors, qwen_2.5_vl_7b.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_2.5_vl_fp16.safetensors, qwen_3_06b_base.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, flux2-vae.safetensors, flux2_ae.safetensors, hunyuan_video_vae_bf16.safetensors, hunyuanvideo15_vae_fp16.safetensors, qwen_image_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 141. 1.4.215.150:8187
+
+- **版本**: 0.22.0
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 9 GB)
+- **内存**: 63 GB (空闲 47 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (108):
+  - asian princess.json
+  - bar3.json
+  - bar4b.json
+  - bar4c.json
+  - bar4f.json
+  - bar4g.json
+  - baroque.json
+  - boner3b.json
+  - cavewoman.json
+  - cheobgsam.json
+  - cherry2000-3.json
+  - drunk-flux2.json
+  - evilqueen.json
+  - face-detail-batch-v6.json
+  - fhair2b.json
+  - fixa.json
+  - fixXXX-x4.json
+  - fixXXX-x4a.json
+  - fixXXX.json
+  - fixXXX2.json
+  - flux1baroque.json
+  - flux2-sg-test.json
+  - fluxbaroque2.json
+  - france-1.json
+  - fut1.json
+  - hair-sd15-absreal-desert.json
+  - hair-sd15-absreal-fut-4.json
+  - hair-sd15-absreal.json
+  - hair2-upper-0213a-futa-cp.json
+  - hair2-upper-0213a-futa-p.json
+  - hairupper-0213-42.json
+  - hairupper-0213-a.json
+  - hairupper-0213-latex-42.json
+  - hairupper.json
+  - loratest2.json
+  - loratest3.json
+  - meditate2.json
+  - meditateflux1.json
+  - moongirl.json
+  - moongirl5.json
+  - moongirl6.json
+  - noisetest1.json
+  - noisetest2.json
+  - noisetest3.json
+  - opera.json
+  - orian.json
+  - red10.json
+  - red3.json
+  - red9.json
+  - redhead.json
+  - roman.json
+  - samples504d.json
+  - sd-hardcandy-hair.json
+  - sd15-crazy-hair-barbarian.json
+  - sd15-crazy-hair-v6.json
+  - sd15-crazy-hair.json
+  - sd15-hair-11-dwarf.json
+  - sd15-hair-12.json
+  - sd15-hair-12d.json
+  - sd15-hair-v2.json
+  - sd15-hair-v3.json
+  - sd15-hair-v4-hard.json
+  - sd15-hair-v4.json
+  - sd15hardhair.json
+  - sea_cucumber.json
+  - simple-klein-9b.json
+  - ski_andor.json
+  - spacegirl-armor.json
+  - spacegirl-FP8.json
+  - spacegirl-monitor-lizard-v3.json
+  - spacegirl-monitor-lizard.json
+  - spacegirl-tactical.json
+  - spacegirl26-euler-beta-float.json
+  - spacegirl26-euler-beta-float1.json
+  - spacegirl26-euler-beta-float2.json
+  - spacegirl26-euler-beta.json
+  - spacegirl26-euler-betadragon.json
+  - spacegirl26-euler-simple-float.json
+  - spacegirl26-euler-simple-float4.json
+  - spacegirl26-Karras.json
+  - spacegirl26.json
+  - spacegirldog.json
+  - spaceV3.json
+  - spacstationegirlV3.json
+  - test gprompt.json
+  - test1.json
+  - test_gprompt.json
+  - thaigirl.json
+  - tikif.json
+  - up1.json
+  - up1a.json
+  - upbatch.json
+  - upbatch1.json
+  - upbatch3.json
+  - upbatchX.json
+  - v3-big-hair-mirror-bridge.json
+  - v3-big-hair-space-pool.json
+  - v3-bighair-alien-dwarfstar.json
+  - v3-flapper-alien-dwarfstar.json
+  - v3-flux2-chained-B.json
+  - v3-flux2-chained.json
+  - v3BigHair-1.json
+  - v3BigHair-80s.json
+  - v3BigHair-mod.json
+  - v8-diner.json
+  - zero_flux2.json
+  - zimage-space-girl.json
+  - zimage-space-qwen.json
+- **模型** (559):
+  - ._flux1-dev-bnb-nf4-v2.safetensors
+  - flux1-dev-bnb-nf4-v2.safetensors
+  - beyondREALITY_V20BF16.safetensors
+  - fluxUnchainedBySCG_hyfu8StepHybridV10.safetensors
+  - fuxCapacityNSFWPorn_50FP16.safetensors
+  - jibMixFlux_12gb_v12SRPO.safetensors
+  - jibMixFlux_23gb_v12SRPO.safetensors
+  - tinflux2Klein4B_4bFp8.safetensors
+  - babesIllustriousBy_v20FP16.safetensors
+  - illustriousXLPersonalMerge_v30Noob10based.safetensors
+  - illustriousXLPersonal_pmAes3k512.safetensors
+  - illustrioussatIOR_illustrioussatIorv.safetensors
+  - illustrioussatReal_illustrioussatRealv2.safetensors
+  - pornmasterPro_realismILV1VAE.safetensors
+  - realismIllustriousBy_v50FP16.safetensors
+  - ._getphatPonyReality_v40.safetensors
+  - ._goddessOfRealism_gorPONYV3VAE.safetensors
+  - ._ponyDiffusionV6XL_v6StartWithThisOne.safetensors
+  - ._ponyFaetality_v11.safetensors
+  - anotherPONYREALISTIC_v10.safetensors
+  - babesBYSTABLEYOGI_ponyV1.safetensors
+  - cyberrealisticPony_v64.safetensors
+  - duchaitenPonyXLNo_v52.safetensors
+  - fastPonyMerge_version6.safetensors
+  - fennfotoPONY_v2.safetensors
+  - getphatPonyReality_v40.safetensors
+  - goddessOfRealism_gorPONYV2artFixVAE.safetensors
+  - goddessOfRealism_gorPONYV3VAE.safetensors
+  - halcyonPony_v11.safetensors
+  - iniverseMixXLSFWNSFW_ponyV1Xllora.safetensors
+  - ponyDiffusionV6XL_v6StartWithThisOne.safetensors
+  - ponyFaetality_v11.safetensors
+  - ponyRealism_v21VAE.safetensors
+  - tamePonyThe_v10.safetensors
+  - absolutereality_v181.safetensors
+  - cirrostratus_v25.safetensors
+  - darksun_futasunV10.safetensors
+  - hardcandy_v2.safetensors
+  - notRealRealistic_v31.safetensors
+  - oukaHorror_v10.safetensors
+  - realcartoon3d_v16.safetensors
+  - realcartoonAnime_v11.safetensors
+  - realcartoonPixar_v11.safetensors
+  - realcartoonPixar_v5.safetensors
+  - realcartoonRealistic_v15.safetensors
+  - realcartoonRealistic_v16.safetensors
+  - realcartoonRealistic_v17.safetensors
+  - redSea_v10.safetensors
+  - redwater_703.safetensors
+  - sourceOfTheGoddess_003.safetensors
+  - sourceOfTheGoddess_003LCM.safetensors
+  - theAgendaMix_v35.safetensors
+  - westernCartoonStarTrek_v10.safetensors
+  - 1910_Dress_XL.safetensors
+  - 70s_Sci-Fi_Art_XL.safetensors
+  - ApocalypticXL_V1.safetensors
+  - Apocalyptic_XL_V2.safetensors
+  - AppleVisionProDoguXL_vsnz.safetensors
+  - Beautify-Supermodel-SDXL.safetensors
+  - Blade the daywalker.safetensors
+  - Bloodborne.safetensors
+  - CARTOON_DC_powergirl_ownwaifu-15.safetensors
+  - CARTOON_X_MEN90s_Mystique_ownwaifu-15.safetensors
+  - CARTOON_felicia_blackcat_ownwaifu-15.safetensors
+  - CARTOON_lady_death_ownwaifu-15.safetensors
+  - CBarkerAIXL_v2.safetensors
+  - Conan the Barbarian.safetensors
+  - Cthulhu_for_SDXL-000007.safetensors
+  - EnvyAttitudeAdjustmentXL01a.safetensors
+  - EnvyAwesomizeXL01.safetensors
+  - EnvyEgyptianFuturismXL01.safetensors
+  - EnvyGothicXL01.safetensors
+  - EnvyGreeblesXL01.safetensors
+  - EnvyMetallicXL01.safetensors
+  - EnvyNightmareXL01.safetensors
+  - EnvyPrimordialXL01.safetensors
+  - EnvyPulpScifiXL.safetensors
+  - EvaMendesXL.safetensors
+  - FF-Style-Edvard-Munch-vpred.safetensors
+  - FF-TentacleFFashion4.safetensors
+  - Fantastic_Planet_XL01.safetensors
+  - Fantasy_Creatures.safetensors
+  - Furiosa1024.safetensors
+  - Furiosa_V2-E10_(MadMaxFuryRoad).safetensors
+  - Garbage_Pail_Kids_XL.safetensors
+  - Gothic_Queen.safetensors
+  - HarleyQuinnModernv2-000003.safetensors
+  - HarleyQuinnV2.safetensors
+  - Midjourney Image Enhancer XL v1.safetensors
+  - Mullets.safetensors
+  - PAseer dunnoV2.safetensors
+  - PAseer-SDXL-AlienGrey.safetensors
+  - PAseer-SDXL-ChineseDragonV1.safetensors
+  - PAseer-SDXL-Echoes of the Verdant Twilight.safetensors
+  - PAseer-SDXL-HorribleFace.safetensors
+  - PAseer-SDXL-HorrorSongV2.safetensors
+  - PAseer-SDXL-MonsterTaurV1.safetensors
+  - PAseer-SDXL-QiLin.safetensors
+  - PAseer-SDXL-StormElf.safetensors
+  - PAseer-SDXL-Transparent Robot.safetensors
+  - PAseer-SDXL-ehtrealisticcityscape.safetensors
+  - PAseer-SciFiRobotic.safetensors
+  - PAseer. what V2.safetensors
+  - PAseers Cthulhu Mythos SDXL Dark Young of Shub Niggurath .safetensors
+  - PAseers Cthulhu Mythos SDXL DeepOnes.safetensors
+  - PAseers Cthulhu Mythos SDXL Dimensional Shambler.safetensors
+  - PAseers Cthulhu Mythos SDXL Hastur.safetensors
+  - Pinay_Beauty-000005.safetensors
+  - Realistic_Space_Images-000005.safetensors
+  - Retro_rocket_sdxl.safetensors
+  - StarDestroyerLora-10.safetensors
+  - Star_Destoyer_SDXL_v1_sdestroyer.safetensors
+  - StarshipTroopers1024.safetensors
+  - Steamboat_Willie_Style_XL-000003.safetensors
+  - SteampunkXL_V1.safetensors
+  - UKIYO-EV2.safetensors
+  - Ukiyo-e Art.safetensors
+  - Xena Warrior Princess.safetensors
+  - Xenomorph_Chestburster_SDXL.safetensors
+  - alien_god_V2.safetensors
+  - captain_kirk_10_x114-step00005500.safetensors
+  - dichen_lachman_prodigy_experimental.safetensors
+  - dungeons_and_dragons_xl_v3.safetensors
+  - epiCPhotoXL.safetensors
+  - hair_style.safetensors
+  - hp_lovecraft_XL.safetensors
+  - hud_barbir0ck_XLP.safetensors
+  - hud_cut0ut_ling_XLP.safetensors
+  - hud_nrse_apn_XLP.safetensors
+  - long_hair_lora.safetensors
+  - motorhead.safetensors
+  - pink-emo-sx.safetensors
+  - pornmaster_proSDXLV8.safetensors
+  - spy vs spy style.safetensors
+  - star wars style.safetensors
+  - steampunk_xl_v2.safetensors
+  - tank_girl_v1.safetensors
+  - veryLongHair.safetensors
+  - xl_big_hair-1.0.safetensors
+  - xl_mega_twintails-1.0.safetensors
+  - xl_n15g_aio_clothing-2.0.safetensors
+  - xl_n15g_aio_hairstyles-1.0.safetensors
+  - xl_underbust_corset-1.0.safetensors
+  - xl_victorian_dress-1.0.safetensors
+  - xuer extravagant gown.safetensors
+  - !DeJarnetteXL.safetensors
+  - 1dkXLP.safetensors
+  - AIArtsChannel_swamp_monster_style_XL.safetensors
+  - BDSM_Pillory_XL.safetensors
+  - BlackRealFishnetsP_XL.safetensors
+  - BlancheXL.safetensors
+  - BondageYokeXL V1 - leather mittens holding iron bar.safetensors
+  - BoundXL.safetensors
+  - CarbieBlenderXL.safetensors
+  - Classic Western Dragons XL.safetensors
+  - ClassipeintXL.safetensors
+  - Concept Art Twilight Style SDXL_LoRA_Pony Diffusion V6 XL.safetensors
+  - CyborgsXL.safetensors
+  - DD-made-of-clay-XL-v2.safetensors
+  - DJIMini4Pro_JuggernautXL_8_v2_with_reg.safetensors
+  - DOZA_Village_Dozamura_Femboy_Variant_Assorted_Doujin_Artstyle_Blend_PonyXL.safetensors
+  - DS9XLVGRAD3.safetensors
+  - DanaScullyXL.safetensors
+  - DesertFestivalXL_v2.0.safetensors
+  - DisplayCaseXL.safetensors
+  - DonMD3m0nXL-000010.safetensors
+  - DonMH41rXL-000006.safetensors
+  - EldritchCharcoalXL1.1.safetensors
+  - Emma01-2-XL.safetensors
+  - FF-Latex.ID-XL-011.bf16.safetensors
+  - FappXL.safetensors
+  - Flared_Jeans_XL_V2.safetensors
+  - FleshMonstrosityXL-000001.safetensors
+  - FleshmutantXLV4.safetensors
+  - FoxMulderXL.safetensors
+  - Fresh Ideas@Oriental Beauty_XL.safetensors
+  - GUNATYOU_XL.safetensors
+  - Girls with tails XL hair test2.safetensors
+  - HelldiversXL.safetensors
+  - Hmong_costume_Red_XL_V2.safetensors
+  - Hmong_costume_Ultramarine_XL_V2.safetensors
+  - JDGremlin_JuggernautXL_8_v1.safetensors
+  - JJsLasBhutanArchitectural_XL.safetensors
+  - JJsSwimpool_XL.safetensors
+  - JarJarBinksXLV1.safetensors
+  - Kawaii_Makeup_XL.safetensors
+  - Lady_Death_XL__Pony.safetensors
+  - Liquid_Fluid_Metal_XL_-_By_DICE.safetensors
+  - Loathsome_XL_V1.safetensors
+  - MS_Real_XL_Tentacles.safetensors
+  - MagicXL.safetensors
+  - Manji_Kishi-dan_Schelz_Assorted_Doujin_Artstyle_Blend_PonyXL.safetensors
+  - MegaTits_XL-000006.safetensors
+  - Mehndi_ponyXL_v10.safetensors
+  - Men'sFacialV4XL.safetensors
+  - Metal_Stocks_XL-000005.safetensors
+  - MicroSkirt_XL.safetensors
+  - Microwaist_XL_v01.safetensors
+  - NSFW_Reality_Engine_XL05.safetensors
+  - OldTechnologyXL.safetensors
+  - OverallDetailXL.safetensors
+  - PBFH-XL.safetensors
+  - PerfectEyesXL.safetensors
+  - RPGDragonkinXL.safetensors
+  - RPGGiantBeetleXL.safetensors
+  - RPGShamblingMoundXL.safetensors
+  - RPGUthkararXL.safetensors
+  - RickandMortyXL_nxyz.safetensors
+  - SexyRobots-XL.safetensors
+  - Shotgun_Smoking_XL.safetensors
+  - Simple_Latex_Dress_XL-000004.safetensors
+  - Smile_and_Cry_XL.safetensors
+  - Spartan_Armor_XL.safetensors
+  - StillsuitXL_v1.31.safetensors
+  - StillsuitXl_1.21.safetensors
+  - The_spacecraft_XL.safetensors
+  - UndergroundClub_XL.safetensors
+  - Visual_Novel_Background_-_PonyXL_V6.safetensors
+  - WetshirtXL_-_Wet_T-Shirt_for_SDXL.safetensors
+  - Xenomechanical_XL.safetensors
+  - ZombiePortraitXL_v1.safetensors
+  - ZombieXL.safetensors
+  - [XL]GiantMonster.safetensors
+  - [XL]dark_fantasy_creature.safetensors
+  - add-detail-xl.safetensors
+  - albaptista_xl_1_standard-000050.safetensors
+  - ana_xl_8dim_3-000050.safetensors
+  - bodypaint-XL-000005.safetensors
+  - bronzecd_xl-000006.safetensors
+  - c0mpXLP.safetensors
+  - catastrophe_XL-000009.safetensors
+  - caveruinsPOV_XL-000009.safetensors
+  - cyberpunk_xl_v1.safetensors
+  - cyborggirl_XL.safetensors
+  - dark_gothic_fantasy_xl_3.01.safetensors
+  - destruction_XL-000010.safetensors
+  - dragon_riding_xl_v1.safetensors
+  - f412glassXL.safetensors
+  - futureskyline_XL-000009.safetensors
+  - handcuffs_XL_1_-000007.safetensors
+  - hjsocrealmosaic_v10xl.safetensors
+  - hmviXL.safetensors
+  - jabba_the_hutt_XL_pony_bf_v1.safetensors
+  - jadecarvingcd_xl-000007.safetensors
+  - jesalba_xl_1_standard_merger_29_60_83_05_02_03.safetensors
+  - jgedFLUXlite.safetensors
+  - lama_scuba_helmet-xl-v2-000012.safetensors
+  - lauren-boebert-xl-1.0.safetensors
+  - lbc_dress_art_XL.safetensors
+  - league_of_legends_xl_v1.safetensors
+  - mayamaze_XL.safetensors
+  - multiarm-4-xl-v1.safetensors
+  - naitaopidai_XL_reg0_.safetensors
+  - nisaFLUXlite.safetensors
+  - nova_xl_v1.safetensors
+  - nudify_xl_lite.safetensors
+  - onche_ondulay_Style_XL.safetensors
+  - p1nheadXL.safetensors
+  - ponyfemboyXLlast-000008.safetensors
+  - s1mps0nsXLP.safetensors
+  - scifiurban_XL.safetensors
+  - speakini_xl-gen1-v1.2-000143.safetensors
+  - vampireXL.safetensors
+  - weird future fashion_v5_xl.safetensors
+  - xl_more_art-full_v1.safetensors
+  - 40_ThaiDressX1.safetensors
+  - Air_Hair-000008.safetensors
+  - BeyondSDXLv2.safetensors
+  - Da_Vinci-000008.safetensors
+  - EldritchArt1.0.safetensors
+  - Furiosa_A_mad_Max_saga.safetensors
+  - Girl_From_Outter_Space_2250-000010.safetensors
+  - Hairy_Style_SDXL.safetensors
+  - HighHeels.safetensors
+  - Latex_Scuba_Costume.safetensors
+  - LeagueofLegSDXL.safetensors
+  - Malenia_Blade_of_Miquella_Stylezed.safetensors
+  - Millennium_Falcon_SDXL.safetensors
+  - Neon_Cyberpunk_SDXL_Cyberware.safetensors
+  - Quark-Man-SDXL.safetensors
+  - RMSDXL_Creative.safetensors
+  - RMSDXL_Darkness_Cinema.safetensors
+  - RMSDXL_Enhance.safetensors
+  - Real_Beauty.safetensors
+  - SDXLChristmasSweater.safetensors
+  - SDXLFaeTastic2400.safetensors
+  - SDXLHighDetail_v5.safetensors
+  - SDXLPaintSplash.safetensors
+  - SDXL_BTT_THARUNEE_v01.safetensors
+  - SDXL_Psychemelt_style_LoRA-000007.safetensors
+  - SDXLatex-v2-000094.safetensors
+  - SDXLatex-v2-000094.safetensors
+  - Sexy_Girls_With_Foxtail_SDXL-000001.safetensors
+  - Sinister_Style_SDXL.safetensors
+  - Snorlax_v1.safetensors
+  - Snorlax_v2.safetensors
+  - Sonam_Khan_SDXL_LoRA.safetensors
+  - Space_sdxl.safetensors
+  - Terror_From_The_Deep.safetensors
+  - VHSfootage.safetensors
+  - VOGUE_Fashion_Magazine_Cover_Vintage_1960-1975_SDXL.safetensors
+  - Wiz-VintageComicBookCover_v01.safetensors
+  - YoungAdultSDXL.safetensors
+  - brides of dracula style.safetensors
+  - female_xenomorph_sdxl_V2.safetensors
+  - gravs-bimbofication-0.6.safetensors
+  - life_of_brian_style-000019.safetensors
+  - public_restroom.safetensors
+  - science.safetensors
+  - shirtspreadv10_SDXL.safetensors
+  - sinfully_stylish_SDXL.safetensors
+  - tbh162-sdxl.safetensors
+  - tbh207-sdxl.safetensors
+  - tbh377-sdxl.safetensors
+  - vomitChan_v1_SDXL.safetensors
+  - w3t_SDXL.safetensors
+  - winged_girl.safetensors
+  - wizards_vintage_romance.safetensors
+  - JJsScifiStyle_XL.safetensors
+  - SDXLFaetastic_v24.safetensors
+  - albedobaseXLPre_v21preBeta.safetensors
+  - albedobaseXL_v21.safetensors
+  - artUniverse_sdxlV20.safetensors
+  - artUniverse_sdxlV30.safetensors
+  - artUniverse_sdxlV60.safetensors
+  - bmegamixl_v1.safetensors
+  - copaxTimelessxlSDXL1_v11Lightning.safetensors
+  - copaxTimelessxlSDXL1_v122.safetensors
+  - dreamshaperXL_lightningDPMSDE.safetensors
+  - dreamshaperXL_v21TurboDPMSDE.safetensors
+  - dreamshaper_331BakedVae.safetensors
+  - epicrealismXL_v11.safetensors
+  - epicrealismXL_v6Miracle.safetensors
+  - goddessOfRealismV1_v20.safetensors
+  - goddessOfRealism_v3.safetensors
+  - insanelyxl_v10.safetensors
+  - juggernautXL_ragnarokBy.safetensors
+  - juggernautXL_v9Rdphoto2Lightning.safetensors
+  - nightvisionXLPhotorealisticPortrait_beta0702Bakedvae.safetensors
+  - nightvisionxl_V900.safetensors
+  - notRealRealisticSDXL_v12.safetensors
+  - notRealRealisticXLV1.safetensors
+  - protovisionXLHighFidelity3D_release0630Bakedvae.safetensors
+  - protovisionXLHighFidelity3D_releaseV660Bakedvae.safetensors
+  - realcartoonXL_v5.safetensors
+  - realcartoonXL_v7.safetensors
+  - sdXL_v10VAEFix.safetensors
+  - sdxlTripleHeadedMonkeys_v10.safetensors
+  - shataXLLCM_001.safetensors
+  - turboDiffusionXL_v12.safetensors
+  - 0001softrealistic_v122xxx.safetensors
+  - 36Frames_v50.safetensors
+  - 80s_horror_poster_style-000009.safetensors
+  - AOM3A1B_orangemixs.safetensors
+  - AOM3B2_orangemixs.safetensors
+  - AnythingV5Ink_ink.safetensors
+  - AnythingV5Ink_v5PrtRE.safetensors
+  - Deliberate_v3.safetensors
+  - Inkpunk-Diffusion-v2.ckpt
+  - LCM_Dreamshaper_v7_4k.safetensors
+  - M4RV3LSDUNGEONSNEWV40COMICS_mD40.safetensors
+  - MJ52.safetensors
+  - Realistic_Vision_V1.4.ckpt
+  - RealitiesEdgeXL_4.safetensors
+  - SSD-1B-A1111.safetensors
+  - TR_PhoMixRealistic_1.2.safetensors
+  - aZovyaRPGArtistTools_v4.safetensors
+  - abgmix_v10.safetensors
+  - absolutelyArt_v2.safetensors
+  - acornIsBoningXL_xlV2.safetensors
+  - agendaMixXL_v10.safetensors
+  - aiomonstergirls_v4.safetensors
+  - airoticartsPenis_10-inpainting.ckpt
+  - altxl_v60.safetensors
+  - analogMadness_v70.safetensors
+  - angraRealflex_closeToReal.safetensors
+  - animeDreamerMixed_v10.safetensors
+  - animeGod_v10.safetensors
+  - animedreamBabes_v2FP32.safetensors
+  - aniverse_v15Pruned.safetensors
+  - aniverse_v50Pruned.safetensors
+  - antispoon_v10.safetensors
+  - artUniverse_v80.safetensors
+  - artcore_v10.safetensors
+  - artemisMixRealLife_v207.safetensors
+  - artiusV21NSFW_v21.safetensors
+  - artuniversesdxlv6.gNIT.safetensors
+  - averageBlend_v10.safetensors
+  - awsomexlfp16pruned_.safetensors
+  - babesBYSTABLEYOGI_v10.safetensors
+  - beautifulArt_v70.safetensors
+  - beautyfoolAnireal_v10.safetensors
+  - bizarre_v10.safetensors
+  - bordello_10.safetensors
+  - boyfusion_10.safetensors
+  - chacolrealponymixxl_v30a.safetensors
+  - cirrostratus_v20.safetensors
+  - clarity_3.safetensors
+  - cndJKMix_v10.safetensors
+  - colossusProjectXLSFW_v60Experimental2.safetensors
+  - colossusProject_colossusV611.safetensors
+  - copaxPhotoxl_portrait.safetensors
+  - copaxTruesight_v2.safetensors
+  - crystalClearXL_ccxl.safetensors
+  - cyberrealistic_classicV21.safetensors
+  - cyberrealistic_v41BackToBasics.safetensors
+  - dacPhotoecstasyXL_v40.safetensors
+  - darkSurrealism_v11.safetensors
+  - darksun_v50.safetensors
+  - darksun_v7b.safetensors
+  - deliberate_v2.safetensors
+  - demonpony_v10.safetensors
+  - devlishphotorealism_sdxl15.safetensors
+  - disneyStyleV1_v10.safetensors
+  - donutsdeliverymixXLV2_v21Hyperealism.safetensors
+  - dreamlikePhotoreal20_dreamlikePhotoreal20.safetensors
+  - dreamshaper_8.safetensors
+  - drrjdj_j1s.safetensors
+  - dungeonsNWaifusV2225D_dungeonsNWaifus22.safetensors
+  - dynavisionXLAllInOneStylized_release0534bakedvae.safetensors
+  - dynavisionXLAllInOneStylized_releaseV0610Bakedvae.safetensors
+  - envybeyondxl01_v20.safetensors
+  - epicKiwiPeach_v10.safetensors
+  - epiccartoon_v1.safetensors
+  - epicphotogasm_ultimateFidelity.safetensors
+  - epicrealism_naturalSinRC1VAE.safetensors
+  - epicrealism_pureEvolutionV5.safetensors
+  - epicrealism_v10-inpainting.safetensors
+  - euphostain_v10.safetensors
+  - f222.ckpt
+  - faetality_v10.safetensors
+  - fantasialixa_01.safetensors
+  - fenrisxl_801Photorealistic.safetensors
+  - fiamixRebootHNSFW_v20.safetensors
+  - flux1-schnell-fp8.safetensors
+  - flux1-schnell.sft
+  - fluxAsianRealisticFP8_v10Fp8.safetensors
+  - fmlIsThatReal_v03b.safetensors
+  - fullyREALXL_v50Flexism.safetensors
+  - furricanesHumanMix_v10.safetensors
+  - futanariFactor_alphaV10.safetensors
+  - ghostmix_v20Bakedvae.safetensors
+  - hardcoreHentai_v11.safetensors
+  - hassakuHentaiModel_v13.safetensors
+  - himerosxl_v108.safetensors
+  - horrorTHEME_v2.safetensors
+  - houseOfFreyjaIresMix_v10.safetensors
+  - isabelia_v10.safetensors
+  - japaneseAndKoreanComic_v10.ckpt
+  - joseiRealistic_v10A.safetensors
+  - kakarot25DCozy_cozyPruned.safetensors
+  - leosamsFilmgirlUltra_ultraBaseModel.safetensors
+  - lyriel_v16.safetensors
+  - masterLinkFutanari_futalink.ckpt
+  - metaverseMissBo_v10.safetensors
+  - modelshoot-1.0.safetensors
+  - morphxl_v10.safetensors
+  - newrealityxl_v11.safetensors
+  - nightmareShaper_v3FleshEater.safetensors
+  - nonPlusUltra_finalV20.safetensors
+  - noosphere_v42.safetensors
+  - notRealRealisticSDXL_v12.safetensors
+  - notRealRealistic_v31.safetensors
+  - nothingDream_v10.safetensors
+  - npDarkanime_v10.safetensors
+  - nsfw-gen.safetensors
+  - openjourney-v4.ckpt
+  - opiate_V40.safetensors
+  - otokonokoSecretBase_semirealMixV2.safetensors
+  - paradoxSDXL10_paradoxSDXL10.safetensors
+  - perfectdeliberate_v5.safetensors
+  - pfg_111Safetensors.safetensors
+  - photoMovie_photoMovieGAN1.safetensors
+  - photonXEpicrealism_v10.safetensors
+  - photonicFusion_v4RuggedEdition.safetensors
+  - photosomnia_omega.safetensors
+  - pirsusComicsStyle_cartoonStyle.safetensors
+  - pirsusEpicRealism_v31Pruned.safetensors
+  - poltergeistMix_v25.safetensors
+  - pyrosNSFWSDXL_v05.safetensors
+  - raekanamix25D_v10.safetensors
+  - realPhotoBeautiful_realPhotoIII.safetensors
+  - realismBYSTABLEYOGI_v3LCM.safetensors
+  - realismEngineSDXL_v30VAE.safetensors
+  - realismFromHades_v71HQ.safetensors
+  - realisticComicBook_v10.safetensors
+  - realisticDigital_v60.safetensors
+  - realisticFreedomSFW_wonderland.safetensors
+  - realisticFuta_ver4.safetensors
+  - realisticVisionV60B1_v51HyperVAE.safetensors
+  - realisticVisionV60B1_v60B1VAE.safetensors
+  - realisticasianthaila_v20.ckpt
+  - reallierV8_v80.safetensors
+  - reallife_v20.safetensors
+  - realspice_v20.safetensors
+  - realvisxlV30Turbo_v30TurboBakedvae.safetensors
+  - realvisxlV40_v40Bakedvae.safetensors
+  - realvisxlV40_v40LightningBakedvae.safetensors
+  - reliberate_v20.safetensors
+  - revAnimated_v122EOL.safetensors
+  - rfktrsDarkmix_v20Fp16Noema.safetensors
+  - sd3_medium_incl_clips.safetensors
+  - sdxlInkpunkstyle_v01.safetensors
+  - sdxlNuclearGeneralPurposeV2Semi_v2.safetensors
+  - sdxlTripleHeadedMonkeys_v10.safetensors
+  - sdxlUnstableDiffusers_v9DIVINITYMACHINE.safetensors
+  - sdxlYamersRealisticNSFW_v5Rundiffusion.safetensors
+  - semirealNsfwXL_v10.safetensors
+  - sensualMindAnomaly_v10.safetensors
+  - silverstarXL_v3.safetensors
+  - starlightXLAnimated_v3.safetensors
+  - superChineseStyle_superChineseStyleV10.safetensors
+  - t3_Ver09.safetensors
+  - teenaMix_v10.safetensors
+  - theTrualityEngine_trualityENGINEPRO.safetensors
+  - thinkdiffusionxl_v10.safetensors
+  - thisisreal_v50.safetensors
+  - trubass1.1_00001_.safetensors
+  - ultimatediffusionxl_v01.safetensors
+  - ultraBYSTABLEYOGI_ultraByStableYogi.safetensors
+  - ultraBYSTABLEYOGI_v20.safetensors
+  - universestable_v70AnalogPhoto.safetensors
+  - v1-5-pruned-emaonly.safetensors
+  - virileReality_v30BETA2.safetensors
+  - vividpdxl_realVAE.safetensors
+  - waiREALCN_v100.safetensors
+  - waiSemireal_v30.safetensors
+  - xenoplastyBimbosBoobs_v1.safetensors
+  - xl13AsmodeusSFWNSFW_v22BakedVAE.safetensors
+  - xlYamersRealistic_v3.safetensors
+  - xxmix0731girl.safetensors
+  - xxmix9realisticsdxl_v10.safetensors
+  - flux1-dev-fp8.safetensors
+  - ltx-2-19b-distilled.safetensors
+  - ltxv-13b-0.9.7-distilled-fp8.safetensors
+  - ltxv-13b-0.9.7-distilled.safetensors
+  - cocksxlTgirlsAndMales_v10.safetensors
+  - cocksxlTgirlsAndMales_v10_fp16.safetensors
+  - pornmasterFantasy_fp16V2.safetensors
+  - realisticFuta_ver3.safetensors
+  - qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - realcartoonRealistic_v13.safetensors
+  - sd_xl_base_1.0.safetensors
+  - sd_xl_refiner_1.0.safetensors
+  - artsyVibe_v2FP8.safetensors
+  - flux-2-klein-4b.safetensors
+  - flux-2-klein-9b-fp8.safetensors
+  - flux-2-klein-9b.safetensors
+  - flux-2-klein-base-4b.safetensors
+  - flux-2-klein-base-9b-fp8.safetensors
+  - flux-2-klein-base-9b.safetensors
+  - flux1-dev.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - vintageBeauties_flux2Klein9BV2.safetensors
+  - wan2.1_i2v_480p_14B_fp16.safetensors
+  - wan2.1_i2v_720p_14B_fp16.safetensors
+  - wan2.1_t2v_14B_fp16.safetensors
+  - z_image_bf16.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (1494 个, 前10):
+  - 80s_punk_clothing.safetensors
+  - 9_ThaiDressX2.safetensors
+  - APPLEPROVISION_LORA-BESTLORA.safetensors
+  - Alita.safetensors
+  - Axolotl.safetensors
+  - Barbarian_v1.safetensors
+  - Big_updo-000008.safetensors
+  - Buddha-000006.safetensors
+  - CBarkerAI.safetensors
+  - Colonel Kurtz_c0l0k3r2.safetensors
+- **CLIP**: clip_l.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, mistral_3_small_flux2_bf16.safetensors, model.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: SDXL-VAE_0.9.safetensors, Wan2_1_VAE_bf16.safetensors, ae.safetensors, bad.ltxv-13b-0.9.7-vae-BF16..safetensors, beautyfoolAnireal_v10.vae.pt, blessed2.vae.pt, flux2-vae.safetensors, kl-f8-anime2.vae.pt, ltxv-13b-0.9.7-vae-BF16.safetensors, qwen_image_vae.safetensors, sdxl_vae.safetensors, vae-ft-mse-840000-ema-pruned.ckpt.vae.pt, vae-ft-mse-840000-ema-pruned_fp16.safetensors, wan_2.1_vae.safetensors, taesd3, taesd, taesdxl, pixel_space
+
+### 142. 116.91.115.166:8189
+
+- **版本**: 0.18.1
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 15 GB)
+- **内存**: 251 GB (空闲 198 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (3):
+  - wonder_image_gen.json
+  - wonder_face_verify_temp.json
+  - api_kling_omni_v2v.json
+- **模型** (6):
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - wan2.2_i2v_high_noise.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (6 个, 前10):
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2509-Relight.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
+  - wan_high_noise_lora.safetensors
+  - wan_low_noise_lora.safetensors
+- **CLIP**: qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, umt5_xxl.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, qwen_image_vae.safetensors, wan_2.1_vae.safetensors, wan_vae.safetensors, pixel_space
+
+### 143. 14.17.107.52:8082
+
+- **版本**: 0.22.1
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 17 GB)
+- **内存**: 251 GB (空闲 224 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 16
+- **工作流** (0): 无
+- **模型** (9):
+  - Wan21_SkyReelsV3-R2V_fp8_scaled_mixed.safetensors
+  - Wan2_2-I2V-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_bf16.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (4 个, 前10):
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Lightning-8steps-V1.0.safetensors
+  - lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors
+  - wan2.1_i2v_lora_rank64_lightx2v_4step.safetensors
+- **CLIP**: qwen_2.5_vl_7b_fp8_scaled.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: Wan2.1_VAE.pth, qwen_image_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 144. 14.17.107.52:8080
+
+- **版本**: 0.22.1
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 17 GB)
+- **内存**: 251 GB (空闲 224 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 16
+- **工作流** (0): 无
+- **模型** (9):
+  - Wan21_SkyReelsV3-R2V_fp8_scaled_mixed.safetensors
+  - Wan2_2-I2V-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_bf16.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (4 个, 前10):
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Lightning-8steps-V1.0.safetensors
+  - lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors
+  - wan2.1_i2v_lora_rank64_lightx2v_4step.safetensors
+- **CLIP**: qwen_2.5_vl_7b_fp8_scaled.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: Wan2.1_VAE.pth, qwen_image_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 145. 222.88.152.130:8188
+
+- **版本**: 0.3.75
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 23 GB)
+- **内存**: 125 GB (空闲 89 GB)
+- **历史**: 无
+- **管理面板**: 有
+- **自定义节点数**: 36
+- **工作流** (65):
+  - api-7-机甲.json
+  - flux-基础-文生图-冰淇淋.json
+  - 古诗词.json
+  - flux-IPAdapter-单图.json
+  - flux-canny-文生图.json
+  - flux-基础-文生图-糖果.json
+  - api-8-动物.json
+  - api-1-2D风格茶杯.json
+  - image_qwen_image_edit_2509.json
+  -  基础工作流-小红书美女图.json
+  - api-app-16-xieshi-text2img.json
+  - flux-基础-头像.json
+  - api-9-武器.json
+  - test-qwen-image-8steps.json
+  - api-app-20-xieshi-text2img.json
+  - api-app-15-gushici.json
+  - api-app-11-dishini.json
+  - SDXL-古诗词lora.json
+  - flux-基础-文生图-山水.json
+  - flux-基础-文生图-儿童绘本.json
+  - api-3-Q版欧美人物.json
+  - api-app-17-youxi-text2img.json
+  - api-4-Q版国风人物.json
+  - qwen-image-8steps.json
+  - 逆采样工作流.json
+  - image_z_image_turbo .json
+  - flux-基础-redux.json
+  - t.json
+  - redux-控制.json
+  - 高级版风格参考.json
+  - qwen_imag.json
+  - API-大头flux大模型_图片转绘吉普力风格.json
+  - flux-基础-文生图-毛毡.json
+  - api-10-建筑.json
+  - flux-基础-文生图-玩偶.json
+  - redux-测试.json
+  - 02_qwen_Image_edit_subgraphed.json
+  - 大头flux大模型_图片转绘吉普力风格.json
+  - flux-基础-文生图.json
+  - image_qwen_image_edit_25092.json
+  - janus-反推.json
+  - 基础工作流.json
+  - flux-基础-文生图-绘卷.json
+  - flux-基础-文生图-简约logo.json
+  - flux-基础-depth.json
+  - 吉卜力lora测试.json
+  - video_wan2_2_14B_t2v (2).json
+  - api-6-3D.json
+  - api-5-卡通图标.json
+  - VibeVoice_example.json
+  - fp8基础调用.json
+  - video_wan2_2_14B_flf2v.json
+  - flux-基础-文生图-饭团动物.json
+  - api-app-19-dishini-text2img.json
+  - api-2-写实.json
+  - jingtouzhuanhuan.json
+  - image_z_image_turbo2.json
+  - flux_kontext_dev_basic.json
+  - video_wan2_2_14B_animate.json
+  - api-首尾帧视频.json
+  - example_rf_inversion_stylization.json
+  - chibli-workflow.json
+  - api-app-18-tubiao-text2img.json
+  - flux-基础-文生图-手绘.json
+  - qwen-image-edit.json
+- **模型** (19):
+  - DisneyPixarCartoon.safetensors
+  - Game_icon_v30.safetensors
+  - XL-wanou.safetensors
+  - disney.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux1-dev.safetensors
+  - katongv2.safetensors
+  - Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - svdq-fp4_r128-qwen-image-edit-2509-lightningv2.0-8steps.safetensors
+  - svdq-int4_r32-qwen-image-edit-2509-lightning-8steps-251115.safetensors
+  - wan2.2_animate_14B_bf16.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (41 个, 前10):
+  - Dynasty-Flux.safetensors
+  - F.1-OB国风绘卷.safetensors
+  - F.1-儿童图书绘本.safetensors
+  - F.1-软糖世界场景Lora.safetensors
+  - F.1LORA_毛毡.safetensors
+  - F.1gmic icon_Hand_drawn_2D_style.safetensors
+  - F.1自媒体摄影系列_柔光_v6.safetensors
+  - FLUX极致笔触手绘.safetensors
+  - FLUX盲盒lora.safetensors
+  - Flux1.d_动物饭团.safetensors
+- **CLIP**: EVA02_CLIP_L_336_psz14_s6B.pt, ViT-L-14-TEXT-detail-improved-hiT-GmP-HF.safetensors, ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors, clip_l.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, model.safetensors, t5xxl_fp8_e4m3fn.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, ae.safetensors, qwen_image_vae.safetensors, wan_2.1_vae.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, diffusion_pytorch_model.safetensors, wan_2.1_vae.safetensors, zimage_vae.safetensors, pixel_space
+
+### 146. 162.239.59.179:8188
+
+- **版本**: 0.24.1
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 16 GB)
+- **内存**: 31 GB (空闲 13 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (8):
+  - CRPv15fp8.json
+  - CRPv15fp8LORA.json
+  - CRPv15fp8LORA2.json
+  - CRPv15fp8LORA4.json
+  - Mistoon.json
+  - video_ltx2_i2v.json
+  - WAN 2.1 480p 14B.json
+  - Wan2.2_I2V_PainterI2V_Workflow_Kenpechi_v2.4.json
+- **模型** (19):
+  - cyberrealisticPony_v150 fp16.safetensors
+  - cyberrealisticPony_v150 fp8.safetensors
+  - ltx-2-19b-dev-fp8.safetensors
+  - mistoonAmethyst_v20.safetensors
+  - mistoonAnime_v10Noobai.safetensors
+  - mistoonCube_v20.safetensors
+  - mistoonDiamond_v10.safetensors
+  - mistoonEmerald_v30.safetensors
+  - mistoonJade_v10Anime.safetensors
+  - mistoonRuby_v30.safetensors
+  - mistoonSapphire_v30.safetensors
+  - ponyDiffusionV6XL_v6StartWithThisOne.safetensors
+  - ponyV7Base_v70fp16.pt
+  - prefectPonyXL_v6.safetensors
+  - sd_xl_base_1.0.safetensors
+  - sd_xl_refiner_1.0.safetensors
+  - wan2.1_i2v_480p_14B_fp16.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+- **LoRA** (198 个, 前10):
+  - 0563 multiple views_v1_pony.safetensors
+  - 0650 Stacked Arhat_pony.safetensors
+  - 4shot.safetensors
+  - 5Q1RT1N6.safetensors
+  - 90s_pony.safetensors
+  - Ahegao-000014.safetensors
+  - Anal_Autograph.safetensors
+  - Anal_fisting.safetensors
+  - Anal_storage__multiple_soda_cans.safetensors
+  - Anna_and_Elsa_-_Frozen_PonyXL.safetensors
+- **CLIP**: gemma_3_12B_it_fp4_mixed.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: wan_2.1_vae.safetensors, pixel_space
+
+### 147. 151.241.228.227
+
+- **版本**: 0.22.1
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 18 GB)
+- **内存**: 31 GB (空闲 15 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 31
+- **工作流** (0): 无
+- **模型** (5):
+  - homofidelisXL_v30SDXL.safetensors
+  - z_image_turbo_fp8.safetensors
+  - wan2.2_t2v_high_noise_14B_fp16.safetensors
+  - wan2.2_t2v_low_noise_14B_fp16.safetensors
+  - z_image_bf16.safetensors
+- **LoRA** (6 个, 前10):
+  - HI8.safetensors
+  - SVI_v2_PRO_Wan2.2-I2V-A14B_HIGH_lora_rank_128_fp16.safetensors
+  - SVI_v2_PRO_Wan2.2-I2V-A14B_LOW_lora_rank_128_fp16.safetensors
+  - lpgr4nn1e_v1_high.safetensors
+  - lpgr4nn1e_v1_low.safetensors
+  - zit_x.safetensors
+- **CLIP**: nsfw_wan_umt5-xxl_fp8_scaled.safetensors, qwen_3_4b.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, flux2UltrahdRAWVAE_v10.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 148. 220.117.140.31:8188
+
+- **版本**: 0.21.1
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 20 GB)
+- **内存**: 47 GB (空闲 27 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 31
+- **工作流** (177):
+  - 101.Image_v05.json
+  - 102.n8n_flux1_krea_dev.json
+  - 102.n8n_ImageGen.json
+  - 102.n8n_nunchaku-flux-kontext.json
+  - 102.n8n_nunchaku-flux.1-dev.json
+  - 102.n8n_Transition.json
+  - 102_n8n_flux_ImageChange.json
+  - 102_video_wan2_2_5B_ti2v.json
+  - 103_n8n_Voice.json
+  - 103_n8n_voiceclone.json
+  - 104_n8n_VideoGen.json
+  - 105_n8n_Person.json
+  - 106_n8n_VidSubtitle.json
+  - 107_n8n_panzoom.json
+  - 201_n8n_Hun_Text2Vid.json
+  - 202_n8n_Img2Img.json
+  - 203_n8n_Ltx_ImgText2Vid.json
+  - 204_n8n_Ltx_Textt2Vid.json
+  - 205_n8n_Ltx_Vid2VidAudio.json
+  - 206_n8n_ImgFaceSwap.json
+  - 207_n8n_VidFaceSwap.json
+  - 208_n8n_Text2Img.json
+  - 209_n8n_Text2Voice.json
+  - 210_n8n_ImgVoc2Vid.json
+  - 211_n8n_VidVoc2Vid.json
+  - 212_n8n_Img2Text.json
+  - 213_n8n_ImageUpscale.json
+  - 214_n8n_NewsBoard.json
+  - 214_n8n_Sound+Voice.json
+  - 215_n8n_VideoUpscale.json
+  - 216_News_VideoGen.json
+  - 217_n8n_WordCloud.json
+  - 218_n8n_Img2Animate.json
+  - 219_n8n_image2clay.json
+  - 220_n8n_image2rotation.json
+  - 221_n8n_lora_ghibli.json
+  - 222_n8n_Music_Make.json
+  - 223_n8n_Text2Vid_SVD.json
+  - 224_n8n_cloth.json
+  - 224_n8n_Img2Vid_SVD.json
+  - 225_n8n_vidimg2vid.json
+  - 226_ltxv-13b-v2v-long-depth.json
+  - 226_와이퍼스_ltxv-13b-i2v-long-multi-prompt.json
+  - 227_Wan2.2-I2V_ad.json
+  - 227_영상_업스케일.json
+  - 228_wan22_14B_i2v_flf_gguf.json
+  - 228_Wan2_2_14B_lightx2v.json
+  - 230_start_2_video.json
+  - 230_start_end_video.json
+  - 30.QwenEdit_Figure피규어만들기.json
+  - 300_PixelaiLabs_Wan_Video_21_InfiniteTalk (2).json
+  - 301_n8n_audioBGM.json
+  - 302_n8n_movie_eraser.json
+  - 304_n8n_SanAI_OmniGen.json
+  - 305_n8n_backgound_Sound.json
+  - 305_n8n_wyfurs3.json
+  - 320_wan_s2v_1.json
+  - 320_wan_s2v_Extend.json
+  - 333_N8N_Hunyuan Video + ImageMotionGuider.json
+  - 40.V1Wan2.2_14BKJ최적화영상.json
+  - 401_n8n_NewsBoard.json
+  - 41.Wan2.2AIO-MEGA-NSFW3개영상(수정본).json
+  - 434_n8n_depthflow_example.json
+  - 446_n8n_comfy_wordcloud_simple.json
+  - 50.LongCat_TI2V연속영상제작.json
+  - 62.속도빠른고화질이미지Z-Image_v05.json
+  - 71.Flux_kt_nudeCloth.json
+  - 999_n8n_hunyuan SkyReels  image to video share.json
+  - 999_n8n_I2V Skyreels ComfyUI Workflow with Kijai Wrapper Custom Nodes.json
+  - anmate_study01.json
+  - ChatterboxTTS-workflow.json
+  - comfy-zonos-example.json
+  - ComfyUI-OVI-workflow-example.json
+  - ComfyUI-OVIaistudynow.com_.json
+  - CosyVoice+EchoMimicV2.json
+  - Cosyvoice.json
+  - default.json
+  - DiaTTS.json
+  - EdgeTTS_text2speech.json
+  - example_rf_inversion_stylization.json
+  - FLUX_Comparing Detailers.json
+  - flux_dev_example.json
+  - flux_kontext_dev_basic.json
+  - flux_kontext_example.json
+  - hunhyuan_rf_inversion_testing_01.json
+  - Hunyuan Video Image Guider Example.json
+  - Hunyuan-Video-ipv.json
+  - hunyuan_video_text_to_video.json
+  - hyvideo_ip2v_experimental_dango.json
+  - hyvideo_leapfusion_img2vid_example_01.json
+  - hyvideo_lowvram_blockswap_test.json
+  - hyvideo_prompt_mix_experimental.json
+  - hyvideo_t2v_example_01.json
+  - hyvideo_v2v_example_01.json
+  - image_z_image_turbo.json
+  - latentsync_comfyui_basic.json
+  - ltxvideo-v2v.json
+  - LTXV_for_Youtube.json
+  - ltxv_image_to_video.json
+  - ltxv_last_image_to_video.json
+  - ltxv_text_to_video.json
+  - n8n.json
+  - n8n_01.json
+  - n8n_02.json
+  - n8n_ACE.json
+  - n8n_Clothes.json
+  - n8n_flux_ckpt_ghibli.json
+  - n8n_flux_ckpt_upscale_ghibli.json
+  - n8n_flux_lora.json
+  - n8n_flux_lora_image2image.json
+  - n8n_flux_lora_train.json
+  - n8n_framepack_hv_example.json
+  - n8n_LLM_Gemma2.json
+  - n8n_Lmstudio.json
+  - n8n_logo추가.json
+  - n8n_LTXV_exe.json
+  - n8n_SanaV1.json
+  - n8n_Video+Video.json
+  - n8n_Video_Replace.json
+  - n8n_wan2.1_image_to_Loraset.json
+  - n8n_wan2.1_image_to_video(native nodes).json
+  - n8n_WAN21_IMG2VID_TXT2VID_Academia_SD.json
+  - n8n_wan_exe.json
+  - OllamaVision.json
+  - propainter-inpainting-workflow.json
+  - PuLID_with_speedup.json
+  - pyramid_flow_miniflux_768_img2vid_example_01.json
+  - pyramid_flow_miniflux_img2vid_example_01.json
+  - pyramid_flow_miniflux_text2vid_example_01.json
+  - qwen_image_edit_2511.json
+  - Redux_Fill_Clothes_Youtube.json
+  - Remix Song.json
+  - ryanontheinside_audio_classification.json
+  - SanaV1.json
+  - sound_to_video_wan_example.json
+  - step001_workflow.json
+  - step002_workflow.json
+  - Study_01.json
+  - supir高清放大.json
+  - test.json
+  - Unsaved Workflow.json
+  - v2.json
+  - VibeVoice_example.json
+  - video_translation_subtitles_workflow.json
+  - Wan 2.2_Sound_to_Video_ForLowVRam.json
+  - WAN i2v 8 vram 4K video.json
+  - Wan2.2 - Text to video - Jockerai.json
+  - Wan2.2 GGUF - Text to video - Jockerai.json
+  - Wan2.2 GGUF- image to video - Jockerai.json
+  - Wan2.2 image to video - Jockerai.json
+  - wanvideo_480p_I2V_example_02.json
+  - wanvideo_T2V_example_02.json
+  - Wan_Image2Video_720p_fp8_SebastianKamph-Patreon.json
+  - wan_image_to_video_good.json
+  - Wan_Rebels Wan Animate GGUF.json
+  - Wan_s2v_basic_WF.json
+  - Wan_s2v_long_video.json
+  - wan_text_to_video_Good.json
+  - whisper_video_subtitles_workflow.json
+  - z image nsfw ai verse.json
+  - 디퓨전씨_Flux_Kontext_nunchaku.json
+  - 디퓨전씨_Ultimate_Upscale.json
+  - 디퓨전씨_Wan2.1_img2vid_with_LoRA.json
+  - 디퓨전씨_WanVace_FusionX_배포용(single ref.) (5).json
+  - 디퓨전씨_배포용_Wan2_2_14B_lightx2v.json
+  - 와이퍼스_1_Wan2.2 AIO Ai Verse.json
+  - 와이퍼스_20.Wan2.2-T2V텍스트영상.json
+  - 와이퍼스_2_wan2.2-t2v-rapid-aio Ai Verse.json
+  - 와이퍼스_ipiv-Morph-img2vid-AnimateDiff-HyperSD.json
+  - 와이퍼스_ltx.json
+  - 와이퍼스_ltxv-13b-i2v-long-multi-prompt.json
+  - 와이퍼스_ltx_gguf.json
+  - 와이퍼스_video_wan2_2_14B_i2v.json
+  - 와이퍼스_video_wan2_2_5B_ti2v.json
+  - 와이퍼스_wan22_14B_i2v_gguf.json
+  - 와이퍼스_Wan_FusionX_i2v_Image2Video.json
+  - 와이퍼스_Wan_FusionX_i2v_Native_gguf_aistudynow.com-1.json
+- **模型** (69):
+  - DreamShaper_8_pruned.safetensors
+  - aziibpixelmix_v10.safetensors
+  - juggernaut_reborn.safetensors
+  - dreamshaper_xl_v2.1.safetensors
+  - sd_xl_refiner_1.0.safetensors
+  - ace_step_v1_3.5b.safetensors
+  - architecturerealmix_v11.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux1-schnell-fp8.safetensors
+  - interiordesignsuperm_v2.safetensors
+  - japaneseStyleRealistic_v20.safetensors
+  - jibMixFlux_v11KreaNSFW.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - ltx-video-2b-v0.9.safetensors
+  - majicmixRealistic_v7.safetensors
+  - sd_xl_base_1.0.safetensors
+  - stable-audio-open-1.0.safetensors
+  - svd_xt.safetensors
+  - v1-5-pruned-emaonly-fp16.safetensors
+  - wan2.2-i2v-rapid-aio-nsfw-v7.safetensors
+  - wan2.2-i2v-rapid-aio-nsfw-v9.2.safetensors
+  - wan2.2-i2v-rapid-aio.safetensors
+  - wan2.2-rapid-mega-aio-nsfw-v2.safetensors
+  - wan2.2-t2v-rapid-aio-nsfw-v9.2.safetensors
+  - wan2.2-t2v-rapid-aio.safetensors
+  - flux1-kontext-dev-fp8-e4m3fn.safetensors
+  - LongCat_TI2V_comfy_bf16.safetensors
+  - LongCat_TI2V_comfy_fp8_e4m3fn_scaled_KJ.safetensors
+  - MelBandRoformer_fp16.safetensors
+  - MelBandRoformer_fp32.safetensors
+  - Ovi-11B-bf16.safetensors
+  - Ovi-11B-fp8.safetensors
+  - WAN2.2-HighNoise_SmartphoneSnapshotPhotoReality_v2_by-AI_Characters.safetensors
+  - WAN2.2-LowNoise_SmartphoneSnapshotPhotoReality_v2_by-AI_Characters.safetensors
+  - Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors
+  - Wan2_2-I2V-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-HIGH_fp8_e5m2_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-S2V-14B_fp8_e4m3fn_scaled_KJ.safetensors
+  - flux1-canny-dev.safetensors
+  - flux1-dev-kontext_fp8_scaled.safetensors
+  - flux1-dev.safetensors
+  - flux1-fill-dev.safetensors
+  - flux1-krea-dev_fp8_scaled.safetensors
+  - infinitetalk_multi.safetensors
+  - infinitetalk_single.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - svdq-int4-flux.1-dev.safetensors
+  - svdq-int4_r32-flux.1-dev.safetensors
+  - svdq-int4_r32-flux.1-kontext-dev.safetensors
+  - svdq-int4_r32-flux.1-krea-dev.safetensors
+  - wan2.1_fun_camera_v1.1_1.3B_bf16.safetensors
+  - wan2.1_i2v_480p_14B_fp16.safetensors
+  - wan2.1_t2v_1.3B_fp16.safetensors
+  - wan2.1_vace_1.3B_fp16.safetensors
+  - wan2.1_vace_14B_fp16.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_s2v_14B_bf16.safetensors
+  - wan2.2_s2v_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_ti2v_5B_fp16.safetensors
+  - z_image_turbo_bf16.safetensors
+  - z_image_turbo_bf16_nsfw_v2.safetensors
+  - z_image_turbo_fp8_e4m3fn.safetensors
+  - z_image_turbo_fp8_e5m2.safetensors
+- **LoRA** (67 个, 前10):
+  - BetterFeet.safetensors
+  - Detailed_imperfect_skin_faces_and_torso_for_FLUX-000025_1066446.safetensors
+  - Diffused light glamour photography style_1338701.safetensors
+  - FLUX_FD-FelldudeNudeMix64_869974.safetensors
+  - FastWan_T2V_14B_480p_lora_rank_128_bf16.safetensors
+  - LongCat_distill_lora_alpha64_bf16.safetensors
+  - LongCat_refinement_lora_rank128_bf16.safetensors
+  - NSFW-22-H-e8.safetensors
+  - NSFW-22-L-e8.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+- **CLIP**: EVA02_CLIP_L_336_psz14_s6B.pt, clip_l.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, llava_llama3_fp8_scaled.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, t5-base.safetensors, t5xxl_fp8_e4m3fn.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors, umt5-xxl-enc-bf16.safetensors, umt5-xxl-enc-fp8_e4m3fn.safetensors, umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, Wan2_1_VAE_bf16.safetensors, Wan2_2_VAE_bf16.safetensors, ae.safetensors, kjWan2_1_VAE_fp32.safetensors, qwen_image_vae.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, wan2.2_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 149. 220.70.6.210:8188
+
+- **版本**: 0.19.0
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 18 GB)
+- **内存**: 188 GB (空闲 166 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - flux1-schnell-fp8.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 150. 51.250.105.179:8188
+
+- **版本**: 0.3.67
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 17 GB)
+- **内存**: 46 GB (空闲 39 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (23):
+  - qwe.json
+  - workflow-basic-sdxl-refiner-workflow-Q6n55PcgIumjDRoPmPHX-openart-openart.ai.json
+  - Basic_SDXL_LoRA_Workflow.json
+  - qwe 7.json
+  - qwe 5.json
+  - 2025-11-06-SDXL-VERY-GOOD (2).json
+  - qwe 3.json
+  - qwe 6.json
+  - asd 1 GOOD.json
+  - qwe 2.json
+  - qweqwewqe.json
+  - asd 1 BETTER.json
+  - asd 1.json
+  - 2025-11-09-SDXL-advanced.json
+  - SD 1.5.json
+  - qwe 7 GOOD.json
+  - 2025-11-09-SDXL-advanced-and-LoRA.json
+  - 2025-11-05.json
+  - SDXL.json
+  - 2025-11-09-SDXL-advanced-and-LoRA--refining-without-LoRA.json
+  - qweqwewqe 2.json
+  - qwe 4.json
+  - 2025-11-06-SDXL-VERY-GOOD.json
+- **模型** (7):
+  - epicrealism_naturalSinRC1VAE.safetensors
+  - flux1-dev-fp8.safetensors
+  - sd-v1-4.ckpt
+  - sd_xl_base_1.0.safetensors
+  - sd_xl_refiner_1.0.safetensors
+  - sd_xl_refiner_1.0_0.9vae.safetensors
+  - sd_xl_turbo_1.0.safetensors
+- **LoRA** (16 个, 前10):
+  - 2025-11-04-08h54m-SDXL-style-narrow.safetensors
+  - 2025-11-05-Chroma-captions.safetensors
+  - 2025-11-05-Chroma-tags.safetensors
+  - 2025-11-05-Flux-captions.safetensors
+  - 2025-11-05-Flux-tags.safetensors
+  - 2025-11-05-SDXL-tags.safetensors
+  - 2025-11-05-realistic-SD-1.5-tags.safetensors
+  - 2025-11-06-SDXL-with-prefixed-patterns-tags-epoch-19.safetensors
+  - SD-1.5-2025-11-04-03h-54m-concept-narrow.safetensors
+  - SDXL-2025-11-04-03h-54m-concept-narrow (1).safetensors
+- **VAE**: sdxl_vae.safetensors, pixel_space
+
+### 151. 81.29.134.117:8188
+
+- **版本**: 0.10.0
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 21 GB)
+- **内存**: 31 GB (空闲 27 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - flux1-dev-kontext_fp8_scaled.safetensors
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: clip_l.safetensors, t5xxl_fp16.safetensors
+- **VAE**: ae.safetensors, pixel_space
+
+### 152. 94.236.201.99:8188
+
+- **版本**: 0.18.1
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 21 GB)
+- **内存**: 251 GB (空闲 160 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (6):
+  - 05_ipadapter_style.json
+  - 04_controlnet_canny.json
+  - README.txt
+  - 01_basic_txt2img.json
+  - 03_detail_upscale.json
+  - 02_base_refiner_offset.json
+- **模型** (10):
+  - sd_xl_base_1.0.safetensors
+  - model.fp16.safetensors
+  - model.safetensors
+  - model.fp16.safetensors
+  - model.safetensors
+  - diffusion_pytorch_model.fp16.safetensors
+  - diffusion_pytorch_model.safetensors
+  - diffusion_pytorch_model.fp16.safetensors
+  - diffusion_pytorch_model.safetensors
+  - sd_xl_refiner_1.0.safetensors
+- **LoRA** (2 个, 前10):
+  - add-detail-xl.safetensors
+  - sd_xl_offset_example-lora_1.0.safetensors
+- **VAE**: sdxl_vae.safetensors, pixel_space
+
+### 153. comfy.thesoom.com
+
+- **版本**: 0.21.1
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 12 GB)
+- **内存**: 31 GB (空闲 26 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - flux1-schnell.safetensors
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: clip_l.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: ae.safetensors, pixel_space
+
+### 154. ai.tigron.dev
+
+- **版本**: 0.19.1
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 22 GB)
+- **内存**: 31 GB (空闲 27 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (15):
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - ltx-2.3-22b-dev.safetensors
+  - acestep_v1.5_xl_base_bf16.safetensors
+  - ernie-image.safetensors
+  - flux-2-klein-9b-kv-fp8.safetensors
+  - flux1-dev.safetensors
+  - flux2_dev_fp8mixed.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - wan2.2_fun_inpaint_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_fun_inpaint_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_high_noise_14B_fp16.safetensors
+  - wan2.2_i2v_low_noise_14B_fp16.safetensors
+  - z_image_bf16.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (17 个, 前10):
+  - Flux_2-Turbo-LoRA_comfyui.safetensors
+  - Ltx2.3-Licon-VBVR-I2V-96000-R32.safetensors
+  - Qwen-Edit-2509-Multiple-angles.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-Lightning-4steps-V1.0.safetensors
+  - Wan2.2-Fun-A14B-InP-high-noise-MPS.safetensors
+  - Wan2.2-Fun-A14B-InP-low-noise-HPS2.1.safetensors
+  - gemma-3-12b-it-abliterated_lora_rank64_bf16.safetensors
+  - high_noise_model_rank64.safetensors
+  - low_noise_model_rank64.safetensors
+- **CLIP**: clip_l.safetensors, ernie-image-prompt-enhancer.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, gemma_3_12B_it_fp8_scaled.safetensors, ministral-3-3b.safetensors, mistral_3_small_flux2_bf16.safetensors, mistral_3_small_flux2_fp8.safetensors, qwen_0.6b_ace15.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors, qwen_4b_ace15.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5_xxl_fp16.safetensors
+- **VAE**: LTX23_video_vae_bf16.safetensors, ace_1.5_vae.safetensors, ae.safetensors, flux2-vae.safetensors, full_encoder_small_decoder.safetensors, qwen_image_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 155. https://comfy.icecubelab.com
+
+- **版本**: 0.24.1
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 16 GB)
+- **内存**: 31 GB (空闲 19 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 1
+- **工作流** (14):
+  - 01_flux_headshot_pro.json
+  - 02_flux_kpop_girl_halfbody_profile.json
+  - 03_flux_skincare_campaign_ad.json
+  - 04_flux_thumbnail_16x9.json
+  - 05_flux_phone_wallpaper_vertical.json
+  - 06_flux_album_cover_square.json
+  - 07_flux_mj_editorial_portrait.json
+  - 08_flux_mj_fantasy_poster.json
+  - 09_flux_mj_cinematic_landscape.json
+  - 10_flux_mj_surreal_square_art.json
+  - 11_flux_poster_negative_space.json
+  - 12_flux_lookbook_fullbody.json
+  - ace_step_1_m2m_editing.json
+  - ace_step_1_t2m.json
+- **模型** (15):
+  - RealVisXL_V5.0.safetensors
+  - ace_step_v1_3.5b.safetensors
+  - animagineXL_v40.safetensors
+  - epicRealismXL_pureFix.safetensors
+  - hassakuXL_illustrious_v34.safetensors
+  - illustriousXL_v10.safetensors
+  - juggernautXL_ragnarok.safetensors
+  - juggernautXL_v9.safetensors
+  - noobaiXL_v10.safetensors
+  - ponyDiffusionV6XL_v6TurboDPOMerge.safetensors
+  - sd_xl_turbo_1.0_fp16.safetensors
+  - waiIllustriousSDXL_v17.safetensors
+  - zavychromaxl_v10.safetensors
+  - flux1-dev.safetensors
+  - flux1-schnell.safetensors
+- **LoRA** (19 个, 前10):
+  - analog_film_gravure_flux.safetensors
+  - cyberpunk_anime_style_flux.safetensors
+  - flux_casey_baugh_impressionist.safetensors
+  - flux_frostinglane.safetensors
+  - flux_illustration.safetensors
+  - flux_impressionist_landscape.safetensors
+  - flux_koda_film.safetensors
+  - flux_korean_girl.safetensors
+  - flux_monet.safetensors
+  - flux_monet_oscar.safetensors
+- **CLIP**: clip_l.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: ae.safetensors, sdxl_vae.safetensors, taef1, taesd3, taesd, taesdxl, pixel_space
+
+### 156. https://comfy.thesoom.com
+
+- **版本**: 0.21.1
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 12 GB)
+- **内存**: 31 GB (空闲 26 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - flux1-schnell.safetensors
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: clip_l.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: ae.safetensors, pixel_space
+
+### 157. https://ai.tigron.dev
+
+- **版本**: 0.19.1
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 22 GB)
+- **内存**: 31 GB (空闲 27 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (15):
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - ltx-2.3-22b-dev.safetensors
+  - acestep_v1.5_xl_base_bf16.safetensors
+  - ernie-image.safetensors
+  - flux-2-klein-9b-kv-fp8.safetensors
+  - flux1-dev.safetensors
+  - flux2_dev_fp8mixed.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - wan2.2_fun_inpaint_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_fun_inpaint_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_high_noise_14B_fp16.safetensors
+  - wan2.2_i2v_low_noise_14B_fp16.safetensors
+  - z_image_bf16.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (17 个, 前10):
+  - Flux_2-Turbo-LoRA_comfyui.safetensors
+  - Ltx2.3-Licon-VBVR-I2V-96000-R32.safetensors
+  - Qwen-Edit-2509-Multiple-angles.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-Lightning-4steps-V1.0.safetensors
+  - Wan2.2-Fun-A14B-InP-high-noise-MPS.safetensors
+  - Wan2.2-Fun-A14B-InP-low-noise-HPS2.1.safetensors
+  - gemma-3-12b-it-abliterated_lora_rank64_bf16.safetensors
+  - high_noise_model_rank64.safetensors
+  - low_noise_model_rank64.safetensors
+- **CLIP**: clip_l.safetensors, ernie-image-prompt-enhancer.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, gemma_3_12B_it_fp8_scaled.safetensors, ministral-3-3b.safetensors, mistral_3_small_flux2_bf16.safetensors, mistral_3_small_flux2_fp8.safetensors, qwen_0.6b_ace15.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors, qwen_4b_ace15.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5_xxl_fp16.safetensors
+- **VAE**: LTX23_video_vae_bf16.safetensors, ace_1.5_vae.safetensors, ae.safetensors, flux2-vae.safetensors, full_encoder_small_decoder.safetensors, qwen_image_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 158. https://comfyui.demetrisamantium.com
+
+- **版本**: 0.21.0
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 24 GB (空闲 23 GB)
+- **内存**: 94 GB (空闲 43 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 14
+- **工作流** (0): 无
+- **模型** (29):
+  - helheimFlux_v295FP16AIO.safetensors
+  - ilustmix.sft
+  - model.safetensors
+  - novafur.safetensors
+  - novafurryillust.safetensors
+  - novafurryillust2.safetensors
+  - DantionPrimePonyV2.safetensors
+  - genericpony_v40.safetensors
+  - lustifySDXLNSFWSFW_v20.safetensors
+  - novaanimal.sft
+  - novakemono.sft
+  - unzeroplus.safetensors
+  - unzeroplusplus.safetensors
+  - zeroplus.safetensors
+  - ratatoskrAnimalCreature_v141SDXLHEL.safetensors
+  - sleipnirFlux_customClipLOnly.safetensors
+  - transformixPony_v10.safetensors
+  - diffusion_pytorch_model.safetensors
+  - model.safetensors
+  - diffusion_pytorch_model.safetensors
+  - unet_state_dict.pth
+  - diffusion_pytorch_model.safetensors
+  - model.safetensors
+  - diffusion_pytorch_model.safetensors
+  - unet_state_dict.pth
+  - diffusion_pytorch_model.safetensors
+  - zero123-165000.ckpt
+  - ponyrealism.safetensors
+  - qwen_image_edit_2509_bf16.safetensors
+- **LoRA** (681 个, 前10):
+  - 1660241724931821656.safetensors
+  - ADBL.safetensors
+  - Brush_and_textures.safetensors
+  - Chastity_v2.safetensors
+  - Device_bondage24.safetensors
+  - Diaper%20Ladies.safetensors
+  - DiaperSDXL_D087impColors.safetensors
+  - EnvyCubedXL01.safetensors
+  - HighResolution9B.safetensors
+  - Illustrious%20D%20Diaper%20under%20pantyhose%20v1%20%20MikuMasterRace.safetensors
+- **CLIP**: ViT-L-14-BEST-smooth-GmP-HF-format.safetensors, ViT-L-14-BEST-smooth-GmP-TE-only-HF-format.safetensors, ponyrealism.safetensors, ponyrealism2.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, whisper-small-q5_1.bin
+- **VAE**: ponyrealism.safetensors, qwen_image_vae.safetensors, pixel_space
+
+### 159. 113.240.94.253:8188
+
+- **版本**: 0.10.0
+- **GPU**: RTX 3090 (cuda:0 NVIDIA GeForce RTX 3090 : cudaMallocAsync)
+- **显存**: 23 GB (空闲 23 GB)
+- **内存**: 125 GB (空闲 113 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 160. 178.63.101.28:8188
+
+- **版本**: 0.3.68
+- **GPU**: RTX 4000 SFF (cuda:0 NVIDIA RTX 4000 SFF Ada Generation : cudaMallocAsync)
+- **显存**: 20 GB (空闲 5 GB)
+- **内存**: 62 GB (空闲 48 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (7):
+  - leapfusion_hunyuuanvideo_i2v_native_testing.json
+  - image_netayume_lumina_t2i.json
+  - video_wan2_2_5B_ti2v.json
+  - video_wan2.1_alpha_t2v_14B.json
+  - video_wan2_2_14B_s2v.json
+  - video_wan2_2_btp_single_5min.json
+  - audio_stable_audio_example.json
+- **模型** (5):
+  - NetaYumev35_pretrained_all_in_one.safetensors
+  - stable-audio-open-1.0.safetensors
+  - wan2.1_t2v_14B_fp8_scaled.safetensors
+  - wan2.2_s2v_14B_fp8_scaled.safetensors
+  - wan2.2_ti2v_5B_fp16.safetensors
+- **LoRA** (3 个, 前10):
+  - lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank64_bf16.safetensors
+  - wan2.2_t2v_lightx2v_4steps_lora_v1.1_high_noise.safetensors
+  - wan_alpha_2.1_rgba_lora.safetensors
+- **CLIP**: t5-base.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: wan2.2_vae.safetensors, wan_2.1_vae.safetensors, wan_alpha_2.1_vae_alpha_channel.safetensors, wan_alpha_2.1_vae_rgb_channel.safetensors, pixel_space
+
+### 161. 178.63.40.142:5001
+
+- **版本**: 0.18.2
+- **GPU**: RTX 4000 SFF (cuda:0 NVIDIA RTX 4000 SFF Ada Generation : cudaMallocAsync)
+- **显存**: 20 GB (空闲 5 GB)
+- **内存**: 62 GB (空闲 54 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 22
+- **工作流** (6):
+  - flux-klien-lora.json
+  - Job fc5fa65e-be65-4d43-8f2a-57769ea7f235.json
+  - image_flux2_text_to_image_9b.json
+  - flux with lora.json
+  - flux2.klien.json
+  - uncannynew.json
+- **模型** (2):
+  - flux-2-klein-4b.safetensors
+  - flux-2-klein-9b.safetensors
+- **LoRA** (6 个, 前10):
+  - Anything2RealAlpha.safetensors
+  - Flux Klein - NSFW v2.safetensors
+  - Flux2 Klein_AnythingtoRealCharacters.safetensors
+  - f2k_4B_consist_20260314.safetensors
+  - f2k_anything2real_a.safetensors
+  - klein_snofs_v1_4.safetensors
+- **CLIP**: Huihui-Qwen3-8B-abliterated-v2-FP8.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors
+- **VAE**: ae.safetensors, flux2-vae.safetensors, pixel_space
+
+### 162. 5.9.24.54:8088
+
+- **版本**: 0.18.1
+- **GPU**: RTX 4000 SFF (cuda:0 NVIDIA RTX 4000 SFF Ada Generation : cudaMallocAsync)
+- **显存**: 20 GB (空闲 19 GB)
+- **内存**: 62 GB (空闲 60 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 163. 122.166.121.35:8188
+
+- **版本**: 0.11.1
+- **GPU**: RTX 4000 (cuda:0 NVIDIA RTX PRO 4000 Blackwell : cudaMallocAsync)
+- **显存**: 23 GB (空闲 23 GB)
+- **内存**: 61 GB (空闲 34 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (5):
+  - blue_pencil-XL-v7.0.0.safetensors
+  - ltx-2-19b-dev-fp8.safetensors
+  - sd_xl_base_1.0.safetensors
+  - flux1-schnell-fp8.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+- **LoRA** (3 个, 前10):
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2509-Lightning-8steps-V1.0-bf16.safetensors
+  - ltx-2-19b-distilled-lora-384.safetensors
+- **VAE**: ae.safetensors, qwen_image_vae.safetensors, pixel_space
+
+### 164. https://frp-try.com:57211
+
+- **版本**: 0.19.2
+- **GPU**: Tesla V100 (cuda:0 Tesla V100-SXM2-32GB : cudaMallocAsync)
+- **显存**: 32 GB (空闲 26 GB)
+- **内存**: 251 GB (空闲 207 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 46
+- **工作流** (27):
+  - 1.json
+  - 10.json
+  - 2.json
+  - 3.json
+  - 5！.json
+  - 6.json
+  - 7.json
+  - 8.json
+  - 9.json
+  - anima！.json
+  - Unsaved Workflow (1).json
+  - Unsaved Workflow (2).json
+  - Unsaved Workflow (2)111.json
+  - Unsaved Workflow (3).json
+  - Unsaved Workflow (4).json
+  - Unsaved Workflow (Copy).json
+  - Unsaved Workflow.json
+  - 【极致高清】LTX 2.3  首尾帧高清工作流.json
+  - 仅首帧视频工作流-极速.json
+  - 写实文生图.json
+  - 反向二向箔.json
+  - 图生视频1.json
+  - 图生视频2.json
+  - 文生视频1.json
+  - 极速视频工作流.json
+  - 视频2.json
+  - 视频生成Wan2.2-rapid-mega-aio工作流.json
+- **模型** (19):
+  - Wan2.1_i2v_720p_scaled_fp8_e4m3_lightx2v__fp8.safetensors
+  - flux1_Dev.Dkyf.safetensors
+  - wan2.2-rapid-mega-aio-v3.safetensors
+  - xl Illustrious.safetensors
+  - AWPortrait FL.safetensors
+  - FramePackI2V_HY_fp8_e4m3fn.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_high_lighting_fp8_e4m3fn_v3.0.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_low_lighting_fp8_e4m3fn_v3.0.safetensors
+  - Wan2_2-T2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-T2V-A14B_HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - anima-preview3-base.safetensors
+  - anima_baseV10.safetensors
+  - flux-2-klein-9b.safetensors
+  - flux1-dev-fp8.safetensors
+  - ltx-2.3-22b-distilled-1.1_transformer_only_fp8_scaled.safetensors
+  - ltx-2.3-22b-distilled_transformer_only_fp8_scaled.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (72 个, 前10):
+  - Wan21_I2V_14B_lightx2v_cfg_step_distill_lora_rank64.safetensors
+  - lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank64_bf16.safetensors
+  - 4.5.safetensors
+  - Better_Eyes_Detail-000009.safetensors
+  - Eyes_for_Illustrious_Lora_Perfect_anime_eyes.safetensors
+  - F1-超绝氛围感-真实肤感-加强感_S 1.0.safetensors
+  - IL.动态滑姿.safetensors
+  - IL男被动kiss.safetensors
+  - Mazinkaiser.safetensors
+  - NSFWFilter_illusXL_Incrs_v1.safetensors
+- **CLIP**: clip_l.safetensors, model.safetensors, pytorch_model.bin, gemma_3_12B_it_fp8_e4m3fn.safetensors, llava_llama3_fp8_scaled.safetensors, ltx-2.3_text_projection_bf16.safetensors, nsfw_wan_umt5-xxl_fp8_scaled.safetensors, qwen_3_06b_base.safetensors, qwen_3_4b.safetensors, qwen_3_4b_fp8_mixed.safetensors, qwen_3_8b.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: Wan2.2_VAE_Clip_T5编码器_Wan2.1_VAE.safetensors, ae.safetensors, ae.sft, flux2-vae.safetensors, hunyuan_vae.pt, illustriousXLV20_v10.safetensors, LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, qwen_image_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 165. 34.7.185.85:8188
+
+- **版本**: 0.18.1
+- **GPU**: Tesla V100 (cuda:0 Tesla V100-SXM2-16GB : cudaMallocAsync)
+- **显存**: 16 GB (空闲 9 GB)
+- **内存**: 62 GB (空闲 39 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (2):
+  - JuggerXL.json
+  - wan_fun_inpaint_nsfw.json
+- **模型** (1):
+  - juggernautXL_ragnarok.safetensors
+- **LoRA** (4 个, 前10):
+  - dani_girl.safetensors
+  - detailed_perfection_xl.safetensors
+  - wan_general_nsfw.safetensors
+  - woman877.safetensors
+- **CLIP**: clip_l.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: ae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 166. 31.163.192.193:8000
+
+- **版本**: 0.18.5
+- **GPU**: Tesla V100 (cuda:0 Tesla V100-SXM2-16GB : native)
+- **显存**: 16 GB (空闲 15 GB)
+- **内存**: 31 GB (空闲 26 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (13):
+  - An.json
+  - BJ.json
+  - Flac.json
+  - Pen.json
+  - people in place.json
+  - Tit.json
+  - Vid+img.json
+  - Vid.json
+  - video.json
+  - Vid_voice.json
+  - Vid_voice2.json
+  - voice.json
+  - Voice2.json
+- **模型** (8):
+  - hunyuan3d-dit-v2_fp16.safetensors
+  - hunyuan_3d_v2.1.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - flux-2-klein-base-4b-fp8.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan22RemixT2VI2V_i2vHighV30.safetensors
+  - wan22RemixT2VI2V_i2vLowV30.safetensors
+- **LoRA** (13 个, 前10):
+  - ltx-2.3-22b-distilled-lora-384.safetensors
+  - ltx-2.3-id-lora-talkvid-3k.safetensors
+  - wan2.1-i2v-480p-anal-insertion-v1.0.safetensors
+  - wan2.1-i2v-480p-flaccid-v1.0.safetensors
+  - wan2.1-i2v-480p-penis-arousal-v1.0.safetensors
+  - wan2.2-i2v-high-breast-insertion-v1.0.safetensors
+  - wan2.2-i2v-high-oral-insertion-v1.0.safetensors
+  - wan2.2-i2v-high-pov-insertion-v1.0.safetensors
+  - wan2.2-i2v-low-breast-insertion-v1.0.safetensors
+  - wan2.2-i2v-low-oral-insertion-v1.0.safetensors
+- **CLIP**: gemma_3_12B_it_fp4_mixed.safetensors, nsfw_wan_umt5-xxl_fp8_scaled.safetensors, qwen3.5_4b_bf16.safetensors, qwen_3_4b.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: flux2-vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 167. img.jiufangbz.top
+
+- **版本**: 0.13.0
+- **GPU**: RTX 3080 (cuda:0 NVIDIA GeForce RTX 3080 : cudaMallocAsync)
+- **显存**: 20 GB (空闲 15 GB)
+- **内存**: 31 GB (空闲 25 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 15
+- **工作流** (33):
+  - 文生图片.json
+  - image_z_image_turbo.json
+  - 文生图最好用的.json
+  - wan2.1 通义万相文生视频.json
+  - 图生视频.json
+  - 2025.3.31Wan2.1-Fun首尾帧预测视频生成.json
+  - 文生视频.json
+  - txt_to_image_to_video.json
+  - cogvideox_1.0_5b_vid2vid_02.json
+  - svd_workflow.json
+  - 一键抠图【简单型】 (2).json
+  - 新手入门必看2-图生图.json
+  - 新手入门必看4-加载LoRA.json
+  - 视频工作流.json
+  - SVD 文生图&图生视频基本工作流.json
+  - 文生图最好用的 (lora).json
+  - 工作流定制【..X2.json
+  - 电商文生图最好用的.json
+  - 电商文生图最好用222.json
+  - 动漫文生图最好用的 (Copy).json
+  - workflow_txt_to_img_to_video.json
+  - sd.json
+  - workflow.json
+  - 天文文生图最好用的.json
+  - Unsaved Workflow (2).json
+  - 学习.json
+  - ③ flux-kijai-lora-upscale.json
+  - ② flux-kijai-img2img (2).json
+  - ④ flux-局部重绘(1).json
+  - ⑤ flux_局部重绘(2).json
+  - ① flux_txt2img_basic.json
+  - ⑥ flux_ip_adapter (1).json
+  - 电商flux-kijai.json
+- **模型** (21):
+  - pytorch_model.bin
+  - pytorch_model.bin
+  - model-00001-of-00003.safetensors
+  - model-00002-of-00003.safetensors
+  - model-00003-of-00003.safetensors
+  - diffusion_pytorch_model-00001-of-00003.safetensors
+  - diffusion_pytorch_model-00002-of-00003.safetensors
+  - diffusion_pytorch_model-00003-of-00003.safetensors
+  - diffusion_pytorch_model.safetensors
+  - anything-v5-PrtRE.safetensors
+  - majicmixRealistic_v7.safetensors
+  - svd_xt.safetensors
+  - v1-5-pruned-emaonly.safetensors
+  - diffusion_pytorch_model-00001-of-00003.safetensors
+  - diffusion_pytorch_model-00002-of-00003.safetensors
+  - diffusion_pytorch_model-00003-of-00003.safetensors
+  - diffusion_pytorch_model.merged.safetensors
+  - flux1-dev-fp8.safetensors
+  - ltx-2.3-22b-dev_transformer_only_bf16.safetensors
+  - z-image-turbo-fp8-e4m3fn.safetensors
+  - z-image-turbo-fp8-e5m2.safetensors
+- **LoRA** (331 个, 前10):
+  - (服装)婚纱WeddingDressV1.safetensors
+  - (独家发布)NIJI动漫男风格_v1.0.safetensors
+  - (独家）云朵概念_v1.0.safetensors
+  - (设计)现代小型建筑xs architectural-6.safetensors
+  - (风格)中国水墨 墨心.safetensors
+  - (风格)线稿3.0animeLineartMangaLike_v30MangaLike.safetensors
+  - 1.5-简单三视图_V1.safetensors
+  - 2D角色ip三视图Q版_v1.0.safetensors
+  - 3C数码_3C Design_V1.0.safetensors
+  - 3DMM_V12.safetensors
+- **CLIP**: gemma_3_12B_it_fp8_e4m3fn.safetensors, ltx-2-19b-embeddings_connector_distill_bf16.safetensors, Wan2.2-merged.safetensors, models_t5_umt5-xxl-enc-bf16.pth, Wan2.2_T5.pth, clip_vision_l.safetensors, ltx-2.3_text_projection_bf16.safetensors, qwen2_05b.safetensors, qwen2_05b_copy.safetensors, qwen2_05b_fixed.safetensors, qwen_3_4b.safetensors, qwen_3_4b_complete.safetensors, t5_cogvideo.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5-xxl-enc-bf16.safetensors
+- **VAE**: LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, LTX2_audio_vae_bf16.safetensors, LTX2_video_vae_bf16.safetensors, taeltx2_3.safetensors, Wan2.2_VAE.pth, diffusion_pytorch_model.safetensors, flux-ae.safetensors, pixel_space
+
+### 168. https://img.jiufangbz.top
+
+- **版本**: 0.13.0
+- **GPU**: RTX 3080 (cuda:0 NVIDIA GeForce RTX 3080 : cudaMallocAsync)
+- **显存**: 20 GB (空闲 15 GB)
+- **内存**: 31 GB (空闲 25 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 15
+- **工作流** (33):
+  - 文生图片.json
+  - image_z_image_turbo.json
+  - 文生图最好用的.json
+  - wan2.1 通义万相文生视频.json
+  - 图生视频.json
+  - 2025.3.31Wan2.1-Fun首尾帧预测视频生成.json
+  - 文生视频.json
+  - txt_to_image_to_video.json
+  - cogvideox_1.0_5b_vid2vid_02.json
+  - svd_workflow.json
+  - 一键抠图【简单型】 (2).json
+  - 新手入门必看2-图生图.json
+  - 新手入门必看4-加载LoRA.json
+  - 视频工作流.json
+  - SVD 文生图&图生视频基本工作流.json
+  - 文生图最好用的 (lora).json
+  - 工作流定制【..X2.json
+  - 电商文生图最好用的.json
+  - 电商文生图最好用222.json
+  - 动漫文生图最好用的 (Copy).json
+  - workflow_txt_to_img_to_video.json
+  - sd.json
+  - workflow.json
+  - 天文文生图最好用的.json
+  - Unsaved Workflow (2).json
+  - 学习.json
+  - ③ flux-kijai-lora-upscale.json
+  - ② flux-kijai-img2img (2).json
+  - ④ flux-局部重绘(1).json
+  - ⑤ flux_局部重绘(2).json
+  - ① flux_txt2img_basic.json
+  - ⑥ flux_ip_adapter (1).json
+  - 电商flux-kijai.json
+- **模型** (21):
+  - pytorch_model.bin
+  - pytorch_model.bin
+  - model-00001-of-00003.safetensors
+  - model-00002-of-00003.safetensors
+  - model-00003-of-00003.safetensors
+  - diffusion_pytorch_model-00001-of-00003.safetensors
+  - diffusion_pytorch_model-00002-of-00003.safetensors
+  - diffusion_pytorch_model-00003-of-00003.safetensors
+  - diffusion_pytorch_model.safetensors
+  - anything-v5-PrtRE.safetensors
+  - majicmixRealistic_v7.safetensors
+  - svd_xt.safetensors
+  - v1-5-pruned-emaonly.safetensors
+  - diffusion_pytorch_model-00001-of-00003.safetensors
+  - diffusion_pytorch_model-00002-of-00003.safetensors
+  - diffusion_pytorch_model-00003-of-00003.safetensors
+  - diffusion_pytorch_model.merged.safetensors
+  - flux1-dev-fp8.safetensors
+  - ltx-2.3-22b-dev_transformer_only_bf16.safetensors
+  - z-image-turbo-fp8-e4m3fn.safetensors
+  - z-image-turbo-fp8-e5m2.safetensors
+- **LoRA** (331 个, 前10):
+  - (服装)婚纱WeddingDressV1.safetensors
+  - (独家发布)NIJI动漫男风格_v1.0.safetensors
+  - (独家）云朵概念_v1.0.safetensors
+  - (设计)现代小型建筑xs architectural-6.safetensors
+  - (风格)中国水墨 墨心.safetensors
+  - (风格)线稿3.0animeLineartMangaLike_v30MangaLike.safetensors
+  - 1.5-简单三视图_V1.safetensors
+  - 2D角色ip三视图Q版_v1.0.safetensors
+  - 3C数码_3C Design_V1.0.safetensors
+  - 3DMM_V12.safetensors
+- **CLIP**: gemma_3_12B_it_fp8_e4m3fn.safetensors, ltx-2-19b-embeddings_connector_distill_bf16.safetensors, Wan2.2-merged.safetensors, models_t5_umt5-xxl-enc-bf16.pth, Wan2.2_T5.pth, clip_vision_l.safetensors, ltx-2.3_text_projection_bf16.safetensors, qwen2_05b.safetensors, qwen2_05b_copy.safetensors, qwen2_05b_fixed.safetensors, qwen_3_4b.safetensors, qwen_3_4b_complete.safetensors, t5_cogvideo.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5-xxl-enc-bf16.safetensors
+- **VAE**: LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, LTX2_audio_vae_bf16.safetensors, LTX2_video_vae_bf16.safetensors, taeltx2_3.safetensors, Wan2.2_VAE.pth, diffusion_pytorch_model.safetensors, flux-ae.safetensors, pixel_space
+
+### 169. 103.143.207.167:8188
+
+- **版本**: 0.16.4
+- **GPU**: RTX A4000 (cuda:0 NVIDIA RTX A4000 : cudaMallocAsync)
+- **显存**: 16 GB (空闲 9 GB)
+- **内存**: 31 GB (空闲 14 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (1):
+  - GPU.json
+- **模型** (4):
+  - flux1-schnell-fp8.safetensors
+  - flux1devfp8.safetensors
+  - flux1-schnell.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: clip_l.safetensors, model.safetensors, model-00001-of-00002.safetensors, model-00002-of-00002.safetensors, qwen_3_4b.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: ae.safetensors, pixel_space
+
+### 170. 69.197.174.136:8186
+
+- **版本**: 0.20.1
+- **GPU**: RTX A4000 (cuda:0 NVIDIA RTX A4000 : cudaMallocAsync)
+- **显存**: 16 GB (空闲 4 GB)
+- **内存**: 125 GB (空闲 105 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - acestep_v1.5_xl_turbo_bf16.safetensors
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: qwen_0.6b_ace15.safetensors, qwen_1.7b_ace15.safetensors, qwen_4b_ace15.safetensors
+- **VAE**: ace_1.5_vae.safetensors, pixel_space
+
+### 171. 175.206.228.195:8145
+
+- **版本**: 0.17.0
+- **GPU**: RTX 3070 (cuda:0 NVIDIA GeForce RTX 3070 Ti : native)
+- **显存**: 8 GB (空闲 7 GB)
+- **内存**: 23 GB (空闲 16 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (2):
+  - RequestSelf.json
+  - TestRoong.json
+- **模型** (2):
+  - waiIllustriousSDXL_v140.safetensors
+  - waiNSFWIllustrious_v120.safetensors
+- **LoRA** (454 个, 前10):
+  - adrianne_base.safetensors
+  - adrianne_evil.safetensors
+  - adrianne_love.safetensors
+  - adrianne_swimsuit.safetensors
+  - aira_base.safetensors
+  - aira_evil.safetensors
+  - aira_love.safetensors
+  - aira_party.safetensors
+  - aki_base.safetensors
+  - aki_evil.safetensors
+- **VAE**: pixel_space
+
+### 172. 58.33.163.154:58000
+
+- **版本**: 0.22.2
+- **GPU**: RTX 3070 (cuda:0 NVIDIA GeForce RTX 3070 : cudaMallocAsync)
+- **显存**: 8 GB (空闲 7 GB)
+- **内存**: 63 GB (空闲 54 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (4):
+  - 3d_hunyuan3d-v2.1.json
+  - image_z_image_turbo.json
+  - image_z_image_turbo_fun_union_controlnet.json
+  - video_wan2_2_5B_ti2v.json
+- **模型** (3):
+  - hunyuan_3d_v2.1.safetensors
+  - wan2.2_ti2v_5B_fp16.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (3 个, 前10):
+  - Tutu&#39;s half-leg aurora black stockings_Zimg_V1.safetensors
+  - stock_photography_000000680.safetensors
+  - xhs999_000001000.safetensors
+- **CLIP**: qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, qwen_image_vae.safetensors, wan2.2_vae.safetensors, taef1, taesdxl, taesd, taesd3, pixel_space
+
+### 173. 112.217.190.10:6008
+
+- **版本**: 0.18.1
+- **GPU**: GB10 (cuda:0 NVIDIA GB10 : cudaMallocAsync)
+- **显存**: 122 GB (空闲 59 GB)
+- **内存**: 121 GB (空闲 59 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - ltx-2.3-22b-dev-fp8.safetensors
+- **LoRA** (2 个, 前10):
+  - gemma-3-12b-it-abliterated_lora_rank64_bf16.safetensors
+  - ltx-2.3-22b-distilled-lora-384.safetensors
+- **CLIP**: gemma_3_12B_it_fp4_mixed.safetensors, gemma_3_12B_it_fp8_scaled.safetensors, model-00001-of-00005.safetensors, model-00002-of-00005.safetensors, model-00003-of-00005.safetensors, model-00004-of-00005.safetensors, model-00005-of-00005.safetensors, ltx-2.3-22b-dev_embeddings_connectors.safetensors, ltx-2.3-22b-dev_embeddings_connectors.safetensors
+- **VAE**: ltx-2.3-22b-dev_audio_vae.safetensors, ltx-2.3-22b-dev_video_vae.safetensors, ltx-2.3-22b-dev_audio_vae.safetensors, ltx-2.3-22b-dev_video_vae.safetensors, pixel_space
+
+### 174. 87.31.88.253:8188
+
+- **版本**: 0.19.3
+- **GPU**: GB10 (cuda:0 NVIDIA GB10 : cudaMallocAsync)
+- **显存**: 122 GB (空闲 44 GB)
+- **内存**: 121 GB (空闲 86 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 24
+- **工作流** (12):
+  - bj4.json
+  - bj.json
+  - deepthrthpov.json
+  - povsuck.json
+  - bj3.json
+  - cwgrltn.json
+  - povbj1.json
+  - deept.json
+  - cwgrltn2.json
+  - cwgrl.json
+  - bj2.json
+  - fcfck\.json
+- **模型** (10):
+  - flux1-dev-fp8.safetensors
+  - wan2.2_ti2v_5B_fp16.safetensors
+  - flux-2-klein-4b.safetensors
+  - flux-2-klein-9b-fp8.safetensors
+  - flux-2-klein-base-4b.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - wan2.1_i2v_480p_14B_fp16.safetensors
+  - wan2.2_fun_inpaint_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_fun_inpaint_low_noise_14B_fp8_scaled.safetensors
+  - diffusion_pytorch_model.safetensors
+- **LoRA** (35 个, 前10):
+  - Braces-Flux-v1-STRONG.safetensors
+  - Cum_Covered.safetensors
+  - Excessive_Cum_Flux_V1.2.safetensors
+  - FK_bbcanalcowgirl_epoch_20.safetensors
+  - FK_cumstrings.safetensors
+  - FK_reversefellatio.safetensors
+  - FK_sloppydeepthroat_epoch_10.safetensors
+  - FK_teeththroat.safetensors
+  - FluxK4Play.v1.safetensors
+  - Huge_fake_lips_FLUX.safetensors
+- **CLIP**: clip_l.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: flux2-vae.safetensors, qwen_image_vae.safetensors, wan_2.1_vae.safetensors, wan2.2_vae.safetensors, pixel_space
+
+### 175. https://121.154.242.94:8443
+
+- **版本**: 0.22.0
+- **GPU**: GB10 (cuda:0 NVIDIA GB10 : cudaMallocAsync)
+- **显存**: 122 GB (空闲 106 GB)
+- **内存**: 121 GB (空闲 115 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (1):
+  - image_to_tags_to_gen.json
+- **模型** (39):
+  - 3moon mix i2i v2.ckpt
+  - AbyssOrangeMix2_hard.safetensors
+  - AbyssOrangeMix2_nsfw.safetensors
+  - AbyssOrangeMix2_sfw.ckpt
+  - AbyssOrangeMix2_sfw.safetensors
+  - Anything3.0 + F222 - SD1.4.ckpt
+  - Basil_0.9-mixed_x3_0.1.safetensors
+  - DasiwaLTX23_goldenLaceV3.safetensors
+  - JANKUV30NoobaiEPSRouwei_v30.safetensors
+  - Mint Lollipop A1.safetensors
+  - Ultracolor.v4.ckpt
+  - V08_V08.safetensors
+  - aamXLAnimeMix_v10.safetensors
+  - aegithalidaeV1_aegithalos.safetensors
+  - animefull-final-pruned.ckpt
+  - animefull-final-pruned.vae.pt
+  - animesfw-final-pruned.ckpt
+  - animesfw-final-pruned.vae.pt
+  - cafe-instagram-unofficial-test-epoch-9-140k-images-fp32.ckpt
+  - dreamlike-photoreal-2.0.ckpt
+  - f222.ckpt
+  - illustriousXL_v01.safetensors
+  - izumi_01Safetensors.safetensors
+  - juggernautXL_ragnarok.safetensors
+  - kda-popstar-ahri-illust.safetensors
+  - melonmixXLV1_v10.safetensors
+  - pastelmix-better-vae-fp32.safetensors
+  - ponyDiffusionV6XL_v6.safetensors
+  - ratatatat74StyleLora_ratatatat7470.safetensors
+  - realvisxlV50_v50Lightning.safetensors
+  - sd_xl_base_1.0.safetensors
+  - stylizedRPGGameIcons_v4SD21.ckpt
+  - v1-5-pruned-emaonly-fp16.safetensors
+  - v1-5-pruned-emaonly.safetensors
+  - waiIllustriousSDXL_v170.safetensors
+  - waiNSFWIllustrious_v90.safetensors
+  - wd-1-4-anime_e1.ckpt
+  - wd-v1-2-full-ema.ckpt
+  - anima-base-v1.0.safetensors
+- **LoRA** (83 个, 前10):
+  - 177013LORA_177013.safetensors
+  - homebrew_ratatatat_spiritahri-000006.safetensors
+  - kda-popstar-ahri-illust.safetensors
+  - yabby_final-87500.pt
+  - cumblastfacial.safetensors
+  - LoRA_network_NIKKE.safetensors
+  - LoRA_network_v1.safetensors
+  - ahriLeagueOfLegends_ahri45Suggested.safetensors
+  - ani-nahida.pt
+  - cumblastfacial.safetensors
+- **CLIP**: gemma-3-12b-it-heretic-v2_fp8_e4m3fn.safetensors, ltx-2.3_text_projection_bf16.safetensors, qwen_3_06b_base.safetensors
+- **VAE**: LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, kl-f8-anime2.ckpt, qwen_image_vae.safetensors, sdxl_vae.safetensors, vae-ft-mse-840000-ema-pruned.ckpt, pixel_space
+
+### 176. 165.246.44.113:8188
+
+- **版本**: 0.18.1
+- **GPU**: GB10 (cuda:0 NVIDIA GB10 : cudaMallocAsync)
+- **显存**: 120 GB (空闲 27 GB)
+- **内存**: 119 GB (空闲 34 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - flux-2-klein-9b-fp8.safetensors
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: qwen_3_8b_fp8mixed.safetensors
+- **VAE**: flux2-vae.safetensors, pixel_space
+
+### 177. 104.57.157.253:8180
+
+- **版本**: 0.22.0
+- **GPU**: RTX 3060 (cuda:0 NVIDIA GeForce RTX 3060 : cudaMallocAsync)
+- **显存**: 12 GB (空闲 7 GB)
+- **内存**: 30 GB (空闲 16 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (1):
+  - Base Comic Panel Workflow.json
+- **模型** (6):
+  - Lineart-v2.0.safetensors
+  - autismmixSDXL_autismmixPony.safetensors
+  - femixHassakuxl_v214.safetensors
+  - juggernautXL_ragnarokBy.safetensors
+  - ponyDiffusionV6XL_v6StartWithThisOne.safetensors
+  - realisticVisionV60B1_v51HyperVAE.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 178. 175.206.228.195:8188
+
+- **版本**: 0.22.0
+- **GPU**: RTX 3060 (cuda:0 NVIDIA GeForce RTX 3060 : cudaMallocAsync)
+- **显存**: 12 GB (空闲 8 GB)
+- **内存**: 46 GB (空闲 18 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (2):
+  - waiIllustriousSDXL_v140.safetensors
+  - waiNSFWIllustrious_v120.safetensors
+- **LoRA** (454 个, 前10):
+  - adrianne_base.safetensors
+  - adrianne_evil.safetensors
+  - adrianne_love.safetensors
+  - adrianne_swimsuit.safetensors
+  - aira_base.safetensors
+  - aira_evil.safetensors
+  - aira_love.safetensors
+  - aira_party.safetensors
+  - aki_base.safetensors
+  - aki_evil.safetensors
+- **VAE**: pixel_space
+
+### 179. 175.198.225.51:8188
+
+- **版本**: 0.15.0
+- **GPU**: RTX 3060 (cuda:0 NVIDIA GeForce RTX 3060 : cudaMallocAsync)
+- **显存**: 12 GB (空闲 10 GB)
+- **内存**: 31 GB (空闲 14 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (5):
+  - RealVisXL_V4.0_Lightning.safetensors
+  - fabricationXL_v40.safetensors
+  - majicmixRealistic_v7.safetensors
+  - majicmix_v7.safetensors
+  - mistoonAnime_v20_vae.safetensors
+- **LoRA** (21 个, 前10):
+  - HunyuanVideo_Ahegao_v1.safetensors
+  - HunyuanVideo_Dominate_Set.safetensors
+  - HunyuanVideo_InuiToko_v1.safetensors
+  - HunyuanVideo_NSFW_Concept_v1.safetensors
+  - HunyuanVideo_Rem_v1.safetensors
+  - HunyuanVideo_ThickCloseUp_v1.safetensors
+  - HunyuanVideo_TogaHimiko_v1.safetensors
+  - HunyuanVideo_Wanghong_Set.safetensors
+  - HunyuanVideo_YuzukiChoco_v1.safetensors
+  - LongCat_distill_lora_alpha64_bf16.safetensors
+- **CLIP**: clip_l.safetensors, ltx-2.3_text_projection_bf16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, ae.safetensors, flux2-vae.safetensors, hunyuan_video_vae_bf16.safetensors, ltx-2.3-22b-distilled_video_vae.safetensors, diffusion_pytorch_model.safetensors, sd-vae-ft-mse.safetensors, sdxl_vae.safetensors, wan2.2_vae.safetensors, pixel_space
+
+### 180. 175.198.225.51:8189
+
+- **版本**: 0.15.0
+- **GPU**: RTX 3060 (cuda:0 NVIDIA GeForce RTX 3060 : cudaMallocAsync)
+- **显存**: 12 GB (空闲 11 GB)
+- **内存**: 31 GB (空闲 14 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (4):
+  - 6f4b715b-57d1-40f2-a0c5-e582b57f7b63.json
+  - 8dacbcbf-bec6-4743-a371-ffd0ccaac3b6.json
+  - a4f0a96c-34ab-4bc1-a532-a6be4c8d9e8a.json
+  - b8ad2f51-a991-4ee3-b5b4-3e65ff2db138.json
+- **模型** (17):
+  - RealVisXL_V4.0_Lightning.safetensors
+  - Wan2.2-TI2V-5B-Q5_K_M.gguf
+  - fabricationXL_v40.safetensors
+  - flux-2-klein-4b-Q8_0.gguf
+  - majicmixRealistic_v7.safetensors
+  - majicmix_v7.safetensors
+  - mistoonAnime_v20_vae.safetensors
+  - Wan2.2-TI2V-5B-Q8_0.gguf
+  - appearance_feature_extractor.safetensors
+  - fantasytalking_fp16.safetensors
+  - hunyuan-video-t2v-720p-Q5_K_M.gguf
+  - hunyuan_video_FastVideo_720_fp8_e4m3fn.safetensors
+  - mm_sdxl_v10_119.safetensors
+  - motion_extractor.safetensors
+  - spade_generator.safetensors
+  - stitching_retargeting_module.safetensors
+  - warping_module.safetensors
+- **LoRA** (21 个, 前10):
+  - HunyuanVideo_Ahegao_v1.safetensors
+  - HunyuanVideo_Dominate_Set.safetensors
+  - HunyuanVideo_InuiToko_v1.safetensors
+  - HunyuanVideo_NSFW_Concept_v1.safetensors
+  - HunyuanVideo_Rem_v1.safetensors
+  - HunyuanVideo_ThickCloseUp_v1.safetensors
+  - HunyuanVideo_TogaHimiko_v1.safetensors
+  - HunyuanVideo_Wanghong_Set.safetensors
+  - HunyuanVideo_YuzukiChoco_v1.safetensors
+  - LongCat_distill_lora_alpha64_bf16.safetensors
+- **CLIP**: Qwen_3_4b-Q8_0.gguf, clip_l.safetensors, ltx-2.3_text_projection_bf16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors, t5-v1_1-xxl-encoder-Q5_K_M.gguf, t5xxl_fp8_e4m3fn.safetensors, umt5-xxl-encoder-Q4_K_M.gguf, umt5-xxl-encoder-Q5_K_M.gguf, umt5_xxl_fp8_e4m3fn.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, ae.safetensors, flux2-vae.safetensors, hunyuan_video_vae_bf16.safetensors, ltx-2.3-22b-distilled_video_vae.safetensors, diffusion_pytorch_model.safetensors, sd-vae-ft-mse.safetensors, sdxl_vae.safetensors, wan2.2_vae.safetensors, pixel_space
+
+### 181. 47.108.156.108:8188
+
+- **版本**: 0.19.4
+- **GPU**: RTX 3060 (cuda:0 NVIDIA GeForce RTX 3060 : cudaMallocAsync)
+- **显存**: 12 GB (空闲 11 GB)
+- **内存**: 39 GB (空闲 35 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 42
+- **工作流** (27):
+  - flux.2-klein-多图图生图.json
+  - Flux版一键生成角色LoRA训练集.json
+  - prompt-wan.json
+  - qwen-image-2512-文生图.json
+  - qwen-image-edit-下一幕分镜.json
+  - qwen-image-edit-单图出分镜图.json
+  - qwen-image-edit-单图出多角度图.json
+  - qwen-image-edit-单图图生图.json
+  - qwen-image-edit-导演镜头控制.json
+  - qwen-image-eidt-三图图生图.json
+  - qwen-image-lora-文生图.json
+  - qwen-image-图片修复.json
+  - qwen-image-文生图.json
+  - qwen3-tts-单人声音.json
+  - wan2.2-单图出视频.json
+  - wan2.2-单图自动提示词生成视频.json
+  - wan2.2-单图自定义提示词生视频.json
+  - wan2.2-图生长视频.json
+  - wan2.2-多图生视频.json
+  - wan2.2-文生视频.json
+  - wan2.2-视频高清修复.json
+  - wan2.2-首中尾帧自动提示词生成视频.json
+  - wan2.2-首尾帧生成视频.json
+  - z-image-turbo-图生图.json
+  - z-image-图生图.json
+  - z-image-文生图-放大.json
+  - z-image-文生图.json
+- **模型** (17):
+  - v1-5-pruned-emaonly-fp16.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_high_lighting_fp8_e4m3fn_v3.0.safetensors
+  - Wan2.2_Remix_NSFW_i2v_14b_low_lighting_fp8_e4m3fn_v3.0.safetensors
+  - flux-2-klein-9b-fp8.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - wan2.2_fun_control_5B_bf16.safetensors
+  - wan2.2_fun_inpaint_5B_bf16.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_ti2v_5B_fp16.safetensors
+  - z-image-turbo-fp8-e4m3fn.safetensors
+  - z_image_bf16.safetensors
+  - z_image_turbo_bf16.safetensors
+  - z_image_turbo_nvfp4.safetensors
+- **LoRA** (27 个, 前10):
+  - Qwen-Edit-2509-Multiple-angles.safetensors
+  - Qwen-Image-2512-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors
+  - Qwen-Image-Edit-2509-Lightning-8steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2511-Lightning-8steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-F2P.safetensors
+  - Qwen-Image-Lightning-4steps-V1.0.safetensors
+  - Qwen-Image-Lightning-8steps-V1.0.safetensors
+  - Wan2.2-I2V-A14B_lora_HIGH_v2.0_rank_128_fp16.safetensors
+- **CLIP**: Qwen2.5_3B_instruct_bf16.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_4b_fp4_mixed.safetensors, qwen_3_4b_fp8_mixed.safetensors, qwen_3_8b_fp8mixed.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: qwen_image_vae.safetensors, wan2.1_vae.safetensors, wan2.2_vae.safetensors, z-image-turbo-vae.safetensors, z-image-ultraflux-vae_v1.safetensors, z-image-vae.safetensors, pixel_space
+
+### 182. 74.76.34.7:8188
+
+- **版本**: 0.22.0
+- **GPU**: RTX 3060 (cuda:0 NVIDIA GeForce RTX 3060 : cudaMallocAsync)
+- **显存**: 12 GB (空闲 11 GB)
+- **内存**: 7 GB (空闲 2 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (2):
+  - dreamshaper_8.safetensors
+  - v1-5-pruned-emaonly-fp16.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 183. https://153.33.31.158
+
+- **版本**: 0.24.1
+- **GPU**: RTX 3060 (cuda:0 NVIDIA GeForce RTX 3060 : cudaMallocAsync)
+- **显存**: 12 GB (空闲 12 GB)
+- **内存**: 23 GB (空闲 16 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors
+- **LoRA** (5 个, 前10):
+  - Aeldari.safetensors
+  - Astartes.safetensors
+  - Oldhammer.safetensors
+  - Ork-Boyz.safetensors
+  - Tau.safetensors
+- **VAE**: pixel_space
+
+### 184. https://94.127.216.47:8188
+
+- **版本**: 0.24.1
+- **GPU**: RTX 3060 (cuda:0 NVIDIA GeForce RTX 3060 : cudaMallocAsync)
+- **显存**: 12 GB (空闲 4 GB)
+- **内存**: 62 GB (空闲 36 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 31
+- **工作流** (16):
+  - z-image-base.json
+  - z-image-turbo-CN.json
+  - Klein t2i.json
+  - Ideogram1.json
+  - WAN2.2.json
+  - Trellis2.json
+  - qwen_edit.json
+  - ltx2.3_i2v.json
+  - z-image-turbo-llm.json
+  - klein_9b.json
+  - Ideogram2.json
+  - Anima.json
+  - Qwen.json
+  - z-turbo-nag.json
+  - z-image-turbo.json
+  - Anima-preview3.json
+- **模型** (7):
+  - anima-base-v1.0.safetensors
+  - flux-2-klein-9b.safetensors
+  - ideogram4_fp8_scaled.safetensors
+  - ideogram4_unconditional_fp8_scaled.safetensors
+  - qwen_image_edit_2511_fp8_e4m3fn.safetensors
+  - z_image_base_comfy_fp32.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (36 个, 前10):
+  - WAN-2.2-I2V-BreastPlay-HIGH-v2.safetensors
+  - WAN-2.2-I2V-BreastPlay-LOW-v2.safetensors
+  - Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors
+  - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
+  - lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors
+  - scanner_high_convert.safetensors
+  - scanner_low_convert.safetensors
+  - wan2.2_lightx2v_4steps_high_noise.safetensors
+  - wan2.2_lightx2v_4steps_low_noise.safetensors
+  - anima-highres-aesthetic-boost.safetensors
+- **CLIP**: qwen_0.6b_ace15.safetensors, qwen_1.7b_ace15.safetensors, clip-vit-large-patch14.safetensors, gemma_2_2b_fp16.safetensors, gemma_3_12B_it.safetensors, gemma4_e4b_it_fp8_scaled.safetensors, qwen3vl_8b_fp8_scaled.safetensors, qwen_2.5_vl_7b.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_06b_base.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors, umt5-xxl-enc-bf16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ace_1.5_vae.safetensors, ae.safetensors, flux2-vae.safetensors, qwen_image_vae.safetensors, sdxl_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 185. 217.119.193.25:5001
+
+- **版本**: 0.18.2
+- **GPU**: RTX 2080 (cuda:0 NVIDIA GeForce RTX 2080 SUPER : cudaMallocAsync)
+- **显存**: 8 GB (空闲 7 GB)
+- **内存**: 62 GB (空闲 58 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 20
+- **工作流** (0): 无
+- **模型** (1):
+  - flux-2-klein-4b.safetensors
+- **LoRA** (2 个, 前10):
+  - Anything2RealAlpha.safetensors
+  - f2k_4B_consist_20260314.safetensors
+- **CLIP**: qwen_3_4b.safetensors
+- **VAE**: flux2-vae.safetensors, pixel_space
+
+### 186. 115.190.216.210:8189
+
+- **版本**: 0.22.0
+- **GPU**: L4 (cuda:0 NVIDIA L4 : cudaMallocAsync)
+- **显存**: 22 GB (空闲 7 GB)
+- **内存**: 123 GB (空闲 90 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (23):
+  - AudioAddWatermark.json
+  - 图像放大.app.json
+  - UpscaleVideo-SeedVR2.json
+  - Tex2Audio.json
+  - Img2Angles.json
+  - AudioAdd2Video.json
+  - SeedVR2_HD_video_upscale.json
+  - LTX_Img2Video_Dir.json
+  - LTX_Tex2Video.json
+  - LTX_Img2Video_NoDialog.json
+  - Qwen-Image-Lora使用.json
+  - Story2AudioAPI.json
+  - Qwen-Image-i2L风格迁移融图.json
+  - 剧本json拆解.json
+  - 【Work-Fisher】【02.01】ANIMA动漫生图模型+二次放大.json
+  - Tex2CloneAudioWithMark.json
+  - 自定义语音.json
+  - LTX_Img2Video.json
+  - AudioAdd2Video-NoAudio.json
+  - 语音设计.json
+  - 声音克隆.json
+  - Work-Fisher_SeedVR2-V2.json
+  - LTX_Tex2Video_NoDialog.json
+- **模型** (15):
+  - Qwen-Rapid-AIO-NSFW-v23.safetensors
+  - Qwen-Rapid-AIO-SFW-v23.safetensors
+  - leosamsHelloworldXL_helloworldXL70.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - ltx-2.3-22b-dev.safetensors
+  - realisticVisionV51_v51VAE.safetensors
+  - wan2.2_i2v_A14b_high_noise_scaled_fp8_e4m3_lightx2v_4step_comfyui.safetensors
+  - wan2.2_i2v_A14b_low_noise_scaled_fp8_e4m3_lightx2v_4step_comfyui.safetensors
+  - anima-preview.safetensors
+  - flux-2-klein-4b-fp8.safetensors
+  - flux-2-klein-4b.safetensors
+  - flux-2-klein-9b-fp8.safetensors
+  - flux-2-klein-9b.safetensors
+  - F2K-9b-darkBeastMar0326Latest_dbkleinv2BFS.safetensors
+  - qwen_image_2512_bf16.safetensors
+- **LoRA** (12 个, 前10):
+  - Klein_9B-NSFW.safetensors
+  - Qwen-Image-Edit-F2P.safetensors
+  - Qwen-Image-2512-Lightning-8steps-V1.0-bf16.safetensors
+  - Wan2.2-Fun-A14B-InP-high-noise-MPS.safetensors
+  - Wan2.2-Fun-A14B-InP-low-noise-HPS2.1.safetensors
+  - lightx2v_I2V_14B_480p_cfg_step_distill_rank256_bf16.safetensors
+  - i2l_style_lora_13aa607d-c041-41d4-8801-6f7c81ce5a2f.safetensors
+  - ip-adapter-faceid-plus_sd15_lora.safetensors
+  - ip-adapter-faceid-plusv2_sd15_lora.safetensors
+  - ltx-2.3-22b-distilled-lora-384.safetensors
+- **CLIP**: umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors, gemma_3_12B_it_fpmixed.safetensors, qwen_2.5_vl_7b.safetensors, qwen_3_06b_base.safetensors, qwen_3_8b_fp8mixed.safetensors
+- **VAE**: Wan2_1_VAE_bf16.safetensors, flux2-vae.safetensors, qwen_image_vae.safetensors, pixel_space
+
+### 187. 115.190.216.210:8188
+
+- **版本**: 0.22.0
+- **GPU**: L4 (cuda:0 NVIDIA L4 : cudaMallocAsync)
+- **显存**: 22 GB (空闲 7 GB)
+- **内存**: 123 GB (空闲 90 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (16):
+  - Seedance-1-0-lite.json
+  - 剧本解析工具.json
+  - Story2Images-GPT-Batch.json
+  - Roles2Image-Reference-GPT.json
+  - Seedance-2-0.json
+  - Story2Images-Seedream4-Batch.json
+  - Roles2Img-Flux2.json
+  - Roles2Image-GPT.json
+  - Story2Images-Seedream4.json
+  - QwenTTS.app.json
+  - Seedream-4-i2i.json
+  - Seedance-2-0-i2v.json
+  - IndexTTS2-Audio-Emo.json
+  - Roles2Img-Reference-Flux2.json
+  - Seedance-2-0-api.json
+  - Story2Images-GPT.json
+- **模型** (15):
+  - Qwen-Rapid-AIO-NSFW-v23.safetensors
+  - Qwen-Rapid-AIO-SFW-v23.safetensors
+  - leosamsHelloworldXL_helloworldXL70.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - ltx-2.3-22b-dev.safetensors
+  - realisticVisionV51_v51VAE.safetensors
+  - wan2.2_i2v_A14b_high_noise_scaled_fp8_e4m3_lightx2v_4step_comfyui.safetensors
+  - wan2.2_i2v_A14b_low_noise_scaled_fp8_e4m3_lightx2v_4step_comfyui.safetensors
+  - anima-preview.safetensors
+  - flux-2-klein-4b-fp8.safetensors
+  - flux-2-klein-4b.safetensors
+  - flux-2-klein-9b-fp8.safetensors
+  - flux-2-klein-9b.safetensors
+  - F2K-9b-darkBeastMar0326Latest_dbkleinv2BFS.safetensors
+  - qwen_image_2512_bf16.safetensors
+- **LoRA** (12 个, 前10):
+  - Klein_9B-NSFW.safetensors
+  - Qwen-Image-Edit-F2P.safetensors
+  - Qwen-Image-2512-Lightning-8steps-V1.0-bf16.safetensors
+  - Wan2.2-Fun-A14B-InP-high-noise-MPS.safetensors
+  - Wan2.2-Fun-A14B-InP-low-noise-HPS2.1.safetensors
+  - lightx2v_I2V_14B_480p_cfg_step_distill_rank256_bf16.safetensors
+  - i2l_style_lora_13aa607d-c041-41d4-8801-6f7c81ce5a2f.safetensors
+  - ip-adapter-faceid-plus_sd15_lora.safetensors
+  - ip-adapter-faceid-plusv2_sd15_lora.safetensors
+  - ltx-2.3-22b-distilled-lora-384.safetensors
+- **CLIP**: umt5_xxl_fp16.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors, gemma_3_12B_it_fpmixed.safetensors, qwen_2.5_vl_7b.safetensors, qwen_3_06b_base.safetensors, qwen_3_8b_fp8mixed.safetensors
+- **VAE**: Wan2_1_VAE_bf16.safetensors, flux2-vae.safetensors, qwen_image_vae.safetensors, pixel_space
+
+### 188. 188.208.141.8:8188
+
+- **版本**: 0.18.1
+- **GPU**: L4 (cuda:0 NVIDIA L4 : cudaMallocAsync)
+- **显存**: 22 GB (空闲 2 GB)
+- **内存**: 31 GB (空闲 12 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 189. 34.42.237.105
+
+- **版本**: 0.3.59
+- **GPU**: L4 (cuda:0 NVIDIA L4 : cudaMallocAsync)
+- **显存**: 22 GB (空闲 17 GB)
+- **内存**: 15 GB (空闲 9 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 190. 173.61.254.113:8188
+
+- **版本**: 0.18.5
+- **GPU**: RTX 2070 (cuda:0 NVIDIA GeForce RTX 2070 SUPER : cudaMallocAsync)
+- **显存**: 8 GB (空闲 2 GB)
+- **内存**: 31 GB (空闲 16 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 37
+- **工作流** (6):
+  - ClearVram.json
+  - Illustrious.json
+  - IMG to VIDEO (2).json
+  - NoobXLEpsilonPred.json
+  - pony randoms V2.json
+  - Standard.json
+- **模型** (23):
+  - autismmixSDXL_autismmixPony.safetensors
+  - furrytoonmix_xlIllustriousV2.safetensors
+  - hassakuXLIllustrious_v13StyleA.safetensors
+  - ikastriousIllustrious_v51.safetensors
+  - illustriousXLPersonalMerge_v21Noob07530Merged.safetensors
+  - illustriousXLPersonalMerge_v30Noob10based.safetensors
+  - ioliPonyMix_v4_20240824.safetensors
+  - noobaiXLNAIXL_epsilonPred11Version.safetensors
+  - noobaiXLNAIXL_vPred10Version.safetensors
+  - novaAnimalXL_ilV100.safetensors
+  - novaFurryXL_illustriousV30.safetensors
+  - plantMilkModelSuite_walnut.safetensors
+  - realismIllustriousBy_v40FP16.safetensors
+  - sd_xl_turbo_1.0_fp16.safetensors
+  - toonify_Ponydiffusionxl.safetensors
+  - uncannyValley_ilxl10Noob_illustrious.safetensors
+  - unholyDesireMixSinister_v60.safetensors
+  - waiIllustriousSDXL_v160.safetensors
+  - waiNSFWIllustrious_v100.safetensors
+  - xavier_v10.safetensors
+  - yiffymix_v60Noobxl_illustrious.safetensors
+  - smoothMixWan2214BI2V_i2vV20High.safetensors
+  - smoothMixWan2214BI2V_i2vV20Low.safetensors
+- **LoRA** (328 个, 前10):
+  - 1star-000004.safetensors
+  - 2.5DRealistic.safetensors
+  - 2.5DRealisticV2.safetensors
+  - 2DRS_v2-000008.safetensors
+  - AfrobullIXL_v1_il.safetensors
+  - Age_V2.5-Reborn.safetensors
+  - AnalKnotting.safetensors
+  - AndavaBlendV1.safetensors
+  - Andava_Mk2_IllustV1.safetensors
+  - Android_18_DB.safetensors
+- **CLIP**: umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: sdxl_vae.safetensors, wan_2.1_vae.safetensors, taesd, taesdxl, taesd3, taef1, pixel_space
+
+### 191. 95.169.202.102:8188
+
+- **版本**: v0.2.7
+- **GPU**: RTX 2000 Ada (cuda:0 NVIDIA RTX 2000 Ada Generation : cudaMallocAsync)
+- **显存**: 16 GB (空闲 9 GB)
+- **内存**: 251 GB (空闲 188 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (6):
+  - sdxl_lightning_4step.safetensors
+  - Wan2_1-I2V-14B-480p_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_1-T2V-14B_fp8_e4m3fn_scaled_KJ.safetensors
+  - flux1-dev-fp8.safetensors
+  - ltx-video-2b-v0.9.5.safetensors
+  - wan2.1_vace_1.3B_fp16.safetensors
+- **LoRA** (4 个, 前10):
+  - 3d_render_style_xl.safetensors
+  - flux-nsfw-uncensored.safetensors
+  - flux-uncensored-v2.safetensors
+  - pixel-art-xl-v1.1.safetensors
+- **CLIP**: clip_l.safetensors, t5xxl_fp16.safetensors, umt5-xxl-enc-fp8_e4m3fn.safetensors
+- **VAE**: ae.safetensors, wan_2.1_vae.safetensors
+
+### 192. 20.127.39.230:8188
+
+- **版本**: 0.3.66
+- **GPU**: Tesla T4 (cuda:0 Tesla T4 : cudaMallocAsync)
+- **显存**: 16 GB (空闲 13 GB)
+- **内存**: 27 GB (空闲 23 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (1):
+  - SPUM.json
+- **模型** (1):
+  - RetroDiffusion128xModel.safetensors
+- **LoRA** (3 个, 前10):
+  - retro_spum_set_v2.safetensors
+  - retro_spum_set_v3-000050.safetensors
+  - retro_spum_single_v1.safetensors
+- **VAE**: pixel_space
+
+### 193. comfy.udpage.com
+
+- **版本**: 0.21.0
+- **GPU**: Tesla T4 (cuda:0 Tesla T4 : cudaMallocAsync)
+- **显存**: 15 GB (空闲 15 GB)
+- **内存**: 15 GB (空闲 13 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (2):
+  - 샘플 워크플로.json
+  - gsl_starter_1_1.json
+- **模型** (2):
+  - hidream_e1_1_bf16.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: clip_g_hidream.safetensors, clip_l_hidream.safetensors, llama_3.1_8b_instruct_fp8_scaled.safetensors, qwen_3_4b.safetensors, t5xxl_fp8_e4m3fn.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, pixel_space
+
+### 194. 192.98.127.73:8188
+
+- **版本**: 0.5.1
+- **GPU**: Tesla P4 (cuda:0 Tesla P4 : cudaMallocAsync)
+- **显存**: 7 GB (空闲 2 GB)
+- **内存**: 188 GB (空闲 46 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (8):
+  - qwen_image_edit.json
+  - sdxl.json
+  - Dergies.json
+  - pony-v7-adv-cycle-anime-gguf.json
+  - pony-v7-simple-gguf.json
+  - Fooooooo duo.json
+  - Fooooooo.json
+  - Lora.json
+- **模型** (2):
+  - v6.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+- **LoRA** (3 个, 前10):
+  - PDXL_artist_tags_v2.safetensors
+  - Qwen-Image-Lightning-4steps-V1.0.safetensors
+  - silvermoon.safetensors
+- **CLIP**: pony-v7-base.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors
+- **VAE**: qwen_image_vae.safetensors, pixel_space
+
+### 195. 165.154.152.18:9100
+
+- **版本**: 0.5.1
+- **GPU**: MetaX C500 (cuda:0 MetaX C500 : native)
+- **显存**: 64 GB (空闲 30 GB)
+- **内存**: 1 TB (空闲 1 TB)
+- **历史**: 无
+- **管理面板**: 有
+- **自定义节点数**: 8
+- **工作流** (0): 无
+- **模型** (6):
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (5 个, 前10):
+  - Qwen-Image-Edit-Lightning-8steps-V1.0.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
+  - wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
+  - wan2.2_t2v_lightx2v_4steps_lora_v1.1_high_noise.safetensors
+  - wan2.2_t2v_lightx2v_4steps_lora_v1.1_low_noise.safetensors
+- **CLIP**: qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, qwen_image_vae.safetensors, taef1_decoder.pth, taesd3_decoder.pth, taesd_decoder.pth, taesdxl_decoder.pth, wan_2.1_vae.safetensors, pixel_space
+
+### 196. 159.255.232.245:8188
+
+- **版本**: 0.3.44
+- **GPU**: GTX 1060 (cuda:0 NVIDIA GeForce GTX 1060 6GB : cudaMallocAsync)
+- **显存**: 6 GB (空闲 5 GB)
+- **内存**: 31 GB (空闲 9 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (1):
+  - default.json
+- **模型** (7):
+  - Dall-e_3_0.3-v2.safetensors
+  - EnvyStylizedXL01.safetensors
+  - OpenDalleV1.1.safetensors
+  - anything-v3-full.safetensors
+  - epiCPhotoGasmVAE.safetensors
+  - v1-5-pruned-emaonly-fp16.safetensors
+  - wd-1-4-anime_e2.ckpt
+- **LoRA** (0 个, 前10): 无
+- **VAE**: taesd, taesdxl, taesd3, taef1
+
+### 197. 165.173.14.65:8188
+
+- **版本**: v0.3.7-33-g6d1a3f7
+- **GPU**: AMD (cuda:0 AMD Radeon VII : native)
+- **显存**: 16 GB (空闲 10 GB)
+- **内存**: 31 GB (空闲 13 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - flux1-dev.sft
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: clip_l.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: ae.sft
+
+### 198. 221.155.195.42:8189
+
+- **版本**: 0.19.0
+- **GPU**: AMD (cuda:0 AMD Radeon Graphics : native)
+- **显存**: 12 GB (空闲 12 GB)
+- **内存**: 23 GB (空闲 18 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (2):
+  - Unsaved Workflow (3).json
+  - Unsaved Workflow (2).json
+- **模型** (2):
+  - juggernaut_reborn.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (1 个, 前10):
+  - pixel_art_style_z_image_turbo.safetensors
+- **CLIP**: qwen_3_4b.safetensors
+- **VAE**: ae.safetensors, pixel_space
+
+### 199. 85.3.195.101
+
+- **版本**: 0.24.1
+- **GPU**: MPS (mps)
+- **显存**: 96 GB (空闲 76 GB)
+- **内存**: 96 GB (空闲 76 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 4
+- **工作流** (6):
+  - xy_royal.json
+  - xy_starwars_00141_.json
+  - xy_royal_sex.json
+  - xy_elektra_00150_.json
+  - xy_tomb raider.json
+  - xy_royal_00069_.json
+- **模型** (16):
+  - ZIT Tifa pussy show v2.safetensors
+  - ace_step_v1_3.5b.safetensors
+  - ltx-2.3-22b-dev-fp8.safetensors
+  - stable-audio-open-1.0.safetensors
+  - v1-5-pruned-emaonly-fp16.safetensors
+  - v1-5-pruned-emaonly.safetensors
+  - Wan21-WanMove_fp8_scaled_e4m3fn_KJ.safetensors
+  - flux1-dev-kontext_fp8_scaled.safetensors
+  - flux2_dev_fp8mixed.safetensors
+  - hidream_e1_1_bf16.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_2511_bf16.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (19 个, 前10):
+  - Centaur_SDXL.safetensors
+  - Epic Pussy.safetensors
+  - MissionaryVaginal-v2.safetensors
+  - Pussy_Lily_v5_XL.safetensors
+  - Pussy_Lotte_v6_XL_nf.safetensors
+  - Pussy_Peach_Rear_v2_XL.safetensors
+  - Qwen-Edit-2509-Multiple-angles.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - anuppps_rs4.safetensors
+- **CLIP**: clip_l.safetensors, gemma_3_12B_it_fp4_mixed.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, t5-base.safetensors, t5xxl_fp8_e4m3fn_scaled.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: ae.safetensors, flux2-vae.safetensors, qwen_image_vae.safetensors, sdxl_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 200. 121.168.243.67:8999
+
+- **版本**: 0.20.1
+- **GPU**: MPS (mps)
+- **显存**: 32 GB (空闲 18 GB)
+- **内存**: 32 GB (空闲 18 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 70
+- **工作流** (3):
+  - florenceWF22.json
+  - 2026-06-08-221155__0.json
+  - LTX_2.3_i2v_00363_.прыгаетНаЧлене.json
+- **模型** (20):
+  - 10Eros_v1-fp8mixed_learned.safetensors
+  - Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors
+  - dreamshaper_8.safetensors
+  - flux-2-klein-4b.safetensors
+  - flux-2-klein-base-4b-fp8.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux1-schnell-fp8.safetensors
+  - juggernautXL_ragnarokBy.safetensors
+  - juggernautXL_version6Rundiffusion.safetensors
+  - matureCitronIL_Unstable20.safetensors
+  - revAnimated_v122EOL.safetensors
+  - svd.safetensors
+  - svdq-int4_r32-sdxl.safetensors
+  - svdq-r32-sdxl-turbo.safetensors
+  - v15PrunedEmaonly_v15PrunedEmaonly.safetensors
+  - flux-2-klein-base-4b.safetensors
+  - transformer_blocks.safetensors
+  - qwen_3_4b.safetensors
+  - svdq-fp4_r32-flux.1-dev.safetensors
+  - unquantized_layers.safetensors
+- **LoRA** (18 个, 前10):
+  - Adv_Tam_Style_IL_e10.safetensors
+  - Childish01_CE_ZIMG_AIT4k.safetensors
+  - DelicateWhimsyKlein9b_000002000.safetensors
+  - LTX-2.3-OmniNFT-RL-Lora_bf16.safetensors
+  - LTX2.3_Crisp_Enhance.safetensors
+  - Ltx2.3-Licon-VBVR-I2V-390K-R32.safetensors
+  - Mr_harinezumi_Style_V2_epoch_12.safetensors
+  - Pencil.safetensors
+  - PencilSketch_Style - [FLUX - uisato].safetensors
+  - Sketching V3_E10.safetensors
+- **CLIP**: 10Eros_v1-fp8mixed_learned.safetensors, CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors, EVA02_CLIP_L_336_psz14_s6B.pt, clip_l.safetensors, clip_vision_vit_h.safetensors, gemma_3_12B_it_fp8_e4m3fn.safetensors, ltx-2.3-22b-distilled-lora-1.1_fro90_ceil72_condsafe.safetensors, ltx-2.3-id-lora-celebvhq-3k.safetensors, model.safetensors, open_clip_model.safetensors, qwen_3_4b.safetensors, clip_g .safetensors, model.safetensors, t5xxl_fp16.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: ae.safetensors, diffusion_pytorch_model.safetensors, flux2-vae.safetensors, flux_vae.safetensors, sdxl_vae.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, pixel_space
+
+### 201. 175.211.148.251:8188
+
+- **版本**: 0.21.1
+- **GPU**: MPS (mps)
+- **显存**: 24 GB (空闲 4 GB)
+- **内存**: 24 GB (空闲 3 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 14
+- **工作流** (10):
+  - Z_유이_NSFW_v3_fullbody.json
+  - Z_그여자_해변맨발_확정.json
+  - 이게젤낫다_1.json
+  - Z_유이_Turbo_GGUF_canonical.json
+  - reactor_basic.json
+  - Z_유이_Turbo_canonical.json
+  - Z_그여자_확정.json
+  - Z_그여자_base.json
+  - Z_그여자_정원맨발_확정.json
+  - Z_그여자_뷰티CF_확정.json
+- **模型** (5):
+  - flux1-schnell-fp8.safetensors
+  - flux-2-klein-9b-kv-fp8.safetensors
+  - longcat_image_bf16.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - z_image_turbo_bf16.safetensors
+- **LoRA** (2 个, 前10):
+  - Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors
+  - zit_nsfw_peli86.safetensors
+- **CLIP**: qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors
+
+### 202. 211.223.5.82:8188
+
+- **版本**: 0.24.0
+- **GPU**: Intel Arc (xpu:0 Intel(R) Arc(TM) 140V GPU (16GB))
+- **显存**: 16 GB (空闲 14 GB)
+- **内存**: 31 GB (空闲 7 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 48
+- **工作流** (4):
+  - Qwen-Rapid-AIO.json
+  - workflow v1.json
+  - workflow v2.json
+  - workflow v3.json
+- **模型** (9):
+  - FLUX - ASIAN_CHILDREN_REALISTIC Checkpoint_v1.0.safetensors
+  - Qwen-Rapid-AIO-NSFW-v23.safetensors
+  - dxjmzlilus_x8.safetensors
+  - waiIllustriousSDXL_v140.safetensors
+  - waiIllustriousSDXL_v160.safetensors
+  - ARAZmixZIT020_fp8.safetensors
+  - FireRed-Image-Edit-1.1_fp8mixed_comfy.safetensors
+  - anima-preview.safetensors
+  - anima-preview3-base.safetensors
+- **LoRA** (16 个, 前10):
+  - Cosmos-Predict2.5-2B-base-distilled-LoRA.safetensors
+  - FireRed-Image-Edit-1.0-Lightning-8steps-v1.0.safetensors
+  - FireRed-Image-Edit-1.0-Lightning-8steps-v1.1.safetensors
+  - Ixy style[style]-Illus.safetensors
+  - Komeiji-Koishi_IllustriousV3.safetensors
+  - amateurSnapshotPhotoSTYLE_v160FINALFINAL.safetensors
+  - anima-turbo-lora-v0.1.safetensors
+  - anima3-photo-background-v3.safetensors
+  - anima_moria_luluka_v1.1.safetensors
+  - anima_preview_rdbt_finetuned_cfg_distilled_v0.12.safetensors
+- **CLIP**: clip_l.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_06b_base.safetensors, qwen_3_4b.safetensors
+- **VAE**: ae.safetensors, qwen_image_vae.safetensors, taesdxl, taesd, taef1, taef2, taesd3, pixel_space
+
+### 203. 80.147.139.148:8188
+
+- **版本**: 0.19.1
+- **GPU**: MPS (mps)
+- **显存**: 16 GB (空闲 9 GB)
+- **内存**: 16 GB (空闲 8 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: clip_l.safetensors, t5xxl_fp8_e4m3fn.safetensors
+- **VAE**: ae.safetensors, pixel_space
+
+### 204. 153.126.158.21:8188
+
+- **版本**: 0.14.1
+- **GPU**: CPU (cpu)
+- **显存**: 956 MB (空闲 368 MB)
+- **内存**: 956 MB (空闲 367 MB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - v1-5-pruned-emaonly.ckpt
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 205. 120.209.217.11:30001
+
+- **版本**: 0.19.1
+- **GPU**: CPU (cpu)
+- **显存**: 504 GB (空闲 465 GB)
+- **内存**: 503 GB (空闲 464 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 18
+- **工作流** (40):
+  - 首尾帧生成视频.json
+  - 被蜜蜂追逐.json
+  - 两人跟随.json
+  - 劝阻摘蜂巢.json
+  - 蜂巢掉落.json
+  - 被蜜蜂追.json
+  - 躲避蜜蜂.json
+  - 被蛰后.json
+  - 寻找蜂蜜.json
+  - 分享蜂蜜.json
+  - 享受蜂蜜.json
+  - 勾起回忆.json
+  - 遇见大白鹅.json
+  - 大白鹅追赶上树.json
+  - 想摘蜂蜜分享.json
+  - 尝试摘蜂巢.json
+  - 回忆结束.json
+  - 洗手.json
+  - 夕阳西下.json
+  - 图生图-简易版.json
+  - 文生图-简易版.json
+  - 回家.json
+  - controlnet-线稿上色.json
+  - 放大图像与细节添加.json
+  - controlnet-线条边缘化.json
+  - controlnet-openpose姿势处理+softedge线条边缘化.json
+  - controlnet-openpose姿势.json
+  - 测试：分镜.json
+  - Unsaved Workflow (2).json
+  - wan2.2文生视频.json
+  - wan2.2文生图-lora加速.json
+  - wan2.2图生视频-lora加速.json
+  - wan2.2首尾帧生成视频-lora加速.json
+  - Nano文生图.json
+  - 生成人物形象.json
+  - Nano图生图.json
+  - Nano角色分镜生成.json
+  - seedance分镜批量视频生成.json
+  - AutoVideoPipeline.json
+  - AutoVideoPipeline.json.backup
+- **模型** (24):
+  - 3Guofeng3_v33.safetensors
+  - PrimeMix_v2.safetensors
+  - majicmixRealistic_v5.safetensors
+  - primemix_v21.safetensors
+  - v1-5-pruned-emaonly.safetensors
+  - FireRed-Image-Edit-1.1_fp8mixed_comfy.safetensors
+  - Wan2_1-I2V-14B-480P_fp8_e4m3fn.safetensors
+  - Wan2_1-InfiniTetalk-Single_fp16.safetensors
+  - Wan2_1-InfiniteTalk-Multi_fp16.safetensors
+  - flux-2-klein-9b-fp8.safetensors
+  - flux-2-klein-9b-nvfp4.safetensors
+  - flux-2-klein-9b.safetensors
+  - flux1-dev-fp8.safetensors
+  - flux1-fill-dev.safetensors
+  - qwen_image_edit_2509_bf16.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_edit_bf16.safetensors
+  - qwen_image_edit_fp8_e4m3fn.safetensors
+  - qwen_image_fp8_e4m3fn.safetensors
+  - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2_ti2v_5B_fp16.safetensors
+- **LoRA** (17 个, 前10):
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-fp32.safetensors
+  - Qwen-Image-Edit-2509-Lightning-8steps-V1.0-bf16.safetensors
+  - Qwen-Image-Edit-2509-Lightning-8steps-V1.0-fp32.safetensors
+  - Qwen-Image-Edit-Lightning-8steps-V1.0-bf16.safetensors
+  - Qwen-Image-Lightning-4steps-V1.0.safetensors
+  - Qwen-Image-Lightning-8steps-V1.0.safetensors
+  - Qwen-Image-Lightning-8steps-V1.1-bf16.safetensors
+  - Qwen-Image-Lightning-8steps-V1.1.safetensors
+  - Qwen-Image-Lightning-8steps-V2.0-bf16.safetensors
+- **CLIP**: clip-vit-large-patch14.safetensors, clip_l.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_3_8b.safetensors, t5xxl_fp8_e4m3fn.safetensors, umt5-xxl-enc-fp8_e4m3fn.safetensors, umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **VAE**: Wan2_1_VAE_bf16.safetensors, ae.sft, animevae.pt, autoencoder_fix_kl-f8-trinart_characters.ckpt, flux2-vae.safetensors, kl-f8-anime2.ckpt, qwen_image_vae.safetensors, vae-ft-ema-560000-ema-pruned.safetensors, vae-ft-mse-840000-ema-pruned.safetensors, wan2.2_vae.safetensors, wan_2.1_vae.safetensors, pixel_space
+
+### 206. https://94.130.223.40:8443
+
+- **版本**: 0.21.1
+- **GPU**: CPU (cpu)
+- **显存**: 251 GB (空闲 240 GB)
+- **内存**: 251 GB (空闲 239 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (1):
+  - svd_xt_video.json
+- **模型** (2):
+  - flux1-dev-bnb-nf4.safetensors
+  - flux1-dev-fp8.safetensors
+- **LoRA** (2 个, 前10):
+  - fluxRealSkin-V2.safetensors
+  - skin texture style v5.safetensors
+- **VAE**: pixel_space
+
+### 207. 89.169.110.216:8188
+
+- **版本**: 0.14.1
+- **GPU**: CPU (cpu)
+- **显存**: 197 GB (空闲 161 GB)
+- **内存**: 196 GB (空闲 160 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (5):
+  - translate-ecs-mmdit.json
+  - voice-swap-ecs-mmdit.json
+  - controlnet-model-workflow-aws-ecs-mmdit.json
+  - controlnet-model-workflow-aws-ecs.json
+  - pet-ecs-mmdit.json
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 208. 89.169.110.216:8189
+
+- **版本**: 0.14.1
+- **GPU**: CPU (cpu)
+- **显存**: 197 GB (空闲 161 GB)
+- **内存**: 196 GB (空闲 160 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (5):
+  - translate-ecs-mmdit.json
+  - voice-swap-ecs-mmdit.json
+  - controlnet-model-workflow-aws-ecs-mmdit.json
+  - controlnet-model-workflow-aws-ecs.json
+  - pet-ecs-mmdit.json
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 209. 91.99.156.133:8188
+
+- **版本**: 0.19.3
+- **GPU**: CPU (cpu)
+- **显存**: 126 GB (空闲 92 GB)
+- **内存**: 125 GB (空闲 91 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (2):
+  - Synai-Comfyui-3000.json
+  - Syn-Img-3000.json
+- **模型** (3):
+  - dreamshaper_8.safetensors
+  - model.safetensors
+  - v1-5-pruned-emaonly.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: vae-ft-mse-840000-ema-pruned.safetensors, pixel_space
+
+### 210. 23.248.226.250:8188
+
+- **版本**: 0.19.0
+- **GPU**: CPU (cpu)
+- **显存**: 63 GB (空闲 58 GB)
+- **内存**: 62 GB (空闲 58 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 211. 23.248.226.251:8188
+
+- **版本**: 0.19.0
+- **GPU**: CPU (cpu)
+- **显存**: 63 GB (空闲 58 GB)
+- **内存**: 62 GB (空闲 58 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 212. 23.248.226.253:8188
+
+- **版本**: 0.19.0
+- **GPU**: CPU (cpu)
+- **显存**: 63 GB (空闲 58 GB)
+- **内存**: 62 GB (空闲 58 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 213. 23.248.226.254:8188
+
+- **版本**: 0.19.0
+- **GPU**: CPU (cpu)
+- **显存**: 63 GB (空闲 58 GB)
+- **内存**: 62 GB (空闲 58 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 214. 23.248.226.252:8188
+
+- **版本**: 0.19.0
+- **GPU**: CPU (cpu)
+- **显存**: 63 GB (空闲 58 GB)
+- **内存**: 62 GB (空闲 58 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 215. 89.40.177.58:8188
+
+- **版本**: 0.4.0
+- **GPU**: CPU (cpu)
+- **显存**: 63 GB (空闲 55 GB)
+- **内存**: 62 GB (空闲 55 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - model.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 216. 95.217.33.142:8188
+
+- **版本**: 0.4.0
+- **GPU**: CPU (cpu)
+- **显存**: 62 GB (空闲 27 GB)
+- **内存**: 62 GB (空闲 26 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - RealVisXL_V4.0_Lightning.safetensors
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: clip_l.safetensors, t5xxl_fp16.safetensors
+- **VAE**: ae.safetensors, pixel_space
+
+### 217. 75.119.159.242:7654
+
+- **版本**: 0.18.0
+- **GPU**: CPU (cpu)
+- **显存**: 47 GB (空闲 38 GB)
+- **内存**: 47 GB (空闲 37 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (16):
+  - gemini_flyer_workflow.json
+  - Melhorar qualidade de imagem.json
+  - efeito-desmenbrador.json
+  - rosie_flyer_workflow_v2.json
+  - geradro_de_fllyer.json
+  - rosie_flyer_psd_editor_workflow.json
+  - templates-car_product-v1.json
+  - carrosel-9.json
+  - Imagem-editor-avancado.json
+  - rosie_flyer_workflow.json
+  - rosie_flyer_workflow copy.json
+  - rosie_flyer_workflow_v3_clean.json
+  - 3x3_produtos.json
+  - headshot-profissional-2.0.json
+  - rosie_flyer_workflow_v2_prompt_lab.json
+  - flyer-evento-rosies.json
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 218. 75.119.155.9:8188
+
+- **版本**: 0.7.0
+- **GPU**: CPU (cpu)
+- **显存**: 47 GB (空闲 39 GB)
+- **内存**: 47 GB (空闲 39 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (2):
+  - model_1721353.safetensors
+  - realisticVisionV60.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 219. 70.30.144.161
+
+- **版本**: 0.20.1
+- **GPU**: CPU (cpu)
+- **显存**: 47 GB (空闲 15 GB)
+- **内存**: 47 GB (空闲 14 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (2):
+  - SC_Text2Image.app.json
+  - SC_ImageMaker_Max.app.json
+- **模型** (7):
+  - v1-5-pruned-emaonly-fp16.safetensors
+  - v1-5-pruned.safetensors
+  - vae-ft-mse-840000-ema-pruned.ckpt
+  - vae-ft-mse-840000-ema-pruned.safetensors
+  - acestep_v1.5_turbo.safetensors
+  - anima-preview3-base.safetensors
+  - z_image_turbo_bf16(1).safetensors
+- **LoRA** (1 个, 前10):
+  - qwen_0.6b_ace15.safetensors
+- **CLIP**: qwen_0.6b_ace15.safetensors, qwen_3_06b_base.safetensors, qwen_3_4b.safetensors
+- **VAE**: ae.safetensors, qwen_image_vae.safetensors, pixel_space
+
+### 220. https://70.30.144.161
+
+- **版本**: 0.20.1
+- **GPU**: CPU (cpu)
+- **显存**: 47 GB (空闲 15 GB)
+- **内存**: 47 GB (空闲 14 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (2):
+  - SC_Text2Image.app.json
+  - SC_ImageMaker_Max.app.json
+- **模型** (7):
+  - v1-5-pruned-emaonly-fp16.safetensors
+  - v1-5-pruned.safetensors
+  - vae-ft-mse-840000-ema-pruned.ckpt
+  - vae-ft-mse-840000-ema-pruned.safetensors
+  - acestep_v1.5_turbo.safetensors
+  - anima-preview3-base.safetensors
+  - z_image_turbo_bf16(1).safetensors
+- **LoRA** (1 个, 前10):
+  - qwen_0.6b_ace15.safetensors
+- **CLIP**: qwen_0.6b_ace15.safetensors, qwen_3_06b_base.safetensors, qwen_3_4b.safetensors
+- **VAE**: ae.safetensors, qwen_image_vae.safetensors, pixel_space
+
+### 221. 51.75.202.31:8188
+
+- **版本**: 0.24.0
+- **GPU**: CPU (cpu)
+- **显存**: 46 GB (空闲 40 GB)
+- **内存**: 45 GB (空闲 39 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (2):
+  - dreamshaper_8_lcm.safetensors
+  - photon_v1.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 222. 64.44.166.185:8188
+
+- **版本**: 0.18.1
+- **GPU**: CPU (cpu)
+- **显存**: 34 GB (空闲 24 GB)
+- **内存**: 34 GB (空闲 24 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - sdxl_base_1.0.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 223. 113.44.231.98:8188
+
+- **版本**: 0.6.0
+- **GPU**: CPU (cpu)
+- **显存**: 31 GB (空闲 21 GB)
+- **内存**: 31 GB (空闲 21 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 224. 168.231.101.9:8188
+
+- **版本**: 0.3.52
+- **GPU**: CPU (cpu)
+- **显存**: 31 GB (空闲 21 GB)
+- **内存**: 31 GB (空闲 21 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (1):
+  - generování obrázku X.json
+- **模型** (7):
+  - cyberrealistic.safetensors
+  - deliberate_v2.safetensors
+  - dreamshaper_8.safetensors
+  - epicrealism.safetensors
+  - photon.safetensors
+  - realistic_vision_v51.safetensors
+  - sd15.safetensors
+- **LoRA** (2 个, 前10):
+  - detail_tweaker.safetensors
+  - graffiti_style.safetensors
+
+### 225. 151.185.43.115:10001
+
+- **版本**: 0.14.1
+- **GPU**: CPU (cpu)
+- **显存**: 29 GB (空闲 17 GB)
+- **内存**: 29 GB (空闲 17 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (1):
+  - SEEKHO_Brainrot.json
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 226. 151.185.43.115:10002
+
+- **版本**: 0.14.1
+- **GPU**: CPU (cpu)
+- **显存**: 29 GB (空闲 17 GB)
+- **内存**: 29 GB (空闲 17 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 227. 213.32.22.43:8188
+
+- **版本**: 0.18.1
+- **GPU**: CPU (cpu)
+- **显存**: 23 GB (空闲 16 GB)
+- **内存**: 22 GB (空闲 15 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - v1-5-pruned-emaonly.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 228. 89.168.69.237:8188
+
+- **版本**: 0.11.1
+- **GPU**: CPU (cpu)
+- **显存**: 23 GB (空闲 13 GB)
+- **内存**: 23 GB (空闲 13 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - sd_xl_turbo_1.0_fp16.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 229. 111.170.58.38:8002
+
+- **版本**: 0.19.3
+- **GPU**: CPU (cpu)
+- **显存**: 16 GB (空闲 10 GB)
+- **内存**: 15 GB (空闲 10 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 230. 111.170.58.38:8003
+
+- **版本**: 0.19.3
+- **GPU**: CPU (cpu)
+- **显存**: 16 GB (空闲 10 GB)
+- **内存**: 15 GB (空闲 10 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 231. 112.118.57.75:8188
+
+- **版本**: 0.18.1
+- **GPU**: CPU (cpu)
+- **显存**: 16 GB (空闲 6 GB)
+- **内存**: 15 GB (空闲 6 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - sd-v1-5.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 232. 111.170.58.38:8001
+
+- **版本**: 0.19.3
+- **GPU**: CPU (cpu)
+- **显存**: 16 GB (空闲 10 GB)
+- **内存**: 15 GB (空闲 10 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 233. 103.167.2.61:8188
+
+- **版本**: 0.18.1
+- **GPU**: CPU (cpu)
+- **显存**: 16 GB (空闲 13 GB)
+- **内存**: 15 GB (空闲 12 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (1):
+  - testing.json
+- **模型** (2):
+  - sd_xl_turbo_1.0_fp16.safetensors
+  - v1-5-pruned-emaonly.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 234. 20.244.80.13:8188
+
+- **版本**: 0.12.3
+- **GPU**: CPU (cpu)
+- **显存**: 16 GB (空闲 10 GB)
+- **内存**: 15 GB (空闲 10 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (2):
+  - dreamshaper_8.safetensors
+  - v1-5-pruned-emaonly.safetensors
+- **LoRA** (1 个, 前10):
+  - lcm_lora_sd15.safetensors
+- **VAE**: pixel_space
+
+### 235. 123.56.225.154:8190
+
+- **版本**: 0.18.1
+- **GPU**: CPU (cpu)
+- **显存**: 15 GB (空闲 11 GB)
+- **内存**: 14 GB (空闲 10 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 236. 129.211.191.218
+
+- **版本**: 0.18.1
+- **GPU**: CPU (cpu)
+- **显存**: 15 GB (空闲 8 GB)
+- **内存**: 15 GB (空闲 7 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 10
+- **工作流** (9):
+  - GPT-IMAGE-2-模板-网页.json
+  - image-2 (Copy).json
+  - 测试flash3.json
+  - Image-2试用.json
+  - 摩天轮.json
+  - 03.json
+  - Unsaved Workflow (2).json
+  - GPT-IMAGE-2-模板.json
+  - 测试flash4.json
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 237. 101.96.203.51:8188
+
+- **版本**: 0.20.1
+- **GPU**: CPU (cpu)
+- **显存**: 8 GB (空闲 6 GB)
+- **内存**: 7 GB (空闲 5 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 238. 110.40.205.169:8188
+
+- **版本**: 0.18.2
+- **GPU**: CPU (cpu)
+- **显存**: 8 GB (空闲 6 GB)
+- **内存**: 7 GB (空闲 5 GB)
+- **历史**: 无
+- **管理面板**: 有
+- **自定义节点数**: 44
+- **工作流** (5):
+  - 场景原型图生成_四宫格四立面.json
+  - 物品原型图生成.json
+  - 场景原型图生成_四宫格四立面_强一致.json
+  - 人物原型图生成.json
+  - 场景原型图生成.json
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: taesd, taesdxl, taesd3, taef1, pixel_space
+
+### 239. 120.25.63.187:8111
+
+- **版本**: 0.21.0
+- **GPU**: CPU (cpu)
+- **显存**: 8 GB (空闲 6 GB)
+- **内存**: 7 GB (空闲 6 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 240. 129.204.230.167:11001
+
+- **版本**: 0.24.0
+- **GPU**: CPU (cpu)
+- **显存**: 8 GB (空闲 1 GB)
+- **内存**: 7 GB (空闲 1 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (4):
+  - GPT2-banan2.json
+  - banan2-详情页.json
+  - GPT2-详情页.json
+  - G110服装-线稿.json
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 241. 222.98.121.221:8000
+
+- **版本**: 0.19.3
+- **GPU**: CPU (cpu)
+- **显存**: 8 GB (空闲 4 GB)
+- **内存**: 7 GB (空闲 4 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (10):
+  - api_grok_image_edit.app.json
+  - image_flux2_klein_image_edit_9b_base.json
+  - image_flux2_klein_image_edit_9b_distilled.json
+  - image_flux2_text_to_image_9b.json
+  - Pornmaster Z-Image Turbo_i2i_V1_double_FaceDetailer_fix_2026_01_19.json
+  - Pornmaster Z-Image Turbo_i2i_V1_FaceDetailer & magnification_fix_2026_01_19.json
+  - Pornmaster Z-Image Turbo_i2i_V1_FaceDetailer_fix_2026_01_19.json
+  - Pornmaster Z-Image Turbo_i2i_V1_magnification_fix_2026_01_19.json
+  - SD1.5.json
+  - SDXL.json
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 242. 161.97.79.38:8188
+
+- **版本**: 0.20.1
+- **GPU**: CPU (cpu)
+- **显存**: 8 GB (空闲 1 GB)
+- **内存**: 7 GB (空闲 1 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 11
+- **工作流** (0): 无
+- **模型** (1):
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+- **LoRA** (1 个, 前10):
+  - Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors
+- **CLIP**: qwen_2.5_vl_7b_fp8_scaled.safetensors
+- **VAE**: qwen_image_vae.safetensors, qwen_image_vae.safetensors, pixel_space
+
+### 243. 67.215.228.117:8188
+
+- **版本**: 0.18.1
+- **GPU**: CPU (cpu)
+- **显存**: 8 GB (空闲 6 GB)
+- **内存**: 7 GB (空闲 6 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 244. 89.167.82.184:8188
+
+- **版本**: 0.19.3
+- **GPU**: CPU (cpu)
+- **显存**: 8 GB (空闲 3 GB)
+- **内存**: 7 GB (空闲 2 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 245. 85.10.136.8:8188
+
+- **版本**: 0.19.3
+- **GPU**: CPU (cpu)
+- **显存**: 8 GB (空闲 3 GB)
+- **内存**: 7 GB (空闲 2 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - v2-1_512-ema-pruned.safetensors
+- **LoRA** (0 个, 前10): 无
+- **CLIP**: qwen_0.6b_ace15.safetensors
+- **VAE**: ace_1.5_vae.safetensors, pixel_space
+
+### 246. comfy.juncopineiro.com
+
+- **版本**: 0.19.3
+- **GPU**: CPU (cpu)
+- **显存**: 8 GB (空闲 5 GB)
+- **内存**: 7 GB (空闲 4 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (3):
+  - Demo.json
+  - img2img.json
+  - De Texto a Imagen.json
+- **模型** (3):
+  - CyberRealistic_Final.safetensors
+  - DreamShaper_8.safetensors
+  - v1-5-pruned-emaonly.safetensors
+- **LoRA** (1 个, 前10):
+  - lcm-lora-sdv1-5.safetensors
+- **VAE**: vae-ft-mse-840000-ema-pruned.safetensors, pixel_space
+
+### 247. https://comfy.juncopineiro.com
+
+- **版本**: 0.19.3
+- **GPU**: CPU (cpu)
+- **显存**: 8 GB (空闲 5 GB)
+- **内存**: 7 GB (空闲 4 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (3):
+  - Demo.json
+  - img2img.json
+  - De Texto a Imagen.json
+- **模型** (3):
+  - CyberRealistic_Final.safetensors
+  - DreamShaper_8.safetensors
+  - v1-5-pruned-emaonly.safetensors
+- **LoRA** (1 个, 前10):
+  - lcm-lora-sdv1-5.safetensors
+- **VAE**: vae-ft-mse-840000-ema-pruned.safetensors, pixel_space
+
+### 248. https://43.161.225.196
+
+- **版本**: 0.21.1
+- **GPU**: CPU (cpu)
+- **显存**: 8 GB (空闲 6 GB)
+- **内存**: 7 GB (空闲 5 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 249. 47.239.252.9:8188
+
+- **版本**: 0.12.2
+- **GPU**: CPU (cpu)
+- **显存**: 7 GB (空闲 3 GB)
+- **内存**: 7 GB (空闲 3 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 250. 47.83.192.121:8188
+
+- **版本**: 0.12.2
+- **GPU**: CPU (cpu)
+- **显存**: 7 GB (空闲 4 GB)
+- **内存**: 7 GB (空闲 4 GB)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 251. 154.64.253.195:8000
+
+- **版本**: 0.20.1
+- **GPU**: CPU (cpu)
+- **显存**: 4 GB (空闲 2 GB)
+- **内存**: 3 GB (空闲 2 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (3):
+  - 西班牙插画.json
+  - 糖果机.json
+  - 封面.json
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 252. 212.85.249.172:8188
+
+- **版本**: 0.3.68
+- **GPU**: CPU (cpu)
+- **显存**: 4 GB (空闲 2 GB)
+- **内存**: 3 GB (空闲 2 GB)
+- **历史**: 有
+- **管理面板**: 有
+- **自定义节点数**: 27
+- **工作流** (2):
+  - PornUI.json
+  - WorkflowAI.json
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 253. 89.167.98.40:5006
+
+- **版本**: 0.20.1
+- **GPU**: CPU (cpu)
+- **显存**: 4 GB (空闲 2 GB)
+- **内存**: 3 GB (空闲 2 GB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (2):
+  - sd3.5_large_fp8_scaled.safetensors
+  - sd_turbo.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 254. 109.94.211.223:8188
+
+- **版本**: 0.17.0
+- **GPU**: CPU (cpu)
+- **显存**: 2 GB (空闲 382 MB)
+- **内存**: 1 GB (空闲 382 MB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - dreamshaper_8.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 255. 39.97.238.88:81
+
+- **版本**: 0.16.3
+- **GPU**: CPU (cpu)
+- **显存**: 2 GB (空闲 637 MB)
+- **内存**: 1 GB (空闲 637 MB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (5):
+  - nano 单张.json
+  - api设置.json
+  - 裂变批量.json
+  - MJ裂变批量.json
+  - 多角度批量.json
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 256. 43.135.144.34:8188
+
+- **版本**: 0.19.0
+- **GPU**: CPU (cpu)
+- **显存**: 2 GB (空闲 439 MB)
+- **内存**: 1 GB (空闲 439 MB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (2):
+  - wan_r2v_single.json
+  - wan_r2v_multi.json
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 257. 43.134.28.233:8188
+
+- **版本**: 0.18.1
+- **GPU**: CPU (cpu)
+- **显存**: 2 GB (空闲 412 MB)
+- **内存**: 1 GB (空闲 411 MB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 258. 77.73.232.244:8188
+
+- **版本**: 0.17.0
+- **GPU**: CPU (cpu)
+- **显存**: 2 GB (空闲 361 MB)
+- **内存**: 1 GB (空闲 361 MB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (1):
+  - dreamshaper_8.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 259. 89.169.166.140:8188
+
+- **版本**: 0.18.1
+- **GPU**: CPU (cpu)
+- **显存**: 2 GB (空闲 391 MB)
+- **内存**: 1 GB (空闲 390 MB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 260. https://comfy.quiqstory.com
+
+- **版本**: 0.17.0
+- **GPU**: CPU (cpu)
+- **显存**: 2 GB (空闲 931 MB)
+- **内存**: 1 GB (空闲 930 MB)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 261. 122.165.241.167:8188
+
+- **版本**: ?
+- **GPU**: - (-)
+- **显存**: - (空闲 -)
+- **内存**: - (空闲 -)
+- **历史**: 有
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (7):
+  - Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors
+  - flux1-schnell.safetensors
+  - qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - qwen_image_edit_2509_fp8_e4m3fn.safetensors
+  - qwen_image_vae.safetensors
+  - sd_xl_base_1.0.safetensors
+  - v1-5-pruned-emaonly-fp16.safetensors
+- **LoRA** (0 个, 前10): 无
+- **VAE**: pixel_space
+
+### 262. 8.156.73.75
+
+- **版本**: ?
+- **GPU**: - (-)
+- **显存**: - (空闲 -)
+- **内存**: - (空闲 -)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 263. 45.120.119.143:8188
+
+- **版本**: ?
+- **GPU**: - (-)
+- **显存**: - (空闲 -)
+- **内存**: - (空闲 -)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 264. 73.185.58.213:8188
+
+- **版本**: ?
+- **GPU**: - (-)
+- **显存**: - (空闲 -)
+- **内存**: - (空闲 -)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 265. comfyui.wangl.ai
+
+- **版本**: ?
+- **GPU**: - (-)
+- **显存**: - (空闲 -)
+- **内存**: - (空闲 -)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 266. cloud.comfy.org
+
+- **版本**: ?
+- **GPU**: - (-)
+- **显存**: - (空闲 -)
+- **内存**: - (空闲 -)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 267. https://8.156.73.75
+
+- **版本**: ?
+- **GPU**: - (-)
+- **显存**: - (空闲 -)
+- **内存**: - (空闲 -)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 268. https://cloud.comfy.org
+
+- **版本**: ?
+- **GPU**: - (-)
+- **显存**: - (空闲 -)
+- **内存**: - (空闲 -)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 269. comfyai.org
+
+- **版本**: ?
+- **GPU**: - (-)
+- **显存**: - (空闲 -)
+- **内存**: - (空闲 -)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 270. https://stagingcloud.comfy.org
+
+- **版本**: ?
+- **GPU**: - (-)
+- **显存**: - (空闲 -)
+- **内存**: - (空闲 -)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 271. stagingcloud.comfy.org
+
+- **版本**: ?
+- **GPU**: - (-)
+- **显存**: - (空闲 -)
+- **内存**: - (空闲 -)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 272. https://www.comfyai.org
+
+- **版本**: ?
+- **GPU**: - (-)
+- **显存**: - (空闲 -)
+- **内存**: - (空闲 -)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 273. https://hackathon.luckgate.shop
+
+- **版本**: ?
+- **GPU**: - (-)
+- **显存**: - (空闲 -)
+- **内存**: - (空闲 -)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 274. https://comfyui.sylphid.ovh
+
+- **版本**: ?
+- **GPU**: - (-)
+- **显存**: - (空闲 -)
+- **内存**: - (空闲 -)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+
+### 275. www.comfyai.org
+
+- **版本**: ?
+- **GPU**: - (-)
+- **显存**: - (空闲 -)
+- **内存**: - (空闲 -)
+- **历史**: 无
+- **管理面板**: 无
+- **自定义节点数**: 0
+- **工作流** (0): 无
+- **模型** (0): 无
+- **LoRA** (0 个, 前10): 无
+

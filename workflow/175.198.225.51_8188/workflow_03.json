@@ -1,0 +1,86 @@
+{
+  "1": {
+    "inputs": {
+      "ckpt_name": "majicmixRealistic_v7.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "2": {
+    "inputs": {
+      "text": "masterpiece, best quality, photorealistic, 8k uhd, detailed background, sharp focus, DSLR quality, realistic skin texture, 1girl, solo, photorealistic, (mimi:1.3), long silver twin-tails, red eyes, pale skin, beautiful detailed face, Korean idol features, 20 years old, youthful, photorealistic, genital teasing, erect penis visible through tight clothes, massive bulge in pants, cameltoe visible through fabric, pussy outline visible, hands rubbing crotch, fingers touching genitals through clothes, teasing gesture, wet spot visible, precum stain, aroused flushed expression, realistic skin texture, detailed anatomy, wearing unbuttoned bodysuit, full body,spread legs,erect penis visible,masturbating, intimate bedroom setting, soft natural lighting, erotic mood, realistic intimate atmosphere, beautiful detailed face, elegant composition, soft lighting",
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "3": {
+    "inputs": {
+      "text": "worst quality, low quality, blurry, bad anatomy, bad hands, error, missing fingers, extra digit, fewer digits, cropped, jpeg artifacts, ugly, duplicate, morbid, mutilated, out of frame, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck, extra legs, extra feet, missing feet, bad feet, malformed feet, fused legs, fused body, double torso, double body, duplicate body, extra knees, extra ankles, twisted legs, bent legs unnaturally, crossed legs error, sitting pose error, lying pose error, floating limbs, disconnected limbs, limbs not attached, wrong joint position, broken spine, twisted torso, asymmetric body, uneven shoulders, head too small, head too big, anime, cartoon, 2d, illustration, 3d render, cgi, sketch, painting, drawing, 2girls, 3girls, multiple girls, group, crowd, child, teen, underage, minor",
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "4": {
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "5": {
+    "inputs": {
+      "seed": 532713481,
+      "steps": 40,
+      "cfg": 7.5,
+      "sampler_name": "dpmpp_2m_sde_gpu",
+      "scheduler": "karras",
+      "denoise": 1.0,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "latent_image": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  },
+  "6": {
+    "inputs": {
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "7": {
+    "inputs": {
+      "filename_prefix": "REALISTIC_NSFW",
+      "images": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  }
+}

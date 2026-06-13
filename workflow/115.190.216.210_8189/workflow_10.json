@@ -1,0 +1,414 @@
+{
+  "1": {
+    "_meta": {
+      "title": "剧本JSON解析器 (Novel)"
+    },
+    "inputs": {
+      "JSON剧本数据": [
+        "43",
+        0
+      ]
+    },
+    "class_type": "ScriptJSONParser"
+  },
+  "2": {
+    "_meta": {
+      "title": "K采样器选择"
+    },
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect"
+  },
+  "3": {
+    "_meta": {
+      "title": "CFG引导器"
+    },
+    "inputs": {
+      "cfg": 1.0,
+      "model": [
+        "33",
+        0
+      ],
+      "negative": [
+        "17",
+        0
+      ],
+      "positive": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "CFGGuider"
+  },
+  "4": {
+    "_meta": {
+      "title": "Flux2调度器"
+    },
+    "inputs": {
+      "steps": 4,
+      "width": [
+        "37",
+        0
+      ],
+      "height": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "Flux2Scheduler"
+  },
+  "5": {
+    "_meta": {
+      "title": "CLIP文本编码"
+    },
+    "inputs": {
+      "clip": [
+        "28",
+        0
+      ],
+      "text": ""
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "9": {
+    "_meta": {
+      "title": "空Latent图像（Flux2）"
+    },
+    "inputs": {
+      "width": [
+        "37",
+        0
+      ],
+      "height": [
+        "38",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage"
+  },
+  "10": {
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    },
+    "inputs": {
+      "noise": [
+        "42",
+        0
+      ],
+      "guider": [
+        "3",
+        0
+      ],
+      "sigmas": [
+        "4",
+        0
+      ],
+      "sampler": [
+        "2",
+        0
+      ],
+      "latent_image": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced"
+  },
+  "12": {
+    "_meta": {
+      "title": "CLIP文本编码"
+    },
+    "inputs": {
+      "clip": [
+        "28",
+        0
+      ],
+      "text": [
+        "1",
+        4
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "14": {
+    "_meta": {
+      "title": "参考Latent"
+    },
+    "inputs": {
+      "latent": [
+        "21",
+        0
+      ],
+      "conditioning": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent"
+  },
+  "15": {
+    "_meta": {
+      "title": "参考Latent"
+    },
+    "inputs": {
+      "latent": [
+        "21",
+        0
+      ],
+      "conditioning": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent"
+  },
+  "17": {
+    "_meta": {
+      "title": "参考Latent"
+    },
+    "inputs": {
+      "latent": [
+        "22",
+        0
+      ],
+      "conditioning": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent"
+  },
+  "18": {
+    "_meta": {
+      "title": "参考Latent"
+    },
+    "inputs": {
+      "latent": [
+        "22",
+        0
+      ],
+      "conditioning": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent"
+  },
+  "21": {
+    "_meta": {
+      "title": "VAE编码"
+    },
+    "inputs": {
+      "vae": [
+        "29",
+        0
+      ],
+      "pixels": [
+        "59",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "22": {
+    "_meta": {
+      "title": "VAE编码"
+    },
+    "inputs": {
+      "vae": [
+        "29",
+        0
+      ],
+      "pixels": [
+        "61",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "25": {
+    "_meta": {
+      "title": "VAE解码"
+    },
+    "inputs": {
+      "vae": [
+        "29",
+        0
+      ],
+      "samples": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "27": {
+    "_meta": {
+      "title": "保存图像"
+    },
+    "inputs": {
+      "images": [
+        "25",
+        0
+      ],
+      "filename_prefix": "commentary/storyboard"
+    },
+    "class_type": "SaveImage"
+  },
+  "28": {
+    "_meta": {
+      "title": "加载CLIP"
+    },
+    "inputs": {
+      "type": "flux2",
+      "device": "default",
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors"
+    },
+    "class_type": "CLIPLoader"
+  },
+  "29": {
+    "_meta": {
+      "title": "加载VAE"
+    },
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "32": {
+    "_meta": {
+      "title": "UNet加载器"
+    },
+    "inputs": {
+      "unet_name": "flux-2-klein-9b-fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "33": {
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    },
+    "inputs": {
+      "model": [
+        "32",
+        0
+      ],
+      "lora_name": "Klein_9B-NSFW.safetensors",
+      "strength_model": 0.7
+    },
+    "class_type": "LoraLoaderModelOnly"
+  },
+  "37": {
+    "_meta": {
+      "title": "尺寸-宽"
+    },
+    "inputs": {
+      "value": 1280
+    },
+    "class_type": "INTConstant"
+  },
+  "38": {
+    "_meta": {
+      "title": "尺寸-高"
+    },
+    "inputs": {
+      "value": 720
+    },
+    "class_type": "INTConstant"
+  },
+  "42": {
+    "_meta": {
+      "title": "随机噪波"
+    },
+    "inputs": {
+      "noise_seed": 2864035520
+    },
+    "class_type": "RandomNoise"
+  },
+  "43": {
+    "_meta": {
+      "title": "文本"
+    },
+    "inputs": {
+      "text": "{\"analysis_id\": 83, \"style_type\": \"动漫人物\", \"script_analysis\": \"高三修仙特训教室内，全班同学刻苦修炼，唯独林辰瘫睡摆烂。面对教官怒斥与同学嘲讽，林辰意外激活最强摆烂系统，拒绝内卷坚持睡觉，瞬间突破炼气五层，灵气爆发碾压全场，令所有人震惊失语。\", \"scene_registry\": {\"cultivation_classroom\": \"宽敞明亮的现代修仙特训教室，墙面悬挂巨型励志标语，整齐排列着数十张金属课桌椅。窗户宽大透光，讲台位于正前方。光影：高亮冷白光漫反射，整体氛围肃穆压抑，空气中隐约可见灵气微光。\"}, \"character_ref_prompts\": [{\"id\": 245, \"name\": \"林辰\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身][动漫人物]，林辰，十八岁青年男性，黑色碎发，五官俊朗但带着慵懒不羁的气质，穿着宽松的白色修仙校服外套，内搭黑色T恤，全片统一形象\", \"image_url\": \"https://woniuai.tos-cn-beijing.volces.com/images/32cd555b37f54515b52b2b22635a81a4.png\"}, {\"id\": 246, \"name\": \"王胖子\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身][动漫人物]，王胖子，十八岁青年男性，体型微胖圆润，圆脸戴黑框眼镜，穿着略显紧绷的修仙校服，气质憨厚焦急，全片统一形象\", \"image_url\": \"https://woniuai.tos-cn-beijing.volces.com/images/68ee7db59b2a4eda96fa6e9acf07ee28.png\"}, {\"id\": 247, \"name\": \"张教官\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身][动漫人物]，张教官，三十五岁中年男性，寸头，面部线条刚硬，穿着笔挺的深色教官制服，身姿挺拔，气质严厉威严，全片统一形象\", \"image_url\": \"https://woniuai.tos-cn-beijing.volces.com/images/ddd5eb3ed0994e31b9aa8ee054aacbf2.png\"}, {\"id\": 248, \"name\": \"赵天宇\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身][动漫人物]，赵天宇，十八岁青年男性，发型精致，面容高傲冷峻，穿着剪裁合体的修仙校服，气质自信优越，全片统一形象\", \"image_url\": \"https://woniuai.tos-cn-beijing.volces.com/images/b447493c13f04dd0887f1456aeaf3e6e.png\"}, {\"id\": 249, \"name\": \"苏清月\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身][动漫人物]，苏清月，十八岁青年女性，黑长直发，五官清冷绝美，穿着标准修仙校服裙装，气质清高孤傲，全片统一形象\", \"image_url\": \"https://woniuai.tos-cn-beijing.volces.com/images/22e263b86a8e46c086f3aa718cddbd70.png\"}], \"storyboard\": [{\"id\": 2743, \"sequence_id\": 21, \"original_text\": \"同学B:开学到现在一点不努力，迟早被学校劝退。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"同学B\", \"prompt\": \"单人中近景，Cinematic framing, rule of thirds, visible background。同学B摇头叹息，眼神带着惋惜，双手交叠放在桌上，身体微微前倾，冷白光侧照，背景清晰可见。\"}, {\"id\": 2744, \"sequence_id\": 22, \"original_text\": \"旁白:张教官走到桌前重重一拍，巨响瞬间响彻。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"张教官,林辰\", \"prompt\": \"双人中景，Cinematic framing, rule of thirds, visible background。张教官站在课桌旁，手掌重重拍击桌面，桌面微震，林辰身体微微一颤，冷白光聚焦拍桌瞬间，背景清晰可见。\"}, {\"id\": 2745, \"sequence_id\": 23, \"original_text\": \"张教官_暴怒:林辰全班都在刻苦修炼，唯独你上课睡觉。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"张教官\", \"prompt\": \"单人中近景，Cinematic framing, rule of thirds, visible background。张教官眉头紧锁，下颌紧绷，手指直指林辰，胸膛剧烈起伏，冷白光打在面部凸显怒意，背景清晰可见。\"}, {\"id\": 2746, \"sequence_id\": 24, \"original_text\": \"张教官_暴怒:你是不是不想学了，天天摆烂这辈子别想筑基。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"张教官\", \"prompt\": \"单人中景，Cinematic framing, rule of thirds, visible background。张教官双手抱胸，身体前倾压迫感极强，眼神如刀，嘴唇紧抿，冷白光侧照，背景清晰可见。\"}, {\"id\": 2747, \"sequence_id\": 25, \"original_text\": \"林辰:教官太累了卷不动，不如睡个好觉最舒服。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"林辰\", \"prompt\": \"单人中近景，Cinematic framing, rule of thirds, visible background。林辰懒洋洋抬起眼皮，嘴角挂着漫不经心的笑，单手挠了挠头，姿态极度放松，窗外柔光打在脸上，背景清晰可见。\"}, {\"id\": 2748, \"sequence_id\": 26, \"original_text\": \"张教官_暴怒:修仙界没有舒服，今天必须当众苦修两小时。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"张教官\", \"prompt\": \"单人中景，Cinematic framing, rule of thirds, visible background。张教官猛地直起身，手指用力敲击桌面，面部涨红，眼神严厉不容置疑，冷白光聚焦面部，背景清晰可见。\"}, {\"id\": 2749, \"sequence_id\": 27, \"original_text\": \"张教官_暴怒:敢偷懒直接记大过，立刻给我盘腿打坐修炼。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"张教官\", \"prompt\": \"单人中近景，Cinematic framing, rule of thirds, visible background。张教官双臂交叉抱于胸前，下巴微抬，嘴唇紧抿成一条直线，眼神冰冷，冷白光侧照，背景清晰可见。\"}, {\"id\": 2750, \"sequence_id\": 28, \"original_text\": \"旁白:林辰脑海中突然响起一道清脆沙雕的机械音。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"林辰\", \"prompt\": \"单人中近景，Cinematic framing, rule of thirds, visible background。林辰原本慵懒的眼神突然聚焦，瞳孔微微放大，头部微侧似在倾听，嘴角笑意渐收，窗外柔光打在侧脸，背景清晰可见。\"}, {\"id\": 2751, \"sequence_id\": 29, \"original_text\": \"系统音:叮检测到宿主极致摆烂心态，彻底拒绝内卷。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"林辰\", \"prompt\": \"单人中景，Cinematic framing, rule of thirds, visible background。林辰身体微微后仰，双手自然垂落，眼神中闪过一丝错愕，随即恢复平静，冷白光与窗外光交织，背景清晰可见。\"}, {\"id\": 2752, \"sequence_id\": 30, \"original_text\": \"系统音:最强摆烂成神系统绑定成功，越摆烂越强。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"林辰\", \"prompt\": \"单人中近景，Cinematic framing, rule of thirds, visible background。林辰嘴角开始不受控制地上扬，眼底闪过兴奋光芒，手指轻轻敲击桌面，姿态逐渐放松，冷白光侧照，背景清晰可见。\"}]}"
+    },
+    "class_type": "CR Text"
+  },
+  "44": {
+    "_meta": {
+      "title": "按索引提取参考图 (FLUX VAE版)"
+    },
+    "inputs": {
+      "索引列表": [
+        "1",
+        2
+      ],
+      "所有角色图Batch": [
+        "1",
+        5
+      ]
+    },
+    "class_type": "BatchImageSelector"
+  },
+  "45": {
+    "_meta": {
+      "title": "按索引提取参考图 (FLUX VAE版)"
+    },
+    "inputs": {
+      "索引列表": [
+        "1",
+        3
+      ],
+      "所有角色图Batch": [
+        "1",
+        5
+      ]
+    },
+    "class_type": "BatchImageSelector"
+  },
+  "59": {
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    },
+    "inputs": {
+      "fit": "crop",
+      "image": [
+        "44",
+        0
+      ],
+      "method": "lanczos",
+      "aspect_ratio": "original",
+      "scale_to_side": "longest",
+      "scale_to_length": 1280,
+      "background_color": "#000000",
+      "round_to_multiple": "16",
+      "proportional_width": 1,
+      "proportional_height": 1
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2"
+  },
+  "61": {
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    },
+    "inputs": {
+      "fit": "crop",
+      "image": [
+        "45",
+        0
+      ],
+      "method": "lanczos",
+      "aspect_ratio": "original",
+      "scale_to_side": "longest",
+      "scale_to_length": 1280,
+      "background_color": "#000000",
+      "round_to_multiple": "16",
+      "proportional_width": 1,
+      "proportional_height": 1
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2"
+  }
+}

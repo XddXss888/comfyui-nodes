@@ -1,0 +1,175 @@
+{
+  "5": {
+    "inputs": {
+      "width": 1024,
+      "height": 576,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "### Scene Description\n\n**Visual Style:**\n- The scene is rendered in a vibrant and warm Pixar 3D animation style, with soft, inviting colors and smooth shading. The environment is filled with a gentle, magical atmosphere, and the lighting is warm and comforting, casting a soft glow on the characters and the surroundings.\n\n**Composition:**\n- The full-body view of the child, a young Asian girl, is centered in the frame. She is standing in a cozy, whimsical forest clearing, surrounded by tall, friendly trees with leaves that shimmer in the soft light. The ground is covered in a carpet of soft, lush grass, and there are small, glowing flowers scattered around.\n- The girl is wearing a simple, colorful dress with playful patterns. Her hair is tied up in two neat pigtails, and her eyes are wide with a mix of concern and kindness.\n- In front of the girl, there is a small, injured woodland creature (a baby deer) lying on the grass, looking up at her with trusting eyes. The deer's leg is bandaged, indicating it has been hurt.\n- The girl’s hands are gently placed on the deer’s back, and she is leaning slightly forward, showing her care and attention. Her head is tilted to one side, expressing her worry and compassion.\n\n**Visual Effects:**\n- The camera angle is low, looking up at the girl and the deer, emphasizing the emotional connection between them. The background is softly blurred, creating a natural depth of field that draws the viewer's focus to the main subjects.\n- The lighting is warm and ambient, with a soft, golden hue that bathes the scene in a comforting glow. There are small, twinkling lights in the air, adding a touch of magic and wonder.\n- The green bean sprouts on the girl’s head are subtly glowing, emitting a gentle, soothing light. This light is reflected in the deer’s fur, giving it a warm, healing glow.\n\n**Interaction:**\n- The girl is gently massaging the deer’s back, and the deer is visibly relaxing, its eyes half-closed in contentment. The girl’s expression is one of focused tenderness, and her body language conveys her desire to help and comfort.\n- In the background, a few fireflies are floating around, adding to the magical and serene atmosphere. The trees and the surrounding foliage are alive with subtle, gentle movements, as if they are swaying to an unseen, soothing melody.\n\n**Environment:**\n- The forest clearing is a place of peace and tranquility. The trees are tall and have friendly, anthropomorphic features, with faces that seem to be smiling down at the girl and the deer. The sky above is a soft, twilight blue, with a few stars beginning to twinkle.\n- A small, winding stream flows through the clearing, and the water is clear and sparkling. The sound of the stream adds a calming, natural ambiance to the scene.\n\n**Overall Tone:**\n- The scene is filled with a sense of warmth, care, and imagination. The girl’s actions and the magical elements of the environment create a heartwarming and emotionally resonant moment, reflecting the child’s kind and nurturing spirit. The overall composition and visual effects work together to create a visually compelling and emotionally engaging scene.",
+      "clip": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "13",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "9": {
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImageWebsocket",
+    "_meta": {
+      "title": "通过WebSocket保存图像"
+    }
+  },
+  "19": {
+    "inputs": {
+      "filename_prefix": "api_1781360713_48d557ae",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像到磁盘"
+    }
+  },
+  "10": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "11": {
+    "inputs": {
+      "clip_name1": "t5xxl_fp16.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "双CLIP加载器"
+    }
+  },
+  "12": {
+    "inputs": {
+      "unet_name": "flux1-schnell.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "13": {
+    "inputs": {
+      "noise": [
+        "25",
+        0
+      ],
+      "guider": [
+        "22",
+        0
+      ],
+      "sampler": [
+        "16",
+        0
+      ],
+      "sigmas": [
+        "17",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "16": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "17": {
+    "inputs": {
+      "scheduler": "simple",
+      "steps": 4,
+      "denoise": 1.0,
+      "model": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "基本调度器"
+    }
+  },
+  "22": {
+    "inputs": {
+      "model": [
+        "12",
+        0
+      ],
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "基本引导器"
+    }
+  },
+  "25": {
+    "inputs": {
+      "noise_seed": 854958927192159
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  }
+}

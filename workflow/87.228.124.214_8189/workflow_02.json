@@ -1,0 +1,165 @@
+{
+  "9": {
+    "inputs": {
+      "filename_prefix": "z-image-turbo",
+      "images": [
+        "65",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "62": {
+    "inputs": {
+      "clip_name": "z_image_turbo_text_encoder.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "63": {
+    "inputs": {
+      "vae_name": "z_image_turbo_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "64": {
+    "inputs": {
+      "conditioning": [
+        "67",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "65": {
+    "inputs": {
+      "samples": [
+        "74",
+        0
+      ],
+      "vae": [
+        "63",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "66": {
+    "inputs": {
+      "unet_name": "model2.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "67": {
+    "inputs": {
+      "text": "eurameg1, A woman in a glamorous fitted evening dress stands in the center of a dimly lit VIP room, soft warm lighting casting gentle shadows across her figure, one hand resting lightly on the back of a velvet chair, body turned slightly toward the viewer with a subtle flirtatious smile and direct gaze, elegant posture with natural weight on one leg, faint music and party sounds implied beyond the closed door, simple luxurious interior with dark walls and low ambient glow, medium shot framing her from the waist up, clean composition, realistic proportions, coherent cinematic lighting.",
+      "clip": [
+        "72",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "68": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "69": {
+    "inputs": {
+      "shift": 12.0,
+      "model": [
+        "72",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "72": {
+    "inputs": {
+      "lora_name": "zimg-eurameg1-refine-con-char.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.8,
+      "prompt": "",
+      "example": "[none]",
+      "model": [
+        "66",
+        0
+      ],
+      "clip": [
+        "62",
+        0
+      ]
+    },
+    "class_type": "LoraLoader|pysssss",
+    "_meta": {
+      "title": "Lora Loader 🐍"
+    }
+  },
+  "74": {
+    "inputs": {
+      "eta": 0.5,
+      "sampler_name": "exponential/res_2s",
+      "scheduler": "beta57",
+      "steps": 10,
+      "steps_to_run": -1,
+      "denoise": 1.0,
+      "cfg": 1.0,
+      "seed": 453373455444780,
+      "sampler_mode": "standard",
+      "bongmath": true,
+      "model": [
+        "69",
+        0
+      ],
+      "positive": [
+        "67",
+        0
+      ],
+      "negative": [
+        "64",
+        0
+      ],
+      "latent_image": [
+        "68",
+        0
+      ]
+    },
+    "class_type": "ClownsharKSampler_Beta",
+    "_meta": {
+      "title": "ClownsharKSampler"
+    }
+  }
+}

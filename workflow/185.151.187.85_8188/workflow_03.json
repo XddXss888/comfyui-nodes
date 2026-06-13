@@ -1,0 +1,222 @@
+{
+  "9": {
+    "inputs": {
+      "filename_prefix": "flux_max_face_output",
+      "images": [
+        "65",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Сохранить изображение"
+    }
+  },
+  "61": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "Выбор KSampler"
+    }
+  },
+  "62": {
+    "inputs": {
+      "steps": 20,
+      "width": 1024,
+      "height": 1024
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "Flux2Scheduler"
+    }
+  },
+  "63": {
+    "inputs": {
+      "cfg": 0.7,
+      "model": [
+        "70",
+        0
+      ],
+      "positive": [
+        "122",
+        0
+      ],
+      "negative": [
+        "124",
+        0
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG Гид"
+    }
+  },
+  "64": {
+    "inputs": {
+      "noise": [
+        "73",
+        0
+      ],
+      "guider": [
+        "63",
+        0
+      ],
+      "sampler": [
+        "61",
+        0
+      ],
+      "sigmas": [
+        "62",
+        0
+      ],
+      "latent_image": [
+        "123",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "Пользовательский сэмплер (Расширенный)"
+    }
+  },
+  "65": {
+    "inputs": {
+      "samples": [
+        "64",
+        0
+      ],
+      "vae": [
+        "72",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "Декодировать VAE"
+    }
+  },
+  "67": {
+    "inputs": {
+      "text": "blurry face, deformed face, wrong face, different person, mutated face, plastic skin, uncanny valley, bad anatomy, low quality face, text, watermark, cartoon",
+      "clip": [
+        "71",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Negative Prompt"
+    }
+  },
+  "70": {
+    "inputs": {
+      "unet_name": "snofsSexNudesAndOtherFunStuff_v14Distilled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Загрузить модель диффузии"
+    }
+  },
+  "71": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Загрузить CLIP"
+    }
+  },
+  "72": {
+    "inputs": {
+      "vae_name": "full_encoder_small_decoder.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Загрузить VAE"
+    }
+  },
+  "73": {
+    "inputs": {
+      "noise_seed": 35891207045942
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "Случайный шум"
+    }
+  },
+  "74": {
+    "inputs": {
+      "text": "The photo shows a realistic image of real life. A young woman is sitting on a window sill with her legs spread wide open, viewed from a high angle looking down at her. She has a skinny elongated torso. She is sitting on an open windowsill looking out to a garden. She has huge perky breasts. The window is open. Soft dim cool light fills the interior while gentle sunlight spills in from above the window frame. The woman's hands are planted behind her body for support. Her mouth is wide open in joy.\nShe has long straight hair that's platinum blonde. \n\nShe's wearing a bright white ribbed cardigan opened to show her huge breasts. Her head is thrown back in ecstasy. A short man's naked muscular body is standing at the bottom right  of the frame. The man's large, thick, veiny cock is penetrating her vagina in missionary sex. His large testiscles are visible.",
+      "clip": [
+        "71",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Positive Prompt - MAX FACE"
+    }
+  },
+  "76": {
+    "inputs": {
+      "image": "delia.standing.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Загрузить изображение"
+    }
+  },
+  "122": {
+    "inputs": {
+      "conditioning": [
+        "74",
+        0
+      ],
+      "latent": [
+        "123",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Эталонный латент"
+    }
+  },
+  "123": {
+    "inputs": {
+      "pixels": [
+        "76",
+        0
+      ],
+      "vae": [
+        "72",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "Кодировать VAE"
+    }
+  },
+  "124": {
+    "inputs": {
+      "conditioning": [
+        "67",
+        0
+      ],
+      "latent": [
+        "123",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Эталонный латент"
+    }
+  }
+}

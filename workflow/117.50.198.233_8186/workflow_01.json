@@ -1,0 +1,140 @@
+{
+  "57:11": {
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "inputs": {
+      "model": [
+        "57:28",
+        0
+      ],
+      "shift": 3.0
+    }
+  },
+  "57:13": {
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    },
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "batch_size": 1,
+      "height": 720,
+      "width": 1280
+    }
+  },
+  "57:27": {
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    },
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "57:30",
+        0
+      ],
+      "text": "【整体美学】\n真人实拍摄影质感，自然皮肤毛孔与织物纹理，影棚级光影，35mm 胶片质地。\n\n【画面规格】\n角色设定图，\"老陈\"。16:9 横版，纯白背景，平视视角。仅一个角色，画面中不得出现其他人物。\n版面：左 40%、右 60% 两区。\n左区（占画面宽度 40%，全高，纯白背景）：3/4 侧角面部大特写，头顶贴近画面上沿留 5% 留白，画面下沿到锁骨位置，面部横向居中，无表情闭嘴，脸部无阴影。\n右区（占画面宽度 60%，纯白背景）：三张等尺全身像横向排列，依次为正面、侧面、背面。立正姿势，双手自然下垂，头顶贴近画面上沿留 5% 留白，全身完整入画，从头顶到鞋底无任何裁切。\n身材比例（身高 / 体型 / 头身比）严格按【角色档案】描述呈现。\n所有视图保持同一人物，服装、发型、配饰、身材比例、肤色完全一致。\n\n【角色档案】\n主体：男性，约62岁，东亚人，身高约170cm，身形清瘦挺拔。\n面部：鹅蛋脸，花白短发梳理得整齐服帖，戴细框黑边老花镜，眉形稀疏花白，深棕眼瞳，肤色偏白，脸上有浅淡皱纹，神态儒雅平和。\n服装：深灰色涤棉中山装，风纪扣扣至领口，肩线平整，下身穿同色中山装长裤，裤线笔直，脚穿黑色手工布鞋，整体整洁簇新。\n配饰：上衣左胸口口袋插一支黑色钢笔，手腕戴一块半旧上海牌机械表，无其他配饰。\n\n(不出现任何字幕、文字、Logo、水印、UI；不出现其他人物；不要复制角色或分身同脸；不裁切头顶或脚部)"
+    }
+  },
+  "57:28": {
+    "_meta": {
+      "title": "Load Diffusion Model"
+    },
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "57:29": {
+    "_meta": {
+      "title": "Load VAE"
+    },
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    }
+  },
+  "57:3": {
+    "_meta": {
+      "title": "KSampler"
+    },
+    "class_type": "KSampler",
+    "inputs": {
+      "cfg": 1.0,
+      "denoise": 1.0,
+      "latent_image": [
+        "57:13",
+        0
+      ],
+      "model": [
+        "57:11",
+        0
+      ],
+      "negative": [
+        "57:33",
+        0
+      ],
+      "positive": [
+        "57:27",
+        0
+      ],
+      "sampler_name": "res_multistep",
+      "scheduler": "simple",
+      "seed": 1411871073,
+      "steps": 8
+    }
+  },
+  "57:30": {
+    "_meta": {
+      "title": "Load CLIP"
+    },
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "device": "default",
+      "type": "lumina2"
+    }
+  },
+  "57:33": {
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    },
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "57:27",
+        0
+      ]
+    }
+  },
+  "57:8": {
+    "_meta": {
+      "title": "VAE Decode"
+    },
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "57:3",
+        0
+      ],
+      "vae": [
+        "57:29",
+        0
+      ]
+    }
+  },
+  "9": {
+    "_meta": {
+      "title": "Save Image"
+    },
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "z-image-turbo",
+      "images": [
+        "57:8",
+        0
+      ]
+    }
+  }
+}

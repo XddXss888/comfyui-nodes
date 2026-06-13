@@ -1,0 +1,244 @@
+{
+  "1": {
+    "_meta": {
+      "title": "CLIP文本编码"
+    },
+    "inputs": {
+      "clip": [
+        "15",
+        0
+      ],
+      "text": ""
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "2": {
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    },
+    "inputs": {
+      "noise": [
+        "83",
+        0
+      ],
+      "guider": [
+        "5",
+        0
+      ],
+      "sigmas": [
+        "4",
+        0
+      ],
+      "sampler": [
+        "3",
+        0
+      ],
+      "latent_image": [
+        "29",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced"
+  },
+  "3": {
+    "_meta": {
+      "title": "K采样器选择"
+    },
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect"
+  },
+  "4": {
+    "_meta": {
+      "title": "Flux2调度器"
+    },
+    "inputs": {
+      "steps": 4,
+      "width": [
+        "24",
+        0
+      ],
+      "height": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "Flux2Scheduler"
+  },
+  "5": {
+    "_meta": {
+      "title": "CFG引导器"
+    },
+    "inputs": {
+      "cfg": 1.5,
+      "model": [
+        "65",
+        0
+      ],
+      "negative": [
+        "1",
+        0
+      ],
+      "positive": [
+        "35",
+        0
+      ]
+    },
+    "class_type": "CFGGuider"
+  },
+  "15": {
+    "_meta": {
+      "title": "加载CLIP"
+    },
+    "inputs": {
+      "type": "flux2",
+      "device": "default",
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors"
+    },
+    "class_type": "CLIPLoader"
+  },
+  "18": {
+    "_meta": {
+      "title": "加载VAE"
+    },
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "19": {
+    "_meta": {
+      "title": "VAE解码"
+    },
+    "inputs": {
+      "vae": [
+        "18",
+        0
+      ],
+      "samples": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "24": {
+    "_meta": {
+      "title": "图片宽度"
+    },
+    "inputs": {
+      "value": 1280
+    },
+    "class_type": "INTConstant"
+  },
+  "25": {
+    "_meta": {
+      "title": "图片高度"
+    },
+    "inputs": {
+      "value": 720
+    },
+    "class_type": "INTConstant"
+  },
+  "29": {
+    "_meta": {
+      "title": "空Latent图像（Flux2）"
+    },
+    "inputs": {
+      "width": [
+        "24",
+        0
+      ],
+      "height": [
+        "25",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage"
+  },
+  "35": {
+    "_meta": {
+      "title": "CLIP文本编码"
+    },
+    "inputs": {
+      "clip": [
+        "15",
+        0
+      ],
+      "text": [
+        "82",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "64": {
+    "_meta": {
+      "title": "UNet加载器"
+    },
+    "inputs": {
+      "unet_name": "flux-2-klein-9b-fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "65": {
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    },
+    "inputs": {
+      "model": [
+        "64",
+        0
+      ],
+      "lora_name": "ultra_real_v3.safetensors",
+      "strength_model": 0.7
+    },
+    "class_type": "LoraLoaderModelOnly"
+  },
+  "80": {
+    "_meta": {
+      "title": "保存图像"
+    },
+    "inputs": {
+      "images": [
+        "19",
+        0
+      ],
+      "filename_prefix": "commentary/role"
+    },
+    "class_type": "SaveImage"
+  },
+  "81": {
+    "_meta": {
+      "title": "角色设计Json"
+    },
+    "inputs": {
+      "text": "{\"character_ref_prompts\": [{\"id\": \"245\", \"name\": \"林辰\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身]动漫人物，林辰，十八岁青年男性，黑色碎发，五官俊朗但带着慵懒不羁的气质，穿着宽松的白色修仙校服外套，内搭黑色T恤，全片统一形象\"}, {\"id\": \"246\", \"name\": \"王胖子\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身]动漫人物，王胖子，十八岁青年男性，体型微胖圆润，圆脸戴黑框眼镜，穿着略显紧绷的修仙校服，气质憨厚焦急，全片统一形象\"}, {\"id\": \"247\", \"name\": \"张教官\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身]动漫人物，张教官，三十五岁中年男性，寸头，面部线条刚硬，穿着笔挺的深色教官制服，身姿挺拔，气质严厉威严，全片统一形象\"}, {\"id\": \"248\", \"name\": \"赵天宇\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身]动漫人物，赵天宇，十八岁青年男性，发型精致，面容高傲冷峻，穿着剪裁合体的修仙校服，气质自信优越，全片统一形象\"}, {\"id\": \"249\", \"name\": \"苏清月\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身]动漫人物，苏清月，十八岁青年女性，黑长直发，五官清冷绝美，穿着标准修仙校服裙装，气质清高孤傲，全片统一形象\"}]}"
+    },
+    "class_type": "CR Text"
+  },
+  "82": {
+    "_meta": {
+      "title": "剧本JSON解析器 (双角色版)"
+    },
+    "inputs": {
+      "JSON剧本数据": [
+        "81",
+        0
+      ]
+    },
+    "class_type": "ScriptJSONParser"
+  },
+  "83": {
+    "_meta": {
+      "title": "随机噪波"
+    },
+    "inputs": {
+      "noise_seed": 3690405627
+    },
+    "class_type": "RandomNoise"
+  }
+}

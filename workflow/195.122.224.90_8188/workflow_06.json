@@ -1,0 +1,246 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b-nvfp4.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen_3_8b.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "4": {
+    "inputs": {
+      "text": "Photorealistic, modern portrait of Jinhua Zhao, a distinguished transport expert, against a backdrop of innovative urban planning visuals and MIT's iconic architecture.",
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "6": {
+    "inputs": {
+      "width": 1280,
+      "height": 720,
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "7": {
+    "inputs": {
+      "seed": 715731912961082,
+      "steps": 10,
+      "cfg": 3.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "16",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "22",
+        0
+      ],
+      "latent_image": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "9": {
+    "inputs": {
+      "samples": [
+        "24",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "13": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": false,
+        "lora": "klein_slider_detail.safetensors",
+        "strength": 1
+      },
+      "lora_2": {
+        "on": false,
+        "lora": "detail_slider_klein_9b_20260123_065513.safetensors",
+        "strength": 1
+      },
+      "lora_3": {
+        "on": false,
+        "lora": "MIGUNOVK9.safetensors",
+        "strength": 1
+      },
+      "lora_4": {
+        "on": false,
+        "lora": "MovieClips_Klein9B_copy_000000880.safetensors",
+        "strength": 1
+      },
+      "lora_5": {
+        "on": false,
+        "lora": "add_detail.safetensors",
+        "strength": 1
+      },
+      "lora_6": {
+        "on": false,
+        "lora": "bfs_head_v1_flux-klein_9b_step3500_rank128.safetensors",
+        "strength": 1
+      },
+      "lora_7": {
+        "on": true,
+        "lora": "klein_slider_anatomy.safetensors",
+        "strength": 1
+      },
+      "lora_8": {
+        "on": false,
+        "lora": "Flux_2-Turbo-LoRA_comfyui.safetensors",
+        "strength": 1
+      },
+      "lora_9": {
+        "on": false,
+        "lora": "Tiny Things Flux2-Klein-9b.safetensors",
+        "strength": 1
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree)"
+    }
+  },
+  "14": {
+    "inputs": {
+      "sage_attention": "auto",
+      "allow_compile": true,
+      "model": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "PathchSageAttentionKJ",
+    "_meta": {
+      "title": "Patch Sage Attention KJ"
+    }
+  },
+  "16": {
+    "inputs": {
+      "enable_fp16_accumulation": true,
+      "model": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "ModelPatchTorchSettings",
+    "_meta": {
+      "title": "Model Patch Torch Settings"
+    }
+  },
+  "22": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "23": {
+    "inputs": {
+      "filename_prefix": "news",
+      "images": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "24": {
+    "inputs": {
+      "seed": 929385875023844,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.35,
+      "model": [
+        "16",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "22",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  }
+}

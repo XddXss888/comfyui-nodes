@@ -1,0 +1,20 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "_audit_tiny.png"
+    }
+  },
+  "2": {
+    "class_type": "SaveImageTextDataSetToFolder",
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ],
+      "texts": "AUDIT_PROOF_RCE_20260430_THIS_IS_A_TEST",
+      "folder_name": "../../../../tmp/comfyui_audit_proof",
+      "filename_prefix": "rce_test"
+    }
+  }
+}

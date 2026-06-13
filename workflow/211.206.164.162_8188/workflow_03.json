@@ -1,0 +1,86 @@
+{
+  "7": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ],
+      "filename_prefix": "ComfyUI"
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "6",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "3": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "nsfw, nudity, naked, nude, topless, bottomless, lingerie, underwear, lewd, erotic,\nsexual, sex pose, explicit, adult content, fetish, sensual, suggestive,\ninappropriate, obscene,\nexposed skin, exposed chest, exposed breasts, cleavage, underboob, sideboob,\ngenitals, penis, vagina, nipples, areola, pubic hair,\nkissing, intimate, seductive, sexual act"
+    }
+  },
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "illustrious-fp8-SEMImergeij.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 480,
+      "height": 720,
+      "batch_size": 1
+    }
+  },
+  "6": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ],
+      "seed": 412755268422642,
+      "steps": 20,
+      "cfg": 6.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "2": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "Cute cat"
+    }
+  }
+}

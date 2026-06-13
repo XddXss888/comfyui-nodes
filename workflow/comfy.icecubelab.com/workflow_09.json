@@ -1,0 +1,112 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "DualCLIPLoader",
+    "inputs": {
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp16.safetensors",
+      "type": "flux"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "A stunning Korean idol-style woman with burgundy red hair swept into a high ponytail, wispy bangs framing her soft round face and luminous doe eyes. She stands off-center in an autumn park, golden and crimson leaves swirling around her mid-leap, caught in a playful, energetic burst of laughter. Oversized vintage band t-shirt knotted at the waist, paired with black leather combat boots. Shot on 24mm wide angle lens creating dynamic perspective distortion, her silhouette rimmed against a low sun filtering through maple branches. Neon pink and teal glow from nearby street installations mixes with warm golden hour light, casting prismatic highlights across her flawless dewy skin. Styled gradient lip, shimmering eyeshadow. Photorealistic, editorial quality portrait photography."
+    }
+  },
+  "5": {
+    "class_type": "FluxGuidance",
+    "inputs": {
+      "conditioning": [
+        "4",
+        0
+      ],
+      "guidance": 3.5
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
+    }
+  },
+  "7": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "6",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ],
+      "seed": 1178460330,
+      "control_after_generate": "fixed",
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "9",
+        0
+      ],
+      "filename_prefix": "portrait_1178460330"
+    }
+  }
+}

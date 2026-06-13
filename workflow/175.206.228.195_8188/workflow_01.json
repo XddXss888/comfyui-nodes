@@ -1,0 +1,295 @@
+{
+  "2": {
+    "inputs": {
+      "text": [
+        "32",
+        0
+      ],
+      "clip": [
+        "65",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "3": {
+    "inputs": {
+      "text": [
+        "33",
+        0
+      ],
+      "clip": [
+        "65",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "4": {
+    "inputs": {
+      "seed": 339812173,
+      "steps": [
+        "13",
+        0
+      ],
+      "cfg": [
+        "13",
+        1
+      ],
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "model": [
+        "65",
+        0
+      ],
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "__MephiSampler__"
+    }
+  },
+  "5": {
+    "inputs": {
+      "width": [
+        "17",
+        0
+      ],
+      "height": [
+        "17",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "6": {
+    "inputs": {
+      "samples": [
+        "4",
+        0
+      ],
+      "vae": [
+        "36",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "13": {
+    "inputs": {
+      "steps": 30,
+      "cfg": 9.7
+    },
+    "class_type": "StepsAndCfg",
+    "_meta": {
+      "title": "__MephiStepsCFG_"
+    }
+  },
+  "17": {
+    "inputs": {
+      "Width": 768,
+      "Height": 1366,
+      "Batch": 1,
+      "Landscape": false,
+      "HiResMultiplier": 1.7000000000000002
+    },
+    "class_type": "CanvasCreatorAdvanced",
+    "_meta": {
+      "title": "__MephiCreateCanvas__"
+    }
+  },
+  "20": {
+    "inputs": {
+      "seed": 339812173,
+      "steps": 10,
+      "cfg": [
+        "13",
+        1
+      ],
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 0.5000000000000001,
+      "model": [
+        "65",
+        0
+      ],
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "latent_image": [
+        "61",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "__MephiUpSampler__"
+    }
+  },
+  "25": {
+    "inputs": {
+      "resize_scale": [
+        "17",
+        5
+      ],
+      "resize_method": "nearest",
+      "upscale_model": [
+        "27",
+        0
+      ],
+      "image": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "UpscaleImageByModelThenResize",
+    "_meta": {
+      "title": "Upscale Image By Model Then Resize"
+    }
+  },
+  "27": {
+    "inputs": {
+      "model_name": "RealESRGAN_x4.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "Load Upscale Model"
+    }
+  },
+  "28": {
+    "inputs": {
+      "method": "Mean",
+      "src_image": [
+        "62",
+        0
+      ],
+      "ref_image": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "ImageColorTransferMira",
+    "_meta": {
+      "title": "Color Transfer"
+    }
+  },
+  "32": {
+    "inputs": {
+      "text": "ever_lilith_base, nipples, nude, shy, ever_kayrin, park, happy sex, masterpiece, best quality, amazing quality"
+    },
+    "class_type": "TextBoxMira",
+    "_meta": {
+      "title": "__MephiPositive__"
+    }
+  },
+  "33": {
+    "inputs": {
+      "text": "bad quality,worst quality,worst detail,sketch,censor,"
+    },
+    "class_type": "TextBoxMira",
+    "_meta": {
+      "title": "__MephiNegative__"
+    }
+  },
+  "35": {
+    "inputs": {
+      "filename_prefix": "everpic",
+      "images": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "36": {
+    "inputs": {
+      "ckpt_name": "waiIllustriousSDXL_v140.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "61": {
+    "inputs": {
+      "pixels": [
+        "25",
+        0
+      ],
+      "vae": [
+        "36",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "62": {
+    "inputs": {
+      "samples": [
+        "20",
+        0
+      ],
+      "vae": [
+        "36",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "65": {
+    "inputs": {
+      "data": "[{\"name\": \"lilith_base.safetensors\", \"strength\": 1.0, \"strength_clip\": 1.0}]",
+      "model": [
+        "36",
+        0
+      ],
+      "clip": [
+        "36",
+        1
+      ]
+    },
+    "class_type": "AV_LoraListLoader",
+    "_meta": {
+      "title": "__MephiLora__"
+    }
+  }
+}

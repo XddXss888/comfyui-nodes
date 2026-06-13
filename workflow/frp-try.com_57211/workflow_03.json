@@ -1,0 +1,558 @@
+{
+  "106": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "107": {
+    "inputs": {
+      "shift": 5.0,
+      "model": [
+        "122",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "108": {
+    "inputs": {
+      "shift": 5.0,
+      "model": [
+        "124",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "110": {
+    "inputs": {
+      "text": "色调艳丽，过曝，场景切换，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走，出现文字。",
+      "clip": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "115": {
+    "inputs": {
+      "width": [
+        "154",
+        1
+      ],
+      "height": [
+        "154",
+        2
+      ],
+      "length": 77,
+      "batch_size": 1,
+      "positive": [
+        "116",
+        0
+      ],
+      "negative": [
+        "110",
+        0
+      ],
+      "vae": [
+        "117",
+        0
+      ],
+      "clip_vision_start_image": [
+        "160",
+        0
+      ],
+      "clip_vision_end_image": [
+        "161",
+        0
+      ],
+      "end_image": [
+        "154",
+        0
+      ]
+    },
+    "class_type": "WanFirstLastFrameToVideo",
+    "_meta": {
+      "title": "Wan首尾帧视频"
+    }
+  },
+  "116": {
+    "inputs": {
+      "text": "让角色脸上有笑容然后开始作揖说：“承让承让”",
+      "clip": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "正面提示词"
+    }
+  },
+  "117": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "119": {
+    "inputs": {
+      "unet_name": "WAN2.2/wan2.2_i2v_high_noise_14B_Q4_K_M.gguf"
+    },
+    "class_type": "UnetLoaderGGUF",
+    "_meta": {
+      "title": "Unet Loader (GGUF)"
+    }
+  },
+  "122": {
+    "inputs": {
+      "model": [
+        "267",
+        0
+      ]
+    },
+    "class_type": "wanBlockSwap",
+    "_meta": {
+      "title": "Wan块置换"
+    }
+  },
+  "123": {
+    "inputs": {
+      "unet_name": "WAN2.2/wan2.2_i2v_low_noise_14B_Q4_K_M.gguf"
+    },
+    "class_type": "UnetLoaderGGUF",
+    "_meta": {
+      "title": "Unet Loader (GGUF)"
+    }
+  },
+  "124": {
+    "inputs": {
+      "model": [
+        "266",
+        0
+      ]
+    },
+    "class_type": "wanBlockSwap",
+    "_meta": {
+      "title": "Wan块置换"
+    }
+  },
+  "126": {
+    "inputs": {
+      "samples": [
+        "129",
+        0
+      ],
+      "vae": [
+        "117",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "128": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 0,
+      "steps": [
+        "244",
+        0
+      ],
+      "cfg": 1.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": [
+        "245",
+        0
+      ],
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "107",
+        0
+      ],
+      "positive": [
+        "115",
+        0
+      ],
+      "negative": [
+        "115",
+        1
+      ],
+      "latent_image": [
+        "115",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "129": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": [
+        "244",
+        0
+      ],
+      "cfg": 1.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": [
+        "245",
+        0
+      ],
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "108",
+        0
+      ],
+      "positive": [
+        "115",
+        0
+      ],
+      "negative": [
+        "115",
+        1
+      ],
+      "latent_image": [
+        "128",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "131": {
+    "inputs": {
+      "sage_attention": "auto",
+      "allow_compile": false
+    },
+    "class_type": "PathchSageAttentionKJ",
+    "_meta": {
+      "title": "Patch Sage Attention KJ"
+    }
+  },
+  "132": {
+    "inputs": {
+      "sage_attention": "auto",
+      "allow_compile": false
+    },
+    "class_type": "PathchSageAttentionKJ",
+    "_meta": {
+      "title": "Patch Sage Attention KJ"
+    }
+  },
+  "135": {
+    "inputs": {
+      "image": "9fd644b7930af72894f7cfab523af330.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image: Start image"
+    }
+  },
+  "137": {
+    "inputs": {
+      "frame_rate": 16.0,
+      "loop_count": 0,
+      "filename_prefix": "WAN22shouwei001",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "171",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "Video Combine 🎥🅥🅗🅢"
+    }
+  },
+  "152": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": false,
+        "lora": "WAN\\2.1\\Wan21_I2V_14B_lightx2v_cfg_step_distill_lora_rank64.safetensors",
+        "strength": 3.5
+      },
+      "lora_2": {
+        "on": true,
+        "lora": "WAN\\Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors",
+        "strength": 1
+      },
+      "lora_3": {
+        "on": false,
+        "lora": "WAN\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+        "strength": 1
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "119",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree) High Noise"
+    }
+  },
+  "153": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": true,
+        "lora": "WAN\\2.1\\lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank64_bf16.safetensors",
+        "strength": 1.25
+      },
+      "lora_2": {
+        "on": true,
+        "lora": "WAN\\Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors",
+        "strength": 1
+      },
+      "lora_3": {
+        "on": true,
+        "lora": "WAN\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+        "strength": 1
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "123",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree) High Noise"
+    }
+  },
+  "154": {
+    "inputs": {
+      "width": 801,
+      "height": 430,
+      "upscale_method": "lanczos",
+      "keep_proportion": true,
+      "divisible_by": 2,
+      "crop": "disabled",
+      "image": [
+        "135",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJ",
+    "_meta": {
+      "title": "Resize Image (deprecated)"
+    }
+  },
+  "155": {
+    "inputs": {
+      "images": [
+        "154",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "159": {
+    "inputs": {
+      "clip_name": "clip_vision_h.safetensors"
+    },
+    "class_type": "CLIPVisionLoader",
+    "_meta": {
+      "title": "加载CLIP视觉"
+    }
+  },
+  "160": {
+    "inputs": {
+      "crop": "center",
+      "clip_vision": [
+        "159",
+        0
+      ],
+      "image": [
+        "135",
+        0
+      ]
+    },
+    "class_type": "CLIPVisionEncode",
+    "_meta": {
+      "title": "CLIP视觉编码"
+    }
+  },
+  "161": {
+    "inputs": {
+      "crop": "center",
+      "clip_vision": [
+        "159",
+        0
+      ],
+      "image": [
+        "135",
+        0
+      ]
+    },
+    "class_type": "CLIPVisionEncode",
+    "_meta": {
+      "title": "CLIP视觉编码"
+    }
+  },
+  "167": {
+    "inputs": {
+      "model_name": "OmniSR_X2_DIV2K.safetensors"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "加载放大模型"
+    }
+  },
+  "171": {
+    "inputs": {
+      "upscale_model": [
+        "167",
+        0
+      ],
+      "image": [
+        "126",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "使用模型放大图像"
+    }
+  },
+  "244": {
+    "inputs": {
+      "value": 6
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "采样步数"
+    }
+  },
+  "245": {
+    "inputs": {
+      "value": "a/2",
+      "a": [
+        "244",
+        0
+      ]
+    },
+    "class_type": "SimpleMath+",
+    "_meta": {
+      "title": "🔧 Simple Math"
+    }
+  },
+  "247": {
+    "inputs": {
+      "enable_fp16_accumulation": true,
+      "model": [
+        "122",
+        0
+      ]
+    },
+    "class_type": "ModelPatchTorchSettings",
+    "_meta": {
+      "title": "Model Patch Torch Settings"
+    }
+  },
+  "248": {
+    "inputs": {
+      "enable_fp16_accumulation": true,
+      "model": [
+        "124",
+        0
+      ]
+    },
+    "class_type": "ModelPatchTorchSettings",
+    "_meta": {
+      "title": "Model Patch Torch Settings"
+    }
+  },
+  "264": {
+    "inputs": {
+      "value": "a/2"
+    },
+    "class_type": "SimpleMath+",
+    "_meta": {
+      "title": "🔧 Simple Math"
+    }
+  },
+  "266": {
+    "inputs": {
+      "lora_name": "Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors",
+      "strength_model": 1.0,
+      "strength_clip": 1.0,
+      "model": [
+        "123",
+        0
+      ],
+      "clip": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "加载LoRA"
+    }
+  },
+  "267": {
+    "inputs": {
+      "lora_name": "Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors",
+      "strength_model": 1.0,
+      "strength_clip": 1.0,
+      "model": [
+        "119",
+        0
+      ],
+      "clip": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "加载LoRA"
+    }
+  }
+}

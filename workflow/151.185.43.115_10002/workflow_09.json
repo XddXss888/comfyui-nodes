@@ -1,0 +1,28 @@
+{
+  "4": {
+    "inputs": {
+      "images": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "PreviewImageCustom",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "5": {
+    "inputs": {
+      "prompt": "Flat 2D vector illustration of a central command hub coordinating multiple project workflows. Team tasks, documents, milestones, schedules, communication threads, and approval processes converge into a single organized workspace. Floating task cards, workflow connections, progress indicators, and collaboration nodes arranged in a balanced composition. Soft gradients, abstract background shapes, modern business productivity theme, clean corporate vector style, no people, no text, no dashboard interface, premium SaaS hero illustration, SVG quality, thumbnail banner format.",
+      "resolution": "1K",
+      "aspect_ratio": "16:9",
+      "thinking_level": "minimal",
+      "ground_with_web_search": false,
+      "ground_with_image_search": false
+    },
+    "class_type": "Official_NanoBanana2Node",
+    "_meta": {
+      "title": "Nano Banana 2 Image Generation"
+    }
+  }
+}

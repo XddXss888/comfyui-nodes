@@ -1,0 +1,218 @@
+{
+  "6": {
+    "inputs": {
+      "text": "Realistic cinematic shot. The young woman is sleeping peacefully on a soft white bed, her hair spread across the pillow, gentle morning light streaming through a window, slow breathing, subtle facial relaxation, eyelashes fluttering softly, cozy bedroom atmosphere, warm tones, shallow depth of field.",
+      "clip": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "7": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "15",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "10": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "11": {
+    "inputs": {
+      "clip_name": "nsfw_wan_umt5-xxl_fp8_scaled.safetensors",
+      "type": "wan",
+      "device": "cpu"
+    },
+    "class_type": "CLIPLoader"
+  },
+  "12": {
+    "inputs": {
+      "width": 480,
+      "height": 848,
+      "length": 81,
+      "batch_size": 1,
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ],
+      "start_image": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "WanImageToVideo"
+  },
+  "9": {
+    "inputs": {
+      "image": "2.png"
+    },
+    "class_type": "LoadImage"
+  },
+  "20": {
+    "inputs": {
+      "unet_name": "Wan2.2_Remix_NSFW_i2v_14b_high_lighting_v2.0.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "21": {
+    "inputs": {
+      "model": [
+        "20",
+        0
+      ],
+      "lora_name": "Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors",
+      "strength_model": 2.0
+    },
+    "class_type": "LoraLoaderModelOnly"
+  },
+  "22": {
+    "inputs": {
+      "shift": 5.0,
+      "model": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3"
+  },
+  "23": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 87315059284451,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "22",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "12",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "30": {
+    "inputs": {
+      "unet_name": "Wan2.2_Remix_NSFW_i2v_14b_low_lighting_v2.0.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "31": {
+    "inputs": {
+      "model": [
+        "30",
+        0
+      ],
+      "lora_name": "Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors",
+      "strength_model": 1.0
+    },
+    "class_type": "LoraLoaderModelOnly"
+  },
+  "32": {
+    "inputs": {
+      "shift": 5.0,
+      "model": [
+        "31",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3"
+  },
+  "15": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 396582288402637,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "32",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "40": {
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ],
+      "fps": 24.0
+    },
+    "class_type": "CreateVideo"
+  },
+  "41": {
+    "inputs": {
+      "video": [
+        "40",
+        0
+      ],
+      "filename_prefix": "v2_seg1",
+      "format": "mp4",
+      "codec": "h264"
+    },
+    "class_type": "SaveVideo"
+  }
+}

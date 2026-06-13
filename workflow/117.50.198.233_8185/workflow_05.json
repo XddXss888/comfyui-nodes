@@ -1,0 +1,140 @@
+{
+  "57:11": {
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "inputs": {
+      "model": [
+        "57:28",
+        0
+      ],
+      "shift": 3.0
+    }
+  },
+  "57:13": {
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    },
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "batch_size": 1,
+      "height": 720,
+      "width": 1280
+    }
+  },
+  "57:27": {
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    },
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "57:30",
+        0
+      ],
+      "text": "【整体美学】\n真人实拍摄影质感，自然皮肤毛孔与织物纹理，影棚级光影，35mm 胶片质地。\n\n【画面规格】\n角色设定图，\"净念\"。16:9 横版，纯白背景，平视视角。仅一个角色，画面中不得出现其他人物。\n版面：左 40%、右 60% 两区。\n左区（占画面宽度 40%，全高，纯白背景）：正面面部特写，头顶贴近画面上沿留 5% 留白，画面下沿到锁骨位置，面部横向居中，无表情闭嘴，脸部无阴影。\n右区（占画面宽度 60%，纯白背景）：三张等尺全身像横向排列，依次为正面、侧面、背面。立正姿势，双手自然下垂，头顶贴近画面上沿留 5% 留白，全身完整入画，从头顶到鞋底无任何裁切。\n身材比例（身高 / 体型 / 头身比）严格按【角色档案】描述呈现。\n所有视图保持同一人物，服装、发型、配饰、身材比例、肤色完全一致。\n\n【角色档案】\n主体：男性，约45岁，东亚人，身高约185cm，身形高大威严，宽肩厚背。面部：长方脸，光头，头顶有清晰戒疤，眉心有一枚金色火焰纹佛印，浓眉斜飞，深眼窝，鼻梁高挺，薄唇，冷白肤色，下颌骨线条硬朗。服装：金红色交领广袖袈裟，左肩用做工精细的纯金环扣固定，袈裟为重工织锦材质，表面满铺暗金色莲花纹与经文刺绣，内搭雪白素软缎交领宽袖僧衣，领口平整严密，腰间系金线镶边宽腰带，下穿白色真丝阔腿长裤，脚穿白底云头金丝厚底僧鞋，整体材质挺括，整洁簇新。配饰：左手腕缠绕一串打磨圆润的紫檀木佛珠，右手持一柄紫檀木鎏金九环锡杖，顶端金制莲花座镶嵌红色宝石。\n\n(不出现任何字幕、文字、Logo、水印、UI；不出现其他人物；不要复制角色或分身同脸；不裁切头顶或脚部)"
+    }
+  },
+  "57:28": {
+    "_meta": {
+      "title": "Load Diffusion Model"
+    },
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "57:29": {
+    "_meta": {
+      "title": "Load VAE"
+    },
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    }
+  },
+  "57:3": {
+    "_meta": {
+      "title": "KSampler"
+    },
+    "class_type": "KSampler",
+    "inputs": {
+      "cfg": 1.0,
+      "denoise": 1.0,
+      "latent_image": [
+        "57:13",
+        0
+      ],
+      "model": [
+        "57:11",
+        0
+      ],
+      "negative": [
+        "57:33",
+        0
+      ],
+      "positive": [
+        "57:27",
+        0
+      ],
+      "sampler_name": "res_multistep",
+      "scheduler": "simple",
+      "seed": 1947255023,
+      "steps": 8
+    }
+  },
+  "57:30": {
+    "_meta": {
+      "title": "Load CLIP"
+    },
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "device": "default",
+      "type": "lumina2"
+    }
+  },
+  "57:33": {
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    },
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "57:27",
+        0
+      ]
+    }
+  },
+  "57:8": {
+    "_meta": {
+      "title": "VAE Decode"
+    },
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "57:3",
+        0
+      ],
+      "vae": [
+        "57:29",
+        0
+      ]
+    }
+  },
+  "9": {
+    "_meta": {
+      "title": "Save Image"
+    },
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "z-image-turbo",
+      "images": [
+        "57:8",
+        0
+      ]
+    }
+  }
+}

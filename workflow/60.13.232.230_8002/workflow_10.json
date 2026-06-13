@@ -1,0 +1,356 @@
+{
+  "471": {
+    "inputs": {
+      "image": "XXL.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "626": {
+    "inputs": {
+      "image": "PGJ-CTTZ13-ADM1696-XXL_pic.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "M码"
+    }
+  },
+  "737": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "739",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "738": {
+    "inputs": {
+      "model": "ema_vae_fp16.safetensors",
+      "device": "cuda:0",
+      "encode_tiled": true,
+      "encode_tile_size": 1024,
+      "encode_tile_overlap": 128,
+      "decode_tiled": true,
+      "decode_tile_size": 1024,
+      "decode_tile_overlap": 128,
+      "tile_debug": "false",
+      "offload_device": "cuda:0",
+      "cache_model": false
+    },
+    "class_type": "SeedVR2LoadVAEModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load VAE Model"
+    }
+  },
+  "739": {
+    "inputs": {
+      "seed": 2961070790,
+      "resolution": 2048,
+      "max_resolution": 4500,
+      "batch_size": 1,
+      "uniform_batch_size": false,
+      "color_correction": "wavelet",
+      "temporal_overlap": 0,
+      "prepend_frames": 0,
+      "input_noise_scale": 0.0,
+      "latent_noise_scale": 0.0,
+      "offload_device": "cuda:0",
+      "enable_debug": false,
+      "image": [
+        "776",
+        0
+      ],
+      "dit": [
+        "740",
+        0
+      ],
+      "vae": [
+        "738",
+        0
+      ]
+    },
+    "class_type": "SeedVR2VideoUpscaler",
+    "_meta": {
+      "title": "SeedVR2 Video Upscaler (v2.5.24)"
+    }
+  },
+  "740": {
+    "inputs": {
+      "model": "seedvr2_ema_3b_fp16.safetensors",
+      "device": "cuda:0",
+      "blocks_to_swap": 32,
+      "swap_io_components": false,
+      "offload_device": "cpu",
+      "cache_model": false,
+      "attention_mode": "sdpa"
+    },
+    "class_type": "SeedVR2LoadDiTModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load DiT Model"
+    }
+  },
+  "762": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "763": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "764": {
+    "inputs": {
+      "lora_name": "2511_000015210A100.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "766",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "765": {
+    "inputs": {
+      "unet_name": "qwen_image_edit_2511_fp8mixed.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "766": {
+    "inputs": {
+      "lora_name": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "765",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "776": {
+    "inputs": {
+      "samples": [
+        "777",
+        0
+      ],
+      "vae": [
+        "762",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "777": {
+    "inputs": {
+      "seed": 46,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "764",
+        0
+      ],
+      "positive": [
+        "782",
+        0
+      ],
+      "negative": [
+        "783",
+        0
+      ],
+      "latent_image": [
+        "786",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "778": {
+    "inputs": {
+      "purge_cache": true,
+      "purge_models": true,
+      "anything": [
+        "739",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: PurgeVRAM V2",
+    "_meta": {
+      "title": "图层工具：清除VRAM V2"
+    }
+  },
+  "779": {
+    "inputs": {
+      "conditioning": [
+        "784",
+        0
+      ],
+      "latent": [
+        "780",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "780": {
+    "inputs": {
+      "pixels": [
+        "471",
+        0
+      ],
+      "vae": [
+        "762",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "781": {
+    "inputs": {
+      "pixels": [
+        "626",
+        0
+      ],
+      "vae": [
+        "762",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "像素一"
+    }
+  },
+  "782": {
+    "inputs": {
+      "conditioning": [
+        "779",
+        0
+      ],
+      "latent": [
+        "781",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "783": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "763",
+        0
+      ],
+      "vae": [
+        "762",
+        0
+      ],
+      "image1": [
+        "471",
+        0
+      ],
+      "image2": [
+        "626",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "784": {
+    "inputs": {
+      "prompt": "Fill the line art with colors taken directly from the reference garment photo. Keep the original line art structure intact, no shape distortion. Flat lighting, solid colors, no shadows, no wrinkles, clean print-ready output.",
+      "clip": [
+        "763",
+        0
+      ],
+      "image1": [
+        "471",
+        0
+      ],
+      "image2": [
+        "626",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "785": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "width": 1024,
+      "height": 1024,
+      "crop": "disabled",
+      "samples": [
+        "780",
+        0
+      ]
+    },
+    "class_type": "LatentUpscale",
+    "_meta": {
+      "title": "缩放Latent"
+    }
+  },
+  "786": {
+    "inputs": {
+      "amount": 4,
+      "samples": [
+        "785",
+        0
+      ]
+    },
+    "class_type": "RepeatLatentBatch",
+    "_meta": {
+      "title": "复制Latent批次"
+    }
+  }
+}

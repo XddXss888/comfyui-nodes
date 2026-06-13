@@ -1,0 +1,123 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "DualCLIPLoader",
+    "inputs": {
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp16.safetensors",
+      "type": "flux"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "lora_name": "flux_korean_girl.safetensors",
+      "strength_model": 0.85
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "A striking Korean idol with a burgundy red short bob cut, delicate features and a button nose, giving a cool edgy stare directly into the camera. Extreme close-up macro shot at eye level, centered symmetrical composition capturing every skin texture and lash detail. Harsh midday sun casts sharp geometric shadows across her flawless porcelain face, contrasting with the warm golden hour glow of a rooftop cafe behind her. Styled with smoky winged eyeliner, gradient berry lips, and subtle highlighter on cheekbones. She wears a fitted black leather jacket over a mini skirt, one hand brushing her jaw. The atmosphere is cinematic and rebellious, sun-kissed warmth meeting urban cool confidence. Photogenic editorial portrait, no text, no watermarks."
+    }
+  },
+  "6": {
+    "class_type": "FluxGuidance",
+    "inputs": {
+      "conditioning": [
+        "5",
+        0
+      ],
+      "guidance": 3.5
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
+    }
+  },
+  "8": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 896,
+      "height": 1280,
+      "batch_size": 1
+    }
+  },
+  "9": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "8",
+        0
+      ],
+      "seed": 1038282466,
+      "control_after_generate": "fixed",
+      "steps": 22,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "10": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "9",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "10",
+        0
+      ],
+      "filename_prefix": "portrait_1038282466"
+    }
+  }
+}

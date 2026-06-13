@@ -1,0 +1,279 @@
+{
+  "21": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect"
+  },
+  "22": {
+    "inputs": {
+      "noise_seed": 655688651201801
+    },
+    "class_type": "RandomNoise"
+  },
+  "23": {
+    "inputs": {
+      "cfg": 1.0,
+      "model": [
+        "42",
+        0
+      ],
+      "positive": [
+        "50",
+        0
+      ],
+      "negative": [
+        "52",
+        0
+      ]
+    },
+    "class_type": "CFGGuider"
+  },
+  "25": {
+    "inputs": {
+      "text": [
+        "65",
+        0
+      ],
+      "clip": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "26": {
+    "inputs": {
+      "steps": 4,
+      "width": [
+        "56",
+        0
+      ],
+      "height": [
+        "56",
+        1
+      ]
+    },
+    "class_type": "Flux2Scheduler"
+  },
+  "27": {
+    "inputs": {
+      "value": 1280
+    },
+    "class_type": "INTConstant"
+  },
+  "28": {
+    "inputs": {
+      "noise": [
+        "22",
+        0
+      ],
+      "guider": [
+        "23",
+        0
+      ],
+      "sampler": [
+        "21",
+        0
+      ],
+      "sigmas": [
+        "26",
+        0
+      ],
+      "latent_image": [
+        "57",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced"
+  },
+  "29": {
+    "inputs": {
+      "samples": [
+        "28",
+        0
+      ],
+      "vae": [
+        "35",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "35": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "39": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader"
+  },
+  "42": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b-fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "44": {
+    "inputs": {
+      "text": "LOGO,水印，字幕，中文字幕，blurry, out of focus, overexposed, underexposed, low contrast, washed out colors, excessive noise, grainy texture, poor lighting, flickering, motion blur, distorted proportions, unnatural skin tones, deformed facial features, asymmetrical face, missing facial features, extra limbs, disfigured hands, wrong hand count, artifacts around text, unreadable text",
+      "clip": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "45": {
+    "inputs": {
+      "pixels": [
+        "55",
+        0
+      ],
+      "vae": [
+        "35",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "48": {
+    "inputs": {
+      "filename_prefix": "Klein9B",
+      "images": [
+        "212",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "50": {
+    "inputs": {
+      "conditioning": [
+        "25",
+        0
+      ],
+      "latent": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent"
+  },
+  "52": {
+    "inputs": {
+      "conditioning": [
+        "44",
+        0
+      ],
+      "latent": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent"
+  },
+  "53": {
+    "inputs": {
+      "value": 720
+    },
+    "class_type": "INTConstant"
+  },
+  "55": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": 1920,
+      "background_color": "#000000",
+      "image": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2"
+  },
+  "56": {
+    "inputs": {
+      "image": [
+        "55",
+        0
+      ]
+    },
+    "class_type": "GetImageSize"
+  },
+  "57": {
+    "inputs": {
+      "width": [
+        "53",
+        0
+      ],
+      "height": [
+        "27",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage"
+  },
+  "65": {
+    "inputs": {
+      "prompt": "S01: [远景] 阳光透过茂密的树叶洒在森林中，翠绿的草地铺满地面，野花点缀其间。画面左侧一只可爱的小白兔竖着长长的耳朵在草地上欢快地蹦跳，蓬松的尾巴一翘一翘。画面右侧一只背着深绿色花纹壳的小乌龟正慢慢地在草地上爬行，留下一道浅浅的爬痕。远处有高耸的大树和起伏的山丘，蝴蝶在花丛中飞舞，整体氛围温馨梦幻。儿童绘本风格，水彩插画，暖色调。 --ar 9:16\nS02: [中景] 森林小径旁的草地上，可爱的小白兔面向小乌龟站立，嘴巴张开露出灿烂的笑容，一只前爪指向前方的赛道方向，长耳朵兴奋地竖起。小乌龟抬头仰望小白兔，温和地微笑着，前爪缓缓向前伸展表示同意。背景是柔和虚化的绿色森林，金色光斑在两人之间闪烁，烘托友好交流的氛围。儿童绘本风格，水彩插画，暖色调。 --ar 9:16\nS03: [远景] 森林空地上，慈祥的灰色大象伯伯站在中间，长鼻子高高扬起宣布比赛规则，周围围着松鼠、小鹿、小猴、小鸟等小动物们，有的踮脚张望，有的爬到树杈上探头。起点线两侧小白兔和小乌龟做着热身准备，地面上有两根彩色木桩标记起点，远处一棵大树插着红旗作为终点。阳光明媚，氛围热闹。儿童绘本风格，水彩插画，暖色调。 --ar 9:16\nS04: [中景] 画面充满动感与速度感，活泼的小白兔如离弦之箭般飞奔向前，四肢大幅伸展，长耳朵向后飞扬，嘴巴兴奋地张开。身后的地面上扬起一团小灰尘，表示速度之快。画面远处的小乌龟才刚爬出一小步，渺小的身影形成鲜明对比。赛道两侧是模糊流动的树木和草地，背景虚化突出奔跑的速度感。儿童绘本风格，水彩插画，暖色调。 --ar 9:16\nS05: [近景] 画面中央是粗壮茂盛的大树，树荫下铺着一片绿油油的柔软草地。一只小白兔侧躺在草地上，身体蜷缩成一团，闭着眼睛睡得香甜，小肚子随着呼吸一起一伏，长耳朵松软地搭在脸颊旁。旁边散落着几朵黄色和白色的小野花，几片落叶飘落。画面宁静温馨，暖色阳光透过树叶洒落。儿童绘本风格，水彩插画，暖色调。 --ar 9:16\nS06: [中景] 金色的阳光炙烤着大地，弯曲的赛道上一只背着重壳的小乌龟正艰难地向前爬行。它的头微微昂起，目光坚定，额头上挂着一颗晶莹的汗珠，前爪和后爪努力地交替向前。地面上有一串延伸向远方的小小脚印。背景是被晒得有些发白的草地，几朵白云飘在湛蓝的天空，表现出坚持不懈的精神。儿童绘本风格，水彩插画，暖色调。 --ar 9:16\nS07: [中景] 画面构图分为前后两部分：左侧大树下小白兔正在呼呼大睡，身体蜷缩成一团，嘴角挂着微笑，完全沉浸在梦境中。右侧小乌龟正一步一步经过它身边，目光坚定地看向前方赛道，没有回头张望或停下脚步。地面上有小乌龟延伸向远方的爬痕。光斑从树叶缝隙洒落，形成斑驳光影。儿童绘本风格，水彩插画，暖色调。 --ar 9:16\nS08: [特写] 画面上方是小白兔安详的睡脸特写，闭着眼睛，长长的睫毛微微颤动，嘴角幸福地上扬，耳朵柔软地贴在脸颊旁。画面上方漂浮着一个梦幻的云朵形梦境气泡，里面展示着小兔子冲过终点线的欢乐场景，闪闪发光的金色奖杯悬浮在中央，周围环绕着飞舞的彩带和闪亮的星星。梦境色调偏柔和梦幻，与现实画面形成对比。儿童绘本风格，水彩插画，暖色调。 --ar 9:16\nS09: [中景] 小白兔从草地上猛地坐起来，眼睛瞪得圆圆的，嘴巴大大张开呈现震惊的表情，两只前爪紧张地举在胸前，长耳朵高高竖起。画面右侧透过小白兔的视线方向，可以看到远处赛道尽头的小乌龟已经接近终点红旗，只剩一小段距离。背景适度模糊处理，强化小白兔慌张焦急的神态。儿童绘本风格，水彩插画，暖色调。 --ar 9:16\nS10: [远景] 终点的大树下，小乌龟终于爬过了终点线，小小的身影在鲜艳的红旗下方显得无比光荣。周围的小动物们从四面八方涌来欢呼雀跃：松鼠欢快地蹦跳、小鸟在空中盘旋飞翔、小鹿跳跃着跑来、小猴热烈地鼓掌。彩色花瓣和彩带从空中飘落，烘托喜庆氛围。小白兔站在一旁，耷拉着耳朵低着头，表情羞愧不安。儿童绘本风格，水彩插画，暖色调。 --ar 9:16\nS11: [中景] 黄昏的柔和金光洒在森林小路上，小白兔和小乌龟并肩走在回家的路上。小白兔侧头望着小乌龟，脸上带着羞涩又真诚的笑容，长耳朵微微下垂，眼神充满歉意与温柔。小乌龟抬头回望小白兔，温暖地微笑着，前爪缓缓向前爬动。地面上两个小小的身影影子拉得很长，背景是金橙色的夕阳和柔和朦胧的树丛剪影。儿童绘本风格，水彩插画，暖色调。 --ar 9:16\n",
+      "start_index": 0,
+      "max_rows": 11
+    },
+    "class_type": "easy promptLine"
+  },
+  "70": {
+    "inputs": {
+      "images": [
+        "55",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "106": {
+    "inputs": {
+      "image": "Klein9B_00431_.png"
+    },
+    "class_type": "LoadImage"
+  },
+  "211": {
+    "inputs": {
+      "clean_file_cache": true,
+      "clean_processes": true,
+      "clean_dlls": true,
+      "retry_times": 3,
+      "anything": [
+        "29",
+        0
+      ]
+    },
+    "class_type": "RAMCleanup"
+  },
+  "212": {
+    "inputs": {
+      "clean_file_cache": true,
+      "clean_processes": true,
+      "clean_dlls": true,
+      "retry_times": 3,
+      "anything": [
+        "211",
+        0
+      ]
+    },
+    "class_type": "RAMCleanup"
+  }
+}

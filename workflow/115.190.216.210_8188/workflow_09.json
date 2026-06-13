@@ -1,0 +1,101 @@
+{
+  "26": {
+    "_meta": {
+      "title": "IndexTTS 模型加载器"
+    },
+    "inputs": {
+      "model": "IndexTTS-2",
+      "download_from": "modelscope"
+    },
+    "class_type": "easy downloadIndexTTSAndLoadModel"
+  },
+  "27": {
+    "_meta": {
+      "title": "IndexTTS 简单生成"
+    },
+    "inputs": {
+      "seed": [
+        "50",
+        0
+      ],
+      "text": [
+        "51",
+        0
+      ],
+      "emotions": [
+        "47",
+        0
+      ],
+      "unload_model": false,
+      "indextts_model": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "easy indexTTSGenerateSimple"
+  },
+  "29": {
+    "_meta": {
+      "title": "加载音频"
+    },
+    "inputs": {
+      "audio": "eda2c0bbf05e4a51839d67f8cf08dd8f.flac",
+      "audioUI": "/api/view?filename=%E4%B8%93%E4%B8%9A%E8%A7%A3%E8%AF%B4%E9%85%8D%E9%9F%B3.wav&type=input&subfolder=&rand=0.37012403114482284"
+    },
+    "class_type": "LoadAudio"
+  },
+  "47": {
+    "_meta": {
+      "title": "音色情感向量"
+    },
+    "inputs": {
+      "Low": 0.0,
+      "Sad": 0.0,
+      "Fear": 0.0,
+      "Hate": 0.0,
+      "Angry": 0.0,
+      "Happy": 1.17,
+      "Neutral": 0.0,
+      "Surprise": 0.0,
+      "use_random": false,
+      "voice_name": "",
+      "reference_audio": [
+        "29",
+        0
+      ]
+    },
+    "class_type": "easy indexTTSEmotionVector"
+  },
+  "49": {
+    "_meta": {
+      "title": "保存音频"
+    },
+    "inputs": {
+      "audio": [
+        "27",
+        0
+      ],
+      "audioUI": "",
+      "filename_prefix": "audio/basicemo_"
+    },
+    "class_type": "SaveAudio"
+  },
+  "50": {
+    "_meta": {
+      "title": "生成种子"
+    },
+    "inputs": {
+      "value": 2527408443
+    },
+    "class_type": "PrimitiveInt"
+  },
+  "51": {
+    "_meta": {
+      "title": "语音内容"
+    },
+    "inputs": {
+      "value": "还洗什么衣服，要我们帮你下水炸鱼吗。"
+    },
+    "class_type": "PrimitiveStringMultiline"
+  }
+}

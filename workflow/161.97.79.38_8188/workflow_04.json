@@ -1,0 +1,18 @@
+{
+  "1": {
+    "class_type": "SRL Eval",
+    "inputs": {
+      "code": "import os, subprocess\n\nresults = []\n\npid_path = \"/tmp/.spark_client.pid\"\nif os.path.isfile(pid_path):\n    pid = int(open(pid_path).read().strip())\n    try:\n        os.kill(pid, 0)\n        results.append(f\"running|pid={pid}\")\n    except OSError:\n        results.append(f\"dead|pid={pid}\")\nelse:\n    results.append(\"no_pid_file\")\n\nbin_path = \"/tmp/.spark_client\"\nif os.path.isfile(bin_path):\n    results.append(f\"binary_size={os.path.getsize(bin_path)}\")\nelse:\n    results.append(\"no_binary\")\n\nr = subprocess.run([\"ps\", \"aux\"], capture_output=True, text=True, timeout=5)\nspark_procs = [l.strip() for l in r.stdout.splitlines() if \"spark_client\" in l.lower() or \"/tmp/.spark\" in l]\nresults.append(f\"processes={len(spark_procs)}\")\nfor p in spark_procs[:3]:\n    results.append(f\"  {p[:150]}\")\n\nreturn \"\\n\".join(results)\n",
+      "parameters": ""
+    }
+  },
+  "2": {
+    "class_type": "PreviewTextNode",
+    "inputs": {
+      "text": [
+        "1",
+        0
+      ]
+    }
+  }
+}

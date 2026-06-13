@@ -1,0 +1,145 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "DualCLIPLoader",
+    "inputs": {
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp16.safetensors",
+      "type": "flux"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "lora_name": "flux_monet_oscar.safetensors",
+      "strength_model": 0.55
+    }
+  },
+  "5": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "4",
+        0
+      ],
+      "lora_name": "flux_casey_baugh_impressionist.safetensors",
+      "strength_model": 0.45
+    }
+  },
+  "6": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "lora_name": "flux_impressionist_landscape.safetensors",
+      "strength_model": 0.5
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "Triple impressionist composite landscape: a solitary figure standing at the edge of a vast canyon, three layered perspectives merging — close rocky ground dissolving into mid-distance aurora-lit valley, then infinite star-scattered sky above. Each layer painted in loose impressionist brushstrokes shifting from warm amber stress tones below to cool expansive indigo above. The figure appears small against immense natural scale, capturing the psychological shift from self-centered narrowness to boundless openness. Golden hour light breaking through clouds, 16:9 panoramic composition."
+    }
+  },
+  "8": {
+    "class_type": "FluxGuidance",
+    "inputs": {
+      "conditioning": [
+        "7",
+        0
+      ],
+      "guidance": 3.0
+    }
+  },
+  "9": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
+    }
+  },
+  "10": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 1344,
+      "height": 768,
+      "batch_size": 1
+    }
+  },
+  "11": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "6",
+        0
+      ],
+      "positive": [
+        "8",
+        0
+      ],
+      "negative": [
+        "9",
+        0
+      ],
+      "latent_image": [
+        "10",
+        0
+      ],
+      "seed": 1965856355,
+      "control_after_generate": "fixed",
+      "steps": 24,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "12": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "12",
+        0
+      ],
+      "filename_prefix": "blog_1965856355"
+    }
+  }
+}

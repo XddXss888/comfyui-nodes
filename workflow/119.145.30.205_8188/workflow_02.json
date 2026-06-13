@@ -1,0 +1,169 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 4192171794,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "66",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "58",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "*An oval gold pendant in ART DECO style, asymmetrical balanced design, a prominent ram head on the upper part, its curved horns transforming into flowing vine scroll motifs that wrap around the lower and side areas, creating a continuous rhythmic line from head to foliage, engraved geometric lines, black lacquer inlays in scroll tips, high-polish gold contrasted with satin texture, white background, jewelry catalog lighting, 8k, --ar 3:4*",
+      "clip": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "37": {
+    "inputs": {
+      "unet_name": "qwen_image_2512_fp8_e4m3fn.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "38": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "39": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "58": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 4
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "空Latent图像（SD3）"
+    }
+  },
+  "60": {
+    "inputs": {
+      "filename_prefix": "user_7/HULU",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "66": {
+    "inputs": {
+      "shift": 3.1000000000000005,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "采样算法（AuraFlow）"
+    }
+  },
+  "100": {
+    "inputs": {
+      "lora_name": "HULU-Image.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LORA #1 (系统)"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "豹子.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "100",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LORA #2 (系统)"
+    }
+  }
+}

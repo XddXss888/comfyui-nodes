@@ -1,0 +1,28 @@
+{
+  "1": {
+    "inputs": {
+      "prompt": "Premium SaaS vector hero illustration, AI-powered web data extraction platform, multiple web sources connected through intelligent data pipelines into a centralized knowledge hub, structured business data, lead generation, market research, competitive intelligence, interconnected nodes, flowing data streams, abstract technology network, modern flat vector design, blue-indigo-teal gradients, clean whitespace, enterprise software branding, futuristic yet professional, SVG illustration, Dribbble-quality, landing page hero artwork, card thumbnail banner, no dashboard, no text, no people.",
+      "resolution": "1K",
+      "aspect_ratio": "16:9",
+      "thinking_level": "minimal",
+      "ground_with_web_search": false,
+      "ground_with_image_search": false
+    },
+    "class_type": "Official_NanoBanana2Node",
+    "_meta": {
+      "title": "Nano Banana 2 Image Generation"
+    }
+  },
+  "2": {
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "PreviewImageCustom",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  }
+}

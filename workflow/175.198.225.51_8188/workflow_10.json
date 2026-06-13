@@ -1,0 +1,165 @@
+{
+  "3": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "fabricationXL_v40.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "(masterpiece, best quality:1.3), (extreme detailed), (sharp focus), (cinematic lighting), (professional photography), 1girl, mature woman, adult female, (voluptuous body:1.2), (curvy:1.15), (hourglass figure:1.1), (nsfw:1.5), (explicit:1.45), (nude:1.4), (naked:1.35), (uncensored:1.4), (seductive:1.4), (provocative:1.45), (busty:1.35), (large breasts:1.3), (cleavage:1.4), (thighs:1.35), (exposed skin:1.35), (bare skin:1.3), (nipples:1.25), (pussy:1.2), (ass:1.25), (passionate expression:1.35), (hearts in eyes:1.2), (blushing:1.3), (parted lips:1.3), (sultry look:1.4), (ahegao:1.15), (dramatic rim lighting:1.4), (intimate atmosphere:1.35), (boudoir:1.3), (detailed skin texture:1.35), (glistening skin:1.3), (sweat:1.15), (wet skin:1.2), (bedroom setting:1.2), (sheets:1.1), masterpiece, best quality, photorealistic, 8k uhd, korean idol girl, cotton candy pink hair messy wavy twin tails bouncy playful, long bangs slightly messy, heterochromia eyes golden left crimson right large round playful cute shape mischievous aegyo expression, peachy pink skin, average height 163cm voluptuous body full bust, round soft face youthful, masterpiece portrait professional headshot soft lighting clean background, distinct from other characters, pink twin tails emphasized, ahegao tongue out, cowgirl riding, nurse uniform, office after hours, cum dripping, nipples erect, ass spread, soft cinematic lighting, dramatic shadows, NSFW explicit, uncensored",
+      "clip": [
+        "3",
+        1
+      ]
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "low quality, bad anatomy, worst quality, blurry, deformed, extra limbs, malformed hands, mutated hands, fused fingers, too many fingers, bad proportions, disfigured, mutation, gross proportions, body horror, watermark, signature, text, logo, username, censored, mosaic_censoring, bar_censor, covered_nipples, covered_navel",
+      "clip": [
+        "3",
+        1
+      ]
+    }
+  },
+  "5": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1536,
+      "batch_size": 1
+    }
+  },
+  "6": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 48382562,
+      "steps": 40,
+      "cfg": 8.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1.0,
+      "model": [
+        "3",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "6",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    }
+  },
+  "11": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "upscale_method": "area",
+      "width": 1024,
+      "height": 1536,
+      "crop": "disabled",
+      "image": [
+        "10",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "11",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    }
+  },
+  "13": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 48382562,
+      "steps": 40,
+      "cfg": 8.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.4,
+      "model": [
+        "3",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "12",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "13",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    }
+  },
+  "15": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "upscale_method": "lanczos",
+      "width": 832,
+      "height": 1216,
+      "crop": "disabled",
+      "image": [
+        "14",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "easy_realistic_1781357627_",
+      "images": [
+        "15",
+        0
+      ]
+    }
+  }
+}

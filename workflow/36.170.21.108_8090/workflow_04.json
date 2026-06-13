@@ -1,0 +1,288 @@
+{
+  "9": {
+    "inputs": {
+      "filename_prefix": "Flux2-Klein",
+      "images": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "99": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "100": {
+    "inputs": {
+      "noise": [
+        "102",
+        0
+      ],
+      "guider": [
+        "108",
+        0
+      ],
+      "sampler": [
+        "99",
+        0
+      ],
+      "sigmas": [
+        "109",
+        0
+      ],
+      "latent_image": [
+        "665",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "101": {
+    "inputs": {
+      "samples": [
+        "100",
+        0
+      ],
+      "vae": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "102": {
+    "inputs": {
+      "noise_seed": 115285194456204
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  },
+  "105": {
+    "inputs": {
+      "vae_name": "Flux2/flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "108": {
+    "inputs": {
+      "cfg": 1.5,
+      "model": [
+        "158",
+        0
+      ],
+      "positive": [
+        "110",
+        0
+      ],
+      "negative": [
+        "113:186",
+        0
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG引导器"
+    }
+  },
+  "109": {
+    "inputs": {
+      "steps": 20,
+      "width": [
+        "663",
+        0
+      ],
+      "height": [
+        "663",
+        1
+      ]
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "Flux2调度器"
+    }
+  },
+  "110": {
+    "inputs": {
+      "text": "8K 超写实室内人像摄影，胸像特写镜头，16 岁少女艾丝蒂尔・布莱特，棕褐色蓬松分层超长双马尾，发丝带有浅金色阳光挑染，两侧哑光合金束发扣带细微磨损划痕；真人比例琥珀红棕色瞳孔，虹膜纹理清晰，温和内敛浅笑，原生细腻皮肤肌理，清晰皮肤毛孔与苹果肌自然血色红晕，面部柔和骨骼阴影；身穿短款红色棉质游击外套，金色金属刺绣镶边，内搭白色纯棉短袖，单侧哑光蓝烤漆银包边肩甲，颈间银灰束带搭配合金圆扣，双手合十佩戴做旧棕红牛皮半指手套，手套金属铆钉与缝线清晰；背景为复古原木木屋门板，天然深浅木纹，墙面嵌复古金属雕花铭牌，室内暖黄色漫射柔光，正面柔和主光，两侧轮廓光勾勒发丝与金属护甲，50mm 定焦单反相机拍摄，f/2.0 中等景深，真实物理光影，多材质细腻纹理，电影暖调色彩，无 CG 塑料质感，无过度磨皮。",
+      "clip": [
+        "658",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "111": {
+    "inputs": {
+      "conditioning": [
+        "110",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "156": {
+    "inputs": {
+      "sage_attention": "auto",
+      "allow_compile": true,
+      "model": [
+        "664",
+        0
+      ]
+    },
+    "class_type": "PathchSageAttentionKJ",
+    "_meta": {
+      "title": "Patch Sage Attention KJ"
+    }
+  },
+  "158": {
+    "inputs": {
+      "enable_fp16_accumulation": true,
+      "model": [
+        "156",
+        0
+      ]
+    },
+    "class_type": "ModelPatchTorchSettings",
+    "_meta": {
+      "title": "Model Patch Torch Settings"
+    }
+  },
+  "656": {
+    "inputs": {
+      "unet_name": "Flux2/flux-2-klein-9b.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "658": {
+    "inputs": {
+      "clip_name": "qwen/qwen_3_8b.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "663": {
+    "inputs": {
+      "width": 1920,
+      "height": 1920,
+      "aspect_ratio": "16:9 landscape 1344x768",
+      "swap_dimensions": "Off",
+      "upscale_factor": 1.0,
+      "batch_size": 1
+    },
+    "class_type": "CR SDXL Aspect Ratio",
+    "_meta": {
+      "title": "🔳 CR SDXL Aspect Ratio"
+    }
+  },
+  "664": {
+    "inputs": {
+      "lora_name": "FluxKlein/Kook_Flux_klein_亚洲人像.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "656",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "665": {
+    "inputs": {
+      "width": [
+        "666",
+        1
+      ],
+      "height": [
+        "668",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "空Latent图像（Flux2）"
+    }
+  },
+  "666": {
+    "inputs": {
+      "expression": "a*b",
+      "variables.a": [
+        "663",
+        0
+      ],
+      "variables.b": [
+        "663",
+        2
+      ]
+    },
+    "class_type": "SimpleCalculatorKJ",
+    "_meta": {
+      "title": "SimpleCalculatorKJ"
+    }
+  },
+  "668": {
+    "inputs": {
+      "expression": "a*b",
+      "variables.a": [
+        "663",
+        1
+      ],
+      "variables.b": [
+        "663",
+        2
+      ]
+    },
+    "class_type": "SimpleCalculatorKJ",
+    "_meta": {
+      "title": "SimpleCalculatorKJ"
+    }
+  },
+  "113:186": {
+    "inputs": {
+      "conditioning": [
+        "111",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  }
+}

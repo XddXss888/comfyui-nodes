@@ -1,0 +1,107 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 438637886211216,
+      "steps": 16,
+      "cfg": 6.0,
+      "sampler_name": "exp_heun_2_x0_sde",
+      "scheduler": "karras",
+      "denoise": 1.0,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "prefectPonyXL_v6.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "5": {
+    "inputs": {
+      "width": 1024,
+      "height": 1280,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "score_9, score_8_up, score_7_up, 2girls, young hermione granger, brunette, petite, teenager, small breasts, cloak, wizard wand, violet parr, goth, bangs, black lace bra, thigh highs, ball gag, pubic hair, (shortstack:0.6), nipple piercing, (doggystyle position, strap on, lesbian domination:1.2), from behind, ass, anus",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "score_3, score_4, score_5, score_6, poor quality, bad quality, low quality, deformed, ugly, amputee, extra limbs, missing limbs, text, watermark",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  }
+}

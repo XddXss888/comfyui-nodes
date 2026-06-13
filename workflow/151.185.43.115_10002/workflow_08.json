@@ -1,0 +1,28 @@
+{
+  "4": {
+    "inputs": {
+      "images": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "PreviewImageCustom",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "5": {
+    "inputs": {
+      "prompt": "Flat 2D vector illustration, pastel blue and purple color palette, abstract business intelligence scene, AI-powered web data extraction visualized as flowing data particles moving from multiple online sources into a central processing node, structured datasets emerging as charts, graphs, and organized documents, soft gradients, layered geometric background shapes, minimal details, friendly modern design, clean corporate illustration, no people, no text, no dashboard UI, SVG style, landing page hero artwork, premium SaaS thumbnail.",
+      "resolution": "1K",
+      "aspect_ratio": "16:9",
+      "thinking_level": "minimal",
+      "ground_with_web_search": false,
+      "ground_with_image_search": false
+    },
+    "class_type": "Official_NanoBanana2Node",
+    "_meta": {
+      "title": "Nano Banana 2 Image Generation"
+    }
+  }
+}

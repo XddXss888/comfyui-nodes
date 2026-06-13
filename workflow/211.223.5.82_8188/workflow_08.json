@@ -1,0 +1,197 @@
+{
+  "1": {
+    "inputs": {
+      "ckpt_name": "Qwen-Rapid-AIO-NSFW-v23.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "체크포인트 로드"
+    }
+  },
+  "2": {
+    "inputs": {
+      "seed": 65454653,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "beta",
+      "denoise": 1.0,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "3",
+        0
+      ],
+      "negative": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "3": {
+    "inputs": {
+      "prompt": [
+        "19",
+        0
+      ],
+      "clip": [
+        "1",
+        1
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "image1": [
+        "7",
+        0
+      ],
+      "image2": [
+        "8",
+        0
+      ],
+      "image3": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus Input Prompt"
+    }
+  },
+  "4": {
+    "inputs": {
+      "prompt": "bad hands, watermark, patreon username, patreon logo, artist collaboration, censored, mosaic censoring, bar censor, man, boy, selfie, nipple, nude, boob, breasts, ",
+      "clip": [
+        "1",
+        1
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus Negative (leave blank)"
+    }
+  },
+  "5": {
+    "inputs": {
+      "samples": [
+        "2",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE 디코드"
+    }
+  },
+  "6": {
+    "inputs": {
+      "images": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "이미지 미리보기"
+    }
+  },
+  "7": {
+    "inputs": {
+      "image": "98572.webp"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Optional Input Image"
+    }
+  },
+  "8": {
+    "inputs": {
+      "image": "98569.webp"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Optional Input Image"
+    }
+  },
+  "9": {
+    "inputs": {
+      "width": 768,
+      "height": 1344,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Final Image Size"
+    }
+  },
+  "16": {
+    "inputs": {
+      "image": "98539.webp"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Optional Input Image"
+    }
+  },
+  "19": {
+    "inputs": {
+      "use_naia_settings": true,
+      "pre_prompt": "",
+      "post_prompt": "",
+      "auto_hide": "robot joints, dark skin",
+      "remove_author": "skip",
+      "remove_work_title": "skip",
+      "remove_character_name": "skip",
+      "remove_character_features": "skip",
+      "remove_clothes": "skip",
+      "remove_color": "skip",
+      "remove_location_and_background_color": "skip",
+      "remove_expression": "skip",
+      "remove_pose_action": "skip",
+      "remove_meta_tags": "skip",
+      "remove_object_tags": "skip",
+      "remove_noise_tags": "skip",
+      "e621_auto_boost": "skip",
+      "danbooru_auto_weight": "skip",
+      "tag_implication_compression": "skip",
+      "host": "127.0.0.1",
+      "port": 7243
+    },
+    "class_type": "NAIARequestRandom",
+    "_meta": {
+      "title": "NAIA Request Random Prompt"
+    }
+  },
+  "20": {
+    "inputs": {
+      "source": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "미리보기 아무거나"
+    }
+  }
+}

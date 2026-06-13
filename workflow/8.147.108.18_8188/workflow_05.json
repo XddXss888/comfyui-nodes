@@ -1,0 +1,175 @@
+{
+  "5": {
+    "inputs": {
+      "width": 1024,
+      "height": 576,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "**Scene Description:**\n\n**Visual Style:**\n- The scene is rendered in the classic Pixar 3D animation style, with vibrant and warm colors that create a cozy and inviting atmosphere. The lighting is soft and natural, casting gentle shadows and highlighting the expressive features of the characters. The shading is smooth, giving the scene a polished and professional look.\n\n**Composition:**\n- The camera angle is slightly low, looking up at the child, emphasizing her height and the challenge she faces. The full body of the child is visible from head to toe, standing next to a small, round table.\n- The child, a young Asian girl with expressive eyes and a worried yet determined expression, is dressed in a colorful, casual outfit. Her hair is neatly tied in a ponytail, and she is wearing comfortable, everyday clothes.\n- The table is a small, wooden piece, positioned in the center of a cozy, sunlit room. The room is filled with playful and imaginative elements, such as a bookshelf with colorful books, a toy chest, and a few scattered toys on the floor.\n- On top of the table, a small, cute, and slightly anthropomorphic stuffed animal named 罗西 (Rosie) is perched, looking down at the ground with wide, fearful eyes. Rosie is a plush rabbit with a soft, fluffy texture and a bright, cheerful color palette.\n\n**Environment:**\n- The background includes a large window with sunlight streaming in, creating a warm and welcoming ambiance. The light filters through sheer curtains, casting a soft glow over the room.\n- The walls are painted in a light, pastel shade, and there are a few framed pictures and drawings hanging, adding to the homely feel.\n- A plush rug covers part of the wooden floor, and a few cushions and a small, comfy chair are placed near the toy chest, suggesting a space for play and relaxation.\n\n**Interaction:**\n- The child is standing next to the table, one hand reaching out towards Rosie, and the other hand on her hip, showing a mix of concern and determination. Her face is tilted upwards, looking at Rosie with a reassuring smile.\n- Rosie, the stuffed rabbit, is sitting on the edge of the table, hugging its legs tightly and looking down at the ground with a nervous expression. Its ears are slightly drooping, and it seems to be hesitating about jumping down.\n\n**Visual Effects:**\n- The lighting is warm and natural, with a slight golden hue that adds to the cozy and comforting atmosphere. The depth of field is used to keep the focus on the child and Rosie, with the background slightly blurred to draw attention to the main subjects.\n- The ambient lighting creates a soft, diffused glow, enhancing the emotional tone of the scene. The shadows are subtle and add to the overall warmth without being too harsh or distracting.\n- The camera angle is cinematic, capturing the moment with a sense of intimacy and emotion. The viewer can feel the connection between the child and Rosie, and the tension of the situation is palpable but not overwhelming.\n\n**Overall:**\n- The scene is a heartwarming and visually compelling representation of the conversation, with the child and Rosie at the center of a playful and imaginative setting. The emotions and expressions of the characters are clear and engaging, making the scene both relatable and emotionally resonant.",
+      "clip": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "13",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "9": {
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImageWebsocket",
+    "_meta": {
+      "title": "通过WebSocket保存图像"
+    }
+  },
+  "19": {
+    "inputs": {
+      "filename_prefix": "api_1781360671_c7889403",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像到磁盘"
+    }
+  },
+  "10": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "11": {
+    "inputs": {
+      "clip_name1": "t5xxl_fp16.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "双CLIP加载器"
+    }
+  },
+  "12": {
+    "inputs": {
+      "unet_name": "flux1-schnell.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "13": {
+    "inputs": {
+      "noise": [
+        "25",
+        0
+      ],
+      "guider": [
+        "22",
+        0
+      ],
+      "sampler": [
+        "16",
+        0
+      ],
+      "sigmas": [
+        "17",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "16": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "17": {
+    "inputs": {
+      "scheduler": "simple",
+      "steps": 4,
+      "denoise": 1.0,
+      "model": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "基本调度器"
+    }
+  },
+  "22": {
+    "inputs": {
+      "model": [
+        "12",
+        0
+      ],
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "基本引导器"
+    }
+  },
+  "25": {
+    "inputs": {
+      "noise_seed": 854958927192159
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  }
+}

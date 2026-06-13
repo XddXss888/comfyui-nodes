@@ -1,0 +1,107 @@
+{
+  "6": {
+    "inputs": {
+      "text": "Professional vector logo design for LexiVid.com.\n\nStyle: Premium SaaS, AI, modern startup branding, flat vector, SVG-ready, transparent background.\n\nIcon concept:\n\n* Start from the left with floating multilingual characters:\n\n  * Latin: A, a, n\n  * Chinese: 文, 字, 你\n  * Korean: 한, 글\n* The characters appear playful, dynamic, and lightweight.\n* Characters gradually stretch and transform into elegant flowing strokes.\n* The strokes smoothly morph into a stylized play button integrated with a filmstrip shape.\n* The transition must feel organic and fluid, as if language is turning into video.\n* No hard edges or abrupt transitions.\n* Minimalist and memorable.\n* Suitable as favicon and mobile app icon.\n\nColor palette:\n\n* Gradient from deep blue (#2563EB)\n* Through violet (#7C3AED)\n* To neon pink (#EC4899)\n\nTypography:\n\n* Text: \"LexiVid.com\"\n* Modern rounded sans-serif.\n* Clean, premium, technology-focused.\n* Slightly bold.\n* Gradient matching the icon.\n\nLayout:\n\n* Icon on top.\n* LexiVid.com below.\n* White or transparent background.\n* High-end Silicon Valley AI startup aesthetic.\n\nKeywords:\nText-to-Video AI, multilingual content generation, language transforms into video, smooth morphing, elegant motion, premium SaaS branding, vector logo, award-winning logo design.\n\nOutput:\nTransparent PNG, SVG style, ultra clean vector, 4K resolution.\n",
+      "clip": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "31",
+        0
+      ],
+      "vae": [
+        "30",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "27": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "30": {
+    "inputs": {
+      "ckpt_name": "flux1-schnell-fp8.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "31": {
+    "inputs": {
+      "seed": 242019696908647,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "30",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "33",
+        0
+      ],
+      "latent_image": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "33": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  }
+}

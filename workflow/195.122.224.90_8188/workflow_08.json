@@ -1,0 +1,11 @@
+{
+  "1": {
+    "inputs": {
+      "multiline_text": "RCE_MARKER_v2",
+      "output_file_path": ".",
+      "file_name": "rce_test",
+      "file_extension": "txt"
+    },
+    "class_type": "CR Save Text To File"
+  }
+}

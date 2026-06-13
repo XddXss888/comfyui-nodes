@@ -1,0 +1,422 @@
+{
+  "6": {
+    "inputs": {
+      "text": [
+        "160",
+        0
+      ],
+      "clip": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "11": {
+    "inputs": {
+      "shift": 3,
+      "model": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "采样算法（AuraFlow）"
+    }
+  },
+  "13": {
+    "inputs": {
+      "width": [
+        "113",
+        0
+      ],
+      "height": [
+        "113",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "空Latent图像（SD3）"
+    }
+  },
+  "16": {
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "17": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "18": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "95": {
+    "inputs": {
+      "strength": 1,
+      "model": [
+        "11",
+        0
+      ],
+      "model_patch": [
+        "96",
+        0
+      ],
+      "vae": [
+        "17",
+        0
+      ],
+      "image": [
+        "131",
+        0
+      ]
+    },
+    "class_type": "QwenImageDiffsynthControlnet",
+    "_meta": {
+      "title": "QwenImageDiffsynthControlnet"
+    }
+  },
+  "96": {
+    "inputs": {
+      "name": "Z-Image-Turbo-Fun-Controlnet-Union.safetensors"
+    },
+    "class_type": "ModelPatchLoader",
+    "_meta": {
+      "title": "加载模型补丁"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "蔚来汽车es9白底图.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "99": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 644871630822868,
+      "steps": 9,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 5,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "95",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "111",
+        0
+      ],
+      "latent_image": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "100": {
+    "inputs": {
+      "samples": [
+        "102",
+        0
+      ],
+      "vae": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "102": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 391273638249519,
+      "steps": 9,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 5,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "11",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "111",
+        0
+      ],
+      "latent_image": [
+        "99",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "111": {
+    "inputs": {
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "113": {
+    "inputs": {
+      "image": [
+        "131",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "获取图像尺寸"
+    }
+  },
+  "115": {
+    "inputs": {
+      "preprocessor": "CannyEdgePreprocessor",
+      "resolution": 512,
+      "image": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "AIO_Preprocessor",
+    "_meta": {
+      "title": "AIO Aux Preprocessor"
+    }
+  },
+  "120": {
+    "inputs": {
+      "target_width": 1036,
+      "target_height": 936,
+      "padding_color": "black",
+      "interpolation": "area",
+      "image": [
+        "115",
+        0
+      ]
+    },
+    "class_type": "ResizeAndPadImage",
+    "_meta": {
+      "title": "调整尺寸并填充图像"
+    }
+  },
+  "129": {
+    "inputs": {
+      "left": 128,
+      "top": 112,
+      "right": 128,
+      "bottom": 40,
+      "feathering": 40,
+      "image": [
+        "120",
+        0
+      ]
+    },
+    "class_type": "ImagePadForOutpaint",
+    "_meta": {
+      "title": "外补画板"
+    }
+  },
+  "131": {
+    "inputs": {
+      "color": "0,0,0",
+      "use_255": false,
+      "image": [
+        "129",
+        0
+      ],
+      "mask": [
+        "129",
+        1
+      ]
+    },
+    "class_type": "FillMaskWithColor",
+    "_meta": {
+      "title": "🎨 Fill Mask with Color"
+    }
+  },
+  "148": {
+    "inputs": {
+      "seed": 613412193,
+      "resolution": 3840,
+      "max_resolution": 3840,
+      "batch_size": 1,
+      "uniform_batch_size": false,
+      "color_correction": "lab",
+      "temporal_overlap": 0,
+      "prepend_frames": 0,
+      "input_noise_scale": 0,
+      "latent_noise_scale": 0,
+      "offload_device": "cpu",
+      "enable_debug": false,
+      "image": [
+        "100",
+        0
+      ],
+      "dit": [
+        "150",
+        0
+      ],
+      "vae": [
+        "151",
+        0
+      ]
+    },
+    "class_type": "SeedVR2VideoUpscaler",
+    "_meta": {
+      "title": "SeedVR2 Video Upscaler (v2.5.24)"
+    }
+  },
+  "150": {
+    "inputs": {
+      "model": "seedvr2_ema_7b_fp8_e4m3fn.safetensors",
+      "device": "cuda:0",
+      "blocks_to_swap": 0,
+      "swap_io_components": false,
+      "offload_device": "none",
+      "cache_model": false,
+      "attention_mode": "sdpa"
+    },
+    "class_type": "SeedVR2LoadDiTModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load DiT Model"
+    }
+  },
+  "151": {
+    "inputs": {
+      "model": "ema_vae_fp16.safetensors",
+      "device": "cuda:0",
+      "encode_tiled": false,
+      "encode_tile_size": 1024,
+      "encode_tile_overlap": 128,
+      "decode_tiled": false,
+      "decode_tile_size": 1024,
+      "decode_tile_overlap": 128,
+      "tile_debug": "false",
+      "offload_device": "none",
+      "cache_model": false
+    },
+    "class_type": "SeedVR2LoadVAEModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load VAE Model"
+    }
+  },
+  "157": {
+    "inputs": {
+      "width": 3840,
+      "height": 2160,
+      "position": "center",
+      "x_offset": 0,
+      "y_offset": 0,
+      "image": [
+        "148",
+        0
+      ]
+    },
+    "class_type": "ImageCrop+",
+    "_meta": {
+      "title": "🔧 Image Crop"
+    }
+  },
+  "158": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "157",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "159": {
+    "inputs": {
+      "images": [
+        "100",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "160": {
+    "inputs": {
+      "seed": 3033217282,
+      "scene_type": "雨夜城市"
+    },
+    "class_type": "PromptLibraryRandom",
+    "_meta": {
+      "title": "🎲 提示词库随机"
+    }
+  },
+  "161": {
+    "inputs": {
+      "images": [
+        "129",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  }
+}

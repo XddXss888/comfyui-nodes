@@ -1,0 +1,86 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 699884806,
+      "steps": 12,
+      "cfg": 1.7,
+      "sampler_name": "euler",
+      "scheduler": "beta",
+      "denoise": 1.0,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "Illustrious/semireal/lumenfallCrystalClear_v21HyperTuned.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "5": {
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "6": {
+    "inputs": {
+      "text": "1girl, solo, Chinese fox spirit (húli jīng), brown_long_hair, blue_round_eyes, curvy, red_flowing_dress, traditional, eager and playful, seductively undulating her hips, close-up, The blossoms are still scattered across the ground, but the stream now flows gently beneath her, reflecting the sunlight in a shimmering pattern., sunlight, masterpiece, best quality, photorealistic, realistic, very aesthetic, absurdres",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "7": {
+    "inputs": {
+      "text": "blurry, low quality, distorted, deformed, bad anatomy, bad proportions, duplicate, extra limbs, mutation, ugly, lower_body, legs, feet",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImageWebsocket"
+  }
+}

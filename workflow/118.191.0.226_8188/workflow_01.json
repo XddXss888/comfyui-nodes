@@ -1,0 +1,25 @@
+{
+  "16": {
+    "inputs": {
+      "file_path": "/proc/1/cmdline",
+      "dictionary_name": "[filename]"
+    },
+    "class_type": "Load Text File",
+    "_meta": {
+      "title": "Load Text File"
+    }
+  },
+  "17": {
+    "inputs": {
+      "mode": "raw value",
+      "input": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "DisplayAny",
+    "_meta": {
+      "title": "🔧 Display Any"
+    }
+  }
+}

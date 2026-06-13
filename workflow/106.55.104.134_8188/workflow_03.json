@@ -1,0 +1,188 @@
+{
+  "124": {
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNETLoader"
+    }
+  },
+  "126": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "CLIPLoader"
+    }
+  },
+  "127": {
+    "inputs": {
+      "vae_name": "UltraFlux-vae_v1.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "VAELoader"
+    }
+  },
+  "257": {
+    "inputs": {
+      "预设": "自定义",
+      "互换宽高": false,
+      "随机模式": false,
+      "自定义宽": 1024,
+      "自定义高": 1024,
+      "批次数量": 1
+    },
+    "class_type": "ZML_PresetResolutionV2",
+    "_meta": {
+      "title": "ZML_PresetResolutionV2"
+    }
+  },
+  "263": {
+    "inputs": {
+      "noise": [
+        "266",
+        0
+      ],
+      "guider": [
+        "268",
+        0
+      ],
+      "sampler": [
+        "265",
+        0
+      ],
+      "sigmas": [
+        "264",
+        0
+      ],
+      "latent_image": [
+        "257",
+        2
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "264": {
+    "inputs": {
+      "steps": 8,
+      "start_at_step": 0,
+      "end_at_step": 8,
+      "base_image_seq_len": 512,
+      "base_shift": 0.5,
+      "invert_sigmas": "disable",
+      "max_image_seq_len": 2048,
+      "max_shift": 1.15,
+      "num_train_timesteps": 1000,
+      "shift": 3.0,
+      "shift_terminal": 0.5,
+      "stochastic_sampling": "disable",
+      "time_shift_type": "exponential",
+      "use_beta_sigmas": "disable",
+      "use_dynamic_shifting": "enable",
+      "use_exponential_sigmas": "disable",
+      "use_karras_sigmas": "disable",
+      "device": "auto"
+    },
+    "class_type": "FlowMatchEulerDiscreteScheduler (Custom)",
+    "_meta": {
+      "title": "FlowMatchEulerDiscreteScheduler (Custom)"
+    }
+  },
+  "265": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "266": {
+    "inputs": {
+      "noise_seed": 828867209228361
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "267": {
+    "inputs": {
+      "clip": [
+        "126",
+        0
+      ],
+      "text": [
+        "403",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIPTextEncode"
+    }
+  },
+  "268": {
+    "inputs": {
+      "model": [
+        "124",
+        0
+      ],
+      "conditioning": [
+        "267",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "BasicGuider"
+    }
+  },
+  "274": {
+    "inputs": {
+      "samples": [
+        "263",
+        0
+      ],
+      "vae": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAEDecode"
+    }
+  },
+  "385": {
+    "inputs": {
+      "images": [
+        "274",
+        0
+      ],
+      "filename_prefix": "ComfyUI"
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "SaveImage"
+    }
+  },
+  "403": {
+    "inputs": {
+      "value": "画面严格对半分，左半部分是肩部以上的头部大头照，右半部分是从头到脚的全身正面主视图，纯白色背景\n二次元动画电影级画风，赛璐珞上色与轻厚涂光影混合，黑色描线清晰锐利，色彩干净通透层次分明，光影块面感强，日式美型比例，不需要过度描绘细节，不需要过度纹理，画面内容：\n冷色调，文艺忧郁氛围。男性，年龄17岁左右，身形偏清瘦，中等身高，东亚人种，都市街头普通少年形象。脸型线条柔和，略带清瘦棱角，鹅蛋脸轮廓。眉形偏细长，眉峰平缓，眼型是狭长杏眼，瞳色为深灰蓝色，眼尾微微下垂，鼻型小巧挺直，唇形偏薄，唇线清晰。短发造型，发色为深炭黑色，发丝利落蓬松，肤色是冷调白皙，无妆容。身着工装套装，外层为哑光深灰蓝色硬质工装外套，面料耐磨厚实，版型宽松直筒，无多余纹样；内搭浅灰色修身棉质圆领打底衫；下装是同色系深灰蓝色工装长裤，裤型宽松，裤脚微收。整体气质落寞沉静，眉眼间带着忧郁感，眼神直视镜头，表情平和内敛。"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "PrimitiveStringMultiline"
+    }
+  }
+}

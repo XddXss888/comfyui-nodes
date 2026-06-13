@@ -1,0 +1,24 @@
+{
+  "1": {
+    "inputs": {
+      "image": "1.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "2": {
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  }
+}

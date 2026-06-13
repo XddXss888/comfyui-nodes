@@ -1,0 +1,547 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "Qwen-image-edit-2509/qwen_image_edit_2509_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "4": {
+    "inputs": {
+      "lora_name": "Qwen-Image-Edit-Lightning/Qwen-Image-Edit-Lightning-8steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "66": {
+    "inputs": {
+      "context_expand_pixels": 500,
+      "context_expand_factor": 1.0,
+      "fill_mask_holes": false,
+      "blur_mask_pixels": 16.0,
+      "invert_mask": false,
+      "blend_pixels": 0.0,
+      "rescale_algorithm": "bicubic",
+      "mode": "free size",
+      "force_width": 1024,
+      "force_height": 1024,
+      "rescale_factor": 1.0,
+      "min_width": 512,
+      "min_height": 512,
+      "max_width": 768,
+      "max_height": 768,
+      "padding": 32,
+      "image": [
+        "65:3",
+        0
+      ],
+      "mask": [
+        "198",
+        0
+      ]
+    },
+    "class_type": "InpaintCrop",
+    "_meta": {
+      "title": "✂️ Inpaint Crop"
+    }
+  },
+  "85": {
+    "inputs": {
+      "model_name": "GroundingDINO_SwinT_OGC (694MB)"
+    },
+    "class_type": "GroundingDinoModelLoader (segment anything)",
+    "_meta": {
+      "title": "GroundingDinoModelLoader (segment anything)"
+    }
+  },
+  "88": {
+    "inputs": {
+      "model_name": "sam_vit_h (2.56GB)"
+    },
+    "class_type": "SAMModelLoader (segment anything)",
+    "_meta": {
+      "title": "SAMModelLoader (segment anything)"
+    }
+  },
+  "93": {
+    "inputs": {
+      "expand": 5,
+      "tapered_corners": true,
+      "mask": [
+        "225",
+        1
+      ]
+    },
+    "class_type": "GrowMask",
+    "_meta": {
+      "title": "扩展遮罩"
+    }
+  },
+  "97": {
+    "inputs": {
+      "stitch": [
+        "66",
+        0
+      ]
+    },
+    "class_type": "InpaintStitchDebugger",
+    "_meta": {
+      "title": "🔍 Stitch Debugger + 原图坐标"
+    }
+  },
+  "103": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 3.0,
+      "resolution_steps": 1,
+      "image": [
+        "136",
+        1
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "124": {
+    "inputs": {
+      "conditioning": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "125": {
+    "inputs": {
+      "seed": 304575045471721,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "beta",
+      "denoise": 1.0,
+      "model": [
+        "214",
+        0
+      ],
+      "positive": [
+        "127",
+        0
+      ],
+      "negative": [
+        "124",
+        0
+      ],
+      "latent_image": [
+        "190",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "126": {
+    "inputs": {
+      "samples": [
+        "125",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "127": {
+    "inputs": {
+      "prompt": "用image2的车放到image1中,根据背景环境对车身加光影,保持背景和车辆细节不变，使车辆和背景融合自然，真实感。结合环境特征生成自然的物理边缘过渡，彻底去除原图的生硬抠图感与白边残留。漫反射柔光打在车身上，呈现出弱反射_塑料感的视觉效果。画面光源来自被云层遮挡的天空，车底阴影边缘柔和，漆面主要表现为漫反射，呈现弱反射_塑料感，车窗透明。",
+      "enable_resize": false,
+      "enable_vl_resize": true,
+      "upscale_method": "lanczos",
+      "crop": "disabled",
+      "instruction": "disabled",
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "image1": [
+        "224",
+        0
+      ],
+      "image2": [
+        "103",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus_lrzjason",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus 小志Jason(xiaozhijason)"
+    }
+  },
+  "131": {
+    "inputs": {
+      "width": [
+        "132",
+        0
+      ],
+      "height": [
+        "132",
+        1
+      ],
+      "interpolation": "lanczos",
+      "method": "stretch",
+      "condition": "always",
+      "multiple_of": 0,
+      "image": [
+        "126",
+        0
+      ]
+    },
+    "class_type": "ImageResize+",
+    "_meta": {
+      "title": "🔧 Image Resize"
+    }
+  },
+  "132": {
+    "inputs": {
+      "image": [
+        "66",
+        1
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "获取图像尺寸"
+    }
+  },
+  "135": {
+    "inputs": {
+      "prompt": "car",
+      "threshold": 0.3,
+      "sam_model": [
+        "88",
+        0
+      ],
+      "grounding_dino_model": [
+        "85",
+        0
+      ],
+      "image": [
+        "213",
+        0
+      ]
+    },
+    "class_type": "GroundingDinoSAMSegment (segment anything)",
+    "_meta": {
+      "title": "GroundingDinoSAMSegment (segment anything)"
+    }
+  },
+  "136": {
+    "inputs": {
+      "padding": 100,
+      "blur": 0,
+      "mask": [
+        "135",
+        1
+      ],
+      "image_optional": [
+        "213",
+        0
+      ]
+    },
+    "class_type": "MaskBoundingBox+",
+    "_meta": {
+      "title": "🔧 Mask Bounding Box"
+    }
+  },
+  "140": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "230",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "160": {
+    "inputs": {
+      "text": "736",
+      "anything": [
+        "97",
+        12
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "161": {
+    "inputs": {
+      "text": "518",
+      "anything": [
+        "97",
+        13
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "188": {
+    "inputs": {
+      "image": "ComfyUI_00538_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "190": {
+    "inputs": {
+      "amount": 1,
+      "samples": [
+        "127",
+        6
+      ]
+    },
+    "class_type": "RepeatLatentBatch",
+    "_meta": {
+      "title": "复制Latent批次"
+    }
+  },
+  "198": {
+    "inputs": {
+      "square_size": 5,
+      "threshold": 0.01,
+      "mask": [
+        "93",
+        0
+      ]
+    },
+    "class_type": "SquareCoverMask",
+    "_meta": {
+      "title": "Square Cover Mask"
+    }
+  },
+  "213": {
+    "inputs": {
+      "image": "蔚来汽车es9白底图.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载模板"
+    }
+  },
+  "214": {
+    "inputs": {
+      "lora_name": "强光影_偏写实质感.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "215": {
+    "inputs": {
+      "images": [
+        "66",
+        1
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "224": {
+    "inputs": {
+      "megapixels": 2.0,
+      "rounding_method": "nearest",
+      "upscale_method": "lanczos",
+      "max_size": 0,
+      "min_size": 0,
+      "image": [
+        "66",
+        1
+      ]
+    },
+    "class_type": "PreciseMegapixelResizer",
+    "_meta": {
+      "title": "🎯 Precise Megapixel Resizer (等比+16x)"
+    }
+  },
+  "225": {
+    "inputs": {
+      "prompt": "car",
+      "threshold": 0.3,
+      "sam_model": [
+        "88",
+        0
+      ],
+      "grounding_dino_model": [
+        "85",
+        0
+      ],
+      "image": [
+        "188",
+        0
+      ]
+    },
+    "class_type": "MaxAreaSAMSegment",
+    "_meta": {
+      "title": "Max Area SAM Segment"
+    }
+  },
+  "230": {
+    "inputs": {
+      "x": [
+        "97",
+        12
+      ],
+      "y": [
+        "97",
+        13
+      ],
+      "blend_mode": "poisson",
+      "edge_feather_radius": 8,
+      "edge_feather_strength": 0.5,
+      "border_check": true,
+      "destination": [
+        "188",
+        0
+      ],
+      "source": [
+        "131",
+        0
+      ]
+    },
+    "class_type": "ImageCompositePoissonV3",
+    "_meta": {
+      "title": "🧩 Image Composite Poisson V3"
+    }
+  },
+  "65:0": {
+    "inputs": {
+      "image": [
+        "188",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "获取图像尺寸"
+    }
+  },
+  "65:1": {
+    "inputs": {
+      "width": [
+        "65:0",
+        0
+      ],
+      "height": [
+        "65:0",
+        1
+      ],
+      "batch_size": 1,
+      "color": 16777215
+    },
+    "class_type": "EmptyImage",
+    "_meta": {
+      "title": "空图像"
+    }
+  },
+  "65:2": {
+    "inputs": {
+      "image": [
+        "65:1",
+        0
+      ],
+      "alpha": [
+        "225",
+        1
+      ]
+    },
+    "class_type": "JoinImageWithAlpha",
+    "_meta": {
+      "title": "合并图像Alpha"
+    }
+  },
+  "65:3": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "resize_source": false,
+      "destination": [
+        "188",
+        0
+      ],
+      "source": [
+        "65:2",
+        0
+      ],
+      "mask": [
+        "198",
+        0
+      ]
+    },
+    "class_type": "ImageCompositeMasked",
+    "_meta": {
+      "title": "合成图像（遮罩）"
+    }
+  }
+}

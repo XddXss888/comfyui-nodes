@@ -1,0 +1,259 @@
+{
+  "115": {
+    "_meta": {
+      "title": "K采样器选择"
+    },
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "116": {
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "guider": [
+        "124",
+        0
+      ],
+      "latent_image": [
+        "122",
+        0
+      ],
+      "noise": [
+        "118",
+        0
+      ],
+      "sampler": [
+        "115",
+        0
+      ],
+      "sigmas": [
+        "125",
+        0
+      ]
+    }
+  },
+  "117": {
+    "_meta": {
+      "title": "VAE解码"
+    },
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "116",
+        0
+      ],
+      "vae": [
+        "121",
+        0
+      ]
+    }
+  },
+  "118": {
+    "_meta": {
+      "title": "随机噪波"
+    },
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 870747048679020
+    }
+  },
+  "119": {
+    "_meta": {
+      "title": "UNet加载器"
+    },
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "flux-2-klein-4b.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "120": {
+    "_meta": {
+      "title": "加载CLIP"
+    },
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "device": "default",
+      "type": "flux2"
+    }
+  },
+  "121": {
+    "_meta": {
+      "title": "加载VAE"
+    },
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    }
+  },
+  "122": {
+    "_meta": {
+      "title": "空Latent图像（Flux2）"
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "inputs": {
+      "batch_size": 1,
+      "height": 240,
+      "width": 400
+    }
+  },
+  "123": {
+    "_meta": {
+      "title": "缩放图像（像素）"
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "inputs": {
+      "image": [
+        "76",
+        0
+      ],
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "upscale_method": "nearest-exact"
+    }
+  },
+  "124": {
+    "_meta": {
+      "title": "CFG引导器"
+    },
+    "class_type": "CFGGuider",
+    "inputs": {
+      "cfg": 1.0,
+      "model": [
+        "119",
+        0
+      ],
+      "negative": [
+        "130",
+        0
+      ],
+      "positive": [
+        "132",
+        0
+      ]
+    }
+  },
+  "125": {
+    "_meta": {
+      "title": "Flux2调度器"
+    },
+    "class_type": "Flux2Scheduler",
+    "inputs": {
+      "height": 240,
+      "steps": 4,
+      "width": 400
+    }
+  },
+  "126": {
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    },
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "120",
+        0
+      ],
+      "text": "chibi, cute, kawaii, masterpiece"
+    }
+  },
+  "127": {
+    "_meta": {
+      "title": "条件零化"
+    },
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "126",
+        0
+      ]
+    }
+  },
+  "128": {
+    "_meta": {
+      "title": "获取图像尺寸"
+    },
+    "class_type": "GetImageSize",
+    "inputs": {
+      "image": [
+        "123",
+        0
+      ]
+    }
+  },
+  "130": {
+    "_meta": {
+      "title": "参考Latent"
+    },
+    "class_type": "ReferenceLatent",
+    "inputs": {
+      "conditioning": [
+        "127",
+        0
+      ],
+      "latent": [
+        "131",
+        0
+      ]
+    }
+  },
+  "131": {
+    "_meta": {
+      "title": "VAE编码"
+    },
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "123",
+        0
+      ],
+      "vae": [
+        "121",
+        0
+      ]
+    }
+  },
+  "132": {
+    "_meta": {
+      "title": "参考Latent"
+    },
+    "class_type": "ReferenceLatent",
+    "inputs": {
+      "conditioning": [
+        "126",
+        0
+      ],
+      "latent": [
+        "131",
+        0
+      ]
+    }
+  },
+  "76": {
+    "_meta": {
+      "title": "加载图像"
+    },
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "966a0066-f54f-478f-8138-416d7203b81e.png"
+    }
+  },
+  "9": {
+    "_meta": {
+      "title": "Save Image to OSS"
+    },
+    "class_type": "SaveImageToOSS",
+    "inputs": {
+      "images": [
+        "117",
+        0
+      ],
+      "upload_url": "https://aispea.z33.fun/api/role/file/upload"
+    }
+  }
+}

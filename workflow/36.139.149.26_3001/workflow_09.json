@@ -1,0 +1,201 @@
+{
+  "76": {
+    "inputs": {
+      "filename_prefix": "comfyui-airport-editorial",
+      "images": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "86": {
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "87": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "91": {
+    "inputs": {
+      "seed": 916445791366624,
+      "steps": 10,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.8,
+      "model": [
+        "86",
+        0
+      ],
+      "positive": [
+        "130",
+        0
+      ],
+      "negative": [
+        "93",
+        0
+      ],
+      "latent_image": [
+        "116",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "低质量, 模糊, 噪点, JPEG伪影, 压缩失真, 多余的手指, 扭曲的手, 畸形手, 不对称眼睛, 错位牙齿, 卡通风格, 动漫滤镜, 过度上色, 扁平化设计, 残缺身体, 切割画面, 杂乱背景, 错误透视, 丑陋, 恐怖, 死亡眼神, 异常肤色, 表情僵硬, 文字, 水印, 签名, 用户名,出现人类",
+      "clip": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "94": {
+    "inputs": {
+      "samples": [
+        "91",
+        0
+      ],
+      "vae": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "95": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "116": {
+    "inputs": {
+      "pixels": [
+        "117",
+        0
+      ],
+      "vae": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "117": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "None",
+      "scale_to_length": 1024,
+      "background_color": "#000000",
+      "image": [
+        "124",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "LayerUtility: ImageScaleByAspectRatio V2"
+    }
+  },
+  "118": {
+    "inputs": {
+      "image": "b24eafe4_comfyui-airport-editorial_01594_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "124": {
+    "inputs": {
+      "width": [
+        "125",
+        0
+      ],
+      "height": [
+        "125",
+        1
+      ],
+      "upscale_method": "lanczos",
+      "keep_proportion": "stretch",
+      "pad_color": "0, 0, 0",
+      "crop_position": "center",
+      "divisible_by": 2,
+      "device": "cpu",
+      "image": [
+        "118",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJv2",
+    "_meta": {
+      "title": "Resize Image v2"
+    }
+  },
+  "125": {
+    "inputs": {
+      "use_custom_resolution": false,
+      "resolution": "720x1280 (9:16) (竖屏)",
+      "custom_width": 1024,
+      "custom_height": 1024
+    },
+    "class_type": "TTResolutionSelector",
+    "_meta": {
+      "title": "TT分辨率选择器"
+    }
+  },
+  "130": {
+    "inputs": {
+      "text": "统一风格：电影感，电影级构图，戏剧光影，高级镜头语言，在 图1 ，古典中式婚礼大堂，白天，全景，红绸高挂，喜字张贴，灯笼摇曳，案上摆放红烛与果品，喜庆氛围，电影级光影，场景 场景 1，景别 全景，机位 平视，运镜 摇镜，cinematic storyboard keyframe, clear staging, dramatic composition, consistent characters，尺寸比例：9:16，分辨率：720p，图1是地点：李员外家大堂",
+      "clip": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  }
+}

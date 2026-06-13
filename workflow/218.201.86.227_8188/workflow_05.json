@@ -1,0 +1,120 @@
+{
+  "6": {
+    "inputs": {
+      "text": "A moody landscape illustration of the Great Wall of China winding through misty green mountains in heavy rain, dark clouds filling the sky, rain drops falling, wet ancient stone watchtowers glistening, fog and mist rolling through the mountain valleys, dramatic and atmospheric, beautiful hand-drawn illustration style, muted cool color palette with blue-grey tones, panoramic wide shot, melancholic and poetic atmosphere, Chinese ink wash painting influence combined with modern digital illustration",
+      "clip": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "31",
+        0
+      ],
+      "vae": [
+        "30",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "27": {
+    "inputs": {
+      "width": 1024,
+      "height": 768,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "30": {
+    "inputs": {
+      "ckpt_name": "flux1-dev-fp8.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "31": {
+    "inputs": {
+      "seed": 633017177991357,
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "30",
+        0
+      ],
+      "positive": [
+        "35",
+        0
+      ],
+      "negative": [
+        "33",
+        0
+      ],
+      "latent_image": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "33": {
+    "inputs": {
+      "text": "sunny, bright, warm colors, blue sky, cheerful",
+      "clip": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "35": {
+    "inputs": {
+      "guidance": 3.5,
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "Flux Guidance"
+    }
+  }
+}

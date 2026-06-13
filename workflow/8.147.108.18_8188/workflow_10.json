@@ -1,0 +1,175 @@
+{
+  "5": {
+    "inputs": {
+      "width": 1024,
+      "height": 576,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "### Scene Description\n\n**Visual Style:**\n- The scene is rendered in a vibrant and warm Pixar 3D animation style, with soft, inviting lighting and smooth, rich shading. The colors are bright and cheerful, creating a cozy and comforting atmosphere.\n- The characters have slightly exaggerated, expressive features that convey their emotions clearly and endearingly.\n\n**Composition:**\n- The child, a young Asian boy, is the central focus of the scene. He is standing in his bedroom, which is filled with playful and imaginative elements.\n- The boy is wearing pajamas with a cute, starry pattern, and his hair is slightly tousled, giving him a relaxed, sleepy look.\n- In the background, the room is decorated with colorful posters, a bookshelf filled with storybooks, and a small table with a nightlight shaped like a friendly moon.\n- A large, plush toy named \"卡卡\" (Kaka) is by the boy's side, looking up at him with big, expressive eyes. Kaka is a soft, blue creature with a round, huggable body and a friendly smile.\n- The boy is holding a small, stuffed rabbit named \"罗西\" (Rosie) in one hand, and with the other, he is pointing towards the window, where a clear, starry night sky is visible.\n- The window is framed by soft, flowing curtains, and outside, the night sky is dotted with twinkling stars, creating a magical and dreamy backdrop.\n\n**Visual Effects:**\n- The camera angle is low and slightly tilted, capturing the boy and Kaka from a perspective that emphasizes their interaction and the warmth of the moment.\n- Natural depth of field is used to keep the boy, Kaka, and the window in sharp focus, while the rest of the room gently blurs into the background, drawing attention to the main subjects.\n- Ambient lighting from the nightlight and the stars outside creates a soft, gentle glow, adding to the cozy and dreamy atmosphere.\n\n**Interaction:**\n- The boy is looking up at the stars with a sense of wonder and excitement, his face lit up with a smile. He is in the middle of counting the stars, his finger extended towards the sky.\n- Kaka is sitting next to the boy, also looking up at the stars, with a look of contentment and companionship. The plush toy’s presence adds a sense of security and comfort.\n- Rosie, the stuffed rabbit, is held close to the boy’s chest, as if it’s also part of the bedtime ritual.\n\n**Overall Scene:**\n- The scene captures the heart of the conversation, showing the boy’s imagination and the bond between him and his toys. It is a moment of quiet, shared joy and the promise of sweet dreams, all set in a warm, loving environment. The combination of the expressive characters, the cozy setting, and the magical night sky creates a visually compelling and emotionally resonant image.",
+      "clip": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "13",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "9": {
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImageWebsocket",
+    "_meta": {
+      "title": "通过WebSocket保存图像"
+    }
+  },
+  "19": {
+    "inputs": {
+      "filename_prefix": "api_1781360741_432e7cc9",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像到磁盘"
+    }
+  },
+  "10": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "11": {
+    "inputs": {
+      "clip_name1": "t5xxl_fp16.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "双CLIP加载器"
+    }
+  },
+  "12": {
+    "inputs": {
+      "unet_name": "flux1-schnell.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "13": {
+    "inputs": {
+      "noise": [
+        "25",
+        0
+      ],
+      "guider": [
+        "22",
+        0
+      ],
+      "sampler": [
+        "16",
+        0
+      ],
+      "sigmas": [
+        "17",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "16": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "17": {
+    "inputs": {
+      "scheduler": "simple",
+      "steps": 4,
+      "denoise": 1.0,
+      "model": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "基本调度器"
+    }
+  },
+  "22": {
+    "inputs": {
+      "model": [
+        "12",
+        0
+      ],
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "基本引导器"
+    }
+  },
+  "25": {
+    "inputs": {
+      "noise_seed": 854958927192159
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  }
+}

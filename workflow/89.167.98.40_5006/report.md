@@ -1,0 +1,19 @@
+# 89.167.98.40:5006
+
+GPU: CPU | 显存: 4 GB | 空闲: 2 GB
+内存: 3 GB (空闲 2 GB)
+版本: 0.20.1
+报告中的历史: 无
+扫描时间: 2026-06-13 22:30:57
+历史总数: 64 | 成功: 1
+
+## 工作流列表
+
+### 1. workflow_01.json
+- **Prompt ID**: `c83a3c61-2bb6-4ac4-9438-1d10ffecd87d`
+- **类型**: 文生图
+- **节点数**: 7
+- **模型** (1):
+  - sd_turbo.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] a beautiful landscape with mountains

@@ -1,0 +1,123 @@
+{
+  "1": {
+    "inputs": {
+      "image": "19b369ec54a24a7c8bdd0b2070f860da.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "2": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "15": {
+    "inputs": {
+      "prompt": "参考图一中的主要人物，可爱3D卡通风格，面带微笑，双手自然张开呈舒展拥抱姿态，金色光照亮人物轮廓，人物主体高光突出、层次立体，在场景中视觉焦点拉满。人物在白天和夜晚的北京CBD中心区前，艺术化超现实，同一场景同一视角，画面左边是白天，右边是夜晚，左右两侧融合过渡自然。左侧白天部分呈现充满活力的蓝天好天气；右侧夜晚部分呈现灯火辉煌。整幅画面体现艺术化展示北京CBD白天与夜晚两种标志性形态。电影级宽银幕构图，高动态穿越动感光影，画面明亮，对比强烈",
+      "model": "doubao-seedream-4-5-251128",
+      "response_format": "url",
+      "resolution": "4K",
+      "aspect_ratio": "Custom",
+      "width": 1120,
+      "height": 800,
+      "apikey": "a44228f5-f1b2-44e9-860a-d3c8eb5ac03e",
+      "sequential_image_generation": "disabled",
+      "max_images": 1,
+      "seed": 1928180216,
+      "watermark": false,
+      "stream": false,
+      "image1": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "Comfly_Doubao_Seedream_4",
+    "_meta": {
+      "title": "Comfly Doubao Seedream4.0"
+    }
+  },
+  "26": {
+    "inputs": {
+      "aspect_ratio": "custom",
+      "proportional_width": 1120,
+      "proportional_height": 800,
+      "fit": "crop",
+      "method": "bicubic",
+      "round_to_multiple": "None",
+      "scale_to_side": "width",
+      "scale_to_length": 1120,
+      "background_color": "#000000",
+      "image": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    }
+  },
+  "28": {
+    "inputs": {
+      "rotation": "270 degrees",
+      "image": [
+        "29",
+        0
+      ]
+    },
+    "class_type": "ImageRotate",
+    "_meta": {
+      "title": "图像旋转"
+    }
+  },
+  "29": {
+    "inputs": {
+      "invert_mask": true,
+      "blend_mode": "normal",
+      "opacity": 100,
+      "x_percent": 50.0,
+      "y_percent": 50.0,
+      "mirror": "None",
+      "scale": 1.0,
+      "aspect_ratio": 1.0,
+      "rotate": 0.0,
+      "transform_method": "lanczos",
+      "anti_aliasing": 0,
+      "background_image": [
+        "26",
+        0
+      ],
+      "layer_image": [
+        "30",
+        0
+      ],
+      "layer_mask": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "LayerUtility: ImageBlendAdvance",
+    "_meta": {
+      "title": "图层工具：图像混合(高级)"
+    }
+  },
+  "30": {
+    "inputs": {
+      "image": "冰箱贴logo (2).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  }
+}

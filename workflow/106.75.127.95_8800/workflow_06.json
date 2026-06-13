@@ -1,0 +1,305 @@
+{
+  "81": {
+    "inputs": {
+      "image": "image (29).jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "104": {
+    "inputs": {
+      "unet_name": "flux-2-klein-base-9b.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "105": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "111": {
+    "inputs": {
+      "clip_name": "qwen3_8b.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "114": {
+    "inputs": {
+      "text": "too bright nose, black hair, black clothes, Black line, Exposed,nsfw,Low resolution,pixelation,signature,watermark,username,blur,digital,Missing,The tip of the nose is overly bright.",
+      "clip": [
+        "111",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode ( Negative Prompt)"
+    }
+  },
+  "125": {
+    "inputs": {
+      "conditioning": [
+        "114",
+        0
+      ],
+      "latent": [
+        "364",
+        1
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "128": {
+    "inputs": {
+      "lora_name": "klein_9B_Turbo_r128.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "172": {
+    "inputs": {
+      "seed": 1631449518,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "377",
+        0
+      ],
+      "positive": [
+        "378",
+        0
+      ],
+      "negative": [
+        "125",
+        0
+      ],
+      "latent_image": [
+        "364",
+        1
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "180": {
+    "inputs": {
+      "pad_info": [
+        "364",
+        2
+      ],
+      "image": [
+        "376",
+        0
+      ]
+    },
+    "class_type": "CropWithPadInfo_EditUtils",
+    "_meta": {
+      "title": "EditUtils: Crop With Pad Info lrzjason"
+    }
+  },
+  "263": {
+    "inputs": {
+      "source": [
+        "384",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "预览任意"
+    }
+  },
+  "364": {
+    "inputs": {
+      "prompt": "Convert this image to grayscale while preserving all original structures,black background",
+      "ref_longest_edge": 2048,
+      "clip": [
+        "111",
+        0
+      ],
+      "vae": [
+        "105",
+        0
+      ],
+      "image1": [
+        "81",
+        0
+      ]
+    },
+    "class_type": "Flux2KleinEditTextEncode_EditUtils",
+    "_meta": {
+      "title": "EditUtils: Flux2Klein Edit Text Encode lrzjason"
+    }
+  },
+  "372": {
+    "inputs": {
+      "model_name": "drunet_gray.safetensors"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "加载放大模型"
+    }
+  },
+  "375": {
+    "inputs": {
+      "strength": 1.5,
+      "tilesize": 512,
+      "upscale_model": [
+        "372",
+        0
+      ],
+      "image": [
+        "180",
+        0
+      ]
+    },
+    "class_type": "ImageDenoiseWithDPIR",
+    "_meta": {
+      "title": "Denoise with DRUNet"
+    }
+  },
+  "376": {
+    "inputs": {
+      "samples": [
+        "172",
+        0
+      ],
+      "vae": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "377": {
+    "inputs": {
+      "lora_name": "klein_8mm_0130_000010000.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "128",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "378": {
+    "inputs": {
+      "magnitude": 1.0,
+      "contrast": 0.0,
+      "normalize_strength": 0.0,
+      "preserve_original": 0.0,
+      "preserve_mode": "linear",
+      "edit_text_weight": 1.0,
+      "active_end_override": 0,
+      "low_vram": false,
+      "device": "auto",
+      "debug": false,
+      "conditioning": [
+        "364",
+        0
+      ]
+    },
+    "class_type": "Flux2KleinEnhancer",
+    "_meta": {
+      "title": "FLUX.2 Klein Enhancer"
+    }
+  },
+  "384": {
+    "inputs": {
+      "task_id": [
+        "385",
+        4
+      ],
+      "png_done": [
+        "386",
+        0
+      ],
+      "vsm_done": "",
+      "tif_done": [
+        "389",
+        0
+      ]
+    },
+    "class_type": "OSSUploadNode",
+    "_meta": {
+      "title": "OSS Upload"
+    }
+  },
+  "385": {
+    "inputs": {
+      "seed": 1031466140
+    },
+    "class_type": "GenerateUniquePrefix",
+    "_meta": {
+      "title": "生成唯一文件名前缀"
+    }
+  },
+  "386": {
+    "inputs": {
+      "filename_prefix": [
+        "385",
+        0
+      ],
+      "images": [
+        "376",
+        0
+      ]
+    },
+    "class_type": "SaveImageWithStatus",
+    "_meta": {
+      "title": "保存图像(带状态)"
+    }
+  },
+  "389": {
+    "inputs": {
+      "filename_prefix": [
+        "385",
+        3
+      ],
+      "images": [
+        "375",
+        0
+      ]
+    },
+    "class_type": "Save16TIFF",
+    "_meta": {
+      "title": "保存TIFF格式图片"
+    }
+  }
+}

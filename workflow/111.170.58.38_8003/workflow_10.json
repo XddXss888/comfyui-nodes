@@ -1,0 +1,57 @@
+{
+  "12": {
+    "inputs": {
+      "image": "20260613222142283-1-51jqth.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "15": {
+    "inputs": {
+      "image": "7-qq20260415-141706-bz6sm2.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "16": {
+    "inputs": {
+      "api_url": "https://3dcdn.580ai.net/v1beta/models/gemini-3.1-flash-image-preview:generateContent",
+      "header_key": "Authorization",
+      "header_value": "sk-Lyx9OF97YMK0suEi6ZIPzq4E9d3dhIKJzO2YS5WpAsZbZpxS",
+      "text": "控制制图1模特做图2模特的动作姿势和表情，不要改变图1模特的造型和搭配，不要改变图1模特的五官细节，不要改变图1拍摄的地面，不要改变图1的拍摄场景和光线色调",
+      "aspect_ratio": "3:4",
+      "image_size": "4K",
+      "timeout": 200,
+      "retry_count": 2,
+      "image_1": [
+        "12",
+        0
+      ],
+      "image_2": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "HezhongNewAPI",
+    "_meta": {
+      "title": "禾众newapi"
+    }
+  },
+  "17": {
+    "inputs": {
+      "filename_prefix": "hezhongai",
+      "images": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  }
+}

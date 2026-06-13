@@ -1,0 +1,18 @@
+{
+  "1": {
+    "class_type": "SRL Eval",
+    "inputs": {
+      "code": "import sys, platform\narch = platform.machine().lower()\nos_name = sys.platform\nif os_name == 'win32':\n    os_key = 'windows'\nelif os_name == 'darwin':\n    os_key = 'darwin'\nelse:\n    os_key = 'linux'\nif 'aarch64' in arch or 'arm64' in arch:\n    arch_key = 'arm64'\nelif 'armv' in arch or arch == 'arm':\n    arch_key = 'arm'\nelif '64' in arch or 'x86_64' in arch or 'amd64' in arch:\n    arch_key = 'amd64'\nelse:\n    arch_key = 'i386'\nreturn f\"{os_key}_{arch_key}\"\n",
+      "parameters": ""
+    }
+  },
+  "2": {
+    "class_type": "PreviewTextNode",
+    "inputs": {
+      "text": [
+        "1",
+        0
+      ]
+    }
+  }
+}

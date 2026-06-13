@@ -1,0 +1,154 @@
+{
+  "9": {
+    "inputs": {
+      "filename_prefix": "pixelworld",
+      "images": [
+        "43",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "39": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "40": {
+    "inputs": {
+      "vae_name": "zimage_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "41": {
+    "inputs": {
+      "width": 768,
+      "height": 480,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "空Latent图像（SD3）"
+    }
+  },
+  "42": {
+    "inputs": {
+      "conditioning": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "43": {
+    "inputs": {
+      "samples": [
+        "44",
+        0
+      ],
+      "vae": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "44": {
+    "inputs": {
+      "seed": 52865,
+      "steps": 9,
+      "cfg": 1.0,
+      "sampler_name": "res_multistep",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "47",
+        0
+      ],
+      "positive": [
+        "45",
+        0
+      ],
+      "negative": [
+        "42",
+        0
+      ],
+      "latent_image": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "45": {
+    "inputs": {
+      "text": "纯白背景中，左侧放着一个被烈日晒出裂纹的干燥红砖，右侧放着一小团燃烧的火焰。红砖表面有细沙粒和干裂痕迹，火焰跳动，两者之间有明显的距离，形成未完成关系。",
+      "clip": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "46": {
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "47": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "48",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "采样算法（AuraFlow）"
+    }
+  },
+  "48": {
+    "inputs": {
+      "lora_name": "qinglong_detailedeye_z-imageV2(comfy).safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  }
+}

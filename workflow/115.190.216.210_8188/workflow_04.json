@@ -1,0 +1,168 @@
+{
+  "27": {
+    "_meta": {
+      "title": "保存图像"
+    },
+    "inputs": {
+      "images": [
+        "96",
+        0
+      ],
+      "filename_prefix": "commentary/storyboard"
+    },
+    "class_type": "SaveImage"
+  },
+  "37": {
+    "_meta": {
+      "title": "尺寸-宽"
+    },
+    "inputs": {
+      "value": 2560
+    },
+    "class_type": "INTConstant"
+  },
+  "38": {
+    "_meta": {
+      "title": "尺寸-高"
+    },
+    "inputs": {
+      "value": 1440
+    },
+    "class_type": "INTConstant"
+  },
+  "43": {
+    "_meta": {
+      "title": "文本"
+    },
+    "inputs": {
+      "text": "{\"analysis_id\": 82, \"style_type\": \"写实风格\", \"script_analysis\": \"故事讲述底层电工林北在逼仄出租屋维修电路时，因房东催租分心导致触电濒死。在意识消散的瞬间，现代都市景象瓦解，他穿越至一个宏大的蒸汽朋克异世界，重重摔落在机械飞鸟的金属甲板上，面对未知的齿轮与压力表，开启全新命运。\", \"scene_registry\": {\"dingy_room\": \"室内，十平米老旧出租屋。墙面斑驳起皮露出灰色水泥，角落堆满油腻外卖盒与杂物，天花板悬挂老旧灯泡，墙上挂着破旧电工证与划满红叉的维修记录纸。光影：昏黄暖调顶光，局部阴影浓重，整体氛围压抑逼仄。\", \"steampunk_deck\": \"室内/甲板，巨大机械飞鸟背部金属平台。地面铺满冰冷粗糙的铆接钢板，布满油垢与灰尘，旁边立着半人高的生锈压力表与复杂管道。光影：夕阳斜照产生长阴影，金属质感冷硬，整体氛围粗犷危险。\", \"steampunk_world\": \"室外，架空蒸汽朋克奇幻世界。天空悬浮着被金紫色夕阳染透的岛屿，边缘垂落粗大藤蔓，空中漂浮着浓郁白蒸汽与巨大生锈铜齿轮。光影：瑰丽暖调逆光，金属反光强烈，整体氛围宏大神秘。\"}, \"character_ref_prompts\": [{\"id\": 243, \"name\": \"林北\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身][写实风格]，林北，24岁青年男性，黑色碎发微乱，佩戴黑框眼镜，面容清瘦略带疲惫，穿着洗得发白的旧格子睡衣，气质专注且带点底层打工人的沧桑，全片统一形象\", \"image_url\": \"https://woniuai.tos-cn-beijing.volces.com/uploads/2026/06/13/20c5a1a1-21b6-46bd-a66a-dad902282f8c.png\"}, {\"id\": 244, \"name\": \"房东\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身][写实风格]，房东，45岁中年男性，身材微胖，留着寸头，面部肌肉紧绷，穿着深色旧夹克与宽松长裤，气质粗鲁急躁，全片统一形象\", \"image_url\": \"https://woniuai.tos-cn-beijing.volces.com/uploads/2026/06/13/82b19ccd-bed6-4dd7-b2c2-cd5dcaf43f99.png\"}], \"storyboard\": [{\"id\": 2715, \"sequence_id\": 41, \"original_text\": \"旁白:边缘垂下数十丈长如巨蟒般的粗藤蔓。\", \"location_key\": \"steampunk_world\", \"main_character\": \"无\", \"prompt\": \"环境特写中景，头顶留白。岛屿边缘垂落粗大藤蔓，表面纹理粗糙如蟒蛇鳞片。瑰丽暖调逆光，金属反光强烈。Cinematic framing, rule of thirds, visible background。\"}, {\"id\": 2716, \"sequence_id\": 42, \"original_text\": \"旁白:巨大机械飞鸟展开双翼掠过云端之上。\", \"location_key\": \"steampunk_world\", \"main_character\": \"无\", \"prompt\": \"环境全景，头顶留白。金属飞鸟展开宽大机械双翼，掠过云层，机身反光。瑰丽暖调逆光，金属反光强烈。Cinematic framing, rule of thirds, visible background。\"}, {\"id\": 2717, \"sequence_id\": 43, \"original_text\": \"旁白:脊背上披着斗篷的纤细身影一闪而过。\", \"location_key\": \"steampunk_world\", \"main_character\": \"无\", \"prompt\": \"环境特写中景，头顶留白。飞鸟背部站立着披斗篷的纤细人影，衣摆随风翻飞。瑰丽暖调逆光，金属反光强烈。Cinematic framing, rule of thirds, visible background。\"}, {\"id\": 2718, \"sequence_id\": 44, \"original_text\": \"旁白:飞鸟阴影迅速放大笼罩林北惊愕的脸。\", \"location_key\": \"steampunk_world\", \"main_character\": \"林北\", \"prompt\": \"单人中近景，头顶留白。林北仰面躺在地上，巨大飞鸟阴影快速覆盖其面部，表情惊愕。瑰丽暖调逆光，金属反光强烈。Cinematic framing, rule of thirds, visible background。\"}, {\"id\": 2719, \"sequence_id\": 45, \"original_text\": \"旁白:林北重重摔在冰冷粗糙的金属甲板上。\", \"location_key\": \"steampunk_deck\", \"main_character\": \"林北\", \"prompt\": \"单人中景，头顶留白。林北身体砸在金属甲板上，激起微尘，四肢摊开。夕阳斜照产生长阴影，金属质感冷硬。Cinematic framing, rule of thirds, visible background。\"}, {\"id\": 2720, \"sequence_id\": 46, \"original_text\": \"旁白:手指下意识抓握触感是带油垢的齿轮。\", \"location_key\": \"steampunk_deck\", \"main_character\": \"林北\", \"prompt\": \"单人特写中近景，头顶留白。林北手指紧紧抠住甲板缝隙中的小齿轮，指缝沾满黑色油垢。夕阳斜照产生长阴影，金属质感冷硬。Cinematic framing, rule of thirds, visible background。\"}, {\"id\": 2721, \"sequence_id\": 47, \"original_text\": \"旁白:半人高的生锈压力表正剧烈抖动不停。\", \"location_key\": \"steampunk_deck\", \"main_character\": \"无\", \"prompt\": \"道具中景，头顶留白。林北身旁的压力表外壳锈迹斑斑，表盘玻璃震动，指针狂跳。夕阳斜照产生长阴影，金属质感冷硬。Cinematic framing, rule of thirds, visible background。\"}, {\"id\": 2722, \"sequence_id\": 48, \"original_text\": \"旁白:表盘指针在红色区域疯狂跳动不停歇。\", \"location_key\": \"steampunk_deck\", \"main_character\": \"无\", \"prompt\": \"道具特写中近景，头顶留白。压力表指针在红色警戒区快速左右摆动，刻度清晰。夕阳斜照产生长阴影，金属质感冷硬。Cinematic framing, rule of thirds, visible background。\"}]}"
+    },
+    "class_type": "CR Text"
+  },
+  "66": {
+    "_meta": {
+      "title": "剧本JSON解析器 (多角色版)"
+    },
+    "inputs": {
+      "JSON剧本数据": [
+        "43",
+        0
+      ]
+    },
+    "class_type": "ScriptJSONParserMulti"
+  },
+  "69": {
+    "_meta": {
+      "title": "按索引提取参考图 (多路版)"
+    },
+    "inputs": {
+      "索引列表_JSON": [
+        "66",
+        2
+      ],
+      "所有角色图Batch": [
+        "66",
+        4
+      ]
+    },
+    "class_type": "MultiImageBatchSelector"
+  },
+  "70": {
+    "_meta": {
+      "title": "有效数量"
+    },
+    "inputs": {
+      "source": [
+        "69",
+        5
+      ]
+    },
+    "class_type": "PreviewAny"
+  },
+  "86": {
+    "_meta": {
+      "title": "生成数量"
+    },
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "INTConstant"
+  },
+  "90": {
+    "_meta": {
+      "title": "火山方舟 API 客户端"
+    },
+    "inputs": {
+      "key_name": "API Key Niuju",
+      "new_api_key": "",
+      "new_key_name": ""
+    },
+    "class_type": "JimengAPIClient"
+  },
+  "93": {
+    "_meta": {
+      "title": "生成种子"
+    },
+    "inputs": {
+      "value": 638979472
+    },
+    "class_type": "INTConstant"
+  },
+  "96": {
+    "_meta": {
+      "title": "图像生成（Seedream 4）"
+    },
+    "inputs": {
+      "seed": [
+        "93",
+        0
+      ],
+      "size": "Custom",
+      "width": [
+        "37",
+        0
+      ],
+      "client": [
+        "90",
+        0
+      ],
+      "height": [
+        "38",
+        0
+      ],
+      "prompt": [
+        "66",
+        3
+      ],
+      "watermark": false,
+      "max_images": [
+        "86",
+        0
+      ],
+      "model_version": "doubao-seedream-4.5",
+      "images.image_1": [
+        "69",
+        0
+      ],
+      "images.image_2": [
+        "69",
+        1
+      ],
+      "images.image_3": [
+        "69",
+        2
+      ],
+      "images.image_4": [
+        "69",
+        3
+      ],
+      "images.image_5": [
+        "69",
+        4
+      ],
+      "generation_count": 1,
+      "enable_group_generation": false
+    },
+    "class_type": "JimengSeedream4"
+  }
+}

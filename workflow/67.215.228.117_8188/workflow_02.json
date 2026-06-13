@@ -1,0 +1,44 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "1 (1).png",
+      "upload": "image"
+    }
+  },
+  "2": {
+    "class_type": "OpenAIGPTImage1",
+    "inputs": {
+      "prompt": "远光灯光束",
+      "quality": "medium",
+      "background": "auto",
+      "size": "auto",
+      "n": 1,
+      "model": "gpt-image-1",
+      "seed": 0,
+      "image": [
+        "1",
+        0
+      ]
+    }
+  },
+  "3": {
+    "class_type": "PreviewImage",
+    "inputs": {
+      "images": [
+        "2",
+        0
+      ]
+    }
+  },
+  "4": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "2",
+        0
+      ],
+      "filename_prefix": "gpt_image_inpaint"
+    }
+  }
+}

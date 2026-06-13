@@ -1,0 +1,175 @@
+{
+  "5": {
+    "inputs": {
+      "width": 1024,
+      "height": 576,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "**Scene Description:**\n\n**Visual Style:**\n- The scene is rendered in a vibrant and warm Pixar 3D animation style. The colors are bright and inviting, with soft, natural lighting that creates a cozy and playful atmosphere. The shading is smooth, giving the characters and environment a polished and lifelike appearance.\n- The child’s features are slightly exaggerated to convey her emotions clearly. Her eyes are large and expressive, and her movements are fluid and energetic.\n\n**Composition:**\n- The camera angle is set at a low, slightly tilted perspective, capturing the child from head to toe. This angle emphasizes her excitement and the dynamic nature of the scene.\n- The background is a lush, green backyard with a small, colorful play area. There is a wooden fence with a few flowering bushes and a small, clear pond in the corner. The sky is a soft, sunny blue with a few fluffy white clouds.\n- The child is standing in the middle of a shallow, circular water feature, which is part of the play area. She is wearing a bright, yellow raincoat and matching boots, and her hair is tied up in two pigtails with colorful ribbons.\n- In one hand, she holds a pair of oversized, colorful \"super glasses\" (which look like a cross between swimming goggles and superhero shades), and in the other hand, she is holding a small, plastic bucket filled with water.\n\n**Visual Effects:**\n- The water in the water feature is shimmering and sparkling, with small droplets splashing and creating a magical, star-like effect as they catch the light.\n- The ambient lighting is warm and soft, casting a gentle glow on the child and the water, making the scene feel both real and dreamlike.\n- The depth of field is used to keep the child and the water in sharp focus, while the background elements are slightly blurred, drawing the viewer's attention to the main subject.\n- The child is mid-motion, about to throw the water from the bucket high into the air. Her expression is one of pure joy and anticipation, with a big, toothy smile and wide, excited eyes.\n\n**Interaction:**\n- The child is interacting with the water, preparing to splash it high into the air. The water in the bucket is already starting to ripple and move, adding to the sense of motion and energy in the scene.\n- Her \"super glasses\" are perched on her forehead, ready to be put on, adding a touch of whimsy and imagination to the scene.\n\n**Overall Scene:**\n- The scene captures the child’s enthusiasm and the magical, imaginative quality of her play. The vibrant colors, expressive features, and dynamic composition create a visually compelling and emotionally resonant image that reflects the heart of the conversation.",
+      "clip": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "13",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "9": {
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImageWebsocket",
+    "_meta": {
+      "title": "通过WebSocket保存图像"
+    }
+  },
+  "19": {
+    "inputs": {
+      "filename_prefix": "api_1781360662_4eb02a84",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像到磁盘"
+    }
+  },
+  "10": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "11": {
+    "inputs": {
+      "clip_name1": "t5xxl_fp16.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "双CLIP加载器"
+    }
+  },
+  "12": {
+    "inputs": {
+      "unet_name": "flux1-schnell.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "13": {
+    "inputs": {
+      "noise": [
+        "25",
+        0
+      ],
+      "guider": [
+        "22",
+        0
+      ],
+      "sampler": [
+        "16",
+        0
+      ],
+      "sigmas": [
+        "17",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "16": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "17": {
+    "inputs": {
+      "scheduler": "simple",
+      "steps": 4,
+      "denoise": 1.0,
+      "model": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "基本调度器"
+    }
+  },
+  "22": {
+    "inputs": {
+      "model": [
+        "12",
+        0
+      ],
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "基本引导器"
+    }
+  },
+  "25": {
+    "inputs": {
+      "noise_seed": 854958927192159
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  }
+}

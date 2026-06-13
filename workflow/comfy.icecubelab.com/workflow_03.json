@@ -1,0 +1,93 @@
+{
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "juggernautXL_ragnarok.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "sdxl_vae.safetensors"
+    }
+  },
+  "3": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "A stunning Korean idol-style woman with ash brown wavy shoulder-length hair, delicate features and a button nose, playful energetic expression with a bright dimpled smile. Shot from behind, looking over her shoulder with sparkling eyes, cowboy shot framing from thighs up. She wears a cropped denim jacket over denim shorts, standing in a traditional Korean hanok courtyard with wooden pillars and curved tiled roof. Studio butterfly lighting from above casting soft shadows under cheekbones, flawless luminous skin with visible pores, styled gradient lip tint and shimmering eyeshadow. Shot on 50mm lens, standard portrait, shallow depth of field blurring the courtyard lattice doors. Cinematic warm golden hour color grading, hyperrealistic detail, photogenic idol aesthetic."
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "lowres, blurry, bad anatomy, deformed, watermark, signature, extra fingers, cartoon, anime, painting"
+    }
+  },
+  "5": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 896,
+      "height": 1280,
+      "batch_size": 1
+    }
+  },
+  "6": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "3",
+        0
+      ],
+      "negative": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ],
+      "seed": 1952031632,
+      "control_after_generate": "fixed",
+      "steps": 30,
+      "cfg": 4.0,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
+      "denoise": 1.0
+    }
+  },
+  "7": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "6",
+        0
+      ],
+      "vae": [
+        "2",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "7",
+        0
+      ],
+      "filename_prefix": "portrait_1952031632"
+    }
+  }
+}

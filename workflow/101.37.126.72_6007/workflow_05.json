@@ -1,0 +1,506 @@
+{
+  "5": {
+    "inputs": {
+      "width": [
+        "28",
+        0
+      ],
+      "height": [
+        "28",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "空Latent图像（Flux2）"
+    }
+  },
+  "7": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "11": {
+    "inputs": {
+      "version": "RMBG-2.0"
+    },
+    "class_type": "LayerMask: LoadBiRefNetModelV2",
+    "_meta": {
+      "title": "图层遮罩：加载BiRefNet模型 V2（高级）"
+    }
+  },
+  "12": {
+    "inputs": {
+      "select": "mask1",
+      "sort_by": "area_desc",
+      "min_area": 100,
+      "padding": 10,
+      "output_mode": "crop",
+      "image": [
+        "43",
+        0
+      ],
+      "mask": [
+        "43",
+        1
+      ]
+    },
+    "class_type": "PD_Mask Selector",
+    "_meta": {
+      "title": "PD_Mask Selector"
+    }
+  },
+  "14": {
+    "inputs": {
+      "blend_mode": "normal",
+      "opacity": 100,
+      "x_percent": 15.0,
+      "y_percent": 40.0,
+      "scale": 1.0,
+      "align_mode": "bottom_align",
+      "invert_mask": false,
+      "background_image": [
+        "15",
+        0
+      ],
+      "layer_image": [
+        "44",
+        0
+      ],
+      "layer_mask": [
+        "44",
+        1
+      ]
+    },
+    "class_type": "ImageBlendV1",
+    "_meta": {
+      "title": "PD:Image Blend V1"
+    }
+  },
+  "15": {
+    "inputs": {
+      "size": 1024,
+      "interpolation": "bicubic",
+      "image": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "PDIMAGE_LongerSize",
+    "_meta": {
+      "title": "PDIMAGE:LongerSize"
+    }
+  },
+  "16": {
+    "inputs": {
+      "image": "174356b9057ef25638fcbfdaa1a0ee19d3fd5f9b80be22f1ec146973e5bfc0ca (1).jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "17": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "23": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b-fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "25": {
+    "inputs": {
+      "image": "男生-7.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "26": {
+    "inputs": {
+      "text": "PD, transform the real photograph into PDstyle,保持服装和颜色完全一致，背景不变"
+    },
+    "class_type": "CR Text",
+    "_meta": {
+      "title": "🔤 CR Text"
+    }
+  },
+  "28": {
+    "inputs": {
+      "image": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "获取图像尺寸"
+    }
+  },
+  "30": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": 1024,
+      "background_color": "#000000",
+      "image": [
+        "41",
+        0
+      ],
+      "mask": [
+        "41",
+        1
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    }
+  },
+  "31": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": 1024,
+      "background_color": "#000000",
+      "image": [
+        "56",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    }
+  },
+  "36": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "42",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "37": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "39": {
+    "inputs": {
+      "invert_mask": false,
+      "detect": "mask_area",
+      "top_reserve": 20,
+      "bottom_reserve": 20,
+      "left_reserve": 20,
+      "right_reserve": 20,
+      "round_to_multiple": "8",
+      "image": [
+        "12",
+        0
+      ],
+      "mask": [
+        "12",
+        1
+      ]
+    },
+    "class_type": "LayerUtility: CropByMask V2",
+    "_meta": {
+      "title": "图层工具：遮罩裁剪 V2"
+    }
+  },
+  "40": {
+    "inputs": {
+      "rgthree_comparer": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_lrsjf_00009_.png&type=temp&subfolder=&rand=0.11163666429755525"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_lrsjf_00010_.png&type=temp&subfolder=&rand=0.65091818982929"
+          }
+        ]
+      },
+      "image_a": [
+        "14",
+        0
+      ],
+      "image_b": [
+        "56",
+        0
+      ]
+    },
+    "class_type": "Image Comparer (rgthree)",
+    "_meta": {
+      "title": "Image Comparer (rgthree)"
+    }
+  },
+  "41": {
+    "inputs": {
+      "image": "4986bc3cc33ee154f44d46f9165d44cdda6448cf656d33831faf134f2d97910c.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "42": {
+    "inputs": {
+      "blend_mode": "normal",
+      "opacity": 100,
+      "x_percent": 50.0,
+      "y_percent": 50.0,
+      "scale": 1.0,
+      "align_mode": "bottom_align",
+      "invert_mask": true,
+      "background_image": [
+        "31",
+        0
+      ],
+      "layer_image": [
+        "30",
+        0
+      ],
+      "layer_mask": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "ImageBlendV1",
+    "_meta": {
+      "title": "PD:Image Blend V1"
+    }
+  },
+  "43": {
+    "inputs": {
+      "detail_method": "VITMatte",
+      "detail_erode": 4,
+      "detail_dilate": 2,
+      "black_point": 0.01,
+      "white_point": 0.99,
+      "process_detail": false,
+      "device": "cuda",
+      "max_megapixels": 2.0,
+      "image": [
+        "25",
+        0
+      ],
+      "birefnet_model": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "LayerMask: BiRefNetUltraV2",
+    "_meta": {
+      "title": "图层遮罩：BiRefNet Ultra V2（高级）"
+    }
+  },
+  "44": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_longest_side": true,
+      "longest_side": 720,
+      "image": [
+        "39",
+        0
+      ],
+      "mask": [
+        "39",
+        1
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放"
+    }
+  },
+  "48": {
+    "inputs": {
+      "seed": 616961422212637,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "55",
+        0
+      ],
+      "positive": [
+        "52",
+        0
+      ],
+      "negative": [
+        "51",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "50": {
+    "inputs": {
+      "pixels": [
+        "37",
+        0
+      ],
+      "vae": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "51": {
+    "inputs": {
+      "conditioning": [
+        "53",
+        0
+      ],
+      "latent": [
+        "50",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "52": {
+    "inputs": {
+      "conditioning": [
+        "54",
+        0
+      ],
+      "latent": [
+        "50",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "53": {
+    "inputs": {
+      "conditioning": [
+        "54",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "54": {
+    "inputs": {
+      "text": [
+        "26",
+        0
+      ],
+      "clip": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "55": {
+    "inputs": {
+      "lora_name": "training/F2K9B-随意蜡笔-v1_000003250.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "56": {
+    "inputs": {
+      "samples": [
+        "48",
+        0
+      ],
+      "vae": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  }
+}

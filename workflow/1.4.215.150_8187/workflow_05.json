@@ -1,0 +1,270 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "flux-2-klein-base-9b-fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "5": {
+    "inputs": {
+      "text": [
+        "17",
+        0
+      ],
+      "clip": [
+        "80",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "extra limbs,naked,nipples",
+      "clip": [
+        "80",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "9": {
+    "inputs": {
+      "width": 1280,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "10": {
+    "inputs": {
+      "steps": 14,
+      "width": 1280,
+      "height": 1024
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "Flux2Scheduler"
+    }
+  },
+  "11": {
+    "inputs": {
+      "sampler_name": "res_2s_ode"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "12": {
+    "inputs": {
+      "cfg": 4.5,
+      "model": [
+        "80",
+        0
+      ],
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFGGuider"
+    }
+  },
+  "13": {
+    "inputs": {
+      "noise_seed": [
+        "17",
+        3
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "14": {
+    "inputs": {
+      "noise": [
+        "13",
+        0
+      ],
+      "guider": [
+        "12",
+        0
+      ],
+      "sampler": [
+        "11",
+        0
+      ],
+      "sigmas": [
+        "10",
+        0
+      ],
+      "latent_image": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "15": {
+    "inputs": {
+      "samples": [
+        "14",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "17": {
+    "inputs": {
+      "text": "a realistic tiki mug  in the slightly Whimsical kitsch style of \n{{ jack Kirby | Dali | Frank Frazetta | Escher | Traditional Polynesian | Papua New Guinea | eskimo  }},  \nin the form of  \n{{ a scuba diver  | cthulhu | a monitor lizard   | a monkey  | an alien xenomorph face| an evil clown    | an elephant face   | a bimbo woman with large lips and puffed cheeks }}\nplain background,\n8k , detailed.",
+      "seed": 489878224620371,
+      "iteration": -1,
+      "computed_prompt": "a realistic tiki mug  in the slightly Whimsical kitsch style of \nTraditional Polynesian,  \nin the form of  \nan elephant face\nplain background,\n8k , detailed."
+    },
+    "class_type": "GPrompts",
+    "_meta": {
+      "title": "GPrompts"
+    }
+  },
+  "79": {
+    "inputs": {
+      "filename_prefix": "tikiglass",
+      "album": "tikiglass",
+      "tags": "",
+      "save_also": true,
+      "image": [
+        "15",
+        0
+      ],
+      "notes": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "Save Image to Immich Server",
+    "_meta": {
+      "title": "Save Image to Immich Server"
+    }
+  },
+  "80": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": false,
+        "lora": "Kleinflux29b\\80sFantasyKlein9b_000002000H1000.safetensors",
+        "strength": 1.1
+      },
+      "lora_2": {
+        "on": false,
+        "lora": "Kleinflux29b\\FolkHorrorKlein9b.safetensors",
+        "strength": 0.76
+      },
+      "lora_3": {
+        "on": false,
+        "lora": "Kleinflux29b\\Giger_Style_Hall.safetensors",
+        "strength": 0.6
+      },
+      "lora_4": {
+        "on": false,
+        "lora": "Kleinflux29b/Realism_Engine_Klein_V2.safetensors",
+        "strength": 0.8
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree)"
+    }
+  },
+  "88": {
+    "inputs": {
+      "images": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "94": {
+    "inputs": {
+      "format_string": "The prompt is \n$a, \nthe seed is $b, Generated at $datetime on $hostname, Operating system $os",
+      "a": [
+        "17",
+        2
+      ],
+      "b": [
+        "17",
+        3
+      ]
+    },
+    "class_type": "String Formatter",
+    "_meta": {
+      "title": "String Formatter"
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "5": {
+    "inputs": {
+      "width": 1024,
+      "height": 576,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "**Scene Description:**\n\n**Visual Style:**\n- The scene is rendered in a vibrant and warm Pixar 3D animation style, with soft, inviting colors and smooth shading. The lighting is gentle and natural, creating a cozy and comforting atmosphere. The character features are slightly exaggerated to convey the child’s emotions and expressions.\n\n**Composition:**\n- The full-body view of the child, named 可豆贝 (Kedoubèi), is centered in the frame. She is a young Asian girl with expressive, large eyes, a round face, and a cheerful smile. Her hair is styled in two neat pigtails, and she is wearing a bright, colorful dress with playful patterns.\n- The environment is a whimsical, imaginative setting inspired by a cozy, familiar home. Kedoubèi is standing in a well-lit, warmly decorated living room. The walls are painted in a soft, pastel shade, and there are various toys and books scattered around, giving a sense of a lived-in, happy space.\n- In the background, a large, comfortable couch is visible, with a few plush pillows and a blanket. A small, wooden table with a lamp and a stack of storybooks is placed near the couch. A window with sheer curtains lets in a soft, natural light, casting a warm glow over the room.\n\n**Interaction:**\n- Kedoubèi is interacting with a small, toy robot that is sitting on the floor in front of her. The robot is a cute, friendly-looking character with big, round eyes and a metallic, shiny surface. It has a few buttons and dials, and it is currently in a \"helping\" mode, as if it is trying to assist Kedoubèi with something.\n- Kedoubèi is leaning down slightly, her hands on her knees, and she is looking at the robot with a curious and slightly concerned expression. The robot is looking up at her, its eyes blinking in a friendly, supportive manner.\n\n**Visual Effects:**\n- The camera angle is low, capturing the scene from a slightly tilted, cinematic perspective. This angle emphasizes the emotional connection between Kedoubèi and the robot, making the viewer feel like they are part of the interaction.\n- The depth of field is used to keep Kedoubèi and the robot in sharp focus, while the background elements are softly blurred, drawing attention to the main subjects.\n- The ambient lighting is warm and natural, with a soft, diffused light coming from the window and the lamp on the table. This creates a cozy, welcoming atmosphere that enhances the emotional tone of the scene.\n\n**Overall Scene:**\n- The scene captures the heart of the conversation, where Kedoubèi is checking in on the robot, as if it were a friend who might be facing a challenge. The playful, imaginative setting and the warm, inviting atmosphere reflect the caring and supportive nature of the interaction. The slight exaggeration of the characters' features and the vibrant, Pixar-style animation bring the scene to life, making it both visually compelling and emotionally resonant.",
+      "clip": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "13",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "9": {
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImageWebsocket",
+    "_meta": {
+      "title": "通过WebSocket保存图像"
+    }
+  },
+  "19": {
+    "inputs": {
+      "filename_prefix": "api_1781360629_0080ba7c",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像到磁盘"
+    }
+  },
+  "10": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "11": {
+    "inputs": {
+      "clip_name1": "t5xxl_fp16.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "双CLIP加载器"
+    }
+  },
+  "12": {
+    "inputs": {
+      "unet_name": "flux1-schnell.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "13": {
+    "inputs": {
+      "noise": [
+        "25",
+        0
+      ],
+      "guider": [
+        "22",
+        0
+      ],
+      "sampler": [
+        "16",
+        0
+      ],
+      "sigmas": [
+        "17",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "16": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "17": {
+    "inputs": {
+      "scheduler": "simple",
+      "steps": 4,
+      "denoise": 1.0,
+      "model": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "基本调度器"
+    }
+  },
+  "22": {
+    "inputs": {
+      "model": [
+        "12",
+        0
+      ],
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "基本引导器"
+    }
+  },
+  "25": {
+    "inputs": {
+      "noise_seed": 854958927192159
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  }
+}

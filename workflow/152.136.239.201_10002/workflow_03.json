@@ -1,0 +1,290 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "FLUX-KLEIN/flux-2-klein-9b.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "6": {
+    "inputs": {
+      "seed": 584591629289076,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "24",
+        0
+      ],
+      "negative": [
+        "25",
+        0
+      ],
+      "latent_image": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "图1的人物放到图2的水中，保留图1人物细节，图2当背景，双手向前探出水面",
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "8": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "9": {
+    "inputs": {
+      "samples": [
+        "6",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "12": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "13": {
+    "inputs": {
+      "width": [
+        "18",
+        3
+      ],
+      "height": [
+        "18",
+        4
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "空Latent图像（Flux2）"
+    }
+  },
+  "14": {
+    "inputs": {
+      "conditioning": [
+        "7",
+        0
+      ],
+      "latent": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "15": {
+    "inputs": {
+      "image": "ComfyUI_00494_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "18": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "crop",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "None",
+      "scale_to_length": 1024,
+      "background_color": "#000000",
+      "image": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    }
+  },
+  "19": {
+    "inputs": {
+      "pixels": [
+        "18",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "20": {
+    "inputs": {
+      "conditioning": [
+        "8",
+        0
+      ],
+      "latent": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "21": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "crop",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "None",
+      "scale_to_length": 1024,
+      "background_color": "#000000",
+      "image": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    }
+  },
+  "22": {
+    "inputs": {
+      "image": "600001.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "23": {
+    "inputs": {
+      "pixels": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "24": {
+    "inputs": {
+      "conditioning": [
+        "14",
+        0
+      ],
+      "latent": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "25": {
+    "inputs": {
+      "conditioning": [
+        "20",
+        0
+      ],
+      "latent": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  }
+}

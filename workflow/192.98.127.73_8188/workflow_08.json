@@ -1,0 +1,145 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 719177067819324,
+      "steps": 20,
+      "cfg": 8.0,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "model": [
+        "10",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "v6.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Загрузить сheckpoint"
+    }
+  },
+  "5": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Пустое латентное изображение"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "artist:yakovlev_vad, score_9, score_8_up, score_7_up, source_pony, (masterpiece:1.2), (detailed:1.2), pony, female, pegasus, solo, oc:Silver Moon, light grey fur, black mane and tail with green highlights, (crescent moon cutiemark:1.3), green eyes, feathered wings, (short messy mane:1.1), long tail, looking at viewer, gentle smile, (flying:0.8), soft cinematic lighting, warm atmosphere, (high quality:1.2), (highly detailed:1.2), feral, volumetric lighting, depth of field, standing, smiling, raised tail, vulva winking, anus, flush, butt blush, rear view, rear focus, window, god rays, (photorealistic:1.1)",
+      "clip": [
+        "10",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Кодирование текста CLIP (Запрос)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "score_4, score_5, score_6, (low quality:1.2), (deformed:1.2), (bad anatomy), (text, signature, watermark), human, humanoid, anthro, simple background, blurry, 3d, render, doll, horn, unicorn, bright colors",
+      "clip": [
+        "10",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Кодирование текста CLIP (Запрос)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "Декодировать VAE"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "Silver Moon",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Сохранить изображение"
+    }
+  },
+  "10": {
+    "inputs": {
+      "lora_name": "PDXL_artist_tags_v2.safetensors",
+      "strength_model": 1.0,
+      "strength_clip": 1.0,
+      "model": [
+        "11",
+        0
+      ],
+      "clip": [
+        "11",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Загрузить LoRA"
+    }
+  },
+  "11": {
+    "inputs": {
+      "lora_name": "silvermoon.safetensors",
+      "strength_model": 1.0,
+      "strength_clip": 1.0,
+      "model": [
+        "4",
+        0
+      ],
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Загрузить LoRA"
+    }
+  }
+}

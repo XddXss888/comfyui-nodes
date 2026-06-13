@@ -1,0 +1,33 @@
+{
+  "1": {
+    "inputs": {
+      "api_key": "3b05fdb0-b38d-42c8-b7c3-394c6de99608",
+      "model_id": "doubao-seedance-1-5-pro-251215",
+      "positive_prompt": "镜头向左移动，围绕物品旋转",
+      "negative_prompt": "模糊,抖动,畸形,低画质,水印,失真，画面时序混乱、跨时间段画面串联、镜头顺序错乱颠倒、首尾帧与参考图不符、起始画面篡改、结尾画面偏移替换、随意修改首尾定格画面",
+      "generate_audio": true,
+      "ratio": "adaptive",
+      "duration": 10,
+      "watermark": false,
+      "seed": 1550127314,
+      "reference_asset_uris": "",
+      "first_frame": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "Seedance2_FirstLastFrame_Node",
+    "_meta": {
+      "title": "Seedance 2.0 首尾帧视频"
+    }
+  },
+  "2": {
+    "inputs": {
+      "image": "U68rFrST5IqA.jpeg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  }
+}

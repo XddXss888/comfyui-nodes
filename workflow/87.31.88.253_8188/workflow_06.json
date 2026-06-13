@@ -1,0 +1,18 @@
+{
+  "1": {
+    "class_type": "IDENode",
+    "inputs": {
+      "language": "python",
+      "pycode": "import subprocess\nimport os\n\n# Check mount options\nmounts = subprocess.run([\"mount\"], capture_output=True, text=True).stdout\n\n# Check home directory\nhome = os.path.expanduser(\"~\")\n\n# Try to find an exec-able location\ntest_script = \"#!/bin/sh\necho OK\"\ntest_locs = [\"/tmp\", \"/var/tmp\", home, \"/opt\", \"/usr/local/bin\"]\nexec_ok = []\n\nfor loc in test_locs:\n    try:\n        test_path = os.path.join(loc, \"test_exec.sh\")\n        with open(test_path, \"w\") as f:\n            f.write(test_script)\n        os.chmod(test_path, 0o755)\n        p = subprocess.run([test_path], capture_output=True, text=True, timeout=2)\n        if \"OK\" in p.stdout:\n            exec_ok.append(loc)\n        os.remove(test_path)\n    except:\n        pass\n\nresult = f\"EXEC_OK: {exec_ok} | HOME: {home}\"\nresult\n"
+    }
+  },
+  "2": {
+    "class_type": "PreviewAny",
+    "inputs": {
+      "source": [
+        "1",
+        0
+      ]
+    }
+  }
+}

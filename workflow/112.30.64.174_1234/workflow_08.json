@@ -1,0 +1,185 @@
+{
+  "8": {
+    "inputs": {
+      "samples": [
+        "19",
+        0
+      ],
+      "vae": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "11": {
+    "inputs": {
+      "text": "nsfw, 1girl, 1boy, ${\"name\":\"Lin Xing\", \"angle\":\"from front\", \"upperBody\":\"sfw\", \"lowerBody\":\"hidden\"}$, ${\"name\":\"grey hoodie\", \"upperBody\":\"visible\", close-up, hand focus, front view, Lin Xing (original), fair skin, (grey hoodie:1.1), wet clothes, (cum on hands:1.4), (messy hands:1.2), excessive cum, thick semen, transparent fluid, hand touching male stomach, male abs, wet male skin, bathroom, tile wall, steam, water droplets, cinematic lighting, depth of field, macro shot, highly detailed skin surface, erotic tension, ,very aesthetic, masterpiece, best quality, ultra-detailed, miaoka, high contrast, huge filesize,",
+      "clip": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "12": {
+    "inputs": {
+      "text": ",blue grid background, bad hands, deformed hands, bad anatomy, Deviant Art, lowres, worst quality, low quality, multiple views, censored, jpeg artifacts, realistic, 3d, (double navel:1.2), (extra navel:1.2), mutated, deformed, censor",
+      "clip": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "15": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "19": {
+    "inputs": {
+      "seed": 9715081012,
+      "steps": 40,
+      "cfg": 5.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "47",
+        0
+      ],
+      "positive": [
+        "11",
+        0
+      ],
+      "negative": [
+        "12",
+        0
+      ],
+      "latent_image": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "28": {
+    "inputs": {
+      "width": 768,
+      "height": 1280,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "44": {
+    "inputs": {
+      "unet_name": "Anima\\anime\\novaAnimeAM_v15.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "45": {
+    "inputs": {
+      "clip_name": "qwen_3_06b_base.safetensors",
+      "type": "stable_diffusion",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "47": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "99",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "采样算法（AuraFlow）"
+    }
+  },
+  "66": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "99": {
+    "inputs": {
+      "lora_name": "Anima\\style\\channelv2.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "100": {
+    "inputs": {
+      "unet_name": "novaAnimeAM_v15.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "101": {
+    "inputs": {
+      "unet_name": "Anima\\anime\\novaAnimeAM_v15.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "102": {
+    "inputs": {
+      "unet_name": "Anima\\anime\\novaAnimeAM_v15.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "74": {
+    "inputs": {
+      "pixels": [
+        "1849",
+        0
+      ],
+      "vae": [
+        "2014",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "528": {
+    "inputs": {
+      "text": "best-quality,masterpiece,with a high-end texture,UE5 Rendering,RTNS,masterpiece,amazing quality,Semi-realistic,fantasy,high contrast,perspective,depth of field,best quality,realistic anatomy,absurdres,realistic,wrzy，",
+      "speak_and_recognation": true,
+      "clip": [
+        "2041",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码器"
+    }
+  },
+  "530": {
+    "inputs": {
+      "text": "(easynegative),badhandv4,(worst quality, low quality:1.4),greyscale,border,artist name,out of frame,holding,zombie,watermark,text,logo",
+      "speak_and_recognation": true,
+      "clip": [
+        "2041",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码器"
+    }
+  },
+  "1074": {
+    "inputs": {
+      "ckpt_name": "WAI_NSFW-illustrious-SDXL_v14.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Checkpoint加载器(简易)"
+    }
+  },
+  "1849": {
+    "inputs": {},
+    "class_type": "🔹Photoshop ComfyUI Plugin",
+    "_meta": {
+      "title": "🔹Photoshop ComfyUI Plugin"
+    }
+  },
+  "1931": {
+    "inputs": {
+      "output": [
+        "2032",
+        0
+      ]
+    },
+    "class_type": "🔹SendTo Photoshop Plugin",
+    "_meta": {
+      "title": "🔹SendTo Photoshop Plugin"
+    }
+  },
+  "2012": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "2024",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "2014": {
+    "inputs": {
+      "vae_name": "sdxl_vae_fp16fix.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "VAE加载器"
+    }
+  },
+  "2024": {
+    "inputs": {
+      "samples": [
+        "2025",
+        3
+      ],
+      "vae": [
+        "1074",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "2025": {
+    "inputs": {
+      "seed": 457830480898230,
+      "steps": 32,
+      "cfg": 6.0,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": [
+        "2040",
+        1
+      ],
+      "preview_method": "auto",
+      "vae_decode": "true",
+      "model": [
+        "2041",
+        0
+      ],
+      "positive": [
+        "528",
+        0
+      ],
+      "negative": [
+        "530",
+        0
+      ],
+      "latent_image": [
+        "74",
+        0
+      ]
+    },
+    "class_type": "KSampler (Efficient)",
+    "_meta": {
+      "title": "K采样器(效率)"
+    }
+  },
+  "2026": {
+    "inputs": {
+      "model_name": "bbox/face_yolov8m.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "检测加载器"
+    }
+  },
+  "2028": {
+    "inputs": {
+      "model_name": "bbox/hand_yolov8s.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "检测加载器"
+    }
+  },
+  "2032": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "scale_by": 1.1,
+      "image": [
+        "2024",
+        0
+      ]
+    },
+    "class_type": "ImageScaleBy",
+    "_meta": {
+      "title": "图像按系数缩放"
+    }
+  },
+  "2040": {
+    "inputs": {
+      "expression": "0.35",
+      "speak_and_recognation": true,
+      "a": [
+        "1849",
+        2
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "数学表达式"
+    }
+  },
+  "2041": {
+    "inputs": {
+      "lora_name": "yuanzi.safetensors",
+      "strength_model": 0.49,
+      "strength_clip": 0.45,
+      "model": [
+        "1074",
+        0
+      ],
+      "clip": [
+        "1074",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "LoRA加载器"
+    }
+  }
+}

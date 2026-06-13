@@ -1,0 +1,175 @@
+{
+  "5": {
+    "inputs": {
+      "width": 1024,
+      "height": 576,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "**Scene Description:**\n\nThe scene is set in a vibrant, whimsical playroom, bathed in warm, soft lighting that gives the environment a cozy and inviting feel. The walls are adorned with colorful murals of ocean scenes, and there are shelves filled with various toys and building blocks. The floor is covered with a plush, light blue carpet, adding to the sense of comfort and playfulness.\n\n**Character:**\n- **Child:** A young Asian girl, around 6 years old, with expressive features. She has big, bright eyes full of excitement and curiosity. Her hair is tied up in two neat pigtails, and she wears a simple, cheerful dress with a playful pattern. Her face is lit up with a wide, joyful smile as she engages in her imaginative play.\n\n**Environment:**\n- **Background Elements:**\n  - The room is filled with a variety of toys, including a large box of colorful building blocks, a toy chest, and a small table with art supplies.\n  - On one side of the room, a large window lets in natural light, casting a warm glow over the scene. The window frame is decorated with stickers of fish and other sea creatures, adding to the ocean theme.\n  - In the corner, there is a small bookshelf with a few books about the ocean, hinting at the stories she loves to hear.\n\n**Interaction:**\n- The child is kneeling on the floor, surrounded by a pile of blue and green building blocks. She is in the process of stacking the blue blocks to create a small island. Her hands are busy, but her movements are smooth and deliberate, showing her focus and creativity.\n- Next to her, a small container of green bean sprouts is open, and she has already started placing a few sprouts on top of the blue blocks, turning them into miniature coconut trees. Her expression is one of pure joy and satisfaction as she brings her imagination to life.\n\n**Visual Effects:**\n- **Cinematic Camera Angles:**\n  - The camera is positioned slightly above and behind the child, looking down at her as she plays. This angle captures her full body from head to toe, emphasizing her engagement and the scale of her creation.\n  - The depth of field is shallow, with the background slightly blurred, drawing the viewer's attention to the child and her project. The lighting is soft and warm, creating a gentle, dreamy atmosphere.\n- **Ambient Lighting:**\n  - The light from the window casts a soft, diffused glow, highlighting the child’s face and the colorful blocks. The shadows are subtle, adding depth without overpowering the scene.\n  - The overall lighting is warm and inviting, enhancing the sense of warmth and imagination in the room.\n\n**Emotional Tone:**\n- The scene is filled with a sense of wonder and creativity. The child’s expressions and body language convey her excitement and joy as she builds her imaginary world. The vibrant colors and playful elements of the environment reflect the child’s imagination and the magical nature of her playtime.\n\nThis scene captures the heart of the conversation, bringing the child’s imaginative world to life in a visually compelling and emotionally resonant way, true to the Pixar style.",
+      "clip": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "13",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "9": {
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImageWebsocket",
+    "_meta": {
+      "title": "通过WebSocket保存图像"
+    }
+  },
+  "19": {
+    "inputs": {
+      "filename_prefix": "api_1781360728_9ba78589",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像到磁盘"
+    }
+  },
+  "10": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "11": {
+    "inputs": {
+      "clip_name1": "t5xxl_fp16.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "双CLIP加载器"
+    }
+  },
+  "12": {
+    "inputs": {
+      "unet_name": "flux1-schnell.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "13": {
+    "inputs": {
+      "noise": [
+        "25",
+        0
+      ],
+      "guider": [
+        "22",
+        0
+      ],
+      "sampler": [
+        "16",
+        0
+      ],
+      "sigmas": [
+        "17",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "16": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "17": {
+    "inputs": {
+      "scheduler": "simple",
+      "steps": 4,
+      "denoise": 1.0,
+      "model": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "基本调度器"
+    }
+  },
+  "22": {
+    "inputs": {
+      "model": [
+        "12",
+        0
+      ],
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "基本引导器"
+    }
+  },
+  "25": {
+    "inputs": {
+      "noise_seed": 854958927192159
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  }
+}

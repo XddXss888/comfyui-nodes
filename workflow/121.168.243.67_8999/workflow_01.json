@@ -1,0 +1,289 @@
+{
+  "1": {
+    "inputs": {
+      "url": "http://myshakes.ddns.net:8080/images/characters/CAT_3.png"
+    },
+    "class_type": "LoadImageFromURL",
+    "_meta": {
+      "title": "Load Images from URL"
+    }
+  },
+  "2": {
+    "inputs": {
+      "model": "microsoft/Florence-2-large",
+      "precision": "fp16",
+      "convert_to_safetensors": false
+    },
+    "class_type": "DownloadAndLoadFlorence2Model",
+    "_meta": {
+      "title": "DownloadAndLoadFlorence2Model"
+    }
+  },
+  "3": {
+    "inputs": {
+      "text_input": "",
+      "task": "detailed_caption",
+      "fill_mask": false,
+      "keep_model_loaded": false,
+      "max_new_tokens": 1024,
+      "num_beams": 3,
+      "do_sample": true,
+      "output_mask_select": "",
+      "seed": 546683839892475,
+      "image": [
+        "1",
+        0
+      ],
+      "florence2_model": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "Florence2Run",
+    "_meta": {
+      "title": "Florence2Run"
+    }
+  },
+  "5": {
+    "inputs": {
+      "unet_name": "flux1-schnell-Q4_K_M.gguf"
+    },
+    "class_type": "UnetLoaderGGUF",
+    "_meta": {
+      "title": "Unet Loader (GGUF)"
+    }
+  },
+  "6": {
+    "inputs": {
+      "clip_name": "t5xxl-encoder-q4_k_m.gguf",
+      "type": "flux2"
+    },
+    "class_type": "CLIPLoaderGGUF",
+    "_meta": {
+      "title": "CLIPLoader (GGUF)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "VAE 로드"
+    }
+  },
+  "9": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "빈 잠재 이미지"
+    }
+  },
+  "10": {
+    "inputs": {
+      "seed": 15432678912345,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "sgm_uniform",
+      "denoise": 1.0,
+      "model": [
+        "18",
+        0
+      ],
+      "positive": [
+        "14",
+        0
+      ],
+      "negative": [
+        "15",
+        0
+      ],
+      "latent_image": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "11": {
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE 디코드"
+    }
+  },
+  "12": {
+    "inputs": {
+      "filename_prefix": "ComfyUI_Florence2_GGUF_Consistency"
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "이미지 저장"
+    }
+  },
+  "13": {
+    "inputs": {
+      "delimiter": ", ",
+      "clean_whitespace": "true",
+      "text_a": [
+        "17",
+        0
+      ],
+      "text_b": [
+        "3",
+        2
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "14": {
+    "inputs": {
+      "text": [
+        "13",
+        0
+      ],
+      "clip": [
+        "18",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP 텍스트 인코딩 (프롬프트)"
+    }
+  },
+  "15": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "18",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP 텍스트 인코딩 (프롬프트)"
+    }
+  },
+  "16": {
+    "inputs": {
+      "text_0": "The image shows a white cat with wings sitting on a path in the woods, holding a wand in its hand. The path is surrounded by lush green grass, vibrant flowers, and tall trees, with stars twinkling in the night sky above.",
+      "text": [
+        "3",
+        2
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "17": {
+    "inputs": {
+      "value": "[A sleek white cat wearing a pointy deep-pink wizard hat with gold stars, glowing amber eyes like galaxies, a silver bell collar, floating in the air right next to a tiny wooden wand with a glowing tip, standing gracefully], [A tiny, chubby sparrow with soft brown feathers, wearing a miniature blue crown and a small satchel. It has very expressive, large eyes as if it's about to speak.], (Soaring through a starry night sky), (Beaming smiles of joy), (Golden hour lighting), Disney Pixar style, 3d render, octane render, high detail, vibrant colors, cinematic lighting, magical, adventure, friendship"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "주요이야기"
+    }
+  },
+  "18": {
+    "inputs": {
+      "lora_name": "Adv_Tam_Style_IL_e10.safetensors",
+      "strength_model": 1.0,
+      "strength_clip": 1.0,
+      "model": [
+        "20",
+        0
+      ],
+      "clip": [
+        "20",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "LoRA 로드"
+    }
+  },
+  "20": {
+    "inputs": {
+      "lora_name": "Pencil.safetensors",
+      "strength_model": 1.0,
+      "strength_clip": 1.0,
+      "prompt": "",
+      "example": "[none]",
+      "model": [
+        "5",
+        0
+      ],
+      "clip": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "LoraLoader|pysssss",
+    "_meta": {
+      "title": "Lora Loader 🐍"
+    }
+  },
+  "21": {
+    "inputs": {
+      "filename": "%time_%basemodelname_%seed",
+      "path": "",
+      "extension": "jpg",
+      "steps": 20,
+      "cfg": 7.0,
+      "modelname": "",
+      "sampler_name": "",
+      "scheduler_name": "normal",
+      "positive": "unknown",
+      "negative": "unknown",
+      "seed_value": 0,
+      "width": 512,
+      "height": 512,
+      "lossless_webp": true,
+      "quality_jpeg_or_webp": 100,
+      "optimize_png": false,
+      "counter": 0,
+      "denoise": 1.0,
+      "clip_skip": 0,
+      "time_format": "%Y-%m-%d-%H%M%S",
+      "save_workflow_as_json": false,
+      "embed_workflow": true,
+      "additional_hashes": "",
+      "download_civitai_data": true,
+      "easy_remix": true,
+      "show_preview": true,
+      "custom": "",
+      "images": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "Image Saver",
+    "_meta": {
+      "title": "Image Saver"
+    }
+  }
+}

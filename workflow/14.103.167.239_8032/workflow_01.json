@@ -1,0 +1,43 @@
+{
+  "1": {
+    "inputs": {
+      "language": "python",
+      "Add Input variable": "add_input_variable",
+      "Add Output variable": "add_output_variable",
+      "Clear": "clear_code",
+      "pycode": "\nimport os\nimport glob\nlist = glob.glob('/workspace/ComfyUI_v2/ComfyUI/output/audio/*.flac')\nresult = sorted(list, key=lambda x: os.path.getmtime(x), reverse=True)\nresult = [it.replace('/workspace/ComfyUI_v2/ComfyUI/output/audio/','') for it in  result]\nresult = \"#\".join(result)\n",
+      "var3": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "IDENode",
+    "_meta": {
+      "title": "IDE Node"
+    }
+  },
+  "2": {
+    "inputs": {
+      "value": 2770000938
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "3": {
+    "inputs": {
+      "preview_markdown": "",
+      "preview_text": "",
+      "previewMode": false,
+      "source": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
+    }
+  }
+}

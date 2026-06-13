@@ -1,0 +1,55 @@
+{
+  "74": {
+    "inputs": {
+      "image": "20260116150502093-c-pvato8.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "75": {
+    "inputs": {
+      "image": "20251225140606109-9-2kuld5.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "77": {
+    "inputs": {
+      "filename_prefix": "mohua",
+      "images": [
+        "78",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "78": {
+    "inputs": {
+      "text": "In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.",
+      "header_value": "sk-OpHjugTHviVvhmgOnPt6ZrmN5SelsBmaG8Yg0RLKg5BrbBcX",
+      "url": "https://mohuaai.cn/v1beta/models/gemini-3.1-flash-image-preview:generateContent",
+      "model": "gemini-3-pro-image-preview",
+      "aspect_ratio": "9:16",
+      "image_size": "2K",
+      "image_1": [
+        "74",
+        0
+      ],
+      "image_2": [
+        "75",
+        0
+      ]
+    },
+    "class_type": "Banana_pro_MohuaAI",
+    "_meta": {
+      "title": "Banana_pro_MohuaAI"
+    }
+  }
+}

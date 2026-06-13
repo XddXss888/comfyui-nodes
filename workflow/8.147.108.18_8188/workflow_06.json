@@ -1,0 +1,175 @@
+{
+  "5": {
+    "inputs": {
+      "width": 1024,
+      "height": 576,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "### Scene Description\n\n**Visual Style:**\n- The scene is rendered in the vibrant and warm colors characteristic of Pixar 3D animation. The lighting is soft and inviting, with smooth shading that brings out the textures and details of the environment.\n- The child, a young Asian girl, has slightly exaggerated, expressive features that convey her excitement and curiosity. Her eyes are wide with wonder, and her smile is bright and infectious.\n\n**Composition:**\n- The full-body view of the child is centered in the frame. She is standing in a cozy, well-lit room, surrounded by an array of art supplies and a large, colorful canvas on an easel.\n- The background includes a window with a view of a sunny, green park outside, adding to the warm and inviting atmosphere. The walls are adorned with various paintings and drawings, some of which are whimsical and imaginative, reflecting the child's creativity.\n- The child is holding a paintbrush in one hand and a palette in the other, ready to start painting. She is looking at the canvas with a mix of excitement and determination.\n\n**Environment:**\n- The room is filled with playful and creative elements. There are shelves lined with jars of paint, brushes, and other art tools. A small, round table nearby is covered with sketchbooks, colored pencils, and a few half-finished projects.\n- A comfortable, brightly colored rug lies on the floor, and a small, friendly-looking stuffed animal sits on a nearby chair, as if it’s also part of the creative process.\n- The window lets in natural light, casting a warm glow over the entire scene. The light highlights the child and the canvas, making them the focal points.\n\n**Visual Effects:**\n- The camera angle is slightly low, looking up at the child, emphasizing her enthusiasm and the importance of the moment. This cinematic angle captures the emotional and imaginative tone of the scene.\n- The depth of field is used to blur the background slightly, drawing attention to the child and the canvas. The ambient lighting creates a soft, diffused effect, enhancing the warm and welcoming atmosphere.\n- The child’s movements are fluid and natural, with a slight bounce in her step as she prepares to paint, conveying her energy and joy.\n\n**Emotional Tone:**\n- The scene is full of warmth and positivity, reflecting the child’s love for art and her eagerness to create. Her expressive face and body language convey a sense of anticipation and excitement, making the viewer feel her enthusiasm.\n- The overall composition and visual effects work together to create a visually compelling and emotionally resonant scene, capturing the heart of the conversation and the child’s imagination.",
+      "clip": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "13",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "9": {
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImageWebsocket",
+    "_meta": {
+      "title": "通过WebSocket保存图像"
+    }
+  },
+  "19": {
+    "inputs": {
+      "filename_prefix": "api_1781360677_d9e763b7",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像到磁盘"
+    }
+  },
+  "10": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "11": {
+    "inputs": {
+      "clip_name1": "t5xxl_fp16.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "双CLIP加载器"
+    }
+  },
+  "12": {
+    "inputs": {
+      "unet_name": "flux1-schnell.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "13": {
+    "inputs": {
+      "noise": [
+        "25",
+        0
+      ],
+      "guider": [
+        "22",
+        0
+      ],
+      "sampler": [
+        "16",
+        0
+      ],
+      "sigmas": [
+        "17",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "16": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "17": {
+    "inputs": {
+      "scheduler": "simple",
+      "steps": 4,
+      "denoise": 1.0,
+      "model": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "基本调度器"
+    }
+  },
+  "22": {
+    "inputs": {
+      "model": [
+        "12",
+        0
+      ],
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "基本引导器"
+    }
+  },
+  "25": {
+    "inputs": {
+      "noise_seed": 854958927192159
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  }
+}

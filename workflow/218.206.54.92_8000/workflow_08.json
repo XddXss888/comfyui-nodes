@@ -1,0 +1,284 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b-fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed .safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "3": {
+    "inputs": {
+      "pixels": [
+        "25",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "4": {
+    "inputs": {
+      "conditioning": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "5": {
+    "inputs": {
+      "conditioning": [
+        "13",
+        0
+      ],
+      "latent": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "6": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "7": {
+    "inputs": {
+      "rgthree_comparer": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_tdpzy_00102_.png&type=temp&subfolder=&rand=0.25610244600608834"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_tdpzy_00103_.png&type=temp&subfolder=&rand=0.41026285890163305"
+          }
+        ]
+      },
+      "image_a": [
+        "25",
+        0
+      ],
+      "image_b": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "Image Comparer (rgthree)",
+    "_meta": {
+      "title": "图像对比"
+    }
+  },
+  "8": {
+    "inputs": {
+      "vae_name": "FLUX.2-dev-vae\\diffusion_pytorch_model.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "9": {
+    "inputs": {
+      "seed": 439860633603542,
+      "steps": 6,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.9000000000000001,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "10": {
+    "inputs": {
+      "image": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "FluxKontextImageScale",
+    "_meta": {
+      "title": "图像缩放为FluxKontext"
+    }
+  },
+  "11": {
+    "inputs": {
+      "samples": [
+        "9",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "12": {
+    "inputs": {
+      "method": "mkl",
+      "strength": 1.0,
+      "multithread": true,
+      "image_ref": [
+        "25",
+        0
+      ],
+      "image_target": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "ColorMatch",
+    "_meta": {
+      "title": "Color Match"
+    }
+  },
+  "13": {
+    "inputs": {
+      "text": "修复这张图像，提升4K分辨率渲染，高清晰度。移除所有模糊和噪点。\n精细修复如皮肤、头发、织物、表面和环境元素的纹理都得到了完美修复，同时保持皮肤光滑无瑕，达到了照片级的真实质感，同时保留原始构图、光线和色彩搭配",
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "14": {
+    "inputs": {
+      "image": "v11_refine_1781343703906_0e57331e5b9c7.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "23": {
+    "inputs": {
+      "image": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "获取图像尺寸"
+    }
+  },
+  "24": {
+    "inputs": {
+      "expression": "max(max(a,b)-c,0)",
+      "values.a": [
+        "23",
+        0
+      ],
+      "values.b": [
+        "23",
+        1
+      ],
+      "values.c": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "ComfyMathExpression",
+    "_meta": {
+      "title": "是否超过阈值：超过=True"
+    }
+  },
+  "25": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": [
+        "26",
+        0
+      ],
+      "background_color": "#000000",
+      "image": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "LayerUtility: ImageScaleByAspectRatio V2"
+    }
+  },
+  "26": {
+    "inputs": {
+      "value": 2048
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "最长边阈值 / 缩放目标"
+    }
+  }
+}

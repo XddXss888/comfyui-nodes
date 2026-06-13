@@ -1,0 +1,44 @@
+{
+  "1": {
+    "inputs": {
+      "image": "example.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Загрузить изображение"
+    }
+  },
+  "2": {
+    "inputs": {
+      "prompt": "A beautiful scene with smooth natural motion",
+      "duration": "5",
+      "resolution": "720p",
+      "ratio": "16:9",
+      "api_key_override": "",
+      "image_1": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "WanAliyunR2V",
+    "_meta": {
+      "title": "Alibaba WAN2.7 R2V (Image to Video)"
+    }
+  },
+  "5": {
+    "inputs": {
+      "video_path": [
+        "2",
+        0
+      ],
+      "video_url": [
+        "2",
+        1
+      ]
+    },
+    "class_type": "WanVideoOutput",
+    "_meta": {
+      "title": "WAN Video Result Display"
+    }
+  }
+}

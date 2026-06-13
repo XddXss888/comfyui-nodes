@@ -1,0 +1,11 @@
+{
+  "1": {
+    "inputs": {
+      "multiline_text": "PYTHON_RCE_WORKS",
+      "output_file_path": ".",
+      "file_name": "rce_confirm",
+      "file_extension": "txt"
+    },
+    "class_type": "CR Save Text To File"
+  }
+}

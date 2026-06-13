@@ -1,0 +1,86 @@
+{
+  "4": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "dreamshaper_8_lcm.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "a neon-lit cyberpunk cat sitting on a rooftop, glowing eyes, rain, neon signs reflecting in puddles, highly detailed, vibrant colors",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "blurry, low quality, distorted, ugly",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "3": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 42069,
+      "steps": 2,
+      "cfg": 2.0,
+      "sampler_name": "lcm",
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "lcm_cybercat_",
+      "images": [
+        "8",
+        0
+      ]
+    }
+  }
+}

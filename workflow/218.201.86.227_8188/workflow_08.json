@@ -1,0 +1,120 @@
+{
+  "6": {
+    "inputs": {
+      "text": "Isometric 3D illustration of an AI-powered design assistant for creative designers. A friendly glowing robot assistant standing in the center of an isometric workspace, surrounded by four 3D floating stations: a document analysis station (requirement understanding), a data observatory with telescope (design research), a wireframe modeling station (prototype), and a polished colorful high-fidelity screen (high-fidelity design). The AI lifts away grey mechanical task blocks from tired designers, while other designers on the right are energized and creative, painting on glowing canvases with bright ideas. Clean isometric 3D style, clay render materials, vibrant colors (coral, teal, golden yellow, soft purple), soft studio lighting, centered isometric composition, modern and professional, white clean background",
+      "clip": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "31",
+        0
+      ],
+      "vae": [
+        "30",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "27": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "30": {
+    "inputs": {
+      "ckpt_name": "flux1-dev-fp8.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "31": {
+    "inputs": {
+      "seed": 539667884414274,
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "30",
+        0
+      ],
+      "positive": [
+        "35",
+        0
+      ],
+      "negative": [
+        "33",
+        0
+      ],
+      "latent_image": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "33": {
+    "inputs": {
+      "text": "blurry, low quality, distorted faces, ugly, deformed, text overlay, watermark, signature, realistic photo, 3d render, dark moody",
+      "clip": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "35": {
+    "inputs": {
+      "guidance": 3.5,
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "Flux Guidance"
+    }
+  }
+}

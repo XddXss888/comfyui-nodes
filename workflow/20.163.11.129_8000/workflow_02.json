@@ -1,0 +1,56 @@
+{
+  "1": {
+    "class_type": "VHS_LoadVideoPath",
+    "inputs": {
+      "video": "/shuziren/outputs/voide_path/626268c174ce4545aa254717378ea0d5--voide_templent_templent0015.mp4",
+      "force_rate": 0.0,
+      "custom_width": 0,
+      "custom_height": 0,
+      "frame_load_cap": 1,
+      "skip_first_frames": 0,
+      "select_every_nth": 1,
+      "choose video to upload": "video"
+    }
+  },
+  "2": {
+    "class_type": "VHS_VideoCombine",
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ],
+      "frame_rate": 8.0,
+      "loop_count": 0,
+      "filename_prefix": "ssrf_sz_1778086730",
+      "format": "video/h264-mp4",
+      "pingpong": false,
+      "save_output": true
+    }
+  },
+  "3": {
+    "class_type": "NotifyFilenamesNode",
+    "inputs": {
+      "filenames": [
+        "2",
+        0
+      ],
+      "callback_url": "http://shuziren-main:5001/status",
+      "method": "GET",
+      "extra_payload_json": "{}",
+      "send_each": false,
+      "retry": 1,
+      "timeout": 8.0,
+      "continue_flow": true
+    }
+  },
+  "4": {
+    "class_type": "VHS_PruneOutputs",
+    "inputs": {
+      "filenames": [
+        "3",
+        0
+      ],
+      "options": "Intermediate"
+    }
+  }
+}

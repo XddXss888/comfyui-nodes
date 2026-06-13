@@ -1,0 +1,315 @@
+{
+  "13": {
+    "inputs": {
+      "image": "ComfyUI_07480_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "30": {
+    "inputs": {
+      "glb_path": "/data/comfyui/workspace/models/meshes/Tiger_001.glb"
+    },
+    "class_type": "Hy3DLoadMesh",
+    "_meta": {
+      "title": "Hy3D Load Mesh"
+    }
+  },
+  "52": {
+    "inputs": {
+      "width": 518,
+      "height": 518,
+      "interpolation": "lanczos",
+      "method": "pad",
+      "condition": "always",
+      "multiple_of": 2,
+      "image": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "ImageResize+",
+    "_meta": {
+      "title": "🔧 Image Resize"
+    }
+  },
+  "61": {
+    "inputs": {
+      "camera_azimuths": "0, 90, 180, 270, 0, 180",
+      "camera_elevations": "0, 0, 0, 0, 90, -90",
+      "view_weights": "1, 0.1, 0.5, 0.1, 0.05, 0.05",
+      "camera_distance": 1.45,
+      "ortho_scale": 1.2
+    },
+    "class_type": "Hy3DCameraConfig",
+    "_meta": {
+      "title": "Hy3D Camera Config"
+    }
+  },
+  "79": {
+    "inputs": {
+      "render_size": 1024,
+      "texture_size": 2048,
+      "normal_space": "world",
+      "trimesh": [
+        "83",
+        0
+      ],
+      "camera_config": [
+        "61",
+        0
+      ]
+    },
+    "class_type": "Hy3DRenderMultiView",
+    "_meta": {
+      "title": "Hy3D Render MultiView"
+    }
+  },
+  "83": {
+    "inputs": {
+      "trimesh": [
+        "30",
+        0
+      ]
+    },
+    "class_type": "Hy3DMeshUVWrap",
+    "_meta": {
+      "title": "Hy3D Mesh UV Wrap"
+    }
+  },
+  "85": {
+    "inputs": {
+      "model": "hunyuan3d-paint-v2-0"
+    },
+    "class_type": "DownloadAndLoadHy3DPaintModel",
+    "_meta": {
+      "title": "(Down)Load Hy3D PaintModel"
+    }
+  },
+  "88": {
+    "inputs": {
+      "view_size": 512,
+      "steps": 25,
+      "seed": 1024,
+      "denoise_strength": 1.0,
+      "pipeline": [
+        "85",
+        0
+      ],
+      "ref_image": [
+        "52",
+        0
+      ],
+      "normal_maps": [
+        "79",
+        0
+      ],
+      "position_maps": [
+        "79",
+        1
+      ],
+      "camera_config": [
+        "61",
+        0
+      ],
+      "scheduler": [
+        "149",
+        0
+      ]
+    },
+    "class_type": "Hy3DSampleMultiView",
+    "_meta": {
+      "title": "Hy3D Sample MultiView"
+    }
+  },
+  "92": {
+    "inputs": {
+      "images": [
+        "117",
+        0
+      ],
+      "renderer": [
+        "79",
+        2
+      ],
+      "camera_config": [
+        "61",
+        0
+      ]
+    },
+    "class_type": "Hy3DBakeFromMultiview",
+    "_meta": {
+      "title": "Hy3D Bake From Multiview"
+    }
+  },
+  "98": {
+    "inputs": {
+      "texture": [
+        "129",
+        0
+      ],
+      "renderer": [
+        "129",
+        2
+      ]
+    },
+    "class_type": "Hy3DApplyTexture",
+    "_meta": {
+      "title": "Hy3D Apply Texture"
+    }
+  },
+  "99": {
+    "inputs": {
+      "filename_prefix": "3D/tiger_textured",
+      "file_format": "glb",
+      "save_file": true,
+      "trimesh": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "Hy3DExportMesh",
+    "_meta": {
+      "title": "Hy3DExportMesh"
+    }
+  },
+  "111": {
+    "inputs": {
+      "images": [
+        "88",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview: Multiview Results"
+    }
+  },
+  "116": {
+    "inputs": {
+      "images": [
+        "79",
+        1
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview: Position Maps"
+    }
+  },
+  "117": {
+    "inputs": {
+      "width": 2048,
+      "height": 2048,
+      "interpolation": "lanczos",
+      "method": "stretch",
+      "condition": "always",
+      "multiple_of": 0,
+      "image": [
+        "88",
+        0
+      ]
+    },
+    "class_type": "ImageResize+",
+    "_meta": {
+      "title": "🔧 Image Resize"
+    }
+  },
+  "125": {
+    "inputs": {
+      "images": [
+        "92",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview: Initial Baked Texture"
+    }
+  },
+  "126": {
+    "inputs": {
+      "images": [
+        "129",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview: Vertex Inpainted Texture"
+    }
+  },
+  "127": {
+    "inputs": {
+      "images": [
+        "129",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview: Fully Inpainted Texture"
+    }
+  },
+  "129": {
+    "inputs": {
+      "texture": [
+        "92",
+        0
+      ],
+      "mask": [
+        "92",
+        1
+      ],
+      "renderer": [
+        "92",
+        2
+      ]
+    },
+    "class_type": "Hy3DMeshVerticeInpaintTexture",
+    "_meta": {
+      "title": "Hy3D Mesh Vertice Inpaint Texture"
+    }
+  },
+  "149": {
+    "inputs": {
+      "scheduler": "Euler A",
+      "sigmas": "default",
+      "pipeline": [
+        "85",
+        0
+      ]
+    },
+    "class_type": "Hy3DDiffusersSchedulerConfig",
+    "_meta": {
+      "title": "Hy3D Diffusers Scheduler Config"
+    }
+  },
+  "154": {
+    "inputs": {
+      "model_file": [
+        "99",
+        0
+      ],
+      "image": ""
+    },
+    "class_type": "Preview3D",
+    "_meta": {
+      "title": "预览3D"
+    }
+  },
+  "155": {
+    "inputs": {
+      "images": [
+        "52",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  }
+}

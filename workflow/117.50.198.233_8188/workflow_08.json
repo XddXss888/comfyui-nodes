@@ -1,0 +1,140 @@
+{
+  "57:11": {
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "inputs": {
+      "model": [
+        "57:28",
+        0
+      ],
+      "shift": 3.0
+    }
+  },
+  "57:13": {
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    },
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "batch_size": 1,
+      "height": 720,
+      "width": 1280
+    }
+  },
+  "57:27": {
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    },
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "57:30",
+        0
+      ],
+      "text": "【整体美学】\n真人实拍摄影质感，自然皮肤毛孔与织物纹理，影棚级光影，35mm 胶片质地。\n\n【画面规格】\n物品参考图，\"大团结纸币\"。完整物品展示，单个物品，垂直放置，居中构图，纯白背景，正面视角，清晰展示物品全貌与表面质感。\n\n【物品档案】\n形状：一张长方形的十元面额纸币。尺寸：长约十五厘米，宽约七厘米。材质：棉纤维纸。颜色：正背面主色为黑蓝与浅灰，票面中心图案为军民团结走出大会堂，国徽图案。表面处理：纸张绵软挺括，票面带有手工雕刻版纹的凹凸触感，流通使用后出现多处横向和纵向的折痕，边角微圆，整体有较浅的灰污感。显著标记：票面上方印有“中国人民银行”字样，下方有“拾圆”面额标示。\n\n(不出现任何字幕、文字、Logo、水印；不出现持握者、手、人物、人影；不出现背景环境)"
+    }
+  },
+  "57:28": {
+    "_meta": {
+      "title": "Load Diffusion Model"
+    },
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "57:29": {
+    "_meta": {
+      "title": "Load VAE"
+    },
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    }
+  },
+  "57:3": {
+    "_meta": {
+      "title": "KSampler"
+    },
+    "class_type": "KSampler",
+    "inputs": {
+      "cfg": 1.0,
+      "denoise": 1.0,
+      "latent_image": [
+        "57:13",
+        0
+      ],
+      "model": [
+        "57:11",
+        0
+      ],
+      "negative": [
+        "57:33",
+        0
+      ],
+      "positive": [
+        "57:27",
+        0
+      ],
+      "sampler_name": "res_multistep",
+      "scheduler": "simple",
+      "seed": 623956914,
+      "steps": 8
+    }
+  },
+  "57:30": {
+    "_meta": {
+      "title": "Load CLIP"
+    },
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "device": "default",
+      "type": "lumina2"
+    }
+  },
+  "57:33": {
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    },
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "57:27",
+        0
+      ]
+    }
+  },
+  "57:8": {
+    "_meta": {
+      "title": "VAE Decode"
+    },
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "57:3",
+        0
+      ],
+      "vae": [
+        "57:29",
+        0
+      ]
+    }
+  },
+  "9": {
+    "_meta": {
+      "title": "Save Image"
+    },
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "z-image-turbo",
+      "images": [
+        "57:8",
+        0
+      ]
+    }
+  }
+}

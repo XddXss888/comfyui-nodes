@@ -1,0 +1,86 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 2143741420,
+      "steps": 12,
+      "cfg": 1.7,
+      "sampler_name": "euler",
+      "scheduler": "beta",
+      "denoise": 1.0,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "Illustrious/semireal/lumenfallCrystalClear_v21HyperTuned.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "5": {
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "6": {
+    "inputs": {
+      "text": "solo, brown_hair, blue_eyes, cowboy_shot, masterpiece, best quality, photorealistic, realistic, very aesthetic, absurdres",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "7": {
+    "inputs": {
+      "text": "blurry, low quality, distorted, deformed, bad anatomy, bad proportions, duplicate, extra limbs, mutation, ugly, feet",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImageWebsocket"
+  }
+}

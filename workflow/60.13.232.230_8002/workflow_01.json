@@ -1,0 +1,274 @@
+{
+  "471": {
+    "inputs": {
+      "image": "17fd46131e294b50a32d6a0b027146ee_.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "626": {
+    "inputs": {
+      "image": "31aac1bb103c49c78ebc6072a52e6aaf_.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "M码"
+    }
+  },
+  "627": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "699",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "M尺码"
+    }
+  },
+  "694": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "695": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "696": {
+    "inputs": {
+      "lora_name": "2511_000015210A100.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "698",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "697": {
+    "inputs": {
+      "unet_name": "qwen_image_edit_2511_fp8mixed.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "698": {
+    "inputs": {
+      "lora_name": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "697",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "699": {
+    "inputs": {
+      "samples": [
+        "700",
+        0
+      ],
+      "vae": [
+        "694",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "700": {
+    "inputs": {
+      "seed": 814283498084395,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "696",
+        0
+      ],
+      "positive": [
+        "706",
+        0
+      ],
+      "negative": [
+        "707",
+        0
+      ],
+      "latent_image": [
+        "702",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "701": {
+    "inputs": {
+      "purge_cache": true,
+      "purge_models": true,
+      "anything": [
+        "699",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: PurgeVRAM V2",
+    "_meta": {
+      "title": "图层工具：清除VRAM V2"
+    }
+  },
+  "702": {
+    "inputs": {
+      "amount": 4,
+      "samples": [
+        "704",
+        0
+      ]
+    },
+    "class_type": "RepeatLatentBatch",
+    "_meta": {
+      "title": "复制Latent批次"
+    }
+  },
+  "703": {
+    "inputs": {
+      "conditioning": [
+        "708",
+        0
+      ],
+      "latent": [
+        "704",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "704": {
+    "inputs": {
+      "pixels": [
+        "471",
+        0
+      ],
+      "vae": [
+        "694",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "705": {
+    "inputs": {
+      "pixels": [
+        "626",
+        0
+      ],
+      "vae": [
+        "694",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "706": {
+    "inputs": {
+      "conditioning": [
+        "703",
+        0
+      ],
+      "latent": [
+        "705",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "707": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "695",
+        0
+      ],
+      "vae": [
+        "694",
+        0
+      ],
+      "image1": [
+        "471",
+        0
+      ],
+      "image2": [
+        "626",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "708": {
+    "inputs": {
+      "prompt": "Fill the line art with colors taken directly from the reference garment photo. Keep the original line art structure intact, no shape distortion. Flat lighting, solid colors, no shadows, no wrinkles, clean print-ready output.",
+      "clip": [
+        "695",
+        0
+      ],
+      "image1": [
+        "471",
+        0
+      ],
+      "image2": [
+        "626",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  }
+}

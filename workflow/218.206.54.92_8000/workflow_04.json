@@ -1,0 +1,195 @@
+{
+  "10": {
+    "inputs": {
+      "image": "v4_cutout_1781342079745_ba639b6c6ba888.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "11": {
+    "inputs": {
+      "color": "#ffffff",
+      "mode": "HEX"
+    },
+    "class_type": "LayerUtility: ColorPicker",
+    "_meta": {
+      "title": "LayerUtility: ColorPicker"
+    }
+  },
+  "12": {
+    "inputs": {
+      "color": "#ffffff",
+      "mode": "HEX"
+    },
+    "class_type": "LayerUtility: ColorPicker",
+    "_meta": {
+      "title": "LayerUtility: ColorPicker"
+    }
+  },
+  "16": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "17": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "18": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "19": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "21": {
+    "inputs": {
+      "torchscript_jit": "default",
+      "image": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "InspyrenetRembg",
+    "_meta": {
+      "title": "Inspyrenet Rembg"
+    }
+  },
+  "22": {
+    "inputs": {
+      "fill_background": true,
+      "background_color": [
+        "12",
+        0
+      ],
+      "RGBA_image": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageRemoveAlpha",
+    "_meta": {
+      "title": "LayerUtility: ImageRemoveAlpha"
+    }
+  },
+  "23": {
+    "inputs": {
+      "RGB_image": [
+        "22",
+        0
+      ],
+      "mask": [
+        "21",
+        1
+      ]
+    },
+    "class_type": "LayerUtility: ImageCombineAlpha",
+    "_meta": {
+      "title": "LayerUtility: ImageCombineAlpha"
+    }
+  },
+  "24": {
+    "inputs": {
+      "model": "BiRefNet-general-epoch_244.pth"
+    },
+    "class_type": "LayerMask: LoadBiRefNetModel",
+    "_meta": {
+      "title": "LayerMask: Load BiRefNet Model"
+    }
+  },
+  "25": {
+    "inputs": {
+      "detail_method": "VITMatte",
+      "detail_erode": 4,
+      "detail_dilate": 2,
+      "black_point": 0.01,
+      "white_point": 0.99,
+      "process_detail": false,
+      "device": "cuda",
+      "max_megapixels": 2.0,
+      "image": [
+        "10",
+        0
+      ],
+      "birefnet_model": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "LayerMask: BiRefNetUltraV2",
+    "_meta": {
+      "title": "LayerMask: BiRefNet Ultra V2"
+    }
+  },
+  "26": {
+    "inputs": {
+      "fill_background": true,
+      "background_color": [
+        "11",
+        0
+      ],
+      "RGBA_image": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageRemoveAlpha",
+    "_meta": {
+      "title": "LayerUtility: ImageRemoveAlpha"
+    }
+  },
+  "27": {
+    "inputs": {
+      "RGB_image": [
+        "26",
+        0
+      ],
+      "mask": [
+        "25",
+        1
+      ]
+    },
+    "class_type": "LayerUtility: ImageCombineAlpha",
+    "_meta": {
+      "title": "LayerUtility: ImageCombineAlpha"
+    }
+  }
+}

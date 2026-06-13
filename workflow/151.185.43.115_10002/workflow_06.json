@@ -1,0 +1,25 @@
+{
+  "3": {
+    "inputs": {
+      "prompt": "Premium SaaS vector hero illustration, AI-powered web data extraction platform, multiple web sources connected through intelligent data pipelines into a centralized knowledge hub, structured business data, lead generation, market research, competitive intelligence, interconnected nodes, flowing data streams, abstract technology network, modern flat vector design, blue-indigo-teal gradients, clean whitespace, enterprise software branding, futuristic yet professional, SVG illustration, Dribbble-quality, landing page hero artwork, card thumbnail banner, no dashboard, no text, no people.",
+      "image_size": "1600x900",
+      "random_seed": 1
+    },
+    "class_type": "Fal_ZImageTurboTextToImageNode",
+    "_meta": {
+      "title": "Z-Image Text to Image"
+    }
+  },
+  "4": {
+    "inputs": {
+      "images": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "PreviewImageCustom",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  }
+}

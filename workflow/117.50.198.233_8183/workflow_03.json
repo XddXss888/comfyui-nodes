@@ -1,0 +1,140 @@
+{
+  "57:11": {
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "inputs": {
+      "model": [
+        "57:28",
+        0
+      ],
+      "shift": 3.0
+    }
+  },
+  "57:13": {
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    },
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "batch_size": 1,
+      "height": 720,
+      "width": 1280
+    }
+  },
+  "57:27": {
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    },
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "57:30",
+        0
+      ],
+      "text": "【整体美学】\n真人实拍摄影质感，自然皮肤毛孔与织物纹理，影棚级光影，35mm 胶片质地。\n院线电影年代写实质感，克制自然光，Lomo 复古褪色暖橘调，胶片颗粒，Documentary\n\n【画面规格】\n环境概念图，\"1990年废纸厂厂房\"。宽银幕构图，16:9比例，大全景，超广角镜头，平视视角，大气透视，建筑纹理细致。\n\n【环境档案】\n空间类型：室内一间1990年县城国营废纸厂生产厂房。空间尺度：面积约200平米，层高6米，空间开阔高耸，充满工业感。布局：厂房中央排列多台碎纸机，每台机器旁设操作工位，靠墙堆放码放整齐的废旧杂志捆，西侧为厂房入口，角落设配电箱与开关面板。建筑材质：墙体为红砖砌筑，地面为粗糙水泥地，屋顶为钢屋架铺石棉瓦，门窗为钢框玻璃。主色调：砖红、水泥灰与深褐色为主。标志性陈设：多台工业碎纸机、靠墙码放的废旧杂志捆、顶部悬挂的大功率日光灯管、墙面配电箱、钢框玻璃窗。光源基调：顶部多组大功率日光灯管直射，光线冷白强烈，机器下方形成浓重阴影。\n\n(不出现任何字幕、文字、Logo、水印；不出现人物、人影、行人、路人)"
+    }
+  },
+  "57:28": {
+    "_meta": {
+      "title": "Load Diffusion Model"
+    },
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "57:29": {
+    "_meta": {
+      "title": "Load VAE"
+    },
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    }
+  },
+  "57:3": {
+    "_meta": {
+      "title": "KSampler"
+    },
+    "class_type": "KSampler",
+    "inputs": {
+      "cfg": 1.0,
+      "denoise": 1.0,
+      "latent_image": [
+        "57:13",
+        0
+      ],
+      "model": [
+        "57:11",
+        0
+      ],
+      "negative": [
+        "57:33",
+        0
+      ],
+      "positive": [
+        "57:27",
+        0
+      ],
+      "sampler_name": "res_multistep",
+      "scheduler": "simple",
+      "seed": 534239276,
+      "steps": 8
+    }
+  },
+  "57:30": {
+    "_meta": {
+      "title": "Load CLIP"
+    },
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "device": "default",
+      "type": "lumina2"
+    }
+  },
+  "57:33": {
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    },
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "57:27",
+        0
+      ]
+    }
+  },
+  "57:8": {
+    "_meta": {
+      "title": "VAE Decode"
+    },
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "57:3",
+        0
+      ],
+      "vae": [
+        "57:29",
+        0
+      ]
+    }
+  },
+  "9": {
+    "_meta": {
+      "title": "Save Image"
+    },
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "z-image-turbo",
+      "images": [
+        "57:8",
+        0
+      ]
+    }
+  }
+}

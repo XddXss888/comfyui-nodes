@@ -1,0 +1,175 @@
+{
+  "5": {
+    "inputs": {
+      "width": 1024,
+      "height": 576,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "### Scene Description\n\n**Visual Style:**\n- The scene is rendered in a vibrant and warm Pixar 3D animation style, with soft, natural lighting and smooth shading. The colors are bright and inviting, creating a cozy and playful atmosphere. The characters have slightly exaggerated, expressive features that convey their emotions clearly.\n\n**Composition:**\n- The scene is set in a cozy, well-lit playroom. The walls are painted a soft, pastel blue, and the floor is covered with a plush, light-colored carpet. In the background, there are shelves filled with colorful toys, books, and a few potted plants, adding a touch of nature to the room.\n- The child, a young Asian boy, is at the center of the scene, standing on the carpet. He is wearing a simple, brightly colored t-shirt and comfortable shorts. His hair is neatly combed, and his face is full of joy and excitement.\n- The boy is interacting with a large, colorful set of building blocks. He is in the process of placing a block on top of a tower he has built, with a look of concentration and happiness on his face.\n- To his left, a small, friendly robot named罗西 (Rosie) is also helping to build the tower. Rosie is a cute, anthropomorphic robot with big, round eyes and a cheerful expression. She is holding a block and looking up at the boy, her posture conveying a sense of shared enthusiasm and fun.\n\n**Visual Effects:**\n- The camera angle is low, looking up at the boy and Rosie, giving a sense of the child's perspective and emphasizing the height and scale of the block tower.\n- The lighting is soft and warm, with a gentle, ambient glow coming from a nearby window, casting a slight, natural shadow on the floor. This creates a cozy, inviting atmosphere.\n- The depth of field is used to keep the boy and Rosie in sharp focus, while the background elements are slightly blurred, drawing the viewer's attention to the main subjects.\n- The overall composition is balanced, with the block tower and the boy’s interaction with it as the focal point, and the background elements providing context and warmth.\n\n**Emotional Tone:**\n- The scene captures the joy and camaraderie of playing together. The boy’s expression and body language, along with Rosie’s supportive presence, convey a sense of shared fun and the importance of teamwork. The vibrant, warm colors and soft lighting enhance the feeling of a happy, carefree moment.\n\n**Environment:**\n- The playroom is a safe, nurturing space, filled with familiar and comforting elements. The toys and books on the shelves suggest a world of imagination and learning, while the potted plants add a touch of nature and freshness.\n- The block tower is tall and colorful, with a variety of shapes and sizes, showing the creativity and effort put into building it. The blocks are arranged in a way that suggests stability and balance, reflecting the boy’s careful and thoughtful approach to the task.\n\nThis scene brings the conversation to life, capturing the essence of the child’s imaginative and joyful answer, and creating a visually compelling, emotionally resonant image.",
+      "clip": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "13",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "9": {
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImageWebsocket",
+    "_meta": {
+      "title": "通过WebSocket保存图像"
+    }
+  },
+  "19": {
+    "inputs": {
+      "filename_prefix": "api_1781360622_3994f610",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像到磁盘"
+    }
+  },
+  "10": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "11": {
+    "inputs": {
+      "clip_name1": "t5xxl_fp16.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "双CLIP加载器"
+    }
+  },
+  "12": {
+    "inputs": {
+      "unet_name": "flux1-schnell.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "13": {
+    "inputs": {
+      "noise": [
+        "25",
+        0
+      ],
+      "guider": [
+        "22",
+        0
+      ],
+      "sampler": [
+        "16",
+        0
+      ],
+      "sigmas": [
+        "17",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "16": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "17": {
+    "inputs": {
+      "scheduler": "simple",
+      "steps": 4,
+      "denoise": 1.0,
+      "model": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "基本调度器"
+    }
+  },
+  "22": {
+    "inputs": {
+      "model": [
+        "12",
+        0
+      ],
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "基本引导器"
+    }
+  },
+  "25": {
+    "inputs": {
+      "noise_seed": 854958927192159
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  }
+}

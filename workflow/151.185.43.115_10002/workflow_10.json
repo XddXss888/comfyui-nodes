@@ -1,0 +1,28 @@
+{
+  "4": {
+    "inputs": {
+      "images": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "PreviewImageCustom",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "5": {
+    "inputs": {
+      "prompt": "Create a modern 2D flat vector illustration representing a secure credential management vault. A central digital vault acts as the protected hub for passwords, API keys, access tokens, SSH keys, and sensitive credentials. Multiple secure connections flow into the vault through encrypted channels visualized with shield elements, lock symbols, protected data streams, security layers, and verification nodes. Surrounding the vault are abstract representations of users, applications, servers, cloud services, and databases accessing credentials through controlled and authenticated pathways. Emphasize enterprise security, trust, access control, encryption, compliance, and governance. Clean geometric shapes, smooth curves, soft blue, indigo, and teal gradients, modern SaaS illustration style. No dashboard UI, no text, no labels, no logos, no warning symbols, no screenshots. Premium SVG-quality vector artwork, minimalist composition, professional cybersecurity aesthetic, ample whitespace, card thumbnail/banner format, 16:9 aspect ratio. ",
+      "resolution": "1K",
+      "aspect_ratio": "16:9",
+      "thinking_level": "minimal",
+      "ground_with_web_search": false,
+      "ground_with_image_search": false
+    },
+    "class_type": "Official_NanoBanana2Node",
+    "_meta": {
+      "title": "Nano Banana 2 Image Generation"
+    }
+  }
+}

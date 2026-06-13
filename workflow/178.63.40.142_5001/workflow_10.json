@@ -1,0 +1,198 @@
+{
+  "67": {
+    "inputs": {
+      "noise": [
+        "68",
+        0
+      ],
+      "guider": [
+        "73",
+        0
+      ],
+      "sampler": [
+        "72",
+        0
+      ],
+      "sigmas": [
+        "84",
+        0
+      ],
+      "latent_image": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "68": {
+    "inputs": {
+      "noise_seed": 492488556817385
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  },
+  "72": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "73": {
+    "inputs": {
+      "cfg": 1.0,
+      "model": [
+        "120",
+        0
+      ],
+      "positive": [
+        "74",
+        0
+      ],
+      "negative": [
+        "75",
+        0
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG引导器"
+    }
+  },
+  "74": {
+    "inputs": {
+      "text": "Two men in military uniforms marching in sync down a narrow hallway, left-right marching pose, then seated side by side on a leather couch, consulting room interior, medical-military hybrid aesthetic, an older officer standing before them holding a pocket watch pendulum, hypnotic atmosphere, soft focused background, tense anticipation, cinematic lighting, 8k, highly detailed",
+      "clip": [
+        "118",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "75": {
+    "inputs": {
+      "text": "This low quality greyscale unfinished sketch is inaccurate and flawed. The image is very blurred and lacks detail with excessive chromatic aberrations and artifacts. The image is overly saturated with excessive bloom. It has a toony aesthetic with bold outlines and flat colors. ",
+      "clip": [
+        "118",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "负面prompt"
+    }
+  },
+  "79": {
+    "inputs": {
+      "samples": [
+        "67",
+        0
+      ],
+      "vae": [
+        "80",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "80": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "84": {
+    "inputs": {
+      "scheduler": "beta",
+      "steps": 4,
+      "denoise": 0.99,
+      "model": [
+        "120",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "基本调度器"
+    }
+  },
+  "94": {
+    "inputs": {
+      "dimensions": "1024 x 1024  (square)",
+      "clip_scale": 1.5,
+      "batch_size": 1
+    },
+    "class_type": "SDXL Empty Latent Image (rgthree)",
+    "_meta": {
+      "title": "SDXL Empty Latent Image (rgthree)"
+    }
+  },
+  "114": {
+    "inputs": {
+      "images": [
+        "79",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "117": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "118": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "120": {
+    "inputs": {
+      "lora_name": "klein_snofs_v1_4.safetensors",
+      "strength_model": 1.0,
+      "strength_clip": 1.0,
+      "model": [
+        "117",
+        0
+      ],
+      "clip": [
+        "118",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "加载LoRA"
+    }
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "ld_hi": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "wan2.2/wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "ld_lo": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "wan2.2/wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "ms_hi": {
+    "class_type": "ModelSamplingSD3",
+    "inputs": {
+      "model": [
+        "ld_hi",
+        0
+      ],
+      "shift": 5.0
+    }
+  },
+  "ms_lo": {
+    "class_type": "ModelSamplingSD3",
+    "inputs": {
+      "model": [
+        "ld_lo",
+        0
+      ],
+      "shift": 5.0
+    }
+  },
+  "clip": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "wan2.2/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan"
+    }
+  },
+  "pos": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "clip",
+        0
+      ],
+      "text": "Hello! May I see your passport and ticket? — subtle natural motion: the character gently moves, blinks and shifts slightly as if speaking, with a slow gentle camera push-in and soft ambient movement in the background. Keep the character's appearance, outfit and art style identical to the input image. No abrupt motion, no morphing, no extra people appearing."
+    }
+  },
+  "neg": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "clip",
+        0
+      ],
+      "text": "overexposed, blurry, low quality, jpeg artifacts, static, still, deformed, distorted, extra limbs, extra fingers, morphing, flickering, watermark, text"
+    }
+  },
+  "vae": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "wan2.2/wan_2.1_vae.safetensors"
+    }
+  },
+  "img": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "se_src_08.png"
+    }
+  },
+  "i2v": {
+    "class_type": "WanImageToVideo",
+    "inputs": {
+      "positive": [
+        "pos",
+        0
+      ],
+      "negative": [
+        "neg",
+        0
+      ],
+      "vae": [
+        "vae",
+        0
+      ],
+      "width": 1280,
+      "height": 720,
+      "length": 81,
+      "batch_size": 1,
+      "start_image": [
+        "img",
+        0
+      ]
+    }
+  },
+  "k1": {
+    "class_type": "KSamplerAdvanced",
+    "inputs": {
+      "model": [
+        "ms_hi",
+        0
+      ],
+      "add_noise": "enable",
+      "noise_seed": 12345,
+      "steps": 16,
+      "cfg": 3.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "i2v",
+        0
+      ],
+      "negative": [
+        "i2v",
+        1
+      ],
+      "latent_image": [
+        "i2v",
+        2
+      ],
+      "start_at_step": 0,
+      "end_at_step": 8,
+      "return_with_leftover_noise": "enable"
+    }
+  },
+  "k2": {
+    "class_type": "KSamplerAdvanced",
+    "inputs": {
+      "model": [
+        "ms_lo",
+        0
+      ],
+      "add_noise": "disable",
+      "noise_seed": 12345,
+      "steps": 16,
+      "cfg": 3.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "i2v",
+        0
+      ],
+      "negative": [
+        "i2v",
+        1
+      ],
+      "latent_image": [
+        "k1",
+        0
+      ],
+      "start_at_step": 8,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable"
+    }
+  },
+  "dec": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "k2",
+        0
+      ],
+      "vae": [
+        "vae",
+        0
+      ]
+    }
+  },
+  "vid": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "dec",
+        0
+      ],
+      "fps": 16.0
+    }
+  },
+  "save": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "vid",
+        0
+      ],
+      "filename_prefix": "se_08",
+      "format": "mp4",
+      "codec": "h264"
+    }
+  }
+}

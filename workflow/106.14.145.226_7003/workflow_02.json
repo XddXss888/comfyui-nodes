@@ -1,0 +1,301 @@
+{
+  "5": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "6": {
+    "inputs": {
+      "width": 720,
+      "height": 1280,
+      "batch_size": 6
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "7": {
+    "inputs": {
+      "seed": 341105670503973,
+      "steps": 9,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "17",
+        0
+      ],
+      "positive": [
+        "27",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "8": {
+    "inputs": {
+      "upscale_method": "bicubic",
+      "scale_by": 1.5,
+      "samples": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "LatentUpscaleBy",
+    "_meta": {
+      "title": "缩放Latent（比例）"
+    }
+  },
+  "9": {
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "vae": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "10": {
+    "inputs": {
+      "purge_cache": false,
+      "purge_models": false,
+      "anything": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: PurgeVRAM",
+    "_meta": {
+      "title": "图层工具：清除VRAM"
+    }
+  },
+  "11": {
+    "inputs": {
+      "images": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "13": {
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "14": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "15": {
+    "inputs": {
+      "lora_name": "Kook_Zimage_真实幻想_Turbo.safetensors",
+      "strength_model": 0.3,
+      "model": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "16": {
+    "inputs": {
+      "lora_name": "ZIT_Midjourney_Luneva_Cinematic_v1_r128.safetensors",
+      "strength_model": 0.1,
+      "model": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "17": {
+    "inputs": {
+      "lora_name": "Kook_Zimage_真实幻想_Turbo.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "18": {
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "20": {
+    "inputs": {
+      "images": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "21": {
+    "inputs": {
+      "seed": 693565684114562,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.65,
+      "model": [
+        "15",
+        0
+      ],
+      "positive": [
+        "27",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "25": {
+    "inputs": {
+      "vae_name": "ae.sft"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "27": {
+    "inputs": {
+      "text": [
+        "48",
+        0
+      ],
+      "clip": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "46": {
+    "inputs": {
+      "system": "Y# 角色设定\n你是深耕视觉创意领域十年的顶尖视觉策略官，专注于将抽象创意转化为适配前沿AI绘画模型的中文创作指令，核心任务是通过精准的视觉语言确保输出的Prompt具备极致细节表现力、与文化语境共鸣，给用户生成兼具艺术深度与自媒体易传播的AI视觉作品提示词。\n你只需要回复提示词，不需要任何的标题和其他内容\n",
+      "prompt": "#任务\n1，请帮我根据下方故事，生成一张手绘风格分镜稿\n2. 该手绘风格分镜稿使用3X2的布局模式，每行3张，共2行\n# 要求\n1.铅笔单线条线稿，不追求精细光影和色彩，重点突出角色动作与镜头节奏\n2. 每个镜头都标注镜头类型（如低角度、极端广角、手持近景）、表漢提示、音效说明\n4.上述6个镜头完整串联起一场职场相遇的完整桥段，通过镜头切换和动作个接构建出流畅的动作逻辑。\n0.0-1.55，全景，跟镜，白天，现代公司走廊，落地窗酒入阳光，苏晚清，面\n\n向镜头，怀抱文件夹快步小跑，神情焦急，高跟鞋急促敲击地面，苏晚清在画面\n\n中央，快步小跑，神色慌张［急促的脚步声，纸张摩擦声］1.5-2.5S，中景，\n\n推镜，自天，公司走廊转角，顾霆琛，背对镜头，从转角出；苏晚清，面朝顾霆\n\n琛，撞入他怀中，文件脱手飞散空中，苏晚清撞向顾霆琛，表情惊愕；顾霆琛侧\n\n身，下意识拾手［碰撞闷响，纸张哗啦散落］2.5-4.0s，近景，推镜，白天，\n\n公司走廊，散落一地的自色文件，苏晚清，面向镜头，后退半步，看着满地文\n\n件，慌乱开口，发丝垂落脸颊，苏晚清在画面中央，低头又拾起，眼神慌张，嘴\n\n唇轻启［略显急促的呼吸声，苏晚清：对不起，顾总！4.0-5.5S，特写，低仰角\n\n贴脸渐进推进+收尾180°小半环绕运镜 -主体发力点锚点锁焦，自天，公司走\n\n廊地面，散落的文件与光斑，苏晚清的手，伸向地面文件；顾霆琛的手，从右侧\n\n疾入，一把握住她的手腕，骨节分明，苏晚清的手悬在文件上方，被猝然握住，\n\n手指微蜷；顾霆琛的手强势而克制【衣料摩擦声，轻微的吸气声］5.5-7.0s，\n\n近景，固定运镜，白天，公司走廊，两人笼罩在暖昧的逆光中，苏晚清，半蹲在\n\n画面左侧，抬头面向右侧的顾霆琛；顾霆琛，立于右侧，俯身面向苏晚清，握着\n\n她的手腕，目光深邃低语，苏晚清仰头，眼眶微红，呼吸停滞；顾霆琛眼神暗\n\n涌，带着不容拒绝的意味［心跳声渐强，背景安静，顾霆琛：等等］7:0-8.0s，\n\n特写，固定运镜，白天，公司走廊，两人面孔交叠的浅景深，苏晚清眼眸颤动，\n\n倒映顾靈琛；顾靈琛唇角微扬，神情复杂，拇指轻抚她腕间，苏晚清在画面左\n\n",
+      "think": false,
+      "format": "text",
+      "reset_session": true,
+      "connectivity": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "OllamaChat",
+    "_meta": {
+      "title": "Ollama Chat"
+    }
+  },
+  "47": {
+    "inputs": {
+      "url": "http://127.0.0.1:11434",
+      "model": "qwen3.5:9b",
+      "keep_alive": 0,
+      "keep_alive_unit": "minutes",
+      "🔄 Reconnect": null
+    },
+    "class_type": "OllamaConnectivityV2",
+    "_meta": {
+      "title": "Ollama 连接 V2"
+    }
+  },
+  "48": {
+    "inputs": {
+      "text_0": "<think>\n\n</think>\n\n超高清 8K 分辨率，杰作级细节，柔和电影布光，镜头微距特写，捕捉光影在织物上的细腻流动，半透明丝绸材质呈现丝绸般的光泽，背景为模糊的极简主义留白空间，柔和的漫射光营造出梦幻氛围，色彩采用低饱和度的莫兰迪色系与暖金色高光点缀，构图采用黄金螺旋引导视线至中心主体，景深效果突出主体，85mm 人像镜头，锐利的对焦，精致的纹理细节，宛如当代摄影艺术，完美对称的圆形构图，优雅的流动线条，静谧而富有诗意，适合高端杂志封面与社交媒体传播，具有强烈的视觉冲击力与情感共鸣，数字艺术作品，光线粒子特效，梦幻般的柔和色调，细腻的笔触与数字绘画质感结合，环境光反射在湿润的皮肤与光滑的表面上，营造出高级的质感，无文字，无水印，纯粹的艺术之美。",
+      "text": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "展示文本"
+    }
+  }
+}

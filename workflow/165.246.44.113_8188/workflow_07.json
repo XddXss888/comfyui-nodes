@@ -1,0 +1,167 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b-fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "4": {
+    "inputs": {
+      "text": "A whimsical, cute cartoon car illustrated in a bright, pastel color palette. The car has a rounded, bubble-like body with a soft pastel pink exterior, large sparkling white headlights that look like friendly eyes, and a smiling front grille that resembles a happy mouth. Its wheels are oversized and fluffy, with pastel blue rims and white tire treads that look like little clouds. The car sits on a gentle, rolling green hill under a clear sky painted in light cyan with a few fluffy white clouds. A few cherry blossom petals drift around, adding a playful, springtime feel. The overall style is child-friendly, with smooth curves, minimal shading, and a cheerful, uplifting atmosphere.",
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Encode Prompt"
+    }
+  },
+  "5": {
+    "inputs": {
+      "conditioning": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "Zero Negative"
+    }
+  },
+  "6": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux2 Latent"
+    }
+  },
+  "7": {
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "max_shift": 1.15,
+      "base_shift": 0.5,
+      "width": 1024,
+      "height": 1024
+    },
+    "class_type": "ModelSamplingFlux",
+    "_meta": {
+      "title": "Model Sampling Flux"
+    }
+  },
+  "8": {
+    "inputs": {
+      "steps": 20,
+      "width": 1024,
+      "height": 1024
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "Flux2 Scheduler"
+    }
+  },
+  "9": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "Select Sampler"
+    }
+  },
+  "10": {
+    "inputs": {
+      "model": [
+        "7",
+        0
+      ],
+      "add_noise": true,
+      "noise_seed": 561998698710991,
+      "cfg": 1.0,
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "sampler": [
+        "9",
+        0
+      ],
+      "sigmas": [
+        "8",
+        0
+      ],
+      "latent_image": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "SamplerCustom",
+    "_meta": {
+      "title": "Sample"
+    }
+  },
+  "11": {
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "Decode VAE"
+    }
+  },
+  "12": {
+    "inputs": {
+      "filename_prefix": "Flux2-Klein",
+      "images": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  }
+}

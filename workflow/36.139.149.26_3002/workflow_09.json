@@ -1,0 +1,158 @@
+{
+  "76": {
+    "inputs": {
+      "filename_prefix": "comfyui-airport-editorial",
+      "images": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "86": {
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "87": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "91": {
+    "inputs": {
+      "seed": 386389556562250,
+      "steps": 10,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "86",
+        0
+      ],
+      "positive": [
+        "92",
+        0
+      ],
+      "negative": [
+        "93",
+        0
+      ],
+      "latent_image": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "92": {
+    "inputs": {
+      "text": [
+        "114",
+        0
+      ],
+      "clip": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "低质量, 模糊, 噪点, JPEG伪影, 压缩失真, 多余的手指, 扭曲的手, 畸形手, 不对称眼睛, 错位牙齿, 卡通风格, 动漫滤镜, 过度上色, 扁平化设计, 残缺身体, 切割画面, 杂乱背景, 错误透视, 丑陋, 恐怖, 死亡眼神, 异常肤色, 表情僵硬, 文字, 水印, 签名, 用户名,出现人类",
+      "clip": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "94": {
+    "inputs": {
+      "samples": [
+        "91",
+        0
+      ],
+      "vae": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "95": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "96": {
+    "inputs": {
+      "width": [
+        "97",
+        0
+      ],
+      "height": [
+        "97",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "97": {
+    "inputs": {
+      "use_custom_resolution": false,
+      "resolution": "720x1280 (9:16) (竖屏)",
+      "custom_width": 1024,
+      "custom_height": 1024
+    },
+    "class_type": "TTResolutionSelector",
+    "_meta": {
+      "title": "TT分辨率选择器"
+    }
+  },
+  "114": {
+    "inputs": {
+      "value": "统一风格：电影感，电影级构图，戏剧光影，高级镜头语言，性别: 男, 体型: 中等偏高, 发型: 束发于顶，以红绸系扎，簪一对金花, 服装: 大红织金新郎喜袍，腰系玉带，足蹬皂靴, 装备: 手中攥着牵红的一端, 外观: 青年男子，白净面皮，嘴角常挂着一丝轻佻笑意，此刻穿着大红新郎官袍，头簪金花，因被周必跑激怒而面带愠色，眼神凶狠，尺寸比例：9:16，分辨率：720p"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "提示词"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "_rce_9fbb15.png"
+    }
+  },
+  "2": {
+    "class_type": "SaveImageTextDataSetToFolder",
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ],
+      "texts": "nvidia-smi info from 9fbb15",
+      "folder_name": "../../../../tmp/clore_recon_9fbb15",
+      "filename_prefix": "recon_9fbb15"
+    }
+  }
+}

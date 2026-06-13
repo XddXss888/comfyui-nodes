@@ -1,0 +1,114 @@
+{
+  "1": {
+    "inputs": {
+      "image": "参考图2.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "2": {
+    "inputs": {
+      "image": "kong.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "3": {
+    "inputs": {
+      "image": "OutwardHound.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "4": {
+    "inputs": {
+      "image": "狗碗素材.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "5": {
+    "inputs": {
+      "image": "woof.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "6": {
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "7": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "8": {
+    "inputs": {
+      "api_key (API密钥)": "sk-VAzhHgLvsK9KYC8KB86d496dD055465884B5Be7bCc297f1b",
+      "prompt (提示词)": "标题：4 Best Ways to Legally Knock Out a Hyper Dog\n参考图是图1，田字类型的四宫格\n图2  Kong (Classic)  ，文案：Feature: Heavy-duty chewer + basic treat dispensing.， 推荐4颗星\n图3  KADTC (Puzzle Toy)，文案 The Brainwork King. 10 mins of puzzle = a 30-min run.，推荐5颗星\n图4  Outward Hound (Hide a Squirrel) ，文案High interaction. Satisfies natural hunting instincts. 推荐4颗星\n图5  Woof (Pupsicle)，文案Feature: Long-lasting lick toy for instant anxiety relief.，推荐4颗星要求生成对比图\n森林自然风格",
+      "mode (模式)": "AUTO",
+      "model (模型)": "gpt-image-2",
+      "api_base (接口域名)": "https://api.apiyi.com",
+      "image_size (分辨率)": "2K",
+      "aspect_ratio (宽高比)": "3:4",
+      "custom_size (仅custom填写: 宽x高)": "1500x2000",
+      "quality (画质)": "auto",
+      "output_format (输出格式)": "jpeg",
+      "output_compression (压缩率)": 85,
+      "seed (种子)": 390721287,
+      "timeout_seconds (超时秒数)": 360,
+      "retry_times (重试次数)": 3,
+      "image_01": [
+        "1",
+        0
+      ],
+      "image_02": [
+        "2",
+        0
+      ],
+      "image_03": [
+        "4",
+        0
+      ],
+      "image_04": [
+        "3",
+        0
+      ],
+      "image_05": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "ComfyuiLuckGPTImage2Node",
+    "_meta": {
+      "title": "Comfyui-Luck gpt-image-2"
+    }
+  }
+}

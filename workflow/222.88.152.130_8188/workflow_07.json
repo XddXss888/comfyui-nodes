@@ -1,0 +1,285 @@
+{
+  "1": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "2": {
+    "inputs": {
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "4": {
+    "inputs": {
+      "fps": 16.0,
+      "images": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "5": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "6": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "7": {
+    "inputs": {
+      "samples": [
+        "12",
+        0
+      ],
+      "vae": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "8": {
+    "inputs": {
+      "shift": 5.0,
+      "model": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "9": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "10": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "11": {
+    "inputs": {
+      "shift": 5.0,
+      "model": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "12": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "8",
+        0
+      ],
+      "positive": [
+        "21",
+        0
+      ],
+      "negative": [
+        "21",
+        1
+      ],
+      "latent_image": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "13": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 941603215482680,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "11",
+        0
+      ],
+      "positive": [
+        "21",
+        0
+      ],
+      "negative": [
+        "21",
+        1
+      ],
+      "latent_image": [
+        "21",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "14": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "mp4",
+      "codec": "h264",
+      "video-preview": "",
+      "video": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  },
+  "15": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "21": {
+    "inputs": {
+      "width": 720,
+      "height": 480,
+      "length": 57,
+      "batch_size": 1,
+      "positive": [
+        "22",
+        0
+      ],
+      "negative": [
+        "2",
+        0
+      ],
+      "vae": [
+        "15",
+        0
+      ],
+      "start_image": [
+        "23",
+        0
+      ],
+      "end_image": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "WanFirstLastFrameToVideo",
+    "_meta": {
+      "title": "WanFirstLastFrameToVideo"
+    }
+  },
+  "22": {
+    "inputs": {
+      "text": "入场：两个湿粘土陶坯从画面底部缓慢上升，轻颤后稳定在画面中央，左侧碗形坯和右侧圆盘坯相距一掌宽。中段：一道金色光线从右侧切入，逐渐照亮圆盘坯，其表面水分蒸发并出现细微裂纹；左侧碗形坯边缘被光斑触及，表面反光逐渐消失，泥土未干部分变哑光，整个变化过程中陶坯表面变暗淡并呈现干燥脱水纹理。出场：左右陶坯缓慢向中心靠拢并融合，轮廓重组为一个完整的陶碗，所有潮湿痕迹消失，碗边缘有放射状干裂纹，阳光逐渐增强后柔和退去，仅留下最终陶碗居中静置1.5秒",
+      "clip": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "23": {
+    "inputs": {
+      "url": "http://222.88.152.130:8188/browser/s/outputs/pixelworld_12234_.png",
+      "cache": true
+    },
+    "class_type": "LoadImageByUrl //Browser",
+    "_meta": {
+      "title": "Load Image By URL"
+    }
+  },
+  "24": {
+    "inputs": {
+      "url": "http://222.88.152.130:8188/browser/s/outputs/pixelworld_12235_.png",
+      "cache": true
+    },
+    "class_type": "LoadImageByUrl //Browser",
+    "_meta": {
+      "title": "Load Image By URL"
+    }
+  }
+}

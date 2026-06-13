@@ -1,0 +1,83 @@
+{
+  "37": {
+    "inputs": {
+      "aspect_ratio": "16:9 (Widescreen)",
+      "megapixels": 1.5
+    },
+    "class_type": "ResolutionSelector",
+    "_meta": {
+      "title": "Resolution Selector"
+    }
+  },
+  "111": {
+    "inputs": {
+      "source": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
+    }
+  },
+  "158": {
+    "inputs": {
+      "filename_prefix": "Ideogram_4.0"
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "177": {
+    "inputs": {
+      "number_type": "integer",
+      "minimum": 1,
+      "maximum": 1000000000,
+      "seed": 202381778139008
+    },
+    "class_type": "Random Number",
+    "_meta": {
+      "title": "Random Number"
+    }
+  },
+  "179": {
+    "inputs": {
+      "width": [
+        "37",
+        0
+      ],
+      "height": [
+        "37",
+        1
+      ],
+      "high_level_description": "An amateur photograph from 1981 depicting a fighter jet cockpit view, showing a MiG-27 in combat with a flying saucer; a cruise missile explosion is visible on the saucer, and the jet dodges a laser beam, with a red star visible on the fighter's interior. The photo bears a 'ОСОБОЙ ВАЖНОСТИ' stamp in the corner.",
+      "background": "A vast, stormy sky with a dark blue base, showing a MiG-27 and a flying saucer in mid-combat. The background includes visible smoke trails and distant stars. A cruise missile explosion emits a bright white flash and orange fire.",
+      "style": "photo",
+      "style.photo": "amateur 1980s film stock, handheld, low-resolution, visible lens flare and film grain",
+      "aesthetics": "surreal, high-contrast, grainy, vintage film texture, retro sci-fi aesthetic",
+      "lighting": "harsh artificial lighting, dramatic shadows, uneven exposure",
+      "medium": "photograph",
+      "style_palette_data": "[\"#D11C1C\",\"#4A4A4A\",\"#1E1E1E\",\"#FFC107\",\"#000000\",\"#FF5733\",\"#333333\",\"#8B0000\"]",
+      "elements_data": "[{\"type\":\"obj\",\"text\":\"\",\"desc\":\"A MiG-27 fighter jet flying at a steep angle, with a red star on the cockpit panel. The jet is angled to the right, with visible cockpit windows and a damaged wing edge.\",\"palette\":[\"#D11C1C\",\"#8B0000\",\"#1E1E1E\"],\"x\":0.15,\"y\":0.1,\"w\":0.6,\"h\":0.3},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"A large flying saucer hovering in the sky, with a visible explosion from a cruise missile striking its side. The object emits a bright white flash and orange fire, with smoke rising from the impact point.\",\"palette\":[\"#FFC107\",\"#FF5733\",\"#000000\"],\"x\":0.5,\"y\":0.2,\"w\":0.35,\"h\":0.45},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"A laser beam shooting from the flying saucer toward the MiG-27, hitting a side of the jet and creating a visible reflection. The jet moves sharply to the left, avoiding the beam.\",\"palette\":[\"#FF5733\",\"#FFFFFF\",\"#000000\"],\"x\":0.3,\"y\":0.35,\"w\":0.3,\"h\":0.15},{\"type\":\"text\",\"text\":\"ОСОБОЙ ВАЖНОСТИ\",\"desc\":\"Faded red stamp in the corner, printed in block letters.\",\"palette\":[\"#D11C1C\",\"#4A4A4A\"],\"x\":0.01,\"y\":0.9,\"w\":0.24,\"h\":0.05}]",
+      "bg_brightness": 25
+    },
+    "class_type": "Ideogram4PromptBuilderKJ",
+    "_meta": {
+      "title": "Ideogram 4 Prompt Builder KJ"
+    }
+  },
+  "180": {
+    "inputs": {
+      "source": [
+        "179",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "3": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 1159014022,
+      "steps": 25,
+      "cfg": 7.0,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    }
+  },
+  "4": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "wd-1-4-anime_e2.ckpt"
+    }
+  },
+  "5": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1280,
+      "height": 720,
+      "batch_size": 1
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "(masterpiece:1.3), best quality, ultra-detailed, 8k, nsfw, anthropomorphic silver wolf, silver fur, bushy wolf tail, naked, bare shoulders, cleavage, large breasts, navel, standing upright, arms relaxed at sides, confident smirk, heavy breathing, mouth slightly open, tongue out, covered in thick white semen, cum on fur, cum on breasts, cum on thighs, cum on face, dripping cum, messy, wet fur, glistening semen, bedroom interior, dim ambient lighting, cinematic rim light, volumetric dust rays, shallow depth of field, soft focus background, dynamic low angle, e621 rule34 style, anime aesthetic, detailed fur texture, smooth skin patches, anthropomorphic anatomy, 2d illustration, high contrast, dramatic shadows, intricate details, vibrant colors, smooth gradients, full body shot, centered composition, rule of thirds, solo, female focus, anthropomorphic features, digitigrade legs, paw pads, standing pose, room environment, soft skin highlights, reflective fur, anatomical accuracy, smooth shading, cel shading, lineart, clean lines, professional composition, dramatic lighting, atmospheric perspective, detailed background elements, scattered cum droplets, glistening skin, wet muzzle, anthropomorphic posture",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "lowres, bad anatomy, bad hands, extra fingers, missing fingers, fused fingers, bad proportions, text, watermark, blurry, worst quality, low quality, deformed, ugly, extra limbs, censored, mosaic censoring, signature, logo, crop, out of frame, poor lighting, flat shading, distorted anatomy",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "tgbot",
+      "images": [
+        "8",
+        0
+      ]
+    }
+  }
+}

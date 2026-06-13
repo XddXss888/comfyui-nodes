@@ -1,0 +1,926 @@
+{
+  "599": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": [
+        "649",
+        0
+      ],
+      "steps": 9,
+      "cfg": 1.0,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "beta",
+      "start_at_step": 0,
+      "end_at_step": 7,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "760",
+        0
+      ],
+      "positive": [
+        "627",
+        0
+      ],
+      "negative": [
+        "825",
+        0
+      ],
+      "latent_image": [
+        "698",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "고급 KSampler"
+    }
+  },
+  "608": {
+    "inputs": {
+      "conditioning_a": [
+        "620",
+        0
+      ],
+      "conditioning_b": [
+        "627",
+        0
+      ],
+      "boolean": [
+        "652",
+        0
+      ]
+    },
+    "class_type": "Conditioning Input Switch",
+    "_meta": {
+      "title": "Conditioning Input Switch"
+    }
+  },
+  "609": {
+    "inputs": {
+      "samples": [
+        "599",
+        0
+      ],
+      "vae": [
+        "757",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE 디코드"
+    }
+  },
+  "610": {
+    "inputs": {
+      "samples": [
+        "638",
+        0
+      ],
+      "vae": [
+        "757",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE 디코드"
+    }
+  },
+  "618": {
+    "inputs": {
+      "image": [
+        "610",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "이미지 크기 가져오기"
+    }
+  },
+  "619": {
+    "inputs": {
+      "conditioning": [
+        "608",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "조건 (0으로 출력)"
+    }
+  },
+  "620": {
+    "inputs": {
+      "text": [
+        "635",
+        0
+      ],
+      "clip": [
+        "755",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Clip from additional prompts"
+    }
+  },
+  "627": {
+    "inputs": {
+      "text": "wide shot, from front, 1boy, 2girls, interior, hogwarts express, train compartment, velvet seats, window, daylight, warm lighting, Moody Photography, ((韩风冷色调网红美白滤镜))，极致冷白皮，通体雪白, nsfw, 全身，11歲，女孩，蘿莉，兒童，小孩，幼童，（小頭），((陰部)), (((美麗的臉龐)))，對稱的臉型，精緻的五官，可愛的臉龐，無瑕的白皙肌膚，會說話的眼睛，長長的睫毛，完美無瑕的皮膚, interior of an old-fashioned British steam train compartment, enclosed private railway compartment, small closed cabin, eye-level camera at seated passenger height, looking toward the opposite bench seat, compact compartment layout, dark blue striped fabric bench seats, facing bench seats, cream-colored walls, dark polished wooden trim, warm soft interior lighting, cozy narrow room, vintage railway carriage interior, classic compartment design, intimate nostalgic atmosphere, viewer body not visible, empty foreground, A pleated micro-mini skirt that doesn't reach the pubic bone revealing the vagina, A pleated micro-mini skirt that doesn't cover the crotch, Extremely short pleated micro-mini skirt,,\n\nboy, child, short black hair, black open robe, white shirt, grey necktie, sitting, smile, looking at other | girl, child, long red hair, twin tails, black open robe, white shirt, grey necktie, sitting, smile, hands together | girl, child, black straight hair, black open robe, white shirt, grey necktie, sitting, neutral expression,\n\nThree children sitting together in train compartment having friendly conversation, velvet seats and wooden panels, sunlight through window\n",
+      "clip": [
+        "755",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP 텍스트 인코딩 (프롬프트)"
+    }
+  },
+  "630": {
+    "inputs": {
+      "value": "(a*b + (96 * 2))/2",
+      "a": [
+        "618",
+        1
+      ],
+      "b": [
+        "637",
+        0
+      ]
+    },
+    "class_type": "SimpleMath+",
+    "_meta": {
+      "title": "Calculate optimized height"
+    }
+  },
+  "631": {
+    "inputs": {
+      "value": "(a*b + (96 * 2))/2",
+      "a": [
+        "618",
+        0
+      ],
+      "b": [
+        "637",
+        0
+      ]
+    },
+    "class_type": "SimpleMath+",
+    "_meta": {
+      "title": "Calculate optimized width"
+    }
+  },
+  "635": {
+    "inputs": {
+      "value": "韩风冷色调网红美白滤镜，极致冷白皮，白嫩幼，overexposure，通体雪白。高清现实主义风格，细节丰富，动态光影，8K超清"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "SD UPSCALE Custom Prompt 自定义提示词"
+    }
+  },
+  "637": {
+    "inputs": {
+      "value": 2.0
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "SD Upscale Factor (放大大小）"
+    }
+  },
+  "638": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": [
+        "771",
+        0
+      ],
+      "steps": 9,
+      "cfg": 1.0,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "sgm_uniform",
+      "start_at_step": 4,
+      "end_at_step": 999,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "756",
+        0
+      ],
+      "positive": [
+        "627",
+        0
+      ],
+      "negative": [
+        "627",
+        0
+      ],
+      "latent_image": [
+        "647",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "고급 KSampler"
+    }
+  },
+  "644": {
+    "inputs": {
+      "model_name": "4xNomos8k_atd_jpg.safetensors"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "업스케일 모델 로드"
+    }
+  },
+  "647": {
+    "inputs": {
+      "upscale_method": "bislerp",
+      "scale_by": 1.7,
+      "samples": [
+        "599",
+        0
+      ]
+    },
+    "class_type": "LatentUpscaleBy",
+    "_meta": {
+      "title": "잠재 데이터 크기 배율 조정"
+    }
+  },
+  "649": {
+    "inputs": {
+      "seed": 441772348
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "Seed (1ST)"
+    }
+  },
+  "652": {
+    "inputs": {
+      "value": false
+    },
+    "class_type": "PrimitiveBoolean",
+    "_meta": {
+      "title": "Use custom prompts？用自定义提示词？"
+    }
+  },
+  "663": {
+    "inputs": {
+      "upscale_by": [
+        "637",
+        0
+      ],
+      "seed": [
+        "774",
+        0
+      ],
+      "steps": 3,
+      "cfg": 1.0,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "sgm_uniform",
+      "denoise": 0.23,
+      "mode_type": "Linear",
+      "tile_width": [
+        "631",
+        0
+      ],
+      "tile_height": [
+        "630",
+        0
+      ],
+      "mask_blur": 64,
+      "tile_padding": 96,
+      "seam_fix_mode": "None",
+      "seam_fix_denoise": 1.0,
+      "seam_fix_width": 64,
+      "seam_fix_mask_blur": 8,
+      "seam_fix_padding": 16,
+      "force_uniform_tiles": true,
+      "tiled_decode": false,
+      "batch_size": 1,
+      "image": [
+        "610",
+        0
+      ],
+      "model": [
+        "756",
+        0
+      ],
+      "positive": [
+        "608",
+        0
+      ],
+      "negative": [
+        "619",
+        0
+      ],
+      "vae": [
+        "757",
+        0
+      ],
+      "upscale_model": [
+        "644",
+        0
+      ]
+    },
+    "class_type": "UltimateSDUpscale",
+    "_meta": {
+      "title": "Ultimate SD Upscale"
+    }
+  },
+  "698": {
+    "inputs": {
+      "width": 768,
+      "height": 768,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image (Base Dimensions) 初始大小"
+    }
+  },
+  "702": {
+    "inputs": {
+      "model_name": "1xSkinContrast-High-SuperUltraCompact.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "업스케일 모델 로드"
+    }
+  },
+  "703": {
+    "inputs": {
+      "upscale_model": [
+        "702",
+        0
+      ],
+      "image": [
+        "734",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "모델을 사용한 이미지 확대"
+    }
+  },
+  "707": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": false,
+        "lora": "zimage base\\Salttaro ZIB - Better Pussy Spread V1.0.safetensors",
+        "strength": 0.38
+      },
+      "lora_2": {
+        "on": false,
+        "lora": "zimage\\salttaro_zit_better_pussy_v1.0_15000.safetensors",
+        "strength": 0.4666687011718747
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "761",
+        0
+      ],
+      "clip": [
+        "755",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree)"
+    }
+  },
+  "709": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "707",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "모델 샘플링 (AuraFlow)"
+    }
+  },
+  "711": {
+    "inputs": {
+      "blend_factor": 0.4,
+      "blend_mode": "normal",
+      "image1": [
+        "734",
+        0
+      ],
+      "image2": [
+        "703",
+        0
+      ]
+    },
+    "class_type": "ImageBlend",
+    "_meta": {
+      "title": "Intensity - 强度"
+    }
+  },
+  "718": {
+    "inputs": {
+      "dilation": 8,
+      "mask": [
+        "798",
+        0
+      ]
+    },
+    "class_type": "ImpactDilateMask",
+    "_meta": {
+      "title": "Dilate Mask 扩展涂抹区域"
+    }
+  },
+  "720": {
+    "inputs": {
+      "seed": 115174424
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "Seed (rgthree)"
+    }
+  },
+  "721": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "821",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "모델 샘플링 (AuraFlow)"
+    }
+  },
+  "729": {
+    "inputs": {
+      "seed": 963600539
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "Seed (rgthree)"
+    }
+  },
+  "730": {
+    "inputs": {
+      "text": "Pussy, Vagina, 阴道，阴蒂，阴唇,",
+      "clip": [
+        "707",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Detailer CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "731": {
+    "inputs": {
+      "combined": false,
+      "crop_factor": 3.5,
+      "bbox_fill": false,
+      "drop_size": 10,
+      "contour_fill": true,
+      "mask": [
+        "718",
+        0
+      ]
+    },
+    "class_type": "MaskToSEGS",
+    "_meta": {
+      "title": "MASK to SEGS"
+    }
+  },
+  "732": {
+    "inputs": {
+      "filename_prefix": "image/2026-06-13/ZIT-050530",
+      "images": [
+        "711",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "이미지 저장"
+    }
+  },
+  "734": {
+    "inputs": {
+      "guide_size": 1440.0,
+      "guide_size_for": true,
+      "max_size": 1440.0,
+      "seed": [
+        "729",
+        0
+      ],
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "sgm_uniform",
+      "denoise": 0.5,
+      "feather": 100,
+      "noise_mask": true,
+      "force_inpaint": true,
+      "wildcard": "",
+      "cycle": 1,
+      "inpaint_model": false,
+      "noise_mask_feather": 20,
+      "tiled_encode": false,
+      "tiled_decode": false,
+      "image": [
+        "789",
+        0
+      ],
+      "segs": [
+        "731",
+        0
+      ],
+      "model": [
+        "709",
+        0
+      ],
+      "clip": [
+        "707",
+        1
+      ],
+      "vae": [
+        "757",
+        0
+      ],
+      "positive": [
+        "730",
+        0
+      ],
+      "negative": [
+        "746",
+        0
+      ]
+    },
+    "class_type": "DetailerForEach",
+    "_meta": {
+      "title": "디테일러 (SEGS)"
+    }
+  },
+  "739": {
+    "inputs": {
+      "text": "Lisu,",
+      "clip": [
+        "821",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Detailer CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "745": {
+    "inputs": {
+      "conditioning": [
+        "739",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "조건 (0으로 출력)"
+    }
+  },
+  "746": {
+    "inputs": {
+      "conditioning": [
+        "730",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "조건 (0으로 출력)"
+    }
+  },
+  "755": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "CLIP 로드"
+    }
+  },
+  "756": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "822",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "모델 샘플링 (AuraFlow)"
+    }
+  },
+  "757": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "VAE 로드"
+    }
+  },
+  "759": {
+    "inputs": {
+      "lora_name": "zit_sda_v1.safetensors",
+      "strength_model": 0.49,
+      "model": [
+        "822",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA 로드 (모델 전용)"
+    }
+  },
+  "760": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "759",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "모델 샘플링 (AuraFlow)"
+    }
+  },
+  "761": {
+    "inputs": {
+      "unet_name": "moodyProMix_zitV13.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "확산 모델 로드"
+    }
+  },
+  "763": {
+    "inputs": {
+      "conditioning": [
+        "627",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "조건 (0으로 출력)"
+    }
+  },
+  "771": {
+    "inputs": {
+      "value": "a+b",
+      "a": [
+        "649",
+        0
+      ],
+      "b": [
+        "773",
+        0
+      ]
+    },
+    "class_type": "SimpleMath+",
+    "_meta": {
+      "title": "🔧 Simple Math"
+    }
+  },
+  "773": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Seed (2ND) - Keep 0 by default"
+    }
+  },
+  "774": {
+    "inputs": {
+      "value": "a+b",
+      "a": [
+        "775",
+        0
+      ],
+      "b": [
+        "771",
+        0
+      ]
+    },
+    "class_type": "SimpleMath+",
+    "_meta": {
+      "title": "🔧 Simple Math"
+    }
+  },
+  "775": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Seed (SD) - Keep 0 by default"
+    }
+  },
+  "787": {
+    "inputs": {
+      "target": "confidence",
+      "order": true,
+      "take_start": 0,
+      "take_count": 2,
+      "segs": [
+        "790",
+        0
+      ]
+    },
+    "class_type": "ImpactSEGSOrderedFilter",
+    "_meta": {
+      "title": "SEGS Filter (ordered)"
+    }
+  },
+  "789": {
+    "inputs": {
+      "guide_size": 512.0,
+      "guide_size_for": true,
+      "max_size": 1440.0,
+      "seed": [
+        "720",
+        0
+      ],
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "sgm_uniform",
+      "denoise": 0.45,
+      "feather": 100,
+      "noise_mask": true,
+      "force_inpaint": true,
+      "wildcard": "",
+      "cycle": 1,
+      "inpaint_model": false,
+      "noise_mask_feather": 20,
+      "tiled_encode": false,
+      "tiled_decode": false,
+      "image": [
+        "663",
+        0
+      ],
+      "segs": [
+        "787",
+        0
+      ],
+      "model": [
+        "721",
+        0
+      ],
+      "clip": [
+        "821",
+        1
+      ],
+      "vae": [
+        "757",
+        0
+      ],
+      "positive": [
+        "739",
+        0
+      ],
+      "negative": [
+        "745",
+        0
+      ]
+    },
+    "class_type": "DetailerForEach",
+    "_meta": {
+      "title": "디테일러 (SEGS)"
+    }
+  },
+  "790": {
+    "inputs": {
+      "threshold": 0.5,
+      "dilation": 10,
+      "crop_factor": 2.0,
+      "drop_size": 1,
+      "labels": "all",
+      "bbox_detector": [
+        "792",
+        0
+      ],
+      "image": [
+        "663",
+        0
+      ]
+    },
+    "class_type": "BboxDetectorSEGS",
+    "_meta": {
+      "title": "BBOX Detector (SEGS)"
+    }
+  },
+  "792": {
+    "inputs": {
+      "model_name": "bbox/face_yolov8m.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "UltralyticsDetectorProvider"
+    }
+  },
+  "798": {
+    "inputs": {
+      "segs": [
+        "787",
+        0
+      ]
+    },
+    "class_type": "SegsToCombinedMask",
+    "_meta": {
+      "title": "SEGS to MASK (combined)"
+    }
+  },
+  "821": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "761",
+        0
+      ],
+      "clip": [
+        "755",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree)"
+    }
+  },
+  "822": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": false,
+        "lora": "InniePussy_Z.safetensors",
+        "strength": 0.5
+      },
+      "lora_2": {
+        "on": false,
+        "lora": "ZIT_ta86_beautyful_women_allround.safetensors",
+        "strength": 0.5
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "761",
+        0
+      ],
+      "clip": [
+        "755",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree)"
+    }
+  },
+  "825": {
+    "inputs": {
+      "text": "泛黄，模糊，低分辨率，低质量图像，诡异的外观，多餘手臂, 多餘腿部，丑陋，躁点，网格感，JPEG压缩条纹，水印，乱码，意义不明的字符，过暗，过曝，tongue out, plastic skin, signatue, username, logo, watermark, artist name, tattoo, speech bubble,  bubble, chat bubble, callout, word, body hair, under hair,   reclinin, open-plan carriage, open coach, modern train interior, airplane seats, bus seats, individual seats, rows of seats, subway interior, reclining seats, futuristic train, plastic interior, bright LED lighting, luxury lounge train, wide open cabin, corridor only, no private cabin,\n\n",
+      "clip": [
+        "755",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  }
+}

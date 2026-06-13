@@ -1,0 +1,87 @@
+{
+  "1": {
+    "inputs": {
+      "ckpt_name": "sd_turbo.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "2": {
+    "inputs": {
+      "text": "a beautiful landscape with mountains",
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "3": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "4": {
+    "inputs": {
+      "seed": 12345,
+      "steps": 20,
+      "cfg": 7.0,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  },
+  "5": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "length": 1,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "6": {
+    "inputs": {
+      "samples": [
+        "4",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "7": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  }
+}
