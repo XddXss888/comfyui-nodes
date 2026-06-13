@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_84e31830aff2450d91802c573bc4cecb.png"
+      "image": "ref_76f0084c73e24d4cb8b74b037cec56bc.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "白いレース模様のブラジャーと白いレース模様のショーツ。",
+      "prompt": "More bouncy, more pointy,  more bigger but moving upaward shaped chest ",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 173238302092604,
-      "steps": 8,
+      "seed": 926492931606364,
+      "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

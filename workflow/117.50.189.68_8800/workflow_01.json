@@ -77,9 +77,9 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "myloras10\\DoubleDSpitroast_high_noise.safetensors",
-      "lora_03": "None",
-      "lora_04": "None",
+      "lora_02": "myloras2\\MissionaryUpClose10_000002500_high_noise.safetensors",
+      "lora_03": "wan0922\\触发词lyy666版本v1高噪添加强度1.safetensors",
+      "lora_04": "wan0924\\W22_HN_i2v_POV_Missionary_Insertion_v1.safetensors",
       "lora_05": "None",
       "lora_06": "None",
       "lora_07": "None",
@@ -87,7 +87,7 @@
       "lora_09": "None",
       "lora_10": "None",
       "model": [
-        "163",
+        "156",
         0
       ],
       "strength_01": 2.0000000000000004,
@@ -110,7 +110,7 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "myloras10\\DoubleDSpitroast_low_noise.safetensors",
+      "lora_02": "myloras2\\MissionaryUpClose10_000002500_low_noise.safetensors",
       "lora_03": "None",
       "lora_04": "None",
       "lora_05": "None",
@@ -120,13 +120,13 @@
       "lora_09": "None",
       "lora_10": "None",
       "model": [
-        "164",
+        "157",
         0
       ],
       "strength_01": 1.0,
       "strength_02": 1.0000000000000002,
-      "strength_03": 1.0000000000000002,
-      "strength_04": 1.0000000000000002,
+      "strength_03": 0.0,
+      "strength_04": 0.0,
       "strength_05": 1.0,
       "strength_06": 1.0,
       "strength_07": 1.0,
@@ -155,18 +155,18 @@
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/71040dfc-9f31-4772-8945-056ff0b61c7f.png"
+      "urls": "https://media.pornmaker.cloud/0fc35efc-d923-4852-88af-dae658d4787d.png"
     },
     "class_type": "LoadImageFromURL"
   },
-  "163": {
+  "156": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
   },
-  "164": {
+  "157": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 5482523423965221016,
+      "noise_seed": 8180032317667956088,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 6710561547047196023,
+      "noise_seed": 3212451490427485158,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": "DoubleDSpitroast.Scene cut. Switch to a threesome scene. The same woman is having sex with two men in a threesome. She is giving oral sex to the man in front of her while the man behind her is having dogstyle sex with her from behind."
+      "text": "MissionaryUpClose10.Immediately cut to an extremely erotic scene.\r\nrealistic and intense handheld video of a naked woman and a naked man having sex. The camera focuses up and close on the woman's vagina and the man's penis. The woman holds her legs with both hands. The man thrusts his penis in and out of her vagina vigorously. She moans and experiences intense pleasure with every thrust."
     },
     "class_type": "CLIPTextEncode"
   },

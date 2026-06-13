@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_1b85ff2546444fb690f9b314dd152f2e.png"
+      "image": "ref_8952310765f24177b88e3a02e5593da4.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "服を小さくして",
+      "prompt": "Make her barefoot with the soles of her feet in the air ",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 75507370810670,
+      "seed": 94664096884511,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",

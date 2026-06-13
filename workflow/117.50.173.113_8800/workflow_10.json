@@ -77,9 +77,9 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "myloras7\\AnalNelson_high_noise.safetensors",
-      "lora_03": "None",
-      "lora_04": "None",
+      "lora_02": "myloras9\\BBCDPV3_high_noise.safetensors",
+      "lora_03": "wan2.2\\NSFW-22-H-e8.safetensors",
+      "lora_04": "wan0924\\W22_HN_i2v_POV_Missionary_Insertion_v1.safetensors",
       "lora_05": "None",
       "lora_06": "None",
       "lora_07": "None",
@@ -87,13 +87,13 @@
       "lora_09": "None",
       "lora_10": "None",
       "model": [
-        "156",
+        "163",
         0
       ],
       "strength_01": 2.0000000000000004,
       "strength_02": 1.0000000000000002,
       "strength_03": 1.0000000000000002,
-      "strength_04": 0.0,
+      "strength_04": 1.0000000000000002,
       "strength_05": 1.0,
       "strength_06": 1.0,
       "strength_07": 1.0,
@@ -110,8 +110,8 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "myloras7\\AnalNelson_low_noise.safetensors",
-      "lora_03": "None",
+      "lora_02": "myloras9\\BBCDPV3_low_noise.safetensors",
+      "lora_03": "wan2.2\\NSFW-22-L-e8.safetensors",
       "lora_04": "None",
       "lora_05": "None",
       "lora_06": "None",
@@ -120,13 +120,13 @@
       "lora_09": "None",
       "lora_10": "None",
       "model": [
-        "157",
+        "164",
         0
       ],
       "strength_01": 1.0,
       "strength_02": 1.0000000000000002,
       "strength_03": 1.0000000000000002,
-      "strength_04": 0.0,
+      "strength_04": 1.0000000000000002,
       "strength_05": 1.0,
       "strength_06": 1.0,
       "strength_07": 1.0,
@@ -155,18 +155,18 @@
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/f44dd7b2-2aa2-49b3-aac9-18e6bbb97636.png"
+      "urls": "https://media.pornmaker.cloud/466f7932-072a-416e-bbb3-bc2c6e894945.png"
     },
     "class_type": "LoadImageFromURL"
   },
-  "156": {
+  "163": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
   },
-  "157": {
+  "164": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 6510488338986273834,
+      "noise_seed": 6715805006024930119,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 4713063412585562406,
+      "noise_seed": 2546179671225264482,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": "AnalNelson.Immediately cut to an extremely erotic scene.\r\nthe exact same women is is enjoys an anal penetration with her legs spread wide apart. The man thrusts his veiny penis deeply into her, creating a full nelson position. Her facial expressions indicate pleasure, making sounds of enjoyment. His movements are rhythmic and forceful, exerting significant effort. This intense and explicit scene."
+      "text": "BBCDP.Immediately cut to an extremely erotic scene. The exact same woman is having group sex with two Black men; she is lying beneath one man who is penetrating her anus while another man is penetrating her vagina."
     },
     "class_type": "CLIPTextEncode"
   },

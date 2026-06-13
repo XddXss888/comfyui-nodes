@@ -77,7 +77,7 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "myloras5\\Ass2Ass_high_noise.safetensors",
+      "lora_02": "wan0529\\On All Fours Blowjob_high_noise.safetensors",
       "lora_03": "None",
       "lora_04": "None",
       "lora_05": "None",
@@ -87,15 +87,15 @@
       "lora_09": "None",
       "lora_10": "None",
       "model": [
-        "163",
+        "156",
         0
       ],
       "strength_01": 2.0000000000000004,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 1.0000000000000002,
-      "strength_04": 1.0000000000000002,
+      "strength_02": 1.0,
+      "strength_03": 0.0,
+      "strength_04": 2.0000000000000004,
       "strength_05": 1.0,
-      "strength_06": 1.0,
+      "strength_06": 3.0000000000000004,
       "strength_07": 1.0,
       "strength_08": 1.0,
       "strength_09": 1.0,
@@ -110,7 +110,7 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "myloras5\\Ass2Ass_low_noise.safetensors",
+      "lora_02": "wan0529\\On All Fours Blowjob_low_noise.safetensors",
       "lora_03": "None",
       "lora_04": "None",
       "lora_05": "None",
@@ -120,12 +120,12 @@
       "lora_09": "None",
       "lora_10": "None",
       "model": [
-        "164",
+        "157",
         0
       ],
       "strength_01": 1.0,
       "strength_02": 1.0000000000000002,
-      "strength_03": 1.0000000000000002,
+      "strength_03": 0.0,
       "strength_04": 1.0000000000000002,
       "strength_05": 1.0,
       "strength_06": 1.0,
@@ -155,18 +155,18 @@
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/a935bc94-676d-44cb-8fa6-16f57feb7c69.png"
+      "urls": "https://media.pornmaker.cloud/b1991661-4713-4701-9cad-2136e3e84f81.png"
     },
     "class_type": "LoadImageFromURL"
   },
-  "163": {
+  "156": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
   },
-  "164": {
+  "157": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 6778337555484711715,
+      "noise_seed": 5080846510275657565,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 577029179111169484,
+      "noise_seed": 5204616946353176113,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": "Ass2Ass.Immediately cut to an extremely erotic scene. \r\n\r\nthe exact two women back to back, ass to ass,on all fours, completely naked,  They were both using the same dildo to deeply penetrate their vaginas, their bodies writhing in ecstasy as they enjoyed the sensation."
+      "text": "OnAllFoursBlowjob.cut  scene.POV.The same woman is On all fours in front of man, giving him a blowjob while looking at the camera. The video is shot from a male's POV perspective."
     },
     "class_type": "CLIPTextEncode"
   },

@@ -28,7 +28,7 @@
         0
       ],
       "lora_name": "flux_korean_girl.safetensors",
-      "strength_model": 0.85
+      "strength_model": 0.8
     }
   },
   "5": {
@@ -38,7 +38,7 @@
         "2",
         0
       ],
-      "text": "A stunning Korean idol-style woman with burgundy red fluffy wolf cut hair, sharp jawline and mesmerizing cat-like eyes, captured in a surprised candid moment — lips slightly parted, eyes wide with delight, as if she just spotted someone she knows. Shot on 85mm f/1.4 lens with creamy bokeh, eye-level straight on, bust shot from shoulders up. She wears a tailored charcoal blazer over a champagne silk top. Soft window light creates a Rembrandt triangle shadow on her cheek, golden hour warmth spilling through the bookstore windows behind her. Cozy shelves with warm Edison bulbs glow in the blurred background. Flawless porcelain skin, subtle smoky eye makeup, dewy highlight on cheekbones. Ultra-realistic, editorial portrait photography."
+      "text": "A striking Korean idol woman with natural black hair carrying a deep blue sheen, sleek center-parted and falling past her shoulders, stands in an autumn park as golden and crimson leaves drift around her. Fox-like eyes lined with smoky graphite shadow pierce directly into the camera, slim face holding a fierce runway attitude with slightly parted lips. She wears a sharply tailored charcoal power suit with wide structured shoulders and a cinched waist. Full body head to toe composition, shot on 85mm f/1.4 with creamy bokeh dissolving the tree-lined path behind her. Cross lighting from two sides sculpts dramatic cheekbones and jawline, casting warm amber on one side, cool silver on the other. Eye-level straight on. Flawless luminous skin, editorial perfection."
     }
   },
   "6": {
@@ -64,8 +64,8 @@
   "8": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "width": 896,
-      "height": 1280,
+      "width": 1024,
+      "height": 1024,
       "batch_size": 1
     }
   },
@@ -88,9 +88,9 @@
         "8",
         0
       ],
-      "seed": 1035035257,
+      "seed": 1711581801,
       "control_after_generate": "fixed",
-      "steps": 22,
+      "steps": 24,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -117,7 +117,7 @@
         "10",
         0
       ],
-      "filename_prefix": "portrait_1035035257"
+      "filename_prefix": "portrait_1711581801"
     }
   }
 }

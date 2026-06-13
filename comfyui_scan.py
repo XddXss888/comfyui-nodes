@@ -132,6 +132,118 @@ def extract_names(field_value):
     return names
 
 
+# ComfyUI 内置节点（用于估算自定义节点数）
+_COMFYUI_BUILTIN = frozenset({
+    # ---- 采样器 ----
+    "KSampler", "KSamplerAdvanced", "KSamplerSelect",
+    "SamplerCustom", "SamplerCustomAdvanced",
+    # ---- CLIP 文本编码 ----
+    "CLIPTextEncode", "CLIPTextEncodeSDXL", "CLIPTextEncodeSDXLRefiner",
+    "CLIPTextEncodeHunyuanDiT", "CLIPTextEncodeFlux", "CLIPTextEncodePipe",
+    "CLIPSetLastLayer",
+    # ---- VAE ----
+    "VAEDecode", "VAEDecodeTiled", "VAEEncode", "VAEEncodeForInpaint",
+    "VAELoader",
+    # ---- Checkpoint ----
+    "CheckpointLoaderSimple", "CheckpointLoader",
+    "UNETLoader", "DiffusionLoader", "DiffusersLoader",
+    "unCLIPCheckpointLoader", "ImageOnlyCheckpointLoader",
+    # ---- LoRA / ControlNet / Model ----
+    "LoraLoader", "LoraLoaderModelOnly",
+    "ControlNetLoader", "ControlNetApply", "ControlNetApplyAdvanced",
+    "DiffControlNetLoader",
+    "CLIPLoader", "DualCLIPLoader", "TripleCLIPLoader", "QuadrupleCLIPLoader",
+    "CLIPVisionLoader", "StyleModelLoader", "GLIGENLoader", "HypernetworkLoader",
+    "UpscaleModelLoader", "ImageUpscaleWithModel",
+    # ---- 图像加载/保存 ----
+    "LoadImage", "LoadImageMask", "SaveImage", "PreviewImage",
+    "LoadImageFromUrl",
+    # ---- Latent ----
+    "EmptyLatentImage", "LatentComposite", "LatentBlend",
+    "LatentUpscale", "LatentUpscaleBy", "SetLatentNoiseMask",
+    "LoadLatent", "SaveLatent",
+    # ---- Conditioning ----
+    "ConditioningCombine", "ConditioningAverage", "ConditioningConcat",
+    "ConditioningSetArea", "ConditioningSetAreaPercentage",
+    "ConditioningSetMask", "ConditioningSetTimestepRange",
+    "ConditioningZeroOut",
+    # ---- 图像处理 ----
+    "ImageScale", "ImageScaleBy", "ImageScaleToTotalPixels",
+    "ImageCrop", "ImagePadForOutpaint", "ImageBlend",
+    "ImageInvert", "ImageColorMatch", "ImageSharpen", "ImageBlur",
+    "ImageToMask", "MaskToImage", "SolidMask", "EllipseMask",
+    "CropMask", "InvertMask", "GrowMask",
+    "ImageFlip", "ImageRotate", "ImageCompositeMasked",
+    # ---- 杂项 ----
+    "FreeU", "FreeU_V2",
+    "Note", "PrimitiveNode", "Reroute",
+    "Canny", "MiDaS", "Zoe",
+    # ---- Video ----
+    "LoadVideo", "VideoLinearCFGGuidance",
+    "LoadAudio", "LTXVAudioVAELoader", "LTXAVTextEncoderLoader",
+    "AudioEncoderLoader",
+})
+# 已知内置节点前缀（用于匹配变体）
+_COMFYUI_BUILTIN_PREFIXES = (
+    "KSampler", "CLIPTextEncode", "VAEDecode", "VAEEncode",
+    "CheckpointLoader", "LoraLoader", "CLIPLoader",
+    "LoadImage", "SaveImage", "PreviewImage",
+    "EmptyLatentImage", "Conditioning", "ControlNet",
+    "ImageScale", "ImageCrop", "ImagePad",
+    "ImageToMask", "MaskToImage", "SolidMask", "EllipseMask",
+    "CropMask", "GrowMask", "InvertMask",
+    "LatentUpscale", "LatentBlend", "LatentComposite",
+    "ImageBlend", "ImageInvert", "ImageColorMatch",
+    "ImageSharpen", "ImageBlur", "ImageFlip",
+    "ImageRotate", "ImageCompositeMasked",
+    "LoadLatent", "SaveLatent", "LoadImageMask",
+    "UNETLoader", "DiffusionLoader", "DiffusersLoader",
+    "StyleModelLoader", "GLIGENLoader", "HypernetworkLoader",
+    "UpscaleModelLoader",
+    "FreeU", "Note", "PrimitiveNode", "Reroute",
+)
+
+def _estimate_custom_nodes(base, timeout=5):
+    """Manager 不可用时，从 object_info 估算自定义节点数。
+    使用流式 key 提取避免全量 JSON 解析（object_info 可达 MB 级）。"""
+    import subprocess, re
+    try:
+        # curl 流式下载，只取前 1MB，超时则用已有数据
+        proc = subprocess.run(
+            ["curl", "-sk", "--max-time", str(timeout), base + "/object_info"],
+            capture_output=True, text=True, timeout=timeout + 2)
+        raw = proc.stdout
+        if not raw or len(raw) < 10:
+            return 0
+        # 匹配 value 为 object 且含 "input" 的 key（ComfyUI 节点类型特征）
+        # [^}]{0,500} 确保 "input" 出现在值的前500字符内（节点定义的第一属性）
+        keys = set(re.findall(
+            r'"([A-Za-z][A-Za-z0-9_ /()+\-]+)"\s*:\s*\{[^}]{0,500}"input"', raw))
+        # 排除 ComfyUI 节点定义内部的嵌套 key（非节点类型名）
+        _NON_NODE_KEYS = {
+            "input", "output", "required", "optional", "hidden",
+            "default", "min", "max", "step", "round", "name",
+            "display_name", "category", "tooltip", "type",
+            "forceInput", "multiline", "dynamicPrompts", "lazy",
+            "control_after_generate", "image_upload",
+            "output_name", "output_is_list", "output_node",
+            "description", "python_module", "color",
+        }
+        keys -= _NON_NODE_KEYS
+        if not keys:
+            return 0
+        custom = 0
+        for k in keys:
+            if k in _COMFYUI_BUILTIN:
+                continue
+            if any(k.startswith(p) for p in _COMFYUI_BUILTIN_PREFIXES):
+                continue
+            custom += 1
+        return custom
+    except:
+        return 0
+
+
 def check_and_detail(srv, timeout=6, detail_timeout=8):
     """测活 + 详情采集一步完成"""
     base = srv["url"]
@@ -141,11 +253,25 @@ def check_and_detail(srv, timeout=6, detail_timeout=8):
          "gpu_vram_fmt":"", "gpu_free_fmt":"",
          "ram_fmt":"", "ram_free_fmt":"",
          "models":[], "loras":[], "lora_count":0, "clips":[], "vaes":[], "workflows":[],
-         "has_history":False, "manager":False, "custom_nodes":0}
+         "has_history":False, "manager":False, "custom_nodes":0,
+         "custom_nodes_estimated":False}
 
-    # ---- 测活 ----
+    # ---- 测活（带 1 次重试，防网络抖动误判） ----
+    def _try_system_stats(base_url, t):
+        """尝试获取 system_stats，支持 1 次重试"""
+        for attempt in range(2):
+            try:
+                s, _, bd = fetch(f"{base_url}/system_stats", t)
+                return s, bd
+            except Exception as e:
+                if attempt == 0 and "timed out" in str(e).lower():
+                    time.sleep(1)  # 等 1s 再试
+                    continue
+                raise
+        raise Exception("system_stats timeout after retry")
+
     try:
-        s, _, bd = fetch(f"{base}/system_stats", timeout)
+        s, bd = _try_system_stats(base, timeout)
         if s == 200:
             data = json.loads(bd)
             sys_info = data.get("system", {})
@@ -193,7 +319,9 @@ def check_and_detail(srv, timeout=6, detail_timeout=8):
 
     r["ok"] = True
 
-    # ---- 详情采集（顺序执行，外层已用200并发覆盖，无需嵌套线程池）----
+    # ---- 详情采集 ----
+    # 快速请求（history/manager/workflows）顺序执行即可
+    # 模型/节点查询用小型线程池（3 workers）并行加速，避免单节点最坏 175s 超全局 90s 超时
     def _quick_fetch(path, default=None):
         try:
             s, _, bd = fetch(f"{base}{path}", min(detail_timeout, 5))
@@ -203,20 +331,38 @@ def check_and_detail(srv, timeout=6, detail_timeout=8):
         except: pass
         return default
 
-    def _fetch_node_list(nt, fld):
+    def _fetch_node_list(nt, fld, timeout=None):
+        t = timeout if timeout is not None else min(detail_timeout, 5)
         try:
-            s, _, bd = fetch(f"{base}/object_info/{nt}", detail_timeout)
+            s, _, bd = fetch(f"{base}/object_info/{nt}", t)
             if s == 200:
                 inp = json.loads(bd).get(nt, {}).get("input", {}).get("required", {})
                 return extract_names(inp.get(fld, []))
         except: pass
         return []
 
-    # 历史
+    # 历史（快速请求，独立执行）
     hist_data = _quick_fetch("/history?max_items=1", {})
     r["has_history"] = isinstance(hist_data, dict) and len(hist_data) > 0
 
-    # 模型（去重用 set，性能优于 list 线性查找）
+    # Manager / Workflows（快速请求，独立执行）
+    mgr_data = _quick_fetch("/customnode/installed")
+    if isinstance(mgr_data, dict):
+        r["manager"] = "ComfyUI-Manager" in mgr_data
+        r["custom_nodes"] = len(mgr_data)
+    else:
+        r["manager"] = False
+        # Manager 未安装时，从 object_info 估算自定义节点数
+        r["custom_nodes"] = _estimate_custom_nodes(base, min(detail_timeout, 10))
+        r["custom_nodes_estimated"] = True
+
+    wf_data = _quick_fetch("/api/userdata?dir=workflows")
+    if isinstance(wf_data, list):
+        r["workflows"] = [str(w) for w in wf_data if isinstance(w, str)]
+    else:
+        r["workflows"] = []
+
+    # 模型/节点查询 — 用小型线程池并行（3 workers），最坏 ~55s 而不是 ~160s
     MODEL_LOADERS = [
         ("CheckpointLoaderSimple", "ckpt_name"),
         ("UNETLoader", "unet_name"),
@@ -231,39 +377,39 @@ def check_and_detail(srv, timeout=6, detail_timeout=8):
         ("Hunyuan3DModelLoader", "model_name"),
         ("Flux2Loader", "flux_name"),
     ]
+    ALL_NODE_QUERIES = [(nt, fld) for nt, fld in MODEL_LOADERS] + \
+                       [("LoraLoader", "lora_name"), ("LoraLoaderModelOnly", "lora_name"),
+                        ("CLIPLoader", "clip_name"), ("VAELoader", "vae_name")]
+
+    node_results = {}  # key: (nt, fld) or special → result
+    with ThreadPoolExecutor(max_workers=3) as detail_pool:
+        futures_map = {}
+        for nt, fld in ALL_NODE_QUERIES:
+            futures_map[detail_pool.submit(_fetch_node_list, nt, fld)] = (nt, fld)
+        for fut in as_completed(futures_map):
+            try:
+                node_results[futures_map[fut]] = fut.result(timeout=detail_timeout + 2)
+            except:
+                node_results[futures_map[fut]] = []
+
+    # 汇总模型
     models_set = set()
     for nt, fld in MODEL_LOADERS:
-        for n in _fetch_node_list(nt, fld):
+        for n in (node_results.get((nt, fld), []) or []):
             models_set.add(n)
     r["models"] = sorted(models_set)
 
     # LoRA
     lora_set = set()
-    for nt in ("LoraLoader", "LoraLoaderModelOnly"):
-        for n in _fetch_node_list(nt, "lora_name"):
+    for key in [("LoraLoader", "lora_name"), ("LoraLoaderModelOnly", "lora_name")]:
+        for n in (node_results.get(key, []) or []):
             lora_set.add(n)
     r["lora_count"] = len(lora_set)
     r["loras"] = sorted(lora_set)[:10]
 
     # CLIP / VAE
-    r["clips"] = _fetch_node_list("CLIPLoader", "clip_name")
-    r["vaes"]  = _fetch_node_list("VAELoader", "vae_name")
-
-    # Manager
-    mgr_data = _quick_fetch("/customnode/installed")
-    if isinstance(mgr_data, dict):
-        r["manager"] = "ComfyUI-Manager" in mgr_data
-        r["custom_nodes"] = len(mgr_data)
-    else:
-        r["manager"] = False
-        r["custom_nodes"] = 0
-
-    # Workflows
-    wf_data = _quick_fetch("/api/userdata?dir=workflows")
-    if isinstance(wf_data, list):
-        r["workflows"] = [str(w) for w in wf_data if isinstance(w, str)]
-    else:
-        r["workflows"] = []
+    r["clips"] = node_results.get(("CLIPLoader", "clip_name"), []) or []
+    r["vaes"]  = node_results.get(("VAELoader", "vae_name"), []) or []
 
     return r
 
@@ -294,7 +440,8 @@ def print_summary(alive, elapsed):
         free = x["gpu_free_fmt"] or "-"
         hist = "✓" if x.get("has_history") else ""
         mgr = "✓" if x.get("manager") else ""
-        cn = str(x.get("custom_nodes", 0)) if x.get("custom_nodes") else ""
+        cn_val = x.get("custom_nodes", 0)
+        cn = f"~{cn_val}" if cn_val and x.get("custom_nodes_estimated") else str(cn_val) if cn_val else ""
         nw = str(len(x.get("workflows", []))) if x.get("workflows") else ""
         nm = len(x.get("models", []))
         nl = x.get("lora_count", 0)
@@ -358,7 +505,8 @@ def write_output(alive):
             nl = x.get("lora_count", 0)
             hist = "✓" if x.get("has_history") else "-"
             mgr = "✓" if x.get("manager") else "-"
-            cn = str(x.get("custom_nodes", 0))
+            cn_val = x.get("custom_nodes", 0)
+            cn = f"~{cn_val}" if cn_val and x.get("custom_nodes_estimated") else str(cn_val)
             nw = str(len(x.get("workflows", [])))
             # CPU 节点不显示显存（显卡专用指标）
             is_cpu = (x.get("gpu_simple", "") or "").upper() in ("CPU", "")
@@ -382,7 +530,9 @@ def write_output(alive):
             f.write(f"- **内存**: {x['ram_fmt'] or '-'} (空闲 {x['ram_free_fmt'] or '-'})\n")
             f.write(f"- **历史**: {'有' if x.get('has_history') else '无'}\n")
             f.write(f"- **管理面板**: {'有' if x.get('manager') else '无'}\n")
-            f.write(f"- **自定义节点数**: {x.get('custom_nodes', 0)}\n")
+            cn_val = x.get("custom_nodes", 0)
+            cn_str = f"~{cn_val} (估算，Manager未安装)" if cn_val and x.get("custom_nodes_estimated") else str(cn_val)
+            f.write(f"- **自定义节点数**: {cn_str}\n")
 
             wfs = x.get("workflows", [])
             f.write(f"- **工作流** ({len(wfs)}):")
@@ -429,8 +579,8 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("-f","--file", default=DEFAULT_CSV)
     ap.add_argument("-w","--workers", type=int, default=200)
-    ap.add_argument("-t","--timeout", type=int, default=8)
-    ap.add_argument("--detail-timeout", type=int, default=10)
+    ap.add_argument("-t","--timeout", type=int, default=10)
+    ap.add_argument("--detail-timeout", type=int, default=12)
     args = ap.parse_args()
 
     servers = load_servers(args.file)

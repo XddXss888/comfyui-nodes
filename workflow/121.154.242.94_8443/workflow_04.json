@@ -51,8 +51,8 @@
     "inputs": {
       "text": "masterpiece, best qualit,4K, 8k, hight quality, highres, 1girl, ahri_(league_of_legends), nsfw, fingering, full body, colorfull, nude, pussy, open pussy.open boob,large breasts, self fingering, pussy, solo, fox tail, fox ears, white tail, yellow eyes, masterbation, unaligned breasts, wet, ahegao",
       "clip": [
-        "26",
-        1
+        "5",
+        0
       ]
     },
     "class_type": "CLIPTextEncode",
@@ -64,8 +64,8 @@
     "inputs": {
       "text": "blank page, text, logo, watermark, too many watermarks, reference, signature, artist name, dated, artistic error, scan artifacts, jpeg artifacts, upscaled, aliasing, film grain, heavy film grain, dithering, chromatic aberration, digital dissolve, halftone, screentones, artist:xinzoruo, artist:milkpanda, artist collaboration, one-hour drawing challenge, toon (style), 1990s (style), 4koma, 2koma, mutation, deformed, distorted, disfigured, bad anatomy, unnatural hair, bad face, mob face, bad eyes, empty eyes, bad proportions, bad limbs, amputee, bad arm, bad hands, bad hand structure, extra digits, fewer digits, bad leg, extra leg, distorted composition, bad perspective, multiple views, disorganized colors, unfinished, incomplete, displeasing, very displeasing, unsatisfactory, inadequate, deficient, subpar, poor, blurry, lowres, worst quality, bad quality, fewer details",
       "clip": [
-        "26",
-        1
+        "5",
+        0
       ]
     },
     "class_type": "CLIPTextEncode",
@@ -75,14 +75,14 @@
   },
   "9": {
     "inputs": {
-      "seed": 742980225011332,
+      "seed": 264086262830333,
       "steps": 20,
       "cfg": 6.0,
       "sampler_name": "dpmpp_2m_sde_heun_gpu",
       "scheduler": "simple",
       "denoise": 1.0,
       "model": [
-        "26",
+        "4",
         0
       ],
       "positive": [
@@ -141,32 +141,6 @@
     "class_type": "SaveImage",
     "_meta": {
       "title": "이미지 저장"
-    }
-  },
-  "18": {
-    "inputs": {},
-    "class_type": "CLIPMergeAdd",
-    "_meta": {
-      "title": "CLIP 병합 (더하기)"
-    }
-  },
-  "26": {
-    "inputs": {
-      "lora_name": "kda-popstar-ahri-illust.safetensors",
-      "strength_model": 1.0,
-      "strength_clip": 1.0,
-      "model": [
-        "4",
-        0
-      ],
-      "clip": [
-        "5",
-        0
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "LoRA 로드"
     }
   }
 }

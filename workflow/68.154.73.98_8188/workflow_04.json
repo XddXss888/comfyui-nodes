@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_4bbb62db349041bb8d1ebfda1ab2232b.png"
+      "image": "ref_2d60ec19e8bc415dae872b4a0ba41056.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "生成其他手機擋面自拍的姿勢",
+      "prompt": "実写化\n人間の女性\n明るく",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 984912777137609,
-      "steps": 8,
+      "seed": 829414351485301,
+      "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

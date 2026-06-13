@@ -1,16 +1,16 @@
 # 8.147.108.18:8188
 
-GPU: A10 | 显存: 22 GB | 空闲: 3 GB
-内存: 58 GB (空闲 42 GB)
-版本: 0.3.29
-报告中的历史: 无
-扫描时间: 2026-06-13 22:30:38
-历史总数: 10001 | 成功: 10
+**GPU**: A10 | **显存**: 22 GB | **空闲**: 3 GB
+**内存**: 58 GB (空闲 42 GB)
+**版本**: 0.3.29
+**ComfyUI报告历史**: 有
+**扫描时间**: 2026-06-14 05:56:19
+**历史总数**: 10001 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `339e3826-0ee7-44f4-8100-d902e8c02d7d`
+- **Prompt ID**: `f22193bd-80c7-4855-9ee0-45de61a21982`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (4):
@@ -19,13 +19,13 @@ GPU: A10 | 显存: 22 GB | 空闲: 3 GB
   - flux1-schnell.safetensors
   - t5xxl_fp16.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] ### Scene Description
+  - [CLIPTextEncode::text] **Scene Description:**
 
 **Visual Style:**
-- The scene is rendered in a vibrant and warm Pixar 3D animation style, with soft, natural lighting and smooth shading. The colors are bright and inviting, cre
+- The scene is rendered in a vibrant and warm Pixar 3D animation style, with soft, inviting colors and smooth, detailed shading. The characters have slightly 
 
 ### 2. workflow_02.json
-- **Prompt ID**: `8b70168d-6bec-47df-8d1a-4ceea15a3463`
+- **Prompt ID**: `2410b8c2-e668-46f6-b7cc-45176c474fcf`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (4):
@@ -37,10 +37,10 @@ GPU: A10 | 显存: 22 GB | 空闲: 3 GB
   - [CLIPTextEncode::text] **Scene Description:**
 
 **Visual Style:**
-- The scene is rendered in a vibrant and warm Pixar 3D animation style, with soft, inviting colors and smooth shading. The lighting is gentle and natural, cre
+- The scene is rendered in a vibrant, Pixar-style 3D animation with warm, inviting colors. The lighting is soft and natural, casting gentle shadows that add d
 
 ### 3. workflow_03.json
-- **Prompt ID**: `bfc29113-aada-4c9b-a2d5-8840e4671652`
+- **Prompt ID**: `8ee25998-be56-428b-a812-29da6590fb3f`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (4):
@@ -52,40 +52,10 @@ GPU: A10 | 显存: 22 GB | 空闲: 3 GB
   - [CLIPTextEncode::text] ### Scene Description
 
 **Visual Style:**
-- The scene is rendered in a vibrant, Pixar 3D animation style with warm, inviting colors. The lighting is soft and natural, casting gentle shadows and creatin
+- The scene is rendered in the vibrant and warm color palette characteristic of Pixar 3D animation. The lighting is soft and inviting, with smooth shading that
 
 ### 4. workflow_04.json
-- **Prompt ID**: `ca631166-11c9-470f-9d8d-02a0bf80681c`
-- **类型**: 文生图
-- **节点数**: 13
-- **模型** (4):
-  - ae.safetensors
-  - clip_l.safetensors
-  - flux1-schnell.safetensors
-  - t5xxl_fp16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] **Scene Description:**
-
-**Visual Style:**
-- The scene is rendered in a vibrant and warm Pixar 3D animation style. The colors are bright and inviting, with soft, natural lighting that creates a cozy an
-
-### 5. workflow_05.json
-- **Prompt ID**: `bb140e38-7e20-4c60-ad73-26bc6537cdd4`
-- **类型**: 文生图
-- **节点数**: 13
-- **模型** (4):
-  - ae.safetensors
-  - clip_l.safetensors
-  - flux1-schnell.safetensors
-  - t5xxl_fp16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] **Scene Description:**
-
-**Visual Style:**
-- The scene is rendered in the classic Pixar 3D animation style, with vibrant and warm colors that create a cozy and inviting atmosphere. The lighting is soft
-
-### 6. workflow_06.json
-- **Prompt ID**: `d29f10ad-991d-4a7e-871c-5432127117c4`
+- **Prompt ID**: `05d66422-bd28-40dc-97dd-bc2b29143ca3`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (4):
@@ -97,10 +67,25 @@ GPU: A10 | 显存: 22 GB | 空闲: 3 GB
   - [CLIPTextEncode::text] ### Scene Description
 
 **Visual Style:**
-- The scene is rendered in the vibrant and warm colors characteristic of Pixar 3D animation. The lighting is soft and inviting, with smooth shading that brings
+- The scene is rendered in a vibrant, Pixar 3D animation style with warm, inviting colors. The lighting is soft and diffused, creating a cozy, magical atmosphe
 
-### 7. workflow_07.json
-- **Prompt ID**: `22787e62-1f32-4544-8752-3bffc3b178af`
+### 5. workflow_05.json
+- **Prompt ID**: `6a68b727-d67a-4d56-a1c3-8aff75d694a1`
+- **类型**: 文生图
+- **节点数**: 13
+- **模型** (4):
+  - ae.safetensors
+  - clip_l.safetensors
+  - flux1-schnell.safetensors
+  - t5xxl_fp16.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] **Scene Description:**
+
+**Visual Style:**
+- The scene is rendered in a vibrant, Pixar 3D animation style with warm, inviting colors. The lighting is soft and natural, creating a cozy and magical atmos
+
+### 6. workflow_06.json
+- **Prompt ID**: `a4247782-6530-4db3-a96b-db719c0bd754`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (4):
@@ -114,23 +99,8 @@ GPU: A10 | 显存: 22 GB | 空闲: 3 GB
 **Visual Style:**
 - The scene is rendered in a vibrant, Pixar 3D animation style with warm, inviting colors. The lighting is soft and natural, casting gentle shadows and highli
 
-### 8. workflow_08.json
-- **Prompt ID**: `ddf22240-94b2-4fa6-8b28-a76141f770c3`
-- **类型**: 文生图
-- **节点数**: 13
-- **模型** (4):
-  - ae.safetensors
-  - clip_l.safetensors
-  - flux1-schnell.safetensors
-  - t5xxl_fp16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] ### Scene Description
-
-**Visual Style:**
-- The scene is rendered in a vibrant and warm Pixar 3D animation style, with soft, inviting colors and smooth shading. The environment is filled with a gentle,
-
-### 9. workflow_09.json
-- **Prompt ID**: `1d93d5d1-f3a7-430a-b961-a9f1f18dd4d8`
+### 7. workflow_07.json
+- **Prompt ID**: `156009a7-519e-4b86-94b5-73f6bc45d759`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (4):
@@ -141,10 +111,25 @@ GPU: A10 | 显存: 22 GB | 空闲: 3 GB
 - **提示词**:
   - [CLIPTextEncode::text] **Scene Description:**
 
-The scene is set in a vibrant, whimsical playroom, bathed in warm, soft lighting that gives the environment a cozy and inviting feel. The walls are adorned with colorful murals
+The scene opens with a vibrant, Pixar-style 3D animated environment. The setting is a cozy, sunlit living room filled with warm, inviting colors and soft, ambient lighting. The
 
-### 10. workflow_10.json
-- **Prompt ID**: `1203f144-2d6a-4e1b-b1c3-a6121ec7da02`
+### 8. workflow_08.json
+- **Prompt ID**: `b15a5764-2c28-405b-935b-455197a5d77a`
+- **类型**: 文生图
+- **节点数**: 13
+- **模型** (4):
+  - ae.safetensors
+  - clip_l.safetensors
+  - flux1-schnell.safetensors
+  - t5xxl_fp16.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] **Scene Description:**
+
+**Visual Style:**
+- The scene is rendered in a vibrant and warm Pixar 3D animation style, with soft, inviting lighting and smooth, natural shading. The colors are rich and live
+
+### 9. workflow_09.json
+- **Prompt ID**: `ce1c7738-8e3d-49ae-bc93-84eabb7575bc`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (4):
@@ -156,4 +141,19 @@ The scene is set in a vibrant, whimsical playroom, bathed in warm, soft lighting
   - [CLIPTextEncode::text] ### Scene Description
 
 **Visual Style:**
-- The scene is rendered in a vibrant and warm Pixar 3D animation style, with soft, inviting lighting and smooth, rich shading. The colors are bright and cheerf
+- The scene is rendered in a vibrant and warm Pixar 3D animation style, with soft, inviting colors and smooth, realistic shading. The characters have slightly 
+
+### 10. workflow_10.json
+- **Prompt ID**: `993525d9-097f-40fd-9d15-3e540608c8df`
+- **类型**: 文生图
+- **节点数**: 13
+- **模型** (4):
+  - ae.safetensors
+  - clip_l.safetensors
+  - flux1-schnell.safetensors
+  - t5xxl_fp16.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] **Scene Description:**
+
+**Visual Style:**
+- The scene is rendered in a vibrant, Pixar 3D animation style with warm, inviting colors. The lighting is soft and natural, casting gentle shadows and highli

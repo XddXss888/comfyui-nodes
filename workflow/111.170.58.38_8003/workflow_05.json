@@ -1,7 +1,7 @@
 {
   "12": {
     "inputs": {
-      "image": "260613211114292-1-2-id7422.jpg"
+      "image": "20260613224330555-1-3qrba2.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -10,7 +10,7 @@
   },
   "15": {
     "inputs": {
-      "image": "649-_6_lovesasakids-ckfld8.jpg"
+      "image": "546-_1_lovesasakids-bd1gpl.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -22,7 +22,7 @@
       "api_url": "https://3dcdn.580ai.net/v1beta/models/gemini-3.1-flash-image-preview:generateContent",
       "header_key": "Authorization",
       "header_value": "sk-Lyx9OF97YMK0suEi6ZIPzq4E9d3dhIKJzO2YS5WpAsZbZpxS",
-      "text": "控制图1模特做图2模特的动作姿势和表情，不要改变图1模特的造型和搭配，模特左肩轻微抬高，微风轻轻吹起，不要改变图1模特的五官细节，不要改变图1拍摄的地面，不要改变图1的拍摄场景和光线色调，控制图1模特的上衣袖子是宽松的版型",
+      "text": "控制图1模特做图2模特的动作姿势和表情，图1模特半蹲在地上，右手手指轻轻触碰下巴，微风轻轻吹过，控制图1模特的头向镜头右侧倾斜，不要改变图1模特的造型和搭配，不要改变图1模特的五官细节，不要改变图1拍摄的地面，不要改变图1的拍摄场景和光线色调",
       "aspect_ratio": "3:4",
       "image_size": "4K",
       "timeout": 200,

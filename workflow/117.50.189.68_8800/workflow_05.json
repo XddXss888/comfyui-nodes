@@ -12,7 +12,7 @@
   "104": {
     "inputs": {
       "model": [
-        "138",
+        "158",
         0
       ],
       "shift": 5.000000000000001
@@ -70,39 +70,6 @@
     },
     "class_type": "RifeTensorrt"
   },
-  "138": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "wan0529\\She LOVES your cum_000002000_high_noise.safetensors",
-      "lora_03": "None",
-      "lora_04": "None",
-      "lora_05": "None",
-      "lora_06": "None",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "156",
-        0
-      ],
-      "strength_01": 2.0000000000000004,
-      "strength_02": 1.0,
-      "strength_03": 0.0,
-      "strength_04": 2.0000000000000004,
-      "strength_05": 1.0,
-      "strength_06": 3.0000000000000004,
-      "strength_07": 1.0,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
-  },
   "139": {
     "inputs": {
       "clip": [
@@ -110,7 +77,7 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "wan0529\\She LOVES your cum_000002000_low_noise.safetensors",
+      "lora_02": "wan0220\\FinishHim_low_noise.safetensors",
       "lora_03": "None",
       "lora_04": "None",
       "lora_05": "None",
@@ -127,7 +94,7 @@
       "strength_02": 1.0000000000000002,
       "strength_03": 0.0,
       "strength_04": 1.0000000000000002,
-      "strength_05": 1.0,
+      "strength_05": 0.0,
       "strength_06": 1.0,
       "strength_07": 1.0,
       "strength_08": 1.0,
@@ -155,7 +122,7 @@
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/1e75a4f2-bafe-4005-9c7c-06018d2aa725.png"
+      "urls": "https://media.pornmaker.cloud/e2ebcf38-7897-42fb-8f55-28fa3ac54ccc.png"
     },
     "class_type": "LoadImageFromURL"
   },
@@ -172,6 +139,39 @@
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
+  },
+  "158": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "lora_02": "None",
+      "lora_03": "wan0220\\FinishHim_high_noise.safetensors",
+      "lora_04": "None",
+      "lora_05": "None",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "156",
+        0
+      ],
+      "strength_01": 2.0000000000000004,
+      "strength_02": 1.0000000000000002,
+      "strength_03": 1.0,
+      "strength_04": 1.0000000000000002,
+      "strength_05": 1.5000000000000002,
+      "strength_06": 1.0,
+      "strength_07": 1.0,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
   },
   "84": {
     "inputs": {
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 2325000664394447454,
+      "noise_seed": 4572325928685081847,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 490214037215874567,
+      "noise_seed": 936966572128158128,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": "SheLOVESyourcum.cut scene.POV. The same woman is lying in bed masturbating a man. The man's semen is cum onto the woman's breasts, body, and mouth."
+      "text": "FinishHim.Cutscene.POV. The same woman is grabbing a man's penis and masturbating him, Cumming onto her mouth and face."
     },
     "class_type": "CLIPTextEncode"
   },

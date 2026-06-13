@@ -1,0 +1,150 @@
+{
+  "191": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b-fp8mixed.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "318": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "217": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader"
+  },
+  "219": {
+    "inputs": {
+      "text": "Award-winning interior design photography: a fully finished Спортзал interior space, designed in Modern style — contemporary modern interior: floor-to-ceiling glass walls, polished porcelain tile floors, sleek low-profile Italian leather sofa in charcoal, brushed brass fixtures, monochromatic palette with single bold accent color, geometric statement art, recessed LED lighting, cantilevered shelving, marble accent walls, Calligaris-grade modern furniture. Completely transform this raw space: apply authentic wall finishes (paint, wallpaper, panels, plaster — appropriate to style), period-correct flooring (hardwood, tile, carpet, concrete — style-driven choice), proper ceiling treatment (smooth, beamed, coffered, exposed — depending on style), layered lighting (ambient, task, accent — style-driven fixtures), and furnish with floor lamp, table lamps, wall sconces, ambient lighting, TV, audio system, electronics on media console. домашний спортзал, тренажёры, беговая дорожка, зеркальная стена, резиновое покрытие пола Visual aesthetic: high-end interior design magazine cover quality, AD Architectural Digest style, Elle Decor photography. Composition: balanced rule of thirds, professional staging, curated decor. Lighting: natural daylight from existing windows blended with ambient warm interior lighting, soft shadows, golden hour quality. Camera: wide-angle 24mm lens, eye-level perspective, sharp focus throughout, slight HDR. Quality: 8K ultra-detailed, photorealistic, hyperrealistic textures, natural materials with realistic micro-details, perfect lighting harmony, no AI artifacts. CRITICAL ARCHITECTURAL CONSTRAINT: Keep the EXACT same room shape, EXACT same proportions, EXACT same window positions and sizes, EXACT same door openings, EXACT same ceiling height, EXACT same camera perspective and angle as the source photo — modify ONLY interior design, surface materials, decorative finishes, and furniture placement.",
+      "clip": [
+        "217",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "317": {
+    "inputs": {
+      "text": "modern style (when not requested), generic IKEA look, white minimalism (when not requested), changed room shape, moved windows, moved doors, different room size, different perspective, different camera angle, fisheye, distorted geometry, extra rooms added, walls removed, walls added, new openings, missing windows, cartoon, anime, illustration, painting, drawing, sketch, 3d render look, video game, low quality, blurry, soft focus, motion blur, lens flare, chromatic aberration, oversaturated colors, overprocessed HDR, watermark, signature, text, logo, deformed furniture, melting objects, floating objects, impossible geometry, duplicate windows, asymmetric mirroring, plastic-looking surfaces, fake-looking materials",
+      "clip": [
+        "217",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "9001": {
+    "inputs": {
+      "image": "CgPOUcxq2lqr4nJTDCyc6aouG67AeUEGjidV67di.jpg"
+    },
+    "class_type": "LoadImage"
+  },
+  "9002": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "9001",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels"
+  },
+  "9006": {
+    "inputs": {
+      "pixels": [
+        "9002",
+        0
+      ],
+      "vae": [
+        "318",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "9100": {
+    "inputs": {
+      "conditioning": [
+        "219",
+        0
+      ],
+      "latent": [
+        "9006",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent"
+  },
+  "9200": {
+    "inputs": {
+      "conditioning": [
+        "317",
+        0
+      ],
+      "latent": [
+        "9006",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent"
+  },
+  "500": {
+    "inputs": {
+      "seed": 841798288,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.88,
+      "model": [
+        "191",
+        0
+      ],
+      "positive": [
+        "9100",
+        0
+      ],
+      "negative": [
+        "9200",
+        0
+      ],
+      "latent_image": [
+        "9006",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  },
+  "501": {
+    "inputs": {
+      "samples": [
+        "500",
+        0
+      ],
+      "vae": [
+        "318",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "60": {
+    "inputs": {
+      "filename_prefix": "ComfyUI_Staging",
+      "images": [
+        "501",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  }
+}

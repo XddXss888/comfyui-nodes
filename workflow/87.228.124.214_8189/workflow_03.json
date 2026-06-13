@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "eurameg1, A woman in a glamorous purple dress stands in a dimly lit VIP room at a party, lifting the hem of her dress with one hand while lowering her panties with the other, exposing her hips and intimate area, legs slightly apart in a stable pose, seductive confident expression and direct gaze, soft warm party lighting with shadows, simple background, medium close-up framing, clear visible hands and natural body proportions, one primary subject.",
+      "text": "seductive young curvy woman with long black hair\n\nAn obscene 22-year-old woman with long black hair is in a lavish bedroom. She is wearing a polka dot white bra and panties with garter belts, and thigh high stockings. She has long hair with a ribbon in it, and a ribbon choker with a heart charm. She has freckles. She is sucking on a popsicle. Real life.",
       "clip": [
         "72",
         1
@@ -85,9 +85,9 @@
   },
   "68": {
     "inputs": {
-      "width": 1024,
-      "height": 1024,
-      "batch_size": 1
+      "width": 1280,
+      "height": 1280,
+      "batch_size": 4
     },
     "class_type": "EmptySD3LatentImage",
     "_meta": {
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "zimg-eurameg1-refine-con-char.safetensors",
-      "strength_model": 0.8,
-      "strength_clip": 0.8,
+      "lora_name": "izumi_v.2.safetensors",
+      "strength_model": 0.9,
+      "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -132,12 +132,12 @@
     "inputs": {
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
-      "scheduler": "beta57",
+      "scheduler": "bong_tangent",
       "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 453373455444780,
+      "seed": 990493648306837,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

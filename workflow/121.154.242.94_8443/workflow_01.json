@@ -20,7 +20,7 @@
   "4": {
     "inputs": {
       "unet_name": "anima-base-v1.0.safetensors",
-      "weight_dtype": "default"
+      "weight_dtype": "fp8_e4m3fn_fast"
     },
     "class_type": "UNETLoader",
     "_meta": {
@@ -49,7 +49,7 @@
   },
   "7": {
     "inputs": {
-      "text": "masterpiece, best qualit,4K, 8k, hight quality, highres, 1girl, @yabby, ahri_(league_of_legends), nsfw, fingering, full body, colorfull, nude, pussy, open pussy.open boob,large breasts, self fingering, pussy, solo, fox tail, fox ears, white tail, yellow eyes, masterbation, unaligned breasts, wet, ahegao",
+      "text": "masterpiece, best qualit,4K, 8k, hight quality, highres, 1girl, ahri_(league_of_legends), nsfw, fingering, full body, colorfull, nude, pussy, open pussy.open boob,large breasts, self fingering, pussy, solo, fox tail, fox ears, white tail, yellow eyes, masterbation, unaligned breasts, wet, ahegao",
       "clip": [
         "5",
         0
@@ -75,7 +75,7 @@
   },
   "9": {
     "inputs": {
-      "seed": 438708220967276,
+      "seed": 766015357359925,
       "steps": 20,
       "cfg": 6.0,
       "sampler_name": "dpmpp_2m_sde_heun_gpu",
@@ -86,7 +86,7 @@
         0
       ],
       "positive": [
-        "20",
+        "7",
         0
       ],
       "negative": [
@@ -141,104 +141,6 @@
     "class_type": "SaveImage",
     "_meta": {
       "title": "이미지 저장"
-    }
-  },
-  "13": {
-    "inputs": {
-      "solver_type": "phi_1",
-      "eta": 1,
-      "s_noise": 1,
-      "r": 0.5
-    },
-    "class_type": "SamplerSEEDS2",
-    "_meta": {
-      "title": "SamplerSEEDS2"
-    }
-  },
-  "14": {
-    "inputs": {
-      "add_noise": true,
-      "noise_seed": 677982356031821,
-      "cfg": 8,
-      "model": [
-        "4",
-        0
-      ],
-      "positive": [
-        "7",
-        0
-      ],
-      "negative": [
-        "8",
-        0
-      ],
-      "sampler": [
-        "13",
-        0
-      ],
-      "sigmas": [
-        "15",
-        0
-      ],
-      "latent_image": [
-        "10",
-        0
-      ]
-    },
-    "class_type": "SamplerCustom",
-    "_meta": {
-      "title": "사용자 정의 샘플러"
-    }
-  },
-  "15": {
-    "inputs": {
-      "scheduler": "simple",
-      "steps": 20,
-      "denoise": 1,
-      "model": [
-        "4",
-        0
-      ]
-    },
-    "class_type": "BasicScheduler",
-    "_meta": {
-      "title": "기본 스케줄러"
-    }
-  },
-  "18": {
-    "inputs": {},
-    "class_type": "CLIPMergeAdd",
-    "_meta": {
-      "title": "CLIP 병합 (더하기)"
-    }
-  },
-  "20": {
-    "inputs": {
-      "from_translate": "auto",
-      "to_translate": "en",
-      "manual_translate": true,
-      "Manual Trasnlate": "Manual Trasnlate",
-      "text": "리그오브 레전드 아리",
-      "clip": [
-        "5",
-        0
-      ]
-    },
-    "class_type": "GoogleTranslateCLIPTextEncodeNode",
-    "_meta": {
-      "title": "Google Translate CLIP Text Encode Node"
-    }
-  },
-  "24": {
-    "inputs": {
-      "text": [
-        "20",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP 텍스트 인코딩 (프롬프트)"
     }
   }
 }

@@ -2,7 +2,7 @@
   "103": {
     "inputs": {
       "model": [
-        "159",
+        "139",
         0
       ],
       "shift": 5.000000000000001
@@ -12,7 +12,7 @@
   "104": {
     "inputs": {
       "model": [
-        "158",
+        "138",
         0
       ],
       "shift": 5.000000000000001
@@ -70,6 +70,72 @@
     },
     "class_type": "RifeTensorrt"
   },
+  "138": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "lora_02": "myloras9\\ForcedDeepthroat_high_noise.safetensors",
+      "lora_03": "wan2.2\\NSFW-22-H-e8.safetensors",
+      "lora_04": "wan0924\\W22_HN_i2v_POV_Missionary_Insertion_v1.safetensors",
+      "lora_05": "None",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "163",
+        0
+      ],
+      "strength_01": 2.0000000000000004,
+      "strength_02": 1.0000000000000002,
+      "strength_03": 0.0,
+      "strength_04": 0.0,
+      "strength_05": 1.0,
+      "strength_06": 1.0,
+      "strength_07": 1.0,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
+  },
+  "139": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "lora_02": "myloras9\\ForcedDeepthroat_low_noise.safetensors",
+      "lora_03": "wan2.2\\NSFW-22-L-e8.safetensors",
+      "lora_04": "None",
+      "lora_05": "None",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "164",
+        0
+      ],
+      "strength_01": 1.0,
+      "strength_02": 1.0000000000000002,
+      "strength_03": 0.0,
+      "strength_04": 1.0000000000000002,
+      "strength_05": 1.0,
+      "strength_06": 1.0,
+      "strength_07": 1.0,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
+  },
   "150": {
     "inputs": {
       "crop_position": "center",
@@ -89,89 +155,23 @@
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/3c371edd-d067-4bbd-9ecc-577ed623bca2.png"
+      "urls": "https://media.pornmaker.cloud/05ca9e1e-02a8-4830-92bb-786d9ae918bd.png"
     },
     "class_type": "LoadImageFromURL"
   },
-  "156": {
+  "163": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
   },
-  "157": {
+  "164": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
-  },
-  "158": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "myloras\\DAP_Gangbang_000002250_high_noise.safetensors",
-      "lora_03": "None",
-      "lora_04": "None",
-      "lora_05": "None",
-      "lora_06": "None",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "156",
-        0
-      ],
-      "strength_01": 2.0,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 1.0000000000000002,
-      "strength_04": 1.0000000000000002,
-      "strength_05": 1.0000000000000002,
-      "strength_06": 0.0,
-      "strength_07": 1.0000000000000002,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
-  },
-  "159": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "myloras\\DAP_Gangbang_000002250_low_noise.safetensors",
-      "lora_03": "None",
-      "lora_04": "None",
-      "lora_05": "None",
-      "lora_06": "None",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "157",
-        0
-      ],
-      "strength_01": 1.0,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 1.0000000000000002,
-      "strength_04": 1.0000000000000002,
-      "strength_05": 0.0,
-      "strength_06": 1.0000000000000002,
-      "strength_07": 1.0000000000000002,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
   },
   "84": {
     "inputs": {
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 8403345070719495191,
+      "noise_seed": 6227647972600193888,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 2876962434170861301,
+      "noise_seed": 8678960768310012669,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": "Gangbang.Immediately cut to an extremely erotic scene.\r\nThe same woman was surrounded by several naked men. She lay on top of one man, the man below her and the man in front of her simultaneously inserting their penises into her anus, thrusting violently in and out with large, sweeping movements. She also held the penises of two men simultaneously, masturbating or giving them oral sex. The other men gathered around her, masturbating and lining up, ready to go. The woman's breasts bounced. She moaned continuously."
+      "text": "ForcedDeepthroat.a man appears on the side of the view. then he is quickly grabs her head and drags her head and body around into a kneeling position in front of him with quick motions. the camera moves back a bit. then she gives him a deepthroat blowjob.he is grabbing her head and rapidly moving her head back and forth along the length of the entire penis. he rapidly thrusts his hips back and forth moving the penis inside her mouth"
     },
     "class_type": "CLIPTextEncode"
   },

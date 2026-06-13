@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_b9772a96376e4ff1995107afd09bb430.png"
+      "image": "ref_a36a211ba0d04f10994c2a116c402856.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "picture of women in red saree, she must look hot and revealing, don't change outfits just make women looks sexy and reveal her chubby navel from saree. And it should not look that picture is AI generated, keep the same quality",
+      "prompt": "\n踵を上げて両膝を開き、深く腰を落とす蹲踞をさせて　両手を頭の後ろに",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 779326399118514,
-      "steps": 8,
+      "seed": 178236646936618,
+      "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

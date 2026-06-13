@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_05961078bb2741a4855c59c2c0a857c9.png"
+      "image": "ref_21ebfa1ef9a449f48d82eb630da5022b.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "Keeping all her physical traits, put her in a bikini",
+      "prompt": "Waist is more curvy. Bra and panty color should be in royal blue color",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 459779768037001,
-      "steps": 8,
+      "seed": 434297768938296,
+      "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

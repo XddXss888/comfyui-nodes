@@ -12,7 +12,7 @@
   "104": {
     "inputs": {
       "model": [
-        "158",
+        "138",
         0
       ],
       "shift": 5.000000000000001
@@ -70,6 +70,39 @@
     },
     "class_type": "RifeTensorrt"
   },
+  "138": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "lora_02": "wan2.1\\crash-zoom-in.safetensors",
+      "lora_03": "wan2.2\\wan22-ultimatedeepthroat-I2V-34epoc-high-k3nk.safetensors",
+      "lora_04": "None",
+      "lora_05": "None",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "156",
+        0
+      ],
+      "strength_01": 2.0000000000000004,
+      "strength_02": 1.0,
+      "strength_03": 1.0,
+      "strength_04": 0.0,
+      "strength_05": 1.0,
+      "strength_06": 1.0,
+      "strength_07": 1.0,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
+  },
   "139": {
     "inputs": {
       "clip": [
@@ -77,8 +110,8 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "wan0220\\BestAnalSpooningEver_low_noise.safetensors",
-      "lora_03": "None",
+      "lora_02": "wan2.1\\crash-zoom-in.safetensors",
+      "lora_03": "wan2.2\\wan22-ultimatedeepthroat-I2V-16epoc-low-k3nk.safetensors",
       "lora_04": "None",
       "lora_05": "None",
       "lora_06": "None",
@@ -90,11 +123,11 @@
         "157",
         0
       ],
-      "strength_01": 1.0,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 0.0,
-      "strength_04": 1.0000000000000002,
-      "strength_05": 0.0,
+      "strength_01": 1.0000000000000002,
+      "strength_02": 1.0,
+      "strength_03": 1.0,
+      "strength_04": 0.0,
+      "strength_05": 1.0,
       "strength_06": 1.0,
       "strength_07": 1.0,
       "strength_08": 1.0,
@@ -122,7 +155,7 @@
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/de434a57-c46f-4d18-a3d9-0297c69f8b16.png"
+      "urls": "https://media.pornmaker.cloud/dae9a3b2-93d4-4916-8b40-ac75e6e5a0fa.png"
     },
     "class_type": "LoadImageFromURL"
   },
@@ -139,39 +172,6 @@
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
-  },
-  "158": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "None",
-      "lora_03": "wan0220\\BestAnalSpooningEver_high_noise.safetensors",
-      "lora_04": "None",
-      "lora_05": "None",
-      "lora_06": "None",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "156",
-        0
-      ],
-      "strength_01": 2.0000000000000004,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 1.0,
-      "strength_04": 1.0000000000000002,
-      "strength_05": 1.5000000000000002,
-      "strength_06": 1.0,
-      "strength_07": 1.0,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
   },
   "84": {
     "inputs": {
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 5490246422960057207,
+      "noise_seed": 4625476883389964290,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 6003273693345923724,
+      "noise_seed": 3359401573527476410,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": "BestAnalSpooningEver.cut scene.the same woman  having anal spoon sex with a man. "
+      "text": "realistic. real life. POV. \n\na cinematic scene with the woman in the frame， a man enters from below her, only his lower body is visible, thighs and legs, a penis with testicles appears and she starts engaging in a deepthroat blowjob with that penis. While looking at the camera with a half lidded sexy stare. She swallows the entire penis, her nose smashes agains the man's hips. She moves her head back and fort swallowing the penis, realistic proportions, natural lighting, cinematic composition. \nThe camera performs a  zoom in effect, rapidly zooming closer to her face"
     },
     "class_type": "CLIPTextEncode"
   },

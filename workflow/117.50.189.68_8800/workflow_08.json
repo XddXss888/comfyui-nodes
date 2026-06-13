@@ -12,7 +12,7 @@
   "104": {
     "inputs": {
       "model": [
-        "138",
+        "158",
         0
       ],
       "shift": 5.000000000000001
@@ -70,39 +70,6 @@
     },
     "class_type": "RifeTensorrt"
   },
-  "138": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "None",
-      "lora_03": "None",
-      "lora_04": "wan2.1\\woman_undressing_v1.0_wan14b_epoch048.safetensors",
-      "lora_05": "wan2.1\\pulldown-shura-final-000006.safetensors",
-      "lora_06": "wan2.1\\rip-shura-000006.safetensors",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "156",
-        0
-      ],
-      "strength_01": 2.0000000000000004,
-      "strength_02": 0.0,
-      "strength_03": 0.0,
-      "strength_04": 2.0000000000000004,
-      "strength_05": 1.0,
-      "strength_06": 3.0000000000000004,
-      "strength_07": 1.0,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
-  },
   "139": {
     "inputs": {
       "clip": [
@@ -110,11 +77,11 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "None",
-      "lora_03": "None",
-      "lora_04": "wan2.1\\woman_undressing_v1.0_wan14b_epoch048.safetensors",
-      "lora_05": "wan2.1\\pulldown-shura-final-000006.safetensors",
-      "lora_06": "wan2.1\\rip-shura-000006.safetensors",
+      "lora_02": "wan2.2\\Wan2.2 - T2V - Body Shots - LOW 14B.safetensors",
+      "lora_03": "wan2.1\\crash-zoom-out.safetensors",
+      "lora_04": "wan0901\\HairyPussy_000002500_low_noise.safetensors",
+      "lora_05": "wan0917\\wan2.2-i2v-low-pov-insertion-v1.0.safetensors",
+      "lora_06": "wan2.2\\56Low noise-Cumshot Aesthetics.safetensors",
       "lora_07": "None",
       "lora_08": "None",
       "lora_09": "None",
@@ -125,9 +92,9 @@
       ],
       "strength_01": 1.0,
       "strength_02": 1.0000000000000002,
-      "strength_03": 0.0,
+      "strength_03": 1.0000000000000002,
       "strength_04": 1.0000000000000002,
-      "strength_05": 1.0,
+      "strength_05": 0.0,
       "strength_06": 1.0,
       "strength_07": 1.0,
       "strength_08": 1.0,
@@ -141,7 +108,7 @@
       "crop_position": "center",
       "device": "cpu",
       "divisible_by": 16,
-      "height": 480,
+      "height": 832,
       "image": [
         "151",
         0
@@ -149,13 +116,13 @@
       "keep_proportion": "resize",
       "pad_color": "0, 0, 0",
       "upscale_method": "nearest-exact",
-      "width": 832
+      "width": 480
     },
     "class_type": "ImageResizeKJv2"
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/5e9ea940-c329-447f-9be3-e99be9350229.png"
+      "urls": "https://media.pornmaker.cloud/606167d7-3f1d-421d-a80d-49377b7f7523.png"
     },
     "class_type": "LoadImageFromURL"
   },
@@ -172,6 +139,39 @@
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
+  },
+  "158": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "lora_02": "wan2.2\\Wan2.2 - T2V - Body Shots - HIGH 14B.safetensors",
+      "lora_03": "wan2.1\\crash-zoom-out.safetensors",
+      "lora_04": "wan0901\\HairyPussy_000002500_high_noise.safetensors",
+      "lora_05": "wan0917\\wan2.2-i2v-high-pov-insertion-v1.0.safetensors",
+      "lora_06": "wan2.2\\23High noise-Cumshot Aesthetics.safetensors",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "156",
+        0
+      ],
+      "strength_01": 2.0000000000000004,
+      "strength_02": 1.0000000000000002,
+      "strength_03": 2.0000000000000004,
+      "strength_04": 1.0000000000000002,
+      "strength_05": 0.0,
+      "strength_06": 1.0,
+      "strength_07": 1.0,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
   },
   "84": {
     "inputs": {
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 8770965735979527367,
+      "noise_seed": 2416160181891910043,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 5717803076763182341,
+      "noise_seed": 3614604787212753927,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": "Create a precise 5-second video using the uploaded reference photo of the girl as base appearance reference for all girls in the group.\n\nA group of 10-15 girls, all with similar cute features and style from the reference photo, laughing in a very bratty, mean, and mocking way while sticking their tongues out. They have arrogant, superior, and bullying expressions — narrowed eyes, smug smirks, and teasing attitudes.\n\nSecond-by-second breakdown:\n\n0-1 second: Close-up on the group. They start with bratty smirks, then burst into laughter. Mouths open wide as they laugh mockingly. Most stick their tongues out playfully but rudely, eyes squinting with mean delight. Some point or gesture teasingly.\n\n1-2 seconds: The whole group continues laughing loudly in a bratty manner, shoulders shaking. They keep tongues stuck out while tilting heads, maintaining sharp teasing glares toward the camera.\n\n2-3 seconds: Their mocking laughs intensify — mouths wide, eyes narrowed in superior amusement. They move tongues in and out in taunting ways while laughing, expressions full of arrogant mockery. A few lean forward.\n\n3-4 seconds: Still laughing with high bratty energy, the group leans forward together and sticks tongues out even further in exaggerated mocking gestures. Some make dismissive hand waves or hip poses.\n\n4-5 seconds: They end with one final loud group mocking laugh, tongues still stuck out teasingly, then pull back slightly while giving final smug, satisfied bratty smirks directly at the camera. Expressions remain mean and superior as the clip ends.\n\nStyle: Hyper realistic, cinematic, sharp 4K detail, natural skin texture, realistic facial movements and micro-expressions. Soft dramatic lighting, shallow depth of field. Smooth fluid motion. All girls share exact face, hair, and features style from the reference photo. No style change."
+      "text": " realistic. real life. POV. A girl in the middle of the screen. the camera instantly cr34sh crash zoom out effect to a full pov view ofThe camera focusing on the woman's torso, then executes a sudden, sharp snap-zoom as the cum shoots. A stunningly beautiful young woman lies on her back. her body exquisitely nude. The tip of a glistening, dark penis is barely visible at the very bottom-left edge of the frame, hinting at its immense proximity. The man's hand, partially obscured, is steadily stroking his penis, the rhythmic movement almost hypnotic. Her body and breasts are already glistening with a generous coating of cum, reflecting the ambient light. Suddenly, a huge, thick load of white cum shoots from the penis, arcing through the air with incredible force. The camera focuses intently as the cum lands with a wet splat, spreading thickly across her stomach and breasts, adding to the already copious amount."
     },
     "class_type": "CLIPTextEncode"
   },

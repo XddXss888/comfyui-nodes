@@ -1,550 +1,363 @@
 {
-  "22": {
-    "class_type": "VHS_VideoCombine",
+  "12": {
+    "class_type": "UNETLoader",
     "inputs": {
-      "save_output": true,
-      "filename_prefix": "9ecd92794dd24f55aa6d959d6fb81d3d/9ecd92794dd24f55aa6d959d6fb81d3d",
-      "images": [
-        "100",
-        0
-      ],
-      "loop_count": 0,
-      "pix_fmt": "yuv420p",
-      "save_metadata": true,
-      "crf": 19,
-      "trim_to_audio": false,
-      "format": "video/h264-mp4",
-      "frame_rate": 15.0,
-      "pingpong": false
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_edit_2511_bf16.safetensors"
     },
     "_meta": {
-      "title": "合并为视频"
+      "title": "UNet加载器"
     }
   },
-  "89": {
-    "class_type": "ImageScale",
+  "67": {
+    "class_type": "ModelSamplingAuraFlow",
     "inputs": {
-      "image": [
-        "5",
-        0
-      ],
-      "width": [
-        "75",
-        0
-      ],
-      "upscale_method": "bicubic",
-      "crop": "center",
-      "height": [
-        "84",
+      "shift": 3.1,
+      "model": [
+        "93",
         0
       ]
     },
     "_meta": {
-      "title": "图像缩放"
+      "title": "采样算法（AuraFlow）"
     }
   },
-  "50": {
-    "class_type": "WanVideoTextEncode",
+  "68": {
+    "class_type": "TextEncodeQwenImageEditPlus",
     "inputs": {
-      "t5": [
-        "15",
+      "vae": [
+        "10",
         0
       ],
-      "negative_prompt": "色调艳丽，过曝，静态，细节模糊不清，字幕，出现字幕，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走, 倒着跑，视频倒放",
-      "use_disk_cache": false,
-      "positive_prompt": [
-        "54",
+      "image1": [
+        "73",
         0
       ],
-      "force_offload": true,
-      "device": "gpu"
-    },
-    "_meta": {
-      "title": "WanVideo TextEncode"
-    }
-  },
-  "94": {
-    "class_type": "SimpleMath+",
-    "inputs": {
-      "a": [
-        "63",
+      "prompt": [
+        "111",
         0
       ],
-      "value": "a*16+1"
-    },
-    "_meta": {
-      "title": "简易运算"
-    }
-  },
-  "52": {
-    "class_type": "INTConstant",
-    "inputs": {
-      "value": 8
-    },
-    "_meta": {
-      "title": "整数常量"
-    }
-  },
-  "96": {
-    "class_type": "LayerUtility: If ",
-    "inputs": {
-      "when_FALSE": [
-        "101",
-        0
-      ],
-      "when_TRUE": [
-        "99",
-        0
-      ],
-      "if_condition": [
-        "98",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "图层工具：条件判断"
-    }
-  },
-  "75": {
-    "class_type": "LayerUtility: If ",
-    "inputs": {
-      "when_FALSE": [
+      "clip": [
         "61",
         0
-      ],
-      "when_TRUE": [
-        "83",
-        0
-      ],
-      "if_condition": [
-        "76",
-        0
       ]
     },
     "_meta": {
-      "title": "图层工具：条件判断"
+      "title": "TextEncodeQwenImageEditPlus (Positive)"
     }
   },
-  "97": {
-    "class_type": "easy int",
+  "69": {
+    "class_type": "TextEncodeQwenImageEditPlus",
     "inputs": {
-      "value": 113
-    },
-    "_meta": {
-      "title": "整数"
-    }
-  },
-  "10": {
-    "class_type": "WanVideoLoraSelect",
-    "inputs": {
-      "lora": "lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors",
-      "strength": 1.0000000000000002,
-      "low_mem_load": false,
-      "merge_loras": false
-    },
-    "_meta": {
-      "title": "WanVideo Lora Select"
-    }
-  },
-  "54": {
-    "class_type": "Text Concatenate",
-    "inputs": {
-      "delimiter": ", ",
-      "text_a": [
-        "65",
+      "vae": [
+        "10",
         0
       ],
-      "clean_whitespace": "true",
-      "text_b": [
-        "56",
+      "image1": [
+        "73",
         0
-      ]
-    },
-    "_meta": {
-      "title": "文本连锁"
-    }
-  },
-  "76": {
-    "class_type": "LayerUtility: BooleanOperator",
-    "inputs": {
-      "a": [
+      ],
+      "prompt": "低质量，最差质量，坏的图片",
+      "clip": [
         "61",
         0
-      ],
-      "b": [
-        "81",
-        0
-      ],
-      "operator": "=="
+      ]
     },
     "_meta": {
-      "title": "图层工具：布尔运算符"
+      "title": "文本编码（QwenImageEditPlus）"
     }
   },
-  "98": {
-    "class_type": "LayerUtility: BooleanOperator",
-    "inputs": {
-      "a": [
-        "94",
-        0
-      ],
-      "b": [
-        "97",
-        0
-      ],
-      "operator": "=="
-    },
-    "_meta": {
-      "title": "图层工具：布尔运算符"
-    }
-  },
-  "99": {
-    "class_type": "easy int",
-    "inputs": {
-      "value": 5
-    },
-    "_meta": {
-      "title": "整数"
-    }
-  },
-  "56": {
+  "111": {
     "class_type": "Text Multiline",
     "inputs": {
-      "text": "最高质量的视频，超高清"
+      "text": "一个亚洲男性，短发微卷，穿着灰色运动服，闭眼张臂跃入镜中，镜面泛起涟漪般光晕折射出舞姿 [描述主体和环境+镜头逐渐向前推进，展示……描述画面变化]"
     },
     "_meta": {
-      "title": "多行文本"
+      "title": "Text Multiline"
     }
   },
-  "13": {
-    "class_type": "WanVideoVAELoader",
+  "112": {
+    "class_type": "easy int",
     "inputs": {
-      "model_name": "wan_2.1_vae_comfyorg.safetensors",
-      "precision": "fp16"
+      "value": 1920
     },
     "_meta": {
-      "title": "WanVideo VAE Loader"
+      "title": "整数"
     }
   },
-  "15": {
-    "class_type": "LoadWanVideoT5TextEncoder",
+  "102": {
+    "class_type": "ReservedVRAMSetter",
     "inputs": {
-      "model_name": "umt5-xxl-enc-bf16.safetensors",
-      "precision": "bf16",
-      "load_device": "offload_device",
-      "quantization": "disabled"
+      "mode": "auto",
+      "seed": 605613374246717,
+      "reserved": 0.8,
+      "auto_max_reserved": 0.0,
+      "clean_gpu_before": true
     },
     "_meta": {
-      "title": "WanVideo T5 Text Encoder Loader"
+      "title": "Set Reserved VRAM(GB) ⚙️"
     }
   },
-  "37": {
+  "113": {
+    "class_type": "easy int",
+    "inputs": {
+      "value": 1080
+    },
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "103": {
     "class_type": "Seed (rgthree)",
     "inputs": {
       "seed": -1
     },
     "_meta": {
-      "title": "随机种"
+      "title": "Seed (rgthree)"
     }
   },
-  "16": {
-    "class_type": "WanVideoSampler",
+  "114": {
+    "class_type": "LoadImageFromUrl",
     "inputs": {
-      "add_noise_to_samples": false,
-      "denoise_strength": 1.0,
-      "text_embeds": [
-        "50",
-        0
-      ],
-      "seed": [
-        "37",
-        0
-      ],
-      "cfg": 1.0,
-      "shift": 8.0,
-      "end_step": -1,
-      "riflex_freq_index": 0,
-      "steps": [
-        "52",
-        0
-      ],
-      "samples": [
-        "20",
-        0
-      ],
-      "scheduler": "dpm++",
-      "start_step": 4,
-      "batched_cfg": false,
-      "rope_function": "comfy",
-      "image_embeds": [
-        "17",
-        0
-      ],
-      "force_offload": true,
-      "model": [
-        "4",
-        0
-      ]
+      "image": "http://59.110.66.181:9201/file/upload/material/images/308b99e087d749ebbd775ad467eebcbf.png",
+      "keep_alpha_channel": false,
+      "output_mode": true
     },
     "_meta": {
-      "title": "WanVideo Sampler"
+      "title": "Load Image From URL"
     }
   },
-  "17": {
-    "class_type": "WanVideoEmptyEmbeds",
+  "104": {
+    "class_type": "VAEDecode",
     "inputs": {
-      "width": [
-        "61",
-        0
-      ],
-      "num_frames": [
-        "94",
-        0
-      ],
-      "height": [
-        "62",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "WanVideo Empty Embeds"
-    }
-  },
-  "18": {
-    "class_type": "WanVideoModelLoader",
-    "inputs": {
-      "attention_mode": "sageattn",
-      "rms_norm_function": "default",
-      "model": "smoothMixWan22I2VT2V_t2vHighV20.safetensors",
-      "load_device": "offload_device",
-      "base_precision": "fp16",
-      "quantization": "disabled"
-    },
-    "_meta": {
-      "title": "WanVideo Model Loader"
-    }
-  },
-  "19": {
-    "class_type": "WanVideoModelLoader",
-    "inputs": {
-      "attention_mode": "sageattn",
-      "rms_norm_function": "default",
-      "model": "Wan2.2-T2V-A14B-LowNoise-Q8_0.gguf",
-      "load_device": "offload_device",
-      "base_precision": "fp16",
-      "quantization": "disabled"
-    },
-    "_meta": {
-      "title": "WanVideo Model Loader"
-    }
-  },
-  "100": {
-    "class_type": "GetImageRangeFromBatch",
-    "inputs": {
-      "images": [
-        "7",
-        0
-      ],
-      "start_index": [
-        "96",
-        0
-      ],
-      "num_frames": [
-        "94",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "获取图像范围"
-    }
-  },
-  "101": {
-    "class_type": "easy int",
-    "inputs": {
-      "value": 0
-    },
-    "_meta": {
-      "title": "整数"
-    }
-  },
-  "4": {
-    "class_type": "WanVideoSetLoRAs",
-    "inputs": {
-      "lora": [
+      "vae": [
         "10",
         0
       ],
-      "model": [
-        "19",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "WanVideo Set LoRAs"
-    }
-  },
-  "5": {
-    "class_type": "WanVideoDecode",
-    "inputs": {
-      "tile_y": 272,
-      "normalization": "default",
-      "tile_x": 272,
-      "tile_stride_y": 128,
-      "vae": [
-        "13",
-        0
-      ],
-      "tile_stride_x": 144,
       "samples": [
-        "16",
-        0
-      ],
-      "enable_vae_tiling": false
-    },
-    "_meta": {
-      "title": "WanVideo Decode"
-    }
-  },
-  "7": {
-    "class_type": "GetImageSizeAndCount",
-    "inputs": {
-      "image": [
-        "89",
+        "108",
         0
       ]
     },
     "_meta": {
-      "title": "获取图像尺寸数量"
+      "title": "VAE解码"
     }
   },
-  "81": {
-    "class_type": "easy int",
+  "105": {
+    "class_type": "LatentUpscaleBy",
     "inputs": {
-      "value": 480
-    },
-    "_meta": {
-      "title": "整数"
-    }
-  },
-  "61": {
-    "class_type": "easy int",
-    "inputs": {
-      "value": 1280
-    },
-    "_meta": {
-      "title": "整数"
-    }
-  },
-  "83": {
-    "class_type": "easy int",
-    "inputs": {
-      "value": 468
-    },
-    "_meta": {
-      "title": "整数"
-    }
-  },
-  "62": {
-    "class_type": "easy int",
-    "inputs": {
-      "value": 720
-    },
-    "_meta": {
-      "title": "整数"
-    }
-  },
-  "84": {
-    "class_type": "LayerUtility: If ",
-    "inputs": {
-      "when_FALSE": [
-        "62",
-        0
-      ],
-      "when_TRUE": [
-        "83",
-        0
-      ],
-      "if_condition": [
-        "87",
+      "scale_by": 1.5,
+      "upscale_method": "nearest-exact",
+      "samples": [
+        "65",
         0
       ]
     },
     "_meta": {
-      "title": "图层工具：条件判断"
+      "title": "缩放Latent（比例）"
     }
   },
-  "63": {
-    "class_type": "easy int",
+  "106": {
+    "class_type": "SaveImage",
     "inputs": {
-      "value": 5
+      "filename_prefix": "aa3484df858e4cd4b18c2e1936a3ad08/aa3484df858e4cd4b18c2e1936a3ad08",
+      "images": [
+        "104",
+        0
+      ]
     },
     "_meta": {
-      "title": "整数"
+      "title": "保存图像"
     }
   },
-  "20": {
-    "class_type": "WanVideoSampler",
+  "70": {
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
     "inputs": {
-      "add_noise_to_samples": false,
-      "denoise_strength": 1.0,
-      "text_embeds": [
-        "50",
+      "conditioning": [
+        "68",
         0
       ],
-      "seed": [
-        "37",
+      "reference_latents_method": "index_timestep_zero"
+    },
+    "_meta": {
+      "title": "Edit Model Reference Method"
+    }
+  },
+  "108": {
+    "class_type": "KSamplerAdvanced",
+    "inputs": {
+      "latent_image": [
+        "105",
         0
       ],
       "cfg": 1.0,
-      "shift": 8.0,
-      "end_step": 4,
-      "riflex_freq_index": 0,
-      "steps": [
-        "52",
+      "return_with_leftover_noise": "disable",
+      "end_at_step": 10000,
+      "positive": [
+        "70",
         0
       ],
-      "scheduler": "dpm++_sde",
-      "start_step": 0,
-      "batched_cfg": false,
-      "rope_function": "comfy",
-      "image_embeds": [
-        "17",
+      "add_noise": "enable",
+      "steps": 5,
+      "scheduler": "simple",
+      "negative": [
+        "71",
         0
       ],
-      "force_offload": true,
+      "start_at_step": 2,
+      "sampler_name": "euler",
+      "noise_seed": [
+        "103",
+        0
+      ],
       "model": [
-        "18",
+        "64",
         0
       ]
     },
     "_meta": {
-      "title": "WanVideo Sampler"
+      "title": "K采样器（高级）"
+    }
+  },
+  "71": {
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "inputs": {
+      "conditioning": [
+        "69",
+        0
+      ],
+      "reference_latents_method": "index_timestep_zero"
+    },
+    "_meta": {
+      "title": "Edit Model Reference Method"
+    }
+  },
+  "82": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "batch_size": 1,
+      "width": [
+        "112",
+        0
+      ],
+      "height": [
+        "113",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "空Latent图像（SD3）"
+    }
+  },
+  "93": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "lora_name": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "12",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "61": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "73": {
+    "class_type": "ImageScaleToTotalPixels",
+    "inputs": {
+      "image": [
+        "114",
+        0
+      ],
+      "megapixels": 1.5,
+      "resolution_steps": 1,
+      "upscale_method": "lanczos"
+    },
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "74": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "73",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "64": {
+    "class_type": "CFGNorm",
+    "inputs": {
+      "strength": 1.0,
+      "model": [
+        "67",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "CFG归一化"
+    }
+  },
+  "10": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "_meta": {
+      "title": "加载VAE"
     }
   },
   "65": {
-    "class_type": "Text Multiline",
+    "class_type": "KSampler",
     "inputs": {
-      "text": "同一人物，黑色短发微卷，深灰衬衫配黑色休闲裤，白板前转身时，X9屏幕倒影在玻璃窗上与窗外霓虹重叠。 [描述主体和环境+镜头逐渐向前推进，展示……描述画面变化]"
-    },
-    "_meta": {
-      "title": "多行文本"
-    }
-  },
-  "87": {
-    "class_type": "LayerUtility: BooleanOperator",
-    "inputs": {
-      "a": [
-        "62",
+      "scheduler": "simple",
+      "negative": [
+        "71",
         0
       ],
-      "b": [
-        "81",
+      "denoise": 1.0,
+      "latent_image": [
+        "82",
         0
       ],
-      "operator": "=="
+      "seed": [
+        "103",
+        0
+      ],
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "model": [
+        "64",
+        0
+      ],
+      "positive": [
+        "70",
+        0
+      ],
+      "steps": 6
     },
     "_meta": {
-      "title": "图层工具：布尔运算符"
+      "title": "K采样器"
     }
   }
 }

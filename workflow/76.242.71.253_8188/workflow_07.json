@@ -1,0 +1,237 @@
+{
+  "t5_encoder": {
+    "class_type": "LoadWanVideoT5TextEncoder",
+    "inputs": {
+      "model_name": "umt5-xxl-enc-fp8_e4m3fn.safetensors",
+      "precision": "bf16",
+      "load_device": "offload_device"
+    }
+  },
+  "block_swap": {
+    "class_type": "WanVideoBlockSwap",
+    "inputs": {
+      "blocks_to_swap": 0,
+      "offload_img_emb": false,
+      "offload_txt_emb": false,
+      "vace_blocks_to_swap": 0
+    }
+  },
+  "lora": {
+    "class_type": "WanVideoLoraSelect",
+    "inputs": {
+      "lora": "BoobSlider_Wan2.2_v1_high.safetensors",
+      "strength": -1.0,
+      "merge_loras": false
+    }
+  },
+  "lora_1": {
+    "class_type": "WanVideoLoraSelect",
+    "inputs": {
+      "lora": "Wan2.2_breast_slider_v2_low_noise.safetensors",
+      "strength": -1.0,
+      "merge_loras": false,
+      "prev_lora": [
+        "lora",
+        0
+      ]
+    }
+  },
+  "model_high": {
+    "class_type": "WanVideoModelLoader",
+    "inputs": {
+      "model": "HighNoise\\DasiwaWAN22I2V14BBoundbiteV10_q8High.gguf",
+      "base_precision": "bf16",
+      "quantization": "disabled",
+      "load_device": "main_device",
+      "block_swap_args": [
+        "block_swap",
+        0
+      ],
+      "attention_mode": "sageattn",
+      "lora": [
+        "lora_1",
+        0
+      ]
+    }
+  },
+  "model_low": {
+    "class_type": "WanVideoModelLoader",
+    "inputs": {
+      "model": "LowNoise\\DasiwaWAN22I2V14BBoundbiteV10_q8Low.gguf",
+      "base_precision": "bf16",
+      "quantization": "disabled",
+      "load_device": "main_device",
+      "block_swap_args": [
+        "block_swap",
+        0
+      ],
+      "attention_mode": "sageattn",
+      "lora": [
+        "lora_1",
+        0
+      ]
+    }
+  },
+  "vae": {
+    "class_type": "WanVideoVAELoader",
+    "inputs": {
+      "model_name": "wan_2.1_vae.safetensors",
+      "precision": "bf16"
+    }
+  },
+  "load_img": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "input_manual_1781364343_j6_seg01.png"
+    }
+  },
+  "text_encode": {
+    "class_type": "WanVideoTextEncode",
+    "inputs": {
+      "t5": [
+        "t5_encoder",
+        0
+      ],
+      "positive_prompt": "She quickly removes her dress fully to reveal small natural breasts and body",
+      "negative_prompt": "blurry, low quality, worst quality, overexposed, bad anatomy, deformation, extra limbs, malformed limbs, poorly drawn hands, extra fingers, static, still picture, jittery, looping motion, jerky motion, text, watermark, cluttered background",
+      "force_offload": true
+    }
+  },
+  "text_encode_nag": {
+    "class_type": "WanVideoTextEncode",
+    "inputs": {
+      "t5": [
+        "t5_encoder",
+        0
+      ],
+      "positive_prompt": "",
+      "negative_prompt": "blurry, low quality, worst quality, overexposed, bad anatomy, deformation, extra limbs, malformed limbs, poorly drawn hands, extra fingers, static, still picture, jittery, looping motion, jerky motion, text, watermark, cluttered background",
+      "force_offload": true
+    }
+  },
+  "nag_apply": {
+    "class_type": "WanVideoApplyNAG",
+    "inputs": {
+      "original_text_embeds": [
+        "text_encode",
+        0
+      ],
+      "nag_text_embeds": [
+        "text_encode_nag",
+        0
+      ],
+      "nag_scale": 4.0,
+      "nag_tau": 0.5,
+      "nag_alpha": 0.5
+    }
+  },
+  "img_encode": {
+    "class_type": "WanVideoImageToVideoEncode",
+    "inputs": {
+      "vae": [
+        "vae",
+        0
+      ],
+      "start_image": [
+        "load_img",
+        0
+      ],
+      "width": 640,
+      "height": 832,
+      "num_frames": 81,
+      "noise_aug_strength": 0.0,
+      "start_latent_strength": 1.0,
+      "end_latent_strength": 1.0,
+      "force_offload": true
+    }
+  },
+  "sampler_high": {
+    "class_type": "WanVideoSampler",
+    "inputs": {
+      "model": [
+        "model_high",
+        0
+      ],
+      "image_embeds": [
+        "img_encode",
+        0
+      ],
+      "text_embeds": [
+        "nag_apply",
+        0
+      ],
+      "steps": 4,
+      "cfg": 1.0,
+      "shift": 5.0,
+      "seed": 82868,
+      "sampler": "euler",
+      "scheduler": "flowmatch_distill",
+      "riflex_freq_index": 0,
+      "force_offload": true,
+      "end_step": 1
+    }
+  },
+  "sampler_low": {
+    "class_type": "WanVideoSampler",
+    "inputs": {
+      "model": [
+        "model_low",
+        0
+      ],
+      "image_embeds": [
+        "img_encode",
+        0
+      ],
+      "text_embeds": [
+        "text_encode",
+        0
+      ],
+      "samples": [
+        "sampler_high",
+        0
+      ],
+      "steps": 4,
+      "cfg": 1.0,
+      "shift": 5.0,
+      "seed": 82868,
+      "sampler": "euler",
+      "scheduler": "flowmatch_distill",
+      "riflex_freq_index": 0,
+      "force_offload": true,
+      "start_step": 1
+    }
+  },
+  "decode": {
+    "class_type": "WanVideoDecode",
+    "inputs": {
+      "vae": [
+        "vae",
+        0
+      ],
+      "samples": [
+        "sampler_low",
+        0
+      ],
+      "enable_vae_tiling": false,
+      "tile_x": 272,
+      "tile_y": 272,
+      "tile_stride_x": 144,
+      "tile_stride_y": 128
+    }
+  },
+  "save": {
+    "class_type": "VHS_VideoCombine",
+    "inputs": {
+      "images": [
+        "decode",
+        0
+      ],
+      "frame_rate": 16.0,
+      "loop_count": 0,
+      "filename_prefix": "manual_1781364343_j6/manual_1781364343_j6",
+      "format": "video/h264-mp4",
+      "pingpong": false,
+      "save_output": true
+    }
+  }
+}

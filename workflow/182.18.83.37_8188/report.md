@@ -1,70 +1,70 @@
 # 182.18.83.37:8188
 
-GPU: RTX 5090 | 显存: 31 GB | 空闲: 22 GB
-内存: 1 TB (空闲 1 TB)
-版本: 0.20.1
-报告中的历史: 无
-扫描时间: 2026-06-13 22:35:14
-历史总数: 175 | 成功: 10
+**GPU**: RTX 5090 | **显存**: 31 GB | **空闲**: 22 GB
+**内存**: 1 TB (空闲 1 TB)
+**版本**: 0.20.1
+**ComfyUI报告历史**: 有
+**扫描时间**: 2026-06-14 05:56:14
+**历史总数**: 176 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `f2ffc9a2-9523-477e-ab10-c1d1be5453c5`
-- **类型**: 其他
-- **节点数**: 3
-- **模型** (0):
-
-### 2. workflow_02.json
 - **Prompt ID**: `1e8d97a9-9694-41ac-80fd-d182594aae6e`
 - **类型**: 其他
 - **节点数**: 3
 - **模型** (0):
 
-### 3. workflow_03.json
+### 2. workflow_02.json
 - **Prompt ID**: `e96298c1-950a-4c64-b8d4-1b82b819c37d`
 - **类型**: 其他
 - **节点数**: 3
 - **模型** (0):
 
-### 4. workflow_04.json
+### 3. workflow_03.json
 - **Prompt ID**: `666b78d8-f8e6-4b96-86e4-d6d426fa1a3e`
 - **类型**: 其他
 - **节点数**: 3
 - **模型** (0):
 
-### 5. workflow_05.json
+### 4. workflow_04.json
 - **Prompt ID**: `ecbb827c-1b35-4bf2-a72c-28596a000d1d`
 - **类型**: 其他
 - **节点数**: 3
 - **模型** (0):
 
-### 6. workflow_06.json
+### 5. workflow_05.json
 - **Prompt ID**: `de479db1-6542-45f9-a9e1-1c160ef9526a`
 - **类型**: 其他
 - **节点数**: 3
 - **模型** (0):
 
-### 7. workflow_07.json
+### 6. workflow_06.json
 - **Prompt ID**: `3f3b6e05-7e68-40de-91b2-c8253f4ea55c`
 - **类型**: 其他
 - **节点数**: 3
 - **模型** (0):
 
-### 8. workflow_08.json
+### 7. workflow_07.json
 - **Prompt ID**: `c737d9a4-ad6b-440c-9f7d-d2f1c896bc3b`
 - **类型**: 其他
 - **节点数**: 3
 - **模型** (0):
 
-### 9. workflow_09.json
+### 8. workflow_08.json
 - **Prompt ID**: `7ded7071-eb34-43e6-a47a-a5dfdf431dca`
 - **类型**: 其他
 - **节点数**: 3
 - **模型** (0):
 
-### 10. workflow_10.json
+### 9. workflow_09.json
 - **Prompt ID**: `4ab7ed16-e665-4265-8c7c-2a9b3388863b`
 - **类型**: 其他
+- **节点数**: 3
+- **模型** (0):
+
+### 10. workflow_10.json
+- **Prompt ID**: `9497e914-fea5-4485-9ba8-e2bd7fc3c2fd`
+- **类型**: 文生视频
 - **节点数**: 3
 - **模型** (0):

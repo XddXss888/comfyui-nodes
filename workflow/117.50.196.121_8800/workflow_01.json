@@ -2,7 +2,7 @@
   "103": {
     "inputs": {
       "model": [
-        "139",
+        "165",
         0
       ],
       "shift": 5.000000000000001
@@ -12,7 +12,7 @@
   "104": {
     "inputs": {
       "model": [
-        "138",
+        "166",
         0
       ],
       "shift": 5.000000000000001
@@ -70,72 +70,6 @@
     },
     "class_type": "RifeTensorrt"
   },
-  "138": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "myloras9\\Rubekiss_high_noise.safetensors",
-      "lora_03": "wan2.2\\NSFW-22-H-e8.safetensors",
-      "lora_04": "wan0924\\W22_HN_i2v_POV_Missionary_Insertion_v1.safetensors",
-      "lora_05": "None",
-      "lora_06": "None",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "163",
-        0
-      ],
-      "strength_01": 2.0000000000000004,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 0.0,
-      "strength_04": 0.0,
-      "strength_05": 1.0,
-      "strength_06": 1.0,
-      "strength_07": 1.0,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
-  },
-  "139": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "myloras9\\Rubekiss_low_noise.safetensors",
-      "lora_03": "wan2.2\\NSFW-22-L-e8.safetensors",
-      "lora_04": "None",
-      "lora_05": "None",
-      "lora_06": "None",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "164",
-        0
-      ],
-      "strength_01": 1.0,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 0.0,
-      "strength_04": 1.0000000000000002,
-      "strength_05": 1.0,
-      "strength_06": 1.0,
-      "strength_07": 1.0,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
-  },
   "150": {
     "inputs": {
       "crop_position": "center",
@@ -155,18 +89,84 @@
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/33fc6fdd-c37d-4963-b3da-47c6658b0c07.png"
+      "urls": "https://media.pornmaker.cloud/6dd56714-f498-4f9b-839c-7f6525b869dd.png"
     },
     "class_type": "LoadImageFromURL"
   },
-  "163": {
+  "165": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "lora_02": "wan2.1\\crash-zoom-out.safetensors",
+      "lora_03": "wan2.2\\Wan2.2 v2 - T2V - Cowgirl - LOW 14B.safetensors",
+      "lora_04": "wan0901\\wan2.2-i2v-low-sex-fov-slider-v1.0.safetensors",
+      "lora_05": "None",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "177",
+        0
+      ],
+      "strength_01": 1.0,
+      "strength_02": 1.0000000000000002,
+      "strength_03": 1.0000000000000002,
+      "strength_04": 1.0000000000000002,
+      "strength_05": 0.0,
+      "strength_06": 1.0000000000000002,
+      "strength_07": 1.0000000000000002,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
+  },
+  "166": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "lora_02": "wan2.1\\crash-zoom-out.safetensors",
+      "lora_03": "wan2.2\\Wan2.2 v2 - T2V - Cowgirl - HIGH 14B.safetensors",
+      "lora_04": "wan0901\\wan2.2-i2v-high-sex-fov-slider-v1.0.safetensors",
+      "lora_05": "None",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "176",
+        0
+      ],
+      "strength_01": 2.0000000000000004,
+      "strength_02": 1.5000000000000002,
+      "strength_03": 1.0000000000000002,
+      "strength_04": 1.0000000000000002,
+      "strength_05": 0.0,
+      "strength_06": 0.0,
+      "strength_07": 1.0000000000000002,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
+  },
+  "176": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
   },
-  "164": {
+  "177": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 4037227187101280237,
+      "noise_seed": 7901708054054380202,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 4426831495264590836,
+      "noise_seed": 131885149165128410,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": "Rubekiss.three black men appeared beside the woman, took off her clothes, and touched her breasts. The woman began to kiss them."
+      "text": "The camera zooms out while she is having sexA sexy  woman is straddling a man, having sex with him in the cowgirl position. His penis is going in and out of her pussy. They are having fast, rough, intense sex. The penetration is deep. The woman's body is quivering and shuddering with pleasure. The woman is moaning in ecstacy, her body bouncing."
     },
     "class_type": "CLIPTextEncode"
   },

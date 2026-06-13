@@ -1,80 +1,5 @@
 {
-  "9": {
-    "inputs": {
-      "filename_prefix": "Flux2-Klein",
-      "images": [
-        "101",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
-    }
-  },
-  "99": {
-    "inputs": {
-      "sampler_name": "euler"
-    },
-    "class_type": "KSamplerSelect",
-    "_meta": {
-      "title": "K采样器选择"
-    }
-  },
-  "100": {
-    "inputs": {
-      "noise": [
-        "102",
-        0
-      ],
-      "guider": [
-        "108",
-        0
-      ],
-      "sampler": [
-        "99",
-        0
-      ],
-      "sigmas": [
-        "109",
-        0
-      ],
-      "latent_image": [
-        "665",
-        0
-      ]
-    },
-    "class_type": "SamplerCustomAdvanced",
-    "_meta": {
-      "title": "自定义采样器（高级）"
-    }
-  },
-  "101": {
-    "inputs": {
-      "samples": [
-        "100",
-        0
-      ],
-      "vae": [
-        "105",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "102": {
-    "inputs": {
-      "noise_seed": 115285194456204
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "随机噪波"
-    }
-  },
-  "105": {
+  "10": {
     "inputs": {
       "vae_name": "Flux2/flux2-vae.safetensors"
     },
@@ -83,61 +8,10 @@
       "title": "加载VAE"
     }
   },
-  "108": {
-    "inputs": {
-      "cfg": 1.5,
-      "model": [
-        "158",
-        0
-      ],
-      "positive": [
-        "110",
-        0
-      ],
-      "negative": [
-        "113:186",
-        0
-      ]
-    },
-    "class_type": "CFGGuider",
-    "_meta": {
-      "title": "CFG引导器"
-    }
-  },
-  "109": {
-    "inputs": {
-      "steps": 20,
-      "width": [
-        "663",
-        0
-      ],
-      "height": [
-        "663",
-        1
-      ]
-    },
-    "class_type": "Flux2Scheduler",
-    "_meta": {
-      "title": "Flux2调度器"
-    }
-  },
-  "110": {
-    "inputs": {
-      "text": "8K 超写实室内人像摄影，胸像特写镜头，16 岁少女艾丝蒂尔・布莱特，棕褐色蓬松分层超长双马尾，发丝带有浅金色阳光挑染，两侧哑光合金束发扣带细微磨损划痕；真人比例琥珀红棕色瞳孔，虹膜纹理清晰，温和内敛浅笑，原生细腻皮肤肌理，清晰皮肤毛孔与苹果肌自然血色红晕，面部柔和骨骼阴影；身穿短款红色棉质游击外套，金色金属刺绣镶边，内搭白色纯棉短袖，单侧哑光蓝烤漆银包边肩甲，颈间银灰束带搭配合金圆扣，双手合十佩戴做旧棕红牛皮半指手套，手套金属铆钉与缝线清晰；背景为复古原木木屋门板，天然深浅木纹，墙面嵌复古金属雕花铭牌，室内暖黄色漫射柔光，正面柔和主光，两侧轮廓光勾勒发丝与金属护甲，50mm 定焦单反相机拍摄，f/2.0 中等景深，真实物理光影，多材质细腻纹理，电影暖调色彩，无 CG 塑料质感，无过度磨皮。",
-      "clip": [
-        "658",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
-    }
-  },
-  "111": {
+  "11": {
     "inputs": {
       "conditioning": [
-        "110",
+        "19",
         0
       ]
     },
@@ -146,36 +20,9 @@
       "title": "条件零化"
     }
   },
-  "156": {
+  "13": {
     "inputs": {
-      "sage_attention": "auto",
-      "allow_compile": true,
-      "model": [
-        "664",
-        0
-      ]
-    },
-    "class_type": "PathchSageAttentionKJ",
-    "_meta": {
-      "title": "Patch Sage Attention KJ"
-    }
-  },
-  "158": {
-    "inputs": {
-      "enable_fp16_accumulation": true,
-      "model": [
-        "156",
-        0
-      ]
-    },
-    "class_type": "ModelPatchTorchSettings",
-    "_meta": {
-      "title": "Model Patch Torch Settings"
-    }
-  },
-  "656": {
-    "inputs": {
-      "unet_name": "Flux2/flux-2-klein-9b.safetensors",
+      "unet_name": "Flux2/flux-2-klein-9b-fp8.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -183,9 +30,9 @@
       "title": "UNet加载器"
     }
   },
-  "658": {
+  "14": {
     "inputs": {
-      "clip_name": "qwen/qwen_3_8b.safetensors",
+      "clip_name": "qwen/qwen_3_8b_fp8mixed.safetensors",
       "type": "flux2",
       "device": "default"
     },
@@ -194,95 +41,405 @@
       "title": "加载CLIP"
     }
   },
-  "663": {
+  "17": {
     "inputs": {
-      "width": 1920,
-      "height": 1920,
-      "aspect_ratio": "16:9 landscape 1344x768",
-      "swap_dimensions": "Off",
-      "upscale_factor": 1.0,
-      "batch_size": 1
-    },
-    "class_type": "CR SDXL Aspect Ratio",
-    "_meta": {
-      "title": "🔳 CR SDXL Aspect Ratio"
-    }
-  },
-  "664": {
-    "inputs": {
-      "lora_name": "FluxKlein/Kook_Flux_klein_亚洲人像.safetensors",
-      "strength_model": 0.8,
-      "model": [
-        "656",
+      "samples": [
+        "29",
+        0
+      ],
+      "vae": [
+        "10",
         0
       ]
     },
-    "class_type": "LoraLoaderModelOnly",
+    "class_type": "VAEDecode",
     "_meta": {
-      "title": "LoRA加载器（仅模型）"
+      "title": "VAE解码"
     }
   },
-  "665": {
+  "19": {
     "inputs": {
-      "width": [
-        "666",
-        1
-      ],
-      "height": [
-        "668",
-        1
-      ],
-      "batch_size": 1
-    },
-    "class_type": "EmptyFlux2LatentImage",
-    "_meta": {
-      "title": "空Latent图像（Flux2）"
-    }
-  },
-  "666": {
-    "inputs": {
-      "expression": "a*b",
-      "variables.a": [
-        "663",
+      "text": "让图1的美女截上图3的耳环，抱着戴着图2帽子的图4的猫。",
+      "clip": [
+        "14",
         0
-      ],
-      "variables.b": [
-        "663",
-        2
       ]
     },
-    "class_type": "SimpleCalculatorKJ",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "SimpleCalculatorKJ"
+      "title": "CLIP文本编码"
     }
   },
-  "668": {
+  "29": {
     "inputs": {
-      "expression": "a*b",
-      "variables.a": [
-        "663",
-        1
-      ],
-      "variables.b": [
-        "663",
-        2
+      "anything": [
+        "95",
+        0
       ]
     },
-    "class_type": "SimpleCalculatorKJ",
+    "class_type": "easy cleanGpuUsed",
     "_meta": {
-      "title": "SimpleCalculatorKJ"
+      "title": "清理显存占用"
     }
   },
-  "113:186": {
+  "62": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "63": {
+    "inputs": {
+      "image": "input_node_1773067040957_5_0_1781251157072.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "73": {
     "inputs": {
       "conditioning": [
-        "111",
+        "11",
+        0
+      ],
+      "latent": [
+        "75",
         0
       ]
     },
     "class_type": "ReferenceLatent",
     "_meta": {
       "title": "参考Latent"
+    }
+  },
+  "74": {
+    "inputs": {
+      "conditioning": [
+        "19",
+        0
+      ],
+      "latent": [
+        "75",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "75": {
+    "inputs": {
+      "pixels": [
+        "113",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "83": {
+    "inputs": {
+      "width": [
+        "106",
+        0
+      ],
+      "height": [
+        "106",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "95": {
+    "inputs": {
+      "seed": 666,
+      "steps": 6,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "13",
+        0
+      ],
+      "positive": [
+        "128",
+        0
+      ],
+      "negative": [
+        "127",
+        0
+      ],
+      "latent_image": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "106": {
+    "inputs": {
+      "image": [
+        "113",
+        0
+      ]
+    },
+    "class_type": "easy imageSize",
+    "_meta": {
+      "title": "图像尺寸"
+    }
+  },
+  "113": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 2.0,
+      "resolution_steps": 1,
+      "image": [
+        "63",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "114": {
+    "inputs": {
+      "image": "input_node_1773067026664_2_1_1781251157077.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "115": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 2.0,
+      "resolution_steps": 1,
+      "image": [
+        "114",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "116": {
+    "inputs": {
+      "pixels": [
+        "115",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "117": {
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent（第2张）"
+    },
+    "inputs": {
+      "conditioning": [
+        "73",
+        0
+      ],
+      "latent": [
+        "116",
+        0
+      ]
+    }
+  },
+  "118": {
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent（第2张）"
+    },
+    "inputs": {
+      "conditioning": [
+        "74",
+        0
+      ],
+      "latent": [
+        "116",
+        0
+      ]
+    }
+  },
+  "119": {
+    "inputs": {
+      "image": "input_node_1773067038932_4_2_1781251157084.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "120": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 2.0,
+      "resolution_steps": 1,
+      "image": [
+        "119",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "121": {
+    "inputs": {
+      "pixels": [
+        "120",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "122": {
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent（第3张）"
+    },
+    "inputs": {
+      "conditioning": [
+        "117",
+        0
+      ],
+      "latent": [
+        "121",
+        0
+      ]
+    }
+  },
+  "123": {
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent（第3张）"
+    },
+    "inputs": {
+      "conditioning": [
+        "118",
+        0
+      ],
+      "latent": [
+        "121",
+        0
+      ]
+    }
+  },
+  "124": {
+    "inputs": {
+      "image": "input_node_1773067031126_3_3_1781251157102.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "125": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 2.0,
+      "resolution_steps": 1,
+      "image": [
+        "124",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "126": {
+    "inputs": {
+      "pixels": [
+        "125",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "127": {
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent（第4张）"
+    },
+    "inputs": {
+      "conditioning": [
+        "122",
+        0
+      ],
+      "latent": [
+        "126",
+        0
+      ]
+    }
+  },
+  "128": {
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent（第4张）"
+    },
+    "inputs": {
+      "conditioning": [
+        "123",
+        0
+      ],
+      "latent": [
+        "126",
+        0
+      ]
     }
   }
 }

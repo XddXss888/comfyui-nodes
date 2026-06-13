@@ -12,7 +12,7 @@
   "104": {
     "inputs": {
       "model": [
-        "158",
+        "138",
         0
       ],
       "shift": 5.000000000000001
@@ -70,6 +70,39 @@
     },
     "class_type": "RifeTensorrt"
   },
+  "138": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "lora_02": "myloras8\\DoubleDFuckfe2t_high_noise.safetensors",
+      "lora_03": "None",
+      "lora_04": "None",
+      "lora_05": "None",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "156",
+        0
+      ],
+      "strength_01": 2.0000000000000004,
+      "strength_02": 1.0000000000000002,
+      "strength_03": 1.0000000000000002,
+      "strength_04": 0.0,
+      "strength_05": 1.0,
+      "strength_06": 1.0,
+      "strength_07": 1.0,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
+  },
   "139": {
     "inputs": {
       "clip": [
@@ -77,7 +110,7 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "wan0220\\MirrorDoggy_low_noise.safetensors",
+      "lora_02": "myloras8\\DoubleDFuckfe2t_low_noise.safetensors",
       "lora_03": "None",
       "lora_04": "None",
       "lora_05": "None",
@@ -92,9 +125,9 @@
       ],
       "strength_01": 1.0,
       "strength_02": 1.0000000000000002,
-      "strength_03": 0.0,
-      "strength_04": 1.0000000000000002,
-      "strength_05": 0.0,
+      "strength_03": 1.0000000000000002,
+      "strength_04": 0.0,
+      "strength_05": 1.0,
       "strength_06": 1.0,
       "strength_07": 1.0,
       "strength_08": 1.0,
@@ -122,7 +155,7 @@
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/77edfe4f-ae3b-4d5e-b63e-0484ca53ddc2.png"
+      "urls": "https://media.pornmaker.cloud/f4be10c2-af78-4f74-a077-2be529d57a8b.png"
     },
     "class_type": "LoadImageFromURL"
   },
@@ -139,39 +172,6 @@
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
-  },
-  "158": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "None",
-      "lora_03": "wan0220\\MirrorDoggy_high_noise.safetensors",
-      "lora_04": "None",
-      "lora_05": "None",
-      "lora_06": "None",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "156",
-        0
-      ],
-      "strength_01": 2.0000000000000004,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 1.0,
-      "strength_04": 1.0000000000000002,
-      "strength_05": 1.5000000000000002,
-      "strength_06": 1.0,
-      "strength_07": 1.0,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
   },
   "84": {
     "inputs": {
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 1078088696046939793,
+      "noise_seed": 1667963103308023495,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 8710112310583258757,
+      "noise_seed": 4361103377236531719,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": "MirrorDoggy.Cut scene. A woman is taking a selfie in front of a mirror with her phone. She is being subjected to doggy-style sex from behind by a man."
+      "text": "DoubleDFuckfe2t.The exact same woman is having group sex with the two same men; the camera is shooting from the side, showing her lying on top of one of the men.\n\nThe man beneath her is penetrating her vagina, while the man behind her is penetrating her anus. She reaches orgasm."
     },
     "class_type": "CLIPTextEncode"
   },

@@ -1,9 +1,18 @@
 {
+  "3": {
+    "inputs": {
+      "ckpt_name": "ltx-2.3-22b-distilled-1.1.safetensors"
+    },
+    "class_type": "LowVRAMCheckpointLoader",
+    "_meta": {
+      "title": "🅛🅣🅧 Low VRAM Checkpoint Loader"
+    }
+  },
   "5": {
     "inputs": {
-      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "text": "中景，推镜，白天，温馨的客厅，小男孩穿着印有超级英雄图案的睡衣，头发有些凌乱，眼睛亮晶晶的，面向镜头，兴奋地说，我长大了要当超级英雄，拯救世界。随后镜头推进，小男孩逐渐长大成为大人，穿着一身皱巴巴的西装，领带松垮，头发油腻，疲惫地坐在办公桌前，眼神黯淡。[小男孩的童声，长大后的叹息声]",
       "clip": [
-        "14",
+        "26",
         0
       ]
     },
@@ -14,167 +23,9 @@
   },
   "6": {
     "inputs": {
-      "width": 720,
-      "height": 1280,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "空Latent图像"
-    }
-  },
-  "7": {
-    "inputs": {
-      "seed": 676245510981036,
-      "steps": 9,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "17",
-        0
-      ],
-      "positive": [
-        "27",
-        0
-      ],
-      "negative": [
-        "5",
-        0
-      ],
-      "latent_image": [
-        "6",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "8": {
-    "inputs": {
-      "upscale_method": "bicubic",
-      "scale_by": 1.5,
-      "samples": [
-        "7",
-        0
-      ]
-    },
-    "class_type": "LatentUpscaleBy",
-    "_meta": {
-      "title": "缩放Latent（比例）"
-    }
-  },
-  "9": {
-    "inputs": {
-      "samples": [
-        "7",
-        0
-      ],
-      "vae": [
-        "25",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "14": {
-    "inputs": {
-      "clip_name": "qwen_3_4b.safetensors",
-      "type": "lumina2",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载CLIP"
-    }
-  },
-  "15": {
-    "inputs": {
-      "lora_name": "Kook_Zimage_真实幻想_Turbo.safetensors",
-      "strength_model": 0.3,
-      "model": [
-        "18",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA加载器（仅模型）"
-    }
-  },
-  "16": {
-    "inputs": {
-      "lora_name": "ZIT_Midjourney_Luneva_Cinematic_v1_r128.safetensors",
-      "strength_model": 0.1,
-      "model": [
-        "18",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA加载器（仅模型）"
-    }
-  },
-  "17": {
-    "inputs": {
-      "lora_name": "Kook_Zimage_真实幻想_Turbo.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "16",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA加载器（仅模型）"
-    }
-  },
-  "18": {
-    "inputs": {
-      "unet_name": "z_image_turbo_bf16.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "20": {
-    "inputs": {
-      "images": [
-        "9",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
-    }
-  },
-  "25": {
-    "inputs": {
-      "vae_name": "ae.sft"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "27": {
-    "inputs": {
-      "text": [
-        "53",
-        0
-      ],
+      "text": "worst quality, blurry, jittery, distorted, inconsistent appearance，duplicate character, extra character, clone, crowd, multiple demons, multiple masters, multiple disciples, character duplication, orbit camera, circular camera movement, spinning camera, rotating camera around character, aerial orbit, drone shot, face change, costume change, hairstyle change, character fusion, floating character, flying combat, exaggerated martial arts, acrobatic jump, low quality, blurry, bad anatomy, extra limbs, distorted body, unstable composition",
       "clip": [
-        "14",
+        "26",
         0
       ]
     },
@@ -183,13 +34,413 @@
       "title": "CLIP文本编码"
     }
   },
-  "53": {
+  "7": {
     "inputs": {
-      "text": "# 任务\n\n1. 请帮我根据下方故事，生成一张手绘风格分镜稿\n\n2. 图片中一共有6个分图，每行三张分镜图，一共生成2行\n\n# 要求\n\n1. 铅笔单线条线稿，不追求精细光影和色彩，重点突出角色动作与镜头节奏\n\n2. 每个镜头都标注镜头类型（如低角度、极端广角、手持近景）、表演提示、音效说明\n\n3. 上述6个镜头完整串联起一场职场相遇的完整桥段，通过镜头切换和动作衔接构建出流畅的动作逻辑。\n\n# 故事内容如下：\n\n0.0-1.5s，全景，跟镜，白天，现代公司走廊，落地窗洒入阳光，苏晚清，面向镜头，怀抱文件夹快步小跑，神情焦急，高跟鞋急促敲击地面，苏晚清在画面中央，快步小跑，神色慌张[急促的脚步声，纸张摩擦声]\n1.5-2.5s，中景，推镜，白天，公司走廊转角，顾霆琛，背对镜头，从转角出；苏晚清，面朝顾霆琛，撞入他怀中，文件脱手飞散空中，苏晚清撞向顾霆琛，表情惊愕；顾霆琛侧身，下意识抬手[碰撞闷响，纸张哗啦散落]\n2.5-4.0s，近景，推镜，白天，公司走廊，散落一地的白色文件，苏晚清，面向镜头，后退半步，看着满地文件，慌乱开口，发丝垂落脸颊，苏晚清在画面中央，低头又抬起，眼神慌张，嘴唇轻启[略显急促的呼吸声，苏晚清：对不起，顾总]\n4.0-5.5s，特写，低仰角贴脸渐进推进+收尾180°小半环绕运镜 → 主体发力点锚点锁焦，白天，公司走廊地面，散落的文件与光斑，苏晚清的手，伸向地面文件；顾霆琛的手，从右侧疾入，一把握住她的手腕，骨节分明，苏晚清的手悬在文件上方，被猝然握住，手指微蜷；顾霆琛的手强势而克制[衣料摩擦声，轻微的吸气声]\n5.5-7.0s，近景，固定运镜，白天，公司走廊，两人笼罩在暧昧的逆光中，苏晚清，半蹲在画面左侧，抬头面向右侧的顾霆琛；顾霆琛，立于右侧，俯身面向苏晚清，握着她的手腕，目光深邃低语，苏晚清仰头，眼眶微红，呼吸停滞；顾霆琛眼神暗涌，带着不容拒绝的意味[心跳声渐强，背景安静，顾霆琛：等等]\n7.0-8.0s，特写，固定运镜，白天，公司走廊，两人面孔交叠的浅景深，苏晚清眼眸颤动，倒映顾霆琛；顾霆琛唇角微扬，神情复杂，拇指轻抚她腕间，苏晚清在画面左侧，眼神躲闪又留恋；顾霆琛在右侧，视线灼热，似笑非笑[呼吸声缠绕，钟表滴答声]"
+      "frame_rate": 50.0,
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "6",
+        0
+      ]
     },
-    "class_type": "CR Text",
+    "class_type": "LTXVConditioning",
     "_meta": {
-      "title": "文本"
+      "title": "LTXV条件"
+    }
+  },
+  "8": {
+    "inputs": {
+      "width": [
+        "43",
+        0
+      ],
+      "height": [
+        "44",
+        0
+      ],
+      "length": [
+        "50",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLTXVLatentVideo",
+    "_meta": {
+      "title": "空Latent视频（LTXV）"
+    }
+  },
+  "9": {
+    "inputs": {
+      "frame_idx": 0,
+      "strength": 1.0,
+      "latent_downscale_factor": 1.0,
+      "crop": "center",
+      "use_tiled_encode": false,
+      "tile_size": 256,
+      "tile_overlap": 64,
+      "positive": [
+        "7",
+        0
+      ],
+      "negative": [
+        "7",
+        1
+      ],
+      "vae": [
+        "3",
+        2
+      ],
+      "latent": [
+        "8",
+        0
+      ],
+      "image": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "LTXAddVideoICLoRAGuide",
+    "_meta": {
+      "title": "🅛🅣🅧 Add Video IC-LoRA Guide"
+    }
+  },
+  "10": {
+    "inputs": {
+      "lora_name": "LTX-2.3-Licon-MSR-V1.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "LTXICLoRALoaderModelOnly",
+    "_meta": {
+      "title": "🅛🅣🅧 IC-LoRA Loader Model Only"
+    }
+  },
+  "13": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "15": {
+    "inputs": {
+      "noise_seed": 121024971571212
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  },
+  "16": {
+    "inputs": {
+      "noise": [
+        "15",
+        0
+      ],
+      "guider": [
+        "37",
+        0
+      ],
+      "sampler": [
+        "13",
+        0
+      ],
+      "sigmas": [
+        "27",
+        0
+      ],
+      "latent_image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "17": {
+    "inputs": {
+      "positive": [
+        "9",
+        0
+      ],
+      "negative": [
+        "9",
+        1
+      ],
+      "latent": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "LTXVCropGuides",
+    "_meta": {
+      "title": "LTXV裁剪指导"
+    }
+  },
+  "19": {
+    "inputs": {
+      "fps": 50.0,
+      "images": [
+        "38",
+        0
+      ],
+      "audio": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "20": {
+    "inputs": {
+      "filename_prefix": "LTX-2/MSR_verify_iclora_guide",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  },
+  "21": {
+    "inputs": {
+      "ckpt_name": "ltx-2.3-22b-distilled-1.1.safetensors"
+    },
+    "class_type": "LTXVAudioVAELoader",
+    "_meta": {
+      "title": "LTXV音频VAE加载器"
+    }
+  },
+  "22": {
+    "inputs": {
+      "frames_number": [
+        "50",
+        0
+      ],
+      "frame_rate": 50,
+      "batch_size": 1,
+      "audio_vae": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "LTXVEmptyLatentAudio",
+    "_meta": {
+      "title": "LTXV 空音频潜空间"
+    }
+  },
+  "23": {
+    "inputs": {
+      "video_latent": [
+        "9",
+        2
+      ],
+      "audio_latent": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "24": {
+    "inputs": {
+      "av_latent": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXV分离音视频潜空间"
+    }
+  },
+  "25": {
+    "inputs": {
+      "samples": [
+        "24",
+        1
+      ],
+      "audio_vae": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEDecode",
+    "_meta": {
+      "title": "LTXV音频VAE解码"
+    }
+  },
+  "26": {
+    "inputs": {
+      "text_encoder": "gemma_3_12B_it_fp4_mixed.safetensors",
+      "ckpt_name": "ltx-2.3-22b-distilled-1.1.safetensors",
+      "device": "default"
+    },
+    "class_type": "LTXAVTextEncoderLoader",
+    "_meta": {
+      "title": "LTXV音频文本编码器加载器"
+    }
+  },
+  "27": {
+    "inputs": {
+      "sigmas": "1.0, 0.99375, 0.9875, 0.98125, 0.975, 0.909375, 0.725, 0.421875, 0.0"
+    },
+    "class_type": "ManualSigmas",
+    "_meta": {
+      "title": "自定义Sigmas"
+    }
+  },
+  "28": {
+    "inputs": {
+      "1": [
+        "29",
+        0
+      ],
+      "2": [
+        "40",
+        0
+      ],
+      "3": [
+        "33",
+        0
+      ],
+      "width": [
+        "43",
+        0
+      ],
+      "height": [
+        "44",
+        0
+      ],
+      "frame_count": 33,
+      "background": [
+        "30",
+        0
+      ]
+    },
+    "class_type": "LiconMSR",
+    "_meta": {
+      "title": "Licon MSR"
+    }
+  },
+  "29": {
+    "inputs": {
+      "image": "IMG_1310.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "30": {
+    "inputs": {
+      "image": "IMG_1314.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "33": {
+    "inputs": {
+      "image": "IMG_1313.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "37": {
+    "inputs": {
+      "cfg": 1.0,
+      "model": [
+        "10",
+        0
+      ],
+      "positive": [
+        "9",
+        0
+      ],
+      "negative": [
+        "9",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG引导器"
+    }
+  },
+  "38": {
+    "inputs": {
+      "samples": [
+        "17",
+        2
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "40": {
+    "inputs": {
+      "image": "IMG_1312.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "43": {
+    "inputs": {
+      "value": 720
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "INT Constant"
+    }
+  },
+  "44": {
+    "inputs": {
+      "value": 1280
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "INT Constant"
+    }
+  },
+  "50": {
+    "inputs": {
+      "value": 501
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "INT Constant"
     }
   }
 }

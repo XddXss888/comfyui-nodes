@@ -77,8 +77,8 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "myloras7\\DeepthroatV2_high_noise.safetensors",
-      "lora_03": "wan2.2\\wan22-ultimatedeepthroat-I2V-16epoc-low-k3nk.safetensors",
+      "lora_02": "wan0303\\DoggyFaceView_high_noise.safetensors",
+      "lora_03": "None",
       "lora_04": "None",
       "lora_05": "None",
       "lora_06": "None",
@@ -91,11 +91,11 @@
         0
       ],
       "strength_01": 2.0000000000000004,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 1.0000000000000002,
-      "strength_04": 0.0,
+      "strength_02": 1.0,
+      "strength_03": 0.0,
+      "strength_04": 2.0000000000000004,
       "strength_05": 1.0,
-      "strength_06": 1.0,
+      "strength_06": 3.0000000000000004,
       "strength_07": 1.0,
       "strength_08": 1.0,
       "strength_09": 1.0,
@@ -110,8 +110,8 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "myloras7\\DeepthroatV2_low_noise.safetensors",
-      "lora_03": "wan2.2\\wan22-ultimatedeepthroat-I2V-34epoc-high-k3nk.safetensors",
+      "lora_02": "wan0303\\DoggyFaceView_low_noise.safetensors",
+      "lora_03": "None",
       "lora_04": "None",
       "lora_05": "None",
       "lora_06": "None",
@@ -125,8 +125,8 @@
       ],
       "strength_01": 1.0,
       "strength_02": 1.0000000000000002,
-      "strength_03": 1.0000000000000002,
-      "strength_04": 0.0,
+      "strength_03": 0.0,
+      "strength_04": 1.0000000000000002,
       "strength_05": 1.0,
       "strength_06": 1.0,
       "strength_07": 1.0,
@@ -155,7 +155,7 @@
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/d8ca7d8f-849b-421c-8ec4-e4993f10d571.png"
+      "urls": "https://media.pornmaker.cloud/4fa5e1e5-c277-49c3-b191-d2367ce24bb7.png"
     },
     "class_type": "LoadImageFromURL"
   },
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 4089310269052590817,
+      "noise_seed": 7368113146349438184,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 45239698673955847,
+      "noise_seed": 4868950111013864521,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": "DeepthroatV2.a man appears on the side of the view.he is grabbing her head and rapidly moving her head back and forth along the length of the entire penis. he rapidly thrusts his hips back and forth moving the penis inside her mouth"
+      "text": "DoggyFaceView.Cut scene. The same woman is having dog-style sex with a man. (Shot from the front)"
     },
     "class_type": "CLIPTextEncode"
   },

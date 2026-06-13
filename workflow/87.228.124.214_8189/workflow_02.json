@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "eurameg1, A woman in a glamorous fitted evening dress stands in the center of a dimly lit VIP room, soft warm lighting casting gentle shadows across her figure, one hand resting lightly on the back of a velvet chair, body turned slightly toward the viewer with a subtle flirtatious smile and direct gaze, elegant posture with natural weight on one leg, faint music and party sounds implied beyond the closed door, simple luxurious interior with dark walls and low ambient glow, medium shot framing her from the waist up, clean composition, realistic proportions, coherent cinematic lighting.",
+      "text": "seductive young curvy woman with long black hair\n\nAn obscene 22-year-old woman with long black hair is in a lavish bedroom. She is wearing a polka dot white bra and panties with garter belts, and thigh high stockings. She has long hair with a ribbon in it, and a ribbon choker with a heart charm. She has freckles. She is sucking on a popsicle. Real life.",
       "clip": [
         "72",
         1
@@ -85,8 +85,8 @@
   },
   "68": {
     "inputs": {
-      "width": 1024,
-      "height": 1024,
+      "width": 1280,
+      "height": 1280,
       "batch_size": 1
     },
     "class_type": "EmptySD3LatentImage",
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "zimg-eurameg1-refine-con-char.safetensors",
-      "strength_model": 0.8,
-      "strength_clip": 0.8,
+      "lora_name": "izumi_v.2.safetensors",
+      "strength_model": 0.9,
+      "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -132,12 +132,12 @@
     "inputs": {
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
-      "scheduler": "beta57",
+      "scheduler": "bong_tangent",
       "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 453373455444780,
+      "seed": 420815865391336,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

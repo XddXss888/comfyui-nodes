@@ -1,0 +1,4432 @@
+{
+  "369": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "0.Normal | 1.GGUF | 2.Safe | 3.Nunchaku"
+    }
+  },
+  "383": {
+    "inputs": {
+      "steps_total": 40,
+      "refiner_step": 1,
+      "cfg": 7.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "simple"
+    },
+    "class_type": "KSampler Config (rgthree)",
+    "_meta": {
+      "title": "KSampler Config (rgthree)"
+    }
+  },
+  "389": {
+    "inputs": {
+      "seed": 845124904180892
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "Seed (rgthree)"
+    }
+  },
+  "395": {
+    "inputs": {
+      "filename": "%date_%model_%seed",
+      "path": "",
+      "extension": "png",
+      "lossless_webp": true,
+      "quality_jpeg_or_webp": 100,
+      "optimize_png": false,
+      "embed_workflow": true,
+      "save_workflow_as_json": false,
+      "counter": 0,
+      "time_format": "%d-%m-%Y-%H%M%S",
+      "show_preview": false,
+      "images": [
+        "386:650:649",
+        0
+      ]
+    },
+    "class_type": "Image Saver Simple",
+    "_meta": {
+      "title": "Image Saver Simple"
+    }
+  },
+  "406": {
+    "inputs": {
+      "text": ""
+    },
+    "class_type": "ttN text",
+    "_meta": {
+      "title": "Negative Prompt"
+    }
+  },
+  "407": {
+    "inputs": {
+      "text": "brazilian beautiful woman, 21 years old, small breast, wearing sexy black lingerie"
+    },
+    "class_type": "ttN text",
+    "_meta": {
+      "title": "Positive Promp"
+    }
+  },
+  "413": {
+    "inputs": {
+      "text": "(eye-contact), alone, solo,embedding:SD1.5\\epiCPhoto-neg-neg,epiCPhotop,embedding:SD1.5\\epiCNegative,epiCRealism,"
+    },
+    "class_type": "ttN text",
+    "_meta": {
+      "title": "Additional Positive Prompt"
+    }
+  },
+  "414": {
+    "inputs": {
+      "text_1": [
+        "402:334",
+        0
+      ],
+      "text_2": [
+        "413",
+        0
+      ]
+    },
+    "class_type": "FusionText",
+    "_meta": {
+      "title": "FusionText"
+    }
+  },
+  "415": {
+    "inputs": {
+      "text_0": "Studio photo of a woman, face, brazilian woman 18-years-old, skinny body, athletic butt, glossy red lips, soft cupid's bow lips, in love expression, oval face-shape, long straight hair style, black hair color, long hair length, thin nose, small nose size, bronzed skin tone, smooth skin texture, arched skin shine, arms up pose, embroidered velvet teddy lingerie, heat haze light, light from front, front camera angle, (professional photo, balanced photo, balanced exposure:1.2), artistic makeup, black make-up color, controlled lighting, clean background.(eye-contact), alone, solo,embedding:SD1.5\\epiCPhoto-neg-neg,epiCPhotop,embedding:SD1.5\\epiCNegative,epiCRealism,",
+      "text": [
+        "414",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "416": {
+    "inputs": {
+      "text_0": "no twin, no extra person, no cloned face, no double body, no extra body, no merged bodies, no cartoon, no anime, no illustration, no painting, no drawing, no sketch, no CGI, no render, no plastic skin, no doll-like, no waxy skin, no eye reflections, no catchlights, no glints, no shiny eyes, no reflective eyes, no glare in eyes, no bad eyes, no deformed eyes, no asymmetrical eyes, no cross-eyed, no misaligned pupils, no blurry eyes, no muddy iris, no no pupil detail, no weird pupils, no heterochromia/different colored eyes, no circle lenses, no bad anatomy, no bad proportions, no lowres, no blurry subject, no jpeg artifacts, no watermark, no logo, no signature, no cropped head, no out of frame, no motion blur, no overexposed, no underexposed, no bad hands, no deformed hands, no malformed hands, no disfigured hands, no poorly drawn hands, no fused fingers, no webbed fingers, no missing fingers, no extra fingers, no six fingers, no seven fingers, no too many fingers, no too few fingers, no long fingers, no broken fingers, no twisted fingers, no deformed knuckles, no bad fingernails, no missing fingernails, no extra fingernails, no floating fingers, no extra hand, no missing hand, no fused hands, no mutated hands, no bad feet, no deformed feet, no malformed feet, no disfigured feet, no poorly drawn feet, no fused toes, no webbed toes, no missing toes, no extra toes, no six toes, no too many toes, no too few toes, no deformed toes, no twisted toes, no bad toenails, no missing toenails, no extra toenails, no extra foot, no missing foot, no broken ankles, no twisted ankles, no floating nails, no detached nails, no misaligned nails, no offset nails, no wrong nail placement, no nails hovering, no doubled nails, no extra nails, no nail clipping, no nails clipping, no overlapping nails, no crooked nails, no warped nails, no uneven nails.epiCPhoto-neg,epiCNegative,((naked))",
+      "text": [
+        "621",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "606": {
+    "inputs": {
+      "A": [
+        "371:37",
+        5
+      ],
+      "B": [
+        "386:650:649",
+        0
+      ]
+    },
+    "class_type": "iToolsCompareImage",
+    "_meta": {
+      "title": "Image Compare 🔍"
+    }
+  },
+  "620": {
+    "inputs": {
+      "text": "epiCPhoto-neg,epiCNegative,((naked))"
+    },
+    "class_type": "ttN text",
+    "_meta": {
+      "title": "Negative Prompt"
+    }
+  },
+  "621": {
+    "inputs": {
+      "text_1": [
+        "405:325",
+        0
+      ],
+      "text_2": [
+        "620",
+        0
+      ]
+    },
+    "class_type": "FusionText",
+    "_meta": {
+      "title": "FusionText"
+    }
+  },
+  "399:16": {
+    "inputs": {
+      "subject_focus": "",
+      "scene_setting": "Loft studio with floor-to-ceiling windows",
+      "pose_profile": "S-Curve Stand",
+      "wardrobe_style": "Custom",
+      "tone_profile": "Soft Intimacy",
+      "lighting_setup": "Candlelit Warmth",
+      "camera_framing": "Intimate Portrait",
+      "explicitness_level": "Implied Nude",
+      "set_design": "None",
+      "heat_profile": "Sensual",
+      "custom_pose_prompt": [
+        "399:360",
+        0
+      ],
+      "custom_pose_notes": [
+        "399:360",
+        1
+      ],
+      "custom_wardrobe_prompt": [
+        "399:359",
+        0
+      ],
+      "custom_wardrobe_notes": "",
+      "custom_tone_prompt": "",
+      "custom_tone_notes": "",
+      "custom_lighting_prompt": "",
+      "custom_lighting_notes": "",
+      "custom_camera_prompt": "",
+      "custom_camera_notes": "",
+      "custom_set_prompt": "",
+      "custom_set_notes": "",
+      "custom_explicitness_prompt": "",
+      "custom_explicitness_negative": "",
+      "custom_explicitness_notes": "",
+      "custom_heat_prompt": "",
+      "custom_heat_notes": "",
+      "custom_heat_negative": "",
+      "detail_accent": "",
+      "nsfw_tags": "tasteful, confident, mature",
+      "negative_prompt": "",
+      "include_negative_baseline": true,
+      "include_safety_note": true,
+      "custom_safety_note": "",
+      "preset_action": "none",
+      "preset_name": ""
+    },
+    "class_type": "NoxPromptNSFWDesigner",
+    "_meta": {
+      "title": "Nox Prompt NSFW Designer"
+    }
+  },
+  "399:360": {
+    "inputs": {
+      "primary_action": "Submissive Offer",
+      "secondary_action": "None",
+      "tempo": "Slow Tease",
+      "interaction_mode": "Solo Self-Admiration",
+      "props": "",
+      "environment_mood": "",
+      "heat_descriptor": "",
+      "camera_language": "",
+      "soundscape": "",
+      "dialogue_hook": "",
+      "consent_focus": "enthusiastic consent, explicit verbal check-ins",
+      "boundary_notes": "",
+      "aftercare_plan": "",
+      "safety_props": "",
+      "beat_emphasis": "",
+      "risk_notes": "",
+      "primary_action_custom": "",
+      "secondary_action_custom": "",
+      "tempo_custom": "",
+      "interaction_mode_custom": "",
+      "primary_notes": "",
+      "secondary_notes": "",
+      "tempo_notes": "",
+      "interaction_notes": "",
+      "include_safety_note": true,
+      "custom_safety_note": "",
+      "preset_action": "none",
+      "preset_name": ""
+    },
+    "class_type": "NoxPromptNSFWActionDirector",
+    "_meta": {
+      "title": "Nox Prompt NSFW Action Director"
+    }
+  },
+  "399:17": {
+    "inputs": {
+      "text_0": "soft intimate atmosphere, gentle smile, inviting warmth, implied nudity, strategic coverage, focus on silhouette and light, sensual cadence, warm magnetism, intimate pace. Loft studio with floor-to-ceiling windows. standing s-curve pose, hip popped, graceful arm framing, submissive offer, kneeling poise, open palms, slow tease tempo, patient pacing, suspended breath, solo self-admiration, mirrored touch, confident posture., (velvet lounge shorts lingerie:1.25), (professional photo, balanced photo, balanced exposure:1.2), candlelit glow, warm highlights, gentle falloff across skin, intimate portrait framing, medium close-up, shallow depth of field. Keywords: tasteful, confident, mature.",
+      "text": [
+        "399:16",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "399:359": {
+    "inputs": {
+      "model_pose": "-",
+      "clothes": "-",
+      "female_lingerie": "random 🎲",
+      "makeup": "-",
+      "light_type": "-",
+      "light_direction": "-",
+      "light_weight": 1.0,
+      "style_1": "-",
+      "style_1_weight": 1.0,
+      "style_2": "-",
+      "style_2_weight": 1.0,
+      "background": "-",
+      "camera_angle": "-",
+      "camera_distance": "-",
+      "camera_lens": "-",
+      "photorealism_improvement": true,
+      "active": true,
+      "load_preset": "-- disabled --",
+      "save_preset_as": "",
+      "save_preset": false,
+      "seed": [
+        "399:488",
+        0
+      ]
+    },
+    "class_type": "PortraitMasterStylePose",
+    "_meta": {
+      "title": "Portrait Master: Style & Pose"
+    }
+  },
+  "399:421": {
+    "inputs": {
+      "shot": "-",
+      "shot_weight": 1,
+      "gender": "Woman",
+      "androgynous": 0,
+      "ugly": 0,
+      "ordinary_face": 0,
+      "age": "18",
+      "nationality_1": "South Korean",
+      "nationality_2": "-",
+      "nationality_mix": 0.5,
+      "body_type": "-",
+      "body_type_weight": 1,
+      "breast_size": "-",
+      "breast_size_weight": 1,
+      "butt_size": "-",
+      "butt_size_weight": 1,
+      "eyes_color": "-",
+      "eyes_shape": "random 🎲",
+      "eyebrows_color": "-",
+      "eyebrows_shape": "-",
+      "eyebrows_thickness": "-",
+      "eyebrows_weight": 1,
+      "lips_color": "-",
+      "lips_shape": "random 🎲",
+      "facial_expression": "random 🎲",
+      "facial_expression_weight": 1,
+      "face_shape": "Oval",
+      "face_shape_weight": 1,
+      "facial_asymmetry": 0,
+      "hair_style": "-",
+      "hair_color": "random 🎲",
+      "hair_length": "Long",
+      "disheveled": 0,
+      "beard": "-",
+      "beard_color": "-",
+      "cheekbones": "-",
+      "cheekbones_weight": 1,
+      "jawline": "-",
+      "jawline_weight": 1,
+      "nose_shape": "-",
+      "nose_size": "-",
+      "neck": "-",
+      "face_symmetry": "-",
+      "face_symmetry_weight": 1,
+      "face_proportions": "-",
+      "face_proportions_weight": 1,
+      "face_balance": "-",
+      "face_balance_weight": 1,
+      "face_harmony": "-",
+      "face_harmony_weight": 1,
+      "active": true,
+      "load_preset": "-- disabled --",
+      "save_preset_as": "",
+      "save_preset": false,
+      "seed": [
+        "399:488",
+        0
+      ]
+    },
+    "class_type": "PortraitMasterBaseCharacter",
+    "_meta": {
+      "title": "Portrait Master: Base Character"
+    }
+  },
+  "399:488": {
+    "inputs": {
+      "seed": 730939736537556
+    },
+    "class_type": "easy seed",
+    "_meta": {
+      "title": "EasySeed"
+    }
+  },
+  "398:487": {
+    "inputs": {
+      "seed": 306396790168872
+    },
+    "class_type": "easy seed",
+    "_meta": {
+      "title": "EasySeed"
+    }
+  },
+  "398:419": {
+    "inputs": {
+      "shot": "random 🎲",
+      "shot_weight": 1.0,
+      "gender": "Woman",
+      "androgynous": 0.0,
+      "ugly": 0.0,
+      "ordinary_face": 0.0,
+      "age": "18",
+      "nationality_1": "Brazilian",
+      "nationality_2": "-",
+      "nationality_mix": 0.5,
+      "body_type": "Skinny",
+      "body_type_weight": 1.0,
+      "breast_size": "-",
+      "breast_size_weight": 1.0,
+      "butt_size": "athletic",
+      "butt_size_weight": 1.0,
+      "eyes_color": "-",
+      "eyes_shape": "-",
+      "eyebrows_color": "-",
+      "eyebrows_shape": "-",
+      "eyebrows_thickness": "-",
+      "eyebrows_weight": 1.0,
+      "lips_color": "Glossy Red Lips",
+      "lips_shape": "random 🎲",
+      "facial_expression": "In love",
+      "facial_expression_weight": 1.0,
+      "face_shape": "Oval",
+      "face_shape_weight": 1.0,
+      "facial_asymmetry": 0.0,
+      "hair_style": "Long straight",
+      "hair_color": "Black",
+      "hair_length": "Long",
+      "disheveled": 0.0,
+      "beard": "-",
+      "beard_color": "-",
+      "cheekbones": "-",
+      "cheekbones_weight": 1.0,
+      "jawline": "-",
+      "jawline_weight": 1.0,
+      "nose_shape": "thin",
+      "nose_size": "small",
+      "neck": "-",
+      "face_symmetry": "-",
+      "face_symmetry_weight": 1.0,
+      "face_proportions": "-",
+      "face_proportions_weight": 1.0,
+      "face_balance": "-",
+      "face_balance_weight": 1.0,
+      "face_harmony": "-",
+      "face_harmony_weight": 1.0,
+      "active": true,
+      "load_preset": "-- disabled --",
+      "save_preset_as": "",
+      "save_preset": false,
+      "seed": [
+        "398:487",
+        0
+      ]
+    },
+    "class_type": "PortraitMasterBaseCharacter",
+    "_meta": {
+      "title": "Portrait Master: Base Character"
+    }
+  },
+  "398:136": {
+    "inputs": {
+      "natural_skin": 0.0,
+      "bare_face": 0.0,
+      "washed_face": 0.0,
+      "dried_face": 0.0,
+      "skin_details": 0.0,
+      "skin_pores": 0.0,
+      "dimples": 0.0,
+      "wrinkles": 0.0,
+      "freckles": 0.0,
+      "moles": 0.0,
+      "skin_imperfections": 0.0,
+      "skin_acne": 0.0,
+      "tanned_skin": 0.0,
+      "skin_tone": "random 🎲",
+      "skin_texture": "random 🎲",
+      "skin_shine": "random 🎲",
+      "eyes_details": 0.0,
+      "iris_details": 0.0,
+      "circular_iris": 0.0,
+      "circular_pupil": 0.0,
+      "active": true,
+      "load_preset": "-- disabled --",
+      "save_preset_as": "",
+      "save_preset": false,
+      "seed": [
+        "398:487",
+        0
+      ],
+      "text_in": [
+        "398:419",
+        0
+      ]
+    },
+    "class_type": "PortraitMasterSkinDetails",
+    "_meta": {
+      "title": "Portrait Master: Skin Details"
+    }
+  },
+  "398:133": {
+    "inputs": {
+      "makeup_style": "Artistic Makeup",
+      "makeup_color": "Black",
+      "eyeshadow": false,
+      "eyeshadow_color": "-",
+      "eyeliner": false,
+      "eyeliner_color": "-",
+      "mascara": false,
+      "mascara_color": "-",
+      "blush": false,
+      "blush_color": "-",
+      "lipstick": false,
+      "lipstick_color": "-",
+      "lip_gloss": false,
+      "lip_gloss_color": "-",
+      "active": true,
+      "load_preset": "-- disabled --",
+      "save_preset_as": "",
+      "save_preset": false,
+      "seed": [
+        "398:487",
+        0
+      ],
+      "text_in": [
+        "398:139",
+        0
+      ]
+    },
+    "class_type": "PortraitMasterMakeup",
+    "_meta": {
+      "title": "Portrait Master: Make-up"
+    }
+  },
+  "398:135": {
+    "inputs": {
+      "style": "studio",
+      "add_extra_instructions": false,
+      "text_in": [
+        "398:133",
+        0
+      ]
+    },
+    "class_type": "PortraitMasterPromptStyler",
+    "_meta": {
+      "title": "Portrait Master: Prompt Styler"
+    }
+  },
+  "398:137": {
+    "inputs": {
+      "text_0": "Studio photo of a woman, face, brazilian woman 18-years-old, skinny body, athletic butt, glossy red lips, soft cupid's bow lips, in love expression, oval face-shape, long straight hair style, black hair color, long hair length, thin nose, small nose size, bronzed skin tone, smooth skin texture, arched skin shine, arms up pose, embroidered velvet teddy lingerie, heat haze light, light from front, front camera angle, (professional photo, balanced photo, balanced exposure:1.2), artistic makeup, black make-up color, controlled lighting, clean background.",
+      "text": [
+        "398:135",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "398:139": {
+    "inputs": {
+      "model_pose": "random 🎲",
+      "clothes": "-",
+      "female_lingerie": "random 🎲",
+      "makeup": "-",
+      "light_type": "random 🎲",
+      "light_direction": "random 🎲",
+      "light_weight": 1.0,
+      "style_1": "-",
+      "style_1_weight": 1.0,
+      "style_2": "-",
+      "style_2_weight": 1.0,
+      "background": "-",
+      "camera_angle": "front",
+      "camera_distance": "-",
+      "camera_lens": "-",
+      "photorealism_improvement": true,
+      "active": true,
+      "load_preset": "-- disabled --",
+      "save_preset_as": "",
+      "save_preset": false,
+      "seed": [
+        "398:487",
+        0
+      ],
+      "text_in": [
+        "398:136",
+        0
+      ]
+    },
+    "class_type": "PortraitMasterStylePose",
+    "_meta": {
+      "title": "Portrait Master: Style & Pose"
+    }
+  },
+  "366:56": {
+    "inputs": {
+      "unet_name": "Flux\\fluxedUpFluxNSFW_71Q8GGUF.gguf"
+    },
+    "class_type": "UnetLoaderGGUF",
+    "_meta": {
+      "title": "GGUF"
+    }
+  },
+  "366:335": {
+    "inputs": {
+      "clip_name": "t5xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "GGUF"
+    }
+  },
+  "366:336": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "GGUF"
+    }
+  },
+  "619:608": {
+    "inputs": {
+      "clip_name": "t5xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Normal"
+    }
+  },
+  "619:609": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Normal"
+    }
+  },
+  "619:612": {
+    "inputs": {
+      "index": [
+        "619:618",
+        0
+      ],
+      "value0": [
+        "619:610",
+        1
+      ],
+      "value1": [
+        "619:608",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Clip Switch"
+    }
+  },
+  "619:616": {
+    "inputs": {
+      "index": [
+        "619:618",
+        0
+      ],
+      "value0": [
+        "619:610",
+        2
+      ],
+      "value1": [
+        "619:609",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "VAE Switch"
+    }
+  },
+  "619:614": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int Baked"
+    }
+  },
+  "619:615": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int NotBaked"
+    }
+  },
+  "619:610": {
+    "inputs": {
+      "ckpt_name": "SD1.5\\epicdream_lullaby.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Normal"
+    }
+  },
+  "619:618": {
+    "inputs": {
+      "boolean": true,
+      "on_true": [
+        "619:614",
+        0
+      ],
+      "on_false": [
+        "619:615",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "362:339": {
+    "inputs": {
+      "square_size": 800,
+      "step": 48,
+      "landscape": false,
+      "aspect_a": 4.0,
+      "aspect_b": 3.0
+    },
+    "class_type": "BestResolutionFromArea",
+    "_meta": {
+      "title": "Best-Res (area)"
+    }
+  },
+  "362:340": {
+    "inputs": {
+      "width": [
+        "362:339",
+        0
+      ],
+      "height": [
+        "362:339",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "382:356": {
+    "inputs": {
+      "text": [
+        "382:198",
+        0
+      ]
+    },
+    "class_type": "Text to Number",
+    "_meta": {
+      "title": "Text to Number"
+    }
+  },
+  "382:357": {
+    "inputs": {
+      "number": [
+        "382:356",
+        0
+      ]
+    },
+    "class_type": "Number to Int",
+    "_meta": {
+      "title": "Number to Int"
+    }
+  },
+  "382:200": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int GGUF/Safe"
+    }
+  },
+  "382:358": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int Safe"
+    }
+  },
+  "382:202": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int Normal"
+    }
+  },
+  "382:201": {
+    "inputs": {
+      "value": 2
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int Nunchaku"
+    }
+  },
+  "382:198": {
+    "inputs": {
+      "text": "0",
+      "anything": [
+        "369",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "382:199": {
+    "inputs": {
+      "index": [
+        "382:357",
+        0
+      ],
+      "value0": [
+        "382:202",
+        0
+      ],
+      "value1": [
+        "382:200",
+        0
+      ],
+      "value2": [
+        "382:358",
+        0
+      ],
+      "value3": [
+        "382:201",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "371:41": {
+    "inputs": {
+      "text": [
+        "621",
+        0
+      ],
+      "clip": [
+        "381:379",
+        0
+      ]
+    },
+    "class_type": "PCTextEncode",
+    "_meta": {
+      "title": "PC: Text Encode (no scheduling)"
+    }
+  },
+  "371:40": {
+    "inputs": {
+      "text": [
+        "414",
+        0
+      ],
+      "clip": [
+        "381:379",
+        0
+      ]
+    },
+    "class_type": "PCTextEncode",
+    "_meta": {
+      "title": "PC: Text Encode (no scheduling)"
+    }
+  },
+  "371:37": {
+    "inputs": {
+      "seed": [
+        "389",
+        0
+      ],
+      "steps": [
+        "383",
+        0
+      ],
+      "cfg": [
+        "383",
+        2
+      ],
+      "sampler_name": [
+        "383",
+        3
+      ],
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "preview_method": "none",
+      "vae_decode": "true",
+      "model": [
+        "381:380",
+        0
+      ],
+      "positive": [
+        "371:40",
+        0
+      ],
+      "negative": [
+        "371:41",
+        0
+      ],
+      "latent_image": [
+        "362:340",
+        0
+      ],
+      "optional_vae": [
+        "594:592",
+        0
+      ]
+    },
+    "class_type": "KSampler (Efficient)",
+    "_meta": {
+      "title": "KSampler (Efficient)"
+    }
+  },
+  "701:699": {
+    "inputs": {
+      "offload_model": true,
+      "offload_cache": true,
+      "anything": [
+        "386:650:649",
+        0
+      ]
+    },
+    "class_type": "VRAMCleanup",
+    "_meta": {
+      "title": "🎈VRAM-Cleanup"
+    }
+  },
+  "701:700": {
+    "inputs": {
+      "clean_file_cache": true,
+      "clean_processes": true,
+      "clean_dlls": true,
+      "retry_times": 2,
+      "anything": [
+        "701:699",
+        0
+      ]
+    },
+    "class_type": "RAMCleanup",
+    "_meta": {
+      "title": "🎈RAM-Cleanup"
+    }
+  },
+  "367:59": {
+    "inputs": {
+      "unet_name": "Z-Image-Turbo\\darkBeastMar2126Latest_dbzit9DIMRclaw.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Safetensors"
+    }
+  },
+  "367:60": {
+    "inputs": {
+      "clip_name": "qwen_3_4b_fp8.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Safetensors"
+    }
+  },
+  "367:337": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Safetensors"
+    }
+  },
+  "384:76": {
+    "inputs": {
+      "model_name": "segm/person_yolov8n-seg.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "UltralyticsDetectorProvider"
+    }
+  },
+  "384:246": {
+    "inputs": {
+      "model_name": "segm/breasts_seg.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "UltralyticsDetectorProvider"
+    }
+  },
+  "384:75": {
+    "inputs": {
+      "model_name": "segm/PitHandDetailer-v1b-seg.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "UltralyticsDetectorProvider"
+    }
+  },
+  "384:120": {
+    "inputs": {
+      "model_name": "bbox/adetailerFootYolov8x_v20.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "UltralyticsDetectorProvider"
+    }
+  },
+  "384:145": {
+    "inputs": {
+      "model_name": "bbox/Anzhcs WomanFace v05 1024 y8n.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "UltralyticsDetectorProvider"
+    }
+  },
+  "384:147": {
+    "inputs": {
+      "model_name": "sam_vit_b_01ec64.pth",
+      "device_mode": "Prefer GPU"
+    },
+    "class_type": "SAMLoader",
+    "_meta": {
+      "title": "SAMLoader (Impact)"
+    }
+  },
+  "384:152": {
+    "inputs": {
+      "model_name": "bbox/Eyes.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "UltralyticsDetectorProvider"
+    }
+  },
+  "384:247": {
+    "inputs": {
+      "model_name": "sam_vit_b_01ec64.pth",
+      "device_mode": "Prefer GPU"
+    },
+    "class_type": "SAMLoader",
+    "_meta": {
+      "title": "SAMLoader (Impact)"
+    }
+  },
+  "384:71": {
+    "inputs": {
+      "model_name": "sam_vit_b_01ec64.pth",
+      "device_mode": "Prefer GPU"
+    },
+    "class_type": "SAMLoader",
+    "_meta": {
+      "title": "SAMLoader (Impact)"
+    }
+  },
+  "384:119": {
+    "inputs": {
+      "model_name": "sam_vit_b_01ec64.pth",
+      "device_mode": "Prefer GPU"
+    },
+    "class_type": "SAMLoader",
+    "_meta": {
+      "title": "SAMLoader (Impact)"
+    }
+  },
+  "384:117": {
+    "inputs": {
+      "guide_size": 512.0,
+      "guide_size_for": true,
+      "max_size": 768.0,
+      "seed": [
+        "389",
+        0
+      ],
+      "steps": 15,
+      "cfg": 6.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 0.3,
+      "feather": 25,
+      "noise_mask": true,
+      "force_inpaint": true,
+      "bbox_threshold": 0.4,
+      "bbox_dilation": 10,
+      "bbox_crop_factor": 2.4,
+      "sam_detection_hint": "center-1",
+      "sam_dilation": 10,
+      "sam_threshold": 0.93,
+      "sam_bbox_expansion": 0,
+      "sam_mask_hint_threshold": 0.7,
+      "sam_mask_hint_use_negative": "False",
+      "drop_size": 10,
+      "wildcard": "",
+      "cycle": 1,
+      "inpaint_model": false,
+      "noise_mask_feather": 20,
+      "tiled_encode": true,
+      "tiled_decode": true,
+      "image": [
+        "384:516:514",
+        0
+      ],
+      "model": [
+        "371:37",
+        0
+      ],
+      "clip": [
+        "589:586",
+        0
+      ],
+      "vae": [
+        "371:37",
+        4
+      ],
+      "positive": [
+        "371:37",
+        1
+      ],
+      "negative": [
+        "371:37",
+        2
+      ],
+      "bbox_detector": [
+        "384:120",
+        0
+      ],
+      "sam_model_opt": [
+        "384:119",
+        0
+      ]
+    },
+    "class_type": "FaceDetailer",
+    "_meta": {
+      "title": "Feet"
+    }
+  },
+  "384:258": {
+    "inputs": {
+      "guide_size": 768.0,
+      "guide_size_for": true,
+      "max_size": 1024.0,
+      "seed": [
+        "389",
+        0
+      ],
+      "steps": 15,
+      "cfg": 4.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 0.15,
+      "feather": 50,
+      "noise_mask": false,
+      "force_inpaint": true,
+      "bbox_threshold": 0.55,
+      "bbox_dilation": 10,
+      "bbox_crop_factor": 3.0,
+      "sam_detection_hint": "center-1",
+      "sam_dilation": 0,
+      "sam_threshold": 0.93,
+      "sam_bbox_expansion": 0,
+      "sam_mask_hint_threshold": 0.7,
+      "sam_mask_hint_use_negative": "False",
+      "drop_size": 10,
+      "wildcard": "",
+      "cycle": 1,
+      "inpaint_model": false,
+      "noise_mask_feather": 20,
+      "tiled_encode": true,
+      "tiled_decode": true,
+      "image": [
+        "384:498:497",
+        0
+      ],
+      "model": [
+        "371:37",
+        0
+      ],
+      "clip": [
+        "589:586",
+        0
+      ],
+      "vae": [
+        "371:37",
+        4
+      ],
+      "positive": [
+        "371:37",
+        1
+      ],
+      "negative": [
+        "371:37",
+        2
+      ],
+      "bbox_detector": [
+        "384:76",
+        0
+      ],
+      "sam_model_opt": [
+        "384:245",
+        0
+      ]
+    },
+    "class_type": "FaceDetailer",
+    "_meta": {
+      "title": "Person"
+    }
+  },
+  "384:212": {
+    "inputs": {
+      "model_name": "sam_vit_b_01ec64.pth",
+      "device_mode": "Prefer GPU"
+    },
+    "class_type": "SAMLoader",
+    "_meta": {
+      "title": "SAMLoader (Impact)"
+    }
+  },
+  "384:211": {
+    "inputs": {
+      "model_name": "segm/vagina-v4.2.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "UltralyticsDetectorProvider"
+    }
+  },
+  "384:144": {
+    "inputs": {
+      "model_name": "sam_vit_b_01ec64.pth",
+      "device_mode": "Prefer GPU"
+    },
+    "class_type": "SAMLoader",
+    "_meta": {
+      "title": "SAMLoader (Impact)"
+    }
+  },
+  "384:245": {
+    "inputs": {
+      "model_name": "sam_vit_b_01ec64.pth",
+      "device_mode": "Prefer GPU"
+    },
+    "class_type": "SAMLoader",
+    "_meta": {
+      "title": "SAMLoader (Impact)"
+    }
+  },
+  "384:141:270": {
+    "inputs": {
+      "offload_model": true,
+      "offload_cache": true,
+      "anything": [
+        "384:258",
+        0
+      ]
+    },
+    "class_type": "VRAMCleanup",
+    "_meta": {
+      "title": "🎈VRAM-Cleanup"
+    }
+  },
+  "384:141:271": {
+    "inputs": {
+      "clean_file_cache": true,
+      "clean_processes": true,
+      "clean_dlls": true,
+      "retry_times": 2,
+      "anything": [
+        "384:141:270",
+        0
+      ]
+    },
+    "class_type": "RAMCleanup",
+    "_meta": {
+      "title": "🎈RAM-Cleanup"
+    }
+  },
+  "384:143:274": {
+    "inputs": {
+      "offload_model": true,
+      "offload_cache": true,
+      "anything": [
+        "384:257",
+        0
+      ]
+    },
+    "class_type": "VRAMCleanup",
+    "_meta": {
+      "title": "🎈VRAM-Cleanup"
+    }
+  },
+  "384:143:275": {
+    "inputs": {
+      "clean_file_cache": true,
+      "clean_processes": true,
+      "clean_dlls": true,
+      "retry_times": 2,
+      "anything": [
+        "384:143:274",
+        0
+      ]
+    },
+    "class_type": "RAMCleanup",
+    "_meta": {
+      "title": "🎈RAM-Cleanup"
+    }
+  },
+  "384:167:266": {
+    "inputs": {
+      "offload_model": true,
+      "offload_cache": true,
+      "anything": [
+        "384:213",
+        0
+      ]
+    },
+    "class_type": "VRAMCleanup",
+    "_meta": {
+      "title": "🎈VRAM-Cleanup"
+    }
+  },
+  "384:167:267": {
+    "inputs": {
+      "clean_file_cache": true,
+      "clean_processes": true,
+      "clean_dlls": true,
+      "retry_times": 2,
+      "anything": [
+        "384:167:266",
+        0
+      ]
+    },
+    "class_type": "RAMCleanup",
+    "_meta": {
+      "title": "🎈RAM-Cleanup"
+    }
+  },
+  "384:540:535": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "384:540:537": {
+    "inputs": {
+      "index": [
+        "384:528:527",
+        0
+      ],
+      "value0": [
+        "384:151",
+        0
+      ],
+      "value1": [
+        "384:528:526",
+        1
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "384:540:538": {
+    "inputs": {
+      "index": [
+        "384:540:539",
+        0
+      ],
+      "in": [
+        "384:540:537",
+        0
+      ]
+    },
+    "class_type": "easy anythingInversedSwitch",
+    "_meta": {
+      "title": "Any Inversed Switch"
+    }
+  },
+  "384:540:539": {
+    "inputs": {
+      "boolean": true,
+      "on_true": [
+        "384:540:535",
+        0
+      ],
+      "on_false": [
+        "384:540:536",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "384:540:536": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "384:528:523": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "384:528:525": {
+    "inputs": {
+      "index": [
+        "384:522:521",
+        0
+      ],
+      "value0": [
+        "384:167:267",
+        0
+      ],
+      "value1": [
+        "384:522:520",
+        1
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "384:528:526": {
+    "inputs": {
+      "index": [
+        "384:528:527",
+        0
+      ],
+      "in": [
+        "384:528:525",
+        0
+      ]
+    },
+    "class_type": "easy anythingInversedSwitch",
+    "_meta": {
+      "title": "Any Inversed Switch"
+    }
+  },
+  "384:528:527": {
+    "inputs": {
+      "boolean": false,
+      "on_true": [
+        "384:528:523",
+        0
+      ],
+      "on_false": [
+        "384:528:524",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "384:528:524": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "384:522:517": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "384:522:519": {
+    "inputs": {
+      "index": [
+        "384:516:515",
+        0
+      ],
+      "value0": [
+        "384:117",
+        0
+      ],
+      "value1": [
+        "384:516:514",
+        1
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "384:522:520": {
+    "inputs": {
+      "index": [
+        "384:522:521",
+        0
+      ],
+      "in": [
+        "384:522:519",
+        0
+      ]
+    },
+    "class_type": "easy anythingInversedSwitch",
+    "_meta": {
+      "title": "Any Inversed Switch"
+    }
+  },
+  "384:522:521": {
+    "inputs": {
+      "boolean": false,
+      "on_true": [
+        "384:522:517",
+        0
+      ],
+      "on_false": [
+        "384:522:518",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "384:522:518": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "384:516:511": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "384:516:513": {
+    "inputs": {
+      "index": [
+        "384:510:509",
+        0
+      ],
+      "value0": [
+        "384:143:275",
+        0
+      ],
+      "value1": [
+        "384:510:508",
+        1
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "384:516:514": {
+    "inputs": {
+      "index": [
+        "384:516:515",
+        0
+      ],
+      "in": [
+        "384:516:513",
+        0
+      ]
+    },
+    "class_type": "easy anythingInversedSwitch",
+    "_meta": {
+      "title": "Any Inversed Switch"
+    }
+  },
+  "384:516:515": {
+    "inputs": {
+      "boolean": false,
+      "on_true": [
+        "384:516:511",
+        0
+      ],
+      "on_false": [
+        "384:516:512",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "384:516:512": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "384:510:505": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "384:510:507": {
+    "inputs": {
+      "index": [
+        "384:504:503",
+        0
+      ],
+      "value0": [
+        "384:260",
+        0
+      ],
+      "value1": [
+        "384:504:502",
+        1
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "384:510:508": {
+    "inputs": {
+      "index": [
+        "384:510:509",
+        0
+      ],
+      "in": [
+        "384:510:507",
+        0
+      ]
+    },
+    "class_type": "easy anythingInversedSwitch",
+    "_meta": {
+      "title": "Any Inversed Switch"
+    }
+  },
+  "384:510:506": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "384:510:509": {
+    "inputs": {
+      "boolean": false,
+      "on_true": [
+        "384:510:505",
+        0
+      ],
+      "on_false": [
+        "384:510:506",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "384:504:499": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "384:504:501": {
+    "inputs": {
+      "index": [
+        "384:498:496",
+        0
+      ],
+      "value0": [
+        "384:141:271",
+        0
+      ],
+      "value1": [
+        "384:498:497",
+        1
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "384:504:502": {
+    "inputs": {
+      "index": [
+        "384:504:503",
+        0
+      ],
+      "in": [
+        "384:504:501",
+        0
+      ]
+    },
+    "class_type": "easy anythingInversedSwitch",
+    "_meta": {
+      "title": "Any Inversed Switch"
+    }
+  },
+  "384:504:503": {
+    "inputs": {
+      "boolean": false,
+      "on_true": [
+        "384:504:499",
+        0
+      ],
+      "on_false": [
+        "384:504:500",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "384:504:500": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "384:498:494": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "384:498:497": {
+    "inputs": {
+      "index": [
+        "384:498:496",
+        0
+      ],
+      "in": [
+        "384:498:492",
+        0
+      ]
+    },
+    "class_type": "easy anythingInversedSwitch",
+    "_meta": {
+      "title": "Any Inversed Switch"
+    }
+  },
+  "384:498:492": {
+    "inputs": {
+      "index": 0,
+      "value0": [
+        "371:37",
+        5
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "384:498:495": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "384:498:496": {
+    "inputs": {
+      "boolean": true,
+      "on_true": [
+        "384:498:494",
+        0
+      ],
+      "on_false": [
+        "384:498:495",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "384:260": {
+    "inputs": {
+      "guide_size": 768.0,
+      "guide_size_for": true,
+      "max_size": 1024.0,
+      "seed": [
+        "389",
+        0
+      ],
+      "steps": 30,
+      "cfg": 6.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 0.25,
+      "feather": 20,
+      "noise_mask": true,
+      "force_inpaint": true,
+      "bbox_threshold": 0.2,
+      "bbox_dilation": 10,
+      "bbox_crop_factor": 2.0,
+      "sam_detection_hint": "center-1",
+      "sam_dilation": 10,
+      "sam_threshold": 0.93,
+      "sam_bbox_expansion": 0,
+      "sam_mask_hint_threshold": 0.7,
+      "sam_mask_hint_use_negative": "False",
+      "drop_size": 10,
+      "wildcard": "",
+      "cycle": 1,
+      "inpaint_model": false,
+      "noise_mask_feather": 20,
+      "tiled_encode": true,
+      "tiled_decode": true,
+      "image": [
+        "384:504:502",
+        0
+      ],
+      "model": [
+        "371:37",
+        0
+      ],
+      "clip": [
+        "589:586",
+        0
+      ],
+      "vae": [
+        "371:37",
+        4
+      ],
+      "positive": [
+        "371:37",
+        1
+      ],
+      "negative": [
+        "371:37",
+        2
+      ],
+      "bbox_detector": [
+        "384:246",
+        0
+      ],
+      "sam_model_opt": [
+        "384:247",
+        0
+      ],
+      "segm_detector_opt": [
+        "384:246",
+        1
+      ]
+    },
+    "class_type": "FaceDetailer",
+    "_meta": {
+      "title": "Boobs"
+    }
+  },
+  "384:257": {
+    "inputs": {
+      "guide_size": 512.0,
+      "guide_size_for": true,
+      "max_size": 768.0,
+      "seed": [
+        "389",
+        0
+      ],
+      "steps": 15,
+      "cfg": 6.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 0.3,
+      "feather": 25,
+      "noise_mask": true,
+      "force_inpaint": true,
+      "bbox_threshold": 0.1,
+      "bbox_dilation": 10,
+      "bbox_crop_factor": 2.4,
+      "sam_detection_hint": "center-1",
+      "sam_dilation": 10,
+      "sam_threshold": 0.93,
+      "sam_bbox_expansion": 0,
+      "sam_mask_hint_threshold": 0.7,
+      "sam_mask_hint_use_negative": "False",
+      "drop_size": 10,
+      "wildcard": "white fingernails, fully white fingernails, long fingernails, gel fingernails, square gel fingernails, same fingernails on both hands, same fingernails on every finger,",
+      "cycle": 1,
+      "inpaint_model": false,
+      "noise_mask_feather": 20,
+      "tiled_encode": true,
+      "tiled_decode": true,
+      "image": [
+        "384:510:508",
+        0
+      ],
+      "model": [
+        "371:37",
+        0
+      ],
+      "clip": [
+        "589:586",
+        0
+      ],
+      "vae": [
+        "371:37",
+        4
+      ],
+      "positive": [
+        "371:37",
+        1
+      ],
+      "negative": [
+        "371:37",
+        2
+      ],
+      "bbox_detector": [
+        "384:75",
+        0
+      ],
+      "sam_model_opt": [
+        "384:71",
+        0
+      ],
+      "segm_detector_opt": [
+        "384:75",
+        1
+      ]
+    },
+    "class_type": "FaceDetailer",
+    "_meta": {
+      "title": "Hands"
+    }
+  },
+  "384:213": {
+    "inputs": {
+      "guide_size": 512.0,
+      "guide_size_for": true,
+      "max_size": 768.0,
+      "seed": [
+        "389",
+        0
+      ],
+      "steps": 15,
+      "cfg": 6.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 0.15,
+      "feather": 25,
+      "noise_mask": true,
+      "force_inpaint": true,
+      "bbox_threshold": 0.4,
+      "bbox_dilation": 10,
+      "bbox_crop_factor": 2.4,
+      "sam_detection_hint": "center-1",
+      "sam_dilation": 10,
+      "sam_threshold": 0.93,
+      "sam_bbox_expansion": 0,
+      "sam_mask_hint_threshold": 0.7,
+      "sam_mask_hint_use_negative": "False",
+      "drop_size": 10,
+      "wildcard": "",
+      "cycle": 1,
+      "inpaint_model": false,
+      "noise_mask_feather": 20,
+      "tiled_encode": true,
+      "tiled_decode": true,
+      "image": [
+        "384:522:520",
+        0
+      ],
+      "model": [
+        "371:37",
+        0
+      ],
+      "clip": [
+        "589:586",
+        0
+      ],
+      "vae": [
+        "371:37",
+        4
+      ],
+      "positive": [
+        "371:37",
+        1
+      ],
+      "negative": [
+        "371:37",
+        2
+      ],
+      "bbox_detector": [
+        "384:211",
+        0
+      ],
+      "sam_model_opt": [
+        "384:212",
+        0
+      ],
+      "segm_detector_opt": [
+        "384:211",
+        1
+      ]
+    },
+    "class_type": "FaceDetailer",
+    "_meta": {
+      "title": "Pussy"
+    }
+  },
+  "384:542": {
+    "inputs": {
+      "index": [
+        "384:540:539",
+        0
+      ],
+      "value0": [
+        "384:153",
+        0
+      ],
+      "value1": [
+        "384:540:538",
+        1
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "384:1313:1247": {
+    "inputs": {
+      "unet_name": "Z-Image-Turbo\\2602_ZIT_BSY_fp16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Safetensors"
+    }
+  },
+  "384:1313:1248": {
+    "inputs": {
+      "clip_name": "qwen_3_4b_fp8.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Safetensors"
+    }
+  },
+  "384:1313:1249": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Safetensors"
+    }
+  },
+  "384:1314:1250": {
+    "inputs": {
+      "model_name": "Z-Image-Turbo\\svdq-int4_r256-z-image-turbo.safetensors"
+    },
+    "class_type": "NunchakuZImageDiTLoader",
+    "_meta": {
+      "title": "Nunchaku"
+    }
+  },
+  "384:1314:1251": {
+    "inputs": {
+      "clip_name": "Huihui-Qwen3-4B-abliterated-v2_fp8mixed.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Nunchaku"
+    }
+  },
+  "384:1314:1252": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Nunchaku"
+    }
+  },
+  "384:1315:1253": {
+    "inputs": {
+      "unet_name": "Flux\\fluxedUpFluxNSFW_71Q8GGUF.gguf"
+    },
+    "class_type": "UnetLoaderGGUF",
+    "_meta": {
+      "title": "GGUF"
+    }
+  },
+  "384:1315:1254": {
+    "inputs": {
+      "clip_name": "t5xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "GGUF"
+    }
+  },
+  "384:1315:1255": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "GGUF"
+    }
+  },
+  "384:1316:1256": {
+    "inputs": {
+      "clip_name": "t5xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Normal"
+    }
+  },
+  "384:1316:1257": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Normal"
+    }
+  },
+  "384:1316:1258": {
+    "inputs": {
+      "index": [
+        "384:1316:1263",
+        0
+      ],
+      "value0": [
+        "384:1316:1262",
+        1
+      ],
+      "value1": [
+        "384:1316:1256",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Clip Switch"
+    }
+  },
+  "384:1316:1259": {
+    "inputs": {
+      "index": [
+        "384:1316:1263",
+        0
+      ],
+      "value0": [
+        "384:1316:1262",
+        2
+      ],
+      "value1": [
+        "384:1316:1257",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "VAE Switch"
+    }
+  },
+  "384:1316:1260": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int Baked"
+    }
+  },
+  "384:1316:1261": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int NotBaked"
+    }
+  },
+  "384:1316:1262": {
+    "inputs": {
+      "ckpt_name": "Illu\\cyberillustrious_v60Alt.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Normal"
+    }
+  },
+  "384:1316:1263": {
+    "inputs": {
+      "boolean": true,
+      "on_true": [
+        "384:1316:1260",
+        0
+      ],
+      "on_false": [
+        "384:1316:1261",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "384:1329:1266": {
+    "inputs": {
+      "text": [
+        "384:1329:1272",
+        0
+      ]
+    },
+    "class_type": "Text to Number",
+    "_meta": {
+      "title": "Text to Number"
+    }
+  },
+  "384:1329:1267": {
+    "inputs": {
+      "number": [
+        "384:1329:1266",
+        0
+      ]
+    },
+    "class_type": "Number to Int",
+    "_meta": {
+      "title": "Number to Int"
+    }
+  },
+  "384:1329:1268": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int GGUF/Safe"
+    }
+  },
+  "384:1329:1269": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int Safe"
+    }
+  },
+  "384:1329:1270": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int Normal"
+    }
+  },
+  "384:1329:1271": {
+    "inputs": {
+      "value": 2
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int Nunchaku"
+    }
+  },
+  "384:1329:1272": {
+    "inputs": {
+      "text": "0",
+      "anything": [
+        "369",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "384:1329:1274": {
+    "inputs": {
+      "index": [
+        "384:1329:1267",
+        0
+      ],
+      "value0": [
+        "384:1329:1270",
+        0
+      ],
+      "value1": [
+        "384:1329:1268",
+        0
+      ],
+      "value2": [
+        "384:1329:1269",
+        0
+      ],
+      "value3": [
+        "384:1329:1271",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "384:1338:1286": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int GGUF/Safe"
+    }
+  },
+  "384:1338:1287": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int Safe"
+    }
+  },
+  "384:1338:1288": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int Nunchaku"
+    }
+  },
+  "384:1338:1289": {
+    "inputs": {
+      "index": [
+        "384:1344",
+        0
+      ],
+      "value0": [
+        "384:1338:1292",
+        0
+      ],
+      "value1": [
+        "384:1338:1286",
+        0
+      ],
+      "value2": [
+        "384:1338:1287",
+        0
+      ],
+      "value3": [
+        "384:1338:1288",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "384:1338:1290": {
+    "inputs": {
+      "index": [
+        "384:1344",
+        0
+      ],
+      "value0": [
+        "384:1316:1262",
+        0
+      ],
+      "value1": [
+        "384:1315:1253",
+        0
+      ],
+      "value2": [
+        "384:1313:1247",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Model Switch"
+    }
+  },
+  "384:1338:1292": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int Normal"
+    }
+  },
+  "384:1338:1293": {
+    "inputs": {
+      "index": [
+        "384:1338:1289",
+        0
+      ],
+      "value0": [
+        "384:1316:1262",
+        0
+      ],
+      "value1": [
+        "384:1338:1290",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "384:1342:1296": {
+    "inputs": {
+      "index": [
+        "384:1344",
+        0
+      ],
+      "value0": [
+        "384:1316:1259",
+        0
+      ],
+      "value1": [
+        "384:1315:1255",
+        0
+      ],
+      "value2": [
+        "384:1313:1249",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "384:1342:1297": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "384:1324": {
+    "inputs": {
+      "steps_total": 40,
+      "refiner_step": 1,
+      "cfg": 7.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "simple"
+    },
+    "class_type": "KSampler Config (rgthree)",
+    "_meta": {
+      "title": "KSampler Config (rgthree)"
+    }
+  },
+  "384:1326": {
+    "inputs": {
+      "seed": 1001831434959109
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "Seed (rgthree)"
+    }
+  },
+  "384:1318:1264": {
+    "inputs": {
+      "square_size": 800,
+      "step": 48,
+      "landscape": false,
+      "aspect_a": 4.0,
+      "aspect_b": 3.0
+    },
+    "class_type": "BestResolutionFromArea",
+    "_meta": {
+      "title": "Best-Res (area)"
+    }
+  },
+  "384:1318:1265": {
+    "inputs": {
+      "width": [
+        "384:1318:1264",
+        0
+      ],
+      "height": [
+        "384:1318:1264",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "384:1344": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "0.Normal | 1.GGUF | 2.Safe | 3.Nunchaku"
+    }
+  },
+  "384:153": {
+    "inputs": {
+      "guide_size": 512.0,
+      "guide_size_for": true,
+      "max_size": 768.0,
+      "seed": [
+        "389",
+        0
+      ],
+      "steps": 20,
+      "cfg": 5.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 0.2,
+      "feather": 15,
+      "noise_mask": true,
+      "force_inpaint": true,
+      "bbox_threshold": 0.65,
+      "bbox_dilation": 10,
+      "bbox_crop_factor": 2.1,
+      "sam_detection_hint": "center-1",
+      "sam_dilation": 10,
+      "sam_threshold": 0.93,
+      "sam_bbox_expansion": 0,
+      "sam_mask_hint_threshold": 0.7,
+      "sam_mask_hint_use_negative": "False",
+      "drop_size": 10,
+      "wildcard": "",
+      "cycle": 1,
+      "inpaint_model": false,
+      "noise_mask_feather": 20,
+      "tiled_encode": true,
+      "tiled_decode": true,
+      "image": [
+        "384:540:538",
+        0
+      ],
+      "model": [
+        "371:37",
+        0
+      ],
+      "clip": [
+        "589:586",
+        0
+      ],
+      "vae": [
+        "371:37",
+        4
+      ],
+      "positive": [
+        "371:37",
+        1
+      ],
+      "negative": [
+        "371:37",
+        2
+      ],
+      "bbox_detector": [
+        "384:152",
+        0
+      ],
+      "sam_model_opt": [
+        "384:147",
+        0
+      ],
+      "segm_detector_opt": [
+        "384:152",
+        1
+      ]
+    },
+    "class_type": "FaceDetailer",
+    "_meta": {
+      "title": "Augen"
+    }
+  },
+  "384:1340:1294": {
+    "inputs": {
+      "index": [
+        "384:1344",
+        0
+      ],
+      "value0": [
+        "384:1316:1258",
+        0
+      ],
+      "value1": [
+        "384:1315:1254",
+        0
+      ],
+      "value2": [
+        "384:1313:1248",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "384:1340:1295": {
+    "inputs": {
+      "clip_name": "t5xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "stable_diffusion",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "384:1330:1275": {
+    "inputs": {
+      "source": [
+        "384:1330:1280",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
+    }
+  },
+  "384:1330:1276": {
+    "inputs": {
+      "source": [
+        "384:1330:1281",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
+    }
+  },
+  "384:1330:1277": {
+    "inputs": {
+      "index": [
+        "384:1329:1274",
+        0
+      ],
+      "in": [
+        "384:1338:1293",
+        0
+      ]
+    },
+    "class_type": "easy anythingInversedSwitch",
+    "_meta": {
+      "title": "Any Inversed Model"
+    }
+  },
+  "384:1330:1278": {
+    "inputs": {
+      "index": [
+        "384:1329:1274",
+        0
+      ],
+      "in": [
+        "384:1340:1294",
+        0
+      ]
+    },
+    "class_type": "easy anythingInversedSwitch",
+    "_meta": {
+      "title": "Any Inversed Clip"
+    }
+  },
+  "384:1330:1280": {
+    "inputs": {
+      "index": [
+        "384:1329:1274",
+        0
+      ],
+      "value0": [
+        "384:1330:1284",
+        1
+      ],
+      "value1": [
+        "384:1330:1285",
+        1
+      ],
+      "value2": [
+        "384:1330:1278",
+        2
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Clip"
+    }
+  },
+  "384:1330:1281": {
+    "inputs": {
+      "index": [
+        "384:1329:1274",
+        0
+      ],
+      "value0": [
+        "384:1330:1284",
+        0
+      ],
+      "value1": [
+        "384:1330:1285",
+        0
+      ],
+      "value2": [
+        "384:1330:1277",
+        2
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Model"
+    }
+  },
+  "384:1330:1284": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": false,
+        "lora": "Z-Image\\Slider\\REDZ15_DetailDaemonZ_lora_v1.1.safetensors",
+        "strength": 0
+      },
+      "lora_2": {
+        "on": true,
+        "lora": "Z-Image\\Slider\\Z-Breast-Slider.safetensors",
+        "strength": -0.25
+      },
+      "lora_3": {
+        "on": true,
+        "lora": "Z-Image\\Slider\\saggy-slider.safetensors",
+        "strength": 0.5
+      },
+      "lora_4": {
+        "on": true,
+        "lora": "Z-Image\\Slider\\Z-Hip-Slider.safetensors",
+        "strength": 1
+      },
+      "lora_5": {
+        "on": true,
+        "lora": "Z-Image\\Slider\\Better Curvy Figure.safetensors",
+        "strength": 0.35
+      },
+      "lora_6": {
+        "on": false,
+        "lora": "Z-Image\\Slider\\Mystic-XXX-ZIT-V5.safetensors",
+        "strength": 0
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "384:1330:1277",
+        0
+      ],
+      "clip": [
+        "384:1330:1278",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree)"
+    }
+  },
+  "384:1330:1285": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": false,
+        "lora": "PonyXL\\Slider\\Breast Slider - Pony_alpha1.0_rank4_noxattn_last.safetensors",
+        "strength": 0.75
+      },
+      "lora_2": {
+        "on": false,
+        "lora": "PonyXL\\Slider\\Breast Sag Slider_alpha1.0_rank4_noxattn_last.safetensors",
+        "strength": -0.5
+      },
+      "lora_3": {
+        "on": false,
+        "lora": "Pony\\Face\\Makeup Slider_alpha1.0_rank4_noxattn_last_447502.safetensors",
+        "strength": 0.125
+      },
+      "lora_4": {
+        "on": true,
+        "lora": "SD1.5\\Slider\\breastsizeslideroffset.safetensors",
+        "strength": 0.6
+      },
+      "lora_5": {
+        "on": true,
+        "lora": "SD1.5\\Slider\\detail_slider_v4.safetensors",
+        "strength": 0.25
+      },
+      "lora_6": {
+        "on": true,
+        "lora": "SD1.5\\Slider\\real_slider_v2.safetensors",
+        "strength": 0.25
+      },
+      "lora_7": {
+        "on": false,
+        "lora": "SD1.5\\Helper\\Breast Helper - [Concept] - Version 1.2.safetensors",
+        "strength": 0.6
+      },
+      "lora_8": {
+        "on": false,
+        "lora": "SD1.5\\Helper\\epiCRealismHelper.safetensors",
+        "strength": 1
+      },
+      "lora_9": {
+        "on": false,
+        "lora": "SD1.5\\Helper\\epiCRealLife.safetensors",
+        "strength": 1
+      },
+      "lora_10": {
+        "on": true,
+        "lora": "SD1.5\\Helper\\PuffyNipples_v11OD.safetensors",
+        "strength": 0.6
+      },
+      "lora_11": {
+        "on": false,
+        "lora": "SD1.5\\NSFW\\URPMv1.3_LORA_296.safetensors",
+        "strength": 0.8
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "384:1330:1277",
+        1
+      ],
+      "clip": [
+        "384:1330:1278",
+        1
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree)"
+    }
+  },
+  "384:1345:1298": {
+    "inputs": {
+      "text": [
+        "621",
+        0
+      ],
+      "clip": [
+        "384:1330:1280",
+        0
+      ]
+    },
+    "class_type": "PCTextEncode",
+    "_meta": {
+      "title": "PC: Text Encode (no scheduling)"
+    }
+  },
+  "384:1345:1299": {
+    "inputs": {
+      "text": [
+        "414",
+        0
+      ],
+      "clip": [
+        "384:1330:1280",
+        0
+      ]
+    },
+    "class_type": "PCTextEncode",
+    "_meta": {
+      "title": "PC: Text Encode (no scheduling)"
+    }
+  },
+  "384:1345:1300": {
+    "inputs": {
+      "seed": [
+        "384:1326",
+        0
+      ],
+      "steps": [
+        "384:1324",
+        0
+      ],
+      "cfg": [
+        "384:1324",
+        2
+      ],
+      "sampler_name": [
+        "384:1324",
+        3
+      ],
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "preview_method": "none",
+      "vae_decode": "true",
+      "model": [
+        "384:1330:1281",
+        0
+      ],
+      "positive": [
+        "384:1345:1299",
+        0
+      ],
+      "negative": [
+        "384:1345:1298",
+        0
+      ],
+      "latent_image": [
+        "384:1318:1265",
+        0
+      ],
+      "optional_vae": [
+        "384:1342:1296",
+        0
+      ]
+    },
+    "class_type": "KSampler (Efficient)",
+    "_meta": {
+      "title": "KSampler (Efficient)"
+    }
+  },
+  "384:151": {
+    "inputs": {
+      "guide_size": 512.0,
+      "guide_size_for": true,
+      "max_size": 768.0,
+      "seed": [
+        "389",
+        0
+      ],
+      "steps": 15,
+      "cfg": 4.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 0.4,
+      "feather": 25,
+      "noise_mask": true,
+      "force_inpaint": true,
+      "bbox_threshold": 0.7,
+      "bbox_dilation": 10,
+      "bbox_crop_factor": 2.2,
+      "sam_detection_hint": "center-1",
+      "sam_dilation": 20,
+      "sam_threshold": 0.93,
+      "sam_bbox_expansion": 0,
+      "sam_mask_hint_threshold": 0.7,
+      "sam_mask_hint_use_negative": "False",
+      "drop_size": 10,
+      "wildcard": "",
+      "cycle": 1,
+      "inpaint_model": false,
+      "noise_mask_feather": 20,
+      "tiled_encode": true,
+      "tiled_decode": true,
+      "image": [
+        "384:528:526",
+        0
+      ],
+      "model": [
+        "384:1345:1300",
+        0
+      ],
+      "clip": [
+        "384:1340:1294",
+        0
+      ],
+      "vae": [
+        "384:1345:1300",
+        4
+      ],
+      "positive": [
+        "384:1345:1300",
+        1
+      ],
+      "negative": [
+        "384:1345:1300",
+        2
+      ],
+      "bbox_detector": [
+        "384:145",
+        0
+      ],
+      "sam_model_opt": [
+        "384:144",
+        0
+      ],
+      "segm_detector_opt": [
+        "384:145",
+        1
+      ]
+    },
+    "class_type": "FaceDetailer",
+    "_meta": {
+      "title": "Gesicht"
+    }
+  },
+  "397:20": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "397:7": {
+    "inputs": {
+      "boolean": true,
+      "on_true": [
+        "397:19",
+        0
+      ],
+      "on_false": [
+        "397:20",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "397:21": {
+    "inputs": {
+      "index": [
+        "397:7",
+        0
+      ],
+      "value0": [
+        "398:137",
+        0
+      ],
+      "value1": [
+        "399:17",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "397:19": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "381:374": {
+    "inputs": {
+      "source": [
+        "381:379",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
+    }
+  },
+  "381:375": {
+    "inputs": {
+      "source": [
+        "381:380",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
+    }
+  },
+  "381:377": {
+    "inputs": {
+      "index": [
+        "382:199",
+        0
+      ],
+      "in": [
+        "370:348",
+        0
+      ]
+    },
+    "class_type": "easy anythingInversedSwitch",
+    "_meta": {
+      "title": "Any Inversed Model"
+    }
+  },
+  "381:378": {
+    "inputs": {
+      "index": [
+        "382:199",
+        0
+      ],
+      "in": [
+        "589:586",
+        0
+      ]
+    },
+    "class_type": "easy anythingInversedSwitch",
+    "_meta": {
+      "title": "Any Inversed Clip"
+    }
+  },
+  "381:379": {
+    "inputs": {
+      "index": [
+        "382:199",
+        0
+      ],
+      "value0": [
+        "381:372",
+        1
+      ],
+      "value1": [
+        "381:376",
+        1
+      ],
+      "value2": [
+        "381:378",
+        2
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Clip"
+    }
+  },
+  "381:380": {
+    "inputs": {
+      "index": [
+        "382:199",
+        0
+      ],
+      "value0": [
+        "381:372",
+        0
+      ],
+      "value1": [
+        "381:376",
+        0
+      ],
+      "value2": [
+        "381:377",
+        2
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Model"
+    }
+  },
+  "381:372": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": false,
+        "lora": "Z-Image\\Slider\\REDZ15_DetailDaemonZ_lora_v1.1.safetensors",
+        "strength": 0
+      },
+      "lora_2": {
+        "on": true,
+        "lora": "Z-Image\\Slider\\Z-Breast-Slider.safetensors",
+        "strength": -0.25
+      },
+      "lora_3": {
+        "on": true,
+        "lora": "Z-Image\\Slider\\saggy-slider.safetensors",
+        "strength": 0.5
+      },
+      "lora_4": {
+        "on": true,
+        "lora": "Z-Image\\Slider\\Z-Hip-Slider.safetensors",
+        "strength": 1
+      },
+      "lora_5": {
+        "on": true,
+        "lora": "Z-Image\\Slider\\Better Curvy Figure.safetensors",
+        "strength": 0.35
+      },
+      "lora_6": {
+        "on": false,
+        "lora": "Z-Image\\Slider\\Mystic-XXX-ZIT-V5.safetensors",
+        "strength": 0
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "381:377",
+        0
+      ],
+      "clip": [
+        "381:378",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree)"
+    }
+  },
+  "381:376": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": false,
+        "lora": "PonyXL\\Slider\\Breast Slider - Pony_alpha1.0_rank4_noxattn_last.safetensors",
+        "strength": 0.75
+      },
+      "lora_2": {
+        "on": false,
+        "lora": "PonyXL\\Slider\\Breast Sag Slider_alpha1.0_rank4_noxattn_last.safetensors",
+        "strength": -0.5
+      },
+      "lora_3": {
+        "on": false,
+        "lora": "Pony\\Face\\Makeup Slider_alpha1.0_rank4_noxattn_last_447502.safetensors",
+        "strength": 0.125
+      },
+      "lora_4": {
+        "on": true,
+        "lora": "SD1.5\\Slider\\breastsizeslideroffset.safetensors",
+        "strength": 0.5
+      },
+      "lora_5": {
+        "on": true,
+        "lora": "SD1.5\\Slider\\detail_slider_v4.safetensors",
+        "strength": 0.25
+      },
+      "lora_6": {
+        "on": true,
+        "lora": "SD1.5\\Slider\\real_slider_v2.safetensors",
+        "strength": 0.25
+      },
+      "lora_7": {
+        "on": true,
+        "lora": "SD1.5\\Helper\\Breast Helper - [Concept] - Version 1.2.safetensors",
+        "strength": 0.6
+      },
+      "lora_8": {
+        "on": false,
+        "lora": "SD1.5\\Helper\\epiCRealismHelper.safetensors",
+        "strength": 1
+      },
+      "lora_9": {
+        "on": false,
+        "lora": "SD1.5\\Helper\\epiCRealLife.safetensors",
+        "strength": 1
+      },
+      "lora_10": {
+        "on": false,
+        "lora": "SD1.5\\Helper\\PuffyNipples_v11OD.safetensors",
+        "strength": 0.6
+      },
+      "lora_11": {
+        "on": false,
+        "lora": "SD1.5\\NSFW\\URPMv1.3_LORA_296.safetensors",
+        "strength": 0.8
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "381:377",
+        1
+      ],
+      "clip": [
+        "381:378",
+        1
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree)"
+    }
+  },
+  "370:343": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int GGUF/Safe"
+    }
+  },
+  "370:344": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int Safe"
+    }
+  },
+  "370:346": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int Nunchaku"
+    }
+  },
+  "370:347": {
+    "inputs": {
+      "index": [
+        "369",
+        0
+      ],
+      "value0": [
+        "370:345",
+        0
+      ],
+      "value1": [
+        "370:343",
+        0
+      ],
+      "value2": [
+        "370:344",
+        0
+      ],
+      "value3": [
+        "370:346",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "370:342": {
+    "inputs": {
+      "index": [
+        "369",
+        0
+      ],
+      "value0": [
+        "619:610",
+        0
+      ],
+      "value1": [
+        "366:56",
+        0
+      ],
+      "value2": [
+        "367:59",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Model Switch"
+    }
+  },
+  "370:345": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int Normal"
+    }
+  },
+  "370:348": {
+    "inputs": {
+      "index": [
+        "370:347",
+        0
+      ],
+      "value0": [
+        "619:610",
+        0
+      ],
+      "value1": [
+        "370:342",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "589:586": {
+    "inputs": {
+      "index": [
+        "369",
+        0
+      ],
+      "value0": [
+        "619:612",
+        0
+      ],
+      "value1": [
+        "366:335",
+        0
+      ],
+      "value2": [
+        "367:60",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "589:591": {
+    "inputs": {
+      "clip_name": "t5xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "stable_diffusion",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "594:592": {
+    "inputs": {
+      "index": [
+        "369",
+        0
+      ],
+      "value0": [
+        "619:616",
+        0
+      ],
+      "value1": [
+        "366:336",
+        0
+      ],
+      "value2": [
+        "367:337",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "594:597": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "386:34": {
+    "inputs": {
+      "model": "ema_vae_fp16.safetensors",
+      "device": "cuda:0",
+      "encode_tiled": true,
+      "encode_tile_size": 1024,
+      "encode_tile_overlap": 128,
+      "decode_tiled": true,
+      "decode_tile_size": 1024,
+      "decode_tile_overlap": 128,
+      "tile_debug": "false",
+      "offload_device": "cuda:0",
+      "cache_model": true
+    },
+    "class_type": "SeedVR2LoadVAEModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load VAE Model"
+    }
+  },
+  "386:31": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "scale_by": 1.0,
+      "image": [
+        "386:561:559",
+        0
+      ]
+    },
+    "class_type": "ImageScaleBy",
+    "_meta": {
+      "title": "Upscale Image By"
+    }
+  },
+  "386:33": {
+    "inputs": {
+      "model": "seedvr2_ema_7b-Q4_K_M.gguf",
+      "device": "cuda:0",
+      "blocks_to_swap": 0,
+      "swap_io_components": false,
+      "offload_device": "cpu",
+      "cache_model": true,
+      "attention_mode": "sdpa"
+    },
+    "class_type": "SeedVR2LoadDiTModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load DiT Model"
+    }
+  },
+  "386:306": {
+    "inputs": {
+      "model": "ema_vae_fp16.safetensors",
+      "device": "cuda:0",
+      "encode_tiled": true,
+      "encode_tile_size": 1024,
+      "encode_tile_overlap": 128,
+      "decode_tiled": true,
+      "decode_tile_size": 1024,
+      "decode_tile_overlap": 128,
+      "tile_debug": "false",
+      "offload_device": "cuda:0",
+      "cache_model": true
+    },
+    "class_type": "SeedVR2LoadVAEModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load VAE Model"
+    }
+  },
+  "386:310": {
+    "inputs": {
+      "seed": 42,
+      "resolution": 1532,
+      "max_resolution": 2048,
+      "batch_size": 1,
+      "uniform_batch_size": false,
+      "color_correction": "lab",
+      "temporal_overlap": 0,
+      "prepend_frames": 0,
+      "input_noise_scale": 0.0,
+      "latent_noise_scale": 0.05,
+      "offload_device": "cuda:0",
+      "enable_debug": false,
+      "image": [
+        "386:307",
+        0
+      ],
+      "dit": [
+        "386:305",
+        0
+      ],
+      "vae": [
+        "386:306",
+        0
+      ]
+    },
+    "class_type": "SeedVR2VideoUpscaler",
+    "_meta": {
+      "title": "SeedVR2 Video Upscaler (v2.5.22)"
+    }
+  },
+  "386:307": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "scale_by": 1.0,
+      "image": [
+        "386:573:571",
+        0
+      ]
+    },
+    "class_type": "ImageScaleBy",
+    "_meta": {
+      "title": "Upscale Image By"
+    }
+  },
+  "386:561:556": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "386:561:557": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "386:561:558": {
+    "inputs": {
+      "index": 0,
+      "value0": [
+        "643:647:646",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "386:561:559": {
+    "inputs": {
+      "index": [
+        "386:561:560",
+        0
+      ],
+      "in": [
+        "386:561:558",
+        0
+      ]
+    },
+    "class_type": "easy anythingInversedSwitch",
+    "_meta": {
+      "title": "Any Inversed Switch"
+    }
+  },
+  "386:561:560": {
+    "inputs": {
+      "boolean": true,
+      "on_true": [
+        "386:561:556",
+        0
+      ],
+      "on_false": [
+        "386:561:557",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "386:573:568": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "386:573:569": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "386:573:570": {
+    "inputs": {
+      "index": [
+        "386:561:560",
+        0
+      ],
+      "value0": [
+        "386:576:575",
+        0
+      ],
+      "value1": [
+        "386:561:559",
+        1
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "386:573:571": {
+    "inputs": {
+      "index": [
+        "386:573:572",
+        0
+      ],
+      "in": [
+        "386:573:570",
+        0
+      ]
+    },
+    "class_type": "easy anythingInversedSwitch",
+    "_meta": {
+      "title": "Any Inversed Switch"
+    }
+  },
+  "386:573:572": {
+    "inputs": {
+      "boolean": false,
+      "on_true": [
+        "386:573:568",
+        0
+      ],
+      "on_false": [
+        "386:573:569",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "386:32": {
+    "inputs": {
+      "seed": 42,
+      "resolution": 1200,
+      "max_resolution": 1600,
+      "batch_size": 1,
+      "uniform_batch_size": false,
+      "color_correction": "lab",
+      "temporal_overlap": 0,
+      "prepend_frames": 0,
+      "input_noise_scale": 0.0,
+      "latent_noise_scale": 0.0,
+      "offload_device": "cuda:0",
+      "enable_debug": false,
+      "image": [
+        "386:31",
+        0
+      ],
+      "dit": [
+        "386:33",
+        0
+      ],
+      "vae": [
+        "386:34",
+        0
+      ]
+    },
+    "class_type": "SeedVR2VideoUpscaler",
+    "_meta": {
+      "title": "SeedVR2 Video Upscaler (v2.5.22)"
+    }
+  },
+  "386:305": {
+    "inputs": {
+      "model": "seedvr2_ema_7b-Q4_K_M.gguf",
+      "device": "cuda:0",
+      "blocks_to_swap": 0,
+      "swap_io_components": false,
+      "offload_device": "cpu",
+      "cache_model": true,
+      "attention_mode": "sdpa"
+    },
+    "class_type": "SeedVR2LoadDiTModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load DiT Model"
+    }
+  },
+  "386:576:574": {
+    "inputs": {
+      "offload_model": true,
+      "offload_cache": true,
+      "anything": [
+        "386:32",
+        0
+      ]
+    },
+    "class_type": "VRAMCleanup",
+    "_meta": {
+      "title": "🎈VRAM-Cleanup"
+    }
+  },
+  "386:576:575": {
+    "inputs": {
+      "clean_file_cache": true,
+      "clean_processes": true,
+      "clean_dlls": true,
+      "retry_times": 2,
+      "anything": [
+        "386:576:574",
+        0
+      ]
+    },
+    "class_type": "RAMCleanup",
+    "_meta": {
+      "title": "🎈RAM-Cleanup"
+    }
+  },
+  "386:485": {
+    "inputs": {
+      "index": 0,
+      "value0": [
+        "386:310",
+        0
+      ],
+      "value1": [
+        "386:573:571",
+        1
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "386:650:648": {
+    "inputs": {
+      "offload_model": true,
+      "offload_cache": true,
+      "anything": [
+        "386:485",
+        0
+      ]
+    },
+    "class_type": "VRAMCleanup",
+    "_meta": {
+      "title": "🎈VRAM-Cleanup"
+    }
+  },
+  "386:650:649": {
+    "inputs": {
+      "clean_file_cache": true,
+      "clean_processes": true,
+      "clean_dlls": true,
+      "retry_times": 2,
+      "anything": [
+        "386:650:648",
+        0
+      ]
+    },
+    "class_type": "RAMCleanup",
+    "_meta": {
+      "title": "🎈RAM-Cleanup"
+    }
+  },
+  "643:634": {
+    "inputs": {
+      "face_model": "Izzy Green (CamGirl).safetensors"
+    },
+    "class_type": "ReActorLoadFaceModel",
+    "_meta": {
+      "title": "Load Face Model 🌌 ReActor"
+    }
+  },
+  "643:629": {
+    "inputs": {
+      "enabled": true,
+      "swap_model": "inswapper_128.onnx",
+      "facedetection": "retinaface_resnet50",
+      "face_restore_model": "GPEN-BFR-512.onnx",
+      "face_restore_visibility": 1.0,
+      "codeformer_weight": 0.5,
+      "detect_gender_input": "no",
+      "detect_gender_source": "no",
+      "input_faces_index": "0",
+      "source_faces_index": "0",
+      "console_log_level": 1,
+      "input_image": [
+        "643:641:639",
+        0
+      ],
+      "face_model": [
+        "643:634",
+        0
+      ],
+      "face_boost": [
+        "643:633",
+        0
+      ]
+    },
+    "class_type": "ReActorFaceSwap",
+    "_meta": {
+      "title": "ReActor 🌌 Fast Face Swap"
+    }
+  },
+  "643:642": {
+    "inputs": {
+      "index": [
+        "643:641:640",
+        0
+      ],
+      "value0": [
+        "643:629",
+        0
+      ],
+      "value1": [
+        "643:641:639",
+        1
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "643:641:636": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "643:641:639": {
+    "inputs": {
+      "index": [
+        "643:641:640",
+        0
+      ],
+      "in": [
+        "384:542",
+        0
+      ]
+    },
+    "class_type": "easy anythingInversedSwitch",
+    "_meta": {
+      "title": "Any Inversed Switch"
+    }
+  },
+  "643:641:640": {
+    "inputs": {
+      "boolean": true,
+      "on_true": [
+        "643:641:636",
+        0
+      ],
+      "on_false": [
+        "643:641:637",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "643:641:637": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "643:633": {
+    "inputs": {
+      "enabled": true,
+      "boost_model": "GPEN-BFR-512.onnx",
+      "interpolation": "Bilinear",
+      "visibility": 1.0,
+      "codeformer_weight": 0.5,
+      "restore_with_main_after": false
+    },
+    "class_type": "ReActorFaceBoost",
+    "_meta": {
+      "title": "ReActor 🌌 Face Booster"
+    }
+  },
+  "643:1036:1031": {
+    "inputs": {
+      "image": "1319x1071_2c91e34ce153dc94a6e725cae345f10e1e7c62f98690341a.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "#1 Load Image"
+    }
+  },
+  "643:1036:1033": {
+    "inputs": {
+      "image": "8ECEDD57-9327-4746-A9A7-493029567C88.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "#2 Load Image"
+    }
+  },
+  "643:1036:1034": {
+    "inputs": {
+      "image": "99CB25F5-D886-445C-9FF7-930A059AA113.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "#3 Load Image"
+    }
+  },
+  "643:1036:1035": {
+    "inputs": {
+      "image": "38042F6C-95F1-4ED3-A443-4481851A4BA1.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "#4Load Image"
+    }
+  },
+  "643:1036:1032": {
+    "inputs": {
+      "image1": [
+        "643:1036:1031",
+        0
+      ],
+      "image2": [
+        "643:1036:1033",
+        0
+      ],
+      "image3": [
+        "643:1036:1034",
+        0
+      ],
+      "image4": [
+        "643:1036:1035",
+        0
+      ]
+    },
+    "class_type": "ImpactMakeImageBatch",
+    "_meta": {
+      "title": "Make Image Batch"
+    }
+  },
+  "643:1036:1038": {
+    "inputs": {
+      "save_mode": true,
+      "send_only": false,
+      "face_model_name": "Izzy Green (CamGirl)",
+      "compute_method": "Mean",
+      "images": [
+        "643:1036:1032",
+        0
+      ]
+    },
+    "class_type": "ReActorBuildFaceModel",
+    "_meta": {
+      "title": "Build Blended Face Model 🌌 ReActor"
+    }
+  },
+  "643:647:645": {
+    "inputs": {
+      "offload_model": true,
+      "offload_cache": true,
+      "anything": [
+        "643:642",
+        0
+      ]
+    },
+    "class_type": "VRAMCleanup",
+    "_meta": {
+      "title": "🎈VRAM-Cleanup"
+    }
+  },
+  "643:647:646": {
+    "inputs": {
+      "clean_file_cache": true,
+      "clean_processes": true,
+      "clean_dlls": true,
+      "retry_times": 2,
+      "anything": [
+        "643:647:645",
+        0
+      ]
+    },
+    "class_type": "RAMCleanup",
+    "_meta": {
+      "title": "🎈RAM-Cleanup"
+    }
+  },
+  "402:331": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "402:332": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "402:333": {
+    "inputs": {
+      "boolean": false,
+      "on_true": [
+        "402:332",
+        0
+      ],
+      "on_false": [
+        "402:331",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "402:334": {
+    "inputs": {
+      "index": [
+        "402:333",
+        0
+      ],
+      "value0": [
+        "407",
+        0
+      ],
+      "value1": [
+        "397:21",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "403:229": {
+    "inputs": {
+      "index": 1,
+      "value0": [
+        "403:13",
+        0
+      ],
+      "value1": [
+        "403:1",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  },
+  "403:13": {
+    "inputs": {
+      "provider": "openrouter",
+      "model": "mistral-nemo:12b-instruct-2407-q4_K_M",
+      "api_key": "",
+      "local_endpoint": "http://127.0.0.1:11434/v1",
+      "llm_path": "none",
+      "auto_download_fallback": true,
+      "quantization": "4bit",
+      "device": "auto"
+    },
+    "class_type": "Z_ImageAPIConfig",
+    "_meta": {
+      "title": "0. Lokal - Mistral Nemo"
+    }
+  },
+  "403:1": {
+    "inputs": {
+      "provider": "local",
+      "model": "dolphin-mistral:7b",
+      "api_key": "",
+      "local_endpoint": "http://127.0.0.1:11434/v1",
+      "llm_path": "none",
+      "auto_download_fallback": true,
+      "quantization": "4bit",
+      "device": "auto"
+    },
+    "class_type": "Z_ImageAPIConfig",
+    "_meta": {
+      "title": "1. Lokal - Dolphin-Mistral"
+    }
+  },
+  "403:232": {
+    "inputs": {
+      "enable_temperature": true,
+      "temperature": 0.1,
+      "enable_top_p": true,
+      "top_p": 0.85,
+      "enable_top_k": true,
+      "top_k": 50,
+      "enable_seed": true,
+      "seed": [
+        "403:577",
+        0
+      ],
+      "enable_repeat_penalty": true,
+      "repeat_penalty": 1.2,
+      "enable_max_tokens": true,
+      "max_tokens": 512,
+      "debug_mode": false
+    },
+    "class_type": "Z_ImageOptions",
+    "_meta": {
+      "title": "Z-Image Options"
+    }
+  },
+  "403:425": {
+    "inputs": {
+      "clean_file_cache": true,
+      "clean_processes": true,
+      "clean_dlls": true,
+      "retry_times": 2,
+      "anything": [
+        "403:424",
+        0
+      ]
+    },
+    "class_type": "RAMCleanup",
+    "_meta": {
+      "title": "🎈RAM-Cleanup"
+    }
+  },
+  "403:424": {
+    "inputs": {
+      "offload_model": true,
+      "offload_cache": true,
+      "anything": [
+        "403:25",
+        0
+      ]
+    },
+    "class_type": "VRAMCleanup",
+    "_meta": {
+      "title": "🎈VRAM-Cleanup"
+    }
+  },
+  "403:577": {
+    "inputs": {
+      "seed": 972751336869981
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "Seed (rgthree)"
+    }
+  },
+  "403:25": {
+    "inputs": {
+      "prompt": [
+        "402:334",
+        0
+      ],
+      "prompt_template": "custom",
+      "retry_count": 3,
+      "max_output_length": 2000,
+      "session_id": "",
+      "reset_session": false,
+      "keep_model_loaded": true,
+      "utf8_sanitize": false,
+      "custom_system_prompt": "You are a NEGATIVE PROMPT GENERATOR for diffusion models.\n\nINPUT:\n{prompt}\n\nTASK:\nOutput ONE negative prompt line: only things that must NOT happen.\n\nHARD RULES:\n- Output ONLY a single comma-separated line (no explanations, no extra lines).\n- The negative prompt MUST support a super realistic / ultra-realistic photorealistic result by preventing stylization and common realism-breaking artifacts.\n- Do NOT include anything that is required by the input prompt (subjects, attributes, clothing/nudity status, pose, age, hair, nails, makeup, environment, lighting, camera angle, required text, names, tokens). If unsure, omit it.\n- Keep tokens intact and unchanged: (weights), [brackets], <lora:...>, embeddings, tags, aspect ratios, directives.\n- TEXT RULE: If the input requires specific text, NEVER add \"no text\" or \"text\" as negative. Watermark/logo/signature are allowed unless explicitly requested.\n\nMUST ENFORCE (always include):\n- Solo/duplicates: 2girls, 2women, multiple people, crowd, extra person, duplicate person, cloned face, double body, extra body, twin, merged bodies.\n- Ultra-realism protection: cartoon, anime, illustration, painting, drawing, sketch, CGI, 3D, render, plastic skin, doll-like, waxy skin.\n- Eye reflection ban: eye reflections, eye reflection, catchlight, catchlights, eye glint, glints, specular highlight in eyes, shiny eyes, reflective eyes, glare in eyes.\n  Plus eye failures: bad eyes, deformed eyes, asymmetrical eyes, cross-eyed, misaligned pupils, blurry eyes, muddy iris, no iris detail, no pupil detail, weird pupils, extra pupils.\n  Do NOT ban circle lenses unless the input explicitly demands natural eyes only. Only ban heterochromia/different colored eyes if not requested.\n- Common artifacts: bad anatomy, bad proportions, lowres, blurry subject, jpeg artifacts, watermark, logo, signature, cropped head, out of frame, motion blur, overexposed, underexposed.\n\nHANDS/FEET & DIGITS ENFORCEMENT (hard, always include):\n- Hands: bad hands, deformed hands, malformed hands, disfigured hands, poorly drawn hands, fused fingers, webbed fingers, missing fingers, extra fingers, six fingers, seven fingers, too many fingers, too few fingers, long fingers, broken fingers, twisted fingers, deformed knuckles, bad fingernails, missing fingernails, extra fingernails, floating fingers, extra hand, missing hand, fused hands, mutated hands.\n- Feet/Toes: bad feet, deformed feet, malformed feet, disfigured feet, poorly drawn feet, fused toes, webbed toes, missing toes, extra toes, six toes, too many toes, too few toes, deformed toes, twisted toes, bad toenails, missing toenails, extra toenails, extra foot, missing foot, broken ankles, twisted ankles.\n- Limb/joint errors: extra limbs, missing limbs, fused limbs, dislocated joints, broken wrists, broken ankles, unnatural limb bending.\n\nNAIL ATTACHMENT / GEL NAIL FAILURES (hard, always include):\n- floating nails, detached nails, misaligned nails, offset nails, nails not attached, wrong nail placement, nails hovering, doubled nails, extra nails, nail clipping, nails clipping, overlapping nails, crooked nails, warped nails, uneven nails, inconsistent nails, malformed fingernails, deformed fingernails.\n\nOUTPUT:\n- 35–110 high-signal terms, no duplicates, comma-separated single line.",
+      "config": [
+        "403:229",
+        0
+      ],
+      "options": [
+        "403:232",
+        0
+      ]
+    },
+    "class_type": "Z_ImagePromptEnhancer",
+    "_meta": {
+      "title": "Z-Image Prompt Enhancer"
+    }
+  },
+  "403:38:312": {
+    "inputs": {
+      "string": [
+        "402:334",
+        0
+      ],
+      "substring": "ERROR",
+      "case_sensitive": true
+    },
+    "class_type": "StringContains",
+    "_meta": {
+      "title": "Contains Text"
+    }
+  },
+  "403:38:313": {
+    "inputs": {
+      "text": "False",
+      "anything": [
+        "403:38:312",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "403:38:311": {
+    "inputs": {
+      "cond": [
+        "403:38:313",
+        0
+      ]
+    },
+    "class_type": "ImpactConditionalStopIteration",
+    "_meta": {
+      "title": "ImpactConditionalStopIteration"
+    }
+  },
+  "405:322": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "405:323": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "405:324": {
+    "inputs": {
+      "boolean": false,
+      "on_true": [
+        "405:323",
+        0
+      ],
+      "on_false": [
+        "405:322",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "405:325": {
+    "inputs": {
+      "index": [
+        "405:324",
+        0
+      ],
+      "value0": [
+        "406",
+        0
+      ],
+      "value1": [
+        "403:425",
+        0
+      ]
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "_meta": {
+      "title": "Any Index Switch"
+    }
+  }
+}

@@ -12,7 +12,7 @@
   "104": {
     "inputs": {
       "model": [
-        "138",
+        "158",
         0
       ],
       "shift": 5.000000000000001
@@ -70,39 +70,6 @@
     },
     "class_type": "RifeTensorrt"
   },
-  "138": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "myloras5\\POVBlowjobv2_high_noise.safetensors",
-      "lora_03": "None",
-      "lora_04": "None",
-      "lora_05": "None",
-      "lora_06": "None",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "163",
-        0
-      ],
-      "strength_01": 2.0000000000000004,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 0.0,
-      "strength_04": 2.0000000000000004,
-      "strength_05": 1.0,
-      "strength_06": 1.0,
-      "strength_07": 1.0,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
-  },
   "139": {
     "inputs": {
       "clip": [
@@ -110,8 +77,8 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "myloras5\\POVBlowjobv2_low_noise.safetensors",
-      "lora_03": "None",
+      "lora_02": "wan2.1\\1881395_wan2.1-i2v-480p-reveal-v1.0.safetensors",
+      "lora_03": "wan2.1\\dicks_epoch_100.safetensors",
       "lora_04": "None",
       "lora_05": "None",
       "lora_06": "None",
@@ -120,14 +87,14 @@
       "lora_09": "None",
       "lora_10": "None",
       "model": [
-        "164",
+        "157",
         0
       ],
       "strength_01": 1.0,
       "strength_02": 1.0000000000000002,
-      "strength_03": 0.0,
+      "strength_03": 1.0000000000000002,
       "strength_04": 1.0000000000000002,
-      "strength_05": 1.0,
+      "strength_05": 0.0,
       "strength_06": 1.0,
       "strength_07": 1.0,
       "strength_08": 1.0,
@@ -155,23 +122,56 @@
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/a060e876-9b94-4d15-9a02-06b2aa8ed84f.png"
+      "urls": "https://media.pornmaker.cloud/39e518fd-b515-4636-96f5-e53659b53b24.png"
     },
     "class_type": "LoadImageFromURL"
   },
-  "163": {
+  "156": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
   },
-  "164": {
+  "157": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
+  },
+  "158": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "lora_02": "wan2.1\\1881395_wan2.1-i2v-480p-reveal-v1.0.safetensors",
+      "lora_03": "wan2.1\\dicks_epoch_100.safetensors",
+      "lora_04": "None",
+      "lora_05": "None",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "156",
+        0
+      ],
+      "strength_01": 2.0000000000000004,
+      "strength_02": 2.0000000000000004,
+      "strength_03": 2.0000000000000004,
+      "strength_04": 1.0000000000000002,
+      "strength_05": 1.5000000000000002,
+      "strength_06": 1.0,
+      "strength_07": 1.0,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
   },
   "84": {
     "inputs": {
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 5725842826764100399,
+      "noise_seed": 7547778791135181937,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 2297482103787423623,
+      "noise_seed": 6101341479708706644,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": "POVBlowjobv2.POV.A woman leans between the legs of a naked man, performing deep throat oral sex on his enormous erect penis."
+      "text": "She pulls down her pants revealing a penis."
     },
     "class_type": "CLIPTextEncode"
   },

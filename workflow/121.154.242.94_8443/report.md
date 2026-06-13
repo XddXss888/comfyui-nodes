@@ -1,49 +1,47 @@
 # https://121.154.242.94:8443
 
-GPU: GB10 | 显存: 122 GB | 空闲: 106 GB
-内存: 121 GB (空闲 115 GB)
-版本: 0.22.0
-报告中的历史: 无
-扫描时间: 2026-06-13 22:37:38
-历史总数: 8 | 成功: 6
+**GPU**: GB10 | **显存**: 122 GB | **空闲**: 89 GB
+**内存**: 121 GB (空闲 104 GB)
+**版本**: 0.22.0
+**ComfyUI报告历史**: 有
+**扫描时间**: 2026-06-14 05:56:32
+**历史总数**: 19 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `12c1a758-ab93-4ca8-95e2-a455f012e8b6`
+- **Prompt ID**: `be75ca10-fab5-46b7-abe6-30e8541e4334`
 - **类型**: 文生图
-- **节点数**: 17
+- **节点数**: 11
 - **模型** (4):
   - 3moon mix i2i v2.ckpt
   - anima-base-v1.0.safetensors
   - qwen_3_06b_base.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] masterpiece, best qualit,4K, 8k, hight quality, highres, 1girl, @yabby, ahri_(league_of_legends), nsfw, fingering, full body, colorfull, nude, pussy, open pussy.open boob,large breasts, self fingering
+  - [CLIPTextEncode::text] masterpiece, best qualit,4K, 8k, hight quality, highres, 1girl, ahri_(league_of_legends), nsfw, fingering, full body, colorfull, nude, pussy, open pussy.open boob,large breasts, self fingering, pussy,
   - [CLIPTextEncode::text] blank page, text, logo, watermark, too many watermarks, reference, signature, artist name, dated, artistic error, scan artifacts, jpeg artifacts, upscaled, aliasing, film grain, heavy film grain, dith
-  - [GoogleTranslateCLIPTextEncodeNode::text] 리그오브 레전드 아리
 
 ### 2. workflow_02.json
-- **Prompt ID**: `60290123-4953-4e72-861d-98f6a30132f2`
+- **Prompt ID**: `0369758e-f546-49f5-b852-37d25f31c9ce`
 - **类型**: 文生图
-- **节点数**: 15
+- **节点数**: 11
 - **模型** (4):
   - 3moon mix i2i v2.ckpt
   - anima-base-v1.0.safetensors
   - qwen_3_06b_base.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] masterpiece, best qualit,4K, 8k, hight quality, highres, 1girl, @yabby, ahri_(league_of_legends), nsfw, fingering, full body, colorfull, nude, pussy, open pussy.open boob,large breasts, self fingering
+  - [CLIPTextEncode::text] masterpiece, best qualit,4K, 8k, hight quality, highres, 1girl, ahri_(league_of_legends), nsfw, fingering, full body, colorfull, nude, pussy, open pussy.open boob,large breasts, self fingering, pussy,
   - [CLIPTextEncode::text] blank page, text, logo, watermark, too many watermarks, reference, signature, artist name, dated, artistic error, scan artifacts, jpeg artifacts, upscaled, aliasing, film grain, heavy film grain, dith
 
 ### 3. workflow_03.json
-- **Prompt ID**: `2c19e4c5-eb0e-42b3-b4e9-15f271d9a548`
+- **Prompt ID**: `fea1010d-8392-4e65-bae5-578193c94ed3`
 - **类型**: 文生图
-- **节点数**: 13
-- **模型** (5):
+- **节点数**: 11
+- **模型** (4):
   - 3moon mix i2i v2.ckpt
   - anima-base-v1.0.safetensors
-  - kda-popstar-ahri-illust.safetensors
   - qwen_3_06b_base.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
@@ -51,13 +49,12 @@ GPU: GB10 | 显存: 122 GB | 空闲: 106 GB
   - [CLIPTextEncode::text] blank page, text, logo, watermark, too many watermarks, reference, signature, artist name, dated, artistic error, scan artifacts, jpeg artifacts, upscaled, aliasing, film grain, heavy film grain, dith
 
 ### 4. workflow_04.json
-- **Prompt ID**: `06e8cf60-48ed-4b5e-aeda-998322edd96e`
+- **Prompt ID**: `7d05a539-493a-49bf-8f97-241e017d68d0`
 - **类型**: 文生图
-- **节点数**: 13
-- **模型** (5):
+- **节点数**: 11
+- **模型** (4):
   - 3moon mix i2i v2.ckpt
   - anima-base-v1.0.safetensors
-  - kda-popstar-ahri-illust.safetensors
   - qwen_3_06b_base.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
@@ -65,12 +62,11 @@ GPU: GB10 | 显存: 122 GB | 空闲: 106 GB
   - [CLIPTextEncode::text] blank page, text, logo, watermark, too many watermarks, reference, signature, artist name, dated, artistic error, scan artifacts, jpeg artifacts, upscaled, aliasing, film grain, heavy film grain, dith
 
 ### 5. workflow_05.json
-- **Prompt ID**: `dfb12fa7-09e6-4d61-94b2-93a761930025`
+- **Prompt ID**: `6cb45115-db5c-4aaf-a4b8-b316468d29ec`
 - **类型**: 文生图
-- **节点数**: 13
-- **模型** (5):
+- **节点数**: 11
+- **模型** (4):
   - 3moon mix i2i v2.ckpt
-  - Ahri/kda-popstar-ahri-illust.safetensors
   - anima-base-v1.0.safetensors
   - qwen_3_06b_base.safetensors
   - qwen_image_vae.safetensors
@@ -79,12 +75,63 @@ GPU: GB10 | 显存: 122 GB | 空闲: 106 GB
   - [CLIPTextEncode::text] blank page, text, logo, watermark, too many watermarks, reference, signature, artist name, dated, artistic error, scan artifacts, jpeg artifacts, upscaled, aliasing, film grain, heavy film grain, dith
 
 ### 6. workflow_06.json
-- **Prompt ID**: `f552d8c0-7308-4115-891c-4056a4443c1d`
+- **Prompt ID**: `38976445-1c27-41b0-be55-e15eac3bdfa3`
 - **类型**: 文生图
-- **节点数**: 13
-- **模型** (5):
+- **节点数**: 11
+- **模型** (4):
   - 3moon mix i2i v2.ckpt
-  - Ahri/kda-popstar-ahri-illust.safetensors
+  - anima-base-v1.0.safetensors
+  - qwen_3_06b_base.safetensors
+  - qwen_image_vae.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] masterpiece, best qualit,4K, 8k, hight quality, highres, 1girl, ahri_(league_of_legends), nsfw, fingering, full body, colorfull, nude, pussy, open pussy.open boob,large breasts, self fingering, pussy,
+  - [CLIPTextEncode::text] blank page, text, logo, watermark, too many watermarks, reference, signature, artist name, dated, artistic error, scan artifacts, jpeg artifacts, upscaled, aliasing, film grain, heavy film grain, dith
+
+### 7. workflow_07.json
+- **Prompt ID**: `dcbb2919-f474-4571-8678-8e9f08d4725e`
+- **类型**: 文生图
+- **节点数**: 11
+- **模型** (4):
+  - 3moon mix i2i v2.ckpt
+  - anima-base-v1.0.safetensors
+  - qwen_3_06b_base.safetensors
+  - qwen_image_vae.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] masterpiece, best qualit,4K, 8k, hight quality, highres, 1girl, ahri_(league_of_legends), nsfw, fingering, full body, colorfull, nude, pussy, open pussy.open boob,large breasts, self fingering, pussy,
+  - [CLIPTextEncode::text] blank page, text, logo, watermark, too many watermarks, reference, signature, artist name, dated, artistic error, scan artifacts, jpeg artifacts, upscaled, aliasing, film grain, heavy film grain, dith
+
+### 8. workflow_08.json
+- **Prompt ID**: `1cd59a27-937f-485a-b0d2-2fd324895cff`
+- **类型**: 文生图
+- **节点数**: 11
+- **模型** (4):
+  - 3moon mix i2i v2.ckpt
+  - anima-base-v1.0.safetensors
+  - qwen_3_06b_base.safetensors
+  - qwen_image_vae.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] masterpiece, best qualit,4K, 8k, hight quality, highres, 1girl, ahri_(league_of_legends), nsfw, fingering, full body, colorfull, nude, pussy, open pussy.open boob,large breasts, self fingering, pussy,
+  - [CLIPTextEncode::text] blank page, text, logo, watermark, too many watermarks, reference, signature, artist name, dated, artistic error, scan artifacts, jpeg artifacts, upscaled, aliasing, film grain, heavy film grain, dith
+
+### 9. workflow_09.json
+- **Prompt ID**: `2b5387b9-54d7-4656-8c1d-a940307e946d`
+- **类型**: 文生图
+- **节点数**: 11
+- **模型** (4):
+  - 3moon mix i2i v2.ckpt
+  - anima-base-v1.0.safetensors
+  - qwen_3_06b_base.safetensors
+  - qwen_image_vae.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] masterpiece, best qualit,4K, 8k, hight quality, highres, 1girl, ahri_(league_of_legends), nsfw, fingering, full body, colorfull, nude, pussy, open pussy.open boob,large breasts, self fingering, pussy,
+  - [CLIPTextEncode::text] blank page, text, logo, watermark, too many watermarks, reference, signature, artist name, dated, artistic error, scan artifacts, jpeg artifacts, upscaled, aliasing, film grain, heavy film grain, dith
+
+### 10. workflow_10.json
+- **Prompt ID**: `d059c82c-19c9-473f-91d3-dd67f390fc99`
+- **类型**: 文生图
+- **节点数**: 11
+- **模型** (4):
+  - 3moon mix i2i v2.ckpt
   - anima-base-v1.0.safetensors
   - qwen_3_06b_base.safetensors
   - qwen_image_vae.safetensors

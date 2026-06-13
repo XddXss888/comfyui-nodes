@@ -1,0 +1,254 @@
+{
+  "37": {
+    "inputs": {
+      "unet_name": "qwen_image_edit_2511_bf16.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "38": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "39": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "107": {
+    "inputs": {
+      "image": "1781360972554.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "122": {
+    "inputs": {
+      "lora_name": "QWen/Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "181": {
+    "inputs": {
+      "conditioning": [
+        "284",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "223": {
+    "inputs": {
+      "value": "transform the image to a realistic photograph. "
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (Multiline)"
+    }
+  },
+  "283": {
+    "inputs": {
+      "to_ref": true,
+      "ref_main_image": true,
+      "ref_longest_edge": 1024,
+      "ref_crop": "pad",
+      "ref_upscale": "lanczos",
+      "to_vl": true,
+      "vl_resize": true,
+      "vl_target_size": 384,
+      "vl_crop": "center",
+      "vl_upscale": "bicubic",
+      "image": [
+        "107",
+        0
+      ]
+    },
+    "class_type": "QwenEditConfigPreparer",
+    "_meta": {
+      "title": "Qwen Edit Config Preparer"
+    }
+  },
+  "284": {
+    "inputs": {
+      "prompt": [
+        "223",
+        0
+      ],
+      "return_full_refs_cond": true,
+      "instruction": "Describe the key features of the input image (color, shape, size, texture, objects, background), then explain how the user's text instruction should alter or modify the image. Generate a new image that meets the user's requirements while maintaining consistency with the original input where appropriate.",
+      "clip": [
+        "38",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ],
+      "configs": [
+        "283",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlusCustom_lrzjason",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlusCustom lrzjason"
+    }
+  },
+  "335": {
+    "inputs": {
+      "value": 1091359629775520
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "354": {
+    "inputs": {
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 64,
+      "temporal_overlap": 8,
+      "samples": [
+        "356",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE Decode (Tiled)"
+    }
+  },
+  "356": {
+    "inputs": {
+      "seed": [
+        "335",
+        0
+      ],
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "beta57",
+      "denoise": 1.0,
+      "model": [
+        "493",
+        0
+      ],
+      "positive": [
+        "284",
+        0
+      ],
+      "negative": [
+        "181",
+        0
+      ],
+      "latent_image": [
+        "284",
+        1
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "357": {
+    "inputs": {
+      "custom_output": [
+        "284",
+        2
+      ]
+    },
+    "class_type": "QwenEditOutputExtractor",
+    "_meta": {
+      "title": "Qwen Edit Output Extractor"
+    }
+  },
+  "358": {
+    "inputs": {
+      "image": [
+        "354",
+        0
+      ],
+      "pad_info": [
+        "357",
+        0
+      ]
+    },
+    "class_type": "CropWithPadInfo",
+    "_meta": {
+      "title": "Crop With Pad Info"
+    }
+  },
+  "490": {
+    "inputs": {
+      "lora_name": "QWen/anything2real_2601.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "122",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "493": {
+    "inputs": {
+      "lora_name": "QWen/Qwen_Snofs_1_3.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "490",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "494": {
+    "inputs": {
+      "images": [
+        "358",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  }
+}

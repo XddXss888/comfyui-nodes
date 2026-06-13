@@ -1,0 +1,165 @@
+{
+  "9": {
+    "inputs": {
+      "filename_prefix": "z-image-turbo",
+      "images": [
+        "65",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "62": {
+    "inputs": {
+      "clip_name": "z_image_turbo_text_encoder.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "63": {
+    "inputs": {
+      "vae_name": "z_image_turbo_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "64": {
+    "inputs": {
+      "conditioning": [
+        "67",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "65": {
+    "inputs": {
+      "samples": [
+        "74",
+        0
+      ],
+      "vae": [
+        "63",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "66": {
+    "inputs": {
+      "unet_name": "model2.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "67": {
+    "inputs": {
+      "text": "l34n0r, chubby woman, A woman stands in the center of a stopped hotel elevator, fully naked with only sheer lace stockings remaining on her legs, the removed dress pooled at her feet, her body turned slightly to the side with one hand resting on the elevator wall for support, soft intimate lighting casting gentle shadows across her skin, close intimate tension in the small space, medium close-up framing from thighs up, natural pose with relaxed shoulders and subtle arch in her back, gaze directed forward with a soft surrendered expression, simple elevator interior background.",
+      "clip": [
+        "72",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "68": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "69": {
+    "inputs": {
+      "shift": 12.0,
+      "model": [
+        "72",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "72": {
+    "inputs": {
+      "lora_name": "z-3l34n0r.safetensors",
+      "strength_model": 0.78,
+      "strength_clip": 0.8,
+      "prompt": "",
+      "example": "[none]",
+      "model": [
+        "66",
+        0
+      ],
+      "clip": [
+        "62",
+        0
+      ]
+    },
+    "class_type": "LoraLoader|pysssss",
+    "_meta": {
+      "title": "Lora Loader 🐍"
+    }
+  },
+  "74": {
+    "inputs": {
+      "eta": 0.5,
+      "sampler_name": "exponential/res_2s",
+      "scheduler": "bong_tangent",
+      "steps": 10,
+      "steps_to_run": -1,
+      "denoise": 1.0,
+      "cfg": 1.0,
+      "seed": 699584008911822,
+      "sampler_mode": "standard",
+      "bongmath": true,
+      "model": [
+        "69",
+        0
+      ],
+      "positive": [
+        "67",
+        0
+      ],
+      "negative": [
+        "64",
+        0
+      ],
+      "latent_image": [
+        "68",
+        0
+      ]
+    },
+    "class_type": "ClownsharKSampler_Beta",
+    "_meta": {
+      "title": "ClownsharKSampler"
+    }
+  }
+}

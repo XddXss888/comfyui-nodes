@@ -1,7 +1,16 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_25c53ecc7b514d36a2b9ed221fce2ed5.png"
+      "image": "ref_8fee8e4b55654358be8b15b59ab7719d.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "83": {
+    "inputs": {
+      "image": "ref_fd6c8276f31845e1b89342be3e6363a3.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +130,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "白いレース模様のブラジャーと白いレース模様のパンティ―。",
+      "prompt": "“Change the entire outfit in the first photo to match the outfit in the second photo. It should look realistic with original hour lighting. do not change anything else.\nWithout changing face detailingIMPORTANT – FACE LOCK\n\nKeep the subject's real face exactly the same as the reference image.\n\nDo NOT change facial structure, jawline, eyes shape, nose, lips, skin tone, beard, hairline, age, or expression.\n\nMaintain 100% identity accuracy.\n\nNo beautification, no face swapping, no Al alteration.\n\nPreserve natural skin texture, pores, asymmetry, and imperfections.\n\nThe person must be instantly recognizable as the same individual.",
       "clip": [
         "91:61",
         0
@@ -132,6 +141,10 @@
       ],
       "image1": [
         "91:88",
+        0
+      ],
+      "image2": [
+        "83",
         0
       ]
     },
@@ -184,7 +197,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 290462981447991,
+      "seed": 308247495499006,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -225,6 +238,10 @@
       ],
       "image1": [
         "91:88",
+        0
+      ],
+      "image2": [
+        "83",
         0
       ]
     },

@@ -2,7 +2,7 @@
   "103": {
     "inputs": {
       "model": [
-        "139",
+        "159",
         0
       ],
       "shift": 5.000000000000001
@@ -12,7 +12,7 @@
   "104": {
     "inputs": {
       "model": [
-        "138",
+        "158",
         0
       ],
       "shift": 5.000000000000001
@@ -70,72 +70,6 @@
     },
     "class_type": "RifeTensorrt"
   },
-  "138": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "wan1023\\wan2.2-i2v-high-sex-smashcut-v1.0.safetensors",
-      "lora_03": "wan0924\\W22_HN_i2v_POV_Missionary_Insertion_v1.safetensors",
-      "lora_04": "None",
-      "lora_05": "wan0922\\触发词lyy666版本v1高噪添加强度1.safetensors",
-      "lora_06": "None",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "162",
-        0
-      ],
-      "strength_01": 2.0000000000000004,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 1.0000000000000002,
-      "strength_04": 0.0,
-      "strength_05": 1.0,
-      "strength_06": 1.0,
-      "strength_07": 1.0,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
-  },
-  "139": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "wan1023\\wan2.2-i2v-low-sex-smashcut-v1.0.safetensors",
-      "lora_03": "myloras2\\MissionaryUpClose10_000002500_low_noise.safetensors",
-      "lora_04": "None",
-      "lora_05": "None",
-      "lora_06": "None",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "163",
-        0
-      ],
-      "strength_01": 1.0,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 0.0,
-      "strength_04": 1.0000000000000002,
-      "strength_05": 1.0,
-      "strength_06": 1.0,
-      "strength_07": 1.0,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
-  },
   "150": {
     "inputs": {
       "crop_position": "center",
@@ -155,23 +89,89 @@
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/089bfd7e-6fec-48dd-bf2f-a74599977f98.png"
+      "urls": "https://media.pornmaker.cloud/30dbf2bf-113e-4615-a96a-791c36e41c3e.png"
     },
     "class_type": "LoadImageFromURL"
   },
-  "162": {
+  "156": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
   },
-  "163": {
+  "157": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
+  },
+  "158": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "lora_02": "None",
+      "lora_03": "wan0924\\W22_HN_i2v_POV_Missionary_Insertion_v1.safetensors",
+      "lora_04": "wan2.2\\NSFW-22-H-e8.safetensors",
+      "lora_05": "None",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "156",
+        0
+      ],
+      "strength_01": 2.0,
+      "strength_02": 0.0,
+      "strength_03": 1.0000000000000002,
+      "strength_04": 1.0000000000000002,
+      "strength_05": 0.0,
+      "strength_06": 1.0000000000000002,
+      "strength_07": 1.0000000000000002,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
+  },
+  "159": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "lora_02": "None",
+      "lora_03": "wan0924\\W22_LN_i2v_POV_Missionary_Insertion_v1.safetensors",
+      "lora_04": "wan2.2\\NSFW-22-L-e8.safetensors",
+      "lora_05": "None",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "157",
+        0
+      ],
+      "strength_01": 1.0,
+      "strength_02": 1.0000000000000002,
+      "strength_03": 1.0000000000000002,
+      "strength_04": 1.0000000000000002,
+      "strength_05": 0.0,
+      "strength_06": 1.0000000000000002,
+      "strength_07": 1.0000000000000002,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
   },
   "84": {
     "inputs": {
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 3716052382185879929,
+      "noise_seed": 5557092490377023116,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 5549247218513001011,
+      "noise_seed": 602567290813971438,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": "lyy666.<SM4SHCUT> The scene changes and a man is thrusting his penis into and out of her pussy.Immediately cut to an extremely erotic scene. the exact same person is now completely naked and lying on their back, having missionary sex with a man, close-up shot of their genitals"
+      "text": "Immediately cut to a new scene where the exact same person is now completely naked and lying on their back, and she moves her head forward slightly. The scene is a top-down view showing the same woman completely nude, with their legs in an open position, with her vagina visible. At the bottom of the frame a man can be partially seen, as the man takes his penis with his hand and inserts his penis into the woman's vagina, pushing his body towards her. He then moves back and forward, as he pushes his penis into the woman's vagina repeatedly. The angle is from the point of view of the man at the bottom of the frame"
     },
     "class_type": "CLIPTextEncode"
   },

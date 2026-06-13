@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 2178401,
+      "seed": 2143741420,
       "steps": 12,
       "cfg": 1.7,
       "sampler_name": "euler",
@@ -42,7 +42,7 @@
   },
   "6": {
     "inputs": {
-      "text": "1girl, solo, black_medium_hair, brown_captivating_eyes, curvy, white_tight_dress, silver_hoop_earrings, playful yet slightly nervous, inviting someone in through the window, close-up, a cozy apartment with sunlight filtering through the windows, books scattered on the table, and a hint of fresh coffee aroma in the air, white_soft, masterpiece, best quality, photorealistic, realistic, very aesthetic, absurdres",
+      "text": "solo, brown_hair, blue_eyes, cowboy_shot, masterpiece, best quality, photorealistic, realistic, very aesthetic, absurdres",
       "clip": [
         "4",
         1
@@ -52,7 +52,7 @@
   },
   "7": {
     "inputs": {
-      "text": "blurry, low quality, distorted, deformed, bad anatomy, bad proportions, duplicate, extra limbs, mutation, ugly, lower_body, legs, feet",
+      "text": "blurry, low quality, distorted, deformed, bad anatomy, bad proportions, duplicate, extra limbs, mutation, ugly, feet",
       "clip": [
         "4",
         1

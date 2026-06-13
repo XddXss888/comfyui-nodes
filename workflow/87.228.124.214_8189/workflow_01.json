@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "Chase Infinity, African American, young woman, slicked back afro braids, A woman wearing a short black-and-white maid outfit stands in a house doorway, one hand resting on her thigh with fingers lightly tracing the fabric, body leaning slightly forward in a confident pose, playful seductive smile and direct gaze toward the viewer, soft indoor lighting highlighting the folds of her outfit against a simple domestic interior, medium close-up framing from the waist up, natural proportions and clear silhouette.",
+      "text": "l34n0r, chubby woman, A woman in delicate lingerie kneels in a photo studio, her body leaning forward with intense hunger as she takes a thick cock deep into her throat, lips stretched tightly around the shaft and her hands gripping the base for support, head tilted upward with watery eyes and an expression of desperate craving, soft professional lighting highlighting the tension in her neck and the glossy sheen on her skin against a plain studio backdrop, medium close-up framing that keeps clear focus on her face, mouth, and upper body.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "ChaseInfinity_ZimageTurbo.safetensors",
-      "strength_model": 0.7,
-      "strength_clip": 1.0,
+      "lora_name": "z-3l34n0r.safetensors",
+      "strength_model": 0.78,
+      "strength_clip": 0.8,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.33,
+      "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
       "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 1076162935499585,
+      "seed": 699584008911822,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

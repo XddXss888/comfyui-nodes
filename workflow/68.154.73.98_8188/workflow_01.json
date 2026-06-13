@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_e8877971cdd14116b08259d54434e33b.png"
+      "image": "ref_ad4d050976744d52b92d25c1ae6bcf9a.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "실사 같은 8K 해상도, 초고해상도, 매우 섬세한 피부 질감, 자연스럽고 사실적인 피부 질감, 보송보송하고 매끈한 피부 질감, 선명한 초점, 부드러운 얼굴 윤곽, Sony A7R IV, 85mm f/1.8 렌즈로 촬영, 피부 아래에서 빛이 투과하는 효과, 자연스러운 민낯 메이크업,우윳빛 언더톤의 하얀 피부, 부드럽게 확산된 조명, 밝고 균일한 조명, 그림자 없음, 강한 그림자 없음, 반사광 없음, 눈부심 없음, 전문적인 사진 촬영, 부드러운 가슴골이 많이 드러나는 아이보리색 끈 비키니 착용 \n",
+      "prompt": "Change wheels to BBS RS chrome wheels that fit the the entire arch very well of the car with no arch gap ",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 234761389943803,
+      "seed": 295964676524515,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",

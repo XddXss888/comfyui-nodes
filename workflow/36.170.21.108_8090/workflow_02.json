@@ -1,118 +1,336 @@
 {
-  "9": {
+  "274": {
     "inputs": {
-      "filename_prefix": "z-image",
-      "images": [
-        "43",
-        0
-      ]
+      "noise_seed": 666
     },
-    "class_type": "SaveImage",
+    "class_type": "RandomNoise",
     "_meta": {
-      "title": "保存图像"
+      "title": "随机噪波"
     }
   },
-  "39": {
+  "275": {
     "inputs": {
-      "clip_name": "qwen_3_4b.safetensors",
-      "type": "lumina2",
-      "device": "default"
+      "noise_seed": 666
     },
-    "class_type": "CLIPLoader",
+    "class_type": "RandomNoise",
     "_meta": {
-      "title": "加载CLIP"
+      "title": "随机噪波"
     }
   },
-  "40": {
+  "276": {
     "inputs": {
-      "vae_name": "ae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "41": {
-    "inputs": {
-      "width": [
-        "58",
+      "video_latent": [
+        "288",
         0
       ],
-      "height": [
-        "58",
+      "audio_latent": [
+        "309",
         1
-      ],
-      "batch_size": 1
-    },
-    "class_type": "EmptySD3LatentImage",
-    "_meta": {
-      "title": "空Latent图像（SD3）"
-    }
-  },
-  "42": {
-    "inputs": {
-      "conditioning": [
-        "45",
-        0
       ]
     },
-    "class_type": "ConditioningZeroOut",
+    "class_type": "LTXVConcatAVLatent",
     "_meta": {
-      "title": "条件零化"
+      "title": "LTXVConcatAVLatent"
     }
   },
-  "43": {
+  "279": {
     "inputs": {
-      "samples": [
-        "44",
-        0
-      ],
-      "vae": [
-        "40",
-        0
-      ]
+      "sampler_name": "euler_cfg_pp"
     },
-    "class_type": "VAEDecode",
+    "class_type": "KSamplerSelect",
     "_meta": {
-      "title": "VAE解码"
+      "title": "K采样器选择"
     }
   },
-  "44": {
+  "280": {
     "inputs": {
-      "seed": 679843878827864,
-      "steps": 9,
+      "sigmas": "0.85, 0.7250, 0.4219, 0.0"
+    },
+    "class_type": "ManualSigmas",
+    "_meta": {
+      "title": "自定义Sigmas"
+    }
+  },
+  "282": {
+    "inputs": {
       "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
       "model": [
-        "47",
+        "318",
         0
       ],
       "positive": [
-        "45",
+        "284",
         0
       ],
       "negative": [
-        "42",
+        "284",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG引导器"
+    }
+  },
+  "283": {
+    "inputs": {
+      "noise": [
+        "275",
+        0
+      ],
+      "guider": [
+        "316",
+        0
+      ],
+      "sampler": [
+        "291",
+        0
+      ],
+      "sigmas": [
+        "308",
         0
       ],
       "latent_image": [
-        "41",
+        "306",
         0
       ]
     },
-    "class_type": "KSampler",
+    "class_type": "SamplerCustomAdvanced",
     "_meta": {
-      "title": "K采样器"
+      "title": "自定义采样器（高级）"
     }
   },
-  "45": {
+  "284": {
     "inputs": {
-      "text": "风景",
-      "clip": [
-        "39",
+      "positive": [
+        "305",
         0
+      ],
+      "negative": [
+        "305",
+        1
+      ],
+      "latent": [
+        "309",
+        0
+      ]
+    },
+    "class_type": "LTXVCropGuides",
+    "_meta": {
+      "title": "LTXV裁剪指导"
+    }
+  },
+  "286": {
+    "inputs": {
+      "longer_edge": 1536,
+      "images": [
+        "334",
+        0
+      ]
+    },
+    "class_type": "ResizeImagesByLongerEdge",
+    "_meta": {
+      "title": "缩放图像（长边）"
+    }
+  },
+  "287": {
+    "inputs": {
+      "samples": [
+        "284",
+        2
+      ],
+      "upscale_model": [
+        "313",
+        0
+      ],
+      "vae": [
+        "319",
+        0
+      ]
+    },
+    "class_type": "LTXVLatentUpsampler",
+    "_meta": {
+      "title": "LTXV潜空间上采样器"
+    }
+  },
+  "288": {
+    "inputs": {
+      "strength": 1.0,
+      "bypass": false,
+      "vae": [
+        "319",
+        0
+      ],
+      "image": [
+        "289",
+        0
+      ],
+      "latent": [
+        "287",
+        0
+      ]
+    },
+    "class_type": "LTXVImgToVideoInplace",
+    "_meta": {
+      "title": "LTXV图像转视频（原地）"
+    }
+  },
+  "289": {
+    "inputs": {
+      "img_compression": 18,
+      "image": [
+        "286",
+        0
+      ]
+    },
+    "class_type": "LTXVPreprocess",
+    "_meta": {
+      "title": "LTXV预处理"
+    }
+  },
+  "291": {
+    "inputs": {
+      "sampler_name": "euler_ancestral_cfg_pp"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "292": {
+    "inputs": {
+      "expression": "a/4",
+      "values.a": [
+        "456",
+        0
+      ]
+    },
+    "class_type": "ComfyMathExpression",
+    "_meta": {
+      "title": "Math Expression"
+    }
+  },
+  "294": {
+    "inputs": {
+      "expression": "a/4",
+      "values.a": [
+        "456",
+        1
+      ]
+    },
+    "class_type": "ComfyMathExpression",
+    "_meta": {
+      "title": "Math Expression"
+    }
+  },
+  "295": {
+    "inputs": {
+      "width": [
+        "292",
+        1
+      ],
+      "height": [
+        "294",
+        1
+      ],
+      "length": [
+        "301",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLTXVLatentVideo",
+    "_meta": {
+      "title": "空Latent视频（LTXV）"
+    }
+  },
+  "296": {
+    "inputs": {
+      "strength": 0.7,
+      "bypass": false,
+      "vae": [
+        "319",
+        0
+      ],
+      "image": [
+        "289",
+        0
+      ],
+      "latent": [
+        "295",
+        0
+      ]
+    },
+    "class_type": "LTXVImgToVideoInplace",
+    "_meta": {
+      "title": "LTXV图像转视频（原地）"
+    }
+  },
+  "297": {
+    "inputs": {
+      "samples": [
+        "446",
+        1
+      ],
+      "audio_vae": [
+        "320",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEDecode",
+    "_meta": {
+      "title": "LTXV音频VAE解码"
+    }
+  },
+  "298": {
+    "inputs": {
+      "expression": "a",
+      "values.a": [
+        "300",
+        0
+      ]
+    },
+    "class_type": "ComfyMathExpression",
+    "_meta": {
+      "title": "Math Expression"
+    }
+  },
+  "300": {
+    "inputs": {
+      "value": 24
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Frame Rate"
+    }
+  },
+  "301": {
+    "inputs": {
+      "value": 121
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Length"
+    }
+  },
+  "303": {
+    "inputs": {
+      "value": "人物跳舞"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Prompt"
+    }
+  },
+  "304": {
+    "inputs": {
+      "text": [
+        "303",
+        0
+      ],
+      "clip": [
+        "436",
+        1
       ]
     },
     "class_type": "CLIPTextEncode",
@@ -120,9 +338,190 @@
       "title": "CLIP文本编码"
     }
   },
-  "46": {
+  "305": {
     "inputs": {
-      "unet_name": "Z_image/BEYOND REALITY SUPER Z IMAGE 3.0 淡妆浓抹 BF16.safetensors",
+      "frame_rate": [
+        "352",
+        0
+      ],
+      "positive": [
+        "304",
+        0
+      ],
+      "negative": [
+        "315",
+        0
+      ]
+    },
+    "class_type": "LTXVConditioning",
+    "_meta": {
+      "title": "LTXV条件"
+    }
+  },
+  "306": {
+    "inputs": {
+      "video_latent": [
+        "296",
+        0
+      ],
+      "audio_latent": [
+        "307",
+        0
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "307": {
+    "inputs": {
+      "frames_number": [
+        "301",
+        0
+      ],
+      "frame_rate": [
+        "298",
+        1
+      ],
+      "batch_size": 1,
+      "audio_vae": [
+        "320",
+        0
+      ]
+    },
+    "class_type": "LTXVEmptyLatentAudio",
+    "_meta": {
+      "title": "LTXV 空音频潜空间"
+    }
+  },
+  "308": {
+    "inputs": {
+      "sigmas": "1.0, 0.99375, 0.9875, 0.98125, 0.975, 0.909375, 0.725, 0.421875, 0.0"
+    },
+    "class_type": "ManualSigmas",
+    "_meta": {
+      "title": "自定义Sigmas"
+    }
+  },
+  "309": {
+    "inputs": {
+      "av_latent": [
+        "283",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXV分离音视频潜空间"
+    }
+  },
+  "310": {
+    "inputs": {
+      "noise": [
+        "274",
+        0
+      ],
+      "guider": [
+        "282",
+        0
+      ],
+      "sampler": [
+        "279",
+        0
+      ],
+      "sigmas": [
+        "280",
+        0
+      ],
+      "latent_image": [
+        "276",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "311": {
+    "inputs": {
+      "av_latent": [
+        "310",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXV分离音视频潜空间"
+    }
+  },
+  "313": {
+    "inputs": {
+      "model_name": "ltx-2.3-spatial-upscaler-x2-1.0.safetensors"
+    },
+    "class_type": "LatentUpscaleModelLoader",
+    "_meta": {
+      "title": "加载Latent放大模型"
+    }
+  },
+  "315": {
+    "inputs": {
+      "text": "pc game, console game, video game, cartoon, childish, ugly",
+      "clip": [
+        "436",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "316": {
+    "inputs": {
+      "cfg": 1.0,
+      "model": [
+        "318",
+        0
+      ],
+      "positive": [
+        "305",
+        0
+      ],
+      "negative": [
+        "305",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG引导器"
+    }
+  },
+  "317": {
+    "inputs": {
+      "tile_size": 768,
+      "overlap": 64,
+      "temporal_size": 4096,
+      "temporal_overlap": 4,
+      "samples": [
+        "446",
+        0
+      ],
+      "vae": [
+        "319",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE解码（分块）"
+    }
+  },
+  "318": {
+    "inputs": {
+      "unet_name": "LTX2_KJ/ltx-2.3-22b-distilled_transformer_only_fp8_input_scaled_v3.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -130,24 +529,320 @@
       "title": "UNet加载器"
     }
   },
-  "47": {
+  "319": {
     "inputs": {
-      "shift": 3.0,
-      "model": [
-        "46",
+      "vae_name": "LTX2_KJ/LTX23_video_vae_bf16.safetensors",
+      "device": "main_device",
+      "weight_dtype": "bf16"
+    },
+    "class_type": "VAELoaderKJ",
+    "_meta": {
+      "title": "VAELoader KJ"
+    }
+  },
+  "320": {
+    "inputs": {
+      "vae_name": "LTX2_KJ/LTX2_audio_vae_bf16.safetensors",
+      "device": "main_device",
+      "weight_dtype": "bf16"
+    },
+    "class_type": "VAELoaderKJ",
+    "_meta": {
+      "title": "VAELoader KJ"
+    }
+  },
+  "324": {
+    "inputs": {
+      "clip_name1": "gemma/gemma_3_12B_it_fp8_e4m3fn.safetensors",
+      "clip_name2": "LTX2_KJ/ltx-2.3_text_projection_bf16.safetensors",
+      "type": "ltxv",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "双CLIP加载器"
+    }
+  },
+  "334": {
+    "inputs": {
+      "width": [
+        "456",
+        0
+      ],
+      "height": [
+        "456",
+        1
+      ],
+      "upscale_method": "nearest-exact",
+      "keep_proportion": "crop",
+      "pad_color": "0, 0, 0",
+      "crop_position": "center",
+      "divisible_by": 32,
+      "device": "cpu",
+      "image": [
+        "455",
         0
       ]
     },
-    "class_type": "ModelSamplingAuraFlow",
+    "class_type": "ImageResizeKJv2",
     "_meta": {
-      "title": "采样算法（AuraFlow）"
+      "title": "Resize Image v2"
     }
   },
-  "58": {
+  "352": {
     "inputs": {
-      "width": 256,
-      "height": 256,
-      "aspect_ratio": "16:9 landscape 1344x768",
+      "expression": "a",
+      "values.a": [
+        "300",
+        0
+      ]
+    },
+    "class_type": "ComfyMathExpression",
+    "_meta": {
+      "title": "Math Expression"
+    }
+  },
+  "378": {
+    "inputs": {
+      "expression": "a",
+      "values.a": [
+        "300",
+        0
+      ]
+    },
+    "class_type": "ComfyMathExpression",
+    "_meta": {
+      "title": "Math Expression"
+    }
+  },
+  "380": {
+    "inputs": {
+      "frame_rate": [
+        "378",
+        0
+      ],
+      "loop_count": 0,
+      "filename_prefix": "ltx23",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "317",
+        0
+      ],
+      "audio": [
+        "297",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "Video Combine 🎥🅥🅗🅢"
+    }
+  },
+  "436": {
+    "inputs": {
+      "lora_name": "gemma/gemma-3-12b-it-abliterated_heretic_lora_rank64_bf16.safetensors",
+      "strength_model": 1.0,
+      "strength_clip": 1.0,
+      "model": [
+        "318",
+        0
+      ],
+      "clip": [
+        "324",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "加载LoRA"
+    }
+  },
+  "439": {
+    "inputs": {
+      "positive": [
+        "305",
+        0
+      ],
+      "negative": [
+        "305",
+        1
+      ],
+      "latent": [
+        "311",
+        0
+      ]
+    },
+    "class_type": "LTXVCropGuides",
+    "_meta": {
+      "title": "LTXV裁剪指导"
+    }
+  },
+  "440": {
+    "inputs": {
+      "noise_seed": 42
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  },
+  "441": {
+    "inputs": {
+      "sampler_name": "euler_cfg_pp"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "442": {
+    "inputs": {
+      "sigmas": "0.85, 0.7250, 0.4219, 0.0"
+    },
+    "class_type": "ManualSigmas",
+    "_meta": {
+      "title": "自定义Sigmas"
+    }
+  },
+  "443": {
+    "inputs": {
+      "video_latent": [
+        "451",
+        0
+      ],
+      "audio_latent": [
+        "311",
+        1
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "444": {
+    "inputs": {
+      "noise": [
+        "440",
+        0
+      ],
+      "guider": [
+        "445",
+        0
+      ],
+      "sampler": [
+        "441",
+        0
+      ],
+      "sigmas": [
+        "442",
+        0
+      ],
+      "latent_image": [
+        "443",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "445": {
+    "inputs": {
+      "cfg": 1.0,
+      "model": [
+        "318",
+        0
+      ],
+      "positive": [
+        "439",
+        0
+      ],
+      "negative": [
+        "439",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG引导器"
+    }
+  },
+  "446": {
+    "inputs": {
+      "av_latent": [
+        "444",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXV分离音视频潜空间"
+    }
+  },
+  "450": {
+    "inputs": {
+      "samples": [
+        "439",
+        2
+      ],
+      "upscale_model": [
+        "313",
+        0
+      ],
+      "vae": [
+        "319",
+        0
+      ]
+    },
+    "class_type": "LTXVLatentUpsampler",
+    "_meta": {
+      "title": "LTXV潜空间上采样器"
+    }
+  },
+  "451": {
+    "inputs": {
+      "strength": 1.0,
+      "bypass": false,
+      "vae": [
+        "319",
+        0
+      ],
+      "image": [
+        "289",
+        0
+      ],
+      "latent": [
+        "450",
+        0
+      ]
+    },
+    "class_type": "LTXVImgToVideoInplace",
+    "_meta": {
+      "title": "LTXV图像转视频（原地）"
+    }
+  },
+  "455": {
+    "inputs": {
+      "image": "image.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "456": {
+    "inputs": {
+      "width": 1920,
+      "height": 1920,
+      "aspect_ratio": "1:1 square 1024x1024",
       "swap_dimensions": "Off",
       "upscale_factor": 1.0,
       "batch_size": 1

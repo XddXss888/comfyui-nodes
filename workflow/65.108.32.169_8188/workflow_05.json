@@ -1,0 +1,127 @@
+{
+  "1": {
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "19",
+        0
+      ],
+      "vae": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "11": {
+    "inputs": {
+      "text": "1::artist:ningen mame::, +0.5::artist:@ciloranko::, 1.2::artist:@azuuru::, year 2025, 2::Masterpiece, best quality, amazing quality, highres, absurdres ::, -2::simple illustration, downscaled ::, best illustration, 1.5::waifu2x::, HIGH CONTRAST, very aesthetic, masterpiece, no text, +2::realistic::, light on front, -3::heart mark::, 3::white background::, simple background, 3::cowboy shot::, standing, 1girl, solo, light brown hair, chestnut hair, medium hair, shoulder-length hair, straight hair, side part, hazel eyes, warm eyes, gentle eyes, small face, young woman, petite, short, 17 years old, school uniform, japanese high school uniform, white sailor collar, navy blue sailor uniform, navy blue pleated skirt, knee-length skirt, white blouse, long sleeves, red ribbon, neck ribbon, school bag, brown satchel, photography club pin, pin badge, black loafers, white knee socks, small stud earrings, minimal makeup, soft blush, natural lips, phone in hand, clutching phone to chest, looking at viewer, soft smile, warm smile, slightly flushed cheeks, bashful, lovesick expression, head tilt, gentle, composed, cherry blossoms, school hallway background, morning light, soft lighting, warm tones",
+      "clip": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "12": {
+    "inputs": {
+      "text": "worst quality,\nlow quality,\nscore_1,\nscore_2,\ntext,\nwatermark,\nsignature,\nartist name",
+      "clip": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "15": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "19": {
+    "inputs": {
+      "seed": 290257810948005,
+      "steps": 23,
+      "cfg": 4.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "model": [
+        "44",
+        0
+      ],
+      "positive": [
+        "11",
+        0
+      ],
+      "negative": [
+        "12",
+        0
+      ],
+      "latent_image": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "28": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "44": {
+    "inputs": {
+      "unet_name": "AnimaYume_tuned_v05.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "45": {
+    "inputs": {
+      "clip_name": "qwen_3_06b_base.safetensors",
+      "type": "stable_diffusion",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  }
+}

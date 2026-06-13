@@ -1,0 +1,253 @@
+{
+  "1": {
+    "inputs": {
+      "image": "/app/services/comfyui-worker/temp/uploads/a48c1fea300928cf4427e7962ac292fb83d95c690c675c893f8576847222b512.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Image 1"
+    }
+  },
+  "3": {
+    "inputs": {
+      "seed": 405795883635485,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "75",
+        0
+      ],
+      "positive": [
+        "111",
+        0
+      ],
+      "negative": [
+        "110",
+        0
+      ],
+      "latent_image": [
+        "129",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "38": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "39": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "66": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "115",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "75": {
+    "inputs": {
+      "strength": 1.0,
+      "model": [
+        "66",
+        0
+      ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "CFGNorm"
+    }
+  },
+  "93": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
+    }
+  },
+  "99": {
+    "inputs": {
+      "path": "/app/services/comfyui-worker/temp/results/76787c15-beca-41e8-97c6-e6cdfcc956b7.png",
+      "overwrite": "true",
+      "image": [
+        "130",
+        0
+      ]
+    },
+    "class_type": "JWImageSaveToPath",
+    "_meta": {
+      "title": "Image Save To Path"
+    }
+  },
+  "110": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "38",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "111": {
+    "inputs": {
+      "prompt": [
+        "75:74",
+        0
+      ],
+      "clip": [
+        "38",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ],
+      "image1": [
+        "93",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "115": {
+    "inputs": {
+      "model_name": "svdq-int4_r128-qwen-image-edit-2509-lightningv2.0-4steps.safetensors",
+      "cpu_offload": "disable",
+      "num_blocks_on_gpu": 20,
+      "use_pin_memory": "disable"
+    },
+    "class_type": "NunchakuQwenImageDiTLoader",
+    "_meta": {
+      "title": "Nunchaku Qwen-Image DiT Loader"
+    }
+  },
+  "127": {
+    "inputs": {
+      "size": 512,
+      "interpolation_mode": "nearest exact",
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "JWImageResizeByLongerSide",
+    "_meta": {
+      "title": "Image Resize by Longer Side"
+    }
+  },
+  "129": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "130": {
+    "inputs": {
+      "model": "BiRefNet-general",
+      "mask_blur": 0,
+      "mask_offset": 0,
+      "invert_output": false,
+      "refine_foreground": false,
+      "background": "Alpha",
+      "background_color": "#222222",
+      "image": [
+        "132",
+        0
+      ]
+    },
+    "class_type": "BiRefNetRMBG",
+    "_meta": {
+      "title": "BiRefNet Remove Background (RMBG)"
+    }
+  },
+  "132": {
+    "inputs": {
+      "height": 512,
+      "width": 512,
+      "interpolation_mode": "bicubic",
+      "image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "JWImageResize",
+    "_meta": {
+      "title": "Image Resize"
+    }
+  },
+  "75:74": {
+    "inputs": {
+      "text": "Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: A 3D Character sticker making a quiet “shhh” gesture, one finger placed in front of the mouth, calm face, round eyes, slightly raised eyebrows, secretive and playful mood, cute silent expression, clean cartoon shape, glossy 3D rendering, soft lighting, friendly mysterious vibe, isolated on transparent background, high detail, sticker style, white sticker outline, no text. Keep the face of the human in the image and the skin color of the human in the image. Use sticker style, gray background"
+    },
+    "class_type": "JWString",
+    "_meta": {
+      "title": "String"
+    }
+  }
+}

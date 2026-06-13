@@ -1,7 +1,7 @@
 {
   "12": {
     "inputs": {
-      "image": "20260613195040043-4-6xpa4q.jpg"
+      "image": "20260613222142283-1-51jqth.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -10,7 +10,7 @@
   },
   "15": {
     "inputs": {
-      "image": "5-qq20260415-141638-8ed5t2.png"
+      "image": "4-qq20260415-102235-jylmu2.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -22,7 +22,7 @@
       "api_url": "https://3dcdn.580ai.net/v1beta/models/gemini-3.1-flash-image-preview:generateContent",
       "header_key": "Authorization",
       "header_value": "sk-Lyx9OF97YMK0suEi6ZIPzq4E9d3dhIKJzO2YS5WpAsZbZpxS",
-      "text": "控制图1模特做图2模特的动作姿势，去掉图1模特手里的小熊，让图1模特像图2模特一样的方向角度，不要改变图1模特的产品细节，不要改变图1模特的造型和搭配，不要改变图1模特的五官细节，正面镜头自然抓拍，不要改变图1拍摄的地面，不要改变图1的拍摄场景和光线色调",
+      "text": "控制制图1模特做图2模特的动作姿势和表情，图1模特坐在椅子上，桌上放着淡粉色的蝴蝶兰，桌椅的颜色改为深棕色，裙摆的纱裙自然散开，纱裙的裙摆有强烈的垂坠感，不要改变图1模特的造型和搭配，不要改变图1模特的五官细节，不要改变图1拍摄的地面，不要改变图1的拍摄场景和光线色调",
       "aspect_ratio": "3:4",
       "image_size": "4K",
       "timeout": 200,

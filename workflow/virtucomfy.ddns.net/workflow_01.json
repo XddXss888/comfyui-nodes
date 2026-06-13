@@ -4,7 +4,6 @@
       "filename_prefix": "video/LTX_2.3_i2v",
       "format": "auto",
       "codec": "auto",
-      "video-preview": "",
       "video": [
         "320:310",
         0
@@ -17,7 +16,7 @@
   },
   "269": {
     "inputs": {
-      "image": "pasted/image (8).png"
+      "image": "PIC_MP Robot-4.jpeg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -35,7 +34,7 @@
   },
   "320:277": {
     "inputs": {
-      "noise_seed": 257803777371902
+      "noise_seed": 835857371148659
     },
     "class_type": "RandomNoise",
     "_meta": {
@@ -392,7 +391,7 @@
   },
   "320:301": {
     "inputs": {
-      "value": 5
+      "value": 10
     },
     "class_type": "PrimitiveInt",
     "_meta": {
@@ -564,19 +563,6 @@
       "title": "Width"
     }
   },
-  "320:313": {
-    "inputs": {
-      "text": "pc game, console game, video game, cartoon, childish, ugly",
-      "clip": [
-        "320:317",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
-    }
-  },
   "320:314": {
     "inputs": {
       "cfg": 1.0,
@@ -656,7 +642,7 @@
   },
   "320:319": {
     "inputs": {
-      "value": "A cleaning robot clean a corotion area on the oil tank. \ngive an environment of like a oily water, the water ripples"
+      "value": "Using the reference image, the yellow robot is now operating inside a dark, heavily corroded oil tank. It is submerged in thick, murky, oily water. The robot slowly moves forward, cleaning the corroded surface. The oily water ripples and churns actively around the robot as it works. The camera remains completely static."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -765,6 +751,19 @@
     "class_type": "PrimitiveBoolean",
     "_meta": {
       "title": "Boolean (Enable Prompt Enhance)"
+    }
+  },
+  "320:313": {
+    "inputs": {
+      "text": "move camera",
+      "clip": [
+        "320:317",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
     }
   }
 }

@@ -1,0 +1,252 @@
+{
+  "1": {
+    "inputs": {
+      "tags": "Modern Pop, upbeat indie pop, groovy bassline, acoustic guitar strums, cheerful synth accents, playful male vocals",
+      "lyrics": "[Intro]\nOye \n\n[Verse]\nOye , tu móvil suena tu móvil suena. Oye bro ven y contesta ya. Por qué no coges el teléfono ya? Tu móvil suena. Tu móvil va al buzón adiós!",
+      "seed": 831368546178445,
+      "bpm": 150,
+      "duration": 30.0,
+      "timesignature": "4",
+      "language": "en",
+      "keyscale": "C major",
+      "generate_audio_codes": false,
+      "cfg_scale": 5.0,
+      "temperature": 0.3,
+      "top_p": 0.3,
+      "top_k": 0,
+      "min_p": 0.0,
+      "clip": [
+        "888",
+        0
+      ]
+    },
+    "class_type": "TextEncodeAceStepAudio1.5",
+    "_meta": {
+      "title": "TextEncodeAceStepAudio1.5"
+    }
+  },
+  "47": {
+    "inputs": {
+      "conditioning": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "78": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "777",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "99": {
+    "inputs": {
+      "filename_prefix": "/sda-disk/home/Ringtone/music-generation-system/temp/results/0e8f44ab-d86b-46af-bfc6-cbcec6e8dccd.mp3",
+      "quality": "320k",
+      "audioUI": "/api/view?filename=ComfyUI.mp3&type=output&subfolder=audio&rand=0.4924722780430826",
+      "audio": [
+        "1015",
+        0
+      ]
+    },
+    "class_type": "SaveAudioMP3",
+    "_meta": {
+      "title": "Save Audio (MP3)"
+    }
+  },
+  "101": {
+    "inputs": {
+      "seed": 659510118930300,
+      "steps": 8,
+      "cfg": 2.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.45,
+      "model": [
+        "78",
+        0
+      ],
+      "positive": [
+        "1",
+        0
+      ],
+      "negative": [
+        "47",
+        0
+      ],
+      "latent_image": [
+        "110",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "105": {
+    "inputs": {
+      "samples": [
+        "101",
+        0
+      ],
+      "vae": [
+        "999",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeAudio",
+    "_meta": {
+      "title": "VAE Decode Audio"
+    }
+  },
+  "110": {
+    "inputs": {
+      "audio": [
+        "111",
+        0
+      ],
+      "vae": [
+        "999",
+        0
+      ]
+    },
+    "class_type": "VAEEncodeAudio",
+    "_meta": {
+      "title": "VAE Encode Audio"
+    }
+  },
+  "111": {
+    "inputs": {
+      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_15/ES/t15_es_raw_song_2.MP3",
+      "audioUI": "/api/view?filename=t15_es_raw_song_2.MP3&type=input&subfolder=&rand=0.24160415293400284"
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "Raw Song"
+    }
+  },
+  "222": {
+    "inputs": {
+      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_15/ES/t15_es_raw_song_2.MP3",
+      "audioUI": "/api/view?filename=t9_jp_raw_song_2.MP3&type=input&subfolder=&rand=0.4181124574746081"
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "Beat"
+    }
+  },
+  "777": {
+    "inputs": {
+      "unet_name": "acestep_v1.5_xl_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "888": {
+    "inputs": {
+      "clip_name1": "qwen_0.6b_ace15.safetensors",
+      "clip_name2": "qwen_4b_ace15.safetensors",
+      "type": "ace",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "DualCLIPLoader"
+    }
+  },
+  "999": {
+    "inputs": {
+      "vae_name": "ace_1.5_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "1011": {
+    "inputs": {
+      "volume": 4,
+      "audio": [
+        "222",
+        0
+      ]
+    },
+    "class_type": "AudioAdjustVolume",
+    "_meta": {
+      "title": "Audio Adjust Volume"
+    }
+  },
+  "1014": {
+    "inputs": {
+      "audioUI": "/api/view?filename=ComfyUI_temp_inemp.flac&type=temp&subfolder=&rand=0.15515276514130882",
+      "audio": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "PreviewAudio",
+    "_meta": {
+      "title": "Preview Audio"
+    }
+  },
+  "1015": {
+    "inputs": {
+      "direction": "after",
+      "audio1": [
+        "1016",
+        0
+      ],
+      "audio2": [
+        "1018",
+        0
+      ]
+    },
+    "class_type": "AudioConcat",
+    "_meta": {
+      "title": "Audio Concat"
+    }
+  },
+  "1016": {
+    "inputs": {
+      "start_time": 0.0,
+      "end_time": 1.5,
+      "audio": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "AudioTrim",
+    "_meta": {
+      "title": "Audio Trim ⚡🅡🅞🅣🅘"
+    }
+  },
+  "1018": {
+    "inputs": {
+      "start_time": 1.5,
+      "end_time": 0.0,
+      "audio": [
+        "111",
+        0
+      ]
+    },
+    "class_type": "AudioTrim",
+    "_meta": {
+      "title": "Audio Trim ⚡🅡🅞🅣🅘"
+    }
+  }
+}

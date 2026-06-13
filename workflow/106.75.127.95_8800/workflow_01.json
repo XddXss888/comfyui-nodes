@@ -1,7 +1,7 @@
 {
   "81": {
     "inputs": {
-      "image": "image (273).jpg"
+      "image": "image (67).png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -83,7 +83,7 @@
   },
   "172": {
     "inputs": {
-      "seed": 1156782979,
+      "seed": 281262733,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -263,7 +263,7 @@
   },
   "385": {
     "inputs": {
-      "seed": 1329732417
+      "seed": 484326573
     },
     "class_type": "GenerateUniquePrefix",
     "_meta": {

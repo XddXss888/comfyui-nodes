@@ -2,7 +2,7 @@
   "103": {
     "inputs": {
       "model": [
-        "139",
+        "159",
         0
       ],
       "shift": 5.000000000000001
@@ -70,39 +70,6 @@
     },
     "class_type": "RifeTensorrt"
   },
-  "139": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "wan2.1\\rip-shura-000006.safetensors",
-      "lora_03": "wan2.1\\woman_undressing_v1.0_wan14b_epoch048.safetensors",
-      "lora_04": "None",
-      "lora_05": "None",
-      "lora_06": "None",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "157",
-        0
-      ],
-      "strength_01": 1.0,
-      "strength_02": 2.0000000000000004,
-      "strength_03": 2.0000000000000004,
-      "strength_04": 1.0000000000000002,
-      "strength_05": 0.0,
-      "strength_06": 1.0,
-      "strength_07": 1.0,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
-  },
   "150": {
     "inputs": {
       "crop_position": "center",
@@ -122,7 +89,7 @@
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/5f37139f-b356-4986-b203-29d2447d1671.png"
+      "urls": "https://media.pornmaker.cloud/bbba26ac-a48b-4c17-926c-7c98920f1876.png"
     },
     "class_type": "LoadImageFromURL"
   },
@@ -147,8 +114,8 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "wan2.1\\rip-shura-000006.safetensors",
-      "lora_03": "wan2.1\\woman_undressing_v1.0_wan14b_epoch048.safetensors",
+      "lora_02": "wan0922\\触发词lyy666版本v1高噪添加强度1.safetensors",
+      "lora_03": "wan0911\\Wan2.2 v3 - T2V - Doggy Style - HIGH 14B.safetensors",
       "lora_04": "None",
       "lora_05": "None",
       "lora_06": "None",
@@ -160,13 +127,46 @@
         "156",
         0
       ],
-      "strength_01": 2.0000000000000004,
-      "strength_02": 2.0000000000000004,
-      "strength_03": 2.0000000000000004,
+      "strength_01": 2.0,
+      "strength_02": 1.0000000000000002,
+      "strength_03": 1.0000000000000002,
       "strength_04": 1.0000000000000002,
-      "strength_05": 1.5000000000000002,
-      "strength_06": 1.0,
-      "strength_07": 1.0,
+      "strength_05": 0.0,
+      "strength_06": 1.0000000000000002,
+      "strength_07": 1.0000000000000002,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
+  },
+  "159": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "lora_02": "None",
+      "lora_03": "wan0911\\Wan2.2 v3 - T2V - Doggy Style - LOW 14B.safetensors",
+      "lora_04": "None",
+      "lora_05": "None",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "157",
+        0
+      ],
+      "strength_01": 1.0,
+      "strength_02": 1.0000000000000002,
+      "strength_03": 1.0000000000000002,
+      "strength_04": 1.0000000000000002,
+      "strength_05": 0.0,
+      "strength_06": 1.0000000000000002,
+      "strength_07": 1.0000000000000002,
       "strength_08": 1.0,
       "strength_09": 1.0,
       "strength_10": 1.0
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 5084565955330244694,
+      "noise_seed": 9065772426413853060,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 9222907193185329768,
+      "noise_seed": 7357003120593708674,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": "A man walked up to the woman and grabbed her clothes with both hands, tearing them off her body, revealing her completely naked body, leaving her looking horny, her eyes wide open and her mouth hanging open."
+      "text": "lyy666.a same person video. 1.The first scene is a selfie of a beautiful woman, who is looking for an AV actor to shoot an AV film.\r\n\r\nThe scene instantly switches to a scene where they are having sex.\r\n\r\nsecond scene: close up scene,background change to bedroom she is naked nude nipples nipple showing and doing all fours pose, A naked man is behind her and holding her hip doing doggy style sex thrusting back and forth to her vagina, their bodies moving in perfect harmony, the girl expression is enjoy,the cameral is forcus on side view of them,slowly zoom in her face"
     },
     "class_type": "CLIPTextEncode"
   },

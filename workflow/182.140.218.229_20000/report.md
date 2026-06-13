@@ -1,16 +1,16 @@
 # 182.140.218.229:20000
 
-GPU: RTX 4090 | 显存: 47 GB | 空闲: 47 GB
-内存: 944 GB (空闲 285 GB)
-版本: 0.3.46
-报告中的历史: 无
-扫描时间: 2026-06-13 22:33:12
-历史总数: 10001 | 成功: 10
+**GPU**: RTX 4090 | **显存**: 47 GB | **空闲**: 47 GB
+**内存**: 944 GB (空闲 286 GB)
+**版本**: 0.3.46
+**ComfyUI报告历史**: 有
+**扫描时间**: 2026-06-14 05:59:05
+**历史总数**: 10001 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `4ce4b081-ba13-4178-9731-3dde28585286`
+- **Prompt ID**: `4ce247fe-19ee-4ade-9f9d-5b65d8b1b8f9`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -21,11 +21,13 @@ GPU: RTX 4090 | 显存: 47 GB | 空闲: 47 GB
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] She is feeling very agitated and confused.  BLACKMAN IN SHORTS  ONLYV checking to make sure  no lumps he pulls her OUTFIT and pulls off her BRA  TAKE OFF  her shirt takes off the bra so he can make su
-  - [PrimitiveStringMultiline::text] She is feeling very agitated and confused.  BLACKMAN IN SHORTS  ONLYV checking to make sure  no lumps he pulls her OUTFIT and pulls off her BRA  TAKE OFF  her shirt takes off the bra so he can make su
+  - [PrimitiveStringMultiline::positive] Teo (Garotinho 4 anos de pele clara) olhando para seus próprios pés descalços e empoeirados com uma expressão de travessura, enquanto Chico - Shih tzu, observa curioso deitado ao seu lado.
+
+  - [PrimitiveStringMultiline::text] Teo (Garotinho 4 anos de pele clara) olhando para seus próprios pés descalços e empoeirados com uma expressão de travessura, enquanto Chico - Shih tzu, observa curioso deitado ao seu lado.
+
 
 ### 2. workflow_02.json
-- **Prompt ID**: `12e6fff4-1167-43ad-9cee-79fa6c08cc2a`
+- **Prompt ID**: `dcc3ec72-12c4-4f89-b51f-33e92f9e3482`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -36,11 +38,13 @@ GPU: RTX 4090 | 显存: 47 GB | 空闲: 47 GB
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] Bu fotoğrafda siyah ceketli kız belinden silahı çıkartarak karşısında belirli mesafede olan ayakta olan oğlana siyah pencekli kız silahla o oğlana ateş etsin  ve oğlanın geyimi kan olsun yere yıkılsın
-  - [PrimitiveStringMultiline::text] Bu fotoğrafda siyah ceketli kız belinden silahı çıkartarak karşısında belirli mesafede olan ayakta olan oğlana siyah pencekli kız silahla o oğlana ateş etsin  ve oğlanın geyimi kan olsun yere yıkılsın
+  - [PrimitiveStringMultiline::positive] O bebezinho Andy (Garotinho 1 ano de pele clara) engatinhando feliz pela grama, com as solas dos pezinhos bem sujas de terra escura apontadas para trás.
+
+  - [PrimitiveStringMultiline::text] O bebezinho Andy (Garotinho 1 ano de pele clara) engatinhando feliz pela grama, com as solas dos pezinhos bem sujas de terra escura apontadas para trás.
+
 
 ### 3. workflow_03.json
-- **Prompt ID**: `2792d03f-bd1b-4de8-898e-a28ea6044022`
+- **Prompt ID**: `12cab0dc-cf02-49ac-89a0-5235dcfefedb`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -51,11 +55,13 @@ GPU: RTX 4090 | 显存: 47 GB | 空闲: 47 GB
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] She is feeling very agitated and confused.  BLACKMAN IN SHORTS  ONLYV checking to make sure  no lumps he pulls her OUTFIT and pulls off her BRA  TAKE OFF  her shirt takes off the bra so he can make su
-  - [PrimitiveStringMultiline::text] She is feeling very agitated and confused.  BLACKMAN IN SHORTS  ONLYV checking to make sure  no lumps he pulls her OUTFIT and pulls off her BRA  TAKE OFF  her shirt takes off the bra so he can make su
+  - [PrimitiveStringMultiline::positive] Chico - Shih tzu correndo em disparada carregando seu potinho de ração na boca, e Penny - Calopsita voando muito rápido ao lado dele com uma expressão de choque.
+
+  - [PrimitiveStringMultiline::text] Chico - Shih tzu correndo em disparada carregando seu potinho de ração na boca, e Penny - Calopsita voando muito rápido ao lado dele com uma expressão de choque.
+
 
 ### 4. workflow_04.json
-- **Prompt ID**: `cc3fc81f-59ee-48c0-abb7-788eebf4b343`
+- **Prompt ID**: `74d6f614-e0bc-4b06-a34f-3e028d7b2fd3`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -66,11 +72,11 @@ GPU: RTX 4090 | 显存: 47 GB | 空闲: 47 GB
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] Kara pencekli kız yüzü görünerek belinden silah çıkartıp kız yüzü görünerek silahı karşısında belirli mesafede olan insana kız yüzü görünerek insana silahla ateş etsin ve silahın sesi gelsin ve bu ins
-  - [PrimitiveStringMultiline::text] Kara pencekli kız yüzü görünerek belinden silah çıkartıp kız yüzü görünerek silahı karşısında belirli mesafede olan insana kız yüzü görünerek insana silahla ateş etsin ve silahın sesi gelsin ve bu ins
+  - [PrimitiveStringMultiline::positive] Grabs her chin kisses her
+  - [PrimitiveStringMultiline::text] Grabs her chin kisses her
 
 ### 5. workflow_05.json
-- **Prompt ID**: `6979bc97-be8b-400d-9a76-c3d7d1993c42`
+- **Prompt ID**: `35ae71f6-fea8-4967-a343-73cc2a60060d`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -81,11 +87,11 @@ GPU: RTX 4090 | 显存: 47 GB | 空闲: 47 GB
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] Kara pencekli kız yüzü görünerek belinden silah çıkartıp belirli mesafede olan insana kız yüzü görünerek insana silahla ateş etsin ve silahın sesi gelsin ve bu insanı geyimi kan olsun yere yıkılsın.
-  - [PrimitiveStringMultiline::text] Kara pencekli kız yüzü görünerek belinden silah çıkartıp belirli mesafede olan insana kız yüzü görünerek insana silahla ateş etsin ve silahın sesi gelsin ve bu insanı geyimi kan olsun yere yıkılsın.
+  - [PrimitiveStringMultiline::positive] She talks to the camera in a seductive manner. This video is in real time motion and NOT in slow motion 
+  - [PrimitiveStringMultiline::text] She talks to the camera in a seductive manner. This video is in real time motion and NOT in slow motion 
 
 ### 6. workflow_06.json
-- **Prompt ID**: `b0293e33-c24c-4da0-ad22-36f349789ef5`
+- **Prompt ID**: `326b9fb3-b45e-426e-b789-267d040dd13f`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -96,11 +102,11 @@ GPU: RTX 4090 | 显存: 47 GB | 空闲: 47 GB
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] She is feeling very agitated and confused.  BLACKMAN IN SHORTS  ONLYV checking to make sure  no lumps he pulls her OUTFIT and pulls off her BRA  TAKE OFF  her shirt takes off the bra so he can make su
-  - [PrimitiveStringMultiline::text] She is feeling very agitated and confused.  BLACKMAN IN SHORTS  ONLYV checking to make sure  no lumps he pulls her OUTFIT and pulls off her BRA  TAKE OFF  her shirt takes off the bra so he can make su
+  - [PrimitiveStringMultiline::positive] chica  a la fuerza se sienta sobre el hombre mientras el le frota sus pechos y tira de su polera fuerte rompiendola y mientras la chica se pone de pies abriendo  bajando  su falda mientras pone cara d
+  - [PrimitiveStringMultiline::text] chica  a la fuerza se sienta sobre el hombre mientras el le frota sus pechos y tira de su polera fuerte rompiendola y mientras la chica se pone de pies abriendo  bajando  su falda mientras pone cara d
 
 ### 7. workflow_07.json
-- **Prompt ID**: `3628d1cc-c496-4ee5-97de-f401a3bd9a3f`
+- **Prompt ID**: `ba7bd293-3637-40bf-8d83-d92e853b9218`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -111,11 +117,11 @@ GPU: RTX 4090 | 显存: 47 GB | 空闲: 47 GB
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] She is feeling very agitated and confused.  BLACKMAN IN SHORTS  ONLYV checking to make sure  no lumps he pulls her OUTFIT and pulls off her BRA  TAKE OFF  her shirt takes off the bra so he can make su
-  - [PrimitiveStringMultiline::text] She is feeling very agitated and confused.  BLACKMAN IN SHORTS  ONLYV checking to make sure  no lumps he pulls her OUTFIT and pulls off her BRA  TAKE OFF  her shirt takes off the bra so he can make su
+  - [PrimitiveStringMultiline::positive] The creamy foamy liquid rapidly dribbles down as she takes a selfie with her mobile phone. This is a video in real time motion and NOT in slow motion 
+  - [PrimitiveStringMultiline::text] The creamy foamy liquid rapidly dribbles down as she takes a selfie with her mobile phone. This is a video in real time motion and NOT in slow motion 
 
 ### 8. workflow_08.json
-- **Prompt ID**: `973a5644-f081-4322-9a9d-fe397609cf66`
+- **Prompt ID**: `dcdd06ea-8c47-44d2-8572-9b7c58d61eb7`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -126,11 +132,11 @@ GPU: RTX 4090 | 显存: 47 GB | 空闲: 47 GB
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] She is feeling very agitated and confused.  BLACKMAN IN SHORTS  ONLYV checking to make sure  no lumps he pulls her OUTFIT and pulls off her BRA  TAKE OFF  her shirt takes off the bra so he can make su
-  - [PrimitiveStringMultiline::text] She is feeling very agitated and confused.  BLACKMAN IN SHORTS  ONLYV checking to make sure  no lumps he pulls her OUTFIT and pulls off her BRA  TAKE OFF  her shirt takes off the bra so he can make su
+  - [PrimitiveStringMultiline::positive] Kisses to camera  The camera dont move and dont change the angle. she smiles sticks out her tongue A small, tiny invisible drone moves around female body from very top to bottom as a scanning device. 
+  - [PrimitiveStringMultiline::text] Kisses to camera  The camera dont move and dont change the angle. she smiles sticks out her tongue A small, tiny invisible drone moves around female body from very top to bottom as a scanning device. 
 
 ### 9. workflow_09.json
-- **Prompt ID**: `a819525b-f697-4869-bcb3-6c059a71f2cf`
+- **Prompt ID**: `9f4ecd67-d160-4774-856c-7937938791f7`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -141,13 +147,11 @@ GPU: RTX 4090 | 显存: 47 GB | 空闲: 47 GB
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] Her dress falls to the floor displaying her naked figure. Walks towards camera like a professional runway model. Fierce blue eyes
-Spins around 360 degrees
-  - [PrimitiveStringMultiline::text] Her dress falls to the floor displaying her naked figure. Walks towards camera like a professional runway model. Fierce blue eyes
-Spins around 360 degrees
+  - [PrimitiveStringMultiline::positive] She puts her wide open mouth close up to the hole is the wall on the left 
+  - [PrimitiveStringMultiline::text] She puts her wide open mouth close up to the hole is the wall on the left 
 
 ### 10. workflow_10.json
-- **Prompt ID**: `02f72fa7-985f-4452-9d8c-dc539da94310`
+- **Prompt ID**: `713fd569-0fab-4786-bf95-e9441a181337`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -158,7 +162,5 @@ Spins around 360 degrees
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] Her dress falls to the floor displaying her naked figure. Walks towards camera like a professional runway model. Fierce blue eyes
-Spins around 360 degrees
-  - [PrimitiveStringMultiline::text] Her dress falls to the floor displaying her naked figure. Walks towards camera like a professional runway model. Fierce blue eyes
-Spins around 360 degrees
+  - [PrimitiveStringMultiline::positive] Immediately Her dress slips off her  body to the ground and then she is completely without anything on.   Large naturals. Fit and toned. Athletic and muscular. The camera keeps the centered in the fra
+  - [PrimitiveStringMultiline::text] Immediately Her dress slips off her  body to the ground and then she is completely without anything on.   Large naturals. Fit and toned. Athletic and muscular. The camera keeps the centered in the fra

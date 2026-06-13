@@ -1,123 +1,93 @@
 {
   "1": {
-    "class_type": "UNETLoader",
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "unet_name": "flux1-dev.safetensors",
-      "weight_dtype": "default"
+      "ckpt_name": "zavychromaxl_v10.safetensors"
     }
   },
   "2": {
-    "class_type": "DualCLIPLoader",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip_name1": "clip_l.safetensors",
-      "clip_name2": "t5xxl_fp16.safetensors",
-      "type": "flux"
+      "vae_name": "sdxl_vae.safetensors"
     }
   },
   "3": {
-    "class_type": "VAELoader",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "vae_name": "ae.safetensors"
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "A stunning Korean idol-style woman with chestnut brown textured shag cut, heart-shaped face and full lips, elegant sophisticated expression. She wears a sharply tailored charcoal power suit with structured shoulders, standing in an autumn park as golden and crimson leaves drift around her. Shot on 135mm telephoto with compressed background of blurred amber foliage. Silhouette against golden hour light source, warm side light catching the edges of her hair and jawline, casting a luminous glow across flawless porcelain skin. Medium shot capturing the park environment, one hand lightly adjusting her lapel. Styled dewy makeup with soft berry lip, subtle smoky eyes. Bold vivid chromatic tones, fashion editorial atmosphere, cinematic depth."
     }
   },
   "4": {
-    "class_type": "LoraLoaderModelOnly",
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "lowres, deformed, blurry, watermark, ugly, low quality"
+    }
+  },
+  "5": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 896,
+      "height": 1280,
+      "batch_size": 1
+    }
+  },
+  "6": {
+    "class_type": "KSampler",
     "inputs": {
       "model": [
         "1",
         0
       ],
-      "lora_name": "flux_korean_girl.safetensors",
-      "strength_model": 0.8
-    }
-  },
-  "5": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": "Stunning portrait of a Korean idol woman with voluminous natural black curls carrying a deep blue sheen, diamond face shape with defined sculpted brows, serene contemplative expression gazing softly past camera. Tight headshot, shot on 24mm wide angle lens creating dynamic perspective, silhouette framing against bright backlight source. Neon glow mixed color lighting casting cool cyan and warm magenta across flawless porcelain skin, styled dewy makeup with gradient berry lips. Minimalist white studio backdrop. Retro 90s oversized denim jacket collar framing her jawline. Soft natural light fills shadows delicately. Wispy curls catch colored light creating ethereal halo effect. Cinematic depth, editorial fashion photography, ultra high resolution, no text, no watermarks."
-    }
-  },
-  "6": {
-    "class_type": "FluxGuidance",
-    "inputs": {
-      "conditioning": [
-        "5",
-        0
-      ],
-      "guidance": 3.5
-    }
-  },
-  "7": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": ""
-    }
-  },
-  "8": {
-    "class_type": "EmptySD3LatentImage",
-    "inputs": {
-      "width": 896,
-      "height": 1280,
-      "batch_size": 4
-    }
-  },
-  "9": {
-    "class_type": "KSampler",
-    "inputs": {
-      "model": [
-        "4",
-        0
-      ],
       "positive": [
-        "6",
+        "3",
         0
       ],
       "negative": [
-        "7",
+        "4",
         0
       ],
       "latent_image": [
-        "8",
+        "5",
         0
       ],
-      "seed": 1504915336,
+      "seed": 1635673489,
       "control_after_generate": "fixed",
-      "steps": 22,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
+      "steps": 28,
+      "cfg": 6.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
       "denoise": 1.0
     }
   },
-  "10": {
+  "7": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "9",
+        "6",
         0
       ],
       "vae": [
-        "3",
+        "2",
         0
       ]
     }
   },
-  "11": {
+  "8": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "10",
+        "7",
         0
       ],
-      "filename_prefix": "portrait_1504915336"
+      "filename_prefix": "portrait_1635673489"
     }
   }
 }
