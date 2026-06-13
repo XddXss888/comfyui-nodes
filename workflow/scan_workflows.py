@@ -2,6 +2,8 @@
 """
 扫描 report.md 中的所有 ComfyUI 节点，从每个节点提取最近 10 条成功完成的历史工作流。
 每个节点一个文件夹，包含工作流 JSON 文件和 report.md。
+
+用法: python3 scan_workflows.py [report.md路径] [输出目录]
 """
 
 import json
@@ -14,10 +16,13 @@ import urllib.request
 import urllib.error
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-REPORT_PATH = "/mnt/workspace/comfyui/report.md"
-OUTPUT_DIR = "/mnt/workspace/comfyui/workflow"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PARENT_DIR = os.path.dirname(SCRIPT_DIR)
+
+REPORT_PATH = os.path.join(PARENT_DIR, "report.md")
+OUTPUT_DIR = os.path.join(PARENT_DIR, "workflow")
 MAX_WORKFLOWS = 10
-REQUEST_TIMEOUT = 60
+REQUEST_TIMEOUT = 30
 RETRY_COUNT = 2
 MAX_WORKERS = 30
 
@@ -34,8 +39,9 @@ def sanitize_name(addr):
     return name
 
 
-def parse_report():
-    with open(REPORT_PATH, "r") as f:
+def parse_report(report_path=None):
+    path = report_path or REPORT_PATH
+    with open(path, "r") as f:
         content = f.read()
     sections = re.split(r"\n### \d+\. ", content)[1:]
     nodes = []
@@ -44,18 +50,38 @@ def parse_report():
         if not m:
             continue
         addr = m.group(1).strip()
-        gpu_m = re.search(r"\*\*GPU\*\*: (.+) \(", sec)
-        gpu = gpu_m.group(1) if gpu_m else ""
-        vram_m = re.search(r"\*\*显存\*\*: (\d+) GB", sec)
+
+        # GPU: 匹配 "**GPU**: XXX" 格式，不要求括号后缀
+        gpu_m = re.search(r"\*\*GPU\*\*:\s*(.+?)(?:\s*\(|$)", sec)
+        gpu = gpu_m.group(1).strip() if gpu_m else ""
+
+        # 显存: 匹配整数 GB，也处理 "—" (CPU模式)
+        vram_m = re.search(r"\*\*显存\*\*:\s*(\d+)\s*GB", sec)
         vram = int(vram_m.group(1)) if vram_m else 0
-        free_m = re.search(r"空闲 (\d+) GB", sec)
+
+        # 空闲显存
+        free_m = re.search(r"空闲\s*(\d+)\s*GB", sec)
         free = int(free_m.group(1)) if free_m else 0
-        mem_m = re.search(r"\*\*内存\*\*: (.+)", sec)
-        mem = mem_m.group(1).strip() if mem_m else ""
-        ver_m = re.search(r"\*\*版本\*\*: (.+)", sec)
+
+        # 内存: 分离总量和空闲
+        mem_total = ""
+        mem_free = ""
+        mem_m = re.search(r"\*\*内存\*\*:\s*(.+?)(?:\s*\(空闲\s*(.+?)\))?\s*$", sec, re.MULTILINE)
+        if mem_m:
+            mem_total = mem_m.group(1).strip()
+            mem_free = (mem_m.group(2) or "").strip()
+
+        ver_m = re.search(r"\*\*版本\*\*:\s*(.+)", sec)
         ver = ver_m.group(1).strip() if ver_m else ""
-        has_history = "历史\*\*: 有" in sec or "历史\*\*: ✓" in sec or "历史: 有" in sec or "历史: ✓" in sec
-        nodes.append({"addr": addr, "gpu": gpu, "vram": vram, "free": free, "mem": mem, "ver": ver, "has_history": has_history})
+
+        # 历史: 统一检测 "有" 或 ✓
+        has_history = bool(re.search(r"\*\*历史\*\*:\s*(有|✓)", sec))
+
+        nodes.append({
+            "addr": addr, "gpu": gpu, "vram": vram, "free": free,
+            "mem_total": mem_total, "mem_free": mem_free,
+            "ver": ver, "has_history": has_history
+        })
     return nodes
 
 
@@ -192,11 +218,35 @@ def extract_node_prompts(wf):
     return texts
 
 
+FORCE_SCAN = False  # 将被 main() 中的命令行参数覆盖
+
+
+def should_skip(node_dir, node):
+    """已有报告且包含工作流列表则跳过（增量扫描），--force 可覆盖"""
+    if FORCE_SCAN:
+        return False
+    report_file = os.path.join(node_dir, "report.md")
+    if not os.path.exists(report_file):
+        return False
+    try:
+        with open(report_file, "r") as f:
+            content = f.read()
+        if "## 工作流列表" in content:
+            return True
+    except:
+        pass
+    return False
+
+
 def process_node(node, idx, total):
     """返回 (addr, result_str) 而不是直接 print，避免并发输出混乱"""
     addr = node["addr"]
     name = sanitize_name(addr)
     node_dir = os.path.join(OUTPUT_DIR, name)
+
+    # 增量扫描：跳过已有完整报告的节点
+    if should_skip(node_dir, node):
+        return f"[{idx}/{total}] {addr} ⏭️ 已有报告，跳过"
 
     history = fetch_history(addr)
     if history is None:
@@ -212,6 +262,24 @@ def process_node(node, idx, total):
                 completed.append((pid, prompt_data))
 
     if not completed:
+        # 统一格式：即使无工作流也用标准格式
+        os.makedirs(node_dir, exist_ok=True)
+        report_lines = [
+            f"# {addr}",
+            "",
+            f"**GPU**: {node['gpu']} | **显存**: {node['vram']} GB | **空闲**: {node['free']} GB",
+            f"**内存**: {node['mem_total']} (空闲 {node['mem_free']})" if node['mem_total'] else f"**内存**: —",
+            f"**版本**: {node['ver']}",
+            f"**ComfyUI报告历史**: {'有' if node['has_history'] else '无'}",
+            f"**扫描时间**: {time.strftime('%Y-%m-%d %H:%M:%S')}",
+            "",
+            "## 工作流列表",
+            "",
+            f"历史总数: {total_records} | 成功工作流: 0",
+            "",
+        ]
+        with open(os.path.join(node_dir, "report.md"), "w", encoding="utf-8") as f:
+            f.write("\n".join(report_lines))
         return f"[{idx}/{total}] {addr} — {total_records}条记录 / 0成功"
 
     completed = completed[-MAX_WORKFLOWS:]
@@ -220,12 +288,12 @@ def process_node(node, idx, total):
     report_lines = [
         f"# {addr}",
         "",
-        f"GPU: {node['gpu']} | 显存: {node['vram']} GB | 空闲: {node['free']} GB",
-        f"内存: {node['mem']}",
-        f"版本: {node['ver']}",
-        f"报告中的历史: {'有' if node['has_history'] else '无'}",
-        f"扫描时间: {time.strftime('%Y-%m-%d %H:%M:%S')}",
-        f"历史总数: {total_records} | 成功: {len(completed)}",
+        f"**GPU**: {node['gpu']} | **显存**: {node['vram']} GB | **空闲**: {node['free']} GB",
+        f"**内存**: {node['mem_total']} (空闲 {node['mem_free']})" if node['mem_total'] else f"**内存**: —",
+        f"**版本**: {node['ver']}",
+        f"**ComfyUI报告历史**: {'有' if node['has_history'] else '无'}",
+        f"**扫描时间**: {time.strftime('%Y-%m-%d %H:%M:%S')}",
+        f"**历史总数**: {total_records} | **成功**: {len(completed)}",
         "",
         "## 工作流列表",
         "",
@@ -261,7 +329,23 @@ def process_node(node, idx, total):
 
 
 def main():
-    nodes = parse_report()
+    global OUTPUT_DIR, REQUEST_TIMEOUT, MAX_WORKERS, FORCE_SCAN
+
+    import argparse
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("report", nargs="?", default=REPORT_PATH, help=f"report.md 路径 (默认: {REPORT_PATH})")
+    ap.add_argument("-o", "--output", default=OUTPUT_DIR, help=f"输出目录 (默认: {OUTPUT_DIR})")
+    ap.add_argument("-w", "--workers", type=int, default=MAX_WORKERS, help=f"并发数 (默认: {MAX_WORKERS})")
+    ap.add_argument("-t", "--timeout", type=int, default=REQUEST_TIMEOUT, help=f"请求超时秒数 (默认: {REQUEST_TIMEOUT})")
+    ap.add_argument("--force", action="store_true", help="强制全量扫描（忽略已有报告）")
+    args = ap.parse_args()
+
+    OUTPUT_DIR = args.output
+    REQUEST_TIMEOUT = args.timeout
+    MAX_WORKERS = args.workers
+    FORCE_SCAN = args.force
+
+    nodes = parse_report(args.report)
     total = len(nodes)
     print(f"节点: {total} | 并发: {MAX_WORKERS} | 超时: {REQUEST_TIMEOUT}s | 重试: {RETRY_COUNT}")
     print()
@@ -287,10 +371,11 @@ def main():
 
     # 汇总
     ok_count = sum(1 for _, line in results if "✅" in line)
+    skip_count = sum(1 for _, line in results if "⏭️" in line)
     zero_count = sum(1 for _, line in results if "0成功" in line)
     dead_count = sum(1 for _, line in results if "不可达" in line)
     err_count = sum(1 for _, line in results if "异常" in line)
-    print(f"\n汇总: {ok_count}有工作流 | {zero_count}无成功 | {dead_count}不可达 | {err_count}异常")
+    print(f"\n汇总: {ok_count}有工作流 | {zero_count}无成功 | {skip_count}已跳过 | {dead_count}不可达 | {err_count}异常")
 
 
 if __name__ == "__main__":

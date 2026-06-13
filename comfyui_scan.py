@@ -163,17 +163,21 @@ def check_and_detail(srv, timeout=6, detail_timeout=8):
                     dtype = (d.get("type") or "").lower()
                     if dtype != "cpu" and "cpu" not in name:
                         gpu_dev = d; break
-                if not gpu_dev:
-                    gpu_dev = devs[0]
-                raw_name = gpu_dev.get("name", "") or ""
-                r["gpu_raw"] = raw_name
-                r["gpu_simple"] = simplify_gpu(raw_name)
-                gpu_devs = [d for d in devs if (d.get("type") or "").lower() != "cpu"]
-                if not gpu_devs: gpu_devs = devs
-                vram_total = sum(int(d.get("vram_total", 0) or 0) for d in gpu_devs)
-                vram_free = sum(int(d.get("vram_free", 0) or 0) for d in gpu_devs)
-                r["gpu_vram_fmt"] = fmt_vram(vram_total)
-                r["gpu_free_fmt"] = fmt_vram(vram_free)
+                if gpu_dev:
+                    # 有真实 GPU
+                    raw_name = gpu_dev.get("name", "") or ""
+                    r["gpu_raw"] = raw_name
+                    r["gpu_simple"] = simplify_gpu(raw_name)
+                    gpu_devs = [d for d in devs if (d.get("type") or "").lower() != "cpu"]
+                    if not gpu_devs:
+                        gpu_devs = [gpu_dev]
+                    vram_total = sum(int(d.get("vram_total", 0) or 0) for d in gpu_devs)
+                    vram_free = sum(int(d.get("vram_free", 0) or 0) for d in gpu_devs)
+                    r["gpu_vram_fmt"] = fmt_vram(vram_total)
+                    r["gpu_free_fmt"] = fmt_vram(vram_free)
+                else:
+                    # CPU-only 系统，不设显存字段
+                    r["gpu_simple"] = "CPU"
             else:
                 r["gpu_simple"] = "CPU"
         else:
@@ -189,16 +193,15 @@ def check_and_detail(srv, timeout=6, detail_timeout=8):
 
     r["ok"] = True
 
-    # ---- 详情采集 ----
-    def _fetch_history():
+    # ---- 详情采集（顺序执行，外层已用200并发覆盖，无需嵌套线程池）----
+    def _quick_fetch(path, default=None):
         try:
-            s, _, bd = fetch(f"{base}/history?max_items=1", min(detail_timeout, 5))
+            s, _, bd = fetch(f"{base}{path}", min(detail_timeout, 5))
             if s == 200:
                 data = json.loads(bd)
-                if isinstance(data, dict) and len(data) > 0:
-                    return True
+                return data
         except: pass
-        return False
+        return default
 
     def _fetch_node_list(nt, fld):
         try:
@@ -209,30 +212,11 @@ def check_and_detail(srv, timeout=6, detail_timeout=8):
         except: pass
         return []
 
-    def _fetch_manager():
-        try:
-            s, _, bd = fetch(f"{base}/customnode/installed", min(detail_timeout, 5))
-            if s == 200:
-                data = json.loads(bd)
-                if isinstance(data, dict):
-                    return {"manager": "ComfyUI-Manager" in data, "count": len(data)}
-        except: pass
-        return {"manager": False, "count": 0}
+    # 历史
+    hist_data = _quick_fetch("/history?max_items=1", {})
+    r["has_history"] = isinstance(hist_data, dict) and len(hist_data) > 0
 
-    def _fetch_workflows():
-        try:
-            s, _, bd = fetch(f"{base}/api/userdata?dir=workflows", min(detail_timeout, 5))
-            if s == 200:
-                wf_list = json.loads(bd)
-                if isinstance(wf_list, list):
-                    return [str(w) for w in wf_list if isinstance(w, str)]
-        except: pass
-        return []
-
-    pool = ThreadPoolExecutor(max_workers=8)
-    tasks = {}
-    tasks["history"]  = pool.submit(_fetch_history)
-    # 模型加载器 -> 参数字段 (节点类型, 字段名)
+    # 模型（去重用 set，性能优于 list 线性查找）
     MODEL_LOADERS = [
         ("CheckpointLoaderSimple", "ckpt_name"),
         ("UNETLoader", "unet_name"),
@@ -247,46 +231,40 @@ def check_and_detail(srv, timeout=6, detail_timeout=8):
         ("Hunyuan3DModelLoader", "model_name"),
         ("Flux2Loader", "flux_name"),
     ]
-    for idx, (nt, fld) in enumerate(MODEL_LOADERS):
-        tasks[f"model_{idx}"] = pool.submit(_fetch_node_list, nt, fld)
-    tasks["lora1"]    = pool.submit(_fetch_node_list, "LoraLoader", "lora_name")
-    tasks["lora2"]    = pool.submit(_fetch_node_list, "LoraLoaderModelOnly", "lora_name")
-    tasks["clip"]     = pool.submit(_fetch_node_list, "CLIPLoader", "clip_name")
-    tasks["vae"]      = pool.submit(_fetch_node_list, "VAELoader", "vae_name")
-    tasks["manager"]  = pool.submit(_fetch_manager)
-    tasks["workflows"]= pool.submit(_fetch_workflows)
+    models_set = set()
+    for nt, fld in MODEL_LOADERS:
+        for n in _fetch_node_list(nt, fld):
+            models_set.add(n)
+    r["models"] = sorted(models_set)
 
-    def get(key, default=None):
-        try:
-            return tasks[key].result(timeout=detail_timeout + 3)
-        except: return default
+    # LoRA
+    lora_set = set()
+    for nt in ("LoraLoader", "LoraLoaderModelOnly"):
+        for n in _fetch_node_list(nt, "lora_name"):
+            lora_set.add(n)
+    r["lora_count"] = len(lora_set)
+    r["loras"] = sorted(lora_set)[:10]
 
-    r["has_history"] = bool(get("history", False))
+    # CLIP / VAE
+    r["clips"] = _fetch_node_list("CLIPLoader", "clip_name")
+    r["vaes"]  = _fetch_node_list("VAELoader", "vae_name")
 
-    models = []
-    for key in tasks:
-        if not key.startswith("model_"): continue
-        for n in (get(key, []) or []):
-            if n not in models: models.append(n)
-    r["models"] = models
+    # Manager
+    mgr_data = _quick_fetch("/customnode/installed")
+    if isinstance(mgr_data, dict):
+        r["manager"] = "ComfyUI-Manager" in mgr_data
+        r["custom_nodes"] = len(mgr_data)
+    else:
+        r["manager"] = False
+        r["custom_nodes"] = 0
 
-    all_loras = []
-    for key in ("lora1", "lora2"):
-        for n in (get(key, []) or []):
-            if n not in all_loras: all_loras.append(n)
-    r["lora_count"] = len(all_loras)
-    r["loras"] = all_loras[:10]
+    # Workflows
+    wf_data = _quick_fetch("/api/userdata?dir=workflows")
+    if isinstance(wf_data, list):
+        r["workflows"] = [str(w) for w in wf_data if isinstance(w, str)]
+    else:
+        r["workflows"] = []
 
-    r["clips"] = get("clip", []) or []
-    r["vaes"]  = get("vae", []) or []
-
-    mgr_info = get("manager", {"manager": False, "count": 0}) or {"manager": False, "count": 0}
-    r["manager"] = mgr_info["manager"]
-    r["custom_nodes"] = mgr_info["count"]
-
-    r["workflows"] = get("workflows", []) or []
-
-    pool.shutdown(wait=False, cancel_futures=True)
     return r
 
 
@@ -325,29 +303,34 @@ def print_summary(alive, elapsed):
         print(f"  {C_GREEN}{url:<46}{C_RESET} {ver:<8} {gpu:<22} {vram:>8} {free:>8} {hist:>4} {mgr:>4} {cn:>4} {nw:>4}  {nm:>4}  {nl:>4}   {ml}")
 
 
+# GPU 排名字典 — O(1) 查找，替代之前的 list.index() O(n)
+_GPU_RANK_MAP = {
+    "B200": 56, "H200": 55, "H100": 54, "A800": 53, "A100": 52, "H20": 51,
+    "RTX PRO 6000 BB": 50, "RTX 6000 Ada": 49, "RTX 5880 Ada": 48,
+    "RTX 5090": 47, "L40S": 46, "L40": 45, "RTX A6000": 44,
+    "A40": 43, "L20": 42, "RTX 4090": 41, "A30": 40, "RTX 5080": 39,
+    "RTX A5000": 38, "RTX 5070 Ti": 37, "RTX 5070": 36,
+    "RTX 4080": 35, "A10": 34, "A10G": 33, "RTX 4070 Ti": 32,
+    "RTX 5060 Ti": 31, "RTX 5060": 30, "RTX 4070": 29,
+    "RTX 4060 Ti": 28, "RTX 4060": 27, "RTX 3090": 26,
+    "Quadro RTX 6000": 25, "RTX 4000 SFF": 24, "RTX 4000": 23,
+    "Tesla V100": 22, "RTX 3080": 21, "RTX A4000": 20,
+    "RTX 3070": 19, "GB10": 18,
+    "RTX 3060": 17, "RTX 2080 Ti": 16, "RTX 2080": 15,
+    "RTX 3050": 14, "Tesla P40": 13, "L4": 12,
+    "RTX 2070": 11, "RTX 2060": 10, "RTX 2000 Ada": 9,
+    "Tesla T4": 8, "Tesla P4": 7, "MetaX C500": 6,
+    "GTX 1080": 5, "GTX 1070": 4, "GTX 1060": 3, "GTX": 2,
+    "NPU": 2, "AMD": 2, "MPS": 1,
+    "Intel Arc": 1,
+}
 def gpu_rank(gpu_simple):
-    order = [
-        "B200", "H200", "H100", "A800", "A100", "H20",
-        "RTX PRO 6000 BB", "RTX 6000 Ada", "RTX 5880 Ada",
-        "RTX 5090", "L40S", "L40", "RTX A6000",
-        "A40", "L20", "RTX 4090", "A30", "RTX 5080",
-        "RTX A5000", "RTX 5070 Ti", "RTX 5070",
-        "RTX 4080", "A10", "A10G", "RTX 4070 Ti",
-        "RTX 5060 Ti", "RTX 5060", "RTX 4070",
-        "RTX 4060 Ti", "RTX 4060", "RTX 3090",
-        "Quadro RTX 6000", "RTX 4000 SFF", "RTX 4000",
-        "Tesla V100", "RTX 3080", "RTX A4000",
-        "RTX 3070", "GB10",
-        "RTX 3060", "RTX 2080 Ti", "RTX 2080",
-        "RTX 3050", "Tesla P40", "L4",
-        "RTX 2070", "RTX 2060", "RTX 2000 Ada",
-        "Tesla T4", "Tesla P4", "MetaX C500",
-        "GTX 1080", "GTX 1070", "GTX 1060", "GTX",
-        "NPU", "AMD", "MPS",
-    ]
     g = gpu_simple or ""
-    if g in order: return len(order) - order.index(g)
-    if g == "CPU" or g == "-" or not g: return 0
+    rank = _GPU_RANK_MAP.get(g)
+    if rank is not None:
+        return rank
+    if g in ("CPU", "-", "") or not g:
+        return 0
     return 1
 
 def write_output(alive):
@@ -368,15 +351,21 @@ def write_output(alive):
         f.write("| # | 地址 | 版本 | GPU | 显存 | 空闲 | 历史 | 管理 | 节点 | 工作流 | 模型数 | LoRA数 |\n")
         f.write("|---|------|------|-----|------|------|------|------|------|--------|--------|--------|\n")
         for i, x in enumerate(alive_sorted, 1):
-            url = x["host"]
+            raw_url = x["host"]
+            # 统一使用 host（含端口），避免 http:// 前缀污染表格
+            url_display = raw_url if raw_url else x["url"].replace("http://","").replace("https://","")
             nm = len(x.get("models", []))
             nl = x.get("lora_count", 0)
             hist = "✓" if x.get("has_history") else "-"
             mgr = "✓" if x.get("manager") else "-"
             cn = str(x.get("custom_nodes", 0))
             nw = str(len(x.get("workflows", [])))
-            f.write(f"| {i} | {url} | {x['comfyui'] or '?'} | {x['gpu_simple'] or '-'} | "
-                    f"{x['gpu_vram_fmt'] or '-'} | {x['gpu_free_fmt'] or '-'} | "
+            # CPU 节点不显示显存（显卡专用指标）
+            is_cpu = (x.get("gpu_simple", "") or "").upper() in ("CPU", "")
+            vram_disp = "—" if is_cpu else (x.get("gpu_vram_fmt") or "-")
+            free_disp = "—" if is_cpu else (x.get("gpu_free_fmt") or "-")
+            f.write(f"| {i} | {url_display} | {x['comfyui'] or '?'} | {x['gpu_simple'] or '-'} | "
+                    f"{vram_disp} | {free_disp} | "
                     f"{hist} | {mgr} | {cn} | {nw} | {nm} | {nl} |\n")
 
         f.write("\n---\n\n## 详情\n\n")
@@ -385,7 +374,11 @@ def write_output(alive):
             f.write(f"### {i}. {url}\n\n")
             f.write(f"- **版本**: {x['comfyui'] or '?'}\n")
             f.write(f"- **GPU**: {x['gpu_simple'] or '-'} ({x.get('gpu_raw','') or '-'})\n")
-            f.write(f"- **显存**: {x['gpu_vram_fmt'] or '-'} (空闲 {x['gpu_free_fmt'] or '-'})\n")
+            is_cpu = (x.get("gpu_simple", "") or "").upper() in ("CPU", "")
+            if is_cpu:
+                f.write(f"- **显存**: — (CPU模式，无独立显存)\n")
+            else:
+                f.write(f"- **显存**: {x['gpu_vram_fmt'] or '-'} (空闲 {x['gpu_free_fmt'] or '-'})\n")
             f.write(f"- **内存**: {x['ram_fmt'] or '-'} (空闲 {x['ram_free_fmt'] or '-'})\n")
             f.write(f"- **历史**: {'有' if x.get('has_history') else '无'}\n")
             f.write(f"- **管理面板**: {'有' if x.get('manager') else '无'}\n")
