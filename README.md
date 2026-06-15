@@ -31,6 +31,9 @@ python3 scan_workflows.py report.md -w 200
 -w  并发数           默认 200
 -t  连接超时(秒)     默认 10
     --detail-timeout  详情超时(秒)  默认 12
+    --security        启用安全检测（任意文件读取漏洞）
+    --sec-workers     安全检测并发数  默认 10
+    --sec-read-timeout  安全检测读取超时  默认 10
 ```
 
 ### scan_workflows.py
@@ -53,6 +56,18 @@ report.md           报告文件路径
 - **自定义节点**: Manager管理的精确计数，无Manager时从object_info估算（标注`~`）
 - **工作流**: 用户保存的工作流 + 历史记录中成功执行的流程
 - **管理面板**: 是否安装 ComfyUI-Manager
+
+## 安全检测
+
+启用 `--security` 参数后，扫描完成后自动检测 **任意文件读取漏洞**：
+
+```bash
+python3 comfyui_scan.py -f comfyui.csv --security
+```
+
+- 检测 `Load Text File` + `PreviewAny` 组合节点是否存在
+- 尝试通过 API 读取 `/etc/passwd` 等系统文件
+- 生成 `security_report.md` 报告，包含泄露内容预览和修复建议
 
 ## 输出格式
 

