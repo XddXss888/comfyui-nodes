@@ -1,0 +1,197 @@
+{
+  "1": {
+    "inputs": {
+      "image": "input_1781449956445_fc40b99d-3d50-4f8a-b8be-562097f51f2b_84dd91a4-282a-40d5-99df-e6ddb6c34dbf.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "2": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "width": 556,
+      "height": 768,
+      "crop": "disabled",
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "图像缩放"
+    }
+  },
+  "3": {
+    "inputs": {
+      "ckpt_name": "插画\\绪儿已成精_动漫V3 复古风.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Checkpoint加载器（简易）"
+    }
+  },
+  "4": {
+    "inputs": {
+      "text": "一个女孩",
+      "clip": [
+        "3",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "正向提示"
+    }
+  },
+  "5": {
+    "inputs": {
+      "text": "Nsfw，低分辨率，糟糕的解剖结构，糟糕的手，文本，错误，缺失的手指，多余的数字，更少的数字，裁剪，最差的质量，低质量，正常质量，jpeg伪影，签名，水印，用户名，模糊",
+      "clip": [
+        "3",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "反向提示"
+    }
+  },
+  "6": {
+    "inputs": {
+      "pixels": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "11": {
+    "inputs": {
+      "seed": 1,
+      "steps": 20,
+      "cfg": 7.0,
+      "sampler_name": "euler",
+      "scheduler": "karras",
+      "denoise": 1.0,
+      "model": [
+        "3",
+        0
+      ],
+      "positive": [
+        "16",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "12": {
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "13": {
+    "inputs": {
+      "filename_prefix": "PANG_painter_SD1.5_1781449956946_0_0",
+      "images": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "14": {
+    "inputs": {
+      "guassian_sigma": 6.0,
+      "intensity_threshold": 8,
+      "resolution": 768,
+      "image": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "LineartStandardPreprocessor",
+    "_meta": {
+      "title": "New Lineart预处理"
+    }
+  },
+  "15": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_lineart.pth"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "New Lineart ControlNet加载器"
+    }
+  },
+  "16": {
+    "inputs": {
+      "switch": "On",
+      "strength": 0.45,
+      "conditioning": [
+        "4",
+        0
+      ],
+      "control_net": [
+        "15",
+        0
+      ],
+      "image": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "CR Apply ControlNet",
+    "_meta": {
+      "title": "New Lineart ControlNet应用"
+    }
+  },
+  "17": {
+    "inputs": {
+      "samples": [
+        "6",
+        0
+      ],
+      "amount": 4
+    },
+    "class_type": "RepeatLatentBatch",
+    "_meta": {
+      "title": "图像Latent批次扩展"
+    }
+  }
+}

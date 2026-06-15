@@ -25,7 +25,7 @@
       "format": "video/h264-mp4",
       "frame_rate": 48.0,
       "images": [
-        "161",
+        "136",
         0
       ],
       "loop_count": 0,
@@ -77,9 +77,9 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "None",
-      "lora_03": "wan0924\\W22_HN_i2v_POV_Missionary_Insertion_v1.safetensors",
-      "lora_04": "wan2.2\\NSFW-22-H-e8.safetensors",
+      "lora_02": "wan2.2\\wan2.2-i2v-high-oral-insertion-v1.0.safetensors",
+      "lora_03": "None",
+      "lora_04": "None",
       "lora_05": "None",
       "lora_06": "None",
       "lora_07": "None",
@@ -90,13 +90,13 @@
         "156",
         0
       ],
-      "strength_01": 2.0,
-      "strength_02": 0.0,
-      "strength_03": 1.0000000000000002,
-      "strength_04": 1.0000000000000002,
-      "strength_05": 0.0,
-      "strength_06": 1.0000000000000002,
-      "strength_07": 1.0000000000000002,
+      "strength_01": 2.0000000000000004,
+      "strength_02": 1.0000000000000002,
+      "strength_03": 0.0,
+      "strength_04": 0.0,
+      "strength_05": 1.0,
+      "strength_06": 1.0,
+      "strength_07": 1.0,
       "strength_08": 1.0,
       "strength_09": 1.0,
       "strength_10": 1.0
@@ -110,9 +110,9 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "None",
-      "lora_03": "wan0924\\W22_LN_i2v_POV_Missionary_Insertion_v1.safetensors",
-      "lora_04": "wan2.2\\NSFW-22-L-e8.safetensors",
+      "lora_02": "wan2.2\\wan2.2-i2v-low-oral-insertion-v1.0.safetensors",
+      "lora_03": "None",
+      "lora_04": "None",
       "lora_05": "None",
       "lora_06": "None",
       "lora_07": "None",
@@ -123,13 +123,13 @@
         "157",
         0
       ],
-      "strength_01": 1.0,
+      "strength_01": 1.0000000000000002,
       "strength_02": 1.0000000000000002,
-      "strength_03": 1.0000000000000002,
-      "strength_04": 1.0000000000000002,
-      "strength_05": 0.0,
-      "strength_06": 1.0000000000000002,
-      "strength_07": 1.0000000000000002,
+      "strength_03": 0.0,
+      "strength_04": 0.0,
+      "strength_05": 1.0,
+      "strength_06": 1.0,
+      "strength_07": 1.0,
       "strength_08": 1.0,
       "strength_09": 1.0,
       "strength_10": 1.0
@@ -141,7 +141,7 @@
       "crop_position": "center",
       "device": "cpu",
       "divisible_by": 16,
-      "height": 480,
+      "height": 832,
       "image": [
         "151",
         0
@@ -149,13 +149,13 @@
       "keep_proportion": "resize",
       "pad_color": "0, 0, 0",
       "upscale_method": "nearest-exact",
-      "width": 832
+      "width": 480
     },
     "class_type": "ImageResizeKJv2"
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/19ac9435-8f84-439a-969e-f25b524171ca.png"
+      "urls": "https://media.pornmaker.cloud/82eca133-cbbb-4131-9e4a-740976ee327b.png"
     },
     "class_type": "LoadImageFromURL"
   },
@@ -172,32 +172,6 @@
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
-  },
-  "161": {
-    "inputs": {
-      "image1": [
-        "168",
-        0
-      ],
-      "image2": [
-        "136",
-        0
-      ]
-    },
-    "class_type": "ImageBatch"
-  },
-  "168": {
-    "inputs": {
-      "custom_height": 0,
-      "custom_width": 0,
-      "force_rate": 48,
-      "force_size": "Disabled",
-      "frame_load_cap": 0,
-      "select_every_nth": 1,
-      "skip_first_frames": 0,
-      "url": "https://media.pornmaker.cloud/075b45f0-4409-4e94-b721-90288c57ed75.mp4"
-    },
-    "class_type": "LoadVideoFromURL"
   },
   "84": {
     "inputs": {
@@ -224,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 4732086117363236706,
+      "noise_seed": 3579178702562861694,
       "positive": [
         "98",
         0
@@ -254,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 8378629446756101364,
+      "noise_seed": 5292998491559026904,
       "positive": [
         "98",
         0
@@ -302,7 +276,7 @@
         "84",
         0
       ],
-      "text": "Immediately cut to a new scene where the exact same person is now completely naked and lying on their back, and she moves her head forward slightly. The scene is a top-down view showing the same woman completely nude, with their legs in an open position, with her vagina visible. At the bottom of the frame a man can be partially seen, as the man takes his penis with his hand and inserts his penis into the woman's vagina, pushing his body towards her. He then moves back and forward, as he pushes his penis into the woman's vagina repeatedly. The angle is from the point of view of the man at the bottom of the frame"
+      "text": "realistic. real life. POV. \r\nA man appears and she sucks his penis. Static camera, fixed viewpoint, still shot."
     },
     "class_type": "CLIPTextEncode"
   },

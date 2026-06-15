@@ -13,8 +13,8 @@
   },
   "16": {
     "inputs": {
-      "positive_prompt": "d2z0h2a6yv, portrait of a man",
-      "negative_prompt": "earbuds, mustache, beard, sideburns, imperial beard, stubble, shaggy mustache, horseshoe mustache, Italian mustache, Fu Manchu mustache, pencil mustache, horseshoe mustache, full beard, goatee, Van Dyke beard, Hollywood beard, Garfield beard, skate beard, Amish beard, Balbo beard, Verdi beard, three-day stubble, week-long stubble, Mexican stubble, Bredin sideburns/cheeks, Elvis sideburns, skipper beard, French fork split beard",
+      "positive_prompt": "d2z0h2a6yv, portrait of a man, one person",
+      "negative_prompt": "shadow, fingers, cloth, bandages, leaves, mask, hats, gray and black spots, grey and black stripes, tattoos, glasses, mustache, beard, sideburns, imperial beard, stubble, shaggy mustache, horseshoe mustache, Italian mustache, Fu Manchu mustache, pencil mustache, horseshoe mustache, full beard, goatee, Van Dyke beard, Hollywood beard, Garfield beard, skate beard, Amish beard, Balbo beard, Verdi beard, three-day stubble, week-long stubble, Mexican stubble, Bredin sideburns/cheeks, Elvis sideburns, skipper beard, French fork split beard",
       "force_offload": true,
       "use_disk_cache": false,
       "device": "gpu",
@@ -189,7 +189,7 @@
   },
   "124": {
     "inputs": {
-      "value": 118
+      "value": 208
     },
     "class_type": "JWInteger",
     "_meta": {
@@ -212,7 +212,7 @@
         0
       ],
       "mask": [
-        "234",
+        "191",
         0
       ]
     },
@@ -238,7 +238,7 @@
   },
   "168": {
     "inputs": {
-      "lora": "training_results/actor_Anton_Vasilev/look_01/training_results_wan21_03_720p_only/14B/20260415_13-31-47/epoch10/adapter_model.safetensors",
+      "lora": "training_results/actor_Svyatoslav/look_01/training_results_wan21_01/14B/20260408_17-26-09/epoch1/adapter_model.safetensors",
       "strength": 1.2,
       "low_mem_load": false,
       "merge_loras": false
@@ -348,7 +348,7 @@
   },
   "197": {
     "inputs": {
-      "value": "/DATA/Jive/processing/7_serie/0290/0290_a_vasilev/"
+      "value": "/DATA/Jive/processing/6_serie/0100/0100_s_rogojan/"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -357,7 +357,7 @@
   },
   "198": {
     "inputs": {
-      "value": "/DATA/Jive/Yandex.Disk/Dzhave/work/7_serie/0290/0290_a_vasilev/"
+      "value": "/DATA/Jive/Yandex.Disk/Dzhave/work/6_serie/0100/0100_s_rogojan/"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -605,7 +605,7 @@
   },
   "215": {
     "inputs": {
-      "value": "_0290_a_vasilev_epoch10_53"
+      "value": "_0100_s_rogojan_epoch1_53"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -736,7 +736,7 @@
   "227": {
     "inputs": {
       "image": [
-        "238",
+        "222",
         0
       ]
     },
@@ -793,95 +793,6 @@
     "class_type": "JoinStringMulti",
     "_meta": {
       "title": "Join String Multi"
-    }
-  },
-  "233": {
-    "inputs": {
-      "value": 0.5,
-      "width": [
-        "235",
-        0
-      ],
-      "height": [
-        "235",
-        1
-      ]
-    },
-    "class_type": "SolidMask",
-    "_meta": {
-      "title": "SolidMask"
-    }
-  },
-  "234": {
-    "inputs": {
-      "x": 0,
-      "y": 0,
-      "operation": "multiply",
-      "destination": [
-        "191",
-        0
-      ],
-      "source": [
-        "233",
-        0
-      ]
-    },
-    "class_type": "MaskComposite",
-    "_meta": {
-      "title": "MaskComposite"
-    }
-  },
-  "235": {
-    "inputs": {
-      "image": [
-        "213",
-        0
-      ]
-    },
-    "class_type": "GetImageSize",
-    "_meta": {
-      "title": "Get Image Size"
-    }
-  },
-  "238": {
-    "inputs": {
-      "x": 0,
-      "y": 0,
-      "resize_source": false,
-      "destination": [
-        "222",
-        0
-      ],
-      "source": [
-        "240",
-        0
-      ],
-      "mask": [
-        "191",
-        0
-      ]
-    },
-    "class_type": "ImageCompositeMasked",
-    "_meta": {
-      "title": "ImageCompositeMasked"
-    }
-  },
-  "240": {
-    "inputs": {
-      "width": [
-        "235",
-        0
-      ],
-      "height": [
-        "235",
-        1
-      ],
-      "batch_size": 1,
-      "color": 0
-    },
-    "class_type": "EmptyImage",
-    "_meta": {
-      "title": "EmptyImage"
     }
   }
 }

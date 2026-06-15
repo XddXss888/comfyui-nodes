@@ -4,115 +4,67 @@
 **内存**: 0 (空闲 0)
 **版本**: v0.2.2
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-14 05:56:17
-**历史总数**: 25 | **成功**: 10
+**扫描时间**: 2026-06-15 18:27:44
+**历史总数**: 70 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `f171c4aa-8adf-4346-b8d3-a63e3a0321c4`
-- **类型**: 文生图
-- **节点数**: 15
-- **模型** (3):
-  - WAI_NSFW-illustrious-SDXL_v14.safetensors
-  - sdxl_vae_fp16fix.safetensors
-  - wrzy_v0.2-000030.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] best-quality,masterpiece,with a high-end texture,UE5 Rendering,RTNS,masterpiece,amazing quality,Semi-realistic,fantasy,high contrast,perspective,depth of field,best quality,realistic anatomy,absurdres
-  - [CLIPTextEncode::text] (easynegative),badhandv4,(worst quality, low quality:1.4),greyscale,border,artist name,out of frame,holding,zombie,watermark,text,logo
+- **Prompt ID**: `7ca4b603-30ea-49df-a1bb-b769631889e0`
+- **类型**: 其他
+- **节点数**: 2
+- **模型** (0):
 
 ### 2. workflow_02.json
-- **Prompt ID**: `35d08501-06e8-4b87-bf81-a17dfbb20451`
-- **类型**: 文生图
-- **节点数**: 15
-- **模型** (3):
-  - WAI_NSFW-illustrious-SDXL_v14.safetensors
-  - sdxl_vae_fp16fix.safetensors
-  - yuanzi.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] best-quality,masterpiece,with a high-end texture,UE5 Rendering,RTNS,masterpiece,amazing quality,Semi-realistic,fantasy,high contrast,perspective,depth of field,best quality,realistic anatomy,absurdres
-  - [CLIPTextEncode::text] (easynegative),badhandv4,(worst quality, low quality:1.4),greyscale,border,artist name,out of frame,holding,zombie,watermark,text,logo
+- **Prompt ID**: `dd1efcb3-86fa-469f-a041-fd9b14c2fa92`
+- **类型**: 其他
+- **节点数**: 2
+- **模型** (0):
 
 ### 3. workflow_03.json
-- **Prompt ID**: `c0991116-1fac-4abd-b4d3-eae33ce3931b`
-- **类型**: 文生图
-- **节点数**: 7
-- **模型** (1):
-  - 25D朦胧美MAX.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A photorealistic portrait of a 22-year-old innocent farm girl with a petite build yet medium breasts, and a mane of very long, voluminous long blonde hair. She is sitting on the bed, wearing an flowin
-  - [CLIPTextEncode::text] text, watermark
+- **Prompt ID**: `90cac8c1-a1ba-4ec2-8808-ef206db0f245`
+- **类型**: 其他
+- **节点数**: 2
+- **模型** (0):
 
 ### 4. workflow_04.json
-- **Prompt ID**: `f385dfb0-5546-4d09-94ca-105d37f28eca`
-- **类型**: 文生图
-- **节点数**: 7
-- **模型** (1):
-  - 25D朦胧美MAX.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A photorealistic portrait of a 19-year-old innocent farm girl with a petite build yet medium breasts, and a mane of very long, voluminous long blonde hair. She is sitting on the bed, wearing an flowin
-  - [CLIPTextEncode::text] text, watermark
+- **Prompt ID**: `86a5b152-4623-49e3-8d88-06c11666897f`
+- **类型**: 其他
+- **节点数**: 2
+- **模型** (0):
 
 ### 5. workflow_05.json
-- **Prompt ID**: `49aeff07-bb38-4175-82b5-d95cc707d825`
-- **类型**: 文生图
-- **节点数**: 7
-- **模型** (1):
-  - 25D朦胧美MAX.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A photorealistic portrait of a 19-year-old innocent farm girl with a petite build yet medium breasts, and a mane of very long, voluminous long blonde hair. She is sitting on the bed, wearing an flowin
-  - [CLIPTextEncode::text] text, watermark
+- **Prompt ID**: `8d3c0deb-1256-4271-981e-8119837b1b51`
+- **类型**: 其他
+- **节点数**: 2
+- **模型** (0):
 
 ### 6. workflow_06.json
-- **Prompt ID**: `82e2d0ed-58a6-4931-b0c0-7a20a076ea2d`
-- **类型**: 文生图
-- **节点数**: 7
-- **模型** (1):
-  - WAI_NSFW-illustrious-SDXL_v14.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A photorealistic portrait of a 19-year-old innocent farm girl with a petite build yet medium breasts, and a mane of very long, voluminous long blonde hair. She is sitting on the bed, wearing an flowin
-  - [CLIPTextEncode::text] text, watermark
+- **Prompt ID**: `3bc75f17-457f-401a-b3e4-11c42ff66211`
+- **类型**: 其他
+- **节点数**: 2
+- **模型** (0):
 
 ### 7. workflow_07.json
-- **Prompt ID**: `274d4966-0737-4f19-8988-6fdc43338e56`
-- **类型**: 文生图
-- **节点数**: 7
-- **模型** (1):
-  - 25D朦胧美MAX.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A photorealistic portrait of a 19-year-old innocent farm girl with a petite build yet medium breasts, and a mane of very long, voluminous long blonde hair. She is sitting on the bed, wearing an flowin
-  - [CLIPTextEncode::text] text, watermark
+- **Prompt ID**: `59957a0c-6d0c-4243-a753-df7cbbc3f0b1`
+- **类型**: 其他
+- **节点数**: 2
+- **模型** (0):
 
 ### 8. workflow_08.json
-- **Prompt ID**: `aeac0114-2e1b-42cd-bded-56ae777ba710`
-- **类型**: 文生图
-- **节点数**: 7
-- **模型** (1):
-  - WAI_NSFW-illustrious-SDXL_v14.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A photorealistic portrait of a 19-year-old innocent farm girl with a petite build yet medium breasts, and a mane of very long, voluminous long blonde hair. She is sitting on the bed, wearing an flowin
-  - [CLIPTextEncode::text] text, watermark
+- **Prompt ID**: `496bc6c3-b04a-4b0c-b63f-3dee14786d4f`
+- **类型**: 其他
+- **节点数**: 2
+- **模型** (0):
 
 ### 9. workflow_09.json
-- **Prompt ID**: `8a6d369e-f8cd-4bda-8528-a410f87136da`
-- **类型**: 文生图
-- **节点数**: 15
-- **模型** (3):
-  - WAI_NSFW-illustrious-SDXL_v14.safetensors
-  - sdxl_vae_fp16fix.safetensors
-  - yuanzi.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] best-quality,masterpiece,with a high-end texture,UE5 Rendering,RTNS,masterpiece,amazing quality,Semi-realistic,fantasy,high contrast,perspective,depth of field,best quality,realistic anatomy,absurdres
-  - [CLIPTextEncode::text] (easynegative),badhandv4,(worst quality, low quality:1.4),greyscale,border,artist name,out of frame,holding,zombie,watermark,text,logo
+- **Prompt ID**: `2f8415c1-5139-4b8f-b01e-957219353fac`
+- **类型**: 其他
+- **节点数**: 2
+- **模型** (0):
 
 ### 10. workflow_10.json
-- **Prompt ID**: `f72eabbc-2ed0-4421-b748-91acfeac90f3`
-- **类型**: 文生图
-- **节点数**: 15
-- **模型** (3):
-  - WAI_NSFW-illustrious-SDXL_v14.safetensors
-  - sdxl_vae_fp16fix.safetensors
-  - yuanzi.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] best-quality,masterpiece,with a high-end texture,UE5 Rendering,RTNS,masterpiece,amazing quality,Semi-realistic,fantasy,high contrast,perspective,depth of field,best quality,realistic anatomy,absurdres
-  - [CLIPTextEncode::text] (easynegative),badhandv4,(worst quality, low quality:1.4),greyscale,border,artist name,out of frame,holding,zombie,watermark,text,logo
+- **Prompt ID**: `6b36d1d9-4197-4f86-bc8f-4075d944d479`
+- **类型**: 其他
+- **节点数**: 2
+- **模型** (0):

@@ -6,7 +6,7 @@
       "unet_name": "qwen_image_edit_2511_bf16.safetensors"
     },
     "_meta": {
-      "title": "UNet加载器"
+      "title": "UNET加载器"
     }
   },
   "67": {
@@ -14,12 +14,12 @@
     "inputs": {
       "shift": 3.1,
       "model": [
-        "93",
+        "118",
         0
       ]
     },
     "_meta": {
-      "title": "采样算法（AuraFlow）"
+      "title": "模型采样算法AuraFlow"
     }
   },
   "68": {
@@ -30,11 +30,11 @@
         0
       ],
       "image1": [
-        "73",
+        "121",
         0
       ],
       "prompt": [
-        "111",
+        "116",
         0
       ],
       "clip": [
@@ -54,10 +54,10 @@
         0
       ],
       "image1": [
-        "73",
+        "121",
         0
       ],
-      "prompt": "低质量，最差质量，坏的图片",
+      "prompt": "泛黄，AI感，不真实，丑陋，油腻的皮肤，异常的肢体，不协调的肢体",
       "clip": [
         "61",
         0
@@ -67,29 +67,40 @@
       "title": "文本编码（QwenImageEditPlus）"
     }
   },
-  "111": {
+  "121": {
+    "class_type": "LoadImageFromUrl",
+    "inputs": {
+      "image": "http://59.110.66.181:9201/file/upload/material/images/b040d96500364be0a5dae94e0f4874d9.png",
+      "keep_alpha_channel": false,
+      "output_mode": true
+    },
+    "_meta": {
+      "title": "Load Image From URL"
+    }
+  },
+  "115": {
+    "class_type": "Seed (rgthree)",
+    "inputs": {
+      "seed": -1
+    },
+    "_meta": {
+      "title": "随机种"
+    }
+  },
+  "116": {
     "class_type": "Text Multiline",
     "inputs": {
-      "text": "一个亚洲男性，短发微卷，穿着灰色运动服，闭眼张臂跃入镜中，镜面泛起涟漪般光晕折射出舞姿 [描述主体和环境+镜头逐渐向前推进，展示……描述画面变化]"
+      "text": "根据首尾帧生成视频"
     },
     "_meta": {
-      "title": "Text Multiline"
+      "title": "多行文本"
     }
   },
-  "112": {
-    "class_type": "easy int",
-    "inputs": {
-      "value": 1920
-    },
-    "_meta": {
-      "title": "整数"
-    }
-  },
-  "102": {
+  "117": {
     "class_type": "ReservedVRAMSetter",
     "inputs": {
       "mode": "auto",
-      "seed": 605613374246717,
+      "seed": 276581673098068,
       "reserved": 0.8,
       "auto_max_reserved": 0.0,
       "clean_gpu_before": true
@@ -98,36 +109,7 @@
       "title": "Set Reserved VRAM(GB) ⚙️"
     }
   },
-  "113": {
-    "class_type": "easy int",
-    "inputs": {
-      "value": 1080
-    },
-    "_meta": {
-      "title": "整数"
-    }
-  },
-  "103": {
-    "class_type": "Seed (rgthree)",
-    "inputs": {
-      "seed": -1
-    },
-    "_meta": {
-      "title": "Seed (rgthree)"
-    }
-  },
-  "114": {
-    "class_type": "LoadImageFromUrl",
-    "inputs": {
-      "image": "http://59.110.66.181:9201/file/upload/material/images/308b99e087d749ebbd775ad467eebcbf.png",
-      "keep_alpha_channel": false,
-      "output_mode": true
-    },
-    "_meta": {
-      "title": "Load Image From URL"
-    }
-  },
-  "104": {
+  "8": {
     "class_type": "VAEDecode",
     "inputs": {
       "vae": [
@@ -135,7 +117,7 @@
         0
       ],
       "samples": [
-        "108",
+        "65",
         0
       ]
     },
@@ -143,31 +125,18 @@
       "title": "VAE解码"
     }
   },
-  "105": {
-    "class_type": "LatentUpscaleBy",
+  "118": {
+    "class_type": "LoraLoaderModelOnly",
     "inputs": {
-      "scale_by": 1.5,
-      "upscale_method": "nearest-exact",
-      "samples": [
-        "65",
+      "lora_name": "consistence_edit_v2.safetensors",
+      "strength_model": 0.3,
+      "model": [
+        "73",
         0
       ]
     },
     "_meta": {
-      "title": "缩放Latent（比例）"
-    }
-  },
-  "106": {
-    "class_type": "SaveImage",
-    "inputs": {
-      "filename_prefix": "aa3484df858e4cd4b18c2e1936a3ad08/aa3484df858e4cd4b18c2e1936a3ad08",
-      "images": [
-        "104",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "保存图像"
+      "title": "LoRA加载器(仅模型)"
     }
   },
   "70": {
@@ -183,40 +152,17 @@
       "title": "Edit Model Reference Method"
     }
   },
-  "108": {
-    "class_type": "KSamplerAdvanced",
+  "119": {
+    "class_type": "SaveImage",
     "inputs": {
-      "latent_image": [
-        "105",
-        0
-      ],
-      "cfg": 1.0,
-      "return_with_leftover_noise": "disable",
-      "end_at_step": 10000,
-      "positive": [
-        "70",
-        0
-      ],
-      "add_noise": "enable",
-      "steps": 5,
-      "scheduler": "simple",
-      "negative": [
-        "71",
-        0
-      ],
-      "start_at_step": 2,
-      "sampler_name": "euler",
-      "noise_seed": [
-        "103",
-        0
-      ],
-      "model": [
-        "64",
+      "filename_prefix": "db5e50a087594014acbdcbcb8044181a/db5e50a087594014acbdcbcb8044181a",
+      "images": [
+        "8",
         0
       ]
     },
     "_meta": {
-      "title": "K采样器（高级）"
+      "title": "保存图像"
     }
   },
   "71": {
@@ -232,24 +178,18 @@
       "title": "Edit Model Reference Method"
     }
   },
-  "82": {
-    "class_type": "EmptySD3LatentImage",
+  "61": {
+    "class_type": "CLIPLoader",
     "inputs": {
-      "batch_size": 1,
-      "width": [
-        "112",
-        0
-      ],
-      "height": [
-        "113",
-        0
-      ]
+      "clip_name": "qwen_2.5_vl_7b.safetensors",
+      "type": "qwen_image",
+      "device": "default"
     },
     "_meta": {
-      "title": "空Latent图像（SD3）"
+      "title": "CLIP加载器"
     }
   },
-  "93": {
+  "73": {
     "class_type": "LoraLoaderModelOnly",
     "inputs": {
       "lora_name": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
@@ -260,25 +200,14 @@
       ]
     },
     "_meta": {
-      "title": "LoRA加载器（仅模型）"
+      "title": "LoRA加载器(仅模型)"
     }
   },
-  "61": {
-    "class_type": "CLIPLoader",
-    "inputs": {
-      "clip_name": "qwen_2.5_vl_7b.safetensors",
-      "type": "qwen_image",
-      "device": "default"
-    },
-    "_meta": {
-      "title": "加载CLIP"
-    }
-  },
-  "73": {
+  "84": {
     "class_type": "ImageScaleToTotalPixels",
     "inputs": {
       "image": [
-        "114",
+        "121",
         0
       ],
       "megapixels": 1.5,
@@ -286,14 +215,14 @@
       "upscale_method": "lanczos"
     },
     "_meta": {
-      "title": "缩放图像（像素）"
+      "title": "图像按像素缩放"
     }
   },
-  "74": {
+  "85": {
     "class_type": "VAEEncode",
     "inputs": {
       "pixels": [
-        "73",
+        "84",
         0
       ],
       "vae": [
@@ -324,7 +253,7 @@
       "vae_name": "qwen_image_vae.safetensors"
     },
     "_meta": {
-      "title": "加载VAE"
+      "title": "VAE加载器"
     }
   },
   "65": {
@@ -337,11 +266,11 @@
       ],
       "denoise": 1.0,
       "latent_image": [
-        "82",
+        "85",
         0
       ],
       "seed": [
-        "103",
+        "115",
         0
       ],
       "cfg": 1.0,
@@ -354,7 +283,7 @@
         "70",
         0
       ],
-      "steps": 6
+      "steps": 5
     },
     "_meta": {
       "title": "K采样器"

@@ -1,0 +1,372 @@
+{
+  "140": {
+    "inputs": {
+      "seed": 395290559153094,
+      "steps": 40,
+      "cfg": 5.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "normal",
+      "denoise": 0.99,
+      "model": [
+        "159",
+        0
+      ],
+      "positive": [
+        "144",
+        0
+      ],
+      "negative": [
+        "144",
+        1
+      ],
+      "latent_image": [
+        "154",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "141": {
+    "inputs": {
+      "width": 1536,
+      "height": 1536,
+      "upscale_method": "lanczos",
+      "keep_proportion": true,
+      "divisible_by": 0,
+      "crop": 0,
+      "image": [
+        "157",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJ",
+    "_meta": {
+      "title": "图像缩放（KJ）"
+    }
+  },
+  "143": {
+    "inputs": {
+      "control_net_name": "mistoLine_rank256.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "ControlNet加载器(高级)"
+    }
+  },
+  "144": {
+    "inputs": {
+      "strength": 1.0,
+      "start_percent": 0.0,
+      "end_percent": 0.8,
+      "positive": [
+        "150",
+        0
+      ],
+      "negative": [
+        "149",
+        0
+      ],
+      "control_net": [
+        "143",
+        0
+      ],
+      "image": [
+        "146",
+        0
+      ]
+    },
+    "class_type": "ACN_AdvancedControlNetApply",
+    "_meta": {
+      "title": "高级ControlNet应用"
+    }
+  },
+  "145": {
+    "inputs": {
+      "ckpt_name": "XL_插画\\绪儿已成精_动漫XL_V1.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Checkpoint加载器(简易)"
+    }
+  },
+  "146": {
+    "inputs": {
+      "preprocessor": "AnyLineArtPreprocessor_aux",
+      "resolution": 1024,
+      "image": [
+        "141",
+        0
+      ]
+    },
+    "class_type": "AIO_Preprocessor",
+    "_meta": {
+      "title": "Aux集成预处理器"
+    }
+  },
+  "147": {
+    "inputs": {
+      "text_input": "",
+      "task": "caption",
+      "fill_mask": true,
+      "keep_model_loaded": false,
+      "max_new_tokens": 1024,
+      "num_beams": 3,
+      "do_sample": true,
+      "output_mask_select": "",
+      "seed": 1,
+      "image": [
+        "157",
+        0
+      ],
+      "florence2_model": [
+        "148",
+        0
+      ]
+    },
+    "class_type": "Florence2Run",
+    "_meta": {
+      "title": "Florence2 执行"
+    }
+  },
+  "148": {
+    "inputs": {
+      "model": "gokaygokay/Florence-2-Flux-Large",
+      "precision": "fp16",
+      "attention": "sdpa"
+    },
+    "class_type": "DownloadAndLoadFlorence2Model",
+    "_meta": {
+      "title": "下载并加载 Florence2 模型"
+    }
+  },
+  "149": {
+    "inputs": {
+      "text": "Nsfw，低分辨率，糟糕的解剖结构，糟糕的手，文本，错误，缺失的手指，多余的数字，更少的数字，裁剪，最差的质量，低质量，正常质量，jpeg伪影，签名，水印，用户名，模糊",
+      "parser": "A1111",
+      "mean_normalization": true,
+      "multi_conditioning": false,
+      "use_old_emphasis_implementation": false,
+      "with_SDXL": false,
+      "ascore": 6.0,
+      "width": 1024,
+      "height": 1024,
+      "crop_w": 0,
+      "crop_h": 0,
+      "target_width": 1024,
+      "target_height": 1024,
+      "text_g": "",
+      "text_l": "",
+      "smZ_steps": 40,
+      "clip": [
+        "145",
+        1
+      ]
+    },
+    "class_type": "smZ CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode++"
+    }
+  },
+  "150": {
+    "inputs": {
+      "text": [
+        "155",
+        0
+      ],
+      "parser": "A1111",
+      "mean_normalization": true,
+      "multi_conditioning": false,
+      "use_old_emphasis_implementation": false,
+      "with_SDXL": false,
+      "ascore": 6.0,
+      "width": 1024,
+      "height": 1024,
+      "crop_w": 0,
+      "crop_h": 0,
+      "target_width": 1024,
+      "target_height": 1024,
+      "text_g": "",
+      "text_l": "",
+      "smZ_steps": 40,
+      "clip": [
+        "145",
+        1
+      ]
+    },
+    "class_type": "smZ CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode++"
+    }
+  },
+  "151": {
+    "inputs": {
+      "samples": [
+        "140",
+        0
+      ],
+      "vae": [
+        "153",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "152": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "151",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "153": {
+    "inputs": {
+      "vae_name": "sdxl_vae_fp16fix.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "VAE加载器"
+    }
+  },
+  "154": {
+    "inputs": {
+      "width": [
+        "141",
+        1
+      ],
+      "height": [
+        "141",
+        2
+      ],
+      "batch_size": 4
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent"
+    }
+  },
+  "155": {
+    "inputs": {
+      "a": [
+        "158",
+        0
+      ],
+      "b": [
+        "147",
+        2
+      ]
+    },
+    "class_type": "JWStringConcat",
+    "_meta": {
+      "title": "String Concatenate"
+    }
+  },
+  "157": {
+    "inputs": {
+      "image": "input_1781449840638_5ec0b008-31a4-4730-a690-e8df25c19be8_298d36a9-4100-4d30-87b8-532b3e0e05b2.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "158": {
+    "inputs": {
+      "string": "一个女孩"
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "String Literal"
+    }
+  },
+  "159": {
+    "inputs": {
+      "weight": 1.0,
+      "weight_faceidv2": 1.0,
+      "weight_type": "style transfer precise",
+      "combine_embeds": "concat",
+      "start_at": 0.0,
+      "end_at": 1.0,
+      "embeds_scaling": "V only",
+      "layer_weights": "3:2.5,6:1",
+      "model": [
+        "160",
+        0
+      ],
+      "ipadapter": [
+        "160",
+        1
+      ],
+      "image": [
+        "164",
+        0
+      ]
+    },
+    "class_type": "IPAdapterMS",
+    "_meta": {
+      "title": "应用IPAdapter Mad Scientist"
+    }
+  },
+  "160": {
+    "inputs": {
+      "preset": "PLUS (high strength)",
+      "model": [
+        "145",
+        0
+      ]
+    },
+    "class_type": "IPAdapterUnifiedLoader",
+    "_meta": {
+      "title": "IPAdapter加载器"
+    }
+  },
+  "161": {
+    "inputs": {
+      "image": "input_1781449841078_af29d6fe-616b-41ab-96f7-8f6cd5d25831_5e2dbd96-05fe-470a-b181-e5719792b199.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "164": {
+    "inputs": {
+      "interpolation": "LANCZOS",
+      "crop_position": "top",
+      "sharpening": 0.0,
+      "image": [
+        "161",
+        0
+      ]
+    },
+    "class_type": "PrepImageForClipVision",
+    "_meta": {
+      "title": "CLIP视觉图像处理"
+    }
+  },
+  "165": {
+    "inputs": {
+      "images": [
+        "164",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  }
+}

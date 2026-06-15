@@ -1,0 +1,339 @@
+{
+  "6": {
+    "inputs": {
+      "text": "A cinematic medium shot of a slim, angular ten-year-old boy sitting on the edge of a flat, pale grey granite (#A9A9A9) stone jutting out over a wide, still freshwater pond, the stone's surface worn satin-smooth with sage-green (#8A9A5B) and burnt-orange (#CC5500) lichen clinging to its underside. Golden hour warm amber (#FFB347) light bathes the scene from above, while cool wavering reflected light from the pond's surface casts subtle rippling patterns on the underside of the stone. The boy, Arjun, has medium-brown skin (#8D5524) with warm honey undertones glowing in the golden light, messy black hair (#1A1A1A) with blue-black highlights falling in uneven tufts across his forehead, large expressive dark brown eyes (#3B1F0B) framed by thick lashes gazing downward with lips slightly parted and brow tensed, a small dark brown mole (#2B1B0E) on his left cheek. He wears a faded blue shirt (#7B9BAF) hanging loose on his angular frame and frayed khaki-brown shorts (#8B7355) ending above his knobby knees, his thin shoulder blades visible through the worn fabric. He sits on the stone's edge with his bare feet — slightly dusty with splayed toes — dangling just above the pond's tawny-gold (#D4A437) shallows, toes curled tightly inward in a reflexive grip, a single golden droplet clinging to his big toe catching amber light. The pond surface below shows smooth pebbles and decomposing leaves in the translucent shallows, darkening to deep green-brown (#2F4F2F) toward the center, with a single concentric ripple expanding outward from directly beneath his feet. Jade-green (#3B7A57) lotus pads float nearby with mercury-like droplets, and electric blue (#0077BE) dragonflies hover motionless above the still water. The massive banyan tree's elephant-grey (#848484) aerial roots and emerald (#2E8B57) moss-draped trunk are visible in the background, its canopy casting dappled emerald shadows across the scene. Arjun's hands grip the stone's edge with white knuckles, his entire posture rigid and hesitant, jaw clenched and eyes wide with visible tension. Pixar-style 3D, soft global illumination, polished cinematic quality. Color palette of warm amber (#FFB347), tawny-gold (#D4A437), medium-brown (#8D5524), pale grey granite (#A9A9A9), and deep green-brown (#2F4F2F).",
+      "clip": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "13",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "scene_06/Flux2",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "10": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "12": {
+    "inputs": {
+      "unet_name": "flux2_dev_fp8mixed.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "13": {
+    "inputs": {
+      "noise": [
+        "25",
+        0
+      ],
+      "guider": [
+        "22",
+        0
+      ],
+      "sampler": [
+        "16",
+        0
+      ],
+      "sigmas": [
+        "48",
+        0
+      ],
+      "latent_image": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "16": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "22": {
+    "inputs": {
+      "model": [
+        "12",
+        0
+      ],
+      "conditioning": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "BasicGuider"
+    }
+  },
+  "25": {
+    "inputs": {
+      "noise_seed": 42
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "26": {
+    "inputs": {
+      "guidance": 4.0,
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "FluxGuidance"
+    }
+  },
+  "38": {
+    "inputs": {
+      "clip_name": "mistral_3_small_flux2_bf16.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "39": {
+    "inputs": {
+      "conditioning": [
+        "43",
+        0
+      ],
+      "latent": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "40": {
+    "inputs": {
+      "pixels": [
+        "41",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "41": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "42",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
+    }
+  },
+  "42": {
+    "inputs": {
+      "image": "arjun (1).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "43": {
+    "inputs": {
+      "conditioning": [
+        "71",
+        0
+      ],
+      "latent": [
+        "44",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "44": {
+    "inputs": {
+      "pixels": [
+        "45",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "45": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
+    }
+  },
+  "46": {
+    "inputs": {
+      "image": "thegranitestone (1).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "47": {
+    "inputs": {
+      "width": 1248,
+      "height": 832,
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "48": {
+    "inputs": {
+      "steps": 20,
+      "width": 1248,
+      "height": 832
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "Flux2Scheduler"
+    }
+  },
+  "68": {
+    "inputs": {
+      "image": "thepond (1).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "69": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "68",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
+    }
+  },
+  "70": {
+    "inputs": {
+      "pixels": [
+        "69",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "71": {
+    "inputs": {
+      "conditioning": [
+        "26",
+        0
+      ],
+      "latent": [
+        "70",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  }
+}

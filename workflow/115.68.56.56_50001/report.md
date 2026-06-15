@@ -4,67 +4,67 @@
 **内存**: 62 GB (空闲 57 GB)
 **版本**: 0.3.67
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-14 05:56:20
-**历史总数**: 549 | **成功**: 10
+**扫描时间**: 2026-06-15 18:28:34
+**历史总数**: 566 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `fa806fc9-615d-499d-86a1-a9d7da0a7d78`
+- **Prompt ID**: `5c2dceb6-a57f-45c2-9b25-e4a1a30dbc40`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 2. workflow_02.json
-- **Prompt ID**: `a69a7bdc-85ce-405e-b24e-6682eea9bfee`
+- **Prompt ID**: `135b51ca-1e94-4e52-b100-84ea89a2b3b2`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 3. workflow_03.json
-- **Prompt ID**: `e01c7227-f177-4d3d-a118-4aa5139171bf`
+- **Prompt ID**: `c15f4e84-f051-4d2a-a466-6fe1511524a9`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 4. workflow_04.json
-- **Prompt ID**: `18992ee0-40db-45b4-bad2-acc147ae9a41`
+- **Prompt ID**: `ea44a47f-f82d-4a2b-a01f-c9f6332364a3`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 5. workflow_05.json
-- **Prompt ID**: `ebf6392f-9f35-4127-b8da-0d4b3ba35ba0`
+- **Prompt ID**: `34aa297f-3e9e-43c9-9445-d80996b65366`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 6. workflow_06.json
-- **Prompt ID**: `ad7a4302-93cd-446a-b230-09b6c79835ae`
+- **Prompt ID**: `dbdfeedd-eefb-4c87-b7a5-5fa59ed66dcf`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 7. workflow_07.json
-- **Prompt ID**: `477823dc-daa3-4397-87dc-3b590321d793`
+- **Prompt ID**: `930843e6-6bc2-48e9-8c25-3c1fbb73f8b8`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 8. workflow_08.json
-- **Prompt ID**: `ff58cbc9-133f-4bf2-b179-6561269972b5`
+- **Prompt ID**: `df159512-02f0-45dc-9d4e-7f8beb7f8ab9`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 9. workflow_09.json
-- **Prompt ID**: `5b8ff9f6-f350-4aeb-8cdd-2e29b410b44d`
+- **Prompt ID**: `fda59033-96c1-430b-af1d-6b5e930b7213`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 10. workflow_10.json
-- **Prompt ID**: `c4db6632-d003-4e5b-bf04-1be165f9ba13`
+- **Prompt ID**: `535eb4b3-eda5-4237-8ffe-2c1d6b356d33`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):

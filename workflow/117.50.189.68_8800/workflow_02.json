@@ -2,7 +2,7 @@
   "103": {
     "inputs": {
       "model": [
-        "159",
+        "139",
         0
       ],
       "shift": 5.000000000000001
@@ -12,7 +12,7 @@
   "104": {
     "inputs": {
       "model": [
-        "158",
+        "138",
         0
       ],
       "shift": 5.000000000000001
@@ -70,6 +70,72 @@
     },
     "class_type": "RifeTensorrt"
   },
+  "138": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "lora_02": "wan2.1\\crash-zoom-in.safetensors",
+      "lora_03": "wan2.2\\wan22-ultimatedeepthroat-I2V-34epoc-high-k3nk.safetensors",
+      "lora_04": "None",
+      "lora_05": "None",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "156",
+        0
+      ],
+      "strength_01": 2.0000000000000004,
+      "strength_02": 1.0,
+      "strength_03": 1.0,
+      "strength_04": 0.0,
+      "strength_05": 1.0,
+      "strength_06": 1.0,
+      "strength_07": 1.0,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
+  },
+  "139": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "lora_02": "wan2.1\\crash-zoom-in.safetensors",
+      "lora_03": "wan2.2\\wan22-ultimatedeepthroat-I2V-16epoc-low-k3nk.safetensors",
+      "lora_04": "None",
+      "lora_05": "None",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "157",
+        0
+      ],
+      "strength_01": 1.0000000000000002,
+      "strength_02": 1.0,
+      "strength_03": 1.0,
+      "strength_04": 0.0,
+      "strength_05": 1.0,
+      "strength_06": 1.0,
+      "strength_07": 1.0,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
+  },
   "150": {
     "inputs": {
       "crop_position": "center",
@@ -89,7 +155,7 @@
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/bbba26ac-a48b-4c17-926c-7c98920f1876.png"
+      "urls": "https://media.pornmaker.cloud/05fbc298-9b84-4f66-82c0-760a9e822f35.png"
     },
     "class_type": "LoadImageFromURL"
   },
@@ -106,72 +172,6 @@
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
-  },
-  "158": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "wan0922\\触发词lyy666版本v1高噪添加强度1.safetensors",
-      "lora_03": "wan0911\\Wan2.2 v3 - T2V - Doggy Style - HIGH 14B.safetensors",
-      "lora_04": "None",
-      "lora_05": "None",
-      "lora_06": "None",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "156",
-        0
-      ],
-      "strength_01": 2.0,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 1.0000000000000002,
-      "strength_04": 1.0000000000000002,
-      "strength_05": 0.0,
-      "strength_06": 1.0000000000000002,
-      "strength_07": 1.0000000000000002,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
-  },
-  "159": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "None",
-      "lora_03": "wan0911\\Wan2.2 v3 - T2V - Doggy Style - LOW 14B.safetensors",
-      "lora_04": "None",
-      "lora_05": "None",
-      "lora_06": "None",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "157",
-        0
-      ],
-      "strength_01": 1.0,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 1.0000000000000002,
-      "strength_04": 1.0000000000000002,
-      "strength_05": 0.0,
-      "strength_06": 1.0000000000000002,
-      "strength_07": 1.0000000000000002,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
   },
   "84": {
     "inputs": {
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 9065772426413853060,
+      "noise_seed": 7809816027523418805,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 7357003120593708674,
+      "noise_seed": 3700173869061382792,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": "lyy666.a same person video. 1.The first scene is a selfie of a beautiful woman, who is looking for an AV actor to shoot an AV film.\r\n\r\nThe scene instantly switches to a scene where they are having sex.\r\n\r\nsecond scene: close up scene,background change to bedroom she is naked nude nipples nipple showing and doing all fours pose, A naked man is behind her and holding her hip doing doggy style sex thrusting back and forth to her vagina, their bodies moving in perfect harmony, the girl expression is enjoy,the cameral is forcus on side view of them,slowly zoom in her face"
+      "text": "realistic. real life. POV. \r\n\r\na cinematic scene with a woman in the frame， a man enters from the side, only his lower body is visible, side view of his hips, thighs and legs, with a gigantic erected penis with testicles appears and she starts engaging in a deepthroat blowjob with that penis. She swallows the entire penis, her nose smashes agains the man's hips. She moves her head back and fort swallowing the penis, realistic proportions, natural lighting, cinematic composition. \r\nThe camera performs a  zoom in effect, rapidly zooming closer to her face"
     },
     "class_type": "CLIPTextEncode"
   },

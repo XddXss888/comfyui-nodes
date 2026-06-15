@@ -1,22 +1,21 @@
 # 117.50.189.68:8800
 
-**GPU**: RTX 5090 | **显存**: 32 GB | **空闲**: 29 GB
-**内存**: 95 GB (空闲 51 GB)
+**GPU**: RTX 5090 | **显存**: 32 GB | **空闲**: 30 GB
+**内存**: 95 GB (空闲 48 GB)
 **版本**: 0.12.2
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-14 05:56:18
-**历史总数**: 505 | **成功**: 10
+**扫描时间**: 2026-06-15 18:27:42
+**历史总数**: 24 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `4f86a7f4-6365-4190-8e22-1c62b2552e44`
+- **Prompt ID**: `47047e26-3bf1-4657-a1e5-a51d7104f5c9`
 - **类型**: 文生视频
 - **节点数**: 20
-- **模型** (10):
-  - myloras2\MissionaryUpClose10_000002500_high_noise.safetensors
-  - myloras2\MissionaryUpClose10_000002500_low_noise.safetensors
-  - wan0922\触发词lyy666版本v1高噪添加强度1.safetensors
+- **模型** (9):
+  - myloras3\MissionaryUndress_high_noise.safetensors
+  - myloras3\MissionaryUndress_low_noise.safetensors
   - wan0924\W22_HN_i2v_POV_Missionary_Insertion_v1.safetensors
   - wan2.1\wan_2.1_vae.safetensors
   - wan2.2\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
@@ -26,37 +25,36 @@
   - wan\umt5_xxl_fp8_e4m3fn_scaled.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] 色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
-  - [CLIPTextEncode::text] MissionaryUpClose10.Immediately cut to an extremely erotic scene.
-realistic and intense handheld video of a naked woman and a naked man having sex. The camera focuses up and close on the woman's vagi
+  - [CLIPTextEncode::text] MissionaryUndress.Immediately cut to an extremely erotic scene. the exact same person is now completely naked and lying on their back, The scene is a top-down view showing the same woman completely nu
 
 ### 2. workflow_02.json
-- **Prompt ID**: `3b93fdbc-04c7-4ebb-b58a-025982eb925b`
+- **Prompt ID**: `855e1799-d6fa-49c2-be29-9b89dece2ed9`
 - **类型**: 文生视频
 - **节点数**: 20
 - **模型** (9):
-  - wan0911\Wan2.2 v3 - T2V - Doggy Style - HIGH 14B.safetensors
-  - wan0911\Wan2.2 v3 - T2V - Doggy Style - LOW 14B.safetensors
-  - wan0922\触发词lyy666版本v1高噪添加强度1.safetensors
+  - wan2.1\crash-zoom-in.safetensors
   - wan2.1\wan_2.1_vae.safetensors
   - wan2.2\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
   - wan2.2\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
   - wan2.2\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
   - wan2.2\wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan2.2\wan22-ultimatedeepthroat-I2V-16epoc-low-k3nk.safetensors
+  - wan2.2\wan22-ultimatedeepthroat-I2V-34epoc-high-k3nk.safetensors
   - wan\umt5_xxl_fp8_e4m3fn_scaled.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] 色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
-  - [CLIPTextEncode::text] lyy666.a same person video. 1.The first scene is a selfie of a beautiful woman, who is looking for an AV actor to shoot an AV film.
+  - [CLIPTextEncode::text] realistic. real life. POV. 
 
-The scene instantly switches to a scene where they are having sex
+a cinematic scene with a woman in the frame， a man enters from the side, only his lower body is visible, side view of his hips, thighs and legs, with a gigantic erected 
 
 ### 3. workflow_03.json
-- **Prompt ID**: `04d173ec-3be8-42f1-8e61-46153f6dbd81`
+- **Prompt ID**: `552fe24a-6e19-42ba-8910-2309bfb557f0`
 - **类型**: 文生视频
 - **节点数**: 20
 - **模型** (8):
-  - myloras2\UndressSnap_000002500_high_noise.safetensors
-  - myloras2\UndressSnap_000002500_low_noise.safetensors
   - wan2.1\wan_2.1_vae.safetensors
+  - wan2.2\wan2.2-i2v-high-oral-insertion-v1.0.safetensors
+  - wan2.2\wan2.2-i2v-low-oral-insertion-v1.0.safetensors
   - wan2.2\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
   - wan2.2\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
   - wan2.2\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
@@ -64,16 +62,17 @@ The scene instantly switches to a scene where they are having sex
   - wan\umt5_xxl_fp8_e4m3fn_scaled.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] 色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
-  - [CLIPTextEncode::text] UndressSnap.a woman snapped her fingers and all her clothes disappeared, revealing her completely naked beautiful body, plump breasts, and female pubic hair clearly visible. She confidently showed her
+  - [CLIPTextEncode::text] realistic. real life. POV. 
+A man appears and she sucks his penis. Static camera, fixed viewpoint, still shot.
 
 ### 4. workflow_04.json
-- **Prompt ID**: `e5f501de-d09d-4f11-9d1b-f416f32651c1`
+- **Prompt ID**: `146f4a61-4fa4-449d-a88a-e5e70ea77756`
 - **类型**: 文生视频
 - **节点数**: 20
 - **模型** (8):
-  - wan0529\On All Fours Blowjob_high_noise.safetensors
-  - wan0529\On All Fours Blowjob_low_noise.safetensors
   - wan2.1\wan_2.1_vae.safetensors
+  - wan2.2\wan2.2-i2v-high-oral-insertion-v1.0.safetensors
+  - wan2.2\wan2.2-i2v-low-oral-insertion-v1.0.safetensors
   - wan2.2\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
   - wan2.2\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
   - wan2.2\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
@@ -81,15 +80,19 @@ The scene instantly switches to a scene where they are having sex
   - wan\umt5_xxl_fp8_e4m3fn_scaled.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] 色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
-  - [CLIPTextEncode::text] OnAllFoursBlowjob.cut  scene.POV.The same woman is On all fours in front of man, giving him a blowjob while looking at the camera. The video is shot from a male's POV perspective.
+  - [CLIPTextEncode::text] realistic. real life. POV. 
+A man appears and she sucks his penis. Static camera, fixed viewpoint, still shot.
 
 ### 5. workflow_05.json
-- **Prompt ID**: `c930a682-9c21-4583-abc8-8e8ad5dfa2b5`
+- **Prompt ID**: `45ceae6b-70b3-458f-8bdf-d4201b9ae6b8`
 - **类型**: 文生视频
 - **节点数**: 20
-- **模型** (8):
-  - wan0220\FinishHim_high_noise.safetensors
-  - wan0220\FinishHim_low_noise.safetensors
+- **模型** (11):
+  - wan0904\BBC blowjob_high_noise.safetensors
+  - wan0904\BBC blowjob_low_noise.safetensors
+  - wan0917\Wan2.2 - I2V - Blowjob - HIGH 14B.safetensors
+  - wan0917\Wan2.2 - I2V - Blowjob - LOW 14B.safetensors
+  - wan2.1\dicks_epoch_100.safetensors
   - wan2.1\wan_2.1_vae.safetensors
   - wan2.2\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
   - wan2.2\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
@@ -98,18 +101,16 @@ The scene instantly switches to a scene where they are having sex
   - wan\umt5_xxl_fp8_e4m3fn_scaled.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] 色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
-  - [CLIPTextEncode::text] FinishHim.Cutscene.POV. The same woman is grabbing a man's penis and masturbating him, Cumming onto her mouth and face.
+  - [CLIPTextEncode::text] A beautiful woman is performing oral sex on a huge black penis.POV.A woman kneels between the legs of a naked black man with a massive erect black penis. she engages in a deep throat blowjob, she swal
 
 ### 6. workflow_06.json
-- **Prompt ID**: `f1b23000-1292-4c57-bb46-6252764b8cdd`
+- **Prompt ID**: `fd867e29-f673-4a99-8d42-6f8b2a2e5b77`
 - **类型**: 文生视频
 - **节点数**: 20
-- **模型** (10):
+- **模型** (8):
   - wan2.1\wan_2.1_vae.safetensors
-  - wan2.2New\wan2.2-i2v-high-cumshot-v1.0.safetensors
-  - wan2.2New\wan2.2-i2v-low-cumshot-v1.0.safetensors
-  - wan2.2\23High noise-Cumshot Aesthetics.safetensors
-  - wan2.2\56Low noise-Cumshot Aesthetics.safetensors
+  - wan2.2\wan2.2-i2v-high-oral-insertion-v1.0.safetensors
+  - wan2.2\wan2.2-i2v-low-oral-insertion-v1.0.safetensors
   - wan2.2\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
   - wan2.2\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
   - wan2.2\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
@@ -117,15 +118,17 @@ The scene instantly switches to a scene where they are having sex
   - wan\umt5_xxl_fp8_e4m3fn_scaled.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] 色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
-  - [CLIPTextEncode::text] A man cums on her face
+  - [CLIPTextEncode::text] realistic. real life. POV. 
+A man appears and she sucks his penis. Static camera, fixed viewpoint, still shot.
 
 ### 7. workflow_07.json
-- **Prompt ID**: `7666a7c4-63a9-4f6c-b195-10fdbc7aeceb`
+- **Prompt ID**: `8f15aa1d-402f-4553-91f0-f640e6687fb6`
 - **类型**: 文生视频
 - **节点数**: 20
-- **模型** (8):
-  - wan0220\FrontViewReverseFrogy_high_noise.safetensors
-  - wan0220\FrontViewReverseFrogy_low_noise.safetensors
+- **模型** (9):
+  - myloras5\MissionaryAnalV1_high_noise.safetensors
+  - myloras5\MissionaryAnalV1_low_noise.safetensors
+  - wan2.1\FusionX_FaceNaturalizer.safetensors
   - wan2.1\wan_2.1_vae.safetensors
   - wan2.2\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
   - wan2.2\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
@@ -134,41 +137,18 @@ The scene instantly switches to a scene where they are having sex
   - wan\umt5_xxl_fp8_e4m3fn_scaled.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] 色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
-  - [CLIPTextEncode::text] FrontViewReverseFrogy.cut scene.
-the same woman is having sex with a man using the Cowgril position.(Front View Reverse Frogy)
+  - [CLIPTextEncode::text] MissionaryAnal.Immediately cut to an extremely erotic scene.
+
+The same woman is is lying on her back with her legs spread. The man's penis is rapidly penetrating her anus. and She reaches orgasm.
 
 ### 8. workflow_08.json
-- **Prompt ID**: `7909a731-eea8-4a26-a84c-3f79b5e2fae1`
-- **类型**: 文生视频
-- **节点数**: 20
-- **模型** (15):
-  - wan0901\HairyPussy_000002500_high_noise.safetensors
-  - wan0901\HairyPussy_000002500_low_noise.safetensors
-  - wan0917\wan2.2-i2v-high-pov-insertion-v1.0.safetensors
-  - wan0917\wan2.2-i2v-low-pov-insertion-v1.0.safetensors
-  - wan2.1\crash-zoom-out.safetensors
-  - wan2.1\wan_2.1_vae.safetensors
-  - wan2.2\23High noise-Cumshot Aesthetics.safetensors
-  - wan2.2\56Low noise-Cumshot Aesthetics.safetensors
-  - wan2.2\Wan2.2 - T2V - Body Shots - HIGH 14B.safetensors
-  - wan2.2\Wan2.2 - T2V - Body Shots - LOW 14B.safetensors
-  - wan2.2\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
-  - wan2.2\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
-  - wan2.2\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
-  - wan2.2\wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
-  - wan\umt5_xxl_fp8_e4m3fn_scaled.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] 色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
-  - [CLIPTextEncode::text]  realistic. real life. POV. A girl in the middle of the screen. the camera instantly cr34sh crash zoom out effect to a full pov view ofThe camera focusing on the woman's torso, then executes a sudden,
-
-### 9. workflow_09.json
-- **Prompt ID**: `7df9b2be-7f8d-4fe9-b417-d5703d0f6887`
+- **Prompt ID**: `1f6fb51b-dca4-4507-942b-8282c3ddb89d`
 - **类型**: 文生视频
 - **节点数**: 20
 - **模型** (8):
-  - wan0303\DoggyFaceView_high_noise.safetensors
-  - wan0303\DoggyFaceView_low_noise.safetensors
   - wan2.1\wan_2.1_vae.safetensors
+  - wan2.2\wan2.2-i2v-high-oral-insertion-v1.0.safetensors
+  - wan2.2\wan2.2-i2v-low-oral-insertion-v1.0.safetensors
   - wan2.2\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
   - wan2.2\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
   - wan2.2\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
@@ -176,14 +156,34 @@ the same woman is having sex with a man using the Cowgril position.(Front View R
   - wan\umt5_xxl_fp8_e4m3fn_scaled.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] 色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
-  - [CLIPTextEncode::text] DoggyFaceView.Cut scene. The same woman is having dog-style sex with a man. (Shot from the front)
+  - [CLIPTextEncode::text] realistic. real life. POV. 
+A man appears and she sucks his penis. Static camera, fixed viewpoint, still shot.
 
-### 10. workflow_10.json
-- **Prompt ID**: `4b678de6-1ecc-4610-9b64-124cffb96a35`
+### 9. workflow_09.json
+- **Prompt ID**: `7649621c-2379-417a-b62d-9de160b94d0b`
 - **类型**: 文生视频
 - **节点数**: 20
-- **模型** (7):
-  - wan2.1\I2V-jiggle_tits.safetensors
+- **模型** (8):
+  - wan2.1\wan_2.1_vae.safetensors
+  - wan2.2\wan2.2-i2v-high-oral-insertion-v1.0.safetensors
+  - wan2.2\wan2.2-i2v-low-oral-insertion-v1.0.safetensors
+  - wan2.2\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+  - wan2.2\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
+  - wan2.2\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors
+  - wan2.2\wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+  - wan\umt5_xxl_fp8_e4m3fn_scaled.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] 色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
+  - [CLIPTextEncode::text] realistic. real life. POV. 
+A man appears and she sucks his penis. Static camera, fixed viewpoint, still shot.
+
+### 10. workflow_10.json
+- **Prompt ID**: `05e89979-3c69-4a50-99c1-c2494183a281`
+- **类型**: 文生视频
+- **节点数**: 20
+- **模型** (8):
+  - wan0529\POV Stroking and Rubbing_high_noise.safetensors
+  - wan0529\POV Stroking and Rubbing_low_noise.safetensors
   - wan2.1\wan_2.1_vae.safetensors
   - wan2.2\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
   - wan2.2\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors
@@ -192,4 +192,4 @@ the same woman is having sex with a man using the Cowgril position.(Front View R
   - wan\umt5_xxl_fp8_e4m3fn_scaled.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] 色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
-  - [CLIPTextEncode::text] A woman she shakes her flat chest side to side causing her small breasts to jiggle. jiggle_tits
+  - [CLIPTextEncode::text] POVStrokingandRubbing.Cut scene.POV. The woman is rubbing her vagina while stroking the penis of the man in front of her.

@@ -1,0 +1,100 @@
+{
+  "1": {
+    "inputs": {
+      "image": "input_34ee57b6a8c7.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "2": {
+    "inputs": {
+      "frame_rate": 30.0,
+      "loop_count": 0,
+      "filename_prefix": "ndsd",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "合并为视频"
+    }
+  },
+  "4": {
+    "inputs": {
+      "max_count": 1,
+      "mutable_prompt": "Both individuals keep their faces directed toward the camera without turning their heads, each extending one hand to form a heart shape. The camera remains stationary, with the background unchanged and the vehicles (cars, airplanes, or ships) behind them stationary.\nBoth individuals keep their faces directed toward the camera without turning their heads, and slowly embrace. The camera remains still, the background remains unchanged, and the vehicles (cars, airplanes, or ships) behind them are stationary.\nBoth individuals keep their faces directed toward the camera without turning their heads, each extending one hand to shake hands. The camera remains stationary, the background remains unchanged, and the vehicles (cars, airplanes, or ships) behind the people are stationary.",
+      "immutable_prompt": "",
+      "random_sample": "enable",
+      "upload": null,
+      "seed": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "RandomPrompt",
+    "_meta": {
+      "title": "随机提示词"
+    }
+  },
+  "5": {
+    "inputs": {
+      "seed": -1
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "随机种子"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text_0": "Both individuals keep their faces directed toward the camera without turning their heads, and slowly embrace. The camera remains still, the background remains unchanged, and the vehicles (cars, airplanes, or ships) behind them are stationary.",
+      "text": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "展示文本"
+    }
+  },
+  "12": {
+    "inputs": {
+      "api_key": "sk-33af3d038c1a5926868c14eb8e36c9fc",
+      "model": "v5.6",
+      "prompt": [
+        "4",
+        0
+      ],
+      "negative_prompt": "",
+      "duration": 5,
+      "quality": "720p",
+      "motion_mode": "normal",
+      "camera_movement": "none",
+      "style": "none",
+      "seed": 221754095,
+      "batch_size": 1,
+      "nth_frame": 1,
+      "use_transition": false,
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "FL_PixVerseAPI",
+    "_meta": {
+      "title": "FL PixVerse API"
+    }
+  }
+}

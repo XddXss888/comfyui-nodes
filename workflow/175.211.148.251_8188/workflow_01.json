@@ -1,183 +1,159 @@
 {
-  "9": {
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "filename_prefix": "LongCat-Image",
-      "images": [
-        "13:8",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
+      "ckpt_name": "ponyrealismV22VAE.gWd2.safetensors"
     }
   },
-  "14": {
+  "2": {
+    "class_type": "LoraLoader",
     "inputs": {
-      "aspect_ratio": "9:16 (Portrait Widescreen)",
-      "megapixels": 1.0
-    },
-    "class_type": "ResolutionSelector",
-    "_meta": {
-      "title": "Resolution Selector"
-    }
-  },
-  "13:1": {
-    "inputs": {
-      "unet_name": "longcat_image_bf16.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Load Diffusion Model"
-    }
-  },
-  "13:2": {
-    "inputs": {
-      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
-      "type": "longcat_image",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "Load CLIP"
-    }
-  },
-  "13:3": {
-    "inputs": {
-      "vae_name": "ae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Load VAE"
-    }
-  },
-  "13:11": {
-    "inputs": {
-      "guidance": 4.0,
-      "conditioning": [
-        "13:4",
-        0
-      ]
-    },
-    "class_type": "FluxGuidance",
-    "_meta": {
-      "title": "FluxGuidance"
-    }
-  },
-  "13:12": {
-    "inputs": {
-      "guidance": 4.0,
-      "conditioning": [
-        "13:5",
-        0
-      ]
-    },
-    "class_type": "FluxGuidance",
-    "_meta": {
-      "title": "FluxGuidance"
-    }
-  },
-  "13:10": {
-    "inputs": {
-      "strength": 1.0,
       "model": [
-        "13:1",
-        0
-      ]
-    },
-    "class_type": "CFGNorm",
-    "_meta": {
-      "title": "CFGNorm"
-    }
-  },
-  "13:6": {
-    "inputs": {
-      "width": [
-        "14",
+        "1",
         0
       ],
-      "height": [
-        "14",
+      "clip": [
+        "1",
         1
       ],
-      "batch_size": 1
-    },
-    "class_type": "EmptySD3LatentImage",
-    "_meta": {
-      "title": "EmptySD3LatentImage"
+      "lora_name": "zit_nsfw_peli86.safetensors",
+      "strength_model": 0.85,
+      "strength_clip": 0.85
     }
   },
-  "13:8": {
-    "inputs": {
-      "samples": [
-        "13:7",
-        0
-      ],
-      "vae": [
-        "13:3",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
-    }
-  },
-  "13:4": {
-    "inputs": {
-      "text": "amateur photo of young, nude, tween sisters posing wild in kitchen. They are bare bottomless, wearing nothing but thigh high socks.",
-      "clip": [
-        "13:2",
-        0
-      ]
-    },
+  "3": {
     "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
+    "inputs": {
+      "clip": [
+        "2",
+        1
+      ],
+      "text": "그여자, • She stands in a seductive pose,  full-body shot, feet and toes visible infront of window with morining light,she is fully nude,not wearing any underwear , looking me with smile, 20s mature korean woman, sharp jawline, defined facial features, almond eyes, professional photography, 50mm, shallow depth of field, soft natural light, detailed skin texture, sharp focus"
     }
   },
-  "13:7": {
+  "4": {
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "seed": 622998687474815,
-      "steps": 20,
-      "cfg": 4.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
+      "clip": [
+        "2",
+        1
+      ],
+      "text": "worst quality, low quality, blurry, deformed, bad anatomy, bad hands, extra fingers, text, watermark, signature, logo, cartoon, anime, illustration, 3d render, "
+    }
+  },
+  "5": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    }
+  },
+  "6": {
+    "class_type": "KSampler",
+    "inputs": {
       "model": [
-        "13:10",
+        "2",
         0
       ],
       "positive": [
-        "13:11",
+        "3",
         0
       ],
       "negative": [
-        "13:12",
+        "4",
         0
       ],
       "latent_image": [
-        "13:6",
+        "5",
         0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
+      ],
+      "seed": 135540186962618,
+      "steps": 30,
+      "cfg": 7.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1.0
     }
   },
-  "13:5": {
+  "7": {
+    "class_type": "VAEDecode",
     "inputs": {
-      "text": "blurry, low resolution, oversaturated, harsh lighting, messy composition, distorted face, extra fingers, bad anatomy, cheap jewelry, plastic texture, cartoon, illustration, anime, watermark, text, logo",
-      "clip": [
-        "13:2",
+      "samples": [
+        "6",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "8": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "7",
+        0
+      ],
+      "filename_prefix": "geunyeoja/그여자"
+    }
+  },
+  "9": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "1000007127.jpg"
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "1000007125.jpg"
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "1000007126.jpg"
+    }
+  },
+  "12": {
+    "class_type": "ImageBatch",
+    "inputs": {
+      "image1": [
+        "9",
+        0
+      ],
+      "image2": [
+        "10",
         0
       ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "13": {
+    "class_type": "ImageBatch",
+    "inputs": {
+      "image1": [
+        "12",
+        0
+      ],
+      "image2": [
+        "11",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "ReActorBuildFaceModel",
+    "inputs": {
+      "images": [
+        "13",
+        0
+      ],
+      "save_mode": true,
+      "send_only": false,
+      "face_model_name": "geunyeoja_v1",
+      "compute_method": "Mean"
     }
   }
 }

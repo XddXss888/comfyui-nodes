@@ -1,36 +1,74 @@
 {
-  "174": {
+  "1": {
     "inputs": {
-      "value": 2
+      "unet_name": "flux-2-klein-9b-fp8.safetensors",
+      "weight_dtype": "default"
     },
-    "class_type": "easy int",
+    "class_type": "UNETLoader",
     "_meta": {
-      "title": "设置【出图尺寸】"
+      "title": "UNet加载器"
     }
   },
-  "191": {
+  "2": {
     "inputs": {
-      "value": 96
+      "clip_name": "qwen_3_8b_fp8mixed .safetensors",
+      "type": "flux2",
+      "device": "default"
     },
-    "class_type": "easy int",
+    "class_type": "CLIPLoader",
     "_meta": {
-      "title": "设置【 DPI 】"
+      "title": "加载CLIP"
     }
   },
-  "228": {
+  "3": {
     "inputs": {
-      "image": "v12_upscale_1781341595334_512a7a4576c7c.png"
+      "pixels": [
+        "25",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
     },
-    "class_type": "LoadImage",
+    "class_type": "VAEEncode",
     "_meta": {
-      "title": "加载图像"
+      "title": "VAE编码"
     }
   },
-  "230": {
+  "4": {
+    "inputs": {
+      "conditioning": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "5": {
+    "inputs": {
+      "conditioning": [
+        "13",
+        0
+      ],
+      "latent": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "6": {
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "217:232",
+        "12",
         0
       ]
     },
@@ -39,28 +77,28 @@
       "title": "保存图像"
     }
   },
-  "231": {
+  "7": {
     "inputs": {
       "rgthree_comparer": {
         "images": [
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_eaehb_00007_.png&type=temp&subfolder=&rand=0.367556268442236"
+            "url": "/api/view?filename=rgthree.compare._temp_tdpzy_00102_.png&type=temp&subfolder=&rand=0.25610244600608834"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_eaehb_00008_.png&type=temp&subfolder=&rand=0.5743140919650986"
+            "url": "/api/view?filename=rgthree.compare._temp_tdpzy_00103_.png&type=temp&subfolder=&rand=0.41026285890163305"
           }
         ]
       },
       "image_a": [
-        "228",
+        "25",
         0
       ],
       "image_b": [
-        "217:232",
+        "12",
         0
       ]
     },
@@ -69,326 +107,178 @@
       "title": "图像对比"
     }
   },
-  "217:193": {
+  "8": {
     "inputs": {
-      "value": 2048
+      "vae_name": "FLUX.2-dev-vae\\diffusion_pytorch_model.safetensors"
     },
-    "class_type": "easy int",
+    "class_type": "VAELoader",
     "_meta": {
-      "title": "整数"
+      "title": "加载VAE"
     }
   },
-  "217:194": {
+  "9": {
     "inputs": {
-      "batch_index": [
-        "217:195",
-        1
+      "seed": 439860633603542,
+      "steps": 6,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.9000000000000001,
+      "model": [
+        "1",
+        0
       ],
-      "length": 1,
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "10": {
+    "inputs": {
       "image": [
-        "217:196",
+        "14",
         0
       ]
     },
-    "class_type": "ImageFromBatch",
+    "class_type": "FluxKontextImageScale",
     "_meta": {
-      "title": "从批次获取图像"
+      "title": "图像缩放为FluxKontext"
     }
   },
-  "217:195": {
+  "11": {
     "inputs": {
-      "total": [
-        "217:200",
-        0
-      ]
-    },
-    "class_type": "easy forLoopStart",
-    "_meta": {
-      "title": "For循环-开始"
-    }
-  },
-  "217:196": {
-    "inputs": {
-      "tile_width": [
-        "217:193",
-        0
-      ],
-      "tile_height": [
-        "217:193",
-        0
-      ],
-      "image": [
-        "217:208",
-        0
-      ]
-    },
-    "class_type": "TTP_Image_Tile_Batch",
-    "_meta": {
-      "title": "TTP_图像瓦片批处理"
-    }
-  },
-  "217:197": {
-    "inputs": {
-      "any_1": [
-        "217:195",
-        2
-      ],
-      "any_2": [
-        "217:199",
-        0
-      ]
-    },
-    "class_type": "easy batchAnything",
-    "_meta": {
-      "title": "任何批次组合"
-    }
-  },
-  "217:198": {
-    "inputs": {
-      "flow": [
-        "217:195",
-        0
-      ],
-      "initial_value1": [
-        "217:197",
-        0
-      ]
-    },
-    "class_type": "easy forLoopEnd",
-    "_meta": {
-      "title": "For循环-结束"
-    }
-  },
-  "217:199": {
-    "inputs": {
-      "seed": 72459922,
-      "resolution": [
-        "217:205",
-        0
-      ],
-      "max_resolution": 0,
-      "batch_size": 1,
-      "uniform_batch_size": false,
-      "color_correction": "lab",
-      "temporal_overlap": 0,
-      "prepend_frames": 0,
-      "input_noise_scale": 0.0,
-      "latent_noise_scale": 0.0,
-      "offload_device": "cpu",
-      "enable_debug": false,
-      "image": [
-        "217:202",
-        0
-      ],
-      "dit": [
-        "217:204",
+      "samples": [
+        "9",
         0
       ],
       "vae": [
-        "217:203",
+        "8",
         0
       ]
     },
-    "class_type": "SeedVR2VideoUpscaler",
+    "class_type": "VAEDecode",
     "_meta": {
-      "title": "SeedVR2视频放大器"
+      "title": "VAE解码"
     }
   },
-  "217:200": {
+  "12": {
     "inputs": {
-      "images": [
-        "217:196",
-        0
-      ]
-    },
-    "class_type": "easy imageCount",
-    "_meta": {
-      "title": "图像计数"
-    }
-  },
-  "217:201": {
-    "inputs": {
-      "image": [
-        "217:194",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: GetImageSize",
-    "_meta": {
-      "title": "LayerUtility: GetImageSize"
-    }
-  },
-  "217:202": {
-    "inputs": {
-      "width": 1280,
-      "height": 1280,
-      "interpolation": "nearest-exact",
-      "method": "keep proportion",
-      "condition": "always",
-      "multiple_of": 0,
-      "image": [
-        "217:194",
-        0
-      ]
-    },
-    "class_type": "ImageResize+",
-    "_meta": {
-      "title": "🔧 Image Resize"
-    }
-  },
-  "217:203": {
-    "inputs": {
-      "model": "ema_vae_fp16.safetensors",
-      "device": "cuda:0",
-      "encode_tiled": true,
-      "encode_tile_size": 1024,
-      "encode_tile_overlap": 128,
-      "decode_tiled": true,
-      "decode_tile_size": 1024,
-      "decode_tile_overlap": 128,
-      "tile_debug": "false",
-      "offload_device": "cpu",
-      "cache_model": false
-    },
-    "class_type": "SeedVR2LoadVAEModel",
-    "_meta": {
-      "title": "加载SeedVR2 VAE模型"
-    }
-  },
-  "217:205": {
-    "inputs": {
-      "mode": false,
-      "a": [
-        "217:201",
+      "method": "mkl",
+      "strength": 1.0,
+      "multithread": true,
+      "image_ref": [
+        "25",
         0
       ],
-      "b": [
-        "217:201",
-        1
+      "image_target": [
+        "11",
+        0
       ]
     },
-    "class_type": "ImpactMinMax",
+    "class_type": "ColorMatch",
     "_meta": {
-      "title": "求极值"
+      "title": "Color Match"
     }
   },
-  "217:206": {
+  "13": {
     "inputs": {
-      "padding": 64,
-      "tiles": [
-        "217:198",
+      "text": "修复这张图像，提升4K分辨率渲染，高清晰度。移除所有模糊和噪点。\n修复破损茶汤原图，修正浑浊茶汤，茶汤通透金黄油亮，茶汤液面细腻反光、自然细小气泡，玻璃公道杯通透无脏点，杯壁水珠晶莹，去除画面噪点、灰雾、划痕，精准保留原有构图、茶具、布景不变，浅景深，柔和侧逆光，画质锐利，食品级质感，色彩自然真实，无AI畸变",
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "14": {
+    "inputs": {
+      "image": "v11_refine_1781513489546_c078d16747cc08.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "23": {
+    "inputs": {
+      "image": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "获取图像尺寸"
+    }
+  },
+  "24": {
+    "inputs": {
+      "expression": "max(max(a,b)-c,0)",
+      "values.a": [
+        "23",
         0
       ],
-      "positions": [
-        "217:196",
+      "values.b": [
+        "23",
         1
       ],
-      "original_size": [
-        "217:196",
-        2
-      ],
-      "grid_size": [
-        "217:196",
-        3
-      ]
-    },
-    "class_type": "TTP_Image_Assy",
-    "_meta": {
-      "title": "TTP_图像拼接/重组"
-    }
-  },
-  "217:192": {
-    "inputs": {
-      "value": "a*b-80",
-      "a": [
-        "174",
-        0
-      ],
-      "b": [
-        "217:193",
+      "values.c": [
+        "26",
         0
       ]
     },
-    "class_type": "SimpleMath+",
+    "class_type": "ComfyMathExpression",
     "_meta": {
-      "title": "🔧 Simple Math"
+      "title": "是否超过阈值：超过=True"
     }
   },
-  "217:208": {
+  "25": {
     "inputs": {
-      "width": [
-        "217:192",
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": [
+        "26",
         0
       ],
-      "height": [
-        "217:192",
-        0
-      ],
-      "interpolation": "lanczos",
-      "method": "keep proportion",
-      "condition": "always",
-      "multiple_of": 8,
+      "background_color": "#000000",
       "image": [
-        "228",
+        "14",
         0
       ]
     },
-    "class_type": "ImageResize+",
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
     "_meta": {
-      "title": "🔧 Image Resize"
+      "title": "LayerUtility: ImageScaleByAspectRatio V2"
     }
   },
-  "217:207": {
+  "26": {
     "inputs": {
-      "custom_path": "",
-      "custom_filename": "",
-      "filename_prefix": "comfyui",
-      "timestamp": "None",
-      "dpi": [
-        "191",
-        0
-      ],
-      "format": "jpg",
-      "quality": 100,
-      "meta_data": false,
-      "blind_watermark": "",
-      "save_workflow_as_json": false,
-      "preview": false,
-      "images": [
-        "217:232",
-        0
-      ]
+      "value": 2048
     },
-    "class_type": "LayerUtility: SaveImagePlusV2",
+    "class_type": "PrimitiveInt",
     "_meta": {
-      "title": "LayerUtility: SaveImagePlus V2(Advance)"
-    }
-  },
-  "217:204": {
-    "inputs": {
-      "model": "seedvr2_ema_3b_fp8_e4m3fn.safetensors",
-      "device": "cuda:0",
-      "blocks_to_swap": 32,
-      "swap_io_components": false,
-      "offload_device": "cpu",
-      "cache_model": false,
-      "attention_mode": "sdpa"
-    },
-    "class_type": "SeedVR2LoadDiTModel",
-    "_meta": {
-      "title": "加载SeedVR2 DiT模型"
-    }
-  },
-  "217:232": {
-    "inputs": {
-      "anything": [
-        "217:206",
-        0
-      ]
-    },
-    "class_type": "easy cleanGpuUsed",
-    "_meta": {
-      "title": "清理显存占用"
+      "title": "最长边阈值 / 缩放目标"
     }
   }
 }

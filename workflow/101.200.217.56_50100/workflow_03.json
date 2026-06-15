@@ -1,0 +1,196 @@
+{
+  "1": {
+    "inputs": {
+      "image": "input_1781449502141_742cc58e-d33e-4435-9f08-f3105ba3abe2_6254992f-7f76-4183-8246-51cb7313349b.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "2": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "width": 556,
+      "height": 768,
+      "crop": "disabled",
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "图像缩放"
+    }
+  },
+  "3": {
+    "inputs": {
+      "ckpt_name": "XL写实\\绪儿-一青十色XL_V3.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Checkpoint加载器（简易）"
+    }
+  },
+  "4": {
+    "inputs": {
+      "text": "一个女孩",
+      "clip": [
+        "3",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "正向提示"
+    }
+  },
+  "5": {
+    "inputs": {
+      "text": "Nsfw，低分辨率，糟糕的解剖结构，糟糕的手，文本，错误，缺失的手指，多余的数字，更少的数字，裁剪，最差的质量，低质量，正常质量，jpeg伪影，签名，水印，用户名，模糊",
+      "clip": [
+        "3",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "反向提示"
+    }
+  },
+  "6": {
+    "inputs": {
+      "pixels": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "11": {
+    "inputs": {
+      "seed": 3,
+      "steps": 20,
+      "cfg": 7.0,
+      "sampler_name": "euler",
+      "scheduler": "karras",
+      "denoise": 1.0,
+      "model": [
+        "3",
+        0
+      ],
+      "positive": [
+        "17",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "12": {
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "13": {
+    "inputs": {
+      "filename_prefix": "PANG_painter_SDXL_1781449560295_2_0",
+      "images": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "14": {
+    "inputs": {
+      "guassian_sigma": 6.0,
+      "intensity_threshold": 8,
+      "resolution": 768,
+      "image": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "LineartStandardPreprocessor",
+    "_meta": {
+      "title": "Draft Invert线稿预处理"
+    }
+  },
+  "15": {
+    "inputs": {
+      "image": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Draft Invert反相"
+    }
+  },
+  "16": {
+    "inputs": {
+      "control_net_name": "xinsir_controlnet-scribble-sdxl-1.0.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Draft Invert ControlNet加载器"
+    }
+  },
+  "17": {
+    "inputs": {
+      "switch": "On",
+      "strength": 0.8,
+      "conditioning": [
+        "4",
+        0
+      ],
+      "control_net": [
+        "16",
+        0
+      ],
+      "image": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "CR Apply ControlNet",
+    "_meta": {
+      "title": "Draft Invert ControlNet应用"
+    }
+  }
+}

@@ -37,7 +37,7 @@
   },
   "7": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl blue eyes,blush,smile,bangs,black hair,blue hair,hair between eyes,closed mouth,pleated skirt,indoors,(Make a cute expression:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl solo,looking at viewer,blush,smile,open mouth,thighs,sweat,teeth,looking back,ass,from behind,on bed,pubic hair,all fours,(nude:0.8)",
       "clip": [
         "1",
         1
@@ -63,7 +63,7 @@
   },
   "9": {
     "inputs": {
-      "seed": 1805789093,
+      "seed": 267338349,
       "steps": 20,
       "cfg": 6.5,
       "sampler_name": "dpmpp_sde",
@@ -133,7 +133,7 @@
   },
   "14": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20259/28/acb40610eb79424c81c2e002fbec40f0.jpeg",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202412/2/9f504043f64d4735b127750e279289bc.jpeg",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

@@ -8,7 +8,7 @@
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "A majestic lighthouse stands on a rugged cliff overlooking a turbulent sea, its bright beacon cutting through the dense, swirling fog. The scene is illuminated by dramatic, low-angle HDR lighting that casts long shadows and highlights the intricate, weathered textures of the stone structure and the crashing waves. The composition is centered and heroic, with the lighthouse dominating the frame against a brooding, stormy sky. 🔬 Hyperrealistic, ultra-detailed, 8K, photorealistic textures, subsurface scattering in the foam and mist, with a moody, atmospheric cinematic quality.",
+      "text": "Dog",
       "clip": [
         "1",
         1
@@ -36,7 +36,7 @@
   "5": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 819310373,
+      "seed": 839530214,
       "steps": 8,
       "cfg": 7.0,
       "sampler_name": "euler",

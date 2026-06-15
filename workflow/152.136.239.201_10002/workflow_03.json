@@ -1,290 +1,199 @@
 {
-  "1": {
+  "29": {
     "inputs": {
-      "unet_name": "FLUX-KLEIN/flux-2-klein-9b.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "2": {
-    "inputs": {
-      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
-      "type": "flux2",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载CLIP"
-    }
-  },
-  "3": {
-    "inputs": {
-      "vae_name": "flux2-vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "6": {
-    "inputs": {
-      "seed": 584591629289076,
-      "steps": 4,
+      "seed": 414529230650497,
+      "steps": 20,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0,
       "model": [
-        "1",
+        "53",
         0
       ],
       "positive": [
-        "24",
+        "54",
         0
       ],
       "negative": [
-        "25",
-        0
+        "54",
+        1
       ],
       "latent_image": [
-        "13",
-        0
+        "54",
+        2
       ]
     },
     "class_type": "KSampler",
     "_meta": {
-      "title": "K采样器"
+      "title": "KSampler"
     }
   },
-  "7": {
+  "35": {
     "inputs": {
-      "text": "图1的人物放到图2的水中，保留图1人物细节，图2当背景，双手向前探出水面",
-      "clip": [
-        "2",
+      "guidance": 20.0,
+      "conditioning": [
+        "57",
         0
       ]
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "FluxGuidance",
     "_meta": {
-      "title": "CLIP文本编码"
+      "title": "FluxGuidance"
     }
   },
-  "8": {
-    "inputs": {
-      "text": "",
-      "clip": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
-    }
-  },
-  "9": {
-    "inputs": {
-      "samples": [
-        "6",
-        0
-      ],
-      "vae": [
-        "3",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "12": {
+  "36": {
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "9",
+        "37",
         0
       ]
     },
     "class_type": "SaveImage",
     "_meta": {
-      "title": "保存图像"
+      "title": "Save Image"
     }
   },
-  "13": {
+  "37": {
     "inputs": {
-      "width": [
-        "18",
-        3
-      ],
-      "height": [
-        "18",
-        4
-      ],
-      "batch_size": 1
-    },
-    "class_type": "EmptyFlux2LatentImage",
-    "_meta": {
-      "title": "空Latent图像（Flux2）"
-    }
-  },
-  "14": {
-    "inputs": {
-      "conditioning": [
-        "7",
+      "samples": [
+        "29",
         0
       ],
-      "latent": [
-        "19",
+      "vae": [
+        "49",
         0
       ]
     },
-    "class_type": "ReferenceLatent",
+    "class_type": "VAEDecode",
     "_meta": {
-      "title": "参考Latent"
+      "title": "VAE Decode"
     }
   },
-  "15": {
+  "47": {
     "inputs": {
-      "image": "ComfyUI_00494_.png"
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp8_e4m3fn.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "DualCLIPLoader"
+    }
+  },
+  "48": {
+    "inputs": {
+      "unet_name": "flux1-fill-dev.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "49": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "53": {
+    "inputs": {
+      "strength": 1.0,
+      "model": [
+        "48",
+        0
+      ]
+    },
+    "class_type": "DifferentialDiffusion",
+    "_meta": {
+      "title": "差异扩散DifferentialDiffusion"
+    }
+  },
+  "54": {
+    "inputs": {
+      "noise_mask": false,
+      "positive": [
+        "35",
+        0
+      ],
+      "negative": [
+        "60",
+        0
+      ],
+      "vae": [
+        "49",
+        0
+      ],
+      "pixels": [
+        "59",
+        0
+      ],
+      "mask": [
+        "59",
+        1
+      ]
+    },
+    "class_type": "InpaintModelConditioning",
+    "_meta": {
+      "title": "内补模型条件"
+    }
+  },
+  "55": {
+    "inputs": {
+      "image": "f2.jpeg"
     },
     "class_type": "LoadImage",
     "_meta": {
       "title": "加载图像"
     }
   },
-  "18": {
+  "57": {
     "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 1,
-      "proportional_height": 1,
-      "fit": "crop",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_side": "None",
-      "scale_to_length": 1024,
-      "background_color": "#000000",
+      "text": "masterpiece,\nbest quality,\nphotorealistic,\nfashion photography,\n\nbeautiful asian woman,\nelegant face,\nsymmetrical face,\nnatural makeup,\n\noff-shoulder evening gown,\nluxury velvet dress,\nstructured neckline,\nlow-cut neckline,\nvisible cleavage,\nlarge breasts,\n\nfabric thickness,\ntextured fabric,\ntailored dress,\nvisible stitching,\nseam details,\n\nnatural fabric folds,\nmicro fabric folds,\nsoft neckline folds,\ncloth draping naturally,\nrealistic garment construction,\nrealistic cloth physics,\n\nfabric stretching naturally over body,\nnatural fabric tension,\nsubtle skin compression,\ngentle pressure from clothing,\nrealistic neckline indentation,\n\ndetailed collarbone,\ndetailed shoulders,\nnatural skin texture,\n\ncinematic lighting,\nsoft shadows,\nshallow depth of field,\nultra detailed,\n8k",
+      "clip": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "59": {
+    "inputs": {
+      "left": 400,
+      "top": 0,
+      "right": 400,
+      "bottom": 800,
+      "feathering": 100,
       "image": [
-        "15",
+        "55",
         0
       ]
     },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "class_type": "ImagePadForOutpaint",
     "_meta": {
-      "title": "图层工具：按宽高比缩放 V2"
+      "title": "外补画板"
     }
   },
-  "19": {
+  "60": {
     "inputs": {
-      "pixels": [
-        "18",
-        0
-      ],
-      "vae": [
-        "3",
+      "text": "low quality,\nworst quality,\nblurry,\njpeg artifacts,\n\nbad anatomy,\ndeformed anatomy,\nmutated body,\nextra limbs,\nextra fingers,\nmissing fingers,\n\nclothes fused with skin,\npainted clothing,\nbody paint,\ndrawn-on clothes,\nfloating fabric,\nunrealistic neckline,\npaper-thin fabric,\nplastic clothes,\nrubber clothes,\nlatex texture,\n\nsharp clothing edge,\nhard edges,\nstiff fabric,\nunrealistic cloth physics,\nfabric clipping,\n\noversaturated,\noverexposed,\nunderexposed,\n\ncartoon,\nanime,\ncgi,\n3d render,\nillustration",
+      "clip": [
+        "47",
         0
       ]
     },
-    "class_type": "VAEEncode",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "VAE编码"
-    }
-  },
-  "20": {
-    "inputs": {
-      "conditioning": [
-        "8",
-        0
-      ],
-      "latent": [
-        "19",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "参考Latent"
-    }
-  },
-  "21": {
-    "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 1,
-      "proportional_height": 1,
-      "fit": "crop",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_side": "None",
-      "scale_to_length": 1024,
-      "background_color": "#000000",
-      "image": [
-        "22",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
-    "_meta": {
-      "title": "图层工具：按宽高比缩放 V2"
-    }
-  },
-  "22": {
-    "inputs": {
-      "image": "600001.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "23": {
-    "inputs": {
-      "pixels": [
-        "21",
-        0
-      ],
-      "vae": [
-        "3",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE编码"
-    }
-  },
-  "24": {
-    "inputs": {
-      "conditioning": [
-        "14",
-        0
-      ],
-      "latent": [
-        "23",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "参考Latent"
-    }
-  },
-  "25": {
-    "inputs": {
-      "conditioning": [
-        "20",
-        0
-      ],
-      "latent": [
-        "23",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "参考Latent"
+      "title": "CLIP文本编码"
     }
   }
 }

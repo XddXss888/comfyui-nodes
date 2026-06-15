@@ -1,0 +1,239 @@
+{
+  "71": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "72": {
+    "inputs": {
+      "text": "low quality, blurry",
+      "clip": [
+        "71",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "73": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "74": {
+    "inputs": {
+      "width": 1080,
+      "height": 1920,
+      "length": 1,
+      "batch_size": 1
+    },
+    "class_type": "EmptyHunyuanLatentVideo",
+    "_meta": {
+      "title": "空Latent视频（Hunyuan）"
+    }
+  },
+  "75": {
+    "inputs": {
+      "unet_name": "wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "76": {
+    "inputs": {
+      "unet_name": "wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "82": {
+    "inputs": {
+      "shift": 5.0,
+      "model": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "83": {
+    "inputs": {
+      "lora_name": "lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "75",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "85": {
+    "inputs": {
+      "lora_name": "lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "76",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "shift": 5.0,
+      "model": [
+        "85",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "118",
+        0
+      ],
+      "vae": [
+        "73",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "动漫，视觉风格：动漫\n画面风格：国漫\n\n高质量电影级动漫产品摄影 / 道具特写，超详细真实质感：\n日系动漫风格的圆形玻璃碗，线条干净圆润，碗壁呈半透明的浅白色，边缘有柔和的高光描边，碗底带有淡淡的水波纹反光，整体质感清透，无多余装饰，色彩清新明亮，适配竖屏特写、中景镜头。\n镜头方向：，经典产品/道具拍摄角度\n\n画面要求：\n- 超高细节，8k分辨率，极致锐度与纹理\n- 真实材质表现，金属反光/皮革纹理/玻璃折射/布料纤维清晰可见\n- 优秀构图，经典三分法或对称/中心式构图\n- 完美贴合动漫视觉语言与国漫整体氛围，风格高度一致\n\n负面提示（强烈负面）：\nlow quality, worst quality, blurry, deformed, bad anatomy, bad hands, missing fingers, extra limbs, poorly drawn face, bad proportions, watermark, text, logo, signature, overexposed, underexposed, plastic skin, doll, lowres, jpeg artifacts, grainybad anime, deformed anime, low quality anime, flat color, flat shading, 3d render, cgi",
+      "clip": [
+        "71",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "114": {
+    "inputs": {
+      "samples": [
+        "117",
+        0
+      ],
+      "vae": [
+        "73",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "117": {
+    "inputs": {
+      "seed": 127496470,
+      "steps": 10,
+      "cfg": 1.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "82",
+        0
+      ],
+      "positive": [
+        "89",
+        0
+      ],
+      "negative": [
+        "72",
+        0
+      ],
+      "latent_image": [
+        "74",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "118": {
+    "inputs": {
+      "seed": 127496470,
+      "steps": 10,
+      "cfg": 1.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.3,
+      "model": [
+        "86",
+        0
+      ],
+      "positive": [
+        "89",
+        0
+      ],
+      "negative": [
+        "72",
+        0
+      ],
+      "latent_image": [
+        "117",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "119": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  }
+}

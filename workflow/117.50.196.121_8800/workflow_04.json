@@ -25,7 +25,7 @@
       "format": "video/h264-mp4",
       "frame_rate": 48.0,
       "images": [
-        "161",
+        "136",
         0
       ],
       "loop_count": 0,
@@ -77,8 +77,8 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "myloras\\POVDoubleBJ_000002250_high_noise.safetensors",
-      "lora_03": "wan2.2\\WAN-2.2-I2V-HandjobBlowjobCombo-HIGH-v1.safetensors",
+      "lora_02": "wan2.2\\wan2.2-i2v-high-oral-insertion-v1.0.safetensors",
+      "lora_03": "None",
       "lora_04": "None",
       "lora_05": "None",
       "lora_06": "None",
@@ -90,13 +90,13 @@
         "156",
         0
       ],
-      "strength_01": 2.0,
+      "strength_01": 2.0000000000000004,
       "strength_02": 1.0000000000000002,
-      "strength_03": 1.0000000000000002,
-      "strength_04": 1.0000000000000002,
-      "strength_05": 1.0000000000000002,
-      "strength_06": 0.0,
-      "strength_07": 1.0000000000000002,
+      "strength_03": 0.0,
+      "strength_04": 0.0,
+      "strength_05": 1.0,
+      "strength_06": 1.0,
+      "strength_07": 1.0,
       "strength_08": 1.0,
       "strength_09": 1.0,
       "strength_10": 1.0
@@ -110,8 +110,8 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "myloras\\POVDoubleBJ_000002250_low_noise.safetensors",
-      "lora_03": "wan2.2\\WAN-2.2-I2V-HandjobBlowjobCombo-LOW-v1.safetensors",
+      "lora_02": "wan2.2\\wan2.2-i2v-low-oral-insertion-v1.0.safetensors",
+      "lora_03": "None",
       "lora_04": "None",
       "lora_05": "None",
       "lora_06": "None",
@@ -123,13 +123,13 @@
         "157",
         0
       ],
-      "strength_01": 1.0,
+      "strength_01": 1.0000000000000002,
       "strength_02": 1.0000000000000002,
-      "strength_03": 1.0000000000000002,
-      "strength_04": 1.0000000000000002,
-      "strength_05": 0.0,
-      "strength_06": 1.0000000000000002,
-      "strength_07": 1.0000000000000002,
+      "strength_03": 0.0,
+      "strength_04": 0.0,
+      "strength_05": 1.0,
+      "strength_06": 1.0,
+      "strength_07": 1.0,
       "strength_08": 1.0,
       "strength_09": 1.0,
       "strength_10": 1.0
@@ -155,7 +155,7 @@
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/01d475b9-8c25-439e-b7dc-b92755962229.png"
+      "urls": "https://media.pornmaker.cloud/06d9f9b9-a986-49dc-8cba-a6aa50f38414.png"
     },
     "class_type": "LoadImageFromURL"
   },
@@ -172,32 +172,6 @@
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
-  },
-  "161": {
-    "inputs": {
-      "image1": [
-        "168",
-        0
-      ],
-      "image2": [
-        "136",
-        0
-      ]
-    },
-    "class_type": "ImageBatch"
-  },
-  "168": {
-    "inputs": {
-      "custom_height": 0,
-      "custom_width": 0,
-      "force_rate": 48,
-      "force_size": "Disabled",
-      "frame_load_cap": 0,
-      "select_every_nth": 1,
-      "skip_first_frames": 0,
-      "url": "https://media.pornmaker.cloud/c65b1e26-d254-44de-80be-b15879e3ee49.mp4"
-    },
-    "class_type": "LoadVideoFromURL"
   },
   "84": {
     "inputs": {
@@ -224,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 5237572492561113537,
+      "noise_seed": 6691816911784763773,
       "positive": [
         "98",
         0
@@ -254,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 7167968317836119659,
+      "noise_seed": 5576232424799417151,
       "positive": [
         "98",
         0
@@ -302,7 +276,7 @@
         "84",
         0
       ],
-      "text": "POVDoubleBJ.Immediately cut to an extremely erotic scene.The same woman kneels between two men. There are two penises in front of her. The woman gives a handjob and a blowjob to both penises at the same time."
+      "text": "realistic. real life. POV. \r\nA man appears and she sucks his penis. Static camera, fixed viewpoint, still shot."
     },
     "class_type": "CLIPTextEncode"
   },

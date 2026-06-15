@@ -1,25 +1,75 @@
 {
-  "6": {
+  "2": {
     "inputs": {
-      "text": "背景换成公园",
+      "text": "female,43 years old,\n43岁亚洲女性，高级感人像，黑色长发，精致妆容，白色修身连衣裙，优雅站姿，气质清纯又迷人，柔和棚拍灯光，浅灰背景，时尚杂志封面风格,\n,\nFF7 Remake style, Final Fantasy 7 aesthetic, Square Enix 3D anime,\nstylized semi-realistic, cel-shaded hybrid render,\ndelicate detailed face, sharp anime eyes, refined hair strands,\ncinematic lighting, soft shadows, PBR textures,\nUnreal Engine 5, masterpiece, best quality, ultra-detailed, 8K.\n\nPose: standard T-pose, hands hanging naturally at sides, standing straight and upright.没穿衣服\n\n**年龄特征要求**：\n- 必须在面部明显体现 22 岁的年龄特征\n- 年轻人（18-25岁）：皮肤紧致光滑、胶原蛋白充足、眼神明亮有活力、面部轮廓清晰圆润、无皱纹\n- 青年人（26-35岁）：皮肤状态良好、轻微软化纹、成熟气质初现、眼神自信稳重\n- 中年人（36-50岁）：皮肤略有松弛、眼角细纹、轻微法令纹显现、成熟稳重气质、眼周出现岁月痕迹\n- 50岁以上：皱纹明显、皮肤松弛、眼袋出现、苍老气质、头发可能灰白\n\n**⚠️ 严格禁止**：\n- 不得生成与指定年龄不符的面部特征（如让30岁的人看起来像20岁，或像50岁）\n- 不得忽略年龄参数随意生成外观\n- 不得在不应该出现皱纹的年龄段添加皱纹",
       "clip": [
-        "38",
+        "16",
         0
       ]
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
+      "title": "正向"
     }
   },
-  "8": {
+  "4": {
+    "inputs": {
+      "seed": 576381080940608,
+      "steps": 30,
+      "cfg": 3.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "18",
+        0
+      ],
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
+        "9",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "5": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "6": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "7": {
     "inputs": {
       "samples": [
-        "13",
+        "4",
         0
       ],
       "vae": [
-        "10",
+        "6",
         0
       ]
     },
@@ -30,115 +80,21 @@
   },
   "9": {
     "inputs": {
-      "filename_prefix": "Flux2",
-      "images": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
-    }
-  },
-  "10": {
-    "inputs": {
-      "vae_name": "flux2-vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "12": {
-    "inputs": {
-      "unet_name": "flux2_dev_fp8mixed.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "13": {
-    "inputs": {
-      "noise": [
-        "25",
-        0
-      ],
-      "guider": [
-        "22",
-        0
-      ],
-      "sampler": [
+      "text": "",
+      "clip": [
         "16",
         0
-      ],
-      "sigmas": [
-        "48",
-        0
-      ],
-      "latent_image": [
-        "47",
-        0
       ]
     },
-    "class_type": "SamplerCustomAdvanced",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "自定义采样器（高级）"
+      "title": "反向"
     }
   },
   "16": {
     "inputs": {
-      "sampler_name": "euler"
-    },
-    "class_type": "KSamplerSelect",
-    "_meta": {
-      "title": "K采样器选择"
-    }
-  },
-  "22": {
-    "inputs": {
-      "model": [
-        "67",
-        0
-      ],
-      "conditioning": [
-        "39",
-        0
-      ]
-    },
-    "class_type": "BasicGuider",
-    "_meta": {
-      "title": "基本引导器"
-    }
-  },
-  "25": {
-    "inputs": {
-      "noise_seed": 1092622874592607
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "随机噪波"
-    }
-  },
-  "26": {
-    "inputs": {
-      "guidance": 4.0,
-      "conditioning": [
-        "6",
-        0
-      ]
-    },
-    "class_type": "FluxGuidance",
-    "_meta": {
-      "title": "Flux引导"
-    }
-  },
-  "38": {
-    "inputs": {
-      "clip_name": "mistral_3_small_flux2_fp8.safetensors",
-      "type": "flux2",
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "qwen_image",
       "device": "default"
     },
     "class_type": "CLIPLoader",
@@ -146,96 +102,39 @@
       "title": "加载CLIP"
     }
   },
-  "39": {
+  "18": {
     "inputs": {
-      "conditioning": [
-        "26",
-        0
-      ],
-      "latent": [
-        "40",
-        0
-      ]
+      "unet_name": "z_image_bf16.safetensors",
+      "weight_dtype": "default"
     },
-    "class_type": "ReferenceLatent",
+    "class_type": "UNETLoader",
     "_meta": {
-      "title": "人物1参考Latent (主链，必须启用)"
+      "title": "UNet加载器"
     }
   },
-  "40": {
+  "19": {
     "inputs": {
-      "pixels": [
-        "41",
-        0
-      ],
-      "vae": [
-        "10",
+      "filename_prefix": "to-image-2026-06-15",
+      "images": [
+        "7",
         0
       ]
     },
-    "class_type": "VAEEncode",
+    "class_type": "SaveImageS3",
     "_meta": {
-      "title": "VAE编码"
+      "title": "Save Image to S3"
     }
   },
-  "41": {
+  "20": {
     "inputs": {
-      "upscale_method": "lanczos",
-      "megapixels": 1.0,
-      "resolution_steps": 1,
-      "image": [
-        "42",
+      "images": [
+        "7",
         0
       ]
     },
-    "class_type": "ImageScaleToTotalPixels",
+    "class_type": "PreviewImage",
     "_meta": {
-      "title": "缩放图像（像素）"
-    }
-  },
-  "42": {
-    "inputs": {
-      "image": "example.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "人物参考图1 (必填)"
-    }
-  },
-  "47": {
-    "inputs": {
-      "width": 1024,
-      "height": 1024,
-      "batch_size": 1
-    },
-    "class_type": "EmptyFlux2LatentImage",
-    "_meta": {
-      "title": "空Latent图像（Flux2）"
-    }
-  },
-  "48": {
-    "inputs": {
-      "steps": 8,
-      "width": 1024,
-      "height": 1024
-    },
-    "class_type": "Flux2Scheduler",
-    "_meta": {
-      "title": "Flux2调度器"
-    }
-  },
-  "67": {
-    "inputs": {
-      "lora_name": "Flux_2-Turbo-LoRA_comfyui.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "12",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA加载器（仅模型）"
+      "title": "预览图像"
     }
   }
 }

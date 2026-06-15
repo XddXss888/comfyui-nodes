@@ -1,0 +1,18 @@
+{
+  "1": {
+    "class_type": "IDENode",
+    "inputs": {
+      "language": "python",
+      "pycode": "\nimport os\n\ncwd = os.getcwd()\nout = [f'CWD: {cwd}']\n\n# List immediate subdirs\nfor d in os.listdir(cwd):\n    path = os.path.join(cwd, d)\n    if os.path.isdir(path):\n        out.append(f'  DIR: {d}')\n\n# Check for ComfyUI subdir\ncomfy = os.path.join(cwd, 'ComfyUI')\nif os.path.exists(comfy):\n    out.append('ComfyUI subdir:')\n    for d in os.listdir(comfy):\n        path = os.path.join(comfy, d)\n        if os.path.isdir(path):\n            out.append(f'  DIR: {d}')\n\n# Check ComfyUI/output\ncomfy_out = os.path.join(cwd, 'ComfyUI', 'output')\nif os.path.exists(comfy_out):\n    files = os.listdir(comfy_out)[:10]\n    out.append(f'ComfyUI/output: {files}')\n\nresult = chr(10).join(out)\n"
+    }
+  },
+  "2": {
+    "class_type": "PreviewTextNode",
+    "inputs": {
+      "text": [
+        "1",
+        0
+      ]
+    }
+  }
+}

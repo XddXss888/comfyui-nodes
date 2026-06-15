@@ -12,7 +12,7 @@
   "104": {
     "inputs": {
       "model": [
-        "138",
+        "158",
         0
       ],
       "shift": 5.000000000000001
@@ -70,39 +70,6 @@
     },
     "class_type": "RifeTensorrt"
   },
-  "138": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "myloras3\\FisheyePOVBJ_high_noise.safetensors",
-      "lora_03": "wan0924\\W22_HN_i2v_POV_Missionary_Insertion_v1.safetensors",
-      "lora_04": "wan2.2\\WAN-2.2-I2V-HandjobBlowjobCombo-HIGH-v1.safetensors",
-      "lora_05": "None",
-      "lora_06": "None",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "162",
-        0
-      ],
-      "strength_01": 2.0000000000000004,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 1.0000000000000002,
-      "strength_04": 0.0,
-      "strength_05": 1.0,
-      "strength_06": 1.0,
-      "strength_07": 1.0,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
-  },
   "139": {
     "inputs": {
       "clip": [
@@ -110,9 +77,9 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "myloras3\\FisheyePOVBJ_low_noise.safetensors",
-      "lora_03": "wan2.2\\WAN-2.2-I2V-HandjobBlowjobCombo-LOW-v1.safetensors",
-      "lora_04": "None",
+      "lora_02": "wan0917\\wan2.2-i2v-low-pov-insertion-v1.0.safetensors",
+      "lora_03": "wan2.1\\crash-zoom-out.safetensors",
+      "lora_04": "wan0911\\POV_missionary_Wan2.2_I2V_v1.0.safetensors",
       "lora_05": "None",
       "lora_06": "None",
       "lora_07": "None",
@@ -120,14 +87,14 @@
       "lora_09": "None",
       "lora_10": "None",
       "model": [
-        "163",
+        "157",
         0
       ],
       "strength_01": 1.0,
       "strength_02": 1.0000000000000002,
-      "strength_03": 0.0,
+      "strength_03": 1.0000000000000002,
       "strength_04": 0.0,
-      "strength_05": 1.0,
+      "strength_05": 0.0,
       "strength_06": 1.0,
       "strength_07": 1.0,
       "strength_08": 1.0,
@@ -155,23 +122,56 @@
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/1f8a05f9-8ac6-43e3-bf68-72c3bc4bc4ca.png"
+      "urls": "https://media.pornmaker.cloud/e3d49450-d42d-4010-8f28-500475e43cbd.png"
     },
     "class_type": "LoadImageFromURL"
   },
-  "162": {
+  "156": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
   },
-  "163": {
+  "157": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
+  },
+  "158": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "lora_02": "wan0917\\wan2.2-i2v-high-pov-insertion-v1.0.safetensors",
+      "lora_03": "wan2.1\\crash-zoom-out.safetensors",
+      "lora_04": "None",
+      "lora_05": "wan0911\\POV_missionary_Wan2.2_I2V_v1.0.safetensors",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "156",
+        0
+      ],
+      "strength_01": 2.0000000000000004,
+      "strength_02": 1.0000000000000002,
+      "strength_03": 2.0000000000000004,
+      "strength_04": 0.0,
+      "strength_05": 1.0000000000000002,
+      "strength_06": 1.0,
+      "strength_07": 1.0,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
   },
   "84": {
     "inputs": {
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 5566399136822503851,
+      "noise_seed": 5507001656605644403,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 5457104170713338492,
+      "noise_seed": 6067577795068116411,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": "FisheyePOVBJ.Immediately cut to an extremely erotic scene.the exact same women is holding a black man's penis and giving him a blowjob.while looking at the camera"
+      "text": " realistic. real life. POV. A girl in the middle of the screen. the camera instantly cr34sh crash zoom out effect to a full pov view ofA woman is lying on her back with her legs spread having anal sex with a man in a POV view from above.A man appears and inserts his penis into her pussy."
     },
     "class_type": "CLIPTextEncode"
   },

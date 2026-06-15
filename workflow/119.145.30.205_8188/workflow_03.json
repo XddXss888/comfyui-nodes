@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 1748201106,
+      "seed": 4237523077,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -31,7 +31,7 @@
   },
   "6": {
     "inputs": {
-      "text": "*A round gold pendant, ART DECO style, a highly detailed ram head in high relief at the absolute center, taking up half of the pendant's area, with strong visual impact. The background is entirely engraved with dense arabesque scrolling foliage in low relief, creating a rich tapestry effect that does not compete with the ram head. Geometric stepped arch motifs on the outer border. Diamond eyes, onyx forehead marking. Combination of matte and polished gold. Black background, dramatic spotlight, 8k, --ar 1:1*",
+      "text": "Product photography of a heavy handmade Gaboratory bicolor silver gold pendant, vintage oxidized sterling silver base with 18k brass gold inlaid carved details, centered gothic dagger with a coiled serpent wrapping around the blade, gold-inlaid serpent eyes and dagger hilt pommel, oxidized silver serpent scales and dagger blade with fullered center, gold-inlaid serpent fangs and hilt crossguard, top silver bail engraved with \"Gaboratory\", soft diffused natural light, laid flat on creamy white fine suede fabric background, subtle matte texture, shallow depth of field, 8K ultra-detailed, macro metal texture shot, luxury men's gothic biker jewelry, neutral soft tone, commercial jewelry shot, sharp focus on metal engravings, no shadows overload",
       "clip": [
         "38",
         0
@@ -129,7 +129,7 @@
     "inputs": {
       "shift": 3.1000000000000005,
       "model": [
-        "101",
+        "100",
         0
       ]
     },
@@ -150,20 +150,6 @@
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
       "title": "LORA #1 (系统)"
-    }
-  },
-  "101": {
-    "inputs": {
-      "lora_name": "豹子.safetensors",
-      "strength_model": 0.8,
-      "model": [
-        "100",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LORA #2 (系统)"
     }
   }
 }

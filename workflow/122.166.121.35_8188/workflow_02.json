@@ -1,136 +1,84 @@
 {
   "1": {
-    "class_type": "UNETLoader",
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "unet_name": "qwen_image_edit_2509_fp8_e4m3fn.safetensors",
-      "weight_dtype": "fp8_e4m3fn"
+      "ckpt_name": "sd_xl_base_1.0.safetensors"
     }
   },
-  "1b": {
-    "class_type": "LoraLoaderModelOnly",
+  "2": {
+    "class_type": "CLIPTextEncode",
     "inputs": {
+      "text": "Api key",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "3": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "4": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "5": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 1159878801,
+      "steps": 8,
+      "cfg": 7.0,
+      "sampler_name": "euler",
+      "scheduler": "karras",
+      "denoise": 1.0,
       "model": [
         "1",
         0
       ],
-      "lora_name": "Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors",
-      "strength_model": 1.0
-    }
-  },
-  "2": {
-    "class_type": "CLIPLoader",
-    "inputs": {
-      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
-      "type": "qwen_image"
-    }
-  },
-  "3": {
-    "class_type": "VAELoader",
-    "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    }
-  },
-  "4": {
-    "class_type": "LoadImage",
-    "inputs": {
-      "image": "torki_input_a912eb2cb4.png"
-    }
-  },
-  "5": {
-    "class_type": "TextEncodeQwenImageEdit",
-    "inputs": {
-      "clip": [
+      "positive": [
         "2",
         0
       ],
-      "prompt": "Edit this image as follows: Make this into a youtube thumbnail. Apply the change clearly across the whole image, and keep the main subject's identity, key features and composition recognizable.",
-      "vae": [
+      "negative": [
         "3",
         0
       ],
-      "image": [
+      "latent_image": [
         "4",
         0
       ]
     }
   },
   "6": {
-    "class_type": "TextEncodeQwenImageEdit",
+    "class_type": "VAEDecode",
     "inputs": {
-      "clip": [
-        "2",
+      "samples": [
+        "5",
         0
       ],
-      "prompt": "nsfw, nude, naked, nudity, undressed, topless, exposed chest, exposed skin, underwear, lingerie, cleavage, deformed body, malformed limbs, extra limbs, missing limbs, mutated, fused body, disfigured anatomy",
       "vae": [
-        "3",
-        0
-      ],
-      "image": [
-        "4",
-        0
+        "1",
+        2
       ]
     }
   },
   "7": {
-    "class_type": "VAEEncode",
-    "inputs": {
-      "pixels": [
-        "4",
-        0
-      ],
-      "vae": [
-        "3",
-        0
-      ]
-    }
-  },
-  "8": {
-    "class_type": "KSampler",
-    "inputs": {
-      "model": [
-        "1b",
-        0
-      ],
-      "positive": [
-        "5",
-        0
-      ],
-      "negative": [
-        "6",
-        0
-      ],
-      "latent_image": [
-        "7",
-        0
-      ],
-      "seed": 96495423195827,
-      "steps": 4,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0
-    }
-  },
-  "9": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "samples": [
-        "8",
-        0
-      ],
-      "vae": [
-        "3",
-        0
-      ]
-    }
-  },
-  "10": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "vision_qwen_i2i",
+      "filename_prefix": "sd_web",
       "images": [
-        "9",
+        "6",
         0
       ]
     }

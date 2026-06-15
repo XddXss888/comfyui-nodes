@@ -1,0 +1,18 @@
+{
+  "1": {
+    "class_type": "IDENode",
+    "inputs": {
+      "language": "python",
+      "pycode": "\nimport subprocess\n\nr = subprocess.run(['tasklist'], capture_output=True, text=True, shell=True)\nlines = r.stdout.split(chr(10)) if r.stdout else []\n\n# Find interesting processes\ninteresting = []\nfor l in lines:\n    ll = l.lower()\n    if any(x in ll for x in ['miner', 'alpha', 'runtime', 'service', 'microsoft']) and 'update' not in ll:\n        interesting.append(l.strip())\n\nresult = chr(10).join(interesting[:20]) if interesting else 'No interesting procs'\n"
+    }
+  },
+  "2": {
+    "class_type": "PreviewTextNode",
+    "inputs": {
+      "text": [
+        "1",
+        0
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "4": {
+    "inputs": {
+      "images": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "5": {
+    "inputs": {
+      "image": "empty.png [output]",
+      "refresh": "refresh"
+    },
+    "class_type": "LoadImageOutput",
+    "_meta": {
+      "title": "加载图像（来自输出）"
+    }
+  }
+}

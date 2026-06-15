@@ -8,7 +8,7 @@
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "a cute cat, digital art",
+      "text": "t",
       "clip": [
         "1",
         1
@@ -16,69 +16,59 @@
     }
   },
   "3": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "text": "",
-      "clip": [
-        "1",
-        1
-      ]
-    }
-  },
-  "4": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 1024,
-      "height": 1024,
+      "width": 512,
+      "height": 512,
       "batch_size": 1
     }
   },
-  "5": {
+  "4": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 42,
-      "steps": 8,
-      "cfg": 7.0,
-      "sampler_name": "euler",
-      "scheduler": "karras",
-      "denoise": 1.0,
       "model": [
         "1",
         0
       ],
+      "seed": 42,
+      "steps": 1,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "normal",
       "positive": [
         "2",
         0
       ],
       "negative": [
-        "3",
+        "2",
         0
       ],
       "latent_image": [
+        "3",
+        0
+      ],
+      "denoise": 1.0
+    }
+  },
+  "5": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "vae": [
+        "1",
+        2
+      ],
+      "samples": [
         "4",
         0
       ]
     }
   },
   "6": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "samples": [
-        "5",
-        0
-      ],
-      "vae": [
-        "1",
-        2
-      ]
-    }
-  },
-  "7": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "test_hetzner",
+      "filename_prefix": "t",
       "images": [
-        "6",
+        "5",
         0
       ]
     }

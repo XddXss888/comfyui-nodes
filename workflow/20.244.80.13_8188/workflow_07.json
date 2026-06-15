@@ -8,7 +8,7 @@
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "a cat sitting on a windowsill",
+      "text": "A hyperrealistic, close-up view of a pristine lake reflecting a rustic wooden house at golden hour. The water is glassy, with subtle ripples near the shore, mirroring the warm orange and pink hues of the sunset sky. The house features weathered timber, a sloping roof, and glowing windows that cast a soft, golden light onto the dock. In the foreground, tall reeds and wildflowers frame the scene, their silhouettes sharp against the luminous horizon. The atmosphere is serene, with mist rising gently from the water. Shot on a medium-format camera, 85mm lens, f/2.8, with soft, diffused lighting and rich, cinematic color grading.",
       "clip": [
         "1",
         1
@@ -36,7 +36,7 @@
   "5": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 546481906,
+      "seed": 561318712,
       "steps": 20,
       "cfg": 7.0,
       "sampler_name": "euler",

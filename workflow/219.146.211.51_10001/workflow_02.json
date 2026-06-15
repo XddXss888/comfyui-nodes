@@ -1,58 +1,100 @@
 {
-  "10": {
+  "2": {
     "inputs": {
-      "image": "example.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "11": {
-    "inputs": {
-      "upscale_method": "lanczos",
-      "width": 768,
-      "height": 1344,
-      "crop": "center",
-      "image": [
-        "10",
+      "text": "展现AI虚拟形象服装设计的场景，采用现代时尚风格，3D渲染，细节精致细腻，色彩柔和搭配，剪裁优雅，高清8K画质，高质量渲染，光影效果出色。简洁背景突出服装主体元素，专业时尚摄影风格。灵感来源：一位22岁的亚洲女性，拥有精致的动漫风格，气质纯真甜美，长发乌黑卷曲，大眼睛，身穿白色露肩连衣裙，粉嫩妆容，梦幻柔和的光线，紫色氛围背景，肌肤细腻，高品质角色插画，设计精美，适合AI虚拟形象穿着，全身展示，FF7重制风格，最终幻想7美学，史克威尔艾尼克斯3D动漫风格，半写实风格，Cel阴影混合渲染，面部细节精致，动漫般锐利的眼神，发丝柔美，电影级灯光，柔和阴影，PBR材质，虚幻引擎5，杰作级品质，超高细节，8K分辨率，主体画面居中，构图精良。",
+      "clip": [
+        "16",
         0
       ]
     },
-    "class_type": "ImageScale",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "缩放图像"
+      "title": "正向"
     }
   },
-  "12": {
+  "4": {
     "inputs": {
-      "unet_name": "flux2_dev_fp8mixed.safetensors",
-      "weight_dtype": "default",
-      "device": "cuda:0"
-    },
-    "class_type": "UNETLoaderMultiGPU",
-    "_meta": {
-      "title": "UNETLoaderMultiGPU"
-    }
-  },
-  "13": {
-    "inputs": {
-      "lora_name": "Flux_2-Turbo-LoRA_comfyui.safetensors",
-      "strength_model": 1.0,
+      "seed": 897028270303908,
+      "steps": 30,
+      "cfg": 3.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
       "model": [
-        "12",
+        "18",
+        0
+      ],
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
+        "9",
+        0
+      ],
+      "latent_image": [
+        "5",
         0
       ]
     },
-    "class_type": "LoraLoaderModelOnly",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "LoRA加载器（仅模型）"
+      "title": "K采样器"
     }
   },
-  "14": {
+  "5": {
     "inputs": {
-      "clip_name": "mistral_3_small_flux2_fp8.safetensors",
-      "type": "flux2",
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "6": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "7": {
+    "inputs": {
+      "samples": [
+        "4",
+        0
+      ],
+      "vae": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "9": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "反向"
+    }
+  },
+  "16": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "qwen_image",
       "device": "default"
     },
     "class_type": "CLIPLoader",
@@ -60,430 +102,39 @@
       "title": "加载CLIP"
     }
   },
-  "15": {
+  "18": {
     "inputs": {
-      "vae_name": "flux2-vae.safetensors",
-      "device": "cuda:0"
+      "unet_name": "z_image_bf16.safetensors",
+      "weight_dtype": "default"
     },
-    "class_type": "VAELoaderMultiGPU",
+    "class_type": "UNETLoader",
     "_meta": {
-      "title": "VAELoaderMultiGPU"
+      "title": "UNet加载器"
+    }
+  },
+  "19": {
+    "inputs": {
+      "filename_prefix": "to-image-2026-06-15",
+      "images": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "SaveImageS3",
+    "_meta": {
+      "title": "Save Image to S3"
     }
   },
   "20": {
     "inputs": {
-      "text": "Create a single-canvas professional character reference board with the same structure as a clean wuxia costume design sheet.\n\nREFERENCE USE:\nUse the loaded reference image as identity / outfit / character reference conditioning. Preserve the same face structure, hairstyle, body proportion, clothing silhouette, main colors, material feeling, accessories, and temperament. The final board must be newly composed, not a simple enlargement or direct copy of the reference image.\n\nCANVAS:\n- 2560x1440 2K horizontal board, clean light gray background.\n- Precise vertical editorial grid with white gutters and pale gray panels.\n- Unequal columns, not five equal panels.\n- Left 60%: three tall full-body columns for front, side, and back views.\n- Middle-right 18%: a feature-detail column with a strict thumbnail grid.\n- Far-right 22%: a large facial close-up panel above a color/material information area.\n\nLAYOUT DETAILS:\n1. First tall column: full-body front view, standing straight, centered, complete feet visible, neutral studio pose, arms relaxed naturally at the sides or holding a prop low in front of the body.\n2. Second tall column: full-body strict side view, 90-degree profile, centered, complete feet visible, arms relaxed naturally, no raised-arm pose.\n3. Third tall column: full-body back view, centered, complete feet visible, robe/back hair/back accessory details visible, arms relaxed naturally.\n4. Feature column: a neat two-column grid of small rectangular thumbnails. Upper thumbnails show clean face-angle variations and hair/hat close-ups only; they must be head-and-shoulder crops with no hands, no arms, no fingers, no props, and no object touching the head or face. Lower thumbnails show sleeve, collar, robe fabric, belt, fan/weapon/prop, boots, and texture close-ups as isolated design details.\n5. Far-right panel: one large head-and-shoulders facial close-up in the upper half; no hands near the face, no raised arms, no fingers touching hair, no hand on head. Lower half has clean blank rows, small color swatch rectangles, and empty label spaces for metadata.\n6. Leave clean blank header bands at the top of each major column. Do not put text in the header bands; labels are added later by post-processing.\n\nCONSISTENCY:\nAll views and thumbnails must be the same person. Keep identical facial structure, hair color, hairstyle, outfit silhouette, robe color, inner garment color, material texture, boots, and props across every module. Keep hands and arms anatomically normal and only where they belong in full-body views or prop-detail cells.\n\nTEXT RULE:\nDo not generate readable text, Chinese characters, English words, labels, numbers, fake letters, logos, or signatures. Only draw blank header areas, blank metadata rows, and abstract color swatches.\n\nNEGATIVE INSTRUCTION:\nNo readable text, no fake letters, no random typography, no watermark, no logo, no signature. No extra people, no unrelated duplicate characters, no changed identity, no changed hairstyle, no changed outfit colors. No hand on head, no hand above head, no fingers touching hair, no fingers touching face, no hand covering face, no floating hands, no random arms in face thumbnails, no props crossing the face, no face fused with hands, no extra arms, no extra hands, no fused fingers, no extra fingers, no broken limbs. No cropped feet, no cut-off boots, no missing hands in full-body views. No noisy background, no movie poster, no action scene, no dramatic perspective, no fisheye lens.\n\nSTYLE:\nHigh quality guofeng anime wuxia character design sheet, refined 2D illustration, clean confident line art, elegant cel shading, subtle fabric texture, soft studio lighting, calm costume-reference presentation. The board should feel like a polished anime character setting sheet inspired by professional costume-reference layout, with crisp rectangular panels and disciplined spacing.\n\nSTYLE AVOID:\nAvoid photorealistic live-action skin, hyperreal photography, Unreal Engine render, western armor, modern fashion.",
-      "clip": [
-        "14",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP POSITIVE - ANIME WUXIA STYLE (switch=false)"
-    }
-  },
-  "21": {
-    "inputs": {
-      "text": "Create a single-canvas professional character reference board with the same structure as a clean wuxia costume design sheet.\n\nREFERENCE USE:\nUse the loaded reference image as identity / outfit / character reference conditioning. Preserve the same face structure, hairstyle, body proportion, clothing silhouette, main colors, material feeling, accessories, and temperament. The final board must be newly composed, not a simple enlargement or direct copy of the reference image.\n\nCANVAS:\n- 2560x1440 2K horizontal board, clean light gray background.\n- Precise vertical editorial grid with white gutters and pale gray panels.\n- Unequal columns, not five equal panels.\n- Left 60%: three tall full-body columns for front, side, and back views.\n- Middle-right 18%: a feature-detail column with a strict thumbnail grid.\n- Far-right 22%: a large facial close-up panel above a color/material information area.\n\nLAYOUT DETAILS:\n1. First tall column: full-body front view, standing straight, centered, complete feet visible, neutral studio pose, arms relaxed naturally at the sides or holding a prop low in front of the body.\n2. Second tall column: full-body strict side view, 90-degree profile, centered, complete feet visible, arms relaxed naturally, no raised-arm pose.\n3. Third tall column: full-body back view, centered, complete feet visible, robe/back hair/back accessory details visible, arms relaxed naturally.\n4. Feature column: a neat two-column grid of small rectangular thumbnails. Upper thumbnails show clean face-angle variations and hair/hat close-ups only; they must be head-and-shoulder crops with no hands, no arms, no fingers, no props, and no object touching the head or face. Lower thumbnails show sleeve, collar, robe fabric, belt, fan/weapon/prop, boots, and texture close-ups as isolated design details.\n5. Far-right panel: one large head-and-shoulders facial close-up in the upper half; no hands near the face, no raised arms, no fingers touching hair, no hand on head. Lower half has clean blank rows, small color swatch rectangles, and empty label spaces for metadata.\n6. Leave clean blank header bands at the top of each major column. Do not put text in the header bands; labels are added later by post-processing.\n\nCONSISTENCY:\nAll views and thumbnails must be the same person. Keep identical facial structure, hair color, hairstyle, outfit silhouette, robe color, inner garment color, material texture, boots, and props across every module. Keep hands and arms anatomically normal and only where they belong in full-body views or prop-detail cells.\n\nTEXT RULE:\nDo not generate readable text, Chinese characters, English words, labels, numbers, fake letters, logos, or signatures. Only draw blank header areas, blank metadata rows, and abstract color swatches.\n\nNEGATIVE INSTRUCTION:\nNo readable text, no fake letters, no random typography, no watermark, no logo, no signature. No extra people, no unrelated duplicate characters, no changed identity, no changed hairstyle, no changed outfit colors. No hand on head, no hand above head, no fingers touching hair, no fingers touching face, no hand covering face, no floating hands, no random arms in face thumbnails, no props crossing the face, no face fused with hands, no extra arms, no extra hands, no fused fingers, no extra fingers, no broken limbs. No cropped feet, no cut-off boots, no missing hands in full-body views. No noisy background, no movie poster, no action scene, no dramatic perspective, no fisheye lens.\n\nSTYLE:\nRealistic wuxia live-action character design sheet, high-end costume photography, neutral studio lighting, natural human skin texture, detailed fabric weave, believable robe layers, leather/metal/accessory details, clean production-design reference board. The board should feel like a professional casting/costume reference sheet with precise rectangular panels and disciplined spacing.\n\nSTYLE AVOID:\nAvoid anime line art, cel shading, oil painting, 3D render, Unreal Engine look, western armor, modern fashion.",
-      "clip": [
-        "14",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP POSITIVE - REALISTIC WUXIA STYLE (switch=true)"
-    }
-  },
-  "22": {
-    "inputs": {
-      "value": false
-    },
-    "class_type": "PrimitiveBoolean",
-    "_meta": {
-      "title": "STYLE SWITCH BOOLEAN: false=ANIME WUXIA, true=REALISTIC WUXIA"
-    }
-  },
-  "23": {
-    "inputs": {
-      "switch": [
-        "22",
-        0
-      ],
-      "on_false": [
-        "20",
-        0
-      ],
-      "on_true": [
-        "21",
-        0
-      ]
-    },
-    "class_type": "ComfySwitchNode",
-    "_meta": {
-      "title": "STYLE SWITCH SELECTS CLIP CONDITIONING"
-    }
-  },
-  "24": {
-    "inputs": {
-      "guidance": 4.0,
-      "conditioning": [
-        "23",
-        0
-      ]
-    },
-    "class_type": "FluxGuidance",
-    "_meta": {
-      "title": "Flux引导"
-    }
-  },
-  "25": {
-    "inputs": {
-      "device": "cuda:0",
-      "pixels": [
-        "11",
-        0
-      ],
-      "vae": [
-        "15",
-        0
-      ]
-    },
-    "class_type": "VAEEncodeForceDevice",
-    "_meta": {
-      "title": "VAE Encode Force CUDA Device"
-    }
-  },
-  "26": {
-    "inputs": {
-      "conditioning": [
-        "24",
-        0
-      ],
-      "latent": [
-        "25",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "参考Latent"
-    }
-  },
-  "27": {
-    "inputs": {
-      "model": [
-        "13",
-        0
-      ],
-      "conditioning": [
-        "26",
-        0
-      ]
-    },
-    "class_type": "BasicGuider",
-    "_meta": {
-      "title": "基本引导器"
-    }
-  },
-  "30": {
-    "inputs": {
-      "noise_seed": 123456
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "随机噪波"
-    }
-  },
-  "31": {
-    "inputs": {
-      "sampler_name": "euler"
-    },
-    "class_type": "KSamplerSelect",
-    "_meta": {
-      "title": "K采样器选择"
-    }
-  },
-  "32": {
-    "inputs": {
-      "steps": 12,
-      "width": 2560,
-      "height": 1440
-    },
-    "class_type": "Flux2Scheduler",
-    "_meta": {
-      "title": "Flux2Scheduler - 2K 2560x1440"
-    }
-  },
-  "33": {
-    "inputs": {
-      "width": 2560,
-      "height": 1440,
-      "batch_size": 1
-    },
-    "class_type": "EmptyFlux2LatentImage",
-    "_meta": {
-      "title": "EmptyFlux2LatentImage - 2K 2560x1440"
-    }
-  },
-  "40": {
-    "inputs": {
-      "device": "cuda:0",
-      "noise": [
-        "30",
-        0
-      ],
-      "guider": [
-        "27",
-        0
-      ],
-      "sampler": [
-        "31",
-        0
-      ],
-      "sigmas": [
-        "32",
-        0
-      ],
-      "latent_image": [
-        "33",
-        0
-      ]
-    },
-    "class_type": "SamplerCustomAdvancedForceDevice",
-    "_meta": {
-      "title": "Sampler Custom Advanced Force CUDA Device"
-    }
-  },
-  "50": {
-    "inputs": {
-      "device": "cuda:0",
-      "samples": [
-        "40",
-        0
-      ],
-      "vae": [
-        "15",
-        0
-      ]
-    },
-    "class_type": "VAEDecodeForceDevice",
-    "_meta": {
-      "title": "VAE Decode Force CUDA Device"
-    }
-  },
-  "60": {
-    "inputs": {
-      "filename_prefix": "Flux2_Dev_TurboLoRA/A_target_board_layout",
       "images": [
-        "107",
+        "7",
         0
       ]
     },
-    "class_type": "SaveImage",
+    "class_type": "PreviewImage",
     "_meta": {
-      "title": "保存图像"
-    }
-  },
-  "100": {
-    "inputs": {
-      "text": "[FRONT VIEW]",
-      "font": "ShareTechMono-Regular.ttf",
-      "size": 40,
-      "color": "#0B0B0B",
-      "background_color": "#00000000",
-      "shadow_distance": 0,
-      "shadow_blur": 0,
-      "shadow_color": "#000000",
-      "horizontal_align": "left",
-      "vertical_align": "top",
-      "offset_x": 43,
-      "offset_y": 40,
-      "direction": "ltr",
-      "img_composite": [
-        "50",
-        0
-      ]
-    },
-    "class_type": "DrawText+",
-    "_meta": {
-      "title": "Post label - [FRONT VIEW] (2K coords)"
-    }
-  },
-  "101": {
-    "inputs": {
-      "text": "[SIDE VIEW]",
-      "font": "ShareTechMono-Regular.ttf",
-      "size": 40,
-      "color": "#0B0B0B",
-      "background_color": "#00000000",
-      "shadow_distance": 0,
-      "shadow_blur": 0,
-      "shadow_color": "#000000",
-      "horizontal_align": "left",
-      "vertical_align": "top",
-      "offset_x": 565,
-      "offset_y": 40,
-      "direction": "ltr",
-      "img_composite": [
-        "100",
-        0
-      ]
-    },
-    "class_type": "DrawText+",
-    "_meta": {
-      "title": "Post label - [SIDE VIEW] (2K coords)"
-    }
-  },
-  "102": {
-    "inputs": {
-      "text": "[BACK VIEW]",
-      "font": "ShareTechMono-Regular.ttf",
-      "size": 40,
-      "color": "#0B0B0B",
-      "background_color": "#00000000",
-      "shadow_distance": 0,
-      "shadow_blur": 0,
-      "shadow_color": "#000000",
-      "horizontal_align": "left",
-      "vertical_align": "top",
-      "offset_x": 1043,
-      "offset_y": 40,
-      "direction": "ltr",
-      "img_composite": [
-        "101",
-        0
-      ]
-    },
-    "class_type": "DrawText+",
-    "_meta": {
-      "title": "Post label - [BACK VIEW] (2K coords)"
-    }
-  },
-  "103": {
-    "inputs": {
-      "text": "[FEATURES]",
-      "font": "ShareTechMono-Regular.ttf",
-      "size": 40,
-      "color": "#0B0B0B",
-      "background_color": "#00000000",
-      "shadow_distance": 0,
-      "shadow_blur": 0,
-      "shadow_color": "#000000",
-      "horizontal_align": "left",
-      "vertical_align": "top",
-      "offset_x": 1542,
-      "offset_y": 40,
-      "direction": "ltr",
-      "img_composite": [
-        "102",
-        0
-      ]
-    },
-    "class_type": "DrawText+",
-    "_meta": {
-      "title": "Post label - [FEATURES] (2K coords)"
-    }
-  },
-  "104": {
-    "inputs": {
-      "text": "[FACIAL FEATURES]",
-      "font": "ShareTechMono-Regular.ttf",
-      "size": 36,
-      "color": "#0B0B0B",
-      "background_color": "#00000000",
-      "shadow_distance": 0,
-      "shadow_blur": 0,
-      "shadow_color": "#000000",
-      "horizontal_align": "left",
-      "vertical_align": "top",
-      "offset_x": 1964,
-      "offset_y": 40,
-      "direction": "ltr",
-      "img_composite": [
-        "103",
-        0
-      ]
-    },
-    "class_type": "DrawText+",
-    "_meta": {
-      "title": "Post label - [FACIAL FEATURES] (2K coords)"
-    }
-  },
-  "105": {
-    "inputs": {
-      "text": "COLOR / MATERIAL",
-      "font": "ShareTechMono-Regular.ttf",
-      "size": 34,
-      "color": "#0B0B0B",
-      "background_color": "#00000000",
-      "shadow_distance": 0,
-      "shadow_blur": 0,
-      "shadow_color": "#000000",
-      "horizontal_align": "left",
-      "vertical_align": "top",
-      "offset_x": 1996,
-      "offset_y": 765,
-      "direction": "ltr",
-      "img_composite": [
-        "104",
-        0
-      ]
-    },
-    "class_type": "DrawText+",
-    "_meta": {
-      "title": "Post label - COLOR / MATERIAL (2K coords)"
-    }
-  },
-  "106": {
-    "inputs": {
-      "text": "PROFILE",
-      "font": "ShareTechMono-Regular.ttf",
-      "size": 36,
-      "color": "#0B0B0B",
-      "background_color": "#00000000",
-      "shadow_distance": 0,
-      "shadow_blur": 0,
-      "shadow_color": "#000000",
-      "horizontal_align": "left",
-      "vertical_align": "top",
-      "offset_x": 1996,
-      "offset_y": 1157,
-      "direction": "ltr",
-      "img_composite": [
-        "105",
-        0
-      ]
-    },
-    "class_type": "DrawText+",
-    "_meta": {
-      "title": "Post label - PROFILE (2K coords)"
-    }
-  },
-  "107": {
-    "inputs": {
-      "text": "AGE 22 | WUXIA | CALM NOBILITY",
-      "font": "ShareTechMono-Regular.ttf",
-      "size": 29,
-      "color": "#0B0B0B",
-      "background_color": "#00000000",
-      "shadow_distance": 0,
-      "shadow_blur": 0,
-      "shadow_color": "#000000",
-      "horizontal_align": "left",
-      "vertical_align": "top",
-      "offset_x": 1996,
-      "offset_y": 1213,
-      "direction": "ltr",
-      "img_composite": [
-        "106",
-        0
-      ]
-    },
-    "class_type": "DrawText+",
-    "_meta": {
-      "title": "Post label - AGE 22 | WUXIA | CALM NOBILITY (2K coords)"
+      "title": "预览图像"
     }
   }
 }

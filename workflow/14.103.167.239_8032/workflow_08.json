@@ -1,0 +1,210 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 354555,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "78",
+        0
+      ],
+      "positive": [
+        "94",
+        0
+      ],
+      "negative": [
+        "47",
+        0
+      ],
+      "latent_image": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "18": {
+    "inputs": {
+      "samples": [
+        "108",
+        0
+      ],
+      "vae": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeAudio",
+    "_meta": {
+      "title": "VAE Decode Audio"
+    }
+  },
+  "47": {
+    "inputs": {
+      "conditioning": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "78": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "94": {
+    "inputs": {
+      "tags": "这是一首融合美式Funk、华语独立流行与抒情R&B的跨流派实验作品。整体建立在深沉弹性的贝斯线条之上，配以轻微压缩感的鼓组编程，营造出典型的放克摇摆节奏感。键盘大量使用Vintage Electric Piano与Analog Pad合成器音色，赋予音乐浓厚的70年代复古质感。人声经过磁带饱和与轻微Auto-Tune处理，在保留自然温度的同时增添了现代气息。制作风格刻意模拟模拟时代的温暖声音特质，通过总线压缩、电子管失真与数字清晰度之间的对比强化听觉层次。动态设计讲究递进变化，利用乐器密度和混响空间推动情绪发展。情感主线围绕都市夜晚的浪漫邂逅与内心独白展开，旋律流畅延展，副歌部分通过密集和声堆叠提升情感张力。结构上遵循经典流行框架，并加入Breakdown段落制造戏剧性转折。",
+      "lyrics": "[Instrumental]",
+      "seed": 31,
+      "bpm": 95,
+      "duration": 248.0,
+      "timesignature": "4",
+      "language": "zh",
+      "keyscale": "Eb major",
+      "generate_audio_codes": false,
+      "cfg_scale": 2.0,
+      "temperature": 0.85,
+      "top_p": 0.9,
+      "top_k": 0,
+      "min_p": 0.0,
+      "clip": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "TextEncodeAceStepAudio1.5",
+    "_meta": {
+      "title": "TextEncodeAceStepAudio1.5"
+    }
+  },
+  "98": {
+    "inputs": {
+      "seconds": 248.0,
+      "batch_size": 1
+    },
+    "class_type": "EmptyAceStep1.5LatentAudio",
+    "_meta": {
+      "title": "Empty Ace Step 1.5 Latent Audio"
+    }
+  },
+  "104": {
+    "inputs": {
+      "unet_name": "acestep_v1.5_xl_sft_turbo_nvfp4.safetensors",
+      "weight_dtype": "fp8_e4m3fn_fast"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "105": {
+    "inputs": {
+      "clip_name1": "qwen_0.6b_ace15-fp8.safetensors",
+      "clip_name2": "qwen_4b_ace15-fp8.safetensors",
+      "type": "ace",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "DualCLIPLoader"
+    }
+  },
+  "106": {
+    "inputs": {
+      "vae_name": "ace_1.5_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "107": {
+    "inputs": {
+      "filename_prefix": "audio/夜色呢喃",
+      "audioUI": "",
+      "audio": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "SaveAudio",
+    "_meta": {
+      "title": "Save Audio (FLAC)"
+    }
+  },
+  "108": {
+    "inputs": {
+      "seed": 3180549884,
+      "steps": 12,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "78",
+        0
+      ],
+      "positive": [
+        "110",
+        0
+      ],
+      "negative": [
+        "47",
+        0
+      ],
+      "latent_image": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "110": {
+    "inputs": {
+      "tags": "这是一首融合美式Funk、华语独立流行与抒情R&B的跨流派实验作品。整体建立在深沉弹性的贝斯线条之上，配以轻微压缩感的鼓组编程，营造出典型的放克摇摆节奏感。键盘大量使用Vintage Electric Piano与Analog Pad合成器音色，赋予音乐浓厚的70年代复古质感。人声经过磁带饱和与轻微Auto-Tune处理，在保留自然温度的同时增添了现代气息。制作风格刻意模拟模拟时代的温暖声音特质，通过总线压缩、电子管失真与数字清晰度之间的对比强化听觉层次。动态设计讲究递进变化，利用乐器密度和混响空间推动情绪发展。情感主线围绕都市夜晚的浪漫邂逅与内心独白展开，旋律流畅延展，副歌部分通过密集和声堆叠提升情感张力。结构上遵循经典流行框架，并加入Breakdown段落制造戏剧性转折。",
+      "lyrics": "[Intro]\n[guitar riff, bass walk, brushed snare]\n\n\n[Verse 1]\n霓虹闪烁的城市夜晚\n你我擦肩而过的瞬间\n心跳像鼓点一样敲打着节拍\n在这喧嚣中寻找一丝温柔\n\n[Chorus - high energy, harmonies]\nOh baby let's dance under the moonlight\n在这夜色里我们自由飞翔\nEvery move you make feels so right\n就让这旋律带走所有忧伤\n\n[Verse 2]\n指尖轻触传递的秘密\n眼神交汇时的心跳加速\n城市的声音渐渐远去\n只剩下你我的呼吸交错\n\n[Pre-Chorus - building energy]\nTime slows down when you're near me\n每一秒都变得珍贵无比\n\n[Chorus - powerful belting, harmonies]\nOh baby let's dance under the moonlight\n在这夜色里我们自由飞翔\nEvery move you make feels so right\n就让这旋律带走所有忧伤\n\n[Bridge - Breakdown, low energy, falsetto]\n[soft Rhodes piano, minimal percussion]\nWhen the world fades away\n只剩下我和你\nIn this moment we stay\n直到天明来临\n\n[Chorus - explosive, full band, harmonies]\nOh baby let's dance under the moonlight\n在这夜色里我们自由飞翔\nEvery move you make feels so right\n就让这旋律带走所有忧伤\n\n[Outro - fade out, dreamy]\n[guitar feedback, ambient pad layers]",
+      "seed": 31,
+      "bpm": 95,
+      "duration": 248.0,
+      "timesignature": "4",
+      "language": "zh",
+      "keyscale": "Eb major",
+      "generate_audio_codes": false,
+      "cfg_scale": 2.0,
+      "temperature": 0.5,
+      "top_p": 0.9,
+      "top_k": 0,
+      "min_p": 0.0,
+      "clip": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "TextEncodeAceStepAudio1.5",
+    "_meta": {
+      "title": "TextEncodeAceStepAudio1.5"
+    }
+  }
+}

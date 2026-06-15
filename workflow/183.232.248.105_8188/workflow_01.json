@@ -1,0 +1,260 @@
+{
+  "74": {
+    "inputs": {
+      "pixels": [
+        "1849",
+        0
+      ],
+      "vae": [
+        "2014",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "528": {
+    "inputs": {
+      "text": "best-quality,masterpiece,with a high-end texture,UE5 Rendering,RTNS,masterpiece,amazing quality,Semi-realistic,fantasy,high contrast,perspective,depth of field,best quality,absurdres,realistic,wzry，1 man",
+      "speak_and_recognation": true,
+      "clip": [
+        "2016",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "正向词"
+    }
+  },
+  "530": {
+    "inputs": {
+      "text": "(easynegative),badhandv4,(worst quality, low quality:1.4),greyscale,border,artist name,out of frame,holding,zombie,watermark,text,logo",
+      "speak_and_recognation": true,
+      "clip": [
+        "2016",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "负面提示词"
+    }
+  },
+  "1074": {
+    "inputs": {
+      "ckpt_name": "WA-illustrious-SDXL_v14.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Checkpoint加载器(简易)"
+    }
+  },
+  "1849": {
+    "inputs": {},
+    "class_type": "🔹Photoshop ComfyUI Plugin",
+    "_meta": {
+      "title": "🔹Photoshop ComfyUI Plugin"
+    }
+  },
+  "1931": {
+    "inputs": {
+      "output": [
+        "2032",
+        0
+      ]
+    },
+    "class_type": "🔹SendTo Photoshop Plugin",
+    "_meta": {
+      "title": "🔹SendTo Photoshop Plugin"
+    }
+  },
+  "2012": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "2024",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "2014": {
+    "inputs": {
+      "vae_name": "sdxl_vae_fp16fix.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "VAE加载器"
+    }
+  },
+  "2016": {
+    "inputs": {
+      "lora_name": "yuanzi.safetensors",
+      "strength_model": 0.2,
+      "strength_clip": 0.2,
+      "model": [
+        "2041",
+        0
+      ],
+      "clip": [
+        "2041",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "2024": {
+    "inputs": {
+      "samples": [
+        "2025",
+        3
+      ],
+      "vae": [
+        "1074",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "2025": {
+    "inputs": {
+      "seed": 1020263165599443,
+      "steps": 23,
+      "cfg": 6.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": [
+        "2040",
+        1
+      ],
+      "preview_method": "auto",
+      "vae_decode": "true",
+      "model": [
+        "2016",
+        0
+      ],
+      "positive": [
+        "528",
+        0
+      ],
+      "negative": [
+        "530",
+        0
+      ],
+      "latent_image": [
+        "74",
+        0
+      ]
+    },
+    "class_type": "KSampler (Efficient)",
+    "_meta": {
+      "title": "KSampler (Efficient)"
+    }
+  },
+  "2032": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "scale_by": 1.1,
+      "image": [
+        "2024",
+        0
+      ]
+    },
+    "class_type": "ImageScaleBy",
+    "_meta": {
+      "title": "Upscale Image By"
+    }
+  },
+  "2040": {
+    "inputs": {
+      "expression": "0.15",
+      "speak_and_recognation": true,
+      "a": [
+        "1849",
+        2
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "2041": {
+    "inputs": {
+      "lora_name": "wrzy_v0.2-000030.safetensors",
+      "strength_model": 0.6,
+      "strength_clip": 0.8,
+      "model": [
+        "1074",
+        0
+      ],
+      "clip": [
+        "1074",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "2042": {
+    "inputs": {
+      "ckpt_name": "WA-illustrious-SDXL_v14.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Checkpoint加载器(简易)"
+    }
+  },
+  "2043": {
+    "inputs": {
+      "lora_name": "wrzy_v0.2-000030.safetensors",
+      "strength_model": 0.5,
+      "strength_clip": 0.5,
+      "model": [
+        "2042",
+        0
+      ],
+      "clip": [
+        "2042",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "2044": {
+    "inputs": {
+      "lora_name": "圆脸.safetensors",
+      "strength_model": 0.3,
+      "strength_clip": 0.3,
+      "model": [
+        "2043",
+        0
+      ],
+      "clip": [
+        "2043",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  }
+}

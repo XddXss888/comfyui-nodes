@@ -12,7 +12,7 @@
   "104": {
     "inputs": {
       "model": [
-        "158",
+        "138",
         0
       ],
       "shift": 5.000000000000001
@@ -70,16 +70,16 @@
     },
     "class_type": "RifeTensorrt"
   },
-  "139": {
+  "138": {
     "inputs": {
       "clip": [
         "84",
         0
       ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "wan0220\\FrontViewReverseFrogy_low_noise.safetensors",
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "lora_02": "myloras5\\MissionaryAnalV1_high_noise.safetensors",
       "lora_03": "None",
-      "lora_04": "None",
+      "lora_04": "wan2.1\\FusionX_FaceNaturalizer.safetensors",
       "lora_05": "None",
       "lora_06": "None",
       "lora_07": "None",
@@ -87,14 +87,47 @@
       "lora_09": "None",
       "lora_10": "None",
       "model": [
-        "157",
+        "163",
+        0
+      ],
+      "strength_01": 2.0000000000000004,
+      "strength_02": 1.0000000000000002,
+      "strength_03": 0.0,
+      "strength_04": 2.0000000000000004,
+      "strength_05": 1.0,
+      "strength_06": 1.0,
+      "strength_07": 1.0,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
+  },
+  "139": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "lora_02": "myloras5\\MissionaryAnalV1_low_noise.safetensors",
+      "lora_03": "None",
+      "lora_04": "wan2.1\\FusionX_FaceNaturalizer.safetensors",
+      "lora_05": "None",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "164",
         0
       ],
       "strength_01": 1.0,
       "strength_02": 1.0000000000000002,
       "strength_03": 0.0,
       "strength_04": 1.0000000000000002,
-      "strength_05": 0.0,
+      "strength_05": 1.0,
       "strength_06": 1.0,
       "strength_07": 1.0,
       "strength_08": 1.0,
@@ -122,56 +155,23 @@
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/eb67dddf-b2d9-48ae-925e-59b20882b654.png"
+      "urls": "https://media.pornmaker.cloud/0fb260c6-bf8b-45ce-99e7-63dde65cac70.png"
     },
     "class_type": "LoadImageFromURL"
   },
-  "156": {
+  "163": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
   },
-  "157": {
+  "164": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
-  },
-  "158": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "None",
-      "lora_03": "wan0220\\FrontViewReverseFrogy_high_noise.safetensors",
-      "lora_04": "None",
-      "lora_05": "None",
-      "lora_06": "None",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "156",
-        0
-      ],
-      "strength_01": 2.0000000000000004,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 1.0,
-      "strength_04": 1.0000000000000002,
-      "strength_05": 1.5000000000000002,
-      "strength_06": 1.0,
-      "strength_07": 1.0,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
   },
   "84": {
     "inputs": {
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 6294700968010464022,
+      "noise_seed": 4635490687322910905,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 1942161695481287671,
+      "noise_seed": 5464862348948722532,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": "FrontViewReverseFrogy.cut scene.\r\nthe same woman is having sex with a man using the Cowgril position.(Front View Reverse Frogy)"
+      "text": "MissionaryAnal.Immediately cut to an extremely erotic scene.\r\n\r\nThe same woman is is lying on her back with her legs spread. The man's penis is rapidly penetrating her anus. and She reaches orgasm."
     },
     "class_type": "CLIPTextEncode"
   },

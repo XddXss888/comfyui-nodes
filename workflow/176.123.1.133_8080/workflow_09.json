@@ -1,0 +1,750 @@
+{
+  "1": {
+    "inputs": {
+      "ckpt_name": "Comix_b3.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Загрузить сheckpoint"
+    }
+  },
+  "2": {
+    "inputs": {
+      "ckpt_name": "LuMix.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Загрузить сheckpoint"
+    }
+  },
+  "3": {
+    "inputs": {
+      "time_embed.": [
+        "18",
+        1
+      ],
+      "label_emb.": [
+        "18",
+        2
+      ],
+      "input_blocks.0": [
+        "18",
+        3
+      ],
+      "input_blocks.1": [
+        "18",
+        4
+      ],
+      "input_blocks.2": [
+        "18",
+        5
+      ],
+      "input_blocks.3": [
+        "18",
+        6
+      ],
+      "input_blocks.4": [
+        "18",
+        7
+      ],
+      "input_blocks.5": [
+        "18",
+        8
+      ],
+      "input_blocks.6": [
+        "18",
+        9
+      ],
+      "input_blocks.7": [
+        "18",
+        10
+      ],
+      "input_blocks.8": [
+        "18",
+        11
+      ],
+      "middle_block.0": [
+        "18",
+        12
+      ],
+      "middle_block.1": [
+        "18",
+        13
+      ],
+      "middle_block.2": [
+        "18",
+        14
+      ],
+      "output_blocks.0": [
+        "18",
+        15
+      ],
+      "output_blocks.1": [
+        "18",
+        16
+      ],
+      "output_blocks.2": [
+        "18",
+        17
+      ],
+      "output_blocks.3": [
+        "18",
+        18
+      ],
+      "output_blocks.4": [
+        "18",
+        19
+      ],
+      "output_blocks.5": [
+        "18",
+        20
+      ],
+      "output_blocks.6": [
+        "18",
+        21
+      ],
+      "output_blocks.7": [
+        "18",
+        22
+      ],
+      "output_blocks.8": [
+        "18",
+        23
+      ],
+      "out.": [
+        "18",
+        24
+      ],
+      "model1": [
+        "1",
+        0
+      ],
+      "model2": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "ModelMergeSDXL",
+    "_meta": {
+      "title": "Слияние моделей SDXL"
+    }
+  },
+  "4": {
+    "inputs": {
+      "seed": 311704391057038,
+      "steps": 20,
+      "cfg": 8.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.75,
+      "model": [
+        "3",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "5": {
+    "inputs": {
+      "samples": [
+        "4",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "Декодировать VAE"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "solo,\n\n\ncleavage,\nlooking at viewer,\nshirt,\n\ncel shading,\ngrey background,",
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Кодирование текста CLIP (Запрос)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Кодирование текста CLIP (Запрос)"
+    }
+  },
+  "14": {
+    "inputs": {
+      "image": "asdfasdf.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Загрузить изображение"
+    }
+  },
+  "15": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "width": 700,
+      "height": 1000,
+      "crop": "center",
+      "image": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Масштабировать изображение"
+    }
+  },
+  "16": {
+    "inputs": {
+      "pixels": [
+        "15",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "Кодировать VAE"
+    }
+  },
+  "18": {
+    "inputs": {
+      "experiment_name": "Experiment_1",
+      "generation_number": 4,
+      "mutation_rate": 0.13,
+      "mutation_sigma": 0.13,
+      "individual_list": [
+        "61",
+        0
+      ]
+    },
+    "class_type": "GA_Generator",
+    "_meta": {
+      "title": "🧬 GA Crossover & Mutator"
+    }
+  },
+  "19": {
+    "inputs": {
+      "images": [
+        "5",
+        0
+      ],
+      "generation_data": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "GA_ImageSaver",
+    "_meta": {
+      "title": "🧬 GA Image Saver"
+    }
+  },
+  "22": {
+    "inputs": {
+      "inputs.input0": [
+        "54",
+        0
+      ],
+      "inputs.input1": [
+        "66",
+        0
+      ],
+      "inputs.input2": [
+        "65",
+        0
+      ],
+      "inputs.input3": [
+        "64",
+        0
+      ]
+    },
+    "class_type": "CreateList",
+    "_meta": {
+      "title": "Создать список"
+    }
+  },
+  "40": {
+    "inputs": {
+      "images": [
+        "55",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Предварительный просмотр изображения"
+    }
+  },
+  "54": {
+    "inputs": {
+      "image": "individual_000_6812.png",
+      "style": 5,
+      "color": 5,
+      "pose": 5,
+      "face": 5
+    },
+    "class_type": "GA_ImageLoader",
+    "_meta": {
+      "title": "🧬 GA Image Loader & Scorer"
+    }
+  },
+  "55": {
+    "inputs": {
+      "title": "Population Genome Overlay",
+      "alpha": 0.7,
+      "linewidth": 1.8,
+      "show_mean": true,
+      "show_std": true,
+      "individual_list": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "GA_GenomeVisualizer",
+    "_meta": {
+      "title": "🧬 GA Genome Visualizer"
+    }
+  },
+  "60": {
+    "inputs": {
+      "inputs.input0": [
+        "71",
+        0
+      ],
+      "inputs.input1": [
+        "70",
+        0
+      ],
+      "inputs.input2": [
+        "69",
+        0
+      ],
+      "inputs.input3": [
+        "68",
+        0
+      ]
+    },
+    "class_type": "CreateList",
+    "_meta": {
+      "title": "Создать список"
+    }
+  },
+  "61": {
+    "inputs": {
+      "inputs.input0": [
+        "22",
+        0
+      ],
+      "inputs.input1": [
+        "60",
+        0
+      ],
+      "inputs.input2": [
+        "77",
+        0
+      ],
+      "inputs.input3": [
+        "89",
+        0
+      ]
+    },
+    "class_type": "CreateList",
+    "_meta": {
+      "title": "Создать список"
+    }
+  },
+  "62": {
+    "inputs": {
+      "title": "Population Genome Overlay",
+      "alpha": 0.7,
+      "linewidth": 1.8,
+      "show_mean": true,
+      "show_std": true,
+      "individual_list": [
+        "60",
+        0
+      ]
+    },
+    "class_type": "GA_GenomeVisualizer",
+    "_meta": {
+      "title": "🧬 GA Genome Visualizer"
+    }
+  },
+  "63": {
+    "inputs": {
+      "images": [
+        "62",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Предварительный просмотр изображения"
+    }
+  },
+  "64": {
+    "inputs": {
+      "image": "individual_000_3605.png",
+      "style": 5,
+      "color": 5,
+      "pose": 5,
+      "face": 5
+    },
+    "class_type": "GA_ImageLoader",
+    "_meta": {
+      "title": "🧬 GA Image Loader & Scorer"
+    }
+  },
+  "65": {
+    "inputs": {
+      "image": "individual_000_2721.png",
+      "style": 5,
+      "color": 5,
+      "pose": 5,
+      "face": 5
+    },
+    "class_type": "GA_ImageLoader",
+    "_meta": {
+      "title": "🧬 GA Image Loader & Scorer"
+    }
+  },
+  "66": {
+    "inputs": {
+      "image": "individual_000_1452.png",
+      "style": 5,
+      "color": 5,
+      "pose": 5,
+      "face": 5
+    },
+    "class_type": "GA_ImageLoader",
+    "_meta": {
+      "title": "🧬 GA Image Loader & Scorer"
+    }
+  },
+  "68": {
+    "inputs": {
+      "image": "individual_000_9349.png",
+      "style": 5,
+      "color": 5,
+      "pose": 5,
+      "face": 5
+    },
+    "class_type": "GA_ImageLoader",
+    "_meta": {
+      "title": "🧬 GA Image Loader & Scorer"
+    }
+  },
+  "69": {
+    "inputs": {
+      "image": "individual_000_8955.png",
+      "style": 5,
+      "color": 5,
+      "pose": 5,
+      "face": 5
+    },
+    "class_type": "GA_ImageLoader",
+    "_meta": {
+      "title": "🧬 GA Image Loader & Scorer"
+    }
+  },
+  "70": {
+    "inputs": {
+      "image": "individual_000_8102.png",
+      "style": 5,
+      "color": 5,
+      "pose": 5,
+      "face": 5
+    },
+    "class_type": "GA_ImageLoader",
+    "_meta": {
+      "title": "🧬 GA Image Loader & Scorer"
+    }
+  },
+  "71": {
+    "inputs": {
+      "image": "individual_000_1754.png",
+      "style": 5,
+      "color": 5,
+      "pose": 5,
+      "face": 5
+    },
+    "class_type": "GA_ImageLoader",
+    "_meta": {
+      "title": "🧬 GA Image Loader & Scorer"
+    }
+  },
+  "73": {
+    "inputs": {
+      "image": "individual_000_6831.png",
+      "style": 5,
+      "color": 5,
+      "pose": 5,
+      "face": 5
+    },
+    "class_type": "GA_ImageLoader",
+    "_meta": {
+      "title": "🧬 GA Image Loader & Scorer"
+    }
+  },
+  "74": {
+    "inputs": {
+      "image": "individual_000_6147.png",
+      "style": 5,
+      "color": 5,
+      "pose": 5,
+      "face": 5
+    },
+    "class_type": "GA_ImageLoader",
+    "_meta": {
+      "title": "🧬 GA Image Loader & Scorer"
+    }
+  },
+  "75": {
+    "inputs": {
+      "image": "individual_000_1038.png",
+      "style": 5,
+      "color": 5,
+      "pose": 5,
+      "face": 5
+    },
+    "class_type": "GA_ImageLoader",
+    "_meta": {
+      "title": "🧬 GA Image Loader & Scorer"
+    }
+  },
+  "76": {
+    "inputs": {
+      "image": "individual_000_4875.png",
+      "style": 5,
+      "color": 5,
+      "pose": 5,
+      "face": 5
+    },
+    "class_type": "GA_ImageLoader",
+    "_meta": {
+      "title": "🧬 GA Image Loader & Scorer"
+    }
+  },
+  "77": {
+    "inputs": {
+      "inputs.input0": [
+        "73",
+        0
+      ],
+      "inputs.input1": [
+        "74",
+        0
+      ],
+      "inputs.input2": [
+        "75",
+        0
+      ],
+      "inputs.input3": [
+        "76",
+        0
+      ]
+    },
+    "class_type": "CreateList",
+    "_meta": {
+      "title": "Создать список"
+    }
+  },
+  "78": {
+    "inputs": {
+      "title": "Population Genome Overlay",
+      "alpha": 0.7,
+      "linewidth": 1.8,
+      "show_mean": true,
+      "show_std": true,
+      "individual_list": [
+        "77",
+        0
+      ]
+    },
+    "class_type": "GA_GenomeVisualizer",
+    "_meta": {
+      "title": "🧬 GA Genome Visualizer"
+    }
+  },
+  "79": {
+    "inputs": {
+      "images": [
+        "78",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Предварительный просмотр изображения"
+    }
+  },
+  "80": {
+    "inputs": {
+      "title": "Population Genome Overlay",
+      "alpha": 0.7,
+      "linewidth": 1.8,
+      "show_mean": true,
+      "show_std": true,
+      "individual_list": [
+        "61",
+        0
+      ]
+    },
+    "class_type": "GA_GenomeVisualizer",
+    "_meta": {
+      "title": "🧬 GA Genome Visualizer"
+    }
+  },
+  "81": {
+    "inputs": {
+      "images": [
+        "80",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Предварительный просмотр изображения"
+    }
+  },
+  "85": {
+    "inputs": {
+      "image": "individual_000_3115.png",
+      "style": 5,
+      "color": 5,
+      "pose": 5,
+      "face": 5
+    },
+    "class_type": "GA_ImageLoader",
+    "_meta": {
+      "title": "🧬 GA Image Loader & Scorer"
+    }
+  },
+  "86": {
+    "inputs": {
+      "image": "individual_000_2480.png",
+      "style": 5,
+      "color": 5,
+      "pose": 5,
+      "face": 5
+    },
+    "class_type": "GA_ImageLoader",
+    "_meta": {
+      "title": "🧬 GA Image Loader & Scorer"
+    }
+  },
+  "87": {
+    "inputs": {
+      "image": "individual_000_3614.png",
+      "style": 5,
+      "color": 5,
+      "pose": 5,
+      "face": 5
+    },
+    "class_type": "GA_ImageLoader",
+    "_meta": {
+      "title": "🧬 GA Image Loader & Scorer"
+    }
+  },
+  "88": {
+    "inputs": {
+      "image": "individual_000_6878.png",
+      "style": 5,
+      "color": 5,
+      "pose": 5,
+      "face": 5
+    },
+    "class_type": "GA_ImageLoader",
+    "_meta": {
+      "title": "🧬 GA Image Loader & Scorer"
+    }
+  },
+  "89": {
+    "inputs": {
+      "inputs.input0": [
+        "85",
+        0
+      ],
+      "inputs.input1": [
+        "86",
+        0
+      ],
+      "inputs.input2": [
+        "87",
+        0
+      ],
+      "inputs.input3": [
+        "88",
+        0
+      ]
+    },
+    "class_type": "CreateList",
+    "_meta": {
+      "title": "Создать список"
+    }
+  },
+  "90": {
+    "inputs": {
+      "title": "Population Genome Overlay",
+      "alpha": 0.7,
+      "linewidth": 1.8,
+      "show_mean": true,
+      "show_std": true,
+      "individual_list": [
+        "89",
+        0
+      ]
+    },
+    "class_type": "GA_GenomeVisualizer",
+    "_meta": {
+      "title": "🧬 GA Genome Visualizer"
+    }
+  },
+  "91": {
+    "inputs": {
+      "images": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Предварительный просмотр изображения"
+    }
+  }
+}

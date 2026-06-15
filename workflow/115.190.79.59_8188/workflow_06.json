@@ -1,0 +1,18 @@
+{
+  "1": {
+    "class_type": "IDENode",
+    "inputs": {
+      "language": "python",
+      "pycode": "\nimport subprocess\nout = []\n\n# Check nvidia-smi\nr = subprocess.run(['nvidia-smi', '--query-gpu=memory.used,memory.total', '--format=csv,noheader'], capture_output=True, text=True)\nout.append('GPU Memory: ' + r.stdout.strip())\n\n# Check what processes are using GPU\nr2 = subprocess.run(['nvidia-smi', '--query-compute-apps=pid,used_memory,process_name', '--format=csv,noheader'], capture_output=True, text=True)\nout.append('GPU Processes: ' + (r2.stdout.strip() or 'None'))\n\nresult = chr(10).join(out)\n"
+    }
+  },
+  "2": {
+    "class_type": "PreviewTextNode",
+    "inputs": {
+      "text": [
+        "1",
+        0
+      ]
+    }
+  }
+}

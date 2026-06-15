@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "seductive young curvy woman with long black hair\n\nAn obscene 22-year-old woman with long black hair is in a lavish bedroom. She is wearing a polka dot white bra and panties with garter belts, and thigh high stockings. She has long hair with a ribbon in it, and a ribbon choker with a heart charm. She has freckles. She is sucking on a popsicle. Real life.",
+      "text": "A seductive female teacher in an empty classroom after school, completely naked with a thick natural bush of dark pubic hair covering her visible pussy, standing beside the teacher's desk with one hand resting on its surface, legs slightly parted, wearing only glasses, a tight dangerous smile on her lips, confrontational gaze directed forward, pointer lying on the desk, soft afternoon light from the windows casting gentle shadows across her body, medium shot framing her from upper thighs to head with clear anatomical detail and natural proportions.",
       "clip": [
         "72",
         1
@@ -85,9 +85,9 @@
   },
   "68": {
     "inputs": {
-      "width": 1280,
-      "height": 1280,
-      "batch_size": 4
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
     },
     "class_type": "EmptySD3LatentImage",
     "_meta": {
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "izumi_v.2.safetensors",
-      "strength_model": 0.9,
-      "strength_clip": 1.0,
+      "lora_name": "ULRIKANB_SYNTH_zimg_v1.safetensors",
+      "strength_model": 0.82,
+      "strength_clip": 0.86,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -137,7 +137,7 @@
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 990493648306837,
+      "seed": 1109815001262350,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

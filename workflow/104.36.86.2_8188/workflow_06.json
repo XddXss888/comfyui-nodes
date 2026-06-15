@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 665565442,
+      "seed": 313438995,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,naked,looking at viewer,long hair,black hair,ass,looking back,indoors,realistic,(be naked:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,brown eyes, parted lips, teeth, wavy hair, brown footwear, grass, denim, jeans, fence, horse,(Zoom in on chest:1.0),(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20263/28/ac09f7cd5f30450f87526f68f66e4a70.jpg",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2025/10/15/1760518855218.png",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

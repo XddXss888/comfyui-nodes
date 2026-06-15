@@ -31,14 +31,14 @@
   },
   "6": {
     "inputs": {
-      "seed": 67259557717144,
+      "seed": 946450653131005,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0,
       "model": [
-        "32",
+        "1",
         0
       ],
       "positive": [
@@ -285,20 +285,6 @@
     "class_type": "ReferenceLatent",
     "_meta": {
       "title": "参考Latent"
-    }
-  },
-  "32": {
-    "inputs": {
-      "lora_name": "F.1手部优化-手指修复-手部特写-精致手模_V1.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "1",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA加载器（仅模型）"
     }
   }
 }

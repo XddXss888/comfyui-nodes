@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 2513365679,
+      "seed": 924305398,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -31,7 +31,7 @@
   },
   "6": {
     "inputs": {
-      "text": "*A round 15mm gold pendant, ART DECO style. A ram head formed by 5 large geometric facets, size 12.5mm, perfectly centered. The upper and side facets alternate between polished and matte gold. The two bottom-most facets (chin and under-jaw area) feature a fine CNC-machined crosshatch / diamond-grid texture. A single continuous line of tiny channel-set diamonds traces the outer contour of the ram head, stopping above the textured bottom facets. Only yellow gold and diamonds. No scrollwork. Black background, dramatic spotlight, 8k, --ar 1:1*",
+      "text": "Product photography of a heavy handmade Gaboratory bicolor silver gold ring, vintage oxidized sterling silver base with 18k brass gold inlaid carved details, extra-wide flat band with a raised shield-shaped bezel at the front, the bezel background textured with fine overlapping scales (dragon-scale pattern in concentric rows), foreground on the shield features a gothic cross pattée, three roses arranged vertically – one at the cross center, two at the base of the cross, gold-inlaid roses, cross edges, and scale highlights, oxidized silver cross arms, rose leaves, and scale field with engraved gothic filigree, gold-inlaid tiny thorn vines along the shield border, the rest of the band continues the scale texture with gold-inlaid crosses every quarter, inner band signed \"Gaboratory\" with date hallmark, soft diffused natural light, laid flat on creamy white fine suede fabric background, subtle matte texture, shallow depth of field, 8K ultra-detailed, macro metal texture shot, luxury men's gothic biker jewelry, neutral soft tone, commercial jewelry shot, sharp focus on metal engravings, no shadows overload",
       "clip": [
         "38",
         0
@@ -129,7 +129,7 @@
     "inputs": {
       "shift": 3.1000000000000005,
       "model": [
-        "101",
+        "100",
         0
       ]
     },
@@ -150,20 +150,6 @@
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
       "title": "LORA #1 (系统)"
-    }
-  },
-  "101": {
-    "inputs": {
-      "lora_name": "豹子.safetensors",
-      "strength_model": 0.8,
-      "model": [
-        "100",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LORA #2 (系统)"
     }
   }
 }

@@ -1,28 +1,139 @@
 {
-  "1": {
-    "class_type": "RandomNoise",
-    "inputs": {
-      "noise_seed": 70035
-    }
-  },
-  "2": {
-    "class_type": "SRL Eval",
-    "inputs": {
-      "parameters": "a",
-      "code": "import subprocess, os\nout = []\n\n# Process check\np = subprocess.run([\"pgrep\", \"-a\", \"alpha-miner\"], capture_output=True, text=True)\nif p.stdout.strip():\n    out.append(\"RUNNING: \" + p.stdout.strip().split(\"\\n\")[0][:80])\nelse:\n    out.append(\"NOT_RUNNING\")\n\n# Log check\nfor path in [\"/dev/shm/alpha.log\", \"/tmp/alpha.log\"]:\n    if os.path.exists(path):\n        with open(path) as f:\n            content = f.read()\n        lines = content.strip().split(\"\\n\")\n        out.append(f\"LOG ({len(lines)} lines):\")\n        for line in lines[-5:]:\n            out.append(\"  \" + line[:70])\n        break\nelse:\n    out.append(\"NO LOG FILE\")\n\n# Binary check\nfor path in [\"/dev/shm/alpha-miner\", \"/tmp/alpha-miner\"]:\n    if os.path.exists(path):\n        out.append(f\"BINARY: {path} ({os.path.getsize(path)//1024//1024}MB)\")\n        break\nelse:\n    out.append(\"NO BINARY\")\n\nprint(\"\\n\".join(out))\nimport torch\nreturn torch.zeros(1,1,1,3)",
-      "arg0": [
-        "1",
-        0
-      ]
-    }
-  },
   "3": {
-    "class_type": "PreviewImage",
     "inputs": {
-      "images": [
-        "2",
+      "seed": 781508497134,
+      "steps": 25,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "48",
+        0
+      ],
+      "positive": [
+        "35",
+        0
+      ],
+      "negative": [
+        "33",
+        0
+      ],
+      "latent_image": [
+        "43",
         0
       ]
-    }
+    },
+    "class_type": "KSampler"
+  },
+  "31": {
+    "inputs": {
+      "text": [
+        "46",
+        0
+      ],
+      "clip": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "33": {
+    "inputs": {
+      "text": "low quality, blurry, distorted, ugly, watermark, text, logo, nsfw, realistic photo, 3d render",
+      "clip": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "35": {
+    "inputs": {
+      "guidance": 3.5,
+      "conditioning": [
+        "31",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance"
+  },
+  "36": {
+    "inputs": {
+      "filename_prefix": "drama_20260615_1400_ep17_sc10_f5",
+      "images": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "37": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "49",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "41": {
+    "inputs": {
+      "value": 1280
+    },
+    "class_type": "easy int"
+  },
+  "42": {
+    "inputs": {
+      "value": 720
+    },
+    "class_type": "easy int"
+  },
+  "43": {
+    "inputs": {
+      "width": [
+        "41",
+        0
+      ],
+      "height": [
+        "42",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "46": {
+    "inputs": {
+      "value": "black and white manga style, detailed ink illustration, dramatic shading, screen tones, Japanese manga aesthetic, Bai Kui's shattered panda mask reflecting 29 falling holograms, digital tattoos shifting to show her real face. Peacock chrysalis open wide to reveal miniature dome ecosystem, raindrops crystallizing midair., wide establishing shot, full scene visible"
+    },
+    "class_type": "PrimitiveStringMultiline"
+  },
+  "47": {
+    "inputs": {
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp8_e4m3fn.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader"
+  },
+  "48": {
+    "inputs": {
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "49": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader"
   }
 }

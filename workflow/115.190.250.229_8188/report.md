@@ -4,67 +4,67 @@
 **内存**: 110 GB (空闲 85 GB)
 **版本**: 0.22.0
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-14 05:56:14
-**历史总数**: 15 | **成功**: 10
+**扫描时间**: 2026-06-14 14:31:18
+**历史总数**: 50 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `40696210-7828-4a49-84a7-d04707c68a9c`
+- **Prompt ID**: `f19db251-46dd-4015-ac26-f5d98fdee28f`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 2. workflow_02.json
-- **Prompt ID**: `1c205eb3-63b9-46f2-bf49-38508e67038f`
+- **Prompt ID**: `f46fdd45-bee8-41c2-8113-ac638dc4e644`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 3. workflow_03.json
-- **Prompt ID**: `7a094c8e-0154-4c81-943b-212bc34ceedc`
+- **Prompt ID**: `3f4c351b-fa91-400f-8c22-032ae7d1a5c5`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 4. workflow_04.json
-- **Prompt ID**: `b1a4a85e-fe64-4d66-aca6-d3c773ed7db1`
+- **Prompt ID**: `73f44ad1-e183-408a-acfb-81d11dae7ef2`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 5. workflow_05.json
-- **Prompt ID**: `addc76c2-99bb-4601-b277-9e16d8e62a8e`
+- **Prompt ID**: `8f81b7da-8099-4803-835e-8802bc24c988`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 6. workflow_06.json
-- **Prompt ID**: `bf9fc5ac-fea7-47f8-bda8-b5d9d9bce458`
+- **Prompt ID**: `bcb713ef-0f97-40c0-b03f-4eaff624a90c`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 7. workflow_07.json
-- **Prompt ID**: `17c56dd3-7b76-472c-b8ac-b95443e0c2f4`
+- **Prompt ID**: `4bb7ce04-f63b-43f4-ac26-9a79c23b84d8`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 8. workflow_08.json
-- **Prompt ID**: `b27b1810-08ef-49e3-a718-52f6ba13e3b9`
+- **Prompt ID**: `cacab30c-281d-435f-a961-5dded0c1dabb`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 9. workflow_09.json
-- **Prompt ID**: `fac329cf-d6f3-442e-8f3c-596c5e3fc513`
+- **Prompt ID**: `07c688dd-ecbb-4f7f-967d-4438d3578ded`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 10. workflow_10.json
-- **Prompt ID**: `a8124622-521a-40b6-8d77-e685d7484a67`
+- **Prompt ID**: `7487ed75-077e-4bc8-b16a-125cc9696c23`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):

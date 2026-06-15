@@ -28,7 +28,7 @@
         0
       ],
       "lora_name": "flux_korean_girl.safetensors",
-      "strength_model": 0.85
+      "strength_model": 0.8
     }
   },
   "5": {
@@ -38,7 +38,7 @@
         "2",
         0
       ],
-      "text": "A stunning Korean idol-style woman with a platinum blonde pixie cut stands small within a wide environmental portrait on a snow-covered street at night. Shot on 135mm telephoto with compressed background, high angle looking down. She wears a sharply tailored charcoal power suit with peaked lapels, standing beneath golden streetlamps casting warm backlit rim light that traces her silhouette edge. Delicate features, button nose, flawless porcelain skin with subtle highlighter on cheekbones, smoky bronze eyeshadow, nude glossy lips. Elegant and sophisticated expression, chin slightly tilted, one hand adjusting her blazer cuff. Snowflakes caught in warm light create soft bokeh. Atmospheric, cinematic, editorial fashion photography, ultra-detailed skin texture, no text, no watermarks."
+      "text": "A stunning Korean idol photographed from behind on a concert stage, looking over her shoulder with a bright cheerful smile. Heart-shaped face with full lips, flawless dewy skin, ash brown wavy shoulder-length hair catching colored spotlights. She wears sleek black athletic wear with mesh panels, sporty chic styling. Shot on 85mm f/1.4 lens, creamy bokeh dissolving the stage lights into soft orbs of magenta and cyan. Backlit rim light creates a glowing silhouette edge along her hair and shoulders. Wide environmental portrait, she appears small against the vast stage backdrop. Hyper detailed skin texture and luminous eyes reflecting stage lights. Extreme close-up detail on her face despite the wide framing. Styled glamour makeup, soft blush, glossy lips. Ethereal concert atmosphere."
     }
   },
   "6": {
@@ -64,8 +64,8 @@
   "8": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "width": 896,
-      "height": 1280,
+      "width": 1024,
+      "height": 1024,
       "batch_size": 1
     }
   },
@@ -88,9 +88,9 @@
         "8",
         0
       ],
-      "seed": 1198792460,
+      "seed": 175887687,
       "control_after_generate": "fixed",
-      "steps": 22,
+      "steps": 24,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -117,7 +117,7 @@
         "10",
         0
       ],
-      "filename_prefix": "portrait_1198792460"
+      "filename_prefix": "portrait_175887687"
     }
   }
 }

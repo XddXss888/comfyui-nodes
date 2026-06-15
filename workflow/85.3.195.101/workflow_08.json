@@ -72,7 +72,7 @@
   },
   "57:27": {
     "inputs": {
-      "text": "A raw, unedited amateur documentary photograph of Medusa, ancient greek woman. Real human skin with visible pores, freckles, blemishes, and natural texture. Real human eyes. Hair made of genuine live vipers with wet, glossy scales. Shot outdoors in overcast daylight, natural imperfect lighting, grainy 35mm film texture, candid snapshot, authentic look, sharp focus. Background shows blurry, weathered ancient stone ruins.",
+      "text": "A raw, unedited amateur documentary photograph of Medusa, ancient greek woman. Real human skin with visible pores, freckles, blemishes, and natural texture. Real human eyes. Hair made of genuine live vipers with wet, glossy scales. Shot outdoors in overcast daylight, natural imperfect lighting, grainy 35mm film texture, candid snapshot, authentic look, sharp focus. Background shows blurry, weathered ancient stone ruins. full body ",
       "clip": [
         "57:30",
         0
@@ -85,7 +85,7 @@
   },
   "57:13": {
     "inputs": {
-      "width": 1024,
+      "width": 1552,
       "height": 1024,
       "batch_size": 1
     },
@@ -109,7 +109,7 @@
   },
   "57:3": {
     "inputs": {
-      "seed": 42870411653213,
+      "seed": 320004795743185,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "res_multistep",

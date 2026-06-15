@@ -49,7 +49,7 @@
   },
   "7": {
     "inputs": {
-      "text": "masterpiece, best qualit,4K, 8k, hight quality, highres, 1girl, ahri_(league_of_legends), nsfw, fingering, full body, colorfull, nude, pussy, open pussy.open boob,large breasts, self fingering, pussy, solo, fox tail, fox ears, white tail, yellow eyes, masterbation, unaligned breasts, wet, ahegao",
+      "text": "masterpiece, best qualit,4K, 8k, hight quality, highres, 1girl,  ahri_(league_of_legends), nsfw, fingering, full body, black hair, pussy, open pussy.open boob,large breasts, self fingering, pussy, solo, fox tail,white color tail, fox ears, yellow eyes, masterbation, unaligned breasts, wet, ahegao, have facial flushing, on bed, dildo, white skin, @fake_(lord_socar),",
       "clip": [
         "5",
         0
@@ -62,7 +62,7 @@
   },
   "8": {
     "inputs": {
-      "text": "blank page, text, logo, watermark, too many watermarks, reference, signature, artist name, dated, artistic error, scan artifacts, jpeg artifacts, upscaled, aliasing, film grain, heavy film grain, dithering, chromatic aberration, digital dissolve, halftone, screentones, artist:xinzoruo, artist:milkpanda, artist collaboration, one-hour drawing challenge, toon (style), 1990s (style), 4koma, 2koma, mutation, deformed, distorted, disfigured, bad anatomy, unnatural hair, bad face, mob face, bad eyes, empty eyes, bad proportions, bad limbs, amputee, bad arm, bad hands, bad hand structure, extra digits, fewer digits, bad leg, extra leg, distorted composition, bad perspective, multiple views, disorganized colors, unfinished, incomplete, displeasing, very displeasing, unsatisfactory, inadequate, deficient, subpar, poor, blurry, lowres, worst quality, bad quality, fewer details",
+      "text": "blank page, text, logo, watermark, too many watermarks, reference, signature, artist name, dated, artistic error, scan artifacts, jpeg artifacts, upscaled, aliasing, film grain, heavy film grain, dithering, chromatic aberration, digital dissolve, halftone, screentones, artist:xinzoruo, artist:milkpanda, artist collaboration, one-hour drawing challenge, toon (style), 1990s (style), 4koma, 2koma, mutation, deformed, distorted, disfigured, bad anatomy, unnatural hair, bad face, mob face, bad eyes, empty eyes, bad proportions, bad limbs, amputee, bad arm, bad hands, bad hand structure, extra digits, fewer digits, bad leg, extra leg, distorted composition, bad perspective, multiple views, disorganized colors, unfinished, incomplete, displeasing, very displeasing, unsatisfactory, inadequate, deficient, subpar, poor, blurry, lowres, worst quality, bad quality, fewer details, blue skin, red skin, yellow skin",
       "clip": [
         "5",
         0
@@ -75,7 +75,7 @@
   },
   "9": {
     "inputs": {
-      "seed": 814573311468214,
+      "seed": 266390705056321,
       "steps": 20,
       "cfg": 6.0,
       "sampler_name": "dpmpp_2m_sde_heun_gpu",
@@ -105,8 +105,8 @@
   },
   "10": {
     "inputs": {
-      "width": 880,
-      "height": 1232,
+      "width": 1448,
+      "height": 896,
       "batch_size": 1
     },
     "class_type": "EmptyLatentImage",

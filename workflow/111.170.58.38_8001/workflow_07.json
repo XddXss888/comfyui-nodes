@@ -1,7 +1,7 @@
 {
   "12": {
     "inputs": {
-      "image": "260613221617557-1-2-t419hh.jpg"
+      "image": "60615172533284-0115-ho86on.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -10,7 +10,7 @@
   },
   "15": {
     "inputs": {
-      "image": "3-qq20260415-142138-z9iwws.png"
+      "image": "615172533285-1055-1-cgdorz.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -22,7 +22,7 @@
       "api_url": "https://3dcdn.580ai.net/v1beta/models/gemini-3.1-flash-image-preview:generateContent",
       "header_key": "Authorization",
       "header_value": "sk-Lyx9OF97YMK0suEi6ZIPzq4E9d3dhIKJzO2YS5WpAsZbZpxS",
-      "text": "控制制图1模特做图2模特的动作姿势和表情，控制图1模特轻轻旋转裙摆，不要改变图1模特的造型和搭配，不要改变图1模特的五官细节，不要改变图1拍摄的地面，不要改变图1的拍摄场景和光线色调",
+      "text": "将图一服装穿到图二的模特身上，模特不变，背景不变。宽松版型",
       "aspect_ratio": "3:4",
       "image_size": "4K",
       "timeout": 200,

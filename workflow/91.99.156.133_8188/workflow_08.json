@@ -16,7 +16,7 @@
   "3": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "test persistence",
+      "text": "test",
       "clip": [
         "1",
         1
@@ -76,7 +76,7 @@
   "7": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "hermes_persist",
+      "filename_prefix": "hermes_c8cdfe68",
       "images": [
         "6",
         0

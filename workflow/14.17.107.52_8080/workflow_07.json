@@ -1,0 +1,239 @@
+{
+  "71": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "72": {
+    "inputs": {
+      "text": "low quality, blurry",
+      "clip": [
+        "71",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "73": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "74": {
+    "inputs": {
+      "width": 1080,
+      "height": 1920,
+      "length": 1,
+      "batch_size": 1
+    },
+    "class_type": "EmptyHunyuanLatentVideo",
+    "_meta": {
+      "title": "空Latent视频（Hunyuan）"
+    }
+  },
+  "75": {
+    "inputs": {
+      "unet_name": "wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "76": {
+    "inputs": {
+      "unet_name": "wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "82": {
+    "inputs": {
+      "shift": 5.0,
+      "model": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "83": {
+    "inputs": {
+      "lora_name": "lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "75",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "85": {
+    "inputs": {
+      "lora_name": "lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "76",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "shift": 5.0,
+      "model": [
+        "85",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "118",
+        0
+      ],
+      "vae": [
+        "73",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "动漫，视觉风格：动漫\n画面风格：动漫3D\n高质量大师级动漫玄幻古风插画漫画角色：\n陆泽是一位中年男性，拥有高智商反派的专业形象，具备斯文败类的气质。他有着深邃的眼睛和锐利的目光，透露出智慧与狡黠。他的体态修长而健硕，皮肤白皙，散发出一种冷峻的美感。陆泽留着整齐的短发，显得干练而有魅力。他总是穿着剪裁合身的黑色西装，搭配白色衬衫和深色领带，展现出西装暴徒的独特风格。他的微表情管理能力顶级，能够精准地演绎心理扭曲的角色，给人带来强烈的压迫感。陆泽以其极强的台词功底和实力派演技，在影视作品中塑造了一个个令人难忘的角色。\n镜头方向：正面\n画面要求：\n超高清32K，高质量，有质感，漫画风格光影渲染，赛璐珞与厚涂结合，色彩通透饱满，专业角色设计，精致的五官比例，富有表现力的眼神光。\n负面提示（强烈负面）：\n低质量，模糊，失真，变形，畸形，丑陋，粗糙，低分辨率，水印，文字，签名，噪点，锯齿，过度曝光，阴影过重，光线平淡。油画风格，水彩风格，3D渲染，低多边形。手指数量错误，肢体比例失调。photorealistic, realistic, 3d, cgi, render, photography, sketch, monochrome, grayscale, bad anime, deformed anime, flat color, flat shading, low quality anime",
+      "clip": [
+        "71",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "114": {
+    "inputs": {
+      "samples": [
+        "117",
+        0
+      ],
+      "vae": [
+        "73",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "117": {
+    "inputs": {
+      "seed": 622509951,
+      "steps": 10,
+      "cfg": 1.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "82",
+        0
+      ],
+      "positive": [
+        "89",
+        0
+      ],
+      "negative": [
+        "72",
+        0
+      ],
+      "latent_image": [
+        "74",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "118": {
+    "inputs": {
+      "seed": 622509951,
+      "steps": 10,
+      "cfg": 1.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.3,
+      "model": [
+        "86",
+        0
+      ],
+      "positive": [
+        "89",
+        0
+      ],
+      "negative": [
+        "72",
+        0
+      ],
+      "latent_image": [
+        "117",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "119": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  }
+}

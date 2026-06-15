@@ -1,0 +1,101 @@
+{
+  "3": {
+    "class_type": "KSampler",
+    "inputs": {
+      "cfg": 1.0,
+      "denoise": 1.0,
+      "latent_image": [
+        "5",
+        0
+      ],
+      "model": [
+        "12",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "seed": 72038400508689,
+      "steps": 4
+    }
+  },
+  "5": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "batch_size": 1,
+      "height": 1024,
+      "width": 1024
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "11",
+        0
+      ],
+      "text": "A high-quality, realistic photo of a single male engineer wearing a hard hat and safety vest, standing alone in a vast, lush green field. In the distant background, a massive industrial boiler stands prominently against the horizon. Cinematic lighting, wide shot, professional photography."
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "11",
+        0
+      ],
+      "text": ""
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "vision_",
+      "images": [
+        "8",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    }
+  },
+  "11": {
+    "class_type": "DualCLIPLoader",
+    "inputs": {
+      "clip_name1": "t5xxl_fp8_e4m3fn.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "flux"
+    }
+  },
+  "12": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "flux1-schnell-fp8.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    }
+  }
+}

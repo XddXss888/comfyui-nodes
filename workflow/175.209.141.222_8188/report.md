@@ -4,8 +4,8 @@
 **内存**: 31 GB (空闲 23 GB)
 **版本**: 0.22.0
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-14 05:56:17
-**历史总数**: 11 | **成功**: 7
+**扫描时间**: 2026-06-15 18:27:45
+**历史总数**: 15 | **成功**: 10
 
 ## 工作流列表
 
@@ -70,4 +70,31 @@
   - Juggernaut-X-RunDiffusion-NSFW.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] Naked woman
+  - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality
+
+### 8. workflow_08.json
+- **Prompt ID**: `d3572e64-0f69-485c-a383-a732e66a785b`
+- **类型**: 文生图
+- **节点数**: 7
+- **模型** (1):
+  - DreamShaperXL_Turbo_v2_1.safetensors
+
+### 9. workflow_09.json
+- **Prompt ID**: `e76ba62e-0eed-4c41-b494-1abfac633702`
+- **类型**: 文生图
+- **节点数**: 7
+- **模型** (1):
+  - Juggernaut-X-RunDiffusion-NSFW.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Naked woman
+  - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality
+
+### 10. workflow_10.json
+- **Prompt ID**: `9ae5152b-752b-4840-ad4b-3d6771d7984f`
+- **类型**: 文生图
+- **节点数**: 7
+- **模型** (1):
+  - Juggernaut-X-RunDiffusion-NSFW.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Head chopped off with blood by a islamist terrorist in the desert
   - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality

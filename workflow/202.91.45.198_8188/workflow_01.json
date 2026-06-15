@@ -1,7 +1,7 @@
 {
   "10": {
     "inputs": {
-      "model": "hy3dgen\\hunyuan3d-dit-v2-0-fp16.safetensors",
+      "model": "hunyuan3d-dit-v2-0-fp16.safetensors",
       "attention_mode": "sdpa",
       "cublas_ops": false
     },
@@ -12,7 +12,7 @@
   },
   "13": {
     "inputs": {
-      "image": "c6-before.png"
+      "image": "4wd.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -48,7 +48,7 @@
       "steps": 50,
       "width": 512,
       "height": 512,
-      "cfg_image": 1.0,
+      "cfg_image": 1,
       "seed": 0,
       "delight_pipe": [
         "28",
@@ -222,7 +222,7 @@
       "view_size": 512,
       "steps": 25,
       "seed": 1024,
-      "denoise_strength": 1.0,
+      "denoise_strength": 1,
       "pipeline": [
         "85",
         0

@@ -12,7 +12,7 @@
   "104": {
     "inputs": {
       "model": [
-        "138",
+        "159",
         0
       ],
       "shift": 5.000000000000001
@@ -70,39 +70,6 @@
     },
     "class_type": "RifeTensorrt"
   },
-  "138": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "None",
-      "lora_03": "None",
-      "lora_04": "wan2.1\\woman_undressing_v1.0_wan14b_epoch048.safetensors",
-      "lora_05": "wan2.1\\pulldown-shura-final-000006.safetensors",
-      "lora_06": "wan2.1\\rip-shura-000006.safetensors",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "156",
-        0
-      ],
-      "strength_01": 2.0000000000000004,
-      "strength_02": 0.0,
-      "strength_03": 0.0,
-      "strength_04": 2.0000000000000004,
-      "strength_05": 1.0,
-      "strength_06": 3.0000000000000004,
-      "strength_07": 1.0,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
-  },
   "139": {
     "inputs": {
       "clip": [
@@ -110,25 +77,25 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "None",
-      "lora_03": "None",
-      "lora_04": "wan2.1\\woman_undressing_v1.0_wan14b_epoch048.safetensors",
-      "lora_05": "wan2.1\\pulldown-shura-final-000006.safetensors",
-      "lora_06": "wan2.1\\rip-shura-000006.safetensors",
+      "lora_02": "wan0907\\T2V_facefuck_low.safetensors",
+      "lora_03": "wan2.1\\crash-zoom-out.safetensors",
+      "lora_04": "None",
+      "lora_05": "None",
+      "lora_06": "None",
       "lora_07": "None",
       "lora_08": "None",
       "lora_09": "None",
       "lora_10": "None",
       "model": [
-        "157",
+        "164",
         0
       ],
       "strength_01": 1.0,
       "strength_02": 1.0000000000000002,
-      "strength_03": 0.0,
+      "strength_03": 1.0000000000000002,
       "strength_04": 1.0000000000000002,
-      "strength_05": 1.0,
-      "strength_06": 1.0,
+      "strength_05": 0.0,
+      "strength_06": 0.0,
       "strength_07": 1.0,
       "strength_08": 1.0,
       "strength_09": 1.0,
@@ -155,18 +122,51 @@
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/1f95f03e-e8ad-496f-9fcf-503bb5605952.png"
+      "urls": "https://media.pornmaker.cloud/7ff58c1e-e5ae-46e4-9981-3d65a8020a91.png"
     },
     "class_type": "LoadImageFromURL"
   },
-  "156": {
+  "159": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "lora_02": "wan0907\\T2V_facefuck_high.safetensors",
+      "lora_03": "wan2.1\\crash-zoom-out.safetensors",
+      "lora_04": "None",
+      "lora_05": "None",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "163",
+        0
+      ],
+      "strength_01": 2.0,
+      "strength_02": 1.0000000000000002,
+      "strength_03": 1.5000000000000002,
+      "strength_04": 1.0000000000000002,
+      "strength_05": 0.0,
+      "strength_06": 0.0,
+      "strength_07": 1.0000000000000002,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
+  },
+  "163": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
   },
-  "157": {
+  "164": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 6034743127832165716,
+      "noise_seed": 867011001434946966,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 4298845059512227206,
+      "noise_seed": 8659102738060656878,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": "A woman quickly removing all her clothing, revealing a completely naked body, beautiful nipples and pubic hair, her breasts bouncing. Absolutely fixed frame, zero camera movement, no pans, no zooms, completely still camera"
+      "text": " realistic. real life. POV. A girl in the middle of the screen. the camera instantly cr34sh crash zoom out effect to a full pov view ofClose-up shot of woman. She is engaged in a blowjob with a man, laying on top of him, sucking his large erect penis. The view is focusing on the woman's face and the man's penis and testicles. The man aggressively thrusts his erect penis in the woman's mouth, moving his penis back and forth quickly. They are having fast, rough, intense blowjob. "
     },
     "class_type": "CLIPTextEncode"
   },

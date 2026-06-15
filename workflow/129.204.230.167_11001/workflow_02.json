@@ -1,13 +1,13 @@
 {
   "1": {
     "inputs": {
-      "image_path_or_URL": "https://cos.credit99.cn/2026-06-10/69d367054c6e2e96ca9f00fc/upload/20260610213834569-_20260610143414_334-9e9epl.png",
+      "image_path_or_URL": "https://cos.credit99.cn/2026-06-15/69d367054c6e2e96ca9f00fc/upload/20260615160915102-_3-afjdls.jpg",
       "image": "",
       "upscale_method": "lanczos",
       "megapixels": 0.0,
       "scale_by": 1.0,
       "resize_mode": "longest_side",
-      "size": 768
+      "size": 1024
     },
     "class_type": "AILab_LoadImage",
     "_meta": {
@@ -16,66 +16,32 @@
   },
   "2": {
     "inputs": {
-      "image_path_or_URL": "https://cos.credit99.cn/2026-06-12/69d367054c6e2e96ca9f00fc/upload/20260612225313415-20260308173402315-0-9fpzk7.png",
-      "image": "",
-      "upscale_method": "lanczos",
-      "megapixels": 0,
-      "scale_by": 1,
-      "resize_mode": "longest_side",
-      "size": 768
+      "action": "append",
+      "tidy_tags": "no",
+      "text_a": "{\n  \"task_objective\": \"Industrial Visualization & 9-View 3x3 - Transform uploaded product image into 9 standard visualization maps, original structure FULLY PRESERVED\",\n  \"input_assets\": {\n    \"source_image\": \"User Uploaded Image - Product subject, composition, proportions, structural features, mechanical details - LOCKED\"\n  },\n  \"workflow\": {\n    \"step_1\": \"Auto-detect product structure from uploaded image: shape, contour, proportions, mechanical details, spatial relationships\",\n    \"step_2\": \"Generate 9 visualization maps ALL from the original uploaded image independently— each derived directly from source, NOT sequentially from each other\",\n    \"step_3\": \"Assemble 9-view 3x3 grid, professional engineering layout\"\n  },",
+      "text_b": "  \"outputs\": {\n    \"view_1\": \"Technical Line Art - Precise industrial line drawing, black lines on white bg, clear mechanical edges, engineering drawing style\",\n    \"view_2\": \"Industrial 3D Print Depth Map: High-precision grayscale height-field data optimized for SLA/SLS laser printing. Near=bright(255), Far=dark(0). 16-bit dynamic range with smooth gradients and micron-level detail. Strict manufacturing compliance: Z-axis displacement optimized, overhangs <45°, minimum wall thickness maintained. Retain sharp edges and embossed patterns. Pure dimensional accuracy, no lighting/shading, slicer-ready output\",\n    \"view_3\": \"3D Laser Print Depth Map - high-precision grayscale depth map optimized for laser 3D printing, near=bright (255) far=dark (0), 16-bit dynamic range, micron-level surface detail preserved, smooth gradient transitions, optimized Z-axis displacement, overhang <45°, minimum wall thickness SLA/SLS compliant, sharp edges and embossed patterns retained, pure height-field data, engineering-grade dimensional accuracy, slicer-ready output\",\n    \"view_4\": \"Exploded View - Components separated along assembly axes, showing internal structure, technical illustration style, Chinese parts description; high-end visual and typographic elegance\",\n    \"view_5\": \"Aged Brass Render - Warm golden-brown patina, metallic sheen with aged character\",\n    \"view_6\": \"Polished Silver - Mirror-finish silver, high specular reflection, cool metallic luster, flawless chrome-like surface\",\n    \"view_7\": \"Rose Gold - Warm rose-tinted gold, soft pinkish metallic sheen, elegant luxury finish, premium jewelry-grade rendering\",\n    \"view_8\": \"Walnut Wood - Natural walnut grain texture, rich dark brown tones, grain direction following product contours\",\n    \"view_9\": \"Wireframe - Geometric mesh/edge display, visible polygon structure, technical CAD wireframe style\"\n  },",
+      "text_c": "  \"output_requirements\": [\n    \"ALL 9 views MUST preserve identical product structure — same subject, composition, proportions, mechanical details from original image\",\n    \"Each view is independently derived from the ORIGINAL uploaded image — NOT sequentially from the previous view. Same product, different rendering mode only\",\n    \"No text/labels/watermarks except Exploded View (view_4) which includes Chinese parts description\",\n    \"Material renders with physically correct light interaction and realistic surface properties per material type\",\n    \"Premium 3x3 - consistent framing across all views, industrial visualization presentation standard\"\n  ]\n}\n\n    \"source_image\": \"User Uploaded Image - Product subject, composition, proportions, structural features, mechanical details - LOCKED\"\n  },\n  \"workflow\": {\n    \"step_1\": \"Auto-detect product structure from uploaded image: shape, contour, proportions, mechanical details, spatial relationships\",\n    \"step_2\": \"Generate 9 visualization maps ALL from the original uploaded image independently: line art, 3D print depth, exploded view, wireframe, aged brass, polished silver, rose gold, walnut wood, 3D laser print depth — each derived directly from source, NOT sequentially from each other\",\n    \"step_3\": \"Assemble 9-view 3x3 grid, professional engineering layout\"\n  },\n  \"outputs\": {\n    \"view_1\": \"Technical Line Art - Precise industrial line drawing, black lines on white bg, clear mechanical edges, engineering drawing style\",\n    \"view_2\": \"3D Print Depth Map - Pure monochrome grayscale height-field (Near=255, Far=0), zero lighting/shading/AO, 16-bit smooth gradients, DFM compliance: Z-axis optimized, overhangs <45°, valid min wall thickness, slicer-ready output\",\n    \"view_3\": \"3D Laser Print Depth Map - Layered depth bands with laser-etched precision, high-contrast depth contour lines, industrial additive manufacturing visualization\",\n    \"view_4\": \"Exploded View - Components separated along assembly axes, showing internal structure, technical illustration style, Chinese parts description; high-end visual and typographic elegance\",\n    \"view_5\": \"Aged Brass Render - Warm golden-brown patina, subtle oxidation and verdigris accents, metallic sheen with aged character\",\n    \"view_6\": \"Polished Silver - Mirror-finish silver, high specular reflection, cool metallic luster, flawless chrome-like surface\",\n    \"view_7\": \"Rose Gold - Warm rose-tinted gold, soft pinkish metallic sheen, elegant luxury finish, premium jewelry-grade rendering\",\n    \"view_8\": \"Walnut Wood - Natural walnut grain texture, rich dark brown tones, grain direction following product contours\",\n    \"view_9\": \"Wireframe - Geometric mesh/edge display, visible polygon structure, technical CAD wireframe style\"\n  },\n  \"output_requirements\": [\n    \"ALL 9 views MUST preserve identical product structure — same subject, composition, proportions, mechanical details from original image\",\n    \"Each view is independently derived from the ORIGINAL uploaded image — NOT sequentially from the previous view. Same product, different rendering mode only\",\n    \"No text/labels/watermarks except Exploded View (view_4) which includes Chinese parts description\",\n    \"Material renders with physically correct light interaction and realistic surface properties per material type\",\n    \"Premium 3x3 - consistent framing across all views, industrial visualization presentation standard\"\n  ]\n}\n"
     },
-    "class_type": "AILab_LoadImage",
+    "class_type": "StringFunction|pysssss",
     "_meta": {
-      "title": "加载图像 (RMBG) 🖼️"
+      "title": "String Function 🐍"
     }
   },
   "3": {
     "inputs": {
-      "action": "append",
-      "tidy_tags": "no",
-      "text_a": "\"DESIGNATED AREA: Pattern application confined to the center rectangular area only\",\n    \"DESIGNATED TEXT:",
-      "text_b": "No Text",
-      "text_c": ", specified text in soft cute cartoon font, auto-scaled, no overflow,elegant typography matching framework\",\n    \"MATERIAL: Brushed matte base + oxidized patina relief, warm vintage golden tones — zero color saturation\"同\",",
-      "result": ""
-    },
-    "class_type": "StringFunction|pysssss",
-    "_meta": {
-      "title": "String Function 🐍"
-    }
-  },
-  "4": {
-    "inputs": {
-      "action": "append",
-      "tidy_tags": "no",
-      "text_a": "{\n  \"task_objective\": \"Industrial Line Art to Relief Pattern Design & 9-View 3x3 - Map Figure 2 patterns onto Figure 1 product, view_1 precise replica, views 2-9 creative variations,  material, original product structure FULLY PRESERVED\",\n  \"input_assets\": {\n    \"product_reference\": \"Figure 1 Industrial Line Art - Outer frame dimensions, shape, outline, structural features - LOCKED\",\n    \"pattern_inspiration\": \"Figure 2 Inspiration Image - Decorative patterns, surface textures, artistic motifs — pattern structure only, discard color\"\n},\n  \"workflow\": {\n    \"step_1\": \"Auto-detect Figure 1 product structure + extract Figure 2 pattern structure (discard color)\",\n    \"step_2\": \"View_1 (FIXED): 1:1 replica of Figure 2 pattern within designated_area. Views 2-9 (CREATIVE): free designs inspired by Figure 2 aesthetic DNA within designated_area\",\n    \"step_3\": \"Verify Figure 1 product specs/dimensions/shape unchanged, apply  material + designated_text, assemble 9-view 3x3 grid\"\n  },\n  \"outputs\": {\n    \"view_1\": \"Precise Replica - 1:1 replica of Figure 2 pattern, self-adapted to Figure 1 product within designated_area, \",\n    \"view_2\": \"Creative Variation 02 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_3\": \"Creative Variation 03 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_4\": \"Creative Variation 04 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_5\": \"Creative Variation 05 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_6\": \"Creative Variation 06 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_7\": \"Creative Variation 07 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_8\": \"Creative Variation 08 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_9\": \"Creative Variation 09 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \"\n  },\n  \"output_requirements\": [\n    \"PRODUCT LOCK: Outer frame dimensions and shape identical to Figure 1 — zero deviation across all 9 views\",\n    \"PATTERN SELF-ADAPT: Patterns from Figure 2 automatically wrap/fill/scale to fit within designated_area\",\n    \"VIEW_1 FIXED: Strict 1:1 replica of Figure 2 pattern; VIEWS 2-9 CREATIVE: free designs sharing Figure 2 aesthetic DNA\",\n\n",
-      "text_b": [
-        "3",
-        0
-      ],
-      "text_c": "    \"No text/labels/watermarks except designated_text; Premium 3x3, macro front view\"\n  ]\n}\n",
-      "result": "{\n  \"task_objective\": \"Industrial Line Art to Relief Pattern Design & 9-View 3x3 - Map Figure 2 patterns onto Figure 1 product, view_1 precise replica, views 2-9 creative variations,  material, original product structure FULLY PRESERVED\",\n  \"input_assets\": {\n    \"product_reference\": \"Figure 1 Industrial Line Art - Outer frame dimensions, shape, outline, structural features - LOCKED\",\n    \"pattern_inspiration\": \"Figure 2 Inspiration Image - Decorative patterns, surface textures, artistic motifs — pattern structure only, discard color\"\n},\n  \"workflow\": {\n    \"step_1\": \"Auto-detect Figure 1 product structure + extract Figure 2 pattern structure (discard color)\",\n    \"step_2\": \"View_1 (FIXED): 1:1 replica of Figure 2 pattern within designated_area. Views 2-9 (CREATIVE): free designs inspired by Figure 2 aesthetic DNA within designated_area\",\n    \"step_3\": \"Verify Figure 1 product specs/dimensions/shape unchanged, apply  material + designated_text, assemble 9-view 3x3 grid\"\n  },\n  \"outputs\": {\n    \"view_1\": \"Precise Replica - 1:1 replica of Figure 2 pattern, self-adapted to Figure 1 product within designated_area, \",\n    \"view_2\": \"Creative Variation 02 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_3\": \"Creative Variation 03 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_4\": \"Creative Variation 04 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_5\": \"Creative Variation 05 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_6\": \"Creative Variation 06 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_7\": \"Creative Variation 07 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_8\": \"Creative Variation 08 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_9\": \"Creative Variation 09 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \"\n  },\n  \"output_requirements\": [\n    \"PRODUCT LOCK: Outer frame dimensions and shape identical to Figure 1 — zero deviation across all 9 views\",\n    \"PATTERN SELF-ADAPT: Patterns from Figure 2 automatically wrap/fill/scale to fit within designated_area\",\n    \"VIEW_1 FIXED: Strict 1:1 replica of Figure 2 pattern; VIEWS 2-9 CREATIVE: free designs sharing Figure 2 aesthetic DNA\",\n    \"DESIGNATED AREA: Pattern application confined to specified product surface area only\",\n    \"DESIGNATED TEXT: specified text in soft cute cartoon font, auto-scaled, no overflow\",\n    \"MATERIAL: Brushed matte base + mirror-polished relief, monochrome  metallic tones — zero color saturation\",\n    \"No text/labels/watermarks except designated_text; Premium 3x3, macro front view\"\n  ]\n}\n"
-    },
-    "class_type": "StringFunction|pysssss",
-    "_meta": {
-      "title": "String Function 🐍"
-    }
-  },
-  "5": {
-    "inputs": {
-      "inputcount": 2,
+      "inputcount": 1,
       "prompt": [
-        "4",
+        "2",
         0
       ],
-      "aspect_ratio": "1:1",
+      "aspect_ratio": [
+        "5",
+        0
+      ],
       "resolution": "4k",
       "Update inputs(支持多图点我）": null,
       "images": [
         "1",
-        0
-      ],
-      "image_2": [
-        "2",
         0
       ]
     },
@@ -85,28 +51,27 @@
       "trd_node": true
     }
   },
-  "6": {
+  "4": {
     "inputs": {
       "prompt": [
-        "4",
+        "2",
         0
       ],
       "temperature": 0.9,
       "top_p": 0.95,
-      "seed": 976169495,
+      "seed": 79564115,
       "max_tokens": 32768,
-      "aspect_ratio": "1:1",
+      "aspect_ratio": [
+        "5",
+        0
+      ],
       "resolution": "4K",
       "thinking_level": "disabled",
-      "inputcount": 2,
+      "inputcount": 1,
       "Update inputs(支持多图点我）": null,
       "mode": "third-party",
       "images": [
         "1",
-        0
-      ],
-      "image_2": [
-        "2",
         0
       ]
     },
@@ -116,15 +81,24 @@
       "trd_node": true
     }
   },
-  "7": {
+  "5": {
+    "inputs": {
+      "ratio": "1:1"
+    },
+    "class_type": "ratio_selector",
+    "_meta": {
+      "title": "ratio selector"
+    }
+  },
+  "6": {
     "inputs": {
       "index": 1,
       "image0": [
-        "5",
+        "3",
         0
       ],
       "image1": [
-        "6",
+        "4",
         0
       ]
     },
@@ -133,12 +107,12 @@
       "title": "图像编号切换"
     }
   },
-  "8": {
+  "7": {
     "inputs": {
       "columns": 3,
       "rows": 3,
       "image": [
-        "7",
+        "6",
         0
       ]
     },
@@ -147,11 +121,11 @@
       "title": "Image Grid To Batch"
     }
   },
-  "9": {
+  "8": {
     "inputs": {
       "select": "0,1,2,3,4,5,6,7",
       "images": [
-        "8",
+        "7",
         0
       ]
     },
@@ -160,11 +134,11 @@
       "title": "图层工具：批次选择器"
     }
   },
-  "10": {
+  "9": {
     "inputs": {
-      "filename_prefix": "ind",
+      "filename_prefix": "Ind420",
       "images": [
-        "9",
+        "8",
         0
       ]
     },

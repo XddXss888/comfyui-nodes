@@ -1,0 +1,18 @@
+{
+  "1": {
+    "class_type": "IDENode",
+    "inputs": {
+      "language": "python",
+      "pycode": "\nimport os\n\ncomfy_out = r'D:\\server\\ComfyUI_windows_portable\\ComfyUI\\output'\nout = []\nfor f in os.listdir(comfy_out):\n    path = os.path.join(comfy_out, f)\n    if os.path.isfile(path) and not f.endswith('.png'):\n        size = os.path.getsize(path)\n        out.append(f'{f}: {size}')\n\nresult = chr(10).join(out) if out else 'No non-png files'\n"
+    }
+  },
+  "2": {
+    "class_type": "PreviewTextNode",
+    "inputs": {
+      "text": [
+        "1",
+        0
+      ]
+    }
+  }
+}

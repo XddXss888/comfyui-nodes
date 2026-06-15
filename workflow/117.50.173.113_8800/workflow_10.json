@@ -77,24 +77,24 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "myloras9\\BBCDPV3_high_noise.safetensors",
-      "lora_03": "wan2.2\\NSFW-22-H-e8.safetensors",
-      "lora_04": "wan0924\\W22_HN_i2v_POV_Missionary_Insertion_v1.safetensors",
-      "lora_05": "None",
+      "lora_02": "wan2.2\\Wan2.2-T2V-Femaled-Vaginus-High-v1.safetensors",
+      "lora_03": "wan2.2\\wan2.2_i2v_highnoise_pov_missionary_v1.0.safetensors",
+      "lora_04": "wan2.2\\Wan2.2 - T2V - Missionary Sex - HIGH 14B.safetensors",
+      "lora_05": "wan2.1\\crash-zoom-out.safetensors",
       "lora_06": "None",
       "lora_07": "None",
       "lora_08": "None",
       "lora_09": "None",
       "lora_10": "None",
       "model": [
-        "163",
+        "156",
         0
       ],
-      "strength_01": 2.0000000000000004,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 1.0000000000000002,
+      "strength_01": 2.0,
+      "strength_02": 0.0,
+      "strength_03": 1.0,
       "strength_04": 1.0000000000000002,
-      "strength_05": 1.0,
+      "strength_05": 1.5000000000000002,
       "strength_06": 1.0,
       "strength_07": 1.0,
       "strength_08": 1.0,
@@ -110,22 +110,22 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "myloras9\\BBCDPV3_low_noise.safetensors",
-      "lora_03": "wan2.2\\NSFW-22-L-e8.safetensors",
-      "lora_04": "None",
-      "lora_05": "None",
+      "lora_02": "wan2.2\\Wan2.2-T2V-Femaled-Vaginus-Low-V1.safetensors",
+      "lora_03": "wan2.2\\wan2.2_i2v_lownoise_pov_missionary_v1.0.safetensors",
+      "lora_04": "wan2.2\\Wan2.2 - T2V - Missionary Sex - LOW 14B.safetensors",
+      "lora_05": "wan2.1\\crash-zoom-out.safetensors",
       "lora_06": "None",
       "lora_07": "None",
       "lora_08": "None",
       "lora_09": "None",
       "lora_10": "None",
       "model": [
-        "164",
+        "157",
         0
       ],
       "strength_01": 1.0,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 1.0000000000000002,
+      "strength_02": 0.0,
+      "strength_03": 1.0,
       "strength_04": 1.0000000000000002,
       "strength_05": 1.0,
       "strength_06": 1.0,
@@ -155,18 +155,18 @@
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/466f7932-072a-416e-bbb3-bc2c6e894945.png"
+      "urls": "https://media.pornmaker.cloud/01cd361d-61ce-4eba-90c3-8ee430f37beb.png"
     },
     "class_type": "LoadImageFromURL"
   },
-  "163": {
+  "156": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
   },
-  "164": {
+  "157": {
     "inputs": {
       "unet_name": "wan2.2\\wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 6715805006024930119,
+      "noise_seed": 7714662089127423288,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 2546179671225264482,
+      "noise_seed": 3355887132704752092,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": "BBCDP.Immediately cut to an extremely erotic scene. The exact same woman is having group sex with two Black men; she is lying beneath one man who is penetrating her anus while another man is penetrating her vagina."
+      "text": " realistic. real life. POV. A girl in the middle of the screen. the camera instantly cr34sh crash zoom out effect to a full pov view of A woman is lying on her back with her legs spread looking up at the viewer having sex with a man. She is moaning with pleasure. The nude man rapidly thrusts his penis back and forth inside her vagina. Movements are fast with bouncing breasts. "
     },
     "class_type": "CLIPTextEncode"
   },

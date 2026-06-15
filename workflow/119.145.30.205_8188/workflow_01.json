@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 3348079710,
+      "seed": 1398646350,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -31,7 +31,7 @@
   },
   "6": {
     "inputs": {
-      "text": "*A round gold pendant in ART DECO style, central symmetrical composition, intricate scrolling foliage (vine scroll / acanthus) forming a circular medallion pattern, a stylized ram head placed directly above the foliage center, overlapping and integrated, the ram horns seamlessly extending into the scrollwork, black onyx and diamond accents for contrast, polished and matte gold finish, geometric stepped border, luxury jewelry rendering, black background, studio lighting, 8k, --ar 1:1*",
+      "text": "Product photography of a heavy handmade Gaboratory bicolor silver gold pendant, vintage oxidized sterling silver base with 18k brass gold inlaid carved details, centered gothic skull with hollow eye sockets and grinning teeth, a fleur-de-lis emerging from the top of the skull forming the upper cross arm, the left and right cross arms shaped as smaller fleur-de-lis petals, the lower cross arm as a pointed gothic dagger-like tip, gold-inlaid skull teeth, eye rims, and fleur-de-lis petal edges, oxidized silver skull cranium and cross arm cores with engraved gothic veining, top silver bail engraved with \"Gaboratory\", soft diffused natural light, laid flat on creamy white fine suede fabric background, subtle matte texture, shallow depth of field, 8K ultra-detailed, macro metal texture shot, luxury men's gothic biker jewelry, neutral soft tone, commercial jewelry shot, sharp focus on metal engravings, no shadows overload",
       "clip": [
         "38",
         0
@@ -129,7 +129,7 @@
     "inputs": {
       "shift": 3.1000000000000005,
       "model": [
-        "101",
+        "100",
         0
       ]
     },
@@ -150,20 +150,6 @@
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
       "title": "LORA #1 (系统)"
-    }
-  },
-  "101": {
-    "inputs": {
-      "lora_name": "豹子.safetensors",
-      "strength_model": 0.8,
-      "model": [
-        "100",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LORA #2 (系统)"
     }
   }
 }

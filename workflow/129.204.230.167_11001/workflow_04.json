@@ -1,13 +1,13 @@
 {
   "1": {
     "inputs": {
-      "image_path_or_URL": "https://cos.credit99.cn/image/temps/69d367054c6e2e96ca9f00fc/ind_00170_-20260612150501668.png",
+      "image_path_or_URL": "https://cos.credit99.cn/2026-06-15/69d367054c6e2e96ca9f00fc/upload/20260615165943793-image-xe1e21.jpg",
       "image": "",
       "upscale_method": "lanczos",
       "megapixels": 0.0,
       "scale_by": 1.0,
       "resize_mode": "longest_side",
-      "size": 1024
+      "size": 768
     },
     "class_type": "AILab_LoadImage",
     "_meta": {
@@ -16,135 +16,153 @@
   },
   "2": {
     "inputs": {
-      "action": "append",
-      "tidy_tags": "no",
-      "text_a": "{\n  \"task_objective\": \"Industrial Visualization & 9-View 3x3 - Transform uploaded product image into 9 standard visualization maps, original structure FULLY PRESERVED\",\n  \"input_assets\": {\n    \"source_image\": \"User Uploaded Image - Product subject, composition, proportions, structural features, mechanical details - LOCKED\"\n  },\n  \"workflow\": {\n    \"step_1\": \"Auto-detect product structure from uploaded image: shape, contour, proportions, mechanical details, spatial relationships\",\n    \"step_2\": \"Generate 9 visualization maps ALL from the original uploaded image independently— each derived directly from source, NOT sequentially from each other\",\n    \"step_3\": \"Assemble 9-view 3x3 grid, professional engineering layout\"\n  },",
-      "text_b": "  \"outputs\": {\n    \"view_1\": \"Technical Line Art - Precise industrial line drawing, black lines on white bg, clear mechanical edges, engineering drawing style\",\n    \"view_2\": \"Industrial 3D Print Depth Map: High-precision grayscale height-field data optimized for SLA/SLS laser printing. Near=bright(255), Far=dark(0). 16-bit dynamic range with smooth gradients and micron-level detail. Strict manufacturing compliance: Z-axis displacement optimized, overhangs <45°, minimum wall thickness maintained. Retain sharp edges and embossed patterns. Pure dimensional accuracy, no lighting/shading, slicer-ready output\",\n    \"view_3\": \"3D Laser Print Depth Map - high-precision grayscale depth map optimized for laser 3D printing, near=bright (255) far=dark (0), 16-bit dynamic range, micron-level surface detail preserved, smooth gradient transitions, optimized Z-axis displacement, overhang <45°, minimum wall thickness SLA/SLS compliant, sharp edges and embossed patterns retained, pure height-field data, engineering-grade dimensional accuracy, slicer-ready output\",\n    \"view_4\": \"Exploded View - Components separated along assembly axes, showing internal structure, technical illustration style, Chinese parts description; high-end visual and typographic elegance\",\n    \"view_5\": \"Aged Brass Render - Warm golden-brown patina, metallic sheen with aged character\",\n    \"view_6\": \"Polished Silver - Mirror-finish silver, high specular reflection, cool metallic luster, flawless chrome-like surface\",\n    \"view_7\": \"Rose Gold - Warm rose-tinted gold, soft pinkish metallic sheen, elegant luxury finish, premium jewelry-grade rendering\",\n    \"view_8\": \"Walnut Wood - Natural walnut grain texture, rich dark brown tones, grain direction following product contours\",\n    \"view_9\": \"Wireframe - Geometric mesh/edge display, visible polygon structure, technical CAD wireframe style\"\n  },",
-      "text_c": "  \"output_requirements\": [\n    \"ALL 9 views MUST preserve identical product structure — same subject, composition, proportions, mechanical details from original image\",\n    \"Each view is independently derived from the ORIGINAL uploaded image — NOT sequentially from the previous view. Same product, different rendering mode only\",\n    \"No text/labels/watermarks except Exploded View (view_4) which includes Chinese parts description\",\n    \"Material renders with physically correct light interaction and realistic surface properties per material type\",\n    \"Premium 3x3 - consistent framing across all views, industrial visualization presentation standard\"\n  ]\n}\n\n    \"source_image\": \"User Uploaded Image - Product subject, composition, proportions, structural features, mechanical details - LOCKED\"\n  },\n  \"workflow\": {\n    \"step_1\": \"Auto-detect product structure from uploaded image: shape, contour, proportions, mechanical details, spatial relationships\",\n    \"step_2\": \"Generate 9 visualization maps ALL from the original uploaded image independently: line art, 3D print depth, exploded view, wireframe, aged brass, polished silver, rose gold, walnut wood, 3D laser print depth — each derived directly from source, NOT sequentially from each other\",\n    \"step_3\": \"Assemble 9-view 3x3 grid, professional engineering layout\"\n  },\n  \"outputs\": {\n    \"view_1\": \"Technical Line Art - Precise industrial line drawing, black lines on white bg, clear mechanical edges, engineering drawing style\",\n    \"view_2\": \"3D Print Depth Map - Pure monochrome grayscale height-field (Near=255, Far=0), zero lighting/shading/AO, 16-bit smooth gradients, DFM compliance: Z-axis optimized, overhangs <45°, valid min wall thickness, slicer-ready output\",\n    \"view_3\": \"3D Laser Print Depth Map - Layered depth bands with laser-etched precision, high-contrast depth contour lines, industrial additive manufacturing visualization\",\n    \"view_4\": \"Exploded View - Components separated along assembly axes, showing internal structure, technical illustration style, Chinese parts description; high-end visual and typographic elegance\",\n    \"view_5\": \"Aged Brass Render - Warm golden-brown patina, subtle oxidation and verdigris accents, metallic sheen with aged character\",\n    \"view_6\": \"Polished Silver - Mirror-finish silver, high specular reflection, cool metallic luster, flawless chrome-like surface\",\n    \"view_7\": \"Rose Gold - Warm rose-tinted gold, soft pinkish metallic sheen, elegant luxury finish, premium jewelry-grade rendering\",\n    \"view_8\": \"Walnut Wood - Natural walnut grain texture, rich dark brown tones, grain direction following product contours\",\n    \"view_9\": \"Wireframe - Geometric mesh/edge display, visible polygon structure, technical CAD wireframe style\"\n  },\n  \"output_requirements\": [\n    \"ALL 9 views MUST preserve identical product structure — same subject, composition, proportions, mechanical details from original image\",\n    \"Each view is independently derived from the ORIGINAL uploaded image — NOT sequentially from the previous view. Same product, different rendering mode only\",\n    \"No text/labels/watermarks except Exploded View (view_4) which includes Chinese parts description\",\n    \"Material renders with physically correct light interaction and realistic surface properties per material type\",\n    \"Premium 3x3 - consistent framing across all views, industrial visualization presentation standard\"\n  ]\n}\n"
+      "index": 0,
+      "text0": [
+        "5",
+        0
+      ],
+      "text1": [
+        "6",
+        0
+      ],
+      "text2": [
+        "7",
+        0
+      ],
+      "text3": [
+        "8",
+        0
+      ],
+      "text4": [
+        "9",
+        0
+      ],
+      "text5": [
+        "10",
+        0
+      ],
+      "text6": [
+        "11",
+        0
+      ],
+      "text7": [
+        "12",
+        0
+      ]
     },
-    "class_type": "StringFunction|pysssss",
+    "class_type": "easy textIndexSwitch",
     "_meta": {
-      "title": "String Function 🐍"
+      "title": "文本编号切换"
     }
   },
   "3": {
     "inputs": {
-      "inputcount": 1,
-      "prompt": [
+      "model": "gemini-3.1-flash-lite-preview",
+      "system_prompt": [
         "2",
         0
       ],
-      "aspect_ratio": [
-        "5",
-        0
-      ],
-      "resolution": "4k",
+      "user_prompt": "",
+      "max_tokens": 32768,
+      "temperature": 0.8,
+      "detail": "high",
+      "enable_thinking": false,
+      "inputcount": 1,
+      "Update inputs": null,
       "Update inputs(支持多图点我）": null,
       "images": [
         "1",
         0
       ]
     },
-    "class_type": "BizyAir_GPT_IMAGE_2_I2I_API",
+    "class_type": "BizyAir_TRD_VLM_API",
     "_meta": {
-      "title": "☁️BizyAir GPT Image 2 Image To Image",
+      "title": "☁️BizyAir Third-Party VLM API",
       "trd_node": true
     }
   },
   "4": {
     "inputs": {
-      "prompt": [
-        "2",
-        0
-      ],
-      "temperature": 0.9,
-      "top_p": 0.95,
-      "seed": 43242261,
-      "max_tokens": 32768,
-      "aspect_ratio": [
-        "5",
-        0
-      ],
-      "resolution": "4K",
-      "thinking_level": "disabled",
-      "inputcount": 1,
-      "Update inputs(支持多图点我）": null,
-      "mode": "third-party",
-      "images": [
-        "1",
+      "text": [
+        "3",
         0
       ]
     },
-    "class_type": "BizyAir_NanoBanana2",
+    "class_type": "ShowText|pysssss",
     "_meta": {
-      "title": "☁️BizyAir NanoBanana 2",
-      "trd_node": true
+      "title": "Show Text 🐍"
     }
   },
   "5": {
     "inputs": {
-      "ratio": "1:1"
+      "value": "{\n  \"task_objective\": \"Viral Social Media Post Generation - Transform input image into precise Xiaohongshu viral post with structured output, no reasoning, Chinese-primary\",\n  \"input_assets\": {\n    \"source_image\": {\n      \"source\": \"Input Image\",\n      \"focus\": \"Visual elements, product features, color palette, textures, styling details, emotional cues, and usage scenarios\",\n      \"role\": \"Provide all visual references for viral post generation\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Deep visual analysis: extract product category, key features, color system, material texture, emotional tone, target audience, and usage scenarios from the image\",\n    \"step_2\": \"Generate 3 viral titles from different angles (emotional/value/trend), craft body copy with Xiaohongshu formatting, extract traffic hashtags\",\n    \"step_3\": \"Output structured viral post, all selling points MUST be grounded in actual image content\"\n  },\n  \"outputs\": {\n    \"titles\": \"3 viral title options with Emoji, each from different dimension: emotional angle / value angle / trend angle\",\n    \"body\": \"Post body following Xiaohongshu formatting rules: multi-emoji, short paragraphs (max 3 lines), bold/symbol highlights, authentic bestie-recommending tone\",\n    \"hashtags\": \"4-8 high-traffic precision-matched hashtags\"\n  },\n  \"output_requirements\": [\n    \"Output ONLY the final structured post, no analysis process, no internal thinking\",\n    \"ALL selling points MUST be grounded in actual image content - never fabricate features not visible in the image\",\n    \"Titles: must include Emoji, 3 different dimensions (emotional/value/trend), under 25 chars each\",\n    \"Body: Xiaohongshu formatting - multi-emoji (🎀✨💡🔥👗), short paragraphs (max 3 lines), bold key points, authentic excited bestie tone\",\n    \"Hashtags: 4-8 tags, mix of high-traffic broad tags + niche precision tags\",\n    \"ABSOLUTELY NO AI-sounding clichés, NO advertising banned words, NO generic template phrases\",\n    \"Language: Chinese-primary, tone must feel genuine, excited, sincere - like a bestie who found treasure and can't wait to share\"\n  ]\n}\n"
     },
-    "class_type": "ratio_selector",
+    "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "ratio selector"
+      "title": "字符串（多行）"
     }
   },
   "6": {
     "inputs": {
-      "index": 1,
-      "image0": [
-        "3",
-        0
-      ],
-      "image1": [
-        "4",
-        0
-      ]
+      "value": "{\n  \"task_objective\": \"Douyin Viral Copy Generation - Transform input image into 3 ultra-minimal viral copy options (under 30 chars each) with precision hooks, Chinese-primary\",\n  \"input_assets\": {\n    \"source_image\": {\n      \"source\": \"Input Image\",\n      \"focus\": \"Visual elements, core selling point, emotional triggers, product features, and scroll-stopping details\",\n      \"role\": \"Provide visual references for viral copy generation\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Instant visual lock: identify THE single most eye-catching selling point from the image\",\n    \"step_2\": \"Generate 3 viral copies from different dimensions: extreme emotion / suspense reversal / bestie recommendation, each strictly under 30 chars\",\n    \"step_3\": \"Output structured viral copy with precision hashtags\"\n  },\n  \"outputs\": {\n    \"copy_1\": \"Extreme Emotion - Direct selling point smash, create FOMO frenzy atmosphere. Under 30 chars\",\n    \"copy_2\": \"Suspense Reversal - Hook curiosity, make them check comments. Under 30 chars\",\n    \"copy_3\": \"Bestie Push - Sincere, personal use, high aesthetic. Under 30 chars\",\n    \"hashtags\": \"3-5 Douyin trending precision short hashtags\"\n  },\n  \"output_requirements\": [\n    \"Output ONLY the final structured copy, no analysis, no reasoning\",\n    \"ALL selling points MUST be grounded in actual image content - never fabricate\",\n    \"Each copy STRICTLY under 30 Chinese characters, ultra-minimal, punchy\",\n    \"Use extreme short sentences, fragmented syntax, zero complex clauses\",\n    \"Golden 3-second hook formula: suspense / counter-intuition / extreme emotion opening\",\n    \"NO AI clichés, NO ad banned words, NO generic templates\",\n    \"Language: Chinese-primary, tone must be explosive, direct, internet-native\"\n  ]\n}\n"
     },
-    "class_type": "easy imageIndexSwitch",
+    "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "图像编号切换"
+      "title": "字符串（多行）"
     }
   },
   "7": {
     "inputs": {
-      "columns": 3,
-      "rows": 3,
-      "image": [
-        "6",
-        0
-      ]
+      "value": "{\n  \"task_objective\": \"WeChat Moments Private Domain Copy - Transform input image into 3 persona-based朋友圈 posts with comment section script, Chinese-primary\",\n  \"input_assets\": {\n    \"source_image\": {\n      \"source\": \"Input Image\",\n      \"focus\": \"Visual elements, lifestyle scene details, product features suitable for soft-implant, scarcity signals\",\n      \"role\": \"Provide visual references for private domain monetization copy\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Extract lifestyle scene details from image, identify soft-implant opportunities for natural product mention\",\n    \"step_2\": \"Generate 3 persona-based posts: real user / lifestyle vibe / honest seller, each under 6 lines, ultra-colloquial\",\n    \"step_3\": \"Output structured copy with matching comment section script for scarcity & conversion\"\n  },\n  \"outputs\": {\n    \"post_1\": \"Real User / Asked-Bombarded - Create social heat & herd mentality. Max 6 lines, ultra-colloquial\",\n    \"post_2\": \"Lifestyle Vibe / Atmosphere - High-end feel, emotional value, casual flex. Max 6 lines, ultra-colloquial\",\n    \"post_3\": \"Honest Seller / Insider Reveal - Professional, source advantage, heartfelt. Max 6 lines, ultra-colloquial\",\n    \"comment_script\": \"Staged comment sequence: [1st comment] VIP priority tease + [1hr later] scarcity urgency update\"\n  },\n  \"output_requirements\": [\n    \"Output ONLY the final structured copy, no analysis, no reasoning\",\n    \"ALL selling points MUST be grounded in actual image content - never fabricate\",\n    \"Post body: max 6 lines, ultra-colloquial, must feel like real personal sharing NOT advertisement\",\n    \"Anti-fold formatting: proper paragraph breaks, whitespace, minimal precise Emoji, NO text walls\",\n    \"Comment script must create scarcity & urgency naturally, self-Q&A format\",\n    \"Tone: authentic, human, like chatting with friends - zero commercial feel in main post\",\n    \"Language: Chinese-primary, extreme colloquial, everyday speech patterns\"\n  ]\n}\n"
     },
-    "class_type": "ImageGridtoBatch",
+    "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Image Grid To Batch"
+      "title": "字符串（多行）"
     }
   },
   "8": {
     "inputs": {
-      "select": "0,1,2,3,4,5,6,7",
-      "images": [
-        "7",
-        0
-      ]
+      "value": "{\n  \"task_objective\": \"WeChat Video Channel Viral Copy - Transform input image into high-engagement video copy with social currency, targeting 25-55 quality-conscious audience, Chinese-primary\",\n  \"input_assets\": {\n    \"source_image\": {\n      \"source\": \"Input Image\",\n      \"focus\": \"Visual elements, lifestyle cues, emotional resonance points, quality indicators, and philosophical elevation potential\",\n      \"role\": \"Provide visual references for video channel viral copy generation\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Deep aesthetic deconstruction: penetrate image surface, extract underlying relaxation, quality life, or pain point resonance\",\n    \"step_2\": \"Generate 3 viral copy paths: emotional philosophy / high-end taste / practical value, with golden quote and soft-sell narrative\",\n    \"step_3\": \"Output structured viral copy with engagement suffix and hashtags\"\n  },\n  \"outputs\": {\n    \"path_1\": \"Emotional Resonance - Philosophical golden quote, deep identity trigger, soul-striking cover line\",\n    \"path_2\": \"High-End Taste - Old money texture, quality lifestyle elevation, understated luxury narrative\",\n    \"path_3\": \"Practical Value - Useful tips, altruistic sharing, problem-solution structure\",\n    \"engagement_suffix\": \"Soft CTA encouraging share to friends/family groups\",\n    \"hashtags\": \"3-5 WeChat Video Channel trending hashtags\"\n  },\n  \"output_requirements\": [\n    \"Output ONLY the final structured copy, no analysis, no reasoning\",\n    \"ALL selling points MUST be grounded in actual image content - never fabricate\",\n    \"Tone: gentle narration, never hard-sell, '娓娓道来' storytelling style\",\n    \"Target audience: 25-55 age group, quality-conscious, family & growth oriented\",\n    \"Elevate product to life philosophy, refined taste, or warm story - provide social currency\",\n    \"Golden quote must be cover-worthy, triggering strong identity and share impulse\",\n    \"Language: Chinese-primary, mature elegant tone, NO Gen Z slang, NO aggressive selling\"\n  ]\n}\n"
     },
-    "class_type": "LayerUtility: BatchSelector",
+    "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "图层工具：批次选择器"
+      "title": "字符串（多行）"
     }
   },
   "9": {
     "inputs": {
-      "filename_prefix": "Ind420",
-      "images": [
-        "8",
-        0
-      ]
+      "value": "{\n  \"task_objective\": \"Instagram Global Viral Copy - Transform input image into 3 native English IG post/Reel copy options with aesthetic positioning, English-only output\",\n  \"input_assets\": {\n    \"source_image\": {\n      \"source\": \"Input Image\",\n      \"focus\": \"Visual elements, aesthetic category, lifestyle aspiration, Main Character Energy potential, and conversion hooks\",\n      \"role\": \"Provide visual references for Instagram viral copy generation\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Aesthetic decode: identify IG aesthetic category (minimal, old money, soft girl, clean girl, etc.) and aspiration triggers\",\n    \"step_2\": \"Generate 3 viral copy options: aesthetic soft girl / DM automation conversion / micro-blog value story, each with native IG formatting\",\n    \"step_3\": \"Output structured copy with IG SEO keywords and hashtags, 100% English\"\n  },\n  \"outputs\": {\n    \"option_1\": \"Aesthetic & Soft Girl - Minimal luxury, vibe-driven, aspirational. Native IG line-break formatting\",\n    \"option_2\": \"DM Automation / High Conversion - Comment-trigger funnel (Comment 'LINK' for details), IG's hottest monetization play\",\n    \"option_3\": \"Micro-Blog / Value Driven - Story-driven, educational, ideal for Carousel posts. Longer format with value hooks\",\n    \"seo_keywords\": \"IG SEO optimized keywords for search discovery\",\n    \"hashtags\": \"Mix of high-volume + long-tail precision hashtags for IG algorithm\"\n  },\n  \"output_requirements\": [\n    \"Output ONLY the final structured copy, 100% ENGLISH, no Chinese, no analysis\",\n    \"ALL selling points MUST be grounded in actual image content - never fabricate\",\n    \"Use native IG expressions and formatting: line breaks for breathing room, minimal elegant punctuation\",\n    \"Aesthetic positioning: elevate to Main Character Energy, aspirational lifestyle\",\n    \"DM Automation option: must include ManyChat-style trigger (Comment 'XXX' for...)\",\n    \"Micro-blog option: value-first, story-driven, save-worthy content structure\",\n    \"Hashtags: strategic mix of mega (#aesthetic) + mid-tier (#cleangirlaesthetic) + long-tail (#musthaves2024)\"\n  ]\n}\n"
     },
-    "class_type": "SaveImage",
+    "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "保存图像"
+      "title": "字符串（多行）"
+    }
+  },
+  "10": {
+    "inputs": {
+      "value": "{\n  \"task_objective\": \"TikTok Global Viral E-commerce Copy - Transform input image into 3 native English TikTok copy options with on-screen text & caption, English-only output\",\n  \"input_assets\": {\n    \"source_image\": {\n      \"source\": \"Input Image\",\n      \"focus\": \"Visual elements, product features, aesthetic style, problem-solution potential, and Gen Z appeal factors\",\n      \"role\": \"Provide visual references for TikTok viral copy generation\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Decode image for TikTok aesthetic category, identify 3-second hook potential and native slang opportunities\",\n    \"step_2\": \"Generate 3 viral copy options: FOMO hype / POV aesthetic / life hack problem-solver, each with on-screen text + caption\",\n    \"step_3\": \"Output structured copy with visual/audio direction and viral hashtags, 100% English\"\n  },\n  \"outputs\": {\n    \"option_1\": \"Urgency & Hype - FOMO trigger, impulse buy energy. On-screen text + caption\",\n    \"option_2\": \"POV / Aesthetic - Immersive vibe, aesthetic lifestyle. On-screen text + caption\",\n    \"option_3\": \"Life Hack / Problem Solver - Pain point, novelty, strong contrast. On-screen text + caption\",\n    \"visual_audio\": \"Visual & audio direction for video creation\",\n    \"hashtags\": \"3-5 high-traffic precision TikTok hashtags (e.g., #tiktokmademebuyit #tiktokfinds #aesthetic #musthaves)\"\n  },\n  \"output_requirements\": [\n    \"Output ONLY the final structured copy, 100% ENGLISH, no Chinese, no analysis\",\n    \"ALL selling points MUST be grounded in actual image content - never fabricate\",\n    \"Use native TikTok slang and expressions (obsessed, literally, POV, main character energy, etc.)\",\n    \"3-second hook: must stop the scroll within first 3 seconds\",\n    \"On-screen text: punchy, minimal, high-contrast visual impact\",\n    \"Caption: algorithmic CTA (Comment for link, Save this, Share with a friend who needs this)\",\n    \"Hashtags: mix of mega-tags (#tiktokmademebuyit) + niche precision tags\"\n  ]\n}\n"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "字符串（多行）"
+    }
+  },
+  "11": {
+    "inputs": {
+      "value": "{\n  \"task_objective\": \"Bilibili Viral Content Generation - Transform input image into precise Bilibili viral post with structured output, knowledge-driven & meme-fluent style, Chinese-primary\",\n  \"input_assets\": {\n    \"source_image\": {\n      \"source\": \"Input Image\",\n      \"focus\": \"Visual elements, product features, technical details, aesthetic style, cultural references, and knowledge expansion potential\",\n      \"role\": \"Provide all visual references for Bilibili viral content generation\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Deep visual analysis: extract product category, technical specs, aesthetic style, cultural/meme potential, and knowledge expansion angles from the image\",\n    \"step_2\": \"Generate 3 viral titles with 【】bracket format, craft detailed body copy with Bilibili formatting (knowledge + humor + meme), extract topic tags\",\n    \"step_3\": \"Output structured viral content, all selling points MUST be grounded in actual image content\"\n  },\n  \"outputs\": {\n    \"titles\": \"3 viral title options with 【】bracket format, each from different dimension: hardcore knowledge / meme stunt / aesthetic collection\",\n    \"body\": \"Post body following Bilibili formatting: detailed paragraphs with knowledge depth, meme references, self-deprecating humor, 一键三连 CTA, UP主 persona\",\n    \"tags\": \"4-8 Bilibili topic tags, mix of category tags + trending tags + ACG culture tags\"\n  },\n  \"output_requirements\": [\n    \"Output ONLY the final structured post, no analysis process, no internal thinking\",\n    \"ALL selling points MUST be grounded in actual image content - never fabricate features not visible in the image\",\n    \"Titles: must use 【】bracket format, 3 dimensions (hardcore knowledge / meme stunt / aesthetic collection), under 30 chars each\",\n    \"Body: Bilibili formatting - knowledge-driven with depth, meme-fluent (整活/绝了/离谱/蚌埠住了), self-deprecating humor, 一键三连 CTA, UP主 identity\",\n    \"Tags: 4-8 tags, mix of category tags (#数码/#穿搭/#美妆) + trending + ACG culture tags\",\n    \"ABSOLUTELY NO AI clichés, NO advertising banned words, NO generic template phrases\",\n    \"Language: Chinese-primary, tone must be witty, knowledgeable, meme-fluent - like a hardcore UP主 sharing discoveries with 弹幕 friends\"\n  ]\n}\n"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "字符串（多行）"
+    }
+  },
+  "12": {
+    "inputs": {
+      "value": "{\n  \"task_objective\": \"Kuaishou Viral Content Generation - Transform input image into precise Kuaishou viral post with structured output, authentic & community-driven style, Chinese-primary\",\n  \"input_assets\": {\n    \"source_image\": {\n      \"source\": \"Input Image\",\n      \"focus\": \"Visual elements, product features, real-life usage scenarios, emotional warmth, and practical value\",\n      \"role\": \"Provide all visual references for Kuaishou viral content generation\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Deep visual analysis: extract product category, practical value, real-life scenarios, emotional warmth, and community resonance potential from the image\",\n    \"step_2\": \"Generate 3 viral titles with direct emotional hooks, craft body copy with Kuaishou formatting (authentic / warm / community), extract topic tags\",\n    \"step_3\": \"Output structured viral content, all selling points MUST be grounded in actual image content\"\n  },\n  \"outputs\": {\n    \"titles\": \"3 viral title options, each from different dimension: real-life benefit / emotional warmth / old铁 recommendation\",\n    \"body\": \"Post body following Kuaishou formatting: straightforward language, 老铁/家人们 address, emotional storytelling, practical demonstration, double-like CTA\",\n    \"tags\": \"4-8 Kuaishou topic tags, mix of lifestyle tags + regional tags + trending tags\"\n  },\n  \"output_requirements\": [\n    \"Output ONLY the final structured post, no analysis process, no internal thinking\",\n    \"ALL selling points MUST be grounded in actual image content - never fabricate features not visible in the image\",\n    \"Titles: direct emotional hooks, 3 dimensions (real-life benefit / emotional warmth / old铁 recommendation), under 25 chars each\",\n    \"Body: Kuaishou formatting - 老铁/家人们 address, straightforward language, emotional storytelling, practical value focus, double-like CTA,接地气 tone\",\n    \"Tags: 4-8 tags, mix of lifestyle (#生活/#好物) + regional/cultural + trending tags\",\n    \"ABSOLUTELY NO AI clichés, NO advertising banned words, NO generic template phrases\",\n    \"Language: Chinese-primary, tone must be warm, authentic, down-to-earth - like a trusted 老铁 sharing good stuff with 家人们\"\n  ]\n}\n"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "字符串（多行）"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 4192171794,
+      "seed": 2409760902,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -31,7 +31,7 @@
   },
   "6": {
     "inputs": {
-      "text": "*An oval gold pendant in ART DECO style, asymmetrical balanced design, a prominent ram head on the upper part, its curved horns transforming into flowing vine scroll motifs that wrap around the lower and side areas, creating a continuous rhythmic line from head to foliage, engraved geometric lines, black lacquer inlays in scroll tips, high-polish gold contrasted with satin texture, white background, jewelry catalog lighting, 8k, --ar 3:4*",
+      "text": "Product photography of a heavy handmade Gaboratory bicolor silver gold pendant, vintage oxidized sterling silver base with 18k brass gold inlaid carved details, centered gothic skull with hollow eyes and grinning teeth, gold-inlaid eye sockets and teeth against oxidized silver cranium, crossed swords beneath the skull with gold-inlaid hilts and oxidized silver blades, top silver bail engraved with \"Gaboratory\", soft diffused natural light, laid flat on creamy white fine suede fabric background, subtle matte texture, shallow depth of field, 8K ultra-detailed, macro metal texture shot, luxury men's gothic biker jewelry, neutral soft tone, commercial jewelry shot, sharp focus on metal engravings, no shadows overload",
       "clip": [
         "38",
         0
@@ -129,7 +129,7 @@
     "inputs": {
       "shift": 3.1000000000000005,
       "model": [
-        "101",
+        "100",
         0
       ]
     },
@@ -150,20 +150,6 @@
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
       "title": "LORA #1 (系统)"
-    }
-  },
-  "101": {
-    "inputs": {
-      "lora_name": "豹子.safetensors",
-      "strength_model": 0.8,
-      "model": [
-        "100",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LORA #2 (系统)"
     }
   }
 }

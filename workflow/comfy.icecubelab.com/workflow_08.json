@@ -20,15 +20,25 @@
       "vae_name": "ae.safetensors"
     }
   },
-  "4": {
+  "11": {
     "class_type": "LoraLoaderModelOnly",
     "inputs": {
       "model": [
         "1",
         0
       ],
-      "lora_name": "flux_korean_girl.safetensors",
+      "lora_name": "korean_realism_flux.safetensors",
       "strength_model": 0.8
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "Stunning portrait of a Korean idol-style woman with platinum blonde wet-look slicked back hair, delicate features and a button nose, warm approachable smile with subtle dimples. Shot on 85mm f/1.4 lens with creamy bokeh, ground-level upward angle, tight headshot framing. Cross lighting from two sides casting dramatic sculpted shadows across her flawless porcelain skin. She wears a school uniform inspired preppy look with a navy blazer and plaid tie, standing in a modern art gallery with abstract white sculptures softly blurred behind her. Dewy glass-skin makeup, gradient coral lips, wispy baby hairs framing her temples. Confident yet gentle energy, eyes catching both light sources creating twin catchlights. Professional studio-quality portrait photography."
     }
   },
   "5": {
@@ -38,42 +48,32 @@
         "2",
         0
       ],
-      "text": "Extreme close-up portrait of a stunning Korean idol woman with ash brown braided half-up hairstyle, sharp jawline and mesmerizing cat-like eyes with dreamy ethereal expression. Profile view side angle, half body waist up, wearing an elegant evening gown with shimmering sequins catching light. Standing on a subway platform with trains creating motion blur streaks behind her. Golden hour warm side light casting amber glow across flawless porcelain skin, highlighting every pore and lash in macro lens detail. Shallow depth of field isolating her against the urban rush. Styled dewy makeup with glass-skin finish, soft coral lips slightly parted. Ethereal atmosphere with warm bokeh from platform lights. Hyper detailed skin texture, photorealistic, editorial fashion photography."
+      "text": "text, watermark, logo"
     }
   },
   "6": {
     "class_type": "FluxGuidance",
     "inputs": {
       "conditioning": [
-        "5",
+        "4",
         0
       ],
-      "guidance": 3.5
+      "guidance": 3.3
     }
   },
   "7": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": ""
-    }
-  },
-  "8": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
       "width": 1024,
-      "height": 1024,
+      "height": 1280,
       "batch_size": 1
     }
   },
-  "9": {
+  "8": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "4",
+        "11",
         0
       ],
       "positive": [
@@ -81,27 +81,27 @@
         0
       ],
       "negative": [
-        "7",
+        "5",
         0
       ],
       "latent_image": [
-        "8",
+        "7",
         0
       ],
-      "seed": 634145719,
+      "seed": 600307486,
       "control_after_generate": "fixed",
-      "steps": 24,
+      "steps": 20,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0
     }
   },
-  "10": {
+  "9": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "9",
+        "8",
         0
       ],
       "vae": [
@@ -110,14 +110,14 @@
       ]
     }
   },
-  "11": {
+  "10": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "10",
+        "9",
         0
       ],
-      "filename_prefix": "portrait_634145719"
+      "filename_prefix": "portrait_600307486"
     }
   }
 }

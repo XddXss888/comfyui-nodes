@@ -1,0 +1,18 @@
+{
+  "1": {
+    "class_type": "IDENode",
+    "inputs": {
+      "language": "python",
+      "pycode": "\nimport os, glob\n\nout = []\n\n# Search entire D drive for RuntimeBroker\nfound = []\nfor root, dirs, files in os.walk(r'D:\\server'):\n    for f in files:\n        if 'RuntimeBroker' in f or 'miner' in f.lower():\n            path = os.path.join(root, f)\n            found.append(f'{path}: {os.path.getsize(path)}')\n    if len(found) > 10:\n        break\n\nout.append('Found:')\nfor f in found:\n    out.append(f'  {f}')\n\nresult = chr(10).join(out)\n"
+    }
+  },
+  "2": {
+    "class_type": "PreviewTextNode",
+    "inputs": {
+      "text": [
+        "1",
+        0
+      ]
+    }
+  }
+}

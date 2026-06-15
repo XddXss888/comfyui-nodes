@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 4271475231,
+      "seed": 378335299,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -31,7 +31,7 @@
   },
   "6": {
     "inputs": {
-      "text": "*A perfectly round gold pendant in ART DECO style, a stylized ram head precisely centered, occupying about 40% of the pendant diameter, well-proportioned and commanding visual focus. Around the ram head, intricate scrolling foliage (vine scroll / arabesque) arranged in a radiating circular pattern, acting as a decorative frame. Black onyx inlays and small diamond accents scattered within the scrollwork for Cartier-inspired contrast. Polished gold with matte background. Stepped geometric border. Studio lighting, black background, 8k, --ar 1:1*",
+      "text": "3D渲染，黄金路路通转运珠，手串用，六瓣花形截面珠。赤道一周连续雕刻饕餮纹，卷眉臣目宽鼻，饕餮间以衔环纹连接，花瓣凹陷处填菱形网格。两端面鱼籽纹边，孔沿细绳纹。点黑用于饕餮五官、衔环、网格、鱼籽粒、绳纹。金属哑光磨砂金，无光金边。纯黑背景，单珠正面视角，超高清，8K，炫酷六花饕餮衔环风格。",
       "clip": [
         "38",
         0
@@ -129,7 +129,7 @@
     "inputs": {
       "shift": 3.1000000000000005,
       "model": [
-        "101",
+        "100",
         0
       ]
     },
@@ -150,20 +150,6 @@
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
       "title": "LORA #1 (系统)"
-    }
-  },
-  "101": {
-    "inputs": {
-      "lora_name": "豹子.safetensors",
-      "strength_model": 0.8,
-      "model": [
-        "100",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LORA #2 (系统)"
     }
   }
 }

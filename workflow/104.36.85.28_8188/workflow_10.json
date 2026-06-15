@@ -37,7 +37,7 @@
   },
   "7": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl yoga, aqua eyes, wide-eyed, scared, twintails, aqua hair,(Machen Sie Yoga-Übungen:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl blush,looking at viewer,purple eyes,pink eyes,wet,shiny,competition,blue,black,bathroom,shower,(Bra:1.0),(nude:0.8)",
       "clip": [
         "1",
         1
@@ -63,7 +63,7 @@
   },
   "9": {
     "inputs": {
-      "seed": 2067621209,
+      "seed": 167727800,
       "steps": 20,
       "cfg": 6.5,
       "sampler_name": "dpmpp_sde",
@@ -133,7 +133,7 @@
   },
   "14": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2025/01/20/1737332930903.png",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20254/12/012654a909494d6085d75b997c567e78.png",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

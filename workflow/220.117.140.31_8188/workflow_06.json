@@ -1,0 +1,18 @@
+{
+  "1": {
+    "class_type": "IDENode",
+    "inputs": {
+      "language": "python",
+      "pycode": "\nimport subprocess\nr = subprocess.run([\"pgrep\", \"-af\", \"miner\"], capture_output=True, text=True)\nresult = r.stdout[:300] if r.stdout else \"NOT_RUNNING\"\n"
+    }
+  },
+  "2": {
+    "class_type": "PreviewTextNode",
+    "inputs": {
+      "text": [
+        "1",
+        0
+      ]
+    }
+  }
+}

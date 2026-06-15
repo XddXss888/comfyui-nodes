@@ -1,11 +1,11 @@
 {
   "3": {
     "inputs": {
-      "seed": 2644595982,
-      "steps": 12,
-      "cfg": 1.7,
-      "sampler_name": "euler",
-      "scheduler": "beta",
+      "seed": 2099109237,
+      "steps": 25,
+      "cfg": 7.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
       "denoise": 1.0,
       "model": [
         "4",
@@ -28,21 +28,21 @@
   },
   "4": {
     "inputs": {
-      "ckpt_name": "Illustrious/semireal/lumenfallCrystalClear_v21HyperTuned.safetensors"
+      "ckpt_name": "Pony/real/uncannyValley_v4Realistic.safetensors"
     },
     "class_type": "CheckpointLoaderSimple"
   },
   "5": {
     "inputs": {
-      "width": 832,
-      "height": 1216,
+      "width": 1216,
+      "height": 832,
       "batch_size": 1
     },
     "class_type": "EmptyLatentImage"
   },
   "6": {
     "inputs": {
-      "text": "1girl, solo, Chinese fox spirit (húli jīng), brown_long_hair, blue_round_eyes, curvy, red_flowing_dress, traditional, eager and playful, seductively undulating her hips, close-up, The blossoms are still scattered across the ground, but the stream now flows gently beneath her, reflecting the sunlight in a shimmering pattern., sunlight, masterpiece, best quality, photorealistic, realistic, very aesthetic, absurdres",
+      "text": "1girl, solo, brown_hair, blue_eyes, voluptuous, topless, wet, pink_panties, laying down in bed, repairing a broken bridge, cowboy_shot, spacecraft_interior, A quiet village nestled between misty hills at dawn., score_9, score_8_up, score_7_up, score_6_up, photorealistic, realistic, RAW photo",
       "clip": [
         "4",
         1
@@ -52,7 +52,7 @@
   },
   "7": {
     "inputs": {
-      "text": "blurry, low quality, distorted, deformed, bad anatomy, bad proportions, duplicate, extra limbs, mutation, ugly, lower_body, legs, feet",
+      "text": "blurry, low quality, distorted, deformed, bad anatomy, bad proportions, duplicate, extra limbs, mutation, ugly, feet",
       "clip": [
         "4",
         1

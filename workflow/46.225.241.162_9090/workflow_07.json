@@ -1,11 +1,38 @@
 {
   "9": {
     "inputs": {
-      "filename_prefix": "image_go",
+      "filename_prefix": "image_gen",
       "images": [
         "75:65",
         0
       ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "76": {
+    "inputs": {
+      "image": "1989a271-b39a-45a9-a7eb-d13b2102d3f6.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "81": {
+    "inputs": {
+      "image": "bg.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "94": {
+    "inputs": {
+      "filename_prefix": "image_gen"
     },
     "class_type": "SaveImage",
     "_meta": {
@@ -21,16 +48,139 @@
       "title": "KSamplerSelect"
     }
   },
-  "75:62": {
+  "75:73": {
     "inputs": {
-      "steps": 20,
+      "noise_seed": 845802383558951
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "75:71": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "75:72": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "75:123": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b-Q6_K.gguf"
+    },
+    "class_type": "UnetLoaderGGUF",
+    "_meta": {
+      "title": "Unet Loader (GGUF)"
+    }
+  },
+  "75:74": {
+    "inputs": {
+      "text": "tolong buat matanya tersenyum",
+      "clip": [
+        "75:71",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "75:80": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "76",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "Scale Image to Total Pixels"
+    }
+  },
+  "75:82": {
+    "inputs": {
+      "conditioning": [
+        "75:74",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "75:99": {
+    "inputs": {
+      "image": [
+        "75:80",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "Get Image Size"
+    }
+  },
+  "75:79:78": {
+    "inputs": {
+      "pixels": [
+        "75:80",
+        0
+      ],
+      "vae": [
+        "75:72",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "75:66": {
+    "inputs": {
       "width": [
-        "75:68",
+        "75:99",
         0
       ],
       "height": [
-        "75:69",
+        "75:99",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "75:62": {
+    "inputs": {
+      "steps": 4,
+      "width": [
+        "75:99",
         0
+      ],
+      "height": [
+        "75:99",
+        1
       ]
     },
     "class_type": "Flux2Scheduler",
@@ -38,19 +188,51 @@
       "title": "Flux2Scheduler"
     }
   },
-  "75:63": {
+  "75:79:100": {
     "inputs": {
-      "cfg": 5.0,
-      "model": [
-        "75:114",
+      "conditioning": [
+        "75:82",
         0
       ],
-      "positive": [
+      "latent": [
+        "75:79:78",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "75:79:77": {
+    "inputs": {
+      "conditioning": [
         "75:74",
         0
       ],
+      "latent": [
+        "75:79:78",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "75:63": {
+    "inputs": {
+      "cfg": 1.0,
+      "model": [
+        "75:123",
+        0
+      ],
+      "positive": [
+        "75:79:77",
+        0
+      ],
       "negative": [
-        "75:67",
+        "75:79:100",
         0
       ]
     },
@@ -101,106 +283,6 @@
     "class_type": "VAEDecode",
     "_meta": {
       "title": "VAE Decode"
-    }
-  },
-  "75:66": {
-    "inputs": {
-      "width": [
-        "75:68",
-        0
-      ],
-      "height": [
-        "75:69",
-        0
-      ],
-      "batch_size": 1
-    },
-    "class_type": "EmptyFlux2LatentImage",
-    "_meta": {
-      "title": "Empty Flux 2 Latent"
-    }
-  },
-  "75:67": {
-    "inputs": {
-      "text": "",
-      "clip": [
-        "75:71",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
-    }
-  },
-  "75:68": {
-    "inputs": {
-      "value": 1024
-    },
-    "class_type": "PrimitiveInt",
-    "_meta": {
-      "title": "Width"
-    }
-  },
-  "75:69": {
-    "inputs": {
-      "value": 1024
-    },
-    "class_type": "PrimitiveInt",
-    "_meta": {
-      "title": "Height"
-    }
-  },
-  "75:73": {
-    "inputs": {
-      "noise_seed": 504415123887008,
-      "seed": 655019849068030
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "RandomNoise"
-    }
-  },
-  "75:71": {
-    "inputs": {
-      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
-      "type": "flux2",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "Load CLIP"
-    }
-  },
-  "75:72": {
-    "inputs": {
-      "vae_name": "full_encoder_small_decoder.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Load VAE"
-    }
-  },
-  "75:74": {
-    "inputs": {
-      "text": "A majestic Chinese martial arts master (short sword warrior) standing in a powerful, dynamic pose with a gleaming longsword held firmly in both hands. The warrior wears traditional flowing silk robes in deep crimson and gold colors, with intricate embroidery patterns visible on the fabric. His hair is tied back in a traditional topknot, and his expression shows fierce determination and focused intensity. Behind him stretches an awe-inspiring mountain landscape resembling Mount Hua (Huashan) - steep, dramatic peaks rising sharply into misty clouds, with layers of mountains fading into the distance in shades of blue-green. The sky above is painted in warm golden-hour tones with soft orange and pink hues mixing with pale blue. Wispy white clouds drift around the mountain peaks, adding depth and atmosphere to the scene. Dramatic lighting creates a cinematic effect with sunlight breaking through from behind the mountains, casting long shadows and highlighting the warrior's silhouette. The overall composition is balanced with the warrior positioned slightly off-center in the foreground, creating a sense of scale against the vast majestic landscape.",
-      "clip": [
-        "75:71",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
-    }
-  },
-  "75:114": {
-    "inputs": {
-      "unet_name": "flux-2-klein-9b-Q6_K.gguf"
-    },
-    "class_type": "UnetLoaderGGUF",
-    "_meta": {
-      "title": "Unet Loader (GGUF)"
     }
   }
 }

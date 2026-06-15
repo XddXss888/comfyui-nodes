@@ -1,183 +1,100 @@
 {
-  "9": {
+  "1": {
+    "class_type": "UnetLoaderGGUF",
     "inputs": {
-      "filename_prefix": "LongCat-Image",
-      "images": [
-        "13:8",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
+      "unet_name": "z-image-Q6_K.gguf"
     }
   },
-  "14": {
-    "inputs": {
-      "aspect_ratio": "9:16 (Portrait Widescreen)",
-      "megapixels": 1.0
-    },
-    "class_type": "ResolutionSelector",
-    "_meta": {
-      "title": "Resolution Selector"
-    }
-  },
-  "13:1": {
-    "inputs": {
-      "unet_name": "longcat_image_bf16.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Load Diffusion Model"
-    }
-  },
-  "13:2": {
-    "inputs": {
-      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
-      "type": "longcat_image",
-      "device": "default"
-    },
+  "3": {
     "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "Load CLIP"
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
     }
   },
-  "13:3": {
+  "4": {
+    "class_type": "VAELoader",
     "inputs": {
       "vae_name": "ae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Load VAE"
     }
   },
-  "13:11": {
-    "inputs": {
-      "guidance": 4.0,
-      "conditioning": [
-        "13:4",
-        0
-      ]
-    },
-    "class_type": "FluxGuidance",
-    "_meta": {
-      "title": "FluxGuidance"
-    }
-  },
-  "13:12": {
-    "inputs": {
-      "guidance": 4.0,
-      "conditioning": [
-        "13:5",
-        0
-      ]
-    },
-    "class_type": "FluxGuidance",
-    "_meta": {
-      "title": "FluxGuidance"
-    }
-  },
-  "13:10": {
-    "inputs": {
-      "strength": 1.0,
-      "model": [
-        "13:1",
-        0
-      ]
-    },
-    "class_type": "CFGNorm",
-    "_meta": {
-      "title": "CFGNorm"
-    }
-  },
-  "13:6": {
-    "inputs": {
-      "width": [
-        "14",
-        0
-      ],
-      "height": [
-        "14",
-        1
-      ],
-      "batch_size": 1
-    },
-    "class_type": "EmptySD3LatentImage",
-    "_meta": {
-      "title": "EmptySD3LatentImage"
-    }
-  },
-  "13:8": {
-    "inputs": {
-      "samples": [
-        "13:7",
-        0
-      ],
-      "vae": [
-        "13:3",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
-    }
-  },
-  "13:4": {
-    "inputs": {
-      "text": "amateur photo of young, nude, tween sisters posing wild in kitchen. They are bare bottomless, wearing nothing but thigh high socks.",
-      "clip": [
-        "13:2",
-        0
-      ]
-    },
+  "5": {
     "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
+    "inputs": {
+      "clip": [
+        "3",
+        0
+      ],
+      "text": "유이, 아름다운 20대 한국 여성, 눈부시게 예쁜 얼굴, 도자기처럼 하얗고 맑은 피부, 모공과 질감이 살아있는 포토리얼 피부, 또렷하고 맑은 갈색 큰 눈, 살짝 컬이 들어간 긴 속눈썹, 자연스러운 핑크빛 입술, 오똑한 코, V라인 턱선, 길고 윤기나는 검은 생머리, 슬림하고 여성스러운 몸매, 내추럴 메이크업, 따뜻하고 진심어린 미소, 흰 모래 해변에 맨발로 앉아 두 다리를 앞으로 뻗은 포즈, 연한 파스텔 핑크 트라이앵글 비키니 상의와 하이웨이스트 보이숏, 두 발 나란히 프레임 하단에 또렷, 발가락 열 개 모두 프레임 안, 양발 맨발, 왼발 다섯 발가락 + 오른발 다섯 발가락 또렷, 엄지발가락이 가장 굵고 나머지 발가락 순서대로 작아지는 자연스러운 비율, 양손 다섯 손가락 또렷, 정확한 손 관절, 연한 청록 바다 배경 보케, 오후 따뜻한 햇살, 카메라 응시 은은한 미소, 50mm 단렌즈 얕은 심도, Canon EOS R5, 8K UHD, 수상작 퀄리티, 마스터피스"
     }
   },
-  "13:7": {
+  "6": {
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "seed": 413285116335830,
-      "steps": 20,
-      "cfg": 4.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
+      "clip": [
+        "3",
+        0
+      ],
+      "text": "서양인, 백인, 흑인, 라틴, 어린이, 미성년, 플라스틱 피부, 인형 피부, 흐릿한, 초점 나간, 기형, 해부학 오류, 잘못된 손, 여분 손가락, 잃어버린 손가락, 기형 손가락, 융합된 손가락, 네 손가락, 여섯 손가락, 뒤틀린 손가락, 잘못된 발, 기형 발가락, 여분 발가락, 잃어버린 발가락, 융합된 발가락, 네 발가락, 여섯 발가락, 뒤틀린 발가락, 붙은 발가락, 겹친 발가락, 돌연변이, 글자, 워터마크, 서명, 카툰, 애니메이션, 일러스트, 3D 렌더, 그림, 최악의 품질, 낮은 품질"
+    }
+  },
+  "7": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
       "model": [
-        "13:10",
+        "1",
         0
       ],
       "positive": [
-        "13:11",
+        "5",
         0
       ],
       "negative": [
-        "13:12",
+        "6",
         0
       ],
       "latent_image": [
-        "13:6",
+        "7",
         0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
+      ],
+      "seed": 51850632314027,
+      "steps": 9,
+      "cfg": 1.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "beta",
+      "denoise": 1.0
     }
   },
-  "13:5": {
+  "9": {
+    "class_type": "VAEDecode",
     "inputs": {
-      "text": "blurry, low resolution, oversaturated, harsh lighting, messy composition, distorted face, extra fingers, bad anatomy, cheap jewelry, plastic texture, cartoon, illustration, anime, watermark, text, logo",
-      "clip": [
-        "13:2",
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "4",
         0
       ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "9",
+        0
+      ],
+      "filename_prefix": "zimg/유이_GGUF"
     }
   }
 }

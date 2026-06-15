@@ -12,7 +12,7 @@
   "104": {
     "inputs": {
       "model": [
-        "158",
+        "138",
         0
       ],
       "shift": 5.000000000000001
@@ -70,6 +70,39 @@
     },
     "class_type": "RifeTensorrt"
   },
+  "138": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "lora_02": "wan0529\\Pov Cowgirl Ride Tilt Up_high_noise.safetensors",
+      "lora_03": "None",
+      "lora_04": "None",
+      "lora_05": "None",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "156",
+        0
+      ],
+      "strength_01": 2.0000000000000004,
+      "strength_02": 1.0,
+      "strength_03": 0.0,
+      "strength_04": 2.0000000000000004,
+      "strength_05": 1.0,
+      "strength_06": 3.0000000000000004,
+      "strength_07": 1.0,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
+  },
   "139": {
     "inputs": {
       "clip": [
@@ -77,8 +110,8 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "wan2.1\\1881395_wan2.1-i2v-480p-reveal-v1.0.safetensors",
-      "lora_03": "wan2.1\\dicks_epoch_100.safetensors",
+      "lora_02": "wan0529\\Pov Cowgirl Ride Tilt Up_low_noise.safetensors",
+      "lora_03": "None",
       "lora_04": "None",
       "lora_05": "None",
       "lora_06": "None",
@@ -92,9 +125,9 @@
       ],
       "strength_01": 1.0,
       "strength_02": 1.0000000000000002,
-      "strength_03": 1.0000000000000002,
+      "strength_03": 0.0,
       "strength_04": 1.0000000000000002,
-      "strength_05": 0.0,
+      "strength_05": 1.0,
       "strength_06": 1.0,
       "strength_07": 1.0,
       "strength_08": 1.0,
@@ -108,7 +141,7 @@
       "crop_position": "center",
       "device": "cpu",
       "divisible_by": 16,
-      "height": 832,
+      "height": 480,
       "image": [
         "151",
         0
@@ -116,13 +149,13 @@
       "keep_proportion": "resize",
       "pad_color": "0, 0, 0",
       "upscale_method": "nearest-exact",
-      "width": 480
+      "width": 832
     },
     "class_type": "ImageResizeKJv2"
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/39e518fd-b515-4636-96f5-e53659b53b24.png"
+      "urls": "https://media.pornmaker.cloud/39c2e2f1-4534-4ae5-9add-bb549925bb1b.png"
     },
     "class_type": "LoadImageFromURL"
   },
@@ -139,39 +172,6 @@
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
-  },
-  "158": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "wan2.1\\1881395_wan2.1-i2v-480p-reveal-v1.0.safetensors",
-      "lora_03": "wan2.1\\dicks_epoch_100.safetensors",
-      "lora_04": "None",
-      "lora_05": "None",
-      "lora_06": "None",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "156",
-        0
-      ],
-      "strength_01": 2.0000000000000004,
-      "strength_02": 2.0000000000000004,
-      "strength_03": 2.0000000000000004,
-      "strength_04": 1.0000000000000002,
-      "strength_05": 1.5000000000000002,
-      "strength_06": 1.0,
-      "strength_07": 1.0,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
   },
   "84": {
     "inputs": {
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 7547778791135181937,
+      "noise_seed": 9165930921073538169,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 6101341479708706644,
+      "noise_seed": 7235490922134764260,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": "She pulls down her pants revealing a penis."
+      "text": "PovCowgirlRideTiltUp.Cut Scene. POV Perspective. A man is having sex with a woman in a Cowgril position. The camera is shot from the man's POV perspective, from below, with the woman sitting on the man's penis. The camera moves upwards to show the man grabbing the woman's breasts, and the woman's face is clearly visible."
     },
     "class_type": "CLIPTextEncode"
   },

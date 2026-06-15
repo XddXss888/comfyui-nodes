@@ -33,7 +33,7 @@
   },
   "4": {
     "inputs": {
-      "seed": 3586972079,
+      "seed": 9550645990,
       "steps": [
         "13",
         0
@@ -103,7 +103,7 @@
   "13": {
     "inputs": {
       "steps": 27,
-      "cfg": 6.0
+      "cfg": 10.6
     },
     "class_type": "StepsAndCfg",
     "_meta": {
@@ -112,8 +112,8 @@
   },
   "17": {
     "inputs": {
-      "Width": 1024,
-      "Height": 1024,
+      "Width": 888,
+      "Height": 1184,
       "Batch": 1,
       "Landscape": false,
       "HiResMultiplier": 1.7000000000000002
@@ -125,7 +125,7 @@
   },
   "20": {
     "inputs": {
-      "seed": 3586972079,
+      "seed": 9550645990,
       "steps": 10,
       "cfg": [
         "13",
@@ -205,7 +205,7 @@
   },
   "32": {
     "inputs": {
-      "text": "ever_linzy_school, best quality, masterpiece, 1girl, solo focus,pov doorway,dark room, steam,breath,steam from mouth,imminent netorare, netorare,false smile, after sex,looking at viewer, looking afar, blank stare, heavy breathing,aroused, blush,heart-shaped pupils, excessive pussy juice,1boy, mature male,ugly bastard,  faceless male, fat man, side-by-side, grabbing from behind, covered penetration,hand on another's ass,hand under skirt,grabbing another's ass, sexually suggestive,evil grin, masterpiece, best quality, amazing quality"
+      "text": "ever_larimar_base, Bikini, masterpiece, best quality, amazing quality"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -214,7 +214,7 @@
   },
   "33": {
     "inputs": {
-      "text": "bad quality,worst quality,worst detail,sketch,censor,bad anatomy, bad perspective, bad feet, bad hands, bad proportions, wrong foot, wrong hand,multiple views, split screen, monster, furry,5fingers, variations, chest harness, o-ring harness, criss-cross halter, bad link, bad source, corrupted metadata, english text, ranguage, text print, futanari, futa with female, korean commentary, korean text, bad arm,artistic error,too many hands,too many finger, extra arms,extra legs, long neck, 3d, 3d background, paper texture, 2girls, 3girls, yuri, segmented comic, 2koma, 3koma, 4koma, torn clothes, front slit, too many belts,belt, criss-cross halter, diamond button, buttons, buckle, double-breasted, choker, ribbon, belt buckle, belt bow, computer, computer keyboard, computer mouse, computer tower, comic, accessories, corset, front slit, frontless outfit, 3d, censored, mosaic censoring, bar censor, convenient censoring, knee boots, nude,  mouse \\(animal\\), yellow, red,pink,halterneck, criss-cross halter,front slit, front slit,hip vent, neckerchief, sailor collar,collar, front-tie top, front-tie bikini top,front list, clothing cutout,side slit,slit skirt, ribbon-trimmed skirt, skirt cutout,2girls, twins, glint, shiny clothes, selfcest, coat, bow, bra, cleavage, pleated skirt, tribadism, puffy short sleeves, puffy long sleeves, embroidery, criss-cross straps, strap, thigh belt, animal hood,cat hood, bear hood, print shirt, print hoodie, print sweater,horn hood,demon hood, coat, trench coat, stomach cutout, censored nipples, 4koma, 5koma, 6koma, tongue out, asymmetrical legwear,lace-up, jpeg artifacts, bloom, dolphin shorts, from above, against railing, hand on railing, against wall, on railing, arm support, breasts out, look-alike, dual persona, multiple persona"
+      "text": "bad quality,worst quality,worst detail,sketch,censor,"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -277,7 +277,7 @@
   },
   "65": {
     "inputs": {
-      "data": "[{\"name\": \"linzy_school.safetensors\", \"strength\": 0.85, \"strength_clip\": 1.0}]",
+      "data": "[{\"name\": \"larimar_base.safetensors\", \"strength\": 0.9, \"strength_clip\": 1.0}]",
       "model": [
         "36",
         0

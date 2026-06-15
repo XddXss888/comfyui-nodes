@@ -1,0 +1,109 @@
+{
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "flux1-schnell.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "Medical logo featuring a stylized red cross integrated with pine branch motifs inspired by the 'Welcoming Guest Pine', clean minimalist design, balanced symmetry, professional healthcare aesthetic, soft natural lighting, vector-style precision, masterpiece, best quality, highly detailed, studio lighting, crisp edges, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "3": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "4": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 1586616001,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "sgm_uniform",
+      "denoise": 1.0,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "3",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "6": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "4",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "DOOOOR_1K",
+      "images": [
+        "6",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "6",
+        0
+      ],
+      "width": 400,
+      "height": 0,
+      "crop": "disabled",
+      "upscale_method": "nearest-exact"
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "DOOOOR_1K_TH",
+      "images": [
+        "8",
+        0
+      ]
+    }
+  }
+}

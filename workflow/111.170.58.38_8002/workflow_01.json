@@ -1,7 +1,7 @@
 {
   "12": {
     "inputs": {
-      "image": "260613221317035-1-2-c72rk7.jpg"
+      "image": "5008831-5159-7-8y-1-ljy8c1.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -10,7 +10,7 @@
   },
   "15": {
     "inputs": {
-      "image": "___-_5_lovesasakids-gkfhkw.jpg"
+      "image": "hezhongai_00086_-20-b4wncf.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -22,9 +22,9 @@
       "api_url": "https://3dcdn.580ai.net/v1beta/models/gemini-3.1-flash-image-preview:generateContent",
       "header_key": "Authorization",
       "header_value": "sk-Lyx9OF97YMK0suEi6ZIPzq4E9d3dhIKJzO2YS5WpAsZbZpxS",
-      "text": "控制制图1模特做图2模特的动作姿势和表情，控制图1模特不看镜头，图1模特的角度与图2模特一致，多生成三件件图1模特的上衣，不规则的套在模特的脖子上覆盖至肩膀和手臂，多余的上衣慵懒的堆叠凌乱在模特的撒肩膀处，控制图1模特的头向镜头右侧倾斜，不要改变图1模特的造型和搭配，不要改变图1模特的五官细节，不要改变图1拍摄的地面，不要改变图1的拍摄场景和光线色调",
-      "aspect_ratio": "3:4",
-      "image_size": "4K",
+      "text": "图一服装不变，穿在一个欧洲漂亮女孩身上8-9岁金发，参考图二风格，禁止与图二人物场景一模一样，侧面站着自然随意摆动玩的图，裙摆超蓬蓬效果长裙到脚，长的披纱袖跟裙摆一样长度，披纱要密集点不太透明，图一颜色不变 ，参考图二人物披发金发加小发饰，参考图二场景，长裙到脚，参考图一款式袖子是纱，参考图一款式，参考图二人物站在楼梯口，参考图一动作摆动披袖纱效果",
+      "aspect_ratio": "1:1",
+      "image_size": "2K",
       "timeout": 200,
       "retry_count": 2,
       "image_1": [

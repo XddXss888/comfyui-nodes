@@ -2,13 +2,13 @@
   "1": {
     "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "ckpt_name": "dreamshaper_8.safetensors"
+      "ckpt_name": "v1-5-pruned-emaonly.safetensors"
     }
   },
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "A hyperrealistic, close-up view of a pristine lake reflecting a rustic wooden house at golden hour. The water is glassy, with subtle ripples near the shore, mirroring the warm orange and pink hues of the sunset sky. The house features weathered timber, a sloping roof, and glowing windows that cast a soft, golden light onto the dock. In the foreground, tall reeds and wildflowers frame the scene, their silhouettes sharp against the luminous horizon. The atmosphere is serene, with mist rising gently from the water. Shot on a medium-format camera, 85mm lens, f/2.8, with soft, diffused lighting and rich, cinematic color grading.",
+      "text": "A single, sleek black cat with luminous amber eyes sits poised on a weathered wooden fence at dusk. The fur is rendered in ultra-detailed, clean smooth textures, with each strand catching the warm, golden hour light in natural vibrant colors. The cat's whiskers are sharp and crystalline, while its gaze holds a quiet intensity. In the background, a soft bokeh of overgrown garden foliage and distant rolling hills creates rich depth of field. The composition is excellent and balanced, with the cat positioned in the lower left third, drawing the eye across the scene. Natural studio lighting casts a subtle, warm glow, accentuating the creature's form and the weathered grain of the wood. The atmosphere is serene yet watchful, a moment of photorealism with subtle artistic polish. Flawless rendering captures the interplay of light and shadow, from the cat's glossy nose to the faint, dewy mist hovering just above the grass.",
       "clip": [
         "1",
         1
@@ -36,8 +36,8 @@
   "5": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 561318712,
-      "steps": 20,
+      "seed": 701245900,
+      "steps": 8,
       "cfg": 7.0,
       "sampler_name": "euler",
       "scheduler": "karras",

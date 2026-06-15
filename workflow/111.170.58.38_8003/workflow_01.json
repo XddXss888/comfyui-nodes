@@ -1,16 +1,7 @@
 {
   "12": {
     "inputs": {
-      "image": "20260613222142283-1-51jqth.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "15": {
-    "inputs": {
-      "image": "4-qq20260415-102235-jylmu2.png"
+      "image": "hezhongai_00086_-20-5f48fh.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -22,17 +13,13 @@
       "api_url": "https://3dcdn.580ai.net/v1beta/models/gemini-3.1-flash-image-preview:generateContent",
       "header_key": "Authorization",
       "header_value": "sk-Lyx9OF97YMK0suEi6ZIPzq4E9d3dhIKJzO2YS5WpAsZbZpxS",
-      "text": "控制制图1模特做图2模特的动作姿势和表情，图1模特坐在椅子上，桌上放着淡粉色的蝴蝶兰，桌椅的颜色改为深棕色，裙摆的纱裙自然散开，纱裙的裙摆有强烈的垂坠感，不要改变图1模特的造型和搭配，不要改变图1模特的五官细节，不要改变图1拍摄的地面，不要改变图1的拍摄场景和光线色调",
-      "aspect_ratio": "3:4",
-      "image_size": "4K",
+      "text": "图中把披肩网纱袖的长度缩短到裙摆边一样长度就可以，其它不要任何改动",
+      "aspect_ratio": "1:1",
+      "image_size": "2K",
       "timeout": 200,
       "retry_count": 2,
       "image_1": [
         "12",
-        0
-      ],
-      "image_2": [
-        "15",
         0
       ]
     },
@@ -43,7 +30,7 @@
   },
   "17": {
     "inputs": {
-      "filename_prefix": "hezhongai",
+      "filename_prefix": "HezhongAi",
       "images": [
         "16",
         0

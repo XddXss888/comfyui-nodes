@@ -1,28 +1,4 @@
 {
-  "14": {
-    "inputs": {
-      "unet_name": "flux1-dev-fp8.safetensors",
-      "weight_dtype": "fp8_e4m3fn"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNET加载器"
-    }
-  },
-  "16": {
-    "inputs": {
-      "lora_name": "v3ctora.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "14",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA加载器(仅模型)"
-    }
-  },
   "17": {
     "inputs": {
       "noise": [
@@ -30,7 +6,7 @@
         0
       ],
       "guider": [
-        "32",
+        "30",
         0
       ],
       "sampler": [
@@ -53,7 +29,7 @@
   },
   "18": {
     "inputs": {
-      "noise_seed": 1553625029503687
+      "noise_seed": 551401736616546
     },
     "class_type": "RandomNoise",
     "_meta": {
@@ -62,7 +38,7 @@
   },
   "19": {
     "inputs": {
-      "sampler_name": "euler"
+      "sampler_name": "dpmpp_2m_sde_gpu"
     },
     "class_type": "KSamplerSelect",
     "_meta": {
@@ -71,11 +47,11 @@
   },
   "20": {
     "inputs": {
-      "scheduler": "simple",
-      "steps": 25,
+      "scheduler": "karras",
+      "steps": 21,
       "denoise": 1.0,
       "model": [
-        "16",
+        "35",
         0
       ]
     },
@@ -84,22 +60,11 @@
       "title": "基础调度器"
     }
   },
-  "23": {
-    "inputs": {
-      "clip_name1": "t5xxl_fp8_e4m3fn.safetensors",
-      "clip_name2": "clip_l.safetensors",
-      "type": "flux"
-    },
-    "class_type": "DualCLIPLoader",
-    "_meta": {
-      "title": "双CLIP加载器"
-    }
-  },
   "24": {
     "inputs": {
-      "filename_prefix": "2D_graphic/2D_graphic",
+      "filename_prefix": "Color geometry/2025_03_05/Color geometry",
       "images": [
-        "33",
+        "26",
         0
       ]
     },
@@ -108,24 +73,15 @@
       "title": "保存图像"
     }
   },
-  "25": {
-    "inputs": {
-      "vae_name": "ae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "VAE加载器"
-    }
-  },
   "26": {
     "inputs": {
       "samples": [
         "17",
-        1
+        0
       ],
       "vae": [
-        "25",
-        0
+        "33",
+        2
       ]
     },
     "class_type": "VAEDecode",
@@ -135,8 +91,8 @@
   },
   "29": {
     "inputs": {
-      "width": 512,
-      "height": 512,
+      "width": 768,
+      "height": 768,
       "batch_size": 1
     },
     "class_type": "EmptyLatentImage",
@@ -146,45 +102,17 @@
   },
   "30": {
     "inputs": {
-      "text": "Vectorial illustration,A vivid, glowing heart, crafted from shimmering crystal, floating against a dreamy cosmic nebula background, with soft light trails and sparkling particles, hyper-detailed, photorealistic, 8K resolution. in the style of v3ctora, black lines, white background, Vector art, minimalist，only black and white",
-      "speak_and_recognation": true,
-      "clip": [
-        "23",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码器"
-    }
-  },
-  "31": {
-    "inputs": {
-      "text": "Colors other than black and white,colorful，red,yellow,blue,green,\n",
-      "speak_and_recognation": true,
-      "clip": [
-        "23",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码器"
-    }
-  },
-  "32": {
-    "inputs": {
-      "cfg": 2.0,
+      "cfg": 3.5,
       "model": [
-        "16",
+        "35",
         0
       ],
       "positive": [
-        "30",
+        "46",
         0
       ],
       "negative": [
-        "31",
+        "47",
         0
       ]
     },
@@ -195,17 +123,127 @@
   },
   "33": {
     "inputs": {
-      "brightness": 1.0,
-      "contrast": 2.0,
-      "saturation": 1.0,
-      "image": [
-        "26",
+      "ckpt_name": "RealitiesEdgeXLSDXL_TURBOXLV2.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Checkpoint加载器(简易)"
+    }
+  },
+  "35": {
+    "inputs": {
+      "lora_01": "MW_极简logo_icon PRO_1.0.safetensors",
+      "strength_01": 1.0,
+      "lora_02": "v3ctora.safetensors",
+      "strength_02": 0.8,
+      "lora_03": "Harrlogos_v2.0.safetensors",
+      "strength_03": 1.0,
+      "lora_04": "None",
+      "strength_04": 1.0,
+      "model": [
+        "33",
         0
+      ],
+      "clip": [
+        "33",
+        1
       ]
     },
-    "class_type": "LayerColor: Brightness & Contrast",
+    "class_type": "Lora Loader Stack (rgthree)",
     "_meta": {
-      "title": "亮度/对比度"
+      "title": "LoRA堆加载器"
+    }
+  },
+  "43": {
+    "inputs": {
+      "string": "generate an 8.5in x 11in juneteenth african \nthemed sticker designs, each row should have 3 different sticker designs with a total of 4 rows, in the style of v3ctora, Vector art, minimalist,logo_l ,simple background,visual arts,collage art,Large color block",
+      "strip_newlines": true
+    },
+    "class_type": "StringConstantMultiline",
+    "_meta": {
+      "title": "字符串常量(文本框)"
+    }
+  },
+  "44": {
+    "inputs": {
+      "string": "text,letter,shadow, 3D,realistic, ",
+      "strip_newlines": true
+    },
+    "class_type": "StringConstantMultiline",
+    "_meta": {
+      "title": "字符串常量(文本框)"
+    }
+  },
+  "45": {
+    "inputs": {
+      "text_positive": [
+        "43",
+        0
+      ],
+      "text_negative": [
+        "44",
+        0
+      ],
+      "style": "papercraft-flat papercut",
+      "log_prompt": false,
+      "style_positive": true,
+      "style_negative": false
+    },
+    "class_type": "SDXLPromptStyler",
+    "_meta": {
+      "title": "SDXL风格化提示词"
+    }
+  },
+  "46": {
+    "inputs": {
+      "text": [
+        "48",
+        0
+      ],
+      "clip": [
+        "35",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码器"
+    }
+  },
+  "47": {
+    "inputs": {
+      "text": [
+        "48",
+        1
+      ],
+      "clip": [
+        "35",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码器"
+    }
+  },
+  "48": {
+    "inputs": {
+      "text_positive": [
+        "45",
+        0
+      ],
+      "text_negative": [
+        "45",
+        1
+      ],
+      "style": "sai-line art",
+      "log_prompt": false,
+      "style_positive": false,
+      "style_negative": false
+    },
+    "class_type": "SDXLPromptStyler",
+    "_meta": {
+      "title": "SDXL风格化提示词"
     }
   }
 }

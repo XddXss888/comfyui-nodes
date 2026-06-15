@@ -1,0 +1,283 @@
+{
+  "6": {
+    "inputs": {
+      "text": "A cinematic medium shot of a narrow hard-packed rust-red (#8B4513/#A0522D) dirt path stretching toward a distant pond, bordered by dry golden grass on both sides that gradually greens closer to the waterline, bathed in golden hour amber light (#FFB347) casting long copper shadows across the earth and warming every surface with a honeyed glow. Arjun stands front-facing on the path, a slim, angular ten-year-old boy, small for his age at roughly four-foot-six, with medium-brown skin (#8D5524) glowing with warm honey undertones in the backlight, messy black hair (#1A1A1A) with blue-black highlights falling in uneven tufts across his forehead, large expressive dark brown eyes (#3B1F0B) framed by thick lashes looking slightly downward with a quiet pensiveness, a small dark brown mole (#2B1B0E) on his left cheek, thin frame with visible shoulder blades and knobby knees, wearing a faded blue shirt (#7B9BAF) — once vivid cobalt now washed pale and salt-stained — hanging loose on his angular frame, frayed khaki-brown shorts (#8B7355) ending above the knees, bare feet with slightly splayed toes pressing into the packed earth with fine grey-tan dust around his soles, healing pink scrapes (#E8A0A0) on his knees and palms, his hands at his sides with his right thumb pressing restlessly against his index finger, shoulders hunched slightly inward, jaw soft, brow gently furrowed, eyes cast low with a weight beyond his years. The path recedes behind him into warm amber haze, tiny motes of dust suspended in golden shafts of light, the distant suggestion of the pond's tawny-gold shallows visible at the far end of the path. Pixar-style 3D, soft global illumination, polished cinematic quality. Color palette of rust-red (#8B4513), warm amber (#FFB347), faded blue (#7B9BAF), medium-brown (#8D5524), khaki-brown (#8B7355), copper (#B87333), and grey-tan dust tones.",
+      "clip": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "13",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "scene_03/Flux2",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "10": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "12": {
+    "inputs": {
+      "unet_name": "flux2_dev_fp8mixed.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "13": {
+    "inputs": {
+      "noise": [
+        "25",
+        0
+      ],
+      "guider": [
+        "22",
+        0
+      ],
+      "sampler": [
+        "16",
+        0
+      ],
+      "sigmas": [
+        "48",
+        0
+      ],
+      "latent_image": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "16": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "22": {
+    "inputs": {
+      "model": [
+        "12",
+        0
+      ],
+      "conditioning": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "BasicGuider"
+    }
+  },
+  "25": {
+    "inputs": {
+      "noise_seed": 42
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "26": {
+    "inputs": {
+      "guidance": 4.0,
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "FluxGuidance"
+    }
+  },
+  "38": {
+    "inputs": {
+      "clip_name": "mistral_3_small_flux2_bf16.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "39": {
+    "inputs": {
+      "conditioning": [
+        "43",
+        0
+      ],
+      "latent": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "40": {
+    "inputs": {
+      "pixels": [
+        "41",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "41": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "42",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
+    }
+  },
+  "42": {
+    "inputs": {
+      "image": "arjun (1).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "43": {
+    "inputs": {
+      "conditioning": [
+        "26",
+        0
+      ],
+      "latent": [
+        "44",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "44": {
+    "inputs": {
+      "pixels": [
+        "45",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "45": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
+    }
+  },
+  "46": {
+    "inputs": {
+      "image": "thedirtpath (1).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "47": {
+    "inputs": {
+      "width": 1248,
+      "height": 832,
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "48": {
+    "inputs": {
+      "steps": 20,
+      "width": 1248,
+      "height": 832
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "Flux2Scheduler"
+    }
+  }
+}

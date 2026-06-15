@@ -12,7 +12,7 @@
   "104": {
     "inputs": {
       "model": [
-        "158",
+        "138",
         0
       ],
       "shift": 5.000000000000001
@@ -70,6 +70,39 @@
     },
     "class_type": "RifeTensorrt"
   },
+  "138": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "lora_02": "wan2.2\\wan2.2-i2v-high-oral-insertion-v1.0.safetensors",
+      "lora_03": "None",
+      "lora_04": "None",
+      "lora_05": "None",
+      "lora_06": "None",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "156",
+        0
+      ],
+      "strength_01": 2.0000000000000004,
+      "strength_02": 1.0000000000000002,
+      "strength_03": 0.0,
+      "strength_04": 0.0,
+      "strength_05": 1.0,
+      "strength_06": 1.0,
+      "strength_07": 1.0,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
+  },
   "139": {
     "inputs": {
       "clip": [
@@ -77,11 +110,11 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "wan2.2\\Wan2.2 - T2V - Body Shots - LOW 14B.safetensors",
-      "lora_03": "wan2.1\\crash-zoom-out.safetensors",
-      "lora_04": "wan0901\\HairyPussy_000002500_low_noise.safetensors",
-      "lora_05": "wan0917\\wan2.2-i2v-low-pov-insertion-v1.0.safetensors",
-      "lora_06": "wan2.2\\56Low noise-Cumshot Aesthetics.safetensors",
+      "lora_02": "wan2.2\\wan2.2-i2v-low-oral-insertion-v1.0.safetensors",
+      "lora_03": "None",
+      "lora_04": "None",
+      "lora_05": "None",
+      "lora_06": "None",
       "lora_07": "None",
       "lora_08": "None",
       "lora_09": "None",
@@ -90,11 +123,11 @@
         "157",
         0
       ],
-      "strength_01": 1.0,
+      "strength_01": 1.0000000000000002,
       "strength_02": 1.0000000000000002,
-      "strength_03": 1.0000000000000002,
-      "strength_04": 1.0000000000000002,
-      "strength_05": 0.0,
+      "strength_03": 0.0,
+      "strength_04": 0.0,
+      "strength_05": 1.0,
       "strength_06": 1.0,
       "strength_07": 1.0,
       "strength_08": 1.0,
@@ -122,7 +155,7 @@
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/606167d7-3f1d-421d-a80d-49377b7f7523.png"
+      "urls": "https://media.pornmaker.cloud/b2152ef7-38bd-43ef-957e-d87b59ffed84.png"
     },
     "class_type": "LoadImageFromURL"
   },
@@ -139,39 +172,6 @@
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
-  },
-  "158": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "wan2.2\\Wan2.2 - T2V - Body Shots - HIGH 14B.safetensors",
-      "lora_03": "wan2.1\\crash-zoom-out.safetensors",
-      "lora_04": "wan0901\\HairyPussy_000002500_high_noise.safetensors",
-      "lora_05": "wan0917\\wan2.2-i2v-high-pov-insertion-v1.0.safetensors",
-      "lora_06": "wan2.2\\23High noise-Cumshot Aesthetics.safetensors",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "156",
-        0
-      ],
-      "strength_01": 2.0000000000000004,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 2.0000000000000004,
-      "strength_04": 1.0000000000000002,
-      "strength_05": 0.0,
-      "strength_06": 1.0,
-      "strength_07": 1.0,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
   },
   "84": {
     "inputs": {
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 2416160181891910043,
+      "noise_seed": 4013728735552969964,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 3614604787212753927,
+      "noise_seed": 6649083173366799157,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": " realistic. real life. POV. A girl in the middle of the screen. the camera instantly cr34sh crash zoom out effect to a full pov view ofThe camera focusing on the woman's torso, then executes a sudden, sharp snap-zoom as the cum shoots. A stunningly beautiful young woman lies on her back. her body exquisitely nude. The tip of a glistening, dark penis is barely visible at the very bottom-left edge of the frame, hinting at its immense proximity. The man's hand, partially obscured, is steadily stroking his penis, the rhythmic movement almost hypnotic. Her body and breasts are already glistening with a generous coating of cum, reflecting the ambient light. Suddenly, a huge, thick load of white cum shoots from the penis, arcing through the air with incredible force. The camera focuses intently as the cum lands with a wet splat, spreading thickly across her stomach and breasts, adding to the already copious amount."
+      "text": "realistic. real life. POV. \r\nA man appears and she sucks his penis. Static camera, fixed viewpoint, still shot."
     },
     "class_type": "CLIPTextEncode"
   },

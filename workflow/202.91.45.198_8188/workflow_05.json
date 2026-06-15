@@ -12,11 +12,11 @@
   },
   "13": {
     "inputs": {
-      "image": "IMG_5580.jpg"
+      "image": "ComfyUI_temp_aynrb_00001_.png"
     },
     "class_type": "LoadImage",
     "_meta": {
-      "title": "Load Image"
+      "title": "Загрузить изображение"
     }
   },
   "17": {
@@ -77,7 +77,7 @@
     },
     "class_type": "PreviewImage",
     "_meta": {
-      "title": "Preview Image"
+      "title": "Предварительный просмотр изображения"
     }
   },
   "52": {
@@ -174,7 +174,7 @@
     },
     "class_type": "ImageCompositeMasked",
     "_meta": {
-      "title": "ImageCompositeMasked"
+      "title": "Составное изображение с маской"
     }
   },
   "79": {
@@ -262,7 +262,7 @@
     },
     "class_type": "PreviewImage",
     "_meta": {
-      "title": "Preview Image"
+      "title": "Предварительный просмотр изображения"
     }
   },
   "92": {
@@ -355,7 +355,7 @@
     },
     "class_type": "PreviewImage",
     "_meta": {
-      "title": "Preview Image"
+      "title": "Предварительный просмотр изображения"
     }
   },
   "117": {
@@ -440,7 +440,7 @@
     },
     "class_type": "SolidMask",
     "_meta": {
-      "title": "SolidMask"
+      "title": "Сплошная маска"
     }
   },
   "133": {
@@ -452,7 +452,7 @@
     },
     "class_type": "MaskToImage",
     "_meta": {
-      "title": "Convert Mask to Image"
+      "title": "Преобразовать маску в изображение"
     }
   },
   "138": {
@@ -553,7 +553,7 @@
     },
     "class_type": "Preview3D",
     "_meta": {
-      "title": "Preview 3D"
+      "title": "Предварительный просмотр 3D"
     }
   },
   "154": {
@@ -566,7 +566,7 @@
     },
     "class_type": "Preview3D",
     "_meta": {
-      "title": "Preview 3D"
+      "title": "Предварительный просмотр 3D"
     }
   }
 }

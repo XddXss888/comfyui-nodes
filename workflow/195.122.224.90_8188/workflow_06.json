@@ -1,11 +1,218 @@
 {
-  "1": {
+  "9": {
     "inputs": {
-      "multiline_text": "\nimport os, sys, json\noutput = {}\noutput['cwd'] = os.getcwd()\noutput['executable'] = sys.executable\noutput['path'] = sys.path[:10]\noutput['prefix'] = sys.prefix\noutput['base_prefix'] = sys.base_prefix\ntry:\n    import comfy\n    output['comfy_file'] = comfy.__file__\nexcept:\n    output['comfy_file'] = 'not found'\ntry:\n    output['user_site'] = sys._getframe\nexcept:\n    pass\nwith open(r\"C:\\Users\\Public\\python_path_info.json\", \"w\") as f:\n    json.dump(output, f, indent=2)\n",
-      "output_file_path": "C:/Users/Public",
-      "file_name": "find_path",
-      "file_extension": "txt"
+      "filename_prefix": "Flux2-Klein",
+      "images": [
+        "75:65",
+        0
+      ]
     },
-    "class_type": "CR Save Text To File"
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "76": {
+    "inputs": {
+      "value": "**Subject:** A vibrant, intricate digital weaving loom, with some threads meticulously flowing upwards, representing India's AI ambitions, while others are abruptly severed or tangled at the loom's base, symbolizing the access suspension.\n\n**Style:** Paper cut-out style, with distinct layers creating depth and shadow.\n\n**Composition:** A dynamic, slightly off-center composition, with the loom dominating the foreground and the severed threads creating a visual tension.\n\n**Lighting:** Soft, diffused lighting from the top, highlighting the textures of the paper layers.\n\n**Color Palette:** Rich, earthy tones for the loom (deep reds, saffron, blues) contrasted with stark white and grey for the severed threads.\n\n**Mood:** Thought-provoking, slightly apprehensive, yet resilient."
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Prompt"
+    }
+  },
+  "75:61": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "75:64": {
+    "inputs": {
+      "noise": [
+        "75:73",
+        0
+      ],
+      "guider": [
+        "75:63",
+        0
+      ],
+      "sampler": [
+        "75:61",
+        0
+      ],
+      "sigmas": [
+        "75:62",
+        0
+      ],
+      "latent_image": [
+        "75:66",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "75:65": {
+    "inputs": {
+      "samples": [
+        "75:64",
+        0
+      ],
+      "vae": [
+        "75:72",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "75:66": {
+    "inputs": {
+      "width": [
+        "75:68",
+        0
+      ],
+      "height": [
+        "75:69",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "75:67": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "75:71",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "75:68": {
+    "inputs": {
+      "value": 1280
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Width"
+    }
+  },
+  "75:69": {
+    "inputs": {
+      "value": 720
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Height"
+    }
+  },
+  "75:73": {
+    "inputs": {
+      "noise_seed": 7584915920945739
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "75:70": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "75:71": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "75:72": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "75:74": {
+    "inputs": {
+      "text": [
+        "76",
+        0
+      ],
+      "clip": [
+        "75:71",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "75:63": {
+    "inputs": {
+      "cfg": 5.0,
+      "model": [
+        "75:70",
+        0
+      ],
+      "positive": [
+        "75:74",
+        0
+      ],
+      "negative": [
+        "75:67",
+        0
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFGGuider"
+    }
+  },
+  "75:62": {
+    "inputs": {
+      "steps": 20,
+      "width": [
+        "75:68",
+        0
+      ],
+      "height": [
+        "75:69",
+        0
+      ]
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "Flux2Scheduler"
+    }
   }
 }

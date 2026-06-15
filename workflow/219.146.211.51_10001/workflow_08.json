@@ -1,0 +1,128 @@
+{
+  "2": {
+    "inputs": {
+      "text": "female,43 years old,\n43岁亚洲女性，皮肤略有松弛、眼角细纹、轻微法令纹显现、成熟稳重气质、眼周出现岁月痕迹，高级感人像，黑色长发，精致妆容，白色修身连衣裙，优雅站姿，气质清纯又迷人，柔和棚拍灯光，浅灰背景，时尚杂志封面风格,\n,\nFF7 Remake style, Final Fantasy 7 aesthetic, Square Enix 3D anime,\nstylized semi-realistic, cel-shaded hybrid render,\ndelicate detailed face, sharp anime eyes, refined hair strands,\ncinematic lighting, soft shadows, PBR textures,\nUnreal Engine 5, masterpiece, best quality, ultra-detailed, 8K.\n\nPose: standard T-pose, hands hanging naturally at sides, standing straight and upright.没穿衣服\n\n**年龄特征要求**：\n- 必须在面部明显体现 22 岁的年龄特征\n- 年轻人（18-25岁）：皮肤紧致光滑、胶原蛋白充足、眼神明亮有活力、面部轮廓清晰圆润、无皱纹\n- 青年人（26-35岁）：皮肤状态良好、轻微软化纹、成熟气质初现、眼神自信稳重\n- 中年人（36-50岁）：皮肤略有松弛、眼角细纹、轻微法令纹显现、成熟稳重气质、眼周出现岁月痕迹\n- 50岁以上：皱纹明显、皮肤松弛、眼袋出现、苍老气质、头发可能灰白\n\n",
+      "clip": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "正向"
+    }
+  },
+  "4": {
+    "inputs": {
+      "seed": 783984818558010,
+      "steps": 30,
+      "cfg": 3.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "18",
+        0
+      ],
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
+        "9",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "5": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "6": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "7": {
+    "inputs": {
+      "samples": [
+        "4",
+        0
+      ],
+      "vae": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "9": {
+    "inputs": {
+      "text": " 不得生成与指定年龄不符的面部特征（如让30岁的人看起来像20岁，或像50岁）\n- 不得忽略年龄参数随意生成外观\n- 不得在不应该出现皱纹的年龄段添加皱纹",
+      "clip": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "反向"
+    }
+  },
+  "16": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "18": {
+    "inputs": {
+      "unet_name": "z_image_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "19": {
+    "inputs": {
+      "filename_prefix": "to-image-2026-06-15",
+      "images": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "SaveImageS3",
+    "_meta": {
+      "title": "Save Image to S3"
+    }
+  }
+}

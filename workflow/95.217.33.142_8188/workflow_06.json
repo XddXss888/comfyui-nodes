@@ -37,7 +37,7 @@
     "class_type": "KSampler",
     "inputs": {
       "seed": 42,
-      "steps": 4,
+      "steps": 8,
       "cfg": 7.0,
       "sampler_name": "euler",
       "scheduler": "karras",
@@ -76,7 +76,7 @@
   "7": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "webui_test",
+      "filename_prefix": "test_hetzner",
       "images": [
         "6",
         0

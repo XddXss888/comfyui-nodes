@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image_path_or_URL": "https://cos.credit99.cn/2026-06-11/6a17e2300eae9fa57b61d09b/upload/20260611141519527-_20260609223816_122-6t0gsd.jpg",
+      "image_path_or_URL": "https://cos.credit99.cn/image/temps/69d367054c6e2e96ca9f00fc/Ind420_00193_-20260615084711071.png",
       "image": "",
       "upscale_method": "lanczos",
       "megapixels": 0.0,
@@ -16,7 +16,7 @@
   },
   "2": {
     "inputs": {
-      "image_path_or_URL": "https://cos.credit99.cn/2026-06-12/69d367054c6e2e96ca9f00fc/upload/20260612225918677-icywinter-_beautifu-oer8n7.png",
+      "image_path_or_URL": "https://cos.credit99.cn/2026-06-15/69d367054c6e2e96ca9f00fc/upload/20260615155906326-TOP10_11-n2br45.jpg",
       "image": "",
       "upscale_method": "lanczos",
       "megapixels": 0,
@@ -33,10 +33,9 @@
     "inputs": {
       "action": "append",
       "tidy_tags": "no",
-      "text_a": "    \"DESIGNATED AREA: Pattern application confined to specified product surface area only\",\n    \"DESIGNATED TEXT:",
-      "text_b": "photorealistic details，masterpiece quality,No Text",
-      "text_c": ", specified text in soft cute cartoon font, auto-scaled, no overflow,elegant typography matching framework\",\n    \"MATERIAL: Smooth polished base + natural wood grain relief, rich dark brown earthy tones — zero color saturation\",",
-      "result": ""
+      "text_a": "    \"Model type selection (Asian  female model) with auto-adapted body proportions and skin tone, 100% consistent across all wear views\",",
+      "text_b": "",
+      "text_c": ""
     },
     "class_type": "StringFunction|pysssss",
     "_meta": {
@@ -45,30 +44,42 @@
   },
   "4": {
     "inputs": {
-      "action": "append",
-      "tidy_tags": "no",
-      "text_a": "{\n  \"task_objective\": \"Industrial Line Art to Relief Pattern Design & 9-View 3x3 - Map Figure 2 patterns onto Figure 1 product, view_1 precise replica, views 2-9 creative variations,  material, original product structure FULLY PRESERVED\",\n  \"input_assets\": {\n    \"product_reference\": \"Figure 1 Industrial Line Art - Outer frame dimensions, shape, outline, structural features - LOCKED\",\n    \"pattern_inspiration\": \"Figure 2 Inspiration Image - Decorative patterns, surface textures, artistic motifs — pattern structure only, discard color\"\n},\n  \"workflow\": {\n    \"step_1\": \"Auto-detect Figure 1 product structure + extract Figure 2 pattern structure (discard color)\",\n    \"step_2\": \"View_1 (FIXED): 1:1 replica of Figure 2 pattern within designated_area. Views 2-9 (CREATIVE): free designs inspired by Figure 2 aesthetic DNA within designated_area\",\n    \"step_3\": \"Verify Figure 1 product specs/dimensions/shape unchanged, apply  material + designated_text, assemble 9-view 3x3 grid\"\n  },\n  \"outputs\": {\n    \"view_1\": \"Precise Replica - 1:1 replica of Figure 2 pattern, self-adapted to Figure 1 product within designated_area, \",\n    \"view_2\": \"Creative Variation 02 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_3\": \"Creative Variation 03 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_4\": \"Creative Variation 04 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_5\": \"Creative Variation 05 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_6\": \"Creative Variation 06 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_7\": \"Creative Variation 07 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_8\": \"Creative Variation 08 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_9\": \"Creative Variation 09 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \"\n  },\n  \"output_requirements\": [\n    \"PRODUCT LOCK: Outer frame dimensions and shape identical to Figure 1 — zero deviation across all 9 views\",\n    \"PATTERN SELF-ADAPT: Patterns from Figure 2 automatically wrap/fill/scale to fit within designated_area\",\n    \"VIEW_1 FIXED: Strict 1:1 replica of Figure 2 pattern; VIEWS 2-9 CREATIVE: free designs sharing Figure 2 aesthetic DNA\",\n\n",
-      "text_b": [
-        "3",
+      "index": 1,
+      "text0": [
+        "8",
         0
       ],
-      "text_c": "    \"No text/labels/watermarks except designated_text; Premium 3x3, macro front view\"\n  ]\n}\n",
-      "result": "{\n  \"task_objective\": \"Industrial Line Art to Relief Pattern Design & 9-View 3x3 - Map Figure 2 patterns onto Figure 1 product, view_1 precise replica, views 2-9 creative variations,  material, original product structure FULLY PRESERVED\",\n  \"input_assets\": {\n    \"product_reference\": \"Figure 1 Industrial Line Art - Outer frame dimensions, shape, outline, structural features - LOCKED\",\n    \"pattern_inspiration\": \"Figure 2 Inspiration Image - Decorative patterns, surface textures, artistic motifs — pattern structure only, discard color\"\n},\n  \"workflow\": {\n    \"step_1\": \"Auto-detect Figure 1 product structure + extract Figure 2 pattern structure (discard color)\",\n    \"step_2\": \"View_1 (FIXED): 1:1 replica of Figure 2 pattern within designated_area. Views 2-9 (CREATIVE): free designs inspired by Figure 2 aesthetic DNA within designated_area\",\n    \"step_3\": \"Verify Figure 1 product specs/dimensions/shape unchanged, apply  material + designated_text, assemble 9-view 3x3 grid\"\n  },\n  \"outputs\": {\n    \"view_1\": \"Precise Replica - 1:1 replica of Figure 2 pattern, self-adapted to Figure 1 product within designated_area, \",\n    \"view_2\": \"Creative Variation 02 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_3\": \"Creative Variation 03 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_4\": \"Creative Variation 04 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_5\": \"Creative Variation 05 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_6\": \"Creative Variation 06 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_7\": \"Creative Variation 07 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_8\": \"Creative Variation 08 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \",\n    \"view_9\": \"Creative Variation 09 - Inspired by Figure 2 aesthetic DNA, self-adapted within designated_area, \"\n  },\n  \"output_requirements\": [\n    \"PRODUCT LOCK: Outer frame dimensions and shape identical to Figure 1 — zero deviation across all 9 views\",\n    \"PATTERN SELF-ADAPT: Patterns from Figure 2 automatically wrap/fill/scale to fit within designated_area\",\n    \"VIEW_1 FIXED: Strict 1:1 replica of Figure 2 pattern; VIEWS 2-9 CREATIVE: free designs sharing Figure 2 aesthetic DNA\",\n    \"DESIGNATED AREA: Pattern application confined to specified product surface area only\",\n    \"DESIGNATED TEXT: specified text in soft cute cartoon font, auto-scaled, no overflow\",\n    \"MATERIAL: Brushed matte base + mirror-polished relief, monochrome  metallic tones — zero color saturation\",\n    \"No text/labels/watermarks except designated_text; Premium 3x3, macro front view\"\n  ]\n}\n"
+      "text1": [
+        "9",
+        0
+      ]
     },
-    "class_type": "StringFunction|pysssss",
+    "class_type": "easy textIndexSwitch",
     "_meta": {
-      "title": "String Function 🐍"
+      "title": "文本编号切换"
     }
   },
   "5": {
+    "inputs": {
+      "ratio": "3:4"
+    },
+    "class_type": "ratio_selector",
+    "_meta": {
+      "title": "ratio selector"
+    }
+  },
+  "6": {
     "inputs": {
       "inputcount": 2,
       "prompt": [
         "4",
         0
       ],
-      "aspect_ratio": "1:1",
-      "resolution": "4k",
+      "aspect_ratio": [
+        "5",
+        0
+      ],
+      "resolution": "2k",
       "Update inputs(支持多图点我）": null,
       "images": [
         "1",
@@ -85,7 +96,7 @@
       "trd_node": true
     }
   },
-  "6": {
+  "7": {
     "inputs": {
       "prompt": [
         "4",
@@ -93,10 +104,13 @@
       ],
       "temperature": 0.9,
       "top_p": 0.95,
-      "seed": 340732934,
+      "seed": 795428119,
       "max_tokens": 32768,
-      "aspect_ratio": "1:1",
-      "resolution": "4K",
+      "aspect_ratio": [
+        "5",
+        0
+      ],
+      "resolution": "2K",
       "thinking_level": "disabled",
       "inputcount": 2,
       "Update inputs(支持多图点我）": null,
@@ -116,15 +130,47 @@
       "trd_node": true
     }
   },
-  "7": {
+  "8": {
+    "inputs": {
+      "action": "append",
+      "tidy_tags": "no",
+      "text_a": "{\n  \"task_objective\": \"Fashion Promo Page & 3+1 Layout -3-top (inspiration→sketch→render) + 1-bottom (campaign)\",\n  \"input_assets\": {\n    \"structural_reference\": {\n      \"source\": \"Figure 1 Line Art\",\n      \"focus\": \"EXACT garment structural framework - proportions, silhouette form, seam placement, hemline positioning, collar styling, sleeve length, waistline, and overall garment length - ABSOLUTE PRESERVATION REQUIRED\",\n      \"role\": \"Provide locked structural blueprint for garment design generation\"\n    },\n    \"aesthetic_reference\": {\n      \"source\": \"Figure 2 Inspiration\",\n      \"focus\": \"Color system, fabric texture, pattern or detailing, and overall style tone\",\n      \"role\": \"Provide aesthetic elements to be applied onto the garment structure\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Analyze Figure 2 inspiration + parse Figure 1 garment structure\",\n    \"step_2\": \"Generate sketch → render from Figure 1 structure + Figure 2 aesthetics, pixel-precise, NO structural deviation\",\n    \"step_3\": \"Generate brand campaign, assemble 3-top + 1-bottom layout with premium atmosphere & transformation flow\"\n  },\n  \"outputs\": {\n    \"top_left\": \"Inspiration Source - Figure 2 original image with premium framing. Label: 灵感溯源 INSPIRATION\",\n    \"top_center\": \"Sketch Design - Figure 1 structure + Figure 2 aesthetics sketch. Label: 草图设计 SKETCH\",\n    \"top_right\": \"Garment Render - High-fidelity render, realistic fabric. Label: 服装渲染 RENDER. SOURCE OF TRUTH\",\n    \"bottom_full\": \"Brand Campaign - Dynamic editorial pose, stylish setting matching Figure 2 mood, spanning full width. Label: 品牌时尚 FASHION CAMPAIGN\"\n  },\n  \"output_requirements\": [\n    \"Figure 1 structure LOCKED; Figure 2 aesthetics pixel-precise\",\n    \"Campaign garment 100% identical to top_right render\",\n\n",
+      "text_b": [
+        "3",
+        0
+      ],
+      "text_c": "\n    \"SFW; realistic fabric; consistent lighting; NO oily shine; NO oversaturation\",\n    \"3-top + 1-bottom layout - gradient bg from Figure 2 colors, glow around top-left, cinematic vignette, luxury white space\",\n    \"Subtle flow lines connecting inspiration→sketch→render→campaign, indicating creative transformation journey\",\n    \"Coherent lighting: garment shadows on body, ambient occlusion at folds, consistent light direction\",\n    \"Premium atmosphere: Figure 2 color gradient bg, glow around center, cinematic vignette, unified color grading, luxury white space, editorial retouching\",\n    \"AI copywriting: Chinese-primary + English-secondary, series poetic title + inspiration analysis, elegant typography with theme-matching decorative icons\"\n   ]\n}"
+    },
+    "class_type": "StringFunction|pysssss",
+    "_meta": {
+      "title": "String Function 🐍"
+    }
+  },
+  "9": {
+    "inputs": {
+      "action": "append",
+      "tidy_tags": "no",
+      "text_a": "{\n  \"task_objective\": \"Fashion Promo Page & 6-View Fashion Layout - center inspiration with surrounding design views\",\n  \"input_assets\": {\n    \"structural_reference\": {\n      \"source\": \"Figure 1 Line Art\",\n      \"focus\": \"EXACT garment structural framework - proportions, silhouette form, seam placement, hemline positioning, collar styling, sleeve length, waistline, and overall garment length - ABSOLUTE PRESERVATION REQUIRED\",\n      \"role\": \"Provide locked structural blueprint for garment design generation\"\n    },\n    \"aesthetic_reference\": {\n      \"source\": \"Figure 2 Inspiration\",\n      \"focus\": \"Color system, fabric texture, pattern or detailing, and overall style tone\",\n      \"role\": \"Provide aesthetic elements to be applied onto the garment structure\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Analyze Figure 2 inspiration + parse Figure 1 garment structure\",\n    \"step_2\": \"Generate sketch → render from Figure 1 structure + Figure 2 aesthetics, pixel-precise, NO structural deviation\",\n    \"step_3\": \"Generate model wearing views + brand campaign, assemble diamond layout with premium atmosphere\"\n  },\n  \"outputs\": {\n    \"center_inspiration\": \"Figure 2 Inspiration - Original image at center with premium framing & glow. Label: 灵感溯源 INSPIRATION SOURCE\",\n    \"top_left\": \"Sketch Design - Figure 1 structure + Figure 2 aesthetics sketch. Label: 草图设计 SKETCH\",\n    \"top_right\": \"Garment Render - High-fidelity render, realistic fabric. Label: 服装渲染 GARMENT RENDER. SOURCE OF TRUTH\",\n    \"left_view\": \"Side Profile - Model side view, silhouette & drape emphasis. Label: 侧面效果 SIDE\",\n    \"right_view\": \"Detail Closeup - Dutch angle collar/detail, texture & craftsmanship. Label: 细节特写 DETAIL\",\n    \"bottom_campaign\": \"Brand Campaign - Dynamic editorial pose, stylish setting matching Figure 2 mood. Label: 品牌时尚 FASHION CAMPAIGN\"\n  },\n  \"output_requirements\": [\n    \"NO text/labels/watermarks except view labels; Figure 1 structure LOCKED; Figure 2 aesthetics pixel-precise\",\n    \"All wear views garment 100% identical to top_right render\",\n\n",
+      "text_b": [
+        "3",
+        0
+      ],
+      "text_c": "\n    \"SFW; realistic fabric; consistent lighting; NO oily shine; NO oversaturation\",\n    \"Coherent lighting: garment shadows on body, ambient occlusion at folds, consistent light direction\",\n    \"Premium atmosphere: Figure 2 color gradient bg, glow around center, cinematic vignette, unified color grading, luxury white space, editorial retouching\",\n    \"AI copywriting: Chinese-primary + English-secondary, series poetic title + inspiration analysis + garment spec + DNA mapping (icon-annotated), elegant typography with theme-matching decorative icons\"\n  ]\n}"
+    },
+    "class_type": "StringFunction|pysssss",
+    "_meta": {
+      "title": "String Function 🐍"
+    }
+  },
+  "10": {
     "inputs": {
       "index": 0,
       "image0": [
-        "5",
+        "6",
         0
       ],
       "image1": [
-        "6",
+        "7",
         0
       ]
     },
@@ -133,38 +179,11 @@
       "title": "图像编号切换"
     }
   },
-  "8": {
+  "11": {
     "inputs": {
-      "columns": 3,
-      "rows": 3,
-      "image": [
-        "7",
-        0
-      ]
-    },
-    "class_type": "ImageGridtoBatch",
-    "_meta": {
-      "title": "Image Grid To Batch"
-    }
-  },
-  "9": {
-    "inputs": {
-      "select": "0,1,2,3,4,5,6,7",
+      "filename_prefix": "cloth150",
       "images": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: BatchSelector",
-    "_meta": {
-      "title": "图层工具：批次选择器"
-    }
-  },
-  "10": {
-    "inputs": {
-      "filename_prefix": "ind",
-      "images": [
-        "9",
+        "10",
         0
       ]
     },

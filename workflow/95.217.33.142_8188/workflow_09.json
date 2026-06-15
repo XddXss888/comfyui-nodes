@@ -8,7 +8,7 @@
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "cinematic shot of a mountain lake at sunset, golden hour, gentle waves",
+      "text": "A solitary lighthouse stands on a rugged cliff edge, its white and red stripes glowing softly under the amber light of a setting sun. The sea churns with foamy waves crashing against the rocks, spray catching the golden light. The sky is a dramatic gradient of deep indigo to fiery orange, with wispy clouds scattered across the horizon. Long shadows stretch from the lighthouse, and a faint, ethereal mist hovers over the water. 🔬 Hyperrealistic, ultra-detailed, 8K, photorealistic textures on the lighthouse’s weathered surface and the rocky cliff, subsurface scattering in the foam and mist, HDR lighting emphasizing the warm sun rays and cool shadows, cinematic composition with a low-angle view, depth of field blurring the distant horizon.",
       "clip": [
         "1",
         1
@@ -18,7 +18,7 @@
   "3": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "blurry, low quality",
+      "text": "",
       "clip": [
         "1",
         1
@@ -36,11 +36,11 @@
   "5": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 466146560,
-      "steps": 4,
-      "cfg": 2.0,
-      "sampler_name": "dpmpp_2m",
-      "scheduler": "sgm_uniform",
+      "seed": 870327276,
+      "steps": 20,
+      "cfg": 7.0,
+      "sampler_name": "euler",
+      "scheduler": "karras",
       "denoise": 1.0,
       "model": [
         "1",
@@ -76,11 +76,11 @@
   "7": {
     "class_type": "SaveImage",
     "inputs": {
+      "filename_prefix": "sd_web",
       "images": [
         "6",
         0
-      ],
-      "filename_prefix": "txt2img_95"
+      ]
     }
   }
 }

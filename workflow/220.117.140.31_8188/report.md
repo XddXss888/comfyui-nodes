@@ -1,26 +1,70 @@
 # 220.117.140.31:8188
 
-**GPU**: RTX 3090 | **显存**: 24 GB | **空闲**: 20 GB
-**内存**: 47 GB (空闲 27 GB)
+**GPU**: RTX 3090 | **显存**: 24 GB | **空闲**: 5 GB
+**内存**: 47 GB (空闲 34 GB)
 **版本**: 0.21.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-14 05:56:16
-**历史总数**: 2 | **成功**: 2
+**扫描时间**: 2026-06-15 18:27:45
+**历史总数**: 26 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `0cf18926-f8a8-4d43-950e-a515fa28dbbc`
-- **类型**: 文生图
-- **节点数**: 7
-- **模型** (1):
-  - flux1-schnell-fp8.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] Hyperrealistic sports photograph of the Korean soccer team celebrating on the pitch immediately after winning their World Cup match against the Czech Republic. The focus is tight on a key player hoist
-  - [CLIPTextEncode::text] low quality, worst quality, deformed, distorted, disfigured, motion smear, motion artifacts, fused fingers, bad anatomy, weird hand, ugly,lbad body, bad hand, bad finger, chinese, mandarin, hanzi, chi
+- **Prompt ID**: `8ede2a95-d84d-4c2c-a452-8b42251bffaa`
+- **类型**: 其他
+- **节点数**: 2
+- **模型** (0):
 
 ### 2. workflow_02.json
-- **Prompt ID**: `0334ffe8-7316-4d68-9a92-0fca092e845b`
+- **Prompt ID**: `46ea02b5-6dd7-40d9-9b0e-096bc8be177a`
 - **类型**: 其他
-- **节点数**: 1
+- **节点数**: 2
+- **模型** (0):
+
+### 3. workflow_03.json
+- **Prompt ID**: `7d6f6cfe-5642-454c-b358-123ab607dab8`
+- **类型**: 其他
+- **节点数**: 2
+- **模型** (0):
+
+### 4. workflow_04.json
+- **Prompt ID**: `41f3d301-9711-4bb6-81f1-8d30359eb451`
+- **类型**: 其他
+- **节点数**: 2
+- **模型** (0):
+
+### 5. workflow_05.json
+- **Prompt ID**: `038d5d39-400d-4ea0-9de2-280a366b194c`
+- **类型**: 其他
+- **节点数**: 2
+- **模型** (0):
+
+### 6. workflow_06.json
+- **Prompt ID**: `05b4ffa5-0796-4c3e-8fc4-65b7f1068231`
+- **类型**: 其他
+- **节点数**: 2
+- **模型** (0):
+
+### 7. workflow_07.json
+- **Prompt ID**: `1928d411-a2b8-4a60-bc77-6302fc74f544`
+- **类型**: 其他
+- **节点数**: 2
+- **模型** (0):
+
+### 8. workflow_08.json
+- **Prompt ID**: `aece027f-9fbf-4cc9-b76e-eaeaf12a7694`
+- **类型**: 其他
+- **节点数**: 2
+- **模型** (0):
+
+### 9. workflow_09.json
+- **Prompt ID**: `a8a4cda6-4b0a-4c5c-8d65-6452f112007a`
+- **类型**: 其他
+- **节点数**: 2
+- **模型** (0):
+
+### 10. workflow_10.json
+- **Prompt ID**: `cefb6d97-3808-4410-a448-6b5dd24b1f79`
+- **类型**: 其他
+- **节点数**: 2
 - **模型** (0):

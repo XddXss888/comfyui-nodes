@@ -1,20 +1,22 @@
 # 118.24.135.6:12300
 
-**GPU**: RTX 3090 | **显存**: 24 GB | **空闲**: 23 GB
-**内存**: 31 GB (空闲 26 GB)
+**GPU**: RTX 3090 | **显存**: 24 GB | **空闲**: 13 GB
+**内存**: 31 GB (空闲 22 GB)
 **版本**: 0.20.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-14 05:56:18
-**历史总数**: 93 | **成功**: 1
+**扫描时间**: 2026-06-15 18:27:45
+**历史总数**: 3 | **成功**: 2
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `43b40750-4934-4ffa-81db-5a4d1ea657e5`
-- **类型**: 文生图
-- **节点数**: 7
-- **模型** (1):
-  - blue_pencil-XL-v3.1.0.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A serene landscape with a calm lake reflecting snow-capped mountains under a soft sunset sky, pink and orange hues, a wooden dock extending into the water, a lone pine tree on the shore, photorealisti
-  - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality
+- **Prompt ID**: `382c801f-8142-4e0e-8d2d-9043477e712a`
+- **类型**: 其他
+- **节点数**: 1
+- **模型** (0):
+
+### 2. workflow_02.json
+- **Prompt ID**: `3352ac2d-5404-4e8b-bdfe-e1f99795b4e8`
+- **类型**: 其他
+- **节点数**: 1
+- **模型** (0):

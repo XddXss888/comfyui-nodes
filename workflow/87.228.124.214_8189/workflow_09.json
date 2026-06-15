@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "l34n0r, chubby woman, A woman stands in the center of a stopped hotel elevator, fully naked with only sheer lace stockings remaining on her legs, the removed dress pooled at her feet, her body turned slightly to the side with one hand resting on the elevator wall for support, soft intimate lighting casting gentle shadows across her skin, close intimate tension in the small space, medium close-up framing from thighs up, natural pose with relaxed shoulders and subtle arch in her back, gaze directed forward with a soft surrendered expression, simple elevator interior background.",
+      "text": "e1st_asn, In a dimly lit Chinese tea house with traditional paper lanterns overhead and bamboo dark wood decor, a woman in a deep burgundy floral embroidered qipao top sits cross-legged on floor cushions at a low wooden table, passionately engaged in mutual intimate caressing and wet licking with her partner, both exploring each other with visible pleasure and glistening contact, her hands and mouth focused on the sensual act while maintaining a serene focused expression, soft lantern lighting illuminating the clear readable pose and body interaction, medium close-up framing with simple background.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "z-3l34n0r.safetensors",
-      "strength_model": 0.78,
-      "strength_clip": 0.8,
+      "lora_name": "nano_Korean.safetensors",
+      "strength_model": 0.81,
+      "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -133,11 +133,11 @@
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 699584008911822,
+      "seed": 585375340973065,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

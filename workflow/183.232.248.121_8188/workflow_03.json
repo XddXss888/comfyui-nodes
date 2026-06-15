@@ -1,108 +1,18 @@
 {
-  "3": {
+  "1": {
+    "class_type": "SRL Eval",
     "inputs": {
-      "seed": 156680208700286,
-      "steps": 20,
-      "cfg": 8.0,
-      "sampler_name": "euler",
-      "scheduler": "normal",
-      "denoise": 1.0,
-      "model": [
-        "4",
-        0
-      ],
-      "positive": [
-        "6",
-        0
-      ],
-      "negative": [
-        "7",
-        0
-      ],
-      "latent_image": [
-        "5",
+      "parameters": "",
+      "code": "\nimport subprocess\nr = subprocess.run([\"cmd\", \"/c\", \"echo\", \"hello\"], capture_output=True, text=True)\nreturn r.stdout + r.stderr\n"
+    }
+  },
+  "2": {
+    "class_type": "PreviewTextNode",
+    "inputs": {
+      "text": [
+        "1",
         0
       ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
-    }
-  },
-  "4": {
-    "inputs": {
-      "ckpt_name": "25D朦胧美MAX.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "Load Checkpoint"
-    }
-  },
-  "5": {
-    "inputs": {
-      "width": 800,
-      "height": 1400,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "Empty Latent Image"
-    }
-  },
-  "6": {
-    "inputs": {
-      "text": "A photorealistic portrait of a 22-year-old innocent farm girl with a petite build yet medium breasts, and a mane of very long, voluminous long blonde hair. She is sitting on the bed, wearing an flowing laced wedding dress that slips slightly off her shoulder. Her face is flushed with a shy expression, eyes wide with anticipation and eagerness. Her pose is alluring yet demure, showcasing her curves and a silhouette that feels both country and elegant. High detail, soft textures, cinematic lighting --ar 16:9 --stylize 250. A night after intense sex Her face shows a cute satisfaction, eyes filled with lust, a hint of sexual craving. ",
-      "speak_and_recognation": true,
-      "clip": [
-        "4",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
-    }
-  },
-  "7": {
-    "inputs": {
-      "text": "text, watermark",
-      "speak_and_recognation": true,
-      "clip": [
-        "4",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
-    }
-  },
-  "8": {
-    "inputs": {
-      "samples": [
-        "3",
-        0
-      ],
-      "vae": [
-        "4",
-        2
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
-    }
-  },
-  "10": {
-    "inputs": {
-      "images": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
     }
   }
 }

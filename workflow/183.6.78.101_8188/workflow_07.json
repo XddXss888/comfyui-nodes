@@ -1,0 +1,67 @@
+{
+  "11": {
+    "inputs": {
+      "image": "2026-06-15-1824151868.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "30": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "35",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "35": {
+    "inputs": {
+      "prompt": [
+        "44",
+        0
+      ],
+      "model": "gemini-3-pro-image-preview",
+      "seed": 540898093,
+      "aspect_ratio": "1:1",
+      "resolution": "4K",
+      "response_modalities": "IMAGE",
+      "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      },
+      "images": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "GeminiImage2Node",
+    "_meta": {
+      "title": "Nano Banana Pro（Google Gemini 图像）"
+    }
+  },
+  "44": {
+    "inputs": {
+      "Text": "细化沙滩，可以适当删减，",
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      }
+    },
+    "class_type": "DF_Text_Box",
+    "_meta": {
+      "title": "提示词"
+    }
+  }
+}

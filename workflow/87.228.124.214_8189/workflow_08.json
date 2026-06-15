@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "l34n0r, chubby woman, In a stopped hotel elevator between floors, a woman in a fitted dress and sheer lace stockings is held closely against her partner in the confined space, her body gently pressed forward with one hand brushing the hem of her dress near the lace top of her stocking, her gaze soft and lingering with a knowing smile, intimate tension filling the close quarters, medium close-up framing with soft interior lighting.",
+      "text": "eurameg1, At a luxury VIP auction under glamorous stage lighting, an elegant woman in a fitted evening gown stands with confident poise and a knowing smile, her eyes directed at the man's fully exposed erect penis as he removes his trousers and underwear, the intimate male anatomy clearly visible in the foreground while keeping primary visual focus on her poised reaction and the refined opulent setting.",
       "clip": [
         "72",
         1
@@ -109,8 +109,8 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "z-3l34n0r.safetensors",
-      "strength_model": 0.78,
+      "lora_name": "zimg-eurameg1-refine-con-char.safetensors",
+      "strength_model": 0.8,
       "strength_clip": 0.8,
       "prompt": "",
       "example": "[none]",
@@ -132,12 +132,12 @@
     "inputs": {
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
-      "scheduler": "bong_tangent",
+      "scheduler": "beta57",
       "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 699584008911822,
+      "seed": 453373455444780,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

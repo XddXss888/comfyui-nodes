@@ -1,11 +1,11 @@
 {
   "3": {
     "inputs": {
-      "seed": 2253289730,
-      "steps": 12,
-      "cfg": 1.7,
-      "sampler_name": "euler",
-      "scheduler": "beta",
+      "seed": 4155440285,
+      "steps": 25,
+      "cfg": 7.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
       "denoise": 1.0,
       "model": [
         "4",
@@ -28,21 +28,21 @@
   },
   "4": {
     "inputs": {
-      "ckpt_name": "Illustrious/semireal/lumenfallCrystalClear_v21HyperTuned.safetensors"
+      "ckpt_name": "Pony/real/uncannyValley_v4Realistic.safetensors"
     },
     "class_type": "CheckpointLoaderSimple"
   },
   "5": {
     "inputs": {
-      "width": 832,
-      "height": 1216,
+      "width": 1216,
+      "height": 832,
       "batch_size": 1
     },
     "class_type": "EmptyLatentImage"
   },
   "6": {
     "inputs": {
-      "text": "solo, Android, silver_spun_hair, blue_sharp_eyes, slim, light_brown_flowy_dress, brown_woven_hairband, confident smirk, dancing gracefully, dutch_angle, spacecraft_interior, around the flickering lights of the control room, blue_neon, masterpiece, best quality, photorealistic, realistic, very aesthetic, absurdres",
+      "text": "1girl, solo, brown_hair, blue_eyes, voluptuous, tank_top, pink_panties, laying down in bed, repairing a broken bridge, cowboy_shot, spacecraft_interior, A quiet village nestled between misty hills at dawn., score_9, score_8_up, score_7_up, score_6_up, photorealistic, realistic, RAW photo",
       "clip": [
         "4",
         1
@@ -52,7 +52,7 @@
   },
   "7": {
     "inputs": {
-      "text": "blurry, low quality, distorted, deformed, bad anatomy, bad proportions, duplicate, extra limbs, mutation, ugly, straight-on",
+      "text": "blurry, low quality, distorted, deformed, bad anatomy, bad proportions, duplicate, extra limbs, mutation, ugly, feet",
       "clip": [
         "4",
         1

@@ -1,0 +1,362 @@
+{
+  "41": {
+    "inputs": {
+      "image": "barslan.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "REQUIRED Image 1 - user/source identity"
+    }
+  },
+  "83": {
+    "inputs": {
+      "image": "ChatGPT Image Jun 15, 2026, 11_27_50 AM.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "REQUIRED Image 2 - target/reference image"
+    }
+  },
+  "145": {
+    "inputs": {
+      "shift": 3.1,
+      "model": [
+        "161",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "146": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "147": {
+    "inputs": {
+      "reference_latents_method": "index_timestep_zero",
+      "conditioning": [
+        "149",
+        0
+      ]
+    },
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "_meta": {
+      "title": "Edit Model Reference Method"
+    }
+  },
+  "148": {
+    "inputs": {
+      "reference_latents_method": "index_timestep_zero",
+      "conditioning": [
+        "151",
+        0
+      ]
+    },
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "_meta": {
+      "title": "Edit Model Reference Method"
+    }
+  },
+  "149": {
+    "inputs": {
+      "prompt": "changed costume, different costume, simplified costume, wrong colors, wrong patterns, missing details, clothes from image 1, changed body, changed pose, changed background, changed face identity, different face, altered facial features, changed eyes, changed nose, changed mouth, changed expression, deformed face, blurry face, extra head, double face, text, watermark",
+      "clip": [
+        "162",
+        0
+      ],
+      "vae": [
+        "146",
+        0
+      ],
+      "image1": [
+        "41",
+        0
+      ],
+      "image2": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "Negative - source identity into reference"
+    }
+  },
+  "151": {
+    "inputs": {
+      "prompt": "Use image 2 as the base image. Keep the costume from image 2 exactly identical, one-to-one, with the same shape, colors, patterns, texture, and details. Keep the same body, pose, background, lighting, and comic illustration style from image 2. Place the head from image 1 onto the costume naturally, matching the angle and style, but preserve the facial identity from image 1 exactly.",
+      "clip": [
+        "162",
+        0
+      ],
+      "vae": [
+        "146",
+        0
+      ],
+      "image1": [
+        "41",
+        0
+      ],
+      "image2": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "Positive - source identity into reference"
+    }
+  },
+  "152": {
+    "inputs": {
+      "strength": 1.0,
+      "model": [
+        "145",
+        0
+      ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "CFGNorm"
+    }
+  },
+  "153": {
+    "inputs": {
+      "lora_name": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "152",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "154": {
+    "inputs": {
+      "value": 4.0
+    },
+    "class_type": "PrimitiveFloat",
+    "_meta": {
+      "title": "CFG"
+    }
+  },
+  "155": {
+    "inputs": {
+      "value": 1.0
+    },
+    "class_type": "PrimitiveFloat",
+    "_meta": {
+      "title": "CFG"
+    }
+  },
+  "158": {
+    "inputs": {
+      "samples": [
+        "169",
+        0
+      ],
+      "vae": [
+        "146",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "161": {
+    "inputs": {
+      "unet_name": "qwen_image_edit_2511_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "162": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "163": {
+    "inputs": {
+      "switch": [
+        "168",
+        0
+      ],
+      "on_false": [
+        "152",
+        0
+      ],
+      "on_true": [
+        "153",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "Switch (Model)"
+    }
+  },
+  "164": {
+    "inputs": {
+      "switch": [
+        "168",
+        0
+      ],
+      "on_false": [
+        "154",
+        0
+      ],
+      "on_true": [
+        "155",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "Switch (CFG)"
+    }
+  },
+  "165": {
+    "inputs": {
+      "value": 4
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Steps"
+    }
+  },
+  "166": {
+    "inputs": {
+      "value": 40
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Steps"
+    }
+  },
+  "167": {
+    "inputs": {
+      "switch": [
+        "168",
+        0
+      ],
+      "on_false": [
+        "166",
+        0
+      ],
+      "on_true": [
+        "165",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "Switch (Steps)"
+    }
+  },
+  "168": {
+    "inputs": {
+      "value": false
+    },
+    "class_type": "PrimitiveBoolean",
+    "_meta": {
+      "title": "Enable 4steps LoRA?"
+    }
+  },
+  "169": {
+    "inputs": {
+      "seed": 236005294171618,
+      "steps": [
+        "167",
+        0
+      ],
+      "cfg": [
+        "164",
+        0
+      ],
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "163",
+        0
+      ],
+      "positive": [
+        "148",
+        0
+      ],
+      "negative": [
+        "147",
+        0
+      ],
+      "latent_image": [
+        "9010",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler - Qwen source to reference transfer"
+    }
+  },
+  "9010": {
+    "inputs": {
+      "width": 720,
+      "height": 1280,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "Output Latent 720x1280"
+    }
+  },
+  "9017": {
+    "inputs": {
+      "filename_prefix": "wf49_qwen_source_to_reference_FINAL",
+      "images": [
+        "9020",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "FINAL OUTPUT - wf49 source to reference transfer"
+    }
+  },
+  "9020": {
+    "inputs": {
+      "sharpen_radius": 2,
+      "sigma": 0.8,
+      "alpha": 0.45,
+      "image": [
+        "158",
+        0
+      ]
+    },
+    "class_type": "ImageSharpen",
+    "_meta": {
+      "title": "Light sharpen final Qwen output"
+    }
+  }
+}

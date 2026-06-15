@@ -1,43 +1,210 @@
 {
-  "1": {
-    "inputs": {
-      "language": "python",
-      "Add Input variable": "add_input_variable",
-      "Add Output variable": "add_output_variable",
-      "Clear": "clear_code",
-      "pycode": "\nimport os\nimport glob\nlist = glob.glob('/workspace/ComfyUI_v2/ComfyUI/output/audio/*.flac')\nresult = sorted(list, key=lambda x: os.path.getmtime(x), reverse=True)\nresult = [it.replace('/workspace/ComfyUI_v2/ComfyUI/output/audio/','') for it in  result]\nresult = \"#\".join(result)\n",
-      "var3": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "IDENode",
-    "_meta": {
-      "title": "IDE Node"
-    }
-  },
-  "2": {
-    "inputs": {
-      "value": 2770000938
-    },
-    "class_type": "PrimitiveInt",
-    "_meta": {
-      "title": "Int"
-    }
-  },
   "3": {
     "inputs": {
-      "preview_markdown": "",
-      "preview_text": "",
-      "previewMode": false,
-      "source": [
-        "1",
+      "seed": 354555,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "78",
+        0
+      ],
+      "positive": [
+        "94",
+        0
+      ],
+      "negative": [
+        "47",
+        0
+      ],
+      "latent_image": [
+        "98",
         0
       ]
     },
-    "class_type": "PreviewAny",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "Preview as Text"
+      "title": "KSampler"
+    }
+  },
+  "18": {
+    "inputs": {
+      "samples": [
+        "108",
+        0
+      ],
+      "vae": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeAudio",
+    "_meta": {
+      "title": "VAE Decode Audio"
+    }
+  },
+  "47": {
+    "inputs": {
+      "conditioning": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "78": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "94": {
+    "inputs": {
+      "tags": "这是一首融合了环境音乐、非洲节奏与摇滚元素的独特作品，整体呈现出深沉而富有生命力的情感表达。音乐以D小调为基础，营造出一种既神秘又充满力量的氛围。开篇由轻柔的环境音效引入，随后加入具有非洲特色的打击乐组，包括康加鼓、邦戈鼓和沙锤等，构建出丰富的节奏层次。管乐部分主要采用萨克斯风和长笛交替演奏，带来悠扬且略带忧郁的旋律线条。人声采用低吟浅唱的方式演绎，声音温暖而富有磁性，在某些段落中融入了轻柔的和声叠加。整体动态变化丰富，从安静的冥想到激昂的爆发，展现出自然界的壮阔与细腻。歌曲结构包含两个主歌、两个副歌以及一个桥段，最后以渐弱的方式结束，仿佛回归到大自然的宁静怀抱。",
+      "lyrics": "[Instrumental]",
+      "seed": 31,
+      "bpm": 95,
+      "duration": 240.0,
+      "timesignature": "4",
+      "language": "zh",
+      "keyscale": "D minor",
+      "generate_audio_codes": false,
+      "cfg_scale": 2.0,
+      "temperature": 0.85,
+      "top_p": 0.9,
+      "top_k": 0,
+      "min_p": 0.0,
+      "clip": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "TextEncodeAceStepAudio1.5",
+    "_meta": {
+      "title": "TextEncodeAceStepAudio1.5"
+    }
+  },
+  "98": {
+    "inputs": {
+      "seconds": 240.0,
+      "batch_size": 1
+    },
+    "class_type": "EmptyAceStep1.5LatentAudio",
+    "_meta": {
+      "title": "Empty Ace Step 1.5 Latent Audio"
+    }
+  },
+  "104": {
+    "inputs": {
+      "unet_name": "acestep_v1.5_xl_sft_turbo_nvfp4.safetensors",
+      "weight_dtype": "fp8_e4m3fn_fast"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "105": {
+    "inputs": {
+      "clip_name1": "qwen_0.6b_ace15-fp8.safetensors",
+      "clip_name2": "qwen_4b_ace15-fp8.safetensors",
+      "type": "ace",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "DualCLIPLoader"
+    }
+  },
+  "106": {
+    "inputs": {
+      "vae_name": "ace_1.5_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "107": {
+    "inputs": {
+      "filename_prefix": "audio/大地之歌",
+      "audioUI": "",
+      "audio": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "SaveAudio",
+    "_meta": {
+      "title": "Save Audio (FLAC)"
+    }
+  },
+  "108": {
+    "inputs": {
+      "seed": 767511701,
+      "steps": 12,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "78",
+        0
+      ],
+      "positive": [
+        "110",
+        0
+      ],
+      "negative": [
+        "47",
+        0
+      ],
+      "latent_image": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "110": {
+    "inputs": {
+      "tags": "这是一首融合了环境音乐、非洲节奏与摇滚元素的独特作品，整体呈现出深沉而富有生命力的情感表达。音乐以D小调为基础，营造出一种既神秘又充满力量的氛围。开篇由轻柔的环境音效引入，随后加入具有非洲特色的打击乐组，包括康加鼓、邦戈鼓和沙锤等，构建出丰富的节奏层次。管乐部分主要采用萨克斯风和长笛交替演奏，带来悠扬且略带忧郁的旋律线条。人声采用低吟浅唱的方式演绎，声音温暖而富有磁性，在某些段落中融入了轻柔的和声叠加。整体动态变化丰富，从安静的冥想到激昂的爆发，展现出自然界的壮阔与细腻。歌曲结构包含两个主歌、两个副歌以及一个桥段，最后以渐弱的方式结束，仿佛回归到大自然的宁静怀抱。",
+      "lyrics": "[Intro - Ambient soundscape with distant thunder]\n\n[Verse 1 - Soft vocals, light percussion]\n\n在这片古老的土地上\n风诉说着千年的故事\n我的心跳随着大地脉搏\n感受着生命的呼吸\n\n[Chorus - Building energy, full band enters]\n奔跑吧 在无垠的草原\n让灵魂自由飞翔\n倾听那来自远古的声音\n唤醒心中沉睡的力量\n\n[Verse 2 - Raspy vocal, African drums prominent]\n河流蜿蜒穿过山谷\n鸟儿歌唱迎接黎明\n我踏上这条未知旅途\n寻找属于自己的光明\n\n[Chorus - High energy, explosive, harmonies]\n奔跑吧 在无垠的草原\n让灵魂自由飞翔\n倾听那来自远古的声音\n唤醒心中沉睡的力量\n\n[Bridge - Dreamy, layered female vocals, flute solo]\n星空下许下的愿望\n月光洒在我肩膀\n这一刻时间仿佛停止\n只剩下内心深处的渴望\n\n[Outro - Fade out, ambient textures return]",
+      "seed": 31,
+      "bpm": 95,
+      "duration": 240.0,
+      "timesignature": "4",
+      "language": "zh",
+      "keyscale": "D minor",
+      "generate_audio_codes": false,
+      "cfg_scale": 2.0,
+      "temperature": 0.5,
+      "top_p": 0.9,
+      "top_k": 0,
+      "min_p": 0.0,
+      "clip": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "TextEncodeAceStepAudio1.5",
+    "_meta": {
+      "title": "TextEncodeAceStepAudio1.5"
     }
   }
 }

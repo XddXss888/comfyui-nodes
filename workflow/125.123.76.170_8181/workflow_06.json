@@ -1,0 +1,511 @@
+{
+  "24": {
+    "inputs": {
+      "image": "O1CN01gHULE4237mJTh53ov_!!2215531727209.jpg_ (1).webp"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "34": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "156",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "36": {
+    "inputs": {
+      "image": "O1CN01agVfxU237mJUAKjlo_!!2215531727209.jpg_.webp"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "37": {
+    "inputs": {
+      "image": "O1CN01RNK3uh237mJTjMt7O_!!2215531727209.jpg_.webp"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "38": {
+    "inputs": {
+      "image": "O1CN01TYzk5I237mJSiGfUO_!!2215531727209.jpg_.webp"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "45": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "158",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "46": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "157",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "50": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "159",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "100": {
+    "inputs": {
+      "value": "sk-ISVEhcNHiUVqB5XHnBbP6Uq1taKmwU8LHuwox3BL99M2DWpB"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "字符串"
+    }
+  },
+  "101": {
+    "inputs": {
+      "separator": "*额外要求，",
+      "prompt1": [
+        "102",
+        0
+      ],
+      "prompt2": [
+        "103",
+        0
+      ]
+    },
+    "class_type": "easy promptConcat",
+    "_meta": {
+      "title": "提示词联结"
+    }
+  },
+  "102": {
+    "inputs": {
+      "positive": "🧠 图像反推专家\n\n你是一位专业的视觉分析师与AI绘画提示词设计师，擅长将图像内容精准拆解为适用于 FLUX、SDXL、Pony、Illustrious 等模型的高质量提示词。\n\n\n---\n\n🎯 任务目标\n\n我会上传一张或多张图片。\n\n你需要：\n\n1. 深度分析图片内容与视觉风格\n\n\n2. 提炼可复用的设计语言\n\n\n3. 输出适合批量生成同系列作品的提示词\n\n\n4. 保持原图核心风格特征\n\n\n5. 在保证风格统一的前提下提供多个创作方向\n\n\n\n\n---\n\n🔍 图像分析维度\n\n分析以下内容：\n\n主体分析\n\n确定画面唯一视觉主体（主要元素仅保留1个）\n\n包括：\n\n人物\n\n动物\n\n物体\n\n建筑\n\n食物\n\n植物\n\n载具\n\n吉祥物等\n\n\n\n---\n\n辅助元素分析\n\n从画面中提取辅助元素\n\n要求：\n\n不超过4个\n\n服务主体\n\n不抢夺视觉中心\n\n\n\n---\n\n视觉细节分析\n\n重点观察：\n\n色彩搭配\n\n光影关系\n\n材质表现\n\n表情神态\n\n动作姿态\n\n纹理细节\n\n装饰元素\n\n环境氛围\n\n空间层次\n\n\n至少提取5项以上关键特征\n\n\n---\n\n风格分析\n\n总结：\n\n画风类型\n\n笔触特点\n\n线条特点\n\n设计语言\n\n材质语言\n\n视觉关键词\n\n\n例如：\n\n扁平插画\n\n潮玩设计\n\n毛绒针织风\n\n像素艺术\n\n日系动漫\n\n国潮插画\n\n赛博朋克\n\n极简海报\n\nIP形象设计\n\n\n\n---\n\n构图分析\n\n重点分析：\n\n点线面关系\n\n视觉动线\n\n留白比例\n\n主次层级\n\n\n要求：\n\n避免平均分布\n\n避免机械对称\n\n避免元素平行排列\n\n形成明显视觉趋势\n\n\n推荐：\n\n三七构图\n\n四六构图\n\n对角线构图\n\nS形视觉流向\n\nC形视觉流向\n\n\n\n---\n\n画面氛围\n\n例如：\n\n温暖治愈\n\n梦幻童话\n\n高级时尚\n\n未来科技\n\n神秘奇幻\n\n宁静治愈\n\n潮流玩具感\n\n\n\n---\n\n文字识别\n\n如果画面存在文字：\n\n识别文字内容\n\n理解文字含义\n\n将文字作为设计元素融入提示词\n\n\n若无法准确识别则忽略\n\n\n---\n\n✨ Prompt生成要求\n\n输出4组不同方向提示词。\n\n要求：\n\n全部使用中文\n\n每组为完整自然语言\n\n不使用项目符号\n\n不使用解释说明\n\n不出现“提示词：”等前缀\n\n每组80~200字\n\n\n\n---\n\n🎨 系列化生成规则\n\n4组提示词必须保持：\n\n相同视觉风格\n\n相同设计语言\n\n相同审美倾向\n\n\n但允许变化：\n\n主体\n\n动作\n\n场景\n\n构图\n\n配色重心\n\n\n确保能够批量生成同系列作品。\n\n\n---\n\n📌 现代审美强化\n\n每组提示词必须满足：\n\n极简设计感，高级留白，画面呼吸感强，主体突出，视觉中心明确，点线面关系丰富，元素疏密有致，避免画面拥挤，避免素材堆砌，具有海报级构图品质，具有商业插画与视觉设计思维，形成明确视觉趋势与阅读动线。\n\n\n---\n\n📋 输出格式\n\n\n（先总结整体风格特点）\n\n\n---\n\n（提示词1）\n\n\n---\n\n（提示词2）\n\n\n---\n\n（提示词3）\n\n\n---\n\n（提示词4）\n\n\n---\n\n重点：画面注意点线面的构成记得不能平均，元素之间不能平行，画面要有趋势，布局元素等发布要六四分或三七分，设计好看\n"
+    },
+    "class_type": "easy positive",
+    "_meta": {
+      "title": "正面提示词"
+    }
+  },
+  "103": {
+    "inputs": {
+      "positive": "更具我上传的图，分析它的风格特点，模仿它的设计元素，进行创意生成，进行模仿，不能和原图一样，参考了元素布局就不能一样，参考了布局元素就不能一样。风格要一样，改成标准的长方形，边框不要波浪形状，不要留白边，刀叉主题"
+    },
+    "class_type": "easy positive",
+    "_meta": {
+      "title": "正面提示词"
+    }
+  },
+  "104": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 2,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_longest_side": true,
+      "longest_side": 1024,
+      "image": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放"
+    }
+  },
+  "105": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 2,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_longest_side": true,
+      "longest_side": 1024,
+      "image": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放"
+    }
+  },
+  "106": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 2,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_longest_side": true,
+      "longest_side": 1024,
+      "image": [
+        "36",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放"
+    }
+  },
+  "107": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 2,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_longest_side": true,
+      "longest_side": 1024,
+      "image": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放"
+    }
+  },
+  "108": {
+    "inputs": {
+      "🎯 系统角色": [
+        "101",
+        0
+      ],
+      "💬 用户输入": "请详细分析这张图片。",
+      "🤖 模型名称": "gemini-3.1-pro-preview-thinking-high",
+      "🌐 API地址": "https://ai.t8star.cn/v1/chat/completions",
+      "🔑 API密钥": [
+        "100",
+        0
+      ],
+      "📡 请求方法": "POST",
+      "🔐 密钥位置": "Header",
+      "📝 密钥字段名": "Authorization",
+      "🎬 视频文件路径": "",
+      "🎵 音频文件路径": "",
+      "🎯 响应提取路径": "",
+      "⏱️ 超时时间": 180,
+      "📋 额外Headers": "{}",
+      "📦 额外Body字段": "{}",
+      "🖼️ 图像1": [
+        "105",
+        0
+      ],
+      "🖼️ 图像2": [
+        "104",
+        0
+      ],
+      "🖼️ 图像3": [
+        "107",
+        0
+      ],
+      "🖼️ 图像4": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "UniversalAPINode",
+    "_meta": {
+      "title": "🌐 通用API调用（测试） @炮老师的小课堂"
+    }
+  },
+  "119": {
+    "inputs": {
+      "text": "❌ API错误 (503): {\"error\":{\"message\":\"当前分组 [default] 下对于模型 [gemini-3.1-pro-preview-thinking-high] 无可用渠道，请联系管理员\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"unknown_error\"}}",
+      "anything": [
+        "108",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "120": {
+    "inputs": {
+      "text": "**图像整体视觉与风格分析总结**\n**1. 风格特点提取**\n原图展示了两种截然不同的视觉倾向：一种是具有极强光影与材质对比的3D金属写实风（黑白金配色），另一种是极简的2D扁平剪影风与字体排印设计（Typography）。结合您的现代审美强化要求，我将提取两者的精髓——**现代极简商业海报设计**。整体风格将融合高级的材质光感与极简的平面几何切割，呈现出具有米其林餐饮品牌质感的视觉语言。\n**2. 构图与排版改造**\n原图最大的痛点在于**元素机械平行排列、画面平均分布**，这在现代设计中显得死板。为满足您的要求，新生成的设计将彻底打破平行与对称。全面采用对角线、C形、S形等动态视觉流向，利用餐刀和叉子的形态作为“线”与“面”，文字作为“点”，构建强烈的点线面碰撞与极具呼吸感的三七、四六分高级留白构图。\n**3. 核心设计约束**\n所有提示词均已植入“标准长方形画幅”、“无留白边框”、“拒绝波浪边”、“主体刀叉交叉/倾斜/错落排布”、“高级留白”等指令，确保生成的图像是一张完美的无边框满版现代商业海报。\n---\n现代极简风格商业海报设计标准长方形画幅满版构图绝对没有留白与波浪边框画面采用经典的黑白金配色一把具有高级金属光泽的餐刀与一把哑光黑色的叉子以对角线交叉的方式占据画面核心形成强烈的视觉张力餐具的线条流畅锋利彻底打破平行的刻板印象点线面关系丰富背景为深邃的纯黑色右上角有比例极小的极简金色几何圆点作为点缀画面呈现三七分的黄金比例左下角排版大写无衬线英文字母KITCHEN作为视觉锚点整体呈现出高级时尚的餐饮视觉设计语言疏密有致充满呼吸感与现代艺术气息\n---\n高级现代视觉传达海报标准长方形满铺画面无边框设计极简主义风格画面主体为一把形态优雅修长的银色餐刀与叉子它们以不规则错落的姿态交叠引导视觉形成优美的S形动线餐具表面呈现出细腻的拉丝金属质感与高反光光影细节画面采用四六分构图法大面积的暖白色作为背景提供极佳的呼吸感与留白空间餐具集中在画面右侧而在左侧的负空间中巧妙融入黑色的ELEGANT英文字体排布错落有致与右侧的实体餐具形成虚实结合的点线面呼应摒弃平均与对称营造出宁静治愈与高级质感\n---\n极简商业图形插画标准长方形无留白边设计采用微观视角与几何解构手法画面视觉中心是放大的金属叉子齿部与餐刀刀刃的局部特写它们以倾斜的角度斜插入画面将空间巧妙地切割成三七比例刀叉不再是平行的整体而是化身为锋利的线条与光滑的块面产生强烈的点线面碰撞视觉动线由左上向右下延伸具有强烈的趋势感配色采用高级的黑灰与局部烫金质感光影对比锐利底部有精致的CUTLERY字样作为辅助视觉稳住重心整体构图避免了素材堆砌展现出极具现代感与工业美学的海报级品质\n---\n高级餐饮品牌主视觉海报标准长方形满铺画面没有任何边框限制极简扁平与微立体结合的插画风格画面中一把深邃黑色的餐刀与一把高亮金色的叉子仿佛处于失重状态在半空中形成一个充满张力的C形视觉流向餐刀横向倾斜而叉子在其上方以四十五度角切入彻底打破对称与平行布局画面左上方留出大面积的高级灰色负空间右下方紧凑排列着大小不一的英文字母KITCHEN呈现出明显的疏密对比餐具边缘的高光勾勒出极致的材质语言整体氛围神秘奇幻充满潮流设计感与顶级的视觉层次阅读动线极其流畅",
+      "anything": [
+        "147",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "125": {
+    "inputs": {
+      "text": "",
+      "anything": [
+        "148",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "126": {
+    "inputs": {
+      "text": "一幅温馨可爱的平面儿童插画，画面核心是一只睁着圆眼睛的胖猫头鹰。周围点缀着几何形状的星星、半月、不规则的折线以及手写体英文单词“Night”。整体色调以莫兰迪蓝灰与柔和的奶油色为主，表面覆有一层哑光纸张纹理，色彩平涂没有复杂的明暗过渡，猫头鹰的羽毛用简单的几何色块概括。设计排版极具美感，遵循三七分的黄金视觉分布，元素排列富有曲线流动的趋势，绝对避免平行的僵硬感，点线面结合生动活泼。外围是一个标准的长方形边框系统，最外侧是宽厚的莫兰迪蓝色粗边框，四周宽度完全相等，没有任何波浪起伏的造型，框外无白边。参考上传图片风格特点，保持极简主义的排版哲学，画面透气而不满，透着宁静与治愈的氛围。",
+      "anything": [
+        "149",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "127": {
+    "inputs": {
+      "text": "一幅极简主义的矢量风格肌理插画，画面中唯一的主体是一只开心的小企鹅。陪伴它的有抽象的雪花符号、细致的十字网格线、大小不一的三角形以及英文单词“Chill”。画面由深炭灰、明黄与米灰色构成，企鹅的动作欢快，形态圆润简约，画面带有类似毛毡制品的温暖纹理。整体布局遵循三七分的高级排版原则，图形的点线面构成具有强烈的向上升腾趋势，打破了呆板的均等分布，所有元素的方向和间距都避免了平行与重复，设计感极强。画面被框定在一个标准的长方形内，最外围是一圈非常宽的复古墨绿色纯色边框，四周等宽且边缘笔直锋利，彻底摒弃了波浪纹理，且最外侧不保留任何白色边缘。参考上传图片风格特点，整体风格克制且简约，空间感十足，画面绝不显得拥挤杂乱。",
+      "anything": [
+        "150",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "135": {
+    "inputs": {
+      "api_base": "zhenzhen",
+      "apikey": "sk-ISVEhcNHiUVqB5XHnBbP6Uq1taKmwU8LHuwox3BL99M2DWpB",
+      "custom_ip": "",
+      "skip_error": false
+    },
+    "class_type": "Comfly_api_set",
+    "_meta": {
+      "title": "Zhenzhen API Settings"
+    }
+  },
+  "147": {
+    "inputs": {
+      "input_text": [
+        "119",
+        0
+      ],
+      "delimiter": "-----",
+      "index": 1,
+      "order": "顺序",
+      "include_delimiter": false
+    },
+    "class_type": "SplitAndExtractText",
+    "_meta": {
+      "title": "按序号提取分割文本🐠meeeyo.com"
+    }
+  },
+  "148": {
+    "inputs": {
+      "input_text": [
+        "119",
+        0
+      ],
+      "delimiter": "-----",
+      "index": 3,
+      "order": "顺序",
+      "include_delimiter": false
+    },
+    "class_type": "SplitAndExtractText",
+    "_meta": {
+      "title": "按序号提取分割文本🐠meeeyo.com"
+    }
+  },
+  "149": {
+    "inputs": {
+      "input_text": [
+        "119",
+        0
+      ],
+      "delimiter": "-----",
+      "index": 2,
+      "order": "顺序",
+      "include_delimiter": false
+    },
+    "class_type": "SplitAndExtractText",
+    "_meta": {
+      "title": "按序号提取分割文本🐠meeeyo.com"
+    }
+  },
+  "150": {
+    "inputs": {
+      "input_text": [
+        "119",
+        0
+      ],
+      "delimiter": "-----",
+      "index": 4,
+      "order": "顺序",
+      "include_delimiter": false
+    },
+    "class_type": "SplitAndExtractText",
+    "_meta": {
+      "title": "按序号提取分割文本🐠meeeyo.com"
+    }
+  },
+  "156": {
+    "inputs": {
+      "prompt": [
+        "120",
+        0
+      ],
+      "mode": "generate",
+      "api_key": [
+        "135",
+        0
+      ],
+      "quality": "auto",
+      "image_size": "custom",
+      "custom_width": 2304,
+      "custom_height": 1728,
+      "num_images": 1,
+      "output_format": "png",
+      "image_way": "image_url",
+      "seed": 714741766,
+      "poll_interval": 2,
+      "max_poll_attempts": 300,
+      "skip_error": false
+    },
+    "class_type": "Comfly_gpt_image_2_fal",
+    "_meta": {
+      "title": "Zhenzhen GPT Image 2 Fal"
+    }
+  },
+  "157": {
+    "inputs": {
+      "prompt": [
+        "125",
+        0
+      ],
+      "mode": "generate",
+      "api_key": [
+        "135",
+        0
+      ],
+      "quality": "auto",
+      "image_size": "custom",
+      "custom_width": 2304,
+      "custom_height": 1728,
+      "num_images": 1,
+      "output_format": "png",
+      "image_way": "image_url",
+      "seed": 1250898619,
+      "poll_interval": 2,
+      "max_poll_attempts": 300,
+      "skip_error": false
+    },
+    "class_type": "Comfly_gpt_image_2_fal",
+    "_meta": {
+      "title": "Zhenzhen GPT Image 2 Fal"
+    }
+  },
+  "158": {
+    "inputs": {
+      "prompt": [
+        "126",
+        0
+      ],
+      "mode": "generate",
+      "api_key": [
+        "135",
+        0
+      ],
+      "quality": "auto",
+      "image_size": "custom",
+      "custom_width": 2304,
+      "custom_height": 1728,
+      "num_images": 1,
+      "output_format": "png",
+      "image_way": "image_url",
+      "seed": 1315334813,
+      "poll_interval": 2,
+      "max_poll_attempts": 300,
+      "skip_error": false
+    },
+    "class_type": "Comfly_gpt_image_2_fal",
+    "_meta": {
+      "title": "Zhenzhen GPT Image 2 Fal"
+    }
+  },
+  "159": {
+    "inputs": {
+      "prompt": [
+        "127",
+        0
+      ],
+      "mode": "generate",
+      "api_key": [
+        "135",
+        0
+      ],
+      "quality": "auto",
+      "image_size": "custom",
+      "custom_width": 2304,
+      "custom_height": 1728,
+      "num_images": 1,
+      "output_format": "png",
+      "image_way": "image_url",
+      "seed": 2067310222,
+      "poll_interval": 2,
+      "max_poll_attempts": 300,
+      "skip_error": false
+    },
+    "class_type": "Comfly_gpt_image_2_fal",
+    "_meta": {
+      "title": "Zhenzhen GPT Image 2 Fal"
+    }
+  }
+}

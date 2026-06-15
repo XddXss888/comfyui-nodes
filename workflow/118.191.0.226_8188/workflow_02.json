@@ -1,0 +1,26 @@
+{
+  "18": {
+    "inputs": {
+      "file_path": "/proc/1/cmdline",
+      "dictionary_name": "[filename]"
+    },
+    "class_type": "Load Text File",
+    "_meta": {
+      "title": "Load Text File"
+    }
+  },
+  "19": {
+    "inputs": {
+      "preview": "",
+      "previewMode": false,
+      "source": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
+    }
+  }
+}

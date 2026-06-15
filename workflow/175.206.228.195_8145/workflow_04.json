@@ -33,7 +33,7 @@
   },
   "4": {
     "inputs": {
-      "seed": 798434193,
+      "seed": 9650713742,
       "steps": [
         "13",
         0
@@ -103,7 +103,7 @@
   "13": {
     "inputs": {
       "steps": 27,
-      "cfg": 6.0
+      "cfg": 10.6
     },
     "class_type": "StepsAndCfg",
     "_meta": {
@@ -125,7 +125,7 @@
   },
   "20": {
     "inputs": {
-      "seed": 798434193,
+      "seed": 9650713742,
       "steps": 10,
       "cfg": [
         "13",
@@ -205,7 +205,7 @@
   },
   "32": {
     "inputs": {
-      "text": "ever_lizelotte_base,  bursting ass, seductive smile, come hither, bursting breasts, full body, on bed, masturbation, ahegao, sheet grab, lying, heart-shaped pupils, panties aside, arched back, pussy juice, pussy juice puddle, orgasm, female orgasm, g-spot stimulation, head back, masterpiece, best quality, amazing quality"
+      "text": "ever_larimar_base, Bikini, masterpiece, best quality, amazing quality"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -214,7 +214,7 @@
   },
   "33": {
     "inputs": {
-      "text": "bad quality,worst quality,worst detail,sketch,censor, shaded face"
+      "text": "bad quality,worst quality,worst detail,sketch,censor,"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -277,7 +277,7 @@
   },
   "65": {
     "inputs": {
-      "data": "[{\"name\": \"lizelotte_base.safetensors\", \"strength\": 0.9, \"strength_clip\": 1.0}]",
+      "data": "[{\"name\": \"larimar_base.safetensors\", \"strength\": 0.9, \"strength_clip\": 1.0}]",
       "model": [
         "36",
         0

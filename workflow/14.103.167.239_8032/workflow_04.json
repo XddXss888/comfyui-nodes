@@ -1,0 +1,210 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 354555,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "78",
+        0
+      ],
+      "positive": [
+        "94",
+        0
+      ],
+      "negative": [
+        "47",
+        0
+      ],
+      "latent_image": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "18": {
+    "inputs": {
+      "samples": [
+        "108",
+        0
+      ],
+      "vae": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeAudio",
+    "_meta": {
+      "title": "VAE Decode Audio"
+    }
+  },
+  "47": {
+    "inputs": {
+      "conditioning": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "78": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "94": {
+    "inputs": {
+      "tags": "这是一首融合了传统昆比亚舞曲精髓与现代流行元素的作品。整体以A小调贯穿始终，营造出一种既欢快又带有淡淡忧伤的情绪基调。节奏上采用128 BPM的速度，使得整首歌曲充满活力却不失优雅。主要乐器配置包括旋律鲜明的手风琴、奠定律动基础的古拉鼓与贝斯组合，以及提供丰富和声层次的干净电吉他。人声方面，男主人公唱腔清澈且富有感情，通过叙述心碎故事传达深层情感；副歌部分加入了精心设计的和声编排，使主唱与伴唱之间形成强烈互动。歌曲结构紧凑有序，从前奏开始便展现出浓郁的民族风情，在各个段落之间巧妙地插入了生动的手风琴独奏及一段富有戏剧性的口白，进一步强化了作品所要表达的那种矛盾而复杂的聚会气氛——表面欢愉但内心孤独。",
+      "lyrics": "[Instrumental]",
+      "seed": 31,
+      "bpm": 128,
+      "duration": 240.0,
+      "timesignature": "4",
+      "language": "zh",
+      "keyscale": "A minor",
+      "generate_audio_codes": false,
+      "cfg_scale": 2.0,
+      "temperature": 0.85,
+      "top_p": 0.9,
+      "top_k": 0,
+      "min_p": 0.0,
+      "clip": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "TextEncodeAceStepAudio1.5",
+    "_meta": {
+      "title": "TextEncodeAceStepAudio1.5"
+    }
+  },
+  "98": {
+    "inputs": {
+      "seconds": 240.0,
+      "batch_size": 1
+    },
+    "class_type": "EmptyAceStep1.5LatentAudio",
+    "_meta": {
+      "title": "Empty Ace Step 1.5 Latent Audio"
+    }
+  },
+  "104": {
+    "inputs": {
+      "unet_name": "acestep_v1.5_xl_sft_turbo_nvfp4.safetensors",
+      "weight_dtype": "fp8_e4m3fn_fast"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "105": {
+    "inputs": {
+      "clip_name1": "qwen_0.6b_ace15-fp8.safetensors",
+      "clip_name2": "qwen_4b_ace15-fp8.safetensors",
+      "type": "ace",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "DualCLIPLoader"
+    }
+  },
+  "106": {
+    "inputs": {
+      "vae_name": "ace_1.5_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "107": {
+    "inputs": {
+      "filename_prefix": "audio/心碎的节拍",
+      "audioUI": "",
+      "audio": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "SaveAudio",
+    "_meta": {
+      "title": "Save Audio (FLAC)"
+    }
+  },
+  "108": {
+    "inputs": {
+      "seed": 4196589451,
+      "steps": 12,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "78",
+        0
+      ],
+      "positive": [
+        "110",
+        0
+      ],
+      "negative": [
+        "47",
+        0
+      ],
+      "latent_image": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "110": {
+    "inputs": {
+      "tags": "这是一首融合了传统昆比亚舞曲精髓与现代流行元素的作品。整体以A小调贯穿始终，营造出一种既欢快又带有淡淡忧伤的情绪基调。节奏上采用128 BPM的速度，使得整首歌曲充满活力却不失优雅。主要乐器配置包括旋律鲜明的手风琴、奠定律动基础的古拉鼓与贝斯组合，以及提供丰富和声层次的干净电吉他。人声方面，男主人公唱腔清澈且富有感情，通过叙述心碎故事传达深层情感；副歌部分加入了精心设计的和声编排，使主唱与伴唱之间形成强烈互动。歌曲结构紧凑有序，从前奏开始便展现出浓郁的民族风情，在各个段落之间巧妙地插入了生动的手风琴独奏及一段富有戏剧性的口白，进一步强化了作品所要表达的那种矛盾而复杂的聚会气氛——表面欢愉但内心孤独。",
+      "lyrics": "[Intro - Accordion Melody]\n[guitar strumming, percussion build-up]\n\n\n[Verse 1]\n夜色迷离灯光闪烁\n我独自站在人群之中\n回忆像潮水般涌来\n你的笑容如此清晰\n\n[Chorus - Powerful Belting, Harmonies]\n我的心在跳动 却空荡荡\n借一杯酒忘掉所有悲伤\n虽然音乐还在响彻云霄\n我的灵魂却已悄然远航\n\n[Verse 2]\n曾经我们相拥起舞\n现在只剩我一个人\n脚步踉跄眼神迷茫\n谁能理解这份痛楚\n\n[Pre-Chorus - Building Energy]\n每一次呼吸都那么沉重\n每一滴眼泪都那么真实\n\n[Chorus - Powerful Belting, Harmonies]\n我的心在跳动 却空荡荡\n借一杯酒忘掉所有悲伤\n虽然音乐还在响彻云霄\n我的灵魂却已悄然远航\n\n[Accordion Solo - Lively, Expressive]\n[melodic improvisation with rhythmic pulse]\n\n[Bridge - Spoken Word, Low Energy]\n你说过永远不离开\n可如今只剩寂寞陪伴\n在这狂欢的夜晚里\n我只是个失落的灵魂\n\n[Chorus - Powerful Belting, Harmonies]\n我的心在跳动 却空荡荡\n借一杯酒忘掉所有悲伤\n虽然音乐还在响彻云霄\n我的灵魂却已悄然远航\n\n[Outro - Fade Out, Accordion Lead]\n[fading accordion melody with subtle percussion]",
+      "seed": 31,
+      "bpm": 128,
+      "duration": 240.0,
+      "timesignature": "4",
+      "language": "zh",
+      "keyscale": "A minor",
+      "generate_audio_codes": false,
+      "cfg_scale": 2.0,
+      "temperature": 0.5,
+      "top_p": 0.9,
+      "top_k": 0,
+      "min_p": 0.0,
+      "clip": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "TextEncodeAceStepAudio1.5",
+    "_meta": {
+      "title": "TextEncodeAceStepAudio1.5"
+    }
+  }
+}

@@ -1,192 +1,181 @@
 {
-  "1": {
+  "278": {
     "inputs": {
-      "cfg": 1.0,
+      "image": "cmqen006a004ilv01912tka2o.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "LoadImage"
+    }
+  },
+  "352": {
+    "inputs": {
+      "text": "让照片的这个男人手上戴着劳力士手表，穿着白色衬衫、黑色马甲和领带，坐着身体半侧靠在米色办公椅上，保持脸部一致，自信的微笑着看向镜头,背景是带有暖色灯光的书架，摆放着书籍和装饰物，营造出温馨而有质感的室内环境。前景有桌面和文件本，奢华，整体色调柔和，光线自然，给人一种商务、精英、理性且沉稳的感觉。"
+    },
+    "class_type": "CR Text",
+    "_meta": {
+      "title": "CR Text"
+    }
+  },
+  "378": {
+    "inputs": {
       "model": [
-        "24",
+        "388",
         0
       ],
       "positive": [
-        "3",
+        "385",
         0
       ],
       "negative": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "CFGGuider",
-    "_meta": {
-      "title": "CFG引导器"
-    }
-  },
-  "2": {
-    "inputs": {
-      "conditioning": [
-        "4",
+        "383",
         0
       ],
-      "latent": [
-        "18",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "参考Latent"
-    }
-  },
-  "3": {
-    "inputs": {
-      "conditioning": [
-        "6",
+      "latent_image": [
+        "379",
         0
       ],
-      "latent": [
-        "18",
-        0
-      ]
+      "seed": 484865308044076,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
     },
-    "class_type": "ReferenceLatent",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "参考Latent"
+      "title": "KSampler"
     }
   },
-  "4": {
-    "inputs": {
-      "conditioning": [
-        "6",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "条件零化"
-    }
-  },
-  "5": {
+  "379": {
     "inputs": {
       "width": [
-        "28",
-        0
+        "403",
+        1
       ],
       "height": [
-        "28",
-        1
+        "403",
+        2
       ],
       "batch_size": 1
     },
     "class_type": "EmptyFlux2LatentImage",
     "_meta": {
-      "title": "空Latent图像（Flux2）"
+      "title": "EmptyFlux2LatentImage"
     }
   },
-  "6": {
+  "380": {
     "inputs": {
-      "text": [
-        "26",
+      "image": [
+        "278",
         0
       ],
+      "aspect_ratio": "original",
+      "proportional_width": 2,
+      "proportional_height": 3,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": 1024,
+      "background_color": "#000000"
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "LayerUtility: ImageScaleByAspectRatio V2"
+    }
+  },
+  "381": {
+    "inputs": {
       "clip": [
-        "17",
+        "389",
+        0
+      ],
+      "text": [
+        "352",
         0
       ]
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "CLIP文本编码"
+      "title": "CLIPTextEncode"
     }
   },
-  "7": {
+  "382": {
     "inputs": {
-      "vae_name": "flux2-vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "11": {
-    "inputs": {
-      "version": "RMBG-2.0"
-    },
-    "class_type": "LayerMask: LoadBiRefNetModelV2",
-    "_meta": {
-      "title": "图层遮罩：加载BiRefNet模型 V2（高级）"
-    }
-  },
-  "12": {
-    "inputs": {
-      "select": "mask1",
-      "sort_by": "area_desc",
-      "min_area": 100,
-      "padding": 10,
-      "output_mode": "crop",
-      "image": [
-        "43",
+      "pixels": [
+        "380",
         0
       ],
-      "mask": [
-        "43",
-        1
-      ]
-    },
-    "class_type": "PD_Mask Selector",
-    "_meta": {
-      "title": "PD_Mask Selector"
-    }
-  },
-  "14": {
-    "inputs": {
-      "blend_mode": "normal",
-      "opacity": 100,
-      "x_percent": 15.0,
-      "y_percent": 40.0,
-      "scale": 1.0,
-      "align_mode": "bottom_align",
-      "invert_mask": false,
-      "background_image": [
-        "15",
-        0
-      ],
-      "layer_image": [
-        "44",
-        0
-      ],
-      "layer_mask": [
-        "44",
-        1
-      ]
-    },
-    "class_type": "ImageBlendV1",
-    "_meta": {
-      "title": "PD:Image Blend V1"
-    }
-  },
-  "15": {
-    "inputs": {
-      "size": 1024,
-      "interpolation": "bicubic",
-      "image": [
-        "16",
+      "vae": [
+        "390",
         0
       ]
     },
-    "class_type": "PDIMAGE_LongerSize",
+    "class_type": "VAEEncode",
     "_meta": {
-      "title": "PDIMAGE:LongerSize"
+      "title": "VAEEncode"
     }
   },
-  "16": {
+  "383": {
     "inputs": {
-      "image": "174356b9057ef25638fcbfdaa1a0ee19d3fd5f9b80be22f1ec146973e5bfc0ca (1).jpg"
+      "conditioning": [
+        "384",
+        0
+      ],
+      "latent": [
+        "382",
+        0
+      ]
     },
-    "class_type": "LoadImage",
+    "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "加载图像"
+      "title": "ReferenceLatent"
     }
   },
-  "17": {
+  "384": {
+    "inputs": {
+      "conditioning": [
+        "381",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "385": {
+    "inputs": {
+      "conditioning": [
+        "381",
+        0
+      ],
+      "latent": [
+        "382",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "388": {
+    "inputs": {
+      "model": [
+        "394",
+        0
+      ],
+      "lora_name": "training/霸道总裁KB2_v2_000003000.safetensors",
+      "strength_model": 1.0
+    },
+    "class_type": "PD_lora_loader",
+    "_meta": {
+      "title": "PD_lora_loader"
+    }
+  },
+  "389": {
     "inputs": {
       "clip_name": "qwen_3_8b_fp8mixed.safetensors",
       "type": "flux2",
@@ -194,367 +183,65 @@
     },
     "class_type": "CLIPLoader",
     "_meta": {
-      "title": "加载CLIP"
+      "title": "CLIPLoader"
     }
   },
-  "18": {
+  "390": {
     "inputs": {
-      "pixels": [
-        "37",
-        0
-      ],
-      "vae": [
-        "7",
-        0
-      ]
+      "vae_name": "flux2-vae.safetensors"
     },
-    "class_type": "VAEEncode",
+    "class_type": "VAELoader",
     "_meta": {
-      "title": "VAE编码"
+      "title": "VAELoader"
     }
   },
-  "20": {
-    "inputs": {
-      "noise": [
-        "27",
-        0
-      ],
-      "guider": [
-        "1",
-        0
-      ],
-      "sampler": [
-        "22",
-        0
-      ],
-      "sigmas": [
-        "29",
-        0
-      ],
-      "latent_image": [
-        "5",
-        0
-      ]
-    },
-    "class_type": "SamplerCustomAdvanced",
-    "_meta": {
-      "title": "自定义采样器（高级）"
-    }
-  },
-  "21": {
+  "393": {
     "inputs": {
       "samples": [
-        "20",
+        "378",
         0
       ],
       "vae": [
-        "7",
+        "390",
         0
       ]
     },
     "class_type": "VAEDecode",
     "_meta": {
-      "title": "VAE解码"
+      "title": "VAEDecode"
     }
   },
-  "22": {
-    "inputs": {
-      "sampler_name": "euler"
-    },
-    "class_type": "KSamplerSelect",
-    "_meta": {
-      "title": "K采样器选择"
-    }
-  },
-  "23": {
+  "394": {
     "inputs": {
       "unet_name": "flux-2-klein-9b-fp8.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
     "_meta": {
-      "title": "UNet加载器"
+      "title": "UNETLoader"
     }
   },
-  "24": {
+  "403": {
     "inputs": {
-      "lora_name": "training/F2K9B-小人插画-v1_000002500.safetensors",
-      "strength_model": 1.0000000000000002,
-      "model": [
-        "23",
-        0
-      ]
+      "aspect_ratio": "2:3",
+      "max_size": 1024
     },
-    "class_type": "LoraLoaderModelOnly",
+    "class_type": "PDRatioSelector",
     "_meta": {
-      "title": "LoRA加载器（仅模型）"
+      "title": "PDRatioSelector"
     }
   },
-  "25": {
+  "407": {
     "inputs": {
-      "image": "男生-8.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "26": {
-    "inputs": {
-      "text": "PD, transform the real photograph into PDstyle,保持服装和颜色完全一致，背景不变"
-    },
-    "class_type": "CR Text",
-    "_meta": {
-      "title": "🔤 CR Text"
-    }
-  },
-  "27": {
-    "inputs": {
-      "noise_seed": 94095483657801
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "随机噪波"
-    }
-  },
-  "28": {
-    "inputs": {
-      "image": [
-        "37",
-        0
-      ]
-    },
-    "class_type": "GetImageSize",
-    "_meta": {
-      "title": "获取图像尺寸"
-    }
-  },
-  "29": {
-    "inputs": {
-      "steps": 8,
-      "width": [
-        "28",
-        1
-      ],
-      "height": [
-        "28",
-        1
-      ]
-    },
-    "class_type": "Flux2Scheduler",
-    "_meta": {
-      "title": "Flux2调度器"
-    }
-  },
-  "30": {
-    "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 1,
-      "proportional_height": 1,
-      "fit": "letterbox",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_side": "longest",
-      "scale_to_length": 1024,
-      "background_color": "#000000",
-      "image": [
-        "41",
-        0
-      ],
-      "mask": [
-        "41",
-        1
-      ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
-    "_meta": {
-      "title": "图层工具：按宽高比缩放 V2"
-    }
-  },
-  "31": {
-    "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 1,
-      "proportional_height": 1,
-      "fit": "letterbox",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_side": "longest",
-      "scale_to_length": 1024,
-      "background_color": "#000000",
-      "image": [
-        "21",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
-    "_meta": {
-      "title": "图层工具：按宽高比缩放 V2"
-    }
-  },
-  "36": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
       "images": [
-        "42",
+        "393",
         0
-      ]
+      ],
+      "filename_prefix": "ComfyUI"
     },
     "class_type": "SaveImage",
     "_meta": {
-      "title": "保存图像"
-    }
-  },
-  "37": {
-    "inputs": {
-      "upscale_method": "lanczos",
-      "megapixels": 1.0,
-      "resolution_steps": 1,
-      "image": [
-        "14",
-        0
-      ]
-    },
-    "class_type": "ImageScaleToTotalPixels",
-    "_meta": {
-      "title": "缩放图像（像素）"
-    }
-  },
-  "39": {
-    "inputs": {
-      "invert_mask": false,
-      "detect": "mask_area",
-      "top_reserve": 20,
-      "bottom_reserve": 20,
-      "left_reserve": 20,
-      "right_reserve": 20,
-      "round_to_multiple": "8",
-      "image": [
-        "12",
-        0
-      ],
-      "mask": [
-        "12",
-        1
-      ]
-    },
-    "class_type": "LayerUtility: CropByMask V2",
-    "_meta": {
-      "title": "图层工具：遮罩裁剪 V2"
-    }
-  },
-  "40": {
-    "inputs": {
-      "rgthree_comparer": {
-        "images": [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_lrsjf_00003_.png&type=temp&subfolder=&rand=0.1250113422403284"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_lrsjf_00004_.png&type=temp&subfolder=&rand=0.2721786820650164"
-          }
-        ]
-      },
-      "image_a": [
-        "14",
-        0
-      ],
-      "image_b": [
-        "21",
-        0
-      ]
-    },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "Image Comparer (rgthree)"
-    }
-  },
-  "41": {
-    "inputs": {
-      "image": "4986bc3cc33ee154f44d46f9165d44cdda6448cf656d33831faf134f2d97910c.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "42": {
-    "inputs": {
-      "blend_mode": "normal",
-      "opacity": 100,
-      "x_percent": 50.0,
-      "y_percent": 50.0,
-      "scale": 1.0,
-      "align_mode": "bottom_align",
-      "invert_mask": true,
-      "background_image": [
-        "31",
-        0
-      ],
-      "layer_image": [
-        "30",
-        0
-      ],
-      "layer_mask": [
-        "30",
-        1
-      ]
-    },
-    "class_type": "ImageBlendV1",
-    "_meta": {
-      "title": "PD:Image Blend V1"
-    }
-  },
-  "43": {
-    "inputs": {
-      "detail_method": "VITMatte",
-      "detail_erode": 4,
-      "detail_dilate": 2,
-      "black_point": 0.01,
-      "white_point": 0.99,
-      "process_detail": false,
-      "device": "cuda",
-      "max_megapixels": 2.0,
-      "image": [
-        "25",
-        0
-      ],
-      "birefnet_model": [
-        "11",
-        0
-      ]
-    },
-    "class_type": "LayerMask: BiRefNetUltraV2",
-    "_meta": {
-      "title": "图层遮罩：BiRefNet Ultra V2（高级）"
-    }
-  },
-  "44": {
-    "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 1,
-      "proportional_height": 1,
-      "fit": "letterbox",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_longest_side": true,
-      "longest_side": 720,
-      "image": [
-        "39",
-        0
-      ],
-      "mask": [
-        "39",
-        1
-      ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio",
-    "_meta": {
-      "title": "图层工具：按宽高比缩放"
+      "title": "SaveImage"
     }
   }
 }

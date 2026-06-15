@@ -1,0 +1,210 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 354555,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "78",
+        0
+      ],
+      "positive": [
+        "94",
+        0
+      ],
+      "negative": [
+        "47",
+        0
+      ],
+      "latent_image": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "18": {
+    "inputs": {
+      "samples": [
+        "108",
+        0
+      ],
+      "vae": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeAudio",
+    "_meta": {
+      "title": "VAE Decode Audio"
+    }
+  },
+  "47": {
+    "inputs": {
+      "conditioning": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "78": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "94": {
+    "inputs": {
+      "tags": "这首作品是一首欢快乐观的器乐流行曲，融合了现代指弹吉他技法与电子元素。核心基于清脆明亮的钢弦原声吉他指弹旋律，采用G大调营造出开阔温暖的感觉。伴奏由稳定的四四拍鼓机节奏支撑，节拍轻快但不急躁，配合简洁而富有律动感的贝斯线条，奠定了积极向上的基调。随着音乐推进，细腻的合成器音垫缓缓铺陈开来，带来柔和的和声背景与空气感，同时点缀着微妙的空间氛围音效，增强整体层次与沉浸感。结构上遵循典型的流行器乐框架：前奏-主段-副段-桥段-再现-尾声。其中特别安排了一段鼓声淡出的间奏(Breakdown)，突出吉他的独奏表现力及贝斯与之的对话互动，之后所有元素再次回归形成高潮。整体制作干净利落，动态对比明显，情绪饱满而不失轻松惬意，在最后以渐弱(Fade Out)方式温柔收束，留下余韵悠长的印象。",
+      "lyrics": "[Instrumental]",
+      "seed": 31,
+      "bpm": 120,
+      "duration": 240.0,
+      "timesignature": "4",
+      "language": "zh",
+      "keyscale": "G major",
+      "generate_audio_codes": false,
+      "cfg_scale": 2.0,
+      "temperature": 0.85,
+      "top_p": 0.9,
+      "top_k": 0,
+      "min_p": 0.0,
+      "clip": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "TextEncodeAceStepAudio1.5",
+    "_meta": {
+      "title": "TextEncodeAceStepAudio1.5"
+    }
+  },
+  "98": {
+    "inputs": {
+      "seconds": 240.0,
+      "batch_size": 1
+    },
+    "class_type": "EmptyAceStep1.5LatentAudio",
+    "_meta": {
+      "title": "Empty Ace Step 1.5 Latent Audio"
+    }
+  },
+  "104": {
+    "inputs": {
+      "unet_name": "acestep_v1.5_xl_sft_turbo_nvfp4.safetensors",
+      "weight_dtype": "fp8_e4m3fn_fast"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "105": {
+    "inputs": {
+      "clip_name1": "qwen_0.6b_ace15-fp8.safetensors",
+      "clip_name2": "qwen_4b_ace15-fp8.safetensors",
+      "type": "ace",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "DualCLIPLoader"
+    }
+  },
+  "106": {
+    "inputs": {
+      "vae_name": "ace_1.5_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "107": {
+    "inputs": {
+      "filename_prefix": "audio/Sunlit Pathways",
+      "audioUI": "",
+      "audio": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "SaveAudio",
+    "_meta": {
+      "title": "Save Audio (FLAC)"
+    }
+  },
+  "108": {
+    "inputs": {
+      "seed": 4095198981,
+      "steps": 12,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "78",
+        0
+      ],
+      "positive": [
+        "110",
+        0
+      ],
+      "negative": [
+        "47",
+        0
+      ],
+      "latent_image": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "110": {
+    "inputs": {
+      "tags": "这首作品是一首欢快乐观的器乐流行曲，融合了现代指弹吉他技法与电子元素。核心基于清脆明亮的钢弦原声吉他指弹旋律，采用G大调营造出开阔温暖的感觉。伴奏由稳定的四四拍鼓机节奏支撑，节拍轻快但不急躁，配合简洁而富有律动感的贝斯线条，奠定了积极向上的基调。随着音乐推进，细腻的合成器音垫缓缓铺陈开来，带来柔和的和声背景与空气感，同时点缀着微妙的空间氛围音效，增强整体层次与沉浸感。结构上遵循典型的流行器乐框架：前奏-主段-副段-桥段-再现-尾声。其中特别安排了一段鼓声淡出的间奏(Breakdown)，突出吉他的独奏表现力及贝斯与之的对话互动，之后所有元素再次回归形成高潮。整体制作干净利落，动态对比明显，情绪饱满而不失轻松惬意，在最后以渐弱(Fade Out)方式温柔收束，留下余韵悠长的印象。",
+      "lyrics": "[Intro - Acoustic Fingerpicking, Light Drums]\n[guitar solo, no lyrics]\n\n\n[Verse - Building Energy, Synth Pad Enters]\n[guitar solo, no lyrics]\n\n[Chorus - Full Band, Euphoric]\n[guitar solo, no lyrics]\n\n[Bridge - Breakdown, Bass & Guitar Focus]\n[guitar solo, no lyrics]\n\n[Chorus - High Energy, Explosive]\n[guitar solo, no lyrics]\n\n[Outro - Fade Out, Dreamy]\n[guitar solo, no lyrics]",
+      "seed": 31,
+      "bpm": 120,
+      "duration": 240.0,
+      "timesignature": "4",
+      "language": "zh",
+      "keyscale": "G major",
+      "generate_audio_codes": false,
+      "cfg_scale": 2.0,
+      "temperature": 0.5,
+      "top_p": 0.9,
+      "top_k": 0,
+      "min_p": 0.0,
+      "clip": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "TextEncodeAceStepAudio1.5",
+    "_meta": {
+      "title": "TextEncodeAceStepAudio1.5"
+    }
+  }
+}

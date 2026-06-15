@@ -37,7 +37,7 @@
   },
   "6": {
     "inputs": {
-      "text": "男人正在面向前方说话，表情自然柔和",
+      "text": "男人面向前方说话，表情自然，光线柔和，没有任何字幕",
       "clip": [
         "38",
         0
@@ -93,7 +93,7 @@
   },
   "52": {
     "inputs": {
-      "image": "edu_portrait_65e1c84c.jpg"
+      "image": "edu_portrait_e12cef18.jpeg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -140,8 +140,8 @@
   },
   "58": {
     "inputs": {
-      "audio": "edu_audio_65e1c84c.mp3",
-      "audioUI": "/api/view?filename=edu_audio_65e1c84c.mp3&type=input&subfolder=&rand=0.0"
+      "audio": "edu_audio_e12cef18.mp3",
+      "audioUI": "/api/view?filename=edu_audio_e12cef18.mp3&type=input&subfolder=&rand=0.0"
     },
     "class_type": "LoadAudio",
     "_meta": {
@@ -254,7 +254,7 @@
         "100",
         0
       ],
-      "length": 90,
+      "length": 129,
       "image": [
         "80",
         0
@@ -285,7 +285,7 @@
   },
   "104": {
     "inputs": {
-      "value": 30
+      "value": 43
     },
     "class_type": "PrimitiveInt",
     "_meta": {

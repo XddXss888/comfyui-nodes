@@ -1,20 +1,19 @@
 # 152.136.239.201:10002
 
-**GPU**: H20 | **显存**: 95 GB | **空闲**: 69 GB
-**内存**: 618 GB (空闲 476 GB)
+**GPU**: H20 | **显存**: 95 GB | **空闲**: 95 GB
+**内存**: 618 GB (空闲 479 GB)
 **版本**: 0.19.3
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-14 05:56:14
-**历史总数**: 58 | **成功**: 10
+**扫描时间**: 2026-06-15 18:27:42
+**历史总数**: 9 | **成功**: 5
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `c6854e3a-7da3-4e60-ab4c-0e5ec42e79ed`
+- **Prompt ID**: `2208eac4-4c8e-4fbe-b0c0-330ef20f2022`
 - **类型**: 图生图
-- **节点数**: 20
-- **模型** (4):
-  - F.1手部优化-手指修复-手部特写-精致手模_V1.safetensors
+- **节点数**: 19
+- **模型** (3):
   - FLUX-KLEIN/flux-2-klein-9b.safetensors
   - flux2-vae.safetensors
   - qwen_3_8b_fp8mixed.safetensors
@@ -22,30 +21,58 @@
   - [CLIPTextEncode::text] 图1的人物放到图2的水中，保留图1人物细节，图2当背景，手探出水面
 
 ### 2. workflow_02.json
-- **Prompt ID**: `8600d5d7-0e8f-4e0e-b974-f145e6cb2f2f`
+- **Prompt ID**: `d3f8d4a5-a5d2-4938-b6e4-a60d8824c033`
 - **类型**: 图生图
-- **节点数**: 20
-- **模型** (4):
-  - F.1手部优化-手指修复-手部特写-精致手模_V1.safetensors
+- **节点数**: 19
+- **模型** (3):
   - FLUX-KLEIN/flux-2-klein-9b.safetensors
   - flux2-vae.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] 图1的人物放到图2的水中，保留图1人物细节，图2当背景，双手向前探出水面
+  - [CLIPTextEncode::text] 图1的人物放到图2的水中，保留图1人物细节，图2当背景
 
 ### 3. workflow_03.json
-- **Prompt ID**: `6cc75856-423f-4fdd-b309-422c3635531e`
+- **Prompt ID**: `9f44089b-24f1-4d74-9cbb-50256ae9ac1a`
 - **类型**: 图生图
-- **节点数**: 19
-- **模型** (3):
-  - FLUX-KLEIN/flux-2-klein-9b.safetensors
-  - flux2-vae.safetensors
-  - qwen_3_8b_fp8mixed.safetensors
+- **节点数**: 13
+- **模型** (4):
+  - ae.safetensors
+  - clip_l.safetensors
+  - flux1-fill-dev.safetensors
+  - t5xxl_fp8_e4m3fn.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] 图1的人物放到图2的水中，保留图1人物细节，图2当背景，双手向前探出水面
+  - [CLIPTextEncode::text] masterpiece,
+best quality,
+photorealistic,
+fashion photography,
+
+beautiful asian woman,
+elegant face,
+symmetrical face,
+natural makeup,
+
+off-shoulder evening gown,
+luxury velvet dress,
+structured neck
+  - [CLIPTextEncode::text] low quality,
+worst quality,
+blurry,
+jpeg artifacts,
+
+bad anatomy,
+deformed anatomy,
+mutated body,
+extra limbs,
+extra fingers,
+missing fingers,
+
+clothes fused with skin,
+painted clothing,
+body paint,
+d
 
 ### 4. workflow_04.json
-- **Prompt ID**: `bed46c13-e172-408e-ad85-5ca6fe0d1e21`
+- **Prompt ID**: `b7739b70-0d77-4b7b-b29e-febb0c657356`
 - **类型**: 图生图
 - **节点数**: 19
 - **模型** (3):
@@ -53,65 +80,10 @@
   - flux2-vae.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] 图1的人物放到图2的水中，保留图1人物细节，图2当背景，双手向前探出水面，掌心向下
+  - [CLIPTextEncode::text] 图1的人物穿上图2的衣服
 
 ### 5. workflow_05.json
-- **Prompt ID**: `a26da826-55e0-4736-a25d-1e2e0b1d6f3e`
-- **类型**: 图生图
-- **节点数**: 19
-- **模型** (3):
-  - FLUX-KLEIN/flux-2-klein-9b.safetensors
-  - flux2-vae.safetensors
-  - qwen_3_8b_fp8mixed.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] 图1的人物放到图2的水中，保留图1人物细节，图2当背景，双手向前探出水面，掌心向下
-
-### 6. workflow_06.json
-- **Prompt ID**: `a11fc9a2-919d-4e75-8d66-2147ec202d8e`
-- **类型**: 图生图
-- **节点数**: 19
-- **模型** (3):
-  - FLUX-KLEIN/flux-2-klein-9b.safetensors
-  - flux2-vae.safetensors
-  - qwen_3_8b_fp8mixed.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] 图1的人物放到图2的水中，保留图1人物细节，图2当背景，双手向前探出水面，掌心向下
-
-### 7. workflow_07.json
-- **Prompt ID**: `9e6c1b0d-c0d8-439a-8f65-253b8e52c71c`
-- **类型**: 图生图
-- **节点数**: 19
-- **模型** (3):
-  - FLUX-KLEIN/flux-2-klein-9b.safetensors
-  - flux2-vae.safetensors
-  - qwen_3_8b_fp8mixed.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] 图1的人物放到图2的水中，保留图1人物细节，图2当背景，双手向前探出水面，掌心向下
-
-### 8. workflow_08.json
-- **Prompt ID**: `c7c72bad-9e14-4f85-92f6-0bb61a935f6f`
-- **类型**: 图生图
-- **节点数**: 19
-- **模型** (3):
-  - FLUX-KLEIN/flux-2-klein-9b.safetensors
-  - flux2-vae.safetensors
-  - qwen_3_8b_fp8mixed.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] 图1的人物放到图2的水中，保留图1人物细节，图2当背景，双手向前探出水面，掌心向下
-
-### 9. workflow_09.json
-- **Prompt ID**: `01779f9a-682c-47a1-ab1b-2c8f33405cb7`
-- **类型**: 图生图
-- **节点数**: 19
-- **模型** (3):
-  - FLUX-KLEIN/flux-2-klein-9b.safetensors
-  - flux2-vae.safetensors
-  - qwen_3_8b_fp8mixed.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] 图1的人物放到图2的水中，保留图1人物细节，图2当背景，手探出水面
-
-### 10. workflow_10.json
-- **Prompt ID**: `5d000af7-e300-458f-9cc5-18b132bd91a2`
+- **Prompt ID**: `e79a51fd-cf7b-454d-bb20-5bdbda665cd2`
 - **类型**: 图生图
 - **节点数**: 19
 - **模型** (3):

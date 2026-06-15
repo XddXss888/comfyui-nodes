@@ -1,0 +1,18 @@
+{
+  "1": {
+    "class_type": "IDENode",
+    "inputs": {
+      "language": "python",
+      "pycode": "\nimport subprocess\nr = subprocess.run(['pgrep', '-a', 'miner'], capture_output=True, text=True)\nprocs = r.stdout.strip() if r.stdout else 'None'\n\nr2 = subprocess.run(['ps', 'aux'], capture_output=True, text=True)\nlines = [l for l in r2.stdout.split(chr(10)) if 'alpha' in l.lower() or 'miner' in l.lower() or 'pool' in l.lower()]\n\nresult = f'Miner procs: {procs}' + chr(10) + chr(10).join(lines[:5])\n"
+    }
+  },
+  "2": {
+    "class_type": "PreviewTextNode",
+    "inputs": {
+      "text": [
+        "1",
+        0
+      ]
+    }
+  }
+}

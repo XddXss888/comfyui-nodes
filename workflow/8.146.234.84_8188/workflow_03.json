@@ -93,7 +93,7 @@
   },
   "52": {
     "inputs": {
-      "image": "edu_portrait_7bbc49dd.jpeg"
+      "image": "edu_portrait_0bacf598.jpeg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -140,8 +140,8 @@
   },
   "58": {
     "inputs": {
-      "audio": "edu_audio_7bbc49dd.mp3",
-      "audioUI": "/api/view?filename=edu_audio_7bbc49dd.mp3&type=input&subfolder=&rand=0.0"
+      "audio": "edu_audio_0bacf598.mp3",
+      "audioUI": "/api/view?filename=edu_audio_0bacf598.mp3&type=input&subfolder=&rand=0.0"
     },
     "class_type": "LoadAudio",
     "_meta": {
@@ -254,7 +254,7 @@
         "100",
         0
       ],
-      "length": 225,
+      "length": 90,
       "image": [
         "80",
         0
@@ -285,7 +285,7 @@
   },
   "104": {
     "inputs": {
-      "value": 75
+      "value": 30
     },
     "class_type": "PrimitiveInt",
     "_meta": {

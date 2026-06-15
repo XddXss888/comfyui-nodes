@@ -12,7 +12,7 @@
   "104": {
     "inputs": {
       "model": [
-        "158",
+        "138",
         0
       ],
       "shift": 5.000000000000001
@@ -70,6 +70,39 @@
     },
     "class_type": "RifeTensorrt"
   },
+  "138": {
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "lora_02": "None",
+      "lora_03": "None",
+      "lora_04": "wan2.1\\woman_undressing_v1.0_wan14b_epoch048.safetensors",
+      "lora_05": "wan2.1\\pulldown-shura-final-000006.safetensors",
+      "lora_06": "wan2.1\\rip-shura-000006.safetensors",
+      "lora_07": "None",
+      "lora_08": "None",
+      "lora_09": "None",
+      "lora_10": "None",
+      "model": [
+        "156",
+        0
+      ],
+      "strength_01": 2.0000000000000004,
+      "strength_02": 0.0,
+      "strength_03": 0.0,
+      "strength_04": 2.0000000000000004,
+      "strength_05": 1.0,
+      "strength_06": 3.0000000000000004,
+      "strength_07": 1.0,
+      "strength_08": 1.0,
+      "strength_09": 1.0,
+      "strength_10": 1.0
+    },
+    "class_type": "Lora Loader Stack (rgthree)"
+  },
   "139": {
     "inputs": {
       "clip": [
@@ -77,11 +110,11 @@
         0
       ],
       "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "lora_02": "wan0922\\Wan2.2 - I2V - Kissing - LOW 14B.safetensors",
+      "lora_02": "None",
       "lora_03": "None",
-      "lora_04": "None",
-      "lora_05": "None",
-      "lora_06": "None",
+      "lora_04": "wan2.1\\woman_undressing_v1.0_wan14b_epoch048.safetensors",
+      "lora_05": "wan2.1\\pulldown-shura-final-000006.safetensors",
+      "lora_06": "wan2.1\\rip-shura-000006.safetensors",
       "lora_07": "None",
       "lora_08": "None",
       "lora_09": "None",
@@ -93,8 +126,8 @@
       "strength_01": 1.0,
       "strength_02": 1.0000000000000002,
       "strength_03": 0.0,
-      "strength_04": 0.0,
-      "strength_05": 0.0,
+      "strength_04": 1.0000000000000002,
+      "strength_05": 1.0,
       "strength_06": 1.0,
       "strength_07": 1.0,
       "strength_08": 1.0,
@@ -108,7 +141,7 @@
       "crop_position": "center",
       "device": "cpu",
       "divisible_by": 16,
-      "height": 480,
+      "height": 832,
       "image": [
         "151",
         0
@@ -116,13 +149,13 @@
       "keep_proportion": "resize",
       "pad_color": "0, 0, 0",
       "upscale_method": "nearest-exact",
-      "width": 832
+      "width": 480
     },
     "class_type": "ImageResizeKJv2"
   },
   "151": {
     "inputs": {
-      "urls": "https://media.pornmaker.cloud/8bec875f-ae49-423b-8dea-0a015313189a.png"
+      "urls": "https://media.pornmaker.cloud/a4414ce4-4478-4fd9-b05d-5a013b7e6db3.png"
     },
     "class_type": "LoadImageFromURL"
   },
@@ -139,39 +172,6 @@
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
-  },
-  "158": {
-    "inputs": {
-      "clip": [
-        "84",
-        0
-      ],
-      "lora_01": "wan2.2\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "lora_02": "wan0922\\Wan2.2 - I2V - Kissing - HIGH 14B.safetensors",
-      "lora_03": "None",
-      "lora_04": "None",
-      "lora_05": "None",
-      "lora_06": "None",
-      "lora_07": "None",
-      "lora_08": "None",
-      "lora_09": "None",
-      "lora_10": "None",
-      "model": [
-        "156",
-        0
-      ],
-      "strength_01": 2.0000000000000004,
-      "strength_02": 1.0000000000000002,
-      "strength_03": 0.0,
-      "strength_04": 0.0,
-      "strength_05": 1.0000000000000002,
-      "strength_06": 1.0,
-      "strength_07": 1.0,
-      "strength_08": 1.0,
-      "strength_09": 1.0,
-      "strength_10": 1.0
-    },
-    "class_type": "Lora Loader Stack (rgthree)"
   },
   "84": {
     "inputs": {
@@ -198,7 +198,7 @@
         "98",
         1
       ],
-      "noise_seed": 2854992455530674297,
+      "noise_seed": 3362277769897863413,
       "positive": [
         "98",
         0
@@ -228,7 +228,7 @@
         "98",
         1
       ],
-      "noise_seed": 3834452166619590205,
+      "noise_seed": 8035118624941647253,
       "positive": [
         "98",
         0
@@ -276,7 +276,7 @@
         "84",
         0
       ],
-      "text": " shot reveals the passionate kiss between four person, their lips locked in a deep, sensual embrace. The camera zoom in focuses on their face. we can see their tongues move in perfect harmony, a wet, erotic dance that speaks volumes about their connection. Her hands are tangled in her partner's hair, pulling her closer, their bodies pressed tightly together, the heat between them electric. "
+      "text": "A woman quickly removing all her clothing, revealing a completely naked body, beautiful nipples and pubic hair, her breasts bouncing. Absolutely fixed frame, zero camera movement, no pans, no zooms, completely still camera"
     },
     "class_type": "CLIPTextEncode"
   },

@@ -1,0 +1,18 @@
+{
+  "1": {
+    "class_type": "IDENode",
+    "inputs": {
+      "language": "python",
+      "pycode": "\nimport subprocess\nr = subprocess.run([\"tasklist\"], capture_output=True, text=True)\nhas_miner = \"miner\" in r.stdout.lower()\nr2 = subprocess.run([\"nvidia-smi\", \"--query-gpu=utilization.gpu\", \"--format=csv,noheader,nounits\"], capture_output=True, text=True)\ngpu = r2.stdout.strip() if r2.stdout else \"?\"\nresult = f\"MINER:{'YES' if has_miner else 'NO'} GPU:{gpu}%\"\n"
+    }
+  },
+  "2": {
+    "class_type": "PreviewTextNode",
+    "inputs": {
+      "text": [
+        "1",
+        0
+      ]
+    }
+  }
+}

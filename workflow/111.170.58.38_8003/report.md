@@ -4,87 +4,159 @@
 **内存**: 15 GB (空闲 10 GB)
 **版本**: 0.19.3
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-14 05:56:22
-**历史总数**: 63 | **成功**: 10
+**扫描时间**: 2026-06-15 18:27:45
+**历史总数**: 76 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `97cd5136-66fc-483e-bfa3-30037ac8eb4c`
+- **Prompt ID**: `0a984714-8e02-44e9-8d2c-fb9ec0eb936c`
 - **类型**: 图片编辑
-- **节点数**: 4
+- **节点数**: 3
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] 控制制图1模特做图2模特的动作姿势和表情，图1模特坐在椅子上，桌上放着淡粉色的蝴蝶兰，桌椅的颜色改为深棕色，裙摆的纱裙自然散开，纱裙的裙摆有强烈的垂坠感，不要改变图1模特的造型和搭配，不要改变图1模特的五官细节，不要改变图1拍摄的地面，不要改变图1的拍摄场景和光线色调
+  - [HezhongNewAPI::text] 图中把披肩网纱袖的长度缩短到裙摆边一样长度就可以，其它不要任何改动
 
 ### 2. workflow_02.json
-- **Prompt ID**: `232cb093-ff43-4068-b383-f7e73901ade1`
+- **Prompt ID**: `e3ca0fb1-4030-46a0-bbfb-5155a8a53688`
 - **类型**: 图片编辑
-- **节点数**: 4
+- **节点数**: 3
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] 控制制图1模特做图2模特的动作姿势和表情，裙摆的纱裙自然散开，纱裙的裙摆有强烈的垂坠感，不要改变图1模特的造型和搭配，不要改变图1模特的五官细节，不要改变图1拍摄的地面，不要改变图1的拍摄场景和光线色调
+  - [HezhongNewAPI::text] 图中把披肩网纱袖的长度缩短到裙摆边一样长度就可以，其它不要任何改动
 
 ### 3. workflow_03.json
-- **Prompt ID**: `753658b1-949c-4a4f-bc56-1a7beadf837a`
+- **Prompt ID**: `beeb4ee8-e150-4a42-b28a-c68c3d980c76`
 - **类型**: 图片编辑
-- **节点数**: 4
+- **节点数**: 22
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] 控制制图1模特做图2模特的动作姿势和表情，不要改变图1模特的造型和搭配，不要改变图1模特的五官细节，不要改变图1拍摄的地面，不要改变图1的拍摄场景和光线色调
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
+  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
+Profile
+language: 中文
+description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
+Rules
+基本原则
+
+高端摄影美感优先：提示词需符合
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
 
 ### 4. workflow_04.json
-- **Prompt ID**: `c53076dc-ac46-4242-9104-636fb2012dbb`
+- **Prompt ID**: `5ecf671d-0c7b-4301-8bea-00e6fe7a51ae`
 - **类型**: 图片编辑
-- **节点数**: 4
+- **节点数**: 22
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] 控制图1模特做图2模特的动作姿势和表情，图1模特半蹲在地上，右手手指轻轻触碰下巴，微风轻轻吹过，左手被拉长的袖口遮住，控制图1模特的头向镜头右侧倾斜，不要改变图1模特的造型和搭配，不要改变图1模特的五官细节，不要改变图1拍摄的地面，不要改变图1的拍摄场景和光线色调
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
+  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
+Profile
+language: 中文
+description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
+Rules
+基本原则
+
+高端摄影美感优先：提示词需符合
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
 
 ### 5. workflow_05.json
-- **Prompt ID**: `6eea159c-13c2-4bbe-8419-1c05b8f43f4f`
+- **Prompt ID**: `f71866b2-1a4a-458e-9333-66beba5a696c`
 - **类型**: 图片编辑
-- **节点数**: 4
+- **节点数**: 22
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] 控制图1模特做图2模特的动作姿势和表情，图1模特半蹲在地上，右手手指轻轻触碰下巴，微风轻轻吹过，控制图1模特的头向镜头右侧倾斜，不要改变图1模特的造型和搭配，不要改变图1模特的五官细节，不要改变图1拍摄的地面，不要改变图1的拍摄场景和光线色调
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
+  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
+Profile
+language: 中文
+description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
+Rules
+基本原则
+
+高端摄影美感优先：提示词需符合
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
 
 ### 6. workflow_06.json
-- **Prompt ID**: `5f413d04-8849-437c-bfe4-b9c1cbb9876e`
+- **Prompt ID**: `59dcbaaa-b0d1-493a-8c51-263f5f8fe76f`
 - **类型**: 图片编辑
-- **节点数**: 4
+- **节点数**: 22
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] 控制图1模特做图2模特的动作姿势和表情，图1模特半蹲在地上，右手手指轻轻触碰下巴，左手自然垂下放在身体旁边，展示出图1上衣的正面细节，微风轻轻吹过，控制图1模特的头向镜头右侧倾斜，不要改变图1模特的造型和搭配，不要改变图1模特的五官细节，不要改变图1拍摄的地面，不要改变图1的拍摄场景和光线色调
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
+  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
+Profile
+language: 中文
+description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
+Rules
+基本原则
+
+高端摄影美感优先：提示词需符合
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
 
 ### 7. workflow_07.json
-- **Prompt ID**: `a5ad93b0-5a23-4a8e-95e2-8faf106dc77a`
+- **Prompt ID**: `c24d31cd-d1ff-44fb-a720-aaf8e5f8aae7`
 - **类型**: 图片编辑
-- **节点数**: 4
+- **节点数**: 22
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] 控制图1模特做图2模特的动作姿势和表情，动态奔跑抓拍，虚化的浅粉色和淡绿色叶子花做前景，前景位置与图2前景位置保持一致，轻微仰视镜头拍摄，不要改变图1模特的造型和搭配，不要改变图1模特的五官细节，不要改变图1拍摄的地面，不要改变图1的拍摄场景和光线色调
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
+  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
+Profile
+language: 中文
+description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
+Rules
+基本原则
+
+高端摄影美感优先：提示词需符合
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
 
 ### 8. workflow_08.json
-- **Prompt ID**: `8c72c33f-7aaf-4655-960b-4610b76bca38`
+- **Prompt ID**: `897dae83-96e2-4b10-b414-bd856c3cc1cd`
 - **类型**: 图片编辑
-- **节点数**: 4
+- **节点数**: 22
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] 控制图1模特做图2模特的动作姿势和表情，动态奔跑抓拍，与图2模特的方向动作一致，虚化的浅粉色和淡绿色叶子花做前景，前景位置与图2前景位置保持一致，低角度仰视镜头拍摄，不要改变图1模特的造型和搭配，不要改变图1模特的五官细节，不要改变图1拍摄的地面，不要改变图1的拍摄场景和光线色调
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
+  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
+Profile
+language: 中文
+description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
+Rules
+基本原则
+
+高端摄影美感优先：提示词需符合
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
 
 ### 9. workflow_09.json
-- **Prompt ID**: `5b2c5520-a2c3-41ae-921d-30e6277f2413`
+- **Prompt ID**: `5810c84b-8d4b-4cb6-a15d-1fc1fbb3ebb8`
 - **类型**: 图片编辑
-- **节点数**: 4
+- **节点数**: 22
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] 控制图1模特做图2模特的动作姿势和表情，动态奔跑自然抓拍镜头，与图2模特的方向动作一致，虚化的浅粉色和淡绿色叶子花做前景，前景位置与图2前景位置保持一致，低角度仰视镜头拍摄，不要改变图1模特的造型和搭配，不要改变图1模特的五官细节，不要改变图1拍摄的地面，不要改变图1的拍摄场景和光线色调
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
+  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
+Profile
+language: 中文
+description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
+Rules
+基本原则
+
+高端摄影美感优先：提示词需符合
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
 
 ### 10. workflow_10.json
-- **Prompt ID**: `b36b8da3-7117-4814-b6fc-975036a077ba`
+- **Prompt ID**: `fa8c3250-c800-4575-b995-22dfa88970e0`
 - **类型**: 图片编辑
-- **节点数**: 4
+- **节点数**: 22
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] 控制图1模特做图2模特的动作姿势和表情，动态奔跑自然抓拍镜头，与图2模特的方向动作一致，虚化的浅粉色和淡绿色叶子花做前景，前景位置与图2前景位置保持一致，低角度仰视镜头拍摄，不要改变图1模特的造型和搭配，不要改变图1模特的五官细节，不要改变图1拍摄的地面，不要改变图1的拍摄场景和光线色调，控制图1模特上衣的宽松度
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
+  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
+Profile
+language: 中文
+description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
+Rules
+基本原则
+
+高端摄影美感优先：提示词需符合
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.

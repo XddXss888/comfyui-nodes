@@ -1,153 +1,18 @@
 {
-  "74": {
+  "1": {
+    "class_type": "IDENode",
     "inputs": {
-      "pixels": [
-        "1849",
-        0
-      ],
-      "vae": [
-        "2014",
+      "language": "python",
+      "pycode": "\nimport subprocess\nr = subprocess.run(['whoami'], capture_output=True, text=True)\nresult = r.stdout\n"
+    }
+  },
+  "2": {
+    "class_type": "PreviewTextNode",
+    "inputs": {
+      "text": [
+        "1",
         0
       ]
-    },
-    "class_type": "VAEEncode"
-  },
-  "528": {
-    "inputs": {
-      "text": "Ancient house\nbest-quality,masterpiece,with a high-end texture,UE5 Rendering,RTNS,masterpiece,amazing quality,Semi-realistic,fantasy,high contrast,perspective,depth of field,best quality,realistic anatomy,absurdres,realistic，Z3zz4,",
-      "speak_and_recognation": true,
-      "clip": [
-        "2015",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode"
-  },
-  "530": {
-    "inputs": {
-      "text": "(easynegative),badhandv4,(worst quality, low quality:1.4),greyscale,border,artist name,out of frame,holding,zombie,watermark,text,logo，NSFW",
-      "speak_and_recognation": true,
-      "clip": [
-        "2015",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode"
-  },
-  "755": {
-    "inputs": {
-      "seed": 681504250148637,
-      "steps": [
-        "1991:2",
-        0
-      ],
-      "cfg": [
-        "1991:2",
-        2
-      ],
-      "sampler_name": [
-        "1991:2",
-        3
-      ],
-      "scheduler": [
-        "1991:2",
-        4
-      ],
-      "denoise": [
-        "1849",
-        2
-      ],
-      "model": [
-        "2015",
-        0
-      ],
-      "positive": [
-        "528",
-        0
-      ],
-      "negative": [
-        "530",
-        0
-      ],
-      "latent_image": [
-        "74",
-        0
-      ]
-    },
-    "class_type": "KSampler"
-  },
-  "1019": {
-    "inputs": {
-      "samples": [
-        "755",
-        0
-      ],
-      "vae": [
-        "2014",
-        0
-      ]
-    },
-    "class_type": "VAEDecode"
-  },
-  "1074": {
-    "inputs": {
-      "ckpt_name": "二次元大模型.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple"
-  },
-  "1849": {
-    "inputs": {},
-    "class_type": "🔹Photoshop ComfyUI Plugin"
-  },
-  "1931": {
-    "inputs": {
-      "output": [
-        "1019",
-        0
-      ]
-    },
-    "class_type": "🔹SendTo Photoshop Plugin"
-  },
-  "2012": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "1019",
-        0
-      ]
-    },
-    "class_type": "SaveImage"
-  },
-  "2014": {
-    "inputs": {
-      "vae_name": "sdxl_vae_fp16fix.safetensors"
-    },
-    "class_type": "VAELoader"
-  },
-  "2015": {
-    "inputs": {
-      "lora_name": "z3画风_illv0.1.safetensors",
-      "strength_model": 0.6,
-      "strength_clip": 1.0,
-      "model": [
-        "1074",
-        0
-      ],
-      "clip": [
-        "1074",
-        1
-      ]
-    },
-    "class_type": "LoraLoader"
-  },
-  "1991:2": {
-    "inputs": {
-      "steps_total": 20,
-      "refiner_step": 24,
-      "cfg": 5.0,
-      "sampler_name": "euler_ancestral",
-      "scheduler": "normal"
-    },
-    "class_type": "KSampler Config (rgthree)"
+    }
   }
 }

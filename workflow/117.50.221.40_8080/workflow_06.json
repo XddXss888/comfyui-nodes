@@ -1,0 +1,152 @@
+{
+  "1": {
+    "class_type": "UnetLoaderGGUF",
+    "inputs": {
+      "unet_name": "flux1-dev-Q8_0.gguf"
+    }
+  },
+  "2": {
+    "class_type": "DualCLIPLoader",
+    "inputs": {
+      "clip_name1": "t5xxl_fp8_e4m3fn.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "flux"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "ae_flux1.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "Pastoral girl with braided hair, wearing a white linen long dress, standing in a golden wheat field at dusk, soft backlight creating a warm golden halo around her, hair flowing gently in the breeze, serene and healing atmosphere, realistic photography, masterpiece, best quality, highly detailed, professional lighting, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "clip": [
+        "2",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 576,
+      "height": 1024,
+      "batch_size": 4
+    }
+  },
+  "12": {
+    "class_type": "FluxGuidance",
+    "inputs": {
+      "guidance": 3.5,
+      "conditioning": [
+        "4",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 1493985630,
+      "steps": 28,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "12",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "",
+      "clip": [
+        "2",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "6",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "DOOOOR_4K",
+      "images": [
+        "15",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "8",
+        0
+      ],
+      "width": 400,
+      "height": 0,
+      "crop": "disabled",
+      "upscale_method": "nearest-exact"
+    }
+  },
+  "11": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "DOOOOR_4K_TH",
+      "images": [
+        "10",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "UpscaleModelLoader",
+    "inputs": {
+      "model_name": "4x-UltraSharp.pth"
+    }
+  },
+  "15": {
+    "class_type": "ImageUpscaleWithModel",
+    "inputs": {
+      "upscale_model": [
+        "14",
+        0
+      ],
+      "image": [
+        "8",
+        0
+      ]
+    }
+  }
+}

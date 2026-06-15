@@ -2,7 +2,7 @@
   "1": {
     "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "ckpt_name": "zavychromaxl_v10.safetensors"
+      "ckpt_name": "epicRealismXL_pureFix.safetensors"
     }
   },
   "2": {
@@ -18,7 +18,7 @@
         "1",
         1
       ],
-      "text": "A melancholic Korean idol woman with platinum blonde voluminous curls cascading past her shoulders, shot from behind as she looks over her shoulder with wistful aegyo-sal eyes and softly parted lips. Baby face with dewy porcelain skin, subtle smoky eyeshadow, gradient rose lips. She wears an elegant black dress with a low back, standing in a traditional Korean hanok courtyard with weathered wooden pillars and stone pathways. Studio butterfly lighting from above sculpts dramatic cheekbone shadows. Shot on 35mm lens, tight headshot, environmental portrait. Shallow depth of field blurs the courtyard's curved tile roof into bokeh. Atmospheric, poetic stillness, fashion editorial quality, vivid chromatic palette, ultra-detailed skin texture."
+      "text": "Portrait of a stunning Korean woman with natural black hair showing blue sheen styled in twin low buns, diamond face shape with defined sculptured brows, dreamy ethereal expression gazing into the distance. Profile view captured through an ornate wooden archway framing her silhouette against a busy night market alive with golden and amber bokeh lights. She wears sleek black athletic wear with a cropped zip-up jacket, sporty chic styling. Overcast soft diffused light wraps her flawless porcelain skin with gentle luminosity while warm market glow creates painterly contrast behind her. Shot on 85mm f/1.4 lens producing creamy bokeh, cinematic color grading with teal and warm amber tones, dramatic shadows sculpting her jawline, editorial fashion photography, ultra detailed, photorealistic."
     }
   },
   "4": {
@@ -28,7 +28,7 @@
         "1",
         1
       ],
-      "text": "lowres, deformed, blurry, watermark, ugly, low quality"
+      "text": "lowres, blurry, bad anatomy, watermark, signature, oversaturated, harsh lighting, plastic skin"
     }
   },
   "5": {
@@ -58,10 +58,10 @@
         "5",
         0
       ],
-      "seed": 701313018,
+      "seed": 1921388518,
       "control_after_generate": "fixed",
-      "steps": 28,
-      "cfg": 6.0,
+      "steps": 30,
+      "cfg": 5.0,
       "sampler_name": "dpmpp_2m",
       "scheduler": "karras",
       "denoise": 1.0
@@ -87,7 +87,7 @@
         "7",
         0
       ],
-      "filename_prefix": "portrait_701313018"
+      "filename_prefix": "portrait_1921388518"
     }
   }
 }

@@ -1,0 +1,283 @@
+{
+  "6": {
+    "inputs": {
+      "text": "A cinematic wide shot of a vast, mirror-still freshwater pond at golden hour, warm amber light (#FFB347) bathing every surface in copper-gold radiance with long soft shadows stretching across the scene. The shallows near the western bank glow tawny-gold (#D4A437/#C8A951), translucent enough to reveal smooth pebbles and decomposing leaves on the bottom, deepening to dark green-brown (#2F4F2F) at the mysterious center where the bottom vanishes. The pond surface reflects a bronze (#CD7F32) and copper-gold (#B87333) sky, with a single water strider dimpling the surface and concentric rings radiating outward. Jade-green (#3B7A57) waxy lotus pads float across the surface bearing mercury-like droplets, one half-open lotus flower in pale pink (#FFB7C5) fading to cream catching the warm light. On the eastern shore, a massive ancient banyan tree dominates the composition, its trunk and aerial roots in elephant-grey (#848484) bark draped with emerald moss (#2E8B57), the roots reaching into the water like slow fingers, its enormous canopy casting dappled emerald shadows across the pond with shifting patterns of golden light filtering through dense jade-green leaves. The western bank is sun-baked terracotta (#C75B39/#CD853F) clay, cracked in a fine mosaic pattern, sloping gently to the waterline. Dragonflies in electric blue (#0077BE) and translucent green (#76D7C4) hover above the water surface. The eastern bank is lined with wildflowers — yellow mustard (#E1AD01) and pale violet wood sorrel (#9B7ED8). Faint outlines of mud-brick village houses sit in the far background with thin wisps of cooking smoke rising into the amber sky. Every surface catches the golden hour warmth, from the wet sheen on the lotus pads to the lichen on submerged stones. Pixar-style 3D, soft global illumination, polished cinematic quality. Color palette of warm amber (#FFB347), tawny-gold (#D4A437), copper-gold (#B87333), jade-green (#3B7A57), emerald (#2E8B57), elephant-grey (#848484), terracotta (#C75B39), pale pink (#FFB7C5), electric blue (#0077BE), and dark green-brown (#2F4F2F).",
+      "clip": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "13",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "scene_01/Flux2",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "10": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "12": {
+    "inputs": {
+      "unet_name": "flux2_dev_fp8mixed.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "13": {
+    "inputs": {
+      "noise": [
+        "25",
+        0
+      ],
+      "guider": [
+        "22",
+        0
+      ],
+      "sampler": [
+        "16",
+        0
+      ],
+      "sigmas": [
+        "48",
+        0
+      ],
+      "latent_image": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "16": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "22": {
+    "inputs": {
+      "model": [
+        "12",
+        0
+      ],
+      "conditioning": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "BasicGuider"
+    }
+  },
+  "25": {
+    "inputs": {
+      "noise_seed": 42
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "26": {
+    "inputs": {
+      "guidance": 4.0,
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "FluxGuidance"
+    }
+  },
+  "38": {
+    "inputs": {
+      "clip_name": "mistral_3_small_flux2_bf16.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "39": {
+    "inputs": {
+      "conditioning": [
+        "43",
+        0
+      ],
+      "latent": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "40": {
+    "inputs": {
+      "pixels": [
+        "41",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "41": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "42",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
+    }
+  },
+  "42": {
+    "inputs": {
+      "image": "thepond (1).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "43": {
+    "inputs": {
+      "conditioning": [
+        "26",
+        0
+      ],
+      "latent": [
+        "44",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "44": {
+    "inputs": {
+      "pixels": [
+        "45",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "45": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
+    }
+  },
+  "46": {
+    "inputs": {
+      "image": "thebanyantree (1).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "47": {
+    "inputs": {
+      "width": 1248,
+      "height": 832,
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "48": {
+    "inputs": {
+      "steps": 20,
+      "width": 1248,
+      "height": 832
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "Flux2Scheduler"
+    }
+  }
+}

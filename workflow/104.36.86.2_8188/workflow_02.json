@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 1722104794,
+      "seed": 1090928475,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,bath,water,moisture,plump,freckles,curvy,wavy hair,(Photo during a bath:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,blowjob,large breasts,brown hair,green eyes,red hair,curly hair,freckles,lips,hand on hip,window,ring,earrings,(Blowjob:1.0),(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2025/10/15/1760518139226.png",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2024/11/15/1731707345464.jpeg",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

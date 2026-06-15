@@ -1,84 +1,84 @@
 {
-  "4": {
+  "1": {
     "class_type": "CheckpointLoaderSimple",
     "inputs": {
       "ckpt_name": "dreamshaper_8.safetensors"
     }
   },
-  "5": {
-    "class_type": "EmptyLatentImage",
-    "inputs": {
-      "width": 64,
-      "height": 64,
-      "batch_size": 1
-    }
-  },
-  "6": {
+  "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "test",
+      "text": "Hot girl",
       "clip": [
-        "4",
-        1
-      ]
-    }
-  },
-  "7": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "text": "",
-      "clip": [
-        "4",
+        "1",
         1
       ]
     }
   },
   "3": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "4": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "5": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 1,
-      "steps": 1,
-      "cfg": 1.0,
+      "seed": 1202956753,
+      "steps": 8,
+      "cfg": 7.0,
       "sampler_name": "euler",
-      "scheduler": "normal",
+      "scheduler": "karras",
       "denoise": 1.0,
       "model": [
-        "4",
+        "1",
         0
       ],
       "positive": [
-        "6",
+        "2",
         0
       ],
       "negative": [
-        "7",
+        "3",
         0
       ],
       "latent_image": [
-        "5",
+        "4",
         0
       ]
     }
   },
-  "8": {
+  "6": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "3",
+        "5",
         0
       ],
       "vae": [
-        "4",
+        "1",
         2
       ]
     }
   },
-  "9": {
+  "7": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "t",
+      "filename_prefix": "sd_web",
       "images": [
-        "8",
+        "6",
         0
       ]
     }

@@ -1,93 +1,145 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "UNETLoader",
     "inputs": {
-      "ckpt_name": "epicRealismXL_pureFix.safetensors"
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
     }
   },
   "2": {
-    "class_type": "VAELoader",
+    "class_type": "DualCLIPLoader",
     "inputs": {
-      "vae_name": "sdxl_vae.safetensors"
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp16.safetensors",
+      "type": "flux"
     }
   },
   "3": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip": [
-        "1",
-        1
-      ],
-      "text": "A stunning Korean idol-style woman with dark brown layered curtain bangs framing angular features and strong defined brows, confident powerful expression with smoky bronze eyeshadow and gradient lips. She stands in an autumn park, golden maple leaves drifting around her, wearing an oversized vintage band t-shirt tucked loosely into black leather boots. Shot on 35mm lens, environmental portrait capturing her reflection in a rain-puddle on the stone path, golden hour warm side light casting long amber shadows across her face. Negative space opens to the left revealing bokeh of orange and crimson foliage. One hand pushing hair back, chin slightly lifted, gaze piercing through the reflection. Flawless luminous skin, editorial photography, cinematic film grain, dramatic atmosphere."
+      "vae_name": "ae.safetensors"
     }
   },
   "4": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "LoraLoaderModelOnly",
     "inputs": {
-      "clip": [
+      "model": [
         "1",
-        1
+        0
       ],
-      "text": "lowres, blurry, bad anatomy, watermark, signature, oversaturated, harsh lighting, plastic skin"
+      "lora_name": "flux_korean_girl.safetensors",
+      "strength_model": 0.6
     }
   },
   "5": {
-    "class_type": "EmptyLatentImage",
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "4",
+        0
+      ],
+      "lora_name": "flux_xlabs_realism.safetensors",
+      "strength_model": 0.5
+    }
+  },
+  "6": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "lora_name": "flux_casey_baugh_impressionist.safetensors",
+      "strength_model": 0.45
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "A melancholic Korean woman stands alone in a vast flower field at golden sunrise, shot on 35mm lens environmental portrait, profile view side angle, full body head to toe. Natural black hair with blue sheen, layered curtain bangs falling softly across her forehead, baby face with delicate aegyo-sal under-eye charm. She wears a sharply tailored charcoal blazer over an ivory silk top, hands loosely clasped behind her back. Overcast soft diffused light wraps her figure in muted warmth. Her expression is distant and poetic, lips barely parted, gazing toward the horizon. Wildflowers brush against her ankles. Flawless porcelain skin, editorial Korean idol makeup, subtle blush, glass-skin finish. Painterly realism, cinematic atmosphere, ethereal mood."
+    }
+  },
+  "8": {
+    "class_type": "FluxGuidance",
+    "inputs": {
+      "conditioning": [
+        "7",
+        0
+      ],
+      "guidance": 3.5
+    }
+  },
+  "9": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
+    }
+  },
+  "10": {
+    "class_type": "EmptySD3LatentImage",
     "inputs": {
       "width": 896,
       "height": 1280,
       "batch_size": 1
     }
   },
-  "6": {
+  "11": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "1",
-        0
-      ],
-      "positive": [
-        "3",
-        0
-      ],
-      "negative": [
-        "4",
-        0
-      ],
-      "latent_image": [
-        "5",
-        0
-      ],
-      "seed": 1595314410,
-      "control_after_generate": "fixed",
-      "steps": 30,
-      "cfg": 5.0,
-      "sampler_name": "dpmpp_2m",
-      "scheduler": "karras",
-      "denoise": 1.0
-    }
-  },
-  "7": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "samples": [
         "6",
         0
       ],
+      "positive": [
+        "8",
+        0
+      ],
+      "negative": [
+        "9",
+        0
+      ],
+      "latent_image": [
+        "10",
+        0
+      ],
+      "seed": 827460580,
+      "control_after_generate": "fixed",
+      "steps": 26,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "12": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
       "vae": [
-        "2",
+        "3",
         0
       ]
     }
   },
-  "8": {
+  "13": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "7",
+        "12",
         0
       ],
-      "filename_prefix": "portrait_1595314410"
+      "filename_prefix": "portrait_827460580"
     }
   }
 }

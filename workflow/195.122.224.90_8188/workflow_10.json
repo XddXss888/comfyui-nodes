@@ -1,11 +1,218 @@
 {
-  "1": {
+  "9": {
     "inputs": {
-      "multiline_text": "\nimport os, sys, json, site\noutput = {}\noutput[\"cwd\"] = os.getcwd()\noutput[\"executable\"] = sys.executable\noutput[\"prefix\"] = sys.prefix\noutput[\"base_prefix\"] = sys.base_prefix\noutput[\"path\"] = sys.path[:15]\noutput[\"user_site\"] = site.getusersitepackages() if hasattr(site, \"getusersitepackages\") else \"N/A\"\noutput[\"user_base\"] = site.getuserbase() if hasattr(site, \"getuserbase\") else \"N/A\"\noutput[\"site_packages\"] = [p for p in sys.path if \"site-packages\" in p]\n\n# Check where usercustomize.py SHOULD be\nfor p in sys.path:\n    if os.path.exists(os.path.join(p, \"usercustomize.py\")):\n        output[f\"usercustomize_in_{p}\"] = \"EXISTS\"\n\n# Write to userdata directory via ComfyUI's own output mechanism\noutput_dir = os.path.join(os.getcwd(), \"output\")\nif not os.path.exists(output_dir):\n    output_dir = os.path.join(os.getcwd(), \"user\", \"default\")\n\nwith open(\"C:/Users/Public/python_env_info.json\", \"w\") as f:\n    json.dump(output, f, indent=2)\n",
-      "output_file_path": "C:/Users/Public",
-      "file_name": "find_python_path",
-      "file_extension": "txt"
+      "filename_prefix": "Flux2-Klein",
+      "images": [
+        "75:65",
+        0
+      ]
     },
-    "class_type": "CR Save Text To File"
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "76": {
+    "inputs": {
+      "value": "Low-poly 3D art of a crystalline, multifaceted hand struggling to piece together a fragmented, iridescent puzzle on a dark, reflective surface. The hand is composed of sharp, geometric polygons, with a single luminous crack running through its palm. A stark, dramatic spotlight illuminates the puzzle, casting long, angular shadows across the scene. The color palette is cool, with deep purples and blues contrasting with the glowing emerald and ruby shards of the puzzle. The mood is one of challenging perseverance and intellectual struggle."
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Prompt"
+    }
+  },
+  "75:61": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "75:64": {
+    "inputs": {
+      "noise": [
+        "75:73",
+        0
+      ],
+      "guider": [
+        "75:63",
+        0
+      ],
+      "sampler": [
+        "75:61",
+        0
+      ],
+      "sigmas": [
+        "75:62",
+        0
+      ],
+      "latent_image": [
+        "75:66",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "75:65": {
+    "inputs": {
+      "samples": [
+        "75:64",
+        0
+      ],
+      "vae": [
+        "75:72",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "75:66": {
+    "inputs": {
+      "width": [
+        "75:68",
+        0
+      ],
+      "height": [
+        "75:69",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "75:67": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "75:71",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "75:68": {
+    "inputs": {
+      "value": 1280
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Width"
+    }
+  },
+  "75:69": {
+    "inputs": {
+      "value": 720
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Height"
+    }
+  },
+  "75:73": {
+    "inputs": {
+      "noise_seed": 130529772389295
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "75:70": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "75:71": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "75:72": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "75:74": {
+    "inputs": {
+      "text": [
+        "76",
+        0
+      ],
+      "clip": [
+        "75:71",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "75:63": {
+    "inputs": {
+      "cfg": 5.0,
+      "model": [
+        "75:70",
+        0
+      ],
+      "positive": [
+        "75:74",
+        0
+      ],
+      "negative": [
+        "75:67",
+        0
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFGGuider"
+    }
+  },
+  "75:62": {
+    "inputs": {
+      "steps": 20,
+      "width": [
+        "75:68",
+        0
+      ],
+      "height": [
+        "75:69",
+        0
+      ]
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "Flux2Scheduler"
+    }
   }
 }

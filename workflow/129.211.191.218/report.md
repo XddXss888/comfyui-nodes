@@ -4,67 +4,117 @@
 **内存**: 15 GB (空闲 7 GB)
 **版本**: 0.18.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-14 05:56:32
-**历史总数**: 125 | **成功**: 10
+**扫描时间**: 2026-06-15 18:27:48
+**历史总数**: 175 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `0330edc6-488f-4afc-9d83-504fbf295507`
+- **Prompt ID**: `73e5d450-c4ed-403c-815f-eef7b4867da1`
 - **类型**: 图片编辑
 - **节点数**: 8
 - **模型** (0):
+- **提示词**:
+  - [NanoBanana2AIO::prompt] 参考图是第一张图
+标题：Top 4 Functional Toys Pro Dog Trainers Actually Buy
+第二张图 是KONG (Classic)：标签：Crate Training  描述：Perfect for rewards and helping pups love their crate.
+第三张图 是 KADTC (Puzzle Toy) 标签：Focus & P
 
 ### 2. workflow_02.json
-- **Prompt ID**: `83106ece-f386-4da0-9cff-43106bd864a2`
+- **Prompt ID**: `6b072748-75fb-434c-bee7-d14fd1e23b11`
 - **类型**: 图片编辑
 - **节点数**: 8
 - **模型** (0):
+- **提示词**:
+  - [NanoBanana2AIO::prompt] 参考图是第一张图
+标题：Top 4 Functional Toys Pro Dog Trainers Actually Buy
+第二张图 是KONG (Classic)：标签：Crate Training  描述：Perfect for rewards and helping pups love their crate.
+第三张图 是 KADTC (Puzzle Toy) 标签：Focus & P
 
 ### 3. workflow_03.json
-- **Prompt ID**: `70f84342-2961-4ec5-bd67-4c9bdcaa3e1d`
+- **Prompt ID**: `0f3ed2b9-164a-4803-99a9-669f8b7055c1`
 - **类型**: 图片编辑
 - **节点数**: 8
 - **模型** (0):
+- **提示词**:
+  - [NanoBanana2AIO::prompt] 参考图是第一张图
+标题：Top 4 Functional Toys Pro Dog Trainers Actually Buy
+第二张图 是KONG (Classic)：标签：Crate Training  描述：Perfect for rewards and helping pups love their crate.
+第三张图 是 KADTC (Puzzle Toy) 标签：Focus & P
 
 ### 4. workflow_04.json
-- **Prompt ID**: `deeaa455-e4a5-4a21-9656-a160f071c8fc`
+- **Prompt ID**: `bd520b37-5ad3-4463-a276-720799544a4d`
 - **类型**: 图片编辑
 - **节点数**: 8
 - **模型** (0):
+- **提示词**:
+  - [NanoBanana2AIO::prompt] 参考图是第一张图
+标题：Top 4 Functional Toys Pro Dog Trainers Actually Buy
+第二张图 是KONG (Classic)：标签：Crate Training  描述：Perfect for rewards and helping pups love their crate.
+第三张图 是 KADTC (Puzzle Toy) 标签：Focus & P
 
 ### 5. workflow_05.json
-- **Prompt ID**: `22d3b2c7-89ef-419b-97fb-0867358e585b`
+- **Prompt ID**: `588bc164-29cc-40a3-8e0d-498d8630b6be`
 - **类型**: 图片编辑
 - **节点数**: 8
 - **模型** (0):
+- **提示词**:
+  - [NanoBanana2AIO::prompt] 参考图是第一张图
+标题：Top 4 Functional Toys Pro Dog Trainers Actually Buy
+第二张图 是KONG (Classic)：标签：Crate Training  描述：Perfect for rewards and helping pups love their crate.
+第三张图 是 KADTC (Puzzle Toy) 标签：Focus & P
 
 ### 6. workflow_06.json
-- **Prompt ID**: `f833f3d6-f2d4-431f-9e3a-23fdfe631162`
+- **Prompt ID**: `b01e2fb7-614b-4f0b-9a7a-a3a7f66b81c0`
 - **类型**: 图片编辑
 - **节点数**: 8
 - **模型** (0):
+- **提示词**:
+  - [NanoBanana2AIO::prompt] 参考图是第一张图
+标题：Top 4 Functional Toys Pro Dog Trainers Actually Buy
+第二张图 是KONG (Classic)：标签：Crate Training  描述：Perfect for rewards and helping pups love their crate.
+第三张图 是 KADTC (Puzzle Toy) 标签：Focus & P
 
 ### 7. workflow_07.json
-- **Prompt ID**: `be43f01c-b207-4048-9116-e37b34cce96d`
+- **Prompt ID**: `f9f1e84b-36eb-45c4-b490-3c3b44e66b03`
 - **类型**: 图片编辑
 - **节点数**: 8
 - **模型** (0):
+- **提示词**:
+  - [NanoBanana2AIO::prompt] 参考图是第一张图
+标题：Top 4 Functional Toys Pro Dog Trainers Actually Buy
+第二张图 是KONG (Classic)：标签：Crate Training  描述：Perfect for rewards and helping pups love their crate.
+第三张图 是 KADTC (Puzzle Toy) 标签：Focus & P
 
 ### 8. workflow_08.json
-- **Prompt ID**: `5056c7ca-8204-4a0c-84ed-70865cc1b428`
+- **Prompt ID**: `01e70052-a0d3-485b-bbcd-9735cc1bb78e`
 - **类型**: 图片编辑
 - **节点数**: 8
 - **模型** (0):
+- **提示词**:
+  - [NanoBanana2AIO::prompt] 参考图是第一张图
+标题：Top 4 Functional Toys Pro Dog Trainers Actually Buy
+第二张图 是KONG (Classic)：标签：Crate Training  描述：Perfect for rewards and helping pups love their crate.
+第三张图 是 KADTC (Puzzle Toy) 标签：Focus & P
 
 ### 9. workflow_09.json
-- **Prompt ID**: `da21bf21-aa08-48b6-a9ac-b7b6bdebea6f`
+- **Prompt ID**: `ff5165dc-c532-4b80-8a87-b6f04640c88a`
 - **类型**: 图片编辑
 - **节点数**: 8
 - **模型** (0):
+- **提示词**:
+  - [NanoBanana2AIO::prompt] 参考图是第一张图
+标题：Top 4 Functional Toys Pro Dog Trainers Actually Buy
+第二张图 是KONG (Classic)：标签：Crate Training  描述：Perfect for rewards and helping pups love their crate.
+第三张图 是 KADTC (Puzzle Toy) 标签：Focus & P
 
 ### 10. workflow_10.json
-- **Prompt ID**: `d46fbc8c-1b33-411e-adb8-984fe55bafdc`
+- **Prompt ID**: `d10767c3-593b-4676-826d-161465001e32`
 - **类型**: 图片编辑
 - **节点数**: 8
 - **模型** (0):
+- **提示词**:
+  - [NanoBanana2AIO::prompt] 参考图是第一张图
+标题：Top 4 Functional Toys Pro Dog Trainers Actually Buy
+第二张图 是KONG (Classic)：标签：Crate Training  描述：Perfect for rewards and helping pups love their crate.
+第三张图 是 KADTC (Puzzle Toy) 标签：Focus & P

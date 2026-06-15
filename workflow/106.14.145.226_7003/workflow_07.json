@@ -10,7 +10,7 @@
   },
   "5": {
     "inputs": {
-      "text": "中景，推镜，白天，温馨的客厅，小男孩穿着印有超级英雄图案的睡衣，头发有些凌乱，眼睛亮晶晶的，面向镜头，兴奋地说，我长大了要当超级英雄，拯救世界。随后镜头推进，小男孩逐渐长大成为大人，穿着一身皱巴巴的西装，领带松垮，头发油腻，疲惫地坐在办公桌前，眼神黯淡。[小男孩的童声，长大后的叹息声]",
+      "text": "严格参考输入的图片和背景，小女孩坐在背景中的办公室里。\n小女孩坐在办公室的电脑桌前说话。",
       "clip": [
         "26",
         0
@@ -132,7 +132,7 @@
   },
   "15": {
     "inputs": {
-      "noise_seed": 121024971571212
+      "noise_seed": 985594835086417
     },
     "class_type": "RandomNoise",
     "_meta": {
@@ -228,24 +228,6 @@
       "title": "LTXV音频VAE加载器"
     }
   },
-  "22": {
-    "inputs": {
-      "frames_number": [
-        "50",
-        0
-      ],
-      "frame_rate": 50,
-      "batch_size": 1,
-      "audio_vae": [
-        "21",
-        0
-      ]
-    },
-    "class_type": "LTXVEmptyLatentAudio",
-    "_meta": {
-      "title": "LTXV 空音频潜空间"
-    }
-  },
   "23": {
     "inputs": {
       "video_latent": [
@@ -253,7 +235,7 @@
         2
       ],
       "audio_latent": [
-        "22",
+        "86",
         0
       ]
     },
@@ -320,10 +302,6 @@
         "40",
         0
       ],
-      "3": [
-        "33",
-        0
-      ],
       "width": [
         "43",
         0
@@ -345,7 +323,7 @@
   },
   "29": {
     "inputs": {
-      "image": "IMG_1310.png"
+      "image": "IMG_1287.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -354,16 +332,7 @@
   },
   "30": {
     "inputs": {
-      "image": "IMG_1314.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "33": {
-    "inputs": {
-      "image": "IMG_1313.png"
+      "image": "IMG_1287.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -409,7 +378,7 @@
   },
   "40": {
     "inputs": {
-      "image": "IMG_1312.png"
+      "image": "IMG_1287.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -436,11 +405,65 @@
   },
   "50": {
     "inputs": {
-      "value": 501
+      "value": 750
     },
     "class_type": "INTConstant",
     "_meta": {
       "title": "INT Constant"
+    }
+  },
+  "86": {
+    "inputs": {
+      "samples": [
+        "89",
+        0
+      ],
+      "mask": [
+        "88",
+        0
+      ]
+    },
+    "class_type": "SetLatentNoiseMask",
+    "_meta": {
+      "title": "设置Latent噪波遮罩"
+    }
+  },
+  "88": {
+    "inputs": {
+      "value": 0.0,
+      "width": 512,
+      "height": 512
+    },
+    "class_type": "SolidMask",
+    "_meta": {
+      "title": "纯块遮罩"
+    }
+  },
+  "89": {
+    "inputs": {
+      "audio": [
+        "91",
+        0
+      ],
+      "audio_vae": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEEncode",
+    "_meta": {
+      "title": "LTXV音频VAE编码"
+    }
+  },
+  "91": {
+    "inputs": {
+      "audio": "挖掘机.mp3",
+      "start_time": 0.0,
+      "duration": 15.0
+    },
+    "class_type": "VHS_LoadAudioUpload",
+    "_meta": {
+      "title": "Load Audio (Upload)🎥🅥🅗🅢"
     }
   }
 }

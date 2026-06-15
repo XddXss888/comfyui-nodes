@@ -1,152 +1,125 @@
 # 106.14.145.226:7003
 
-**GPU**: RTX 5080 | **显存**: 16 GB | **空闲**: 10 GB
-**内存**: 47 GB (空闲 10 GB)
+**GPU**: RTX 5080 | **显存**: 16 GB | **空闲**: 6 GB
+**内存**: 47 GB (空闲 34 GB)
 **版本**: 0.19.3
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-14 05:56:16
-**历史总数**: 31 | **成功**: 10
+**扫描时间**: 2026-06-15 18:27:45
+**历史总数**: 48 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `dc2072ba-c32a-41e1-8876-bcf67cd5770d`
-- **类型**: 文生图
-- **节点数**: 18
-- **模型** (5):
-  - Kook_Zimage_真实幻想_Turbo.safetensors
-  - ZIT_Midjourney_Luneva_Cinematic_v1_r128.safetensors
-  - ae.sft
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] 色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
-  - [CR Text::text] 生成一个戴红领巾的小男孩的照片
-
-### 2. workflow_02.json
-- **Prompt ID**: `6c25b0cd-46cb-44e7-8b8f-f292574feacc`
-- **类型**: 文生图
-- **节点数**: 18
-- **模型** (5):
-  - Kook_Zimage_真实幻想_Turbo.safetensors
-  - ZIT_Midjourney_Luneva_Cinematic_v1_r128.safetensors
-  - ae.sft
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] 色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
-  - [CR Text::text] 生成一个戴红领巾的小女孩的照片
-
-### 3. workflow_03.json
-- **Prompt ID**: `d96a3b96-0210-4014-bd3b-dd8e60f50cbf`
-- **类型**: 文生图
-- **节点数**: 18
-- **模型** (5):
-  - Kook_Zimage_真实幻想_Turbo.safetensors
-  - ZIT_Midjourney_Luneva_Cinematic_v1_r128.safetensors
-  - ae.sft
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] 色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
-
-### 4. workflow_04.json
-- **Prompt ID**: `4011e4d8-d0e8-4819-a183-47015146d669`
-- **类型**: 文生图
-- **节点数**: 18
-- **模型** (5):
-  - Kook_Zimage_真实幻想_Turbo.safetensors
-  - ZIT_Midjourney_Luneva_Cinematic_v1_r128.safetensors
-  - ae.sft
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] 色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
-
-### 5. workflow_05.json
-- **Prompt ID**: `008a25b0-2334-42ef-afef-f16c6141fb69`
-- **类型**: 文生图
-- **节点数**: 18
-- **模型** (5):
-  - Kook_Zimage_真实幻想_Turbo.safetensors
-  - ZIT_Midjourney_Luneva_Cinematic_v1_r128.safetensors
-  - ae.sft
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] 色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
-  - [CR Text::text] 温馨的客厅，有柔软的沙发、色彩鲜艳的地毯、墙上挂着一些家庭照片和小男孩喜欢的超级英雄海报。
-
-### 6. workflow_06.json
-- **Prompt ID**: `d1416dc8-b777-40c5-aa25-5d74487d7c18`
-- **类型**: 文生图
-- **节点数**: 18
-- **模型** (5):
-  - Kook_Zimage_真实幻想_Turbo.safetensors
-  - ZIT_Midjourney_Luneva_Cinematic_v1_r128.safetensors
-  - ae.sft
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] 色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
-  - [CR Text::text] 狭小昏暗的办公室，堆满文件的办公桌，破旧的电脑，墙上贴着公司的规章制度。
-
-### 7. workflow_07.json
-- **Prompt ID**: `1ca9f585-d71a-4dc5-b7e2-314e74f5227c`
+- **Prompt ID**: `df58e604-02d2-41f1-8c30-a7b75cf1ca5b`
 - **类型**: 图生图
-- **节点数**: 30
+- **节点数**: 31
 - **模型** (3):
   - LTX-2.3-Licon-MSR-V1.safetensors
   - gemma_3_12B_it_fp4_mixed.safetensors
   - ltx-2.3-22b-distilled-1.1.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] 中景，推镜，白天，温馨的客厅，小男孩穿着印有超级英雄图案的睡衣，头发有些凌乱，眼睛亮晶晶的，面向镜头，兴奋地说，我长大了要当超级英雄，拯救世界。随后镜头推进，小男孩逐渐长大成为大人，穿着一身皱巴巴的西装，领带松垮，头发油腻，疲惫地坐在办公桌前，眼神黯淡。[小男孩的童声，长大后的叹息声]
+  - [CLIPTextEncode::text] 两个小朋友坐在沙发上。小男孩短发，小女孩长发。
+远景镜头一：小女生的腿上下摆动，小男孩伸着懒腰。
+中景镜头二：小女孩突然坐起来，转向小男孩，身子倾过去亲了一口小男孩的侧脸。
+镜头三：小男孩激动着跳起来，女孩在旁边看着
+  - [CLIPTextEncode::text] 镜头崩坏，质量差，人脸不一致
+
+### 2. workflow_02.json
+- **Prompt ID**: `88359ad2-6943-48eb-9445-b07ec8358ef9`
+- **类型**: 图生图
+- **节点数**: 23
+- **模型** (5):
+  - LTX-Kijai\LTX23_audio_vae_bf16.safetensors
+  - LTX-Kijai\LTX23_video_vae_bf16.safetensors
+  - gemma_3_12B_it.safetensors
+  - ltx-2.3-22b-distilled-1.1_transformer_only_fp8_scaled.safetensors
+  - ltx-2.3_text_projection_bf16.safetensors
+
+### 3. workflow_03.json
+- **Prompt ID**: `7fb0f32e-859d-4b79-9b14-e4509742453c`
+- **类型**: 文生图
+- **节点数**: 2
+- **模型** (0):
+- **提示词**:
+  - [FB_Qwen3TTSVoiceDesign::text] 这个意大利面就应该拌40号混凝土，
+因为这个螺丝钉的长度，很容易会直接影响到挖掘机的扭矩。
+往里砸的时候，一瞬间就会产生大量的高能蛋白，俗称UFO，
+会严重影响经济发展，甚至对整个太平洋以及充电器都会造成一定的核污染，你知道吧？
+
+### 4. workflow_04.json
+- **Prompt ID**: `60877c47-728d-4af6-a8bb-c6f2d406d0e2`
+- **类型**: 图生图
+- **节点数**: 31
+- **模型** (3):
+  - LTX-2.3-Licon-MSR-V1.safetensors
+  - gemma_3_12B_it_fp4_mixed.safetensors
+  - ltx-2.3-22b-distilled-1.1.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] 小女孩坐在办公室的电脑桌前，认真的科普
+  - [CLIPTextEncode::text] worst quality, blurry, jittery, distorted, inconsistent appearance，duplicate character, extra character, clone, crowd, multiple demons, multiple masters, multiple disciples, character duplication, orb
+
+### 5. workflow_05.json
+- **Prompt ID**: `ed41ce32-f6b5-4913-811c-92990f515861`
+- **类型**: 图生图
+- **节点数**: 31
+- **模型** (3):
+  - LTX-2.3-Licon-MSR-V1.safetensors
+  - gemma_3_12B_it_fp4_mixed.safetensors
+  - ltx-2.3-22b-distilled-1.1.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] 小女孩坐在办公室的电脑桌前说话
+  - [CLIPTextEncode::text] worst quality, blurry, jittery, distorted, inconsistent appearance，duplicate character, extra character, clone, crowd, multiple demons, multiple masters, multiple disciples, character duplication, orb
+
+### 6. workflow_06.json
+- **Prompt ID**: `39ad1759-2bad-4f68-bf26-136969b52289`
+- **类型**: 图生图
+- **节点数**: 32
+- **模型** (3):
+  - LTX-2.3-Licon-MSR-V1.safetensors
+  - gemma_3_12B_it_fp4_mixed.safetensors
+  - ltx-2.3-22b-distilled-1.1.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] 严格参考输入的图片和背景，小女孩坐在背景中的办公室里。
+小女孩坐在办公室的电脑桌前说话。
+  - [CLIPTextEncode::text] worst quality, blurry, jittery, distorted, inconsistent appearance，duplicate character, extra character, clone, crowd, multiple demons, multiple masters, multiple disciples, character duplication, orb
+
+### 7. workflow_07.json
+- **Prompt ID**: `b74239e0-93d7-4ff5-b553-66826272c5ed`
+- **类型**: 图生图
+- **节点数**: 32
+- **模型** (3):
+  - LTX-2.3-Licon-MSR-V1.safetensors
+  - gemma_3_12B_it_fp4_mixed.safetensors
+  - ltx-2.3-22b-distilled-1.1.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] 严格参考输入的图片和背景，小女孩坐在背景中的办公室里。
+小女孩坐在办公室的电脑桌前说话。
   - [CLIPTextEncode::text] worst quality, blurry, jittery, distorted, inconsistent appearance，duplicate character, extra character, clone, crowd, multiple demons, multiple masters, multiple disciples, character duplication, orb
 
 ### 8. workflow_08.json
-- **Prompt ID**: `16ea5c46-ec34-485b-aa55-11dac198d320`
-- **类型**: 图生图
-- **节点数**: 28
-- **模型** (3):
-  - LTX-2.3-Licon-MSR-V1.safetensors
-  - gemma_3_12B_it_fp4_mixed.safetensors
-  - ltx-2.3-22b-distilled-1.1.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] @西夜谢: 整体风格：顶级国漫院线电影质感，8K超清画质，电影级光影渲染，丝滑一镜到底运镜，动态粒子特效细腻流畅
-0-2s 动态漩涡镜头，黑金背景中金色粒子呈螺旋状高速旋转，形成深邃空间隧道感，粒子流光细腻带拖尾，画面充满动感张力
-2-4s 粒子聚合镜头，金色粒子逐渐汇聚，从抽象漩涡形态具象化为古装人物轮廓，粒子流转间勾勒出服饰纹理与身形结构，光影层次丰富
-4-7s 人物成型镜头，粒子完全凝聚成身
-  - [CLIPTextEncode::text] worst quality, blurry, jittery, distorted, inconsistent appearance，duplicate character, extra character, clone, crowd, multiple demons, multiple masters, multiple disciples, character duplication, orb
+- **Prompt ID**: `e04aac8f-f91f-467f-9866-3145516ad383`
+- **类型**: 其他/工具
+- **节点数**: 1
+- **模型** (0):
 
 ### 9. workflow_09.json
-- **Prompt ID**: `5f5ed9a2-0cb8-41a5-8759-52994e62c001`
+- **Prompt ID**: `2ea4027e-d313-45de-bda4-85168e1d5052`
 - **类型**: 图生图
-- **节点数**: 28
-- **模型** (3):
-  - LTX-2.3-Licon-MSR-V1.safetensors
-  - gemma_3_12B_it_fp4_mixed.safetensors
-  - ltx-2.3-22b-distilled-1.1.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] 国漫古风女性角色，黑发如瀑，清冷御姐气质，身着绣有金色凤凰纹样的半透明白色广袖长袍，衣袂飘逸。
-动作：从特写手部开始，手臂缓慢抬起，广袖随动作舒展翻飞，角色缓缓转身，眼神从清冷到逐渐锐利，最终正面朝向镜头，衣摆带起飘落的红色花瓣，发丝随风飘动。
-镜头：手部特写→缓慢拉远至中景→跟随角色转身的环绕运镜→最后推至角色脸部特写，全程运镜丝滑。
-场景：古风宫殿飞檐背景，天空云层翻涌，强烈的逆光从角色身后打
-  - [CLIPTextEncode::text] worst quality, blurry, jittery, distorted, inconsistent appearance，duplicate character, extra character, clone, crowd, multiple demons, multiple masters, multiple disciples, character duplication, orb
+- **节点数**: 16
+- **模型** (4):
+  - Qwen-Image-Edit\Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen\qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - Qwen\qwen_image_vae.safetensors
+  - Qwen_Image_Edit\Qwen_Image_Edit_2511\qwen-image-edit-2511-Q6_K.gguf
 
 ### 10. workflow_10.json
-- **Prompt ID**: `9f873071-ec1d-482e-988b-de0c0314e5e2`
+- **Prompt ID**: `f4051405-1ace-4397-9229-abda19e12397`
 - **类型**: 图生图
-- **节点数**: 28
-- **模型** (3):
-  - LTX-2.3-Licon-MSR-V1.safetensors
-  - gemma_3_12B_it_fp4_mixed.safetensors
-  - ltx-2.3-22b-distilled-1.1.safetensors
+- **节点数**: 16
+- **模型** (4):
+  - Qwen-Image-Edit\Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen\qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - Qwen\qwen_image_vae.safetensors
+  - Qwen_Image_Edit\Qwen_Image_Edit_2511\qwen-image-edit-2511-Q6_K.gguf
 - **提示词**:
-  - [CLIPTextEncode::text] @被钻石闪到腰: 指令…
- 1. 画面1（0 - 3秒）
- 展示科技感桌面，包含发光键盘、带有“AZ AZRA”标识的音响、显示器。显示器中呈现一位银发高髻、身着浅蓝色古风服饰、双眼被白布条蒙住的女性角色，背景为中式山水画风。一只手在键盘上操作。
-2. 画面2（3 - 6秒）
- 现实中的手向显示器伸出，同时显示器里的角色也抬手，两者即将接触时，触发蓝色电光特效。
- 画面3（6 - 9秒）
- 角色蒙
-  - [CLIPTextEncode::text] worst quality, blurry, jittery, distorted, inconsistent appearance，duplicate character, extra character, clone, crowd, multiple demons, multiple masters, multiple disciples, character duplication, orb
+  - [TextEncodeQwenImageEditPlus::prompt] 这个女生衣服换成粉色，背景换成证件照蓝色

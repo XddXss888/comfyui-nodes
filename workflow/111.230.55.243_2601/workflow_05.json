@@ -1,0 +1,670 @@
+{
+  "8": {
+    "inputs": {
+      "samples": [
+        "139",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "10": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "12": {
+    "inputs": {
+      "unet_name": "flux2/flux-2-klein-9b.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "38": {
+    "inputs": {
+      "clip_name": "qwen_3_8b.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "46": {
+    "inputs": {
+      "image": "comfyui_8 (1).jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "139": {
+    "inputs": {
+      "seed": 679392680505962,
+      "steps": 6,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "141",
+        0
+      ],
+      "positive": [
+        "140",
+        0
+      ],
+      "negative": [
+        "140",
+        1
+      ],
+      "latent_image": [
+        "152",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "140": {
+    "inputs": {
+      "prompt": [
+        "188",
+        0
+      ],
+      "mode": "2_image",
+      "batch_size": 1,
+      "width": [
+        "173",
+        3
+      ],
+      "height": [
+        "173",
+        4
+      ],
+      "clip": [
+        "141",
+        1
+      ],
+      "vae": [
+        "10",
+        0
+      ],
+      "image1": [
+        "46",
+        0
+      ],
+      "image2": [
+        "839",
+        0
+      ]
+    },
+    "class_type": "PainterFluxImageEdit",
+    "_meta": {
+      "title": "Painter Flux Image Edit"
+    }
+  },
+  "141": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": true,
+        "lora": "flux-klein/Klein-万物迁移.safetensors",
+        "strength": 0.8
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "12",
+        0
+      ],
+      "clip": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree)"
+    }
+  },
+  "143": {
+    "inputs": {
+      "anything": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "easy cleanGpuUsed",
+    "_meta": {
+      "title": "清理显存占用"
+    }
+  },
+  "152": {
+    "inputs": {
+      "high_freq_mult": 1.15,
+      "sigma": 2.0,
+      "denoise_threshold": 0.05,
+      "mask_hardness": 2.0,
+      "hf_pre_blur_sigma": 0.5,
+      "latent": [
+        "140",
+        2
+      ]
+    },
+    "class_type": "LatentFrequencyEnhancer_lrzjason",
+    "_meta": {
+      "title": "Latent Frequency Enhancer (lrzjason)"
+    }
+  },
+  "173": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": [
+        "201",
+        0
+      ],
+      "background_color": "#000000",
+      "image": [
+        "839",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    }
+  },
+  "186": {
+    "inputs": {
+      "model": "qwen3.5/Qwen3.5-27B-Q4_K_M.gguf",
+      "mmproj": "qwen3.5/mmproj-Qwen3.5-27B-BF16.gguf",
+      "chat_handler": "Qwen3.5",
+      "n_ctx": 8192,
+      "vram_limit": -1,
+      "image_min_tokens": 0,
+      "image_max_tokens": 0
+    },
+    "class_type": "llama_cpp_model_loader",
+    "_meta": {
+      "title": "Llama-cpp Model Loader"
+    }
+  },
+  "187": {
+    "inputs": {
+      "max_tokens": 1024,
+      "top_k": 30,
+      "top_p": 0.9,
+      "min_p": 0.05,
+      "typical_p": 1.0,
+      "temperature": 0.8,
+      "repeat_penalty": 1.0,
+      "frequency_penalty": 0.0,
+      "presence_penalty": 1.0,
+      "mirostat_mode": 0,
+      "mirostat_eta": 0.1,
+      "mirostat_tau": 5.0,
+      "state_uid": -1
+    },
+    "class_type": "llama_cpp_parameters",
+    "_meta": {
+      "title": "Llama-cpp Parameters"
+    }
+  },
+  "188": {
+    "inputs": {
+      "text": "将黑色蕾丝文胸优雅地半埋在目标场景的蓬松蓝白色雪地中，仿佛一件精致的冬日时尚艺术品。明亮的冷色调顶光穿透雪雾，在文胸的蕾丝边缘勾勒出晶莹的轮廓光，同时在柔软的雪地上投下清晰的冷蓝色投影，模拟出高海拔环境的通透感与凛冽气息。画面整体呈现出超写实摄影的质感，细腻的雪粒纹理与文胸丝滑的黑色面料形成强烈的冷暖与虚实对比，营造出一种静谧而高级的冬季氛围。",
+      "anything": [
+        "836",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "200": {
+    "inputs": {
+      "value": "你是一位专业的视觉合成与物理光影专家。你的任务是根据用户上传的2张图片将一个产品主体无缝融合到一个目标场景中，确保结果符合真实世界的物理规律。\n\n## 输入\n- 产品主体图：[描述产品]\n- 目标场景图：[描述场景]\n\n###隐式分析\n场景光影分析\n分析目标场景的光照环境，输出：主光源方向与角度、光源类型、光源色温、环境光颜色倾向、现有阴影的方向/长度/软硬程度、场景透视灭点与相机高度。\n主体放置规划\n基于场景透视，确定：主体在画面中的具体位置、主体与地面的接触方式、主体在场景中的合理比例、主体朝向与相机角度。\n 物理光影合成\n严格遵循以下物理规则：\n1. **投影规则**：投影方向与场景主光源方向相反；投影形状符合主体轮廓并在接触面产生变形；近接触面处实、远处虚；投影颜色受环境漫反射影响（非纯黑）。\n2. **高光与反射**：高光位置对应光源方向；反光面映射环境元素；哑光材质避免过强镜面反射。\n3. **环境光遮蔽（AO）**：主体与接触面交界处有自然的阴影加深。\n4. **全局光照**：主体暗部受场景环境色影响，呈现真实的环境反射色。\n5. **透视一致**：主体透视灭点与场景灭点重合，比例符合近大远小。\n质量自检\n生成完成后逐项检查：光源方向是否与场景一致？投影是否落在正确的接触面上？主体是否悬浮或与场景穿插？材质反射是否符合环境？色温是否与场景统一？透视是否自然？\n## #输出要求\n直接输出提示词一段中文表达，不要多余的解释。图像风格为超写实摄影，与目标场景保持一致的光学和质感特性。"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "字符串（多行）"
+    }
+  },
+  "201": {
+    "inputs": {
+      "value": 1152
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "INT Constant"
+    }
+  },
+  "799": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "800": {
+    "inputs": {
+      "clip_name": "qwen_3_8b.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "801": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "835:834",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "802": {
+    "inputs": {
+      "lora_name": "flux-klein/Klein-consistency.safetensors",
+      "strength_model": 0.75,
+      "model": [
+        "807",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "806": {
+    "inputs": {
+      "unet_name": "flux2/Flux2-Klein-9B-True-v2 .safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "807": {
+    "inputs": {
+      "lora_name": "flux-klein/K真实皮肤质感.safetensors",
+      "strength_model": 0.85,
+      "model": [
+        "806",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "809": {
+    "inputs": {
+      "value": 4
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "836": {
+    "inputs": {
+      "preset_prompt": "Prompt Style - Detailed",
+      "custom_prompt": [
+        "843",
+        0
+      ],
+      "system_prompt": [
+        "200",
+        0
+      ],
+      "inference_mode": "images",
+      "max_frames": 24,
+      "max_size": 256,
+      "seed": 861138309472622,
+      "force_offload": true,
+      "save_states": false,
+      "llama_model": [
+        "186",
+        0
+      ],
+      "parameters": [
+        "187",
+        0
+      ],
+      "image_1": [
+        "46",
+        0
+      ],
+      "image_2": [
+        "839",
+        0
+      ]
+    },
+    "class_type": "llama_cpp_instruct_adv",
+    "_meta": {
+      "title": "Llama-cpp Instruct"
+    }
+  },
+  "839": {
+    "inputs": {
+      "image": "7e196f53ce3f012dde3eb464bda3362e.webp"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "840": {
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "843": {
+    "inputs": {
+      "String": ""
+    },
+    "class_type": "String",
+    "_meta": {
+      "title": "String"
+    }
+  },
+  "835:823": {
+    "inputs": {
+      "conditioning": [
+        "835:808",
+        0
+      ],
+      "latent": [
+        "835:825",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "835:824": {
+    "inputs": {
+      "value": 512
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "835:825": {
+    "inputs": {
+      "tile_size": [
+        "835:824",
+        0
+      ],
+      "overlap": 64,
+      "temporal_size": 64,
+      "temporal_overlap": 8,
+      "pixels": [
+        "835:829",
+        0
+      ],
+      "vae": [
+        "799",
+        0
+      ]
+    },
+    "class_type": "VAEEncodeTiled",
+    "_meta": {
+      "title": "VAE编码分块）"
+    }
+  },
+  "835:826": {
+    "inputs": {
+      "tile_size": [
+        "835:824",
+        0
+      ],
+      "overlap": 64,
+      "temporal_size": 64,
+      "temporal_overlap": 8,
+      "pixels": [
+        "835:830",
+        0
+      ],
+      "vae": [
+        "799",
+        0
+      ]
+    },
+    "class_type": "VAEEncodeTiled",
+    "_meta": {
+      "title": "VAE编码分块）"
+    }
+  },
+  "835:827": {
+    "inputs": {
+      "conditioning": [
+        "835:808",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "835:828": {
+    "inputs": {
+      "conditioning": [
+        "835:827",
+        0
+      ],
+      "latent": [
+        "835:825",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "835:829": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": [
+        "835:831",
+        0
+      ],
+      "background_color": "#000000",
+      "image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    }
+  },
+  "835:830": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": 1024,
+      "background_color": "#000000",
+      "image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    }
+  },
+  "835:831": {
+    "inputs": {
+      "expression": "a*b",
+      "a": [
+        "835:832",
+        1
+      ],
+      "b": [
+        "809",
+        0
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "数学表达式"
+    }
+  },
+  "835:832": {
+    "inputs": {
+      "image": [
+        "835:830",
+        0
+      ]
+    },
+    "class_type": "Get Image Size",
+    "_meta": {
+      "title": "Get Image Size"
+    }
+  },
+  "835:833": {
+    "inputs": {
+      "seed": 279317236443184,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "tile_width": [
+        "835:824",
+        0
+      ],
+      "tile_height": [
+        "835:824",
+        0
+      ],
+      "overlap": 128,
+      "blend_strength": 0.05,
+      "color_preserve": 0.1,
+      "model": [
+        "802",
+        0
+      ],
+      "positive": [
+        "835:823",
+        0
+      ],
+      "negative": [
+        "835:828",
+        0
+      ],
+      "latent_image": [
+        "835:825",
+        0
+      ],
+      "latent_blend": [
+        "835:826",
+        0
+      ]
+    },
+    "class_type": "SZ_KleinTiledKSampler",
+    "_meta": {
+      "title": "SZ KleinTiled KSampler"
+    }
+  },
+  "835:834": {
+    "inputs": {
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 64,
+      "temporal_overlap": 8,
+      "samples": [
+        "835:833",
+        0
+      ],
+      "vae": [
+        "799",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE解码（分块）"
+    }
+  },
+  "835:808": {
+    "inputs": {
+      "text": "保持原有特征并清晰化画面，增加细节，干净细腻光滑的皮肤，干净的边缘，减少噪点，高清，4K，提高分辨率，补充细节，修复画面，超高清，极致细节，高对比度，清晰的光影细节，保持画面色调不变，8K画质",
+      "clip": [
+        "800",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  }
+}

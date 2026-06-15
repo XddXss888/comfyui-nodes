@@ -21,37 +21,26 @@
     }
   },
   "4": {
-    "class_type": "LoraLoaderModelOnly",
-    "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "lora_name": "flux_korean_girl.safetensors",
-      "strength_model": 0.85
-    }
-  },
-  "5": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
         "2",
         0
       ],
-      "text": "A stunning Korean idol-style woman with burgundy red fluffy wolf cut hair, sharp jawline and mesmerizing cat-like eyes, captured in a surprised candid moment — lips slightly parted, eyes wide with delight, as if she just spotted someone she knows. Shot on 85mm f/1.4 lens with creamy bokeh, eye-level straight on, bust shot from shoulders up. She wears a tailored charcoal blazer over a champagne silk top. Soft window light creates a Rembrandt triangle shadow on her cheek, golden hour warmth spilling through the bookstore windows behind her. Cozy shelves with warm Edison bulbs glow in the blurred background. Flawless porcelain skin, subtle smoky eye makeup, dewy highlight on cheekbones. Ultra-realistic, editorial portrait photography."
+      "text": "A stunning Korean idol-style woman with warm caramel balayage wet-look slicked back hair, baby face with aegyo-sal under-eye charm, giving a coy half-smile looking away. She wears a flowing wrap dress in earth tones, standing on a foggy forest trail at dawn. Shot on 50mm lens, standard portrait, profile view side angle, cowboy shot framing from thighs up. Blue hour twilight ambient lighting casts soft cool tones through the mist, illuminating her flawless porcelain skin and styled dewy makeup. Delicate wisps of fog curl around her silhouette. She rests one hand lightly on her hip, body angled away with chin tilted upward, exuding effortless elegance. Photorealistic, ultra-detailed, cinematic color grading, shallow depth of field."
     }
   },
-  "6": {
+  "5": {
     "class_type": "FluxGuidance",
     "inputs": {
       "conditioning": [
-        "5",
+        "4",
         0
       ],
       "guidance": 3.5
     }
   },
-  "7": {
+  "6": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
@@ -61,47 +50,47 @@
       "text": ""
     }
   },
-  "8": {
+  "7": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "width": 896,
-      "height": 1280,
+      "width": 1024,
+      "height": 1024,
       "batch_size": 1
     }
   },
-  "9": {
+  "8": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "4",
+        "1",
         0
       ],
       "positive": [
-        "6",
+        "5",
         0
       ],
       "negative": [
-        "7",
+        "6",
         0
       ],
       "latent_image": [
-        "8",
+        "7",
         0
       ],
-      "seed": 1035035257,
+      "seed": 1711026699,
       "control_after_generate": "fixed",
-      "steps": 22,
+      "steps": 20,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0
     }
   },
-  "10": {
+  "9": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "9",
+        "8",
         0
       ],
       "vae": [
@@ -110,14 +99,14 @@
       ]
     }
   },
-  "11": {
+  "10": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "10",
+        "9",
         0
       ],
-      "filename_prefix": "portrait_1035035257"
+      "filename_prefix": "portrait_1711026699"
     }
   }
 }

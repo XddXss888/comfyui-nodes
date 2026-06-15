@@ -59,7 +59,7 @@
         "154",
         2
       ],
-      "length": 65,
+      "length": 77,
       "batch_size": 1,
       "positive": [
         "116",
@@ -93,7 +93,7 @@
   },
   "116": {
     "inputs": {
-      "text": "镜头缓慢向前推进，电脑屏幕光线轻微闪烁，人物不动，氛围沉寂",
+      "text": "麦田边缘的幽暗树林，男主笨拙地挥斧砍树、扛木头、拼接搭建木板屋，用动作叠化展现搭建全过程，最终落成一栋歪歪扭扭、缝隙漏风的简陋木屋。中景镜头，人物动作笨拙费力，树林阴暗静谧，氛围冷清孤寂",
       "clip": [
         "106",
         0
@@ -271,7 +271,7 @@
   },
   "135": {
     "inputs": {
-      "image": "日系动漫画风出租屋场景生成.png"
+      "image": "b57b8fb4ea9d7faa63d9aec72b17b47e.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -365,7 +365,7 @@
   "154": {
     "inputs": {
       "width": 832,
-      "height": 480,
+      "height": 0,
       "upscale_method": "lanczos",
       "keep_proportion": true,
       "divisible_by": 2,
@@ -553,13 +553,6 @@
     "class_type": "LoraLoader",
     "_meta": {
       "title": "加载LoRA"
-    }
-  },
-  "269": {
-    "inputs": {},
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
     }
   }
 }

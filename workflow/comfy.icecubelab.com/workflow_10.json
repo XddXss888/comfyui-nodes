@@ -1,123 +1,93 @@
 {
   "1": {
-    "class_type": "UNETLoader",
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "unet_name": "flux1-dev.safetensors",
-      "weight_dtype": "default"
+      "ckpt_name": "RealVisXL_V5.0.safetensors"
     }
   },
   "2": {
-    "class_type": "DualCLIPLoader",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip_name1": "clip_l.safetensors",
-      "clip_name2": "t5xxl_fp16.safetensors",
-      "type": "flux"
+      "vae_name": "sdxl_vae.safetensors"
     }
   },
   "3": {
-    "class_type": "VAELoader",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "vae_name": "ae.safetensors"
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "RAW photo, ultra realistic skin texture, stunning Korean idol woman with dark brown twin low buns, delicate features, button nose, fierce runway attitude, shot on 35mm lens, environmental portrait, three-quarter view, framed through weathered stone archway of a vintage film studio, cross lighting from two sides casting dramatic shadows across her cheekbones, wearing a flowy summer dress in pale lavender, one hand resting on the archway edge, chin slightly lifted with commanding gaze, flawless porcelain skin, editorial makeup with sharp contour and smoked burgundy eyes, old film reels and warm tungsten practicals visible in the background bokeh, cinematic depth, window light spilling across dusty wooden floors, fashion editorial quality, no text, no watermarks"
     }
   },
   "4": {
-    "class_type": "LoraLoaderModelOnly",
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "cartoon, anime, illustration, painting, low quality, blurry, deformed, extra fingers, bad anatomy, watermark, text, signature, oversaturated"
+    }
+  },
+  "5": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 896,
+      "height": 1280,
+      "batch_size": 1
+    }
+  },
+  "6": {
+    "class_type": "KSampler",
     "inputs": {
       "model": [
         "1",
         0
       ],
-      "lora_name": "flux_korean_girl.safetensors",
-      "strength_model": 0.8
-    }
-  },
-  "5": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": "A striking Korean idol woman with natural black hair carrying a deep blue sheen, sleek center-parted and falling past her shoulders, stands in an autumn park as golden and crimson leaves drift around her. Fox-like eyes lined with smoky graphite shadow pierce directly into the camera, slim face holding a fierce runway attitude with slightly parted lips. She wears a sharply tailored charcoal power suit with wide structured shoulders and a cinched waist. Full body head to toe composition, shot on 85mm f/1.4 with creamy bokeh dissolving the tree-lined path behind her. Cross lighting from two sides sculpts dramatic cheekbones and jawline, casting warm amber on one side, cool silver on the other. Eye-level straight on. Flawless luminous skin, editorial perfection."
-    }
-  },
-  "6": {
-    "class_type": "FluxGuidance",
-    "inputs": {
-      "conditioning": [
-        "5",
-        0
-      ],
-      "guidance": 3.5
-    }
-  },
-  "7": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": ""
-    }
-  },
-  "8": {
-    "class_type": "EmptySD3LatentImage",
-    "inputs": {
-      "width": 1024,
-      "height": 1024,
-      "batch_size": 1
-    }
-  },
-  "9": {
-    "class_type": "KSampler",
-    "inputs": {
-      "model": [
-        "4",
-        0
-      ],
       "positive": [
-        "6",
+        "3",
         0
       ],
       "negative": [
-        "7",
+        "4",
         0
       ],
       "latent_image": [
-        "8",
+        "5",
         0
       ],
-      "seed": 1711581801,
+      "seed": 164317416,
       "control_after_generate": "fixed",
-      "steps": 24,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
+      "steps": 30,
+      "cfg": 4.5,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
       "denoise": 1.0
     }
   },
-  "10": {
+  "7": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "9",
+        "6",
         0
       ],
       "vae": [
-        "3",
+        "2",
         0
       ]
     }
   },
-  "11": {
+  "8": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "10",
+        "7",
         0
       ],
-      "filename_prefix": "portrait_1711581801"
+      "filename_prefix": "portrait_164317416"
     }
   }
 }

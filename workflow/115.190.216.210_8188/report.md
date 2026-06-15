@@ -4,67 +4,67 @@
 **内存**: 123 GB (空闲 79 GB)
 **版本**: 0.22.0
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-14 05:56:22
-**历史总数**: 191 | **成功**: 10
+**扫描时间**: 2026-06-14 14:31:21
+**历史总数**: 230 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `4ef7bfab-f2cc-4385-b1f5-527914952617`
-- **类型**: 音频生成
-- **节点数**: 7
+- **Prompt ID**: `20ceec46-5513-4119-a467-7a64c0e6d4b6`
+- **类型**: 其他
+- **节点数**: 1
 - **模型** (0):
 
 ### 2. workflow_02.json
-- **Prompt ID**: `3558db84-c9fe-47e7-a96a-550410df6e06`
+- **Prompt ID**: `097144ea-283c-4d98-96fe-81879bcbfcad`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 3. workflow_03.json
-- **Prompt ID**: `fba7a7af-55ca-4946-9a3a-6ce6ad2774ca`
+- **Prompt ID**: `6b403c73-d577-44a2-a421-5ead3b5099aa`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 4. workflow_04.json
-- **Prompt ID**: `9de45a01-4b1b-499f-bf90-f8caae7f5efc`
+- **Prompt ID**: `5a395996-dad1-402a-aff2-6fac1dc78c2c`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 5. workflow_05.json
-- **Prompt ID**: `6e6bc995-6aad-41f2-adb3-c299c6ec3763`
+- **Prompt ID**: `2183be50-fabb-4bb9-b561-313a992198a3`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 6. workflow_06.json
-- **Prompt ID**: `90b1ee73-41e0-4cfa-bc30-f726b25bd634`
+- **Prompt ID**: `a5244199-42b2-4b79-b478-4d546275393f`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 7. workflow_07.json
-- **Prompt ID**: `f54e6bd9-f240-4df5-9520-c780bb3851dd`
+- **Prompt ID**: `d1179218-2b7f-47ae-aad0-7d57002a93cb`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 8. workflow_08.json
-- **Prompt ID**: `7b0e373d-ea5c-4e45-a82d-8823d085bfa7`
+- **Prompt ID**: `780c13c8-e185-43ee-a0c9-29f6c9e49559`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 9. workflow_09.json
-- **Prompt ID**: `2f559c36-0cfb-452e-8b3f-40fcc6a161f3`
+- **Prompt ID**: `7673d096-7936-40e6-ac2d-951f58ec7cc8`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 10. workflow_10.json
-- **Prompt ID**: `2f0c9da5-9ea4-4acd-9fa6-6fa695d66f45`
+- **Prompt ID**: `980f2e9c-db1a-492b-80a0-474a6a3f1f69`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):

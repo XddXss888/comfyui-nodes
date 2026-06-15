@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 2077871220,
+      "seed": 1386925575,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,bathing,freckles,blush,smile,parted lips,mole,lips,(show me a photo during bathing :1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,long hair,blue eyes,blonde hair,medium breasts,thighs,hairband,parted lips,pubic hair,anus,freckles,nose,clitoris,urethra,indoors,couch,spread legs,(ارني نفسك وعضوي داخلك:1.0),(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2024/12/29/1735515295404.jpeg",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/chatpic/20258/9/28dbfc817d86472c905fc2dcc90e0f0f.jpg",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

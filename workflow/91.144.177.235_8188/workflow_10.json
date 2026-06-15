@@ -1,0 +1,150 @@
+{
+  "191": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b-fp8mixed.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "318": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "217": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader"
+  },
+  "219": {
+    "inputs": {
+      "text": "Professional architectural photography, beautifully designed outdoor swimming pool with sparkling blue water, pool deck with lounge area, resort-style backyard, transitional style, sparkling swimming pool water centered, pool deck with lounge chairs in foreground, resort-style outdoor setting, clean surfaces in premium outdoor materials, tasteful landscaping and manicured greenery, golden hour natural daylight under open sky, inviting curb appeal, award-winning architectural design. photorealistic, ultra detailed, 8k, magazine quality",
+      "clip": [
+        "217",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "317": {
+    "inputs": {
+      "text": "indoor room interior, ceiling, enclosed walls, drywall, cluttered furniture, excess seating, picture frame border, vignette, watermark, text, logo, blurry, distorted, low quality, cartoon, illustration, 3d render, overexposed, empty pool, dry pool, no water, indoor pool",
+      "clip": [
+        "217",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "9001": {
+    "inputs": {
+      "image": "aOIliGxLrUg6ixFOFY9a0rIzuI2LvTDMf5zyUwf8.jpg"
+    },
+    "class_type": "LoadImage"
+  },
+  "9002": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "9001",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels"
+  },
+  "9006": {
+    "inputs": {
+      "pixels": [
+        "9002",
+        0
+      ],
+      "vae": [
+        "318",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "9100": {
+    "inputs": {
+      "conditioning": [
+        "219",
+        0
+      ],
+      "latent": [
+        "9006",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent"
+  },
+  "9200": {
+    "inputs": {
+      "conditioning": [
+        "317",
+        0
+      ],
+      "latent": [
+        "9006",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent"
+  },
+  "500": {
+    "inputs": {
+      "seed": 736551425,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.88,
+      "model": [
+        "191",
+        0
+      ],
+      "positive": [
+        "9100",
+        0
+      ],
+      "negative": [
+        "9200",
+        0
+      ],
+      "latent_image": [
+        "9006",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  },
+  "501": {
+    "inputs": {
+      "samples": [
+        "500",
+        0
+      ],
+      "vae": [
+        "318",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "60": {
+    "inputs": {
+      "filename_prefix": "ComfyUI_Staging",
+      "images": [
+        "501",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  }
+}

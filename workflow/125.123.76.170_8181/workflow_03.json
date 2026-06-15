@@ -1,0 +1,103 @@
+{
+  "5": {
+    "inputs": {
+      "positive": "将输入的参考图1提取里面的图案\n\n绝对视觉一致性（最高优先级）：\n\n精确的颜色与色值\n\n环境光影重绘：\n必须去除光影，重新计算并渲染地垫的原来的颜色，包括：\n\n去除光源方向与在地垫表面形成的明暗过渡。\n\n去除光照强度对不同材质（如亮面丝绒或哑光棉麻）的漫反射效果。\n\n去除色温冷暖与环境光污染（环境色对地垫的影响）。\n\n去除地垫在地面或台面投射的真实阴影。\n去除地垫必须看起来像是在同一真实环境中被拍摄。\n\n图案完整性：\n目标地垫如果图案缺少，把他补全\n\n禁止臆造（NO HALLUCINATION）：\n不要添加任何纹理（除非提示词里明确有写）\n不得添加或猜测任何左侧图像中未明确提供的内容，\n包括新的颜色、图案、编织结构、包边样式或设计细节。\n\n无缝融合（SEAMLESS FUSION）：\n最终结果必须完整的俯视图，并高清化，没有底纹，的高清可以印花的图像\n"
+    },
+    "class_type": "easy positive",
+    "_meta": {
+      "title": "正面提示词"
+    }
+  },
+  "6": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "19": {
+    "inputs": {
+      "separator": "*额外要求，",
+      "prompt1": [
+        "5",
+        0
+      ],
+      "prompt2": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "easy promptConcat",
+    "_meta": {
+      "title": "提示词联结"
+    }
+  },
+  "20": {
+    "inputs": {
+      "positive": "不要有白框"
+    },
+    "class_type": "easy positive",
+    "_meta": {
+      "title": "正面提示词"
+    }
+  },
+  "23": {
+    "inputs": {
+      "prompt": [
+        "19",
+        0
+      ],
+      "mode": "edit",
+      "api_key": [
+        "25",
+        0
+      ],
+      "quality": "auto",
+      "image_size": "custom",
+      "custom_width": 2304,
+      "custom_height": 1728,
+      "num_images": 1,
+      "output_format": "png",
+      "image_way": "image_url",
+      "seed": 26051,
+      "poll_interval": 2,
+      "max_poll_attempts": 300,
+      "skip_error": false,
+      "image1": [
+        "29",
+        0
+      ]
+    },
+    "class_type": "Comfly_gpt_image_2_fal",
+    "_meta": {
+      "title": "Zhenzhen GPT Image 2 Fal"
+    }
+  },
+  "25": {
+    "inputs": {
+      "api_base": "zhenzhen",
+      "apikey": "sk-ISVEhcNHiUVqB5XHnBbP6Uq1taKmwU8LHuwox3BL99M2DWpB",
+      "custom_ip": "",
+      "skip_error": false
+    },
+    "class_type": "Comfly_api_set",
+    "_meta": {
+      "title": "Zhenzhen API Settings"
+    }
+  },
+  "29": {
+    "inputs": {
+      "image": "6c34364f0f56005aee15a85950fbefe6.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  }
+}

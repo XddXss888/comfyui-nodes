@@ -1,16 +1,16 @@
 # 38.247.184.100:8070
 
 **GPU**: RTX 5090 | **显存**: 31 GB | **空闲**: 12 GB
-**内存**: 88 GB (空闲 60 GB)
+**内存**: 88 GB (空闲 56 GB)
 **版本**: 0.21.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-14 05:56:20
-**历史总数**: 97 | **成功**: 10
+**扫描时间**: 2026-06-15 18:29:17
+**历史总数**: 398 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `c08539cf-f471-473f-8922-cdfd261e5096`
+- **Prompt ID**: `b93dbe54-ad14-45e3-ac0d-dd8e25774f4f`
 - **类型**: 文生视频
 - **节点数**: 43
 - **模型** (3):
@@ -18,10 +18,10 @@
   - gemma_3_12B_it_fp4_mixed.safetensors
   - ltx-2-spatial-upscaler-x2-1.0.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] He closes his eyes and inhales deeply, letting the wind rustle through the leaves, feeling connected to nature while lost in thought.
+  - [CLIPTextEncode::text] They sit peacefully with eyes closed, taking deep breaths together, creating a serene and united atmosphere.
 
 ### 2. workflow_02.json
-- **Prompt ID**: `79876ead-714c-4035-a40d-ec58d42f0722`
+- **Prompt ID**: `b94f5618-907b-44f3-a9fe-ff448eb36191`
 - **类型**: 文生视频
 - **节点数**: 43
 - **模型** (3):
@@ -29,10 +29,10 @@
   - gemma_3_12B_it_fp4_mixed.safetensors
   - ltx-2-spatial-upscaler-x2-1.0.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] He lifts his head slowly, looking around softly, as if considering new possibilities, a faint glimmer of hope in his eyes.
+  - [CLIPTextEncode::text] They exchange smiles and laughter in a calm atmosphere, showcasing the warmth of friendship.
 
 ### 3. workflow_03.json
-- **Prompt ID**: `654c4ed5-d7cf-4c84-820b-80dbb0f221d5`
+- **Prompt ID**: `417bc108-d745-4cd3-a750-97eaabc7a601`
 - **类型**: 文生视频
 - **节点数**: 43
 - **模型** (3):
@@ -40,10 +40,10 @@
   - gemma_3_12B_it_fp4_mixed.safetensors
   - ltx-2-spatial-upscaler-x2-1.0.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] He walks with a steady pace, glancing around with increased confidence, as if seeking someone special.
+  - [CLIPTextEncode::text] They point at the stars, sharing hopes and dreams under the night sky, creating a sense of unity.
 
 ### 4. workflow_04.json
-- **Prompt ID**: `6eec5114-feb5-4c9e-97de-faeb6bd1da1b`
+- **Prompt ID**: `2fcfd2fd-dd4f-4b4a-b890-493297b6ce0b`
 - **类型**: 文生视频
 - **节点数**: 43
 - **模型** (3):
@@ -51,10 +51,10 @@
   - gemma_3_12B_it_fp4_mixed.safetensors
   - ltx-2-spatial-upscaler-x2-1.0.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] He freezes momentarily, then slowly starts to approach her with a smile, filled with emotion and anticipation.
+  - [CLIPTextEncode::text] The character opens their eyes wide, joyfully stretching, happy to greet another beautiful day.
 
 ### 5. workflow_05.json
-- **Prompt ID**: `e600a06b-9a4b-4306-ba58-40babb5f63ee`
+- **Prompt ID**: `c692f5f1-8c1b-4615-bab1-882891224f4f`
 - **类型**: 文生视频
 - **节点数**: 43
 - **模型** (3):
@@ -62,10 +62,10 @@
   - gemma_3_12B_it_fp4_mixed.safetensors
   - ltx-2-spatial-upscaler-x2-1.0.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] They embrace warmly, laughing and sharing a moment filled with happiness, the world around them fades away.
+  - [CLIPTextEncode::text] They expertly dress, playfully dancing around the room as they put on their clothing.
 
 ### 6. workflow_06.json
-- **Prompt ID**: `1f60b53c-22cb-44ec-ac9c-bbedc9ba61ac`
+- **Prompt ID**: `d5359742-ac61-417d-acf3-d39b01970e9c`
 - **类型**: 文生视频
 - **节点数**: 43
 - **模型** (3):
@@ -73,10 +73,10 @@
   - gemma_3_12B_it_fp4_mixed.safetensors
   - ltx-2-spatial-upscaler-x2-1.0.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] They share a moment where they playfully nudge each other, filled with laughter and connection, emphasizing their joy.
+  - [CLIPTextEncode::text] They take turns embracing, creating moments of laughter, sharing stories and warmth.
 
 ### 7. workflow_07.json
-- **Prompt ID**: `cd2508cd-d4f4-4f5c-9f12-91f9bb43dd31`
+- **Prompt ID**: `136cb048-b9dd-461f-8790-43bea5ef36ce`
 - **类型**: 文生视频
 - **节点数**: 43
 - **模型** (3):
@@ -84,10 +84,10 @@
   - gemma_3_12B_it_fp4_mixed.safetensors
   - ltx-2-spatial-upscaler-x2-1.0.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] They walk, hand in hand, smiling radiantly, as the background slowly illuminates, highlighting their movement away from sadness.
+  - [CLIPTextEncode::text] They joyfully hand snacks to one another, telling funny stories and sharing mutual excitement.
 
 ### 8. workflow_08.json
-- **Prompt ID**: `fd04704d-ac36-4477-9a14-17b76e482d62`
+- **Prompt ID**: `1d6cb25b-447d-49c9-bd46-52191e7e963e`
 - **类型**: 文生视频
 - **节点数**: 43
 - **模型** (3):
@@ -95,21 +95,16 @@
   - gemma_3_12B_it_fp4_mixed.safetensors
   - ltx-2-spatial-upscaler-x2-1.0.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] He kneels down slightly as he hands her the flowers, and she gasps in surprise and joy, both smiling widely.
+  - [CLIPTextEncode::text] They share a hilarious joke, laughing uncontrollably, creating a playful and electric environment.
 
 ### 9. workflow_09.json
-- **Prompt ID**: `a4df2eb3-82a3-461d-b74b-ac272ce9dd81`
+- **Prompt ID**: `ee2190a0-eb51-4539-b978-8f22ba54c2cf`
 - **类型**: 文生视频
-- **节点数**: 43
-- **模型** (3):
-  - LTX-2/ltx-2-19b-distilled.safetensors
-  - gemma_3_12B_it_fp4_mixed.safetensors
-  - ltx-2-spatial-upscaler-x2-1.0.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] He passionately shares his feelings, animated by the moment, as her expression reflects curiosity and excitement.
+- **节点数**: 2
+- **模型** (0):
 
 ### 10. workflow_10.json
-- **Prompt ID**: `a423da42-de27-4059-8c07-c14653bb094b`
+- **Prompt ID**: `248281df-1ceb-435b-9e1d-e88f244853fe`
 - **类型**: 文生视频
 - **节点数**: 43
 - **模型** (3):
@@ -117,4 +112,4 @@
   - gemma_3_12B_it_fp4_mixed.safetensors
   - ltx-2-spatial-upscaler-x2-1.0.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] They hold each other tightly, swaying gently as the camera captures their smiles and quiet bliss, showcasing the profound bond they have.
+  - [CLIPTextEncode::text] The character starts the chainsaw with a strong gesture, showing determination. He looks around the area, preparing for the work ahead, as trees sway lightly in the breeze.

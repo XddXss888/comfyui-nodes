@@ -151,6 +151,7 @@
   },
   "5285": {
     "inputs": {
+      "text_0": "false",
       "value": [
         "5282",
         1
@@ -175,6 +176,7 @@
   },
   "5289": {
     "inputs": {
+      "text_0": "Skipped XYZ plot creation because training is not final yet: 3000/3500.",
       "text": [
         "5282",
         2
@@ -187,14 +189,14 @@
   },
   "5305": {
     "inputs": {
-      "dataset_images_dir": "C:\\Users\\gedha\\.aitoolkit\\AI-Toolkit\\datasets\\3mm4_st0n3_3072",
-      "workspace_dir": "C:\\Users\\gedha\\.comfyui\\musubi\\workspace\\3mm4_st0n3",
-      "run_name": "LTX_3mm4_st0n3",
-      "output_name": "LTX_3mm4_st0n3",
+      "dataset_images_dir": "C:\\Users\\gedha\\.aitoolkit\\AI-Toolkit\\datasets\\4ny4_t4yl0r_j0y_3072",
+      "workspace_dir": "C:\\Users\\gedha\\.comfyui\\musubi\\workspace\\4ny4_t4yl0r_j0y",
+      "run_name": "LTX_4ny4_t4yl0r_j0y",
+      "output_name": "LTX_4ny4_t4yl0r_j0y",
       "resolution_width": 2048,
-      "resolution_height": 2083,
+      "resolution_height": 2048,
       "steps_per_run": 500,
-      "total_target_steps": 3500,
+      "total_target_steps": 4000,
       "network_dim": 64,
       "network_alpha": 32,
       "blocks_to_swap": 0,

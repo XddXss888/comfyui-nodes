@@ -1,0 +1,50 @@
+{
+  "3": {
+    "inputs": {
+      "image": "2026-06-15-1826426526.png",
+      "seed": "499701781519202"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "23": {
+    "inputs": {
+      "torchscript_jit": "on",
+      "image": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "InspyrenetRembg",
+    "_meta": {
+      "title": "Inspyrenet Rembg"
+    }
+  },
+  "31": {
+    "inputs": {
+      "mask": [
+        "23",
+        1
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "34": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  }
+}
