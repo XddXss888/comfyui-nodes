@@ -2,11 +2,11 @@
   "3": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 1650376320,
+      "seed": 42,
       "steps": 4,
       "cfg": 7.0,
       "sampler_name": "euler",
-      "scheduler": "normal",
+      "scheduler": "simple",
       "denoise": 1.0,
       "model": [
         "4",
@@ -35,15 +35,15 @@
   "5": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 256,
-      "height": 256,
+      "width": 512,
+      "height": 512,
       "batch_size": 1
     }
   },
   "6": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "a simple test image",
+      "text": "benchmark red circle",
       "clip": [
         "4",
         1
@@ -53,7 +53,7 @@
   "7": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "blurry, lowres, watermark, text",
+      "text": "",
       "clip": [
         "4",
         1
@@ -76,7 +76,7 @@
   "9": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "tgbot",
+      "filename_prefix": "bench",
       "images": [
         "8",
         0

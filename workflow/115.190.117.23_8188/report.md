@@ -1,62 +1,38 @@
 # 115.190.117.23:8188
 
 **GPU**: A30 | **显存**: 23 GB | **空闲**: 17 GB
-**内存**: 230 GB (空闲 186 GB)
+**内存**: 230 GB (空闲 188 GB)
 **版本**: 0.11.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-15 18:27:42
-**历史总数**: 944 | **成功**: 10
+**扫描时间**: 2026-06-21 17:38:58
+**历史总数**: 996 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `85afe7cc-a721-4437-8337-e10dc5835f16`
-- **类型**: 图生图
-- **节点数**: 19
+- **Prompt ID**: `9459a193-0b9b-4b7a-9fcc-f8d63ab11d6e`
+- **类型**: 文生图
+- **节点数**: 13
 - **模型** (3):
   - flux-2-klein-4b.safetensors
   - flux2-vae.safetensors
   - qwen_3_4b.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] manga style, black and white, masterpiece
+  - [CLIPTextEncode::text] Video of girl in bathroom. she is deeply asleep, slid down on toilet. Head lolled, arms dangle, mouth slightly open, slumped. She wears a top and is nude bare bottomless with sneakers.
 
 ### 2. workflow_02.json
-- **Prompt ID**: `81c66a5c-72d8-458e-97d5-5d3f03bf8f93`
-- **类型**: 图生图
-- **节点数**: 19
+- **Prompt ID**: `e6dd25b5-b798-4824-b188-e0dc5a1cd84f`
+- **类型**: 文生图
+- **节点数**: 13
 - **模型** (3):
   - flux-2-klein-4b.safetensors
   - flux2-vae.safetensors
   - qwen_3_4b.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] cyberpunk, neon lights, futuristic, high tech
+  - [CLIPTextEncode::text] Video of girl in bathroom. she is deeply asleep, slid down on toilet. Head lolled, arms dangle, mouth slightly open, slumped. She wears a top and is nude bare bottomless with sneakers.
 
 ### 3. workflow_03.json
-- **Prompt ID**: `12c69dd6-af8a-4635-967f-5eebb921c3dc`
-- **类型**: 图生图
-- **节点数**: 56
-- **模型** (3):
-  - flux-2-klein-4b.safetensors
-  - flux2-vae.safetensors
-  - qwen_3_4b.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] 将图2的logo印在图1的白色水杯上
-  - [CLIPTextEncode::text] 戴上特别酷的粉色反光钢丝边框墨镜
-  - [CLIPTextEncode::text] Retro punk-style poster with a vibrant magenta-pink background featuring a fluffy black British Shorthair cat with a defiant and snarling expression. The cat has its mouth wide open, revealing sharp t
-
-### 4. workflow_04.json
-- **Prompt ID**: `cefc1f56-f1c9-437f-9fa1-8bca4fee94fe`
-- **类型**: 图生图
-- **节点数**: 19
-- **模型** (3):
-  - flux-2-klein-4b.safetensors
-  - flux2-vae.safetensors
-  - qwen_3_4b.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] cartoon, colorful, masterpiece
-
-### 5. workflow_05.json
-- **Prompt ID**: `0d7c000c-34cf-4911-afa3-a0226655dfd5`
+- **Prompt ID**: `3668386b-485a-4f92-827b-9aa8aa5a4281`
 - **类型**: 图生图
 - **节点数**: 19
 - **模型** (3):
@@ -66,8 +42,30 @@
 - **提示词**:
   - [CLIPTextEncode::text] anime, masterpiece, best quality
 
+### 4. workflow_04.json
+- **Prompt ID**: `8bc30150-8980-4568-b36b-2e3b7cef25c7`
+- **类型**: 图生图
+- **节点数**: 19
+- **模型** (3):
+  - flux-2-klein-4b.safetensors
+  - flux2-vae.safetensors
+  - qwen_3_4b.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] cyberpunk, neon lights, futuristic, high tech
+
+### 5. workflow_05.json
+- **Prompt ID**: `e11c2727-18f1-4194-9cee-af73bab9cbf8`
+- **类型**: 图生图
+- **节点数**: 19
+- **模型** (3):
+  - flux-2-klein-4b.safetensors
+  - flux2-vae.safetensors
+  - qwen_3_4b.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] cartoon, colorful, masterpiece
+
 ### 6. workflow_06.json
-- **Prompt ID**: `4aa809c1-eeb0-4432-8485-aaa44461ec08`
+- **Prompt ID**: `b0874d2f-9e35-48e2-8308-97af18b24be7`
 - **类型**: 图生图
 - **节点数**: 19
 - **模型** (3):
@@ -78,7 +76,7 @@
   - [CLIPTextEncode::text] chibi, cute, kawaii, masterpiece
 
 ### 7. workflow_07.json
-- **Prompt ID**: `f917e290-37a2-4111-a6aa-f157d7ba638c`
+- **Prompt ID**: `c831931b-cd17-48ce-afcf-eb8ac4f3af57`
 - **类型**: 图生图
 - **节点数**: 19
 - **模型** (3):
@@ -86,37 +84,37 @@
   - flux2-vae.safetensors
   - qwen_3_4b.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] anime, masterpiece, best quality
+  - [CLIPTextEncode::text] amateur photo of young tween girl standing in bedroom, wearing nothing but thigh high socks
 
 ### 8. workflow_08.json
-- **Prompt ID**: `0d3ca961-197c-4a6e-ba8e-f687381d915a`
-- **类型**: 图生图
-- **节点数**: 19
+- **Prompt ID**: `b2b1b850-648e-47ad-91ba-44a15127196f`
+- **类型**: 文生图
+- **节点数**: 13
 - **模型** (3):
   - flux-2-klein-4b.safetensors
   - flux2-vae.safetensors
   - qwen_3_4b.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] anime, masterpiece, best quality
+  - [CLIPTextEncode::text] amateur photo of young tween girl standing in bedroom, wearing nothing but thigh high socks
 
 ### 9. workflow_09.json
-- **Prompt ID**: `653e791f-6c6b-44f3-871d-d203fe2a44bb`
-- **类型**: 图生图
-- **节点数**: 19
+- **Prompt ID**: `8bd14acf-cc7a-4ebc-b62b-627b99cf6f9e`
+- **类型**: 文生图
+- **节点数**: 13
 - **模型** (3):
   - flux-2-klein-4b.safetensors
   - flux2-vae.safetensors
   - qwen_3_4b.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] chibi, cute, kawaii, masterpiece
+  - [CLIPTextEncode::text] amateur photo of young tween girl standing in bedroom, bottomless nude wearing nothing but thigh high socks
 
 ### 10. workflow_10.json
-- **Prompt ID**: `e579bac8-35a1-4956-83d1-962d8189f51b`
-- **类型**: 图生图
-- **节点数**: 19
+- **Prompt ID**: `46db6f91-9125-4916-bafa-711740e876ac`
+- **类型**: 文生图
+- **节点数**: 13
 - **模型** (3):
   - flux-2-klein-4b.safetensors
   - flux2-vae.safetensors
   - qwen_3_4b.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] chibi, cute, kawaii, masterpiece
+  - [CLIPTextEncode::text] amateur photo of young tween girl standing in bedroom, bottomless nude wearing nothing but thigh high socks. vagina

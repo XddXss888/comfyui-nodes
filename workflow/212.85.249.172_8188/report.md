@@ -4,67 +4,67 @@
 **内存**: 3 GB (空闲 2 GB)
 **版本**: 0.3.68
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-15 18:27:52
-**历史总数**: 51 | **成功**: 10
+**扫描时间**: 2026-06-21 17:39:03
+**历史总数**: 280 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `cb4b6819-d97a-49bc-9e39-2bc34d5d4400`
+- **Prompt ID**: `4d7cad29-6d0f-4fb1-82a0-006637e9553a`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):
 
 ### 2. workflow_02.json
-- **Prompt ID**: `f67b8d1c-40a4-42ea-ab5b-649ad5f3b0f3`
+- **Prompt ID**: `c126f84b-dcea-4783-b327-61c661949ea5`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):
 
 ### 3. workflow_03.json
-- **Prompt ID**: `d647dc79-fcc6-4ced-aa9d-a3101dfbd4f0`
+- **Prompt ID**: `1fe2bd82-ffe8-4ba9-b7e8-ae84579c7d18`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):
 
 ### 4. workflow_04.json
-- **Prompt ID**: `9835a8e9-cd0b-439d-bde0-428fe4c2ee47`
+- **Prompt ID**: `52bbf024-a7a5-4414-87fb-9e57b7b8119f`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):
 
 ### 5. workflow_05.json
-- **Prompt ID**: `ff7a2383-174d-4409-be9a-1fbc6ca12318`
+- **Prompt ID**: `7dee46be-fb4b-4014-ae21-da4dbc163f9c`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):
 
 ### 6. workflow_06.json
-- **Prompt ID**: `fa3a9887-37a8-4df9-9d1c-80d4a09caa1a`
-- **类型**: 图片编辑
-- **节点数**: 21
+- **Prompt ID**: `5de73533-6c11-4668-900f-459d286ff77c`
+- **类型**: 其他/工具
+- **节点数**: 1
 - **模型** (0):
 
 ### 7. workflow_07.json
-- **Prompt ID**: `3ec0348b-4fcc-421e-acfc-b52a5f89f2a8`
+- **Prompt ID**: `565a5867-65f4-4470-bc09-0cc7b250039e`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):
 
 ### 8. workflow_08.json
-- **Prompt ID**: `3d2e59e9-5660-49de-9121-81096df71aea`
+- **Prompt ID**: `7aafed85-c9f2-4863-bfdb-0ada09950509`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):
 
 ### 9. workflow_09.json
-- **Prompt ID**: `c7f7c961-3261-4a56-b2c2-55f97bbe77ec`
+- **Prompt ID**: `ce92b2bd-5eba-4c94-9ddb-f806fcd44f29`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):
 
 ### 10. workflow_10.json
-- **Prompt ID**: `8dbd24da-c697-49d4-b1c5-9a6037912933`
+- **Prompt ID**: `1de385b2-fcb3-426c-b49b-2c3b8bfab94d`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):

@@ -16,7 +16,7 @@
   "6": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "a man and a young, long-haired girl in a loving embrace in a hot tub on the terrace of a cloudscape, professional photography, commercial photo, studio lighting, high-end camera, sharp focus, 8k, award winning photo",
+      "text": "A beautiful woman in her thirties who comes from a fantasy world inspired by a medieval setting.She has long black hair that is braided on the side in several braids, otherwise it falls loosely on her shoulders.He has green eyes.He is wearing plain clothes - woolen trousers, high leather boots, a white shirt tucked into his trousers, a long cloak thrown over him.She is girded with a leather belt, on which is attached a short sword, and across her back is a quiver with a bow and arrows.She is slim, at first glance fast and agile., portrait photography, headshot, face focus, bokeh background, professional portrait",
       "clip": [
         "4",
         1
@@ -26,7 +26,7 @@
   "7": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "amateur, blurry, bad lighting, low quality, instagram filter, cartoon, painting",
+      "text": "full body, bad face, distorted features, multiple people, busy background",
       "clip": [
         "4",
         1
@@ -36,8 +36,8 @@
   "3": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 164600665,
-      "steps": 50,
+      "seed": 659688449,
+      "steps": 20,
       "cfg": 8.0,
       "sampler_name": "euler",
       "scheduler": "normal",
@@ -76,7 +76,7 @@
   "9": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "pro_photo_",
+      "filename_prefix": "portrait_",
       "images": [
         "8",
         0

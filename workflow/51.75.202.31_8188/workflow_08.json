@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 516797367530877,
+      "seed": 17279677590089,
       "steps": 35,
       "cfg": 7.5,
       "sampler_name": "dpmpp_sde",
@@ -24,43 +24,31 @@
         0
       ]
     },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
-    }
+    "class_type": "KSampler"
   },
   "4": {
     "inputs": {
-      "ckpt_name": "dreamshaper_8_lcm.safetensors"
+      "ckpt_name": "photon_v1.safetensors"
     },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "Load Checkpoint"
-    }
+    "class_type": "CheckpointLoaderSimple"
   },
   "5": {
     "inputs": {
-      "width": 1024,
-      "height": 1024,
+      "width": 768,
+      "height": 768,
       "batch_size": 1
     },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "Empty Latent Image"
-    }
+    "class_type": "EmptyLatentImage"
   },
   "6": {
     "inputs": {
-      "text": "a naked women  bbw 100 years old\n",
+      "text": "A painfully thin brunette stands arched backward, her pronounced ribs and jutting collarbones contrasting sharply with the exaggerated plumpness of her buttocks. Both hands tangled in her dark hair, she stares over her shoulder with smudged, kohl-lined eyes, her scarlet lips parted slightly. The harsh shadows accentuate her grotesquely large, pointed breasts and the deep grooves of her Venus dimples, while the unnatural arch of her spine stretches the skin taut across her pelvis.",
       "clip": [
         "4",
         1
       ]
     },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
-    }
+    "class_type": "CLIPTextEncode"
   },
   "7": {
     "inputs": {
@@ -70,10 +58,7 @@
         1
       ]
     },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
-    }
+    "class_type": "CLIPTextEncode"
   },
   "8": {
     "inputs": {
@@ -86,10 +71,7 @@
         2
       ]
     },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
-    }
+    "class_type": "VAEDecode"
   },
   "9": {
     "inputs": {
@@ -99,9 +81,6 @@
         0
       ]
     },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
-    }
+    "class_type": "SaveImage"
   }
 }

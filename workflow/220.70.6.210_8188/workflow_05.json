@@ -12,7 +12,7 @@
         "1",
         1
       ],
-      "text": "mobile app UI UX,  clean interface, professional portrait, corporate headshot style, clean background, confident and approachable expression, expert specialist, trustworthy local professional, personalized service, no text, no watermark, no logo, photorealistic"
+      "text": "architecture diagram,  cloud infrastructure, professional photography, balanced composition, contextually relevant, natural lighting, expert specialist, trustworthy local professional, personalized service, no text, no watermark, no logo, photorealistic"
     }
   },
   "3": {
@@ -28,8 +28,8 @@
   "4": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 600,
-      "height": 800,
+      "width": 1024,
+      "height": 576,
       "batch_size": 1
     }
   },
@@ -52,7 +52,7 @@
         "4",
         0
       ],
-      "seed": 544324721584099467,
+      "seed": 389246926022508762,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -80,7 +80,7 @@
         "6",
         0
       ],
-      "filename_prefix": "sb_a3c1e290_team"
+      "filename_prefix": "sb_a3c1e290_general"
     }
   }
 }

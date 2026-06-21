@@ -1,99 +1,70 @@
 # 106.55.104.134:8188
 
 **GPU**: RTX 5070 | **显存**: 12 GB | **空闲**: 11 GB
-**内存**: 31 GB (空闲 10 GB)
+**内存**: 31 GB (空闲 13 GB)
 **版本**: 0.17.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-15 18:27:45
-**历史总数**: 144 | **成功**: 10
+**扫描时间**: 2026-06-21 17:38:59
+**历史总数**: 62 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `1e7c409a-7b90-4192-b731-a963bae68990`
-- **类型**: 文生图
-- **节点数**: 13
-- **模型** (3):
-  - UltraFlux-vae_v1.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
+- **Prompt ID**: `a56f0155-78f5-4251-8dbf-756dadfd0054`
+- **类型**: 文生视频
+- **节点数**: 2
+- **模型** (0):
 
 ### 2. workflow_02.json
-- **Prompt ID**: `6ae87250-66d5-499e-aec0-0146d759ff41`
-- **类型**: 文生图
-- **节点数**: 13
-- **模型** (3):
-  - UltraFlux-vae_v1.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
+- **Prompt ID**: `0cbb9c1c-9505-47a5-814c-2ecf867b3394`
+- **类型**: 文生视频
+- **节点数**: 2
+- **模型** (0):
 
 ### 3. workflow_03.json
-- **Prompt ID**: `5933b292-a139-4730-b312-ffb9bf96fa99`
-- **类型**: 文生图
-- **节点数**: 13
-- **模型** (3):
-  - UltraFlux-vae_v1.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
+- **Prompt ID**: `395fc3e3-f7ff-43ee-8d9d-9ac71b8d60de`
+- **类型**: 文生视频
+- **节点数**: 2
+- **模型** (0):
 
 ### 4. workflow_04.json
-- **Prompt ID**: `ae6fae95-1159-44b6-b0c4-33890d431145`
-- **类型**: 文生图
-- **节点数**: 13
-- **模型** (3):
-  - UltraFlux-vae_v1.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
+- **Prompt ID**: `f5325f02-3e6c-4aa9-b3ec-c3d0a0680127`
+- **类型**: 文生视频
+- **节点数**: 2
+- **模型** (0):
 
 ### 5. workflow_05.json
-- **Prompt ID**: `02961faf-7231-45bd-8c17-04d0875b88be`
-- **类型**: 文生图
-- **节点数**: 13
-- **模型** (3):
-  - UltraFlux-vae_v1.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
+- **Prompt ID**: `80f5af25-e003-4f72-a93e-b4d1cf85b757`
+- **类型**: 文生视频
+- **节点数**: 2
+- **模型** (0):
 
 ### 6. workflow_06.json
-- **Prompt ID**: `1cb9bdee-36f0-4f5a-a9bb-0373e06708d2`
-- **类型**: 文生图
-- **节点数**: 13
-- **模型** (3):
-  - UltraFlux-vae_v1.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
+- **Prompt ID**: `a03f5398-72d4-4235-bd95-ab58eab63239`
+- **类型**: 文生视频
+- **节点数**: 2
+- **模型** (0):
 
 ### 7. workflow_07.json
-- **Prompt ID**: `60210e87-0369-42e8-be42-783352d260eb`
-- **类型**: 图片超分
-- **节点数**: 7
-- **模型** (2):
-  - ema_vae_fp16.safetensors
-  - seedvr2_ema_3b_fp8_e4m3fn.safetensors
+- **Prompt ID**: `7a2aec10-97cc-4c91-93e2-846320bb3628`
+- **类型**: 文生视频
+- **节点数**: 2
+- **模型** (0):
 
 ### 8. workflow_08.json
-- **Prompt ID**: `989ad9fb-66fb-4815-8c84-5bcb851c52c6`
-- **类型**: 文生图
-- **节点数**: 13
-- **模型** (3):
-  - UltraFlux-vae_v1.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
+- **Prompt ID**: `39ee77e7-e9a2-47cf-b7e6-7a74a9502c7d`
+- **类型**: 文生视频
+- **节点数**: 2
+- **模型** (0):
 
 ### 9. workflow_09.json
-- **Prompt ID**: `5455aa8d-370b-4929-b8ee-a79cdcfefb55`
-- **类型**: 文生图
-- **节点数**: 13
-- **模型** (3):
-  - UltraFlux-vae_v1.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
+- **Prompt ID**: `01d3b19f-e04a-4ec2-9c1c-03e07cce7f64`
+- **类型**: 文生视频
+- **节点数**: 2
+- **模型** (0):
 
 ### 10. workflow_10.json
-- **Prompt ID**: `4fa6b19e-4c81-43f0-b005-8954275971b8`
-- **类型**: 文生图
-- **节点数**: 13
-- **模型** (3):
-  - UltraFlux-vae_v1.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
+- **Prompt ID**: `b2a29e10-43c9-4702-b77b-e055134352d6`
+- **类型**: 文生视频
+- **节点数**: 2
+- **模型** (0):

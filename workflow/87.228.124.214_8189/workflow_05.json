@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "seductive young curvy woman with long black hair, A woman leaning forward slightly, her curves outlined by soft warm light, locked in a deep kiss with her body pressed close, one hand resting firmly on her ass in an intimate embrace, medium close-up framing on the upper body and contact, natural believable posture, soft ambient lighting, simple background, clear readable pose and silhouette.",
+      "text": "asig2, A woman sitting on a cozy couch in a warmly lit living room during evening, positioned next to the viewer but not interacting, wearing casual home clothes with natural fabric folds, relaxed posture with hands resting on her lap, calm expression and soft gaze directed slightly aside, simple background, medium close-up framing, warm home lighting.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "izumi_v.2.safetensors",
-      "strength_model": 0.9,
-      "strength_clip": 1.0,
+      "lora_name": "zimg_asig2_conchar.safetensors",
+      "strength_model": 0.63,
+      "strength_clip": 0.7,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.5,
+      "eta": 0.33,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 26161571962184,
+      "seed": 661743540426963,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

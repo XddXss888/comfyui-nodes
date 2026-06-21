@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "value": "<로라></로라>\n\n<작가></작가>\n\n<퀄리티>masterpiece, best quality, very awa, amazing quality, 4k, very aesthetic, high resolution, ultra-detailed, absurdres, newest, score_9,  score_8, score_7, highly detailed, year 2025, adult, depth of field, blurry background,</퀄리티>\n\n<메인>upper body, interior, train compartment, vintage train, warm lighting, 1971, nsfw, full body, 11 age, pleated Extreme micro skirt, compact enclosed vintage booth room, small private seating room, shallow box-shaped room, exactly two bench seats only, one long bench seat fixed along the left wall and one long bench seat fixed along the right wall, the two bench seats facing each other across a narrow gap, no other seats, dark navy blue striped fabric bench seats, cream-colored walls, dark polished wooden trim, bright neutral indoor lighting, evenly lit interior, clean soft daylight illumination, balanced exposure, clear details, looking across the room toward the opposite side,,\n\n1boy, child, messy black hair, glasses, hazel eyes, blush, embarrassed, shy, gentle smile, scratching head, white shirt, grey necktie, black open robe, standing, doorway,\n\nEmbarrassed boy scratching head in doorway, blushing shy smile, awkward departure pose, wooden door frame, narrow train corridor visible behind</메인>"
+      "value": "<로라></로라>\n\n<작가></작가>\n\n<퀄리티>masterpiece, best quality, very awa, amazing quality, 4k, very aesthetic, high resolution, ultra-detailed, absurdres, newest, score_9,  score_8, score_7, highly detailed, year 2025, adult, depth of field, blurry background,</퀄리티>\n\n<메인>straight-on, upper body, 1boy, interior, bedroom, dormitory, red canopy bed, wooden furniture, warm lighting, year 1971, nsfw, 11 age,,\n\n1boy, child, messy black hair, bright hazel eyes, round glasses, white shirt, red and yellow diagonal striped necktie, regimental stripe pattern, black open robe with red and gold lining, smile, grin, energetic expression, standing,\n\nJames Potter welcoming Soo to dormitory with characteristic energetic smile, glasses reflecting warm light, messy black hair sticking up.</메인>"
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -10,7 +10,7 @@
   },
   "2": {
     "inputs": {
-      "value": "(lowres:1.2), (worst quality:1.4), (low quality:1.4), (bad anatomy:1.4), bad hands, multiple views, jpeg artifacts, signature, watermark, text, logo, artist name,muscular female, ribs,plastic skin, signatue, username, logo, text, watermark, artist name, tattoo, speech bubble,  bubble, chat bubble, callout, word, body hair, under hair,   reclining, supine, backbend, more than two seats, extra seat, third seat, rear seat, front seat, corner sofa, L-shaped sofa, booth table, dining booth, long carriage, long cabin, subway, metro, modern train, Japanese compartment, Japanese train interior, tatami, shoji, paper sliding door, futon, red seats, red sofa, red velvet, rows of seats, individual seats, airplane seats, bus seats, open-plan interior, wide room,\n\n"
+      "value": "(lowres:1.2), (worst quality:1.4), (low quality:1.4), (bad anatomy:1.4), bad hands, multiple views, jpeg artifacts, signature, watermark, text, logo, artist name,muscular female, ribs,plastic skin, signatue, username, logo, text, watermark, artist name, tattoo, speech bubble,  bubble, chat bubble, callout, word, body hair, under hair,   reclining, supine, backbend, Torch, Magic Staff, Staff, scepter, rod, pole, spear, trident, halberd, polearm, ceremonial staff, ornate staff, oversized wand, double staff, two staffs, giant weapon, long pole, staff with ornament top, crown-shaped tip, ring-shaped tip, Knit Vest, vest, modern school, modern castle, modern furniture, electric ceiling lights, fluorescent lights, sci-fi, futuristic interior, empty walls, minimalism, contemporary clothing, classroom desks, plastic materials, city background, modern portraits, anime classroom, office building, clean white walls, low detail, blurry\n\n"
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -118,7 +118,7 @@
   },
   "34": {
     "inputs": {
-      "seed": 89984054,
+      "seed": 843355269,
       "steps": 24,
       "cfg": 6.5,
       "sampler_name": "euler",
@@ -158,7 +158,7 @@
         "64",
         0
       ],
-      "seed": 401629174,
+      "seed": 714515513,
       "steps": 20,
       "cfg": 6.5,
       "sampler_name": "euler",
@@ -218,7 +218,7 @@
       "guide_size": 512.0,
       "guide_size_for": true,
       "max_size": 1024.0,
-      "seed": 32402706,
+      "seed": 904478300,
       "steps": 20,
       "cfg": 7.0,
       "sampler_name": "euler",
@@ -311,7 +311,7 @@
   },
   "51": {
     "inputs": {
-      "value": 1024
+      "value": 640
     },
     "class_type": "easy int",
     "_meta": {
@@ -320,7 +320,7 @@
   },
   "52": {
     "inputs": {
-      "value": 1024
+      "value": 960
     },
     "class_type": "easy int",
     "_meta": {

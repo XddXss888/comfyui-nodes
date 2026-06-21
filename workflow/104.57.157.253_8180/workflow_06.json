@@ -1,0 +1,18 @@
+{
+  "15": {
+    "inputs": {
+      "ckpt_name": "ponyDiffusionV6XL_v6StartWithThisOne.safetensors",
+      "data_path": "/mnt/media/ai/lora_training/img/MikeRadley/",
+      "batch_size": 1,
+      "max_train_epoches": 6,
+      "save_every_n_epochs": 1,
+      "output_name": "MikeRadley_v1",
+      "clip_skip": 2,
+      "output_dir": "models/loras"
+    },
+    "class_type": "Lora Training in ComfyUI",
+    "_meta": {
+      "title": "Lora Training in ComfyUI"
+    }
+  }
+}

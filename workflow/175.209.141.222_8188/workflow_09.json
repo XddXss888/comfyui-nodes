@@ -2,13 +2,13 @@
   "1": {
     "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "ckpt_name": "Juggernaut-X-RunDiffusion-NSFW.safetensors"
+      "ckpt_name": "CounterfeitXL-V1.0.safetensors"
     }
   },
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Naked woman",
+      "text": "Logo discord avec les lettres RS pour un developpeur",
       "clip": [
         "1",
         1
@@ -36,7 +36,7 @@
   "5": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 3723358368,
+      "seed": 2886893647,
       "steps": 20,
       "cfg": 7.0,
       "sampler_name": "dpmpp_2m",

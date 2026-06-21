@@ -1,28 +1,40 @@
 # 87.228.124.214:8189
 
 **GPU**: RTX 4090 | **显存**: 47 GB | **空闲**: 8 GB
-**内存**: 125 GB (空闲 118 GB)
+**内存**: 125 GB (空闲 119 GB)
 **版本**: 0.18.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-15 18:27:47
-**历史总数**: 27 | **成功**: 10
+**扫描时间**: 2026-06-21 17:39:03
+**历史总数**: 28 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `afaee2c7-7126-4176-b294-3a4c0659e445`
+- **Prompt ID**: `8b286810-72ae-49c8-baaa-169915c8982a`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
+  - TGZW383YGE7RTN4ZTNPAM4FT50.safetensors
   - model2.safetensors
-  - z-3l34n0r.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] l34n0r, chubby woman, A naked woman wearing only sheer lace stockings stands pressed against the wall inside a small hotel elevator, legs slightly parted, with a man's hand between her thighs and fing
+  - [CLIPTextEncode::text] elvaross, A young woman sits at a wooden desk in a cozy home study, books and notebooks spread open in front of her. She wears a tight short skirt that has ridden higher on her crossed legs, one knee 
 
 ### 2. workflow_02.json
-- **Prompt ID**: `e7f0ee9c-c7b6-4eec-84e6-3f7c82575049`
+- **Prompt ID**: `2e5a46fa-e3eb-4e8d-898b-954d10c047ec`
+- **类型**: 文生图
+- **节点数**: 11
+- **模型** (4):
+  - FZXTSS9MFQBP0RKFF1MGXHS1W0.safetensors
+  - model2.safetensors
+  - z_image_turbo_text_encoder.safetensors
+  - z_image_turbo_vae.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] ohwx woman, messy red hair, green eyes, curvy body, A woman stands in a dimly lit bedroom surrounded by displayed leather and latex fetish items, her corset partially unfastened and pulled down to exp
+
+### 3. workflow_03.json
+- **Prompt ID**: `8ccb30d4-cde9-4805-a9b0-a5613bc4ffc1`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
@@ -31,100 +43,88 @@
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] ameg2, A woman kneels over a man lying flat on his back on the gym floor, sucking hard on his erect cock with her lips stretched tightly around the shaft, her head tilted down and eyes locked upward w
-
-### 3. workflow_03.json
-- **Prompt ID**: `6be1c336-a3c5-415a-8bf3-16968ded12c8`
-- **类型**: 文生图
-- **节点数**: 11
-- **模型** (4):
-  - ULRIKANB_SYNTH_zimg_v1.safetensors
-  - model2.safetensors
-  - z_image_turbo_text_encoder.safetensors
-  - z_image_turbo_vae.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A seductive female teacher in an empty classroom after school, completely naked with a thick natural bush of dark pubic hair covering her visible pussy, standing beside the teacher's desk with one han
+  - [CLIPTextEncode::text] ameg2, In a steamy sauna with warm wooden cedar walls and soft lighting, a woman wrapped in a white towel sits on the bench with her bare legs crossed, looking toward the nude man standing close by wi
 
 ### 4. workflow_04.json
-- **Prompt ID**: `b1d53d4b-533f-458e-be06-ea85f9bedff7`
+- **Prompt ID**: `446d9ce7-c49d-4432-adae-299989d2f115`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
-  - ULRIKANB_SYNTH_zimg_v1.safetensors
+  - ameg2_con_char.safetensors
   - model2.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] A strict female teacher in an empty classroom after school, standing bent forward over the teacher's desk with her tight skirt hiked up around her waist, exposing her large hairy buttocks, a hard cock
+  - [CLIPTextEncode::text] ameg2, Lina standing fully nude in a steamy sauna with warm ambient lighting, her skin glistening with moisture, shoulders back and chest forward in a confident pose to display her bare breasts, arms 
 
 ### 5. workflow_05.json
-- **Prompt ID**: `6e07bc22-5432-49c5-ae09-e1bfa06f9d7f`
+- **Prompt ID**: `7477a3a6-7512-4804-81dc-19539af529c1`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
-  - izumi_v.2.safetensors
   - model2.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
+  - zimg_asig2_conchar.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] seductive young curvy woman with long black hair, A woman leaning forward slightly, her curves outlined by soft warm light, locked in a deep kiss with her body pressed close, one hand resting firmly o
+  - [CLIPTextEncode::text] asig2, A woman sitting on a cozy couch in a warmly lit living room during evening, positioned next to the viewer but not interacting, wearing casual home clothes with natural fabric folds, relaxed pos
 
 ### 6. workflow_06.json
-- **Prompt ID**: `508917f9-b06b-42b4-85dc-104ae17c61b8`
+- **Prompt ID**: `c6592c8d-86e6-4a5b-85c3-3486ca27284b`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
-  - ULRIKANB_SYNTH_zimg_v1.safetensors
   - model2.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
+  - zimg_asig2_conchar.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] A female teacher in an empty classroom after school sits on the edge of the teacher's desk in a strict suit with her blouse unbuttoned at the top and tight skirt hiked up around her hips, wearing glas
+  - [CLIPTextEncode::text] asig2, A woman on a couch in a cozy living room at evening, leaning forward with her mouth wrapped around an erect penis, lips sealed tightly around the shaft, one hand gripping the base, her body sup
 
 ### 7. workflow_07.json
-- **Prompt ID**: `4b903a40-2364-4a70-88cd-fac03cd32498`
+- **Prompt ID**: `26dfe82d-6678-4575-80c4-2526ff56f031`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
-  - ULRIKANB_SYNTH_zimg_v1.safetensors
   - model2.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
+  - zimg_asig2_conchar.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] A strict female teacher in an empty classroom after school, bent over the wooden teacher's desk, glasses on, blouse partially unbuttoned, tight skirt hiked up around her waist exposing her big wet but
+  - [CLIPTextEncode::text] asig2, A woman on a cozy couch in a warmly lit living room at evening, completely topless with her bare breasts fully exposed and softly lit, leaning forward in a ready pose with shoulders slightly hu
 
 ### 8. workflow_08.json
-- **Prompt ID**: `e46b2155-b24f-41c6-85a3-ba7aa07e6f57`
+- **Prompt ID**: `5d224863-b270-4ff3-a538-3666201f209f`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
+  - TGZW383YGE7RTN4ZTNPAM4FT50.safetensors
   - model2.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
-  - zimg-eurameg1-refine-con-char.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] eurameg1, At a luxury VIP auction under glamorous stage lighting, an elegant woman in a fitted evening gown stands with confident poise and a knowing smile, her eyes directed at the man's fully expose
+  - [CLIPTextEncode::text] elvaross, A nude woman on all fours in doggystyle position on a bed inside a quiet dorm room at night, her back arched, knees and palms pressing into the mattress for support, breasts hanging naturall
 
 ### 9. workflow_09.json
-- **Prompt ID**: `32f5fdff-0311-40d8-9040-a3830cb6c969`
+- **Prompt ID**: `35a2e4ec-1aac-4d9e-ab6e-0f5153a3aa33`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
+  - FZXTSS9MFQBP0RKFF1MGXHS1W0.safetensors
   - model2.safetensors
-  - nano_Korean.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] e1st_asn, In a dimly lit Chinese tea house with traditional paper lanterns overhead and bamboo dark wood decor, a woman in a deep burgundy floral embroidered qipao top sits cross-legged on floor cushi
+  - [CLIPTextEncode::text] ohwx woman, messy red hair, green eyes, curvy body, In a stylish living room with dim lighting, a dominant woman in a tight shiny black latex outfit and high heels stands in a powerful waist-up pose, 
 
 ### 10. workflow_10.json
-- **Prompt ID**: `b40e00d8-7e95-46c0-a491-39e34ce33c5d`
+- **Prompt ID**: `f596a74d-aa55-40c2-a0a3-c23d6290a9f8`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
-  - izumi_v.2.safetensors
   - model2.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
+  - zimg_asig2_conchar.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] seductive young curvy woman with long black hair, In a dimly lit elegant hotel room with evening atmosphere, a woman stands in a composed pose after releasing her hair, her figure softly illuminated b
+  - [CLIPTextEncode::text] asig2, In a cozy living room with warm evening lighting, a nude woman kneels on the couch and slowly lowers herself into a facesitting position over her partner, thighs spread wide on either side of h

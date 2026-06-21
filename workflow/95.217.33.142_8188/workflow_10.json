@@ -8,7 +8,7 @@
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Your Api key",
+      "text": "Logo discord avec les lettres RS pour un developpeur",
       "clip": [
         "1",
         1
@@ -18,7 +18,7 @@
   "3": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "",
+      "text": "blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality",
       "clip": [
         "1",
         1
@@ -36,10 +36,10 @@
   "5": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 1160065955,
-      "steps": 8,
+      "seed": 3551957115,
+      "steps": 25,
       "cfg": 7.0,
-      "sampler_name": "euler",
+      "sampler_name": "dpmpp_2m",
       "scheduler": "karras",
       "denoise": 1.0,
       "model": [
@@ -76,11 +76,11 @@
   "7": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "sd_web",
       "images": [
         "6",
         0
-      ]
+      ],
+      "filename_prefix": "fantasy"
     }
   }
 }

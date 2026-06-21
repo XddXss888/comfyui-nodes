@@ -1,38 +1,11 @@
 {
   "9": {
     "inputs": {
-      "filename_prefix": "image_gen",
+      "filename_prefix": "image_go",
       "images": [
         "75:65",
         0
       ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
-    }
-  },
-  "76": {
-    "inputs": {
-      "image": "9274746f-fb0f-4bfc-928f-eeb93806804d.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "81": {
-    "inputs": {
-      "image": "bg.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "94": {
-    "inputs": {
-      "filename_prefix": "image_gen"
     },
     "class_type": "SaveImage",
     "_meta": {
@@ -48,139 +21,16 @@
       "title": "KSamplerSelect"
     }
   },
-  "75:73": {
-    "inputs": {
-      "noise_seed": 845802383558951
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "RandomNoise"
-    }
-  },
-  "75:71": {
-    "inputs": {
-      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
-      "type": "flux2",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "Load CLIP"
-    }
-  },
-  "75:72": {
-    "inputs": {
-      "vae_name": "flux2-vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Load VAE"
-    }
-  },
-  "75:123": {
-    "inputs": {
-      "unet_name": "flux-2-klein-9b-Q6_K.gguf"
-    },
-    "class_type": "UnetLoaderGGUF",
-    "_meta": {
-      "title": "Unet Loader (GGUF)"
-    }
-  },
-  "75:74": {
-    "inputs": {
-      "text": "Sebuah foto potret dengan efek kilatan cahaya dari belakang yang kuat dan dramatis, . Sumber cahaya yang kuat di belakang subjek menciptakan cahaya tepi yang terang dan berkilau di sekitar rambut depan wajah dan tepi tubuh mereka, membuat mereka menonjol di latar belakang yang sama namun sangat redup sedikit pencahayaan vignate. Cahaya kilauan glow up juga mengisi bagian depan wajah subjek dan rambut membuat kulit dan pakaian mereka bersinar dengan sorotan cahaya. Nada warna keseluruhan kilau dan efek glow. Latar belakang sama dan buram dengan cahaya bokeh yang kabur. Tidak ada teks yang ditampilkan..",
-      "clip": [
-        "75:71",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
-    }
-  },
-  "75:80": {
-    "inputs": {
-      "upscale_method": "nearest-exact",
-      "megapixels": 1.0,
-      "resolution_steps": 1,
-      "image": [
-        "76",
-        0
-      ]
-    },
-    "class_type": "ImageScaleToTotalPixels",
-    "_meta": {
-      "title": "Scale Image to Total Pixels"
-    }
-  },
-  "75:82": {
-    "inputs": {
-      "conditioning": [
-        "75:74",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "ConditioningZeroOut"
-    }
-  },
-  "75:99": {
-    "inputs": {
-      "image": [
-        "75:80",
-        0
-      ]
-    },
-    "class_type": "GetImageSize",
-    "_meta": {
-      "title": "Get Image Size"
-    }
-  },
-  "75:79:78": {
-    "inputs": {
-      "pixels": [
-        "75:80",
-        0
-      ],
-      "vae": [
-        "75:72",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE Encode"
-    }
-  },
-  "75:66": {
-    "inputs": {
-      "width": [
-        "75:99",
-        0
-      ],
-      "height": [
-        "75:99",
-        1
-      ],
-      "batch_size": 1
-    },
-    "class_type": "EmptyFlux2LatentImage",
-    "_meta": {
-      "title": "Empty Flux 2 Latent"
-    }
-  },
   "75:62": {
     "inputs": {
-      "steps": 4,
+      "steps": 20,
       "width": [
-        "75:99",
+        "75:68",
         0
       ],
       "height": [
-        "75:99",
-        1
+        "75:69",
+        0
       ]
     },
     "class_type": "Flux2Scheduler",
@@ -188,51 +38,19 @@
       "title": "Flux2Scheduler"
     }
   },
-  "75:79:100": {
-    "inputs": {
-      "conditioning": [
-        "75:82",
-        0
-      ],
-      "latent": [
-        "75:79:78",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "ReferenceLatent"
-    }
-  },
-  "75:79:77": {
-    "inputs": {
-      "conditioning": [
-        "75:74",
-        0
-      ],
-      "latent": [
-        "75:79:78",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "ReferenceLatent"
-    }
-  },
   "75:63": {
     "inputs": {
-      "cfg": 1.0,
+      "cfg": 5.0,
       "model": [
-        "75:123",
+        "75:114",
         0
       ],
       "positive": [
-        "75:79:77",
+        "75:74",
         0
       ],
       "negative": [
-        "75:79:100",
+        "75:67",
         0
       ]
     },
@@ -283,6 +101,106 @@
     "class_type": "VAEDecode",
     "_meta": {
       "title": "VAE Decode"
+    }
+  },
+  "75:66": {
+    "inputs": {
+      "width": [
+        "75:68",
+        0
+      ],
+      "height": [
+        "75:69",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "75:67": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "75:71",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "75:68": {
+    "inputs": {
+      "value": 1024
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Width"
+    }
+  },
+  "75:69": {
+    "inputs": {
+      "value": 1024
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Height"
+    }
+  },
+  "75:73": {
+    "inputs": {
+      "noise_seed": 504415123887008,
+      "seed": 1006134995940391
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "75:71": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "75:72": {
+    "inputs": {
+      "vae_name": "full_encoder_small_decoder.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "75:74": {
+    "inputs": {
+      "text": "A premium food packaging box designed for 'Grove' brand potato donuts, featuring a clean and modern aesthetic. The box has a matte finish with warm earthy tones - primarily soft beige or cream as the base color, complemented by rich brown accents that evoke the golden-brown hue of freshly fried potato donuts. The brand name 'GROVE' is prominently displayed in bold, elegant typography at the center or top of the box, using a sophisticated sans-serif font with a slight organic feel to match the natural potato theme. An appetizing image or illustration of golden potato donuts takes up the central visual space, showing their characteristic round shape with visible potato texture and slightly crispy exterior. The packaging includes subtle design elements such as thin horizontal lines or geometric patterns in muted green (referencing the 'grove' concept), small leaf motifs, or minimalist botanical illustrations scattered around the edges. The overall design conveys a sense of artisanal quality and natural ingredients, with enough visual breathing room to feel premium rather than cluttered. The box appears to be rectangular in shape, suitable for containing multiple donuts, with clean edges and a professional, eye-catching presentation.",
+      "clip": [
+        "75:71",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "75:114": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b-Q6_K.gguf"
+    },
+    "class_type": "UnetLoaderGGUF",
+    "_meta": {
+      "title": "Unet Loader (GGUF)"
     }
   }
 }

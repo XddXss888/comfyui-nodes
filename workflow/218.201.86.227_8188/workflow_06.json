@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "A vibrant, modern illustration depicting an AI-powered design assistant for creative designers. At the center, a glowing humanoid AI figure with a friendly, approachable face, surrounded by four floating panels representing the design workflow: 1) a magnifying glass over a brief/document (requirement understanding), 2) a telescope searching through colorful data streams (design research), 3) a digital canvas with wireframe sketches (prototype drawing), 4) a polished, colorful high-fidelity interface mockup (high-fidelity design). The AI figure gently lifts repetitive tasks like tiny floating gears and paper stacks away from a group of diverse designers on the left, while on the right, the designers are now free to paint, brainstorm with glowing lightbulbs, and make creative decisions. Connected by flowing energy lines and gradient arcs between the workflow stages. Modern flat illustration style with clean vector aesthetics, vibrant gradient colors (blue, purple, cyan, warm orange accents), white background with subtle geometric patterns, centered composition, professional and inspiring mood, suitable for a tech product presentation, 1024x1024",
+      "text": "A stunning cinematic sci-fi concept art scene inspired by UFO disclosure news: a graceful mysterious alien explorer with elegant translucent skin, large expressive eyes, subtle bioluminescent markings, standing in front of a sleek hovering alien spacecraft shaped like a luminous crescent saucer, polished chrome and glass surfaces, soft blue and violet energy glow, misty night desert landscape, stars and aurora in the sky, dramatic rim lighting, beautiful composition, highly detailed, premium movie poster quality, awe-inspiring, tasteful, not scary, no text, no logo",
       "clip": [
         "30",
         1
@@ -44,7 +44,7 @@
   "27": {
     "inputs": {
       "width": 1024,
-      "height": 1024,
+      "height": 768,
       "batch_size": 1
     },
     "class_type": "EmptySD3LatentImage",
@@ -63,8 +63,8 @@
   },
   "31": {
     "inputs": {
-      "seed": 174676309805094,
-      "steps": 20,
+      "seed": 116799984430123,
+      "steps": 28,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -93,7 +93,7 @@
   },
   "33": {
     "inputs": {
-      "text": "blurry, low quality, distorted faces, ugly, deformed, text overlay, watermark, signature, realistic photo, 3d render, dark moody",
+      "text": "low quality, blurry, ugly, deformed, extra limbs, bad anatomy, scary horror, gore, text, watermark, logo, jpeg artifacts, poor composition, cropped subject, oversaturated",
       "clip": [
         "30",
         1

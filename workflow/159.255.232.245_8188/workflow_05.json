@@ -1,107 +1,86 @@
 {
-  "3": {
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "seed": 573562842498335,
-      "steps": 25,
-      "cfg": 2.0,
-      "sampler_name": "euler",
-      "scheduler": "normal",
-      "denoise": 1.0,
-      "model": [
-        "4",
-        0
-      ],
-      "positive": [
-        "6",
-        0
-      ],
-      "negative": [
-        "7",
-        0
-      ],
-      "latent_image": [
-        "5",
-        0
+      "ckpt_name": "anything-v3-full.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "Logo discord avec les lettres RS pour un developpeur",
+      "clip": [
+        "1",
+        1
       ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
+    }
+  },
+  "3": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality",
+      "clip": [
+        "1",
+        1
+      ]
     }
   },
   "4": {
+    "class_type": "EmptyLatentImage",
     "inputs": {
-      "ckpt_name": "epiCPhotoGasmVAE.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "Load Checkpoint"
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
     }
   },
   "5": {
+    "class_type": "KSampler",
     "inputs": {
-      "width": 512,
-      "height": 512,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "Empty Latent Image"
-    }
-  },
-  "6": {
-    "inputs": {
-      "text": "score_9, score_8_up, score_7_up, score_6_up, rating_explicit,\nrealistic,\n1girl,\nyoung woman,\nlong hair,\nlarge breasts,\nstanding,\nfull body,\nnude,",
-      "clip": [
-        "4",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
-    }
-  },
-  "7": {
-    "inputs": {
-      "text": "text, watermark",
-      "clip": [
-        "4",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
-    }
-  },
-  "8": {
-    "inputs": {
-      "samples": [
+      "seed": 1302160971,
+      "steps": 20,
+      "cfg": 7.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1.0,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
         "3",
         0
       ],
-      "vae": [
+      "latent_image": [
         "4",
-        2
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
-    }
-  },
-  "9": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "8",
         0
       ]
-    },
+    }
+  },
+  "6": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "7": {
     "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
+    "inputs": {
+      "images": [
+        "6",
+        0
+      ],
+      "filename_prefix": "fantasy"
     }
   }
 }

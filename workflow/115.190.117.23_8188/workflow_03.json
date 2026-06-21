@@ -1,279 +1,29 @@
 {
-  "9": {
-    "inputs": {
-      "filename_prefix": "Flux2-Klein",
-      "images": [
-        "117",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Сохранить изображение"
-    }
-  },
-  "76": {
-    "inputs": {
-      "image": "d3af88f2653c5f03362409f10b1a12f795973394933aaf1ab334d95ed21b0fc1.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Загрузить изображение"
-    }
-  },
-  "81": {
-    "inputs": {
-      "image": "0ca417875ec2f8173b5e6c23027e64fc913666132626a7cb623a47d8abfbc976.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Загрузить изображение"
-    }
-  },
-  "94": {
-    "inputs": {
-      "filename_prefix": "Flux2-Klein",
-      "images": [
-        "102",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Сохранить изображение"
-    }
-  },
-  "98": {
-    "inputs": {
-      "sampler_name": "euler"
-    },
-    "class_type": "KSamplerSelect",
-    "_meta": {
-      "title": "Выбор KSampler"
-    }
-  },
-  "99": {
-    "inputs": {
-      "steps": 4,
-      "width": [
-        "114",
-        0
-      ],
-      "height": [
-        "114",
-        1
-      ]
-    },
-    "class_type": "Flux2Scheduler",
-    "_meta": {
-      "title": "Flux2Scheduler"
-    }
-  },
-  "100": {
-    "inputs": {
-      "cfg": 1.0,
-      "model": [
-        "104",
-        0
-      ],
-      "positive": [
-        "138",
-        0
-      ],
-      "negative": [
-        "136",
-        0
-      ]
-    },
-    "class_type": "CFGGuider",
-    "_meta": {
-      "title": "CFG Гид"
-    }
-  },
-  "101": {
-    "inputs": {
-      "noise": [
-        "103",
-        0
-      ],
-      "guider": [
-        "100",
-        0
-      ],
-      "sampler": [
-        "98",
-        0
-      ],
-      "sigmas": [
-        "99",
-        0
-      ],
-      "latent_image": [
-        "113",
-        0
-      ]
-    },
-    "class_type": "SamplerCustomAdvanced",
-    "_meta": {
-      "title": "Пользовательский сэмплер (Расширенный)"
-    }
-  },
-  "102": {
-    "inputs": {
-      "samples": [
-        "101",
-        0
-      ],
-      "vae": [
-        "107",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "Декодировать VAE"
-    }
-  },
-  "103": {
-    "inputs": {
-      "noise_seed": 773622298798695
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "Случайный шум"
-    }
-  },
-  "104": {
-    "inputs": {
-      "unet_name": "flux-2-klein-4b.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Загрузить модель диффузии"
-    }
-  },
-  "105": {
-    "inputs": {
-      "clip_name": "qwen_3_4b.safetensors",
-      "type": "flux2",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "Загрузить CLIP"
-    }
-  },
-  "106": {
-    "inputs": {
-      "text": "将图2的logo印在图1的白色水杯上",
-      "clip": [
-        "105",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
-    }
-  },
-  "107": {
-    "inputs": {
-      "vae_name": "flux2-vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Загрузить VAE"
-    }
-  },
-  "108": {
-    "inputs": {
-      "upscale_method": "nearest-exact",
-      "megapixels": 1.0,
-      "resolution_steps": 1,
-      "image": [
-        "158",
-        0
-      ]
-    },
-    "class_type": "ImageScaleToTotalPixels",
-    "_meta": {
-      "title": "Масштабировать изображение до общего количества пикселей"
-    }
-  },
-  "109": {
-    "inputs": {
-      "upscale_method": "nearest-exact",
-      "megapixels": 1.0,
-      "resolution_steps": 1,
-      "image": [
-        "81",
-        0
-      ]
-    },
-    "class_type": "ImageScaleToTotalPixels",
-    "_meta": {
-      "title": "Масштабировать изображение до общего количества пикселей"
-    }
-  },
-  "112": {
-    "inputs": {
-      "conditioning": [
-        "106",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "Обнуление кондиционирования"
-    }
-  },
-  "113": {
-    "inputs": {
-      "width": [
-        "114",
-        0
-      ],
-      "height": [
-        "114",
-        1
-      ],
-      "batch_size": 1
-    },
-    "class_type": "EmptyFlux2LatentImage",
-    "_meta": {
-      "title": "Пустой Flux 2 latent"
-    }
-  },
-  "114": {
-    "inputs": {
-      "image": [
-        "108",
-        0
-      ]
-    },
-    "class_type": "GetImageSize",
-    "_meta": {
-      "title": "Получить размер изображения"
-    }
-  },
   "115": {
-    "inputs": {
-      "sampler_name": "euler"
+    "_meta": {
+      "title": "K采样器选择"
     },
     "class_type": "KSamplerSelect",
-    "_meta": {
-      "title": "Выбор KSampler"
+    "inputs": {
+      "sampler_name": "euler"
     }
   },
   "116": {
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    },
+    "class_type": "SamplerCustomAdvanced",
     "inputs": {
-      "noise": [
-        "118",
-        0
-      ],
       "guider": [
         "124",
+        0
+      ],
+      "latent_image": [
+        "122",
+        0
+      ],
+      "noise": [
+        "118",
         0
       ],
       "sampler": [
@@ -283,18 +33,14 @@
       "sigmas": [
         "125",
         0
-      ],
-      "latent_image": [
-        "122",
-        0
       ]
-    },
-    "class_type": "SamplerCustomAdvanced",
-    "_meta": {
-      "title": "Пользовательский сэмплер (Расширенный)"
     }
   },
   "117": {
+    "_meta": {
+      "title": "VAE解码"
+    },
+    "class_type": "VAEDecode",
     "inputs": {
       "samples": [
         "116",
@@ -304,159 +50,147 @@
         "121",
         0
       ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "Декодировать VAE"
     }
   },
   "118": {
-    "inputs": {
-      "noise_seed": 870747048679020
+    "_meta": {
+      "title": "随机噪波"
     },
     "class_type": "RandomNoise",
-    "_meta": {
-      "title": "Случайный шум"
+    "inputs": {
+      "noise_seed": 870747048679020
     }
   },
   "119": {
+    "_meta": {
+      "title": "UNet加载器"
+    },
+    "class_type": "UNETLoader",
     "inputs": {
       "unet_name": "flux-2-klein-4b.safetensors",
       "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Загрузить модель диффузии"
     }
   },
   "120": {
-    "inputs": {
-      "clip_name": "qwen_3_4b.safetensors",
-      "type": "flux2",
-      "device": "default"
+    "_meta": {
+      "title": "加载CLIP"
     },
     "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "Загрузить CLIP"
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "device": "default",
+      "type": "flux2"
     }
   },
   "121": {
-    "inputs": {
-      "vae_name": "flux2-vae.safetensors"
+    "_meta": {
+      "title": "加载VAE"
     },
     "class_type": "VAELoader",
-    "_meta": {
-      "title": "Загрузить VAE"
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
     }
   },
   "122": {
-    "inputs": {
-      "width": [
-        "128",
-        0
-      ],
-      "height": [
-        "128",
-        1
-      ],
-      "batch_size": 1
+    "_meta": {
+      "title": "空Latent图像（Flux2）"
     },
     "class_type": "EmptyFlux2LatentImage",
-    "_meta": {
-      "title": "Пустой Flux 2 latent"
+    "inputs": {
+      "batch_size": 1,
+      "height": 240,
+      "width": 400
     }
   },
   "123": {
+    "_meta": {
+      "title": "缩放图像（像素）"
+    },
+    "class_type": "ImageScaleToTotalPixels",
     "inputs": {
-      "upscale_method": "nearest-exact",
-      "megapixels": 1.0,
-      "resolution_steps": 1,
       "image": [
         "76",
         0
-      ]
-    },
-    "class_type": "ImageScaleToTotalPixels",
-    "_meta": {
-      "title": "Масштабировать изображение до общего количества пикселей"
+      ],
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "upscale_method": "nearest-exact"
     }
   },
   "124": {
+    "_meta": {
+      "title": "CFG引导器"
+    },
+    "class_type": "CFGGuider",
     "inputs": {
       "cfg": 1.0,
       "model": [
         "119",
         0
       ],
-      "positive": [
-        "132",
-        0
-      ],
       "negative": [
         "130",
         0
+      ],
+      "positive": [
+        "132",
+        0
       ]
-    },
-    "class_type": "CFGGuider",
-    "_meta": {
-      "title": "CFG Гид"
     }
   },
   "125": {
-    "inputs": {
-      "steps": 4,
-      "width": [
-        "128",
-        0
-      ],
-      "height": [
-        "128",
-        1
-      ]
+    "_meta": {
+      "title": "Flux2调度器"
     },
     "class_type": "Flux2Scheduler",
-    "_meta": {
-      "title": "Flux2Scheduler"
+    "inputs": {
+      "height": 240,
+      "steps": 4,
+      "width": 400
     }
   },
   "126": {
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    },
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "戴上特别酷的粉色反光钢丝边框墨镜",
       "clip": [
         "120",
         0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
+      ],
+      "text": "anime, masterpiece, best quality"
     }
   },
   "127": {
+    "_meta": {
+      "title": "条件零化"
+    },
+    "class_type": "ConditioningZeroOut",
     "inputs": {
       "conditioning": [
         "126",
         0
       ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "Обнуление кондиционирования"
     }
   },
   "128": {
+    "_meta": {
+      "title": "获取图像尺寸"
+    },
+    "class_type": "GetImageSize",
     "inputs": {
       "image": [
         "123",
         0
       ]
-    },
-    "class_type": "GetImageSize",
-    "_meta": {
-      "title": "Получить размер изображения"
     }
   },
   "130": {
+    "_meta": {
+      "title": "参考Latent"
+    },
+    "class_type": "ReferenceLatent",
     "inputs": {
       "conditioning": [
         "127",
@@ -466,13 +200,13 @@
         "131",
         0
       ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "Эталонный латент"
     }
   },
   "131": {
+    "_meta": {
+      "title": "VAE编码"
+    },
+    "class_type": "VAEEncode",
     "inputs": {
       "pixels": [
         "123",
@@ -482,13 +216,13 @@
         "121",
         0
       ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "Кодировать VAE"
     }
   },
   "132": {
+    "_meta": {
+      "title": "参考Latent"
+    },
+    "class_type": "ReferenceLatent",
     "inputs": {
       "conditioning": [
         "126",
@@ -498,288 +232,28 @@
         "131",
         0
       ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "Эталонный латент"
     }
   },
-  "133": {
-    "inputs": {
-      "conditioning": [
-        "112",
-        0
-      ],
-      "latent": [
-        "134",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
+  "76": {
     "_meta": {
-      "title": "Эталонный латент"
-    }
-  },
-  "134": {
-    "inputs": {
-      "pixels": [
-        "108",
-        0
-      ],
-      "vae": [
-        "107",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "Кодировать VAE"
-    }
-  },
-  "135": {
-    "inputs": {
-      "conditioning": [
-        "106",
-        0
-      ],
-      "latent": [
-        "134",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "Эталонный латент"
-    }
-  },
-  "136": {
-    "inputs": {
-      "conditioning": [
-        "133",
-        0
-      ],
-      "latent": [
-        "137",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "Эталонный латент"
-    }
-  },
-  "137": {
-    "inputs": {
-      "pixels": [
-        "109",
-        0
-      ],
-      "vae": [
-        "107",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "Кодировать VAE"
-    }
-  },
-  "138": {
-    "inputs": {
-      "conditioning": [
-        "135",
-        0
-      ],
-      "latent": [
-        "137",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "Эталонный латент"
-    }
-  },
-  "139": {
-    "inputs": {
-      "filename_prefix": "Flux2-Klein",
-      "images": [
-        "142",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Сохранить изображение"
-    }
-  },
-  "140": {
-    "inputs": {
-      "sampler_name": "euler"
-    },
-    "class_type": "KSamplerSelect",
-    "_meta": {
-      "title": "Выбор KSampler"
-    }
-  },
-  "141": {
-    "inputs": {
-      "noise": [
-        "143",
-        0
-      ],
-      "guider": [
-        "148",
-        0
-      ],
-      "sampler": [
-        "140",
-        0
-      ],
-      "sigmas": [
-        "157",
-        0
-      ],
-      "latent_image": [
-        "147",
-        0
-      ]
-    },
-    "class_type": "SamplerCustomAdvanced",
-    "_meta": {
-      "title": "Пользовательский сэмплер (Расширенный)"
-    }
-  },
-  "142": {
-    "inputs": {
-      "samples": [
-        "141",
-        0
-      ],
-      "vae": [
-        "146",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "Декодировать VAE"
-    }
-  },
-  "143": {
-    "inputs": {
-      "noise_seed": 39279664265085
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "Случайный шум"
-    }
-  },
-  "144": {
-    "inputs": {
-      "unet_name": "flux-2-klein-4b.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Загрузить модель диффузии"
-    }
-  },
-  "145": {
-    "inputs": {
-      "clip_name": "qwen_3_4b.safetensors",
-      "type": "flux2",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "Загрузить CLIP"
-    }
-  },
-  "146": {
-    "inputs": {
-      "vae_name": "flux2-vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Загрузить VAE"
-    }
-  },
-  "147": {
-    "inputs": {
-      "width": 1152,
-      "height": 1536,
-      "batch_size": 1
-    },
-    "class_type": "EmptyFlux2LatentImage",
-    "_meta": {
-      "title": "Пустой Flux 2 latent"
-    }
-  },
-  "148": {
-    "inputs": {
-      "cfg": 1.0,
-      "model": [
-        "144",
-        0
-      ],
-      "positive": [
-        "149",
-        0
-      ],
-      "negative": [
-        "150",
-        0
-      ]
-    },
-    "class_type": "CFGGuider",
-    "_meta": {
-      "title": "CFG Гид"
-    }
-  },
-  "149": {
-    "inputs": {
-      "text": "Retro punk-style poster with a vibrant magenta-pink background featuring a fluffy black British Shorthair cat with a defiant and snarling expression. The cat has its mouth wide open, revealing sharp teeth and a pink tongue, and its glowing light-pink eyes are narrowed in a fierce glare. Its thick black fur is rendered with heavy texture, and it appears to be holding a white ceramic mug with a black rim using its furry paws. In the upper right corner, the text \"FLUX.2\" is written in a bold, distorted black sans-serif font with a slight vintage screen-printed texture. The overall composition has a rebellious, lo-fi aesthetic with subtle distressing and grain, reminiscent of a retro zine or a punk rock flyer.",
-      "clip": [
-        "145",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
-    }
-  },
-  "150": {
-    "inputs": {
-      "conditioning": [
-        "149",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "Обнуление кондиционирования"
-    }
-  },
-  "157": {
-    "inputs": {
-      "steps": 4,
-      "width": 1536,
-      "height": 864
-    },
-    "class_type": "Flux2Scheduler",
-    "_meta": {
-      "title": "Flux2Scheduler"
-    }
-  },
-  "158": {
-    "inputs": {
-      "image": "9cbd9d245c36f636509ce9236ec6a59bfecd74777294fb8a3ee95258be5df706.png"
+      "title": "加载图像"
     },
     "class_type": "LoadImage",
+    "inputs": {
+      "image": "473f8281-b175-41bc-b9ec-0b01166f5c43.png"
+    }
+  },
+  "9": {
     "_meta": {
-      "title": "Загрузить изображение"
+      "title": "Save Image to OSS"
+    },
+    "class_type": "SaveImageToOSS",
+    "inputs": {
+      "images": [
+        "117",
+        0
+      ],
+      "upload_url": "https://aispea.z33.fun/api/role/file/upload"
     }
   }
 }

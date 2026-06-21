@@ -1,9 +1,39 @@
 {
+  "3": {
+    "inputs": {
+      "seed": 273036460302005,
+      "steps": 20,
+      "cfg": 2.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "66",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "58",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
   "6": {
     "inputs": {
-      "text": "add magical powers to the character and let her show her clevage, enhance her brest size to 36DDD",
+      "text": "Video of girl in bathroom. she is deeply asleep, slid down on toilet. Head lolled, arms dangle, mouth slightly open, slumped. She wears a top and is nude bare bottomless with sneakers.",
       "clip": [
-        "11",
+        "38",
         0
       ]
     },
@@ -12,14 +42,27 @@
       "title": "CLIP Text Encode (Positive Prompt)"
     }
   },
+  "7": {
+    "inputs": {
+      "text": " ",
+      "clip": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
   "8": {
     "inputs": {
       "samples": [
-        "13",
+        "3",
         0
       ],
       "vae": [
-        "10",
+        "39",
         0
       ]
     },
@@ -28,7 +71,48 @@
       "title": "VAE解码"
     }
   },
-  "9": {
+  "37": {
+    "inputs": {
+      "unet_name": "qwen_image_fp8_e4m3fn.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "38": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "39": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "58": {
+    "inputs": {
+      "width": 1088,
+      "height": 1920,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "空Latent图像（SD3）"
+    }
+  },
+  "60": {
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
@@ -41,265 +125,17 @@
       "title": "保存图像"
     }
   },
-  "10": {
+  "66": {
     "inputs": {
-      "vae_name": "ae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "11": {
-    "inputs": {
-      "clip_name1": "t5xxl_fp16.safetensors",
-      "clip_name2": "clip_l.safetensors",
-      "type": "flux",
-      "device": "default"
-    },
-    "class_type": "DualCLIPLoader",
-    "_meta": {
-      "title": "双CLIP加载器"
-    }
-  },
-  "12": {
-    "inputs": {
-      "unet_name": "flux1-dev.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "13": {
-    "inputs": {
-      "noise": [
-        "25",
-        0
-      ],
-      "guider": [
-        "22",
-        0
-      ],
-      "sampler": [
-        "16",
-        0
-      ],
-      "sigmas": [
-        "17",
-        0
-      ],
-      "latent_image": [
-        "27",
-        0
-      ]
-    },
-    "class_type": "SamplerCustomAdvanced",
-    "_meta": {
-      "title": "自定义采样器（高级）"
-    }
-  },
-  "16": {
-    "inputs": {
-      "sampler_name": "euler"
-    },
-    "class_type": "KSamplerSelect",
-    "_meta": {
-      "title": "K采样器选择"
-    }
-  },
-  "17": {
-    "inputs": {
-      "scheduler": "simple",
-      "steps": 20,
-      "denoise": 1.0,
+      "shift": 3.1000000000000005,
       "model": [
-        "30",
+        "37",
         0
       ]
     },
-    "class_type": "BasicScheduler",
+    "class_type": "ModelSamplingAuraFlow",
     "_meta": {
-      "title": "基本调度器"
-    }
-  },
-  "22": {
-    "inputs": {
-      "model": [
-        "30",
-        0
-      ],
-      "conditioning": [
-        "47",
-        0
-      ]
-    },
-    "class_type": "BasicGuider",
-    "_meta": {
-      "title": "基本引导器"
-    }
-  },
-  "25": {
-    "inputs": {
-      "noise_seed": 327243545936574
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "随机噪波"
-    }
-  },
-  "26": {
-    "inputs": {
-      "guidance": 3.5,
-      "conditioning": [
-        "6",
-        0
-      ]
-    },
-    "class_type": "FluxGuidance",
-    "_meta": {
-      "title": "Flux引导"
-    }
-  },
-  "27": {
-    "inputs": {
-      "width": 1280,
-      "height": 1280,
-      "batch_size": 1
-    },
-    "class_type": "EmptySD3LatentImage",
-    "_meta": {
-      "title": "空Latent图像（SD3）"
-    }
-  },
-  "30": {
-    "inputs": {
-      "max_shift": 1.15,
-      "base_shift": 0.5,
-      "width": 1280,
-      "height": 1280,
-      "model": [
-        "12",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingFlux",
-    "_meta": {
-      "title": "采样算法（Flux）"
-    }
-  },
-  "38": {
-    "inputs": {
-      "clip_name": "sigclip_vision_patch14_384.safetensors"
-    },
-    "class_type": "CLIPVisionLoader",
-    "_meta": {
-      "title": "加载CLIP视觉"
-    }
-  },
-  "39": {
-    "inputs": {
-      "crop": "center",
-      "clip_vision": [
-        "38",
-        0
-      ],
-      "image": [
-        "40",
-        0
-      ]
-    },
-    "class_type": "CLIPVisionEncode",
-    "_meta": {
-      "title": "CLIP视觉编码"
-    }
-  },
-  "40": {
-    "inputs": {
-      "image": "原图01.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "主图"
-    }
-  },
-  "41": {
-    "inputs": {
-      "strength": 1.0000000000000002,
-      "strength_type": "multiply",
-      "conditioning": [
-        "26",
-        0
-      ],
-      "style_model": [
-        "42",
-        0
-      ],
-      "clip_vision_output": [
-        "39",
-        0
-      ]
-    },
-    "class_type": "StyleModelApply",
-    "_meta": {
-      "title": "应用风格模型"
-    }
-  },
-  "42": {
-    "inputs": {
-      "style_model_name": "flux1-redux-dev.safetensors"
-    },
-    "class_type": "StyleModelLoader",
-    "_meta": {
-      "title": "加载风格模型"
-    }
-  },
-  "44": {
-    "inputs": {
-      "strength": 0.0,
-      "strength_type": "multiply",
-      "conditioning": [
-        "26",
-        0
-      ],
-      "style_model": [
-        "42",
-        0
-      ],
-      "clip_vision_output": [
-        "39",
-        0
-      ]
-    },
-    "class_type": "StyleModelApply",
-    "_meta": {
-      "title": "应用风格模型"
-    }
-  },
-  "46": {
-    "inputs": {
-      "clip_name": "sigclip_vision_patch14_384.safetensors"
-    },
-    "class_type": "CLIPVisionLoader",
-    "_meta": {
-      "title": "加载CLIP视觉"
-    }
-  },
-  "47": {
-    "inputs": {
-      "conditioning_1": [
-        "41",
-        0
-      ],
-      "conditioning_2": [
-        "44",
-        0
-      ]
-    },
-    "class_type": "ConditioningCombine",
-    "_meta": {
-      "title": "条件合并"
+      "title": "采样算法（AuraFlow）"
     }
   }
 }

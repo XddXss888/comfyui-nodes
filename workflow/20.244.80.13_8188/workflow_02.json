@@ -1,10 +1,44 @@
 {
+  "4": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "dreamshaper_8.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 64,
+      "height": 64,
+      "batch_size": 1
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "reply with pong",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
   "3": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 571715292,
-      "steps": 4,
-      "cfg": 7.0,
+      "seed": 1,
+      "steps": 1,
+      "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "normal",
       "denoise": 1.0,
@@ -26,40 +60,6 @@
       ]
     }
   },
-  "4": {
-    "class_type": "CheckpointLoaderSimple",
-    "inputs": {
-      "ckpt_name": "dreamshaper_8.safetensors"
-    }
-  },
-  "5": {
-    "class_type": "EmptyLatentImage",
-    "inputs": {
-      "width": 256,
-      "height": 256,
-      "batch_size": 1
-    }
-  },
-  "6": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "text": "a simple test image",
-      "clip": [
-        "4",
-        1
-      ]
-    }
-  },
-  "7": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "text": "blurry, lowres, watermark, text",
-      "clip": [
-        "4",
-        1
-      ]
-    }
-  },
   "8": {
     "class_type": "VAEDecode",
     "inputs": {
@@ -76,7 +76,7 @@
   "9": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "tgbot",
+      "filename_prefix": "comfyui_probe",
       "images": [
         "8",
         0

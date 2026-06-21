@@ -1,60 +1,12 @@
 {
-  "278": {
-    "inputs": {
-      "image": "cmqetcp39006ilv01bsx4p8u5.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "352": {
-    "inputs": {
-      "text": "PDstyle,图片中人物身穿红色藏族服饰，外搭白色羊毛披肩，脖子佩戴大量彩色珠饰的项链，一只手放在前面，背景是布达拉宫广场，远景可以看到布达拉宫的红白墙体和黄色屋顶，天空晴朗湛蓝，保持五官一致，半身特写，正面看向镜头，背景略微虚化。"
-    },
-    "class_type": "CR Text",
-    "_meta": {
-      "title": "🔤 CR Text"
-    }
-  },
-  "378": {
-    "inputs": {
-      "seed": 886390923394056,
-      "steps": 8,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "388",
-        0
-      ],
-      "positive": [
-        "385",
-        0
-      ],
-      "negative": [
-        "383",
-        0
-      ],
-      "latent_image": [
-        "379",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "379": {
+  "5": {
     "inputs": {
       "width": [
-        "403",
+        "64",
         1
       ],
       "height": [
-        "403",
+        "64",
         2
       ],
       "batch_size": 1
@@ -64,118 +16,88 @@
       "title": "空Latent图像（Flux2）"
     }
   },
-  "380": {
+  "7": {
     "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 2,
-      "proportional_height": 3,
-      "fit": "letterbox",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_side": "longest",
-      "scale_to_length": 1280,
-      "background_color": "#000000",
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "11": {
+    "inputs": {
+      "version": "RMBG-2.0"
+    },
+    "class_type": "LayerMask: LoadBiRefNetModelV2",
+    "_meta": {
+      "title": "图层遮罩：加载BiRefNet模型 V2（高级）"
+    }
+  },
+  "12": {
+    "inputs": {
+      "select": "mask1",
+      "sort_by": "area_desc",
+      "min_area": 100,
+      "padding": 10,
+      "output_mode": "crop",
       "image": [
-        "278",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
-    "_meta": {
-      "title": "图层工具：按宽高比缩放 V2"
-    }
-  },
-  "381": {
-    "inputs": {
-      "text": [
-        "352",
+        "43",
         0
       ],
-      "clip": [
-        "389",
-        0
+      "mask": [
+        "43",
+        1
       ]
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "PD_Mask Selector",
     "_meta": {
-      "title": "CLIP文本编码"
+      "title": "PD_Mask Selector"
     }
   },
-  "382": {
+  "14": {
     "inputs": {
-      "pixels": [
-        "380",
+      "blend_mode": "normal",
+      "opacity": 100,
+      "x_percent": [
+        "158",
+        7
+      ],
+      "y_percent": [
+        "158",
+        8
+      ],
+      "scale": 1.0,
+      "align_mode": "bottom_align",
+      "invert_mask": true,
+      "background_image": [
+        "174",
         0
       ],
-      "vae": [
-        "390",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE编码"
-    }
-  },
-  "383": {
-    "inputs": {
-      "conditioning": [
-        "384",
+      "layer_image": [
+        "173",
         0
       ],
-      "latent": [
-        "382",
+      "layer_mask": [
+        "183",
         0
       ]
     },
-    "class_type": "ReferenceLatent",
+    "class_type": "ImageBlendV1",
     "_meta": {
-      "title": "参考Latent"
+      "title": "PD:Image Blend V1"
     }
   },
-  "384": {
+  "16": {
     "inputs": {
-      "conditioning": [
-        "381",
-        0
-      ]
+      "image": "Clipboard - 2026-06-17 17.02.00.png"
     },
-    "class_type": "ConditioningZeroOut",
+    "class_type": "LoadImage",
     "_meta": {
-      "title": "条件零化"
+      "title": "加载图像"
     }
   },
-  "385": {
-    "inputs": {
-      "conditioning": [
-        "381",
-        0
-      ],
-      "latent": [
-        "382",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "参考Latent"
-    }
-  },
-  "388": {
-    "inputs": {
-      "lora_name": "training/布达拉宫KB2-男-v3_000004750.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "394",
-        0
-      ]
-    },
-    "class_type": "PD_lora_loader",
-    "_meta": {
-      "title": "PD_lora_loader"
-    }
-  },
-  "389": {
+  "17": {
     "inputs": {
       "clip_name": "qwen_3_8b_fp8mixed.safetensors",
       "type": "flux2",
@@ -186,32 +108,7 @@
       "title": "加载CLIP"
     }
   },
-  "390": {
-    "inputs": {
-      "vae_name": "flux2-vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "393": {
-    "inputs": {
-      "samples": [
-        "378",
-        0
-      ],
-      "vae": [
-        "390",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "394": {
+  "23": {
     "inputs": {
       "unet_name": "flux-2-klein-9b-fp8.safetensors",
       "weight_dtype": "default"
@@ -221,7 +118,263 @@
       "title": "UNet加载器"
     }
   },
-  "403": {
+  "25": {
+    "inputs": {
+      "image": "1779845723452-1-8c84f2c17c7e.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "26": {
+    "inputs": {
+      "text": "PD, transform the real photograph into PDstyle,保持服装和颜色完全一致，背景不变"
+    },
+    "class_type": "CR Text",
+    "_meta": {
+      "title": "🔤 CR Text"
+    }
+  },
+  "37": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "58",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "39": {
+    "inputs": {
+      "invert_mask": false,
+      "detect": "mask_area",
+      "top_reserve": 20,
+      "bottom_reserve": 20,
+      "left_reserve": 20,
+      "right_reserve": 20,
+      "round_to_multiple": "8",
+      "image": [
+        "12",
+        0
+      ],
+      "mask": [
+        "12",
+        1
+      ]
+    },
+    "class_type": "LayerUtility: CropByMask V2",
+    "_meta": {
+      "title": "图层工具：遮罩裁剪 V2"
+    }
+  },
+  "43": {
+    "inputs": {
+      "detail_method": "VITMatte",
+      "detail_erode": 4,
+      "detail_dilate": 2,
+      "black_point": 0.01,
+      "white_point": 0.99,
+      "process_detail": false,
+      "device": "cuda",
+      "max_megapixels": 2.0,
+      "image": [
+        "25",
+        0
+      ],
+      "birefnet_model": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "LayerMask: BiRefNetUltraV2",
+    "_meta": {
+      "title": "图层遮罩：BiRefNet Ultra V2（高级）"
+    }
+  },
+  "48": {
+    "inputs": {
+      "seed": 563922072130648,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "55",
+        0
+      ],
+      "positive": [
+        "52",
+        0
+      ],
+      "negative": [
+        "51",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "50": {
+    "inputs": {
+      "pixels": [
+        "37",
+        0
+      ],
+      "vae": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "51": {
+    "inputs": {
+      "conditioning": [
+        "53",
+        0
+      ],
+      "latent": [
+        "50",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "52": {
+    "inputs": {
+      "conditioning": [
+        "54",
+        0
+      ],
+      "latent": [
+        "50",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "53": {
+    "inputs": {
+      "conditioning": [
+        "54",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "54": {
+    "inputs": {
+      "text": [
+        "26",
+        0
+      ],
+      "clip": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "55": {
+    "inputs": {
+      "lora_name": "training/写实动漫-小AI-RA_FK_v2_000002000.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "56": {
+    "inputs": {
+      "samples": [
+        "48",
+        0
+      ],
+      "vae": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "58": {
+    "inputs": {
+      "blend_mode": "normal",
+      "opacity": 100,
+      "x_percent": 50.0,
+      "y_percent": 50.0,
+      "scale": 1.0,
+      "align_mode": "default",
+      "invert_mask": true,
+      "background_image": [
+        "14",
+        0
+      ],
+      "layer_image": [
+        "181",
+        0
+      ],
+      "layer_mask": [
+        "181",
+        1
+      ]
+    },
+    "class_type": "ImageBlendV1",
+    "_meta": {
+      "title": "PD:Image Blend V1"
+    }
+  },
+  "62": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "56",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "64": {
     "inputs": {
       "aspect_ratio": "2:3",
       "max_size": 1024
@@ -231,17 +384,203 @@
       "title": "PD:ratio selector"
     }
   },
-  "407": {
+  "67": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "393",
+      "image": "Clipboard - 2026-06-17 17.01.47.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "69": {
+    "inputs": {
+      "image": "Clipboard - 2026-06-17 17.02.09.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "121": {
+    "inputs": {
+      "image": "2.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "122": {
+    "inputs": {
+      "image": "3.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "123": {
+    "inputs": {
+      "image": "1-1.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "158": {
+    "inputs": {
+      "aspect_ratio": [
+        "64",
+        0
+      ],
+      "int1": 768,
+      "int2": 820,
+      "int3": 640,
+      "X1": 50.0,
+      "Y1": 53.0,
+      "X2": 50.0,
+      "Y2": 53.0,
+      "X3": 50.0,
+      "Y3": 53.0,
+      "front1": [
+        "123",
+        0
+      ],
+      "mask1": [
+        "123",
+        1
+      ],
+      "back1": [
+        "69",
+        0
+      ],
+      "front2": [
+        "122",
+        0
+      ],
+      "mask2": [
+        "122",
+        1
+      ],
+      "back2": [
+        "16",
+        0
+      ],
+      "front3": [
+        "121",
+        0
+      ],
+      "mask3": [
+        "121",
+        1
+      ],
+      "back3": [
+        "67",
         0
       ]
     },
-    "class_type": "SaveImage",
+    "class_type": "PDSelectorSumT3",
     "_meta": {
-      "title": "保存图像"
+      "title": "PD-selector-sum-T3"
+    }
+  },
+  "173": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "nearest",
+      "scale_to_side": "longest",
+      "scale_to_length": [
+        "158",
+        3
+      ],
+      "round_to_multiple": "8",
+      "background_color": "#FFFFFF",
+      "pixels": [
+        "39",
+        0
+      ],
+      "mask_optional": [
+        "39",
+        1
+      ]
+    },
+    "class_type": "PDImageResizeV2",
+    "_meta": {
+      "title": "PDimage_resize_V2"
+    }
+  },
+  "174": {
+    "inputs": {
+      "size": [
+        "194",
+        0
+      ],
+      "interpolation": "bicubic",
+      "image": [
+        "158",
+        2
+      ]
+    },
+    "class_type": "PDIMAGE_LongerSize",
+    "_meta": {
+      "title": "PDIMAGE:LongerSize"
+    }
+  },
+  "181": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "scale_to_side": "longest",
+      "scale_to_length": [
+        "194",
+        0
+      ],
+      "round_to_multiple": "8",
+      "background_color": "#000000",
+      "pixels": [
+        "158",
+        0
+      ],
+      "mask_optional": [
+        "158",
+        1
+      ]
+    },
+    "class_type": "PDImageResizeV2",
+    "_meta": {
+      "title": "PDimage_resize_V2"
+    }
+  },
+  "183": {
+    "inputs": {
+      "mask": [
+        "173",
+        1
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "反转遮罩"
+    }
+  },
+  "194": {
+    "inputs": {
+      "text": [
+        "64",
+        4
+      ]
+    },
+    "class_type": "JWStringToInteger",
+    "_meta": {
+      "title": "String to Integer"
     }
   }
 }

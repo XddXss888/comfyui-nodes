@@ -1,158 +1,86 @@
 {
-  "76": {
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "filename_prefix": "comfyui-airport-editorial",
-      "images": [
-        "94",
-        0
+      "ckpt_name": "v1-5-pruned-emaonly.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "Logo discord avec les lettres RS pour un developpeur",
+      "clip": [
+        "1",
+        1
       ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
     }
   },
-  "86": {
+  "3": {
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "unet_name": "z_image_turbo_bf16.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
+      "text": "blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality",
+      "clip": [
+        "1",
+        1
+      ]
     }
   },
-  "87": {
+  "4": {
+    "class_type": "EmptyLatentImage",
     "inputs": {
-      "clip_name": "qwen_3_4b.safetensors",
-      "type": "qwen_image",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载CLIP"
+      "width": 768,
+      "height": 768,
+      "batch_size": 1
     }
   },
-  "91": {
+  "5": {
+    "class_type": "KSampler",
     "inputs": {
-      "seed": 386389556562250,
-      "steps": 10,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
+      "seed": 2357344480,
+      "steps": 20,
+      "cfg": 6.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
       "denoise": 1.0,
       "model": [
-        "86",
+        "1",
         0
       ],
       "positive": [
-        "92",
+        "2",
         0
       ],
       "negative": [
-        "93",
+        "3",
         0
       ],
       "latent_image": [
-        "96",
+        "4",
         0
       ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
     }
   },
-  "92": {
-    "inputs": {
-      "text": [
-        "114",
-        0
-      ],
-      "clip": [
-        "87",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
-    }
-  },
-  "93": {
-    "inputs": {
-      "text": "低质量, 模糊, 噪点, JPEG伪影, 压缩失真, 多余的手指, 扭曲的手, 畸形手, 不对称眼睛, 错位牙齿, 卡通风格, 动漫滤镜, 过度上色, 扁平化设计, 残缺身体, 切割画面, 杂乱背景, 错误透视, 丑陋, 恐怖, 死亡眼神, 异常肤色, 表情僵硬, 文字, 水印, 签名, 用户名,出现人类",
-      "clip": [
-        "87",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
-    }
-  },
-  "94": {
+  "6": {
+    "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "91",
+        "5",
         0
       ],
       "vae": [
-        "95",
-        0
+        "1",
+        2
       ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
     }
   },
-  "95": {
+  "7": {
+    "class_type": "SaveImage",
     "inputs": {
-      "vae_name": "ae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "96": {
-    "inputs": {
-      "width": [
-        "97",
+      "images": [
+        "6",
         0
       ],
-      "height": [
-        "97",
-        1
-      ],
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "空Latent图像"
-    }
-  },
-  "97": {
-    "inputs": {
-      "use_custom_resolution": false,
-      "resolution": "1280x720 (16:9) (横屏)",
-      "custom_width": 1024,
-      "custom_height": 1024
-    },
-    "class_type": "TTResolutionSelector",
-    "_meta": {
-      "title": "TT分辨率选择器"
-    }
-  },
-  "114": {
-    "inputs": {
-      "value": "统一风格：现代都市视觉风格，真实自然，道具名称: 机械钢臂, 类别: 武器, 材质: 钢、黄铜、铸铁, 颜色: 枪灰色钢铁基底，关节处为古铜色，液压杆为偏黑的油钢色, 尺寸: 覆盖前臂与手掌，长度约35厘米，宽度比人类手臂粗约一倍, 用途: 反派魔手奎因的标志性装备，在酒馆中掐住科尔衣领将其提离地面，制造压迫感，是角色身份与暴力威慑的视觉象征。, 外观: 一条覆盖至肘关节以上的外骨骼机械义肢，由铆接的厚钢片和铜色关节螺栓组合而成。手指关节呈多段仿生结构，掌心部位嵌有一块传动齿轮组，手背有三根外露的液压连杆，整体粗犷厚重，表面布满磕碰凹陷和油污痕迹，机械结构边缘泛出冷冽的金属微光。, 生图提示词: 单个道具，一条重型机械钢臂，以微微弯曲的姿态立在暗色石质展台上，顶光与底光共同勾勒出钢片的铆接结构、铜色关节的油润反光以及手背液压连杆的金属质感，机械表面有旧化污渍，无人物，背景为深灰渐变，16:9比例，现代暗调产品摄影。。单个道具主体，干净背景或展台式构图，无人物，无复杂场景，材质细节清晰，电影道具设定图。，尺寸比例：16:9，分辨率：720p"
-    },
-    "class_type": "PrimitiveStringMultiline",
-    "_meta": {
-      "title": "提示词"
+      "filename_prefix": "fantasy"
     }
   }
 }

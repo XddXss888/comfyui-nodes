@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "A strict female teacher in an empty classroom after school, bent over the wooden teacher's desk, glasses on, blouse partially unbuttoned, tight skirt hiked up around her waist exposing her big wet butt, a male figure partially visible behind her with hands gripping her hips as he penetrates her anally, her expression dominant and confrontational with a predatory glint in her eyes, pointer resting on the desk beside her, dim afternoon light through classroom windows, medium close-up framing on her torso and hips, natural proportions, clear contact and pose, simple background.",
+      "text": "asig2, A woman on a cozy couch in a warmly lit living room at evening, completely topless with her bare breasts fully exposed and softly lit, leaning forward in a ready pose with shoulders slightly hunched and arms resting at her sides, natural skin folds and gentle shadows across her chest, medium close-up framing from the waist up, simple background, warm home lighting, stable and clear composition.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "ULRIKANB_SYNTH_zimg_v1.safetensors",
-      "strength_model": 0.82,
-      "strength_clip": 0.86,
+      "lora_name": "zimg_asig2_conchar.safetensors",
+      "strength_model": 0.63,
+      "strength_clip": 0.7,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.5,
+      "eta": 0.33,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 1109815001262350,
+      "seed": 661743540426963,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

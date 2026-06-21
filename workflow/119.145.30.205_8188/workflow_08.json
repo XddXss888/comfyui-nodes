@@ -1,155 +1,45 @@
 {
-  "3": {
+  "13": {
     "inputs": {
-      "seed": 2027826066,
-      "steps": 8,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "66",
-        0
-      ],
-      "positive": [
-        "6",
-        0
-      ],
-      "negative": [
-        "7",
-        0
-      ],
-      "latent_image": [
-        "58",
+      "model": "RMBG-2.0",
+      "sensitivity": 1.0,
+      "process_res": 1024,
+      "mask_blur": 1,
+      "mask_offset": -1,
+      "invert_output": false,
+      "refine_foreground": false,
+      "background": "Color",
+      "background_color": "#ffffff",
+      "image": [
+        "14",
         0
       ]
     },
-    "class_type": "KSampler",
+    "class_type": "RMBG",
     "_meta": {
-      "title": "K采样器"
+      "title": "Remove Background (RMBG)"
     }
   },
-  "6": {
+  "14": {
     "inputs": {
-      "text": "Product photography of a heavy handmade Gaboratory bicolor silver gold ring, vintage oxidized sterling silver base with 18k brass gold inlaid carved details, slim narrow band ring (approx 3mm width), the entire outer surface polished with a subtle satin finish (no heavy texture), foreground features a single, small fleur-de-lis motif centered on the front, gold-inlaid only the three central petals and the band's outer edges, oxidized silver background with a single engraved line running above and below the fleur-de-lis, no additional decorations, inner band signed \"Gaboratory\" with a tiny star hallmark, soft diffused natural light, laid flat on creamy white fine suede fabric background, subtle matte texture, shallow depth of field, 8K ultra-detailed, macro metal texture shot, luxury men's gothic biker jewelry, neutral soft tone, commercial jewelry shot, sharp focus on metal engravings, no shadows overload",
-      "clip": [
-        "38",
-        0
-      ]
+      "image": "txt_0_5b5e6a9b.png"
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "LoadImage",
     "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
+      "title": "加载图像"
     }
   },
-  "7": {
+  "16": {
     "inputs": {
-      "text": "",
-      "clip": [
-        "38",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
-    }
-  },
-  "8": {
-    "inputs": {
-      "samples": [
-        "3",
-        0
-      ],
-      "vae": [
-        "39",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "37": {
-    "inputs": {
-      "unet_name": "qwen_image_2512_fp8_e4m3fn.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "38": {
-    "inputs": {
-      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
-      "type": "qwen_image",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载CLIP"
-    }
-  },
-  "39": {
-    "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "58": {
-    "inputs": {
-      "width": 1024,
-      "height": 1024,
-      "batch_size": 4
-    },
-    "class_type": "EmptySD3LatentImage",
-    "_meta": {
-      "title": "空Latent图像（SD3）"
-    }
-  },
-  "60": {
-    "inputs": {
-      "filename_prefix": "user_7/HULU",
+      "filename_prefix": "white_bg",
       "images": [
-        "8",
+        "13",
         0
       ]
     },
     "class_type": "SaveImage",
     "_meta": {
       "title": "保存图像"
-    }
-  },
-  "66": {
-    "inputs": {
-      "shift": 3.1000000000000005,
-      "model": [
-        "100",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingAuraFlow",
-    "_meta": {
-      "title": "采样算法（AuraFlow）"
-    }
-  },
-  "100": {
-    "inputs": {
-      "lora_name": "HULU-Image.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "37",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LORA #1 (系统)"
     }
   }
 }

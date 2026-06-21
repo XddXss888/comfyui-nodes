@@ -1,0 +1,284 @@
+{
+  "76": {
+    "id": "76",
+    "inputs": {
+      "filename_prefix": "Sc_ImageMakerMax:",
+      "images": [
+        "91",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "85": {
+    "id": "85",
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "86": {
+    "id": "86",
+    "inputs": {
+      "conditioning": [
+        "92",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "87": {
+    "id": "87",
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16(1).safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "88": {
+    "id": "88",
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "qwen_image",
+      "device": "cpu"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "89": {
+    "id": "89",
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "90": {
+    "id": "90",
+    "inputs": {
+      "width": 1280,
+      "height": 720,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "91": {
+    "id": "91",
+    "inputs": {
+      "samples": [
+        "93",
+        0
+      ],
+      "vae": [
+        "89",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "92": {
+    "id": "92",
+    "inputs": {
+      "text": "Manufacturing setting 3D Printing Farm, Bambu Lab A1 series, clean surroundings, Text “WePrint3D2” , for advertising",
+      "clip": [
+        "88",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "93": {
+    "id": "93",
+    "inputs": {
+      "seed": 2012034021,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "res_multistep",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "85",
+        0
+      ],
+      "positive": [
+        "92",
+        0
+      ],
+      "negative": [
+        "86",
+        0
+      ],
+      "latent_image": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "94:47": {
+    "id": "94:47",
+    "inputs": {
+      "shift": 3,
+      "model": [
+        "94:46",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "94:42": {
+    "id": "94:42",
+    "inputs": {
+      "conditioning": [
+        "94:45",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "94:46": {
+    "id": "94:46",
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16(1).safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "94:39": {
+    "id": "94:39",
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "qwen_image",
+      "device": "cpu"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "94:40": {
+    "id": "94:40",
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "94:41": {
+    "id": "94:41",
+    "inputs": {
+      "width": 1280,
+      "height": 720,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "94:43": {
+    "id": "94:43",
+    "inputs": {
+      "samples": [
+        "94:44",
+        0
+      ],
+      "vae": [
+        "94:40",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "94:45": {
+    "id": "94:45",
+    "inputs": {
+      "text": "",
+      "clip": [
+        "94:39",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "94:44": {
+    "id": "94:44",
+    "inputs": {
+      "seed": 2102447939,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "res_multistep",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "94:47",
+        0
+      ],
+      "positive": [
+        "94:45",
+        0
+      ],
+      "negative": [
+        "94:42",
+        0
+      ],
+      "latent_image": [
+        "94:41",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  }
+}

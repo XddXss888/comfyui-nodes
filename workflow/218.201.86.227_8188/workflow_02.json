@@ -1,73 +1,36 @@
 {
-  "3": {
+  "6": {
     "inputs": {
-      "seed": 77233,
-      "steps": 20,
-      "cfg": 7.0,
-      "sampler_name": "dpmpp_2m",
-      "scheduler": "normal",
-      "denoise": 1.0,
-      "model": [
-        "36",
-        0
-      ],
-      "positive": [
-        "38",
-        0
-      ],
-      "negative": [
-        "39",
-        0
-      ],
-      "latent_image": [
-        "5",
-        0
+      "text": "A traditional Chinese calligraphy brush painting a sweeping brushstroke curve from the lower-left to the upper-right corner on a pure white background. Inside the flowing ink brushstroke, microscopic detailed landscapes of Yantai, China are revealed: Yantaishan scenic area with its historic lighthouse, Kunyushan National Park with misty ancient peaks, Penglai Pavilion with the legendary Eight Immortals crossing the sea, Haichang Fisherman's Wharf, Mou's Manor grand courtyard, and Yantai's stunning coastline. The Bohai Sea shimmering with golden sunlight, vast misty waters along riverbanks, ancient legends merging with modern coastal cityscapes. The brush tip is visible at the upper-right end of the stroke, with fresh ink flowing. Everything outside the brushstroke is pure white negative space (liubai). Traditional Chinese ink painting style (guohua) blended with hyper-realistic detail, ultra-detailed, golden sunlight illuminating the sea and city, surging ocean energy, masterful composition, museum-quality digital painting.",
+      "clip": [
+        "30",
+        1
       ]
     },
-    "class_type": "KSampler",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "4": {
-    "inputs": {
-      "ckpt_name": "DreamShaper_XL_v2.1_Turbo.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "模型加载器"
-    }
-  },
-  "5": {
-    "inputs": {
-      "width": 512,
-      "height": 512,
-      "batch_size": 4
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "空Latent图像"
+      "title": "CLIP Text Encode (Positive Prompt)"
     }
   },
   "8": {
     "inputs": {
       "samples": [
-        "3",
+        "31",
         0
       ],
       "vae": [
-        "4",
+        "30",
         2
       ]
     },
     "class_type": "VAEDecode",
     "_meta": {
-      "title": "VAE解码"
+      "title": "VAE Decode"
     }
   },
-  "28": {
+  "9": {
     "inputs": {
-      "filename_prefix": "logo202512175579",
+      "filename_prefix": "ComfyUI",
       "images": [
         "8",
         0
@@ -75,52 +38,83 @@
     },
     "class_type": "SaveImage",
     "_meta": {
-      "title": "保存图像"
+      "title": "Save Image"
     }
   },
-  "36": {
+  "27": {
     "inputs": {
-      "lora_name": "RoundLogo_XL_E10R16.safetensors",
-      "strength_model": 1.0,
-      "strength_clip": 1.0,
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "30": {
+    "inputs": {
+      "ckpt_name": "flux1-dev-fp8.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "31": {
+    "inputs": {
+      "seed": 44215959904639,
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
       "model": [
-        "4",
+        "30",
         0
       ],
-      "clip": [
-        "4",
-        1
+      "positive": [
+        "35",
+        0
+      ],
+      "negative": [
+        "33",
+        0
+      ],
+      "latent_image": [
+        "27",
+        0
       ]
     },
-    "class_type": "LoraLoader",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "加载LoRA"
+      "title": "KSampler"
     }
   },
-  "38": {
+  "33": {
     "inputs": {
-      "text": "A logo of app,white background,Collaborative Service Management Platform",
+      "text": "blurry, low quality, distorted text, watermark, signature, frame, border, dark background, cluttered, messy",
       "clip": [
-        "36",
+        "30",
         1
       ]
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "正向提示词"
+      "title": "CLIP Text Encode (Negative Prompt)"
     }
   },
-  "39": {
+  "35": {
     "inputs": {
-      "text": "bad art, ugly, deformed, watermark, duplicated\n",
-      "clip": [
-        "36",
-        1
+      "guidance": 3.5,
+      "conditioning": [
+        "6",
+        0
       ]
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "FluxGuidance",
     "_meta": {
-      "title": "CLIP文本编码"
+      "title": "Flux Guidance"
     }
   }
 }

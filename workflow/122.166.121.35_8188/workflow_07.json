@@ -22,16 +22,16 @@
       ],
       "sampler_name": "euler",
       "scheduler": "simple",
-      "seed": 15994399616315,
-      "steps": 4
+      "seed": 42052230650487,
+      "steps": 6
     }
   },
   "5": {
     "class_type": "EmptyLatentImage",
     "inputs": {
       "batch_size": 1,
-      "height": 1024,
-      "width": 1024
+      "height": 1216,
+      "width": 832
     }
   },
   "6": {
@@ -41,7 +41,7 @@
         "11",
         0
       ],
-      "text": "Create an image of an engineer standing in lush green outfield and there is an huge boiler in the background"
+      "text": "a professional studio portrait of a person wearing smart business attire, plain solid grey seamless studio backdrop, soft even lighting, sharp focus, masterpiece, best quality, highly detailed, sharp focus, hyper-realistic, 8k resolution, cinematic lighting, photorealistic, intricate details, professional photography"
     }
   },
   "7": {

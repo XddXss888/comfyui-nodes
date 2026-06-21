@@ -12,7 +12,7 @@
         "1",
         1
       ],
-      "text": "election,  democracy,  ballot,  voting booth, wide angle cinematic shot, golden hour lighting, dramatic depth of field, high resolution 4k, professional photography, enterprise environment, corporate professionalism, B2B modern workspace, no text, no watermark, no logo, photorealistic"
+      "text": "election analysis,  voter education,  transparent government, students engaged in learning, professional photography, balanced composition, contextually relevant, natural lighting, enterprise environment, corporate professionalism, B2B modern workspace, no text, no watermark, no logo, photorealistic"
     }
   },
   "3": {
@@ -28,7 +28,7 @@
   "4": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 1280,
+      "width": 1024,
       "height": 576,
       "batch_size": 1
     }
@@ -52,8 +52,8 @@
         "4",
         0
       ],
-      "seed": 586554434623096721,
-      "steps": 6,
+      "seed": 158800313879205746,
+      "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -80,7 +80,7 @@
         "6",
         0
       ],
-      "filename_prefix": "sb_a3c1e290_hero"
+      "filename_prefix": "sb_a3c1e290_general"
     }
   }
 }

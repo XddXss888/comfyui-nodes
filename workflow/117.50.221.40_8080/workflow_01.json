@@ -1,32 +1,46 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "UnetLoaderGGUF",
     "inputs": {
-      "ckpt_name": "flux1-schnell.safetensors"
+      "unet_name": "sd3.5_large_turbo-Q8_0.gguf"
     }
   },
   "2": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "DualCLIPLoader",
     "inputs": {
-      "text": "Medical logo featuring a stylized red cross integrated with pine branch motifs inspired by the 'Welcoming Guest Pine', clean minimalist design, balanced symmetry, professional healthcare aesthetic, soft natural lighting, vector-style precision, masterpiece, best quality, highly detailed, studio lighting, crisp edges, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
-      "clip": [
-        "1",
-        1
-      ]
+      "clip_name1": "t5xxl_fp8_e4m3fn.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "sd3"
     }
   },
   "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "sd3_vae.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "Masterpiece, best quality, detailed professional illustration of a cheerful kindergarten building with autumn foliage—golden maple trees, warm sunlight, children playing outdoors, vibrant red and yellow color scheme, soft shadows, clean modern architecture, joyful atmosphere, high-resolution, studio lighting, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "clip": [
+        "2",
+        0
+      ]
+    }
+  },
+  "5": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 1024,
+      "width": 576,
       "height": 1024,
       "batch_size": 1
     }
   },
-  "4": {
+  "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 1586616001,
+      "seed": 2142206603,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -37,57 +51,57 @@
         0
       ],
       "positive": [
-        "2",
-        0
-      ],
-      "negative": [
-        "5",
-        0
-      ],
-      "latent_image": [
-        "3",
-        0
-      ]
-    }
-  },
-  "5": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "text": "",
-      "clip": [
-        "1",
-        1
-      ]
-    }
-  },
-  "6": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "samples": [
         "4",
         0
       ],
-      "vae": [
-        "1",
-        2
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
       ]
     }
   },
   "7": {
-    "class_type": "SaveImage",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "filename_prefix": "DOOOOR_1K",
-      "images": [
-        "6",
+      "text": "",
+      "clip": [
+        "2",
         0
       ]
     }
   },
   "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "6",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "DOOOOR_2K",
+      "images": [
+        "14",
+        0
+      ]
+    }
+  },
+  "10": {
     "class_type": "ImageScale",
     "inputs": {
       "image": [
-        "6",
+        "8",
         0
       ],
       "width": 400,
@@ -96,11 +110,30 @@
       "upscale_method": "nearest-exact"
     }
   },
-  "9": {
+  "11": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_1K_TH",
+      "filename_prefix": "DOOOOR_2K_TH",
       "images": [
+        "10",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "UpscaleModelLoader",
+    "inputs": {
+      "model_name": "2xLexicaRRDBNet_Sharp.pth"
+    }
+  },
+  "14": {
+    "class_type": "ImageUpscaleWithModel",
+    "inputs": {
+      "upscale_model": [
+        "13",
+        0
+      ],
+      "image": [
         "8",
         0
       ]

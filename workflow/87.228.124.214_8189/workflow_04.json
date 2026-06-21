@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "A strict female teacher in an empty classroom after school, standing bent forward over the teacher's desk with her tight skirt hiked up around her waist, exposing her large hairy buttocks, a hard cock penetrating her deeply from behind, one hand braced on the desk and the other loosely holding a pointer, glasses on, stern assessing expression, strict suit jacket still on, confrontational atmosphere, simple classroom background with desk and chairs, soft indoor lighting, medium close-up framing on her waist-up pose and the explicit contact.",
+      "text": "ameg2, Lina standing fully nude in a steamy sauna with warm ambient lighting, her skin glistening with moisture, shoulders back and chest forward in a confident pose to display her bare breasts, arms relaxed at her sides with hands resting on her hips, looking toward the viewer with a calm relaxed expression, simple wooden benches and folded towels visible in the soft background, medium close-up framing, gentle steam haze, coherent warm lighting.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "ULRIKANB_SYNTH_zimg_v1.safetensors",
-      "strength_model": 0.82,
-      "strength_clip": 0.86,
+      "lora_name": "ameg2_con_char.safetensors",
+      "strength_model": 0.9,
+      "strength_clip": 0.9,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -133,11 +133,11 @@
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 1109815001262350,
+      "seed": 415093436776455,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

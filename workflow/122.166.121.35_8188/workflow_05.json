@@ -1,101 +1,138 @@
 {
-  "3": {
-    "class_type": "KSampler",
+  "1": {
+    "class_type": "UNETLoader",
     "inputs": {
-      "cfg": 1.0,
-      "denoise": 1.0,
-      "latent_image": [
-        "5",
-        0
-      ],
+      "unet_name": "qwen_image_edit_2509_fp8_e4m3fn.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    }
+  },
+  "1b": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
       "model": [
-        "12",
+        "1",
         0
       ],
-      "positive": [
-        "6",
-        0
-      ],
-      "negative": [
-        "7",
-        0
-      ],
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "seed": 86064049152190,
-      "steps": 6
+      "lora_name": "Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "torki_input_1107ea6f62.png"
     }
   },
   "5": {
-    "class_type": "EmptyLatentImage",
-    "inputs": {
-      "batch_size": 1,
-      "height": 1216,
-      "width": 832
-    }
-  },
-  "6": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "TextEncodeQwenImageEdit",
     "inputs": {
       "clip": [
-        "11",
+        "2",
         0
       ],
-      "text": "Nipped stimulation, masterpiece, best quality, highly detailed, sharp focus, hyper-realistic, 8k resolution, cinematic lighting, photorealistic, intricate details, professional photography"
-    }
-  },
-  "7": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "11",
-        0
-      ],
-      "text": ""
-    }
-  },
-  "8": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "samples": [
+      "prompt": "Transform this photo into an oil-painting portrait of a person, thick impasto brushstrokes, visible canvas texture, bold painterly strokes, fully restyling the entire image including the background. Fully and obviously redraw the whole image in this art style — it must clearly look like art/illustration, not a photograph. Keep the person's face, beard, eyeglasses, hairstyle, clothing, any tattoos or logos, and the original pose clearly recognizable.",
+      "vae": [
         "3",
         0
       ],
-      "vae": [
-        "10",
+      "image": [
+        "4",
         0
       ]
     }
   },
-  "9": {
-    "class_type": "SaveImage",
+  "6": {
+    "class_type": "TextEncodeQwenImageEdit",
     "inputs": {
-      "filename_prefix": "vision_",
-      "images": [
+      "clip": [
+        "2",
+        0
+      ],
+      "prompt": "nsfw, nude, naked, nudity, undressed, topless, exposed chest, exposed skin, underwear, lingerie, cleavage, deformed body, malformed limbs, extra limbs, missing limbs, mutated, fused body, disfigured anatomy",
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "4",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1b",
+        0
+      ],
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "6",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ],
+      "seed": 78418301221789,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
         "8",
+        0
+      ],
+      "vae": [
+        "3",
         0
       ]
     }
   },
   "10": {
-    "class_type": "VAELoader",
+    "class_type": "SaveImage",
     "inputs": {
-      "vae_name": "ae.safetensors"
-    }
-  },
-  "11": {
-    "class_type": "DualCLIPLoader",
-    "inputs": {
-      "clip_name1": "t5xxl_fp8_e4m3fn.safetensors",
-      "clip_name2": "clip_l.safetensors",
-      "type": "flux"
-    }
-  },
-  "12": {
-    "class_type": "UNETLoader",
-    "inputs": {
-      "unet_name": "flux1-schnell-fp8.safetensors",
-      "weight_dtype": "fp8_e4m3fn"
+      "filename_prefix": "vision_qwen_i2i",
+      "images": [
+        "9",
+        0
+      ]
     }
   }
 }

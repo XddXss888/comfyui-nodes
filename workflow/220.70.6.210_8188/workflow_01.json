@@ -12,7 +12,7 @@
         "1",
         1
       ],
-      "text": "corporate headquarters,  strategic planning, clean minimal composition, aspirational lifestyle, value and quality, soft gradient background, expert specialist, trustworthy local professional, personalized service, no text, no watermark, no logo, photorealistic"
+      "text": "SaaS dashboard,  data visualization, professional photography, balanced composition, contextually relevant, natural lighting, expert specialist, trustworthy local professional, personalized service, no text, no watermark, no logo, photorealistic"
     }
   },
   "3": {
@@ -28,8 +28,8 @@
   "4": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 800,
-      "height": 500,
+      "width": 1024,
+      "height": 576,
       "batch_size": 1
     }
   },
@@ -52,7 +52,7 @@
         "4",
         0
       ],
-      "seed": 8738557103287344,
+      "seed": 32252104810886720,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -80,7 +80,7 @@
         "6",
         0
       ],
-      "filename_prefix": "sb_a3c1e290_pricing"
+      "filename_prefix": "sb_a3c1e290_general"
     }
   }
 }

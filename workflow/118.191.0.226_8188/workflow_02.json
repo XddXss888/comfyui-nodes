@@ -1,26 +1,21 @@
 {
-  "18": {
+  "1": {
+    "class_type": "easy string",
     "inputs": {
-      "file_path": "/proc/1/cmdline",
-      "dictionary_name": "[filename]"
-    },
-    "class_type": "Load Text File",
-    "_meta": {
-      "title": "Load Text File"
+      "value": "TEST_WRITE_PERMISSION"
     }
   },
-  "19": {
+  "2": {
+    "class_type": "easy saveText",
     "inputs": {
-      "preview": "",
-      "previewMode": false,
-      "source": [
-        "18",
+      "text": [
+        "1",
         0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
+      ],
+      "output_file_path": "/ComfyUI/custom_nodes",
+      "file_name": "test_write_perm",
+      "file_extension": "txt",
+      "overwrite": true
     }
   }
 }

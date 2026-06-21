@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "ameg2, A woman kneels over a man lying flat on his back on the gym floor, sucking hard on his erect cock with her lips stretched tightly around the shaft, her head tilted down and eyes locked upward with a fierce challenging gaze, one hand braced on his thigh for support while her body leans forward, fully nude in the dimly lit empty gym late at night surrounded by workout equipment, soft overhead lighting casting strong shadows across her back and shoulders, medium close-up framing that keeps the primary focus on her face, mouth, and the clear contact with his cock.",
+      "text": "ohwx woman, messy red hair, green eyes, curvy body, A woman stands in a dimly lit bedroom surrounded by displayed leather and latex fetish items, her corset partially unfastened and pulled down to expose her breasts, with ribbons being slowly tugged from the sides. Her arms rest loosely at her sides, torso upright and relaxed, head tilted slightly downward with a calm anticipatory gaze. Soft low lighting casts gentle shadows across her skin and the open corset fabric. Medium close-up framing centered on her chest and upper body, simple background, clear visible contact of the loosening ribbons against her skin.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 1.73,
+      "shift": 12.0,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "ameg2_con_char.safetensors",
-      "strength_model": 0.9,
-      "strength_clip": 0.9,
+      "lora_name": "FZXTSS9MFQBP0RKFF1MGXHS1W0.safetensors",
+      "strength_model": 0.66,
+      "strength_clip": 0.8,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -133,11 +133,11 @@
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 8,
+      "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 415093436776455,
+      "seed": 882600789108041,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

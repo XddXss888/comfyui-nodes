@@ -1,10 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": [
-        "160",
-        0
-      ],
+      "text": "核心主体：参考图\n破晓晨光，U9停在巨大的国际集装箱码头之巅，身后的吊车群如同冷酷的巨兽。U9的红色在冷调的晨曦和深蓝色海水的映衬下极度夺目。海平面上升起巨大的由AI线条勾勒出的“全球智驾网络地图”轮廓，象征中国工业实力。",
       "clip": [
         "18",
         0
@@ -111,7 +108,7 @@
   },
   "97": {
     "inputs": {
-      "image": "蔚来汽车es9白底图 (1).jpg"
+      "image": "wechat_2026-06-17_145125_582.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +118,7 @@
   "99": {
     "inputs": {
       "add_noise": "enable",
-      "noise_seed": 346620584553450,
+      "noise_seed": 697611451459208,
       "steps": 9,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -170,7 +167,7 @@
   "102": {
     "inputs": {
       "add_noise": "disable",
-      "noise_seed": 443103026360493,
+      "noise_seed": 430861050480499,
       "steps": 9,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -240,8 +237,8 @@
   },
   "120": {
     "inputs": {
-      "target_width": 1036,
-      "target_height": 936,
+      "target_width": 1116,
+      "target_height": 1264,
       "padding_color": "black",
       "interpolation": "area",
       "image": [
@@ -256,9 +253,9 @@
   },
   "129": {
     "inputs": {
-      "left": 128,
-      "top": 112,
-      "right": 128,
+      "left": 24,
+      "top": 512,
+      "right": 24,
       "bottom": 40,
       "feathering": 40,
       "image": [
@@ -291,7 +288,7 @@
   },
   "148": {
     "inputs": {
-      "seed": 2150263890,
+      "seed": 73817897,
       "resolution": 3840,
       "max_resolution": 3840,
       "batch_size": 1,
@@ -357,8 +354,8 @@
   },
   "157": {
     "inputs": {
-      "width": 3840,
-      "height": 2160,
+      "width": 2160,
+      "height": 3840,
       "position": "center",
       "x_offset": 0,
       "y_offset": 0,
@@ -399,36 +396,12 @@
   },
   "160": {
     "inputs": {
-      "seed": 2798036861,
-      "scene_type": "雨夜城市"
+      "seed": 2486066569,
+      "scene_type": ""
     },
     "class_type": "PromptLibraryRandom",
     "_meta": {
       "title": "🎲 提示词库随机"
-    }
-  },
-  "161": {
-    "inputs": {
-      "images": [
-        "129",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
-    }
-  },
-  "162": {
-    "inputs": {
-      "images": [
-        "131",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
     }
   }
 }

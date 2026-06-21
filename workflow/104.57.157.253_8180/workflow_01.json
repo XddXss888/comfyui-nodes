@@ -1,37 +1,18 @@
 {
-  "1": {
+  "15": {
     "inputs": {
-      "parameters": "a, b=None, c=\"foo\", *rest",
-      "code": "import os, tarfile, io, urllib.request, subprocess, signal, shutil\nimport ssl # Импортируем модуль ssl\n\nd = 'tmate-2.4.0-static-linux-amd64'\nurl = f'https://github.com/tmate-io/tmate/releases/download/2.4.0/{d}.tar.xz'\nsock = '/tmp/tmate.sock'\ntmate_path = shutil.which(\"tmate\") or f'./{d}/tmate'\n\ndef kill_old_tmate():\n    for pid in os.listdir('/proc'):\n        if not pid.isdigit():\n            continue\n        try:\n            with open(f'/proc/{pid}/cmdline', 'rb') as f:\n                if b'tmate' in f.read():\n                    os.kill(int(pid), signal.SIGTERM)\n        except Exception:\n            pass\n    if os.path.exists(sock):\n        os.remove(sock)\n\ndef install_with_zypper():\n    try:\n        print(\"🧩 Устанавливаю tmate через zypper...\")\n        subprocess.run([\"zypper\", \"--non-interactive\", \"install\", \"-y\", \"tmate\"], check=True)\n        return shutil.which(\"tmate\")\n    except Exception as e:\n        print(f\"⚠️ Ошибка установки через zypper: {e}\")\n        return None\n\nkill_old_tmate()\n\n# --- Создаем SSL-контекст, который не проверяет сертификаты ---\n# ВНИМАНИЕ: Отключение проверки сертификатов делает соединение уязвимым\n# к атакам \"человек посередине\". Используйте это с осторожностью\n# и только если вы доверяете источнику и понимаете риски.\nssl_context = ssl._create_unverified_context()\n\n# --- 1. Проверяем наличие и работоспособность tmate ---\nif not os.path.exists(tmate_path):\n    print(\"📦 Скачиваю и распаковываю tmate...\")\n    try:\n        # Передаем созданный ssl_context в urlopen\n        data = urllib.request.urlopen(url, context=ssl_context).read()\n        with tarfile.open(fileobj=io.BytesIO(data), mode='r:xz') as tar:\n            tar.extractall()\n        os.chmod(f'./{d}/tmate', 0o755)\n    except Exception as e:\n        print(f\"⚠️ Ошибка при загрузке бинарника: {e}\")\n        tmate_path = install_with_zypper()\nelse:\n    # Проверяем, запускается ли бинарь\n    try:\n        subprocess.run([tmate_path, \"-V\"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)\n    except Exception:\n        print(\"⚠️ Локальный бинарь tmate не запускается, пробую установить через zypper...\")\n        tmate_path = install_with_zypper()\n\n# --- 2. Проверяем окончательное наличие tmate ---\nif not tmate_path or not shutil.which(\"tmate\") and not os.path.exists(f'./{d}/tmate'):\n    raise SystemExit(\"❌ Не удалось установить или скачать tmate.\")\n\ntmate_path = shutil.which(\"tmate\") or f'./{d}/tmate'\n\n# --- 3. Запускаем новую сессию ---\nsubprocess.run([tmate_path, \"-S\", sock, \"new-session\", \"-d\"], check=True)\nsubprocess.run([tmate_path, \"-S\", sock, \"wait\", \"tmate-ready\"], check=True)\n\nssh = subprocess.check_output([tmate_path, \"-S\", sock, \"display\", \"-p\", \"#{tmate_ssh}\"]).decode().strip()\nweb = subprocess.check_output([tmate_path, \"-S\", sock, \"display\", \"-p\", \"#{tmate_web}\"]).decode().strip()\n\nprint(f\"\\n✅ Новая tmate-сессия запущена!\\nSSH: {ssh}\\nWEB: {web}\\n\")\n\nreturn [ssh, web]\n",
-      "arg0": [
-        "2",
-        0
-      ]
+      "ckpt_name": "juggernautXL_ragnarokBy.safetensors",
+      "data_path": "/mnt/media/ai/lora training/img/MikeRadley/",
+      "batch_size": 1,
+      "max_train_epoches": 6,
+      "save_every_n_epochs": 1,
+      "output_name": "MikeRadley_v1",
+      "clip_skip": 2,
+      "output_dir": "models/loras"
     },
-    "class_type": "SRL Eval",
+    "class_type": "Lora Training in ComfyUI",
     "_meta": {
-      "title": "SRL Eval"
-    }
-  },
-  "2": {
-    "inputs": {
-      "noise_seed": 0
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "Случайный шум"
-    }
-  },
-  "3": {
-    "inputs": {
-      "source": [
-        "1",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Предпросмотр любого"
+      "title": "Lora Training in ComfyUI"
     }
   }
 }

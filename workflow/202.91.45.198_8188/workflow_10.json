@@ -1,572 +1,200 @@
 {
-  "10": {
+  "6": {
     "inputs": {
-      "model": "hunyuan3d-dit-v2-0-fp16.safetensors",
-      "attention_mode": "sdpa",
-      "cublas_ops": false
-    },
-    "class_type": "Hy3DModelLoader",
-    "_meta": {
-      "title": "Hy3DModelLoader"
-    }
-  },
-  "13": {
-    "inputs": {
-      "image": "#Psuxos by who (15).jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Загрузить изображение"
-    }
-  },
-  "17": {
-    "inputs": {
-      "filename_prefix": "3D/Hy3D",
-      "file_format": "glb",
-      "save_file": true,
-      "trimesh": [
-        "59",
+      "text": "An amateur video shot on a smartphone camera showing a closeup of a vagina from below, her labia is spread by her fingers, she has light pink nail polish with long square-shaped nails, a patch of pubic hair is visible above her vagina, her skin is light-toned, she has long dark brown hair and brown eyes, her body is slender, natural indoor lighting with soft shadows, in the background there are vertical string curtains and a green circular object partially visible.",
+      "clip": [
+        "38",
         0
       ]
     },
-    "class_type": "Hy3DExportMesh",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "Hy3DExportMesh"
+      "title": "CLIP Text Encode (Positive Prompt)"
     }
   },
-  "28": {
+  "7": {
     "inputs": {
-      "model": "hunyuan3d-delight-v2-0"
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "38",
+        0
+      ]
     },
-    "class_type": "DownloadAndLoadHy3DDelightModel",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "(Down)Load Hy3D DelightModel"
+      "title": "CLIP Text Encode (Negative Prompt)"
     }
   },
-  "35": {
+  "8": {
     "inputs": {
-      "steps": 50,
-      "width": 512,
-      "height": 512,
-      "cfg_image": 1.0,
-      "seed": 0,
-      "delight_pipe": [
-        "28",
+      "samples": [
+        "58",
         0
       ],
-      "image": [
-        "64",
-        0
-      ],
-      "scheduler": [
-        "148",
+      "vae": [
+        "39",
         0
       ]
     },
-    "class_type": "Hy3DDelightImage",
+    "class_type": "VAEDecode",
     "_meta": {
-      "title": "Hy3DDelightImage"
+      "title": "Декодировать VAE"
     }
   },
-  "45": {
+  "37": {
     "inputs": {
-      "images": [
-        "35",
-        0
-      ]
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
     },
-    "class_type": "PreviewImage",
+    "class_type": "UNETLoader",
     "_meta": {
-      "title": "Предварительный просмотр изображения"
+      "title": "Загрузить модель диффузии"
     }
   },
-  "52": {
+  "38": {
     "inputs": {
-      "width": 1024,
-      "height": 1024,
-      "interpolation": "lanczos",
-      "method": "pad",
-      "condition": "always",
-      "multiple_of": 2,
-      "image": [
-        "13",
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Загрузить CLIP"
+    }
+  },
+  "39": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Загрузить VAE"
+    }
+  },
+  "54": {
+    "inputs": {
+      "shift": 8.000000000000002,
+      "model": [
+        "37",
         0
       ]
     },
-    "class_type": "ImageResize+",
+    "class_type": "ModelSamplingSD3",
     "_meta": {
-      "title": "🔧 Image Resize"
+      "title": "Выборка модели SD3"
     }
   },
   "55": {
     "inputs": {
-      "mode": "base",
-      "use_jit": true
+      "shift": 8.0,
+      "model": [
+        "56",
+        0
+      ]
     },
-    "class_type": "TransparentBGSession+",
+    "class_type": "ModelSamplingSD3",
     "_meta": {
-      "title": "🔧 InSPyReNet TransparentBG"
+      "title": "Выборка модели SD3"
     }
   },
   "56": {
     "inputs": {
-      "rembg_session": [
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Загрузить модель диффузии"
+    }
+  },
+  "57": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 347478738085968,
+      "steps": 20,
+      "cfg": 3.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 10,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "54",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "61",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "KSamplerHigh"
+    }
+  },
+  "58": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 20,
+      "cfg": 3.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 10,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
         "55",
         0
       ],
-      "image": [
-        "52",
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "57",
         0
       ]
     },
-    "class_type": "ImageRemoveBackground+",
+    "class_type": "KSamplerAdvanced",
     "_meta": {
-      "title": "🔧 Image Remove Background"
-    }
-  },
-  "59": {
-    "inputs": {
-      "remove_floaters": true,
-      "remove_degenerate_faces": true,
-      "reduce_faces": false,
-      "max_facenum": 200000,
-      "smooth_normals": false,
-      "trimesh": [
-        "140",
-        0
-      ]
-    },
-    "class_type": "Hy3DPostprocessMesh",
-    "_meta": {
-      "title": "Hy3D Postprocess Mesh"
+      "title": "KSamplerLow"
     }
   },
   "61": {
     "inputs": {
-      "camera_azimuths": "0, 90, 180, 270, 0, 180",
-      "camera_elevations": "0, 0, 0, 0, 90, -90",
-      "view_weights": "1, 0.1, 0.5, 0.1, 0.05, 0.05",
-      "camera_distance": 1.45,
-      "ortho_scale": 1.2
+      "width": 928,
+      "height": 528,
+      "length": 81,
+      "batch_size": 1
     },
-    "class_type": "Hy3DCameraConfig",
+    "class_type": "EmptyHunyuanLatentVideo",
     "_meta": {
-      "title": "Hy3D Camera Config"
+      "title": "Пустой HunyuanLatentVideo"
     }
   },
-  "64": {
-    "inputs": {
-      "x": 0,
-      "y": 0,
-      "resize_source": false,
-      "destination": [
-        "133",
-        0
-      ],
-      "source": [
-        "52",
-        0
-      ],
-      "mask": [
-        "56",
-        1
-      ]
-    },
-    "class_type": "ImageCompositeMasked",
-    "_meta": {
-      "title": "Составное изображение с маской"
-    }
-  },
-  "79": {
-    "inputs": {
-      "render_size": 1024,
-      "texture_size": 2048,
-      "normal_space": "world",
-      "trimesh": [
-        "83",
-        0
-      ],
-      "camera_config": [
-        "61",
-        0
-      ]
-    },
-    "class_type": "Hy3DRenderMultiView",
-    "_meta": {
-      "title": "Hy3D Render MultiView"
-    }
-  },
-  "83": {
-    "inputs": {
-      "trimesh": [
-        "59",
-        0
-      ]
-    },
-    "class_type": "Hy3DMeshUVWrap",
-    "_meta": {
-      "title": "Hy3D Mesh UV Wrap"
-    }
-  },
-  "85": {
-    "inputs": {
-      "model": "hunyuan3d-paint-v2-0"
-    },
-    "class_type": "DownloadAndLoadHy3DPaintModel",
-    "_meta": {
-      "title": "(Down)Load Hy3D PaintModel"
-    }
-  },
-  "88": {
-    "inputs": {
-      "view_size": 512,
-      "steps": 25,
-      "seed": 1024,
-      "denoise_strength": 1.0,
-      "pipeline": [
-        "85",
-        0
-      ],
-      "ref_image": [
-        "35",
-        0
-      ],
-      "normal_maps": [
-        "79",
-        0
-      ],
-      "position_maps": [
-        "79",
-        1
-      ],
-      "camera_config": [
-        "61",
-        0
-      ],
-      "scheduler": [
-        "149",
-        0
-      ]
-    },
-    "class_type": "Hy3DSampleMultiView",
-    "_meta": {
-      "title": "Hy3D Sample MultiView"
-    }
-  },
-  "90": {
+  "74": {
     "inputs": {
       "images": [
-        "79",
+        "8",
         0
       ]
     },
     "class_type": "PreviewImage",
     "_meta": {
       "title": "Предварительный просмотр изображения"
-    }
-  },
-  "92": {
-    "inputs": {
-      "images": [
-        "117",
-        0
-      ],
-      "renderer": [
-        "79",
-        2
-      ],
-      "camera_config": [
-        "61",
-        0
-      ]
-    },
-    "class_type": "Hy3DBakeFromMultiview",
-    "_meta": {
-      "title": "Hy3D Bake From Multiview"
-    }
-  },
-  "98": {
-    "inputs": {
-      "texture": [
-        "104",
-        0
-      ],
-      "renderer": [
-        "129",
-        2
-      ]
-    },
-    "class_type": "Hy3DApplyTexture",
-    "_meta": {
-      "title": "Hy3D Apply Texture"
-    }
-  },
-  "99": {
-    "inputs": {
-      "filename_prefix": "3D/Hy3D_textured",
-      "file_format": "glb",
-      "save_file": true,
-      "trimesh": [
-        "98",
-        0
-      ]
-    },
-    "class_type": "Hy3DExportMesh",
-    "_meta": {
-      "title": "Hy3DExportMesh"
-    }
-  },
-  "104": {
-    "inputs": {
-      "inpaint_radius": 3,
-      "inpaint_method": "ns",
-      "texture": [
-        "129",
-        0
-      ],
-      "mask": [
-        "129",
-        1
-      ]
-    },
-    "class_type": "CV2InpaintTexture",
-    "_meta": {
-      "title": "CV2 Inpaint Texture"
-    }
-  },
-  "111": {
-    "inputs": {
-      "images": [
-        "88",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image: Multiview results"
-    }
-  },
-  "116": {
-    "inputs": {
-      "images": [
-        "79",
-        1
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Предварительный просмотр изображения"
-    }
-  },
-  "117": {
-    "inputs": {
-      "width": 2048,
-      "height": 2048,
-      "interpolation": "lanczos",
-      "method": "stretch",
-      "condition": "always",
-      "multiple_of": 0,
-      "image": [
-        "88",
-        0
-      ]
-    },
-    "class_type": "ImageResize+",
-    "_meta": {
-      "title": "🔧 Image Resize"
-    }
-  },
-  "125": {
-    "inputs": {
-      "images": [
-        "92",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image: Initial baked texture"
-    }
-  },
-  "126": {
-    "inputs": {
-      "images": [
-        "129",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image: vertex inpainted texture"
-    }
-  },
-  "127": {
-    "inputs": {
-      "images": [
-        "104",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image: fully inpainted texture"
-    }
-  },
-  "129": {
-    "inputs": {
-      "texture": [
-        "92",
-        0
-      ],
-      "mask": [
-        "92",
-        1
-      ],
-      "renderer": [
-        "92",
-        2
-      ]
-    },
-    "class_type": "Hy3DMeshVerticeInpaintTexture",
-    "_meta": {
-      "title": "Hy3D Mesh Vertice Inpaint Texture"
-    }
-  },
-  "132": {
-    "inputs": {
-      "value": 0.8,
-      "width": 512,
-      "height": 512
-    },
-    "class_type": "SolidMask",
-    "_meta": {
-      "title": "Сплошная маска"
-    }
-  },
-  "133": {
-    "inputs": {
-      "mask": [
-        "132",
-        0
-      ]
-    },
-    "class_type": "MaskToImage",
-    "_meta": {
-      "title": "Преобразовать маску в изображение"
-    }
-  },
-  "138": {
-    "inputs": {
-      "mask": [
-        "56",
-        1
-      ]
-    },
-    "class_type": "MaskPreview+",
-    "_meta": {
-      "title": "🔧 Mask Preview"
-    }
-  },
-  "140": {
-    "inputs": {
-      "box_v": 1.01,
-      "octree_resolution": 768,
-      "num_chunks": 32000,
-      "mc_level": 0.0,
-      "mc_algo": "mc",
-      "enable_flash_vdm": true,
-      "force_offload": true,
-      "vae": [
-        "10",
-        1
-      ],
-      "latents": [
-        "141",
-        0
-      ]
-    },
-    "class_type": "Hy3DVAEDecode",
-    "_meta": {
-      "title": "Hy3D VAE Decode"
-    }
-  },
-  "141": {
-    "inputs": {
-      "guidance_scale": 5.5,
-      "steps": 50,
-      "seed": 123,
-      "scheduler": "FlowMatchEulerDiscreteScheduler",
-      "force_offload": true,
-      "pipeline": [
-        "10",
-        0
-      ],
-      "image": [
-        "52",
-        0
-      ],
-      "mask": [
-        "56",
-        1
-      ]
-    },
-    "class_type": "Hy3DGenerateMesh",
-    "_meta": {
-      "title": "Hy3DGenerateMesh"
-    }
-  },
-  "148": {
-    "inputs": {
-      "scheduler": "Euler A",
-      "sigmas": "default",
-      "pipeline": [
-        "28",
-        0
-      ]
-    },
-    "class_type": "Hy3DDiffusersSchedulerConfig",
-    "_meta": {
-      "title": "Hy3D Diffusers Scheduler Config"
-    }
-  },
-  "149": {
-    "inputs": {
-      "scheduler": "Euler A",
-      "sigmas": "default",
-      "pipeline": [
-        "85",
-        0
-      ]
-    },
-    "class_type": "Hy3DDiffusersSchedulerConfig",
-    "_meta": {
-      "title": "Hy3D Diffusers Scheduler Config"
-    }
-  },
-  "153": {
-    "inputs": {
-      "model_file": [
-        "17",
-        0
-      ],
-      "image": ""
-    },
-    "class_type": "Preview3D",
-    "_meta": {
-      "title": "Предварительный просмотр 3D"
-    }
-  },
-  "154": {
-    "inputs": {
-      "model_file": [
-        "99",
-        0
-      ],
-      "image": ""
-    },
-    "class_type": "Preview3D",
-    "_meta": {
-      "title": "Предварительный просмотр 3D"
     }
   }
 }

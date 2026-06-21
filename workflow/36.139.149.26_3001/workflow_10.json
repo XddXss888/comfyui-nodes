@@ -35,18 +35,18 @@
   },
   "91": {
     "inputs": {
-      "seed": 916445791366624,
+      "seed": 386389556562250,
       "steps": 10,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 0.8,
+      "denoise": 1.0,
       "model": [
         "86",
         0
       ],
       "positive": [
-        "130",
+        "92",
         0
       ],
       "negative": [
@@ -54,13 +54,29 @@
         0
       ],
       "latent_image": [
-        "116",
+        "96",
         0
       ]
     },
     "class_type": "KSampler",
     "_meta": {
       "title": "K采样器"
+    }
+  },
+  "92": {
+    "inputs": {
+      "text": [
+        "114",
+        0
+      ],
+      "clip": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
     }
   },
   "93": {
@@ -101,82 +117,27 @@
       "title": "加载VAE"
     }
   },
-  "116": {
-    "inputs": {
-      "pixels": [
-        "117",
-        0
-      ],
-      "vae": [
-        "95",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE编码"
-    }
-  },
-  "117": {
-    "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 1,
-      "proportional_height": 1,
-      "fit": "letterbox",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_side": "None",
-      "scale_to_length": 1024,
-      "background_color": "#000000",
-      "image": [
-        "124",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
-    "_meta": {
-      "title": "LayerUtility: ImageScaleByAspectRatio V2"
-    }
-  },
-  "118": {
-    "inputs": {
-      "image": "b24eafe4_comfyui-airport-editorial_01594_.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "124": {
+  "96": {
     "inputs": {
       "width": [
-        "125",
+        "97",
         0
       ],
       "height": [
-        "125",
+        "97",
         1
       ],
-      "upscale_method": "lanczos",
-      "keep_proportion": "stretch",
-      "pad_color": "0, 0, 0",
-      "crop_position": "center",
-      "divisible_by": 2,
-      "device": "cpu",
-      "image": [
-        "118",
-        0
-      ]
+      "batch_size": 1
     },
-    "class_type": "ImageResizeKJv2",
+    "class_type": "EmptyLatentImage",
     "_meta": {
-      "title": "Resize Image v2"
+      "title": "空Latent图像"
     }
   },
-  "125": {
+  "97": {
     "inputs": {
       "use_custom_resolution": false,
-      "resolution": "720x1280 (9:16) (竖屏)",
+      "resolution": "1920x1080 (16:9) (横屏)",
       "custom_width": 1024,
       "custom_height": 1024
     },
@@ -185,17 +146,13 @@
       "title": "TT分辨率选择器"
     }
   },
-  "130": {
+  "114": {
     "inputs": {
-      "text": "统一风格：电影感，电影级构图，戏剧光影，高级镜头语言，图1 中景，平视，大堂内红绸高挂，婚宴布置，一名宾客手指门口方向，表情惊喜，其他宾客纷纷扭头看向门口，堂内气氛热闹，场景 场景 1，景别 中景，机位 平视，运镜 摇镜，cinematic storyboard keyframe, clear staging, dramatic composition, consistent characters，尺寸比例：9:16，分辨率：720p，图1是地点：李员外家大堂",
-      "clip": [
-        "87",
-        0
-      ]
+      "value": "秋日白昼·电厂总工办公室（高空垂直鸟瞰｜内景）\n\n16:9宽屏，高空垂直90度鸟瞰视角，轻微自然透视、室内立体空间感，80年代复古刑侦老电影胶片质感，低饱和冷灰褪色色调，柔和均匀室内平光，光影温润立体。高空鸟瞰完整矩形总工办公室室内全景，墙体、顶角线、地面立体分层，空间方正通透；右侧整面木格玻璃窗立体凸起，窗框结构清晰、窗台层次分明；左侧靠墙立式实木储物柜立体贴墙摆放，柜体方正厚重、柜门闭合，顶面、侧面立体结构完整；地面整块粗麻地垫平铺，边界规整立体；顶面实木横梁纵向贯穿，凸起结构层次清晰；靠前窗位置实木宽大办公桌立体居中摆放，办公椅正对窗户、轮廓立体；办公桌两侧铁皮文件筐、堆叠工程图纸、搪瓷茶水筒高低错落、摆放规整；墙角铁皮暖壶、木质矮凳立体落地陈设；办公区、储物区、杂物区立体分区明确，80年代国营办公陈设饱满写实，室内空间立体通透，复古氛围感浓厚，纯空场景无人物无道具。"
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "CLIP文本编码"
+      "title": "提示词"
     }
   }
 }

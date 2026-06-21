@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "input_e3adafa9baa3.jpg"
+      "image": "input_3c49cdbf91e6.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -19,6 +19,31 @@
     "class_type": "SaveImage",
     "_meta": {
       "title": "保存图像"
+    }
+  },
+  "11": {
+    "inputs": {
+      "prompt": "保持图中人物的一致性，生成他们和Ailurus fulgens合影的画面，左右各有一只可爱的Ailurus fulgens趴在他们肩头，背景是蓝天，五彩云朵，绿植和花朵，画面是2D卡通风格，色彩活泼",
+      "model": "doubao-seedream-4-0-250828",
+      "response_format": "url",
+      "resolution": "4K",
+      "aspect_ratio": "1:1",
+      "width": 1024,
+      "height": 1024,
+      "apikey": "fe023f32-413c-41f8-a35d-694231e4c96a",
+      "sequential_image_generation": "disabled",
+      "max_images": 1,
+      "seed": 1981331834,
+      "watermark": false,
+      "stream": false,
+      "image1": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "Comfly_Doubao_Seedream_4",
+    "_meta": {
+      "title": "Comfly Doubao Seedream4.0"
     }
   },
   "12": {
@@ -41,7 +66,7 @@
     },
     "class_type": "LayerUtility: RoundedRectangle",
     "_meta": {
-      "title": "LayerUtility: RoundedRectangle"
+      "title": "图层工具：圆角矩形"
     }
   },
   "13": {
@@ -56,38 +81,13 @@
       "scale_to_length": 928,
       "background_color": "#000000",
       "image": [
-        "16",
+        "11",
         0
       ]
     },
     "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
     "_meta": {
       "title": "按宽高比缩放_V2"
-    }
-  },
-  "16": {
-    "inputs": {
-      "prompt": "保持图中人物的一致性，生成他们和熊猫合影的画面，左右两侧有可爱的熊猫趴在他们肩头，背景是竹园风光。写真摄影风格，轻微美颜，人像精修",
-      "model": "doubao-seedream-4-0-250828",
-      "response_format": "url",
-      "resolution": "4K",
-      "aspect_ratio": "1:1",
-      "width": 1024,
-      "height": 1024,
-      "apikey": "fe023f32-413c-41f8-a35d-694231e4c96a",
-      "sequential_image_generation": "disabled",
-      "max_images": 1,
-      "seed": 944522458,
-      "watermark": false,
-      "stream": false,
-      "image1": [
-        "1",
-        0
-      ]
-    },
-    "class_type": "Comfly_Doubao_Seedream_4",
-    "_meta": {
-      "title": "Comfly Doubao Seedream4.0"
     }
   }
 }

@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "eurameg1, At a luxury VIP auction under glamorous stage lighting, an elegant woman in a fitted evening gown stands with confident poise and a knowing smile, her eyes directed at the man's fully exposed erect penis as he removes his trousers and underwear, the intimate male anatomy clearly visible in the foreground while keeping primary visual focus on her poised reaction and the refined opulent setting.",
+      "text": "elvaross, A nude woman on all fours in doggystyle position on a bed inside a quiet dorm room at night, her back arched, knees and palms pressing into the mattress for support, breasts hanging naturally with visible contact from behind, head turned slightly with a soft expression, soft warm lamplight from a nearby desk lamp casting gentle shadows across her skin and the simple student room interior, medium close-up side angle framing focused on her body and the intimate contact.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "zimg-eurameg1-refine-con-char.safetensors",
-      "strength_model": 0.8,
-      "strength_clip": 0.8,
+      "lora_name": "TGZW383YGE7RTN4ZTNPAM4FT50.safetensors",
+      "strength_model": 0.88,
+      "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.5,
+      "eta": 0.4,
       "sampler_name": "exponential/res_2s",
-      "scheduler": "beta57",
-      "steps": 10,
+      "scheduler": "bong_tangent",
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 453373455444780,
+      "seed": 494111015108424,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

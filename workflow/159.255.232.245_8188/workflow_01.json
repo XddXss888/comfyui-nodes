@@ -2,10 +2,10 @@
   "3": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 1380047793,
-      "steps": 25,
+      "seed": 994794974,
+      "steps": 28,
       "cfg": 7.0,
-      "sampler_name": "euler",
+      "sampler_name": "euler_ancestral",
       "scheduler": "normal",
       "denoise": 1.0,
       "model": [
@@ -29,24 +29,24 @@
   "4": {
     "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "ckpt_name": "wd-1-4-anime_e2.ckpt"
+      "ckpt_name": "anything-v3-full.safetensors"
     }
   },
   "5": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 512,
-      "height": 512,
+      "width": 1080,
+      "height": 1920,
       "batch_size": 1
     }
   },
   "6": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "silver wolf",
+      "text": "silver wolf, full body, sexy body art",
       "clip": [
-        "4",
-        1
+        "9980",
+        0
       ]
     }
   },
@@ -55,8 +55,8 @@
     "inputs": {
       "text": "blurry, lowres, watermark, text, bad anatomy, ugly",
       "clip": [
-        "4",
-        1
+        "9980",
+        0
       ]
     }
   },
@@ -81,6 +81,16 @@
         "8",
         0
       ]
+    }
+  },
+  "9980": {
+    "class_type": "CLIPSetLastLayer",
+    "inputs": {
+      "clip": [
+        "4",
+        1
+      ],
+      "stop_at_clip_layer": -2
     }
   }
 }

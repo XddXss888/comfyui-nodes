@@ -1,7 +1,7 @@
 {
   "12": {
     "inputs": {
-      "image": "hezhongai_00100_-20-ill7sm.jpg"
+      "image": "1161006888-am2a7518-tpe8w8.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -13,9 +13,9 @@
       "api_url": "https://3dcdn.580ai.net/v1beta/models/gemini-3.1-flash-image-preview:generateContent",
       "header_key": "Authorization",
       "header_value": "sk-Lyx9OF97YMK0suEi6ZIPzq4E9d3dhIKJzO2YS5WpAsZbZpxS",
-      "text": "图中把披肩网纱袖的长度缩短到裙摆边一样长度就可以，其它不要任何改动",
-      "aspect_ratio": "1:1",
-      "image_size": "2K",
+      "text": "年轻东亚甜美女模特，蓬松的深棕色长卷发，柔和自然淡妆，面带温柔浅笑，身穿黑色双排扣系带长款羊绒大衣，内搭白色打底衫，浅蓝色下装，全身完整人像。场景是现代轻奢店铺落地窗门口，室内暖光灯带，简约高级的店内环境，地面为浅灰色水磨石，模特一只手抬起轻撩头发，另一只手拎着棕色托特包，自然光搭配室内柔和暖光，电商女装实拍，真实相机拍摄，原生画质，自然景深，画面色调柔和，构图完整，8K高清。",
+      "aspect_ratio": "3:4",
+      "image_size": "4K",
       "timeout": 200,
       "retry_count": 2,
       "image_1": [

@@ -33,7 +33,7 @@
   },
   "4": {
     "inputs": {
-      "seed": 9550645990,
+      "seed": 488064434,
       "steps": [
         "13",
         0
@@ -103,7 +103,7 @@
   "13": {
     "inputs": {
       "steps": 27,
-      "cfg": 10.6
+      "cfg": 2.0
     },
     "class_type": "StepsAndCfg",
     "_meta": {
@@ -125,7 +125,7 @@
   },
   "20": {
     "inputs": {
-      "seed": 9550645990,
+      "seed": 488064434,
       "steps": 10,
       "cfg": [
         "13",
@@ -205,7 +205,7 @@
   },
   "32": {
     "inputs": {
-      "text": "ever_larimar_base, Bikini, masterpiece, best quality, amazing quality"
+      "text": "ever_jiho_love,  ratatatat74, white shirt, necktie, korean school uniform, pencil skirt, delinquent, classroom, masterpiece, best quality, amazing quality"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -277,7 +277,7 @@
   },
   "65": {
     "inputs": {
-      "data": "[{\"name\": \"larimar_base.safetensors\", \"strength\": 0.9, \"strength_clip\": 1.0}]",
+      "data": "[{\"name\": \"jiho_love.safetensors\", \"strength\": 1.0, \"strength_clip\": 1.0}]",
       "model": [
         "36",
         0

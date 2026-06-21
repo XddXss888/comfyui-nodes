@@ -8,7 +8,7 @@
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "t",
+      "text": "A solitary lighthouse stands on a rugged cliff edge, its white and red stripes glowing softly under the amber light of a setting sun. The sea churns with foamy waves crashing against the rocks, spray catching the golden light. The sky is a dramatic gradient of deep indigo to fiery orange, with wispy clouds scattered across the horizon. Long shadows stretch from the lighthouse, and a faint, ethereal mist hovers over the water. 🔬 Hyperrealistic, ultra-detailed, 8K, photorealistic textures on the lighthouse’s weathered surface and the rocky cliff, subsurface scattering in the foam and mist, HDR lighting emphasizing the warm sun rays and cool shadows, cinematic composition with a low-angle view, depth of field blurring the distant horizon.",
       "clip": [
         "1",
         1
@@ -16,59 +16,69 @@
     }
   },
   "3": {
-    "class_type": "EmptyLatentImage",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "width": 512,
-      "height": 512,
-      "batch_size": 1
+      "text": "",
+      "clip": [
+        "1",
+        1
+      ]
     }
   },
   "4": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "5": {
     "class_type": "KSampler",
     "inputs": {
+      "seed": 870327276,
+      "steps": 20,
+      "cfg": 7.0,
+      "sampler_name": "euler",
+      "scheduler": "karras",
+      "denoise": 1.0,
       "model": [
         "1",
         0
       ],
-      "seed": 42,
-      "steps": 1,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "normal",
       "positive": [
         "2",
         0
       ],
       "negative": [
-        "2",
-        0
-      ],
-      "latent_image": [
         "3",
         0
       ],
-      "denoise": 1.0
-    }
-  },
-  "5": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "vae": [
-        "1",
-        2
-      ],
-      "samples": [
+      "latent_image": [
         "4",
         0
       ]
     }
   },
   "6": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "7": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "t",
+      "filename_prefix": "sd_web",
       "images": [
-        "5",
+        "6",
         0
       ]
     }

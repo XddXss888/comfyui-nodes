@@ -1,11 +1,11 @@
 # 211.206.164.162:8188
 
-**GPU**: RTX A5000 | **显存**: 24 GB | **空闲**: 1 GB
-**内存**: 188 GB (空闲 91 GB)
+**GPU**: RTX A5000 | **显存**: 24 GB | **空闲**: 3 GB
+**内存**: 188 GB (空闲 85 GB)
 **版本**: 0.3.71
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-15 18:27:45
-**历史总数**: 6 | **成功**: 6
+**扫描时间**: 2026-06-21 17:39:00
+**历史总数**: 9 | **成功**: 9
 
 ## 工作流列表
 
@@ -80,3 +80,33 @@ exposed skin, exposed
 - **节点数**: 6
 - **模型** (1):
   - flux1-dev-fp8.safetensors
+
+### 7. workflow_07.json
+- **Prompt ID**: `28500b2a-1896-42f4-bfab-252925c59ad4`
+- **类型**: 文生图
+- **节点数**: 7
+- **模型** (1):
+  - flux1-dev-fp8.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Logo discord avec les lettres RS pour un developpeur
+  - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality
+
+### 8. workflow_08.json
+- **Prompt ID**: `f735ee57-933f-4c18-825e-1c8fe400a079`
+- **类型**: 文生图
+- **节点数**: 7
+- **模型** (1):
+  - illustrious-fp8-SEMImergeij.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Logo discord avec les lettres RS pour un developpeur
+  - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality
+
+### 9. workflow_09.json
+- **Prompt ID**: `711e3b1b-19d8-43fa-a189-59c0b588d193`
+- **类型**: 文生图
+- **节点数**: 7
+- **模型** (1):
+  - illustrious-fp8-SEMImergeij.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Logo discord avec les lettres RS pour un developpeur
+  - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality

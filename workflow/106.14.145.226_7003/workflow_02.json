@@ -1,22 +1,48 @@
 {
-  "154": {
+  "3": {
     "inputs": {
-      "sampler_name": "euler_ancestral"
+      "ckpt_name": "ltx-2.3-22b-distilled-1.1.safetensors"
     },
-    "class_type": "KSamplerSelect",
+    "class_type": "LowVRAMCheckpointLoader",
     "_meta": {
-      "title": "K采样器选择"
+      "title": "🅛🅣🅧 Low VRAM Checkpoint Loader"
     }
   },
-  "164": {
+  "5": {
     "inputs": {
-      "frame_rate": 25.0,
+      "text": "已瘫倒在有裂纹的水泥地上的李婶，身体有节奏地前后来回摇晃。双掌反复拍击地面——啪、啪、啪——随着每次拍击皮肤愈发通红。灰白短发向前甩动完全遮住面孔。她口中先是哭着撕心裂肺的哀嚎：“燃气灶……好像忘了……” 声音微弱，满是茫然。随后在一次剧烈抽泣中她猛然后仰露出面庞：嘴巴大张发出撕心裂肺的哀嚎：“小宝！我的小宝啊！” 颈部青筋暴起，泪水与尘土混成泥痕。红色花纹夹克随每次前倾在肩部堆积褶皱，黑色长裤在水泥地上摩擦。米白布包与灰色外套散落身旁。背景水枪喷射持续，声音渐远。整段缓慢推镜。结束状态：头后仰，面庞完全暴露在终极悲痛中，嘴巴大张如无声尖叫，双手平压地面，身体前倾坍塌，彻底耗尽。",
+      "clip": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "worst quality, blurry, jittery, distorted, inconsistent appearance，duplicate character, extra character, clone, crowd, multiple demons, multiple masters, multiple disciples, character duplication, orbit camera, circular camera movement, spinning camera, rotating camera around character, aerial orbit, drone shot, face change, costume change, hairstyle change, character fusion, floating character, flying combat, exaggerated martial arts, acrobatic jump, low quality, blurry, bad anatomy, extra limbs, distorted body, unstable composition",
+      "clip": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "7": {
+    "inputs": {
+      "frame_rate": 50.0,
       "positive": [
-        "607",
-        1
+        "5",
+        0
       ],
       "negative": [
-        "420",
+        "6",
         0
       ]
     },
@@ -25,117 +51,193 @@
       "title": "LTXV条件"
     }
   },
-  "358": {
+  "8": {
     "inputs": {
-      "start_step": 0,
-      "end_step": -1,
-      "sigmas": [
-        "514",
-        0
-      ]
-    },
-    "class_type": "VisualizeSigmasKJ",
-    "_meta": {
-      "title": "VisualizeSigmasKJ"
-    }
-  },
-  "414": {
-    "inputs": {
-      "unet_name": "ltx-2.3-22b-distilled-1.1_transformer_only_fp8_scaled.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "416": {
-    "inputs": {
-      "clip_name1": "gemma_3_12B_it.safetensors",
-      "clip_name2": "ltx-2.3_text_projection_bf16.safetensors",
-      "type": "ltxv",
-      "device": "default"
-    },
-    "class_type": "DualCLIPLoader",
-    "_meta": {
-      "title": "双CLIP加载器"
-    }
-  },
-  "420": {
-    "inputs": {
-      "conditioning": [
-        "607",
-        1
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "条件零化"
-    }
-  },
-  "470": {
-    "inputs": {
-      "vae_name": "LTX-Kijai\\LTX23_audio_vae_bf16.safetensors",
-      "device": "main_device",
-      "weight_dtype": "bf16"
-    },
-    "class_type": "VAELoaderKJ",
-    "_meta": {
-      "title": "VAELoader KJ"
-    }
-  },
-  "471": {
-    "inputs": {
-      "samples": [
-        "549",
+      "width": [
+        "43",
         0
       ],
+      "height": [
+        "44",
+        0
+      ],
+      "length": [
+        "50",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLTXVLatentVideo",
+    "_meta": {
+      "title": "空Latent视频（LTXV）"
+    }
+  },
+  "9": {
+    "inputs": {
+      "frame_idx": 0,
+      "strength": 1.0,
+      "latent_downscale_factor": 1.0,
+      "crop": "center",
+      "use_tiled_encode": false,
+      "tile_size": 256,
+      "tile_overlap": 64,
+      "positive": [
+        "7",
+        0
+      ],
+      "negative": [
+        "7",
+        1
+      ],
       "vae": [
-        "553",
+        "3",
+        2
+      ],
+      "latent": [
+        "8",
+        0
+      ],
+      "image": [
+        "28",
         0
       ]
     },
-    "class_type": "VAEDecode",
+    "class_type": "LTXAddVideoICLoRAGuide",
     "_meta": {
-      "title": "VAE解码"
+      "title": "🅛🅣🅧 Add Video IC-LoRA Guide"
     }
   },
-  "514": {
+  "10": {
     "inputs": {
-      "scheduler": "linear_quadratic",
-      "steps": 8,
-      "denoise": 1.0,
+      "lora_name": "LTX-2.3-Licon-MSR-V1.safetensors",
+      "strength_model": 1.0,
       "model": [
-        "542",
+        "3",
         0
       ]
     },
-    "class_type": "BasicScheduler",
+    "class_type": "LTXICLoRALoaderModelOnly",
     "_meta": {
-      "title": "基本调度器"
+      "title": "🅛🅣🅧 IC-LoRA Loader Model Only"
     }
   },
-  "542": {
+  "13": {
     "inputs": {
-      "sage_attention": "auto",
-      "allow_compile": false,
-      "model": [
-        "414",
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "15": {
+    "inputs": {
+      "noise_seed": 767637577971003
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  },
+  "16": {
+    "inputs": {
+      "noise": [
+        "15",
+        0
+      ],
+      "guider": [
+        "37",
+        0
+      ],
+      "sampler": [
+        "13",
+        0
+      ],
+      "sigmas": [
+        "27",
+        0
+      ],
+      "latent_image": [
+        "23",
         0
       ]
     },
-    "class_type": "PathchSageAttentionKJ",
+    "class_type": "SamplerCustomAdvanced",
     "_meta": {
-      "title": "Patch Sage Attention KJ"
+      "title": "自定义采样器（高级）"
     }
   },
-  "547": {
+  "17": {
     "inputs": {
-      "frames_number": 489,
-      "frame_rate": 25,
+      "positive": [
+        "9",
+        0
+      ],
+      "negative": [
+        "9",
+        1
+      ],
+      "latent": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "LTXVCropGuides",
+    "_meta": {
+      "title": "LTXV裁剪指导"
+    }
+  },
+  "19": {
+    "inputs": {
+      "fps": 50.0,
+      "images": [
+        "38",
+        0
+      ],
+      "audio": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "20": {
+    "inputs": {
+      "filename_prefix": "LTX-2/MSR_verify_iclora_guide",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  },
+  "21": {
+    "inputs": {
+      "ckpt_name": "ltx-2.3-22b-distilled-1.1.safetensors"
+    },
+    "class_type": "LTXVAudioVAELoader",
+    "_meta": {
+      "title": "LTXV音频VAE加载器"
+    }
+  },
+  "22": {
+    "inputs": {
+      "frames_number": [
+        "50",
+        0
+      ],
+      "frame_rate": 50,
       "batch_size": 1,
       "audio_vae": [
-        "470",
+        "21",
         0
       ]
     },
@@ -144,14 +246,14 @@
       "title": "LTXV 空音频潜空间"
     }
   },
-  "548": {
+  "23": {
     "inputs": {
       "video_latent": [
-        "582",
-        0
+        "9",
+        2
       ],
       "audio_latent": [
-        "547",
+        "22",
         0
       ]
     },
@@ -160,10 +262,10 @@
       "title": "LTXVConcatAVLatent"
     }
   },
-  "549": {
+  "24": {
     "inputs": {
       "av_latent": [
-        "561",
+        "16",
         0
       ]
     },
@@ -172,14 +274,14 @@
       "title": "LTXV分离音视频潜空间"
     }
   },
-  "550": {
+  "25": {
     "inputs": {
       "samples": [
-        "549",
+        "24",
         1
       ],
       "audio_vae": [
-        "470",
+        "21",
         0
       ]
     },
@@ -188,174 +290,170 @@
       "title": "LTXV音频VAE解码"
     }
   },
-  "553": {
+  "26": {
     "inputs": {
-      "vae_name": "LTX-Kijai\\LTX23_video_vae_bf16.safetensors",
-      "device": "main_device",
-      "weight_dtype": "bf16"
+      "text_encoder": "gemma_3_12B_it_fp4_mixed.safetensors",
+      "ckpt_name": "ltx-2.3-22b-distilled-1.1.safetensors",
+      "device": "default"
     },
-    "class_type": "VAELoaderKJ",
+    "class_type": "LTXAVTextEncoderLoader",
     "_meta": {
-      "title": "VAELoader KJ"
+      "title": "LTXV音频文本编码器加载器"
     }
   },
-  "561": {
+  "27": {
     "inputs": {
-      "add_noise": true,
-      "noise_seed": 17,
-      "cfg": 1.0,
-      "model": [
-        "588",
+      "sigmas": "1.0, 0.99375, 0.9875, 0.98125, 0.975, 0.909375, 0.725, 0.421875, 0.0"
+    },
+    "class_type": "ManualSigmas",
+    "_meta": {
+      "title": "自定义Sigmas"
+    }
+  },
+  "28": {
+    "inputs": {
+      "1": [
+        "29",
         0
       ],
-      "positive": [
-        "164",
+      "2": [
+        "40",
         0
       ],
-      "negative": [
-        "164",
-        1
-      ],
-      "sampler": [
-        "154",
+      "3": [
+        "33",
         0
       ],
-      "sigmas": [
-        "358",
+      "4": [
+        "80",
         0
       ],
-      "latent_image": [
-        "548",
+      "width": [
+        "43",
+        0
+      ],
+      "height": [
+        "44",
+        0
+      ],
+      "frame_count": 33,
+      "background": [
+        "30",
         0
       ]
     },
-    "class_type": "SamplerCustom",
+    "class_type": "LiconMSR",
     "_meta": {
-      "title": "自定义采样器"
+      "title": "Licon MSR"
     }
   },
-  "577": {
+  "29": {
     "inputs": {
-      "width": 720,
-      "height": 1280,
-      "length": 630,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLTXVLatentVideo",
-    "_meta": {
-      "title": "空Latent视频（LTXV）"
-    }
-  },
-  "582": {
-    "inputs": {
-      "num_images": "1",
-      "num_images.strength_1": 1.0,
-      "num_images.index_1": 0,
-      "vae": [
-        "553",
-        0
-      ],
-      "latent": [
-        "577",
-        0
-      ],
-      "num_images.image_1": [
-        "586",
-        0
-      ]
-    },
-    "class_type": "LTXVImgToVideoInplaceKJ",
-    "_meta": {
-      "title": "LTXVImgToVideoInplaceKJ"
-    }
-  },
-  "584": {
-    "inputs": {
-      "image": "script_img_1781492696.png"
+      "image": "msr_ref0_1782010660.png"
     },
     "class_type": "LoadImage",
     "_meta": {
       "title": "加载图像"
     }
   },
-  "586": {
+  "30": {
     "inputs": {
-      "img_compression": 30,
-      "image": [
-        "584",
-        0
-      ]
+      "image": "msr_bg_1782010660.png"
     },
-    "class_type": "LTXVPreprocess",
+    "class_type": "LoadImage",
     "_meta": {
-      "title": "LTXV预处理"
+      "title": "加载图像"
     }
   },
-  "588": {
+  "33": {
     "inputs": {
-      "preview_rate": 8,
+      "image": "msr_ref0_1782010660.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "37": {
+    "inputs": {
+      "cfg": 1.0,
       "model": [
-        "607",
+        "10",
         0
+      ],
+      "positive": [
+        "9",
+        0
+      ],
+      "negative": [
+        "9",
+        1
       ]
     },
-    "class_type": "LTX2SamplingPreviewOverride",
+    "class_type": "CFGGuider",
     "_meta": {
-      "title": "LTX2 Sampling Preview Override"
+      "title": "CFG引导器"
     }
   },
-  "604": {
+  "38": {
     "inputs": {
-      "frame_rate": 25.0,
-      "loop_count": 0,
-      "filename_prefix": "ltx23",
-      "format": "video/h264-mp4",
-      "pix_fmt": "yuv420p",
-      "crf": 19,
-      "save_metadata": true,
-      "trim_to_audio": false,
-      "pingpong": false,
-      "save_output": true,
-      "images": [
-        "471",
-        0
+      "samples": [
+        "17",
+        2
       ],
-      "audio": [
-        "550",
-        0
+      "vae": [
+        "3",
+        2
       ]
     },
-    "class_type": "VHS_VideoCombine",
+    "class_type": "VAEDecode",
     "_meta": {
-      "title": "v2"
+      "title": "VAE解码"
     }
   },
-  "607": {
+  "40": {
     "inputs": {
-      "global_prompt": "核心风格：写实室内场景，新闻播报风格，中年男性主播，居家/小型演播室环境，画质高清1080P，自然光+补光，画面稳定，真人实景质感，语速平稳正式。镜头运镜平缓，无剧烈晃动，人声同步口播台词。",
-      "max_frames": 630,
-      "timeline_data": "{\"segments\":[{\"prompt\":\"An old man says \\\"Well well... what do we have here?\\\" and takes his hat off\",\"length\":123,\"color\":\"#4f8edc\"},{\"prompt\":\"A red panda jumps onto the old mans lap\",\"length\":122,\"color\":\"#e07b3a\"},{\"prompt\":\"The old man feeds the red panda an ice cream cone\",\"length\":122,\"color\":\"#d9534f\"},{\"prompt\":\"The red panda grabs the ice cream cone and runs away, while the old man says \\\"oh, okay then... keep it\\\"\",\"length\":122,\"color\":\"#5cb85c\"}]}",
-      "local_prompts": "镜头：中景，正面平视\r\n人物动作：男子端坐电脑前，左手手持纸质新闻稿件，右手轻放在键盘上，身体坐直，目光先看向稿件，再转向镜头。\r\n口播台词：各位观众大家好，欢迎收看今日资讯。\r\n分镜提示词：写实中景，中年男性坐在书桌电脑前，左手拿纸质文稿，右手搭在键盘上，坐姿端正，神情正式，室内明亮环境，桌面摆放电脑、稿件，画面清晰，5秒动态画面，人物自然微动。 | 镜头：中近景，微侧角度\r\n人物动作：右手开始敲击键盘，头部微微低头扫视手中稿件，嘴巴同步播报，手部持续打字动作。\r\n口播台词：首先为大家带来本地民生相关消息。\r\n分镜提示词：中近景，男子侧身低头看手中稿件，右手快速敲击电脑键盘，口部做出说话动作，神态专注，桌面电脑屏幕亮起，室内柔光，动态流畅，5秒。 | 镜头：近景，聚焦上半身+手部\r\n人物动作：停止低头，抬头正视前方（镜头），左手举着稿件放在胸前，右手间断敲击键盘，语气沉稳播报。\r\n口播台词：近期城市便民服务举措已全面落地。\r\n分镜提示词：人物近景，男子抬头正视镜头，左手持稿置于身前，右手间歇性敲击键盘，表情严肃专业，上半身为主画面，光影柔和，真人动态画面，5秒。 | 镜头：轻微推镜，特写上半身+面部\r\n人物动作：双手短暂离开键盘，双手扶稳稿件，身体微微前倾，语速平稳继续播报，眼神认真。\r\n口播台词：多项服务站点，将为市民提供便利。\r\n分镜提示词：轻微推镜特写人物上半身，男子双手扶住纸质稿件，身体微微前倾，专注播报，面部表情自然，电脑在背景处，画面聚焦人物，动态连贯，5秒。 | 镜头：拉回标准中景，正面镜头\r\n人物动作：重新将右手放回键盘继续敲击，左手依旧握稿，身体坐回原位，收尾播报，神态温和。\r\n口播台词：以上就是本条资讯全部内容。\r\n分镜提示词：正面标准中景，男子坐直身体，右手再次敲击键盘，左手紧握新闻稿件，收尾播报，氛围平和正式，完整室内场景，画面稳定，5秒。",
-      "segment_lengths": "126,126,126,126,126",
-      "epsilon": 0.001,
-      "fps": 24.0,
-      "time_units": "frames",
-      "model": [
-        "542",
-        0
-      ],
-      "clip": [
-        "416",
-        0
-      ],
-      "latent": [
-        "577",
-        0
-      ]
+      "image": "msr_ref0_1782010660.png"
     },
-    "class_type": "PromptRelayEncodeTimeline",
+    "class_type": "LoadImage",
     "_meta": {
-      "title": "Prompt Relay Encode (Timeline)"
+      "title": "加载图像"
+    }
+  },
+  "43": {
+    "inputs": {
+      "value": 760
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "INT Constant"
+    }
+  },
+  "44": {
+    "inputs": {
+      "value": 1280
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "INT Constant"
+    }
+  },
+  "50": {
+    "inputs": {
+      "value": 501
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "INT Constant"
+    }
+  },
+  "80": {
+    "inputs": {
+      "image": "msr_ref0_1782010660.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
     }
   }
 }

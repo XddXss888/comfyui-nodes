@@ -18,7 +18,7 @@
         "1",
         1
       ],
-      "text": "RAW photo, ultra realistic skin texture, stunning Korean idol woman with dark brown twin low buns, delicate features, button nose, fierce runway attitude, shot on 35mm lens, environmental portrait, three-quarter view, framed through weathered stone archway of a vintage film studio, cross lighting from two sides casting dramatic shadows across her cheekbones, wearing a flowy summer dress in pale lavender, one hand resting on the archway edge, chin slightly lifted with commanding gaze, flawless porcelain skin, editorial makeup with sharp contour and smoked burgundy eyes, old film reels and warm tungsten practicals visible in the background bokeh, cinematic depth, window light spilling across dusty wooden floors, fashion editorial quality, no text, no watermarks"
+      "text": "Failed to authenticate. API Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"Invalid authentication credentials\"},\"request_id\":\"req_011CcGAEitbA5RkAio15n6Qc\"}"
     }
   },
   "4": {
@@ -58,7 +58,7 @@
         "5",
         0
       ],
-      "seed": 164317416,
+      "seed": 624314592,
       "control_after_generate": "fixed",
       "steps": 30,
       "cfg": 4.5,
@@ -87,7 +87,7 @@
         "7",
         0
       ],
-      "filename_prefix": "portrait_164317416"
+      "filename_prefix": "portrait_624314592"
     }
   }
 }

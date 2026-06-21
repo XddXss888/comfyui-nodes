@@ -2,13 +2,13 @@
   "1": {
     "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "ckpt_name": "cyberrealistic.safetensors"
+      "ckpt_name": "dreamshaper_8.safetensors"
     }
   },
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Un paysage serein avec un lac calme reflétant des montagnes enneigées sous un ciel de coucher de soleil doux, teintes roses et oranges, un petit ponton en bois s’avançant dans l’eau, un pin solitaire sur la rive, style réaliste, détails précis, 8K.",
+      "text": "Logo discord avec les lettres RS pour un developpeur",
       "clip": [
         "1",
         1
@@ -36,7 +36,7 @@
   "5": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 3226136673,
+      "seed": 2471723693,
       "steps": 20,
       "cfg": 7.0,
       "sampler_name": "dpmpp_2m",

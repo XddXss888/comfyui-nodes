@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "e1st_asn, In a dimly lit Chinese tea house with traditional paper lanterns overhead and bamboo dark wood decor, a woman in a deep burgundy floral embroidered qipao top sits cross-legged on floor cushions at a low wooden table, passionately engaged in mutual intimate caressing and wet licking with her partner, both exploring each other with visible pleasure and glistening contact, her hands and mouth focused on the sensual act while maintaining a serene focused expression, soft lantern lighting illuminating the clear readable pose and body interaction, medium close-up framing with simple background.",
+      "text": "ohwx woman, messy red hair, green eyes, curvy body, In a stylish living room with dim lighting, a dominant woman in a tight shiny black latex outfit and high heels stands in a powerful waist-up pose, one hand gripping firmly and the other raised in control, looking down with an authoritative expression as she takes charge of the submissive man kneeling before her.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 1.73,
+      "shift": 12.0,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "nano_Korean.safetensors",
-      "strength_model": 0.81,
-      "strength_clip": 1.0,
+      "lora_name": "FZXTSS9MFQBP0RKFF1MGXHS1W0.safetensors",
+      "strength_model": 0.66,
+      "strength_clip": 0.8,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -133,11 +133,11 @@
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 8,
+      "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 585375340973065,
+      "seed": 882600789108041,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

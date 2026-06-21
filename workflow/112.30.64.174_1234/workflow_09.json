@@ -1,12 +1,79 @@
 {
-  "8": {
+  "3": {
+    "inputs": {
+      "seed": 777282834847000,
+      "steps": 30,
+      "cfg": 5.0,
+      "sampler_name": "er_sde",
+      "scheduler": "simple",
+      "denoise": 0.8,
+      "model": [
+        "278",
+        0
+      ],
+      "positive": [
+        "222",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器1"
+    }
+  },
+  "5": {
+    "inputs": {
+      "width": 768,
+      "height": 1536,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "worst quality, low quality, early, old, score_1, score_2, score_3, cartoon, graphic, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, long body, bad anatomy, bad hands, missing fingers, extra fingers, extra digits, fewer digits, cropped, very displeasing, artist name, blurry, jpeg artifacts, lowres, censor",
+      "clip": [
+        "223",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "17": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "105": {
     "inputs": {
       "samples": [
-        "19",
+        "3",
         0
       ],
       "vae": [
-        "15",
+        "265",
         0
       ]
     },
@@ -15,33 +82,231 @@
       "title": "VAE解码"
     }
   },
-  "11": {
+  "203": {
     "inputs": {
-      "text": "nsfw, 1girl, 1boy, hetero, male pov, modern bedroom, bed, white bedsheet, pillows, night, dim lighting, indoor, cowboy shot, from above, face focus, The black-haired girl paralyzed on the bed, her legs spread wide and completely stiff, her pelvis suspended in the air in intense orgasm. 1girl, lin xueqing (original), black hair, long hair, very messy hair, red eyes, slender, fair skin, small breasts, oval face, tareme, long eyelashes, thin eyebrows, small mouth, small nose, completely nude, nude, bare shoulders, navel, bare legs, bare feet, ahegao, rolling eyes, empty eyes, open mouth, drooling, saliva trail, looking up, streaming tears, heavy sweat, wet body, extreme arched back, trembling, tense muscles, spread legs, splayed toes, bare breasts, pointy nipples, pink nipples, pubic hairless, pussy, First-person view of a hand reaching over the frame, pressing down firmly on the base of the dark purple dilator. pov hands, holding sex toy base, vaginal object insertion, dildo inserted, purple dildo, glass anal plug inserted, female ejaculation, projectile squirt, copious pussy juice, squirting orgasm, liquid on toy, motion lines, intense lighting, ,very aesthetic, masterpiece, best quality, ultra-detailed, miaoka, high contrast, huge filesize,",
-      "clip": [
-        "45",
+      "model": "wd-swinv2-tagger-v3",
+      "threshold": 0.4,
+      "character_threshold": 0.4,
+      "replace_underscore": true,
+      "trailing_comma": false,
+      "exclude_tags": [
+        "225",
         0
+      ],
+      "tags": "asuna \\(blue archive\\), 1girl, long hair, breasts, looking at viewer, blush, smile, blue eyes, large breasts, 1boy, navel, closed mouth, jewelry, bare shoulders, very long hair, collarbone, hetero, sweat, penis, alternate costume, solo focus, indoors, sex, stomach, cum, mole, hair over one eye, halo, vaginal, see-through, pov, cum in pussy, light brown hair, straddling, girl on top, veil, pelvic curtain, bridal gauntlets, cowgirl position, mole on breast, blue halo, breast curtains, harem outfit, mouth veil",
+      "image": [
+        "204",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss",
+    "_meta": {
+      "title": "WD14 Tagger 🐍"
+    }
+  },
+  "204": {
+    "inputs": {
+      "image": "vi1ew.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "207": {
+    "inputs": {
+      "text_0": "asuna \\(blue archive\\), 1girl, long hair, breasts, looking at viewer, blush, smile, blue eyes, large breasts, 1boy, navel, closed mouth, jewelry, bare shoulders, very long hair, collarbone, hetero, sweat, penis, alternate costume, solo focus, indoors, sex, stomach, cum, mole, hair over one eye, halo, vaginal, see-through, pov, cum in pussy, light brown hair, straddling, girl on top, veil, pelvic curtain, bridal gauntlets, cowgirl position, mole on breast, blue halo, breast curtains, harem outfit, mouth veil",
+      "text": [
+        "203",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "219": {
+    "inputs": {
+      "string": "masterpiece, best quality, score_9, score_8, score_7, year 2025, newest, highres, absurdres, very aesthetic, scenery, "
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "String Literal"
+    }
+  },
+  "220": {
+    "inputs": {
+      "text1": [
+        "203",
+        0
+      ],
+      "text2": [
+        "219",
+        0
+      ]
+    },
+    "class_type": "TextCombinerTwo",
+    "_meta": {
+      "title": "Text Combiner 2"
+    }
+  },
+  "221": {
+    "inputs": {
+      "text_0": "asuna \\(blue archive\\), 1girl, long hair, breasts, looking at viewer, blush, smile, blue eyes, large breasts, 1boy, navel, closed mouth, jewelry, bare shoulders, very long hair, collarbone, hetero, sweat, penis, alternate costume, solo focus, indoors, sex, stomach, cum, mole, hair over one eye, halo, vaginal, see-through, pov, cum in pussy, light brown hair, straddling, girl on top, veil, pelvic curtain, bridal gauntlets, cowgirl position, mole on breast, blue halo, breast curtains, harem outfit, mouth veilmasterpiece, best quality, score_9, score_8, score_7, year 2025, newest, highres, absurdres, very aesthetic, scenery, ",
+      "text": [
+        "220",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "222": {
+    "inputs": {
+      "text": [
+        "220",
+        0
+      ],
+      "clip": [
+        "223",
+        1
       ]
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
+      "title": "CLIP文本编码"
     }
   },
-  "12": {
+  "223": {
     "inputs": {
-      "text": ",blue grid background, bad hands, deformed hands, bad anatomy, Deviant Art, lowres, worst quality, low quality, multiple views, censored, jpeg artifacts, realistic, 3d, (double navel:1.2), (extra navel:1.2), mutated, deformed, censor",
+      "__lm_autocomplete_meta_text": {
+        "version": 1,
+        "textWidgetName": "text"
+      },
+      "text": "<lora:Ha9siro:0.30>, <lora:Style without name:1.00>, <lora:Anime_artistic_2:0.20>, <lora:AIイラストおじさん (2):0.20>, <lora:绪儿 厚涂构图光影质感增强V3:0.15>, <lora:ATNR_V1.1_Lokr_f4_warmup_stable_decay (1):0.20> <lora:anima-highres-aesthetic-boost:0.30> <lora:skin texture style v5:0.07> <lora:DogmaV8.0-000022:0.30> <lora:anima_p3_rdbt_v0.29.b.122:1.00> <lora:anima-highres-aesthetic-boost:0.30>",
+      "loras": {
+        "__value__": [
+          {
+            "name": "Style without name",
+            "strength": "1.00",
+            "active": false,
+            "expanded": false,
+            "clipStrength": "1.00",
+            "locked": false
+          },
+          {
+            "name": "绪儿 厚涂构图光影质感增强V3",
+            "strength": "0.15",
+            "active": false,
+            "expanded": false,
+            "clipStrength": "0.15",
+            "locked": false
+          },
+          {
+            "name": "AIイラストおじさん (2)",
+            "strength": "0.20",
+            "active": false,
+            "expanded": false,
+            "clipStrength": "0.20",
+            "locked": false
+          },
+          {
+            "name": "ATNR_V1.1_Lokr_f4_warmup_stable_decay (1)",
+            "strength": "0.20",
+            "active": false,
+            "expanded": false,
+            "clipStrength": "0.20",
+            "locked": false
+          },
+          {
+            "name": "Ha9siro",
+            "strength": 0.3,
+            "active": false,
+            "expanded": false,
+            "clipStrength": 0.3,
+            "locked": false
+          },
+          {
+            "name": "Anime_artistic_2",
+            "strength": 0.2,
+            "active": true,
+            "expanded": false,
+            "clipStrength": 0.2,
+            "locked": false
+          },
+          {
+            "name": "anima-highres-aesthetic-boost",
+            "strength": "0.30",
+            "active": true,
+            "expanded": false,
+            "clipStrength": "0.30",
+            "locked": false
+          },
+          {
+            "name": "skin texture style v5",
+            "strength": 0.07,
+            "active": false,
+            "expanded": false,
+            "clipStrength": 0.07,
+            "locked": false
+          },
+          {
+            "name": "DogmaV8.0-000022",
+            "strength": "0.30",
+            "active": false,
+            "expanded": false,
+            "clipStrength": "0.30",
+            "locked": false
+          },
+          {
+            "name": "anima_p3_rdbt_v0.29.b.122",
+            "strength": "0.30",
+            "active": true,
+            "expanded": false,
+            "clipStrength": "0.30",
+            "locked": false
+          }
+        ]
+      },
+      "model": [
+        "268",
+        0
+      ],
       "clip": [
-        "45",
+        "267",
         0
       ]
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "Lora Loader (LoraManager)",
     "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
+      "title": "Lora Loader (LoraManager)"
     }
   },
-  "15": {
+  "225": {
+    "inputs": {
+      "value": "watermark, sample watermark, weibo username, weibo, weibo logo, weibo watermark, censored, mosaic censoring, artist name, twitter username, bar censor, line censor, heart censor, blank censor, pointless censoring, identity censor, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, blurry"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "字符串（多行）"
+    }
+  },
+  "247": {
+    "inputs": {
+      "images": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "265": {
     "inputs": {
       "vae_name": "qwen_image_vae.safetensors"
     },
@@ -50,48 +315,7 @@
       "title": "加载VAE"
     }
   },
-  "19": {
-    "inputs": {
-      "seed": 7084034877,
-      "steps": 40,
-      "cfg": 5.0,
-      "sampler_name": "euler_ancestral",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "47",
-        0
-      ],
-      "positive": [
-        "11",
-        0
-      ],
-      "negative": [
-        "12",
-        0
-      ],
-      "latent_image": [
-        "28",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "28": {
-    "inputs": {
-      "width": 768,
-      "height": 1280,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "空Latent图像"
-    }
-  },
-  "44": {
+  "266": {
     "inputs": {
       "unet_name": "Anima\\anime\\novaAnimeAM_v15.safetensors",
       "weight_dtype": "default"
@@ -101,7 +325,7 @@
       "title": "UNet加载器"
     }
   },
-  "45": {
+  "267": {
     "inputs": {
       "clip_name": "qwen_3_06b_base.safetensors",
       "type": "stable_diffusion",
@@ -112,11 +336,11 @@
       "title": "加载CLIP"
     }
   },
-  "47": {
+  "268": {
     "inputs": {
       "shift": 3.0,
       "model": [
-        "99",
+        "266",
         0
       ]
     },
@@ -125,61 +349,35 @@
       "title": "采样算法（AuraFlow）"
     }
   },
-  "66": {
+  "269": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "8",
-        0
-      ]
+      "text1": "",
+      "text2": ""
     },
-    "class_type": "SaveImage",
+    "class_type": "TextCombinerTwo",
     "_meta": {
-      "title": "保存图像"
+      "title": "Text Combiner 2"
     }
   },
-  "99": {
+  "278": {
     "inputs": {
-      "lora_name": "Anima\\style\\channelv2.safetensors",
-      "strength_model": 1.0,
+      "lllite_name": "anima-lllite-any-test-like-v2.safetensors",
+      "strength": 0.9,
+      "start_percent": 0.0,
+      "end_percent": 0.4,
+      "preserve_wrapper": false,
       "model": [
-        "101",
+        "223",
+        0
+      ],
+      "image": [
+        "204",
         0
       ]
     },
-    "class_type": "LoraLoaderModelOnly",
+    "class_type": "AnimaLLLiteApply",
     "_meta": {
-      "title": "LoRA加载器（仅模型）"
-    }
-  },
-  "100": {
-    "inputs": {
-      "unet_name": "novaAnimeAM_v15.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "101": {
-    "inputs": {
-      "unet_name": "Anima\\anime\\novaAnimeAM_v15.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "102": {
-    "inputs": {
-      "unet_name": "Anima\\anime\\novaAnimeAM_v15.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
+      "title": "Apply Anima ControlNet-LLLite"
     }
   }
 }

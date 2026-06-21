@@ -2,13 +2,13 @@
   "1": {
     "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "ckpt_name": "DreamShaperXL_Turbo_v2_1.safetensors"
+      "ckpt_name": "CounterfeitXL-V1.0.safetensors"
     }
   },
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "neon-lit cyberpunk street, rain, detailed",
+      "text": "Logo discord avec les lettres RS pour un developpeur",
       "clip": [
         "1",
         1
@@ -18,7 +18,7 @@
   "3": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "blurry, low quality",
+      "text": "blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality",
       "clip": [
         "1",
         1
@@ -29,18 +29,18 @@
     "class_type": "EmptyLatentImage",
     "inputs": {
       "width": 1024,
-      "height": 768,
+      "height": 1024,
       "batch_size": 1
     }
   },
   "5": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 717465705,
-      "steps": 6,
-      "cfg": 2.0,
-      "sampler_name": "euler",
-      "scheduler": "normal",
+      "seed": 2019169623,
+      "steps": 20,
+      "cfg": 7.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
       "denoise": 1.0,
       "model": [
         "1",
@@ -80,7 +80,7 @@
         "6",
         0
       ],
-      "filename_prefix": "dsxl_175"
+      "filename_prefix": "fantasy"
     }
   }
 }

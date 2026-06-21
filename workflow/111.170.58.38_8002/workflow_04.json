@@ -1,7 +1,7 @@
 {
   "12": {
     "inputs": {
-      "image": "5229287-5159-7-8y-3-ndrx15.jpg"
+      "image": "0260621165055431-54-rbs6yd.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -10,7 +10,7 @@
   },
   "15": {
     "inputs": {
-      "image": "hezhongai_00086_-20-b4wncf.png"
+      "image": "0260621165432180-18-l4t8n7.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -22,8 +22,8 @@
       "api_url": "https://3dcdn.580ai.net/v1beta/models/gemini-3.1-flash-image-preview:generateContent",
       "header_key": "Authorization",
       "header_value": "sk-Lyx9OF97YMK0suEi6ZIPzq4E9d3dhIKJzO2YS5WpAsZbZpxS",
-      "text": "图一服装不变，穿在一个欧洲漂亮女孩身上8-9岁金发，参考图二风格，禁止与图二人物场景一模一样，正面站着自然随意摆动的图，裙摆超蓬蓬效果长裙到脚，长的披纱袖跟裙摆一样长度，披纱要密集点不太透明，图一颜色不变 ，参考图二人物披发金发加小发饰，参考图二场景，长裙到脚，参考图一款式袖子是纱，参考图一款式",
-      "aspect_ratio": "1:1",
+      "text": "把图一模特身上的套装套在图二的模特身上",
+      "aspect_ratio": "3:4",
       "image_size": "2K",
       "timeout": 200,
       "retry_count": 2,

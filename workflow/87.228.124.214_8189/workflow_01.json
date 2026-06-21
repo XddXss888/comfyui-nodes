@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "l34n0r, chubby woman, A naked woman wearing only sheer lace stockings stands pressed against the wall inside a small hotel elevator, legs slightly parted, with a man's hand between her thighs and fingers inserted into her pussy in clear intimate contact, her body leaning back, one hand gripping his arm, aroused expression with parted lips and direct gaze, close elevator interior with metallic walls and floor buttons, soft warm overhead lighting, medium close-up framing from the waist up.",
+      "text": "elvaross, A young woman sits at a wooden desk in a cozy home study, books and notebooks spread open in front of her. She wears a tight short skirt that has ridden higher on her crossed legs, one knee over the other. Her chin rests playfully on her hand, elbow propped on the desk, body slightly leaned forward. She looks directly at the viewer with a light, inviting smile. Soft warm lamp light illuminates the scene from the side, creating gentle shadows across the desk and her legs. Medium shot from the waist up, clean composition, natural proportions, simple background with shelves and warm room lighting.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "z-3l34n0r.safetensors",
-      "strength_model": 0.78,
-      "strength_clip": 0.8,
+      "lora_name": "TGZW383YGE7RTN4ZTNPAM4FT50.safetensors",
+      "strength_model": 0.88,
+      "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.5,
+      "eta": 0.4,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 699584008911822,
+      "seed": 494111015108424,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

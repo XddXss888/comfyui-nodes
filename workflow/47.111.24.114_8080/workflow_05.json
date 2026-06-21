@@ -148,7 +148,7 @@
   },
   "125": {
     "inputs": {
-      "seed": 370161380728705,
+      "seed": 366418471668374,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -313,7 +313,7 @@
   },
   "160": {
     "inputs": {
-      "text": "736",
+      "text": "-10",
       "anything": [
         "97",
         12
@@ -326,7 +326,7 @@
   },
   "161": {
     "inputs": {
-      "text": "518",
+      "text": "1851",
       "anything": [
         "97",
         13
@@ -339,7 +339,7 @@
   },
   "188": {
     "inputs": {
-      "image": "ComfyUI_00495_.jpg"
+      "image": "121.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -375,7 +375,7 @@
   },
   "213": {
     "inputs": {
-      "image": "绿色模糊.jpg"
+      "image": "45度 (1).jpg"
     },
     "class_type": "LoadImage",
     "_meta": {

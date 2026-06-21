@@ -2,7 +2,7 @@
   "1": {
     "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "ckpt_name": "juggernautXL_ragnarok.safetensors"
+      "ckpt_name": "epicRealismXL_pureFix.safetensors"
     }
   },
   "2": {
@@ -18,7 +18,7 @@
         "1",
         1
       ],
-      "text": "A stunning Korean idol captured in a surprised candid moment, reflected in a rain-streaked glass panel along a riverside boardwalk at dusk. Rose gold textured shag cut catching the warm twilight. Soft round face with doe eyes wide in genuine astonishment, flawless porcelain skin with visible pores, dewy highlighter on cheekbones, gradient coral lip tint. Wearing a sharply tailored charcoal blazer over an ivory silk camisole top. Full body head to toe composition, shot on 24mm wide angle lens creating dynamic perspective distortion. Single dramatic spotlight cutting through surrounding darkness, casting long shadows across wet wooden planks. Purple-orange dusk sky reflected alongside her silhouette. Cinematic color grading, hyperrealistic SDXL render, ultra-detailed skin texture, no text, no watermarks."
+      "text": "Failed to authenticate. API Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"Invalid authentication credentials\"},\"request_id\":\"req_011CcFDLDLrAaqBUWPUPAYaP\"}"
     }
   },
   "4": {
@@ -28,7 +28,7 @@
         "1",
         1
       ],
-      "text": "lowres, blurry, bad anatomy, deformed, watermark, signature, extra fingers, cartoon, anime, painting"
+      "text": "lowres, blurry, bad anatomy, watermark, signature, oversaturated, harsh lighting, plastic skin"
     }
   },
   "5": {
@@ -58,11 +58,11 @@
         "5",
         0
       ],
-      "seed": 2095676645,
+      "seed": 1306069215,
       "control_after_generate": "fixed",
       "steps": 30,
-      "cfg": 4.0,
-      "sampler_name": "dpmpp_2m_sde",
+      "cfg": 5.0,
+      "sampler_name": "dpmpp_2m",
       "scheduler": "karras",
       "denoise": 1.0
     }
@@ -87,7 +87,7 @@
         "7",
         0
       ],
-      "filename_prefix": "portrait_2095676645"
+      "filename_prefix": "portrait_1306069215"
     }
   }
 }

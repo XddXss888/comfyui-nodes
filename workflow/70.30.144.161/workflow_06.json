@@ -1,8 +1,7 @@
 {
   "76": {
-    "id": "76",
     "inputs": {
-      "filename_prefix": "Sc_ImageMakerMax:",
+      "filename_prefix": "comfyui-airport-editorial",
       "images": [
         "91",
         0
@@ -14,7 +13,6 @@
     }
   },
   "85": {
-    "id": "85",
     "inputs": {
       "shift": 3.0,
       "model": [
@@ -28,7 +26,6 @@
     }
   },
   "86": {
-    "id": "86",
     "inputs": {
       "conditioning": [
         "92",
@@ -41,7 +38,6 @@
     }
   },
   "87": {
-    "id": "87",
     "inputs": {
       "unet_name": "z_image_turbo_bf16(1).safetensors",
       "weight_dtype": "default"
@@ -52,7 +48,6 @@
     }
   },
   "88": {
-    "id": "88",
     "inputs": {
       "clip_name": "qwen_3_4b.safetensors",
       "type": "qwen_image",
@@ -64,7 +59,6 @@
     }
   },
   "89": {
-    "id": "89",
     "inputs": {
       "vae_name": "ae.safetensors"
     },
@@ -74,7 +68,6 @@
     }
   },
   "90": {
-    "id": "90",
     "inputs": {
       "width": 1280,
       "height": 720,
@@ -86,7 +79,6 @@
     }
   },
   "91": {
-    "id": "91",
     "inputs": {
       "samples": [
         "93",
@@ -103,9 +95,8 @@
     }
   },
   "92": {
-    "id": "92",
     "inputs": {
-      "text": "Clean modern image of Jesus and his disciples Last Supper\n",
+      "text": "A 2002 Toyota Celica GTS, yellow, black realistic photography,\nsoft lighting, high detail, text \"SlideClip\"",
       "clip": [
         "88",
         0
@@ -117,9 +108,8 @@
     }
   },
   "93": {
-    "id": "93",
     "inputs": {
-      "seed": 1134937990,
+      "seed": 211569471316939,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "res_multistep",
@@ -148,7 +138,6 @@
     }
   },
   "94:47": {
-    "id": "94:47",
     "inputs": {
       "shift": 3,
       "model": [
@@ -162,7 +151,6 @@
     }
   },
   "94:42": {
-    "id": "94:42",
     "inputs": {
       "conditioning": [
         "94:45",
@@ -175,7 +163,6 @@
     }
   },
   "94:46": {
-    "id": "94:46",
     "inputs": {
       "unet_name": "z_image_turbo_bf16(1).safetensors",
       "weight_dtype": "default"
@@ -186,7 +173,6 @@
     }
   },
   "94:39": {
-    "id": "94:39",
     "inputs": {
       "clip_name": "qwen_3_4b.safetensors",
       "type": "qwen_image",
@@ -198,7 +184,6 @@
     }
   },
   "94:40": {
-    "id": "94:40",
     "inputs": {
       "vae_name": "ae.safetensors"
     },
@@ -208,7 +193,6 @@
     }
   },
   "94:41": {
-    "id": "94:41",
     "inputs": {
       "width": 1280,
       "height": 720,
@@ -220,7 +204,6 @@
     }
   },
   "94:43": {
-    "id": "94:43",
     "inputs": {
       "samples": [
         "94:44",
@@ -237,7 +220,6 @@
     }
   },
   "94:45": {
-    "id": "94:45",
     "inputs": {
       "text": "High-fashion editorial tight portrait, ultra-crisp detail\nclean modern sheen, faint high-key digital gloss\nBugatti sport car silver, red. doors open, really beautiful and sexy black woman standing in a sexy pose next to it text embroidered on right side bust \"SlideClip\"",
       "clip": [
@@ -251,9 +233,8 @@
     }
   },
   "94:44": {
-    "id": "94:44",
     "inputs": {
-      "seed": 2772216718,
+      "seed": 515554963911956,
       "steps": 8,
       "cfg": 1,
       "sampler_name": "res_multistep",

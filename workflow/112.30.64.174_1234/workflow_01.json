@@ -1,89 +1,38 @@
 {
-  "8": {
+  "3": {
     "inputs": {
-      "samples": [
-        "19",
-        0
-      ],
-      "vae": [
-        "15",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "11": {
-    "inputs": {
-      "text": "sfw, 1girl, solo, male pov, indoors, living room, cold lighting, blurred background, close-up, from front, face focus, The broken girl at the center of the frame, facing the camera directly, clutching her bathrobe collar tightly with her hands. lin ya (original), black hair, wet hair, slightly messy hair, brown eyes, tall, slender, fair skin, large breasts, oval face, narrow eyes, long eyelashes, thin eyebrows, small mouth, small nose, mole under eye, oversized dark grey flannel bathrobe, holding collar tightly, white knuckles, open eyes, looking at viewer, tears, crying silently, tear-streaked face, pale face, despair, incomprehension, broken eyes, slightly open mouth, trembling, psychological breakdown, intense angle, cinematic lighting, depth of field, ,very aesthetic, masterpiece, best quality, ultra-detailed, miaoka, high contrast, huge filesize,",
-      "clip": [
-        "45",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
-    }
-  },
-  "12": {
-    "inputs": {
-      "text": ",blue grid background, bad hands, deformed hands, bad anatomy, Deviant Art, lowres, worst quality, low quality, multiple views, censored, jpeg artifacts, realistic, 3d, (double navel:1.2), (extra navel:1.2), mutated, deformed, censor",
-      "clip": [
-        "45",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
-    }
-  },
-  "15": {
-    "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "19": {
-    "inputs": {
-      "seed": 120839952,
-      "steps": 40,
+      "seed": 67656699532925,
+      "steps": 30,
       "cfg": 5.0,
       "sampler_name": "euler_ancestral",
-      "scheduler": "simple",
+      "scheduler": "karras",
       "denoise": 1.0,
       "model": [
-        "47",
+        "200",
         0
       ],
       "positive": [
-        "11",
+        "206",
         0
       ],
       "negative": [
-        "12",
-        0
+        "206",
+        1
       ],
       "latent_image": [
-        "28",
+        "5",
         0
       ]
     },
     "class_type": "KSampler",
     "_meta": {
-      "title": "K采样器"
+      "title": "K采样器1"
     }
   },
-  "28": {
+  "5": {
     "inputs": {
-      "width": 768,
-      "height": 1280,
+      "width": 600,
+      "height": 1336,
       "batch_size": 1
     },
     "class_type": "EmptyLatentImage",
@@ -91,45 +40,24 @@
       "title": "空Latent图像"
     }
   },
-  "44": {
+  "7": {
     "inputs": {
-      "unet_name": "Anima\\anime\\novaAnimeAM_v15.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "45": {
-    "inputs": {
-      "clip_name": "qwen_3_06b_base.safetensors",
-      "type": "stable_diffusion",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载CLIP"
-    }
-  },
-  "47": {
-    "inputs": {
-      "shift": 3.0,
-      "model": [
-        "99",
-        0
+      "text": "blue grid background, bad hands, deformed hands, bad anatomy, Deviant Art, lowres, worst quality, low quality, multiple views, censored, jpeg artifacts, realistic, 3d,(double navel:1.2), (extra navel:1.2), mutated, deformed,censor",
+      "clip": [
+        "223",
+        1
       ]
     },
-    "class_type": "ModelSamplingAuraFlow",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "采样算法（AuraFlow）"
+      "title": "CLIP文本编码"
     }
   },
-  "66": {
+  "17": {
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "8",
+        "102",
         0
       ]
     },
@@ -138,48 +66,571 @@
       "title": "保存图像"
     }
   },
-  "99": {
+  "40": {
     "inputs": {
-      "lora_name": "Anima\\style\\channelv2.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "101",
-        0
-      ]
+      "model_name": "4xUltrasharp_4xUltrasharpV10.pt"
     },
-    "class_type": "LoraLoaderModelOnly",
+    "class_type": "UpscaleModelLoader",
     "_meta": {
-      "title": "LoRA加载器（仅模型）"
-    }
-  },
-  "100": {
-    "inputs": {
-      "unet_name": "novaAnimeAM_v15.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
+      "title": "加载放大模型"
     }
   },
   "101": {
     "inputs": {
-      "unet_name": "Anima\\anime\\novaAnimeAM_v15.safetensors",
-      "weight_dtype": "default"
+      "scale_method": "nearest-exact",
+      "seed": 617809762420499,
+      "steps": 30,
+      "cfg": 5.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "karras",
+      "denoise": 0.3,
+      "use_tiled_vae": false,
+      "tile_size": 1024,
+      "model": [
+        "200",
+        0
+      ],
+      "vae": [
+        "218",
+        2
+      ],
+      "positive": [
+        "206",
+        0
+      ],
+      "negative": [
+        "206",
+        1
+      ],
+      "upscale_model_opt": [
+        "40",
+        0
+      ]
     },
-    "class_type": "UNETLoader",
+    "class_type": "PixelKSampleUpscalerProvider",
     "_meta": {
-      "title": "UNet加载器"
+      "title": "PixelKSampleUpscalerProvider"
     }
   },
   "102": {
     "inputs": {
-      "unet_name": "Anima\\anime\\novaAnimeAM_v15.safetensors",
-      "weight_dtype": "default"
+      "upscale_factor": 2.0,
+      "steps": 1,
+      "temp_prefix": "multiply",
+      "step_mode": "simple",
+      "vae_compression": 8,
+      "pixels": [
+        "105",
+        0
+      ],
+      "upscaler": [
+        "101",
+        0
+      ],
+      "vae": [
+        "218",
+        2
+      ]
     },
-    "class_type": "UNETLoader",
+    "class_type": "IterativeImageUpscale",
     "_meta": {
-      "title": "UNet加载器"
+      "title": "Iterative Upscale (Image)1"
+    }
+  },
+  "103": {
+    "inputs": {
+      "simple_image_compare_widget": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=simple_compare._temp_ignco_00001_.png&type=temp&subfolder=&rand=0.14794608737948967"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=simple_compare._temp_ignco_00002_.png&type=temp&subfolder=&rand=0.20447868474984776"
+          }
+        ]
+      },
+      "image_a": [
+        "105",
+        0
+      ],
+      "image_b": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "SimpleImageCompare",
+    "_meta": {
+      "title": "迭代-1"
+    }
+  },
+  "104": {
+    "inputs": {
+      "simple_image_compare_widget": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=simple_compare._temp_jdizb_00001_.png&type=temp&subfolder=&rand=0.6292738780604654"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=simple_compare._temp_jdizb_00002_.png&type=temp&subfolder=&rand=0.4742562645500211"
+          }
+        ]
+      },
+      "image_a": [
+        "102",
+        0
+      ],
+      "image_b": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "SimpleImageCompare",
+    "_meta": {
+      "title": "迭代-2"
+    }
+  },
+  "105": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "218",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "200": {
+    "inputs": {
+      "b1": 1.0,
+      "b2": 1.0,
+      "s1": 1.0,
+      "s2": 1.0,
+      "model": [
+        "223",
+        0
+      ]
+    },
+    "class_type": "FreeU_V2",
+    "_meta": {
+      "title": "FreeU_V2"
+    }
+  },
+  "203": {
+    "inputs": {
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 0.25,
+      "character_threshold": 0.85,
+      "replace_underscore": true,
+      "trailing_comma": false,
+      "exclude_tags": [
+        "225",
+        0
+      ],
+      "image": [
+        "204",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss",
+    "_meta": {
+      "title": "WD14 Tagger 🐍"
+    }
+  },
+  "204": {
+    "inputs": {
+      "image": "sample-ec72bf82eac4ac989399f9e3ad1b2953.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "205": {
+    "inputs": {
+      "control_net_name": "controlnetxlCNXL_xinsirCnUnionPromax.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "加载ControlNet模型"
+    }
+  },
+  "206": {
+    "inputs": {
+      "strength": 0.5,
+      "start_percent": 0.0,
+      "end_percent": 0.6,
+      "positive": [
+        "222",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "control_net": [
+        "205",
+        0
+      ],
+      "image": [
+        "204",
+        0
+      ],
+      "vae": [
+        "218",
+        2
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "应用ControlNet（旧版高级）"
+    }
+  },
+  "207": {
+    "inputs": {
+      "text_0": "asuna \\(blue archive\\), karin \\(blue archive\\), long hair, breasts, looking at viewer, blush, smile, open mouth, blue eyes, large breasts, multiple girls, black hair, hair ornament, 1boy, 2girls, yellow eyes, swimsuit, hetero, heart, bikini, sweat, penis, tongue, dark skin, tongue out, mole, hair over one eye, halo, dark-skinned female, pubic hair, saliva, pov, erection, heart-shaped pupils, dark-skinned male, light brown hair, oral, fellatio, group sex, breast press, male pubic hair, areola slip, micro bikini, licking, blue bikini, veins, mole on breast, hand on another's head, asymmetrical bangs, threesome, veiny penis, large penis, interracial, saliva trail, ffm threesome, licking penis, huge penis, fake screenshot, very dark skin, recording, :>=, viewfinder, cellphone photo, cooperative fellatio, stray pubic hair, lipstick mark, fake phone screenshot, teamwork, kissing penis",
+      "text": [
+        "203",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "218": {
+    "inputs": {
+      "ckpt_name": "Illustrious\\anime\\miaomiaoHarem_v200.safetensors",
+      "vae_name": "sdxlVAE_sdxlVAE.safetensors",
+      "clip_skip": -2
+    },
+    "class_type": "SimpleCheckpointLoaderWithName",
+    "_meta": {
+      "title": "简易Checkpoint加载器 (Simple Checkpoint Loader)"
+    }
+  },
+  "219": {
+    "inputs": {
+      "string": "very aesthetic, masterpiece, best quality, ultra-detailed, miaoka, high contrast, huge filesize,"
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "String Literal"
+    }
+  },
+  "220": {
+    "inputs": {
+      "text1": [
+        "203",
+        0
+      ],
+      "text2": [
+        "219",
+        0
+      ]
+    },
+    "class_type": "TextCombinerTwo",
+    "_meta": {
+      "title": "Text Combiner 2"
+    }
+  },
+  "221": {
+    "inputs": {
+      "text_0": "asuna \\(blue archive\\), karin \\(blue archive\\), long hair, breasts, looking at viewer, blush, smile, open mouth, blue eyes, large breasts, multiple girls, black hair, hair ornament, 1boy, 2girls, yellow eyes, swimsuit, hetero, heart, bikini, sweat, penis, tongue, dark skin, tongue out, mole, hair over one eye, halo, dark-skinned female, pubic hair, saliva, pov, erection, heart-shaped pupils, dark-skinned male, light brown hair, oral, fellatio, group sex, breast press, male pubic hair, areola slip, micro bikini, licking, blue bikini, veins, mole on breast, hand on another's head, asymmetrical bangs, threesome, veiny penis, large penis, interracial, saliva trail, ffm threesome, licking penis, huge penis, fake screenshot, very dark skin, recording, :>=, viewfinder, cellphone photo, cooperative fellatio, stray pubic hair, lipstick mark, fake phone screenshot, teamwork, kissing penismasterpiece, best quality, score_9, score_8, score_7, year 2025, newest, highres, absurdres, very aesthetic, scenery, ",
+      "text": [
+        "220",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "222": {
+    "inputs": {
+      "text": [
+        "220",
+        0
+      ],
+      "clip": [
+        "223",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "223": {
+    "inputs": {
+      "__lm_autocomplete_meta_text": {
+        "version": 1,
+        "textWidgetName": "text"
+      },
+      "text": "<lora:Ha9siro:0.30>, <lora:Style without name:0.50>, <lora:Anime_artistic_2:0.20>, <lora:AIイラストおじさん (2):0.20>, <lora:绪儿 厚涂构图光影质感增强V3:0.15>, <lora:ATNR_V1.1_Lokr_f4_warmup_stable_decay (1):0.20> <lora:skin texture style v5:0.15> <lora:DogmaV8.0-000022:0.30>",
+      "loras": {
+        "__value__": [
+          {
+            "name": "Style without name",
+            "strength": "0.50",
+            "active": false,
+            "expanded": false,
+            "clipStrength": "0.50",
+            "locked": false
+          },
+          {
+            "name": "绪儿 厚涂构图光影质感增强V3",
+            "strength": "0.15",
+            "active": true,
+            "expanded": false,
+            "clipStrength": "0.15",
+            "locked": false
+          },
+          {
+            "name": "AIイラストおじさん (2)",
+            "strength": "0.20",
+            "active": true,
+            "expanded": false,
+            "clipStrength": "0.20",
+            "locked": false
+          },
+          {
+            "name": "ATNR_V1.1_Lokr_f4_warmup_stable_decay (1)",
+            "strength": "0.20",
+            "active": false,
+            "expanded": false,
+            "clipStrength": "0.20",
+            "locked": false
+          },
+          {
+            "name": "Ha9siro",
+            "strength": 0.3,
+            "active": true,
+            "expanded": false,
+            "clipStrength": 0.3,
+            "locked": false
+          },
+          {
+            "name": "Anime_artistic_2",
+            "strength": 0.2,
+            "active": true,
+            "expanded": false,
+            "clipStrength": 0.2,
+            "locked": false
+          },
+          {
+            "name": "skin texture style v5",
+            "strength": "0.15",
+            "active": false,
+            "expanded": false,
+            "clipStrength": "0.15",
+            "locked": false
+          },
+          {
+            "name": "DogmaV8.0-000022",
+            "strength": "0.30",
+            "active": false,
+            "expanded": false,
+            "clipStrength": "0.30",
+            "locked": false
+          }
+        ]
+      },
+      "model": [
+        "218",
+        0
+      ],
+      "clip": [
+        "218",
+        1
+      ]
+    },
+    "class_type": "Lora Loader (LoraManager)",
+    "_meta": {
+      "title": "Lora Loader (LoraManager)"
+    }
+  },
+  "225": {
+    "inputs": {
+      "value": "watermark, sample watermark, weibo username, weibo, weibo logo, weibo watermark, censored, mosaic censoring, artist name, twitter username, bar censor, line censor, heart censor, blank censor, pointless censoring"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "字符串（多行）"
+    }
+  },
+  "228": {
+    "inputs": {
+      "lora_name": "Illustrious\\style\\TrendCraft_The_Peoples_Style_Detailer-v2.4I-5_18_2025-Illustrious.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1,
+      "prompt": "",
+      "example": "[none]",
+      "model": [
+        "218",
+        0
+      ],
+      "clip": [
+        "218",
+        1
+      ]
+    },
+    "class_type": "LoraLoader|pysssss",
+    "_meta": {
+      "title": "Lora Loader 🐍"
+    }
+  },
+  "243": {
+    "inputs": {
+      "simple_image_compare_widget": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=simple_compare._temp_ssbhb_00001_.png&type=temp&subfolder=&rand=0.485084927785315"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=simple_compare._temp_ssbhb_00002_.png&type=temp&subfolder=&rand=0.0021034063947157344"
+          }
+        ]
+      },
+      "image_a": [
+        "102",
+        0
+      ],
+      "image_b": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "SimpleImageCompare",
+    "_meta": {
+      "title": "迭代-3"
+    }
+  },
+  "247": {
+    "inputs": {
+      "images": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "254": {
+    "inputs": {
+      "scale_method": "nearest-exact",
+      "seed": 884301764207008,
+      "steps": 30,
+      "cfg": 5,
+      "sampler_name": "euler",
+      "scheduler": "karras",
+      "denoise": 0.3,
+      "use_tiled_vae": false,
+      "tile_size": 1024,
+      "model": [
+        "228",
+        0
+      ],
+      "vae": [
+        "218",
+        2
+      ],
+      "positive": [
+        "7",
+        0
+      ],
+      "negative": [
+        "206",
+        1
+      ],
+      "upscale_model_opt": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "PixelKSampleUpscalerProvider",
+    "_meta": {
+      "title": "PixelKSampleUpscalerProvider"
+    }
+  },
+  "255": {
+    "inputs": {
+      "scale_method": "nearest-exact",
+      "seed": 1039912907853580,
+      "steps": 30,
+      "cfg": 5,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "exponential",
+      "denoise": 0.3,
+      "use_tiled_vae": false,
+      "tile_size": 1024,
+      "model": [
+        "256",
+        0
+      ],
+      "vae": [
+        "218",
+        2
+      ],
+      "positive": [
+        "222",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "upscale_model_opt": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "PixelKSampleUpscalerProvider",
+    "_meta": {
+      "title": "PixelKSampleUpscalerProvider"
+    }
+  },
+  "256": {
+    "inputs": {
+      "lora_name": "Illustrious\\style\\Detail-me.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1,
+      "prompt": "",
+      "example": "[none]",
+      "model": [
+        "200",
+        0
+      ],
+      "clip": [
+        "218",
+        1
+      ]
+    },
+    "class_type": "LoraLoader|pysssss",
+    "_meta": {
+      "title": "Lora Loader 🐍"
     }
   }
 }

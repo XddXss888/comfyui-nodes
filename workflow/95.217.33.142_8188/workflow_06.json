@@ -8,7 +8,7 @@
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "a cute cat, digital art",
+      "text": "cinematic shot of a mountain lake at sunset, golden hour, gentle waves",
       "clip": [
         "1",
         1
@@ -18,7 +18,7 @@
   "3": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "",
+      "text": "blurry, low quality",
       "clip": [
         "1",
         1
@@ -36,11 +36,11 @@
   "5": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 42,
-      "steps": 8,
-      "cfg": 7.0,
-      "sampler_name": "euler",
-      "scheduler": "karras",
+      "seed": 466146560,
+      "steps": 4,
+      "cfg": 2.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "sgm_uniform",
       "denoise": 1.0,
       "model": [
         "1",
@@ -76,11 +76,11 @@
   "7": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "test_hetzner",
       "images": [
         "6",
         0
-      ]
+      ],
+      "filename_prefix": "txt2img_95"
     }
   }
 }

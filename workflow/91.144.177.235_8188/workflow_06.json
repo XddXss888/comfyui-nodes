@@ -1,18 +1,5 @@
 {
-  "191": {
-    "inputs": {
-      "unet_name": "flux-2-klein-9b-fp8mixed.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader"
-  },
-  "318": {
-    "inputs": {
-      "vae_name": "flux2-vae.safetensors"
-    },
-    "class_type": "VAELoader"
-  },
-  "217": {
+  "415": {
     "inputs": {
       "clip_name": "qwen_3_8b_fp8mixed.safetensors",
       "type": "flux2",
@@ -20,128 +7,91 @@
     },
     "class_type": "CLIPLoader"
   },
-  "219": {
+  "416": {
     "inputs": {
-      "text": "Professional architectural photography, beautifully designed outdoor swimming pool with sparkling blue water, pool deck with lounge area, resort-style backyard, mediterranean style, sparkling swimming pool water centered, pool deck with lounge chairs in foreground, resort-style outdoor setting, clean surfaces in premium outdoor materials, tasteful landscaping and manicured greenery, golden hour natural daylight under open sky, inviting curb appeal, award-winning architectural design. photorealistic, ultra detailed, 8k, magazine quality",
+      "unet_name": "flux-2-klein-9b-fp8mixed.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "424": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "431": {
+    "inputs": {
+      "text": "Blockchain nodes, digital wallets, transaction confirmations, mining rigs, flat vector illustration, corporate blue and white color palette, modern technology aesthetic, clean professional design, soft gradients, no text, no words, no letters, no logos, no people, no faces",
       "clip": [
-        "217",
+        "415",
         0
       ]
     },
     "class_type": "CLIPTextEncode"
   },
-  "317": {
-    "inputs": {
-      "text": "indoor room interior, ceiling, enclosed walls, drywall, cluttered furniture, excess seating, picture frame border, vignette, watermark, text, logo, blurry, distorted, low quality, cartoon, illustration, 3d render, overexposed, empty pool, dry pool, no water, indoor pool",
-      "clip": [
-        "217",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode"
-  },
-  "9001": {
-    "inputs": {
-      "image": "rNQvHVUPQZWVexyvo9Q723nvBBHjcZf7pdOVFvFC.jpg"
-    },
-    "class_type": "LoadImage"
-  },
-  "9002": {
-    "inputs": {
-      "upscale_method": "nearest-exact",
-      "megapixels": 1.0,
-      "resolution_steps": 1,
-      "image": [
-        "9001",
-        0
-      ]
-    },
-    "class_type": "ImageScaleToTotalPixels"
-  },
-  "9006": {
-    "inputs": {
-      "pixels": [
-        "9002",
-        0
-      ],
-      "vae": [
-        "318",
-        0
-      ]
-    },
-    "class_type": "VAEEncode"
-  },
-  "9100": {
+  "429": {
     "inputs": {
       "conditioning": [
-        "219",
-        0
-      ],
-      "latent": [
-        "9006",
+        "431",
         0
       ]
     },
-    "class_type": "ReferenceLatent"
+    "class_type": "ConditioningZeroOut"
   },
-  "9200": {
+  "425": {
     "inputs": {
-      "conditioning": [
-        "317",
-        0
-      ],
-      "latent": [
-        "9006",
-        0
-      ]
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
     },
-    "class_type": "ReferenceLatent"
+    "class_type": "EmptyFlux2LatentImage"
   },
-  "500": {
+  "427": {
     "inputs": {
-      "seed": 353451984,
-      "steps": 8,
+      "seed": 1336345161,
+      "steps": 20,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 0.88,
+      "denoise": 1.0,
       "model": [
-        "191",
+        "416",
         0
       ],
       "positive": [
-        "9100",
+        "431",
         0
       ],
       "negative": [
-        "9200",
+        "429",
         0
       ],
       "latent_image": [
-        "9006",
+        "425",
         0
       ]
     },
     "class_type": "KSampler"
   },
-  "501": {
+  "426": {
     "inputs": {
       "samples": [
-        "500",
+        "427",
         0
       ],
       "vae": [
-        "318",
+        "424",
         0
       ]
     },
     "class_type": "VAEDecode"
   },
-  "60": {
+  "430": {
     "inputs": {
-      "filename_prefix": "ComfyUI_Staging",
+      "filename_prefix": "autopost",
       "images": [
-        "501",
+        "426",
         0
       ]
     },

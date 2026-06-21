@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "A female teacher in an empty classroom after school sits on the edge of the teacher's desk in a strict suit with her blouse unbuttoned at the top and tight skirt hiked up around her hips, wearing glasses, her legs spread as she touches her wet hairy wide pussy with her fingers, aroused expression with a predatory glint in her eyes, pointer resting on the desk beside her, soft afternoon light through the windows, medium shot framing her torso and lap, stable natural pose with clear visible hands and body support.",
+      "text": "asig2, A woman on a couch in a cozy living room at evening, leaning forward with her mouth wrapped around an erect penis, lips sealed tightly around the shaft, one hand gripping the base, her body supported by the cushions, warm home lighting illuminating her face and upper body, expression showing focus mixed with hesitation, medium close-up framing, natural proportions, clear visible contact and pose, stable composition.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "ULRIKANB_SYNTH_zimg_v1.safetensors",
-      "strength_model": 0.82,
-      "strength_clip": 0.86,
+      "lora_name": "zimg_asig2_conchar.safetensors",
+      "strength_model": 0.63,
+      "strength_clip": 0.7,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.5,
+      "eta": 0.33,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 1109815001262350,
+      "seed": 661743540426963,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

@@ -1,168 +1,101 @@
 {
+  "26": {
+    "_meta": {
+      "title": "IndexTTS 模型加载器"
+    },
+    "inputs": {
+      "model": "IndexTTS-2",
+      "download_from": "modelscope"
+    },
+    "class_type": "easy downloadIndexTTSAndLoadModel"
+  },
   "27": {
     "_meta": {
-      "title": "保存图像"
+      "title": "IndexTTS 简单生成"
     },
     "inputs": {
-      "images": [
-        "96",
+      "seed": [
+        "50",
         0
       ],
-      "filename_prefix": "commentary/storyboard"
-    },
-    "class_type": "SaveImage"
-  },
-  "37": {
-    "_meta": {
-      "title": "尺寸-宽"
-    },
-    "inputs": {
-      "value": 2560
-    },
-    "class_type": "INTConstant"
-  },
-  "38": {
-    "_meta": {
-      "title": "尺寸-高"
-    },
-    "inputs": {
-      "value": 1440
-    },
-    "class_type": "INTConstant"
-  },
-  "43": {
-    "_meta": {
-      "title": "文本"
-    },
-    "inputs": {
-      "text": "{\"analysis_id\": 83, \"style_type\": \"动漫人物\", \"script_analysis\": \"高三修仙特训教室内，全班同学刻苦修炼，唯独林辰瘫睡摆烂。面对教官怒斥与同学嘲讽，林辰意外激活最强摆烂系统，拒绝内卷坚持睡觉，瞬间突破炼气五层，灵气爆发碾压全场，令所有人震惊失语。\", \"scene_registry\": {\"cultivation_classroom\": \"宽敞明亮的现代修仙特训教室，墙面悬挂巨型励志标语，整齐排列着数十张金属课桌椅。窗户宽大透光，讲台位于正前方。光影：高亮冷白光漫反射，整体氛围肃穆压抑，空气中隐约可见灵气微光。\"}, \"character_ref_prompts\": [{\"id\": 245, \"name\": \"林辰\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身][动漫人物]，林辰，十八岁青年男性，黑色碎发，五官俊朗但带着慵懒不羁的气质，穿着宽松的白色修仙校服外套，内搭黑色T恤，全片统一形象\", \"image_url\": \"https://woniuai.tos-cn-beijing.volces.com/images/32cd555b37f54515b52b2b22635a81a4.png\"}, {\"id\": 246, \"name\": \"王胖子\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身][动漫人物]，王胖子，十八岁青年男性，体型微胖圆润，圆脸戴黑框眼镜，穿着略显紧绷的修仙校服，气质憨厚焦急，全片统一形象\", \"image_url\": \"https://woniuai.tos-cn-beijing.volces.com/images/68ee7db59b2a4eda96fa6e9acf07ee28.png\"}, {\"id\": 247, \"name\": \"张教官\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身][动漫人物]，张教官，三十五岁中年男性，寸头，面部线条刚硬，穿着笔挺的深色教官制服，身姿挺拔，气质严厉威严，全片统一形象\", \"image_url\": \"https://woniuai.tos-cn-beijing.volces.com/images/ddd5eb3ed0994e31b9aa8ee054aacbf2.png\"}, {\"id\": 248, \"name\": \"赵天宇\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身][动漫人物]，赵天宇，十八岁青年男性，发型精致，面容高傲冷峻，穿着剪裁合体的修仙校服，气质自信优越，全片统一形象\", \"image_url\": \"https://woniuai.tos-cn-beijing.volces.com/images/b447493c13f04dd0887f1456aeaf3e6e.png\"}, {\"id\": 249, \"name\": \"苏清月\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身][动漫人物]，苏清月，十八岁青年女性，黑长直发，五官清冷绝美，穿着标准修仙校服裙装，气质清高孤傲，全片统一形象\", \"image_url\": \"https://woniuai.tos-cn-beijing.volces.com/images/22e263b86a8e46c086f3aa718cddbd70.png\"}], \"storyboard\": [{\"id\": 2743, \"sequence_id\": 21, \"original_text\": \"同学B:开学到现在一点不努力，迟早被学校劝退。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"同学B\", \"prompt\": \"单人中近景，Cinematic framing, rule of thirds, visible background。同学B摇头叹息，眼神带着惋惜，双手交叠放在桌上，身体微微前倾，冷白光侧照，背景清晰可见。\"}, {\"id\": 2744, \"sequence_id\": 22, \"original_text\": \"旁白:张教官走到桌前重重一拍，巨响瞬间响彻。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"张教官,林辰\", \"prompt\": \"双人中景，Cinematic framing, rule of thirds, visible background。张教官站在课桌旁，手掌重重拍击桌面，桌面微震，林辰身体微微一颤，冷白光聚焦拍桌瞬间，背景清晰可见。\"}, {\"id\": 2745, \"sequence_id\": 23, \"original_text\": \"张教官_暴怒:林辰全班都在刻苦修炼，唯独你上课睡觉。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"张教官\", \"prompt\": \"单人中近景，Cinematic framing, rule of thirds, visible background。张教官眉头紧锁，下颌紧绷，手指直指林辰，胸膛剧烈起伏，冷白光打在面部凸显怒意，背景清晰可见。\"}, {\"id\": 2746, \"sequence_id\": 24, \"original_text\": \"张教官_暴怒:你是不是不想学了，天天摆烂这辈子别想筑基。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"张教官\", \"prompt\": \"单人中景，Cinematic framing, rule of thirds, visible background。张教官双手抱胸，身体前倾压迫感极强，眼神如刀，嘴唇紧抿，冷白光侧照，背景清晰可见。\"}, {\"id\": 2747, \"sequence_id\": 25, \"original_text\": \"林辰:教官太累了卷不动，不如睡个好觉最舒服。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"林辰\", \"prompt\": \"单人中近景，Cinematic framing, rule of thirds, visible background。林辰懒洋洋抬起眼皮，嘴角挂着漫不经心的笑，单手挠了挠头，姿态极度放松，窗外柔光打在脸上，背景清晰可见。\"}, {\"id\": 2748, \"sequence_id\": 26, \"original_text\": \"张教官_暴怒:修仙界没有舒服，今天必须当众苦修两小时。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"张教官\", \"prompt\": \"单人中景，Cinematic framing, rule of thirds, visible background。张教官猛地直起身，手指用力敲击桌面，面部涨红，眼神严厉不容置疑，冷白光聚焦面部，背景清晰可见。\"}, {\"id\": 2749, \"sequence_id\": 27, \"original_text\": \"张教官_暴怒:敢偷懒直接记大过，立刻给我盘腿打坐修炼。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"张教官\", \"prompt\": \"单人中近景，Cinematic framing, rule of thirds, visible background。张教官双臂交叉抱于胸前，下巴微抬，嘴唇紧抿成一条直线，眼神冰冷，冷白光侧照，背景清晰可见。\"}, {\"id\": 2750, \"sequence_id\": 28, \"original_text\": \"旁白:林辰脑海中突然响起一道清脆沙雕的机械音。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"林辰\", \"prompt\": \"单人中近景，Cinematic framing, rule of thirds, visible background。林辰原本慵懒的眼神突然聚焦，瞳孔微微放大，头部微侧似在倾听，嘴角笑意渐收，窗外柔光打在侧脸，背景清晰可见。\"}, {\"id\": 2751, \"sequence_id\": 29, \"original_text\": \"系统音:叮检测到宿主极致摆烂心态，彻底拒绝内卷。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"林辰\", \"prompt\": \"单人中景，Cinematic framing, rule of thirds, visible background。林辰身体微微后仰，双手自然垂落，眼神中闪过一丝错愕，随即恢复平静，冷白光与窗外光交织，背景清晰可见。\"}, {\"id\": 2752, \"sequence_id\": 30, \"original_text\": \"系统音:最强摆烂成神系统绑定成功，越摆烂越强。\", \"location_key\": \"cultivation_classroom\", \"main_character\": \"林辰\", \"prompt\": \"单人中近景，Cinematic framing, rule of thirds, visible background。林辰嘴角开始不受控制地上扬，眼底闪过兴奋光芒，手指轻轻敲击桌面，姿态逐渐放松，冷白光侧照，背景清晰可见。\"}]}"
-    },
-    "class_type": "CR Text"
-  },
-  "66": {
-    "_meta": {
-      "title": "剧本JSON解析器 (多角色版)"
-    },
-    "inputs": {
-      "JSON剧本数据": [
-        "43",
+      "text": [
+        "51",
+        0
+      ],
+      "emotions": [
+        "47",
+        0
+      ],
+      "unload_model": false,
+      "indextts_model": [
+        "26",
         0
       ]
     },
-    "class_type": "ScriptJSONParserMulti"
+    "class_type": "easy indexTTSGenerateSimple"
   },
-  "69": {
+  "29": {
     "_meta": {
-      "title": "按索引提取参考图 (多路版)"
+      "title": "加载音频"
     },
     "inputs": {
-      "索引列表_JSON": [
-        "66",
-        2
+      "audio": "27fd238c80404f01ba3ea31fb74ddf94.wav",
+      "audioUI": "/api/view?filename=%E4%B8%93%E4%B8%9A%E8%A7%A3%E8%AF%B4%E9%85%8D%E9%9F%B3.wav&type=input&subfolder=&rand=0.37012403114482284"
+    },
+    "class_type": "LoadAudio"
+  },
+  "47": {
+    "_meta": {
+      "title": "音色情感向量"
+    },
+    "inputs": {
+      "Low": 0.0,
+      "Sad": 0.0,
+      "Fear": 0.0,
+      "Hate": 0.0,
+      "Angry": 0.0,
+      "Happy": 0.0,
+      "Neutral": 1.0,
+      "Surprise": 0.0,
+      "use_random": false,
+      "voice_name": "",
+      "reference_audio": [
+        "29",
+        0
+      ]
+    },
+    "class_type": "easy indexTTSEmotionVector"
+  },
+  "49": {
+    "_meta": {
+      "title": "保存音频"
+    },
+    "inputs": {
+      "audio": [
+        "27",
+        0
       ],
-      "所有角色图Batch": [
-        "66",
-        4
-      ]
+      "audioUI": "",
+      "filename_prefix": "audio/basicemo_"
     },
-    "class_type": "MultiImageBatchSelector"
+    "class_type": "SaveAudio"
   },
-  "70": {
-    "_meta": {
-      "title": "有效数量"
-    },
-    "inputs": {
-      "source": [
-        "69",
-        5
-      ]
-    },
-    "class_type": "PreviewAny"
-  },
-  "86": {
-    "_meta": {
-      "title": "生成数量"
-    },
-    "inputs": {
-      "value": 1
-    },
-    "class_type": "INTConstant"
-  },
-  "90": {
-    "_meta": {
-      "title": "火山方舟 API 客户端"
-    },
-    "inputs": {
-      "key_name": "API Key Niuju",
-      "new_api_key": "",
-      "new_key_name": ""
-    },
-    "class_type": "JimengAPIClient"
-  },
-  "93": {
+  "50": {
     "_meta": {
       "title": "生成种子"
     },
     "inputs": {
-      "value": 1578151011
+      "value": 2773654455
     },
-    "class_type": "INTConstant"
+    "class_type": "PrimitiveInt"
   },
-  "96": {
+  "51": {
     "_meta": {
-      "title": "图像生成（Seedream 4）"
+      "title": "语音内容"
     },
     "inputs": {
-      "seed": [
-        "93",
-        0
-      ],
-      "size": "Custom",
-      "width": [
-        "37",
-        0
-      ],
-      "client": [
-        "90",
-        0
-      ],
-      "height": [
-        "38",
-        0
-      ],
-      "prompt": [
-        "66",
-        3
-      ],
-      "watermark": false,
-      "max_images": [
-        "86",
-        0
-      ],
-      "model_version": "doubao-seedream-4.5",
-      "images.image_1": [
-        "69",
-        0
-      ],
-      "images.image_2": [
-        "69",
-        1
-      ],
-      "images.image_3": [
-        "69",
-        2
-      ],
-      "images.image_4": [
-        "69",
-        3
-      ],
-      "images.image_5": [
-        "69",
-        4
-      ],
-      "generation_count": 1,
-      "enable_group_generation": false
+      "value": "1"
     },
-    "class_type": "JimengSeedream4"
+    "class_type": "PrimitiveStringMultiline"
   }
 }

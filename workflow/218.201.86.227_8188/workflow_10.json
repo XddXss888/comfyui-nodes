@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "Bold flat geometric illustration of an AI-powered design assistant for creative designers. A stylized geometric AI figure at the center, composed of clean circles, triangles and rectangles, connected by dotted lines to four large geometric panels representing the workflow: requirement understanding (clipboard shape), design research (binoculars), prototype drawing (pencil and grid), high-fidelity design (colorful interface card). Designers are simplified geometric figures - grey monotone ones carrying heavy stacks on the left, vibrant colorful ones with creative symbols (stars, hearts, paint drops) on the right. Flat design, bold geometric shapes, limited color palette (indigo, coral, teal, amber, white), no gradients, sharp edges, minimal and modern, white background, centered composition, corporate tech illustration style",
+      "text": "A beautiful wide landscape of rice paddies in the countryside, lush golden-green rice field, gentle breeze implied by flowing rice stalks, reflective irrigation water channels, distant blue mountains, soft white clouds drifting in a bright sky, warm late afternoon sunlight, cinematic peaceful atmosphere, highly detailed natural scenery, photorealistic digital art, no people, no text, 16:9 composition",
       "clip": [
         "30",
         1
@@ -44,7 +44,7 @@
   "27": {
     "inputs": {
       "width": 1024,
-      "height": 1024,
+      "height": 576,
       "batch_size": 1
     },
     "class_type": "EmptySD3LatentImage",
@@ -63,8 +63,8 @@
   },
   "31": {
     "inputs": {
-      "seed": 285417613350016,
-      "steps": 20,
+      "seed": 993778131594979,
+      "steps": 28,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -93,7 +93,7 @@
   },
   "33": {
     "inputs": {
-      "text": "blurry, low quality, distorted faces, ugly, deformed, text overlay, watermark, signature, realistic photo, 3d render, dark moody",
+      "text": "text, watermark, logo, people, buildings, blurry, low quality, distorted horizon, overexposed",
       "clip": [
         "30",
         1

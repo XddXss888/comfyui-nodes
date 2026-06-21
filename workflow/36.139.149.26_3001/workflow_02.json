@@ -35,18 +35,18 @@
   },
   "91": {
     "inputs": {
-      "seed": 916445791366624,
+      "seed": 386389556562250,
       "steps": 10,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 0.8,
+      "denoise": 1.0,
       "model": [
         "86",
         0
       ],
       "positive": [
-        "130",
+        "92",
         0
       ],
       "negative": [
@@ -54,13 +54,29 @@
         0
       ],
       "latent_image": [
-        "116",
+        "96",
         0
       ]
     },
     "class_type": "KSampler",
     "_meta": {
       "title": "K采样器"
+    }
+  },
+  "92": {
+    "inputs": {
+      "text": [
+        "114",
+        0
+      ],
+      "clip": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
     }
   },
   "93": {
@@ -101,79 +117,24 @@
       "title": "加载VAE"
     }
   },
-  "116": {
-    "inputs": {
-      "pixels": [
-        "117",
-        0
-      ],
-      "vae": [
-        "95",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE编码"
-    }
-  },
-  "117": {
-    "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 1,
-      "proportional_height": 1,
-      "fit": "letterbox",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_side": "None",
-      "scale_to_length": 1024,
-      "background_color": "#000000",
-      "image": [
-        "124",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
-    "_meta": {
-      "title": "LayerUtility: ImageScaleByAspectRatio V2"
-    }
-  },
-  "118": {
-    "inputs": {
-      "image": "ea7bf728_comfyui-airport-editorial_00853_.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "124": {
+  "96": {
     "inputs": {
       "width": [
-        "125",
+        "97",
         0
       ],
       "height": [
-        "125",
+        "97",
         1
       ],
-      "upscale_method": "lanczos",
-      "keep_proportion": "stretch",
-      "pad_color": "0, 0, 0",
-      "crop_position": "center",
-      "divisible_by": 2,
-      "device": "cpu",
-      "image": [
-        "118",
-        0
-      ]
+      "batch_size": 1
     },
-    "class_type": "ImageResizeKJv2",
+    "class_type": "EmptyLatentImage",
     "_meta": {
-      "title": "Resize Image v2"
+      "title": "空Latent图像"
     }
   },
-  "125": {
+  "97": {
     "inputs": {
       "use_custom_resolution": false,
       "resolution": "1920x1080 (16:9) (横屏)",
@@ -185,17 +146,13 @@
       "title": "TT分辨率选择器"
     }
   },
-  "130": {
+  "114": {
     "inputs": {
-      "text": "统一风格：现代都市视觉风格，真实自然，特写景，俯拍 图1  ， 图1  张大嘴巴激动的大喊，场景 场景 7，景别 特写，机位 俯视，运镜 固定，cinematic storyboard keyframe, clear staging, dramatic composition, consistent characters，尺寸比例：16:9，分辨率：1080p，图1是角色：李夜来2",
-      "clip": [
-        "87",
-        0
-      ]
+      "value": "不锈钢无菌镊子（法医夹取纸条）无改动，沿用之前版本\n\n材质色彩质感：哑光 304 不锈钢一体成型，整体无抛光亮面，钳头尖细带细密防滑齿，适配夹持薄纸张；弹簧连接缝隙残留淡浅消毒水渍痕迹，长直防滑手柄便于稳定拿捏，无塑料配件，长期勘验使用产生细微浅划痕，无锈点，解放初期法医标准取证器械。\n\n完整多视角提示词：16:9 宽屏影视画幅，专业道具三视图精准分区排版，纯白色干净纯色背景，无阴影无杂物无渐变，80 年代刑侦老电影胶片质感，实物超写实拍摄，低饱和复古褪色色调，细腻胶片颗粒，柔和立体柔光，微距高清材质细节，画面左半区域完整不锈钢无菌镊子正面全景；右上均等排布 45° 斜侧、90° 正侧面、镊子背面完整视角；右下横排四格微距特写（尖细防滑齿纹钳头、不锈钢表面细微浅划痕、弹簧衔接消毒水渍印、加长防滑直手柄肌理），完整展示钳头、手柄、弹簧全部结构无裁切，法医提取纸质密文证物专用无菌镊子，哑光不反光金属，防滑齿防止轻薄纸条滑落，适配法医无菌勘验流程，写实刑侦法医器械建模参考"
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "CLIP文本编码"
+      "title": "提示词"
     }
   }
 }

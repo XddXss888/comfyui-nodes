@@ -1,24 +1,30 @@
 {
   "278": {
     "inputs": {
-      "image": "cmqexzor000aalv01mhf3my0v.png"
+      "image": "cmqjdbr1o01g3lv01440lev6v.png"
     },
     "class_type": "LoadImage",
     "_meta": {
-      "title": "LoadImage"
+      "title": "加载图像"
     }
   },
   "352": {
     "inputs": {
-      "text": "让照片的这个男人手上戴着劳力士手表，穿着白色衬衫、黑色马甲和领带，坐着身体半侧靠在米色办公椅上，保持脸部一致，自信的微笑着看向镜头,背景是带有暖色灯光的书架，摆放着书籍和装饰物，营造出温馨而有质感的室内环境。前景有桌面和文件本，奢华，整体色调柔和，光线自然，给人一种商务、精英、理性且沉稳的感觉。"
+      "text": "让图片的女生穿白色高科技机械装甲，需要让服装匹配人物身材，参考发型脸型，双手放在两侧，改变背景为蓝紫色未来城市光影空间，霓虹灯柱纵向延伸，中近景构图"
     },
     "class_type": "CR Text",
     "_meta": {
-      "title": "CR Text"
+      "title": "🔤 CR Text"
     }
   },
   "378": {
     "inputs": {
+      "seed": 787346236822226,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
       "model": [
         "388",
         0
@@ -34,17 +40,11 @@
       "latent_image": [
         "379",
         0
-      ],
-      "seed": 484865308044076,
-      "steps": 8,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0
+      ]
     },
     "class_type": "KSampler",
     "_meta": {
-      "title": "KSampler"
+      "title": "K采样器"
     }
   },
   "379": {
@@ -61,15 +61,11 @@
     },
     "class_type": "EmptyFlux2LatentImage",
     "_meta": {
-      "title": "EmptyFlux2LatentImage"
+      "title": "空Latent图像（Flux2）"
     }
   },
   "380": {
     "inputs": {
-      "image": [
-        "278",
-        0
-      ],
       "aspect_ratio": "original",
       "proportional_width": 2,
       "proportional_height": 3,
@@ -78,27 +74,31 @@
       "round_to_multiple": "8",
       "scale_to_side": "longest",
       "scale_to_length": 1024,
-      "background_color": "#000000"
+      "background_color": "#000000",
+      "image": [
+        "278",
+        0
+      ]
     },
     "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
     "_meta": {
-      "title": "LayerUtility: ImageScaleByAspectRatio V2"
+      "title": "图层工具：按宽高比缩放 V2"
     }
   },
   "381": {
     "inputs": {
-      "clip": [
-        "389",
-        0
-      ],
       "text": [
         "352",
+        0
+      ],
+      "clip": [
+        "389",
         0
       ]
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "CLIPTextEncode"
+      "title": "CLIP文本编码"
     }
   },
   "382": {
@@ -114,7 +114,7 @@
     },
     "class_type": "VAEEncode",
     "_meta": {
-      "title": "VAEEncode"
+      "title": "VAE编码"
     }
   },
   "383": {
@@ -130,7 +130,7 @@
     },
     "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "ReferenceLatent"
+      "title": "参考Latent"
     }
   },
   "384": {
@@ -142,7 +142,7 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "条件零化"
     }
   },
   "385": {
@@ -158,17 +158,17 @@
     },
     "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "ReferenceLatent"
+      "title": "参考Latent"
     }
   },
   "388": {
     "inputs": {
+      "lora_name": "training/赛博朋克_KB2_v1_000003500.safetensors",
+      "strength_model": 1.0,
       "model": [
         "394",
         0
-      ],
-      "lora_name": "training/霸道总裁KB2_v2_000003000.safetensors",
-      "strength_model": 1.0
+      ]
     },
     "class_type": "PD_lora_loader",
     "_meta": {
@@ -183,7 +183,7 @@
     },
     "class_type": "CLIPLoader",
     "_meta": {
-      "title": "CLIPLoader"
+      "title": "加载CLIP"
     }
   },
   "390": {
@@ -192,7 +192,7 @@
     },
     "class_type": "VAELoader",
     "_meta": {
-      "title": "VAELoader"
+      "title": "加载VAE"
     }
   },
   "393": {
@@ -208,7 +208,7 @@
     },
     "class_type": "VAEDecode",
     "_meta": {
-      "title": "VAEDecode"
+      "title": "VAE解码"
     }
   },
   "394": {
@@ -218,30 +218,30 @@
     },
     "class_type": "UNETLoader",
     "_meta": {
-      "title": "UNETLoader"
+      "title": "UNet加载器"
     }
   },
   "403": {
     "inputs": {
-      "aspect_ratio": "2:3",
+      "aspect_ratio": "1:1",
       "max_size": 1024
     },
     "class_type": "PDRatioSelector",
     "_meta": {
-      "title": "PDRatioSelector"
+      "title": "PD:ratio selector"
     }
   },
   "407": {
     "inputs": {
+      "filename_prefix": "ComfyUI",
       "images": [
         "393",
         0
-      ],
-      "filename_prefix": "ComfyUI"
+      ]
     },
     "class_type": "SaveImage",
     "_meta": {
-      "title": "SaveImage"
+      "title": "保存图像"
     }
   }
 }

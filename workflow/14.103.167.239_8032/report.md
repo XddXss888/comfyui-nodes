@@ -1,110 +1,70 @@
 # 14.103.167.239:8032
 
-**GPU**: A100 | **显存**: 79 GB | **空闲**: 39 GB
+**GPU**: A100 | **显存**: 79 GB | **空闲**: 47 GB
 **内存**: 482 GB (空闲 447 GB)
 **版本**: 0.21.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-15 18:27:42
-**历史总数**: 12 | **成功**: 10
+**扫描时间**: 2026-06-21 17:38:58
+**历史总数**: 33 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `25483209-60ac-4e14-b3ae-316f52edb93d`
-- **类型**: 文生图
-- **节点数**: 12
-- **模型** (4):
-  - ace_1.5_vae.safetensors
-  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
-  - qwen_0.6b_ace15-fp8.safetensors
-  - qwen_4b_ace15-fp8.safetensors
+- **Prompt ID**: `91abf71b-c2c1-45f2-a2e2-547428fa63a7`
+- **类型**: 文生视频
+- **节点数**: 2
+- **模型** (0):
 
 ### 2. workflow_02.json
-- **Prompt ID**: `64eb51e5-0d0d-40fc-a2d5-f4159fd4a9ae`
-- **类型**: 文生图
-- **节点数**: 12
-- **模型** (4):
-  - ace_1.5_vae.safetensors
-  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
-  - qwen_0.6b_ace15-fp8.safetensors
-  - qwen_4b_ace15-fp8.safetensors
+- **Prompt ID**: `3225a544-1ea8-4bc9-b495-a24bdfd18ff9`
+- **类型**: 其他/工具
+- **节点数**: 1
+- **模型** (0):
 
 ### 3. workflow_03.json
-- **Prompt ID**: `ff0c1a55-caca-451f-875e-634fbd1e1571`
-- **类型**: 文生图
-- **节点数**: 12
-- **模型** (4):
-  - ace_1.5_vae.safetensors
-  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
-  - qwen_0.6b_ace15-fp8.safetensors
-  - qwen_4b_ace15-fp8.safetensors
+- **Prompt ID**: `403ba4ca-23d6-42dc-9148-d82f749abfd1`
+- **类型**: 其他/工具
+- **节点数**: 1
+- **模型** (0):
 
 ### 4. workflow_04.json
-- **Prompt ID**: `410b500f-d380-4846-90ef-ca3bf2fd066c`
-- **类型**: 文生图
-- **节点数**: 12
-- **模型** (4):
-  - ace_1.5_vae.safetensors
-  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
-  - qwen_0.6b_ace15-fp8.safetensors
-  - qwen_4b_ace15-fp8.safetensors
+- **Prompt ID**: `ab4b06bd-dc5f-4b65-82e1-3d29b86146a8`
+- **类型**: 其他/工具
+- **节点数**: 1
+- **模型** (0):
 
 ### 5. workflow_05.json
-- **Prompt ID**: `7acceee9-2986-4b33-91d9-6b1fa7d5b2b8`
-- **类型**: 文生图
-- **节点数**: 12
-- **模型** (4):
-  - ace_1.5_vae.safetensors
-  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
-  - qwen_0.6b_ace15-fp8.safetensors
-  - qwen_4b_ace15-fp8.safetensors
+- **Prompt ID**: `9bf5940c-4358-4bd5-9f34-f62773fe6b4e`
+- **类型**: 其他/工具
+- **节点数**: 1
+- **模型** (0):
 
 ### 6. workflow_06.json
-- **Prompt ID**: `404e349d-35da-498a-88c0-5b797d07f6bd`
-- **类型**: 文生图
-- **节点数**: 12
-- **模型** (4):
-  - ace_1.5_vae.safetensors
-  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
-  - qwen_0.6b_ace15-fp8.safetensors
-  - qwen_4b_ace15-fp8.safetensors
+- **Prompt ID**: `5a89e014-93e2-490e-9a0e-fbc5459f7498`
+- **类型**: 其他/工具
+- **节点数**: 1
+- **模型** (0):
 
 ### 7. workflow_07.json
-- **Prompt ID**: `c7f4ecb8-1fbd-471f-af29-f897eafd267c`
-- **类型**: 文生图
-- **节点数**: 12
-- **模型** (4):
-  - ace_1.5_vae.safetensors
-  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
-  - qwen_0.6b_ace15-fp8.safetensors
-  - qwen_4b_ace15-fp8.safetensors
+- **Prompt ID**: `e36627c7-089a-489a-a11f-a24942fa0372`
+- **类型**: 其他/工具
+- **节点数**: 1
+- **模型** (0):
 
 ### 8. workflow_08.json
-- **Prompt ID**: `9285c87b-5443-439a-be87-f5678c5721bd`
-- **类型**: 文生图
-- **节点数**: 12
-- **模型** (4):
-  - ace_1.5_vae.safetensors
-  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
-  - qwen_0.6b_ace15-fp8.safetensors
-  - qwen_4b_ace15-fp8.safetensors
+- **Prompt ID**: `edec7fbf-b875-4812-9d22-1c683d5ebfaa`
+- **类型**: 其他/工具
+- **节点数**: 1
+- **模型** (0):
 
 ### 9. workflow_09.json
-- **Prompt ID**: `218ff918-3f94-4ea6-b68b-517aa5b25cc0`
-- **类型**: 文生图
-- **节点数**: 12
-- **模型** (4):
-  - ace_1.5_vae.safetensors
-  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
-  - qwen_0.6b_ace15-fp8.safetensors
-  - qwen_4b_ace15-fp8.safetensors
+- **Prompt ID**: `301bb6f0-6933-41cf-98f9-db31de4fb1fd`
+- **类型**: 其他/工具
+- **节点数**: 1
+- **模型** (0):
 
 ### 10. workflow_10.json
-- **Prompt ID**: `cfd9826b-17e1-4b6a-ba9a-e0241bce33ab`
-- **类型**: 文生图
-- **节点数**: 12
-- **模型** (4):
-  - ace_1.5_vae.safetensors
-  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
-  - qwen_0.6b_ace15-fp8.safetensors
-  - qwen_4b_ace15-fp8.safetensors
+- **Prompt ID**: `a1205d3e-b43b-4619-af92-4146104a74a8`
+- **类型**: 其他/工具
+- **节点数**: 1
+- **模型** (0):

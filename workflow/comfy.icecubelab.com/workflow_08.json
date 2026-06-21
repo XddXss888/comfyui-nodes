@@ -20,17 +20,6 @@
       "vae_name": "ae.safetensors"
     }
   },
-  "11": {
-    "class_type": "LoraLoaderModelOnly",
-    "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "lora_name": "korean_realism_flux.safetensors",
-      "strength_model": 0.8
-    }
-  },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
@@ -38,34 +27,34 @@
         "2",
         0
       ],
-      "text": "Stunning portrait of a Korean idol-style woman with platinum blonde wet-look slicked back hair, delicate features and a button nose, warm approachable smile with subtle dimples. Shot on 85mm f/1.4 lens with creamy bokeh, ground-level upward angle, tight headshot framing. Cross lighting from two sides casting dramatic sculpted shadows across her flawless porcelain skin. She wears a school uniform inspired preppy look with a navy blazer and plaid tie, standing in a modern art gallery with abstract white sculptures softly blurred behind her. Dewy glass-skin makeup, gradient coral lips, wispy baby hairs framing her temples. Confident yet gentle energy, eyes catching both light sources creating twin catchlights. Professional studio-quality portrait photography."
+      "text": "Failed to authenticate. API Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"Invalid authentication credentials\"},\"request_id\":\"req_011CcFqwMJVH2kE8RVKujwsE\"}"
     }
   },
   "5": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": "text, watermark, logo"
-    }
-  },
-  "6": {
     "class_type": "FluxGuidance",
     "inputs": {
       "conditioning": [
         "4",
         0
       ],
-      "guidance": 3.3
+      "guidance": 3.5
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
     }
   },
   "7": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "width": 1024,
-      "height": 1280,
+      "width": 1920,
+      "height": 816,
       "batch_size": 1
     }
   },
@@ -73,24 +62,24 @@
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "11",
+        "1",
         0
       ],
       "positive": [
-        "6",
+        "5",
         0
       ],
       "negative": [
-        "5",
+        "6",
         0
       ],
       "latent_image": [
         "7",
         0
       ],
-      "seed": 600307486,
+      "seed": 1385518108,
       "control_after_generate": "fixed",
-      "steps": 20,
+      "steps": 22,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -117,7 +106,7 @@
         "9",
         0
       ],
-      "filename_prefix": "portrait_600307486"
+      "filename_prefix": "portrait_1385518108"
     }
   }
 }

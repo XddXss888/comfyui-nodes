@@ -1,328 +1,31 @@
 {
-  "3": {
+  "269": {
     "inputs": {
-      "seed": 791417518534770,
-      "steps": [
-        "103",
-        0
-      ],
-      "cfg": [
-        "105",
-        0
-      ],
-      "sampler_name": "uni_pc",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "54",
-        0
-      ],
-      "positive": [
-        "93",
-        0
-      ],
-      "negative": [
-        "93",
-        1
-      ],
-      "latent_image": [
-        "93",
-        2
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "6": {
-    "inputs": {
-      "text": "活泼嘅爱",
-      "clip": [
-        "38",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
-    }
-  },
-  "7": {
-    "inputs": {
-      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
-      "clip": [
-        "38",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
-    }
-  },
-  "37": {
-    "inputs": {
-      "unet_name": "wan2.2_s2v_14B_fp8_scaled.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "38": {
-    "inputs": {
-      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
-      "type": "wan",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载CLIP"
-    }
-  },
-  "39": {
-    "inputs": {
-      "vae_name": "wan_2.1_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "52": {
-    "inputs": {
-      "image": "edu_portrait_7bbc49dd.jpeg"
+      "image": "test.jpeg"
     },
     "class_type": "LoadImage",
     "_meta": {
       "title": "加载图像"
     }
   },
-  "54": {
+  "276": {
     "inputs": {
-      "shift": 8.0,
-      "model": [
-        "107",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingSD3",
-    "_meta": {
-      "title": "采样算法（SD3）"
-    }
-  },
-  "56": {
-    "inputs": {
-      "audio_encoder": [
-        "57",
-        0
-      ],
-      "audio": [
-        "58",
-        0
-      ]
-    },
-    "class_type": "AudioEncoderEncode",
-    "_meta": {
-      "title": "音频编码器编码"
-    }
-  },
-  "57": {
-    "inputs": {
-      "audio_encoder_name": "wav2vec2_large_english_fp16.safetensors"
-    },
-    "class_type": "AudioEncoderLoader",
-    "_meta": {
-      "title": "加载音频编码器"
-    }
-  },
-  "58": {
-    "inputs": {
-      "audio": "edu_audio_7bbc49dd.mp3",
-      "audioUI": "/api/view?filename=edu_audio_7bbc49dd.mp3&type=input&subfolder=&rand=0.0"
+      "audio": "bamei.mp3",
+      "audioUI": "/api/view?filename=bamei.mp3&type=input&subfolder=&rand=0.21640257054807743"
     },
     "class_type": "LoadAudio",
     "_meta": {
       "title": "加载音频"
     }
   },
-  "80": {
+  "341": {
     "inputs": {
-      "samples": [
-        "95",
-        0
-      ],
-      "vae": [
-        "39",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "82": {
-    "inputs": {
-      "fps": 16.0,
-      "images": [
-        "96",
-        0
-      ],
-      "audio": [
-        "58",
-        0
-      ]
-    },
-    "class_type": "CreateVideo",
-    "_meta": {
-      "title": "创建视频"
-    }
-  },
-  "93": {
-    "inputs": {
-      "width": 640,
-      "height": 640,
-      "length": [
-        "104",
-        0
-      ],
-      "batch_size": 1,
-      "positive": [
-        "6",
-        0
-      ],
-      "negative": [
-        "7",
-        0
-      ],
-      "vae": [
-        "39",
-        0
-      ],
-      "audio_encoder_output": [
-        "56",
-        0
-      ],
-      "ref_image": [
-        "52",
-        0
-      ]
-    },
-    "class_type": "WanSoundImageToVideo",
-    "_meta": {
-      "title": "图像到视频（WanSound）"
-    }
-  },
-  "94": {
-    "inputs": {
-      "dim": "t",
-      "index": 0,
-      "amount": 1,
-      "samples": [
-        "85:182",
-        0
-      ]
-    },
-    "class_type": "LatentCut",
-    "_meta": {
-      "title": "潜在空间切割"
-    }
-  },
-  "95": {
-    "inputs": {
-      "dim": "t",
-      "samples1": [
-        "94",
-        0
-      ],
-      "samples2": [
-        "85:182",
-        0
-      ]
-    },
-    "class_type": "LatentConcat",
-    "_meta": {
-      "title": "潜在空间拼接"
-    }
-  },
-  "96": {
-    "inputs": {
-      "batch_index": [
-        "100",
-        0
-      ],
-      "length": 225,
-      "image": [
-        "80",
-        0
-      ]
-    },
-    "class_type": "ImageFromBatch",
-    "_meta": {
-      "title": "从批次获取图像"
-    }
-  },
-  "100": {
-    "inputs": {
-      "value": 3
-    },
-    "class_type": "PrimitiveInt",
-    "_meta": {
-      "title": "Batch sizes"
-    }
-  },
-  "103": {
-    "inputs": {
-      "value": 4
-    },
-    "class_type": "PrimitiveInt",
-    "_meta": {
-      "title": "Steps"
-    }
-  },
-  "104": {
-    "inputs": {
-      "value": 75
-    },
-    "class_type": "PrimitiveInt",
-    "_meta": {
-      "title": "Chunk Length"
-    }
-  },
-  "105": {
-    "inputs": {
-      "value": 1.0
-    },
-    "class_type": "PrimitiveFloat",
-    "_meta": {
-      "title": "CFG"
-    }
-  },
-  "107": {
-    "inputs": {
-      "lora_name": "wan2.2_t2v_lightx2v_4steps_lora_v1.1_high_noise.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "37",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA加载器（仅模型）"
-    }
-  },
-  "113": {
-    "inputs": {
-      "filename_prefix": "video/ComfyUI",
+      "filename_prefix": "video/LTX_2.3_ia2v",
       "format": "auto",
       "codec": "auto",
       "video-preview": "",
       "video": [
-        "82",
+        "340:312",
         0
       ]
     },
@@ -331,182 +34,767 @@
       "title": "保存视频"
     }
   },
-  "79:78": {
+  "340:285": {
     "inputs": {
-      "dim": "t",
-      "samples1": [
-        "3",
-        0
-      ],
-      "samples2": [
-        "79:77",
-        0
-      ]
+      "noise_seed": 42
     },
-    "class_type": "LatentConcat",
+    "class_type": "RandomNoise",
     "_meta": {
-      "title": "潜在空间拼接"
+      "title": "随机噪波"
     }
   },
-  "79:77": {
+  "340:286": {
     "inputs": {
-      "seed": 1,
-      "steps": [
-        "103",
+      "noise_seed": 943014248841643
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  },
+  "340:287": {
+    "inputs": {
+      "video_latent": [
+        "340:296",
         0
       ],
-      "cfg": [
-        "105",
-        0
-      ],
-      "sampler_name": "uni_pc",
-      "scheduler": "simple",
-      "denoise": 1.0,
+      "audio_latent": [
+        "340:309",
+        1
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "340:288": {
+    "inputs": {
+      "sampler_name": "euler_cfg_pp"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "340:289": {
+    "inputs": {
+      "sigmas": "0.85, 0.7250, 0.4219, 0.0"
+    },
+    "class_type": "ManualSigmas",
+    "_meta": {
+      "title": "自定义Sigmas"
+    }
+  },
+  "340:290": {
+    "inputs": {
+      "cfg": 1.0,
       "model": [
-        "54",
+        "340:293",
         0
       ],
       "positive": [
-        "79:76",
+        "340:292",
         0
       ],
       "negative": [
-        "79:76",
+        "340:292",
         1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG引导器"
+    }
+  },
+  "340:291": {
+    "inputs": {
+      "noise": [
+        "340:286",
+        0
+      ],
+      "guider": [
+        "340:315",
+        0
+      ],
+      "sampler": [
+        "340:298",
+        0
+      ],
+      "sigmas": [
+        "340:308",
+        0
       ],
       "latent_image": [
-        "79:76",
-        2
+        "340:326",
+        0
       ]
     },
-    "class_type": "KSampler",
+    "class_type": "SamplerCustomAdvanced",
     "_meta": {
-      "title": "K采样器"
+      "title": "自定义采样器（高级）"
     }
   },
-  "79:76": {
+  "340:292": {
     "inputs": {
-      "length": [
-        "104",
-        0
-      ],
       "positive": [
-        "6",
+        "340:307",
         0
       ],
       "negative": [
-        "7",
+        "340:307",
+        1
+      ],
+      "latent": [
+        "340:309",
+        0
+      ]
+    },
+    "class_type": "LTXVCropGuides",
+    "_meta": {
+      "title": "LTXV裁剪指导"
+    }
+  },
+  "340:295": {
+    "inputs": {
+      "samples": [
+        "340:309",
+        0
+      ],
+      "upscale_model": [
+        "340:313",
         0
       ],
       "vae": [
-        "39",
-        0
-      ],
-      "video_latent": [
-        "3",
-        0
-      ],
-      "audio_encoder_output": [
-        "56",
-        0
-      ],
-      "ref_image": [
-        "52",
-        0
-      ]
-    },
-    "class_type": "WanSoundImageToVideoExtend",
-    "_meta": {
-      "title": "图像到视频扩展（WanSound）"
-    }
-  },
-  "85:182": {
-    "inputs": {
-      "dim": "t",
-      "samples1": [
-        "79:78",
-        0
-      ],
-      "samples2": [
-        "85:183",
-        0
-      ]
-    },
-    "class_type": "LatentConcat",
-    "_meta": {
-      "title": "潜在空间拼接"
-    }
-  },
-  "85:183": {
-    "inputs": {
-      "seed": 250,
-      "steps": [
-        "103",
-        0
-      ],
-      "cfg": [
-        "105",
-        0
-      ],
-      "sampler_name": "uni_pc",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "54",
-        0
-      ],
-      "positive": [
-        "85:184",
-        0
-      ],
-      "negative": [
-        "85:184",
-        1
-      ],
-      "latent_image": [
-        "85:184",
+        "340:317",
         2
       ]
     },
-    "class_type": "KSampler",
+    "class_type": "LTXVLatentUpsampler",
     "_meta": {
-      "title": "K采样器"
+      "title": "LTXV潜空间上采样器"
     }
   },
-  "85:184": {
+  "340:296": {
     "inputs": {
-      "length": [
-        "104",
-        0
-      ],
-      "positive": [
-        "6",
-        0
-      ],
-      "negative": [
-        "7",
+      "strength": 1.0,
+      "bypass": [
+        "340:305",
         0
       ],
       "vae": [
-        "39",
+        "340:317",
+        2
+      ],
+      "image": [
+        "340:334",
         0
       ],
-      "video_latent": [
-        "79:78",
-        0
-      ],
-      "audio_encoder_output": [
-        "56",
-        0
-      ],
-      "ref_image": [
-        "52",
+      "latent": [
+        "340:295",
         0
       ]
     },
-    "class_type": "WanSoundImageToVideoExtend",
+    "class_type": "LTXVImgToVideoInplace",
     "_meta": {
-      "title": "图像到视频扩展（WanSound）"
+      "title": "LTXV图像转视频（原地）"
+    }
+  },
+  "340:298": {
+    "inputs": {
+      "sampler_name": "euler_ancestral_cfg_pp"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "340:303": {
+    "inputs": {
+      "samples": [
+        "340:311",
+        1
+      ],
+      "audio_vae": [
+        "340:335",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEDecode",
+    "_meta": {
+      "title": "LTXV音频VAE解码"
+    }
+  },
+  "340:306": {
+    "inputs": {
+      "text": [
+        "340:342",
+        0
+      ],
+      "clip": [
+        "340:318",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "340:307": {
+    "inputs": {
+      "frame_rate": [
+        "340:304",
+        0
+      ],
+      "positive": [
+        "340:306",
+        0
+      ],
+      "negative": [
+        "340:314",
+        0
+      ]
+    },
+    "class_type": "LTXVConditioning",
+    "_meta": {
+      "title": "LTXV条件"
+    }
+  },
+  "340:308": {
+    "inputs": {
+      "sigmas": "1.0, 0.99375, 0.9875, 0.98125, 0.975, 0.909375, 0.725, 0.421875, 0.0"
+    },
+    "class_type": "ManualSigmas",
+    "_meta": {
+      "title": "自定义Sigmas"
+    }
+  },
+  "340:309": {
+    "inputs": {
+      "av_latent": [
+        "340:291",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXV分离音视频潜空间"
+    }
+  },
+  "340:310": {
+    "inputs": {
+      "noise": [
+        "340:285",
+        0
+      ],
+      "guider": [
+        "340:290",
+        0
+      ],
+      "sampler": [
+        "340:288",
+        0
+      ],
+      "sigmas": [
+        "340:289",
+        0
+      ],
+      "latent_image": [
+        "340:287",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "340:311": {
+    "inputs": {
+      "av_latent": [
+        "340:310",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXV分离音视频潜空间"
+    }
+  },
+  "340:314": {
+    "inputs": {
+      "text": "pc game, console game, video game, cartoon, childish, ugly",
+      "clip": [
+        "340:318",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "340:315": {
+    "inputs": {
+      "cfg": 1.0,
+      "model": [
+        "340:293",
+        0
+      ],
+      "positive": [
+        "340:307",
+        0
+      ],
+      "negative": [
+        "340:307",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG引导器"
+    }
+  },
+  "340:316": {
+    "inputs": {
+      "tile_size": 768,
+      "overlap": 64,
+      "temporal_size": 4096,
+      "temporal_overlap": 4,
+      "samples": [
+        "340:311",
+        0
+      ],
+      "vae": [
+        "340:317",
+        2
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE解码（分块）"
+    }
+  },
+  "340:325": {
+    "inputs": {
+      "strength": 0.7,
+      "bypass": [
+        "340:305",
+        0
+      ],
+      "vae": [
+        "340:317",
+        2
+      ],
+      "image": [
+        "340:334",
+        0
+      ],
+      "latent": [
+        "340:302",
+        0
+      ]
+    },
+    "class_type": "LTXVImgToVideoInplace",
+    "_meta": {
+      "title": "LTXV图像转视频（原地）"
+    }
+  },
+  "340:330": {
+    "inputs": {
+      "value": 360
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Width"
+    }
+  },
+  "340:333": {
+    "inputs": {
+      "value": 0.0,
+      "width": [
+        "340:330",
+        0
+      ],
+      "height": [
+        "340:324",
+        0
+      ]
+    },
+    "class_type": "SolidMask",
+    "_meta": {
+      "title": "纯块遮罩"
+    }
+  },
+  "340:335": {
+    "inputs": {
+      "ckpt_name": "ltx-2.3-22b-dev-fp8.safetensors"
+    },
+    "class_type": "LTXVAudioVAELoader",
+    "_meta": {
+      "title": "LTXV音频VAE加载器"
+    }
+  },
+  "340:305": {
+    "inputs": {
+      "value": false
+    },
+    "class_type": "PrimitiveBoolean",
+    "_meta": {
+      "title": "Switch to Text to Video?"
+    }
+  },
+  "340:294": {
+    "inputs": {
+      "longer_edge": 1536,
+      "images": [
+        "340:297",
+        0
+      ]
+    },
+    "class_type": "ResizeImagesByLongerEdge",
+    "_meta": {
+      "title": "缩放图像（长边）"
+    }
+  },
+  "340:334": {
+    "inputs": {
+      "img_compression": 18,
+      "image": [
+        "340:294",
+        0
+      ]
+    },
+    "class_type": "LTXVPreprocess",
+    "_meta": {
+      "title": "LTXV预处理"
+    }
+  },
+  "340:301": {
+    "inputs": {
+      "expression": "a/2",
+      "values.a": [
+        "340:324",
+        0
+      ]
+    },
+    "class_type": "ComfyMathExpression",
+    "_meta": {
+      "title": "Math Expression"
+    }
+  },
+  "340:299": {
+    "inputs": {
+      "expression": "a/2",
+      "values.a": [
+        "340:330",
+        0
+      ]
+    },
+    "class_type": "ComfyMathExpression",
+    "_meta": {
+      "title": "Math Expression"
+    }
+  },
+  "340:304": {
+    "inputs": {
+      "expression": "a",
+      "values.a": [
+        "340:323",
+        0
+      ]
+    },
+    "class_type": "ComfyMathExpression",
+    "_meta": {
+      "title": "Math Expression"
+    }
+  },
+  "340:312": {
+    "inputs": {
+      "fps": [
+        "340:304",
+        0
+      ],
+      "images": [
+        "340:316",
+        0
+      ],
+      "audio": [
+        "340:303",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "340:331": {
+    "inputs": {
+      "value": 9.0
+    },
+    "class_type": "PrimitiveFloat",
+    "_meta": {
+      "title": "Duration"
+    }
+  },
+  "340:323": {
+    "inputs": {
+      "value": 24
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Frame Rate"
+    }
+  },
+  "340:302": {
+    "inputs": {
+      "width": [
+        "340:299",
+        1
+      ],
+      "height": [
+        "340:301",
+        1
+      ],
+      "length": [
+        "340:329",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLTXVLatentVideo",
+    "_meta": {
+      "title": "空Latent视频（LTXV）"
+    }
+  },
+  "340:329": {
+    "inputs": {
+      "expression": "a * b",
+      "values.a": [
+        "340:331",
+        0
+      ],
+      "values.b": [
+        "340:323",
+        0
+      ]
+    },
+    "class_type": "ComfyMathExpression",
+    "_meta": {
+      "title": "Math Expression"
+    }
+  },
+  "340:324": {
+    "inputs": {
+      "value": 360
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Height"
+    }
+  },
+  "340:332": {
+    "inputs": {
+      "start_index": 0.0,
+      "duration": [
+        "340:331",
+        0
+      ],
+      "audio": [
+        "276",
+        0
+      ]
+    },
+    "class_type": "TrimAudioDuration",
+    "_meta": {
+      "title": "修剪音频时长"
+    }
+  },
+  "340:328": {
+    "inputs": {
+      "audio": [
+        "340:332",
+        0
+      ],
+      "audio_vae": [
+        "340:335",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEEncode",
+    "_meta": {
+      "title": "LTXV音频VAE编码"
+    }
+  },
+  "340:326": {
+    "inputs": {
+      "video_latent": [
+        "340:325",
+        0
+      ],
+      "audio_latent": [
+        "340:327",
+        0
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "340:327": {
+    "inputs": {
+      "samples": [
+        "340:328",
+        0
+      ],
+      "mask": [
+        "340:333",
+        0
+      ]
+    },
+    "class_type": "SetLatentNoiseMask",
+    "_meta": {
+      "title": "设置Latent噪波遮罩"
+    }
+  },
+  "340:313": {
+    "inputs": {
+      "model_name": "ltx-2.3-spatial-upscaler-x2-1.1.safetensors"
+    },
+    "class_type": "LatentUpscaleModelLoader",
+    "_meta": {
+      "title": "加载Latent放大模型"
+    }
+  },
+  "340:293": {
+    "inputs": {
+      "lora_name": "ltx-2.3-22b-distilled-lora-384.safetensors",
+      "strength_model": 0.5,
+      "model": [
+        "340:317",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "340:317": {
+    "inputs": {
+      "ckpt_name": "ltx-2.3-22b-dev-fp8.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Checkpoint加载器（简易）"
+    }
+  },
+  "340:318": {
+    "inputs": {
+      "text_encoder": "gemma_3_12B_it_fp4_mixed.safetensors",
+      "ckpt_name": "ltx-2.3-22b-dev-fp8.safetensors",
+      "device": "default"
+    },
+    "class_type": "LTXAVTextEncoderLoader",
+    "_meta": {
+      "title": "LTXV音频文本编码器加载器"
+    }
+  },
+  "340:319": {
+    "inputs": {
+      "value": "美女面向前方说话"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Prompt"
+    }
+  },
+  "340:342": {
+    "inputs": {
+      "prompt": [
+        "340:319",
+        0
+      ],
+      "max_length": 256,
+      "sampling_mode": "on",
+      "sampling_mode.temperature": 0.7,
+      "sampling_mode.top_k": 64,
+      "sampling_mode.top_p": 0.95,
+      "sampling_mode.min_p": 0.05,
+      "sampling_mode.repetition_penalty": 1.05,
+      "sampling_mode.seed": 0,
+      "clip": [
+        "340:344",
+        1
+      ],
+      "image": [
+        "340:297",
+        0
+      ]
+    },
+    "class_type": "TextGenerateLTX2Prompt",
+    "_meta": {
+      "title": "TextGenerateLTX2Prompt"
+    }
+  },
+  "340:344": {
+    "inputs": {
+      "lora_name": "gemma-3-12b-it-abliterated_lora_rank64_bf16.safetensors",
+      "strength_model": 1.0,
+      "strength_clip": 1.0,
+      "model": [
+        "340:317",
+        0
+      ],
+      "clip": [
+        "340:318",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "加载LoRA"
+    }
+  },
+  "340:297": {
+    "inputs": {
+      "resize_type": "scale dimensions",
+      "resize_type.width": [
+        "340:330",
+        0
+      ],
+      "resize_type.height": [
+        "340:324",
+        0
+      ],
+      "resize_type.crop": "center",
+      "scale_method": "lanczos",
+      "input": [
+        "269",
+        0
+      ]
+    },
+    "class_type": "ResizeImageMaskNode",
+    "_meta": {
+      "title": "调整图像/掩码大小"
+    }
+  },
+  "340:343": {
+    "inputs": {
+      "preview_markdown": "",
+      "preview_text": "",
+      "previewMode": null,
+      "source": [
+        "340:342",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "预览任意"
     }
   }
 }

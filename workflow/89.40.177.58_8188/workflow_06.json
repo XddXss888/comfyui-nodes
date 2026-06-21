@@ -1,9 +1,10 @@
 {
   "3": {
+    "class_type": "KSampler",
     "inputs": {
-      "seed": 66196263239667,
-      "steps": 20,
-      "cfg": 8.0,
+      "seed": 2987682351,
+      "steps": 4,
+      "cfg": 7.0,
       "sampler_name": "euler",
       "scheduler": "normal",
       "denoise": 1.0,
@@ -23,59 +24,44 @@
         "5",
         0
       ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
     }
   },
   "4": {
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
       "ckpt_name": "model.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "Загрузить сheckpoint"
     }
   },
   "5": {
-    "inputs": {
-      "width": 512,
-      "height": 512,
-      "batch_size": 1
-    },
     "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "Пустое латентное изображение"
+    "inputs": {
+      "width": 256,
+      "height": 256,
+      "batch_size": 1
     }
   },
   "6": {
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,",
+      "text": "a simple test image",
       "clip": [
         "4",
         1
       ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "Кодирование текста CLIP (Запрос)"
     }
   },
   "7": {
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "text, watermark",
+      "text": "blurry, lowres, watermark, text",
       "clip": [
         "4",
         1
       ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "Кодирование текста CLIP (Запрос)"
     }
   },
   "8": {
+    "class_type": "VAEDecode",
     "inputs": {
       "samples": [
         "3",
@@ -85,23 +71,16 @@
         "4",
         2
       ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "Декодировать VAE"
     }
   },
   "9": {
+    "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "ComfyUI",
+      "filename_prefix": "tgbot",
       "images": [
         "8",
         0
       ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Сохранить изображение"
     }
   }
 }

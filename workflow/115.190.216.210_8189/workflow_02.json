@@ -1,101 +1,158 @@
 {
-  "26": {
+  "262": {
     "_meta": {
-      "title": "IndexTTS 模型加载器"
+      "title": "保存图像"
     },
     "inputs": {
-      "model": "IndexTTS-2",
-      "download_from": "modelscope"
+      "images": [
+        "282",
+        0
+      ],
+      "filename_prefix": "commentary/role"
     },
-    "class_type": "easy downloadIndexTTSAndLoadModel"
+    "class_type": "SaveImage"
   },
-  "27": {
+  "264": {
     "_meta": {
-      "title": "IndexTTS 简单生成"
+      "title": "角色设计Json"
     },
     "inputs": {
-      "seed": [
-        "50",
+      "text": "{\"character_ref_prompts\": [{\"id\": \"287\", \"name\": \"江野\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身]写实风格，江野，二十八岁青年男性，寸头短发，面部轮廓硬朗但略显憔悴，穿着深蓝色旧夹克和黑色工装裤，气质桀骜中透着疲惫与焦虑，全片统一形象\"}]}"
+    },
+    "class_type": "CR Text"
+  },
+  "268": {
+    "_meta": {
+      "title": "图片宽度"
+    },
+    "inputs": {
+      "value": 1280
+    },
+    "class_type": "INTConstant"
+  },
+  "269": {
+    "_meta": {
+      "title": "图片高度"
+    },
+    "inputs": {
+      "value": 720
+    },
+    "class_type": "INTConstant"
+  },
+  "271": {
+    "_meta": {
+      "title": "生成数量"
+    },
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "INTConstant"
+  },
+  "275": {
+    "_meta": {
+      "title": "Integer to String"
+    },
+    "inputs": {
+      "value": [
+        "268",
         0
       ],
-      "text": [
-        "51",
+      "format_string": "{}"
+    },
+    "class_type": "JWIntegerToString"
+  },
+  "276": {
+    "_meta": {
+      "title": "Integer to String"
+    },
+    "inputs": {
+      "value": [
+        "269",
         0
       ],
-      "emotions": [
-        "47",
+      "format_string": "{}"
+    },
+    "class_type": "JWIntegerToString"
+  },
+  "277": {
+    "_meta": {
+      "title": "Join Strings"
+    },
+    "inputs": {
+      "string1": [
+        "275",
         0
       ],
-      "unload_model": false,
-      "indextts_model": [
-        "26",
+      "string2": [
+        "276",
+        0
+      ],
+      "delimiter": "x"
+    },
+    "class_type": "JoinStrings"
+  },
+  "278": {
+    "_meta": {
+      "title": "预览任意"
+    },
+    "inputs": {
+      "source": [
+        "277",
         0
       ]
     },
-    "class_type": "easy indexTTSGenerateSimple"
+    "class_type": "PreviewAny"
   },
-  "29": {
+  "280": {
     "_meta": {
-      "title": "加载音频"
+      "title": "Niuju API Key Loader (安全加载)"
     },
     "inputs": {
-      "audio": "65fcff4a42ef4cce92838d1a9d8fb0fb.flac",
-      "audioUI": "/api/view?filename=%E4%B8%93%E4%B8%9A%E8%A7%A3%E8%AF%B4%E9%85%8D%E9%9F%B3.wav&type=input&subfolder=&rand=0.37012403114482284"
+      "api_key_select": "API Key Niuju"
     },
-    "class_type": "LoadAudio"
+    "class_type": "NiujuAPIKeyLoader"
   },
-  "47": {
+  "282": {
     "_meta": {
-      "title": "音色情感向量"
+      "title": "Niuju GPT Image 2 (中转站)"
     },
     "inputs": {
-      "Low": 0.0,
-      "Sad": 0.0,
-      "Fear": 0.0,
-      "Hate": 0.0,
-      "Angry": 0.0,
-      "Happy": 0.0,
-      "Neutral": 0.0,
-      "Surprise": 0.0,
-      "use_random": false,
-      "voice_name": "",
-      "reference_audio": [
-        "29",
+      "mode": "text2image",
+      "model": "gpt-image-2",
+      "prompt": [
+        "283",
+        0
+      ],
+      "api_key": [
+        "280",
+        0
+      ],
+      "api_url": "http://154.201.73.108",
+      "quality": "auto",
+      "batch_size": [
+        "271",
+        0
+      ],
+      "custom_size": [
+        "277",
+        0
+      ],
+      "retry_times": 3,
+      "size_preset": "自定义",
+      "timeout_seconds": 600
+    },
+    "class_type": "NiujuGPTImage2Node"
+  },
+  "283": {
+    "_meta": {
+      "title": "剧本JSON解析器 (多角色版)"
+    },
+    "inputs": {
+      "JSON剧本数据": [
+        "264",
         0
       ]
     },
-    "class_type": "easy indexTTSEmotionVector"
-  },
-  "49": {
-    "_meta": {
-      "title": "保存音频"
-    },
-    "inputs": {
-      "audio": [
-        "27",
-        0
-      ],
-      "audioUI": "",
-      "filename_prefix": "audio/basicemo_"
-    },
-    "class_type": "SaveAudio"
-  },
-  "50": {
-    "_meta": {
-      "title": "生成种子"
-    },
-    "inputs": {
-      "value": 2664255696
-    },
-    "class_type": "PrimitiveInt"
-  },
-  "51": {
-    "_meta": {
-      "title": "语音内容"
-    },
-    "inputs": {
-      "value": "但是那刀子就像长了眼睛一样飞来。"
-    },
-    "class_type": "PrimitiveStringMultiline"
+    "class_type": "ScriptJSONParserMulti"
   }
 }

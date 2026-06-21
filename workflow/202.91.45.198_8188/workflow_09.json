@@ -1,77 +1,90 @@
 {
-  "10": {
+  "1": {
     "inputs": {
-      "model": "hunyuan3d-dit-v2-0-fp16.safetensors",
-      "attention_mode": "sdpa",
-      "cublas_ops": false
-    },
-    "class_type": "Hy3DModelLoader",
-    "_meta": {
-      "title": "Hy3DModelLoader"
-    }
-  },
-  "13": {
-    "inputs": {
-      "image": "#Psuxos by who (15).jpg"
+      "image": "c5-before.png"
     },
     "class_type": "LoadImage",
     "_meta": {
       "title": "Загрузить изображение"
     }
   },
-  "17": {
+  "2": {
     "inputs": {
-      "filename_prefix": "3D/Hy3D",
-      "file_format": "glb",
-      "save_file": true,
-      "trimesh": [
-        "59",
-        0
-      ]
-    },
-    "class_type": "Hy3DExportMesh",
-    "_meta": {
-      "title": "Hy3DExportMesh"
-    }
-  },
-  "28": {
-    "inputs": {
-      "model": "hunyuan3d-delight-v2-0"
-    },
-    "class_type": "DownloadAndLoadHy3DDelightModel",
-    "_meta": {
-      "title": "(Down)Load Hy3D DelightModel"
-    }
-  },
-  "35": {
-    "inputs": {
-      "steps": 50,
-      "width": 512,
-      "height": 512,
-      "cfg_image": 1.0,
-      "seed": 0,
-      "delight_pipe": [
-        "28",
-        0
-      ],
+      "iterations": 3,
+      "model_name": "GFPGANv1.4.pth",
+      "weight": 0.25,
+      "upscale": 1,
+      "only_center_face": false,
+      "aligned": false,
+      "use_bg_upsampler": false,
       "image": [
-        "64",
-        0
-      ],
-      "scheduler": [
-        "148",
+        "19",
         0
       ]
     },
-    "class_type": "Hy3DDelightImage",
+    "class_type": "IterativeGFPGANNode",
     "_meta": {
-      "title": "Hy3DDelightImage"
+      "title": "Iterative GFPGAN Node"
     }
   },
-  "45": {
+  "3": {
+    "inputs": {
+      "expand_mask": true,
+      "dilation_size": 5,
+      "image": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "MouthDetectionNode",
+    "_meta": {
+      "title": "Mouth Detection Node"
+    }
+  },
+  "4": {
+    "inputs": {
+      "match_brightness": false,
+      "match_contrast": false,
+      "source_image": [
+        "22",
+        0
+      ],
+      "target_image": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "ColorMatchingNode",
+    "_meta": {
+      "title": "Color Matching Node"
+    }
+  },
+  "5": {
+    "inputs": {
+      "feather_distance": 50,
+      "feather_strength": 1.5,
+      "source_image": [
+        "4",
+        0
+      ],
+      "target_image": [
+        "19",
+        0
+      ],
+      "mask": [
+        "3",
+        1
+      ]
+    },
+    "class_type": "SeamlessBlendingNode",
+    "_meta": {
+      "title": "Seamless Blending Node"
+    }
+  },
+  "6": {
     "inputs": {
       "images": [
-        "35",
+        "5",
         0
       ]
     },
@@ -80,183 +93,10 @@
       "title": "Предварительный просмотр изображения"
     }
   },
-  "52": {
-    "inputs": {
-      "width": 1024,
-      "height": 1024,
-      "interpolation": "lanczos",
-      "method": "pad",
-      "condition": "always",
-      "multiple_of": 2,
-      "image": [
-        "13",
-        0
-      ]
-    },
-    "class_type": "ImageResize+",
-    "_meta": {
-      "title": "🔧 Image Resize"
-    }
-  },
-  "55": {
-    "inputs": {
-      "mode": "base",
-      "use_jit": true
-    },
-    "class_type": "TransparentBGSession+",
-    "_meta": {
-      "title": "🔧 InSPyReNet TransparentBG"
-    }
-  },
-  "56": {
-    "inputs": {
-      "rembg_session": [
-        "55",
-        0
-      ],
-      "image": [
-        "52",
-        0
-      ]
-    },
-    "class_type": "ImageRemoveBackground+",
-    "_meta": {
-      "title": "🔧 Image Remove Background"
-    }
-  },
-  "59": {
-    "inputs": {
-      "remove_floaters": true,
-      "remove_degenerate_faces": true,
-      "reduce_faces": true,
-      "max_facenum": 50000,
-      "smooth_normals": false,
-      "trimesh": [
-        "140",
-        0
-      ]
-    },
-    "class_type": "Hy3DPostprocessMesh",
-    "_meta": {
-      "title": "Hy3D Postprocess Mesh"
-    }
-  },
-  "61": {
-    "inputs": {
-      "camera_azimuths": "0, 90, 180, 270, 0, 180",
-      "camera_elevations": "0, 0, 0, 0, 90, -90",
-      "view_weights": "1, 0.1, 0.5, 0.1, 0.05, 0.05",
-      "camera_distance": 1.45,
-      "ortho_scale": 1.2
-    },
-    "class_type": "Hy3DCameraConfig",
-    "_meta": {
-      "title": "Hy3D Camera Config"
-    }
-  },
-  "64": {
-    "inputs": {
-      "x": 0,
-      "y": 0,
-      "resize_source": false,
-      "destination": [
-        "133",
-        0
-      ],
-      "source": [
-        "52",
-        0
-      ],
-      "mask": [
-        "56",
-        1
-      ]
-    },
-    "class_type": "ImageCompositeMasked",
-    "_meta": {
-      "title": "Составное изображение с маской"
-    }
-  },
-  "79": {
-    "inputs": {
-      "render_size": 1024,
-      "texture_size": 2048,
-      "normal_space": "world",
-      "trimesh": [
-        "83",
-        0
-      ],
-      "camera_config": [
-        "61",
-        0
-      ]
-    },
-    "class_type": "Hy3DRenderMultiView",
-    "_meta": {
-      "title": "Hy3D Render MultiView"
-    }
-  },
-  "83": {
-    "inputs": {
-      "trimesh": [
-        "59",
-        0
-      ]
-    },
-    "class_type": "Hy3DMeshUVWrap",
-    "_meta": {
-      "title": "Hy3D Mesh UV Wrap"
-    }
-  },
-  "85": {
-    "inputs": {
-      "model": "hunyuan3d-paint-v2-0"
-    },
-    "class_type": "DownloadAndLoadHy3DPaintModel",
-    "_meta": {
-      "title": "(Down)Load Hy3D PaintModel"
-    }
-  },
-  "88": {
-    "inputs": {
-      "view_size": 512,
-      "steps": 25,
-      "seed": 1024,
-      "denoise_strength": 1.0,
-      "pipeline": [
-        "85",
-        0
-      ],
-      "ref_image": [
-        "35",
-        0
-      ],
-      "normal_maps": [
-        "79",
-        0
-      ],
-      "position_maps": [
-        "79",
-        1
-      ],
-      "camera_config": [
-        "61",
-        0
-      ],
-      "scheduler": [
-        "149",
-        0
-      ]
-    },
-    "class_type": "Hy3DSampleMultiView",
-    "_meta": {
-      "title": "Hy3D Sample MultiView"
-    }
-  },
-  "90": {
+  "7": {
     "inputs": {
       "images": [
-        "79",
+        "2",
         0
       ]
     },
@@ -265,92 +105,11 @@
       "title": "Предварительный просмотр изображения"
     }
   },
-  "92": {
+  "8": {
     "inputs": {
       "images": [
-        "117",
+        "3",
         0
-      ],
-      "renderer": [
-        "79",
-        2
-      ],
-      "camera_config": [
-        "61",
-        0
-      ]
-    },
-    "class_type": "Hy3DBakeFromMultiview",
-    "_meta": {
-      "title": "Hy3D Bake From Multiview"
-    }
-  },
-  "98": {
-    "inputs": {
-      "texture": [
-        "104",
-        0
-      ],
-      "renderer": [
-        "129",
-        2
-      ]
-    },
-    "class_type": "Hy3DApplyTexture",
-    "_meta": {
-      "title": "Hy3D Apply Texture"
-    }
-  },
-  "99": {
-    "inputs": {
-      "filename_prefix": "3D/Hy3D_textured",
-      "file_format": "glb",
-      "save_file": true,
-      "trimesh": [
-        "98",
-        0
-      ]
-    },
-    "class_type": "Hy3DExportMesh",
-    "_meta": {
-      "title": "Hy3DExportMesh"
-    }
-  },
-  "104": {
-    "inputs": {
-      "inpaint_radius": 3,
-      "inpaint_method": "ns",
-      "texture": [
-        "129",
-        0
-      ],
-      "mask": [
-        "129",
-        1
-      ]
-    },
-    "class_type": "CV2InpaintTexture",
-    "_meta": {
-      "title": "CV2 Inpaint Texture"
-    }
-  },
-  "111": {
-    "inputs": {
-      "images": [
-        "88",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image: Multiview results"
-    }
-  },
-  "116": {
-    "inputs": {
-      "images": [
-        "79",
-        1
       ]
     },
     "class_type": "PreviewImage",
@@ -358,107 +117,22 @@
       "title": "Предварительный просмотр изображения"
     }
   },
-  "117": {
-    "inputs": {
-      "width": 2048,
-      "height": 2048,
-      "interpolation": "lanczos",
-      "method": "stretch",
-      "condition": "always",
-      "multiple_of": 0,
-      "image": [
-        "88",
-        0
-      ]
-    },
-    "class_type": "ImageResize+",
-    "_meta": {
-      "title": "🔧 Image Resize"
-    }
-  },
-  "125": {
+  "9": {
     "inputs": {
       "images": [
-        "92",
+        "4",
         0
       ]
     },
     "class_type": "PreviewImage",
     "_meta": {
-      "title": "Preview Image: Initial baked texture"
+      "title": "Предварительный просмотр изображения"
     }
   },
-  "126": {
-    "inputs": {
-      "images": [
-        "129",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image: vertex inpainted texture"
-    }
-  },
-  "127": {
-    "inputs": {
-      "images": [
-        "104",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image: fully inpainted texture"
-    }
-  },
-  "129": {
-    "inputs": {
-      "texture": [
-        "92",
-        0
-      ],
-      "mask": [
-        "92",
-        1
-      ],
-      "renderer": [
-        "92",
-        2
-      ]
-    },
-    "class_type": "Hy3DMeshVerticeInpaintTexture",
-    "_meta": {
-      "title": "Hy3D Mesh Vertice Inpaint Texture"
-    }
-  },
-  "132": {
-    "inputs": {
-      "value": 0.8,
-      "width": 512,
-      "height": 512
-    },
-    "class_type": "SolidMask",
-    "_meta": {
-      "title": "Сплошная маска"
-    }
-  },
-  "133": {
+  "10": {
     "inputs": {
       "mask": [
-        "132",
-        0
-      ]
-    },
-    "class_type": "MaskToImage",
-    "_meta": {
-      "title": "Преобразовать маску в изображение"
-    }
-  },
-  "138": {
-    "inputs": {
-      "mask": [
-        "56",
+        "3",
         1
       ]
     },
@@ -467,106 +141,43 @@
       "title": "🔧 Mask Preview"
     }
   },
-  "140": {
+  "19": {
     "inputs": {
-      "box_v": 1.01,
-      "octree_resolution": 384,
-      "num_chunks": 32000,
-      "mc_level": 0.0,
-      "mc_algo": "mc",
-      "enable_flash_vdm": true,
-      "force_offload": true,
-      "vae": [
-        "10",
-        1
-      ],
-      "latents": [
-        "141",
-        0
-      ]
-    },
-    "class_type": "Hy3DVAEDecode",
-    "_meta": {
-      "title": "Hy3D VAE Decode"
-    }
-  },
-  "141": {
-    "inputs": {
-      "guidance_scale": 5.5,
-      "steps": 50,
-      "seed": 123,
-      "scheduler": "FlowMatchEulerDiscreteScheduler",
-      "force_offload": true,
-      "pipeline": [
-        "10",
-        0
-      ],
+      "max_pixels": 1080,
+      "upscale_method": "nearest-exact",
       "image": [
-        "52",
-        0
-      ],
-      "mask": [
-        "56",
-        1
-      ]
-    },
-    "class_type": "Hy3DGenerateMesh",
-    "_meta": {
-      "title": "Hy3DGenerateMesh"
-    }
-  },
-  "148": {
-    "inputs": {
-      "scheduler": "Euler A",
-      "sigmas": "default",
-      "pipeline": [
-        "28",
+        "1",
         0
       ]
     },
-    "class_type": "Hy3DDiffusersSchedulerConfig",
+    "class_type": "ConditionalRescale",
     "_meta": {
-      "title": "Hy3D Diffusers Scheduler Config"
+      "title": "Conditional Rescale"
     }
   },
-  "149": {
+  "22": {
     "inputs": {
-      "scheduler": "Euler A",
-      "sigmas": "default",
-      "pipeline": [
-        "85",
+      "amount": 0.8,
+      "image": [
+        "2",
         0
       ]
     },
-    "class_type": "Hy3DDiffusersSchedulerConfig",
+    "class_type": "ContrastAdaptiveSharpeningNode",
     "_meta": {
-      "title": "Hy3D Diffusers Scheduler Config"
+      "title": "CAS Sharpening"
     }
   },
-  "153": {
+  "23": {
     "inputs": {
-      "model_file": [
-        "17",
+      "images": [
+        "22",
         0
-      ],
-      "image": ""
+      ]
     },
-    "class_type": "Preview3D",
+    "class_type": "PreviewImage",
     "_meta": {
-      "title": "Предварительный просмотр 3D"
-    }
-  },
-  "154": {
-    "inputs": {
-      "model_file": [
-        "99",
-        0
-      ],
-      "image": ""
-    },
-    "class_type": "Preview3D",
-    "_meta": {
-      "title": "Предварительный просмотр 3D"
+      "title": "Предварительный просмотр изображения"
     }
   }
 }

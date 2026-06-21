@@ -5,10 +5,7 @@
       "type": "wan",
       "device": "default"
     },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载CLIP"
-    }
+    "class_type": "CLIPLoader"
   },
   "107": {
     "inputs": {
@@ -18,10 +15,7 @@
         0
       ]
     },
-    "class_type": "ModelSamplingSD3",
-    "_meta": {
-      "title": "采样算法（SD3）"
-    }
+    "class_type": "ModelSamplingSD3"
   },
   "108": {
     "inputs": {
@@ -31,10 +25,7 @@
         0
       ]
     },
-    "class_type": "ModelSamplingSD3",
-    "_meta": {
-      "title": "采样算法（SD3）"
-    }
+    "class_type": "ModelSamplingSD3"
   },
   "110": {
     "inputs": {
@@ -44,10 +35,7 @@
         0
       ]
     },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
-    }
+    "class_type": "CLIPTextEncode"
   },
   "115": {
     "inputs": {
@@ -59,7 +47,7 @@
         "154",
         2
       ],
-      "length": 77,
+      "length": 81,
       "batch_size": 1,
       "positive": [
         "116",
@@ -86,41 +74,29 @@
         0
       ]
     },
-    "class_type": "WanFirstLastFrameToVideo",
-    "_meta": {
-      "title": "Wan首尾帧视频"
-    }
+    "class_type": "WanFirstLastFrameToVideo"
   },
   "116": {
     "inputs": {
-      "text": "麦田同场景，上一秒烈日暴晒，男主抬手遮挡刺眼阳光，皮肤泛红，神情燥热难耐；下一秒寒风骤起，男主缩身抱臂浑身发抖，麦田色调从暖黄快速转为冷灰。快速切镜对比，固定中景，人物动作自然，突出天气毫无逻辑的骤变反差",
+      "text": "仙气飘飘",
       "clip": [
         "106",
         0
       ]
     },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "正面提示词"
-    }
+    "class_type": "CLIPTextEncode"
   },
   "117": {
     "inputs": {
       "vae_name": "wan_2.1_vae.safetensors"
     },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
+    "class_type": "VAELoader"
   },
   "119": {
     "inputs": {
       "unet_name": "WAN2.2/wan2.2_i2v_high_noise_14B_Q4_K_M.gguf"
     },
-    "class_type": "UnetLoaderGGUF",
-    "_meta": {
-      "title": "Unet Loader (GGUF)"
-    }
+    "class_type": "UnetLoaderGGUF"
   },
   "122": {
     "inputs": {
@@ -129,19 +105,13 @@
         0
       ]
     },
-    "class_type": "wanBlockSwap",
-    "_meta": {
-      "title": "Wan块置换"
-    }
+    "class_type": "wanBlockSwap"
   },
   "123": {
     "inputs": {
       "unet_name": "WAN2.2/wan2.2_i2v_low_noise_14B_Q4_K_M.gguf"
     },
-    "class_type": "UnetLoaderGGUF",
-    "_meta": {
-      "title": "Unet Loader (GGUF)"
-    }
+    "class_type": "UnetLoaderGGUF"
   },
   "124": {
     "inputs": {
@@ -150,10 +120,7 @@
         0
       ]
     },
-    "class_type": "wanBlockSwap",
-    "_meta": {
-      "title": "Wan块置换"
-    }
+    "class_type": "wanBlockSwap"
   },
   "126": {
     "inputs": {
@@ -166,10 +133,7 @@
         0
       ]
     },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
+    "class_type": "VAEDecode"
   },
   "128": {
     "inputs": {
@@ -205,10 +169,7 @@
         2
       ]
     },
-    "class_type": "KSamplerAdvanced",
-    "_meta": {
-      "title": "K采样器（高级）"
-    }
+    "class_type": "KSamplerAdvanced"
   },
   "129": {
     "inputs": {
@@ -244,39 +205,27 @@
         0
       ]
     },
-    "class_type": "KSamplerAdvanced",
-    "_meta": {
-      "title": "K采样器（高级）"
-    }
+    "class_type": "KSamplerAdvanced"
   },
   "131": {
     "inputs": {
       "sage_attention": "auto",
       "allow_compile": false
     },
-    "class_type": "PathchSageAttentionKJ",
-    "_meta": {
-      "title": "Patch Sage Attention KJ"
-    }
+    "class_type": "PathchSageAttentionKJ"
   },
   "132": {
     "inputs": {
       "sage_attention": "auto",
       "allow_compile": false
     },
-    "class_type": "PathchSageAttentionKJ",
-    "_meta": {
-      "title": "Patch Sage Attention KJ"
-    }
+    "class_type": "PathchSageAttentionKJ"
   },
   "135": {
     "inputs": {
-      "image": "6190e08494882f43f175876f92f23a06.jpg"
+      "image": "5.jpg"
     },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image: Start image"
-    }
+    "class_type": "LoadImage"
   },
   "137": {
     "inputs": {
@@ -295,10 +244,7 @@
         0
       ]
     },
-    "class_type": "VHS_VideoCombine",
-    "_meta": {
-      "title": "Video Combine 🎥🅥🅗🅢"
-    }
+    "class_type": "VHS_VideoCombine"
   },
   "152": {
     "inputs": {
@@ -326,10 +272,7 @@
         0
       ]
     },
-    "class_type": "Power Lora Loader (rgthree)",
-    "_meta": {
-      "title": "Power Lora Loader (rgthree) High Noise"
-    }
+    "class_type": "Power Lora Loader (rgthree)"
   },
   "153": {
     "inputs": {
@@ -357,28 +300,22 @@
         0
       ]
     },
-    "class_type": "Power Lora Loader (rgthree)",
-    "_meta": {
-      "title": "Power Lora Loader (rgthree) High Noise"
-    }
+    "class_type": "Power Lora Loader (rgthree)"
   },
   "154": {
     "inputs": {
-      "width": 832,
+      "width": 480,
       "height": 0,
       "upscale_method": "lanczos",
       "keep_proportion": true,
-      "divisible_by": 2,
+      "divisible_by": 8,
       "crop": "disabled",
       "image": [
         "135",
         0
       ]
     },
-    "class_type": "ImageResizeKJ",
-    "_meta": {
-      "title": "Resize Image (deprecated)"
-    }
+    "class_type": "ImageResizeKJ"
   },
   "155": {
     "inputs": {
@@ -387,19 +324,13 @@
         0
       ]
     },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
-    }
+    "class_type": "PreviewImage"
   },
   "159": {
     "inputs": {
       "clip_name": "clip_vision_h.safetensors"
     },
-    "class_type": "CLIPVisionLoader",
-    "_meta": {
-      "title": "加载CLIP视觉"
-    }
+    "class_type": "CLIPVisionLoader"
   },
   "160": {
     "inputs": {
@@ -413,10 +344,7 @@
         0
       ]
     },
-    "class_type": "CLIPVisionEncode",
-    "_meta": {
-      "title": "CLIP视觉编码"
-    }
+    "class_type": "CLIPVisionEncode"
   },
   "161": {
     "inputs": {
@@ -430,19 +358,13 @@
         0
       ]
     },
-    "class_type": "CLIPVisionEncode",
-    "_meta": {
-      "title": "CLIP视觉编码"
-    }
+    "class_type": "CLIPVisionEncode"
   },
   "167": {
     "inputs": {
       "model_name": "OmniSR_X2_DIV2K.safetensors"
     },
-    "class_type": "UpscaleModelLoader",
-    "_meta": {
-      "title": "加载放大模型"
-    }
+    "class_type": "UpscaleModelLoader"
   },
   "171": {
     "inputs": {
@@ -455,19 +377,13 @@
         0
       ]
     },
-    "class_type": "ImageUpscaleWithModel",
-    "_meta": {
-      "title": "使用模型放大图像"
-    }
+    "class_type": "ImageUpscaleWithModel"
   },
   "244": {
     "inputs": {
       "value": 4
     },
-    "class_type": "INTConstant",
-    "_meta": {
-      "title": "采样步数"
-    }
+    "class_type": "INTConstant"
   },
   "245": {
     "inputs": {
@@ -477,10 +393,7 @@
         0
       ]
     },
-    "class_type": "SimpleMath+",
-    "_meta": {
-      "title": "🔧 Simple Math"
-    }
+    "class_type": "SimpleMath+"
   },
   "247": {
     "inputs": {
@@ -490,10 +403,7 @@
         0
       ]
     },
-    "class_type": "ModelPatchTorchSettings",
-    "_meta": {
-      "title": "Model Patch Torch Settings"
-    }
+    "class_type": "ModelPatchTorchSettings"
   },
   "248": {
     "inputs": {
@@ -503,19 +413,13 @@
         0
       ]
     },
-    "class_type": "ModelPatchTorchSettings",
-    "_meta": {
-      "title": "Model Patch Torch Settings"
-    }
+    "class_type": "ModelPatchTorchSettings"
   },
   "264": {
     "inputs": {
       "value": "a/2"
     },
-    "class_type": "SimpleMath+",
-    "_meta": {
-      "title": "🔧 Simple Math"
-    }
+    "class_type": "SimpleMath+"
   },
   "266": {
     "inputs": {
@@ -531,10 +435,7 @@
         0
       ]
     },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "加载LoRA"
-    }
+    "class_type": "LoraLoader"
   },
   "267": {
     "inputs": {
@@ -550,9 +451,6 @@
         0
       ]
     },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "加载LoRA"
-    }
+    "class_type": "LoraLoader"
   }
 }

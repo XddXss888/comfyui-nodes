@@ -6,81 +6,65 @@
     }
   },
   "2": {
-    "class_type": "LoraLoader",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "model": [
-        "1",
-        0
-      ],
+      "text": "Logo discord avec les lettres RS pour un developpeur",
       "clip": [
         "1",
         1
-      ],
-      "lora_name": "zit_nsfw_peli86.safetensors",
-      "strength_model": 0.85,
-      "strength_clip": 0.85
+      ]
     }
   },
   "3": {
     "class_type": "CLIPTextEncode",
     "inputs": {
+      "text": "blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality",
       "clip": [
-        "2",
+        "1",
         1
-      ],
-      "text": "그여자, • She stands in a seductive pose,  full-body shot, feet and toes visible infront of window with morining light,she is fully nude,not wearing any underwear"
+      ]
     }
   },
   "4": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        1
-      ],
-      "text": ""
-    }
-  },
-  "5": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 832,
-      "height": 1216,
+      "width": 1024,
+      "height": 1024,
       "batch_size": 1
     }
   },
-  "6": {
+  "5": {
     "class_type": "KSampler",
     "inputs": {
-      "model": [
-        "2",
-        0
-      ],
-      "positive": [
-        "3",
-        0
-      ],
-      "negative": [
-        "4",
-        0
-      ],
-      "latent_image": [
-        "5",
-        0
-      ],
-      "seed": 535513021004826,
-      "steps": 30,
+      "seed": 1025984445,
+      "steps": 25,
       "cfg": 7.0,
       "sampler_name": "dpmpp_2m",
       "scheduler": "karras",
-      "denoise": 1.0
+      "denoise": 1.0,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "latent_image": [
+        "4",
+        0
+      ]
     }
   },
-  "7": {
+  "6": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "6",
+        "5",
         0
       ],
       "vae": [
@@ -89,71 +73,14 @@
       ]
     }
   },
-  "8": {
+  "7": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "7",
+        "6",
         0
       ],
-      "filename_prefix": "geunyeoja/그여자"
-    }
-  },
-  "9": {
-    "class_type": "LoadImage",
-    "inputs": {
-      "image": "1000007127.jpg"
-    }
-  },
-  "10": {
-    "class_type": "LoadImage",
-    "inputs": {
-      "image": "1000007125.jpg"
-    }
-  },
-  "11": {
-    "class_type": "LoadImage",
-    "inputs": {
-      "image": "1000007126.jpg"
-    }
-  },
-  "12": {
-    "class_type": "ImageBatch",
-    "inputs": {
-      "image1": [
-        "9",
-        0
-      ],
-      "image2": [
-        "10",
-        0
-      ]
-    }
-  },
-  "13": {
-    "class_type": "ImageBatch",
-    "inputs": {
-      "image1": [
-        "12",
-        0
-      ],
-      "image2": [
-        "11",
-        0
-      ]
-    }
-  },
-  "14": {
-    "class_type": "ReActorBuildFaceModel",
-    "inputs": {
-      "images": [
-        "13",
-        0
-      ],
-      "save_mode": true,
-      "send_only": false,
-      "face_model_name": "geunyeoja_v1",
-      "compute_method": "Mean"
+      "filename_prefix": "fantasy"
     }
   }
 }

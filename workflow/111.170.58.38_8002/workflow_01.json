@@ -1,16 +1,7 @@
 {
   "12": {
     "inputs": {
-      "image": "5008831-5159-7-8y-1-ljy8c1.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "15": {
-    "inputs": {
-      "image": "hezhongai_00086_-20-b4wncf.png"
+      "image": "47208-comfyui_00958-y5gp4o.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -22,17 +13,13 @@
       "api_url": "https://3dcdn.580ai.net/v1beta/models/gemini-3.1-flash-image-preview:generateContent",
       "header_key": "Authorization",
       "header_value": "sk-Lyx9OF97YMK0suEi6ZIPzq4E9d3dhIKJzO2YS5WpAsZbZpxS",
-      "text": "图一服装不变，穿在一个欧洲漂亮女孩身上8-9岁金发，参考图二风格，禁止与图二人物场景一模一样，侧面站着自然随意摆动玩的图，裙摆超蓬蓬效果长裙到脚，长的披纱袖跟裙摆一样长度，披纱要密集点不太透明，图一颜色不变 ，参考图二人物披发金发加小发饰，参考图二场景，长裙到脚，参考图一款式袖子是纱，参考图一款式，参考图二人物站在楼梯口，参考图一动作摆动披袖纱效果",
-      "aspect_ratio": "1:1",
-      "image_size": "2K",
+      "text": "东亚温婉的年轻女模特，五官柔和，黑色柔顺长发，穿着这件黄灰撞色大青果领双面呢外套，版型极度宽松，落肩超大阔型，袖管宽大，衣身余量充足，慵懒松弛感，内搭浅灰色宽松连衣裙，全身人像，简约纯白墙面背景，柔和均匀的室内自然光，女装电商实拍，原生相机画质，8K高清，完整全身构图。",
+      "aspect_ratio": "3:4",
+      "image_size": "4K",
       "timeout": 200,
       "retry_count": 2,
       "image_1": [
         "12",
-        0
-      ],
-      "image_2": [
-        "15",
         0
       ]
     },
@@ -43,7 +30,7 @@
   },
   "17": {
     "inputs": {
-      "filename_prefix": "hezhongai",
+      "filename_prefix": "HezhongAi",
       "images": [
         "16",
         0

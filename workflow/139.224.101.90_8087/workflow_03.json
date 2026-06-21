@@ -1,0 +1,279 @@
+{
+  "21": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect"
+  },
+  "22": {
+    "inputs": {
+      "noise_seed": 615202862533674
+    },
+    "class_type": "RandomNoise"
+  },
+  "23": {
+    "inputs": {
+      "cfg": 1.0,
+      "model": [
+        "42",
+        0
+      ],
+      "positive": [
+        "50",
+        0
+      ],
+      "negative": [
+        "52",
+        0
+      ]
+    },
+    "class_type": "CFGGuider"
+  },
+  "25": {
+    "inputs": {
+      "text": [
+        "65",
+        0
+      ],
+      "clip": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "26": {
+    "inputs": {
+      "steps": 4,
+      "width": [
+        "56",
+        0
+      ],
+      "height": [
+        "56",
+        1
+      ]
+    },
+    "class_type": "Flux2Scheduler"
+  },
+  "27": {
+    "inputs": {
+      "value": 1080
+    },
+    "class_type": "INTConstant"
+  },
+  "28": {
+    "inputs": {
+      "noise": [
+        "22",
+        0
+      ],
+      "guider": [
+        "23",
+        0
+      ],
+      "sampler": [
+        "21",
+        0
+      ],
+      "sigmas": [
+        "26",
+        0
+      ],
+      "latent_image": [
+        "57",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced"
+  },
+  "29": {
+    "inputs": {
+      "samples": [
+        "28",
+        0
+      ],
+      "vae": [
+        "35",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "35": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "39": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader"
+  },
+  "42": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b-fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "44": {
+    "inputs": {
+      "text": "LOGO,水印，字幕，中文字幕，blurry, out of focus, overexposed, underexposed, low contrast, washed out colors, excessive noise, grainy texture, poor lighting, flickering, motion blur, distorted proportions, unnatural skin tones, deformed facial features, asymmetrical face, missing facial features, extra limbs, disfigured hands, wrong hand count, artifacts around text, unreadable text",
+      "clip": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "45": {
+    "inputs": {
+      "pixels": [
+        "55",
+        0
+      ],
+      "vae": [
+        "35",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "48": {
+    "inputs": {
+      "filename_prefix": "Klein9B",
+      "images": [
+        "212",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "50": {
+    "inputs": {
+      "conditioning": [
+        "25",
+        0
+      ],
+      "latent": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent"
+  },
+  "52": {
+    "inputs": {
+      "conditioning": [
+        "44",
+        0
+      ],
+      "latent": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent"
+  },
+  "53": {
+    "inputs": {
+      "value": 1920
+    },
+    "class_type": "INTConstant"
+  },
+  "55": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": 1920,
+      "background_color": "#000000",
+      "image": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2"
+  },
+  "56": {
+    "inputs": {
+      "image": [
+        "55",
+        0
+      ]
+    },
+    "class_type": "GetImageSize"
+  },
+  "57": {
+    "inputs": {
+      "width": [
+        "53",
+        0
+      ],
+      "height": [
+        "27",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage"
+  },
+  "65": {
+    "inputs": {
+      "prompt": "S01: [远景] 一条清澈宽阔的河流缓缓流淌，河边长满翠绿的青草和野花，远处是连绵的青山和蓝蓝的天空。画面中央偏左，一只可爱的小猴子穿着红色小肚兜，蹲在河岸边的大石头上，伸出一只小手开心地拨弄着水面，溅起晶莹的水花。阳光洒在河面上，波光粼粼，几只蝴蝶在花丛中飞舞。画面充满温暖的田园气息，色调明亮柔和。儿童绘本风格，水彩插画，暖色调。 --ar 16:9\nS02: [中景] 河岸边，小猴子站在青草地上，一只大鳄鱼从水中探出上半身，露出布满鳞片的绿色脊背和长长的嘴巴。大鳄鱼眯着眼睛，嘴角弯弯地笑着，一副和善友好的样子，正在向小猴子招手示意。鳄鱼身后是碧绿平静的河面。小猴子穿着红色肚兜，歪着小脑袋好奇地看着鳄鱼，一只小手抓着自己的尾巴尖，神情天真又好奇。画面右侧远处隐约可见河对岸绿树成荫的小岛轮廓。儿童绘本风格，水彩插画，暖色调。 --ar 16:9\nS03: [远景] 宽阔的河面上，大鳄鱼露出长长的脊背正在河中央缓缓游动，划出一道道波纹。小猴子穿着红色肚兜，稳稳地坐在鳄鱼宽厚的背上，双手抓着鳄鱼背上的鳞片，身体微微前倾，开心地张望四周。河水碧绿清澈，河岸两边的树木和花草在远处变成模糊的色块。天空湛蓝，飘着几朵白云，画面充满冒险的动感。儿童绘本风格，水彩插画，暖色调。 --ar 16:9\nS04: [近景] 河中央，大鳄鱼露出水面的侧脸特写，眼睛变得凶狠狡猾，嘴巴微微张开露出尖利的牙齿，表情阴险。鳄鱼背上的小猴子身体微微一僵，圆圆的大眼睛睁得大大的，嘴巴微张，露出惊讶的神情。但他随即眨了眨眼睛，目光变得专注而冷静，小脑袋微微低垂，似乎正在思考什么。画面背景是流动的河水，虚化处理，聚焦在鳄鱼和小猴子紧张对峙的神态上。儿童绘本风格，水彩插画，暖色调中带着一丝紧张感。 --ar 16:9\nS05: [中景] 鳄鱼背上的小猴子双手捂住自己的胸口位置，脸上露出夸张的惊慌表情，嘴巴张得圆圆的，好像在着急地说着什么，眼神中却透出一丝不易察觉的机灵。大鳄鱼在他前方露出水面，回过头来听着，眼睛半信半疑地眯着。河水在两人周围缓缓流动，河岸已经在不远处隐约可见。画面构图紧凑，聚焦在小猴子表演和鳄鱼犹豫的神态上。儿童绘本风格，水彩插画，暖色调。 --ar 16:9\nS06: [远景] 画面切换到河岸边，一棵枝繁叶茂的大树矗立在岸边。小猴子穿着红色肚兜，正纵身一跃，长长的尾巴在空中甩出一道弧线，敏捷地跳向大树的枝干，双手已经抓住了一根粗壮的树枝。大鳄鱼刚刚抵达岸边，巨大的身体还浮在水中，正抬起头看着小猴子跳跃的身影。河水在鳄鱼身边荡起一圈圈涟漪。画面充满动感，定格在小猴子腾空跃起的精彩瞬间。儿童绘本风格，水彩插画，暖色调。 --ar 16:9\nS07: [中景] 高大的树冠上，小猴子穿着红色肚兜，悠闲地翘着二郎腿坐在粗壮的树枝上，长长的尾巴垂下来轻轻晃动。他一手叉腰，一手对着下面的鳄鱼做鬼脸，露出得意又调皮的灿烂笑容。树下的大鳄鱼浮在岸边水面，气得嘴巴张得大大的，露出两排尖牙，眼睛瞪得圆圆的，满脸愤怒又无奈的表情。阳光透过树叶洒下斑驳的光影，整个画面温馨又欢快。儿童绘本风格，水彩插画，暖色调。 --ar 16:9",
+      "start_index": 0,
+      "max_rows": 7
+    },
+    "class_type": "easy promptLine"
+  },
+  "70": {
+    "inputs": {
+      "images": [
+        "55",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "106": {
+    "inputs": {
+      "image": "character_reference (4).png"
+    },
+    "class_type": "LoadImage"
+  },
+  "211": {
+    "inputs": {
+      "clean_file_cache": true,
+      "clean_processes": true,
+      "clean_dlls": true,
+      "retry_times": 3,
+      "anything": [
+        "29",
+        0
+      ]
+    },
+    "class_type": "RAMCleanup"
+  },
+  "212": {
+    "inputs": {
+      "clean_file_cache": true,
+      "clean_processes": true,
+      "clean_dlls": true,
+      "retry_times": 3,
+      "anything": [
+        "211",
+        0
+      ]
+    },
+    "class_type": "RAMCleanup"
+  }
+}

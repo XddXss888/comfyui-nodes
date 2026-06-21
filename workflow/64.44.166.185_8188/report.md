@@ -1,11 +1,11 @@
 # 64.44.166.185:8188
 
-**GPU**: CPU | **显存**: — | **空闲**: 24 GB
-**内存**: 34 GB (空闲 24 GB)
+**GPU**: CPU | **显存**: — | **空闲**: 21 GB
+**内存**: 34 GB (空闲 21 GB)
 **版本**: 0.18.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-15 18:27:48
-**历史总数**: 91 | **成功**: 5
+**扫描时间**: 2026-06-21 17:39:13
+**历史总数**: 104 | **成功**: 6
 
 ## 工作流列表
 
@@ -51,3 +51,13 @@
 - **节点数**: 6
 - **模型** (1):
   - sdxl_base_1.0.safetensors
+
+### 6. workflow_06.json
+- **Prompt ID**: `d623c1ee-765d-4222-8ab0-7a7d0c5be0c0`
+- **类型**: 文生图
+- **节点数**: 7
+- **模型** (1):
+  - sdxl_base_1.0.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Logo discord avec les lettres RS pour un developpeur
+  - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality

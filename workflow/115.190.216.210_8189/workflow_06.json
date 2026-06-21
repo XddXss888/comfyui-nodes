@@ -39,7 +39,7 @@
       "title": "加载音频"
     },
     "inputs": {
-      "audio": "8d17abdff4244a77a0525586f529c9fd.flac",
+      "audio": "f507e8dac780466bab0f4c59972b4b99.wav",
       "audioUI": "/api/view?filename=%E4%B8%93%E4%B8%9A%E8%A7%A3%E8%AF%B4%E9%85%8D%E9%9F%B3.wav&type=input&subfolder=&rand=0.37012403114482284"
     },
     "class_type": "LoadAudio"
@@ -52,10 +52,10 @@
       "Low": 0.0,
       "Sad": 0.0,
       "Fear": 0.0,
-      "Hate": 0.61,
+      "Hate": 0.0,
       "Angry": 0.0,
-      "Happy": 1.4,
-      "Neutral": 0.0,
+      "Happy": 0.0,
+      "Neutral": 1.0,
       "Surprise": 0.0,
       "use_random": false,
       "voice_name": "",
@@ -85,7 +85,7 @@
       "title": "生成种子"
     },
     "inputs": {
-      "value": 2653297770
+      "value": 4291132326
     },
     "class_type": "PrimitiveInt"
   },
@@ -94,7 +94,7 @@
       "title": "语音内容"
     },
     "inputs": {
-      "value": "还洗什么衣服，要我们帮你下水炸鱼吗。"
+      "value": "1"
     },
     "class_type": "PrimitiveStringMultiline"
   }

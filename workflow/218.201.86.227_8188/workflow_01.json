@@ -1,73 +1,36 @@
 {
-  "3": {
+  "6": {
     "inputs": {
-      "seed": 723516,
-      "steps": 20,
-      "cfg": 7.0,
-      "sampler_name": "dpmpp_2m",
-      "scheduler": "normal",
-      "denoise": 1.0,
-      "model": [
-        "36",
-        0
-      ],
-      "positive": [
-        "38",
-        0
-      ],
-      "negative": [
-        "39",
-        0
-      ],
-      "latent_image": [
-        "5",
-        0
+      "text": "A stunning digital artwork in C4D style. A single Chinese calligraphy brush (maobi) is painting a dynamic sweeping stroke that curves elegantly from the lower-left to the upper-right of the canvas. The brushstroke trail is a glowing translucent ribbon — inside the flowing trail, micro-landscapes of Yantai's traditional Chinese architectural landmarks are revealed as exquisite 3D miniature models with frosted glass (磨砂毛玻璃) material finish: the Penglai Pavilion (蓬莱阁) with its tiered ancient rooftops, Yantaishan colonial lighthouse, Kunyu Mountain National Park pagodas, Haichang Fisherman's Wharf, grand traditional courtyard architecture of Mou's Manor (牟氏庄园), and Yantai's beautiful coastline. All buildings rendered in sleek frosted glass material with subtle translucent layers and soft refractions. The Bohai Sea and rivers are represented as smooth gradient light streams. Golden sunlight creates a powerful sense of vitality and energy flowing through the scene. The brush tip sits at the leading end of the stroke. Everything outside the brushstroke ribbon is pure white negative space (liubai). The overall style is futuristic tech aesthetic, minimalist, clean, C4D 3D rendering, frosted glass textures, soft ambient lighting, depth of field, ultra high detail, 8K, modern digital art.",
+      "clip": [
+        "30",
+        1
       ]
     },
-    "class_type": "KSampler",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "4": {
-    "inputs": {
-      "ckpt_name": "DreamShaper_XL_v2.1_Turbo.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "模型加载器"
-    }
-  },
-  "5": {
-    "inputs": {
-      "width": 512,
-      "height": 512,
-      "batch_size": 4
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "空Latent图像"
+      "title": "CLIP Text Encode (Positive Prompt)"
     }
   },
   "8": {
     "inputs": {
       "samples": [
-        "3",
+        "31",
         0
       ],
       "vae": [
-        "4",
+        "30",
         2
       ]
     },
     "class_type": "VAEDecode",
     "_meta": {
-      "title": "VAE解码"
+      "title": "VAE Decode"
     }
   },
-  "28": {
+  "9": {
     "inputs": {
-      "filename_prefix": "logo202512175579",
+      "filename_prefix": "ComfyUI",
       "images": [
         "8",
         0
@@ -75,52 +38,83 @@
     },
     "class_type": "SaveImage",
     "_meta": {
-      "title": "保存图像"
+      "title": "Save Image"
     }
   },
-  "36": {
+  "27": {
     "inputs": {
-      "lora_name": "RoundLogo_XL_E10R16.safetensors",
-      "strength_model": 1.0,
-      "strength_clip": 1.0,
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "30": {
+    "inputs": {
+      "ckpt_name": "flux1-dev-fp8.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "31": {
+    "inputs": {
+      "seed": 612951921283965,
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
       "model": [
-        "4",
+        "30",
         0
       ],
-      "clip": [
-        "4",
-        1
+      "positive": [
+        "35",
+        0
+      ],
+      "negative": [
+        "33",
+        0
+      ],
+      "latent_image": [
+        "27",
+        0
       ]
     },
-    "class_type": "LoraLoader",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "加载LoRA"
+      "title": "KSampler"
     }
   },
-  "38": {
+  "33": {
     "inputs": {
-      "text": "A logo of app,white background,CSM",
+      "text": "traditional Chinese painting, guohua, ink wash, watercolor, brush ink texture, paper texture, blurry, low quality, deformed, watermark, text, signature, messy, crowded, dark background, anime, cartoon, Western oil painting, low resolution, noisy",
       "clip": [
-        "36",
+        "30",
         1
       ]
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "正向提示词"
+      "title": "CLIP Text Encode (Negative Prompt)"
     }
   },
-  "39": {
+  "35": {
     "inputs": {
-      "text": "bad art, ugly, deformed, watermark, duplicated\n",
-      "clip": [
-        "36",
-        1
+      "guidance": 3.5,
+      "conditioning": [
+        "6",
+        0
       ]
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "FluxGuidance",
     "_meta": {
-      "title": "CLIP文本编码"
+      "title": "Flux Guidance"
     }
   }
 }

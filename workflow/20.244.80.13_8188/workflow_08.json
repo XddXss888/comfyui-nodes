@@ -2,13 +2,13 @@
   "1": {
     "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "ckpt_name": "v1-5-pruned-emaonly.safetensors"
+      "ckpt_name": "dreamshaper_8.safetensors"
     }
   },
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "A single, sleek black cat with luminous amber eyes sits poised on a weathered wooden fence at dusk. The fur is rendered in ultra-detailed, clean smooth textures, with each strand catching the warm, golden hour light in natural vibrant colors. The cat's whiskers are sharp and crystalline, while its gaze holds a quiet intensity. In the background, a soft bokeh of overgrown garden foliage and distant rolling hills creates rich depth of field. The composition is excellent and balanced, with the cat positioned in the lower left third, drawing the eye across the scene. Natural studio lighting casts a subtle, warm glow, accentuating the creature's form and the weathered grain of the wood. The atmosphere is serene yet watchful, a moment of photorealism with subtle artistic polish. Flawless rendering captures the interplay of light and shadow, from the cat's glossy nose to the faint, dewy mist hovering just above the grass.",
+      "text": "Hot girl",
       "clip": [
         "1",
         1
@@ -36,7 +36,7 @@
   "5": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 701245900,
+      "seed": 1203133612,
       "steps": 8,
       "cfg": 7.0,
       "sampler_name": "euler",

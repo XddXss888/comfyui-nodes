@@ -1,0 +1,184 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "mPMix_NSFW_V9_fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "主模型加载"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "z-image-qwen.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "4": {
+    "inputs": {
+      "seed": 674698520767632,
+      "steps": 9,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "26",
+        0
+      ],
+      "positive": [
+        "27",
+        0
+      ],
+      "negative": [
+        "29",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "5": {
+    "inputs": {
+      "text": "现代写实, Base scene: uid=09kkf0i|race=黄种人|sex=男|apparent_age=外观年龄约18岁|face=五官线条分明|eyes=眉宇间透着理科生特有的专注与冷静, 眼神锐利|nose_mouth=鼻翼与嘴角位置稳定|skin=肤色与人种一致, 外观年龄约18岁|aura=坚韧理性, 清纯直男, 后背抵着灰色混凝土墙壁, 身体轻度紧绷, 眉头微皱, 视线平静直对陈墨瞳, 右手半抬欲推未推, 神情冷静克制带一丝不耐, 洗旧浅灰色纯棉T恤, 宽松深蓝色牛仔裤, 白色运动鞋, 清爽黑色短发, 画面中央偏右, 居陈墨瞳身后被圈于墙壁, 叶凡|少年, 黄种人东亚外貌, 清透年轻面部, 年轻面部软组织饱满, 干净年轻肤质, uid=1wojfyw|race=黄种人|sex=女|apparent_age=外观年龄约19岁|face=五官精致立体|eyes=眉宇间带着骄傲, 锐利的眸子灵动且充满好奇|nose_mouth=唇形边界清楚|skin=肌肤如瓷般白皙细腻|aura=透着不加掩饰的野性, 左手撑于叶凡耳侧墙面, 微踮脚尖身体前压, 右手食指与中指轻触叶凡脸颊, 嘴角带戏谑弧度, 眼眸骄傲锐利, 脸颊隐约浮现淡淡红晕, 下唇微咬, 暗红色长直发扎成高马尾随动作轻扬, 左耳银色四叶草耳坠, 紧身黑色短款露脐T恤露出白皙紧致侧腰线, 洗旧浅黑色热裤, 修长双腿笔直, 白色高跟短靴, 画面正中前景主体, 背对镜头一侧, 身形高挑将叶凡圈于臂弯与墙壁之间, 陈墨瞳|少女, 竖向画幅, 竖屏构图, 576:1024 画幅比例, 完整竖向画面, 不要输出横屏画面或横向裁切",
+      "嵌入提示词": null,
+      "clip": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "正面提示词"
+    }
+  },
+  "7": {
+    "inputs": {
+      "width": 576,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "分辨率调整"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "4",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "22": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "26": {
+    "inputs": {
+      "sage_attention": "auto",
+      "allow_compile": false,
+      "model": [
+        "30",
+        0
+      ]
+    },
+    "class_type": "PathchSageAttentionKJ",
+    "_meta": {
+      "title": "Sage 加速"
+    }
+  },
+  "27": {
+    "inputs": {
+      "threshold": 0.2,
+      "strength": 6.0,
+      "conditioning": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "ConditioningNoiseInjection",
+    "_meta": {
+      "title": "出图差异化"
+    }
+  },
+  "28": {
+    "inputs": {
+      "clip_name": "Qwen3-4B-UD-Q5_K_XL.gguf",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "ClipLoaderGGUF",
+    "_meta": {
+      "title": "GGUF 文本编码器"
+    }
+  },
+  "29": {
+    "inputs": {
+      "text": "",
+      "嵌入提示词": null,
+      "clip": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "负面提示词"
+    }
+  },
+  "30": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": true,
+        "lora": "Z-image\\Z-TX-WH13.safetensors",
+        "strength": 0.8
+      },
+      "lora_2": {
+        "on": false,
+        "lora": "None",
+        "strength": 0.8
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "权重Lora加载器"
+    }
+  }
+}

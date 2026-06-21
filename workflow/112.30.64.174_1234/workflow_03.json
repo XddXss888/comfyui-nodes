@@ -1,12 +1,79 @@
 {
-  "8": {
+  "3": {
+    "inputs": {
+      "seed": 181225923671053,
+      "steps": 30,
+      "cfg": 5.0,
+      "sampler_name": "er_sde",
+      "scheduler": "simple",
+      "denoise": 0.8,
+      "model": [
+        "278",
+        0
+      ],
+      "positive": [
+        "222",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器1"
+    }
+  },
+  "5": {
+    "inputs": {
+      "width": 768,
+      "height": 1536,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "worst quality, low quality, early, old, score_1, score_2, score_3, cartoon, graphic, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, long body, bad anatomy, bad hands, missing fingers, extra fingers, extra digits, fewer digits, cropped, very displeasing, artist name, blurry, jpeg artifacts, lowres, censor",
+      "clip": [
+        "267",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "17": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "105": {
     "inputs": {
       "samples": [
-        "19",
+        "3",
         0
       ],
       "vae": [
-        "15",
+        "265",
         0
       ]
     },
@@ -15,33 +82,126 @@
       "title": "VAE解码"
     }
   },
-  "11": {
+  "203": {
     "inputs": {
-      "text": "sfw, 1girl, solo, fearful, indoors, corridor, grey carpet, cold lighting, empty room, full body, from front, The pale girl on the left side of the frame, walking slowly against the wall, facing the camera with her head down, arms tightly wrapped around her own chest. lin ya (original), black hair, long hair, wet hair, brown eyes, tall, slender, fair skin, large breasts, oval face, narrow eyes, long eyelashes, thin eyebrows, small mouth, small nose, mole under eye, oversized dark grey flannel bathrobe, bathrobe wrap around, completely covered clothes, bare feet, pale skin, red eyes, swollen eyes, scared, empty eyes, head down, averting eyes, trembling, self hug, protective posture, tense atmosphere, cinematic angle, ,very aesthetic, masterpiece, best quality, ultra-detailed, miaoka, high contrast, huge filesize,",
+      "model": "wd-swinv2-tagger-v3",
+      "threshold": 0.25,
+      "character_threshold": 0.4,
+      "replace_underscore": true,
+      "trailing_comma": false,
+      "exclude_tags": [
+        "225",
+        0
+      ],
+      "tags": "ibaraki douji \\(fate\\), 1girl, long hair, breasts, blush, open mouth, blonde hair, 1boy, sitting, nipples, yellow eyes, hetero, small breasts, horns, one eye closed, penis, japanese clothes, pointy ears, solo focus, kimono, english text, uncensored, tattoo, erection, facial mark, testicles, veins, oni, veiny penis, large penis, forehead mark, huge penis, looking at penis, penis on face, penis awe",
+      "image": [
+        "204",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss",
+    "_meta": {
+      "title": "WD14 Tagger 🐍"
+    }
+  },
+  "204": {
+    "inputs": {
+      "image": "sample-ec72bf82eac4ac989399f9e3ad1b2953.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "207": {
+    "inputs": {
+      "text_0": "ibaraki douji \\(fate\\), 1girl, long hair, breasts, blush, open mouth, blonde hair, 1boy, sitting, nipples, yellow eyes, hetero, small breasts, horns, one eye closed, penis, japanese clothes, pointy ears, solo focus, kimono, english text, uncensored, tattoo, erection, facial mark, testicles, veins, oni, veiny penis, large penis, forehead mark, huge penis, looking at penis, penis on face, penis awe",
+      "text": [
+        "203",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "219": {
+    "inputs": {
+      "string": "masterpiece, best quality, score_9, score_8, score_7, year 2025, newest, highres, absurdres, very aesthetic, scenery, "
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "String Literal"
+    }
+  },
+  "220": {
+    "inputs": {
+      "text1": [
+        "203",
+        0
+      ],
+      "text2": [
+        "219",
+        0
+      ]
+    },
+    "class_type": "TextCombinerTwo",
+    "_meta": {
+      "title": "Text Combiner 2"
+    }
+  },
+  "221": {
+    "inputs": {
+      "text_0": "ibaraki douji \\(fate\\), 1girl, long hair, breasts, blush, open mouth, blonde hair, 1boy, sitting, nipples, yellow eyes, hetero, small breasts, horns, one eye closed, penis, japanese clothes, pointy ears, solo focus, kimono, english text, uncensored, tattoo, erection, facial mark, testicles, veins, oni, veiny penis, large penis, forehead mark, huge penis, looking at penis, penis on face, penis awemasterpiece, best quality, score_9, score_8, score_7, year 2025, newest, highres, absurdres, very aesthetic, scenery, ",
+      "text": [
+        "220",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "222": {
+    "inputs": {
+      "text": [
+        "220",
+        0
+      ],
       "clip": [
-        "45",
+        "267",
         0
       ]
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
+      "title": "CLIP文本编码"
     }
   },
-  "12": {
+  "225": {
     "inputs": {
-      "text": ",blue grid background, bad hands, deformed hands, bad anatomy, Deviant Art, lowres, worst quality, low quality, multiple views, censored, jpeg artifacts, realistic, 3d, (double navel:1.2), (extra navel:1.2), mutated, deformed, censor",
-      "clip": [
-        "45",
+      "value": "watermark, sample watermark, weibo username, weibo, weibo logo, weibo watermark, censored, mosaic censoring, artist name, twitter username, bar censor, line censor, heart censor, blank censor, pointless censoring, identity censor, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, blurry"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "字符串（多行）"
+    }
+  },
+  "247": {
+    "inputs": {
+      "images": [
+        "105",
         0
       ]
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "PreviewImage",
     "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
+      "title": "预览图像"
     }
   },
-  "15": {
+  "265": {
     "inputs": {
       "vae_name": "qwen_image_vae.safetensors"
     },
@@ -50,48 +210,7 @@
       "title": "加载VAE"
     }
   },
-  "19": {
-    "inputs": {
-      "seed": 7509727242,
-      "steps": 40,
-      "cfg": 5.0,
-      "sampler_name": "euler_ancestral",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "47",
-        0
-      ],
-      "positive": [
-        "11",
-        0
-      ],
-      "negative": [
-        "12",
-        0
-      ],
-      "latent_image": [
-        "28",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "28": {
-    "inputs": {
-      "width": 768,
-      "height": 1280,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "空Latent图像"
-    }
-  },
-  "44": {
+  "266": {
     "inputs": {
       "unet_name": "Anima\\anime\\novaAnimeAM_v15.safetensors",
       "weight_dtype": "default"
@@ -101,7 +220,7 @@
       "title": "UNet加载器"
     }
   },
-  "45": {
+  "267": {
     "inputs": {
       "clip_name": "qwen_3_06b_base.safetensors",
       "type": "stable_diffusion",
@@ -112,11 +231,11 @@
       "title": "加载CLIP"
     }
   },
-  "47": {
+  "268": {
     "inputs": {
       "shift": 3.0,
       "model": [
-        "99",
+        "266",
         0
       ]
     },
@@ -125,61 +244,35 @@
       "title": "采样算法（AuraFlow）"
     }
   },
-  "66": {
+  "269": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "8",
-        0
-      ]
+      "text1": "",
+      "text2": ""
     },
-    "class_type": "SaveImage",
+    "class_type": "TextCombinerTwo",
     "_meta": {
-      "title": "保存图像"
+      "title": "Text Combiner 2"
     }
   },
-  "99": {
+  "278": {
     "inputs": {
-      "lora_name": "Anima\\style\\channelv2.safetensors",
-      "strength_model": 1.0,
+      "lllite_name": "anima-lllite-any-test-like-v2.safetensors",
+      "strength": 0.9,
+      "start_percent": 0.0,
+      "end_percent": 0.4,
+      "preserve_wrapper": false,
       "model": [
-        "101",
+        "268",
+        0
+      ],
+      "image": [
+        "204",
         0
       ]
     },
-    "class_type": "LoraLoaderModelOnly",
+    "class_type": "AnimaLLLiteApply",
     "_meta": {
-      "title": "LoRA加载器（仅模型）"
-    }
-  },
-  "100": {
-    "inputs": {
-      "unet_name": "novaAnimeAM_v15.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "101": {
-    "inputs": {
-      "unet_name": "Anima\\anime\\novaAnimeAM_v15.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "102": {
-    "inputs": {
-      "unet_name": "Anima\\anime\\novaAnimeAM_v15.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
+      "title": "Apply Anima ControlNet-LLLite"
     }
   }
 }

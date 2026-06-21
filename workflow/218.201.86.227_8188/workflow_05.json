@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "A moody landscape illustration of the Great Wall of China winding through misty green mountains in heavy rain, dark clouds filling the sky, rain drops falling, wet ancient stone watchtowers glistening, fog and mist rolling through the mountain valleys, dramatic and atmospheric, beautiful hand-drawn illustration style, muted cool color palette with blue-grey tones, panoramic wide shot, melancholic and poetic atmosphere, Chinese ink wash painting influence combined with modern digital illustration",
+      "text": "Traditional Chinese ink painting of misty mountains and a tranquil river, towering pine trees on cliff edges, a lone fisherman in a small wooden boat, cascading waterfalls, soft morning fog, bamboo forest, ancient stone bridge, serene and contemplative atmosphere, guohua style, ink wash technique, delicate brush strokes, minimal color palette of black ink with subtle touches of light blue and pale gold, vertical scroll composition, poetic and meditative",
       "clip": [
         "30",
         1
@@ -43,7 +43,7 @@
   },
   "27": {
     "inputs": {
-      "width": 1024,
+      "width": 768,
       "height": 768,
       "batch_size": 1
     },
@@ -63,7 +63,7 @@
   },
   "31": {
     "inputs": {
-      "seed": 633017177991357,
+      "seed": 18938598610354,
       "steps": 20,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -93,7 +93,7 @@
   },
   "33": {
     "inputs": {
-      "text": "sunny, bright, warm colors, blue sky, cheerful",
+      "text": "photo, realistic, 3d, blurry, deformed, ugly",
       "clip": [
         "30",
         1

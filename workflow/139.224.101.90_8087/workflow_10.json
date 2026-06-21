@@ -1,0 +1,279 @@
+{
+  "21": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect"
+  },
+  "22": {
+    "inputs": {
+      "noise_seed": 100116973244648
+    },
+    "class_type": "RandomNoise"
+  },
+  "23": {
+    "inputs": {
+      "cfg": 1.0,
+      "model": [
+        "42",
+        0
+      ],
+      "positive": [
+        "50",
+        0
+      ],
+      "negative": [
+        "52",
+        0
+      ]
+    },
+    "class_type": "CFGGuider"
+  },
+  "25": {
+    "inputs": {
+      "text": [
+        "65",
+        0
+      ],
+      "clip": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "26": {
+    "inputs": {
+      "steps": 4,
+      "width": [
+        "56",
+        0
+      ],
+      "height": [
+        "56",
+        1
+      ]
+    },
+    "class_type": "Flux2Scheduler"
+  },
+  "27": {
+    "inputs": {
+      "value": 1080
+    },
+    "class_type": "INTConstant"
+  },
+  "28": {
+    "inputs": {
+      "noise": [
+        "22",
+        0
+      ],
+      "guider": [
+        "23",
+        0
+      ],
+      "sampler": [
+        "21",
+        0
+      ],
+      "sigmas": [
+        "26",
+        0
+      ],
+      "latent_image": [
+        "57",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced"
+  },
+  "29": {
+    "inputs": {
+      "samples": [
+        "28",
+        0
+      ],
+      "vae": [
+        "35",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "35": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "39": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader"
+  },
+  "42": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b-fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "44": {
+    "inputs": {
+      "text": "LOGO,水印，字幕，中文字幕，blurry, out of focus, overexposed, underexposed, low contrast, washed out colors, excessive noise, grainy texture, poor lighting, flickering, motion blur, distorted proportions, unnatural skin tones, deformed facial features, asymmetrical face, missing facial features, extra limbs, disfigured hands, wrong hand count, artifacts around text, unreadable text",
+      "clip": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "45": {
+    "inputs": {
+      "pixels": [
+        "55",
+        0
+      ],
+      "vae": [
+        "35",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "48": {
+    "inputs": {
+      "filename_prefix": "Klein9B",
+      "images": [
+        "212",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "50": {
+    "inputs": {
+      "conditioning": [
+        "25",
+        0
+      ],
+      "latent": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent"
+  },
+  "52": {
+    "inputs": {
+      "conditioning": [
+        "44",
+        0
+      ],
+      "latent": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent"
+  },
+  "53": {
+    "inputs": {
+      "value": 1920
+    },
+    "class_type": "INTConstant"
+  },
+  "55": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": 1920,
+      "background_color": "#000000",
+      "image": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2"
+  },
+  "56": {
+    "inputs": {
+      "image": [
+        "55",
+        0
+      ]
+    },
+    "class_type": "GetImageSize"
+  },
+  "57": {
+    "inputs": {
+      "width": [
+        "53",
+        0
+      ],
+      "height": [
+        "27",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage"
+  },
+  "65": {
+    "inputs": {
+      "prompt": "一张精美的儿童绘本封面图，故事标题：小猴子的心。画面采用暖色调水彩插画风格，主体居中，背景虚化，留有标题文字空间，整体温馨可爱，吸引小朋友注意力。儿童绘本风格，水彩插画，暖色调，高清细节。",
+      "start_index": 0,
+      "max_rows": 1
+    },
+    "class_type": "easy promptLine"
+  },
+  "70": {
+    "inputs": {
+      "images": [
+        "55",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "106": {
+    "inputs": {
+      "image": "scene_batch_2 (7).jpg"
+    },
+    "class_type": "LoadImage"
+  },
+  "211": {
+    "inputs": {
+      "clean_file_cache": true,
+      "clean_processes": true,
+      "clean_dlls": true,
+      "retry_times": 3,
+      "anything": [
+        "29",
+        0
+      ]
+    },
+    "class_type": "RAMCleanup"
+  },
+  "212": {
+    "inputs": {
+      "clean_file_cache": true,
+      "clean_processes": true,
+      "clean_dlls": true,
+      "retry_times": 3,
+      "anything": [
+        "211",
+        0
+      ]
+    },
+    "class_type": "RAMCleanup"
+  }
+}

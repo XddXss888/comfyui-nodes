@@ -8,7 +8,7 @@
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "t",
+      "text": "Logo discord avec les lettres RS pour un developpeur",
       "clip": [
         "1",
         1
@@ -16,61 +16,71 @@
     }
   },
   "3": {
-    "class_type": "EmptyLatentImage",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "width": 512,
-      "height": 512,
-      "batch_size": 1
+      "text": "blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality",
+      "clip": [
+        "1",
+        1
+      ]
     }
   },
   "4": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "5": {
     "class_type": "KSampler",
     "inputs": {
+      "seed": 1359801779,
+      "steps": 25,
+      "cfg": 7.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1.0,
       "model": [
         "1",
         0
       ],
-      "seed": 42,
-      "steps": 1,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "normal",
       "positive": [
         "2",
         0
       ],
       "negative": [
-        "2",
-        0
-      ],
-      "latent_image": [
         "3",
         0
       ],
-      "denoise": 1.0
-    }
-  },
-  "5": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "vae": [
-        "1",
-        2
-      ],
-      "samples": [
+      "latent_image": [
         "4",
         0
       ]
     }
   },
   "6": {
-    "class_type": "SaveImage",
+    "class_type": "VAEDecode",
     "inputs": {
-      "filename_prefix": "t",
-      "images": [
+      "samples": [
         "5",
         0
+      ],
+      "vae": [
+        "1",
+        2
       ]
+    }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "6",
+        0
+      ],
+      "filename_prefix": "fantasy"
     }
   }
 }

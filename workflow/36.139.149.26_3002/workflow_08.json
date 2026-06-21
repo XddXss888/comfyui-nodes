@@ -1,436 +1,20 @@
 {
-  "14": {
+  "76": {
     "inputs": {
-      "model_name": "ltx-2.3-spatial-upscaler-x2-1.1.safetensors"
-    },
-    "class_type": "LatentUpscaleModelLoader",
-    "_meta": {
-      "title": "加载Latent放大模型"
-    }
-  },
-  "15": {
-    "inputs": {
-      "frame_rate": [
-        "132",
-        0
-      ],
-      "positive": [
-        "71",
-        0
-      ],
-      "negative": [
-        "78",
-        0
-      ]
-    },
-    "class_type": "LTXVConditioning",
-    "_meta": {
-      "title": "LTXV条件"
-    }
-  },
-  "30": {
-    "inputs": {
-      "sampler_name": "euler_ancestral_cfg_pp"
-    },
-    "class_type": "KSamplerSelect",
-    "_meta": {
-      "title": "K采样器选择"
-    }
-  },
-  "32": {
-    "inputs": {
-      "cfg": 1.0,
-      "model": [
-        "151",
-        0
-      ],
-      "positive": [
-        "217",
-        0
-      ],
-      "negative": [
-        "217",
-        1
-      ]
-    },
-    "class_type": "CFGGuider",
-    "_meta": {
-      "title": "CFG引导器"
-    }
-  },
-  "37": {
-    "inputs": {
-      "noise_seed": 556629735166101
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "随机噪波"
-    }
-  },
-  "53": {
-    "inputs": {
-      "clip_name1": "gemma_3_12B_it_fp8_e4m3fn.safetensors",
-      "clip_name2": "ltx-2.3_text_projection_bf16.safetensors",
-      "type": "ltxv",
-      "device": "default"
-    },
-    "class_type": "DualCLIPLoader",
-    "_meta": {
-      "title": "双CLIP加载器"
-    }
-  },
-  "56": {
-    "inputs": {
-      "vae_name": "LTX23_video_vae_bf16.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "60": {
-    "inputs": {
-      "vae_name": "LTX23_audio_vae_bf16.safetensors",
-      "device": "main_device",
-      "weight_dtype": "bf16"
-    },
-    "class_type": "VAELoaderKJ",
-    "_meta": {
-      "title": "VAELoader KJ"
-    }
-  },
-  "63": {
-    "inputs": {
-      "noise": [
-        "37",
-        0
-      ],
-      "guider": [
-        "32",
-        0
-      ],
-      "sampler": [
-        "30",
-        0
-      ],
-      "sigmas": [
-        "138",
-        0
-      ],
-      "latent_image": [
-        "147",
-        0
-      ]
-    },
-    "class_type": "SamplerCustomAdvanced",
-    "_meta": {
-      "title": "自定义采样器（高级）"
-    }
-  },
-  "64": {
-    "inputs": {
-      "av_latent": [
-        "63",
-        0
-      ]
-    },
-    "class_type": "LTXVSeparateAVLatent",
-    "_meta": {
-      "title": "LTXV分离音视频潜空间"
-    }
-  },
-  "65": {
-    "inputs": {
-      "samples": [
-        "64",
-        1
-      ],
-      "audio_vae": [
-        "60",
-        0
-      ]
-    },
-    "class_type": "LTXVAudioVAEDecode",
-    "_meta": {
-      "title": "LTXV音频VAE解码"
-    }
-  },
-  "71": {
-    "inputs": {
-      "text": "地点：城市商业区街道\n人物：无\n事：地面剧烈震动，街道中央猛地裂开一道巨大的缝隙，碎石飞溅\n对白：无",
-      "clip": [
-        "53",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
-    }
-  },
-  "78": {
-    "inputs": {
-      "text": "singing, subtitles, blurry, out of focus, overexposed, underexposed, low contrast, washed out colors, excessive noise, grainy texture, poor lighting, flickering, motion blur, distorted proportions, unnatural skin tones, deformed facial features, asymmetrical face, missing facial features, extra limbs, disfigured hands, wrong hand count, artifacts around text, unreadable text on shirt or hat, incorrect lettering on cap (“PNTR”), missing microphone, misplaced microphone, inconsistent perspective, camera shake, incorrect depth of field, background too sharp, background clutter, distracting reflections, harsh shadows, inconsistent lighting direction, color banding, cartoonish rendering, 3D CGI look, unrealistic materials, uncanny valley effect, incorrect ethnicity, wrong gender, exaggerated expressions, smiling, laughing, exaggerated sadness, wrong gaze direction, eyes looking at camera, mismatched lip sync, silent or muted audio, distorted voice, robotic voice, echo, background noise, off-sync audio, missing sniff sounds, incorrect dialogue, added dialogue, repetitive speech, jittery movement, awkward pauses, incorrect timing, unnatural transitions, inconsistent framing, tilted camera, missing door or shelves, missing shallow depth of field, flat lighting, inconsistent tone, cinematic oversaturation, stylized filters, or AI artifacts.",
-      "clip": [
-        "53",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
-    }
-  },
-  "79": {
-    "inputs": {
-      "frame_rate": [
-        "132",
-        0
-      ],
-      "loop_count": 0,
-      "filename_prefix": "LTX2-pre",
-      "format": "video/h264-mp4",
-      "pix_fmt": "yuv420p",
-      "crf": 19,
-      "save_metadata": true,
-      "trim_to_audio": false,
-      "pingpong": false,
-      "save_output": true,
+      "filename_prefix": "comfyui-airport-editorial",
       "images": [
-        "93",
-        0
-      ],
-      "audio": [
-        "65",
+        "94",
         0
       ]
     },
-    "class_type": "VHS_VideoCombine",
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "Video Combine 🎥🅥🅗🅢"
+      "title": "保存图像"
     }
   },
-  "93": {
+  "86": {
     "inputs": {
-      "tile_size": 512,
-      "overlap": 64,
-      "temporal_size": 4096,
-      "temporal_overlap": 64,
-      "samples": [
-        "145",
-        2
-      ],
-      "vae": [
-        "56",
-        0
-      ]
-    },
-    "class_type": "VAEDecodeTiled",
-    "_meta": {
-      "title": "VAE解码（分块）"
-    }
-  },
-  "98": {
-    "inputs": {
-      "width": [
-        "120",
-        1
-      ],
-      "height": [
-        "120",
-        2
-      ],
-      "length": [
-        "133",
-        0
-      ],
-      "batch_size": 1
-    },
-    "class_type": "EmptyLTXVLatentVideo",
-    "_meta": {
-      "title": "空Latent视频（LTXV）"
-    }
-  },
-  "100": {
-    "inputs": {
-      "frames_number": [
-        "133",
-        0
-      ],
-      "frame_rate": [
-        "144",
-        0
-      ],
-      "batch_size": 1,
-      "audio_vae": [
-        "60",
-        0
-      ]
-    },
-    "class_type": "LTXVEmptyLatentAudio",
-    "_meta": {
-      "title": "LTXV 空音频潜空间"
-    }
-  },
-  "113": {
-    "inputs": {
-      "width": [
-        "150",
-        0
-      ],
-      "height": [
-        "150",
-        1
-      ],
-      "upscale_method": "lanczos",
-      "keep_proportion": "crop",
-      "pad_color": "0, 0, 0",
-      "crop_position": "center",
-      "divisible_by": 2,
-      "device": "cpu",
-      "image": [
-        "211",
-        0
-      ]
-    },
-    "class_type": "ImageResizeKJv2",
-    "_meta": {
-      "title": "Resize Image v2"
-    }
-  },
-  "120": {
-    "inputs": {
-      "width": [
-        "150",
-        0
-      ],
-      "height": [
-        "150",
-        1
-      ],
-      "upscale_method": "lanczos",
-      "keep_proportion": "crop",
-      "pad_color": "0, 0, 0",
-      "crop_position": "center",
-      "divisible_by": 2,
-      "device": "cpu",
-      "image": [
-        "210",
-        0
-      ]
-    },
-    "class_type": "ImageResizeKJv2",
-    "_meta": {
-      "title": "Resize Image v2"
-    }
-  },
-  "132": {
-    "inputs": {
-      "value": 24.0
-    },
-    "class_type": "PrimitiveFloat",
-    "_meta": {
-      "title": "fps"
-    }
-  },
-  "133": {
-    "inputs": {
-      "value": "a * b + 1",
-      "a": [
-        "136",
-        0
-      ],
-      "b": [
-        "132",
-        0
-      ]
-    },
-    "class_type": "SimpleMath+",
-    "_meta": {
-      "title": "🔧 Simple Math"
-    }
-  },
-  "136": {
-    "inputs": {
-      "value": 5
-    },
-    "class_type": "INTConstant",
-    "_meta": {
-      "title": "INT Constant"
-    }
-  },
-  "138": {
-    "inputs": {
-      "sigmas": "1.0, 0.99375, 0.9875, 0.98125, 0.975, 0.909375,0.881203,0.863321,0.841251,0.820089,0.655, 0.381875, 0.0"
-    },
-    "class_type": "ManualSigmas",
-    "_meta": {
-      "title": "自定义Sigmas"
-    }
-  },
-  "144": {
-    "inputs": {
-      "_float": [
-        "132",
-        0
-      ]
-    },
-    "class_type": "CR Float To Integer",
-    "_meta": {
-      "title": "🔧 CR Float To Integer"
-    }
-  },
-  "145": {
-    "inputs": {
-      "positive": [
-        "217",
-        0
-      ],
-      "negative": [
-        "217",
-        1
-      ],
-      "latent": [
-        "64",
-        0
-      ]
-    },
-    "class_type": "LTXVCropGuides",
-    "_meta": {
-      "title": "LTXV裁剪指导"
-    }
-  },
-  "147": {
-    "inputs": {
-      "video_latent": [
-        "217",
-        2
-      ],
-      "audio_latent": [
-        "100",
-        0
-      ]
-    },
-    "class_type": "LTXVConcatAVLatent",
-    "_meta": {
-      "title": "LTXVConcatAVLatent"
-    }
-  },
-  "150": {
-    "inputs": {
-      "use_custom_resolution": true,
-      "resolution": "832x480 (5.2:3) (横屏)",
-      "custom_width": 1280,
-      "custom_height": 720
-    },
-    "class_type": "TTResolutionSelector",
-    "_meta": {
-      "title": "TT分辨率选择器"
-    }
-  },
-  "151": {
-    "inputs": {
-      "unet_name": "ltx-2.3-22b-distilled_transformer_only_fp8_input_scaled.safetensors",
+      "unet_name": "z_image_turbo_bf16.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -438,91 +22,137 @@
       "title": "UNet加载器"
     }
   },
-  "190": {
+  "87": {
     "inputs": {
-      "anything": [
-        "93",
-        0
-      ]
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "qwen_image",
+      "device": "default"
     },
-    "class_type": "easy cleanGpuUsed",
+    "class_type": "CLIPLoader",
     "_meta": {
-      "title": "清理显存占用"
+      "title": "加载CLIP"
     }
   },
-  "210": {
+  "91": {
     "inputs": {
-      "image": "77d19df0_comfyui-airport-editorial_01587_.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "211": {
-    "inputs": {
-      "image": "77d19df0_comfyui-airport-editorial_01587_.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "216": {
-    "inputs": {
-      "direction": "right",
-      "match_image_size": true,
-      "spacing_width": 0,
-      "spacing_color": "white",
-      "image1": [
-        "210",
+      "seed": 386389556562250,
+      "steps": 10,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "86",
         0
       ],
-      "image2": [
-        "211",
-        0
-      ]
-    },
-    "class_type": "ImageStitch",
-    "_meta": {
-      "title": "图像拼接"
-    }
-  },
-  "217": {
-    "inputs": {
-      "num_guides": "2",
-      "num_guides.frame_idx_1": 0,
-      "num_guides.strength_1": 0.7,
-      "num_guides.frame_idx_2": 120,
-      "num_guides.strength_2": 0.75,
       "positive": [
-        "15",
+        "92",
         0
       ],
       "negative": [
-        "15",
-        1
-      ],
-      "vae": [
-        "56",
+        "93",
         0
       ],
-      "latent": [
-        "98",
-        0
-      ],
-      "num_guides.image_1": [
-        "120",
-        0
-      ],
-      "num_guides.image_2": [
-        "113",
+      "latent_image": [
+        "96",
         0
       ]
     },
-    "class_type": "LTXVAddGuideMulti",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "LTXVAddGuideMulti"
+      "title": "K采样器"
+    }
+  },
+  "92": {
+    "inputs": {
+      "text": [
+        "114",
+        0
+      ],
+      "clip": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "低质量, 模糊, 噪点, JPEG伪影, 压缩失真, 多余的手指, 扭曲的手, 畸形手, 不对称眼睛, 错位牙齿, 卡通风格, 动漫滤镜, 过度上色, 扁平化设计, 残缺身体, 切割画面, 杂乱背景, 错误透视, 丑陋, 恐怖, 死亡眼神, 异常肤色, 表情僵硬, 文字, 水印, 签名, 用户名,出现人类",
+      "clip": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "94": {
+    "inputs": {
+      "samples": [
+        "91",
+        0
+      ],
+      "vae": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "95": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "96": {
+    "inputs": {
+      "width": [
+        "97",
+        0
+      ],
+      "height": [
+        "97",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "97": {
+    "inputs": {
+      "use_custom_resolution": false,
+      "resolution": "1920x1080 (16:9) (横屏)",
+      "custom_width": 1024,
+      "custom_height": 1024
+    },
+    "class_type": "TTResolutionSelector",
+    "_meta": {
+      "title": "TT分辨率选择器"
+    }
+  },
+  "114": {
+    "inputs": {
+      "value": "老干警（沧桑中年男性）\n\n专属面部细节（独家差异化）：中年东南亚宽脸偏方脸型，面部轮廓宽大扎实，下颌骨厚重硬朗，线条沉稳笨拙不锐利。内双厚重眼皮，眼型偏短，眼尾自然下垂，眼神深沉通透、沉稳内敛，自带岁月沧桑感。鼻梁偏低粗，鼻头肥大宽厚，鼻翼松弛。深小麦色暗沉肤质，面部毛孔清晰，脸颊、眼周有明显自然细纹与浅层皱纹，颧骨略高，面部肌肉松弛，唇色偏淡，整体面相沉稳厚重、饱经世事。\n\n人物特质：中年东南亚男性，脸型宽大沉稳，眉眼深沉内敛，面部布满自然岁月纹路，深小麦色肤质，体态稳健厚重，自带长期执勤的沧桑阅历感\n\n服装&鞋履细节：深灰色复古长袖警服，棉质旧化面料，表面自然轻微褪色、肌理粗糙，领口有长期穿着形成的磨损泛白痕迹；深色宽松工装长裤，面料柔软松弛，穿着久置形成自然杂乱褶皱；复古真皮皮鞋，鞋面布满细微划痕、氧化暗沉做旧痕迹，鞋底轻微磨损，还原多年执勤的老旧质感\n\n中文写实定妆提示词：16:9宽屏影视画幅，专业影视人设精准分区排版，纯白色纯色干净背景，无杂质无阴影无杂物，80年代国产刑侦老电影质感，真人写实人像，低饱和复古色调，自然胶片颗粒感，电影级打光，超高清细节。画面严格分区：左侧三分之一区域展示人物标准正面完整全身立绘，从头到脚完整无裁切；右侧三分之二区域上半部分均等排布45°斜侧身、90°正侧面、后背完整三张全身站姿，比例统一规整；右侧三分之二区域下半部分横排四格小巧脸部特写，包含开心、沉思、流泪、愤怒四种情绪，构图主次分明均衡协调。中年沧桑东南亚老干警，宽方扎实脸型，下颌骨厚重硬朗，厚重内双眼皮，眼尾下垂，眼神深沉内敛，低粗鼻梁，鼻头肥大宽厚，深小麦色暗沉肌肤，面部细纹丰富，肌肉松弛，体态稳健厚重，气质成熟沧桑。身穿旧化深灰色棉质复古警服，搭配深色宽松工装长裤，脚穿做旧磨损真皮皮鞋，面料褪色粗糙，鞋面划痕氧化细节真实，岁月质感浓郁，皮肤肌理布满岁月痕迹，无磨皮无美颜，适配短剧建模、人设定妆、分镜参考"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "提示词"
     }
   }
 }

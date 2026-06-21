@@ -1,0 +1,189 @@
+{
+  "1": {
+    "inputs": {
+      "clip_name": "nsfw_wan_umt5-xxl_fp8_scaled.safetensors",
+      "model": "wan",
+      "type": "wan"
+    },
+    "class_type": "CLIPLoader"
+  },
+  "2": {
+    "inputs": {
+      "vae_name": "Wan\\wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "3": {
+    "inputs": {
+      "unet_name": "wan22RemixNSFWT2v14b.DFTR.safetensors",
+      "model": "default",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "4": {
+    "inputs": {
+      "unet_name": "wan22RemixNSFWT2v14bLow.lsL4.safetensors",
+      "model": "default",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "9": {
+    "inputs": {
+      "model": [
+        "3",
+        0
+      ],
+      "sage_attention": "auto"
+    },
+    "class_type": "PathchSageAttentionKJ"
+  },
+  "10": {
+    "inputs": {
+      "model": [
+        "4",
+        0
+      ],
+      "sage_attention": "auto"
+    },
+    "class_type": "PathchSageAttentionKJ"
+  },
+  "11": {
+    "inputs": {
+      "model": [
+        "9",
+        0
+      ],
+      "enable_fp16_accumulation": true
+    },
+    "class_type": "ModelPatchTorchSettings"
+  },
+  "12": {
+    "inputs": {
+      "model": [
+        "10",
+        0
+      ],
+      "enable_fp16_accumulation": true
+    },
+    "class_type": "ModelPatchTorchSettings"
+  },
+  "13": {
+    "inputs": {
+      "clip": [
+        "1",
+        0
+      ],
+      "text": "nsfw, 1boy 1milf, (mother leaning close to whisper in son s ear:1.3), (intimate proximity in domestic setting:1.2), medium shot, eye-level, over-the-shoulder from behind the boy, [Kamisaka Misui] in foreground, [Kamisaka Misui s son] partially visible in background BREAK Kamisaka Misui: 42yo female, loose messy bun, fair skin, mature hourglass figure, brown eyes wide and intense, (leaning down close to seated figure, one hand resting lightly on his shoulder), (wearing pale purple silk nightgown with thin straps, beige cardigan slipping off one shoulder), (lips nearly touching ear of listener, breath warm and quick), (expression caught between warning and longing), BREAK teenage boy: 16yo male, clean-cut short hair, slim athletic build, (seated on leather sofa, head turned slightly to receive whisper), (wearing casual home clothes), BREAK night, living room with tv glow in background, warm amber floor lamp lighting, empty sofa space beside them still holding impression of where she sat, BREAK intimate low-light atmosphere, soft shadows, cinematic shallow depth of field focusing on the space between lips and ear"
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "14": {
+    "inputs": {
+      "clip": [
+        "1",
+        0
+      ],
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "15": {
+    "inputs": {
+      "Value": 5.0
+    },
+    "class_type": "DF_Integer"
+  },
+  "16": {
+    "inputs": {
+      "a": [
+        "15",
+        0
+      ],
+      "value": "a*16+1"
+    },
+    "class_type": "SimpleMath+"
+  },
+  "17": {
+    "inputs": {
+      "length": [
+        "16",
+        0
+      ],
+      "width": 480,
+      "height": 720,
+      "batch_size": 1,
+      "batch_count": 1
+    },
+    "class_type": "EmptyHunyuanLatentVideo"
+  },
+  "18": {
+    "inputs": {
+      "model_high_noise": [
+        "11",
+        0
+      ],
+      "model_low_noise": [
+        "12",
+        0
+      ],
+      "positive": [
+        "13",
+        0
+      ],
+      "negative": [
+        "14",
+        0
+      ],
+      "latent_image": [
+        "17",
+        0
+      ],
+      "strength": 0.875,
+      "seed": 92983394346842,
+      "seed_behavior": "randomize",
+      "steps": 4,
+      "cfg_high_noise": 1.0,
+      "cfg_low_noise": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "boundary": 0.875,
+      "sigma_shift": 8.0
+    },
+    "class_type": "WanMoeKSampler"
+  },
+  "19": {
+    "inputs": {
+      "samples": [
+        "18",
+        0
+      ],
+      "vae": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "20": {
+    "inputs": {
+      "images": [
+        "19",
+        0
+      ],
+      "frame_rate": 16.0,
+      "loop_count": 0,
+      "filename_prefix": "wan2.2",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 15,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true
+    },
+    "class_type": "VHS_VideoCombine"
+  }
+}

@@ -35,18 +35,18 @@
   },
   "91": {
     "inputs": {
-      "seed": 916445791366624,
+      "seed": 386389556562250,
       "steps": 10,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 0.8,
+      "denoise": 1.0,
       "model": [
         "86",
         0
       ],
       "positive": [
-        "130",
+        "92",
         0
       ],
       "negative": [
@@ -54,13 +54,29 @@
         0
       ],
       "latent_image": [
-        "116",
+        "96",
         0
       ]
     },
     "class_type": "KSampler",
     "_meta": {
       "title": "K采样器"
+    }
+  },
+  "92": {
+    "inputs": {
+      "text": [
+        "114",
+        0
+      ],
+      "clip": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
     }
   },
   "93": {
@@ -101,79 +117,24 @@
       "title": "加载VAE"
     }
   },
-  "116": {
-    "inputs": {
-      "pixels": [
-        "117",
-        0
-      ],
-      "vae": [
-        "95",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE编码"
-    }
-  },
-  "117": {
-    "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 1,
-      "proportional_height": 1,
-      "fit": "letterbox",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_side": "None",
-      "scale_to_length": 1024,
-      "background_color": "#000000",
-      "image": [
-        "124",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
-    "_meta": {
-      "title": "LayerUtility: ImageScaleByAspectRatio V2"
-    }
-  },
-  "118": {
-    "inputs": {
-      "image": "ea7bf728_comfyui-airport-editorial_00853_.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "124": {
+  "96": {
     "inputs": {
       "width": [
-        "125",
+        "97",
         0
       ],
       "height": [
-        "125",
+        "97",
         1
       ],
-      "upscale_method": "lanczos",
-      "keep_proportion": "stretch",
-      "pad_color": "0, 0, 0",
-      "crop_position": "center",
-      "divisible_by": 2,
-      "device": "cpu",
-      "image": [
-        "118",
-        0
-      ]
+      "batch_size": 1
     },
-    "class_type": "ImageResizeKJv2",
+    "class_type": "EmptyLatentImage",
     "_meta": {
-      "title": "Resize Image v2"
+      "title": "空Latent图像"
     }
   },
-  "125": {
+  "97": {
     "inputs": {
       "use_custom_resolution": false,
       "resolution": "1920x1080 (16:9) (横屏)",
@@ -185,17 +146,13 @@
       "title": "TT分辨率选择器"
     }
   },
-  "130": {
+  "114": {
     "inputs": {
-      "text": "统一风格：现代都市视觉风格，真实自然，特写景，俯拍 图1  ， 图1  张大嘴巴激动的大喊，场景 场景 7，景别 特写，机位 俯视，运镜 固定，cinematic storyboard keyframe, clear staging, dramatic composition, consistent characters，尺寸比例：16:9，分辨率：1080p，图1是角色：李夜来2",
-      "clip": [
-        "87",
-        0
-      ]
+      "value": "简易铁丝撬锁工具套装（特务撬保险柜）\n\n材质色彩质感：单根实心哑光黑铁弯折细铁丝，无多余配件，整体纤细简易，两端打磨圆滑，中段弯折出锁芯适配弧度，铁丝表面长期摩擦布满细微划痕，配套小型单层粗麻布束口小布袋，棉抽绳褪色泛白，体积轻薄可直接揣进衣兜，仅靠单根弯折铁丝撬动老式机械保险柜锁芯，极简隐蔽。\n\n完整多视角提示词：16:9 宽屏影视画幅，专业道具三视图精准分区排版，纯白色干净纯色背景，无阴影无杂物无渐变，80 年代刑侦老电影胶片质感，实物超写实拍摄，低饱和复古褪色色调，细腻胶片颗粒，柔和立体柔光，微距高清材质细节，画面左半区域完整简易铁丝撬锁工具连同收纳布袋正面全景；右上均等排布 45° 斜侧、90° 正侧面、布袋背面完整视角；右下横排四格微距特写（哑光黑铁丝表面摩擦划痕、锁芯专用弯折弧度、单层粗麻布收纳布袋、褪色发白束口棉绳），完整展示单根铁丝开锁工具与收纳布袋无裁切，潜伏特务夜间潜入撬开老式保险柜专用极简铁丝撬具，纤细无反光、极易藏匿，结构简单仅有一根弯折铁丝，适配老式机械锁芯，谍战物证建模参考"
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "CLIP文本编码"
+      "title": "提示词"
     }
   }
 }

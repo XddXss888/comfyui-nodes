@@ -8,34 +8,40 @@
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
+      "text": "Logo discord avec les lettres RS pour un developpeur",
       "clip": [
         "1",
         1
-      ],
-      "text": "contact us,  customer service,  support, aerial or street-level map perspective, modern urban, clean signage, welcoming entrance, enterprise environment, corporate professionalism, B2B modern workspace, no text, no watermark, no logo, photorealistic"
+      ]
     }
   },
   "3": {
     "class_type": "CLIPTextEncode",
     "inputs": {
+      "text": "blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality",
       "clip": [
         "1",
         1
-      ],
-      "text": "text, watermark, logo, signature, letters, numbers, blurry, low quality, distorted, ugly, cartoon, anime, illustration, 3d render, CGI, oversaturated, noise, grain, duplicate, deformed"
+      ]
     }
   },
   "4": {
     "class_type": "EmptyLatentImage",
     "inputs": {
       "width": 1024,
-      "height": 512,
+      "height": 1024,
       "batch_size": 1
     }
   },
   "5": {
     "class_type": "KSampler",
     "inputs": {
+      "seed": 3800916969,
+      "steps": 20,
+      "cfg": 7.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1.0,
       "model": [
         "1",
         0
@@ -51,13 +57,7 @@
       "latent_image": [
         "4",
         0
-      ],
-      "seed": 229969757410061923,
-      "steps": 4,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0
+      ]
     }
   },
   "6": {
@@ -80,7 +80,7 @@
         "6",
         0
       ],
-      "filename_prefix": "sb_a3c1e290_contact"
+      "filename_prefix": "fantasy"
     }
   }
 }

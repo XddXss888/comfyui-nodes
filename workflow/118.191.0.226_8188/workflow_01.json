@@ -1,25 +1,21 @@
 {
-  "16": {
+  "1": {
+    "class_type": "easy string",
     "inputs": {
-      "file_path": "/proc/1/cmdline",
-      "dictionary_name": "[filename]"
-    },
-    "class_type": "Load Text File",
-    "_meta": {
-      "title": "Load Text File"
+      "value": "TEST_WRITE_PERMISSION"
     }
   },
-  "17": {
+  "2": {
+    "class_type": "easy saveText",
     "inputs": {
-      "mode": "raw value",
-      "input": [
-        "16",
+      "text": [
+        "1",
         0
-      ]
-    },
-    "class_type": "DisplayAny",
-    "_meta": {
-      "title": "🔧 Display Any"
+      ],
+      "output_file_path": "/ComfyUI",
+      "file_name": "test_write_perm",
+      "file_extension": "txt",
+      "overwrite": true
     }
   }
 }

@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "seductive young curvy woman with long black hair, In a dimly lit elegant hotel room with evening atmosphere, a woman stands in a composed pose after releasing her hair, her figure softly illuminated by warm low light, one hand lightly touching the edge of a glass on a nearby table, body slightly turned with natural posture and shoulders relaxed, gazing steadily toward the viewer with a calm and confident expression, captured in a medium close-up framing that emphasizes her presence and form against the private refined interior.",
+      "text": "asig2, In a cozy living room with warm evening lighting, a nude woman kneels on the couch and slowly lowers herself into a facesitting position over her partner, thighs spread wide on either side of his head, hands gripping the back of the couch for support, back slightly arched, head tilted down with a hesitant yet focused expression as she settles into place.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "izumi_v.2.safetensors",
-      "strength_model": 0.9,
-      "strength_clip": 1.0,
+      "lora_name": "zimg_asig2_conchar.safetensors",
+      "strength_model": 0.63,
+      "strength_clip": 0.7,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.5,
+      "eta": 0.33,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 26161571962184,
+      "seed": 661743540426963,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

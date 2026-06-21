@@ -22,7 +22,7 @@
   },
   "219": {
     "inputs": {
-      "text": "Professional architectural photography, beautifully designed front facade of a beautiful residential home with curb appeal landscaping, front door and pathway, modern style, full front facade of a beautiful residential home centered in frame, viewed from street or driveway level, open sky above with no overhead cover, front yard landscaping and pathway leading to front door, curb appeal from street perspective, clean surfaces in premium outdoor materials, tasteful landscaping and manicured greenery, golden hour natural daylight under open sky, inviting curb appeal, award-winning architectural design. photorealistic, ultra detailed, 8k, magazine quality",
+      "text": "Photorealistic interior of this гостиная, FULLY FURNISHED and beautifully finished, richly and tastefully decorated for Lunar New Year decor, red paper lanterns, fu character, plum blossoms, hongbao envelopes, gold accents, auspicious red and gold, base interior style: contemporary interior, current trends, sculptural furniture, layered neutral palette. Keep the original room architecture — window and door positions, perspective, proportions and layout. Add complete, appropriate furniture for a гостиная and a full festive decoration set. Render smooth freshly painted finished walls and ceiling and a clean polished floor (no bare concrete, no plaster patches, no construction debris, no clutter). Fully furnished contemporary living room with red lanterns, plum blossoms, gold accents, and traditional Chinese New Year decorations in gold and red. Cohesive interior design, complete and well-styled room, warm cinematic lighting, soft natural shadows, realistic materials and textures, photorealistic, magazine-quality interior photography, highly detailed, inviting cozy atmosphere. No text, no watermark, no distorted, broken or duplicated objects.",
       "clip": [
         "217",
         0
@@ -32,17 +32,16 @@
   },
   "317": {
     "inputs": {
-      "text": "indoor room interior, ceiling, enclosed walls, drywall, cluttered furniture, excess seating, picture frame border, vignette, watermark, text, logo, blurry, distorted, low quality, cartoon, illustration, 3d render, overexposed, covered walkway interior, overhead concrete ceiling, interior perspective, no sky visible, enclosed entryway, narrow corridor, entrance tunnel",
-      "clip": [
-        "217",
+      "conditioning": [
+        "219",
         0
       ]
     },
-    "class_type": "CLIPTextEncode"
+    "class_type": "ConditioningZeroOut"
   },
   "9001": {
     "inputs": {
-      "image": "u4lwrpPx7OM8YY353tfOmZ6hNpKDKcWxnf4X3ZhO.jpg"
+      "image": "qa_decor_r5sUQGrQSatppEGu.jpg"
     },
     "class_type": "LoadImage"
   },
@@ -99,12 +98,12 @@
   },
   "500": {
     "inputs": {
-      "seed": 816526555,
-      "steps": 8,
+      "seed": 254238233,
+      "steps": 16,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 0.88,
+      "denoise": 0.85,
       "model": [
         "191",
         0
@@ -139,7 +138,7 @@
   },
   "60": {
     "inputs": {
-      "filename_prefix": "ComfyUI_Staging",
+      "filename_prefix": "ComfyUI_HomeDecor",
       "images": [
         "501",
         0

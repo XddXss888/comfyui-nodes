@@ -12,7 +12,7 @@
         "1",
         1
       ],
-      "text": "e-commerce platform,  modern design, professional photography, balanced composition, contextually relevant, natural lighting, expert specialist, trustworthy local professional, personalized service, no text, no watermark, no logo, photorealistic"
+      "text": "ERP system,  secure interface, professional portrait, corporate headshot style, clean background, confident and approachable expression, expert specialist, trustworthy local professional, personalized service, no text, no watermark, no logo, photorealistic"
     }
   },
   "3": {
@@ -28,8 +28,8 @@
   "4": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 1024,
-      "height": 576,
+      "width": 600,
+      "height": 800,
       "batch_size": 1
     }
   },
@@ -52,7 +52,7 @@
         "4",
         0
       ],
-      "seed": 841948729032975237,
+      "seed": 1142272703584203672,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -80,7 +80,7 @@
         "6",
         0
       ],
-      "filename_prefix": "sb_a3c1e290_general"
+      "filename_prefix": "sb_a3c1e290_team"
     }
   }
 }

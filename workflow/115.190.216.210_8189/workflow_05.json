@@ -39,7 +39,7 @@
       "title": "加载音频"
     },
     "inputs": {
-      "audio": "ffdbab9343824d33bb4f811b74b04365.flac",
+      "audio": "55bf6a4faf2a4e3ba5d8e0b360c64645.wav",
       "audioUI": "/api/view?filename=%E4%B8%93%E4%B8%9A%E8%A7%A3%E8%AF%B4%E9%85%8D%E9%9F%B3.wav&type=input&subfolder=&rand=0.37012403114482284"
     },
     "class_type": "LoadAudio"
@@ -55,7 +55,7 @@
       "Hate": 0.0,
       "Angry": 0.0,
       "Happy": 0.0,
-      "Neutral": 0.0,
+      "Neutral": 1.0,
       "Surprise": 0.0,
       "use_random": false,
       "voice_name": "",
@@ -85,7 +85,7 @@
       "title": "生成种子"
     },
     "inputs": {
-      "value": 3616345309
+      "value": 2534139464
     },
     "class_type": "PrimitiveInt"
   },
@@ -94,7 +94,7 @@
       "title": "语音内容"
     },
     "inputs": {
-      "value": "最后我倒在了沈诚怀里，视线模糊。"
+      "value": "1"
     },
     "class_type": "PrimitiveStringMultiline"
   }

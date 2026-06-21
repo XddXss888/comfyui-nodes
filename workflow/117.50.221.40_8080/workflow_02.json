@@ -2,7 +2,7 @@
   "1": {
     "class_type": "UnetLoaderGGUF",
     "inputs": {
-      "unet_name": "flux1-dev-Q8_0.gguf"
+      "unet_name": "sd3.5_large_turbo-Q8_0.gguf"
     }
   },
   "2": {
@@ -10,19 +10,19 @@
     "inputs": {
       "clip_name1": "t5xxl_fp8_e4m3fn.safetensors",
       "clip_name2": "clip_l.safetensors",
-      "type": "flux"
+      "type": "sd3"
     }
   },
   "3": {
     "class_type": "VAELoader",
     "inputs": {
-      "vae_name": "ae_flux1.safetensors"
+      "vae_name": "sd3_vae.safetensors"
     }
   },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "A realistic portrait of Andy Lau, handsome East Asian man in his 60s, sharp suit, warm smile, soft studio lighting, shallow depth of field, cinematic bokeh background, masterpiece, best quality, ultra-detailed skin texture, professional photography., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "A breathtaking ancient Chinese woman sits gracefully in an ornate wooden pavilion, wearing exquisite off-white hanfu embroidered with gold thread and an elaborate golden phoenix pearl headdress with swaying beaded chains. Her serene, elegant expression and tender gaze evoke timeless charm. Soft silk sleeves and flowing skirts ripple gently in the breeze; cherry blossoms drift weightlessly through sunlit air. Warm golden light filters through rustic wooden pillars, casting ethereal, cinematic shadows. Masterpiece, best quality, ultra-detailed, 8K, poetic classical Chinese aesthetic., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -33,35 +33,25 @@
     "class_type": "EmptyLatentImage",
     "inputs": {
       "width": 1024,
-      "height": 1024,
-      "batch_size": 1
-    }
-  },
-  "12": {
-    "class_type": "FluxGuidance",
-    "inputs": {
-      "guidance": 3.5,
-      "conditioning": [
-        "4",
-        0
-      ]
+      "height": 768,
+      "batch_size": 4
     }
   },
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 1798251743,
-      "steps": 28,
+      "seed": 705651137,
+      "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
-      "scheduler": "simple",
+      "scheduler": "sgm_uniform",
       "denoise": 1.0,
       "model": [
         "1",
         0
       ],
       "positive": [
-        "12",
+        "4",
         0
       ],
       "negative": [
@@ -100,9 +90,9 @@
   "9": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_1K",
+      "filename_prefix": "DOOOOR_2K",
       "images": [
-        "8",
+        "14",
         0
       ]
     }
@@ -123,9 +113,28 @@
   "11": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_1K_TH",
+      "filename_prefix": "DOOOOR_2K_TH",
       "images": [
         "10",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "UpscaleModelLoader",
+    "inputs": {
+      "model_name": "2xLexicaRRDBNet_Sharp.pth"
+    }
+  },
+  "14": {
+    "class_type": "ImageUpscaleWithModel",
+    "inputs": {
+      "upscale_model": [
+        "13",
+        0
+      ],
+      "image": [
+        "8",
         0
       ]
     }

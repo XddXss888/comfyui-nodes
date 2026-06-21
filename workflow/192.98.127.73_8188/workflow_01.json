@@ -1,86 +1,208 @@
 {
-  "3": {
-    "class_type": "KSampler",
+  "28": {
     "inputs": {
-      "seed": 963642174,
-      "steps": 4,
-      "cfg": 7.0,
-      "sampler_name": "euler",
-      "scheduler": "normal",
-      "denoise": 1.0,
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Загрузить VAE"
+    }
+  },
+  "29": {
+    "inputs": {
+      "strength": 1.0,
       "model": [
-        "4",
-        0
-      ],
-      "positive": [
-        "6",
-        0
-      ],
-      "negative": [
-        "7",
-        0
-      ],
-      "latent_image": [
-        "5",
+        "30",
         0
       ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "CFGNorm"
     }
   },
-  "4": {
-    "class_type": "CheckpointLoaderSimple",
+  "30": {
     "inputs": {
-      "ckpt_name": "v6.safetensors"
-    }
-  },
-  "5": {
-    "class_type": "EmptyLatentImage",
-    "inputs": {
-      "width": 256,
-      "height": 256,
-      "batch_size": 1
-    }
-  },
-  "6": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "text": "a simple test image",
-      "clip": [
-        "4",
-        1
+      "shift": 3.0,
+      "model": [
+        "44",
+        0
       ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "Выборка модели AuraFlow"
     }
   },
-  "7": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "text": "blurry, lowres, watermark, text",
-      "clip": [
-        "4",
-        1
-      ]
-    }
-  },
-  "8": {
-    "class_type": "VAEDecode",
+  "31": {
     "inputs": {
       "samples": [
-        "3",
+        "45",
         0
       ],
       "vae": [
-        "4",
-        2
-      ]
-    }
-  },
-  "9": {
-    "class_type": "SaveImage",
-    "inputs": {
-      "filename_prefix": "tgbot",
-      "images": [
-        "8",
+        "28",
         0
       ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "Декодировать VAE"
+    }
+  },
+  "32": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Загрузить CLIP"
+    }
+  },
+  "33": {
+    "inputs": {
+      "pixels": [
+        "36",
+        0
+      ],
+      "vae": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "Кодировать VAE"
+    }
+  },
+  "36": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "Масштабировать изображение до общего количества пикселей"
+    }
+  },
+  "38": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "31",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Сохранить изображение"
+    }
+  },
+  "40": {
+    "inputs": {
+      "prompt": "watermarks",
+      "clip": [
+        "32",
+        0
+      ],
+      "vae": [
+        "28",
+        0
+      ],
+      "image": [
+        "36",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEdit",
+    "_meta": {
+      "title": "TextEncodeQwenImageEdit"
+    }
+  },
+  "41": {
+    "inputs": {
+      "image": "ChatGPT Image 18 мая 2026 г., 02_24_33.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Загрузить изображение"
+    }
+  },
+  "42": {
+    "inputs": {
+      "prompt": "delete skirt",
+      "clip": [
+        "32",
+        0
+      ],
+      "vae": [
+        "28",
+        0
+      ],
+      "image": [
+        "36",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEdit",
+    "_meta": {
+      "title": "TextEncodeQwenImageEdit"
+    }
+  },
+  "43": {
+    "inputs": {
+      "unet_name": "qwen_image_edit_fp8_e4m3fn.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Загрузить модель диффузии"
+    }
+  },
+  "44": {
+    "inputs": {
+      "unet_name": "Qwen-Image-Edit-2509-Q2_K.gguf"
+    },
+    "class_type": "UnetLoaderGGUF",
+    "_meta": {
+      "title": "Unet Loader (GGUF)"
+    }
+  },
+  "45": {
+    "inputs": {
+      "seed": 290788618466389,
+      "steps": 20,
+      "cfg": 2.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "29",
+        0
+      ],
+      "positive": [
+        "42",
+        0
+      ],
+      "negative": [
+        "40",
+        0
+      ],
+      "latent_image": [
+        "33",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
     }
   }
 }

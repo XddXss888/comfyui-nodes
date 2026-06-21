@@ -33,7 +33,7 @@
   },
   "4": {
     "inputs": {
-      "seed": 9938233149,
+      "seed": 9475140406,
       "steps": [
         "13",
         0
@@ -103,7 +103,7 @@
   "13": {
     "inputs": {
       "steps": 27,
-      "cfg": 6.0
+      "cfg": 2.0
     },
     "class_type": "StepsAndCfg",
     "_meta": {
@@ -112,8 +112,8 @@
   },
   "17": {
     "inputs": {
-      "Width": 1366,
-      "Height": 768,
+      "Width": 888,
+      "Height": 1184,
       "Batch": 1,
       "Landscape": false,
       "HiResMultiplier": 1.7000000000000002
@@ -125,7 +125,7 @@
   },
   "20": {
     "inputs": {
-      "seed": 9938233149,
+      "seed": 9475140406,
       "steps": 10,
       "cfg": [
         "13",
@@ -205,7 +205,7 @@
   },
   "32": {
     "inputs": {
-      "text": "ever_vivienne_love, nipples, nude, heart, heart-shaped eyes, looking up, looking at viewer, happy, kissing penis, wedding veil, masterpiece, best quality, amazing quality"
+      "text": "ever_jiho_love,  ratatatat74, from behind, tattoo, see-through clothes, looking back, pointing at self, head tilt, ?, v-shaped eyebrows, disgust, femdom, masterpiece, best quality, amazing quality"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -277,7 +277,7 @@
   },
   "65": {
     "inputs": {
-      "data": "[{\"name\": \"vivienne_love.safetensors\", \"strength\": 0.9, \"strength_clip\": 1.0}]",
+      "data": "[{\"name\": \"jiho_love.safetensors\", \"strength\": 1.0, \"strength_clip\": 1.0}]",
       "model": [
         "36",
         0

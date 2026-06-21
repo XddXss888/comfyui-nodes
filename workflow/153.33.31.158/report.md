@@ -4,67 +4,67 @@
 **内存**: 23 GB (空闲 16 GB)
 **版本**: 0.24.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-15 18:28:09
-**历史总数**: 389 | **成功**: 10
+**扫描时间**: 2026-06-21 17:39:35
+**历史总数**: 420 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `30a2aa8d-6c32-4fd8-8067-9a932beeb522`
+- **Prompt ID**: `60229e23-95f9-41ba-92ca-f291dfac76d0`
 - **类型**: 文生视频
 - **节点数**: 3
 - **模型** (0):
 
 ### 2. workflow_02.json
-- **Prompt ID**: `85999ebb-ecd0-47e7-8f2f-1af65203cafb`
+- **Prompt ID**: `68f33df1-8a75-43b9-960f-7526ddac6a82`
 - **类型**: 文生视频
 - **节点数**: 3
 - **模型** (0):
 
 ### 3. workflow_03.json
-- **Prompt ID**: `dff27534-1380-456b-8897-d9cd709c66cb`
+- **Prompt ID**: `8312fa92-16a0-41b9-af2c-2a840f04d9d6`
 - **类型**: 文生视频
 - **节点数**: 3
 - **模型** (0):
 
 ### 4. workflow_04.json
-- **Prompt ID**: `e7d6f540-6665-46d4-8bb1-34beed0bbf5a`
+- **Prompt ID**: `3e733110-d2c2-4c34-9118-cdb54a47b9b1`
 - **类型**: 文生视频
 - **节点数**: 3
 - **模型** (0):
 
 ### 5. workflow_05.json
-- **Prompt ID**: `d8cbc3aa-d2cf-4748-893d-97b9d02bb598`
+- **Prompt ID**: `707cd98b-9a14-4cbf-a2eb-1558e6185397`
 - **类型**: 文生视频
 - **节点数**: 3
 - **模型** (0):
 
 ### 6. workflow_06.json
-- **Prompt ID**: `bafbcf53-5e72-422a-aace-5affcb8d5a43`
+- **Prompt ID**: `787f3a90-579b-4675-8689-9d84dd4eb2bd`
 - **类型**: 文生视频
 - **节点数**: 3
 - **模型** (0):
 
 ### 7. workflow_07.json
-- **Prompt ID**: `5caf80d3-9ecd-4d38-b654-fddf49febba4`
+- **Prompt ID**: `472c0825-2d06-470c-bd21-35c003c38e36`
 - **类型**: 文生视频
 - **节点数**: 3
 - **模型** (0):
 
 ### 8. workflow_08.json
-- **Prompt ID**: `1e5a6659-d9bd-4a03-bba6-1719f961d2a8`
+- **Prompt ID**: `9755caf2-4803-4312-af8e-115c5dbb1ad8`
 - **类型**: 文生视频
 - **节点数**: 3
 - **模型** (0):
 
 ### 9. workflow_09.json
-- **Prompt ID**: `a954beed-82be-4972-9f80-476bd3fca41e`
+- **Prompt ID**: `5201beed-91bc-48fc-856a-b011cc12168c`
 - **类型**: 文生视频
 - **节点数**: 3
 - **模型** (0):
 
 ### 10. workflow_10.json
-- **Prompt ID**: `025c32cd-a082-48cf-8fa1-a5e4eb9a5296`
+- **Prompt ID**: `387b85fe-9ce8-497f-ba7a-ae3f39489503`
 - **类型**: 文生视频
 - **节点数**: 3
 - **模型** (0):

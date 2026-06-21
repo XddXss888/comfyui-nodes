@@ -1,244 +1,101 @@
 {
-  "1": {
+  "26": {
     "_meta": {
-      "title": "CLIP文本编码"
+      "title": "IndexTTS 模型加载器"
     },
     "inputs": {
-      "clip": [
-        "15",
-        0
-      ],
-      "text": ""
+      "model": "IndexTTS-2",
+      "download_from": "modelscope"
     },
-    "class_type": "CLIPTextEncode"
+    "class_type": "easy downloadIndexTTSAndLoadModel"
   },
-  "2": {
+  "27": {
     "_meta": {
-      "title": "自定义采样器（高级）"
+      "title": "IndexTTS 简单生成"
     },
     "inputs": {
-      "noise": [
-        "83",
+      "seed": [
+        "50",
         0
       ],
-      "guider": [
-        "5",
+      "text": [
+        "51",
         0
       ],
-      "sigmas": [
-        "4",
+      "emotions": [
+        "47",
         0
       ],
-      "sampler": [
-        "3",
+      "unload_model": false,
+      "indextts_model": [
+        "26",
         0
-      ],
-      "latent_image": [
+      ]
+    },
+    "class_type": "easy indexTTSGenerateSimple"
+  },
+  "29": {
+    "_meta": {
+      "title": "加载音频"
+    },
+    "inputs": {
+      "audio": "5cd74f36eeff4cd9b4e7b4b07e78a865.wav",
+      "audioUI": "/api/view?filename=%E4%B8%93%E4%B8%9A%E8%A7%A3%E8%AF%B4%E9%85%8D%E9%9F%B3.wav&type=input&subfolder=&rand=0.37012403114482284"
+    },
+    "class_type": "LoadAudio"
+  },
+  "47": {
+    "_meta": {
+      "title": "音色情感向量"
+    },
+    "inputs": {
+      "Low": 0.0,
+      "Sad": 0.0,
+      "Fear": 0.0,
+      "Hate": 0.0,
+      "Angry": 0.0,
+      "Happy": 0.0,
+      "Neutral": 1.0,
+      "Surprise": 0.0,
+      "use_random": false,
+      "voice_name": "",
+      "reference_audio": [
         "29",
         0
       ]
     },
-    "class_type": "SamplerCustomAdvanced"
+    "class_type": "easy indexTTSEmotionVector"
   },
-  "3": {
+  "49": {
     "_meta": {
-      "title": "K采样器选择"
+      "title": "保存音频"
     },
     "inputs": {
-      "sampler_name": "euler"
-    },
-    "class_type": "KSamplerSelect"
-  },
-  "4": {
-    "_meta": {
-      "title": "Flux2调度器"
-    },
-    "inputs": {
-      "steps": 4,
-      "width": [
-        "24",
+      "audio": [
+        "27",
         0
       ],
-      "height": [
-        "25",
-        0
-      ]
+      "audioUI": "",
+      "filename_prefix": "audio/basicemo_"
     },
-    "class_type": "Flux2Scheduler"
+    "class_type": "SaveAudio"
   },
-  "5": {
+  "50": {
     "_meta": {
-      "title": "CFG引导器"
+      "title": "生成种子"
     },
     "inputs": {
-      "cfg": 1.5,
-      "model": [
-        "65",
-        0
-      ],
-      "negative": [
-        "1",
-        0
-      ],
-      "positive": [
-        "35",
-        0
-      ]
+      "value": 1462207116
     },
-    "class_type": "CFGGuider"
+    "class_type": "PrimitiveInt"
   },
-  "15": {
+  "51": {
     "_meta": {
-      "title": "加载CLIP"
+      "title": "语音内容"
     },
     "inputs": {
-      "type": "flux2",
-      "device": "default",
-      "clip_name": "qwen_3_8b_fp8mixed.safetensors"
+      "value": "1"
     },
-    "class_type": "CLIPLoader"
-  },
-  "18": {
-    "_meta": {
-      "title": "加载VAE"
-    },
-    "inputs": {
-      "vae_name": "flux2-vae.safetensors"
-    },
-    "class_type": "VAELoader"
-  },
-  "19": {
-    "_meta": {
-      "title": "VAE解码"
-    },
-    "inputs": {
-      "vae": [
-        "18",
-        0
-      ],
-      "samples": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "VAEDecode"
-  },
-  "24": {
-    "_meta": {
-      "title": "图片宽度"
-    },
-    "inputs": {
-      "value": 1280
-    },
-    "class_type": "INTConstant"
-  },
-  "25": {
-    "_meta": {
-      "title": "图片高度"
-    },
-    "inputs": {
-      "value": 720
-    },
-    "class_type": "INTConstant"
-  },
-  "29": {
-    "_meta": {
-      "title": "空Latent图像（Flux2）"
-    },
-    "inputs": {
-      "width": [
-        "24",
-        0
-      ],
-      "height": [
-        "25",
-        0
-      ],
-      "batch_size": 1
-    },
-    "class_type": "EmptyFlux2LatentImage"
-  },
-  "35": {
-    "_meta": {
-      "title": "CLIP文本编码"
-    },
-    "inputs": {
-      "clip": [
-        "15",
-        0
-      ],
-      "text": [
-        "82",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode"
-  },
-  "64": {
-    "_meta": {
-      "title": "UNet加载器"
-    },
-    "inputs": {
-      "unet_name": "flux-2-klein-9b-fp8.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader"
-  },
-  "65": {
-    "_meta": {
-      "title": "LoRA加载器（仅模型）"
-    },
-    "inputs": {
-      "model": [
-        "64",
-        0
-      ],
-      "lora_name": "ultra_real_v3.safetensors",
-      "strength_model": 0.7
-    },
-    "class_type": "LoraLoaderModelOnly"
-  },
-  "80": {
-    "_meta": {
-      "title": "保存图像"
-    },
-    "inputs": {
-      "images": [
-        "19",
-        0
-      ],
-      "filename_prefix": "commentary/role"
-    },
-    "class_type": "SaveImage"
-  },
-  "81": {
-    "_meta": {
-      "title": "角色设计Json"
-    },
-    "inputs": {
-      "text": "{\"character_ref_prompts\": [{\"id\": \"245\", \"name\": \"林辰\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身]动漫人物，林辰，十八岁青年男性，黑色碎发，五官俊朗但带着慵懒不羁的气质，穿着宽松的白色修仙校服外套，内搭黑色T恤，全片统一形象\"}, {\"id\": \"246\", \"name\": \"王胖子\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身]动漫人物，王胖子，十八岁青年男性，体型微胖圆润，圆脸戴黑框眼镜，穿着略显紧绷的修仙校服，气质憨厚焦急，全片统一形象\"}, {\"id\": \"247\", \"name\": \"张教官\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身]动漫人物，张教官，三十五岁中年男性，寸头，面部线条刚硬，穿着笔挺的深色教官制服，身姿挺拔，气质严厉威严，全片统一形象\"}, {\"id\": \"248\", \"name\": \"赵天宇\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身]动漫人物，赵天宇，十八岁青年男性，发型精致，面容高傲冷峻，穿着剪裁合体的修仙校服，气质自信优越，全片统一形象\"}, {\"id\": \"249\", \"name\": \"苏清月\", \"prompt\": \"白底，人物三视图[脸部特写、正面全身、背面全身]动漫人物，苏清月，十八岁青年女性，黑长直发，五官清冷绝美，穿着标准修仙校服裙装，气质清高孤傲，全片统一形象\"}]}"
-    },
-    "class_type": "CR Text"
-  },
-  "82": {
-    "_meta": {
-      "title": "剧本JSON解析器 (双角色版)"
-    },
-    "inputs": {
-      "JSON剧本数据": [
-        "81",
-        0
-      ]
-    },
-    "class_type": "ScriptJSONParser"
-  },
-  "83": {
-    "_meta": {
-      "title": "随机噪波"
-    },
-    "inputs": {
-      "noise_seed": 3690405627
-    },
-    "class_type": "RandomNoise"
+    "class_type": "PrimitiveStringMultiline"
   }
 }

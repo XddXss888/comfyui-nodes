@@ -4,97 +4,107 @@
 **内存**: 31 GB (空闲 23 GB)
 **版本**: 0.22.0
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-15 18:27:45
-**历史总数**: 15 | **成功**: 10
+**扫描时间**: 2026-06-21 17:39:00
+**历史总数**: 33 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `a23b5e9b-b6ee-4a2d-a31e-860e150b4b3c`
-- **类型**: 文生图
-- **节点数**: 6
-- **模型** (1):
-  - CounterfeitXL-V1.0.safetensors
-
-### 2. workflow_02.json
-- **Prompt ID**: `1840eff3-8fa7-4dcf-b6c5-77d8edabb5cb`
-- **类型**: 文生图
-- **节点数**: 7
-- **模型** (1):
-  - DreamShaperXL_Turbo_v2_1.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] neon-lit cyberpunk street, rain, detailed
-  - [CLIPTextEncode::text] blurry, low quality
-
-### 3. workflow_03.json
-- **Prompt ID**: `74023d04-2030-41ac-83da-41e98f40b276`
-- **类型**: 文生图
-- **节点数**: 7
-- **模型** (1):
-  - DreamShaperXL_Turbo_v2_1.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A majestic lighthouse stands tall on a rugged cliff overlooking a turbulent sea, hyperrealistic, ultra-detailed, 8K, photorealistic textures, subsurface scattering on the lighthouse's weathered stone 
-
-### 4. workflow_04.json
-- **Prompt ID**: `539c1407-e640-4fe7-bccf-d8c4f83fe057`
-- **类型**: 文生图
-- **节点数**: 7
-- **模型** (1):
-  - DreamShaperXL_Turbo_v2_1.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A majestic lighthouse stands tall on a rugged cliff overlooking a turbulent sea, hyperrealistic, ultra-detailed, 8K, photorealistic textures, subsurface scattering on the lighthouse's weathered stone 
-
-### 5. workflow_05.json
-- **Prompt ID**: `2e97f681-972a-4206-b305-872484490b32`
+- **Prompt ID**: `a0f710e6-866a-42cf-95eb-b0487038def6`
 - **类型**: 文生图
 - **节点数**: 7
 - **模型** (1):
   - hidream_o1_image_dev_fp8_scaled.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] A majestic lighthouse stands tall on a rugged cliff overlooking a turbulent sea, hyperrealistic, ultra-detailed, 8K, photorealistic textures, subsurface scattering on the lighthouse's weathered stone 
-
-### 6. workflow_06.json
-- **Prompt ID**: `9c90891a-bbad-4736-9423-e91b0cd5ce97`
-- **类型**: 文生图
-- **节点数**: 7
-- **模型** (1):
-  - Juggernaut-X-RunDiffusion-NSFW.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A majestic lighthouse stands tall on a rugged cliff overlooking a turbulent sea, hyperrealistic, ultra-detailed, 8K, photorealistic textures, subsurface scattering on the lighthouse's weathered stone 
-
-### 7. workflow_07.json
-- **Prompt ID**: `27b84d75-1b72-49f4-b0b2-bb6b0bc89274`
-- **类型**: 文生图
-- **节点数**: 7
-- **模型** (1):
-  - Juggernaut-X-RunDiffusion-NSFW.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] Naked woman
+  - [CLIPTextEncode::text] Logo discord avec les lettres RS pour un developpeur
   - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality
 
-### 8. workflow_08.json
-- **Prompt ID**: `d3572e64-0f69-485c-a383-a732e66a785b`
+### 2. workflow_02.json
+- **Prompt ID**: `16084cdf-e35a-4cf7-9b25-dfbe1b24915f`
+- **类型**: 文生图
+- **节点数**: 7
+- **模型** (1):
+  - CounterfeitXL-V1.0.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Logo discord avec les lettres RS pour un developpeur
+  - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality
+
+### 3. workflow_03.json
+- **Prompt ID**: `1c0ee6b7-73b6-486d-93c6-dddffd570a49`
+- **类型**: 文生图
+- **节点数**: 7
+- **模型** (1):
+  - autismmixSDXL_autismmixConfetti.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Logo discord avec les lettres RS pour un developpeur
+  - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality
+
+### 4. workflow_04.json
+- **Prompt ID**: `cfbffeb6-bd6b-4070-bc55-cb27ac68e90e`
 - **类型**: 文生图
 - **节点数**: 7
 - **模型** (1):
   - DreamShaperXL_Turbo_v2_1.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Logo discord avec les lettres RS pour un developpeur
+  - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality
 
-### 9. workflow_09.json
-- **Prompt ID**: `e76ba62e-0eed-4c41-b494-1abfac633702`
+### 5. workflow_05.json
+- **Prompt ID**: `9f87337a-a7e8-45d6-8978-54371eae1efe`
 - **类型**: 文生图
 - **节点数**: 7
 - **模型** (1):
   - Juggernaut-X-RunDiffusion-NSFW.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Naked woman
+  - [CLIPTextEncode::text] Logo discord avec les lettres RS pour un developpeur
+  - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality
+
+### 6. workflow_06.json
+- **Prompt ID**: `5e316c11-36b0-4fbb-b215-cde4b6e7af6a`
+- **类型**: 文生图
+- **节点数**: 7
+- **模型** (1):
+  - DreamShaperXL_Turbo_v2_1.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Logo discord avec les lettres RS pour un developpeur
+  - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality
+
+### 7. workflow_07.json
+- **Prompt ID**: `5874f8f3-a233-4960-83da-7ca4e1318aa0`
+- **类型**: 文生图
+- **节点数**: 7
+- **模型** (1):
+  - Juggernaut-X-RunDiffusion-NSFW.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Logo discord avec les lettres RS pour un developpeur
+  - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality
+
+### 8. workflow_08.json
+- **Prompt ID**: `af2321ce-dd29-43a7-83a0-c5ebacea4986`
+- **类型**: 文生图
+- **节点数**: 7
+- **模型** (1):
+  - autismmixSDXL_autismmixConfetti.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Logo discord avec les lettres RS pour un developpeur
+  - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality
+
+### 9. workflow_09.json
+- **Prompt ID**: `530baa02-b1a9-490f-8c5d-1552ca9b2f67`
+- **类型**: 文生图
+- **节点数**: 7
+- **模型** (1):
+  - CounterfeitXL-V1.0.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Logo discord avec les lettres RS pour un developpeur
   - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality
 
 ### 10. workflow_10.json
-- **Prompt ID**: `9ae5152b-752b-4840-ad4b-3d6771d7984f`
+- **Prompt ID**: `5826dddd-c8ce-4fc0-9c16-6cc55f4d0211`
 - **类型**: 文生图
 - **节点数**: 7
 - **模型** (1):
   - Juggernaut-X-RunDiffusion-NSFW.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Head chopped off with blood by a islamist terrorist in the desert
+  - [CLIPTextEncode::text] A cinematic, hyper-realistic 8K photograph: a young Japanese girl, naked, serene expression, reading a vintage novel on a park bench under a canopy of sakura trees. The sky glows in a surreal golden-y
   - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality

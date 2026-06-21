@@ -1,199 +1,38 @@
 {
-  "1": {
+  "58": {
     "inputs": {
-      "add_noise": "enable",
-      "noise_seed": 80715965378083,
-      "steps": 4,
-      "cfg": 1.0,
+      "seed": 1123280799711390,
+      "steps": 8,
+      "cfg": 2.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "start_at_step": 0,
-      "end_at_step": 2,
-      "return_with_leftover_noise": "enable",
+      "denoise": 1.0,
       "model": [
-        "3",
+        "97",
         0
       ],
       "positive": [
-        "15",
+        "99",
         0
       ],
       "negative": [
-        "15",
-        1
+        "64",
+        0
       ],
       "latent_image": [
-        "15",
-        2
-      ]
-    },
-    "class_type": "KSamplerAdvanced",
-    "_meta": {
-      "title": "K采样器（高级）"
-    }
-  },
-  "2": {
-    "inputs": {
-      "add_noise": "disable",
-      "noise_seed": 1005365641311861,
-      "steps": 4,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "start_at_step": 2,
-      "end_at_step": 4,
-      "return_with_leftover_noise": "disable",
-      "model": [
-        "13",
-        0
-      ],
-      "positive": [
-        "15",
-        0
-      ],
-      "negative": [
-        "15",
-        1
-      ],
-      "latent_image": [
-        "1",
+        "91",
         0
       ]
     },
-    "class_type": "KSamplerAdvanced",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "K采样器（高级）"
+      "title": "K采样器"
     }
   },
-  "3": {
-    "inputs": {
-      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA加载器（仅模型）"
-    }
-  },
-  "4": {
-    "inputs": {
-      "prompt": "教室里，女生站在讲台上，对着镜头左手单手叉腰，右手抬起指了指镜头又恢复原样",
-      "clip": [
-        "9",
-        0
-      ],
-      "vae": [
-        "6",
-        0
-      ],
-      "image": [
-        "25",
-        0
-      ]
-    },
-    "class_type": "TextEncodeQwenImageEdit",
-    "_meta": {
-      "title": "文本编码（QwenImageEdit）"
-    }
-  },
-  "5": {
-    "inputs": {
-      "prompt": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
-      "clip": [
-        "9",
-        0
-      ],
-      "vae": [
-        "6",
-        0
-      ],
-      "image": [
-        "25",
-        0
-      ]
-    },
-    "class_type": "TextEncodeQwenImageEdit",
-    "_meta": {
-      "title": "文本编码（QwenImageEdit）"
-    }
-  },
-  "6": {
-    "inputs": {
-      "vae_name": "wan_2.1_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "7": {
-    "inputs": {
-      "image": "d3f97dd1ad0646c588f2ee361d5543d4.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "8": {
-    "inputs": {
-      "unet_name": "wan2.2_i2v_high_noise_14B_fp16.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "9": {
-    "inputs": {
-      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
-      "type": "wan",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载CLIP"
-    }
-  },
-  "10": {
-    "inputs": {
-      "samples": [
-        "2",
-        0
-      ],
-      "vae": [
-        "6",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "11": {
-    "inputs": {
-      "batch_index": -1,
-      "length": 1,
-      "image": [
-        "10",
-        0
-      ]
-    },
-    "class_type": "ImageFromBatch",
-    "_meta": {
-      "title": "从批次获取图像"
-    }
-  },
-  "12": {
+  "60": {
     "inputs": {
       "images": [
-        "11",
+        "85",
         0
       ]
     },
@@ -202,114 +41,80 @@
       "title": "预览图像"
     }
   },
-  "13": {
+  "63": {
     "inputs": {
-      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "14",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA加载器（仅模型）"
-    }
-  },
-  "14": {
-    "inputs": {
-      "unet_name": "wan2.2_i2v_low_noise_14B_fp16.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "15": {
-    "inputs": {
-      "width": 480,
-      "height": 768,
-      "length": 81,
-      "batch_size": 1,
-      "positive": [
-        "4",
-        0
-      ],
-      "negative": [
-        "5",
+      "prompt": "卧室，女生靠在书桌边上和男生面对面看着对方",
+      "clip": [
+        "66",
         0
       ],
       "vae": [
-        "6",
+        "81",
         0
       ],
-      "clip_vision_output": [
-        "16",
+      "image1": [
+        "95",
         0
       ],
-      "start_image": [
-        "25",
+      "image2": [
+        "103",
         0
       ]
     },
-    "class_type": "WanImageToVideo",
+    "class_type": "TextEncodeQwenImageEditPlus",
     "_meta": {
-      "title": "图像到视频（Wan）"
+      "title": "文本编码（QwenImageEditPlus）"
     }
   },
-  "16": {
+  "64": {
     "inputs": {
-      "crop": "center",
-      "clip_vision": [
-        "17",
+      "prompt": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，杂乱的背景，三条腿，背景人很多，倒着走，错误，比例不良,阴毛超出阴部范围",
+      "clip": [
+        "66",
         0
       ],
-      "image": [
-        "25",
+      "vae": [
+        "81",
+        0
+      ],
+      "image1": [
+        "95",
+        0
+      ],
+      "image2": [
+        "103",
         0
       ]
     },
-    "class_type": "CLIPVisionEncode",
+    "class_type": "TextEncodeQwenImageEditPlus",
     "_meta": {
-      "title": "CLIP视觉编码"
+      "title": "文本编码（QwenImageEditPlus）"
     }
   },
-  "17": {
+  "66": {
     "inputs": {
-      "clip_name": "CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors"
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
     },
-    "class_type": "CLIPVisionLoader",
+    "class_type": "CLIPLoader",
     "_meta": {
-      "title": "加载CLIP视觉"
+      "title": "加载CLIP"
     }
   },
-  "18": {
+  "69": {
     "inputs": {
-      "frame_rate": 16.0,
-      "loop_count": 0,
-      "filename_prefix": "AnimateDiff",
-      "format": "video/h264-mp4",
-      "pix_fmt": "yuv420p",
-      "crf": 19,
-      "save_metadata": true,
-      "trim_to_audio": false,
-      "pingpong": false,
-      "save_output": true,
-      "images": [
-        "10",
-        0
-      ]
+      "image": "1000052766.png"
     },
-    "class_type": "VHS_VideoCombine",
+    "class_type": "LoadImage",
     "_meta": {
-      "title": "Video Combine 🎥🅥🅗🅢"
+      "title": "加载图像"
     }
   },
-  "19": {
+  "76": {
     "inputs": {
       "anything": [
-        "1",
+        "58",
         0
       ]
     },
@@ -318,58 +123,156 @@
       "title": "清理显存占用"
     }
   },
-  "23": {
+  "78": {
     "inputs": {
-      "upscale_method": "bicubic",
-      "scale_by": 0.5,
+      "unet_name": "qwen_image_edit_2511_fp8mixed.safetensors",
+      "weight_dtype": "default",
+      "device": "cuda:0"
+    },
+    "class_type": "UNETLoaderMultiGPU",
+    "_meta": {
+      "title": "UNETLoaderMultiGPU"
+    }
+  },
+  "81": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors",
+      "device": "cuda:0"
+    },
+    "class_type": "VAELoaderMultiGPU",
+    "_meta": {
+      "title": "VAELoaderMultiGPU"
+    }
+  },
+  "85": {
+    "inputs": {
+      "samples": [
+        "58",
+        0
+      ],
+      "vae": [
+        "81",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "87": {
+    "inputs": {
+      "anything": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "easy cleanGpuUsed",
+    "_meta": {
+      "title": "清理显存占用"
+    }
+  },
+  "91": {
+    "inputs": {
+      "width": 472,
+      "height": 768,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "95": {
+    "inputs": {
+      "upscale_method": "area",
+      "largest_size": 769,
       "image": [
-        "7",
+        "69",
         0
       ]
     },
-    "class_type": "ImageScaleBy",
+    "class_type": "ImageScaleToMaxDimension",
     "_meta": {
-      "title": "缩放图像（比例）"
+      "title": "图像缩放到最大尺寸"
     }
   },
-  "24": {
+  "97": {
     "inputs": {
-      "images": [
-        "25",
+      "lora_name": "Qwen-Image-Edit-2511-Lightning-8steps-V1.0-fp32.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "78",
         0
       ]
     },
-    "class_type": "PreviewImage",
+    "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "预览图像"
+      "title": "LoRA加载器（仅模型）"
     }
   },
-  "25": {
+  "98": {
     "inputs": {
-      "upscale_method": "bilinear",
-      "width": 0,
-      "height": 640,
-      "crop": "center",
+      "prompt": "写实，真实人体，真实比例。女生使用图像1。男生使用图像2。男女生身高相同",
+      "clip": [
+        "66",
+        0
+      ],
+      "vae": [
+        "81",
+        0
+      ],
+      "image1": [
+        "95",
+        0
+      ],
+      "image2": [
+        "103",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "文本编码（QwenImageEditPlus）"
+    }
+  },
+  "99": {
+    "inputs": {
+      "conditioning_1": [
+        "63",
+        0
+      ],
+      "conditioning_2": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "ConditioningCombine",
+    "_meta": {
+      "title": "条件合并"
+    }
+  },
+  "102": {
+    "inputs": {
+      "image": "1000053166.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "103": {
+    "inputs": {
+      "upscale_method": "area",
+      "largest_size": 768,
       "image": [
-        "23",
+        "102",
         0
       ]
     },
-    "class_type": "ImageScale",
+    "class_type": "ImageScaleToMaxDimension",
     "_meta": {
-      "title": "缩放图像"
-    }
-  },
-  "30": {
-    "inputs": {
-      "images": [
-        "23",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
+      "title": "图像缩放到最大尺寸"
     }
   }
 }

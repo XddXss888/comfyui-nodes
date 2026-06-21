@@ -39,7 +39,7 @@
       "title": "加载音频"
     },
     "inputs": {
-      "audio": "e52568c3e5984291a04eaf598e0ccf07.flac",
+      "audio": "870567285d934243999fc21144e5a55b.wav",
       "audioUI": "/api/view?filename=%E4%B8%93%E4%B8%9A%E8%A7%A3%E8%AF%B4%E9%85%8D%E9%9F%B3.wav&type=input&subfolder=&rand=0.37012403114482284"
     },
     "class_type": "LoadAudio"
@@ -55,7 +55,7 @@
       "Hate": 0.0,
       "Angry": 0.0,
       "Happy": 0.0,
-      "Neutral": 0.0,
+      "Neutral": 1.0,
       "Surprise": 0.0,
       "use_random": false,
       "voice_name": "",
@@ -85,7 +85,7 @@
       "title": "生成种子"
     },
     "inputs": {
-      "value": 3688560036
+      "value": 1403706294
     },
     "class_type": "PrimitiveInt"
   },
@@ -94,7 +94,7 @@
       "title": "语音内容"
     },
     "inputs": {
-      "value": "它直直地往我肚子上飞，根本躲不开。"
+      "value": "1"
     },
     "class_type": "PrimitiveStringMultiline"
   }

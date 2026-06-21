@@ -2,13 +2,13 @@
   "1": {
     "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "ckpt_name": "Juggernaut-X-RunDiffusion-NSFW.safetensors"
+      "ckpt_name": "DreamShaperXL_Turbo_v2_1.safetensors"
     }
   },
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "A majestic lighthouse stands tall on a rugged cliff overlooking a turbulent sea, hyperrealistic, ultra-detailed, 8K, photorealistic textures, subsurface scattering on the lighthouse's weathered stone surface, HDR lighting casting dramatic golden hour rays through storm clouds, highlighting the lighthouse's red and white stripes, waves crashing against the cliff with foam and spray, long exposure effect on the water creating a silky smooth texture, moody atmosphere with deep blues and warm oranges, cinematic composition, shot on a Hasselblad X1D II 50C with a 21mm wide-angle lens, shallow depth of field, sharp focus on the lighthouse lantern room, subtle lens flare from the beacon.",
+      "text": "Logo discord avec les lettres RS pour un developpeur",
       "clip": [
         "1",
         1
@@ -18,7 +18,7 @@
   "3": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "",
+      "text": "blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality",
       "clip": [
         "1",
         1
@@ -36,10 +36,10 @@
   "5": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 861351072,
-      "steps": 30,
+      "seed": 2124346125,
+      "steps": 25,
       "cfg": 7.0,
-      "sampler_name": "euler",
+      "sampler_name": "dpmpp_2m",
       "scheduler": "karras",
       "denoise": 1.0,
       "model": [
@@ -76,11 +76,11 @@
   "7": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "sd_web",
       "images": [
         "6",
         0
-      ]
+      ],
+      "filename_prefix": "fantasy"
     }
   }
 }

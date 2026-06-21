@@ -8,7 +8,7 @@
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Dog",
+      "text": "a cute cat, digital art",
       "clip": [
         "1",
         1
@@ -36,7 +36,7 @@
   "5": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 842137298,
+      "seed": 42,
       "steps": 8,
       "cfg": 7.0,
       "sampler_name": "euler",
@@ -76,7 +76,7 @@
   "7": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "sd_web",
+      "filename_prefix": "test_hetzner",
       "images": [
         "6",
         0
