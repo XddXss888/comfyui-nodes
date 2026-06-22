@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_daa37c98b3b64b32a6078291f0e4e3bd.png"
+      "image": "ref_4879d511d55f4401a0f55884385ff766.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "Inpaint the background: ,in front of bright festive lights or amidst a lively holiday market scene, blending seamlessly with the celebratory ambiance. The masked region is left empty for subject insertion—do not generate any object, texture, or person in or around this area.",
+      "prompt": "Show her big clevage",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 373687553866232,
-      "steps": 4,
+      "seed": 966736812934592,
+      "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

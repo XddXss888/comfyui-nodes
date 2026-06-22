@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 772582707,
+      "seed": 1282448764,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,solo,looking at viewer,large breasts,brown eyes,sitting,closed mouth,forehead,mole on breast,realistic,handjob,(handjob:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,sitting,underwear,panties,red panties,(ces trop bon dit moi dez chose sale :1.0),(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202411/2/23e9796e55cb4fdeb7062131694d9cf7.png",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202412/21/8146416c329e433bbede053cbc563100.webp",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

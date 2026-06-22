@@ -1,189 +1,191 @@
 {
-  "1": {
+  "18": {
     "inputs": {
-      "clip_name": "nsfw_wan_umt5-xxl_fp8_scaled.safetensors",
-      "model": "wan",
-      "type": "wan"
+      "ckpt_name": "anima\\BSSANIRLANIMASemi_v10.safetensors"
     },
-    "class_type": "CLIPLoader"
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "大模型加载器（集成VAE与CLIP）"
+    }
   },
   "2": {
     "inputs": {
-      "vae_name": "Wan\\wan_2.1_vae.safetensors"
+      "lora_name": "anima\\anima-turbo-lora-v0.2.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.8,
+      "model": [
+        "18",
+        0
+      ],
+      "clip": [
+        "18",
+        1
+      ]
     },
-    "class_type": "VAELoader"
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "LoRA 1：Turbo加速"
+    }
   },
   "3": {
     "inputs": {
-      "unet_name": "wan22RemixNSFWT2v14b.DFTR.safetensors",
-      "model": "default",
-      "weight_dtype": "default"
+      "lora_name": "anima\\gpt-image-2_anima-base1_v1-1.safetensors",
+      "strength_model": 0.3,
+      "strength_clip": 1.0,
+      "model": [
+        "2",
+        0
+      ],
+      "clip": [
+        "2",
+        1
+      ]
     },
-    "class_type": "UNETLoader"
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "LoRA 2：gpt-image基础微调"
+    }
   },
   "4": {
     "inputs": {
-      "unet_name": "wan22RemixNSFWT2v14bLow.lsL4.safetensors",
-      "model": "default",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader"
-  },
-  "9": {
-    "inputs": {
+      "lora_name": "anima\\anima-base-1-masterpiece-v51.safetensors",
+      "strength_model": 1.0,
+      "strength_clip": 1.0,
       "model": [
         "3",
         0
       ],
-      "sage_attention": "auto"
+      "clip": [
+        "3",
+        1
+      ]
     },
-    "class_type": "PathchSageAttentionKJ"
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "LoRA 3：大师之作增强"
+    }
   },
-  "10": {
+  "5": {
     "inputs": {
       "model": [
         "4",
         0
       ],
-      "sage_attention": "auto"
+      "method": "from cond"
     },
-    "class_type": "PathchSageAttentionKJ"
+    "class_type": "Support empty uncond",
+    "_meta": {
+      "title": "支持空负向条件"
+    }
+  },
+  "10": {
+    "inputs": {
+      "text": "@ANIRL,@gpt-image-2,masterpiece, best quality, score_9, score_8, highres, absurdres, explicit,nsfw, night, indoor, low_key, chiaroscuro, ambient_shading, cinematic_shadows, (1girl, 1boy), (after_sex:1.2), cuddling, hand_holding, from_above, cowboy_shot, depth_of_field BREAK\n1girl, Sumire, female_focus, 20yo, japanese, receptionist, sitting_sideways, sitting_on_towel, holding_hands, interlocked_fingers, (brown_hair, high_ponytail, tsurime, light_brown_eyes, looking_down_at_hands, light_blush, (catchlights:1.2), fair_skin, tall_female, (j_cup_breasts:1.3), wide_hips, thick_thighs), school_uniform, white_shirt, sleeves_tight, navy_pleated_skirt, skirt_pulled_down, no_panties, bare_legs, towel_under_hips, face_focus, (parted_lips:1.1), light_blush, relaxed BREAK\n1girl, Himari, female_focus, 18yo, japanese, student, lying_on_partner, resting_on_chest, chin_on_arms, (golden_twintails_hair, twin_braids, white_pom_pom_hair_tie, tsurime, golden_brown_eyes, looking_up_at_partner, bright_smile, (catchlights:1.2), fair_skin, petite, (e_cup_breasts:1.1), slim_waist), school_uniform, white_shirt, navy_pleated_skirt, no_panties, bare_legs, face_focus, (parted_lips:1.1), light_blush, cheerful BREAK\n1boy, male_focus, partner, lying_on_back, relaxed, no_glasses, (hand_holding_with_Sumire), (Himari_on_chest) BREAK\n(indoors), tatami_room, japanese_room, warm_lighting, futon, domestic, post_coital_bliss",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "正向提示词"
+    }
   },
   "11": {
     "inputs": {
-      "model": [
-        "9",
-        0
-      ],
-      "enable_fp16_accumulation": true
-    },
-    "class_type": "ModelPatchTorchSettings"
-  },
-  "12": {
-    "inputs": {
-      "model": [
-        "10",
-        0
-      ],
-      "enable_fp16_accumulation": true
-    },
-    "class_type": "ModelPatchTorchSettings"
-  },
-  "13": {
-    "inputs": {
+      "text": "worst quality, low quality, score_1, score_2, score_3, old, early, lowres, simple background, blurry, sepia",
       "clip": [
-        "1",
-        0
-      ],
-      "text": "nsfw, 1boy, (teenage boy sitting alone on edge of freshly made bed:1.2), medium shot, eye-level, quiet bedroom atmosphere after a woman s presence has left, teenage boy in foreground BREAK teenage boy: 16yo male, short clean-cut dark hair, slim athletic build, fair skin, (sitting still on edge of bed, one hand resting on mattress where she touched him earlier), (wearing loose cotton pajamas, top slightly wrinkled from sleep, collar askew), (looking toward bedroom door she just exited through), (expression neutral but posture still, not moving from spot), BREAK morning, boy s bedroom, freshly made bed with gray sheets and plumped pillow, empty laundry basket by door, plate of sweating chilled mochi on nightstand, window half-draped showing glimpse of neighboring house, dresser with school books and small items, BREAK soft morning light through curtain, quiet domestic stillness, belonging left behind after someone has departed the room, shallow depth of field blurring the doorway"
+        "4",
+        1
+      ]
     },
-    "class_type": "CLIPTextEncode"
-  },
-  "14": {
-    "inputs": {
-      "clip": [
-        "1",
-        0
-      ],
-      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
-    },
-    "class_type": "CLIPTextEncode"
-  },
-  "15": {
-    "inputs": {
-      "Value": 5.0
-    },
-    "class_type": "DF_Integer"
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "负向提示词"
+    }
   },
   "16": {
     "inputs": {
-      "a": [
-        "15",
-        0
-      ],
-      "value": "a*16+1"
-    },
-    "class_type": "SimpleMath+"
-  },
-  "17": {
-    "inputs": {
-      "length": [
-        "16",
-        0
-      ],
-      "width": 480,
-      "height": 720,
-      "batch_size": 1,
-      "batch_count": 1
-    },
-    "class_type": "EmptyHunyuanLatentVideo"
-  },
-  "18": {
-    "inputs": {
-      "model_high_noise": [
+      "conditioning": [
         "11",
         0
       ],
-      "model_low_noise": [
-        "12",
+      "start": 0.0,
+      "end": 0.7
+    },
+    "class_type": "ConditioningSetTimestepRange",
+    "_meta": {
+      "title": "负向提示词步长截断"
+    }
+  },
+  "12": {
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "9": {
+    "inputs": {
+      "seed": 2213,
+      "steps": 12,
+      "cfg": 1.0,
+      "sampler_name": "er_sde",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "5",
         0
       ],
       "positive": [
-        "13",
+        "10",
         0
       ],
       "negative": [
-        "14",
+        "16",
         0
       ],
       "latent_image": [
-        "17",
-        0
-      ],
-      "strength": 0.875,
-      "seed": 92983394346842,
-      "seed_behavior": "randomize",
-      "steps": 4,
-      "cfg_high_noise": 1.0,
-      "cfg_low_noise": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "normal",
-      "denoise": 1.0,
-      "boundary": 0.875,
-      "sigma_shift": 8.0
-    },
-    "class_type": "WanMoeKSampler"
-  },
-  "19": {
-    "inputs": {
-      "samples": [
-        "18",
-        0
-      ],
-      "vae": [
-        "2",
+        "12",
         0
       ]
     },
-    "class_type": "VAEDecode"
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
   },
-  "20": {
+  "13": {
     "inputs": {
-      "images": [
-        "19",
+      "samples": [
+        "9",
         0
       ],
-      "frame_rate": 16.0,
-      "loop_count": 0,
-      "filename_prefix": "wan2.2",
-      "format": "video/h264-mp4",
-      "pix_fmt": "yuv420p",
-      "crf": 15,
-      "save_metadata": true,
-      "trim_to_audio": false,
-      "pingpong": false,
-      "save_output": true
+      "vae": [
+        "18",
+        2
+      ]
     },
-    "class_type": "VHS_VideoCombine"
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "4_save": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
   }
 }

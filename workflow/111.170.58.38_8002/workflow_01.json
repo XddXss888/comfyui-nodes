@@ -1,7 +1,16 @@
 {
   "12": {
     "inputs": {
-      "image": "47208-comfyui_00958-y5gp4o.jpg"
+      "image": "hezhongai_00059_-20-mfsvr8.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "15": {
+    "inputs": {
+      "image": "0260621165848672-40-w35mhf.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -13,13 +22,17 @@
       "api_url": "https://3dcdn.580ai.net/v1beta/models/gemini-3.1-flash-image-preview:generateContent",
       "header_key": "Authorization",
       "header_value": "sk-Lyx9OF97YMK0suEi6ZIPzq4E9d3dhIKJzO2YS5WpAsZbZpxS",
-      "text": "东亚温婉的年轻女模特，五官柔和，黑色柔顺长发，穿着这件黄灰撞色大青果领双面呢外套，版型极度宽松，落肩超大阔型，袖管宽大，衣身余量充足，慵懒松弛感，内搭浅灰色宽松连衣裙，全身人像，简约纯白墙面背景，柔和均匀的室内自然光，女装电商实拍，原生相机画质，8K高清，完整全身构图。",
+      "text": "把图一上衣和裤子变成像图二一样的颜色和花型，但要保持图一的形状不变",
       "aspect_ratio": "3:4",
-      "image_size": "4K",
+      "image_size": "2K",
       "timeout": 200,
       "retry_count": 2,
       "image_1": [
         "12",
+        0
+      ],
+      "image_2": [
+        "15",
         0
       ]
     },
@@ -30,7 +43,7 @@
   },
   "17": {
     "inputs": {
-      "filename_prefix": "HezhongAi",
+      "filename_prefix": "hezhongai",
       "images": [
         "16",
         0

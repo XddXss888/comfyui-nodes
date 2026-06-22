@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "asig2, A woman on a couch in a cozy living room at evening, leaning forward with her mouth wrapped around an erect penis, lips sealed tightly around the shaft, one hand gripping the base, her body supported by the cushions, warm home lighting illuminating her face and upper body, expression showing focus mixed with hesitation, medium close-up framing, natural proportions, clear visible contact and pose, stable composition.",
+      "text": "wh1te, short white hair, extremely thin woman, A woman stands embraced in a man's arms on an evening city street under soft glowing streetlights, her eyes gently closed and expression soft and content as he leans in to place a tender kiss on her forehead, her body relaxed against his chest with one hand resting lightly on his shoulder, the background softly blurred with distant city lights and quiet pavement, warm romantic lighting highlighting the intimate moment in a stable medium close-up framing.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 1.73,
+      "shift": 12.0,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "zimg_asig2_conchar.safetensors",
-      "strength_model": 0.63,
-      "strength_clip": 0.7,
+      "lora_name": "White_short_ZiT.safetensors",
+      "strength_model": 0.73,
+      "strength_clip": 0.8,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.33,
+      "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 8,
+      "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 661743540426963,
+      "seed": 177176581693080,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

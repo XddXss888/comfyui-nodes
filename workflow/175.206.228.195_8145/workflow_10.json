@@ -33,7 +33,7 @@
   },
   "4": {
     "inputs": {
-      "seed": 2206932383,
+      "seed": 2143611387,
       "steps": [
         "13",
         0
@@ -102,8 +102,8 @@
   },
   "13": {
     "inputs": {
-      "steps": 27,
-      "cfg": 6.0
+      "steps": 32,
+      "cfg": 11.0
     },
     "class_type": "StepsAndCfg",
     "_meta": {
@@ -112,8 +112,8 @@
   },
   "17": {
     "inputs": {
-      "Width": 1366,
-      "Height": 768,
+      "Width": 1024,
+      "Height": 1024,
       "Batch": 1,
       "Landscape": false,
       "HiResMultiplier": 1.7000000000000002
@@ -125,7 +125,7 @@
   },
   "20": {
     "inputs": {
-      "seed": 2206932383,
+      "seed": 2143611387,
       "steps": 10,
       "cfg": [
         "13",
@@ -205,7 +205,7 @@
   },
   "32": {
     "inputs": {
-      "text": "ever_larimar_base, 1girl, nipples, nude, heart, heart-shaped eyes, looking up, looking at penis, penis shadow, shy, happy, blush, :o, masterpiece, best quality, amazing quality"
+      "text": "ever_wheri_love, halloween, trick or treat, halloween costume, jack-o'-lantern, halloween bucket, condom wrapper, 2::used condoms, colored condoms,Extra large quantities of condoms ::, 4::condom armbands, condom skirts, condom thigh bands, condom bras ::, excessive amounts of condoms stuck to the body, 4::all the clothes on the girl were made of condoms ::,, masterpiece, best quality, amazing quality"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -214,7 +214,7 @@
   },
   "33": {
     "inputs": {
-      "text": "bad quality,worst quality,worst detail,sketch,censor,"
+      "text": "bad quality,worst quality,worst detail,sketch,censor,wrong foot, wrong hand, bad hands, bad feet, headmask, head armet"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -277,7 +277,7 @@
   },
   "65": {
     "inputs": {
-      "data": "[{\"name\": \"larimar_base.safetensors\", \"strength\": 0.9, \"strength_clip\": 1.0}]",
+      "data": "[{\"name\": \"wheri_love.safetensors\", \"strength\": 0.7, \"strength_clip\": 1.0}]",
       "model": [
         "36",
         0

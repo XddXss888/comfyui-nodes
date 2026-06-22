@@ -46,7 +46,7 @@
   },
   "11": {
     "inputs": {
-      "clip_name": "nsfw_wan_umt5-xxl_fp8_scaled.safetensors",
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
       "type": "wan",
       "device": "cpu"
     },
@@ -108,7 +108,7 @@
   "23": {
     "inputs": {
       "add_noise": "enable",
-      "noise_seed": 476629523371099,
+      "noise_seed": 41790842051978,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -166,7 +166,7 @@
   "15": {
     "inputs": {
       "add_noise": "disable",
-      "noise_seed": 1100214663498799,
+      "noise_seed": 662534020164555,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",

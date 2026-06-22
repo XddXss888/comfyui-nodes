@@ -1,37 +1,29 @@
 {
   "1": {
+    "class_type": "UNETLoader",
     "inputs": {
       "unet_name": "FLUX-KLEIN/flux-2-klein-9b.safetensors",
       "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
     }
   },
   "2": {
+    "class_type": "CLIPLoader",
     "inputs": {
       "clip_name": "qwen_3_8b_fp8mixed.safetensors",
       "type": "flux2",
       "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载CLIP"
     }
   },
   "3": {
+    "class_type": "VAELoader",
     "inputs": {
       "vae_name": "flux2-vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
     }
   },
   "6": {
+    "class_type": "KSampler",
     "inputs": {
-      "seed": 1009604557846264,
+      "seed": 946450653131005,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -53,39 +45,30 @@
         "13",
         0
       ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
     }
   },
   "7": {
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "图1的人物放到图2的水中，保留图1人物细节，图2当背景，手探出水面",
+      "text": "Fan Bingbing, chinese actress, standing, full body, completely nude, 4k photo",
       "clip": [
         "2",
         0
       ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
     }
   },
   "8": {
+    "class_type": "CLIPTextEncode",
     "inputs": {
       "text": "",
       "clip": [
         "2",
         0
       ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
     }
   },
   "9": {
+    "class_type": "VAEDecode",
     "inputs": {
       "samples": [
         "6",
@@ -95,26 +78,20 @@
         "3",
         0
       ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
     }
   },
   "12": {
+    "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "ComfyUI",
+      "filename_prefix": "fbb_nude_standing",
       "images": [
         "9",
         0
       ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
     }
   },
   "13": {
+    "class_type": "EmptyFlux2LatentImage",
     "inputs": {
       "width": [
         "18",
@@ -125,13 +102,10 @@
         4
       ],
       "batch_size": 1
-    },
-    "class_type": "EmptyFlux2LatentImage",
-    "_meta": {
-      "title": "空Latent图像（Flux2）"
     }
   },
   "14": {
+    "class_type": "ReferenceLatent",
     "inputs": {
       "conditioning": [
         "7",
@@ -141,22 +115,16 @@
         "19",
         0
       ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "参考Latent"
     }
   },
   "15": {
+    "class_type": "LoadImage",
     "inputs": {
       "image": "ComfyUI_00494_.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
     }
   },
   "18": {
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
     "inputs": {
       "aspect_ratio": "original",
       "proportional_width": 1,
@@ -171,13 +139,10 @@
         "15",
         0
       ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
-    "_meta": {
-      "title": "图层工具：按宽高比缩放 V2"
     }
   },
   "19": {
+    "class_type": "VAEEncode",
     "inputs": {
       "pixels": [
         "18",
@@ -187,13 +152,10 @@
         "3",
         0
       ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE编码"
     }
   },
   "20": {
+    "class_type": "ReferenceLatent",
     "inputs": {
       "conditioning": [
         "8",
@@ -203,13 +165,10 @@
         "19",
         0
       ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "参考Latent"
     }
   },
   "21": {
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
     "inputs": {
       "aspect_ratio": "original",
       "proportional_width": 1,
@@ -224,22 +183,16 @@
         "22",
         0
       ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
-    "_meta": {
-      "title": "图层工具：按宽高比缩放 V2"
     }
   },
   "22": {
+    "class_type": "LoadImage",
     "inputs": {
       "image": "600001.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
     }
   },
   "23": {
+    "class_type": "VAEEncode",
     "inputs": {
       "pixels": [
         "21",
@@ -249,13 +202,10 @@
         "3",
         0
       ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE编码"
     }
   },
   "24": {
+    "class_type": "ReferenceLatent",
     "inputs": {
       "conditioning": [
         "14",
@@ -265,13 +215,10 @@
         "23",
         0
       ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "参考Latent"
     }
   },
   "25": {
+    "class_type": "ReferenceLatent",
     "inputs": {
       "conditioning": [
         "20",
@@ -281,10 +228,6 @@
         "23",
         0
       ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "参考Latent"
     }
   }
 }

@@ -1,7 +1,16 @@
 {
   "12": {
     "inputs": {
-      "image": "20260621165021833-1-9xx6ql.jpg"
+      "image": "0260621170031239-51-hloh8m.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "15": {
+    "inputs": {
+      "image": "0260621170031240-11-gun5rb.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -13,13 +22,17 @@
       "api_url": "https://3dcdn.580ai.net/v1beta/models/gemini-3.1-flash-image-preview:generateContent",
       "header_key": "Authorization",
       "header_value": "sk-Lyx9OF97YMK0suEi6ZIPzq4E9d3dhIKJzO2YS5WpAsZbZpxS",
-      "text": "亚洲美女模特 穿着上边服装 搭配随机 主要衣服上身效果大落肩 夸张宽松肥大效果 超大袖管 慵懒风格",
+      "text": "把图一模特身上的衣服套在图二的模特身上",
       "aspect_ratio": "3:4",
-      "image_size": "4K",
+      "image_size": "2K",
       "timeout": 200,
       "retry_count": 2,
       "image_1": [
         "12",
+        0
+      ],
+      "image_2": [
+        "15",
         0
       ]
     },
@@ -30,7 +43,7 @@
   },
   "17": {
     "inputs": {
-      "filename_prefix": "HezhongAi",
+      "filename_prefix": "hezhongai",
       "images": [
         "16",
         0

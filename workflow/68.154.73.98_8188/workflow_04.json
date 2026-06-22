@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_2d60ec19e8bc415dae872b4a0ba41056.png"
+      "image": "ref_49270defca2e43098377bab0d063f973.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "実写化\n人間の女性\n明るく",
+      "prompt": "make him bending over arching his back",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 829414351485301,
-      "steps": 4,
+      "seed": 845890072757743,
+      "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

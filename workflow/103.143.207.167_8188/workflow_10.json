@@ -1,107 +1,86 @@
 {
-  "6": {
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "text": "Professional vector logo design for LexiVid.com.\n\nStyle: Premium SaaS, AI, modern startup branding, flat vector, SVG-ready, transparent background.\n\nIcon concept:\n\n* Start from the left with floating multilingual characters:\n\n  * Latin: A, a, n\n  * Chinese: 文, 字, 你\n  * Korean: 한, 글\n* The characters appear playful, dynamic, and lightweight.\n* Characters gradually stretch and transform into elegant flowing strokes.\n* The strokes smoothly morph into a stylized play button integrated with a filmstrip shape.\n* The transition must feel organic and fluid, as if language is turning into video.\n* No hard edges or abrupt transitions.\n* Minimalist and memorable.\n* Suitable as favicon and mobile app icon.\n\nColor palette:\n\n* Gradient from deep blue (#2563EB)\n* Through violet (#7C3AED)\n* To neon pink (#EC4899)\n\nTypography:\n\n* Text: \"LexiVid.com\"\n* Modern rounded sans-serif.\n* Clean, premium, technology-focused.\n* Slightly bold.\n* Gradient matching the icon.\n\nLayout:\n\n* Icon on top.\n* LexiVid.com below.\n* White or transparent background.\n* High-end Silicon Valley AI startup aesthetic.\n\nKeywords:\nText-to-Video AI, multilingual content generation, language transforms into video, smooth morphing, elegant motion, premium SaaS branding, vector logo, award-winning logo design.\n\nOutput:\nTransparent PNG, SVG style, ultra clean vector, 4K resolution.\n",
+      "ckpt_name": "flux1-schnell-fp8.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "Logo discord avec les lettres RS pour un developpeur",
       "clip": [
-        "30",
+        "1",
         1
       ]
-    },
+    }
+  },
+  "3": {
     "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
-    }
-  },
-  "8": {
     "inputs": {
-      "samples": [
-        "31",
-        0
-      ],
-      "vae": [
-        "30",
-        2
+      "text": "blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality",
+      "clip": [
+        "1",
+        1
       ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
     }
   },
-  "9": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
-    }
-  },
-  "27": {
+  "4": {
+    "class_type": "EmptyLatentImage",
     "inputs": {
       "width": 1024,
       "height": 1024,
       "batch_size": 1
-    },
-    "class_type": "EmptySD3LatentImage",
-    "_meta": {
-      "title": "EmptySD3LatentImage"
     }
   },
-  "30": {
+  "5": {
+    "class_type": "KSampler",
     "inputs": {
-      "ckpt_name": "flux1-schnell-fp8.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "Load Checkpoint"
-    }
-  },
-  "31": {
-    "inputs": {
-      "seed": 242019696908647,
-      "steps": 4,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
+      "seed": 3841564787,
+      "steps": 20,
+      "cfg": 7.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
       "denoise": 1.0,
       "model": [
-        "30",
+        "1",
         0
       ],
       "positive": [
-        "6",
+        "2",
         0
       ],
       "negative": [
-        "33",
+        "3",
         0
       ],
       "latent_image": [
-        "27",
+        "4",
         0
       ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
     }
   },
-  "33": {
+  "6": {
+    "class_type": "VAEDecode",
     "inputs": {
-      "text": "",
-      "clip": [
-        "30",
-        1
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "1",
+        2
       ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "6",
+        0
+      ],
+      "filename_prefix": "fantasy"
     }
   }
 }

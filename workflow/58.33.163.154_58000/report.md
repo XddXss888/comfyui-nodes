@@ -1,11 +1,11 @@
 # 58.33.163.154:58000
 
-**GPU**: RTX 3070 | **显存**: 8 GB | **空闲**: 7 GB
-**内存**: 63 GB (空闲 51 GB)
+**GPU**: RTX 3070 | **显存**: 8 GB | **空闲**: 2 GB
+**内存**: 63 GB (空闲 30 GB)
 **版本**: 0.22.2
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-21 17:38:58
-**历史总数**: 11 | **成功**: 7
+**扫描时间**: 2026-06-22 08:07:32
+**历史总数**: 13 | **成功**: 8
 
 ## 工作流列表
 
@@ -85,3 +85,14 @@
   - z_image_turbo_bf16.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] A serene deep blue night sky, dotted with glowing warm orange light particles, magical atmosphere, dreamy, cozy, digital art, highly detailed, minimalist aesthetic., surrealism, dreamlike, abstract, i
+
+### 8. workflow_08.json
+- **Prompt ID**: `21d325d7-1a3d-4f8b-a0fb-a6ad2b44de70`
+- **类型**: 文生图
+- **节点数**: 10
+- **模型** (3):
+  - ae.safetensors
+  - qwen_3_4b.safetensors
+  - z_image_turbo_bf16.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] traditional Chinese landscape after rain, clear and gentle celadon blue sky, sunlight breaking through clouds, misty mountains, calm water surface reflecting the sky, healing and serene atmosphere, so

@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "elvaross, A nude woman on all fours in doggystyle position on a bed inside a quiet dorm room at night, her back arched, knees and palms pressing into the mattress for support, breasts hanging naturally with visible contact from behind, head turned slightly with a soft expression, soft warm lamplight from a nearby desk lamp casting gentle shadows across her skin and the simple student room interior, medium close-up side angle framing focused on her body and the intimate contact.",
+      "text": "seductive young curvy woman with long black hair, In a cozy apartment with soft evening lighting, a nude woman on all fours on the bed is being taken from behind by a man, her back arched, hands gripping the sheets, head turned toward the viewer with an aroused inviting expression, the man's hands on her hips, visible intimate contact, warm ambient light casting gentle shadows across their bodies and the rumpled bedding, medium shot framing the woman as the clear primary subject with the man partially visible behind her.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 1.73,
+      "shift": 12.0,
       "model": [
         "72",
         0
@@ -109,8 +109,8 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "TGZW383YGE7RTN4ZTNPAM4FT50.safetensors",
-      "strength_model": 0.88,
+      "lora_name": "izumi_v.2.safetensors",
+      "strength_model": 0.9,
       "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.4,
+      "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 8,
+      "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 494111015108424,
+      "seed": 26161571962184,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

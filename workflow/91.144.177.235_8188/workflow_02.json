@@ -1,18 +1,5 @@
 {
-  "191": {
-    "inputs": {
-      "unet_name": "flux-2-klein-9b-fp8mixed.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader"
-  },
-  "318": {
-    "inputs": {
-      "vae_name": "flux2-vae.safetensors"
-    },
-    "class_type": "VAELoader"
-  },
-  "217": {
+  "415": {
     "inputs": {
       "clip_name": "qwen_3_8b_fp8mixed.safetensors",
       "type": "flux2",
@@ -20,127 +7,91 @@
     },
     "class_type": "CLIPLoader"
   },
-  "219": {
+  "416": {
     "inputs": {
-      "text": "Photorealistic interior of this гостиная, FULLY FURNISHED and beautifully finished, richly and tastefully decorated for Lunar New Year decor, red paper lanterns, fu character, plum blossoms, hongbao envelopes, gold accents, auspicious red and gold, base interior style: contemporary interior, current trends, sculptural furniture, layered neutral palette. Keep the original room architecture — window and door positions, perspective, proportions and layout. Add complete, appropriate furniture for a гостиная and a full festive decoration set. Render smooth freshly painted finished walls and ceiling and a clean polished floor (no bare concrete, no plaster patches, no construction debris, no clutter). Fully furnished contemporary living room with red lanterns, plum blossoms, gold accents, and traditional Chinese New Year decorations in gold and red. Cohesive interior design, complete and well-styled room, warm cinematic lighting, soft natural shadows, realistic materials and textures, photorealistic, magazine-quality interior photography, highly detailed, inviting cozy atmosphere. No text, no watermark, no distorted, broken or duplicated objects.",
+      "unet_name": "flux-2-klein-9b-fp8mixed.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "424": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "431": {
+    "inputs": {
+      "text": "PlayStation console surrounded by glowing game controllers, with a laptop displaying high scores and graphics. Xbox cons, flat vector illustration, corporate blue and white color palette, modern technology aesthetic, clean professional design, soft gradients, no text, no words, no letters, no logos, no people, no faces",
       "clip": [
-        "217",
+        "415",
         0
       ]
     },
     "class_type": "CLIPTextEncode"
   },
-  "317": {
+  "429": {
     "inputs": {
       "conditioning": [
-        "219",
+        "431",
         0
       ]
     },
     "class_type": "ConditioningZeroOut"
   },
-  "9001": {
+  "425": {
     "inputs": {
-      "image": "qa_decor_r5sUQGrQSatppEGu.jpg"
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
     },
-    "class_type": "LoadImage"
+    "class_type": "EmptyFlux2LatentImage"
   },
-  "9002": {
+  "427": {
     "inputs": {
-      "upscale_method": "nearest-exact",
-      "megapixels": 1.0,
-      "resolution_steps": 1,
-      "image": [
-        "9001",
-        0
-      ]
-    },
-    "class_type": "ImageScaleToTotalPixels"
-  },
-  "9006": {
-    "inputs": {
-      "pixels": [
-        "9002",
-        0
-      ],
-      "vae": [
-        "318",
-        0
-      ]
-    },
-    "class_type": "VAEEncode"
-  },
-  "9100": {
-    "inputs": {
-      "conditioning": [
-        "219",
-        0
-      ],
-      "latent": [
-        "9006",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent"
-  },
-  "9200": {
-    "inputs": {
-      "conditioning": [
-        "317",
-        0
-      ],
-      "latent": [
-        "9006",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent"
-  },
-  "500": {
-    "inputs": {
-      "seed": 254238233,
-      "steps": 16,
+      "seed": 233608389,
+      "steps": 20,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 0.85,
+      "denoise": 1.0,
       "model": [
-        "191",
+        "416",
         0
       ],
       "positive": [
-        "9100",
+        "431",
         0
       ],
       "negative": [
-        "9200",
+        "429",
         0
       ],
       "latent_image": [
-        "9006",
+        "425",
         0
       ]
     },
     "class_type": "KSampler"
   },
-  "501": {
+  "426": {
     "inputs": {
       "samples": [
-        "500",
+        "427",
         0
       ],
       "vae": [
-        "318",
+        "424",
         0
       ]
     },
     "class_type": "VAEDecode"
   },
-  "60": {
+  "430": {
     "inputs": {
-      "filename_prefix": "ComfyUI_HomeDecor",
+      "filename_prefix": "autopost",
       "images": [
-        "501",
+        "426",
         0
       ]
     },

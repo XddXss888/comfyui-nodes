@@ -1,16 +1,26 @@
 # 68.154.73.98:8188
 
 **GPU**: A100 | **显存**: 79 GB | **空闲**: 49 GB
-**内存**: 216 GB (空闲 193 GB)
+**内存**: 216 GB (空闲 190 GB)
 **版本**: 0.13.0
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-14 05:56:29
-**历史总数**: 5493 | **成功**: 10
+**扫描时间**: 2026-06-22 08:07:40
+**历史总数**: 10001 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `179200e7-878c-44d0-819e-8fa9c0911481`
+- **Prompt ID**: `657c8c23-b3bc-4ec0-80b6-3085d4944b77`
+- **类型**: 图生图
+- **节点数**: 16
+- **模型** (4):
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - qwen_image_vae.safetensors
+
+### 2. workflow_02.json
+- **Prompt ID**: `1ba9a717-2a16-42dc-bfe0-172172213fb1`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -19,10 +29,55 @@
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] Change wheels to BBS RS chrome wheels that fit the the entire arch very well of the car with no arch gap 
+  - [TextEncodeQwenImageEditPlus::prompt] I want this girls wearing pink bra 
 
-### 2. workflow_02.json
-- **Prompt ID**: `011e2f7c-6bb6-4fd4-9067-42907269e161`
+
+### 3. workflow_03.json
+- **Prompt ID**: `d5d6ae47-5343-490e-bfe3-8011bcebaf8a`
+- **类型**: 文生图
+- **节点数**: 12
+- **模型** (4):
+  - Qwen-Image-Lightning-4steps-V1.0.safetensors
+  - qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
+  - qwen_image_vae.safetensors
+
+### 4. workflow_04.json
+- **Prompt ID**: `31fe9e71-f6e3-4480-bdcf-2ad7b75a84a8`
+- **类型**: 图生图
+- **节点数**: 16
+- **模型** (4):
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - qwen_image_vae.safetensors
+- **提示词**:
+  - [TextEncodeQwenImageEditPlus::prompt] make him bending over arching his back
+
+### 5. workflow_05.json
+- **Prompt ID**: `6cae930c-8d23-424a-997d-8db291d5a23d`
+- **类型**: 图生图
+- **节点数**: 16
+- **模型** (4):
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - qwen_image_vae.safetensors
+- **提示词**:
+  - [TextEncodeQwenImageEditPlus::prompt] Show her big clevage
+
+### 6. workflow_06.json
+- **Prompt ID**: `84e7f9ac-b823-4656-a98d-cafad0835a1b`
+- **类型**: 图生图
+- **节点数**: 16
+- **模型** (4):
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - qwen_image_vae.safetensors
+
+### 7. workflow_07.json
+- **Prompt ID**: `2226328e-830f-4247-91ae-d25e4bfbf1d5`
 - **类型**: 图生图
 - **节点数**: 17
 - **模型** (4):
@@ -31,73 +86,10 @@
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] “Change the entire outfit in the first photo to match the outfit in the second photo. It should look realistic with original hour lighting. do not change anything else.
-Without changing face detailing
-
-### 3. workflow_03.json
-- **Prompt ID**: `24fe6638-ee06-474a-a7ef-c110259d0191`
-- **类型**: 图生图
-- **节点数**: 16
-- **模型** (4):
-  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
-  - qwen_2.5_vl_7b_fp8_scaled.safetensors
-  - qwen_image_edit_2511_fp8mixed.safetensors
-  - qwen_image_vae.safetensors
-- **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] Give her q wedgie
-
-### 4. workflow_04.json
-- **Prompt ID**: `9cd0f861-0012-4363-9adc-def5feb56a27`
-- **类型**: 图生图
-- **节点数**: 16
-- **模型** (4):
-  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
-  - qwen_2.5_vl_7b_fp8_scaled.safetensors
-  - qwen_image_edit_2511_fp8mixed.safetensors
-  - qwen_image_vae.safetensors
-- **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 実写化
-人間の女性
-明るく
-
-### 5. workflow_05.json
-- **Prompt ID**: `29f22df0-4d29-4c5e-8068-408e4154271d`
-- **类型**: 图生图
-- **节点数**: 16
-- **模型** (4):
-  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
-  - qwen_2.5_vl_7b_fp8_scaled.safetensors
-  - qwen_image_edit_2511_fp8mixed.safetensors
-  - qwen_image_vae.safetensors
-- **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] Inpaint the background: ,in front of bright festive lights or amidst a lively holiday market scene, blending seamlessly with the celebratory ambiance. The masked region is left empty for subject inser
-
-### 6. workflow_06.json
-- **Prompt ID**: `86121eda-ff2e-4d86-9f19-58d824c13156`
-- **类型**: 图生图
-- **节点数**: 16
-- **模型** (4):
-  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
-  - qwen_2.5_vl_7b_fp8_scaled.safetensors
-  - qwen_image_edit_2511_fp8mixed.safetensors
-  - qwen_image_vae.safetensors
-- **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] More bouncy, more pointy,  more bigger but moving upaward shaped chest 
-
-### 7. workflow_07.json
-- **Prompt ID**: `a570d0c3-55b2-427f-ba8d-4c8b886471d6`
-- **类型**: 图生图
-- **节点数**: 16
-- **模型** (4):
-  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
-  - qwen_2.5_vl_7b_fp8_scaled.safetensors
-  - qwen_image_edit_2511_fp8mixed.safetensors
-  - qwen_image_vae.safetensors
-- **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] Put the markings on tje swimsuit fromvtje origional uoload
+  - [TextEncodeQwenImageEditPlus::prompt] put him instead of the other guy standing
 
 ### 8. workflow_08.json
-- **Prompt ID**: `ab929d2a-e119-4816-9263-54dc6790496c`
+- **Prompt ID**: `23183e9f-48b3-4b6e-90ef-56ac1afae5e9`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -106,11 +98,10 @@ Without changing face detailing
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 
-踵を上げて両膝を開き、深く腰を落とす蹲踞をさせて　両手を頭の後ろに
+  - [TextEncodeQwenImageEditPlus::prompt] faire que sa main gauche soit sur le bord de la portiere 
 
 ### 9. workflow_09.json
-- **Prompt ID**: `25043f0d-4d57-4216-8708-db7fc3bf63c6`
+- **Prompt ID**: `670c4db2-be57-4602-9c49-7f51700f072c`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -118,11 +109,9 @@ Without changing face detailing
   - qwen_2.5_vl_7b_fp8_scaled.safetensors
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
-- **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] Waist is more curvy. Bra and panty color should be in royal blue color
 
 ### 10. workflow_10.json
-- **Prompt ID**: `d54d0eb6-63ba-4afc-9401-010de8bb5153`
+- **Prompt ID**: `7c5198f6-76d3-4d93-8ef0-eff61de38c05`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -131,4 +120,4 @@ Without changing face detailing
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] Make her barefoot with the soles of her feet in the air 
+  - [TextEncodeQwenImageEditPlus::prompt] faire que ces seins soient tres grand

@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_76f0084c73e24d4cb8b74b037cec56bc.png"
+      "image": "ref_6294687f75c24323a21e18b6a942a206.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "More bouncy, more pointy,  more bigger but moving upaward shaped chest ",
+      "prompt": "上の服装を脱がして",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 926492931606364,
+      "seed": 635055257522838,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",

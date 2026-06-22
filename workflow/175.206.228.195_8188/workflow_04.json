@@ -33,7 +33,7 @@
   },
   "4": {
     "inputs": {
-      "seed": 3461094171,
+      "seed": 8196463125,
       "steps": [
         "13",
         0
@@ -102,8 +102,8 @@
   },
   "13": {
     "inputs": {
-      "steps": 27,
-      "cfg": 2.0
+      "steps": 32,
+      "cfg": 5.5
     },
     "class_type": "StepsAndCfg",
     "_meta": {
@@ -125,7 +125,7 @@
   },
   "20": {
     "inputs": {
-      "seed": 3461094171,
+      "seed": 8196463125,
       "steps": 10,
       "cfg": [
         "13",
@@ -205,7 +205,7 @@
   },
   "32": {
     "inputs": {
-      "text": "ever_jiho_love,  ratatatat74, white shirt, necktie, korean school uniform, pencil skirt, delinquent, classroom, masterpiece, best quality, amazing quality"
+      "text": "ever_garnet_base, [], solo, musume, leaning forward, indoors, no headwear, hair over eyes,shy, huge breasts, no text, maid, slave, twintails, 3d, pov, pov penis, pov crotch, handjob, torture, realistic,comic, from below, masterpiece, best quality, amazing quality"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -214,7 +214,7 @@
   },
   "33": {
     "inputs": {
-      "text": "bad quality,worst quality,worst detail,sketch,censor,"
+      "text": "bad quality,worst quality,worst detail,sketch,censor, [], text focus,text,, watermark,ugly, puffy sleeves, puffy short sleeves,"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -277,7 +277,7 @@
   },
   "65": {
     "inputs": {
-      "data": "[{\"name\": \"jiho_love.safetensors\", \"strength\": 1.0, \"strength_clip\": 1.0}]",
+      "data": "[{\"name\": \"garnet_base.safetensors\", \"strength\": 0.63, \"strength_clip\": 1.0}]",
       "model": [
         "36",
         0

@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "asig2, In a cozy living room with warm evening lighting, a nude woman kneels on the couch and slowly lowers herself into a facesitting position over her partner, thighs spread wide on either side of his head, hands gripping the back of the couch for support, back slightly arched, head tilted down with a hesitant yet focused expression as she settles into place.",
+      "text": "seductive young curvy woman with long black hair, In a cozy apartment with soft evening lighting, a woman sits on the couch in a relaxed yet commanding posture, leaning slightly forward with one hand resting on her knee, gazing steadily at the viewer with a calm, knowing expression that sets the tone for the trust game, intimate atmosphere, medium close-up framing, natural proportions and clear silhouette.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 1.73,
+      "shift": 12.0,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "zimg_asig2_conchar.safetensors",
-      "strength_model": 0.63,
-      "strength_clip": 0.7,
+      "lora_name": "izumi_v.2.safetensors",
+      "strength_model": 0.9,
+      "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.33,
+      "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 8,
+      "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 661743540426963,
+      "seed": 26161571962184,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

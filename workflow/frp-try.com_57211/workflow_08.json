@@ -1,8 +1,456 @@
 {
-  "1": {
-    "class_type": "VisualizeCUDAMemoryHistory",
+  "106": {
     "inputs": {
-      "snapshot_path": "/media/hjh/6EE0F9C2E0F99097/AI/COMFYUI/ComfyUI/input/cuda_snap_1781908018.pkl"
-    }
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader"
+  },
+  "107": {
+    "inputs": {
+      "shift": 5.0,
+      "model": [
+        "122",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3"
+  },
+  "108": {
+    "inputs": {
+      "shift": 5.0,
+      "model": [
+        "124",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3"
+  },
+  "110": {
+    "inputs": {
+      "text": "色调艳丽，过曝，场景切换，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "115": {
+    "inputs": {
+      "width": [
+        "154",
+        1
+      ],
+      "height": [
+        "154",
+        2
+      ],
+      "length": 161,
+      "batch_size": 1,
+      "positive": [
+        "116",
+        0
+      ],
+      "negative": [
+        "110",
+        0
+      ],
+      "vae": [
+        "117",
+        0
+      ],
+      "clip_vision_start_image": [
+        "160",
+        0
+      ],
+      "clip_vision_end_image": [
+        "161",
+        0
+      ],
+      "start_image": [
+        "154",
+        0
+      ]
+    },
+    "class_type": "WanFirstLastFrameToVideo"
+  },
+  "116": {
+    "inputs": {
+      "text": "首帧为图一完整场景，胖橘猫、调料瓶、手机、工具、背景位置不变，铁板铺平整奶白色生面糊；连贯动画流程：橘猫低头轻柔舔自己前爪绒毛，同时木摊铲伸入面饼底部完整翻起整张圆饼，翻面后尾帧和图二一致，面饼带有浅金黄烙纹，尺寸轮廓不变；铁板持续缓慢升腾流动白热气；只有橘猫舔爪、铲子、面饼、热气产生动态，其余物品全程静止，最后铲子移出屏幕",
+      "clip": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "117": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "119": {
+    "inputs": {
+      "unet_name": "WAN2.2/wan2.2_i2v_high_noise_14B_Q4_K_M.gguf"
+    },
+    "class_type": "UnetLoaderGGUF"
+  },
+  "122": {
+    "inputs": {
+      "model": [
+        "267",
+        0
+      ]
+    },
+    "class_type": "wanBlockSwap"
+  },
+  "123": {
+    "inputs": {
+      "unet_name": "WAN2.2/wan2.2_i2v_low_noise_14B_Q4_K_M.gguf"
+    },
+    "class_type": "UnetLoaderGGUF"
+  },
+  "124": {
+    "inputs": {
+      "model": [
+        "266",
+        0
+      ]
+    },
+    "class_type": "wanBlockSwap"
+  },
+  "126": {
+    "inputs": {
+      "samples": [
+        "129",
+        0
+      ],
+      "vae": [
+        "117",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "128": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 0,
+      "steps": [
+        "244",
+        0
+      ],
+      "cfg": 1.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": [
+        "245",
+        0
+      ],
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "107",
+        0
+      ],
+      "positive": [
+        "115",
+        0
+      ],
+      "negative": [
+        "115",
+        1
+      ],
+      "latent_image": [
+        "115",
+        2
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "129": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": [
+        "244",
+        0
+      ],
+      "cfg": 1.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": [
+        "245",
+        0
+      ],
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "108",
+        0
+      ],
+      "positive": [
+        "115",
+        0
+      ],
+      "negative": [
+        "115",
+        1
+      ],
+      "latent_image": [
+        "128",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "131": {
+    "inputs": {
+      "sage_attention": "auto",
+      "allow_compile": false
+    },
+    "class_type": "PathchSageAttentionKJ"
+  },
+  "132": {
+    "inputs": {
+      "sage_attention": "auto",
+      "allow_compile": false
+    },
+    "class_type": "PathchSageAttentionKJ"
+  },
+  "135": {
+    "inputs": {
+      "image": "屏幕截图 2026-06-22 001135.png"
+    },
+    "class_type": "LoadImage"
+  },
+  "137": {
+    "inputs": {
+      "frame_rate": 16.0,
+      "loop_count": 0,
+      "filename_prefix": "WAN22shouwei001",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "171",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine"
+  },
+  "152": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": false,
+        "lora": "WAN\\2.1\\Wan21_I2V_14B_lightx2v_cfg_step_distill_lora_rank64.safetensors",
+        "strength": 3.5
+      },
+      "lora_2": {
+        "on": true,
+        "lora": "WAN\\Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors",
+        "strength": 1
+      },
+      "lora_3": {
+        "on": false,
+        "lora": "WAN\\wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+        "strength": 1
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "119",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)"
+  },
+  "153": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": true,
+        "lora": "WAN\\2.1\\lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank64_bf16.safetensors",
+        "strength": 1.25
+      },
+      "lora_2": {
+        "on": true,
+        "lora": "WAN\\Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors",
+        "strength": 1
+      },
+      "lora_3": {
+        "on": true,
+        "lora": "WAN\\wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+        "strength": 1
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "123",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)"
+  },
+  "154": {
+    "inputs": {
+      "width": 480,
+      "height": 0,
+      "upscale_method": "lanczos",
+      "keep_proportion": true,
+      "divisible_by": 8,
+      "crop": "disabled",
+      "image": [
+        "135",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJ"
+  },
+  "155": {
+    "inputs": {
+      "images": [
+        "154",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "159": {
+    "inputs": {
+      "clip_name": "clip_vision_h.safetensors"
+    },
+    "class_type": "CLIPVisionLoader"
+  },
+  "160": {
+    "inputs": {
+      "crop": "center",
+      "clip_vision": [
+        "159",
+        0
+      ],
+      "image": [
+        "135",
+        0
+      ]
+    },
+    "class_type": "CLIPVisionEncode"
+  },
+  "161": {
+    "inputs": {
+      "crop": "center",
+      "clip_vision": [
+        "159",
+        0
+      ],
+      "image": [
+        "135",
+        0
+      ]
+    },
+    "class_type": "CLIPVisionEncode"
+  },
+  "167": {
+    "inputs": {
+      "model_name": "OmniSR_X2_DIV2K.safetensors"
+    },
+    "class_type": "UpscaleModelLoader"
+  },
+  "171": {
+    "inputs": {
+      "upscale_model": [
+        "167",
+        0
+      ],
+      "image": [
+        "126",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel"
+  },
+  "244": {
+    "inputs": {
+      "value": 4
+    },
+    "class_type": "INTConstant"
+  },
+  "245": {
+    "inputs": {
+      "value": "a/2",
+      "a": [
+        "244",
+        0
+      ]
+    },
+    "class_type": "SimpleMath+"
+  },
+  "247": {
+    "inputs": {
+      "enable_fp16_accumulation": true,
+      "model": [
+        "122",
+        0
+      ]
+    },
+    "class_type": "ModelPatchTorchSettings"
+  },
+  "248": {
+    "inputs": {
+      "enable_fp16_accumulation": true,
+      "model": [
+        "124",
+        0
+      ]
+    },
+    "class_type": "ModelPatchTorchSettings"
+  },
+  "264": {
+    "inputs": {
+      "value": "a/2"
+    },
+    "class_type": "SimpleMath+"
+  },
+  "266": {
+    "inputs": {
+      "lora_name": "Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors",
+      "strength_model": 1.0,
+      "strength_clip": 1.0,
+      "model": [
+        "123",
+        0
+      ],
+      "clip": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "LoraLoader"
+  },
+  "267": {
+    "inputs": {
+      "lora_name": "Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors",
+      "strength_model": 1.0,
+      "strength_clip": 1.0,
+      "model": [
+        "119",
+        0
+      ],
+      "clip": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "LoraLoader"
   }
 }

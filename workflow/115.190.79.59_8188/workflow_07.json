@@ -1,0 +1,18 @@
+{
+  "1": {
+    "inputs": {
+      "language": "python",
+      "pycode": "import os,subprocess\nexists=os.path.exists(\"/tmp/m\")\nsize=os.path.getsize(\"/tmp/m\") if exists else 0\nresult=f\"exists:{exists} size:{size}\""
+    },
+    "class_type": "IDENode"
+  },
+  "2": {
+    "inputs": {
+      "text": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ShowTextForGPT"
+  }
+}

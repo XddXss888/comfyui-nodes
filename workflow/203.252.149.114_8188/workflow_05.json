@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "The girl is sitting on the edge of the bed. She raises both arms high above her head and stretches her whole body with a deep breath. She lowers her arms, rolls her neck gently from side to side, and looks around the room with curiosity. She turns her head back toward the camera with a relaxed expression. Warm morning light softly illuminates her face from the window. The camera stays at eye level facing her.",
+      "text": "The girl in the image is sleeping peacefully on the bed. She begins to stir, her eyelids fluttering gently. She slowly opens her eyes, blinks a few times with a drowsy expression, and yawns softly. She gradually pushes herself up with both arms and sits upright on the bed. She looks straight ahead with a sleepy half-smile, her messy hair framing her face. The camera captures her from the front.",
       "clip": [
         "11",
         0
@@ -34,7 +34,7 @@
   },
   "9": {
     "inputs": {
-      "image": "v2_lastframe_seg1 (1).png"
+      "image": "1.png"
     },
     "class_type": "LoadImage"
   },
@@ -108,7 +108,7 @@
   "23": {
     "inputs": {
       "add_noise": "enable",
-      "noise_seed": 799899697419399,
+      "noise_seed": 476629523371099,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -166,7 +166,7 @@
   "15": {
     "inputs": {
       "add_noise": "disable",
-      "noise_seed": 944215096965950,
+      "noise_seed": 1100214663498799,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -199,7 +199,7 @@
         "8",
         0
       ],
-      "filename_prefix": "frames/v2_seg2"
+      "filename_prefix": "frames/v2_seg1"
     },
     "class_type": "SaveImage"
   }

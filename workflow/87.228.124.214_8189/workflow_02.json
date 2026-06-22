@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "ohwx woman, messy red hair, green eyes, curvy body, A woman stands in a dimly lit bedroom surrounded by displayed leather and latex fetish items, her corset partially unfastened and pulled down to expose her breasts, with ribbons being slowly tugged from the sides. Her arms rest loosely at her sides, torso upright and relaxed, head tilted slightly downward with a calm anticipatory gaze. Soft low lighting casts gentle shadows across her skin and the open corset fabric. Medium close-up framing centered on her chest and upper body, simple background, clear visible contact of the loosening ribbons against her skin.",
+      "text": "asig2, A delicate shy woman stands in a softly lit room, hands lightly clasped in front of her waist, body turned slightly toward the viewer with a nervous yet curious expression, wearing a simple fitted dress with natural fabric folds, medium close-up framing, warm ambient lighting, clear readable posture and gaze directed forward, simple indoor background.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "FZXTSS9MFQBP0RKFF1MGXHS1W0.safetensors",
-      "strength_model": 0.66,
-      "strength_clip": 0.8,
+      "lora_name": "zimg_asig2_conchar.safetensors",
+      "strength_model": 0.63,
+      "strength_clip": 0.7,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.5,
+      "eta": 0.33,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 882600789108041,
+      "seed": 661743540426963,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

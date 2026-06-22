@@ -1,16 +1,16 @@
 # https://frp-try.com:57211
 
-**GPU**: Tesla V100 | **显存**: 32 GB | **空闲**: 26 GB
-**内存**: 251 GB (空闲 195 GB)
+**GPU**: Tesla V100 | **显存**: 32 GB | **空闲**: 31 GB
+**内存**: 251 GB (空闲 186 GB)
 **版本**: 0.19.2
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-21 17:39:00
-**历史总数**: 33 | **成功**: 10
+**扫描时间**: 2026-06-22 08:07:41
+**历史总数**: 101 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `92455de0-cac8-4a66-8356-17403a3306f2`
+- **Prompt ID**: `f15160cd-4131-4acb-978f-1ce0a0b74f93`
 - **类型**: 图生视频
 - **节点数**: 34
 - **模型** (8):
@@ -24,9 +24,13 @@
   - wan_2.1_vae.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] 色调艳丽，过曝，场景切换，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
+  - [CLIPTextEncode::text] 步骤 1：画面出现木质摊铲，伸到面饼底部，缓慢将整张圆形面饼完整翻面
+步骤 2：翻面完成后得到尾帧画面，和图二完全一致，面饼朝下的一面变为熟煎饼皮，表面分布浅金黄色烙制焦纹，大小、轮廓和原图面饼完全不变
+步骤 3：铁板持续向上飘散柔和白色热气，热气缓慢流动
+全程橘猫、酱料瓶、手机、操作台、背景所有物体保持静止，仅铲子、面饼、热气产生动态
 
 ### 2. workflow_02.json
-- **Prompt ID**: `c120614d-b02e-4254-b898-7d5fb574772c`
+- **Prompt ID**: `a61ec462-312b-40bf-8c88-79b5ee710287`
 - **类型**: 图生视频
 - **节点数**: 34
 - **模型** (8):
@@ -40,9 +44,13 @@
   - wan_2.1_vae.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] 色调艳丽，过曝，场景切换，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
+  - [CLIPTextEncode::text] 步骤 1：画面出现木质摊铲，伸到面饼底部，缓慢将整张圆形面饼完整翻面
+步骤 2：翻面完成后得到尾帧画面，和图二完全一致，面饼朝下的一面变为熟煎饼皮，表面分布浅金黄色烙制焦纹，大小、轮廓和原图面饼完全不变
+步骤 3：铁板持续向上飘散柔和白色热气，热气缓慢流动
+全程橘猫、酱料瓶、手机、操作台、背景所有物体保持静止，仅铲子、面饼、热气产生动态 
 
 ### 3. workflow_03.json
-- **Prompt ID**: `914fab43-fbf0-4e51-8b44-4110a4d986df`
+- **Prompt ID**: `d9b954dc-0a52-400b-b26d-7fc9db3ed599`
 - **类型**: 图生视频
 - **节点数**: 34
 - **模型** (8):
@@ -56,9 +64,10 @@
   - wan_2.1_vae.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] 色调艳丽，过曝，场景切换，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
+  - [CLIPTextEncode::text] 首帧为图一完整场景，胖橘猫、调料瓶、手机、工具、背景位置不变，铁板铺平整奶白色生面糊；连贯动画流程：橘猫低头轻柔舔自己前爪绒毛，同时木摊铲伸入面饼底部完整翻起整张圆饼，翻面后尾帧和图二一致，面饼带有浅金黄烙纹，尺寸轮廓不变；铁板持续缓慢升腾流动白热气；只有橘猫舔爪、铲子、面饼、热气产生动态，其余物品全程静止
 
 ### 4. workflow_04.json
-- **Prompt ID**: `2e86ded9-eca5-46ba-a8fa-f21413d27653`
+- **Prompt ID**: `1b1e4cc0-a05a-496e-b6de-3f1cd3983cf8`
 - **类型**: 图生视频
 - **节点数**: 34
 - **模型** (8):
@@ -72,9 +81,10 @@
   - wan_2.1_vae.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] 色调艳丽，过曝，场景切换，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
+  - [CLIPTextEncode::text] 首帧为图一完整场景，胖橘猫、调料瓶、手机、工具、背景位置不变，铁板铺平整奶白色生面糊；连贯动画流程：橘猫低头轻柔舔自己前爪绒毛，同时木摊铲伸入面饼底部完整翻起整张圆饼，翻面后尾帧和图二一致，面饼带有浅金黄烙纹，尺寸轮廓不变；铁板持续缓慢升腾流动白热气；只有橘猫舔爪、铲子、面饼、热气产生动态，其余物品全程静止
 
 ### 5. workflow_05.json
-- **Prompt ID**: `4a72c31a-f76b-4af0-8b35-65980d82b9cf`
+- **Prompt ID**: `1428c2cf-2b01-4e65-9fc9-89cf921615e1`
 - **类型**: 图生视频
 - **节点数**: 34
 - **模型** (8):
@@ -88,49 +98,67 @@
   - wan_2.1_vae.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] 色调艳丽，过曝，场景切换，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
-  - [CLIPTextEncode::text] 初始画面：胖橘猫后腿直立站在铁锅后方，双爪搭在台面上，手机摆放在台面中间，铁锅内是空的，没有面糊，和第一张参考图一模一样。
-画面左侧边缘，缓慢伸出一只人类左手，手里拎着不锈钢面糊小桶，手从画面外伸进镜头，停在铁锅正上方。
-左手倾斜不锈钢小桶，缓缓往下倾倒乳白色面糊，均匀流到黑色铁锅底，铺满整个锅面，面糊表面慢慢冒出细密小气泡，和第二张图的面糊形态一致。
-面糊完全倒完后，拎着桶的左手缓慢向画面左侧移
+  - [CLIPTextEncode::text] 首帧为图一完整场景，胖橘猫、调料瓶、手机、工具、背景位置不变，铁板铺平整奶白色生面糊；连贯动画流程：橘猫低头轻柔舔自己前爪绒毛，同时木摊铲伸入面饼底部完整翻起整张圆饼，翻面后尾帧和图二一致，面饼带有浅金黄烙纹，尺寸轮廓不变；铁板持续缓慢升腾流动白热气；只有橘猫舔爪、铲子、面饼、热气产生动态，其余物品全程静止
 
 ### 6. workflow_06.json
-- **Prompt ID**: `49a0f88f-61d0-43af-a145-4f6b8c7e9162`
-- **类型**: 其他
-- **节点数**: 1
-- **模型** (0):
+- **Prompt ID**: `38187367-c65d-4849-a9a0-871b79e6a99f`
+- **类型**: 图生视频
+- **节点数**: 34
+- **模型** (8):
+  - OmniSR_X2_DIV2K.safetensors
+  - WAN2.2/wan2.2_i2v_high_noise_14B_Q4_K_M.gguf
+  - WAN2.2/wan2.2_i2v_low_noise_14B_Q4_K_M.gguf
+  - Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors
+  - Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors
+  - clip_vision_h.safetensors
+  - umt5_xxl_fp8_e4m3fn_scaled.safetensors
+  - wan_2.1_vae.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] 色调艳丽，过曝，场景切换，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
+  - [CLIPTextEncode::text] 首帧为图一完整场景，胖橘猫、调料瓶、手机、工具、背景位置不变，铁板铺平整奶白色生面糊；连贯动画流程：橘猫低头轻柔舔自己前爪绒毛，同时木摊铲伸入面饼底部完整翻起整张圆饼，翻面后尾帧和图二一致，面饼带有浅金黄烙纹，尺寸轮廓不变；铁板持续缓慢升腾流动白热气；只有橘猫舔爪、铲子、面饼、热气产生动态，其余物品全程静止 
 
 ### 7. workflow_07.json
-- **Prompt ID**: `09ccc8ff-9823-4de9-a90e-b95d4b18c77a`
-- **类型**: 其他
-- **节点数**: 1
-- **模型** (0):
+- **Prompt ID**: `854876ca-aef3-43f6-aa6f-bf682a0f5c96`
+- **类型**: 图生视频
+- **节点数**: 34
+- **模型** (8):
+  - OmniSR_X2_DIV2K.safetensors
+  - WAN2.2/wan2.2_i2v_high_noise_14B_Q4_K_M.gguf
+  - WAN2.2/wan2.2_i2v_low_noise_14B_Q4_K_M.gguf
+  - Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors
+  - Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors
+  - clip_vision_h.safetensors
+  - umt5_xxl_fp8_e4m3fn_scaled.safetensors
+  - wan_2.1_vae.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] 色调艳丽，过曝，场景切换，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
+  - [CLIPTextEncode::text] 首帧为图一完整场景，胖橘猫、调料瓶、手机、工具、背景位置不变，铁板铺平整奶白色生面糊；连贯动画流程：橘猫低头轻柔舔自己前爪绒毛，同时木摊铲伸入面饼底部完整翻起整张圆饼，翻面后尾帧和图二一致，面饼带有浅金黄烙纹，尺寸轮廓不变；铁板持续缓慢升腾流动白热气；只有橘猫舔爪、铲子、面饼、热气产生动态，其余物品全程静止 
 
 ### 8. workflow_08.json
-- **Prompt ID**: `766e6886-650e-4c5f-be1e-776438aef3c1`
-- **类型**: 其他
-- **节点数**: 1
-- **模型** (0):
+- **Prompt ID**: `00e982e7-7e52-47cc-90d6-57959279e930`
+- **类型**: 图生视频
+- **节点数**: 34
+- **模型** (8):
+  - OmniSR_X2_DIV2K.safetensors
+  - WAN2.2/wan2.2_i2v_high_noise_14B_Q4_K_M.gguf
+  - WAN2.2/wan2.2_i2v_low_noise_14B_Q4_K_M.gguf
+  - Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors
+  - Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors
+  - clip_vision_h.safetensors
+  - umt5_xxl_fp8_e4m3fn_scaled.safetensors
+  - wan_2.1_vae.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] 色调艳丽，过曝，场景切换，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
+  - [CLIPTextEncode::text] 首帧为图一完整场景，胖橘猫、调料瓶、手机、工具、背景位置不变，铁板铺平整奶白色生面糊；连贯动画流程：橘猫低头轻柔舔自己前爪绒毛，同时木摊铲伸入面饼底部完整翻起整张圆饼，翻面后尾帧和图二一致，面饼带有浅金黄烙纹，尺寸轮廓不变；铁板持续缓慢升腾流动白热气；只有橘猫舔爪、铲子、面饼、热气产生动态，其余物品全程静止，最后铲子移出屏幕
 
 ### 9. workflow_09.json
-- **Prompt ID**: `95082e12-365f-4074-ae2e-9d17fa072a2e`
+- **Prompt ID**: `1c5e89b5-e70f-4034-87f0-193159cee942`
 - **类型**: 其他
 - **节点数**: 1
 - **模型** (0):
 
 ### 10. workflow_10.json
-- **Prompt ID**: `cef49d38-afa6-464e-9f68-897d9fa4dabc`
-- **类型**: 图生图
-- **节点数**: 17
-- **模型** (7):
-  - anima_baseV10.safetensors
-  - qwen_3_06b_base.safetensors
-  - qwen_image_vae.safetensors
-  - 画风/P.safetensors
-  - 画风/sca.safetensors
-  - 画风/大成.safetensors
-  - 画风/里程碑1.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] eyjafjalla \(arknights\), arknights, 1girl, sheep girl, sheep horns, sheep ears, pink eyes, red eyes, brown hair, long hair, very long hair, ahoge, medium breasts，
-silverash \(arknights\), arknights, 
-  - [CLIPTextEncode::text] bad anatomy,low quality,out of focus,bad proportions,text,blurry,logo,skin blemishes,skin spots,bad hands,acnes,malformed hands,mutated hands,bad feet,cross-eyed,poorly drawn hands,extra legs,too many
-  - [TextEncodeQwenImageEditPlus::prompt] a daring reverse maid outfit. The attire features intricate lace, delicate frills, and a revealing apron, creating a deeply alluring and seductive aesthetic.
+- **Prompt ID**: `f3686cab-d898-4533-8997-9ea56d391bf9`
+- **类型**: 其他
+- **节点数**: 1
+- **模型** (0):

@@ -1,105 +1,68 @@
 {
-  "14": {
+  "1": {
     "inputs": {
-      "unet_name": "flux1-dev-fp8.safetensors",
-      "weight_dtype": "fp8_e4m3fn"
+      "model": "segformer_b3_clothes",
+      "face": false,
+      "hair": false,
+      "hat": true,
+      "sunglass": false,
+      "left_arm": false,
+      "right_arm": false,
+      "left_leg": false,
+      "right_leg": false,
+      "left_shoe": false,
+      "right_shoe": false,
+      "upper_clothes": true,
+      "skirt": true,
+      "pants": true,
+      "dress": true,
+      "belt": false,
+      "bag": true,
+      "scarf": false
     },
-    "class_type": "UNETLoader",
+    "class_type": "LayerMask: SegformerClothesPipelineLoader",
     "_meta": {
-      "title": "UNET加载器"
+      "title": "图层遮罩：Segformer 服装框架"
     }
   },
-  "16": {
+  "2": {
     "inputs": {
-      "lora_name": "v3ctora.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "14",
+      "detail_method": "VITMatte",
+      "detail_erode": 8,
+      "detail_dilate": 6,
+      "black_point": 0.01,
+      "white_point": 0.99,
+      "process_detail": true,
+      "device": "cuda",
+      "max_megapixels": 2.0,
+      "image": [
+        "4",
+        0
+      ],
+      "segformer_pipeline": [
+        "1",
         0
       ]
     },
-    "class_type": "LoraLoaderModelOnly",
+    "class_type": "LayerMask: SegformerUltraV2",
     "_meta": {
-      "title": "LoRA加载器(仅模型)"
+      "title": "图层遮罩：Segformer Ultra V2"
     }
   },
-  "17": {
+  "4": {
     "inputs": {
-      "noise": [
-        "18",
-        0
-      ],
-      "guider": [
-        "32",
-        0
-      ],
-      "sampler": [
-        "19",
-        0
-      ],
-      "sigmas": [
-        "20",
-        0
-      ],
-      "latent_image": [
-        "29",
-        0
-      ]
+      "image": "/root/ComfyUI/input/558369dbf3d4836d05e667484dcce8ee.jpg"
     },
-    "class_type": "SamplerCustomAdvanced",
+    "class_type": "LoadImage",
     "_meta": {
-      "title": "自定义采样器(高级)"
+      "title": "加载图像"
     }
   },
-  "18": {
+  "9": {
     "inputs": {
-      "noise_seed": 7098771792423374
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "随机噪波"
-    }
-  },
-  "19": {
-    "inputs": {
-      "sampler_name": "euler"
-    },
-    "class_type": "KSamplerSelect",
-    "_meta": {
-      "title": "K采样器选择"
-    }
-  },
-  "20": {
-    "inputs": {
-      "scheduler": "simple",
-      "steps": 25,
-      "denoise": 1.0,
-      "model": [
-        "16",
-        0
-      ]
-    },
-    "class_type": "BasicScheduler",
-    "_meta": {
-      "title": "基础调度器"
-    }
-  },
-  "23": {
-    "inputs": {
-      "clip_name1": "t5xxl_fp8_e4m3fn.safetensors",
-      "clip_name2": "clip_l.safetensors",
-      "type": "flux"
-    },
-    "class_type": "DualCLIPLoader",
-    "_meta": {
-      "title": "双CLIP加载器"
-    }
-  },
-  "24": {
-    "inputs": {
-      "filename_prefix": "2D_graphic/2D_graphic",
+      "filename_prefix": "ComfyUI",
       "images": [
-        "33",
+        "2",
         0
       ]
     },
@@ -108,104 +71,29 @@
       "title": "保存图像"
     }
   },
-  "25": {
+  "11": {
     "inputs": {
-      "vae_name": "ae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "VAE加载器"
-    }
-  },
-  "26": {
-    "inputs": {
-      "samples": [
-        "17",
+      "mask": [
+        "2",
         1
-      ],
-      "vae": [
-        "25",
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩到图像"
+    }
+  },
+  "12": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "11",
         0
       ]
     },
-    "class_type": "VAEDecode",
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "29": {
-    "inputs": {
-      "width": 512,
-      "height": 512,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "空Latent"
-    }
-  },
-  "30": {
-    "inputs": {
-      "text": "Vectorial illustration,Deva in the style of v3ctora, black lines, white background, Vector art, minimalist，only black and white",
-      "speak_and_recognation": true,
-      "clip": [
-        "23",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码器"
-    }
-  },
-  "31": {
-    "inputs": {
-      "text": "Colors other than black and white,colorful，red,yellow,blue,green,\n",
-      "speak_and_recognation": true,
-      "clip": [
-        "23",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码器"
-    }
-  },
-  "32": {
-    "inputs": {
-      "cfg": 2.0,
-      "model": [
-        "16",
-        0
-      ],
-      "positive": [
-        "30",
-        0
-      ],
-      "negative": [
-        "31",
-        0
-      ]
-    },
-    "class_type": "CFGGuider",
-    "_meta": {
-      "title": "CFG引导"
-    }
-  },
-  "33": {
-    "inputs": {
-      "brightness": 1.0,
-      "contrast": 2.0,
-      "saturation": 1.0,
-      "image": [
-        "26",
-        0
-      ]
-    },
-    "class_type": "LayerColor: Brightness & Contrast",
-    "_meta": {
-      "title": "亮度/对比度"
+      "title": "保存图像"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "The girl is sitting on the edge of the bed. She raises both arms high above her head and stretches her whole body with a deep breath. She lowers her arms, rolls her neck gently from side to side, and looks around the room with curiosity. She turns her head back toward the camera with a relaxed expression. Warm morning light softly illuminates her face from the window. The camera stays at eye level facing her.",
+      "text": "The girl stands up from the bed and takes a few slow steps toward the window. She reaches out and pulls the curtain to one side. Bright golden sunlight floods into the room. She pauses, closes her eyes briefly to feel the warmth, then turns around to face the room with a gentle smile on her face. The sunlight glows behind her creating a warm backlit silhouette. The camera faces her from inside the room.",
       "clip": [
         "11",
         0
@@ -73,7 +73,7 @@
   },
   "9": {
     "inputs": {
-      "image": "v2_lastframe_seg1.png"
+      "image": "v2_lastframe_seg2.png"
     },
     "class_type": "LoadImage"
   },
@@ -108,7 +108,7 @@
   "23": {
     "inputs": {
       "add_noise": "enable",
-      "noise_seed": 48652992610162,
+      "noise_seed": 476983350191409,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -166,7 +166,7 @@
   "15": {
     "inputs": {
       "add_noise": "disable",
-      "noise_seed": 920297601646601,
+      "noise_seed": 645153962642728,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -209,7 +209,7 @@
         "40",
         0
       ],
-      "filename_prefix": "v2_seg2",
+      "filename_prefix": "v2_seg3",
       "format": "mp4",
       "codec": "h264"
     },

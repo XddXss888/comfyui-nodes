@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "ameg2, Lina standing fully nude in a steamy sauna with warm ambient lighting, her skin glistening with moisture, shoulders back and chest forward in a confident pose to display her bare breasts, arms relaxed at her sides with hands resting on her hips, looking toward the viewer with a calm relaxed expression, simple wooden benches and folded towels visible in the soft background, medium close-up framing, gentle steam haze, coherent warm lighting.",
+      "text": "ohwx woman, messy red hair, green eyes, curvy body, A woman in a tight black latex micro bikini stands in a dimly lit bedroom, her body arched in a seductive dance pose with hips tilted, one hand sliding along her waist and the other brushing her thigh, emphasizing the glossy fabric stretched over her curves. She gazes directly forward with a teasing expression, lips slightly parted. Behind her, a collection of leather and latex fetish items rests on dark furniture under soft low-key lighting that highlights skin and fabric sheen. Medium close-up framing, natural proportions, clear pose, simple intimate background, coherent moody lighting.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 1.73,
+      "shift": 12.0,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "ameg2_con_char.safetensors",
-      "strength_model": 0.9,
-      "strength_clip": 0.9,
+      "lora_name": "FZXTSS9MFQBP0RKFF1MGXHS1W0.safetensors",
+      "strength_model": 0.66,
+      "strength_clip": 0.8,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -133,11 +133,11 @@
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 8,
+      "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 415093436776455,
+      "seed": 882600789108041,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

@@ -1,189 +1,195 @@
 {
   "1": {
     "inputs": {
-      "clip_name": "nsfw_wan_umt5-xxl_fp8_scaled.safetensors",
-      "model": "wan",
-      "type": "wan"
+      "ckpt_name": "anima\\waiANIMA_v10Base10.safetensors"
     },
-    "class_type": "CLIPLoader"
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Checkpoint加载器（简易）"
+    }
   },
   "2": {
     "inputs": {
-      "vae_name": "Wan\\wan_2.1_vae.safetensors"
+      "lora_name": "anima\\anima-turbo-lora-v0.2.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "1",
+        0
+      ]
     },
-    "class_type": "VAELoader"
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA 1：Turbo加速"
+    }
   },
   "3": {
     "inputs": {
-      "unet_name": "wan22RemixNSFWT2v14b.DFTR.safetensors",
-      "model": "default",
-      "weight_dtype": "default"
+      "lora_name": "anima\\anima-base-1-masterpiece-v51.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "2",
+        0
+      ]
     },
-    "class_type": "UNETLoader"
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA 2：大师之作增强"
+    }
   },
   "4": {
     "inputs": {
-      "unet_name": "wan22RemixNSFWT2v14bLow.lsL4.safetensors",
-      "model": "default",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader"
-  },
-  "9": {
-    "inputs": {
+      "lora_name": "anima\\Meion_anima_style_lokr_2-000034.safetensors",
+      "strength_model": 0.3,
       "model": [
         "3",
         0
-      ],
-      "sage_attention": "auto"
+      ]
     },
-    "class_type": "PathchSageAttentionKJ"
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA 3：Meion风格"
+    }
   },
-  "10": {
+  "5": {
     "inputs": {
       "model": [
         "4",
         0
       ],
-      "sage_attention": "auto"
+      "method": "from cond"
     },
-    "class_type": "PathchSageAttentionKJ"
+    "class_type": "Support empty uncond",
+    "_meta": {
+      "title": "支持空负向条件"
+    }
   },
-  "11": {
+  "45": {
     "inputs": {
-      "model": [
-        "9",
-        0
-      ],
-      "enable_fp16_accumulation": true
+      "clip_name": "qwen_3_06b_base.safetensors",
+      "type": "stable_diffusion",
+      "device": "default"
     },
-    "class_type": "ModelPatchTorchSettings"
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载Qwen CLIP"
+    }
   },
-  "12": {
-    "inputs": {
-      "model": [
-        "10",
-        0
-      ],
-      "enable_fp16_accumulation": true
-    },
-    "class_type": "ModelPatchTorchSettings"
-  },
-  "13": {
+  "7": {
     "inputs": {
       "clip": [
-        "1",
+        "45",
         0
       ],
-      "text": "nsfw, 1milf solo, (walking downstairs carrying empty laundry basket:1.2), slightly high-angle looking down the staircase, domestic morning atmosphere, [Kamisaka Misui] descending stairs BREAK Kamisaka Misui: 42yo female, black hair in loose low bun, fair skin, hourglass figure with full hips swaying naturally as she descends, brown eyes looking ahead calm and satisfied, (walking down wooden staircase, one hand on railing, the other holding empty laundry basket balanced on hip), (wearing pale purple silk camisole nightgown, thin straps, bare shoulders and arms, fabric swaying around thighs as she moves), (barefoot on wooden steps, soles softly padding), (bare face, slight smile not directed at anyone, lips moving as if humming), BREAK morning, wooden staircase in Japanese home, morning light from window at top of stairs casting long shadows on steps, empty laundry basket, wall with small framed photos, BREAK backlit scene with soft morning glow, warm wood tones, casual domestic movement with hidden inner satisfaction"
+      "text": "@meionANIMAstyle,masterpiece,realistic, mature,extremely detailed,4k,8k,photo background,colorful aesthetic,soft colors,detailed eyes,mature,photorealistic, detailed background, nsfw, night, indoor, low_key, chiaroscuro, ambient_shading, cinematic_shadows, (1girl, 1boy), sex, (cowgirl_position:1.3), (riding:1.2), (stomach_bulge), from_side, cowboy_shot, depth_of_field BREAK\n1girl, Sumire, female_focus, 20yo, japanese, receptionist, straddling, riding, bouncing, (cowgirl_position:1.3), (brown_hair, high_ponytail, tsurime, light_brown_eyes, (half-closed_eyes:1.1), (catchlights:1.2), fair_skin, tall_female, (j_cup_breasts:1.3), wide_hips, thick_thighs), school_uniform, white_shirt, sleeves_tight, navy_pleated_skirt, shirt_stretched_over_chest, no_panties, bare_legs, (pussy_juice:1.1), face_focus, (parted_lips:1.2), heavy_blush, sweat, glistening_skin, (bouncing_breasts:1.2) BREAK\n1boy, male_focus, partner, lying_down, penis, penis_in_vagina, (visible_penis:1.1), veins, (hands_on_her_hips) BREAK\n(indoors), tatami_room, japanese_room, warm_lighting, futon, two_girls_watching_nearby, domestic"
     },
-    "class_type": "CLIPTextEncode"
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "正向提示词"
+    }
   },
-  "14": {
+  "8": {
     "inputs": {
       "clip": [
-        "1",
+        "45",
         0
       ],
-      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+      "text": "worst quality, low quality, score_1, score_2, score_3, old, early, lowres, simple background, blurry, sepia"
     },
-    "class_type": "CLIPTextEncode"
-  },
-  "15": {
-    "inputs": {
-      "Value": 5.0
-    },
-    "class_type": "DF_Integer"
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "负向提示词"
+    }
   },
   "16": {
     "inputs": {
-      "a": [
-        "15",
+      "conditioning": [
+        "8",
         0
       ],
-      "value": "a*16+1"
+      "start": 0.0,
+      "end": 0.7
     },
-    "class_type": "SimpleMath+"
+    "class_type": "ConditioningSetTimestepRange",
+    "_meta": {
+      "title": "负向提示词步长截断"
+    }
   },
-  "17": {
+  "9": {
     "inputs": {
-      "length": [
-        "16",
-        0
-      ],
-      "width": 480,
-      "height": 720,
-      "batch_size": 1,
-      "batch_count": 1
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
     },
-    "class_type": "EmptyHunyuanLatentVideo"
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
   },
-  "18": {
+  "10": {
     "inputs": {
-      "model_high_noise": [
-        "11",
-        0
-      ],
-      "model_low_noise": [
-        "12",
+      "model": [
+        "5",
         0
       ],
       "positive": [
-        "13",
+        "7",
         0
       ],
       "negative": [
-        "14",
+        "16",
         0
       ],
       "latent_image": [
-        "17",
+        "9",
         0
       ],
-      "strength": 0.875,
-      "seed": 92983394346842,
-      "seed_behavior": "randomize",
-      "steps": 4,
-      "cfg_high_noise": 1.0,
-      "cfg_low_noise": 1.0,
+      "seed": 317540284430183,
+      "steps": 12,
+      "cfg": 1.0,
       "sampler_name": "euler",
-      "scheduler": "normal",
-      "denoise": 1.0,
-      "boundary": 0.875,
-      "sigma_shift": 8.0
+      "scheduler": "simple",
+      "denoise": 1.0
     },
-    "class_type": "WanMoeKSampler"
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
   },
-  "19": {
+  "15": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载Qwen VAE"
+    }
+  },
+  "11": {
     "inputs": {
       "samples": [
-        "18",
+        "10",
         0
       ],
       "vae": [
-        "2",
+        "15",
         0
       ]
     },
-    "class_type": "VAEDecode"
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
   },
-  "20": {
+  "12": {
     "inputs": {
       "images": [
-        "19",
+        "11",
         0
-      ],
-      "frame_rate": 16.0,
-      "loop_count": 0,
-      "filename_prefix": "wan2.2",
-      "format": "video/h264-mp4",
-      "pix_fmt": "yuv420p",
-      "crf": 15,
-      "save_metadata": true,
-      "trim_to_audio": false,
-      "pingpong": false,
-      "save_output": true
+      ]
     },
-    "class_type": "VHS_VideoCombine"
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
   }
 }

@@ -37,7 +37,7 @@
   },
   "7": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl bathing, shower, soap, washing, intimacy, insult, humiliation, anger, frustration, arousal, blush, wet, indoors, bathroom, purple eyes, pink eyes,(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl blush,spread legs,feet,toes,soles,tanlines,toenails,navel piercing,cock,medium,(ragdol... (cock stand up size medium) :1.0),(nude:0.8)",
       "clip": [
         "1",
         1
@@ -63,7 +63,7 @@
   },
   "9": {
     "inputs": {
-      "seed": 478356909,
+      "seed": 1653094577,
       "steps": 20,
       "cfg": 6.5,
       "sampler_name": "dpmpp_sde",
@@ -133,7 +133,7 @@
   },
   "14": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20254/12/012654a909494d6085d75b997c567e78.png",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2026/06/05/1780627536281.webp",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

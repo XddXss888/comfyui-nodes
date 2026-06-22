@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "unet_name": "FLUX-KLEIN/flux-2-klein-9b.safetensors",
+      "unet_name": "wan2.2/Wan2_2-T2V-A14B_HIGH_fp8_e4m3fn_scaled_KJ.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -11,8 +11,164 @@
   },
   "2": {
     "inputs": {
-      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
-      "type": "flux2",
+      "unet_name": "wan2.2/Wan2_2-T2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "3": {
+    "inputs": {
+      "lora_name": "Wan/lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank64_bf16_.safetensors",
+      "strength_model": 0.99,
+      "model": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "4": {
+    "inputs": {
+      "lora_name": "Wan/lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank64_bf16_.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "5": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 0,
+      "steps": 20,
+      "cfg": 8.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "7",
+        0
+      ],
+      "positive": [
+        "9",
+        0
+      ],
+      "negative": [
+        "10",
+        0
+      ],
+      "latent_image": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "6": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 0,
+      "steps": 20,
+      "cfg": 8.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "8",
+        0
+      ],
+      "positive": [
+        "9",
+        0
+      ],
+      "negative": [
+        "10",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "7": {
+    "inputs": {
+      "shift": 8.0,
+      "model": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "8": {
+    "inputs": {
+      "shift": 8.0,
+      "model": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "9": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "10": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "11": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
       "device": "default"
     },
     "class_type": "CLIPLoader",
@@ -20,79 +176,26 @@
       "title": "加载CLIP"
     }
   },
-  "3": {
+  "12": {
     "inputs": {
-      "vae_name": "flux2-vae.safetensors"
+      "width": 848,
+      "height": 480,
+      "length": 25,
+      "batch_size": 1
     },
-    "class_type": "VAELoader",
+    "class_type": "EmptyHunyuanLatentVideo",
     "_meta": {
-      "title": "加载VAE"
+      "title": "空Latent视频（Hunyuan）"
     }
   },
-  "6": {
-    "inputs": {
-      "seed": 818346924985412,
-      "steps": 4,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "1",
-        0
-      ],
-      "positive": [
-        "24",
-        0
-      ],
-      "negative": [
-        "25",
-        0
-      ],
-      "latent_image": [
-        "13",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "7": {
-    "inputs": {
-      "text": "图1的人物放到图2的水中，保留图1人物细节，图2当背景",
-      "clip": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
-    }
-  },
-  "8": {
-    "inputs": {
-      "text": "",
-      "clip": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
-    }
-  },
-  "9": {
+  "13": {
     "inputs": {
       "samples": [
         "6",
         0
       ],
       "vae": [
-        "3",
+        "14",
         0
       ]
     },
@@ -101,190 +204,31 @@
       "title": "VAE解码"
     }
   },
-  "12": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "9",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
-    }
-  },
-  "13": {
-    "inputs": {
-      "width": [
-        "18",
-        3
-      ],
-      "height": [
-        "18",
-        4
-      ],
-      "batch_size": 1
-    },
-    "class_type": "EmptyFlux2LatentImage",
-    "_meta": {
-      "title": "空Latent图像（Flux2）"
-    }
-  },
   "14": {
     "inputs": {
-      "conditioning": [
-        "7",
-        0
-      ],
-      "latent": [
-        "19",
-        0
-      ]
+      "vae_name": "wan_2.1_vae.safetensors"
     },
-    "class_type": "ReferenceLatent",
+    "class_type": "VAELoader",
     "_meta": {
-      "title": "参考Latent"
+      "title": "加载VAE"
     }
   },
   "15": {
     "inputs": {
-      "image": "ComfyUI_00494_.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "18": {
-    "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 1,
-      "proportional_height": 1,
-      "fit": "crop",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_side": "None",
-      "scale_to_length": 1024,
-      "background_color": "#000000",
-      "image": [
-        "15",
+      "frame_rate": 8.0,
+      "loop_count": 0,
+      "filename_prefix": "AnimateDiff",
+      "format": "image/gif",
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "13",
         0
       ]
     },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "class_type": "VHS_VideoCombine",
     "_meta": {
-      "title": "图层工具：按宽高比缩放 V2"
-    }
-  },
-  "19": {
-    "inputs": {
-      "pixels": [
-        "18",
-        0
-      ],
-      "vae": [
-        "3",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE编码"
-    }
-  },
-  "20": {
-    "inputs": {
-      "conditioning": [
-        "8",
-        0
-      ],
-      "latent": [
-        "19",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "参考Latent"
-    }
-  },
-  "21": {
-    "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 1,
-      "proportional_height": 1,
-      "fit": "crop",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_side": "None",
-      "scale_to_length": 1024,
-      "background_color": "#000000",
-      "image": [
-        "22",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
-    "_meta": {
-      "title": "图层工具：按宽高比缩放 V2"
-    }
-  },
-  "22": {
-    "inputs": {
-      "image": "600001.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "23": {
-    "inputs": {
-      "pixels": [
-        "21",
-        0
-      ],
-      "vae": [
-        "3",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE编码"
-    }
-  },
-  "24": {
-    "inputs": {
-      "conditioning": [
-        "14",
-        0
-      ],
-      "latent": [
-        "23",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "参考Latent"
-    }
-  },
-  "25": {
-    "inputs": {
-      "conditioning": [
-        "20",
-        0
-      ],
-      "latent": [
-        "23",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "参考Latent"
+      "title": "Video Combine 🎥🅥🅗🅢"
     }
   }
 }

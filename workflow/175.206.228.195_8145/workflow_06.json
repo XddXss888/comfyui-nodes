@@ -33,7 +33,7 @@
   },
   "4": {
     "inputs": {
-      "seed": 3944975365,
+      "seed": 3085998147,
       "steps": [
         "13",
         0
@@ -102,8 +102,8 @@
   },
   "13": {
     "inputs": {
-      "steps": 27,
-      "cfg": 6.0
+      "steps": 32,
+      "cfg": 5.5
     },
     "class_type": "StepsAndCfg",
     "_meta": {
@@ -112,8 +112,8 @@
   },
   "17": {
     "inputs": {
-      "Width": 1366,
-      "Height": 768,
+      "Width": 768,
+      "Height": 1366,
       "Batch": 1,
       "Landscape": false,
       "HiResMultiplier": 1.7000000000000002
@@ -125,7 +125,7 @@
   },
   "20": {
     "inputs": {
-      "seed": 3944975365,
+      "seed": 3085998147,
       "steps": 10,
       "cfg": [
         "13",
@@ -205,7 +205,7 @@
   },
   "32": {
     "inputs": {
-      "text": "ever_erusha_base, 1girl, nipples, nude, heart, heart-shaped eyes, looking up, looking at viewer, shy, happy, kissing penis, wedding veil, headpat, cum on penis, masterpiece, best quality, amazing quality"
+      "text": "ever_garnet_base, [], solo, musume, leaning forward, indoors, no headwear, hair over eyes,shy, huge breasts, no text, maid, slave, twintails, 3d, pov, pov penis, pov crotch, between breasts, torture, realistic,comic, from above, ejaculation, masterpiece, best quality, amazing quality"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -214,7 +214,7 @@
   },
   "33": {
     "inputs": {
-      "text": "bad quality,worst quality,worst detail,sketch,censor,"
+      "text": "bad quality,worst quality,worst detail,sketch,censor, [], text focus,text,, watermark,ugly, puffy sleeves, puffy short sleeves,"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -277,7 +277,7 @@
   },
   "65": {
     "inputs": {
-      "data": "[{\"name\": \"erusha_base.safetensors\", \"strength\": 0.9, \"strength_clip\": 1.0}]",
+      "data": "[{\"name\": \"garnet_base.safetensors\", \"strength\": 0.63, \"strength_clip\": 1.0}]",
       "model": [
         "36",
         0

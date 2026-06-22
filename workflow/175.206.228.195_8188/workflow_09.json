@@ -33,7 +33,7 @@
   },
   "4": {
     "inputs": {
-      "seed": 8149770513,
+      "seed": 3076815379,
       "steps": [
         "13",
         0
@@ -102,8 +102,8 @@
   },
   "13": {
     "inputs": {
-      "steps": 26,
-      "cfg": 6.7
+      "steps": 32,
+      "cfg": 5.5
     },
     "class_type": "StepsAndCfg",
     "_meta": {
@@ -112,8 +112,8 @@
   },
   "17": {
     "inputs": {
-      "Width": 1024,
-      "Height": 1024,
+      "Width": 768,
+      "Height": 1366,
       "Batch": 1,
       "Landscape": false,
       "HiResMultiplier": 1.7000000000000002
@@ -125,7 +125,7 @@
   },
   "20": {
     "inputs": {
-      "seed": 8149770513,
+      "seed": 3076815379,
       "steps": 10,
       "cfg": [
         "13",
@@ -205,7 +205,7 @@
   },
   "32": {
     "inputs": {
-      "text": "ever_manon_school, black background, petrification, full body, parted lips, completely nude, unconscious, grey hair, stone wall, statue"
+      "text": "ever_garnet_base, [], solo, musume, leaning forward, indoors, no headwear, hair over eyes,shy, huge breasts, no text, maid, slave, twintails, 3d, pov, pov penis, pov crotch, between breasts, torture, realistic,comic, from above, ejaculation, masterpiece, best quality, amazing quality"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -214,7 +214,7 @@
   },
   "33": {
     "inputs": {
-      "text": " tears, glitch, blonde hair"
+      "text": "bad quality,worst quality,worst detail,sketch,censor, [], text focus,text,, watermark,ugly, puffy sleeves, puffy short sleeves,"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -277,7 +277,7 @@
   },
   "65": {
     "inputs": {
-      "data": "[{\"name\": \"manon_school.safetensors\", \"strength\": 0.95, \"strength_clip\": 0.89}]",
+      "data": "[{\"name\": \"garnet_base.safetensors\", \"strength\": 0.63, \"strength_clip\": 1.0}]",
       "model": [
         "36",
         0

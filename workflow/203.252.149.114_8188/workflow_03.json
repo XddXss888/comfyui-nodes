@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "The girl stands up from the bed and takes a few slow steps toward the window. She reaches out and pulls the curtain to one side. Bright golden sunlight floods into the room. She pauses, closes her eyes briefly to feel the warmth, then turns around to face the room with a gentle smile on her face. The sunlight glows behind her creating a warm backlit silhouette. The camera faces her from inside the room.",
+      "text": "The girl in the image is sleeping peacefully on the bed. She begins to stir, her eyelids fluttering gently. She slowly opens her eyes, blinks a few times with a drowsy expression, and yawns softly. She gradually pushes herself up with both arms and sits upright on the bed. She looks straight ahead with a sleepy half-smile, her messy hair framing her face. The camera captures her from the front.",
       "clip": [
         "11",
         0
@@ -32,6 +32,12 @@
     },
     "class_type": "VAEDecode"
   },
+  "9": {
+    "inputs": {
+      "image": "1.png"
+    },
+    "class_type": "LoadImage"
+  },
   "10": {
     "inputs": {
       "vae_name": "wan_2.1_vae.safetensors"
@@ -48,8 +54,8 @@
   },
   "12": {
     "inputs": {
-      "width": 464,
-      "height": 832,
+      "width": 624,
+      "height": 1120,
       "length": 81,
       "batch_size": 1,
       "positive": [
@@ -71,15 +77,9 @@
     },
     "class_type": "WanImageToVideo"
   },
-  "9": {
-    "inputs": {
-      "image": "v2_lastframe_seg2.png"
-    },
-    "class_type": "LoadImage"
-  },
   "20": {
     "inputs": {
-      "unet_name": "Wan2.2_Remix_NSFW_i2v_14b_high_lighting_v2.0.safetensors",
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
@@ -90,7 +90,7 @@
         "20",
         0
       ],
-      "lora_name": "Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors",
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
       "strength_model": 2.0
     },
     "class_type": "LoraLoaderModelOnly"
@@ -108,7 +108,7 @@
   "23": {
     "inputs": {
       "add_noise": "enable",
-      "noise_seed": 476983350191409,
+      "noise_seed": 268379532064929,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -137,7 +137,7 @@
   },
   "30": {
     "inputs": {
-      "unet_name": "Wan2.2_Remix_NSFW_i2v_14b_low_lighting_v2.0.safetensors",
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader"
@@ -148,7 +148,7 @@
         "30",
         0
       ],
-      "lora_name": "Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors",
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
       "strength_model": 1.0
     },
     "class_type": "LoraLoaderModelOnly"
@@ -166,7 +166,7 @@
   "15": {
     "inputs": {
       "add_noise": "disable",
-      "noise_seed": 645153962642728,
+      "noise_seed": 339354246217379,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -199,20 +199,8 @@
         "8",
         0
       ],
-      "fps": 24.0
+      "filename_prefix": "frames/v2_seg1"
     },
-    "class_type": "CreateVideo"
-  },
-  "41": {
-    "inputs": {
-      "video": [
-        "40",
-        0
-      ],
-      "filename_prefix": "v2_seg3",
-      "format": "mp4",
-      "codec": "h264"
-    },
-    "class_type": "SaveVideo"
+    "class_type": "SaveImage"
   }
 }

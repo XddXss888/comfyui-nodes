@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_a36a211ba0d04f10994c2a116c402856.png"
+      "image": "ref_24da2049974d498c9319de94219ac346.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "\n踵を上げて両膝を開き、深く腰を落とす蹲踞をさせて　両手を頭の後ろに",
+      "prompt": "faire que sa main gauche soit sur le bord de la portiere ",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 178236646936618,
+      "seed": 883100473531924,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",

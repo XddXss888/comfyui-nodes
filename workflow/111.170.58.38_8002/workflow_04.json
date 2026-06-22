@@ -1,7 +1,7 @@
 {
   "12": {
     "inputs": {
-      "image": "0260621165055431-54-rbs6yd.jpg"
+      "image": "0260621170228390-50-kfhl7o.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -10,7 +10,7 @@
   },
   "15": {
     "inputs": {
-      "image": "0260621165432180-18-l4t8n7.jpg"
+      "image": "0260621170031240-11-gun5rb.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -22,7 +22,7 @@
       "api_url": "https://3dcdn.580ai.net/v1beta/models/gemini-3.1-flash-image-preview:generateContent",
       "header_key": "Authorization",
       "header_value": "sk-Lyx9OF97YMK0suEi6ZIPzq4E9d3dhIKJzO2YS5WpAsZbZpxS",
-      "text": "把图一模特身上的套装套在图二的模特身上",
+      "text": "把图一模特身上的衣服套在图二的模特身上",
       "aspect_ratio": "3:4",
       "image_size": "2K",
       "timeout": 200,

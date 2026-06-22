@@ -22,16 +22,16 @@
       ],
       "sampler_name": "euler",
       "scheduler": "simple",
-      "seed": 20295664577768,
-      "steps": 6
+      "seed": 57538324916276,
+      "steps": 4
     }
   },
   "5": {
     "class_type": "EmptyLatentImage",
     "inputs": {
       "batch_size": 1,
-      "height": 1216,
-      "width": 832
+      "height": 1024,
+      "width": 1024
     }
   },
   "6": {
@@ -41,7 +41,7 @@
         "11",
         0
       ],
-      "text": "a professional studio headshot portrait of a person wearing a business suit, plain solid grey studio backdrop, soft key lighting, sharp focus, masterpiece, best quality, highly detailed, sharp focus, hyper-realistic, 8k resolution, cinematic lighting, photorealistic, intricate details, professional photography, crisp typography, legible text, clear lettering, sharp text edges, professional typography, readable text"
+      "text": "A warm, lifestyle photograph of a happy young professional couple in a bright, modern kitchen, laughing while eating delicious looking pasta from bowls, soft sunlight through the window, high-end interior design."
     }
   },
   "7": {

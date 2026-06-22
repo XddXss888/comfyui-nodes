@@ -4,8 +4,8 @@
 **内存**: 27 GB (空闲 23 GB)
 **版本**: 0.3.66
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-21 17:39:00
-**历史总数**: 5 | **成功**: 5
+**扫描时间**: 2026-06-22 08:07:40
+**历史总数**: 7 | **成功**: 7
 
 ## 工作流列表
 
@@ -55,3 +55,23 @@
 - **提示词**:
   - [CLIPTextEncode::text] Logo discord avec les lettres RS pour un developpeur
   - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality
+
+### 6. workflow_06.json
+- **Prompt ID**: `05891e85-1560-4032-81fc-37ea27383f02`
+- **类型**: 文生图
+- **节点数**: 8
+- **模型** (2):
+  - RetroDiffusion128xModel.safetensors
+  - retro_spum_set_v3-000050.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] dragon knight
+
+### 7. workflow_07.json
+- **Prompt ID**: `cf468e9d-37b0-4f05-89c4-07c0626d8ddb`
+- **类型**: 文生图
+- **节点数**: 8
+- **模型** (2):
+  - RetroDiffusion128xModel.safetensors
+  - retro_spum_set_v3-000050.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] dragon knight

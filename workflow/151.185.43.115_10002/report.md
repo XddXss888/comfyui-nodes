@@ -1,90 +1,110 @@
 # 151.185.43.115:10002
 
-**GPU**: CPU | **显存**: — | **空闲**: 17 GB
-**内存**: 29 GB (空闲 17 GB)
+**GPU**: CPU | **显存**: — | **空闲**: 12 GB
+**内存**: 29 GB (空闲 12 GB)
 **版本**: 0.14.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-14 14:37:39
-**历史总数**: 204 | **成功**: 10
+**扫描时间**: 2026-06-22 08:07:53
+**历史总数**: 225 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `a3c6f488-e79f-4f65-9ef8-1967466193f4`
-- **类型**: 其他
-- **节点数**: 2
+- **Prompt ID**: `045120f1-418c-48ce-9617-22ed1ac84786`
+- **类型**: 视频编辑
+- **节点数**: 264
 - **模型** (0):
 - **提示词**:
-  - [Official_NanoBanana2Node::prompt] Premium SaaS vector hero illustration, AI-powered web data extraction platform, multiple web sources connected through intelligent data pipelines into a centralized knowledge hub, structured business 
+  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
+  - [Kie_GptImage2TextToImageNode::prompt] Host is a Pixar-style 3D animated human male interview host from a small-town Indian digital studio, age 27–32, average height about 5 feet 8 inches, slim energetic build, warm wheatish-brown skin, ro
+  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
 
 ### 2. workflow_02.json
-- **Prompt ID**: `e4e855d1-45e2-47ae-a7d1-0026c7e6cd64`
-- **类型**: 其他
-- **节点数**: 2
+- **Prompt ID**: `4fd75ec7-1c81-498c-b948-cfa08db26347`
+- **类型**: 视频编辑
+- **节点数**: 266
 - **模型** (0):
 - **提示词**:
-  - [Official_NanoBanana2Node::prompt] Premium SaaS vector hero illustration, AI-powered web data extraction platform, multiple web sources connected through intelligent data pipelines into a centralized knowledge hub, structured business 
+  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
+  - [Kie_GptImage2TextToImageNode::prompt] Host is a Pixar-style 3D animated human male interview host from a small-town Indian digital studio, age 27–32, average height about 5 feet 8 inches, slim energetic build, warm wheatish-brown skin, ro
+  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
 
 ### 3. workflow_03.json
-- **Prompt ID**: `b313fa8a-d34d-42b5-9488-18531eb9514d`
-- **类型**: 其他
-- **节点数**: 2
+- **Prompt ID**: `41c14c4f-ae04-4ca4-b63b-809b7f741322`
+- **类型**: 视频编辑
+- **节点数**: 264
 - **模型** (0):
 - **提示词**:
-  - [Official_NanoBanana2Node::prompt] Premium SaaS vector hero illustration, AI-powered web data extraction platform, multiple web sources connected through intelligent data pipelines into a centralized knowledge hub, structured business 
+  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
+  - [Kie_GptImage2TextToImageNode::prompt] Host is a Pixar-style 3D animated human male interview host from a small-town Indian digital studio, age 27–32, average height about 5 feet 8 inches, slim energetic build, warm wheatish-brown skin, ro
+  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
 
 ### 4. workflow_04.json
-- **Prompt ID**: `37289407-72aa-4238-ae65-01763abc410f`
-- **类型**: 其他
-- **节点数**: 2
+- **Prompt ID**: `20b4fea7-9db1-453d-9099-40d22417dc4b`
+- **类型**: 视频编辑
+- **节点数**: 266
 - **模型** (0):
 - **提示词**:
-  - [Official_NanoBanana2Node::prompt] Premium SaaS vector hero illustration, AI-powered web data extraction platform, multiple web sources connected through intelligent data pipelines into a centralized knowledge hub, structured business 
+  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
+  - [Kie_GptImage2TextToImageNode::prompt] Host is a Pixar-style 3D animated human male interview host from a small-town Indian digital studio, age 27–32, average height about 5 feet 8 inches, slim energetic build, warm wheatish-brown skin, ro
+  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
 
 ### 5. workflow_05.json
-- **Prompt ID**: `e3f9893b-8fd4-4319-8a83-68075f933ccd`
-- **类型**: 其他
-- **节点数**: 2
+- **Prompt ID**: `d21e7349-a18f-4845-8c09-fe9a7dfc9a48`
+- **类型**: 视频编辑
+- **节点数**: 266
 - **模型** (0):
 - **提示词**:
-  - [Official_NanoBanana2Node::prompt] Premium SaaS vector hero illustration, AI-powered web data extraction platform, multiple web sources connected through intelligent data pipelines into a centralized knowledge hub, structured business 
+  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
+  - [Kie_GptImage2TextToImageNode::prompt] Host is a Pixar-style 3D animated human male interview host from a small-town Indian digital studio, age 27–32, average height about 5 feet 8 inches, slim energetic build, warm wheatish-brown skin, ro
+  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
 
 ### 6. workflow_06.json
-- **Prompt ID**: `af1ca4c0-b0ff-49ea-9f42-8666e34cec55`
-- **类型**: 文生图
-- **节点数**: 2
+- **Prompt ID**: `33c19a61-53c2-4359-b817-704a40852eb6`
+- **类型**: 视频编辑
+- **节点数**: 266
 - **模型** (0):
 - **提示词**:
-  - [Fal_ZImageTurboTextToImageNode::prompt] Premium SaaS vector hero illustration, AI-powered web data extraction platform, multiple web sources connected through intelligent data pipelines into a centralized knowledge hub, structured business 
+  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
+  - [Kie_GptImage2TextToImageNode::prompt] Host is a Pixar-style 3D animated human male interview host from a small-town Indian digital studio, age 27–32, average height about 5 feet 8 inches, slim energetic build, warm wheatish-brown skin, ro
+  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
 
 ### 7. workflow_07.json
-- **Prompt ID**: `0b577fb3-7b04-4de9-84af-40319cd0b463`
-- **类型**: 其他
-- **节点数**: 2
+- **Prompt ID**: `7e1953c2-fe90-4266-892b-268fdbd9264e`
+- **类型**: 视频编辑
+- **节点数**: 268
 - **模型** (0):
 - **提示词**:
-  - [Official_NanoBanana2Node::prompt] Premium SaaS vector hero illustration, AI-powered web data extraction platform, multiple web sources connected through intelligent data pipelines into a centralized knowledge hub, structured business 
+  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
+  - [Kie_GptImage2TextToImageNode::prompt] Host is a Pixar-style 3D animated human male interview host from a small-town Indian digital studio, age 27–32, average height about 5 feet 8 inches, slim energetic build, warm wheatish-brown skin, ro
+  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
 
 ### 8. workflow_08.json
-- **Prompt ID**: `a59d5d5f-d147-455b-97c1-2f43e6c843b9`
-- **类型**: 其他
-- **节点数**: 2
+- **Prompt ID**: `666f131e-ecb1-4382-b9a7-7f238365cf60`
+- **类型**: 视频编辑
+- **节点数**: 269
 - **模型** (0):
 - **提示词**:
-  - [Official_NanoBanana2Node::prompt] Flat 2D vector illustration, pastel blue and purple color palette, abstract business intelligence scene, AI-powered web data extraction visualized as flowing data particles moving from multiple online
+  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
+  - [Kie_GptImage2TextToImageNode::prompt] Host is a Pixar-style 3D animated human male interview host from a small-town Indian digital studio, age 27–32, average height about 5 feet 8 inches, slim energetic build, warm wheatish-brown skin, ro
+  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
 
 ### 9. workflow_09.json
-- **Prompt ID**: `1fec879f-5903-4389-a46a-34f3f7f0f203`
-- **类型**: 其他
-- **节点数**: 2
+- **Prompt ID**: `1a618b1a-c358-4dd7-8423-28c20913ecdb`
+- **类型**: 视频编辑
+- **节点数**: 76
 - **模型** (0):
 - **提示词**:
-  - [Official_NanoBanana2Node::prompt] Flat 2D vector illustration of a central command hub coordinating multiple project workflows. Team tasks, documents, milestones, schedules, communication threads, and approval processes converge into 
+  - [Official_NanoBananaNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
+  - [Official_NanoBananaNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
+  - [Official_NanoBananaNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
 
 ### 10. workflow_10.json
-- **Prompt ID**: `544e203c-31b2-4097-a8e3-4427a4ee3c0e`
-- **类型**: 其他
-- **节点数**: 2
+- **Prompt ID**: `723067c8-1176-402d-9453-9e1cbd257cee`
+- **类型**: 视频编辑
+- **节点数**: 270
 - **模型** (0):
 - **提示词**:
-  - [Official_NanoBanana2Node::prompt] Create a modern 2D flat vector illustration representing a secure credential management vault. A central digital vault acts as the protected hub for passwords, API keys, access tokens, SSH keys, and s
+  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
+  - [Kie_GptImage2TextToImageNode::prompt] Host is a Pixar-style 3D animated human male interview host from a small-town Indian digital studio, age 27–32, average height about 5 feet 8 inches, slim energetic build, warm wheatish-brown skin, ro
+  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde

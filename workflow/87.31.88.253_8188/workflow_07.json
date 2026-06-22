@@ -31,7 +31,7 @@
   },
   "336": {
     "inputs": {
-      "image": "ComfyUI_00103_(3).png"
+      "image": "96.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -56,7 +56,7 @@
   },
   "340": {
     "inputs": {
-      "text": "Reverse cowgirl, ultra-realistic 8k. Exact same girl from the reference photo as an 4-year-old with perfect porn body. Riding reverse cowgirl on a 5 years old young little boy with huge thick monster coc on a big sofa, her enormous juicy ass bouncing aggressively. Massive tits jiggling, strong ahegao with tongue out and eyes rolled back. Bright studio lights, realistic motion, heavily photoshopped porn style , the boy fully  grabbing her big tits from the sides and his face seen"
+      "text": "Take her panties off"
     },
     "class_type": "CR Text",
     "_meta": {
@@ -165,8 +165,8 @@
   },
   "348": {
     "inputs": {
-      "seed": 429436700834688,
-      "steps": 4,
+      "seed": 496984548123462,
+      "steps": 5,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "beta",
@@ -224,7 +224,7 @@
   },
   "616": {
     "inputs": {
-      "lora_01": "cowgirl_20260123_04-36-14epoch35.safetensors",
+      "lora_01": "FK_bbcanalcowgirl_epoch_20.safetensors",
       "strength_01": 1.0,
       "lora_02": "KLEIN-Unchained-V2.safetensors",
       "strength_02": 0.7,
@@ -272,15 +272,6 @@
     "class_type": "GetImageSize",
     "_meta": {
       "title": "Get Image Size"
-    }
-  },
-  "619": {
-    "inputs": {
-      "image": "ComfyUI_00313_.png [output]"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
     }
   }
 }

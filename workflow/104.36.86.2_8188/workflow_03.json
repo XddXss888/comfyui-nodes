@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 1745093454,
+      "seed": 1912249722,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,,(حسنا سادخله داخلك:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,ethnicity Asian, eyesColor Brown, hairStyle Curly, hairColor Black, bodyType Slim, touch, enhance,(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/chatpic/20258/9/28dbfc817d86472c905fc2dcc90e0f0f.jpg",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202411/14/1048bfc35fa24dbe999d83afb6ec33b7.jpg",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

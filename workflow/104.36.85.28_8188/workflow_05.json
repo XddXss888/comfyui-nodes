@@ -37,7 +37,7 @@
   },
   "7": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl ,(anyway:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl blush,short hair,bangs,blonde hair,brown hair,brown eyes,jewelry,sitting,thighs,feet,soles,toes,tanlines,toenails,denim shorts,tan,black nails,toenail polish,cutoffs,cock,medium,(ragdolohh look at:1.0),( the boobs show up... what sex? (pull out cock medium) :1.0),(nude:0.8)",
       "clip": [
         "1",
         1
@@ -63,7 +63,7 @@
   },
   "9": {
     "inputs": {
-      "seed": 1689393196,
+      "seed": 27577205,
       "steps": 20,
       "cfg": 6.5,
       "sampler_name": "dpmpp_sde",
@@ -133,7 +133,7 @@
   },
   "14": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202410/27/cb2f03241c8f4bfd8e9139d93d6ecd1d.png",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2026/06/05/1780627536281.webp",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",
