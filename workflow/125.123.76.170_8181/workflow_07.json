@@ -1,227 +1,272 @@
 {
-  "24": {
+  "1": {
     "inputs": {
-      "image": "O1CN01gHULE4237mJTh53ov_!!2215531727209.jpg_ (1).webp"
+      "mode": "random",
+      "seed": [
+        "38",
+        0
+      ],
+      "index": 0,
+      "label": "Batch 001",
+      "path": "D:\\电商场景图\\方形\\浴室",
+      "pattern": "*",
+      "allow_RGBA_output": "false",
+      "filename_text_extension": "true"
     },
-    "class_type": "LoadImage",
+    "class_type": "Load Image Batch",
     "_meta": {
-      "title": "加载图像"
+      "title": "浴室"
     }
   },
-  "34": {
+  "2": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "156",
+      "total": 1,
+      "initial_value1": [
+        "13",
+        0
+      ],
+      "initial_value3": [
+        "28",
         0
       ]
     },
-    "class_type": "SaveImage",
+    "class_type": "easy forLoopStart",
     "_meta": {
-      "title": "保存图像"
+      "title": "For循环-开始"
     }
   },
-  "36": {
+  "4": {
     "inputs": {
-      "image": "O1CN01agVfxU237mJUAKjlo_!!2215531727209.jpg_.webp"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "37": {
-    "inputs": {
-      "image": "O1CN01RNK3uh237mJTjMt7O_!!2215531727209.jpg_.webp"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "38": {
-    "inputs": {
-      "image": "O1CN01TYzk5I237mJSiGfUO_!!2215531727209.jpg_.webp"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "45": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "158",
+      "flow": [
+        "2",
+        0
+      ],
+      "initial_value1": [
+        "37",
+        0
+      ],
+      "initial_value2": [
+        "8",
+        0
+      ],
+      "initial_value3": [
+        "38",
         0
       ]
     },
-    "class_type": "SaveImage",
+    "class_type": "easy forLoopEnd",
     "_meta": {
-      "title": "保存图像"
+      "title": "For循环-结束"
     }
   },
-  "46": {
+  "8": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "157",
+      "any_1": [
+        "2",
+        3
+      ],
+      "any_2": [
+        "69",
         0
       ]
     },
-    "class_type": "SaveImage",
+    "class_type": "easy batchAnything",
     "_meta": {
-      "title": "保存图像"
+      "title": "任何批次组合"
     }
   },
-  "50": {
+  "13": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "159",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
-    }
-  },
-  "100": {
-    "inputs": {
-      "value": "sk-L2Qq2EeYdEVr5L5w1GaMjRjBmHlNhWtSajuof6bvQADyFEff"
+      "value": "0"
     },
     "class_type": "PrimitiveString",
     "_meta": {
       "title": "字符串"
     }
   },
-  "101": {
+  "14": {
     "inputs": {
-      "separator": "*额外要求，",
-      "prompt1": [
-        "102",
-        0
-      ],
-      "prompt2": [
-        "103",
-        0
-      ]
-    },
-    "class_type": "easy promptConcat",
-    "_meta": {
-      "title": "提示词联结"
-    }
-  },
-  "102": {
-    "inputs": {
-      "positive": "🧠 图像反推专家\n\n你是一位专业的视觉分析师与AI绘画提示词设计师，擅长将图像内容精准拆解为适用于 FLUX、SDXL、Pony、Illustrious 等模型的高质量提示词。\n\n\n---\n\n🎯 任务目标\n\n我会上传一张或多张图片。\n\n你需要：\n\n1. 深度分析图片内容与视觉风格\n\n\n2. 提炼可复用的设计语言\n\n\n3. 输出适合批量生成同系列作品的提示词\n\n\n4. 保持原图核心风格特征\n\n\n5. 在保证风格统一的前提下提供多个创作方向\n\n\n\n\n---\n\n🔍 图像分析维度\n\n分析以下内容：\n\n主体分析\n\n确定画面唯一视觉主体（主要元素仅保留1个）\n\n包括：\n\n人物\n\n动物\n\n物体\n\n建筑\n\n食物\n\n植物\n\n载具\n\n吉祥物等\n\n\n\n---\n\n辅助元素分析\n\n从画面中提取辅助元素\n\n要求：\n\n不超过4个\n\n服务主体\n\n不抢夺视觉中心\n\n\n\n---\n\n视觉细节分析\n\n重点观察：\n\n色彩搭配\n\n光影关系\n\n材质表现\n\n表情神态\n\n动作姿态\n\n纹理细节\n\n装饰元素\n\n环境氛围\n\n空间层次\n\n\n至少提取5项以上关键特征\n\n\n---\n\n风格分析\n\n总结：\n\n画风类型\n\n笔触特点\n\n线条特点\n\n设计语言\n\n材质语言\n\n视觉关键词\n\n\n例如：\n\n扁平插画\n\n潮玩设计\n\n毛绒针织风\n\n像素艺术\n\n日系动漫\n\n国潮插画\n\n赛博朋克\n\n极简海报\n\nIP形象设计\n\n\n\n---\n\n构图分析\n\n重点分析：\n\n点线面关系\n\n视觉动线\n\n留白比例\n\n主次层级\n\n\n要求：\n\n避免平均分布\n\n避免机械对称\n\n避免元素平行排列\n\n形成明显视觉趋势\n\n\n推荐：\n\n三七构图\n\n四六构图\n\n对角线构图\n\nS形视觉流向\n\nC形视觉流向\n\n\n\n---\n\n画面氛围\n\n例如：\n\n温暖治愈\n\n梦幻童话\n\n高级时尚\n\n未来科技\n\n神秘奇幻\n\n宁静治愈\n\n潮流玩具感\n\n\n\n---\n\n文字识别\n\n如果画面存在文字：\n\n识别文字内容\n\n理解文字含义\n\n将文字作为设计元素融入提示词\n\n\n若无法准确识别则忽略\n\n\n---\n\n✨ Prompt生成要求\n\n输出4组不同方向提示词。\n\n要求：\n\n全部使用中文\n\n每组为完整自然语言\n\n不使用项目符号\n\n不使用解释说明\n\n不出现“提示词：”等前缀\n\n每组80~200字\n\n\n\n---\n\n🎨 系列化生成规则\n\n4组提示词必须保持：\n\n相同视觉风格\n\n相同设计语言\n\n相同审美倾向\n\n\n但允许变化：\n\n主体\n\n动作\n\n场景\n\n构图\n\n配色重心\n\n\n确保能够批量生成同系列作品。\n\n\n---\n\n📌 现代审美强化\n\n每组提示词必须满足：\n\n极简设计感，高级留白，画面呼吸感强，主体突出，视觉中心明确，点线面关系丰富，元素疏密有致，避免画面拥挤，避免素材堆砌，具有海报级构图品质，具有商业插画与视觉设计思维，形成明确视觉趋势与阅读动线。\n\n\n---\n\n📋 输出格式\n\n\n（先总结整体风格特点）\n\n\n---\n\n（提示词1）\n\n\n---\n\n（提示词2）\n\n\n---\n\n（提示词3）\n\n\n---\n\n（提示词4）\n\n\n---\n\n重点：画面注意点线面的构成记得不能平均，元素之间不能平行，画面要有趋势，布局元素等发布要六四分或三七分，设计好看\n"
-    },
-    "class_type": "easy positive",
-    "_meta": {
-      "title": "正面提示词"
-    }
-  },
-  "103": {
-    "inputs": {
-      "positive": "更具我上传的图，分析它的风格特点，模仿它的设计元素，进行创意生成，进行模仿，不能和原图一样，参考了元素布局就不能一样，参考了布局元素就不能一样。风格要一样，改成标准的长方形，边框不要波浪形状，不要留白边，刀叉主题"
-    },
-    "class_type": "easy positive",
-    "_meta": {
-      "title": "正面提示词"
-    }
-  },
-  "104": {
-    "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 2,
-      "proportional_height": 1,
-      "fit": "letterbox",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_longest_side": true,
-      "longest_side": 1024,
-      "image": [
-        "24",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio",
-    "_meta": {
-      "title": "图层工具：按宽高比缩放"
-    }
-  },
-  "105": {
-    "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 2,
-      "proportional_height": 1,
-      "fit": "letterbox",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_longest_side": true,
-      "longest_side": 1024,
-      "image": [
-        "38",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio",
-    "_meta": {
-      "title": "图层工具：按宽高比缩放"
-    }
-  },
-  "106": {
-    "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 2,
-      "proportional_height": 1,
-      "fit": "letterbox",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_longest_side": true,
-      "longest_side": 1024,
-      "image": [
-        "36",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio",
-    "_meta": {
-      "title": "图层工具：按宽高比缩放"
-    }
-  },
-  "107": {
-    "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 2,
-      "proportional_height": 1,
-      "fit": "letterbox",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_longest_side": true,
-      "longest_side": 1024,
-      "image": [
+      "mode": "single_image",
+      "seed": 16233420680292,
+      "index": [
         "37",
         0
-      ]
+      ],
+      "label": "Batch 001",
+      "path": "D:\\临时文件夹\\评论区图",
+      "pattern": "*",
+      "allow_RGBA_output": "false",
+      "filename_text_extension": "true"
     },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio",
+    "class_type": "Load Image Batch",
     "_meta": {
-      "title": "图层工具：按宽高比缩放"
+      "title": "Load Image Batch"
     }
   },
-  "108": {
+  "15": {
+    "inputs": {
+      "positive": "将输入的参考图1、2拼接图像作为一个完整的「地垫替换与场景合成」，考图3、4是细节白色图3是材质细节，图4是包边细节，图任务进行分析：\n\n参考图2区域（产品来源）：\n包含一个明确的地垫/地毯产品图像（如：门垫、客厅地毯、长条走廊垫、瑜伽垫）。\n该区域是地垫外观的唯一真实来源。\n\n参考图1区域（环境来源）：\n包含一个真实的环境场景（如家居、办公室、户外、健身区、入户玄关等）。\n场景中当前可能在地面铺设了其他旧地垫，或处于空置地面。\n\n任务目标：\n生成一张高保真、写实的单张场景照片，\n将右侧场景中原有的地垫替换为左侧区域展示的地垫，或在合理的位置（如地面、台面、入户口）放置该地垫，使其看起来完全融入新的环境。\n\n通用执行规则：\n\n智能放置方式匹配：\n识别左侧地垫的类型与材质，并为右侧场景匹配最自然、最符合现实的铺设或放置方式：\n\n地面铺设：必须完全贴合场景的地板透视关系，无论是玄关、沙发前、还是走廊。\n\n家具互动：若地垫放置于沙发、茶几、椅子或其他家具下方，需根据透视生成真实的压痕、褶皱或家具腿的遮挡效果。\n\n台面/卷起放置：若为瑜伽垫或小尺寸地垫，且场景允许，可根据环境放置在合理的台面、架子上，或以卷起状态放置在角落，需呈现重力影响下的平展或卷曲。\n\n绝对视觉一致性（最高优先级）：\n必须 100% 保留左侧地垫的所有视觉 DNA，包括但不限于：\n\n精确的颜色与色值\n\n材质纹理（长绒毛质感、短毛圈绒、编织纹理、橡胶防滑底、棉麻质地等）\n\n地垫形状、边缘包边走线、流苏装饰与厚度特征\n\nLogo、图案印花、色彩渐变、几何线条与文字细节\n严禁对地垫进行任何重新设计、美化、简化或风格化处理。\n\n真实物理反馈与重力模拟：\n地垫必须遵循真实世界的物理规律：\n\n正确呈现地垫的厚度和重力感。\n\n悬空展示时（如在台面边缘）的自然弯折、垂坠感。\n\n与地面、家具接触处的合理物理形变（如被家具腿压住时的局部凹陷和褶皱）。\n\n地垫整体尺寸需与场景空间透视及家具比例真实匹配。\n\n环境一致的光影重绘：\n必须根据右侧环境场景，重新计算并渲染地垫的光影效果，包括：\n\n光源方向与在地垫表面形成的明暗过渡。\n\n光照强度对不同材质（如亮面丝绒或哑光棉麻）的漫反射效果。\n\n色温冷暖与环境光污染（环境色对地垫的影响）。\n\n地垫在地面或台面投射的真实阴影。\n地垫必须看起来像是在同一真实环境中被拍摄。\n\n整体场景完整性：\n除目标地垫外，右侧区域的所有内容必须保持完全不变：\n\n原有地板材质与纹理\n\n所有家具、摆设、装饰品、背景墙面、窗户、光照模式等环境元素\n\n画面构成与透视关系\n\n强制约束：\n\n禁止臆造（NO HALLUCINATION）：\n不得添加或猜测任何左侧图像中未明确提供的内容，\n包括新的颜色、图案、编织结构、包边样式或设计细节。\n\n无缝融合（SEAMLESS FUSION）：\n最终结果必须看起来像一张真实拍摄的照片，\n不得出现边缘剪裁拼接痕迹、空间漂浮感（透视错误）、阴影不一致或合成违和感。\n白底图是一张的话直接改就行\n白底图里有两张的话：\n白底图上面的短的替换场景图片里的短的，下面的长图替换场景图里的长地垫，包边查考图片花纹颜色"
+    },
+    "class_type": "easy positive",
+    "_meta": {
+      "title": "正面提示词"
+    }
+  },
+  "18": {
+    "inputs": {
+      "value": "sk-OkZZ0jqYOaBFah2ep7NCvFxwtjdJsM8vwW50lmiFraXOOisf"
+    },
+    "class_type": "easy string",
+    "_meta": {
+      "title": "字符串"
+    }
+  },
+  "19": {
+    "inputs": {
+      "image": "IMG_7148.JPG"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "20": {
+    "inputs": {
+      "image": "IMG_7151.JPG"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "28": {
+    "inputs": {
+      "seed": 365883297141123
+    },
+    "class_type": "easy seed",
+    "_meta": {
+      "title": "随机种"
+    }
+  },
+  "33": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "69",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "34": {
+    "inputs": {
+      "images": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "37": {
+    "inputs": {
+      "value": "a+1",
+      "a": [
+        "2",
+        2
+      ]
+    },
+    "class_type": "easy simpleMath",
+    "_meta": {
+      "title": "easy simpleMath"
+    }
+  },
+  "38": {
+    "inputs": {
+      "value": "a+1",
+      "a": [
+        "2",
+        4
+      ]
+    },
+    "class_type": "easy simpleMath",
+    "_meta": {
+      "title": "easy simpleMath"
+    }
+  },
+  "39": {
+    "inputs": {
+      "mode": "random",
+      "seed": [
+        "38",
+        0
+      ],
+      "index": 0,
+      "label": "Batch 001",
+      "path": "D:\\电商场景图\\方形\\入户门",
+      "pattern": "*",
+      "allow_RGBA_output": "false",
+      "filename_text_extension": "true"
+    },
+    "class_type": "Load Image Batch",
+    "_meta": {
+      "title": "入户门"
+    }
+  },
+  "40": {
+    "inputs": {
+      "mode": "random",
+      "seed": [
+        "38",
+        0
+      ],
+      "index": 0,
+      "label": "Batch 001",
+      "path": "D:\\电商场景图\\方形\\厨房",
+      "pattern": "*",
+      "allow_RGBA_output": "false",
+      "filename_text_extension": "true"
+    },
+    "class_type": "Load Image Batch",
+    "_meta": {
+      "title": "厨房"
+    }
+  },
+  "54": {
+    "inputs": {
+      "mode": "random",
+      "seed": [
+        "38",
+        0
+      ],
+      "index": 0,
+      "label": "Batch 001",
+      "path": "D:\\电商场景图\\方形\\小红书",
+      "pattern": "*",
+      "allow_RGBA_output": "false",
+      "filename_text_extension": "true"
+    },
+    "class_type": "Load Image Batch",
+    "_meta": {
+      "title": "小红书"
+    }
+  },
+  "58": {
     "inputs": {
       "🎯 系统角色": [
-        "101",
+        "63",
         0
       ],
       "💬 用户输入": "请详细分析这张图片。",
       "🤖 模型名称": "gemini-3.1-pro-preview-thinking-high",
       "🌐 API地址": "https://ai.t8star.cn/v1/chat/completions",
       "🔑 API密钥": [
-        "100",
+        "18",
         0
       ],
       "📡 请求方法": "POST",
@@ -234,19 +279,7 @@
       "📋 额外Headers": "{}",
       "📦 额外Body字段": "{}",
       "🖼️ 图像1": [
-        "105",
-        0
-      ],
-      "🖼️ 图像2": [
-        "104",
-        0
-      ],
-      "🖼️ 图像3": [
-        "107",
-        0
-      ],
-      "🖼️ 图像4": [
-        "106",
+        "65",
         0
       ]
     },
@@ -255,257 +288,157 @@
       "title": "🌐 通用API调用（测试） @炮老师的小课堂"
     }
   },
-  "119": {
+  "62": {
     "inputs": {
-      "text": "整体风格特点：Y2K多巴胺涂鸦贴纸风。核心特征为高饱和马卡龙配色、扁平插画质感、粗圆黑色描边或剪贴画边缘、融入趣味卡通手写英文排版，辅以星星、爱心、波浪线等符号，画面活泼欢快且具潮流海报感。\n\n---\n\n标准长方形全画幅商业插画。三七分构图。右侧视觉中心是一把巨大的粉色涂鸦风叉子，带有可爱笑脸和粗黑圆润描边。左侧大面积奶油黄背景留白。画面呈对角线视觉趋势，点缀明黄色星星、绿色爱心与波浪涂鸦线条。左上角手写卡通英文YUMMY，右下角TASTY。极简设计感，高饱和多巴胺配色，Y2K贴纸艺术风格，画面疏密有致充满呼吸感。\n\n---\n\n标准长方形全画幅海报。彩色马卡龙棋盘格平铺背景。四六分构图，左下至右上呈S形视觉流向。主体是一对剪贴画风格的亮黄色刀叉交叉排列，手柄处有金币符号，带轻微立体阴影。周围错落分布煎蛋、红色小番茄贴纸。右侧贴有粉色便签写着DELICIOUS，左下角手写ENJOY。元素疏密有致避免平行机械排列，活泼的多巴胺波普艺术风。\n\n---\n\n标准长方形无白边插画。粉蓝渐变背景满铺浅色小叉子底纹。六四分对角线构图。一把夸张的亮橘色黄油刀横向倾斜于画面偏上方，刀身闪烁高光并带有粗黑描边。右下方散布蓝色云朵和小火花涂鸦。左上角夸张气泡字WOW，右下黑色手写粗体RICH FOOD。视觉中心明确，点线面层次丰富，高级留白，充满潮流玩具感与街头涂鸦感。\n\n---\n\n标准长方形全画幅设计。米白色背景。视觉重心在左下方，三把粉黄绿马卡龙色的勺子与叉子如花束般聚拢，根部系黄色蝴蝶结，呈C形动线向右上延伸。画面点缀绿色波浪线、粉色爱心与黄色金币符号。右上方大号错位卡通字体LUCKY BITE，左侧点缀SO GOOD。极简海报排版，色彩明快，Y2K千禧涂鸦风格，视觉动线流畅，避免元素拥挤。",
-      "anything": [
-        "108",
+      "separator": "*场景图描述",
+      "prompt1": [
+        "15",
+        0
+      ],
+      "prompt2": [
+        "67:60",
         0
       ]
     },
-    "class_type": "easy showAnything",
+    "class_type": "easy promptConcat",
     "_meta": {
-      "title": "展示任何"
+      "title": "提示词联结"
     }
   },
-  "120": {
+  "63": {
     "inputs": {
-      "text": "❌ API错误 (503): {\"error\":{\"message\":\"当前分组 [default] 下对于模型 [gemini-3.1-pro-preview-thinking-high] 无可用渠道，请联系管理员\",\"type\":\"new_api_error\",\"param\":\"\",\"code\":\"unknown_error\"}}",
-      "anything": [
-        "147",
+      "positive": "根据图片内容，分析图片内的信息，主要关注地上的地垫的位置和大小有几张，怎么放的，与场景光影的关系"
+    },
+    "class_type": "easy positive",
+    "_meta": {
+      "title": "正面提示词"
+    }
+  },
+  "64": {
+    "inputs": {
+      "image": "26.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "65": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 2,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_longest_side": true,
+      "longest_side": 1024,
+      "image": [
+        "40",
         0
       ]
     },
-    "class_type": "easy showAnything",
+    "class_type": "LayerUtility: ImageScaleByAspectRatio",
     "_meta": {
-      "title": "展示任何"
+      "title": "图层工具：按宽高比缩放"
     }
   },
-  "125": {
+  "66": {
     "inputs": {
-      "text": "",
-      "anything": [
-        "148",
+      "aspect_ratio": "original",
+      "proportional_width": 2,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_longest_side": true,
+      "longest_side": 1024,
+      "image": [
+        "64",
         0
       ]
     },
-    "class_type": "easy showAnything",
+    "class_type": "LayerUtility: ImageScaleByAspectRatio",
     "_meta": {
-      "title": "展示任何"
+      "title": "图层工具：按宽高比缩放"
     }
   },
-  "126": {
+  "68": {
     "inputs": {
-      "text": "",
-      "anything": [
-        "149",
+      "image": "IMG_7151 (1).JPG"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "69": {
+    "inputs": {
+      "prompt": [
+        "62",
+        0
+      ],
+      "mode": "edit",
+      "api_key": [
+        "70",
+        0
+      ],
+      "quality": "auto",
+      "image_size": "custom",
+      "custom_width": 2304,
+      "custom_height": 1728,
+      "num_images": 1,
+      "output_format": "png",
+      "image_way": "image_url",
+      "seed": 38330,
+      "poll_interval": 2,
+      "max_poll_attempts": 300,
+      "skip_error": false,
+      "image1": [
+        "65",
+        0
+      ],
+      "image2": [
+        "66",
+        0
+      ],
+      "image3": [
+        "19",
+        0
+      ],
+      "image4": [
+        "20",
         0
       ]
     },
-    "class_type": "easy showAnything",
+    "class_type": "Comfly_gpt_image_2_fal",
     "_meta": {
-      "title": "展示任何"
+      "title": "Zhenzhen GPT Image 2 Fal"
     }
   },
-  "127": {
-    "inputs": {
-      "text": "",
-      "anything": [
-        "150",
-        0
-      ]
-    },
-    "class_type": "easy showAnything",
-    "_meta": {
-      "title": "展示任何"
-    }
-  },
-  "135": {
+  "70": {
     "inputs": {
       "api_base": "zhenzhen",
       "apikey": "sk-ISVEhcNHiUVqB5XHnBbP6Uq1taKmwU8LHuwox3BL99M2DWpB",
       "custom_ip": "",
-      "skip_error": false
+      "skip_error": true
     },
     "class_type": "Comfly_api_set",
     "_meta": {
       "title": "Zhenzhen API Settings"
     }
   },
-  "147": {
+  "67:60": {
     "inputs": {
-      "input_text": [
-        "119",
+      "text": "❌ 错误：请求超时 (180秒)",
+      "anything": [
+        "58",
         0
-      ],
-      "delimiter": "---",
-      "index": 1,
-      "order": "顺序",
-      "include_delimiter": false
+      ]
     },
-    "class_type": "SplitAndExtractText",
+    "class_type": "easy showAnything",
     "_meta": {
-      "title": "按序号提取分割文本🐠meeeyo.com"
-    }
-  },
-  "148": {
-    "inputs": {
-      "input_text": [
-        "119",
-        0
-      ],
-      "delimiter": "---",
-      "index": 3,
-      "order": "顺序",
-      "include_delimiter": false
-    },
-    "class_type": "SplitAndExtractText",
-    "_meta": {
-      "title": "按序号提取分割文本🐠meeeyo.com"
-    }
-  },
-  "149": {
-    "inputs": {
-      "input_text": [
-        "119",
-        0
-      ],
-      "delimiter": "---",
-      "index": 2,
-      "order": "顺序",
-      "include_delimiter": false
-    },
-    "class_type": "SplitAndExtractText",
-    "_meta": {
-      "title": "按序号提取分割文本🐠meeeyo.com"
-    }
-  },
-  "150": {
-    "inputs": {
-      "input_text": [
-        "119",
-        0
-      ],
-      "delimiter": "---",
-      "index": 4,
-      "order": "顺序",
-      "include_delimiter": false
-    },
-    "class_type": "SplitAndExtractText",
-    "_meta": {
-      "title": "按序号提取分割文本🐠meeeyo.com"
-    }
-  },
-  "156": {
-    "inputs": {
-      "prompt": [
-        "120",
-        0
-      ],
-      "mode": "generate",
-      "api_key": [
-        "135",
-        0
-      ],
-      "quality": "auto",
-      "image_size": "custom",
-      "custom_width": 2304,
-      "custom_height": 1728,
-      "num_images": 1,
-      "output_format": "png",
-      "image_way": "image_url",
-      "seed": 54861,
-      "poll_interval": 2,
-      "max_poll_attempts": 300,
-      "skip_error": false
-    },
-    "class_type": "Comfly_gpt_image_2_fal",
-    "_meta": {
-      "title": "Zhenzhen GPT Image 2 Fal"
-    }
-  },
-  "157": {
-    "inputs": {
-      "prompt": [
-        "125",
-        0
-      ],
-      "mode": "generate",
-      "api_key": [
-        "135",
-        0
-      ],
-      "quality": "auto",
-      "image_size": "custom",
-      "custom_width": 2304,
-      "custom_height": 1728,
-      "num_images": 1,
-      "output_format": "png",
-      "image_way": "image_url",
-      "seed": 15364,
-      "poll_interval": 2,
-      "max_poll_attempts": 300,
-      "skip_error": false
-    },
-    "class_type": "Comfly_gpt_image_2_fal",
-    "_meta": {
-      "title": "Zhenzhen GPT Image 2 Fal"
-    }
-  },
-  "158": {
-    "inputs": {
-      "prompt": [
-        "126",
-        0
-      ],
-      "mode": "generate",
-      "api_key": [
-        "135",
-        0
-      ],
-      "quality": "auto",
-      "image_size": "custom",
-      "custom_width": 2304,
-      "custom_height": 1728,
-      "num_images": 1,
-      "output_format": "png",
-      "image_way": "image_url",
-      "seed": 15897,
-      "poll_interval": 2,
-      "max_poll_attempts": 300,
-      "skip_error": false
-    },
-    "class_type": "Comfly_gpt_image_2_fal",
-    "_meta": {
-      "title": "Zhenzhen GPT Image 2 Fal"
-    }
-  },
-  "159": {
-    "inputs": {
-      "prompt": [
-        "127",
-        0
-      ],
-      "mode": "generate",
-      "api_key": [
-        "135",
-        0
-      ],
-      "quality": "auto",
-      "image_size": "custom",
-      "custom_width": 2304,
-      "custom_height": 1728,
-      "num_images": 1,
-      "output_format": "png",
-      "image_way": "image_url",
-      "seed": 51160,
-      "poll_interval": 2,
-      "max_poll_attempts": 300,
-      "skip_error": false
-    },
-    "class_type": "Comfly_gpt_image_2_fal",
-    "_meta": {
-      "title": "Zhenzhen GPT Image 2 Fal"
+      "title": "展示任何"
     }
   }
 }

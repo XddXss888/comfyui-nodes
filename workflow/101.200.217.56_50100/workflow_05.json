@@ -1,26 +1,162 @@
 {
+  "48": {
+    "inputs": {
+      "text": [
+        "223",
+        0
+      ],
+      "clip": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "72": {
+    "inputs": {
+      "pixels": [
+        "276",
+        0
+      ],
+      "vae": [
+        "134",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "74": {
+    "inputs": {
+      "separator": "",
+      "text1": [
+        "291",
+        0
+      ],
+      "text2": [
+        "221",
+        0
+      ]
+    },
+    "class_type": "CR Text Concatenate",
+    "_meta": {
+      "title": "🔤 CR Text Concatenate"
+    }
+  },
+  "132": {
+    "inputs": {
+      "unet_name": "wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "133": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "134": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "136": {
+    "inputs": {
+      "lora_name": "Wan2.1_I2V_14B_FusionX_LoRA_I2V_14B.safetensors",
+      "strength_model": 0.6,
+      "model": [
+        "132",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "137": {
+    "inputs": {
+      "lora_name": "lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "136",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "138": {
+    "inputs": {
+      "text": "色调艳丽，过曝，细节模糊不清，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，三条腿，痣，黑点",
+      "clip": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "139": {
+    "inputs": {
+      "shift": 8.000000000000002,
+      "model": [
+        "137",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
   "140": {
     "inputs": {
-      "seed": 395290559153094,
-      "steps": 40,
-      "cfg": 5.0,
-      "sampler_name": "dpmpp_2m",
-      "scheduler": "normal",
-      "denoise": 0.99,
+      "seed": [
+        "280",
+        0
+      ],
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "res_2m",
+      "scheduler": "beta57",
+      "denoise": 0.1,
       "model": [
-        "159",
+        "139",
         0
       ],
       "positive": [
-        "144",
+        "48",
         0
       ],
       "negative": [
-        "144",
-        1
+        "138",
+        0
       ],
       "latent_image": [
-        "154",
+        "72",
         0
       ]
     },
@@ -29,199 +165,104 @@
       "title": "K采样器"
     }
   },
-  "141": {
+  "218": {
     "inputs": {
-      "width": 1536,
-      "height": 1536,
-      "upscale_method": "lanczos",
-      "keep_proportion": true,
-      "divisible_by": 0,
-      "crop": 0,
-      "image": [
-        "157",
-        0
-      ]
+      "image": "input_1782118019025_b6a1f213-5a80-4f13-a6e8-e3095012540c_f3d568af-d62d-41ca-b4a1-abaf86f2f698.png",
+      "upload": "image"
     },
-    "class_type": "ImageResizeKJ",
+    "class_type": "LoadImage",
     "_meta": {
-      "title": "图像缩放（KJ）"
+      "title": "加载图像"
     }
   },
-  "143": {
-    "inputs": {
-      "control_net_name": "mistoLine_rank256.safetensors"
-    },
-    "class_type": "ControlNetLoaderAdvanced",
-    "_meta": {
-      "title": "ControlNet加载器(高级)"
-    }
-  },
-  "144": {
-    "inputs": {
-      "strength": 1.0,
-      "start_percent": 0.0,
-      "end_percent": 0.8,
-      "positive": [
-        "150",
-        0
-      ],
-      "negative": [
-        "149",
-        0
-      ],
-      "control_net": [
-        "143",
-        0
-      ],
-      "image": [
-        "146",
-        0
-      ]
-    },
-    "class_type": "ACN_AdvancedControlNetApply",
-    "_meta": {
-      "title": "高级ControlNet应用"
-    }
-  },
-  "145": {
-    "inputs": {
-      "ckpt_name": "XL_插画\\绪儿已成精_动漫XL_V1.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "Checkpoint加载器(简易)"
-    }
-  },
-  "146": {
-    "inputs": {
-      "preprocessor": "AnyLineArtPreprocessor_aux",
-      "resolution": 1024,
-      "image": [
-        "141",
-        0
-      ]
-    },
-    "class_type": "AIO_Preprocessor",
-    "_meta": {
-      "title": "Aux集成预处理器"
-    }
-  },
-  "147": {
+  "219": {
     "inputs": {
       "text_input": "",
-      "task": "caption",
+      "task": "more_detailed_caption",
       "fill_mask": true,
       "keep_model_loaded": false,
       "max_new_tokens": 1024,
       "num_beams": 3,
       "do_sample": true,
       "output_mask_select": "",
-      "seed": 1,
+      "seed": 1079154992435369,
       "image": [
-        "157",
+        "218",
         0
       ],
       "florence2_model": [
-        "148",
+        "220",
         0
       ]
     },
     "class_type": "Florence2Run",
     "_meta": {
-      "title": "Florence2 执行"
+      "title": "Florence2Run"
     }
   },
-  "148": {
+  "220": {
     "inputs": {
-      "model": "gokaygokay/Florence-2-Flux-Large",
+      "model": "Florence-2-Flux-Large",
       "precision": "fp16",
-      "attention": "sdpa"
+      "attention": "sdpa",
+      "convert_to_safetensors": false
     },
-    "class_type": "DownloadAndLoadFlorence2Model",
+    "class_type": "Florence2ModelLoader",
     "_meta": {
-      "title": "下载并加载 Florence2 模型"
+      "title": "Florence2ModelLoader"
     }
   },
-  "149": {
+  "221": {
     "inputs": {
-      "text": "Nsfw，低分辨率，糟糕的解剖结构，糟糕的手，文本，错误，缺失的手指，多余的数字，更少的数字，裁剪，最差的质量，低质量，正常质量，jpeg伪影，签名，水印，用户名，模糊",
-      "parser": "A1111",
-      "mean_normalization": true,
-      "multi_conditioning": false,
-      "use_old_emphasis_implementation": false,
-      "with_SDXL": false,
-      "ascore": 6.0,
-      "width": 1024,
-      "height": 1024,
-      "crop_w": 0,
-      "crop_h": 0,
-      "target_width": 1024,
-      "target_height": 1024,
-      "text_g": "",
-      "text_l": "",
-      "smZ_steps": 40,
-      "clip": [
-        "145",
-        1
-      ]
-    },
-    "class_type": "smZ CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode++"
-    }
-  },
-  "150": {
-    "inputs": {
+      "text_0": "The image is a close-up portrait of a young woman with long dark hair. She is standing in front of a blurred background of greenery. The woman is wearing a beige sweater with a white turtleneck underneath. She has a slight smile on her face and is looking directly at the camera. Her hair is styled in loose waves and falls over her shoulders. The lighting is soft and natural, highlighting the woman's features. The overall mood of the image is peaceful and serene.",
       "text": [
-        "155",
-        0
-      ],
-      "parser": "A1111",
-      "mean_normalization": true,
-      "multi_conditioning": false,
-      "use_old_emphasis_implementation": false,
-      "with_SDXL": false,
-      "ascore": 6.0,
-      "width": 1024,
-      "height": 1024,
-      "crop_w": 0,
-      "crop_h": 0,
-      "target_width": 1024,
-      "target_height": 1024,
-      "text_g": "",
-      "text_l": "",
-      "smZ_steps": 40,
-      "clip": [
-        "145",
-        1
+        "219",
+        2
       ]
     },
-    "class_type": "smZ CLIPTextEncode",
+    "class_type": "ShowText|pysssss",
     "_meta": {
-      "title": "CLIP Text Encode++"
+      "title": "Show Text 🐍"
     }
   },
-  "151": {
+  "223": {
     "inputs": {
+      "text_0": "(masterpiece), (best quality), (ultra-detailed),highly detailed.4k. The image is a close-up portrait of a young woman with long dark hair. She is standing in front of a blurred background of greenery. The woman is wearing a beige sweater with a white turtleneck underneath. She has a slight smile on her face and is looking directly at the camera. Her hair is styled in loose waves and falls over her shoulders. The lighting is soft and natural, highlighting the woman's features. The overall mood of the image is peaceful and serene.",
+      "text": [
+        "74",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "239": {
+    "inputs": {
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 64,
+      "temporal_overlap": 8,
       "samples": [
         "140",
         0
       ],
       "vae": [
-        "153",
+        "134",
         0
       ]
     },
-    "class_type": "VAEDecode",
+    "class_type": "VAEDecodeTiled",
     "_meta": {
-      "title": "VAE解码"
+      "title": "VAE解码（分块）"
     }
   },
-  "152": {
+  "259": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
+      "filename_prefix": "2025-11-08/wan-regenerated",
       "images": [
-        "151",
+        "239",
         0
       ]
     },
@@ -230,143 +271,36 @@
       "title": "保存图像"
     }
   },
-  "153": {
+  "276": {
     "inputs": {
-      "vae_name": "sdxl_vae_fp16fix.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "VAE加载器"
-    }
-  },
-  "154": {
-    "inputs": {
-      "width": [
-        "141",
-        1
-      ],
-      "height": [
-        "141",
-        2
-      ],
-      "batch_size": 4
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "空Latent"
-    }
-  },
-  "155": {
-    "inputs": {
-      "a": [
-        "158",
-        0
-      ],
-      "b": [
-        "147",
-        2
-      ]
-    },
-    "class_type": "JWStringConcat",
-    "_meta": {
-      "title": "String Concatenate"
-    }
-  },
-  "157": {
-    "inputs": {
-      "image": "input_1781449840638_5ec0b008-31a4-4730-a690-e8df25c19be8_298d36a9-4100-4d30-87b8-532b3e0e05b2.png",
-      "upload": "image"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "158": {
-    "inputs": {
-      "string": "一个女孩"
-    },
-    "class_type": "String Literal",
-    "_meta": {
-      "title": "String Literal"
-    }
-  },
-  "159": {
-    "inputs": {
-      "weight": 1.0,
-      "weight_faceidv2": 1.0,
-      "weight_type": "style transfer precise",
-      "combine_embeds": "concat",
-      "start_at": 0.0,
-      "end_at": 1.0,
-      "embeds_scaling": "V only",
-      "layer_weights": "3:2.5,6:1",
-      "model": [
-        "160",
-        0
-      ],
-      "ipadapter": [
-        "160",
-        1
-      ],
+      "upscale_method": "nearest-exact",
+      "scale_by": 2.0,
       "image": [
-        "164",
+        "218",
         0
       ]
     },
-    "class_type": "IPAdapterMS",
+    "class_type": "ImageScaleBy",
     "_meta": {
-      "title": "应用IPAdapter Mad Scientist"
+      "title": "缩放图像（比例）"
     }
   },
-  "160": {
+  "280": {
     "inputs": {
-      "preset": "PLUS (high strength)",
-      "model": [
-        "145",
-        0
-      ]
+      "seed": 85445159158056
     },
-    "class_type": "IPAdapterUnifiedLoader",
+    "class_type": "easy seed",
     "_meta": {
-      "title": "IPAdapter加载器"
+      "title": "随机种"
     }
   },
-  "161": {
+  "291": {
     "inputs": {
-      "image": "input_1781449841078_af29d6fe-616b-41ab-96f7-8f6cd5d25831_5e2dbd96-05fe-470a-b181-e5719792b199.png",
-      "upload": "image"
+      "text": "(masterpiece), (best quality), (ultra-detailed),highly detailed.4k. "
     },
-    "class_type": "LoadImage",
+    "class_type": "Text Multiline",
     "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "164": {
-    "inputs": {
-      "interpolation": "LANCZOS",
-      "crop_position": "top",
-      "sharpening": 0.0,
-      "image": [
-        "161",
-        0
-      ]
-    },
-    "class_type": "PrepImageForClipVision",
-    "_meta": {
-      "title": "CLIP视觉图像处理"
-    }
-  },
-  "165": {
-    "inputs": {
-      "images": [
-        "164",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
+      "title": "Text Multiline"
     }
   }
 }

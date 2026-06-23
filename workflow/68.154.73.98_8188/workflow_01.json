@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_9b81a928224c494b976c19ef9f477bcf.png"
+      "image": "ref_71a587c0933f414a9e15302f2c19d46b.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "Nude",
+      "prompt": "タオルを小さくして。白色にして。画質は良くして。",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 899975664668880,
+      "seed": 796651948052099,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",

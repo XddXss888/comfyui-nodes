@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "/app/services/comfyui-worker/temp/uploads/63b9c68fa3d62a65155d5813b2e53334e9b69af975bfc0d4935a3fb6e05b0873.png"
+      "image": "/app/services/comfyui-worker/temp/uploads/81aecd6ddb4571b88d8f78818b3beb9177f9f97abfe49c195af27c3a9578453b.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -117,7 +117,7 @@
   },
   "99": {
     "inputs": {
-      "path": "/app/services/comfyui-worker/temp/results/3f5771e2-54de-4b77-a563-38c454fe1f77.png",
+      "path": "/app/services/comfyui-worker/temp/results/f982d318-5b46-40be-a2be-fe5a1fed1333.png",
       "overwrite": "true",
       "image": [
         "130",
@@ -243,7 +243,7 @@
   },
   "75:74": {
     "inputs": {
-      "text": "Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a 3D reaction sticker from the photo. The character has peaceful serene expression, eyes gently closed, soft smile, hands pressed together in prayer/meditation pose, sitting on a pink lotus flower, wearing a light pink robe, beaded bracelets on wrists, “peaceful meditation” vibe, calm and pure face. Character is a 3D cartoon reaction sticker, funny meme expression, pixar-style character, matte plastic material, cinematic soft lighting, highly expressive face. Sticker design with bold white outline, transparent background, high quality 3D render, sharp sticker. Keep the face of the human in the image and the skin color of the human in the image. Use sticker style, gray background"
+      "text": "Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a sticker using the user's photo. Preserve the original gender and identity from the input image. Do not gender-swap the character. No opposite-gender appearance, no feminine features on a male input, no masculine features on a female input. A football Character sticker wearing a Real Madrid white home football kit, white jersey with subtle dark trim, white shorts, athletic football socks, both hands pulling or pointing toward the chest area of the jersey, proud confident expression, iconic celebration pose, realistic sports photography sticker style, crisp cutout, high detail fabric folds, clean isolated transparent background, no text. Keep the face of the human in the image and the skin color of the human in the image. Use sticker style, gray background"
     },
     "class_type": "JWString",
     "_meta": {

@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "/app/services/comfyui-worker/temp/uploads/1fb57638ad9017d51b99d79e18c66c3b00165e196b0811fb81a4f63321333528.png"
+      "image": "/app/services/comfyui-worker/temp/uploads/81aecd6ddb4571b88d8f78818b3beb9177f9f97abfe49c195af27c3a9578453b.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -117,7 +117,7 @@
   },
   "99": {
     "inputs": {
-      "path": "/app/services/comfyui-worker/temp/results/08aa5540-d6fa-4ba8-ab69-239d1fc7e56a.png",
+      "path": "/app/services/comfyui-worker/temp/results/1811d69e-3d2c-4960-9b0b-af73f2ffbb43.png",
       "overwrite": "true",
       "image": [
         "130",
@@ -243,7 +243,7 @@
   },
   "75:74": {
     "inputs": {
-      "text": "Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a 2D illustration sticker from the photo. Character is shedding tears, curved eyebrows indicate sadness. Character is holding a red heart that has been broken in two with both hands, their expression one of heartbreak and disappointment. Clean 2D illustration style, pastel colors. Keep the face of the human in the image and the skin color of the human in the image. Use sticker style, gray background"
+      "text": "Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a sticker using the user's photo. Preserve the original gender and identity from the input image. Do not gender-swap the character. No opposite-gender appearance, no feminine features on a male input, no masculine features on a female input. A football Character sticker wearing a Manchester City light blue home football kit, light blue jersey with subtle white details, matching light blue shorts, athletic football socks, football boots, one hand raised with index finger pointing upward, confident smile, relaxed celebration pose, energetic football mood, realistic sports cutout sticker style, sharp silhouette edges, high contrast lighting, detailed fabric texture, isolated on transparent background, high detail, no text. Keep the face of the human in the image and the skin color of the human in the image. Use sticker style, gray background"
     },
     "class_type": "JWString",
     "_meta": {

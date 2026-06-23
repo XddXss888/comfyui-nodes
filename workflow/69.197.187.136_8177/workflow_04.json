@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "/app/services/comfyui-worker/temp/uploads/1fb57638ad9017d51b99d79e18c66c3b00165e196b0811fb81a4f63321333528.png"
+      "image": "/app/services/comfyui-worker/temp/uploads/81aecd6ddb4571b88d8f78818b3beb9177f9f97abfe49c195af27c3a9578453b.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -117,7 +117,7 @@
   },
   "99": {
     "inputs": {
-      "path": "/app/services/comfyui-worker/temp/results/90c52c85-e7ab-4b5d-ab81-f5d5f3ce1253.png",
+      "path": "/app/services/comfyui-worker/temp/results/2ef181df-d444-46d2-a17c-cc24c5044650.png",
       "overwrite": "true",
       "image": [
         "130",
@@ -243,7 +243,7 @@
   },
   "75:74": {
     "inputs": {
-      "text": "Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a 2D illustration sticker from the photo. Character with closed smiling eyes and blushing cheeks, stand with both feet straight.The character is holding a white sign that says “I ♥ U” with both hands, expressing love and affection. Clean 2D illustration style, pastel colors. Keep the face of the human in the image and the skin color of the human in the image. Use sticker style, gray background"
+      "text": "Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a sticker using the user's photo. Preserve the original gender and identity from the input image. Do not gender-swap the character. No opposite-gender appearance, no feminine features on a male input, no masculine features on a female input. A football Character sticker wearing a Tottenham Hotspur white home football kit, white jersey with navy details, navy shorts, athletic football socks, arms crossed firmly in front of the chest, serious confident expression, strong leader attitude, front-facing pose, realistic sports photography sticker style, crisp cutout, high contrast lighting, clean isolated transparent background, high detail, no text. Keep the face of the human in the image and the skin color of the human in the image. Use sticker style, gray background"
     },
     "class_type": "JWString",
     "_meta": {

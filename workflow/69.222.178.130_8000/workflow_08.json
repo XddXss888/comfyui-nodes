@@ -1,85 +1,9 @@
 {
-  "3": {
+  "9": {
     "inputs": {
-      "seed": 116891237819900,
-      "steps": 27,
-      "cfg": 2.8,
-      "sampler_name": "gradient_estimation",
-      "scheduler": "karras",
-      "denoise": 1.0,
-      "model": [
-        "75",
-        0
-      ],
-      "positive": [
-        "111",
-        0
-      ],
-      "negative": [
-        "110",
-        0
-      ],
-      "latent_image": [
-        "112",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
-    }
-  },
-  "8": {
-    "inputs": {
-      "samples": [
-        "3",
-        0
-      ],
-      "vae": [
-        "39",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
-    }
-  },
-  "37": {
-    "inputs": {
-      "unet_name": "qwen_image_edit_2511_bf16.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Load Diffusion Model"
-    }
-  },
-  "38": {
-    "inputs": {
-      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
-      "type": "qwen_image",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "Load CLIP"
-    }
-  },
-  "39": {
-    "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Load VAE"
-    }
-  },
-  "60": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
+      "filename_prefix": "flux_krea",
       "images": [
-        "8",
+        "70",
         0
       ]
     },
@@ -88,187 +12,10 @@
       "title": "Save Image"
     }
   },
-  "66": {
-    "inputs": {
-      "shift": 2.29,
-      "model": [
-        "395",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingAuraFlow",
-    "_meta": {
-      "title": "ModelSamplingAuraFlow"
-    }
-  },
-  "75": {
-    "inputs": {
-      "strength": 1.0,
-      "model": [
-        "66",
-        0
-      ]
-    },
-    "class_type": "CFGNorm",
-    "_meta": {
-      "title": "CFGNorm"
-    }
-  },
-  "78": {
-    "inputs": {
-      "image": "5d84f56e-800d-426b-9c5b-7a85265f4db6.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "88": {
-    "inputs": {
-      "pixels": [
-        "93",
-        0
-      ],
-      "vae": [
-        "39",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE Encode"
-    }
-  },
-  "89": {
-    "inputs": {
-      "lora_name": "Qwen-Image-Lightning-8steps-V1.0.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "37",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "Load LoRA"
-    }
-  },
-  "93": {
-    "inputs": {
-      "upscale_method": "nearest-exact",
-      "megapixels": 1.0,
-      "resolution_steps": 1,
-      "image": [
-        "399",
-        0
-      ]
-    },
-    "class_type": "ImageScaleToTotalPixels",
-    "_meta": {
-      "title": "ImageScaleToTotalPixels"
-    }
-  },
-  "110": {
-    "inputs": {
-      "prompt": "blurring , distortion, extra digits, extra hands, extra arms, extra feet, extra legs, extra limbs, extra hands,",
-      "clip": [
-        "395",
-        1
-      ],
-      "vae": [
-        "39",
-        0
-      ],
-      "image1": [
-        "93",
-        0
-      ]
-    },
-    "class_type": "TextEncodeQwenImageEditPlus",
-    "_meta": {
-      "title": "TextEncodeQwenImageEditPlus"
-    }
-  },
-  "111": {
-    "inputs": {
-      "prompt": "the woman has both her hands straight up to the sky as she summons, the cats freak out, the demon is serious, the fire on the background amplifies\n",
-      "clip": [
-        "395",
-        1
-      ],
-      "vae": [
-        "39",
-        0
-      ],
-      "image1": [
-        "93",
-        0
-      ]
-    },
-    "class_type": "TextEncodeQwenImageEditPlus",
-    "_meta": {
-      "title": "TextEncodeQwenImageEditPlus"
-    }
-  },
-  "112": {
-    "inputs": {
-      "width": [
-        "407",
-        0
-      ],
-      "height": [
-        "408",
-        0
-      ],
-      "batch_size": 1
-    },
-    "class_type": "EmptySD3LatentImage",
-    "_meta": {
-      "title": "EmptySD3LatentImage"
-    }
-  },
-  "394": {
-    "inputs": {
-      "lora_name": "sulphur_dev_fp8mixed.safetensors",
-      "strength_model": 3.0,
-      "strength_clip": 3.0,
-      "model": [
-        "89",
-        0
-      ],
-      "clip": [
-        "38",
-        0
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Load LoRA (Model and CLIP)"
-    }
-  },
-  "395": {
-    "inputs": {
-      "lora_name": "xenoflexNSFWSFWFlexible_v10.safetensors",
-      "strength_model": 1.33,
-      "strength_clip": 1.33,
-      "model": [
-        "406",
-        0
-      ],
-      "clip": [
-        "406",
-        1
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Load LoRA (Model and CLIP)"
-    }
-  },
-  "399": {
+  "70": {
     "inputs": {
       "anything": [
-        "78",
+        "53:8",
         0
       ]
     },
@@ -277,17 +24,75 @@
       "title": "Clean VRAM Used"
     }
   },
-  "402": {
+  "78": {
     "inputs": {
-      "lora_name": "Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors",
-      "strength_model": 2.0,
-      "strength_clip": 2.0,
+      "seed": 679623013384961
+    },
+    "class_type": "easy seed",
+    "_meta": {
+      "title": "EasySeed"
+    }
+  },
+  "53:39": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "53:27": {
+    "inputs": {
+      "width": 1680,
+      "height": 944,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "53:75": {
+    "inputs": {
+      "text": "extra limbs, stupid",
+      "clip": [
+        "53:54",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "53:8": {
+    "inputs": {
+      "samples": [
+        "53:31",
+        0
+      ],
+      "vae": [
+        "53:39",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "53:54": {
+    "inputs": {
+      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "strength_model": 1.25,
+      "strength_clip": 1.25,
       "model": [
-        "394",
+        "53:79",
         0
       ],
       "clip": [
-        "394",
+        "53:79",
         1
       ]
     },
@@ -296,17 +101,17 @@
       "title": "Load LoRA (Model and CLIP)"
     }
   },
-  "403": {
+  "53:77": {
     "inputs": {
-      "lora_name": "Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors",
+      "lora_name": "Qwen-Image-Lightning-8steps-V1.0.safetensors",
       "strength_model": 1.75,
       "strength_clip": 1.75,
       "model": [
-        "402",
+        "53:52",
         0
       ],
       "clip": [
-        "402",
+        "53:52",
         1
       ]
     },
@@ -315,17 +120,17 @@
       "title": "Load LoRA (Model and CLIP)"
     }
   },
-  "406": {
+  "53:79": {
     "inputs": {
-      "lora_name": "Jesse 2.0.safetensors",
-      "strength_model": 1.5,
-      "strength_clip": 1.5,
+      "lora_name": "jessemusic1l.safetensors",
+      "strength_model": 4.0,
+      "strength_clip": 4.0,
       "model": [
-        "403",
+        "53:77",
         0
       ],
       "clip": [
-        "403",
+        "53:77",
         1
       ]
     },
@@ -334,22 +139,91 @@
       "title": "Load LoRA (Model and CLIP)"
     }
   },
-  "407": {
+  "53:40": {
     "inputs": {
-      "value": 1666
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp16.safetensors",
+      "type": "flux",
+      "device": "default"
     },
-    "class_type": "PrimitiveInt",
+    "class_type": "DualCLIPLoader",
     "_meta": {
-      "title": "Int"
+      "title": "DualCLIPLoader"
     }
   },
-  "408": {
+  "53:31": {
     "inputs": {
-      "value": 944
+      "seed": [
+        "78",
+        0
+      ],
+      "steps": 50,
+      "cfg": 2.0,
+      "sampler_name": "euler",
+      "scheduler": "beta",
+      "denoise": 1.0,
+      "model": [
+        "53:54",
+        0
+      ],
+      "positive": [
+        "53:45",
+        0
+      ],
+      "negative": [
+        "53:75",
+        0
+      ],
+      "latent_image": [
+        "53:27",
+        0
+      ]
     },
-    "class_type": "PrimitiveInt",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "Int"
+      "title": "KSampler"
+    }
+  },
+  "53:52": {
+    "inputs": {
+      "lora_name": "ltx-2.3-22b-dev-nvfp4 (1).safetensors",
+      "strength_model": 2.0,
+      "strength_clip": 2.0,
+      "model": [
+        "53:38",
+        0
+      ],
+      "clip": [
+        "53:40",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA (Model and CLIP)"
+    }
+  },
+  "53:45": {
+    "inputs": {
+      "text": "Cinematic quality with rim lighting. A asian woman with long black hair and makeup on wearing a tight grey full length dress with accents of plack strips in it standing in a grass field with spuds makenzie the dog on a leash laying in the grass, a busy intersection can be seen behind them with a small busy mall behind that, the sky is cloudy and there are power lines and power poles lining the road.",
+      "clip": [
+        "53:54",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "53:38": {
+    "inputs": {
+      "unet_name": "flux1-krea-dev_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
     }
   }
 }

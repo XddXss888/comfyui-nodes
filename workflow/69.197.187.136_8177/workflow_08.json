@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "/app/services/comfyui-worker/temp/uploads/63b9c68fa3d62a65155d5813b2e53334e9b69af975bfc0d4935a3fb6e05b0873.png"
+      "image": "/app/services/comfyui-worker/temp/uploads/81aecd6ddb4571b88d8f78818b3beb9177f9f97abfe49c195af27c3a9578453b.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -117,7 +117,7 @@
   },
   "99": {
     "inputs": {
-      "path": "/app/services/comfyui-worker/temp/results/6724b362-a4ec-49be-ad62-9738ad8e3745.png",
+      "path": "/app/services/comfyui-worker/temp/results/a049ba44-a0dc-4391-8fb5-f8fa75d5190f.png",
       "overwrite": "true",
       "image": [
         "130",
@@ -243,7 +243,7 @@
   },
   "75:74": {
     "inputs": {
-      "text": "Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a 3D chibi reaction sticker from the photo. The character has an extreme shocked expression, wide open eyes, dilated pupils, mouth wide open, hands on cheeks, panicked gesture, tense face mixed with surprise, “shocked reaction” vibe. Character is a 3D cartoon reaction sticker, funny meme expression, pixar-style character, matte plastic material, soft studio lighting, highly expressive face. Sticker design with bold white outline, transparent background, high quality 3D render, sharp sticker. Keep the face of the human in the image and the skin color of the human in the image. Use sticker style, gray background"
+      "text": "Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a sticker using the user's photo. Preserve the original gender and identity from the input image. Do not gender-swap the character. No opposite-gender appearance, no feminine features on a male input, no masculine features on a female input. A football Character sticker wearing a Borussia Dortmund yellow home football kit, bright yellow jersey with black details, black shorts, yellow and black socks, controlling a football with one leg raised, focused eyes, athletic balance pose, energetic football action mood, realistic sports cutout sticker style, sharp edges, detailed kit texture, isolated on transparent background, no text. Keep the face of the human in the image and the skin color of the human in the image. Use sticker style, gray background"
     },
     "class_type": "JWString",
     "_meta": {

@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_24da2049974d498c9319de94219ac346.png"
+      "image": "ref_5d33a4345d00413ea85c846a5866de7d.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "faire que sa main gauche soit sur le bord de la portiere ",
+      "prompt": "Kiss prancis",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 883100473531924,
-      "steps": 4,
+      "seed": 792328873842312,
+      "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

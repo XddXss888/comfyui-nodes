@@ -1,29 +1,26 @@
 {
   "3": {
     "inputs": {
-      "seed": [
-        "87",
-        0
-      ],
-      "steps": 25,
-      "cfg": 7.0,
-      "sampler_name": "dpmpp_sde",
+      "seed": 129922612186422,
+      "steps": 20,
+      "cfg": 5.0,
+      "sampler_name": "dpmpp_2m_sde",
       "scheduler": "karras",
-      "denoise": 1.0,
+      "denoise": 0.6,
       "model": [
         "4",
         0
       ],
       "positive": [
-        "10",
+        "51",
         0
       ],
       "negative": [
-        "10",
+        "51",
         1
       ],
       "latent_image": [
-        "5",
+        "39",
         0
       ]
     },
@@ -34,33 +31,29 @@
   },
   "4": {
     "inputs": {
-      "ckpt_name": "XLHxzmixInteriorAnd_v10.safetensors"
+      "ckpt_name": "epicphotogasm_v1.safetensors"
     },
     "class_type": "CheckpointLoaderSimple",
     "_meta": {
       "title": "Load Checkpoint"
     }
   },
-  "5": {
+  "6": {
     "inputs": {
-      "width": [
-        "16",
-        0
-      ],
-      "height": [
-        "16",
+      "text": "masterpiece, ultra realistics, highres",
+      "clip": [
+        "4",
         1
-      ],
-      "batch_size": 1
+      ]
     },
-    "class_type": "EmptyLatentImage",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "Empty Latent Image"
+      "title": "CLIP Text Encode (Prompt)"
     }
   },
   "7": {
     "inputs": {
-      "text": "nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing",
+      "text": "drawing,paiting,crayon,sketch,graphite,impressionist,noisy,blurry,soft,deformed,ugly,lowers,bad anatomy,bad hands,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,(monochrome,greyscale,old photo), text",
       "clip": [
         "4",
         1
@@ -78,7 +71,7 @@
         0
       ],
       "vae": [
-        "64",
+        "40",
         0
       ]
     },
@@ -87,13 +80,75 @@
       "title": "VAE Decode"
     }
   },
-  "10": {
+  "13": {
     "inputs": {
-      "strength": 0.7000000000000001,
+      "image": "resized_image.jpg_1782167418751"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "14": {
+    "inputs": {
+      "rm_nearest": 0.0,
+      "rm_background": 0.0,
+      "boost": "disable",
+      "resolution": 512,
+      "image": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "LeReS-DepthMapPreprocessor",
+    "_meta": {
+      "title": "LeReS Depth Map (enable boost for leres++)"
+    }
+  },
+  "17": {
+    "inputs": {
+      "detect_hand": "enable",
+      "detect_body": "enable",
+      "detect_face": "enable",
+      "resolution": 512,
+      "bbox_detector": "yolox_l.onnx",
+      "pose_estimator": "dw-ll_ucoco_384.onnx",
+      "scale_stick_for_xinsr_cn": "disable",
+      "image": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "DWPreprocessor",
+    "_meta": {
+      "title": "DWPose Estimator"
+    }
+  },
+  "20": {
+    "inputs": {
+      "control_net_name": "control_v11f1p_sd15_depth.pth"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model (for Depth Map)"
+    }
+  },
+  "22": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_openpose.pth"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model (for DWPose)"
+    }
+  },
+  "24": {
+    "inputs": {
+      "strength": 0.4,
       "start_percent": 0.0,
-      "end_percent": 0.8,
+      "end_percent": 1.0,
       "positive": [
-        "83",
+        "6",
         0
       ],
       "negative": [
@@ -101,15 +156,11 @@
         0
       ],
       "control_net": [
-        "11",
+        "20",
         0
       ],
       "image": [
-        "61",
-        0
-      ],
-      "vae": [
-        "64",
+        "14",
         0
       ]
     },
@@ -118,154 +169,208 @@
       "title": "Apply ControlNet"
     }
   },
-  "11": {
+  "25": {
     "inputs": {
-      "control_net_name": "mistoLine_rank256.safetensors"
-    },
-    "class_type": "ControlNetLoader",
-    "_meta": {
-      "title": "Load ControlNet Model"
-    }
-  },
-  "16": {
-    "inputs": {
+      "strength": 1.0,
+      "start_percent": 0.0,
+      "end_percent": 1.0,
+      "positive": [
+        "24",
+        0
+      ],
+      "negative": [
+        "24",
+        1
+      ],
+      "control_net": [
+        "22",
+        0
+      ],
       "image": [
-        "61",
+        "17",
         0
       ]
     },
-    "class_type": "ImageGenResolutionFromImage",
+    "class_type": "ControlNetApplyAdvanced",
     "_meta": {
-      "title": "Generation Resolution From Image"
+      "title": "Apply ControlNet"
     }
   },
-  "38": {
+  "37": {
     "inputs": {
-      "merge_with_lineart": "lineart_standard",
-      "resolution": 1080,
-      "lineart_lower_bound": 0.0,
-      "lineart_upper_bound": 1.0,
-      "object_min_size": 36,
-      "object_connectivity": 1,
-      "image": [
-        "77",
+      "pixels": [
+        "57",
+        0
+      ],
+      "vae": [
+        "40",
         0
       ]
     },
-    "class_type": "AnyLineArtPreprocessor_aux",
+    "class_type": "VAEEncode",
     "_meta": {
-      "title": "AnyLine Lineart"
+      "title": "VAE Encode"
     }
   },
-  "61": {
+  "39": {
     "inputs": {
-      "width": 1080,
-      "height": 1080,
       "upscale_method": "nearest-exact",
-      "keep_proportion": true,
-      "divisible_by": 2,
+      "width": 512,
+      "height": 0,
       "crop": "disabled",
-      "image": [
-        "38",
+      "samples": [
+        "37",
         0
       ]
     },
-    "class_type": "ImageResizeKJ",
+    "class_type": "LatentUpscale",
     "_meta": {
-      "title": "Resize Image (deprecated)"
+      "title": "Upscale Latent"
     }
   },
-  "64": {
+  "40": {
     "inputs": {
-      "vae_name": "sdxl_vae.safetensors"
+      "vae_name": "vae-ft-mse-840000-ema-pruned.safetensors"
     },
     "class_type": "VAELoader",
     "_meta": {
       "title": "Load VAE"
     }
   },
-  "77": {
+  "41": {
     "inputs": {
-      "image": "example_1781517880856.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "78": {
-    "inputs": {
-      "text": "HOME_AI"
-    },
-    "class_type": "ttN text",
-    "_meta": {
-      "title": "manual prompt"
-    }
-  },
-  "81": {
-    "inputs": {
-      "text": "High quality, masterpiece, 8k, high definition,"
-    },
-    "class_type": "ttN text",
-    "_meta": {
-      "title": "default"
-    }
-  },
-  "82": {
-    "inputs": {
-      "delimiter": ", ",
-      "clean_whitespace": "true",
-      "text_a": [
-        "81",
+      "enabled": true,
+      "swap_model": "inswapper_128.onnx",
+      "facedetection": "retinaface_resnet50",
+      "face_restore_model": "codeformer.pth",
+      "face_restore_visibility": 1.0,
+      "codeformer_weight": 1.0,
+      "detect_gender_input": "no",
+      "detect_gender_source": "no",
+      "input_faces_index": "0,1,2,3,4,5,6,7,8,9",
+      "source_faces_index": "0,1,2,3,4,5,6,7,8,9",
+      "console_log_level": 1,
+      "input_image": [
+        "8",
         0
       ],
-      "text_b": [
-        "78",
+      "source_image": [
+        "13",
         0
       ]
     },
-    "class_type": "Text Concatenate",
+    "class_type": "ReActorFaceSwap",
     "_meta": {
-      "title": "Text Concatenate"
+      "title": "ReActor 🌌 Fast Face Swap"
     }
   },
-  "83": {
+  "43": {
     "inputs": {
-      "clip": [
-        "4",
+      "coarse": "disable",
+      "resolution": 512,
+      "image": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "LineArtPreprocessor",
+    "_meta": {
+      "title": "Realistic Lineart"
+    }
+  },
+  "50": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_lineart.pth"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model (for Realistic LineArt)"
+    }
+  },
+  "51": {
+    "inputs": {
+      "strength": 0.8,
+      "start_percent": 0.0,
+      "end_percent": 1.0,
+      "positive": [
+        "25",
+        0
+      ],
+      "negative": [
+        "25",
         1
       ],
-      "text": [
-        "82",
+      "control_net": [
+        "50",
+        0
+      ],
+      "image": [
+        "43",
         0
       ]
     },
-    "class_type": "Text to Conditioning",
+    "class_type": "ControlNetApplyAdvanced",
     "_meta": {
-      "title": "Text to Conditioning"
+      "title": "Apply ControlNet"
     }
   },
-  "87": {
+  "57": {
     "inputs": {
-      "min": 0,
-      "max": 999999999999999
+      "upscale_method": "nearest-exact",
+      "width": 512,
+      "height": 0,
+      "crop": "disabled",
+      "image": [
+        "13",
+        0
+      ]
     },
-    "class_type": "RandomInt",
+    "class_type": "ImageScale",
     "_meta": {
-      "title": "Random Int"
+      "title": "Upscale Image"
     }
   },
-  "89": {
+  "63": {
     "inputs": {
-      "filename_prefix": "homeai_autodesign",
+      "filename_prefix": "restore046",
       "images": [
-        "8",
+        "64",
         0
       ]
     },
     "class_type": "SaveImage",
     "_meta": {
-      "title": "save img"
+      "title": "Save Image"
+    }
+  },
+  "64": {
+    "inputs": {
+      "score": 0.9,
+      "image": [
+        "41",
+        0
+      ],
+      "alternative_image": [
+        "73",
+        0
+      ]
+    },
+    "class_type": "NSFWDetection",
+    "_meta": {
+      "title": "NSFWDetection"
+    }
+  },
+  "73": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "red": 255,
+      "green": 255,
+      "blue": 255
+    },
+    "class_type": "Image Blank",
+    "_meta": {
+      "title": "Image Blank"
     }
   }
 }

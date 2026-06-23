@@ -4,67 +4,67 @@
 **内存**: 3 GB (空闲 2 GB)
 **版本**: 0.3.68
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-22 08:07:41
-**历史总数**: 480 | **成功**: 10
+**扫描时间**: 2026-06-23 08:07:44
+**历史总数**: 1866 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `d2646473-62ca-4ee3-b105-220b9601fdf9`
+- **Prompt ID**: `62c6e956-923c-4489-9ff4-4743584e03ee`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):
 
 ### 2. workflow_02.json
-- **Prompt ID**: `e8d20bce-b67d-4913-acc1-d0d54df4186f`
+- **Prompt ID**: `1b82e59a-d2f4-4ce2-9b23-4a214fd7afbb`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):
 
 ### 3. workflow_03.json
-- **Prompt ID**: `9da52592-8190-424d-b6f8-90722fa7e3f7`
+- **Prompt ID**: `9a6a2eb0-e797-4593-9d5e-cf724baf2bdc`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):
 
 ### 4. workflow_04.json
-- **Prompt ID**: `bf641464-ec7a-4500-8012-1a5a06090b8f`
+- **Prompt ID**: `4ca8332c-9a65-423f-a21c-a4c07c0b05d9`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):
 
 ### 5. workflow_05.json
-- **Prompt ID**: `2bd853bf-8001-40de-a281-17122d1acad1`
+- **Prompt ID**: `f76ab756-4848-44c5-b73a-a5ba6f50bc04`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):
 
 ### 6. workflow_06.json
-- **Prompt ID**: `b7c72a10-599c-43c5-b5c5-b37766f6210c`
+- **Prompt ID**: `db799dae-36f4-45fd-bb0d-d5c2db7c815a`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):
 
 ### 7. workflow_07.json
-- **Prompt ID**: `e8d99bc1-84a2-45e8-82a6-ec2ecd01a4c2`
+- **Prompt ID**: `97c54586-e340-40de-b6fd-d11f145accb9`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):
 
 ### 8. workflow_08.json
-- **Prompt ID**: `358abe80-c2c6-457e-ba79-30b8f6a50978`
+- **Prompt ID**: `90cf364a-68f6-4f8c-86c9-35475d4c9c56`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):
 
 ### 9. workflow_09.json
-- **Prompt ID**: `566e9a57-3ade-4bc2-8b4c-3970e03ac93c`
+- **Prompt ID**: `ab940dc4-61ab-4ffd-983b-cd7eeb92292a`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):
 
 ### 10. workflow_10.json
-- **Prompt ID**: `fc7d1317-0bc0-4aa0-a08b-03e06990120c`
+- **Prompt ID**: `1dfa4d1e-beb1-49f0-8e59-94b38e2aec42`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):

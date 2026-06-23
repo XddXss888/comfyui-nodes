@@ -1,74 +1,29 @@
 {
-  "1": {
+  "48": {
     "inputs": {
-      "image": "input_1781449502141_742cc58e-d33e-4435-9f08-f3105ba3abe2_6254992f-7f76-4183-8246-51cb7313349b.png",
-      "upload": "image"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "2": {
-    "inputs": {
-      "upscale_method": "lanczos",
-      "width": 556,
-      "height": 768,
-      "crop": "disabled",
-      "image": [
-        "1",
+      "text": [
+        "223",
+        0
+      ],
+      "clip": [
+        "133",
         0
       ]
     },
-    "class_type": "ImageScale",
-    "_meta": {
-      "title": "图像缩放"
-    }
-  },
-  "3": {
-    "inputs": {
-      "ckpt_name": "XL写实\\绪儿-一青十色XL_V3.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "Checkpoint加载器（简易）"
-    }
-  },
-  "4": {
-    "inputs": {
-      "text": "一个女孩",
-      "clip": [
-        "3",
-        1
-      ]
-    },
     "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "正向提示"
+      "title": "CLIP文本编码"
     }
   },
-  "5": {
-    "inputs": {
-      "text": "Nsfw，低分辨率，糟糕的解剖结构，糟糕的手，文本，错误，缺失的手指，多余的数字，更少的数字，裁剪，最差的质量，低质量，正常质量，jpeg伪影，签名，水印，用户名，模糊",
-      "clip": [
-        "3",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "反向提示"
-    }
-  },
-  "6": {
+  "72": {
     "inputs": {
       "pixels": [
-        "2",
+        "276",
         0
       ],
       "vae": [
-        "3",
-        2
+        "134",
+        0
       ]
     },
     "class_type": "VAEEncode",
@@ -76,28 +31,132 @@
       "title": "VAE编码"
     }
   },
-  "11": {
+  "74": {
     "inputs": {
-      "seed": 3,
-      "steps": 20,
-      "cfg": 7.0,
-      "sampler_name": "euler",
-      "scheduler": "karras",
-      "denoise": 1.0,
+      "separator": "",
+      "text1": [
+        "291",
+        0
+      ],
+      "text2": [
+        "221",
+        0
+      ]
+    },
+    "class_type": "CR Text Concatenate",
+    "_meta": {
+      "title": "🔤 CR Text Concatenate"
+    }
+  },
+  "132": {
+    "inputs": {
+      "unet_name": "wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "133": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "134": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "136": {
+    "inputs": {
+      "lora_name": "Wan2.1_I2V_14B_FusionX_LoRA_I2V_14B.safetensors",
+      "strength_model": 0.6,
       "model": [
-        "3",
+        "132",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "137": {
+    "inputs": {
+      "lora_name": "lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "136",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "138": {
+    "inputs": {
+      "text": "色调艳丽，过曝，细节模糊不清，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，三条腿，痣，黑点",
+      "clip": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "139": {
+    "inputs": {
+      "shift": 8.000000000000002,
+      "model": [
+        "137",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "140": {
+    "inputs": {
+      "seed": [
+        "280",
+        0
+      ],
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "res_2m",
+      "scheduler": "beta57",
+      "denoise": 0.1,
+      "model": [
+        "139",
         0
       ],
       "positive": [
-        "17",
+        "48",
         0
       ],
       "negative": [
-        "5",
+        "138",
         0
       ],
       "latent_image": [
-        "6",
+        "72",
         0
       ]
     },
@@ -106,27 +165,104 @@
       "title": "K采样器"
     }
   },
-  "12": {
+  "218": {
     "inputs": {
-      "samples": [
-        "11",
+      "image": "input_1782116746854_33111e19-0450-4e3a-8312-b97117568473_387d14fa-fce0-472f-99c0-ec1b36ebbfd2.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "219": {
+    "inputs": {
+      "text_input": "",
+      "task": "more_detailed_caption",
+      "fill_mask": true,
+      "keep_model_loaded": false,
+      "max_new_tokens": 1024,
+      "num_beams": 3,
+      "do_sample": true,
+      "output_mask_select": "",
+      "seed": 1079154992435369,
+      "image": [
+        "218",
         0
       ],
-      "vae": [
-        "3",
+      "florence2_model": [
+        "220",
+        0
+      ]
+    },
+    "class_type": "Florence2Run",
+    "_meta": {
+      "title": "Florence2Run"
+    }
+  },
+  "220": {
+    "inputs": {
+      "model": "Florence-2-Flux-Large",
+      "precision": "fp16",
+      "attention": "sdpa",
+      "convert_to_safetensors": false
+    },
+    "class_type": "Florence2ModelLoader",
+    "_meta": {
+      "title": "Florence2ModelLoader"
+    }
+  },
+  "221": {
+    "inputs": {
+      "text_0": "The image is a close-up portrait of a young woman with long dark hair. She is standing in front of a blurred background of greenery. The woman is wearing a beige sweater with a white turtleneck underneath. She has a slight smile on her face and is looking directly at the camera. Her hair is styled in loose waves and falls over her shoulders. The lighting is soft and natural, highlighting the woman's features. The overall mood of the image is peaceful and serene.",
+      "text": [
+        "219",
         2
       ]
     },
-    "class_type": "VAEDecode",
+    "class_type": "ShowText|pysssss",
     "_meta": {
-      "title": "VAE解码"
+      "title": "Show Text 🐍"
     }
   },
-  "13": {
+  "223": {
     "inputs": {
-      "filename_prefix": "PANG_painter_SDXL_1781449560295_2_0",
+      "text_0": "(masterpiece), (best quality), (ultra-detailed),highly detailed.4k. The image is a close-up portrait of a young woman with long dark hair. She is standing in front of a blurred background of greenery. The woman is wearing a beige sweater with a white turtleneck underneath. She has a slight smile on her face and is looking directly at the camera. Her hair is styled in loose waves and falls over her shoulders. The lighting is soft and natural, highlighting the woman's features. The overall mood of the image is peaceful and serene.",
+      "text": [
+        "74",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "239": {
+    "inputs": {
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 64,
+      "temporal_overlap": 8,
+      "samples": [
+        "140",
+        0
+      ],
+      "vae": [
+        "134",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE解码（分块）"
+    }
+  },
+  "259": {
+    "inputs": {
+      "filename_prefix": "2025-11-08/wan-regenerated",
       "images": [
-        "12",
+        "239",
         0
       ]
     },
@@ -135,62 +271,36 @@
       "title": "保存图像"
     }
   },
-  "14": {
+  "276": {
     "inputs": {
-      "guassian_sigma": 6.0,
-      "intensity_threshold": 8,
-      "resolution": 768,
+      "upscale_method": "nearest-exact",
+      "scale_by": 2.0,
       "image": [
-        "2",
+        "218",
         0
       ]
     },
-    "class_type": "LineartStandardPreprocessor",
+    "class_type": "ImageScaleBy",
     "_meta": {
-      "title": "Draft Invert线稿预处理"
+      "title": "缩放图像（比例）"
     }
   },
-  "15": {
+  "280": {
     "inputs": {
-      "image": [
-        "14",
-        0
-      ]
+      "seed": 85445159158056
     },
-    "class_type": "ImageInvert",
+    "class_type": "easy seed",
     "_meta": {
-      "title": "Draft Invert反相"
+      "title": "随机种"
     }
   },
-  "16": {
+  "291": {
     "inputs": {
-      "control_net_name": "xinsir_controlnet-scribble-sdxl-1.0.safetensors"
+      "text": "(masterpiece), (best quality), (ultra-detailed),highly detailed.4k. "
     },
-    "class_type": "ControlNetLoader",
+    "class_type": "Text Multiline",
     "_meta": {
-      "title": "Draft Invert ControlNet加载器"
-    }
-  },
-  "17": {
-    "inputs": {
-      "switch": "On",
-      "strength": 0.8,
-      "conditioning": [
-        "4",
-        0
-      ],
-      "control_net": [
-        "16",
-        0
-      ],
-      "image": [
-        "15",
-        0
-      ]
-    },
-    "class_type": "CR Apply ControlNet",
-    "_meta": {
-      "title": "Draft Invert ControlNet应用"
+      "title": "Text Multiline"
     }
   }
 }

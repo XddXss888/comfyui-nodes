@@ -1,11 +1,11 @@
 # 58.33.163.154:58000
 
 **GPU**: RTX 3070 | **显存**: 8 GB | **空闲**: 2 GB
-**内存**: 63 GB (空闲 30 GB)
+**内存**: 63 GB (空闲 31 GB)
 **版本**: 0.22.2
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-22 08:07:32
-**历史总数**: 13 | **成功**: 8
+**扫描时间**: 2026-06-23 08:07:38
+**历史总数**: 15 | **成功**: 10
 
 ## 工作流列表
 
@@ -96,3 +96,25 @@
   - z_image_turbo_bf16.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] traditional Chinese landscape after rain, clear and gentle celadon blue sky, sunlight breaking through clouds, misty mountains, calm water surface reflecting the sky, healing and serene atmosphere, so
+
+### 9. workflow_09.json
+- **Prompt ID**: `b784da3f-2e4e-462a-b7e8-089256deda77`
+- **类型**: 文生图
+- **节点数**: 10
+- **模型** (3):
+  - ae.safetensors
+  - qwen_3_4b.safetensors
+  - z_image_turbo_bf16.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] a healing and warm illustration of sky clearing after rain, soft pastel colors of pale blue and light green celadon, gentle warm sunlight breaking through soft clouds, minimalist aesthetic doodle, coz
+
+### 10. workflow_10.json
+- **Prompt ID**: `91827072-80a2-426f-b7ff-0b4ce3a004ca`
+- **类型**: 文生图
+- **节点数**: 10
+- **模型** (3):
+  - ae.safetensors
+  - qwen_3_4b.safetensors
+  - z_image_turbo_bf16.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] An elegant artwork inspired by the traditional Chinese color 'Yu Guo Tian Qing' after-rain sky blue. A calm sky after rain, soft gray-cyan and pale blue blending together, distant misty mountains in t

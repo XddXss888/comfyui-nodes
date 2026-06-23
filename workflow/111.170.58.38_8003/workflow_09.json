@@ -1,57 +1,63 @@
 {
-  "12": {
+  "1": {
     "inputs": {
-      "image": "20260621201435225-1-y41ghp.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "15": {
-    "inputs": {
-      "image": "_20260516121915_78_-8digaf.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "16": {
-    "inputs": {
-      "api_url": "https://3dcdn.580ai.net/v1beta/models/gemini-3.1-flash-image-preview:generateContent",
-      "header_key": "Authorization",
-      "header_value": "sk-Lyx9OF97YMK0suEi6ZIPzq4E9d3dhIKJzO2YS5WpAsZbZpxS",
-      "text": "图一右边模特穿的短袖长裤替换成图二右边长袖+长裤\n图一左边模特穿的短袖长裤替换成图二左边白灰色长袖+长裤",
-      "aspect_ratio": "3:4",
-      "image_size": "4K",
-      "timeout": 200,
-      "retry_count": 2,
-      "image_1": [
-        "12",
+      "prompt": [
+        "4",
         0
       ],
-      "image_2": [
-        "15",
+      "mirror_site": "volcengine",
+      "model": "doubao-seedance-1-0-pro-fast-251015",
+      "video_mode": "image_to_video",
+      "duration": "5s",
+      "resolution": "1080p",
+      "aspect_ratio": "1:1",
+      "fps": 24,
+      "watermark": false,
+      "camera_fixed": false,
+      "api_key": "ark-1f5b87b0-054a-4e7a-b3a8-4e3cb37180bf-b6fb3",
+      "seed": 451156243,
+      "input_image": [
+        "2",
         0
       ]
     },
-    "class_type": "HezhongNewAPI",
+    "class_type": "DoubaoSeedanceVideoNode",
     "_meta": {
-      "title": "禾众newapi"
+      "title": "禾众豆包视频"
     }
   },
-  "17": {
+  "2": {
     "inputs": {
-      "filename_prefix": "hezhongai",
-      "images": [
-        "16",
+      "image": "o1cn01shsdle1rtsahz-ozoxmv.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "3": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video-preview": "",
+      "video": [
+        "1",
         0
       ]
     },
-    "class_type": "SaveImage",
+    "class_type": "SaveVideo",
     "_meta": {
-      "title": "保存图像"
+      "title": "保存视频"
+    }
+  },
+  "4": {
+    "inputs": {
+      "value": "图片生成视频。让视频视角慢慢向后移动。让视频视角动起来。主要展示下挂布产品的特点和样子，不要有其他东西出现"
+    },
+    "class_type": "easy string",
+    "_meta": {
+      "title": "字符串"
     }
   }
 }

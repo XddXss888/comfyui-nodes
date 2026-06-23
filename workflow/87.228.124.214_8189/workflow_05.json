@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "wh1te, short white hair, extremely thin woman, A woman held tightly in a close embrace on an evening city street under glowing streetlights, her body pressed fully against her partner in an intense emotional hug with arms wrapped around, head resting on the shoulder, soft breathless expression and closed eyes, wearing a fitted casual top and skirt with natural fabric folds, medium close-up framing, warm ambient lighting, simple blurred city background, stable readable pose and natural proportions.",
+      "text": "ameg2, A nude woman sits on a wooden bench inside a steamy sauna with warm ambient lighting and towels scattered nearby, legs spread apart as she uses both hands to firmly grasp her outer pussy lips, squeezing them tightly and pulling them wide to the sides, exposing the inner folds, her torso leaning back slightly for balance, head tilted down with a cold focused expression, visible steam in the air, close-up waist-down framing that clearly shows the hand placement and intimate contact.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "White_short_ZiT.safetensors",
-      "strength_model": 0.73,
-      "strength_clip": 0.8,
+      "lora_name": "ameg2_con_char.safetensors",
+      "strength_model": 0.9,
+      "strength_clip": 0.9,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -133,11 +133,11 @@
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 177176581693080,
+      "seed": 415093436776455,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "asig2, A delicate shy woman stands in a softly lit room, hands lightly clasped in front of her waist, body turned slightly toward the viewer with a nervous yet curious expression, wearing a simple fitted dress with natural fabric folds, medium close-up framing, warm ambient lighting, clear readable posture and gaze directed forward, simple indoor background.",
+      "text": "e1st_asn, A woman walking slowly on a quiet nighttime street, her fingers gently intertwined with her companion's hand in a soft hold, body angled slightly toward the contact, gentle warm expression with a soft smile and gaze directed forward, soft streetlight casting gentle illumination and soft shadows around them, medium shot framing from the waist up with the companion's arm and hand visible only at the edge of frame, natural posture and believable hand placement, simple dark street background with faint building edges, coherent low evening lighting.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "zimg_asig2_conchar.safetensors",
-      "strength_model": 0.63,
-      "strength_clip": 0.7,
+      "lora_name": "nano_Korean.safetensors",
+      "strength_model": 0.81,
+      "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.33,
+      "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
       "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 661743540426963,
+      "seed": 585375340973065,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

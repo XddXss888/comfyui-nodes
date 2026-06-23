@@ -1,30 +1,24 @@
 {
   "278": {
     "inputs": {
-      "image": "cmqjdbr1o01g3lv01440lev6v.png"
+      "image": "cmqow1v0g00e5lv01jsx0irz8.png"
     },
     "class_type": "LoadImage",
     "_meta": {
-      "title": "加载图像"
+      "title": "LoadImage"
     }
   },
   "352": {
     "inputs": {
-      "text": "让图片的女生穿白色高科技机械装甲，需要让服装匹配人物身材，参考发型脸型，双手放在两侧，改变背景为蓝紫色未来城市光影空间，霓虹灯柱纵向延伸，中近景构图"
+      "text": "PD, transform the real photograph into PDstyle,保持五官特征和服装完全一致"
     },
     "class_type": "CR Text",
     "_meta": {
-      "title": "🔤 CR Text"
+      "title": "CR Text"
     }
   },
   "378": {
     "inputs": {
-      "seed": 787346236822226,
-      "steps": 8,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
       "model": [
         "388",
         0
@@ -40,11 +34,17 @@
       "latent_image": [
         "379",
         0
-      ]
+      ],
+      "seed": 310514438848442,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
     },
     "class_type": "KSampler",
     "_meta": {
-      "title": "K采样器"
+      "title": "KSampler"
     }
   },
   "379": {
@@ -61,11 +61,15 @@
     },
     "class_type": "EmptyFlux2LatentImage",
     "_meta": {
-      "title": "空Latent图像（Flux2）"
+      "title": "EmptyFlux2LatentImage"
     }
   },
   "380": {
     "inputs": {
+      "image": [
+        "278",
+        0
+      ],
       "aspect_ratio": "original",
       "proportional_width": 2,
       "proportional_height": 3,
@@ -74,31 +78,27 @@
       "round_to_multiple": "8",
       "scale_to_side": "longest",
       "scale_to_length": 1024,
-      "background_color": "#000000",
-      "image": [
-        "278",
-        0
-      ]
+      "background_color": "#000000"
     },
     "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
     "_meta": {
-      "title": "图层工具：按宽高比缩放 V2"
+      "title": "LayerUtility: ImageScaleByAspectRatio V2"
     }
   },
   "381": {
     "inputs": {
-      "text": [
-        "352",
-        0
-      ],
       "clip": [
         "389",
+        0
+      ],
+      "text": [
+        "352",
         0
       ]
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "CLIP文本编码"
+      "title": "CLIPTextEncode"
     }
   },
   "382": {
@@ -114,7 +114,7 @@
     },
     "class_type": "VAEEncode",
     "_meta": {
-      "title": "VAE编码"
+      "title": "VAEEncode"
     }
   },
   "383": {
@@ -130,7 +130,7 @@
     },
     "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "参考Latent"
+      "title": "ReferenceLatent"
     }
   },
   "384": {
@@ -142,7 +142,7 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "条件零化"
+      "title": "ConditioningZeroOut"
     }
   },
   "385": {
@@ -158,17 +158,17 @@
     },
     "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "参考Latent"
+      "title": "ReferenceLatent"
     }
   },
   "388": {
     "inputs": {
-      "lora_name": "training/赛博朋克_KB2_v1_000003500.safetensors",
-      "strength_model": 1.0,
       "model": [
         "394",
         0
-      ]
+      ],
+      "lora_name": "training/皮克斯GPT-KB2_v1-4000.safetensors",
+      "strength_model": 1.0
     },
     "class_type": "PD_lora_loader",
     "_meta": {
@@ -183,7 +183,7 @@
     },
     "class_type": "CLIPLoader",
     "_meta": {
-      "title": "加载CLIP"
+      "title": "CLIPLoader"
     }
   },
   "390": {
@@ -192,7 +192,7 @@
     },
     "class_type": "VAELoader",
     "_meta": {
-      "title": "加载VAE"
+      "title": "VAELoader"
     }
   },
   "393": {
@@ -208,7 +208,7 @@
     },
     "class_type": "VAEDecode",
     "_meta": {
-      "title": "VAE解码"
+      "title": "VAEDecode"
     }
   },
   "394": {
@@ -218,30 +218,30 @@
     },
     "class_type": "UNETLoader",
     "_meta": {
-      "title": "UNet加载器"
+      "title": "UNETLoader"
     }
   },
   "403": {
     "inputs": {
-      "aspect_ratio": "1:1",
+      "aspect_ratio": "2:3",
       "max_size": 1024
     },
     "class_type": "PDRatioSelector",
     "_meta": {
-      "title": "PD:ratio selector"
+      "title": "PDRatioSelector"
     }
   },
   "407": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
       "images": [
         "393",
         0
-      ]
+      ],
+      "filename_prefix": "ComfyUI"
     },
     "class_type": "SaveImage",
     "_meta": {
-      "title": "保存图像"
+      "title": "SaveImage"
     }
   }
 }

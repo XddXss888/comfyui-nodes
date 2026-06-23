@@ -30,7 +30,7 @@
   },
   "31": {
     "inputs": {
-      "seed": 1840232605,
+      "seed": 1248665568,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler_ancestral",
@@ -122,7 +122,7 @@
   },
   "142": {
     "inputs": {
-      "image": "image (27345).png",
+      "image": "image (27714).png",
       "refresh": "refresh"
     },
     "class_type": "LoadImageOutput",
@@ -189,7 +189,7 @@
       "lora_name": "kontext_8mm_0130_000007000.safetensors",
       "lora_strength": 1.0,
       "model": [
-        "249",
+        "256",
         0
       ]
     },
@@ -379,22 +379,17 @@
   "233": {
     "inputs": {
       "filename_prefix": [
-        "247",
-        2
+        "254",
+        3
       ],
-      "tonemap": "linear",
-      "version": 1,
-      "start_frame": 0,
-      "frame_pad": 1,
-      "save_workflow": "none",
       "images": [
         "234",
         0
       ]
     },
-    "class_type": "SaveEXR",
+    "class_type": "Save16TIFF",
     "_meta": {
-      "title": "Save EXR"
+      "title": "Save 16-bit TIFF"
     }
   },
   "234": {
@@ -415,32 +410,16 @@
       "title": "Denoise with DRUNet"
     }
   },
-  "246": {
+  "254": {
     "inputs": {
-      "filename_prefix": [
-        "247",
-        0
-      ],
-      "images": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
-    }
-  },
-  "247": {
-    "inputs": {
-      "seed": 880700101
+      "seed": 1823819787
     },
     "class_type": "GenerateUniquePrefix",
     "_meta": {
       "title": "生成唯一文件名前缀"
     }
   },
-  "249": {
+  "256": {
     "inputs": {
       "lora_name": "FLUX.1-Turbo-Alpha.safetensors",
       "lora_strength": 1.0,
@@ -454,40 +433,56 @@
       "title": "Nunchaku FLUX LoRA Loader"
     }
   },
-  "250": {
-    "inputs": {
-      "action": "resize only",
-      "smaller_side": 0,
-      "larger_side": 1024,
-      "scale_factor": 0.0,
-      "resize_mode": "reduce size only",
-      "side_ratio": "1:1",
-      "crop_pad_position": 0.5,
-      "pad_feathering": 20,
-      "pixels": [
-        "234",
-        0
-      ]
-    },
-    "class_type": "ImageResize",
-    "_meta": {
-      "title": "Image Resize"
-    }
-  },
-  "251": {
+  "258": {
     "inputs": {
       "filename_prefix": [
-        "247",
-        1
+        "254",
+        0
       ],
       "images": [
-        "250",
+        "8",
         0
       ]
     },
-    "class_type": "SaveVsmAndTif",
+    "class_type": "SaveImageWithStatus",
     "_meta": {
-      "title": "保存VSM文件TIF图片"
+      "title": "保存图像(带状态)"
+    }
+  },
+  "259": {
+    "inputs": {
+      "task_id": [
+        "254",
+        4
+      ],
+      "png_done": [
+        "258",
+        0
+      ],
+      "vsm_done": "",
+      "tif_done": [
+        "233",
+        0
+      ],
+      "exr_done": ""
+    },
+    "class_type": "OSSUploadNode",
+    "_meta": {
+      "title": "OSS Upload"
+    }
+  },
+  "263": {
+    "inputs": {
+      "preview": "",
+      "previewMode": null,
+      "source": [
+        "259",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "预览任意"
     }
   }
 }

@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "asig2, A young woman completely nude, on all fours on soft bedsheets with her back arched and knees spread, presenting her round ass and exposed pussy clearly from a rear three-quarter angle, her upper body supported on her arms, head turned back over her shoulder with a shy warm expression and blushing cheeks, soft intimate bedroom lighting, medium close-up framing focused on her lower body and gaze.",
+      "text": "ameg2, A nude woman sits facing forward in a sauna, legs spread wide and knees bent, fully exposed with hands resting on her thighs and not covering herself. Her body is relaxed yet open, torso upright on the wooden bench, steam rising around her under warm golden lighting. The close medium framing centers on her from the waist down to her spread thighs and visible intimate anatomy, with her gaze directed straight ahead. Simple wooden benches and soft steam fill the background, creating a clear, stable composition with natural proportions and readable posture.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "zimg_asig2_conchar.safetensors",
-      "strength_model": 0.63,
-      "strength_clip": 0.7,
+      "lora_name": "ameg2_con_char.safetensors",
+      "strength_model": 0.9,
+      "strength_clip": 0.9,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.33,
+      "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
       "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 661743540426963,
+      "seed": 415093436776455,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

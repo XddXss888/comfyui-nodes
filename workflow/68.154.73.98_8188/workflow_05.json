@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_4879d511d55f4401a0f55884385ff766.png"
+      "image": "ref_14e16f9a557e41629c16bc59375f3bb1.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "Show her big clevage",
+      "prompt": "Fill in the masked part: No pant",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 966736812934592,
-      "steps": 8,
+      "seed": 105444400964308,
+      "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

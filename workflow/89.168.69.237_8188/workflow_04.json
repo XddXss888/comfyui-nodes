@@ -8,7 +8,7 @@
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "a cute cat, high quality, detailed",
+      "text": "cat",
       "clip": [
         "1",
         1
@@ -18,7 +18,7 @@
   "3": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "blurry, bad quality, ugly",
+      "text": "",
       "clip": [
         "1",
         1
@@ -28,8 +28,8 @@
   "4": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 512,
-      "height": 512,
+      "width": 1024,
+      "height": 1024,
       "batch_size": 1
     }
   },
@@ -37,10 +37,10 @@
     "class_type": "KSampler",
     "inputs": {
       "seed": 42,
-      "steps": 4,
+      "steps": 1,
       "cfg": 2.0,
       "sampler_name": "euler",
-      "scheduler": "normal",
+      "scheduler": "karras",
       "denoise": 1.0,
       "model": [
         "1",
@@ -76,7 +76,7 @@
   "7": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "hermes_test",
+      "filename_prefix": "probe",
       "images": [
         "6",
         0

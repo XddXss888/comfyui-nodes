@@ -1,16 +1,7 @@
 {
   "12": {
     "inputs": {
-      "image": "20260621220034946-2-5qsg20.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "15": {
-    "inputs": {
-      "image": "20260621220034947-3-zd1kc2.jpg"
+      "image": "hezhongai_00123_-20-2rpk63.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -22,17 +13,13 @@
       "api_url": "https://3dcdn.580ai.net/v1beta/models/gemini-3.1-flash-image-preview:generateContent",
       "header_key": "Authorization",
       "header_value": "sk-Lyx9OF97YMK0suEi6ZIPzq4E9d3dhIKJzO2YS5WpAsZbZpxS",
-      "text": "图一右边模特穿的短袖长裤替换成图二右边长袖+长裤\n图一左边模特穿的短袖长裤替换成图二左边长袖+长裤",
+      "text": "帮我删除图中标红的部分",
       "aspect_ratio": "3:4",
-      "image_size": "4K",
+      "image_size": "2K",
       "timeout": 200,
       "retry_count": 2,
       "image_1": [
         "12",
-        0
-      ],
-      "image_2": [
-        "15",
         0
       ]
     },
@@ -43,7 +30,7 @@
   },
   "17": {
     "inputs": {
-      "filename_prefix": "hezhongai",
+      "filename_prefix": "HezhongAi",
       "images": [
         "16",
         0

@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "/app/services/comfyui-worker/temp/uploads/1fb57638ad9017d51b99d79e18c66c3b00165e196b0811fb81a4f63321333528.png"
+      "image": "/app/services/comfyui-worker/temp/uploads/81aecd6ddb4571b88d8f78818b3beb9177f9f97abfe49c195af27c3a9578453b.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -117,7 +117,7 @@
   },
   "99": {
     "inputs": {
-      "path": "/app/services/comfyui-worker/temp/results/1f29cfad-1ee1-4eab-983c-1665984896d1.png",
+      "path": "/app/services/comfyui-worker/temp/results/6789f42c-3993-488a-b941-dd19c45d5353.png",
       "overwrite": "true",
       "image": [
         "130",
@@ -243,7 +243,7 @@
   },
   "75:74": {
     "inputs": {
-      "text": "Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a 2D illustration sticker from the photo. Character with heart-shaped eyes and a gentle smile. Character rests both hands under the chin, showing admiration and love. Clean 2D illustration style, pastel colors. Keep the face of the human in the image and the skin color of the human in the image. Use sticker style, gray background"
+      "text": "Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a sticker using the user's photo. Preserve the original gender and identity from the input image. Do not gender-swap the character. No opposite-gender appearance, no feminine features on a male input, no masculine features on a female input. A football Character sticker wearing a Bayern Munich red home football kit, red jersey with white stripes, red shorts, athletic football socks, expressive shocked reaction, mouth open as if shouting or protesting, both arms spread wide, dynamic upper-body pose, intense match-day emotion, realistic sports sticker style, sharp cutout silhouette, high contrast lighting, detailed fabric texture, isolated on transparent background, no text. Keep the face of the human in the image and the skin color of the human in the image. Use sticker style, gray background"
     },
     "class_type": "JWString",
     "_meta": {

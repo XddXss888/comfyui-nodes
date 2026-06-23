@@ -8,7 +8,7 @@
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "dog",
+      "text": "a cute cat wearing a wizard hat, digital art",
       "clip": [
         "1",
         1
@@ -18,7 +18,7 @@
   "3": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "",
+      "text": "blurry, low quality",
       "clip": [
         "1",
         1
@@ -28,19 +28,19 @@
   "4": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 1024,
-      "height": 1024,
+      "width": 512,
+      "height": 512,
       "batch_size": 1
     }
   },
   "5": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 816127072,
-      "steps": 8,
-      "cfg": 7.0,
-      "sampler_name": "euler",
-      "scheduler": "karras",
+      "seed": 156139172,
+      "steps": 4,
+      "cfg": 2.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "sgm_uniform",
       "denoise": 1.0,
       "model": [
         "1",
@@ -76,11 +76,11 @@
   "7": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "sd_web",
       "images": [
         "6",
         0
-      ]
+      ],
+      "filename_prefix": "txt2img_89"
     }
   }
 }

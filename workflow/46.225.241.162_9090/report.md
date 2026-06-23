@@ -1,114 +1,15 @@
 # 46.225.241.162:9090
 
-**GPU**: RTX PRO 6000 BB | **显存**: 95 GB | **空闲**: 51 GB
-**内存**: 251 GB (空闲 191 GB)
+**GPU**: RTX PRO 6000 BB | **显存**: 95 GB | **空闲**: 50 GB
+**内存**: 251 GB (空闲 168 GB)
 **版本**: 0.22.0
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-22 08:07:29
-**历史总数**: 298 | **成功**: 10
+**扫描时间**: 2026-06-23 08:07:44
+**历史总数**: 307 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `5788ff4c-a94d-43bc-b190-6fee2bfad645`
-- **类型**: 文生图
-- **节点数**: 15
-- **模型** (3):
-  - flux-2-klein-9b-Q6_K.gguf
-  - full_encoder_small_decoder.safetensors
-  - qwen_3_8b_fp8mixed.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A majestic mountain landscape with a winding road cutting through the center of the scene, leading toward the distant peaks. The mountains are covered in lush green vegetation and misty clouds clingin
-
-### 2. workflow_02.json
-- **Prompt ID**: `593daa6a-3287-48db-a5bc-c1bbec01842e`
-- **类型**: 图生图
-- **节点数**: 21
-- **模型** (3):
-  - flux-2-klein-9b-Q6_K.gguf
-  - flux2-vae.safetensors
-  - qwen_3_8b_fp8mixed.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] Bisa buatkan variasi gambar dengan matahari terbenam (sunset) alih-alih pagi hari?
-
-### 3. workflow_03.json
-- **Prompt ID**: `f34f54ce-4697-446f-b141-525812117afa`
-- **类型**: 文生图
-- **节点数**: 15
-- **模型** (3):
-  - flux-2-klein-9b-Q6_K.gguf
-  - full_encoder_small_decoder.safetensors
-  - qwen_3_8b_fp8mixed.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A beautiful Indonesian Muslim bride wearing an elegant hijab wedding dress with coquette princess vibes. The dress features voluminous balloon sleeves made of translucent organza fabric, creating a so
-
-### 4. workflow_04.json
-- **Prompt ID**: `0169bec7-c671-471f-8ece-c08c440602ee`
-- **类型**: 图生图
-- **节点数**: 21
-- **模型** (3):
-  - flux-2-klein-9b-Q6_K.gguf
-  - flux2-vae.safetensors
-  - qwen_3_8b_fp8mixed.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] kok jelek yaa sayy, warnanya kok norak gituu sih 😭 maksud ku ga kaya gituu lohh
-
-### 5. workflow_05.json
-- **Prompt ID**: `4c106c71-fa9d-458f-b350-82d8a63356e2`
-- **类型**: 图生图
-- **节点数**: 21
-- **模型** (3):
-  - flux-2-klein-9b-Q6_K.gguf
-  - flux2-vae.safetensors
-  - qwen_3_8b_fp8mixed.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] engga deh gajadi, jelek, maaf yaa
-
-### 6. workflow_06.json
-- **Prompt ID**: `719d1a3a-617d-4005-ab9d-5d3cc26b2a76`
-- **类型**: 文生图
-- **节点数**: 15
-- **模型** (3):
-  - flux-2-klein-9b-Q6_K.gguf
-  - full_encoder_small_decoder.safetensors
-  - qwen_3_8b_fp8mixed.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A bright and cheerful Sunday greeting photo featuring a warm morning scene. The image shows a cozy living room bathed in golden sunlight streaming through large windows, with soft curtains gently sway
-
-### 7. workflow_07.json
-- **Prompt ID**: `9dce1f9c-35a7-4f41-a510-812b6c065f09`
-- **类型**: 图生图
-- **节点数**: 21
-- **模型** (3):
-  - flux-2-klein-9b-Q6_K.gguf
-  - flux2-vae.safetensors
-  - qwen_3_8b_fp8mixed.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] tambahkan isi kata alkitab
-
-### 8. workflow_08.json
-- **Prompt ID**: `1d9eea55-a1fb-4279-a118-03ed0fa61480`
-- **类型**: 图生图
-- **节点数**: 21
-- **模型** (3):
-  - flux-2-klein-9b-Q6_K.gguf
-  - flux2-vae.safetensors
-  - qwen_3_8b_fp8mixed.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] yang no 5 tambahkan di gambar
-
-### 9. workflow_09.json
-- **Prompt ID**: `d60785f1-a1b1-42f6-bf4e-4cbc6d84232e`
-- **类型**: 图生图
-- **节点数**: 21
-- **模型** (3):
-  - flux-2-klein-9b-Q6_K.gguf
-  - flux2-vae.safetensors
-  - qwen_3_8b_fp8mixed.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] buatkan saya gambar selamat hari minggu dan isi ayat alkitab
-
-### 10. workflow_10.json
 - **Prompt ID**: `e662ba91-0e22-4cf5-a5d4-8e781d96443b`
 - **类型**: 文生图
 - **节点数**: 15
@@ -118,3 +19,102 @@
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] A premium food packaging box designed for 'Grove' brand potato donuts, featuring a clean and modern aesthetic. The box has a matte finish with warm earthy tones - primarily soft beige or cream as the 
+
+### 2. workflow_02.json
+- **Prompt ID**: `c6522175-fb39-4bdb-9436-710f5e0abcf2`
+- **类型**: 图生图
+- **节点数**: 21
+- **模型** (3):
+  - flux-2-klein-9b-Q6_K.gguf
+  - flux2-vae.safetensors
+  - qwen_3_8b_fp8mixed.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Turn my image into a Cartoon style
+
+### 3. workflow_03.json
+- **Prompt ID**: `872e5be5-81cc-4e73-a556-83181c96285f`
+- **类型**: 文生图
+- **节点数**: 15
+- **模型** (3):
+  - flux-2-klein-9b-Q6_K.gguf
+  - full_encoder_small_decoder.safetensors
+  - qwen_3_8b_fp8mixed.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] A serene landscape scene featuring a calm lake reflecting the sky, surrounded by lush green trees and distant mountains. The water has gentle ripples creating subtle patterns on its surface. Tall pine
+
+### 4. workflow_04.json
+- **Prompt ID**: `bcf8d9d8-a0a5-4c1a-864d-77c0d86b98d3`
+- **类型**: 文生图
+- **节点数**: 15
+- **模型** (3):
+  - flux-2-klein-9b-Q6_K.gguf
+  - full_encoder_small_decoder.safetensors
+  - qwen_3_8b_fp8mixed.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] A majestic mountain cat perched gracefully on a rocky outcrop, surrounded by snow-capped peaks and wisps of mist. The feline has thick, fluffy fur in shades of gray and white, with piercing amber eyes
+
+### 5. workflow_05.json
+- **Prompt ID**: `18eb798a-7810-4612-a437-71ae5450c3b2`
+- **类型**: 图生图
+- **节点数**: 21
+- **模型** (3):
+  - flux-2-klein-9b-Q6_K.gguf
+  - flux2-vae.safetensors
+  - qwen_3_8b_fp8mixed.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Ubah gambar menjadi kartun
+
+### 6. workflow_06.json
+- **Prompt ID**: `fb59b697-d049-4ba8-8b0b-5defdaa3fb02`
+- **类型**: 图生图
+- **节点数**: 21
+- **模型** (3):
+  - flux-2-klein-9b-Q6_K.gguf
+  - flux2-vae.safetensors
+  - qwen_3_8b_fp8mixed.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] apa arti ini
+
+### 7. workflow_07.json
+- **Prompt ID**: `ba26564f-2b52-49f4-8d00-097cd283f833`
+- **类型**: 图生图
+- **节点数**: 21
+- **模型** (3):
+  - flux-2-klein-9b-Q6_K.gguf
+  - flux2-vae.safetensors
+  - qwen_3_8b_fp8mixed.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] apa arti penjelasan di left ovarium
+
+### 8. workflow_08.json
+- **Prompt ID**: `4dfa6612-0fd8-4728-a4a3-c5890ce611e8`
+- **类型**: 图生图
+- **节点数**: 21
+- **模型** (3):
+  - flux-2-klein-9b-Q6_K.gguf
+  - flux2-vae.safetensors
+  - qwen_3_8b_fp8mixed.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] tinggi 157 bb 48 apakah normal
+
+### 9. workflow_09.json
+- **Prompt ID**: `efe9901b-e6a4-4cba-9559-5bd985844656`
+- **类型**: 图生图
+- **节点数**: 21
+- **模型** (3):
+  - flux-2-klein-9b-Q6_K.gguf
+  - flux2-vae.safetensors
+  - qwen_3_8b_fp8mixed.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] apakah tinggi 157 bb 48 normal secara bmi
+
+### 10. workflow_10.json
+- **Prompt ID**: `1cfa4c41-34b3-4557-8dac-ca3b039c2825`
+- **类型**: 文生图
+- **节点数**: 15
+- **模型** (3):
+  - flux-2-klein-9b-Q6_K.gguf
+  - full_encoder_small_decoder.safetensors
+  - qwen_3_8b_fp8mixed.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] A medical ultrasound image displaying a transverse cross-section of the uterus, with an annotated measurement value of -30.73 appearing prominently on the screen. The grayscale sonographic view reveal

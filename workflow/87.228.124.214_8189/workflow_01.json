@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "elvaross, A fully naked woman lies on her back on a wooden desk in a cozy home study, legs spread wide apart with knees bent, one hand reaching down to touch her vagina with fingers resting against the exposed folds, body supported flat on the desk surface amid scattered books, soft warm indoor lighting, medium close-up framing focused on her torso and lower body from a slight side angle.",
+      "text": "e1st_asn, A woman walking beside the viewer on a calm nighttime path, gently holding the viewer's hand, her body turned slightly toward them with a soft understanding smile and warm gaze, medium shot from the waist up, simple dark background with soft moonlight, natural relaxed posture and clear hand contact, realistic lighting and proportions.",
       "clip": [
         "72",
         1
@@ -109,8 +109,8 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "TGZW383YGE7RTN4ZTNPAM4FT50.safetensors",
-      "strength_model": 0.88,
+      "lora_name": "nano_Korean.safetensors",
+      "strength_model": 0.81,
       "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.4,
+      "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
       "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 494111015108424,
+      "seed": 585375340973065,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

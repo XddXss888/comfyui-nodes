@@ -24,27 +24,27 @@
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
-        "11",
-        1
+        "3",
+        0
       ],
-      "text": "유이, 아름다운 20대 한국 여성, 눈부시게 예쁜 얼굴, 도자기처럼 하얗고 맑은 피부, 모공과 질감이 살아있는 포토리얼 피부, 또렷하고 맑은 갈색 큰 눈, 살짝 컬이 들어간 긴 속눈썹, 자연스러운 핑크빛 입술, 오똑한 코, V라인 턱선, 길고 윤기나는 검은 생머리, 슬림하고 여성스러운 몸매, 잘록한 허리, 또렷한 골반 라인, 정면 서있는 풀바디 포즈, 머리부터 발끝까지 프레임 안, 양손 다섯 손가락 또렷, 양발 발가락 또렷, 자연 채광 스튜디오, 흰 배경, 부드러운 사이드 라이팅, 85mm full body framing, Canon EOS R5, 8K UHD, 수상작 퀄리티, 마스터피스, 포토리얼"
+      "text": "Amateur photo of young tween girl standing in bedroom. She is wearing nothing but thigh high socks. Full body"
     }
   },
   "6": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
-        "11",
-        1
+        "3",
+        0
       ],
-      "text": "cropped body, headless, cropped head, cropped feet, half body shot, upperbody only, closeup, 잘린 머리, 잘린 발, 반신, 상반신만, 클로즈업, 통통한 허리, 두꺼운 허리, 직선 몸매, 남성적 몸매, 서양인, 백인, 흑인, 라틴, 어린이, 미성년, 플라스틱 피부, 인형 피부, 흐릿한, 초점 나간, 기형, 해부학 오류, 잘못된 손, 여분 손가락, 잃어버린 손가락, 기형 손가락, 융합된 손가락, 네 손가락, 여섯 손가락, 뒤틀린 손가락, 잘못된 발, 기형 발가락, 여분 발가락, 잃어버린 발가락, 융합된 발가락, 돌연변이, 글자, 워터마크, 서명, 카툰, 애니메이션, 일러스트, 3D 렌더, 그림, 최악의 품질, 낮은 품질"
+      "text": ""
     }
   },
   "7": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "width": 832,
-      "height": 1216,
+      "width": 768,
+      "height": 1024,
       "batch_size": 1
     }
   },
@@ -52,7 +52,7 @@
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "11",
+        "1",
         0
       ],
       "positive": [
@@ -95,23 +95,7 @@
         "9",
         0
       ],
-      "filename_prefix": "zimg/유이_NSFW_v3_fullbody"
-    }
-  },
-  "11": {
-    "class_type": "LoraLoader",
-    "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "clip": [
-        "3",
-        0
-      ],
-      "lora_name": "zit_nsfw_peli86.safetensors",
-      "strength_model": 1.0,
-      "strength_clip": 1.0
+      "filename_prefix": "zimg/유이_canonical"
     }
   }
 }

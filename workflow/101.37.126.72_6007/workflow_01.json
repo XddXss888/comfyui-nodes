@@ -118,15 +118,6 @@
       "title": "UNet加载器"
     }
   },
-  "25": {
-    "inputs": {
-      "image": "1779845723452-1-8c84f2c17c7e.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
   "26": {
     "inputs": {
       "text": "PD, transform the real photograph into PDstyle,保持服装和颜色完全一致，背景不变"
@@ -185,7 +176,7 @@
       "device": "cuda",
       "max_megapixels": 2.0,
       "image": [
-        "25",
+        "196",
         0
       ],
       "birefnet_model": [
@@ -200,7 +191,7 @@
   },
   "48": {
     "inputs": {
-      "seed": 563922072130648,
+      "seed": 474332961798923,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -581,6 +572,15 @@
     "class_type": "JWStringToInteger",
     "_meta": {
       "title": "String to Integer"
+    }
+  },
+  "196": {
+    "inputs": {
+      "image": "024_08_北京天坛打卡_male_2026_06_04_14_29_44.jpg"
+    },
+    "class_type": "PD_load_image_v1",
+    "_meta": {
+      "title": "PD Load Image"
     }
   }
 }

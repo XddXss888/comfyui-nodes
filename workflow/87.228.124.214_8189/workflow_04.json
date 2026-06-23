@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "ohwx woman, messy red hair, green eyes, curvy body, A woman in a tight black latex micro bikini stands in a dimly lit bedroom, her body arched in a seductive dance pose with hips tilted, one hand sliding along her waist and the other brushing her thigh, emphasizing the glossy fabric stretched over her curves. She gazes directly forward with a teasing expression, lips slightly parted. Behind her, a collection of leather and latex fetish items rests on dark furniture under soft low-key lighting that highlights skin and fabric sheen. Medium close-up framing, natural proportions, clear pose, simple intimate background, coherent moody lighting.",
+      "text": "ameg2, A nude woman sitting on a wooden bench inside a steamy sauna with warm ambient lighting and towels scattered around, legs spread apart, both hands gripping and forcefully spreading her labia wide open with fingers digging into the folds, torso leaning slightly forward, head tilted with a tense aroused expression and direct gaze toward the viewer, steam rising around her body, medium close-up framing on her waist-up figure and hands, natural skin tones and realistic hand placement.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "FZXTSS9MFQBP0RKFF1MGXHS1W0.safetensors",
-      "strength_model": 0.66,
-      "strength_clip": 0.8,
+      "lora_name": "ameg2_con_char.safetensors",
+      "strength_model": 0.9,
+      "strength_clip": 0.9,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -133,11 +133,11 @@
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 882600789108041,
+      "seed": 415093436776455,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

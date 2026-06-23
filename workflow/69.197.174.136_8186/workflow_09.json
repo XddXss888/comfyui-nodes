@@ -1,9 +1,9 @@
 {
   "1": {
     "inputs": {
-      "tags": "alarm,pop,morning,energy",
-      "lyrics": "[Intro]\n¡Buenos días , vaquero, arriba ya!\n\n[Verse]\n¡Buenos días , vaquero, arriba ya! El sol viene montado y no va a esperar. La cama es bonita, sí, lo sé, pero las metas no llegan con café. Ponte las botas, vamos a andar, que hoy la suerte te va a saludar. Desde el rancho hasta la ciudad, despierta con ganas y buen compás.",
-      "seed": 486703203651001,
+      "tags": "Modern Pop, upbeat indie pop, groovy bassline, acoustic guitar strums, cheerful synth accents, playful male vocals",
+      "lyrics": "[Intro]\nExcuse me Deborah Ca\n\n[Verse]\nExcuse me Deborah Ca, Yo phone ringing, yo phone ringing, big boy come pick up yo phone, why you not pick up yo phone? Yo phone ringing, yo phone ’bout to go to voicemail, goodbye!",
+      "seed": 831368546178445,
       "bpm": 150,
       "duration": 30.0,
       "timesignature": "4",
@@ -52,11 +52,11 @@
   },
   "99": {
     "inputs": {
-      "filename_prefix": "/sda-disk/home/Ringtone/music-generation-system/temp/results/298cbf3f-ba39-43a6-b3a7-612be729d48d.mp3",
+      "filename_prefix": "/sda-disk/home/Ringtone/music-generation-system/temp/results/df34d4bd-af72-4231-bc88-26599cd4fadd.mp3",
       "quality": "320k",
-      "audioUI": "/api/view?filename=ComfyUI.mp3&type=output&subfolder=audio&rand=0.31961824526324756",
+      "audioUI": "/api/view?filename=ComfyUI.mp3&type=output&subfolder=audio&rand=0.06096895522565604",
       "audio": [
-        "1020",
+        "1015",
         0
       ]
     },
@@ -67,12 +67,12 @@
   },
   "101": {
     "inputs": {
-      "seed": 807193839657641,
+      "seed": 436845366789223,
       "steps": 8,
       "cfg": 2.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 0.35,
+      "denoise": 0.4,
       "model": [
         "78",
         0
@@ -114,7 +114,7 @@
   "110": {
     "inputs": {
       "audio": [
-        "1025",
+        "111",
         0
       ],
       "vae": [
@@ -129,12 +129,22 @@
   },
   "111": {
     "inputs": {
-      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_37/ES/t37_es_raw_song.mp3",
-      "audioUI": "/api/view?filename=t37_es_raw_song.mp3&type=input&subfolder=&rand=0.5677366355102708"
+      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_15/EN/t15_en_raw_song_2.MP3",
+      "audioUI": "/api/view?filename=t15_en_raw_song_2.MP3&type=input&subfolder=&rand=0.7026850514197839"
     },
     "class_type": "LoadAudio",
     "_meta": {
       "title": "Raw Song"
+    }
+  },
+  "222": {
+    "inputs": {
+      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_15/EN/t15_en_raw_song_2.MP3",
+      "audioUI": "/api/view?filename=t9_jp_raw_song_2.MP3&type=input&subfolder=&rand=0.6536712189155954"
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "Beat"
     }
   },
   "777": {
@@ -168,11 +178,24 @@
       "title": "Load VAE"
     }
   },
+  "1011": {
+    "inputs": {
+      "volume": 4,
+      "audio": [
+        "222",
+        0
+      ]
+    },
+    "class_type": "AudioAdjustVolume",
+    "_meta": {
+      "title": "Audio Adjust Volume"
+    }
+  },
   "1014": {
     "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_quazg.flac&type=temp&subfolder=&rand=0.824455274502055",
+      "audioUI": "/api/view?filename=ComfyUI_temp_ifhit.flac&type=temp&subfolder=&rand=0.8791144174047741",
       "audio": [
-        "1020",
+        "105",
         0
       ]
     },
@@ -181,25 +204,11 @@
       "title": "Preview Audio"
     }
   },
-  "1018": {
-    "inputs": {
-      "start_time": 2.8,
-      "end_time": 0.0,
-      "audio": [
-        "111",
-        0
-      ]
-    },
-    "class_type": "AudioTrim",
-    "_meta": {
-      "title": "Audio Trim ⚡🅡🅞🅣🅘"
-    }
-  },
-  "1020": {
+  "1015": {
     "inputs": {
       "direction": "after",
       "audio1": [
-        "1022",
+        "1016",
         0
       ],
       "audio2": [
@@ -212,10 +221,10 @@
       "title": "Audio Concat"
     }
   },
-  "1022": {
+  "1016": {
     "inputs": {
       "start_time": 0.0,
-      "end_time": 2.8,
+      "end_time": 3.0,
       "audio": [
         "105",
         0
@@ -226,36 +235,10 @@
       "title": "Audio Trim ⚡🅡🅞🅣🅘"
     }
   },
-  "1023": {
+  "1018": {
     "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_tpomp.flac&type=temp&subfolder=&rand=0.18180866519507743",
-      "audio": [
-        "1022",
-        0
-      ]
-    },
-    "class_type": "PreviewAudio",
-    "_meta": {
-      "title": "Preview Audio"
-    }
-  },
-  "1024": {
-    "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_vjoxb.flac&type=temp&subfolder=&rand=0.21477420093824495",
-      "audio": [
-        "1018",
-        0
-      ]
-    },
-    "class_type": "PreviewAudio",
-    "_meta": {
-      "title": "Preview Audio"
-    }
-  },
-  "1025": {
-    "inputs": {
-      "start_time": 0.0,
-      "end_time": 20.0,
+      "start_time": 3.0,
+      "end_time": 0.0,
       "audio": [
         "111",
         0

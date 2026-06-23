@@ -1,0 +1,650 @@
+{
+  "105": {
+    "inputs": {
+      "conditioning": [
+        "112",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "106": {
+    "inputs": {
+      "Number": "12"
+    },
+    "class_type": "Int",
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "107": {
+    "inputs": {
+      "width": [
+        "189",
+        0
+      ],
+      "height": [
+        "190",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "109": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "271",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "采样算法（AuraFlow）"
+    }
+  },
+  "110": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "259",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "采样算法（AuraFlow）"
+    }
+  },
+  "112": {
+    "inputs": {
+      "text": [
+        "273",
+        0
+      ],
+      "clip": [
+        "218",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "114": {
+    "inputs": {
+      "samples": [
+        "117",
+        0
+      ],
+      "vae": [
+        "218",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "115": {
+    "inputs": {
+      "Number": "7"
+    },
+    "class_type": "Int",
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "116": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": [
+        "252",
+        0
+      ],
+      "steps": [
+        "106",
+        0
+      ],
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": [
+        "115",
+        0
+      ],
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "110",
+        0
+      ],
+      "positive": [
+        "112",
+        0
+      ],
+      "negative": [
+        "105",
+        0
+      ],
+      "latent_image": [
+        "107",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "117": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": [
+        "252",
+        0
+      ],
+      "steps": [
+        "106",
+        0
+      ],
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": [
+        "115",
+        0
+      ],
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "109",
+        0
+      ],
+      "positive": [
+        "112",
+        0
+      ],
+      "negative": [
+        "105",
+        0
+      ],
+      "latent_image": [
+        "116",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "K采样器（高级）"
+    }
+  },
+  "121": {
+    "inputs": {
+      "unet_name": "z_image_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "161": {
+    "inputs": {
+      "text": "1456",
+      "anything": [
+        "173",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "162": {
+    "inputs": {
+      "text": "1656",
+      "anything": [
+        "173",
+        1
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "163": {
+    "inputs": {
+      "width": [
+        "173",
+        0
+      ],
+      "height": [
+        "173",
+        1
+      ],
+      "interpolation": "lanczos",
+      "method": "stretch",
+      "condition": "always",
+      "multiple_of": 8,
+      "image": [
+        "168",
+        0
+      ]
+    },
+    "class_type": "ImageResize+",
+    "_meta": {
+      "title": "🔧 Image Resize"
+    }
+  },
+  "164": {
+    "inputs": {
+      "model": "ema_vae_fp16.safetensors",
+      "device": "cuda:0",
+      "encode_tiled": false,
+      "encode_tile_size": 256,
+      "encode_tile_overlap": 32,
+      "decode_tiled": false,
+      "decode_tile_size": 256,
+      "decode_tile_overlap": 32,
+      "tile_debug": "false",
+      "offload_device": "none",
+      "cache_model": false
+    },
+    "class_type": "SeedVR2LoadVAEModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load VAE Model"
+    }
+  },
+  "165": {
+    "inputs": {
+      "width": [
+        "175",
+        0
+      ],
+      "height": [
+        "175",
+        1
+      ],
+      "interpolation": "lanczos",
+      "method": "stretch",
+      "condition": "always",
+      "multiple_of": 8,
+      "image": [
+        "182",
+        0
+      ]
+    },
+    "class_type": "ImageResize+",
+    "_meta": {
+      "title": "🔧 Image Resize"
+    }
+  },
+  "166": {
+    "inputs": {
+      "text": "6144",
+      "anything": [
+        "175",
+        1
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "167": {
+    "inputs": {
+      "text": "4096",
+      "anything": [
+        "175",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "168": {
+    "inputs": {
+      "seed": 2794489657,
+      "resolution": 1024,
+      "max_resolution": 0,
+      "batch_size": 1,
+      "uniform_batch_size": false,
+      "color_correction": "wavelet",
+      "temporal_overlap": 0,
+      "prepend_frames": 0,
+      "input_noise_scale": 0.0,
+      "latent_noise_scale": 0.0,
+      "offload_device": "cpu",
+      "enable_debug": false,
+      "image": [
+        "174",
+        0
+      ],
+      "dit": [
+        "171",
+        0
+      ],
+      "vae": [
+        "164",
+        0
+      ]
+    },
+    "class_type": "SeedVR2VideoUpscaler",
+    "_meta": {
+      "title": "SeedVR2 Video Upscaler (v2.5.24)"
+    }
+  },
+  "169": {
+    "inputs": {
+      "tile_width": [
+        "170",
+        0
+      ],
+      "tile_height": [
+        "170",
+        1
+      ],
+      "image": [
+        "165",
+        0
+      ]
+    },
+    "class_type": "TTP_Image_Tile_Batch",
+    "_meta": {
+      "title": "TTP_图像瓦片批处理"
+    }
+  },
+  "170": {
+    "inputs": {
+      "width_factor": 3,
+      "height_factor": 4,
+      "overlap_rate": 0.1,
+      "image": [
+        "165",
+        0
+      ]
+    },
+    "class_type": "TTP_Tile_image_size",
+    "_meta": {
+      "title": "TTP_瓦片图像尺寸"
+    }
+  },
+  "171": {
+    "inputs": {
+      "model": "seedvr2_ema_3b_fp8_e4m3fn.safetensors",
+      "device": "cuda:0",
+      "blocks_to_swap": 36,
+      "swap_io_components": false,
+      "offload_device": "cpu",
+      "cache_model": true,
+      "attention_mode": "sdpa"
+    },
+    "class_type": "SeedVR2LoadDiTModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load DiT Model"
+    }
+  },
+  "173": {
+    "inputs": {
+      "image": [
+        "169",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "174": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "scale_by": 0.25,
+      "image": [
+        "169",
+        0
+      ]
+    },
+    "class_type": "ImageScaleBy",
+    "_meta": {
+      "title": "缩放图像（比例）"
+    }
+  },
+  "175": {
+    "inputs": {
+      "image": [
+        "182",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "176": {
+    "inputs": {
+      "padding": 64,
+      "tiles": [
+        "163",
+        0
+      ],
+      "positions": [
+        "169",
+        1
+      ],
+      "original_size": [
+        "169",
+        2
+      ],
+      "grid_size": [
+        "169",
+        3
+      ]
+    },
+    "class_type": "TTP_Image_Assy",
+    "_meta": {
+      "title": "TTP_图像拼接/重组"
+    }
+  },
+  "180": {
+    "inputs": {
+      "amount": 0.45000000000000007,
+      "image": [
+        "176",
+        0
+      ]
+    },
+    "class_type": "ImageCASharpening+",
+    "_meta": {
+      "title": "🔧 Image Contrast Adaptive Sharpening"
+    }
+  },
+  "181": {
+    "inputs": {
+      "images": [
+        "174",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "182": {
+    "inputs": {
+      "anything": [
+        "186",
+        0
+      ]
+    },
+    "class_type": "easy cleanGpuUsed",
+    "_meta": {
+      "title": "清理显存占用"
+    }
+  },
+  "186": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "shortest",
+      "scale_to_length": 4096,
+      "background_color": "#000000",
+      "image": [
+        "114",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    }
+  },
+  "189": {
+    "inputs": {
+      "Number": "1024"
+    },
+    "class_type": "Int",
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "190": {
+    "inputs": {
+      "Number": "1536"
+    },
+    "class_type": "Int",
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "218": {
+    "inputs": {
+      "ckpt_name": "Z-Image-Base-8steps-White_Marble-AIO_v2-bf16.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Checkpoint加载器（简易）"
+    }
+  },
+  "248": {
+    "inputs": {
+      "filename_prefix": "sese/2026-06-22/HUIHUI_",
+      "images": [
+        "180",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "250": {
+    "inputs": {
+      "images": [
+        "114",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "252": {
+    "inputs": {
+      "seed": 505474786377958
+    },
+    "class_type": "easy seed",
+    "_meta": {
+      "title": "随机种"
+    }
+  },
+  "259": {
+    "inputs": {
+      "lora_name": "自训练\\zib-张雅钦2.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "218",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "270": {
+    "inputs": {
+      "lora_name": "Z-image\\Z-Image-Fun-Lora-Distill-8-Steps-2603-ComfyUI.safetensors",
+      "strength_model": 0.45,
+      "model": [
+        "121",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "271": {
+    "inputs": {
+      "lora_name": "自训练\\zib-张雅钦2.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "270",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "273": {
+    "inputs": {
+      "text_0": "一位女性跪在花纹地毯上，身穿红色吊带内衣和黑色蕾丝边饰的服装，头发为黑色，额前有刘海，佩戴白色花朵发饰，涂有红色口红，眼睛化有眼妆，左耳佩戴耳环。一只手从上方按住她的头顶，该手涂有红色指甲油，手腕佩戴白色织带手环和银色戒指，手臂穿着黑色长袖。背景中可见白色沙发、白色砖墙和米色靠垫。",
+      "text": [
+        "274",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "展示文本"
+    }
+  },
+  "274": {
+    "inputs": {
+      "seed": 131026978784261,
+      "max_side": 1600,
+      "excluded": ""
+    },
+    "class_type": "CosplayPromptFetcher",
+    "_meta": {
+      "title": "Cosplay提示词获取器"
+    }
+  }
+}

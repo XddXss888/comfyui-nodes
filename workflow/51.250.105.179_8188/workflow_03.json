@@ -56,8 +56,8 @@
       "crop_h": 0,
       "target_width": 1024,
       "target_height": 1024,
-      "text_g": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_pendant, pendant, fWgvccV359O1A9S28_arch_pattern, arch pattern, gold, pendant with Oyuu pattern",
-      "text_l": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_pendant, pendant, fWgvccV359O1A9S28_arch_pattern, arch pattern, gold, pendant with Oyuu pattern",
+      "text_g": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_pendant, pendant, fWgvccV359O1A9S28_arch_pattern, arch pattern, silver, pendant with kun oyuu pattern",
+      "text_l": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_pendant, pendant, fWgvccV359O1A9S28_arch_pattern, arch pattern, silver, pendant with kun oyuu pattern",
       "clip": [
         "50",
         1
@@ -91,9 +91,9 @@
   "36": {
     "inputs": {
       "add_noise": "enable",
-      "noise_seed": 5374756183061258849,
+      "noise_seed": 17436898959902096445,
       "steps": 35,
-      "cfg": 6.0,
+      "cfg": 5.9,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "exponential",
       "start_at_step": 0,
@@ -133,9 +133,9 @@
   "38": {
     "inputs": {
       "add_noise": "disable",
-      "noise_seed": 5374756183061258849,
+      "noise_seed": 17436898959902096445,
       "steps": 35,
-      "cfg": 6.0,
+      "cfg": 5.9,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "karras",
       "start_at_step": 25,
@@ -177,7 +177,7 @@
       "ascore": 6.0,
       "width": 1024,
       "height": 1024,
-      "text": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_pendant, pendant, fWgvccV359O1A9S28_arch_pattern, arch pattern, gold, pendant with Oyuu pattern",
+      "text": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_pendant, pendant, fWgvccV359O1A9S28_arch_pattern, arch pattern, silver, pendant with kun oyuu pattern",
       "clip": [
         "39",
         1
@@ -207,8 +207,8 @@
   "50": {
     "inputs": {
       "lora_name": "jeweler-ai-v1.5-000037.safetensors",
-      "strength_model": 1.0,
-      "strength_clip": 1.0,
+      "strength_model": 0.9,
+      "strength_clip": 0.9,
       "model": [
         "4",
         0

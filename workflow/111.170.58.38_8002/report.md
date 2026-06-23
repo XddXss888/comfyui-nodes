@@ -1,99 +1,122 @@
 # 111.170.58.38:8002
 
-**GPU**: CPU | **显存**: — | **空闲**: 11 GB
-**内存**: 15 GB (空闲 11 GB)
+**GPU**: CPU | **显存**: — | **空闲**: 10 GB
+**内存**: 15 GB (空闲 10 GB)
 **版本**: 0.19.3
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-22 08:07:40
-**历史总数**: 59 | **成功**: 10
+**扫描时间**: 2026-06-23 08:07:38
+**历史总数**: 89 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `1485c4c0-055e-4c31-bd07-b9eece3c5249`
+- **Prompt ID**: `d42f541c-58e0-4dc7-b0b6-9e937f38b100`
 - **类型**: 图片编辑
-- **节点数**: 4
+- **节点数**: 22
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] 把图一上衣和裤子变成像图二一样的颜色和花型，但要保持图一的形状不变
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
+  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
+Profile
+language: 中文
+description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
+Rules
+基本原则
+
+高端摄影美感优先：提示词需符合
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
 
 ### 2. workflow_02.json
-- **Prompt ID**: `fb77e2ac-d542-4966-8172-4e411c2c572e`
+- **Prompt ID**: `27984ad9-7043-40a8-87f5-b8bc4aa66c09`
 - **类型**: 图片编辑
-- **节点数**: 4
+- **节点数**: 22
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] 把图一模特身上的衣服套在图二的模特身上
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
+  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
+Profile
+language: 中文
+description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
+Rules
+基本原则
+
+高端摄影美感优先：提示词需符合
+  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
 
 ### 3. workflow_03.json
-- **Prompt ID**: `ef34e30f-6725-417d-a5a1-e93d9f939956`
-- **类型**: 图片编辑
-- **节点数**: 4
+- **Prompt ID**: `296dd1cc-b812-416d-9f42-d846e26b8381`
+- **类型**: 图生视频
+- **节点数**: 36
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] 把图一模特身上的衣服套在图二的模特身上
+  - [LayerUtility: TextBox::text] 
+## 1.[角色]
+你是一名资深电商详情页设计师与提Banana 生图工程师。擅长人类消费心理学，电商感性美学，提示词结构。
+你的任务是根据提供的产品信息，生成一套既有品牌高级感，又能通过细节解构促成转化的电商详情页的多屏图像生成提示词（prompt），严格遵循电商详情页的经典叙事顺序（从首屏到收口）。
+```
+2. 核心逻辑：感性引流 + 理性转化
+你需要根据产品类别（product_type
+  - [LayerUtility: TextBox::text] 角色定位
+你是一名精通全球电商视觉营销的设计总监+电商详情页策划总监 +AI 生图提示词工程师。
+工作目标
+户会上传【产品图】并输入若干要求字段。你必须基于图片与用户字段，识别产品主体与可见信息，完成多图详情页的整体策划和分镜规划，输出 AI 绘画提示词。提示词中必须包含画面描述以及营销文案的设计指令。
+
+
+一、输入（用户可能提供不全）
+图片：产品图片
+字段（可选/不全）：品牌、主卖点（可多条）、
+  - [easy showAnything::text] product_type:时尚鞋子；selling_points: 时尚设计，10年不变形，内增高；style:简约轻奢风格；prompt_count:3；输出语言要求：中文
 
 ### 4. workflow_04.json
-- **Prompt ID**: `864e54ed-e4ed-4036-8f5e-3ea6dd7a904f`
+- **Prompt ID**: `a4d0e1a8-6394-4fc8-b846-bb6423727af3`
 - **类型**: 图片编辑
-- **节点数**: 4
+- **节点数**: 3
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] 把图一模特身上的衣服套在图二的模特身上
+  - [HezhongNewAPI::text] 帮我删除图中标红的部分
 
 ### 5. workflow_05.json
-- **Prompt ID**: `545c98c4-7e75-48e0-baaa-b2384c78bfec`
+- **Prompt ID**: `b9a99160-a3f5-4de2-89fb-1d70b774d91e`
 - **类型**: 图片编辑
-- **节点数**: 22
+- **节点数**: 3
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
-  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
-Profile
-language: 中文
-description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
-Rules
-基本原则
-
-高端摄影美感优先：提示词需符合
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
+  - [HezhongNewAPI::text] 帮我将图中标红的部分的字改成Boloni
 
 ### 6. workflow_06.json
-- **Prompt ID**: `4759e580-7999-4890-83d6-aa4f8c7115f4`
+- **Prompt ID**: `801096e9-0101-418f-a53f-c4ae83e05545`
 - **类型**: 图片编辑
-- **节点数**: 22
+- **节点数**: 3
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
-  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
-Profile
-language: 中文
-description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
-Rules
-基本原则
-
-高端摄影美感优先：提示词需符合
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
+  - [HezhongNewAPI::text] 帮我将图中标红的部分的字改成Boloni
 
 ### 7. workflow_07.json
-- **Prompt ID**: `4d695227-0419-4c06-af16-8429e3eb2612`
+- **Prompt ID**: `208bc1eb-c733-4dff-ae0f-8a656bfd62c7`
 - **类型**: 图片编辑
-- **节点数**: 22
+- **节点数**: 3
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
-  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
-Profile
-language: 中文
-description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
-Rules
-基本原则
-
-高端摄影美感优先：提示词需符合
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
+  - [HezhongNewAPI::text] 帮我将图中标红的部分的字改成Boloni
 
 ### 8. workflow_08.json
-- **Prompt ID**: `b385fd46-51e7-4d09-bc0a-a1ba4ad25a09`
+- **Prompt ID**: `07a61e02-392b-43fb-bf44-691270b6423e`
+- **类型**: 图片编辑
+- **节点数**: 3
+- **模型** (0):
+- **提示词**:
+  - [HezhongNewAPI::text] 帮我将图中标红的部分的字改成Boloni
+
+### 9. workflow_09.json
+- **Prompt ID**: `72732c3c-dcea-483c-a9c9-50069906341f`
+- **类型**: 图片编辑
+- **节点数**: 3
+- **模型** (0):
+- **提示词**:
+  - [HezhongNewAPI::text] 帮我删除图中标红的部分
+
+### 10. workflow_10.json
+- **Prompt ID**: `02a0257d-efdf-4a8e-b28c-b111bfd3fae1`
 - **类型**: 图片编辑
 - **节点数**: 22
 - **模型** (0):
@@ -108,18 +131,3 @@ Rules
 
 高端摄影美感优先：提示词需符合
   - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
-
-### 9. workflow_09.json
-- **Prompt ID**: `b0133ee6-5aea-4157-b5be-5477dc12366d`
-- **类型**: 图片编辑
-- **节点数**: 4
-- **模型** (0):
-- **提示词**:
-  - [HezhongNewAPI::text] 图一右边模特穿的短袖长裤替换成图二右边长袖+长裤
-图一左边模特穿的短袖长裤替换成图二左边长袖+长裤
-
-### 10. workflow_10.json
-- **Prompt ID**: `ee7c743a-5f59-48b4-a13d-67cfc8e7d89c`
-- **类型**: 其他/工具
-- **节点数**: 2
-- **模型** (0):

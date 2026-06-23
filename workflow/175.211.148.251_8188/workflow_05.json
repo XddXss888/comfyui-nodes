@@ -1,8 +1,9 @@
 {
   "1": {
-    "class_type": "UnetLoaderGGUF",
+    "class_type": "UNETLoader",
     "inputs": {
-      "unet_name": "z-image-Q6_K.gguf"
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
     }
   },
   "3": {
@@ -26,7 +27,7 @@
         "3",
         0
       ],
-      "text": "amateur photo of nude, young, American tween sister standing in kitchen. She wears nothing but thigh high socks. Brother kneeling beside her, kissing upper thigh."
+      "text": "Amateur photo of young girl standing in bedroom. She is wearing nothing but thigh high socks."
     }
   },
   "6": {
@@ -66,7 +67,7 @@
         "7",
         0
       ],
-      "seed": 707861481895795,
+      "seed": 1202410039,
       "steps": 9,
       "cfg": 1.0,
       "sampler_name": "euler_ancestral",
@@ -94,7 +95,7 @@
         "9",
         0
       ],
-      "filename_prefix": "zimg/유이_GGUF"
+      "filename_prefix": "zimg/유이_canonical"
     }
   }
 }

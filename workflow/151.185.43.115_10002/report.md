@@ -4,107 +4,237 @@
 **内存**: 29 GB (空闲 12 GB)
 **版本**: 0.14.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-22 08:07:53
-**历史总数**: 225 | **成功**: 10
+**扫描时间**: 2026-06-23 08:08:11
+**历史总数**: 266 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `045120f1-418c-48ce-9617-22ed1ac84786`
+- **Prompt ID**: `34e6b7a0-8072-482f-b618-7ea613f75021`
 - **类型**: 视频编辑
-- **节点数**: 264
+- **节点数**: 23
 - **模型** (0):
 - **提示词**:
-  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
-  - [Kie_GptImage2TextToImageNode::prompt] Host is a Pixar-style 3D animated human male interview host from a small-town Indian digital studio, age 27–32, average height about 5 feet 8 inches, slim energetic build, warm wheatish-brown skin, ro
-  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
+  - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
+A tiny rented Mumbai room, Iter 3 housing style, cramped but clean. Single bed against the wall, plastic chair, old study table, notebook filled with handwritten ideas, ring light in one c
+  - [Kie_GeminiOmniVideoNode::prompt] FRIEND DIALOGUE
+Duration: 3–4 sec
+Dialogue
+
+Friend(the girl in green is talking):
+"Tu try toh kar rahi hai lekin tareeka nahi aata tujhe. Seekho App khol."
+
+pause
+
+"Wahaan se script likhna seekh."
+
+OM
+  - [Kie_GeminiOmniVideoNode::prompt] nisha says
+" Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
 
 ### 2. workflow_02.json
-- **Prompt ID**: `4fd75ec7-1c81-498c-b948-cfa08db26347`
+- **Prompt ID**: `c7e30989-a41e-4470-b7e2-2f5e79816511`
 - **类型**: 视频编辑
-- **节点数**: 266
+- **节点数**: 23
 - **模型** (0):
 - **提示词**:
-  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
-  - [Kie_GptImage2TextToImageNode::prompt] Host is a Pixar-style 3D animated human male interview host from a small-town Indian digital studio, age 27–32, average height about 5 feet 8 inches, slim energetic build, warm wheatish-brown skin, ro
-  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
+  - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
+A tiny rented Mumbai room, Iter 3 housing style, cramped but clean. Single bed against the wall, plastic chair, old study table, notebook filled with handwritten ideas, ring light in one c
+  - [Kie_GeminiOmniVideoNode::prompt] FRIEND DIALOGUE
+Duration: 3–4 sec
+Dialogue
+
+Friend(the girl in green is talking):
+"Tu try toh kar rahi hai lekin tareeka nahi aata tujhe. Seekho App khol."
+
+pause
+
+"Wahaan se script likhna seekh."
+
+OM
+  - [Kie_GeminiOmniVideoNode::prompt] nisha says
+" Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
 
 ### 3. workflow_03.json
-- **Prompt ID**: `41c14c4f-ae04-4ca4-b63b-809b7f741322`
+- **Prompt ID**: `434cc70a-2b2d-4ea6-a4f6-2b01fb1d6171`
 - **类型**: 视频编辑
-- **节点数**: 264
+- **节点数**: 23
 - **模型** (0):
 - **提示词**:
-  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
-  - [Kie_GptImage2TextToImageNode::prompt] Host is a Pixar-style 3D animated human male interview host from a small-town Indian digital studio, age 27–32, average height about 5 feet 8 inches, slim energetic build, warm wheatish-brown skin, ro
-  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
+  - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
+A tiny rented Mumbai room, Iter 3 housing style, cramped but clean. Single bed against the wall, plastic chair, old study table, notebook filled with handwritten ideas, ring light in one c
+  - [Kie_GeminiOmniVideoNode::prompt] FRIEND DIALOGUE
+Duration: 3–4 sec
+Dialogue
+
+Friend(the girl in green is talking):
+"Tu try toh kar rahi hai lekin tareeka nahi aata tujhe. Seekho App khol."
+
+pause
+
+"Wahaan se script likhna seekh."
+
+OM
+  - [Kie_GeminiOmniVideoNode::prompt] nisha says
+" Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
 
 ### 4. workflow_04.json
-- **Prompt ID**: `20b4fea7-9db1-453d-9099-40d22417dc4b`
+- **Prompt ID**: `34c0bf20-16db-415a-bfe5-84e082aa7a80`
 - **类型**: 视频编辑
-- **节点数**: 266
+- **节点数**: 26
 - **模型** (0):
 - **提示词**:
-  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
-  - [Kie_GptImage2TextToImageNode::prompt] Host is a Pixar-style 3D animated human male interview host from a small-town Indian digital studio, age 27–32, average height about 5 feet 8 inches, slim energetic build, warm wheatish-brown skin, ro
-  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
+  - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
+A tiny rented Mumbai room, Iter 3 housing style, cramped but clean. Single bed against the wall, plastic chair, old study table, notebook filled with handwritten ideas, ring light in one c
+  - [Kie_GeminiOmniVideoNode::prompt] FRIEND DIALOGUE
+Duration: 3–4 sec
+Dialogue
+
+Friend(the girl in green is talking):
+"Tu try toh kar rahi hai lekin tareeka nahi aata tujhe. Seekho App khol."
+
+pause
+
+"Wahaan se script likhna seekh."
+
+OM
+  - [Kie_GeminiOmniVideoNode::prompt] nisha says
+" Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
 
 ### 5. workflow_05.json
-- **Prompt ID**: `d21e7349-a18f-4845-8c09-fe9a7dfc9a48`
+- **Prompt ID**: `1e4ed549-52ec-451c-ae9f-d1f93ebacfb2`
 - **类型**: 视频编辑
-- **节点数**: 266
+- **节点数**: 26
 - **模型** (0):
 - **提示词**:
-  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
-  - [Kie_GptImage2TextToImageNode::prompt] Host is a Pixar-style 3D animated human male interview host from a small-town Indian digital studio, age 27–32, average height about 5 feet 8 inches, slim energetic build, warm wheatish-brown skin, ro
-  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
+  - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
+A tiny rented Mumbai room, Iter 3 housing style, cramped but clean. Single bed against the wall, plastic chair, old study table, notebook filled with handwritten ideas, ring light in one c
+  - [Kie_GeminiOmniVideoNode::prompt] FRIEND DIALOGUE
+Duration: 3–4 sec
+Dialogue
+
+Friend(the girl in green is talking):
+"Tu try toh kar rahi hai lekin tareeka nahi aata tujhe. Seekho App khol."
+
+pause
+
+"Wahaan se script likhna seekh."
+
+OM
+  - [Kie_GeminiOmniVideoNode::prompt] nisha says
+" Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
 
 ### 6. workflow_06.json
-- **Prompt ID**: `33c19a61-53c2-4359-b817-704a40852eb6`
+- **Prompt ID**: `daad6fa7-a37d-48ca-b37c-db17a53f3cb1`
 - **类型**: 视频编辑
-- **节点数**: 266
+- **节点数**: 26
 - **模型** (0):
 - **提示词**:
-  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
-  - [Kie_GptImage2TextToImageNode::prompt] Host is a Pixar-style 3D animated human male interview host from a small-town Indian digital studio, age 27–32, average height about 5 feet 8 inches, slim energetic build, warm wheatish-brown skin, ro
-  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
+  - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
+A tiny rented Mumbai room, Iter 3 housing style, cramped but clean. Single bed against the wall, plastic chair, old study table, notebook filled with handwritten ideas, ring light in one c
+  - [Kie_GeminiOmniVideoNode::prompt] FRIEND DIALOGUE
+Duration: 3–4 sec
+Dialogue
+
+Friend(the girl in green is talking):
+"Tu try toh kar rahi hai lekin tareeka nahi aata tujhe. Seekho App khol."
+
+pause
+
+"Wahaan se script likhna seekh."
+
+OM
+  - [Kie_GeminiOmniVideoNode::prompt] nisha says
+" Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
 
 ### 7. workflow_07.json
-- **Prompt ID**: `7e1953c2-fe90-4266-892b-268fdbd9264e`
+- **Prompt ID**: `b7e8c451-4330-48a2-87ed-e6cf72d31a44`
 - **类型**: 视频编辑
-- **节点数**: 268
+- **节点数**: 28
 - **模型** (0):
 - **提示词**:
-  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
-  - [Kie_GptImage2TextToImageNode::prompt] Host is a Pixar-style 3D animated human male interview host from a small-town Indian digital studio, age 27–32, average height about 5 feet 8 inches, slim energetic build, warm wheatish-brown skin, ro
-  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
+  - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
+A tiny rented Mumbai room, Iter 3 housing style, cramped but clean. Single bed against the wall, plastic chair, old study table, notebook filled with handwritten ideas, ring light in one c
+  - [Kie_GeminiOmniVideoNode::prompt] FRIEND DIALOGUE
+Duration: 3–4 sec
+Dialogue
+
+Friend(the girl in green is talking):
+"Tu try toh kar rahi hai lekin tareeka nahi aata tujhe. Seekho App khol."
+
+pause
+
+"Wahaan se script likhna seekh."
+
+OM
+  - [Kie_GeminiOmniVideoNode::prompt] nisha says
+" Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
 
 ### 8. workflow_08.json
-- **Prompt ID**: `666f131e-ecb1-4382-b9a7-7f238365cf60`
+- **Prompt ID**: `100329fc-bc5c-4d24-88d8-da8a0b3adb17`
 - **类型**: 视频编辑
-- **节点数**: 269
+- **节点数**: 28
 - **模型** (0):
 - **提示词**:
-  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
-  - [Kie_GptImage2TextToImageNode::prompt] Host is a Pixar-style 3D animated human male interview host from a small-town Indian digital studio, age 27–32, average height about 5 feet 8 inches, slim energetic build, warm wheatish-brown skin, ro
-  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
+  - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
+A tiny rented Mumbai room, Iter 3 housing style, cramped but clean. Single bed against the wall, plastic chair, old study table, notebook filled with handwritten ideas, ring light in one c
+  - [Kie_GeminiOmniVideoNode::prompt] FRIEND DIALOGUE
+Duration: 3–4 sec
+Dialogue
+
+Friend(the girl in green is talking):
+"Tu try toh kar rahi hai lekin tareeka nahi aata tujhe. Seekho App khol."
+
+pause
+
+"Wahaan se script likhna seekh."
+
+OM
+  - [Kie_GeminiOmniVideoNode::prompt] nisha says
+" Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
 
 ### 9. workflow_09.json
-- **Prompt ID**: `1a618b1a-c358-4dd7-8423-28c20913ecdb`
+- **Prompt ID**: `4b59a395-9b89-43d8-a5b5-887f4483869e`
 - **类型**: 视频编辑
-- **节点数**: 76
+- **节点数**: 29
 - **模型** (0):
 - **提示词**:
-  - [Official_NanoBananaNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
-  - [Official_NanoBananaNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
-  - [Official_NanoBananaNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
+  - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
+A tiny rented Mumbai room, Iter 3 housing style, cramped but clean. Single bed against the wall, plastic chair, old study table, notebook filled with handwritten ideas, ring light in one c
+  - [Kie_GeminiOmniVideoNode::prompt] FRIEND DIALOGUE
+Duration: 3–4 sec
+Dialogue
+
+Friend(the girl in green is talking):
+"Tu try toh kar rahi hai lekin tareeka nahi aata tujhe. Seekho App khol."
+
+pause
+
+"Wahaan se script likhna seekh."
+
+OM
+  - [Kie_GeminiOmniVideoNode::prompt] nisha says
+" Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
 
 ### 10. workflow_10.json
-- **Prompt ID**: `723067c8-1176-402d-9453-9e1cbd257cee`
+- **Prompt ID**: `bf75dc0b-eb55-4a68-9822-0c5db5447673`
 - **类型**: 视频编辑
-- **节点数**: 270
+- **节点数**: 31
 - **模型** (0):
 - **提示词**:
-  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulders from years 
-  - [Kie_GptImage2TextToImageNode::prompt] Host is a Pixar-style 3D animated human male interview host from a small-town Indian digital studio, age 27–32, average height about 5 feet 8 inches, slim energetic build, warm wheatish-brown skin, ro
-  - [Kie_GptImage2TextToImageNode::prompt] Shabnam Aapa: Shabnam Aapa is a Pixar-style 3D animated human woman from a tier-3 Indian basti, age 34–38, medium height about 5 feet 2 inches, sturdy working-class build with slightly rounded shoulde
+  - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
+A tiny rented Mumbai room, Iter 3 housing style, cramped but clean. Single bed against the wall, plastic chair, old study table, notebook filled with handwritten ideas, ring light in one c
+  - [Kie_GeminiOmniVideoNode::prompt] FRIEND DIALOGUE
+Duration: 3–4 sec
+Dialogue
+
+Friend(the girl in green is talking):
+"Tu try toh kar rahi hai lekin tareeka nahi aata tujhe. Seekho App khol."
+
+pause
+
+"Wahaan se script likhna seekh."
+
+OM
+  - [Kie_GeminiOmniVideoNode::prompt] nisha says
+" Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 

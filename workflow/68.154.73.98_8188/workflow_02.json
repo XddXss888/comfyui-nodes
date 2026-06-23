@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_34a8bc7ca304483a88f57318627e64c3.png"
+      "image": "ref_878193017f8945969b7ee651bf60a0e1.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "I want this girls wearing pink bra \n",
+      "prompt": "Change shirt to a powder blue color ",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 760407261202724,
+      "seed": 159588003495370,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",

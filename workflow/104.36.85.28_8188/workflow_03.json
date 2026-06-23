@@ -37,7 +37,7 @@
   },
   "7": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl sitting,blush,looking at viewer,short hair,bangs,blonde hair,brown hair,brown eyes,jewelry,feet,toes,soles,tanlines,toenails,denim,tan,black nails,toenail polish,(show me what you can do :1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl blush, thighs, sweat, shiny, indoors, shiny skin, skindentation, doorway,(desnuda:1.0),(nude:0.8)",
       "clip": [
         "1",
         1
@@ -63,7 +63,7 @@
   },
   "9": {
     "inputs": {
-      "seed": 1306400405,
+      "seed": 907720228,
       "steps": 20,
       "cfg": 6.5,
       "sampler_name": "dpmpp_sde",
@@ -133,7 +133,7 @@
   },
   "14": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2026/06/05/1780627536281.webp",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202512/22/1a89d432167a4e99807016a9e4fc01a6.webp",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

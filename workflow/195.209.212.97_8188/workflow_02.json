@@ -98,7 +98,7 @@
       ],
       "cfg": 3.0,
       "shift": 8.0,
-      "seed": 1747,
+      "seed": 14477,
       "force_offload": true,
       "scheduler": "dpm++_sde",
       "riflex_freq_index": 0,
@@ -203,7 +203,7 @@
   },
   "124": {
     "inputs": {
-      "value": 999
+      "value": 90
     },
     "class_type": "JWInteger",
     "_meta": {
@@ -252,7 +252,7 @@
   },
   "168": {
     "inputs": {
-      "lora": "training_results/actor_Sofya/look_01/training_results_wan21_01/14B/20260408_20-26-38/epoch1/adapter_model.safetensors",
+      "lora": "training_results/actor_Anastasia/look_05/training_results_wan21_01/14B/20260510_15-46-41/epoch1/adapter_model.safetensors",
       "strength": 1.0,
       "low_mem_load": false,
       "merge_loras": false
@@ -362,7 +362,7 @@
   },
   "197": {
     "inputs": {
-      "value": "/DATA/Jive/processing/5_serie/0070-v2/0070-v2_s_kashtanova_01/"
+      "value": "/DATA/Jive/processing/8_serie/0320/0320_a_ukolova/"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -371,7 +371,7 @@
   },
   "198": {
     "inputs": {
-      "value": "/DATA/Jive/Yandex.Disk/Dzhave/work/5_serie/0070-v2/0070-v2_s_kashtanova_01/"
+      "value": "/DATA/Jive/Yandex.Disk/Dzhave/work/8_serie/0320/0320_a_ukolova/"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -619,7 +619,7 @@
   },
   "215": {
     "inputs": {
-      "value": "_0070-v2_s_kashtanova_01_epoch1_1747"
+      "value": "_0320_a_ukolova_epoch1_14477"
     },
     "class_type": "PrimitiveString",
     "_meta": {

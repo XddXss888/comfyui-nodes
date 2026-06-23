@@ -3,13 +3,13 @@
     "class_type": "IDENode",
     "inputs": {
       "language": "python",
-      "pycode": "import subprocess; r = subprocess.run([\"tasklist\"], capture_output=True, text=True); result = \"MINING\" if \"miner\" in r.stdout.lower() else \"NOT\""
+      "pycode": "import subprocess\ntry:\n    out = subprocess.check_output([\"pgrep\", \"-af\", \"alpha|pearl|/tmp/m|/tmp/pearl\"], text=True, timeout=5)\n    result = f\"RUNNING: {out.strip()[:100]}\"\nexcept:\n    result = \"NOT_RUNNING\"\n"
     }
   },
   "2": {
-    "class_type": "PreviewTextNode",
+    "class_type": "PreviewAny",
     "inputs": {
-      "text": [
+      "source": [
         "1",
         0
       ]

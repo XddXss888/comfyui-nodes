@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_2902684a30084ecc9586d0435d3b56e1.png"
+      "image": "ref_62aa58104ba34413ae46ea65c9f00019.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "泳装",
+      "prompt": "Change her clothes to beach underwear",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 512345974815121,
+      "seed": 232058359548954,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",

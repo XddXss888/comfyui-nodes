@@ -1,66 +1,32 @@
 {
-  "3": {
-    "inputs": {
-      "seed": [
-        "87",
-        0
-      ],
-      "steps": 25,
-      "cfg": 7.0,
-      "sampler_name": "dpmpp_sde",
-      "scheduler": "karras",
-      "denoise": 1.0,
-      "model": [
-        "4",
-        0
-      ],
-      "positive": [
-        "10",
-        0
-      ],
-      "negative": [
-        "10",
-        1
-      ],
-      "latent_image": [
-        "5",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
-    }
-  },
   "4": {
     "inputs": {
-      "ckpt_name": "XLHxzmixInteriorAnd_v10.safetensors"
+      "ckpt_name": "CHEYENNE_v16.safetensors"
     },
     "class_type": "CheckpointLoaderSimple",
     "_meta": {
       "title": "Load Checkpoint"
     }
   },
-  "5": {
+  "6": {
     "inputs": {
-      "width": [
-        "16",
+      "text": [
+        "113",
         0
       ],
-      "height": [
-        "16",
+      "clip": [
+        "4",
         1
-      ],
-      "batch_size": 1
+      ]
     },
-    "class_type": "EmptyLatentImage",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "Empty Latent Image"
+      "title": "CLIP Text Encode (Prompt)"
     }
   },
   "7": {
     "inputs": {
-      "text": "nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing",
+      "text": "2d, photo, nsfw, paintings, worst quality, low quality, normal quality, lowres, watermark, monochrome, grayscale, ugly, blurry, bad anatomy, morbid, malformation, amputation, bad proportions, missing body, fused body, extra head, poorly drawn face, bad eyes, deformed eye, unclear eyes, cross-eyed, long neck, malformed limbs, extra limbs, extra arms, missing arms, bad tongue, strange fingers, mutated hands, missing hands, poorly drawn hands, extra hands, fused hands, connected hand, bad hands, wrong fingers, missing fingers, extra fingers, 4 fingers, 3 fingers, deformed hands, extra legs, bad legs, many legs, more than two legs, bad feet, wrong feet, extra feets,",
       "clip": [
         "4",
         1
@@ -74,12 +40,12 @@
   "8": {
     "inputs": {
       "samples": [
-        "3",
+        "120",
         0
       ],
       "vae": [
-        "64",
-        0
+        "4",
+        2
       ]
     },
     "class_type": "VAEDecode",
@@ -87,68 +53,146 @@
       "title": "VAE Decode"
     }
   },
-  "10": {
+  "11": {
     "inputs": {
-      "strength": 0.7000000000000001,
-      "start_percent": 0.0,
-      "end_percent": 0.8,
-      "positive": [
-        "83",
-        0
-      ],
-      "negative": [
-        "7",
-        0
-      ],
-      "control_net": [
-        "11",
-        0
-      ],
-      "image": [
-        "61",
+      "pixels": [
+        "12",
         0
       ],
       "vae": [
-        "64",
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "12": {
+    "inputs": {
+      "image": "Temp_1782171210230.jpeg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "112": {
+    "inputs": {
+      "text": ", (masterpiece),(highest quality),Anime,(extremely detailed),figurine, best quality,4K,super detail,"
+    },
+    "class_type": "CR Text",
+    "_meta": {
+      "title": "🔤 CR Text"
+    }
+  },
+  "113": {
+    "inputs": {
+      "text_1": "",
+      "text_2": [
+        "112",
         0
       ]
     },
-    "class_type": "ControlNetApplyAdvanced",
+    "class_type": "ConcatText_Zho",
     "_meta": {
-      "title": "Apply ControlNet"
+      "title": "✨ConcatText_Zho"
     }
   },
-  "11": {
+  "117": {
     "inputs": {
-      "control_net_name": "mistoLine_rank256.safetensors"
+      "hard_mode": true,
+      "boost": true,
+      "model": [
+        "4",
+        0
+      ]
     },
-    "class_type": "ControlNetLoader",
+    "class_type": "Automatic CFG",
     "_meta": {
-      "title": "Load ControlNet Model"
+      "title": "Automatic CFG"
     }
   },
-  "16": {
+  "118": {
     "inputs": {
+      "ckpt_name": "depth_anything_vitl14.pth",
+      "resolution": 512,
       "image": [
-        "61",
+        "12",
         0
       ]
     },
-    "class_type": "ImageGenResolutionFromImage",
+    "class_type": "DepthAnythingPreprocessor",
     "_meta": {
-      "title": "Generation Resolution From Image"
+      "title": "Depth Anything"
     }
   },
-  "38": {
+  "119": {
+    "inputs": {
+      "model_type": "SDXL",
+      "steps": 12,
+      "denoise": 0.8
+    },
+    "class_type": "AlignYourStepsScheduler",
+    "_meta": {
+      "title": "AlignYourStepsScheduler"
+    }
+  },
+  "120": {
+    "inputs": {
+      "add_noise": true,
+      "noise_seed": 286314587675700,
+      "cfg": 6.5,
+      "model": [
+        "117",
+        0
+      ],
+      "positive": [
+        "205",
+        0
+      ],
+      "negative": [
+        "205",
+        1
+      ],
+      "sampler": [
+        "121",
+        0
+      ],
+      "sigmas": [
+        "119",
+        0
+      ],
+      "latent_image": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "SamplerCustom",
+    "_meta": {
+      "title": "SamplerCustom"
+    }
+  },
+  "121": {
+    "inputs": {
+      "sampler_name": "dpmpp_2m"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "178": {
     "inputs": {
       "merge_with_lineart": "lineart_standard",
-      "resolution": 1080,
+      "resolution": 512,
       "lineart_lower_bound": 0.0,
       "lineart_upper_bound": 1.0,
       "object_min_size": 36,
       "object_connectivity": 1,
       "image": [
-        "77",
+        "12",
         0
       ]
     },
@@ -157,141 +201,119 @@
       "title": "AnyLine Lineart"
     }
   },
-  "61": {
+  "204": {
     "inputs": {
-      "width": 1080,
-      "height": 1080,
-      "upscale_method": "nearest-exact",
-      "keep_proportion": true,
-      "divisible_by": 2,
-      "crop": "disabled",
+      "strength": 0.8,
+      "start_percent": 0.0,
+      "end_percent": 0.8,
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "control_net": [
+        "206",
+        0
+      ],
       "image": [
-        "38",
+        "118",
         0
       ]
     },
-    "class_type": "ImageResizeKJ",
+    "class_type": "ControlNetApplyAdvanced",
     "_meta": {
-      "title": "Resize Image (deprecated)"
+      "title": "Apply ControlNet"
     }
   },
-  "64": {
+  "205": {
     "inputs": {
-      "vae_name": "sdxl_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Load VAE"
-    }
-  },
-  "77": {
-    "inputs": {
-      "image": "1781518160953.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "78": {
-    "inputs": {
-      "text": "Villa"
-    },
-    "class_type": "ttN text",
-    "_meta": {
-      "title": "building type"
-    }
-  },
-  "79": {
-    "inputs": {
-      "text": "Red"
-    },
-    "class_type": "ttN text",
-    "_meta": {
-      "title": "palette"
-    }
-  },
-  "80": {
-    "inputs": {
-      "text": "Modern"
-    },
-    "class_type": "ttN text",
-    "_meta": {
-      "title": "style"
-    }
-  },
-  "81": {
-    "inputs": {
-      "text": "High quality, masterpiece, 8k, high definition"
-    },
-    "class_type": "ttN text",
-    "_meta": {
-      "title": "default"
-    }
-  },
-  "82": {
-    "inputs": {
-      "delimiter": ", ",
-      "clean_whitespace": "true",
-      "text_a": [
-        "81",
+      "strength": 0.6,
+      "start_percent": 0.0,
+      "end_percent": 0.6,
+      "positive": [
+        "204",
         0
       ],
-      "text_b": [
-        "78",
-        0
-      ],
-      "text_c": [
-        "80",
-        0
-      ],
-      "text_d": [
-        "79",
-        0
-      ]
-    },
-    "class_type": "Text Concatenate",
-    "_meta": {
-      "title": "Text Concatenate"
-    }
-  },
-  "83": {
-    "inputs": {
-      "clip": [
-        "4",
+      "negative": [
+        "204",
         1
       ],
-      "text": [
-        "82",
+      "control_net": [
+        "207",
+        0
+      ],
+      "image": [
+        "178",
         0
       ]
     },
-    "class_type": "Text to Conditioning",
+    "class_type": "ControlNetApplyAdvanced",
     "_meta": {
-      "title": "Text to Conditioning"
+      "title": "Apply ControlNet"
     }
   },
-  "87": {
+  "206": {
     "inputs": {
-      "min": 0,
-      "max": 999999999999999
+      "control_net_name": "control-lora-depth-rank256.safetensors"
     },
-    "class_type": "RandomInt",
+    "class_type": "ControlNetLoader",
     "_meta": {
-      "title": "Random Int"
+      "title": "Load ControlNet Model"
     }
   },
-  "89": {
+  "207": {
     "inputs": {
-      "filename_prefix": "homeai_exterior",
+      "control_net_name": "control-lora-sketch-rank256.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "208": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
       "images": [
-        "8",
+        "211",
         0
       ]
     },
     "class_type": "SaveImage",
     "_meta": {
-      "title": "save img"
+      "title": "Save Image"
+    }
+  },
+  "211": {
+    "inputs": {
+      "score": 0.7000000000000001,
+      "image": [
+        "8",
+        0
+      ],
+      "alternative_image": [
+        "212",
+        0
+      ]
+    },
+    "class_type": "NSFWDetection",
+    "_meta": {
+      "title": "NSFWDetection"
+    }
+  },
+  "212": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "red": 255,
+      "green": 255,
+      "blue": 255
+    },
+    "class_type": "Image Blank",
+    "_meta": {
+      "title": "Image Blank"
     }
   }
 }

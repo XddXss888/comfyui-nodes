@@ -1,18 +1,158 @@
 {
-  "5": {
+  "1": {
     "inputs": {
-      "positive": "将输入的参考图1提取里面的图案\n\n绝对视觉一致性（最高优先级）：\n\n精确的颜色与色值\n\n环境光影重绘：\n必须去除光影，重新计算并渲染地垫的原来的颜色，包括：\n\n去除光源方向与在地垫表面形成的明暗过渡。\n\n去除光照强度对不同材质（如亮面丝绒或哑光棉麻）的漫反射效果。\n\n去除色温冷暖与环境光污染（环境色对地垫的影响）。\n\n去除地垫在地面或台面投射的真实阴影。\n去除地垫必须看起来像是在同一真实环境中被拍摄。\n\n图案完整性：\n目标地垫如果图案缺少，把他补全\n\n禁止臆造（NO HALLUCINATION）：\n不要添加任何纹理（除非提示词里明确有写）\n不得添加或猜测任何左侧图像中未明确提供的内容，\n包括新的颜色、图案、编织结构、包边样式或设计细节。\n\n无缝融合（SEAMLESS FUSION）：\n最终结果必须完整的俯视图，并高清化，没有底纹，的高清可以印花的图像\n"
+      "mode": "random",
+      "seed": [
+        "38",
+        0
+      ],
+      "index": 0,
+      "label": "Batch 001",
+      "path": "D:\\电商场景图\\方形\\浴室",
+      "pattern": "*",
+      "allow_RGBA_output": "false",
+      "filename_text_extension": "true"
+    },
+    "class_type": "Load Image Batch",
+    "_meta": {
+      "title": "浴室"
+    }
+  },
+  "2": {
+    "inputs": {
+      "total": 1,
+      "initial_value1": [
+        "13",
+        0
+      ],
+      "initial_value3": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "easy forLoopStart",
+    "_meta": {
+      "title": "For循环-开始"
+    }
+  },
+  "4": {
+    "inputs": {
+      "flow": [
+        "2",
+        0
+      ],
+      "initial_value1": [
+        "37",
+        0
+      ],
+      "initial_value2": [
+        "8",
+        0
+      ],
+      "initial_value3": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "easy forLoopEnd",
+    "_meta": {
+      "title": "For循环-结束"
+    }
+  },
+  "8": {
+    "inputs": {
+      "any_1": [
+        "2",
+        3
+      ],
+      "any_2": [
+        "69",
+        0
+      ]
+    },
+    "class_type": "easy batchAnything",
+    "_meta": {
+      "title": "任何批次组合"
+    }
+  },
+  "13": {
+    "inputs": {
+      "value": "0"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "字符串"
+    }
+  },
+  "14": {
+    "inputs": {
+      "mode": "single_image",
+      "seed": 212374798184284,
+      "index": [
+        "37",
+        0
+      ],
+      "label": "Batch 001",
+      "path": "D:\\临时文件夹\\评论区图",
+      "pattern": "*",
+      "allow_RGBA_output": "false",
+      "filename_text_extension": "true"
+    },
+    "class_type": "Load Image Batch",
+    "_meta": {
+      "title": "Load Image Batch"
+    }
+  },
+  "15": {
+    "inputs": {
+      "positive": "将输入的参考图1、2拼接图像作为一个完整的「地垫替换与场景合成」，考图3、4是细节白色图3是材质细节，图4是包边细节，图任务进行分析：\n\n参考图2区域（产品来源）：\n包含一个明确的地垫/地毯产品图像（如：门垫、客厅地毯、长条走廊垫、瑜伽垫）。\n该区域是地垫外观的唯一真实来源。\n\n参考图1区域（环境来源）：\n包含一个真实的环境场景（如家居、办公室、户外、健身区、入户玄关等）。\n场景中当前可能在地面铺设了其他旧地垫，或处于空置地面。\n\n任务目标：\n生成一张高保真、写实的单张场景照片，\n将右侧场景中原有的地垫替换为左侧区域展示的地垫，或在合理的位置（如地面、台面、入户口）放置该地垫，使其看起来完全融入新的环境。\n\n通用执行规则：\n\n智能放置方式匹配：\n识别左侧地垫的类型与材质，并为右侧场景匹配最自然、最符合现实的铺设或放置方式：\n\n地面铺设：必须完全贴合场景的地板透视关系，无论是玄关、沙发前、还是走廊。\n\n家具互动：若地垫放置于沙发、茶几、椅子或其他家具下方，需根据透视生成真实的压痕、褶皱或家具腿的遮挡效果。\n\n台面/卷起放置：若为瑜伽垫或小尺寸地垫，且场景允许，可根据环境放置在合理的台面、架子上，或以卷起状态放置在角落，需呈现重力影响下的平展或卷曲。\n\n绝对视觉一致性（最高优先级）：\n必须 100% 保留左侧地垫的所有视觉 DNA，包括但不限于：\n\n精确的颜色与色值\n\n材质纹理（长绒毛质感、短毛圈绒、编织纹理、橡胶防滑底、棉麻质地等）\n\n地垫形状、边缘包边走线、流苏装饰与厚度特征\n\nLogo、图案印花、色彩渐变、几何线条与文字细节\n严禁对地垫进行任何重新设计、美化、简化或风格化处理。\n\n真实物理反馈与重力模拟：\n地垫必须遵循真实世界的物理规律：\n\n正确呈现地垫的厚度和重力感。\n\n悬空展示时（如在台面边缘）的自然弯折、垂坠感。\n\n与地面、家具接触处的合理物理形变（如被家具腿压住时的局部凹陷和褶皱）。\n\n地垫整体尺寸需与场景空间透视及家具比例真实匹配。\n\n环境一致的光影重绘：\n必须根据右侧环境场景，重新计算并渲染地垫的光影效果，包括：\n\n光源方向与在地垫表面形成的明暗过渡。\n\n光照强度对不同材质（如亮面丝绒或哑光棉麻）的漫反射效果。\n\n色温冷暖与环境光污染（环境色对地垫的影响）。\n\n地垫在地面或台面投射的真实阴影。\n地垫必须看起来像是在同一真实环境中被拍摄。\n\n整体场景完整性：\n除目标地垫外，右侧区域的所有内容必须保持完全不变：\n\n原有地板材质与纹理\n\n所有家具、摆设、装饰品、背景墙面、窗户、光照模式等环境元素\n\n画面构成与透视关系\n\n强制约束：\n\n禁止臆造（NO HALLUCINATION）：\n不得添加或猜测任何左侧图像中未明确提供的内容，\n包括新的颜色、图案、编织结构、包边样式或设计细节。\n\n无缝融合（SEAMLESS FUSION）：\n最终结果必须看起来像一张真实拍摄的照片，\n不得出现边缘剪裁拼接痕迹、空间漂浮感（透视错误）、阴影不一致或合成违和感。\n白底图是一张的话直接改就行\n白底图里有两张的话：\n白底图上面的短的替换场景图片里的短的，下面的长图替换场景图里的长地垫，包边查考图片花纹颜色"
     },
     "class_type": "easy positive",
     "_meta": {
       "title": "正面提示词"
     }
   },
-  "6": {
+  "18": {
+    "inputs": {
+      "value": "sk-OkZZ0jqYOaBFah2ep7NCvFxwtjdJsM8vwW50lmiFraXOOisf"
+    },
+    "class_type": "easy string",
+    "_meta": {
+      "title": "字符串"
+    }
+  },
+  "19": {
+    "inputs": {
+      "image": "IMG_7148.JPG"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "20": {
+    "inputs": {
+      "image": "IMG_7151.JPG"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "28": {
+    "inputs": {
+      "seed": 809531625329640
+    },
+    "class_type": "easy seed",
+    "_meta": {
+      "title": "随机种"
+    }
+  },
+  "33": {
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "23",
+        "69",
         0
       ]
     },
@@ -21,15 +161,142 @@
       "title": "保存图像"
     }
   },
-  "19": {
+  "34": {
     "inputs": {
-      "separator": "*额外要求，",
+      "images": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "37": {
+    "inputs": {
+      "value": "a+1",
+      "a": [
+        "2",
+        2
+      ]
+    },
+    "class_type": "easy simpleMath",
+    "_meta": {
+      "title": "easy simpleMath"
+    }
+  },
+  "38": {
+    "inputs": {
+      "value": "a+1",
+      "a": [
+        "2",
+        4
+      ]
+    },
+    "class_type": "easy simpleMath",
+    "_meta": {
+      "title": "easy simpleMath"
+    }
+  },
+  "39": {
+    "inputs": {
+      "mode": "random",
+      "seed": [
+        "38",
+        0
+      ],
+      "index": 0,
+      "label": "Batch 001",
+      "path": "D:\\电商场景图\\方形\\入户门",
+      "pattern": "*",
+      "allow_RGBA_output": "false",
+      "filename_text_extension": "true"
+    },
+    "class_type": "Load Image Batch",
+    "_meta": {
+      "title": "入户门"
+    }
+  },
+  "40": {
+    "inputs": {
+      "mode": "random",
+      "seed": [
+        "38",
+        0
+      ],
+      "index": 0,
+      "label": "Batch 001",
+      "path": "D:\\电商场景图\\方形\\厨房",
+      "pattern": "*",
+      "allow_RGBA_output": "false",
+      "filename_text_extension": "true"
+    },
+    "class_type": "Load Image Batch",
+    "_meta": {
+      "title": "厨房"
+    }
+  },
+  "54": {
+    "inputs": {
+      "mode": "random",
+      "seed": [
+        "38",
+        0
+      ],
+      "index": 0,
+      "label": "Batch 001",
+      "path": "D:\\电商场景图\\方形\\小红书",
+      "pattern": "*",
+      "allow_RGBA_output": "false",
+      "filename_text_extension": "true"
+    },
+    "class_type": "Load Image Batch",
+    "_meta": {
+      "title": "小红书"
+    }
+  },
+  "58": {
+    "inputs": {
+      "🎯 系统角色": [
+        "63",
+        0
+      ],
+      "💬 用户输入": "请详细分析这张图片。",
+      "🤖 模型名称": "gemini-3.1-pro-preview-thinking-high",
+      "🌐 API地址": "https://ai.t8star.cn/v1/chat/completions",
+      "🔑 API密钥": [
+        "18",
+        0
+      ],
+      "📡 请求方法": "POST",
+      "🔐 密钥位置": "Header",
+      "📝 密钥字段名": "Authorization",
+      "🎬 视频文件路径": "",
+      "🎵 音频文件路径": "",
+      "🎯 响应提取路径": "",
+      "⏱️ 超时时间": 180,
+      "📋 额外Headers": "{}",
+      "📦 额外Body字段": "{}",
+      "🖼️ 图像1": [
+        "65",
+        0
+      ]
+    },
+    "class_type": "UniversalAPINode",
+    "_meta": {
+      "title": "🌐 通用API调用（测试） @炮老师的小课堂"
+    }
+  },
+  "62": {
+    "inputs": {
+      "separator": "*场景图描述",
       "prompt1": [
-        "5",
+        "15",
         0
       ],
       "prompt2": [
-        "20",
+        "67:60",
         0
       ]
     },
@@ -38,24 +305,82 @@
       "title": "提示词联结"
     }
   },
-  "20": {
+  "63": {
     "inputs": {
-      "positive": "不要有白框"
+      "positive": "根据图片内容，分析图片内的信息，主要关注地上的地垫的位置和大小有几张，怎么放的，与场景光影的关系"
     },
     "class_type": "easy positive",
     "_meta": {
       "title": "正面提示词"
     }
   },
-  "23": {
+  "64": {
+    "inputs": {
+      "image": "矩形 12.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "65": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 2,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_longest_side": true,
+      "longest_side": 1024,
+      "image": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放"
+    }
+  },
+  "66": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 2,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_longest_side": true,
+      "longest_side": 1024,
+      "image": [
+        "64",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放"
+    }
+  },
+  "68": {
+    "inputs": {
+      "image": "IMG_7151 (1).JPG"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "69": {
     "inputs": {
       "prompt": [
-        "19",
+        "62",
         0
       ],
       "mode": "edit",
       "api_key": [
-        "25",
+        "70",
         0
       ],
       "quality": "auto",
@@ -65,12 +390,24 @@
       "num_images": 1,
       "output_format": "png",
       "image_way": "image_url",
-      "seed": 14320,
+      "seed": 16830,
       "poll_interval": 2,
       "max_poll_attempts": 300,
       "skip_error": false,
       "image1": [
-        "29",
+        "65",
+        0
+      ],
+      "image2": [
+        "66",
+        0
+      ],
+      "image3": [
+        "19",
+        0
+      ],
+      "image4": [
+        "20",
         0
       ]
     },
@@ -79,25 +416,29 @@
       "title": "Zhenzhen GPT Image 2 Fal"
     }
   },
-  "25": {
+  "70": {
     "inputs": {
       "api_base": "zhenzhen",
       "apikey": "sk-ISVEhcNHiUVqB5XHnBbP6Uq1taKmwU8LHuwox3BL99M2DWpB",
       "custom_ip": "",
-      "skip_error": false
+      "skip_error": true
     },
     "class_type": "Comfly_api_set",
     "_meta": {
       "title": "Zhenzhen API Settings"
     }
   },
-  "29": {
+  "67:60": {
     "inputs": {
-      "image": "e4938593daef52bf4457a5422a49c46c.png"
+      "text": "这是一份针对图片中地垫细节及光影关系的详细分析：\n\n**一、 地垫的数量与基本特征**\n*   **数量：** 图片中只存在 **1张** 地垫。\n*   **形状与外观：** 是一张深灰色（或黑色）、表面带有明显竖向条纹（类似灯芯绒或防滑纹理）的长方形地垫。上面印有卡通动物头像（猪、狗、熊、兔）以及英文标语和散落的彩色糖果图案。\n\n**二、 地垫的大小与位置（怎么放的）**\n*   **相对大小：** 由于缺乏参照物，无法得出具体尺寸。但从比例来看，它是一张典型的“长条形”厨房/门厅地垫。它的长度跨越了上方橱柜的一组抽屉加上旁边柜门的一部分；宽度适中，足以容纳人站立操作。\n*   **摆放位置：** 地垫平铺在浅色的瓷砖地面上。\n*   **摆放方式（怎么放的）：** \n    1.  **平行贴合：** 地垫的较长一条边缘（上方边缘）与左侧橱柜的底侧（踢脚线位置）保持**严格平行**。\n    2.  **紧凑放置：** 地垫被推得很靠里，几乎紧贴着橱柜底部的内缩区域放置，没有留出明显的缝隙。\n\n**三、 地垫与场景光影的关系（重点分析）**\n\n通过观察光影，可以推断出场景的光照环境以及地垫在其中的状态：\n\n1.  **主光源方向：** 观察瓷砖地面左下角的方形反光斑块，以及抽屉面板上的高光，可以推断主光源（可能是顶灯或窗户光）大致来自于**右上方或正上方偏右**的位置。\n2.  **橱柜对地垫的投影（最显著的光影关系）：** \n    *   由于光源在上方，左侧垂直的橱柜必然会在地面上投下阴影。\n    *   **请仔细观察地垫靠近橱柜的上半部分：** 沿着地垫的长边，有一道明显的**深色阴影带**覆盖在地垫上。这说明地垫被放置在了橱柜边缘的遮挡范围内。在这个阴影区域内，地垫的深灰色显得更暗，上面印着的黄色小星星等图案的亮度也相对降低。\n3.  **地垫自身的投影：**\n    *   地垫的厚度看起来较薄。观察地垫的右下角圆弧边缘以及右侧短边，可以看到地垫在浅色瓷砖上投下了一道**非常细微且边缘锐利的深色阴影线**。\n    *   这道微弱的投影进一步证实了光源是从右上方打下来的，同时也说明地垫非常平整地贴合在地面上，没有卷边。\n4.  **材质与光线反射的对比：**\n    *   **地面：** 浅色瓷砖表面光滑，属于镜面/半镜面反射，能清晰地反射出光源（左下角的亮斑）。\n    *   **地垫：** 材质是深色且带有粗糙条纹的绒面或布面，属于**漫反射**材质，且颜色深，因此它**吸收了大量的光线**。\n    *   **视觉效果：** 这种强烈的吸光（地垫）与反光（瓷砖）的材质对比，使得深色的地垫在明亮的地面上显得非常突出，边界清晰，增强了画面的层次感。\n\n**总结：**\n这是一张单张的、长条形的深色卡通地垫。它被规整、平贴地放置在橱柜正下方的瓷砖上。由于紧靠橱柜且光源来自上方，地垫的上半部分清晰地笼罩在橱柜投下的阴影中，而其自身较薄的厚度也在右下方地面上留下了微弱的投影，整体光影逻辑自然、合理。",
+      "anything": [
+        "58",
+        0
+      ]
     },
-    "class_type": "LoadImage",
+    "class_type": "easy showAnything",
     "_meta": {
-      "title": "加载图像"
+      "title": "展示任何"
     }
   }
 }

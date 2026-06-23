@@ -1,161 +1,88 @@
 # 111.170.58.38:8003
 
-**GPU**: CPU | **显存**: — | **空闲**: 11 GB
-**内存**: 15 GB (空闲 11 GB)
+**GPU**: CPU | **显存**: — | **空闲**: 10 GB
+**内存**: 15 GB (空闲 10 GB)
 **版本**: 0.19.3
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-22 08:07:40
-**历史总数**: 87 | **成功**: 10
+**扫描时间**: 2026-06-23 08:07:38
+**历史总数**: 154 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `3c1b1d11-65cd-4093-a67c-26e410b79de5`
+- **Prompt ID**: `fe3fbbc0-346d-4db8-a4d6-8f9640e48397`
 - **类型**: 图片编辑
-- **节点数**: 22
+- **节点数**: 3
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
-  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
-Profile
-language: 中文
-description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
-Rules
-基本原则
-
-高端摄影美感优先：提示词需符合
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
+  - [HezhongNewAPI::text] 把衣服补充完整，保持高清，其他不变
 
 ### 2. workflow_02.json
-- **Prompt ID**: `56bdd780-3f01-42ac-8bc3-33e9647bc6eb`
+- **Prompt ID**: `68514a51-ffac-4e3e-92b7-029c85c2cc38`
 - **类型**: 图片编辑
-- **节点数**: 22
+- **节点数**: 3
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
-  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
-Profile
-language: 中文
-description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
-Rules
-基本原则
-
-高端摄影美感优先：提示词需符合
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
+  - [HezhongNewAPI::text] 把衣服补充完整，其他不变
 
 ### 3. workflow_03.json
-- **Prompt ID**: `387822b5-d9ff-45a8-9e33-52341b26e8fe`
-- **类型**: 图片编辑
-- **节点数**: 22
-- **模型** (0):
-- **提示词**:
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
-  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
-Profile
-language: 中文
-description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
-Rules
-基本原则
-
-高端摄影美感优先：提示词需符合
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
-
-### 4. workflow_04.json
-- **Prompt ID**: `11590e0a-1c62-47d6-bcd5-47778a9c6335`
-- **类型**: 图片编辑
-- **节点数**: 22
-- **模型** (0):
-- **提示词**:
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
-  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
-Profile
-language: 中文
-description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
-Rules
-基本原则
-
-高端摄影美感优先：提示词需符合
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
-
-### 5. workflow_05.json
-- **Prompt ID**: `839778c1-1c53-464b-9f55-c4c61fd22c9e`
-- **类型**: 图片编辑
-- **节点数**: 22
-- **模型** (0):
-- **提示词**:
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
-  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
-Profile
-language: 中文
-description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
-Rules
-基本原则
-
-高端摄影美感优先：提示词需符合
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
-
-### 6. workflow_06.json
-- **Prompt ID**: `2a610eda-0fc2-4738-8c97-c9f3b05284cc`
-- **类型**: 图片编辑
-- **节点数**: 22
-- **模型** (0):
-- **提示词**:
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
-  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
-Profile
-language: 中文
-description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
-Rules
-基本原则
-
-高端摄影美感优先：提示词需符合
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
-
-### 7. workflow_07.json
-- **Prompt ID**: `fb82f2ba-a551-4fb4-a67e-8b04066abdc3`
-- **类型**: 图片编辑
-- **节点数**: 22
-- **模型** (0):
-- **提示词**:
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
-  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
-Profile
-language: 中文
-description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
-Rules
-基本原则
-
-高端摄影美感优先：提示词需符合
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
-
-### 8. workflow_08.json
-- **Prompt ID**: `1a2e351a-63e1-4f26-9fb7-00d7e1f9402f`
-- **类型**: 图片编辑
-- **节点数**: 22
-- **模型** (0):
-- **提示词**:
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
-  - [LayerUtility: TextBox::text] Role: 专业商业摄影提示词生成专家
-Profile
-language: 中文
-description: 专业商业摄影提示词生成专家，根据用户输入的服装模特图像及提示词，生成适配高端商业摄影的AI生图提示词，精准调整模特姿势、场景、风格，保持服装/背景（用户无要求时），确保提示词动作自然、细节专业、符合主流审美，适配不同服装特性与用户需求。
-Rules
-基本原则
-
-高端摄影美感优先：提示词需符合
-  - [HezhongNewAPI::text] In Figure 1, the model wears the clothes from Figure 2, with everything else remaining the same.
-
-### 9. workflow_09.json
-- **Prompt ID**: `1905e3a7-e3e8-44bf-9ab9-5ea71bbf2cd9`
+- **Prompt ID**: `24ec8642-2c13-473b-91a5-a3da7178c482`
 - **类型**: 图片编辑
 - **节点数**: 4
 - **模型** (0):
 - **提示词**:
-  - [HezhongNewAPI::text] 图一右边模特穿的短袖长裤替换成图二右边长袖+长裤
-图一左边模特穿的短袖长裤替换成图二左边白灰色长袖+长裤
+  - [HezhongNewAPI::text] 图一服装不变，套在图二假模上，参考图二的假模一样，要纯白背景跟图二一样，蓬蓬裙短裙参考图二，图一的款式不要改变，把图一的褶痕抹平，参考图二效果，参考图二假模跟白底背景，图一款式颜色不变白色 ，背心款网纱裙，正面图
+
+### 4. workflow_04.json
+- **Prompt ID**: `ae86c274-612c-47d8-a64b-2963f853783e`
+- **类型**: 图片编辑
+- **节点数**: 4
+- **模型** (0):
+- **提示词**:
+  - [HezhongNewAPI::text] 图一服装不变，套在图二假模上，参考图二的假模一样，要纯白背景跟图二一样，蓬蓬裙短裙参考图二，图一的款式不要改变，把图一的褶痕抹平，参考图二效果，参考图二假模跟白底背景，图一款式颜色不变白色 ，背心款网纱裙，背面图
+
+### 5. workflow_05.json
+- **Prompt ID**: `231cbc85-bfa5-4722-853f-fd4ac8dfb95c`
+- **类型**: 图片编辑
+- **节点数**: 4
+- **模型** (0):
+- **提示词**:
+  - [HezhongNewAPI::text] 图1颜色改成图2的颜色，面料版型和其他的都不改变
+
+### 6. workflow_06.json
+- **Prompt ID**: `d5a25248-bc0d-4e64-b20d-0bb62f0aa4d9`
+- **类型**: 图片编辑
+- **节点数**: 4
+- **模型** (0):
+- **提示词**:
+  - [HezhongNewAPI::text] 图1颜色改成图2的颜色，面料版型和其他的都不改变
+
+### 7. workflow_07.json
+- **Prompt ID**: `cd96036f-641d-4fa0-8428-edd3c6360552`
+- **类型**: 图片编辑
+- **节点数**: 4
+- **模型** (0):
+- **提示词**:
+  - [HezhongNewAPI::text] 图一服装不变，穿在欧洲可爱女童身上4岁，参考图二风格，正面站着随意自然的图，裙摆超蓬蓬效果，图一服装不要任何改变，图一颜色不变，参考图二人物头发，短裙到膝盖下一点，飞边袖，参考图二场景但配件不要一模一样
+
+### 8. workflow_08.json
+- **Prompt ID**: `fbd9b162-88d3-4660-99c8-ca92edc004af`
+- **类型**: 图片编辑
+- **节点数**: 4
+- **模型** (0):
+- **提示词**:
+  - [HezhongNewAPI::text] 图1颜色改成图2的颜色，面料版型和其他的都不改变
+
+### 9. workflow_09.json
+- **Prompt ID**: `969a799d-2573-4129-8499-f4f70ef1cedd`
+- **类型**: 视频编辑
+- **节点数**: 4
+- **模型** (0):
 
 ### 10. workflow_10.json
-- **Prompt ID**: `80f25e60-1da5-4ae6-8758-28a3082a6945`
-- **类型**: 其他/工具
-- **节点数**: 2
+- **Prompt ID**: `d05d3ee5-f039-47b3-81d7-3f9eec8e26fd`
+- **类型**: 图片编辑
+- **节点数**: 3
 - **模型** (0):
+- **提示词**:
+  - [HezhongNewAPI::text] 帮我删除图中标红的部分

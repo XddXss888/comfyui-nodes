@@ -1,16 +1,16 @@
 # 182.140.218.229:20000
 
-**GPU**: RTX 4090 | **显存**: 47 GB | **空闲**: 32 GB
-**内存**: 944 GB (空闲 298 GB)
+**GPU**: RTX 4090 | **显存**: 47 GB | **空闲**: 47 GB
+**内存**: 944 GB (空闲 285 GB)
 **版本**: 0.3.46
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-22 08:10:09
+**扫描时间**: 2026-06-23 08:10:39
 **历史总数**: 10001 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `7c15845e-cacf-457e-aa0c-ad74ae63f796`
+- **Prompt ID**: `84c73a3a-839a-40c8-a3a6-eaf26513a7ca`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -21,13 +21,19 @@
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] This video is filmed in real time motion and is NOT filmed in slow motion.
-Only The woman in the middle squats down and then all three of them look into the camera with serious faces
-  - [PrimitiveStringMultiline::text] This video is filmed in real time motion and is NOT filmed in slow motion.
-Only The woman in the middle squats down and then all three of them look into the camera with serious faces
+  - [PrimitiveStringMultiline::positive] Create a 5-second vertical video (9:16) using the provided Fuente Deportiva logo.
+
+The logo remains fixed, sharp and perfectly readable at all times.
+
+The camera moves smoothly forward through the cen
+  - [PrimitiveStringMultiline::text] Create a 5-second vertical video (9:16) using the provided Fuente Deportiva logo.
+
+The logo remains fixed, sharp and perfectly readable at all times.
+
+The camera moves smoothly forward through the cen
 
 ### 2. workflow_02.json
-- **Prompt ID**: `c54ae08b-1190-4cc5-8c9f-626cb2794d45`
+- **Prompt ID**: `2e8fe6ad-5549-4d08-97d7-af6f130e7cc3`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -38,11 +44,11 @@ Only The woman in the middle squats down and then all three of them look into th
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] A small, tiny invisible drone slowly moves across the woman’s body from top to bottom like a scanning device. Wherever the drone passes, that part of her clothes disappears and reveals her naked body 
-  - [PrimitiveStringMultiline::text] A small, tiny invisible drone slowly moves across the woman’s body from top to bottom like a scanning device. Wherever the drone passes, that part of her clothes disappears and reveals her naked body 
+  - [PrimitiveStringMultiline::positive] Standing  next to each other? They both want to wrestle she starts to grab them and then he grabbed her and they actually are rolling around and he has her pin down on the couch and he see her trying 
+  - [PrimitiveStringMultiline::text] Standing  next to each other? They both want to wrestle she starts to grab them and then he grabbed her and they actually are rolling around and he has her pin down on the couch and he see her trying 
 
 ### 3. workflow_03.json
-- **Prompt ID**: `a9f9e037-22bf-40a7-a484-266eb5242938`
+- **Prompt ID**: `7efd277d-9347-417f-a8b4-fe20defdfd0e`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -53,11 +59,11 @@ Only The woman in the middle squats down and then all three of them look into th
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] Camera moves backwards to get full body shot. She Gets Arrest by Police. slapped her three times in the face her face quivers each time by police for public nudity her clothes all fall off and dissolv
-  - [PrimitiveStringMultiline::text] Camera moves backwards to get full body shot. She Gets Arrest by Police. slapped her three times in the face her face quivers each time by police for public nudity her clothes all fall off and dissolv
+  - [PrimitiveStringMultiline::positive] Maintain extreme consistency of the woman’s appearance throughout. Her face and hair must look the same in the last frame as it does in the first frame. The consistency of her appearance is essential 
+  - [PrimitiveStringMultiline::text] Maintain extreme consistency of the woman’s appearance throughout. Her face and hair must look the same in the last frame as it does in the first frame. The consistency of her appearance is essential 
 
 ### 4. workflow_04.json
-- **Prompt ID**: `dc3ad27e-9183-4cc2-8b46-0808ac3f230b`
+- **Prompt ID**: `1ae462d2-81f5-42aa-af82-83ad90c3da30`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -68,11 +74,11 @@ Only The woman in the middle squats down and then all three of them look into th
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] Camera moves backwards to get full body shot. She Gets Arrest by Police. slapped her three times in the face her face quivers each time by police for public nudity her clothes all fall off and dissolv
-  - [PrimitiveStringMultiline::text] Camera moves backwards to get full body shot. She Gets Arrest by Police. slapped her three times in the face her face quivers each time by police for public nudity her clothes all fall off and dissolv
+  - [PrimitiveStringMultiline::positive] Standing  next to each other? They both want to wrestle she starts to grab them and then he grabbed her and they actually are rolling around and he has her pin down on the couch and he see her trying 
+  - [PrimitiveStringMultiline::text] Standing  next to each other? They both want to wrestle she starts to grab them and then he grabbed her and they actually are rolling around and he has her pin down on the couch and he see her trying 
 
 ### 5. workflow_05.json
-- **Prompt ID**: `8b35e74d-1ccc-40de-ac2c-e1ea6ee7943a`
+- **Prompt ID**: `17f4cd91-bc8d-4c83-8536-90803e5ccab8`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -83,11 +89,11 @@ Only The woman in the middle squats down and then all three of them look into th
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] Camera moves backwards to get full body shot. She Gets Arrest by Police. slapped her three times in the face her face quivers each time by police for public nudity her clothes all fall off and dissolv
-  - [PrimitiveStringMultiline::text] Camera moves backwards to get full body shot. She Gets Arrest by Police. slapped her three times in the face her face quivers each time by police for public nudity her clothes all fall off and dissolv
+  - [PrimitiveStringMultiline::positive] woman removes black to reveal her amazing large round bare ass
+  - [PrimitiveStringMultiline::text] woman removes black to reveal her amazing large round bare ass
 
 ### 6. workflow_06.json
-- **Prompt ID**: `1ec94b3a-b94f-41c3-833e-a8381e2c2974`
+- **Prompt ID**: `38e95a5c-09fc-4ec9-b7cc-3893ff02bd70`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -98,11 +104,11 @@ Only The woman in the middle squats down and then all three of them look into th
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] ѕhоԝіոg hеr ոіcе νаgіոа.Ѕіtѕ оո іѕ bіg hаrԁ реոіѕ, fаcе tо fаcе bоսոcіոg оո іѕ ԁіck սр аոԁ ԁоԝո, реոеtrаtеԁ ״זין בכוס ״gеttіոg mах рӏеаѕսrе, ԝhіӏе hе ејаcսӏаtе ոіcе аmоսոt оf ѕреrm оո hеr cӏіtоrіѕ аոԁ
-  - [PrimitiveStringMultiline::text] ѕhоԝіոg hеr ոіcе νаgіոа.Ѕіtѕ оո іѕ bіg hаrԁ реոіѕ, fаcе tо fаcе bоսոcіոg оո іѕ ԁіck սр аոԁ ԁоԝո, реոеtrаtеԁ ״זין בכוס ״gеttіոg mах рӏеаѕսrе, ԝhіӏе hе ејаcսӏаtе ոіcе аmоսոt оf ѕреrm оո hеr cӏіtоrіѕ аոԁ
+  - [PrimitiveStringMultiline::positive] He is sitting still while the back ground his mouth remains closed the ladies speed up moving taking to each other lights come down for ceiling and fish are moving fast as well
+  - [PrimitiveStringMultiline::text] He is sitting still while the back ground his mouth remains closed the ladies speed up moving taking to each other lights come down for ceiling and fish are moving fast as well
 
 ### 7. workflow_07.json
-- **Prompt ID**: `4d9076bb-5de3-440c-8d3c-88a19c470c94`
+- **Prompt ID**: `ce3e9d4c-7063-4c0b-a94e-477a4e7ca03b`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -113,11 +119,11 @@ Only The woman in the middle squats down and then all three of them look into th
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] ѕhоԝіոg hеr ոіcе νаgіոа.Ѕіtѕ оո іѕ bіg hаrԁ реոіѕ, fаcе tо fаcе bоսոcіոg оո іѕ ԁіck սр аոԁ ԁоԝո, реոеtrаtеԁ ״זין בכוס ״gеttіոg mах рӏеаѕսrе, ԝhіӏе hе ејаcսӏаtе ոіcе аmоսոt оf ѕреrm оո hеr cӏіtоrіѕ аոԁ
-  - [PrimitiveStringMultiline::text] ѕhоԝіոg hеr ոіcе νаgіոа.Ѕіtѕ оո іѕ bіg hаrԁ реոіѕ, fаcе tо fаcе bоսոcіոg оո іѕ ԁіck սр аոԁ ԁоԝո, реոеtrаtеԁ ״זין בכוס ״gеttіոg mах рӏеаѕսrе, ԝhіӏе hе ејаcսӏаtе ոіcе аmоսոt оf ѕреrm оո hеr cӏіtоrіѕ аոԁ
+  - [PrimitiveStringMultiline::positive] Keep both arms up above head, keep both arms up behind head, face forward
+  - [PrimitiveStringMultiline::text] Keep both arms up above head, keep both arms up behind head, face forward
 
 ### 8. workflow_08.json
-- **Prompt ID**: `dadf743e-c79e-4126-8af5-00dcb8384dfe`
+- **Prompt ID**: `c7e0b800-e81f-4a1f-96c0-5ecd41faa62b`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -128,13 +134,11 @@ Only The woman in the middle squats down and then all three of them look into th
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] This video is filmed in real time motion and is NOT filmed in slow motion
-The woman on the left and the woman in the middle have a long passionate kiss
-  - [PrimitiveStringMultiline::text] This video is filmed in real time motion and is NOT filmed in slow motion
-The woman on the left and the woman in the middle have a long passionate kiss
+  - [PrimitiveStringMultiline::positive] Maintain extreme consistency of the woman’s appearance throughout. Her face and hair must look the same in the last frame as it does in the first frame. The consistency of her appearance is essential 
+  - [PrimitiveStringMultiline::text] Maintain extreme consistency of the woman’s appearance throughout. Her face and hair must look the same in the last frame as it does in the first frame. The consistency of her appearance is essential 
 
 ### 9. workflow_09.json
-- **Prompt ID**: `386f442b-e189-4113-83e6-3837e855d973`
+- **Prompt ID**: `0bca1ee7-2bd2-4c4f-811e-74895cde095d`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -145,11 +149,11 @@ The woman on the left and the woman in the middle have a long passionate kiss
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] Sentarse encima 
-  - [PrimitiveStringMultiline::text] Sentarse encima 
+  - [PrimitiveStringMultiline::positive] She breathes heavily. Her fat belly expands and sticks out further with every breath she takes
+  - [PrimitiveStringMultiline::text] She breathes heavily. Her fat belly expands and sticks out further with every breath she takes
 
 ### 10. workflow_10.json
-- **Prompt ID**: `37c8419e-0db9-4430-9fc9-4b2e3cd710b3`
+- **Prompt ID**: `973f6d07-e749-4d13-932f-c1d888912bc4`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -160,5 +164,5 @@ The woman on the left and the woman in the middle have a long passionate kiss
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] Platting chess
-  - [PrimitiveStringMultiline::text] Platting chess
+  - [PrimitiveStringMultiline::positive] All the blue textiles are unneccessary and slide Right off uncovering every bodypart that‘s beneath
+  - [PrimitiveStringMultiline::text] All the blue textiles are unneccessary and slide Right off uncovering every bodypart that‘s beneath

@@ -4,28 +4,28 @@
 **内存**: 62 GB (空闲 45 GB)
 **版本**: 0.6.0
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-22 08:07:47
-**历史总数**: 3597 | **成功**: 10
+**扫描时间**: 2026-06-23 08:07:44
+**历史总数**: 4177 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `7a90b62a-bbe8-4217-a8fc-205e658a1c15`
-- **类型**: 文生视频
-- **节点数**: 32
+- **Prompt ID**: `56b5e934-1e98-4ece-ad81-a8da17d75a87`
+- **类型**: 文生图
+- **节点数**: 30
 - **模型** (7):
   - FLUX.1-Turbo-Alpha.safetensors
   - ae.safetensors
   - clip_l.safetensors
   - drunet_gray.safetensors
-  - kontext_3mm_0130_000007000.safetensors
+  - kontext_8mm_0130_000007000.safetensors
   - svdq-int4_r32-flux.1-kontext-dev.safetensors
   - t5xxl_fp16.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures,black background
 
 ### 2. workflow_02.json
-- **Prompt ID**: `2482bc86-60d6-4b18-92a7-9f092d999e0a`
+- **Prompt ID**: `0409c056-9a62-4ac8-81d2-6240e4fb2d6b`
 - **类型**: 文生视频
 - **节点数**: 32
 - **模型** (7):
@@ -40,7 +40,7 @@
   - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures,black background
 
 ### 3. workflow_03.json
-- **Prompt ID**: `f90d19ed-c69e-4610-8e6b-6ac16e23a722`
+- **Prompt ID**: `e26e0158-8a78-4bb9-9e0f-a4e2c4d01d44`
 - **类型**: 文生视频
 - **节点数**: 32
 - **模型** (7):
@@ -55,7 +55,7 @@
   - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures,black background
 
 ### 4. workflow_04.json
-- **Prompt ID**: `fa842910-0968-454b-946f-87e79e347017`
+- **Prompt ID**: `cf65a896-73d8-474b-9e29-2463e94d78a8`
 - **类型**: 文生视频
 - **节点数**: 32
 - **模型** (7):
@@ -70,7 +70,7 @@
   - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures,black background
 
 ### 5. workflow_05.json
-- **Prompt ID**: `4cc6f23d-a407-4d01-937d-added4619739`
+- **Prompt ID**: `6aaf4a56-dbb3-47d9-b10c-4af18d483147`
 - **类型**: 文生视频
 - **节点数**: 32
 - **模型** (7):
@@ -78,14 +78,14 @@
   - ae.safetensors
   - clip_l.safetensors
   - drunet_gray.safetensors
-  - kontext_8mm_0130_000007000.safetensors
+  - kontext_3mm_0130_000007000.safetensors
   - svdq-int4_r32-flux.1-kontext-dev.safetensors
   - t5xxl_fp16.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures,black background
 
 ### 6. workflow_06.json
-- **Prompt ID**: `2f0f21da-b825-4f36-a801-f19c0e7f6bc3`
+- **Prompt ID**: `6544c1cf-11be-4dbc-b678-fe811b45ddfa`
 - **类型**: 文生图
 - **节点数**: 32
 - **模型** (7):
@@ -100,9 +100,9 @@
   - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures,black background
 
 ### 7. workflow_07.json
-- **Prompt ID**: `ffc37784-bedb-4914-81ab-2f0b671a2005`
-- **类型**: 文生图
-- **节点数**: 30
+- **Prompt ID**: `f2c4957e-e852-4824-924f-a2b4ca16580f`
+- **类型**: 文生视频
+- **节点数**: 32
 - **模型** (7):
   - FLUX.1-Turbo-Alpha.safetensors
   - ae.safetensors
@@ -115,9 +115,9 @@
   - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures,black background
 
 ### 8. workflow_08.json
-- **Prompt ID**: `8b73e644-8954-4e99-b763-904daddcdc3c`
-- **类型**: 文生图
-- **节点数**: 30
+- **Prompt ID**: `c6dd0f86-9ccb-44a3-946b-62d2249343a4`
+- **类型**: 文生视频
+- **节点数**: 32
 - **模型** (7):
   - FLUX.1-Turbo-Alpha.safetensors
   - ae.safetensors
@@ -130,8 +130,8 @@
   - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures,black background
 
 ### 9. workflow_09.json
-- **Prompt ID**: `2fe72d8a-4ca1-419d-bed8-b1b4eb32faba`
-- **类型**: 文生图
+- **Prompt ID**: `01804985-c000-4626-9afe-8e1ff81874d4`
+- **类型**: 文生视频
 - **节点数**: 32
 - **模型** (7):
   - FLUX.1-Turbo-Alpha.safetensors
@@ -145,7 +145,7 @@
   - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures,black background
 
 ### 10. workflow_10.json
-- **Prompt ID**: `42c349dd-9585-43d4-aaed-edbb8fabc9ac`
+- **Prompt ID**: `211c782a-58ec-4cc0-a9db-10262382785f`
 - **类型**: 文生视频
 - **节点数**: 32
 - **模型** (7):
@@ -153,7 +153,7 @@
   - ae.safetensors
   - clip_l.safetensors
   - drunet_gray.safetensors
-  - kontext_3mm_0130_000007000.safetensors
+  - kontext_8mm_0130_000007000.safetensors
   - svdq-int4_r32-flux.1-kontext-dev.safetensors
   - t5xxl_fp16.safetensors
 - **提示词**:

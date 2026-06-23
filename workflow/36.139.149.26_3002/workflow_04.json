@@ -1,8 +1,158 @@
 {
-  "1": {
-    "class_type": "VisualizeCUDAMemoryHistory",
+  "76": {
     "inputs": {
-      "snapshot_path": "/data/ComfyUI2/input/cuda_snap_1782059176.pkl"
+      "filename_prefix": "comfyui-airport-editorial",
+      "images": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "86": {
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "87": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "91": {
+    "inputs": {
+      "seed": 386389556562250,
+      "steps": 10,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "86",
+        0
+      ],
+      "positive": [
+        "92",
+        0
+      ],
+      "negative": [
+        "93",
+        0
+      ],
+      "latent_image": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "92": {
+    "inputs": {
+      "text": [
+        "114",
+        0
+      ],
+      "clip": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "93": {
+    "inputs": {
+      "text": "低质量, 模糊, 噪点, JPEG伪影, 压缩失真, 多余的手指, 扭曲的手, 畸形手, 不对称眼睛, 错位牙齿, 卡通风格, 动漫滤镜, 过度上色, 扁平化设计, 残缺身体, 切割画面, 杂乱背景, 错误透视, 丑陋, 恐怖, 死亡眼神, 异常肤色, 表情僵硬, 文字, 水印, 签名, 用户名,出现人类",
+      "clip": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "94": {
+    "inputs": {
+      "samples": [
+        "91",
+        0
+      ],
+      "vae": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "95": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "96": {
+    "inputs": {
+      "width": [
+        "97",
+        0
+      ],
+      "height": [
+        "97",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "97": {
+    "inputs": {
+      "use_custom_resolution": false,
+      "resolution": "1080x1920 (9:16) (竖屏)",
+      "custom_width": 1024,
+      "custom_height": 1024
+    },
+    "class_type": "TTResolutionSelector",
+    "_meta": {
+      "title": "TT分辨率选择器"
+    }
+  },
+  "114": {
+    "inputs": {
+      "value": "严格按照下方提升词生成图片：\n杰作，8K超清，9：16，生成4张，极致细节，日式动漫同人立绘，流畅精致线稿，柔和通透光影，高饱和清透色彩，人物轮廓带有清晰白色描边，纯白色背景，无多余文字。统一穿搭：男性着经典执事服，女性着标准女仆装，整体以黑白为主色调，仅在领结、蝴蝶结、蕾丝、丝带处做小面积专属色彩点缀，无任何大面积图案印花。统一互动姿势：前方人物站立，后方执事单手托举杯盘、手持饮品杯，温柔向前递出，二人视线交汇，肢体互动自然协调。\n后方工藤新一，深棕色标志性刺猬头，蓝色眼眸明亮温润，嘴角扬起温柔浅笑，眼神满是宠溺。身穿黑白经典执事服，白色翻领衬衫搭配黑色马甲与黑色西裤，衬衫袖口卷起，黑色袖带束紧，佩戴藏蓝色领结，单手托住白色杯盘，将透明饮品杯缓缓递向身前。\n前方毛利兰，乌黑长发柔顺垂落，眉眼弯起，嘴角噙着清甜笑意，脸颊泛起淡淡绯红，神情腼腆又欣喜。身穿黑白女仆装，白色围裙搭配黑色连衣裙，头戴白色蕾丝发箍，领口系淡粉色蝴蝶结，袖口与裙摆荷叶边带有浅粉色蕾丝滚边，双手轻抬，下意识想要接下饮品，身姿温婉灵动。二人氛围甜蜜羞涩，互动温馨治愈。\n构图居中协调，人物比例协调，画风统一和谐，画面角落点缀小巧爱心、樱花、侦探徽章卡通贴纸。"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "提示词"
     }
   }
 }

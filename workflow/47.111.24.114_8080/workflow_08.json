@@ -148,7 +148,7 @@
   },
   "125": {
     "inputs": {
-      "seed": 953330860844969,
+      "seed": 332240698918246,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -313,7 +313,7 @@
   },
   "160": {
     "inputs": {
-      "text": "306",
+      "text": "-150",
       "anything": [
         "97",
         12
@@ -326,7 +326,7 @@
   },
   "161": {
     "inputs": {
-      "text": "396",
+      "text": "1838",
       "anything": [
         "97",
         13
@@ -339,7 +339,7 @@
   },
   "188": {
     "inputs": {
-      "image": "ComfyUI_00421_.png"
+      "image": "ComfyUI_00397_.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -375,7 +375,7 @@
   },
   "213": {
     "inputs": {
-      "image": "12.jpg"
+      "image": "wechat_2026-06-17_145125_582.png"
     },
     "class_type": "LoadImage",
     "_meta": {

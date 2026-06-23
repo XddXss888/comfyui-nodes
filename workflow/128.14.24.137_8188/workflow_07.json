@@ -1,0 +1,270 @@
+{
+  "101": {
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "lora_name": "wan2.2/lightx2v_v1/wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+      "model": [
+        "95",
+        0
+      ],
+      "strength_model": 1.0000000000000002
+    }
+  },
+  "102": {
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "lora_name": "wan2.2/lightx2v_v1/wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+      "model": [
+        "96",
+        0
+      ],
+      "strength_model": 1.0000000000000002
+    }
+  },
+  "103": {
+    "_meta": {
+      "title": "采样算法（SD3）"
+    },
+    "class_type": "ModelSamplingSD3",
+    "inputs": {
+      "model": [
+        "102",
+        0
+      ],
+      "shift": 5.000000000000001
+    }
+  },
+  "104": {
+    "_meta": {
+      "title": "采样算法（SD3）"
+    },
+    "class_type": "ModelSamplingSD3",
+    "inputs": {
+      "model": [
+        "101",
+        0
+      ],
+      "shift": 5.000000000000001
+    }
+  },
+  "108": {
+    "_meta": {
+      "title": "保存视频"
+    },
+    "class_type": "SaveVideo",
+    "inputs": {
+      "codec": "auto",
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "video": [
+        "94",
+        0
+      ],
+      "video-preview": ""
+    }
+  },
+  "116": {
+    "_meta": {
+      "title": "加载图像"
+    },
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "/data/app/stable-diffusion/work/data/picovix/picovix_app/test_task_8f4148fb614048bd/img2img_source/4eee8cb3bb35c5e3e784a54fd9cf9590_0.png"
+    }
+  },
+  "84": {
+    "_meta": {
+      "title": "加载CLIP"
+    },
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "wan2.2/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "device": "default",
+      "type": "wan"
+    }
+  },
+  "85": {
+    "_meta": {
+      "title": "K采样器（高级）"
+    },
+    "class_type": "KSamplerAdvanced",
+    "inputs": {
+      "add_noise": "disable",
+      "cfg": 1.0,
+      "end_at_step": 4,
+      "latent_image": [
+        "86",
+        0
+      ],
+      "model": [
+        "103",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "noise_seed": 0,
+      "positive": [
+        "98",
+        0
+      ],
+      "return_with_leftover_noise": "disable",
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "steps": 4
+    }
+  },
+  "86": {
+    "_meta": {
+      "title": "K采样器（高级）"
+    },
+    "class_type": "KSamplerAdvanced",
+    "inputs": {
+      "add_noise": "enable",
+      "cfg": 1.0,
+      "end_at_step": 2,
+      "latent_image": [
+        "98",
+        2
+      ],
+      "model": [
+        "104",
+        0
+      ],
+      "negative": [
+        "98",
+        1
+      ],
+      "noise_seed": 273156575691,
+      "positive": [
+        "98",
+        0
+      ],
+      "return_with_leftover_noise": "enable",
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "steps": 4
+    }
+  },
+  "87": {
+    "_meta": {
+      "title": "VAE解码"
+    },
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "85",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ]
+    }
+  },
+  "89": {
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    },
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+    }
+  },
+  "90": {
+    "_meta": {
+      "title": "加载VAE"
+    },
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "wan2.2/wan_2.1_vae.safetensors"
+    }
+  },
+  "93": {
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    },
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "84",
+        0
+      ],
+      "text": "Cinematic slow push-in shot of Nova, a fashionable woman in a casual beige outfit, sitting by a sunlit cafe window. She holds a latte in her hands, soft natural morning light streaming in, creating warm golden highlights and gentle shadows that shift subtly across her face and the table. Steam rises gently from the latte, curling and dissipating into the air, with delicate wisps moving slowly. Her"
+    }
+  },
+  "94": {
+    "_meta": {
+      "title": "创建视频"
+    },
+    "class_type": "CreateVideo",
+    "inputs": {
+      "fps": 16.0,
+      "images": [
+        "87",
+        0
+      ]
+    }
+  },
+  "95": {
+    "_meta": {
+      "title": "UNet加载器"
+    },
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "wan2.2/wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "96": {
+    "_meta": {
+      "title": "UNet加载器"
+    },
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "wan2.2/wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "98": {
+    "_meta": {
+      "title": "Wan图像到视频"
+    },
+    "class_type": "WanImageToVideo",
+    "inputs": {
+      "batch_size": 1,
+      "height": 1024,
+      "length": 81,
+      "negative": [
+        "89",
+        0
+      ],
+      "positive": [
+        "93",
+        0
+      ],
+      "start_image": [
+        "116",
+        0
+      ],
+      "vae": [
+        "90",
+        0
+      ],
+      "width": 576
+    }
+  }
+}

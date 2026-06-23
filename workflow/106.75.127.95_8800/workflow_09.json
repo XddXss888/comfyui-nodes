@@ -1,7 +1,7 @@
 {
   "81": {
     "inputs": {
-      "image": "image (287).png"
+      "image": "image (112).png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -83,7 +83,7 @@
   },
   "172": {
     "inputs": {
-      "seed": 1712291051,
+      "seed": 164801371,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -141,7 +141,7 @@
   },
   "364": {
     "inputs": {
-      "prompt": "Convert this image to grayscale while preserving all original structures,black background",
+      "prompt": "Convert this image to grayscale while preserving all original structures",
       "ref_longest_edge": 2048,
       "clip": [
         "111",
@@ -206,7 +206,7 @@
   },
   "377": {
     "inputs": {
-      "lora_name": "klein_8mm_0130_000010000.safetensors",
+      "lora_name": "klein_3mm_0130_000010000.safetensors",
       "strength_model": 1.0,
       "model": [
         "128",
@@ -263,7 +263,7 @@
   },
   "385": {
     "inputs": {
-      "seed": 1262603804
+      "seed": 887887063
     },
     "class_type": "GenerateUniquePrefix",
     "_meta": {
