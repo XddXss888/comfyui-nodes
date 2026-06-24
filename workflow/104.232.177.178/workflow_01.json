@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "ai_edit_src_26024D13-D1ED-4E7D-9A15-BA6EB8A73012.png"
+      "image": "ai_edit_src_F58484F4-E264-407A-8FB7-71159930D7E4.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -30,8 +30,8 @@
   },
   "37": {
     "inputs": {
-      "weight_dtype": "default",
-      "unet_name": "Qwen-Image-Edit-2511-FP8_e4m3fn.safetensors"
+      "unet_name": "qwen_image_edit_2509_fp8_e4m3fn.safetensors",
+      "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
     "_meta": {
@@ -40,12 +40,12 @@
   },
   "89": {
     "inputs": {
+      "lora_name": "Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
       "model": [
         "37",
         0
-      ],
-      "lora_name": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
-      "strength_model": 1.0
+      ]
     },
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
@@ -54,11 +54,11 @@
   },
   "66": {
     "inputs": {
+      "shift": 3.0,
       "model": [
         "89",
         0
-      ],
-      "shift": 3.0
+      ]
     },
     "class_type": "ModelSamplingAuraFlow",
     "_meta": {
@@ -67,11 +67,11 @@
   },
   "75": {
     "inputs": {
+      "strength": 1.0,
       "model": [
         "66",
         0
-      ],
-      "strength": 1.0
+      ]
     },
     "class_type": "CFGNorm",
     "_meta": {
@@ -81,12 +81,12 @@
   "93": {
     "inputs": {
       "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 64,
       "image": [
         "1",
         0
-      ],
-      "megapixels": 1.0,
-      "resolution_steps": 64
+      ]
     },
     "class_type": "ImageScaleToTotalPixels",
     "_meta": {
@@ -123,7 +123,7 @@
         "93",
         0
       ],
-      "prompt": "make more realistic"
+      "prompt": "upscale image, remove glasses, change shirt color to red"
     },
     "class_type": "TextEncodeQwenImageEditPlus",
     "_meta": {
@@ -132,6 +132,7 @@
   },
   "4": {
     "inputs": {
+      "prompt": "",
       "clip": [
         "6",
         0
@@ -143,8 +144,7 @@
       "image1": [
         "93",
         0
-      ],
-      "prompt": ""
+      ]
     },
     "class_type": "TextEncodeQwenImageEditPlus",
     "_meta": {
@@ -173,7 +173,7 @@
       "denoise": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "seed": 2633604736138488,
+      "seed": 6067854100276840,
       "steps": 4
     },
     "class_type": "KSampler",
@@ -203,7 +203,7 @@
         "8",
         0
       ],
-      "filename_prefix": "iqueue_edit_26024D13-D1ED-4E7D-9A15-BA6EB8A73012"
+      "filename_prefix": "iqueue_edit_F58484F4-E264-407A-8FB7-71159930D7E4"
     },
     "class_type": "SaveImage",
     "_meta": {

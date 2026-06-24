@@ -13,8 +13,8 @@
   },
   "16": {
     "inputs": {
-      "positive_prompt": "d2z0h2a6yv, portrait of a man",
-      "negative_prompt": "black and gray spots, shadow, fingers, cloth, bandages, leaves, mask, hats, gray and black spots, grey and black stripes, tattoos, glasses, mustache, beard, sideburns, imperial beard, stubble, shaggy mustache, horseshoe mustache, Italian mustache, Fu Manchu mustache, pencil mustache, horseshoe mustache, full beard, goatee, Van Dyke beard, Hollywood beard, Garfield beard, skate beard, Amish beard, Balbo beard, Verdi beard, three-day stubble, week-long stubble, Mexican stubble, Bredin sideburns/cheeks, Elvis sideburns, skipper beard, French fork split beard",
+      "positive_prompt": "d2z0h2a6yv, portrait of a woman",
+      "negative_prompt": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
       "force_offload": true,
       "use_disk_cache": false,
       "device": "gpu",
@@ -98,7 +98,7 @@
       ],
       "cfg": 3.0,
       "shift": 8.0,
-      "seed": 15477,
+      "seed": 28475,
       "force_offload": true,
       "scheduler": "dpm++_sde",
       "riflex_freq_index": 0,
@@ -203,7 +203,7 @@
   },
   "124": {
     "inputs": {
-      "value": 60
+      "value": 80
     },
     "class_type": "JWInteger",
     "_meta": {
@@ -212,7 +212,7 @@
   },
   "125": {
     "inputs": {
-      "value": 354
+      "value": 0
     },
     "class_type": "JWInteger",
     "_meta": {
@@ -252,7 +252,7 @@
   },
   "168": {
     "inputs": {
-      "lora": "training_results/actor_Svyatoslav/look_01/training_results_wan21_01/14B/20260408_17-26-09/epoch2/adapter_model.safetensors",
+      "lora": "training_results/actor_Sofya/look_01/training_results_wan21_01/14B/20260408_20-26-38/epoch1/adapter_model.safetensors",
       "strength": 1.0,
       "low_mem_load": false,
       "merge_loras": false
@@ -362,7 +362,7 @@
   },
   "197": {
     "inputs": {
-      "value": "/DATA/Jive/processing/8_serie/0270/0270_s_rogojan/"
+      "value": "/DATA/Jive/processing/5_serie/0080-new/0080-new_s_kashtanova_Combine/"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -371,7 +371,7 @@
   },
   "198": {
     "inputs": {
-      "value": "/DATA/Jive/Yandex.Disk/Dzhave/work/8_serie/0270/0270_s_rogojan/"
+      "value": "/DATA/Jive/Yandex.Disk/Dzhave/work/5_serie/0080-new/0080-new_s_kashtanova_Combine/"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -619,7 +619,7 @@
   },
   "215": {
     "inputs": {
-      "value": "_0270_s_rogojan_epoch2_15477"
+      "value": "_0080-new_s_kashtanova_Combine_epoch1_28475"
     },
     "class_type": "PrimitiveString",
     "_meta": {

@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "input_52dfe3777034.jpg"
+      "image": "jimeng-2026-03-31-1752-一个亚洲女生，年轻正脸微笑，全身正脸，室内摄影，淡绿色长袖西装衬衫，硬挺高级面料....png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -12,7 +12,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "8",
+        "26",
         0
       ]
     },
@@ -21,50 +21,119 @@
       "title": "保存图像"
     }
   },
-  "8": {
+  "15": {
     "inputs": {
-      "aspect_ratio": "custom",
-      "proportional_width": 800,
-      "proportional_height": 880,
-      "fit": "crop",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_side": "width",
-      "scale_to_length": 800,
-      "background_color": "#000000",
-      "image": [
-        "12",
+      "prompt": [
+        "28",
         0
-      ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
-    "_meta": {
-      "title": "按宽高比缩放_V2"
-    }
-  },
-  "12": {
-    "inputs": {
-      "prompt": "保持图中人物的一致性，生成他们和熊猫合影的画面，左右两侧有可爱的熊猫趴在他们肩头，背景是竹林和五颜六色的花朵，有一只熊猫抱着竹子，画面是3D卡通风格，色彩活泼",
-      "model": "doubao-seedream-4-0-250828",
+      ],
+      "model": "doubao-seedream-4-5-251128",
       "response_format": "url",
-      "resolution": "4K",
-      "aspect_ratio": "1:1",
-      "width": 1024,
-      "height": 1024,
-      "apikey": "fe023f32-413c-41f8-a35d-694231e4c96a",
+      "resolution": "1K",
+      "aspect_ratio": "Custom",
+      "width": 3552,
+      "height": 2400,
+      "apikey": "a44228f5-f1b2-44e9-860a-d3c8eb5ac03e",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 2111394930,
+      "seed": 1418553716,
       "watermark": false,
       "stream": false,
       "image1": [
         "1",
+        0
+      ],
+      "image2": [
+        "25",
         0
       ]
     },
     "class_type": "Comfly_Doubao_Seedream_4",
     "_meta": {
       "title": "Comfly Doubao Seedream4.0"
+    }
+  },
+  "25": {
+    "inputs": {
+      "image": "qnd.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "26": {
+    "inputs": {
+      "aspect_ratio": "custom",
+      "proportional_width": 2622,
+      "proportional_height": 1772,
+      "fit": "crop",
+      "method": "bicubic",
+      "round_to_multiple": "None",
+      "scale_to_side": "width",
+      "scale_to_length": 2622,
+      "background_color": "#000000",
+      "image": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    }
+  },
+  "27": {
+    "inputs": {
+      "seed": 503255251948038
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "Seed (rgthree)"
+    }
+  },
+  "28": {
+    "inputs": {
+      "old": "[偏向]",
+      "new": [
+        "29",
+        0
+      ],
+      "use_regex": false,
+      "string": [
+        "31",
+        0
+      ]
+    },
+    "class_type": "String Replace (mtb)",
+    "_meta": {
+      "title": "String Replace (mtb)"
+    }
+  },
+  "29": {
+    "inputs": {
+      "max_count": 1,
+      "mutable_prompt": "左侧\n右侧",
+      "immutable_prompt": "",
+      "random_sample": "enable",
+      "upload": null,
+      "seed": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "RandomPrompt",
+    "_meta": {
+      "title": "Random Prompt ♾️Mixlab"
+    }
+  },
+  "31": {
+    "inputs": {
+      "value": "参考图一中的主要人物，2D线稿插画风格，主体为图一人物站在前景[偏向]位置，正面朝向镜头，怀抱书籍，头发边缘被照亮，氛围感。背景是北京天坛祈年殿远景（参考图二建筑），祈年殿完整明显，蓝天白云，灰色地砖。高对比，高饱和，鲜艳的色彩，画面具有东方哲学与时间沉淀气质，电影级国风叙事海报，高级商业视觉"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "字符串"
     }
   }
 }

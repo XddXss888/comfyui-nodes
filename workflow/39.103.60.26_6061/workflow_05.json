@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "input_884447658bf2.jpg"
+      "image": "jimeng-2026-02-09-2106-身着淡粉色长袖职业女性，年轻，正脸，淡淡的微笑，手自然垂落，8K高清，实景拍摄效....png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -12,7 +12,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "17",
+        "33",
         0
       ]
     },
@@ -21,44 +21,30 @@
       "title": "保存图像"
     }
   },
-  "8": {
-    "inputs": {
-      "aspect_ratio": "custom",
-      "proportional_width": 1152,
-      "proportional_height": 848,
-      "fit": "crop",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_side": "width",
-      "scale_to_length": 1152,
-      "background_color": "#000000",
-      "image": [
-        "15",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
-    "_meta": {
-      "title": "按宽高比缩放_V2"
-    }
-  },
   "15": {
     "inputs": {
-      "prompt": "保持图中人物的一致性，生成他们和熊猫合影的画面，左右两侧有可爱的熊猫趴在他们肩头，背景是竹园风光。写真摄影风格，中景景别，轻微美颜，人像精修",
-      "model": "doubao-seedream-4-0-250828",
+      "prompt": [
+        "28",
+        0
+      ],
+      "model": "doubao-seedream-4-5-251128",
       "response_format": "url",
       "resolution": "4K",
-      "aspect_ratio": "4:3",
-      "width": 1024,
-      "height": 1024,
-      "apikey": "fe023f32-413c-41f8-a35d-694231e4c96a",
+      "aspect_ratio": "Custom",
+      "width": 1120,
+      "height": 800,
+      "apikey": "a44228f5-f1b2-44e9-860a-d3c8eb5ac03e",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 1795509196,
+      "seed": 457267750,
       "watermark": false,
       "stream": false,
       "image1": [
         "1",
+        0
+      ],
+      "image2": [
+        "25",
         0
       ]
     },
@@ -67,17 +53,98 @@
       "title": "Comfly Doubao Seedream4.0"
     }
   },
-  "17": {
+  "25": {
     "inputs": {
-      "mode": "transpose",
-      "rotation": 90,
-      "sampler": "nearest",
-      "images": [
-        "8",
+      "image": "qnd.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "26": {
+    "inputs": {
+      "aspect_ratio": "custom",
+      "proportional_width": 1120,
+      "proportional_height": 800,
+      "fit": "crop",
+      "method": "bicubic",
+      "round_to_multiple": "None",
+      "scale_to_side": "width",
+      "scale_to_length": 1120,
+      "background_color": "#000000",
+      "image": [
+        "15",
         0
       ]
     },
-    "class_type": "Image Rotate",
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    }
+  },
+  "27": {
+    "inputs": {
+      "seed": 346392400775844
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "Seed (rgthree)"
+    }
+  },
+  "28": {
+    "inputs": {
+      "old": "[偏向]",
+      "new": [
+        "29",
+        0
+      ],
+      "use_regex": false,
+      "string": [
+        "31",
+        0
+      ]
+    },
+    "class_type": "String Replace (mtb)",
+    "_meta": {
+      "title": "String Replace (mtb)"
+    }
+  },
+  "29": {
+    "inputs": {
+      "max_count": 1,
+      "mutable_prompt": "左侧\n右侧",
+      "immutable_prompt": "",
+      "random_sample": "enable",
+      "upload": null,
+      "seed": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "RandomPrompt",
+    "_meta": {
+      "title": "Random Prompt ♾️Mixlab"
+    }
+  },
+  "31": {
+    "inputs": {
+      "value": "参考图一中的主要人物，2D线稿插画风格，主体为图一人物站在前景[偏向]位置，正面朝向镜头，怀抱书籍，头发边缘被照亮，氛围感。背景是北京天坛祈年殿远景（参考图二建筑），祈年殿完整明显，蓝天白云，灰色地砖。高对比，高饱和，鲜艳的色彩，画面具有东方哲学与时间沉淀气质，电影级国风叙事海报，高级商业视觉"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "字符串"
+    }
+  },
+  "33": {
+    "inputs": {
+      "rotation": "270 degrees",
+      "image": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "ImageRotate",
     "_meta": {
       "title": "图像旋转"
     }

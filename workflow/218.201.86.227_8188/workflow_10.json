@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "A beautiful wide landscape of rice paddies in the countryside, lush golden-green rice field, gentle breeze implied by flowing rice stalks, reflective irrigation water channels, distant blue mountains, soft white clouds drifting in a bright sky, warm late afternoon sunlight, cinematic peaceful atmosphere, highly detailed natural scenery, photorealistic digital art, no people, no text, 16:9 composition",
+      "text": "A stunning wide panoramic travel banner in autumn, featuring a modern white passenger airplane flying above a serene coastal landscape, deep blue ocean, calm waves, golden sandy beach, autumn foliage in warm orange red and golden tones along the shore, a few maple leaves subtly framing the foreground, soft warm late-afternoon sunlight, clear sky with gentle clouds, premium tourism advertising style, cinematic wide composition, vibrant natural autumn colors, high detail, professional digital illustration, spacious website hero banner composition, no text, no logo, no watermark",
       "clip": [
         "30",
         1
@@ -30,7 +30,7 @@
   },
   "9": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
+      "filename_prefix": "autumn_airplane_ocean_beach_banner_2048x768",
       "images": [
         "8",
         0
@@ -43,8 +43,8 @@
   },
   "27": {
     "inputs": {
-      "width": 1024,
-      "height": 576,
+      "width": 2048,
+      "height": 768,
       "batch_size": 1
     },
     "class_type": "EmptySD3LatentImage",
@@ -63,8 +63,8 @@
   },
   "31": {
     "inputs": {
-      "seed": 993778131594979,
-      "steps": 28,
+      "seed": 727437957995708,
+      "steps": 24,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -93,7 +93,7 @@
   },
   "33": {
     "inputs": {
-      "text": "text, watermark, logo, people, buildings, blurry, low quality, distorted horizon, overexposed",
+      "text": "text, logo, watermark, words, letters, people, crowded, distorted airplane, extra wings, blurry, low quality, ugly, deformed, dark, gloomy, snow, winter",
       "clip": [
         "30",
         1

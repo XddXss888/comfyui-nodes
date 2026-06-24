@@ -4,13 +4,13 @@
 **内存**: 125 GB (空闲 110 GB)
 **版本**: 0.16.4
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-23 08:08:05
+**扫描时间**: 2026-06-24 08:14:00
 **历史总数**: 10001 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `4d77cdb0-ed20-4f6c-98b7-8880c87c5950`
+- **Prompt ID**: `5f7267c8-41e3-40b5-8f86-46f6b2c97654`
 - **类型**: 图生图
 - **节点数**: 17
 - **模型** (3):
@@ -18,10 +18,10 @@
   - qwen_image_vae.safetensors
   - svdq-int4_r128-qwen-image-edit-2509-lightningv2.0-4steps.safetensors
 - **提示词**:
-  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a 2D illustration sticker from the photo. Character smiling with heart 
+  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a cheerful chibi sticker from the photo. Character one eye winking whil
 
 ### 2. workflow_02.json
-- **Prompt ID**: `ee887818-739b-4e5a-a7e5-64b012a2c418`
+- **Prompt ID**: `b0eec7e8-7494-4b21-8516-858930234fb6`
 - **类型**: 图生图
 - **节点数**: 17
 - **模型** (3):
@@ -29,10 +29,10 @@
   - qwen_image_vae.safetensors
   - svdq-int4_r128-qwen-image-edit-2509-lightningv2.0-4steps.safetensors
 - **提示词**:
-  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a sticker using the user's photo. Preserve the original gender and iden
+  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: This cute 2D chibi character. Character is holding a hot cup of coffee in one 
 
 ### 3. workflow_03.json
-- **Prompt ID**: `3943510d-8cbe-4002-8e9a-f2f3443c027e`
+- **Prompt ID**: `a641da06-1fc9-4606-b11c-a3fcb636fa59`
 - **类型**: 图生图
 - **节点数**: 17
 - **模型** (3):
@@ -40,10 +40,10 @@
   - qwen_image_vae.safetensors
   - svdq-int4_r128-qwen-image-edit-2509-lightningv2.0-4steps.safetensors
 - **提示词**:
-  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a sticker using the user's photo. Preserve the original gender and iden
+  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a 3D chibi reaction sticker from the photo. The character has an extrem
 
 ### 4. workflow_04.json
-- **Prompt ID**: `daaa36d3-5e09-426b-9a6e-a4a7fb6312dc`
+- **Prompt ID**: `7001d579-2196-42e3-aae3-295eba2eaf70`
 - **类型**: 图生图
 - **节点数**: 17
 - **模型** (3):
@@ -51,10 +51,10 @@
   - qwen_image_vae.safetensors
   - svdq-int4_r128-qwen-image-edit-2509-lightningv2.0-4steps.safetensors
 - **提示词**:
-  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a sticker using the user's photo. Preserve the original gender and iden
+  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a 3D reaction sticker from the photo. The character is crying in despai
 
 ### 5. workflow_05.json
-- **Prompt ID**: `a6414570-6d3f-4bf7-b724-50e161b14358`
+- **Prompt ID**: `bfc21df1-3156-44f0-b08d-a712e6c1fafb`
 - **类型**: 图生图
 - **节点数**: 17
 - **模型** (3):
@@ -62,10 +62,10 @@
   - qwen_image_vae.safetensors
   - svdq-int4_r128-qwen-image-edit-2509-lightningv2.0-4steps.safetensors
 - **提示词**:
-  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a sticker using the user's photo. Preserve the original gender and iden
+  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: The character has an angry annoyed expression, squinting uneven eyes with a sa
 
 ### 6. workflow_06.json
-- **Prompt ID**: `326b3448-e666-43bf-8707-fe274817fead`
+- **Prompt ID**: `e2744cc4-caca-43ef-a782-ac15b578814a`
 - **类型**: 图生图
 - **节点数**: 17
 - **模型** (3):
@@ -73,10 +73,10 @@
   - qwen_image_vae.safetensors
   - svdq-int4_r128-qwen-image-edit-2509-lightningv2.0-4steps.safetensors
 - **提示词**:
-  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a sticker using the user's photo. Preserve the original gender and iden
+  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a 3D reaction sticker from the photo. The character has an angry focuse
 
 ### 7. workflow_07.json
-- **Prompt ID**: `432c64cc-e2be-4e81-b006-7d2407092269`
+- **Prompt ID**: `1c15a7e0-b024-4b35-88a3-96437ba59889`
 - **类型**: 图生图
 - **节点数**: 17
 - **模型** (3):
@@ -84,10 +84,10 @@
   - qwen_image_vae.safetensors
   - svdq-int4_r128-qwen-image-edit-2509-lightningv2.0-4steps.safetensors
 - **提示词**:
-  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a sticker using the user's photo. Preserve the original gender and iden
+  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a 3D reaction sticker from the photo. The character has shocked confuse
 
 ### 8. workflow_08.json
-- **Prompt ID**: `7fba169e-4de6-4fb8-8eb1-a2a9d4061899`
+- **Prompt ID**: `f234817d-6479-47fd-9d44-29dc23f627dd`
 - **类型**: 图生图
 - **节点数**: 17
 - **模型** (3):
@@ -95,10 +95,10 @@
   - qwen_image_vae.safetensors
   - svdq-int4_r128-qwen-image-edit-2509-lightningv2.0-4steps.safetensors
 - **提示词**:
-  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a sticker using the user's photo. Preserve the original gender and iden
+  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a 3D reaction sticker from the photo. The character has an expression o
 
 ### 9. workflow_09.json
-- **Prompt ID**: `cb8dd4eb-c358-4613-a984-b4b734b7ff0f`
+- **Prompt ID**: `5a84adb4-fa4c-45b4-a416-136b3f3a950d`
 - **类型**: 图生图
 - **节点数**: 17
 - **模型** (3):
@@ -106,10 +106,10 @@
   - qwen_image_vae.safetensors
   - svdq-int4_r128-qwen-image-edit-2509-lightningv2.0-4steps.safetensors
 - **提示词**:
-  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a sticker using the user's photo. Preserve the original gender and iden
+  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a 3D reaction sticker from the photo. The character has peaceful serene
 
 ### 10. workflow_10.json
-- **Prompt ID**: `523c783f-0cee-495b-a026-61865b381259`
+- **Prompt ID**: `754d70ca-18e1-4171-8aea-4c39e1a7c534`
 - **类型**: 图生图
 - **节点数**: 17
 - **模型** (3):
@@ -117,4 +117,4 @@
   - qwen_image_vae.safetensors
   - svdq-int4_r128-qwen-image-edit-2509-lightningv2.0-4steps.safetensors
 - **提示词**:
-  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a sticker using the user's photo. Preserve the original gender and iden
+  - [JWString::text] Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a 3D reaction sticker from the photo. The character has an angry annoye

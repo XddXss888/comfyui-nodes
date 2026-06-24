@@ -30,7 +30,7 @@
   },
   "31": {
     "inputs": {
-      "seed": 921015056,
+      "seed": 2084849367,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler_ancestral",
@@ -122,7 +122,7 @@
   },
   "142": {
     "inputs": {
-      "image": "image (15159).jpg",
+      "image": "image (28054).png",
       "refresh": "refresh"
     },
     "class_type": "LoadImageOutput",
@@ -412,7 +412,7 @@
   },
   "254": {
     "inputs": {
-      "seed": 1094731963
+      "seed": 1574239952
     },
     "class_type": "GenerateUniquePrefix",
     "_meta": {

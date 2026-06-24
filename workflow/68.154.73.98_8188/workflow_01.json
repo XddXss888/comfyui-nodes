@@ -1,7 +1,16 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_71a587c0933f414a9e15302f2c19d46b.png"
+      "image": "ref_d04664d5dcbe4c3bbbdfcc6d681bc92c.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "83": {
+    "inputs": {
+      "image": "ref_759fbf8351894c0a92e70b3dfca77377.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +130,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "タオルを小さくして。白色にして。画質は良くして。",
+      "prompt": "make them kiss",
       "clip": [
         "91:61",
         0
@@ -132,6 +141,10 @@
       ],
       "image1": [
         "91:88",
+        0
+      ],
+      "image2": [
+        "83",
         0
       ]
     },
@@ -184,7 +197,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 796651948052099,
+      "seed": 227658467735976,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -225,6 +238,10 @@
       ],
       "image1": [
         "91:88",
+        0
+      ],
+      "image2": [
+        "83",
         0
       ]
     },

@@ -1,79 +1,7 @@
 {
-  "6": {
+  "1": {
     "inputs": {
-      "text": "product_lightfusion, use the original product as the absolute reference. Strictly preserve the product shape, structure, size, proportions, perspective, position, color, material, text, logo, label, patterns, graphics and all packaging details exactly unchanged.\n\nDo not redesign, beautify, repaint, reshape, replace or modify the product. Do not change any text, logo, label, typography, graphics, packaging layout or product details. Do not add, remove or move any product elements.\n\nOnly improve the integration between the product and the background. Match the lighting direction, light intensity, color temperature, brightness, contact shadows, cast shadows, ambient reflections, edge blending and spatial occlusion according to the surrounding environment.\n\nMake the product naturally blend into the scene as if it was truly photographed there. Fix unrealistic cut-out edges, floating effects, lighting mismatch, fake shadows, weak contact shadows and visible compositing seams. Keep the result realistic, natural, high-end and commercial photography style.\n\nIf tea liquor, tea soup, tea cup or transparent liquid is present, preserve its original color and shape while enhancing its realistic lighting, translucency, clarity, glow, rim highlights, surface reflection, inner light transmission and natural shadow. Make the tea liquid look more transparent, bright, clean and visually rich, with a clear warm amber tone and realistic commercial photography lighting.\n\nFinal requirement: keep the original product completely unchanged. Only improve lighting, shadows, reflections, tea liquid translucency, environmental integration and overall realism.",
-      "clip": [
-        "232",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
-    }
-  },
-  "8": {
-    "inputs": {
-      "samples": [
-        "31",
-        0
-      ],
-      "vae": [
-        "39",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "31": {
-    "inputs": {
-      "seed": 1012584170560555,
-      "steps": 20,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "232",
-        0
-      ],
-      "positive": [
-        "35",
-        0
-      ],
-      "negative": [
-        "135",
-        0
-      ],
-      "latent_image": [
-        "124",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "35": {
-    "inputs": {
-      "guidance": 2.5,
-      "conditioning": [
-        "177",
-        0
-      ]
-    },
-    "class_type": "FluxGuidance",
-    "_meta": {
-      "title": "Flux引导"
-    }
-  },
-  "37": {
-    "inputs": {
-      "unet_name": "图片编辑模型_fp8.safetensors",
+      "unet_name": "flux-2-klein-9b-fp8.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -81,35 +9,25 @@
       "title": "UNet加载器"
     }
   },
-  "38": {
+  "2": {
     "inputs": {
-      "clip_name1": "clip_l.safetensors",
-      "clip_name2": "t5xxl_fp8_e4m3fn.safetensors",
-      "type": "flux",
+      "clip_name": "qwen_3_8b_fp8mixed .safetensors",
+      "type": "flux2",
       "device": "default"
     },
-    "class_type": "DualCLIPLoader",
+    "class_type": "CLIPLoader",
     "_meta": {
-      "title": "双CLIP加载器"
+      "title": "加载CLIP"
     }
   },
-  "39": {
-    "inputs": {
-      "vae_name": "ae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "124": {
+  "3": {
     "inputs": {
       "pixels": [
-        "261",
+        "25",
         0
       ],
       "vae": [
-        "39",
+        "8",
         0
       ]
     },
@@ -118,10 +36,10 @@
       "title": "VAE编码"
     }
   },
-  "135": {
+  "4": {
     "inputs": {
       "conditioning": [
-        "6",
+        "13",
         0
       ]
     },
@@ -130,27 +48,14 @@
       "title": "条件零化"
     }
   },
-  "136": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
-    }
-  },
-  "177": {
+  "5": {
     "inputs": {
       "conditioning": [
-        "6",
+        "13",
         0
       ],
       "latent": [
-        "124",
+        "3",
         0
       ]
     },
@@ -159,37 +64,41 @@
       "title": "参考Latent"
     }
   },
-  "195": {
+  "6": {
     "inputs": {
-      "image": "v10_lighting_1781946934126_84d88066bb1538.png"
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "12",
+        0
+      ]
     },
-    "class_type": "LoadImage",
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "加载图像"
+      "title": "保存图像"
     }
   },
-  "197": {
+  "7": {
     "inputs": {
       "rgthree_comparer": {
         "images": [
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_fjdln_00011_.png&type=temp&subfolder=&rand=0.1170286871996844"
+            "url": "/api/view?filename=rgthree.compare._temp_tdpzy_00102_.png&type=temp&subfolder=&rand=0.25610244600608834"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_fjdln_00012_.png&type=temp&subfolder=&rand=0.6437863553999479"
+            "url": "/api/view?filename=rgthree.compare._temp_tdpzy_00103_.png&type=temp&subfolder=&rand=0.41026285890163305"
           }
         ]
       },
       "image_a": [
-        "8",
+        "25",
         0
       ],
       "image_b": [
-        "195",
+        "12",
         0
       ]
     },
@@ -198,7 +107,148 @@
       "title": "图像对比"
     }
   },
-  "228": {
+  "8": {
+    "inputs": {
+      "vae_name": "FLUX.2-dev-vae\\diffusion_pytorch_model.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "9": {
+    "inputs": {
+      "seed": 439860633603542,
+      "steps": 6,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.9000000000000001,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "10": {
+    "inputs": {
+      "image": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "FluxKontextImageScale",
+    "_meta": {
+      "title": "图像缩放为FluxKontext"
+    }
+  },
+  "11": {
+    "inputs": {
+      "samples": [
+        "9",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "12": {
+    "inputs": {
+      "method": "mkl",
+      "strength": 1.0,
+      "multithread": true,
+      "image_ref": [
+        "25",
+        0
+      ],
+      "image_target": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "ColorMatch",
+    "_meta": {
+      "title": "Color Match"
+    }
+  },
+  "13": {
+    "inputs": {
+      "text": "修复图像，修复后整体外观精致。图像风格写实,逼真的玻璃光泽和反射，玻璃细节和形态表现突出",
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "14": {
+    "inputs": {
+      "image": "v11_refine_1782203534834_0ad5c8f06f1868.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "23": {
+    "inputs": {
+      "image": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "获取图像尺寸"
+    }
+  },
+  "24": {
+    "inputs": {
+      "expression": "max(max(a,b)-c,0)",
+      "values.a": [
+        "23",
+        0
+      ],
+      "values.b": [
+        "23",
+        1
+      ],
+      "values.c": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "ComfyMathExpression",
+    "_meta": {
+      "title": "是否超过阈值：超过=True"
+    }
+  },
+  "25": {
     "inputs": {
       "aspect_ratio": "original",
       "proportional_width": 1,
@@ -208,12 +258,12 @@
       "round_to_multiple": "8",
       "scale_to_side": "longest",
       "scale_to_length": [
-        "258",
+        "26",
         0
       ],
       "background_color": "#000000",
       "image": [
-        "195",
+        "14",
         0
       ]
     },
@@ -222,85 +272,13 @@
       "title": "LayerUtility: ImageScaleByAspectRatio V2"
     }
   },
-  "232": {
-    "inputs": {
-      "lora_name": "kontext产品溶图打光_海报合成_产品打光_电商换背景_图片合成_溶图光影重绘_V1.0.safetensors",
-      "strength_model": 1.0,
-      "strength_clip": 1.0,
-      "model": [
-        "37",
-        0
-      ],
-      "clip": [
-        "38",
-        0
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "加载LoRA"
-    }
-  },
-  "257": {
-    "inputs": {
-      "image": [
-        "195",
-        0
-      ]
-    },
-    "class_type": "GetImageSize",
-    "_meta": {
-      "title": "获取图像尺寸"
-    }
-  },
-  "258": {
+  "26": {
     "inputs": {
       "value": 2048
     },
     "class_type": "PrimitiveInt",
     "_meta": {
       "title": "最长边阈值 / 缩放目标"
-    }
-  },
-  "259": {
-    "inputs": {
-      "expression": "max(max(a,b)-c,0)",
-      "values.a": [
-        "257",
-        0
-      ],
-      "values.b": [
-        "257",
-        1
-      ],
-      "values.c": [
-        "258",
-        0
-      ]
-    },
-    "class_type": "ComfyMathExpression",
-    "_meta": {
-      "title": "是否超过阈值：超过=True"
-    }
-  },
-  "261": {
-    "inputs": {
-      "switch": [
-        "259",
-        2
-      ],
-      "on_false": [
-        "195",
-        0
-      ],
-      "on_true": [
-        "228",
-        0
-      ]
-    },
-    "class_type": "ComfySwitchNode",
-    "_meta": {
-      "title": "自动只缩小不放大"
     }
   }
 }

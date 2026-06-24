@@ -1,16 +1,16 @@
 # 119.91.118.136:8886
 
 **GPU**: RTX 3070 | **显存**: 8 GB | **空闲**: 2 GB
-**内存**: 31 GB (空闲 14 GB)
-**版本**: 0.21.1
+**内存**: 31 GB (空闲 17 GB)
+**版本**: 0.25.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-21 17:38:58
-**历史总数**: 8 | **成功**: 8
+**扫描时间**: 2026-06-24 08:08:38
+**历史总数**: 11 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `25a4e3da-6a1f-465c-b2ca-da5af7ba496d`
+- **Prompt ID**: `6a462e49-2636-40e7-8b9c-4da0b4d66778`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (3):
@@ -18,10 +18,10 @@
   - mPMix_NSFW_V9_fp8.safetensors
   - z-image-qwen.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] 现代写实, Base scene: uid=09kkf0i|race=黄种人|sex=男|apparent_age=外观年龄约18岁|face=五官线条分明|eyes=眉宇间透着理科生特有的专注与冷静, 眼神锐利|nose_mouth=鼻翼与嘴角位置稳定|skin=肤色与人种一致, 外观年龄约18岁|aura=坚韧理性, 清纯直男, 身高约178cm, 骨架匀称略显单薄, 肌肉紧凑, 站姿笔挺, 
+  - [CLIPTextEncode::text] 现代写实, Base scene: uid=0umzfzj|race=黄种人|sex=男|apparent_age=外观年龄约19岁|face=五官端正, 却能在陈墨瞳面前无缝切换回纯净无害的模样|eyes=眼神坚毅, 却能在陈墨瞳面前无缝切换回纯净无害的模样|nose_mouth=鼻唇关系端正|skin=肤质干净自然, 外观年龄约19岁|aura=气质中逐渐蜕变出深邃, 从容的上位者压迫感, 穿
 
 ### 2. workflow_02.json
-- **Prompt ID**: `f8a4c1b9-29f7-4863-a754-f700cb9b81a1`
+- **Prompt ID**: `476c06a7-9da9-4db1-8dde-5bb978cb1def`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (3):
@@ -29,10 +29,10 @@
   - mPMix_NSFW_V9_fp8.safetensors
   - z-image-qwen.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] 现代写实, Base scene: 男性少年, 黄种人东亚面孔, 外观年龄约18岁, 清透年轻面部, 年轻面部软组织饱满, 干净年轻肤质, 五官线条分明, 眉宇间理科生特有的专注冷静, 眼神锐利, 鼻翼与嘴角位置稳定, 此刻眉头微蹙, 神情沉静如水无波澜, 身高约178cm, 骨架匀称略显单薄但肌肉紧凑, 后背抵贴冰冷水泥墙壁, 双臂自然垂于体侧轻度紧绷, 脚跟触墙站定, 洗得发白浅灰色纯棉短袖T
+  - [CLIPTextEncode::text] 现代写实, Base scene: uid=0umzfzj|race=黄种人|sex=男|apparent_age=外观年龄约19岁|face=五官端正, 却能在陈墨瞳面前无缝切换回纯净无害的模样|eyes=眼神坚毅, 却能在陈墨瞳面前无缝切换回纯净无害的模样|nose_mouth=鼻唇关系端正|skin=肤质干净自然, 外观年龄约19岁|aura=气质中逐渐蜕变出深邃, 从容的上位者压迫感, 身
 
 ### 3. workflow_03.json
-- **Prompt ID**: `c0705a82-7e54-4d3a-a5e8-2c1faead0d0f`
+- **Prompt ID**: `8cf62090-ffdb-43da-809a-c623f2f4f5e8`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (3):
@@ -40,10 +40,10 @@
   - mPMix_NSFW_V9_fp8.safetensors
   - z-image-qwen.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] 现代写实, Base scene: uid=09kkf0i|race=黄种人|sex=男|apparent_age=外观年龄约18岁|face=五官线条分明|eyes=眉宇间透着理科生特有的专注与冷静, 眼神锐利|nose_mouth=鼻翼与嘴角位置稳定|skin=肤色与人种一致, 外观年龄约18岁|aura=坚韧理性, 清纯直男, 后背抵着灰色混凝土墙壁, 身体轻度紧绷, 眉头微皱, 视线平静直
+  - [CLIPTextEncode::text] 现代写实, Base scene: uid=0umzfzj|race=黄种人|sex=男|apparent_age=外观年龄约19岁|face=五官端正, 却能在陈墨瞳面前无缝切换回纯净无害的模样|eyes=眼神坚毅, 却能在陈墨瞳面前无缝切换回纯净卧榻无害的模样|nose_mouth=鼻唇关系端正|skin=肤质干净自然, 外观年龄约19岁|aura=气质中逐渐蜕变出深邃, 从容的上位者压迫感,
 
 ### 4. workflow_04.json
-- **Prompt ID**: `773e1436-7e69-41c5-8a0e-b2411ced9ab9`
+- **Prompt ID**: `09d6cb76-be60-4667-a155-aa52e4e367c5`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (3):
@@ -51,10 +51,10 @@
   - mPMix_NSFW_V9_fp8.safetensors
   - z-image-qwen.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] 现代写实, Base scene: uid=09kkf0i, 身高约178cm骨架匀称略显单薄, 后背抵住冰冷墙壁, 身体微微僵直, 视线直视正前方陈墨瞳, 右手臂微抬欲推开对方手臂, 手指停在侧腰方向, 表情平静但眼底有压制的不悦, 穿洗白浅灰色纯棉T恤, 宽松深蓝色牛仔裤, 白色运动鞋, 黑色短发, 位于画面右侧贴墙, 叶凡|男性少年, 黄种人东亚面孔, 外观年龄约18岁, 清透年轻面部, 年
+  - [CLIPTextEncode::text] 现代写实, Base scene: uid=0umzfzj|race=黄种人|sex=男|apparent_age=外观年龄约19岁|face=五官端正, 却能在陈墨瞳面前无缝切换回纯净无害的模样|eyes=眼神坚毅, 却能在陈墨瞳面前无缝切换回纯净无害的模样|nose_mouth=鼻唇关系端正|skin=肤质干净自然, 外观年龄约19岁|aura=气质中逐渐蜕变出深邃, 从容的上位者压迫感, 穿
 
 ### 5. workflow_05.json
-- **Prompt ID**: `9ef05a57-b976-46df-bbf3-4324a04693e4`
+- **Prompt ID**: `f0566dbd-6bf0-4dc1-a791-da62a528628d`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (3):
@@ -62,10 +62,10 @@
   - mPMix_NSFW_V9_fp8.safetensors
   - z-image-qwen.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] 现代写实, Base scene: uid=1wojfyw|race=黄种人|sex=女|apparent_age=外观年龄约19岁|face=五官精致立体|eyes=眉宇间带着骄傲, 锐利的眸子灵动且充满好奇|nose_mouth=唇形边界清楚|skin=肌肤如瓷般白皙细腻|aura=透着不加掩饰的野性, 暗红色长直发扎高马尾, 黑色短款露脐紧身T恤下摆露出白皙紧致小腹侧腰线条, 洗旧浅黑色热裤
+  - [CLIPTextEncode::text] 现代写实, 本镜头剧情画面： 现代写实电影分镜, 照片级写实环境风格, 真实空间尺度, 竖向镜头语言, 纵深感, 华国首都, 女生宿舍内, 深夜, 柔和的暖色调台灯光线, 昏暗的室内氛围, 背景是模糊的宿舍床铺和衣柜, 中景是柔软的枕头和凌乱的被褥, 前景是发亮的手机屏幕, 画面中心焦点, 单人特写, 微距景深, 静谧的夜晚空气感, 真实织物材质, 细腻光影过渡, [1]陈墨瞳|女性, 外观年龄约
 
 ### 6. workflow_06.json
-- **Prompt ID**: `62f5d05b-a359-4876-a7c4-eabae5adb543`
+- **Prompt ID**: `4ae72bad-3cd1-459b-9cce-51a7789952fc`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (3):
@@ -73,10 +73,10 @@
   - mPMix_NSFW_V9_fp8.safetensors
   - z-image-qwen.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] 现代写实, Base scene: uid=09kkf0i|race=黄种人|sex=男|apparent_age=外观年龄约18岁|face=五官线条分明|eyes=眉宇间透着理科生特有的专注与冷静, 眼神锐利|nose_mouth=鼻翼与嘴角位置稳定|skin=肤色与人种一致, 外观年龄约18岁|aura=坚韧理性, 清纯直男, 身高约178cm, 骨架匀称略显单薄, 肌肉紧凑, 洗白浅灰色纯
+  - [CLIPTextEncode::text] 现代写实, 本镜头剧情画面： 现代写实电影分镜, 照片级写实环境风格, 真实空间尺度, 竖向镜头语言, 纵深感, 华国首都, 首都大学, 男寝室楼, 404宿舍, 深夜, 幽暗的宿舍环境, 背景是模糊的铁架床和上铺床板, 中景是下铺床铺空间, 前景是发亮的手机屏幕, 画面中心焦点, 单人近景, 冷色调手机屏幕光与周围昏暗环境形成强烈对比, 真实阴影, 静谧压抑的氛围, [1]林沐|男性, 黄种人,
 
 ### 7. workflow_07.json
-- **Prompt ID**: `ab877260-24c4-4d04-973c-1054ce6859b1`
+- **Prompt ID**: `541802da-8942-4c9c-9c59-cf89b92e242a`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (3):
@@ -84,10 +84,10 @@
   - mPMix_NSFW_V9_fp8.safetensors
   - z-image-qwen.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] 现代写实, Base scene: uid=09kkf0i|race=黄种人|sex=男|apparent_age=外观年龄约18岁|face=五官线条分明|eyes=眉宇间透着理科生特有的专注与冷静, 眼神锐利|nose_mouth=鼻翼与嘴角位置稳定|skin=肤色与人种一致, 外观年龄约18岁|aura=坚韧理性, 清纯直男, 身高约178cm, 骨架匀称略显单薄, 肌肉紧凑, 清爽干练黑色
+  - [CLIPTextEncode::text] 现代写实, 本镜头剧情画面： 现代写实电影分镜, 照片级写实环境风格, 真实空间尺度, 竖向镜头语言, 女主播直播间画面, 明亮的环形补光灯光源, 温馨的背景布置, 背景是模糊的粉色系房间装饰和电脑设备, 中景是直播电竞椅, 前景是女主播上半身特写, 画面中心焦点, 单人特写, 高对比度清晰画质, 真实织物与肌肤质感, 明亮的直播间氛围, 甜美讨好的视觉焦点, [1]苏苏不是酥酥|女性, 外观年龄
 
 ### 8. workflow_08.json
-- **Prompt ID**: `a18f2d80-9f93-4176-b285-04c7fdc40b92`
+- **Prompt ID**: `5f756084-3412-4de0-8a9a-6c61a7f13104`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (3):
@@ -95,4 +95,26 @@
   - mPMix_NSFW_V9_fp8.safetensors
   - z-image-qwen.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] 现代写实, Base scene: 男性少年, 黄种人东亚外貌, 外观年龄约18岁, 清透年轻面部, 年轻面部软组织饱满, 干净年轻肤质, 五官线条分明, 眉宇间带理科生专注与冷静, 眼神锐利平静, uid=09kkf0i, 黑色清爽短发, 洗白浅灰纯棉T恤, 宽松深蓝牛仔裤, 白色运动鞋, 站姿笔挺, 右手握行李箱拉杆, 行李箱轮子落地, 脸盆套床单搭在拉杆上, 位置居画面中偏右, 侧身四分之三
+  - [CLIPTextEncode::text] 现代写实, 本镜头剧情画面： 现代写实电影分镜, 照片级写实环境风格, 真实空间尺度, 竖向镜头语言, 纵深感, 华国首都, 首都大学, 404宿舍, 深夜, 上下铺双人空间关系, 背景是昏暗的宿舍墙壁和柜子, 中景是上下铺铁架床结构, 前景是林沐手中的手机屏幕, 双人同框, 上下层级构图, 冷暖光交织, 下铺手机冷光与上铺微弱的光线形成对比, 诡异的阶层错位氛围, 真实材质与光影, [1]林沐|
+
+### 9. workflow_09.json
+- **Prompt ID**: `053a92cd-9518-4f37-a709-11d2482f8693`
+- **类型**: 文生图
+- **节点数**: 12
+- **模型** (3):
+  - Qwen3-4B-UD-Q5_K_XL.gguf
+  - mPMix_NSFW_V9_fp8.safetensors
+  - z-image-qwen.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] 现代写实, Base scene: uid=0umzfzj|race=黄种人|sex=男|apparent_age=外观年龄约19岁|face=五官端正, 却能在陈墨瞳面前无缝切换回纯净无害的模样|eyes=眼神坚毅, 却能在陈墨瞳面前无缝切换回纯净无害的模样|nose_mouth=鼻唇关系端正|skin=肤质干净自然, 外观年龄约19岁|aura=气质中逐渐蜕变出深邃, 从容的上位者压迫感, 穿
+
+### 10. workflow_10.json
+- **Prompt ID**: `a9c40d71-2b0a-4b68-93c8-49955ca4a17c`
+- **类型**: 文生图
+- **节点数**: 12
+- **模型** (3):
+  - Qwen3-4B-UD-Q5_K_XL.gguf
+  - mPMix_NSFW_V9_fp8.safetensors
+  - z-image-qwen.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] 现代写实, Base scene: 1boy, 黄种人, 外观年龄约19岁, 年轻男性, 清透年轻面部, 年轻面部软组织饱满, 干净年轻肤质, 五官端正, 眼神坚毅, 鼻唇关系端正, 气质中带有深邃, 从容的压迫感, 身高约178cm, 骨架匀称, 肌肉线条紧实, 穿着廉价且洗得有些发白的蓝色休闲服, 黑色牛仔裤, 浑身上下无多余配饰, 位于画面中央偏左的下铺床上, 背靠昏暗的床铺墙壁, 姿态半躺

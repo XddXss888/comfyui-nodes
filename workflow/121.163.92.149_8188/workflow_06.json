@@ -1,83 +1,66 @@
 {
   "1": {
+    "class_type": "UNETLoader",
     "inputs": {
       "unet_name": "boogu_image_turbo_nvfp4.safetensors",
       "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Load Diffusion Model"
     }
   },
   "2": {
+    "class_type": "CLIPLoader",
     "inputs": {
       "clip_name": "qwen3vl_8b_fp8_scaled.safetensors",
       "type": "boogu",
       "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "Load CLIP"
     }
   },
   "3": {
+    "class_type": "VAELoader",
     "inputs": {
       "vae_name": "flux1_vae_bf16.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Load VAE"
     }
   },
   "4": {
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "ink wash painting, sumi-e brush style, atmospheric portrait of a sinister menacing wuxia martial artist (Five Poisons Elder), a powerful imposing martial arts master, elaborate ornate detail, sickly jade green poison mist accents, bust portrait facing slightly to the side, expressive loose ink brushstrokes, soft ink bleeding, plain empty aged off-white rice paper background, clean empty corners, monochrome black ink, dramatic, ominous, masterpiece, highly detailed",
+      "text": "Isolated creature art of ONE single cute chibi three-headed dragon hydra in side profile. Its chubby FOUR-LEGGED dragon body faces to the RIGHT, standing on four legs, with a long tail that has small spikes along the back and tail extending to the RIGHT. THREE necks rise upward from the FRONT of its chest, and all THREE dragon heads are at the upper LEFT, all three heads facing and looking to the LEFT (all snouts point left, same direction). The necks are SHORT to medium length, close together, each neck has a lighter cream-yellow throat on its front. Each of the three heads has small horns and little fin-like frills. EXACTLY three heads, no more than three. Green scales with a cream-yellow belly and throat, big round glowing eyes, small wisps of pale green poison mist. Chibi cute, big heads, chubby body. ONE single creature, clean anatomy, three short necks joined at the front chest. Like a classic three-headed hydra dragon. Soft painterly storybook style, soft fluffy shading, cute monster mascot. Centered, plain flat pale gray background, soft even lighting, no scene, no ground, no text, no frame.",
       "clip": [
         "2",
         0
       ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "Positive Prompt"
     }
   },
   "5": {
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "red seal, red stamp, signature seal, artist seal, chop, corner seal, inscription, hanging scroll, calligraphy, chinese characters, korean characters, kanji, hanzi, hangul, text, letters, words, captions, watermark, signature, logo, frame, border, photorealistic, photo, 3d render, anime, cartoon, bright saturated colors, blurry, lowres, low quality, deformed, disfigured, bad anatomy, extra limbs, extra fingers",
+      "text": "",
       "clip": [
         "2",
         0
       ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "Negative Prompt"
     }
   },
   "6": {
+    "class_type": "EmptySD3LatentImage",
     "inputs": {
       "width": 1024,
-      "height": 1024,
+      "height": 1536,
       "batch_size": 1
-    },
-    "class_type": "EmptySD3LatentImage",
-    "_meta": {
-      "title": "EmptySD3LatentImage"
     }
   },
   "7": {
+    "class_type": "KSampler",
     "inputs": {
-      "seed": 318037882181590,
+      "model": [
+        "1",
+        0
+      ],
+      "seed": 24789,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0,
-      "model": [
-        "1",
-        0
-      ],
       "positive": [
         "4",
         0
@@ -90,13 +73,10 @@
         "6",
         0
       ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
     }
   },
   "8": {
+    "class_type": "VAEDecode",
     "inputs": {
       "samples": [
         "7",
@@ -106,23 +86,58 @@
         "3",
         0
       ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
     }
   },
   "9": {
+    "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "boogu_turbo",
       "images": [
+        "12",
+        0
+      ],
+      "filename_prefix": "wf_h1"
+    }
+  },
+  "10": {
+    "class_type": "TransparentBGSession+",
+    "inputs": {
+      "mode": "base",
+      "use_jit": false
+    }
+  },
+  "11": {
+    "class_type": "ImageRemoveBackground+",
+    "inputs": {
+      "rembg_session": [
+        "10",
+        0
+      ],
+      "image": [
         "8",
         0
       ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
+    }
+  },
+  "13": {
+    "class_type": "InvertMask",
+    "inputs": {
+      "mask": [
+        "11",
+        1
+      ]
+    }
+  },
+  "12": {
+    "class_type": "JoinImageWithAlpha",
+    "inputs": {
+      "image": [
+        "8",
+        0
+      ],
+      "alpha": [
+        "13",
+        0
+      ]
     }
   }
 }

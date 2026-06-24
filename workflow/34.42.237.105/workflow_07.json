@@ -1,4 +1,13 @@
 {
+  "1": {
+    "inputs": {
+      "image": "8dAxdmph.webp"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
   "3": {
     "inputs": {
       "model": "depth_anything_v2_vits_fp16.safetensors",
@@ -52,13 +61,13 @@
   },
   "31": {
     "inputs": {
-      "intensity": 1.0,
-      "softness": 1.2,
-      "mask_feather": 7,
+      "intensity": 0.8000000000000002,
+      "softness": 1.2000000000000002,
+      "mask_feather": 1,
       "max_steps": 16,
       "lens_shape": "disk",
-      "max_kernel": 5,
-      "subject_feather": 7,
+      "max_kernel": 13,
+      "subject_feather": 5,
       "apply_blur": true,
       "image": [
         "132",
@@ -81,7 +90,7 @@
   "118": {
     "inputs": {
       "filename_prefix": "ComfyUI",
-      "file_type": "WEBP (lossy)",
+      "file_type": "WEBP (lossless)",
       "remove_metadata": true,
       "images": [
         "229",
@@ -95,7 +104,7 @@
   },
   "120": {
     "inputs": {
-      "url_or_path": "https://generations-production.s3.eu-central-1.amazonaws.com/6a3948f29d7714fb516ab67f/3gRAO1oa.png"
+      "url_or_path": "https://zaps-profile-faces.s3.ap-south-1.amazonaws.com/6a3ae7384d9e379db35405d6/GJseZIPe_valorant.webp"
     },
     "class_type": "LoadImageFromUrlOrPath",
     "_meta": {
@@ -148,7 +157,7 @@
   "135": {
     "inputs": {
       "image": [
-        "237",
+        "31",
         0
       ]
     },
@@ -206,7 +215,7 @@
       "visibility": 0.5,
       "codeformer_weight": 0.5,
       "image": [
-        "236",
+        "231",
         0
       ]
     },
@@ -220,109 +229,13 @@
       "model_name": "PPR10K_c",
       "device": "cuda",
       "image": [
-        "235",
+        "135",
         0
       ]
     },
     "class_type": "BPAMEnhance",
     "_meta": {
       "title": "BPAM Image Enhancement"
-    }
-  },
-  "233": {
-    "inputs": {
-      "blend_factor": 1.0,
-      "blend_mode": "normal",
-      "image1": [
-        "237",
-        0
-      ],
-      "image2": [
-        "135",
-        0
-      ]
-    },
-    "class_type": "ImageBlend",
-    "_meta": {
-      "title": "Image Blend"
-    }
-  },
-  "235": {
-    "inputs": {
-      "condition": true,
-      "if_true": [
-        "237",
-        0
-      ],
-      "if_false": [
-        "233",
-        0
-      ]
-    },
-    "class_type": "Basic data handling: IfElse",
-    "_meta": {
-      "title": "Skin Retouch=off"
-    }
-  },
-  "236": {
-    "inputs": {
-      "condition": false,
-      "if_true": [
-        "235",
-        0
-      ],
-      "if_false": [
-        "231",
-        0
-      ]
-    },
-    "class_type": "Basic data handling: IfElse",
-    "_meta": {
-      "title": "BPAM=off"
-    }
-  },
-  "237": {
-    "inputs": {
-      "blur_ok": [
-        "300",
-        1
-      ],
-      "if_true": [
-        "31",
-        0
-      ],
-      "if_false": [
-        "132",
-        0
-      ]
-    },
-    "class_type": "BlurGatedSwitch",
-    "_meta": {
-      "title": "Blur switch (lazy) — override blur_ok via API for force modes"
-    }
-  },
-  "300": {
-    "inputs": {
-      "threshold": 0.42,
-      "use_scene_prior": true,
-      "device_mode": "AUTO",
-      "depth_convention": "near_is_high",
-      "images": [
-        "125",
-        0
-      ],
-      "mask": [
-        "174",
-        1
-      ],
-      "depth": [
-        "4",
-        0
-      ]
-    },
-    "class_type": "BlurCandidateScore",
-    "_meta": {
-      "title": "Blur Candidate Score (gate)"
     }
   }
 }

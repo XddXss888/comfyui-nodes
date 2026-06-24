@@ -30,7 +30,6 @@
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
-      "video-preview": "",
       "video": [
         "2",
         0
@@ -72,7 +71,6 @@
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
-      "video-preview": "",
       "video": [
         "5",
         0
@@ -122,7 +120,6 @@
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
-      "video-preview": "",
       "video": [
         "7",
         0
@@ -138,7 +135,6 @@
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
-      "video-preview": "",
       "video": [
         "8",
         0
@@ -171,7 +167,6 @@
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
-      "video-preview": "",
       "video": [
         "11",
         0
@@ -187,7 +182,6 @@
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
-      "video-preview": "",
       "video": [
         "11",
         0
@@ -246,7 +240,6 @@
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
-      "video-preview": "",
       "video": [
         "14",
         0
@@ -279,7 +272,6 @@
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
-      "video-preview": "",
       "video": [
         "18",
         0
@@ -331,7 +323,6 @@
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
-      "video-preview": "",
       "video": [
         "22",
         0
@@ -340,6 +331,1557 @@
     "class_type": "SaveVideo",
     "_meta": {
       "title": "Save Video"
+    }
+  },
+  "24": {
+    "inputs": {
+      "image": "ComfyUI_00036_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "25": {
+    "inputs": {
+      "prompt": "Use the uploaded image as the composition reference.\n\nA young Indian male creator stands beside a large vertical monitor in a modern RGB-lit content studio, speaking confidently and enthusiastically directly to camera.\n\nThe monitor never displays the spoken words.\n\nInstead, it displays supporting visual evidence synchronized with the narration:\nMonitor shows:\n\nReel Analytics Dashboard\nViews: 200\nReach: 187\nShares: 1\nSaves: 0\nFlat performance graph\nLast 30 days stagnant growth",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "26": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "28": {
+    "inputs": {
+      "prompt": "change the guy into a young smart indian guy with glasses, in his 25s, ",
+      "aspect_ratio": "9:16",
+      "image_resolution": "2K",
+      "random_seed": 1,
+      "images.image_1": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "Kie_Seedream4EditNode",
+    "_meta": {
+      "title": "Seedream 4 Image to Image"
+    }
+  },
+  "29": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "30": {
+    "inputs": {
+      "prompt": "he says with confidence and enthusiasm, energetic\n\" Mere reels 200 views pe atke the. Seekho ne bataya kyun — aur maine fix kiya. Hashtag, timing, trending audio — sab try kiya. Kuch kaam nahi aaya. \"",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "31": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "30",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "32": {
+    "inputs": {
+      "image": "ComfyUI_00036_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "33": {
+    "inputs": {
+      "prompt": "he says with confidence and enthusiasm, energetic\n\" Problem meri content mein nahi thi — mujhe pata hi nahi tha algorithm kaise kaam karta hai. Seekho pe ek 3 minute ka video tha — Instagram pehle 3 second dekhta hai. \"",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "34": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "33",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "35": {
+    "inputs": {
+      "prompt": "Use the uploaded image as the exact composition reference.\n\nA young Indian female creator stands beside a large vertical monitor in a modern creator studio with purple and blue RGB lighting, speaking confidently to camera. The monitor displays a single professional Instagram retention analytics dashboard throughout the entire shot.\n\nThe dashboard focuses exclusively on First 3 Second Performance Analysis.\n\nVisible on screen:\n\nReel thumbnail at top\nAudience Retention Graph\nStrong retention during first 3 seconds\nRetention starts at 100%\n92% still watching at 1 second\n85% still watching at 2 seconds\n78% still watching at 3 seconds\nCurve remains relatively stable after the hook\nGreen highlighted zone covering first 3 seconds\n\"Above Average Retention\" indicator\nViewer attention heatmap concentrated at video opening\nAverage watch duration increasing\nPositive engagement prediction metrics\nReach expansion indicator showing algorithm confidence\nProfessional Instagram-style creator analytics interface\n\nNo promotional text. No captions. No explanation boxes. Only authentic creator analytics and retention data proving that the opening hook is successfully holding viewer attention.\n\n35mm lens, realistic monitor reflections, photorealistic UI, ultra-sharp readability, premium creator studio lighting, natural skin texture, realistic glass reflections.",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "81",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "36": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "35",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "37": {
+    "inputs": {
+      "image": "ComfyUI_00044_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "38": {
+    "inputs": {
+      "prompt": "Use the uploaded image as the exact composition reference.\n\nA young Indian female creator stands beside a large vertical monitor in a modern RGB-lit creator studio, confidently speaking directly to camera. The monitor remains on a single analytics dashboard throughout the shot.\n\nThe dashboard shows reel performance growth after optimizing the opening frame.\n\nVisible data on screen:\n\nReel Analytics Overview\nViews: 6,400\nPrevious Period: 200\nGrowth: +3100%\nReach: 5,870\nAverage Watch Time: 11.4s\nAudience Retention: 78%\nShares: 94\nSaves: 127\nEngagement Rate: 12.8%\n\nLarge upward performance graph:\n\nStarts at 200 views\nGradually climbs\nSharp acceleration after optimization point\nEnds at 6,400 views\n\nA small marker appears on the graph:\n\nHook Updated\n\nAfter that marker, growth increases significantly.\n\nProfessional Instagram-style analytics interface, realistic creator dashboard, clean UI hierarchy, readable metrics, authentic social-media growth data.\n\n35mm lens, photorealistic monitor reflections, realistic monitor glow, ultra-sharp analytics screen, premium creator studio lighting.",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "82",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "39": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "40": {
+    "inputs": {
+      "image": "ComfyUI_00045_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "41": {
+    "inputs": {
+      "prompt": "he says with confidence and enthusiasm, energetic\n\" Maine sirf apna pehla frame fix kiya. Agle hafte 6,400 views aaye. Yeh magic nahi tha — yeh sirf sahi cheez pehli baar seekhna tha. Main guarantee nahi de sakta tumhare views kal viral honge. \"",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "42": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "43": {
+    "inputs": {
+      "image": "ComfyUI_00047_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "44": {
+    "inputs": {
+      "prompt": "he says with confidence and enthusiasm, energetic - the camera stays still through the video\n\" But agar tum seriously samajhna chahte ho ki algorithm kaise kaam karta hai. Seekho exactly yahi sikhata hai. Step by step. \"",
+      "duration": "8",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "43",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "45": {
+    "inputs": {
+      "prompt": "Use the uploaded image as the exact composition reference.\nUse the uploaded frame as composition reference, but generate only the monitor screen content. The guy will be added separately. User will upload the Seekho logo reference in ComfyUI.\n\nCreate a clean vertical monitor UI for the Seekho app offer page. Premium Indian ed-tech creator growth landing screen, white background, minimal modern layout, sharp readable typography, realistic app interface.\n\nAt the top, place the Seekho logo from the uploaded logo reference.\n\nMain screen content:\n\n500+ Creator Growth Videos\n\nCourse categories listed below:\n\nInstagram Reels Strategy\nAlgorithm Secrets\nFirst 3 Seconds Hook Formula\nContent Growth Framework\nProfile Optimization\nEditing Basics\n\nMiddle section shows a subscription trial card:\n\n₹1 mein 3 din ka trial\n\nLarge green button:\n\nStart Now\n\nSmall text below:\n\nCancel anytime\n\nBottom trust section:\n\n⭐ 4.8 | 25k+ learners\n\nBottom CTA:\n\nInstall karo, ₹1 mein shuru karo\n\nClean app-store style interface, soft shadows, rounded cards, green CTA button, premium Seekho brand colors, high-resolution UI, designed for a large vertical monitor, no human subject.",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "24",
+        0
+      ],
+      "images.image_2": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "46": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "47": {
+    "inputs": {
+      "image": "seekho-icon-filled-256.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "48": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "44",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "49": {
+    "inputs": {
+      "image": "ComfyUI_00036_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "50": {
+    "inputs": {
+      "prompt": "keep everything exactly the same of image 1, just replace the monitor data with image 2, and make sure the lighting and everyhtign matches of image 2 with 1",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "91",
+        0
+      ],
+      "images.image_2": [
+        "51",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "51": {
+    "inputs": {
+      "image": "ComfyUI_00046_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "52": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "50",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "53": {
+    "inputs": {
+      "prompt": "he says with confidence and enthusiasm, energetic - the camera stays still through the video\n\" Seekho app mein 500+ aisi videos hain. Pehle teen din sirf ek rupaye mein try karo.\"",
+      "duration": "8",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "55",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "54": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "53",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "55": {
+    "inputs": {
+      "image": "videoframe_8000.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "57": {
+    "inputs": {
+      "prompt": "Ultra-realistic portrait of a beautiful young South Asian woman, standing outdoors on an elegant pedestrian street during golden hour. She has long, naturally wavy dark hair, symmetrical facial features, warm medium-fair skin tone, expressive brown eyes, subtle natural makeup, soft pink lips, and delicate crystal drop earrings.\n\nShe wears a sophisticated sleeveless deep-red Indian kurti with a matching flowing dupatta draped around her shoulders. The fabric has rich texture and natural folds, moving gently in a light breeze.\n\nShe stands confidently facing the camera with a calm, graceful expression and direct eye contact.\n\nBackground features creamy golden bokeh, soft greenery, luxury residential architecture softly blurred, shallow depth of field.\n\nLens: 85mm portrait lens\nAperture: f/1.8\nLighting: Natural golden-hour sunlight, soft facial highlights, realistic skin rendering\nStyle: Hyperrealistic photography, premium fashion portrait, ultra-detailed skin texture, realistic hair strands, photorealistic fabric detail, cinematic color grading, DSLR quality, 8K.",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16"
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "58": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "57",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "59": {
+    "inputs": {
+      "prompt": "",
+      "aspect_ratio": "9:16",
+      "resolution": "480p",
+      "duration": 8,
+      "nsfw_checker": true
+    },
+    "class_type": "Kie_GrokImagineVideo15PreviewNode",
+    "_meta": {
+      "title": "Grok Imagine Video 1.5 Preview"
+    }
+  },
+  "60": {
+    "inputs": {
+      "image": "ChatGPT Image Jun 19, 2026, 02_13_25 PM.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "61": {
+    "inputs": {
+      "image": "ComfyUI_00036_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "62": {
+    "inputs": {
+      "image": "ComfyUI_00044_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "63": {
+    "inputs": {
+      "image": "ComfyUI_00045_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "64": {
+    "inputs": {
+      "image": "ComfyUI_00047_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "65": {
+    "inputs": {
+      "prompt": "keep everything exactly the same, just change the guy to the female in image 2",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "61",
+        0
+      ],
+      "images.image_2": [
+        "67",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "66": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "65",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "67": {
+    "inputs": {
+      "image": "Screenshot 2026-06-23 123827.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "68": {
+    "inputs": {
+      "image": "ComfyUI_00056_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "69": {
+    "inputs": {
+      "prompt": "keep everything exactly the same, the girl in the image wears a classic black tshirt with glasses",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "71",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "70": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "69",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "71": {
+    "inputs": {
+      "image": "ComfyUI_00050_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "72": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "69",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "73": {
+    "inputs": {
+      "prompt": "she says with confidence and enthusiasm, energetic, camera stays still through out the video, keep the monitor girl static\n\" Mere reels 200 views pe atke the. Seekho ne bataya kyun — aur maine fix kiya. Hashtag, timing, trending audio — sab try kiya. Kuch kaam nahi aaya. \"",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "68",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "74": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "73",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "75": {
+    "inputs": {
+      "image": "ComfyUI_00044_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "76": {
+    "inputs": {
+      "prompt": "keep everything exactly the same of image 2, replace the monitor data of image 1 to image 2",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "75",
+        0
+      ],
+      "images.image_2": [
+        "77",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "77": {
+    "inputs": {
+      "image": "girl 1.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "78": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "76",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "79": {
+    "inputs": {
+      "prompt": "keep everything exactly the same, replace the guy in the monitor to the girl ",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "77",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "80": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "79",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "81": {
+    "inputs": {
+      "image": "ComfyUI_00056_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "82": {
+    "inputs": {
+      "image": "ComfyUI_00056_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "83": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "84": {
+    "inputs": {
+      "prompt": "he says with confidence and enthusiasm, energetic, camera stays still through out the video, keep the monitor girl static\n\" Problem meri content mein nahi thi — mujhe pata hi nahi tha algorithm kaise kaam karta hai. Seekho pe ek 3 minute ka video tha — Instagram pehle 3 second dekhta hai. \"",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "88",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "85": {
+    "inputs": {
+      "prompt": "she says with confidence and enthusiasm, energetic, camera stays still through out the video\n\" अगले हफ़्ते \"छह हज़ार चारसौ\" व्यूज़ आए। Yeh magic nahi tha — yeh sirf sahi cheez pehli baar seekhna tha. \"\nNEGATIVE PROMPT:\nmis pronounciation random words",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "93",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "86": {
+    "inputs": {
+      "prompt": "she says with confidence and enthusiasm, energetic, the camera stays still through the video\n\" But agar tum seriously samajhna chahte ho ki algorithm kaise kaam karta hai. Seekho exactly yahi sikhata hai. Step by step. \"",
+      "duration": "8",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "87": {
+    "inputs": {
+      "prompt": "she says with confidence and enthusiasm, energetic, the camera stays still through the video\n\" सीखो ऐप में 500+ ऐसी वीडियो हैं। पहले तीन दिन सिर्फ़ ek rupaye में ट्राय करो।\"",
+      "duration": "8",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "88": {
+    "inputs": {
+      "image": "ComfyUI_00059_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "89": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "90": {
+    "inputs": {
+      "prompt": "Generate a high-quality, photorealistic image",
+      "model": "Flash",
+      "model.resolution": "1K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "64",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "91": {
+    "inputs": {
+      "image": "ComfyUI_00060_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "92": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "50",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "93": {
+    "inputs": {
+      "image": "ComfyUI_00060_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "94": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "85",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "95": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "96": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "97": {
+    "inputs": {
+      "image": "ComfyUI_00065_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "98": {
+    "inputs": {
+      "image": "ComfyUI_00064_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "99": {
+    "inputs": {
+      "prompt": "keep everyhting exactly the same just remove the content in foreground and the gradient",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "100": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "99",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "101": {
+    "inputs": {
+      "image": "videoframe_8000 (1).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "102": {
+    "inputs": {
+      "prompt": "A realistic Tier-3 Indian middle-class home at night. Warm yellow tube-light illumination, intimate household atmosphere. Kajal, a 26-year-old Indian woman wearing a mustard yellow kurta with a light blue dupatta, sits at a small wooden table carefully practicing an intricate bridal mehendi design on her own hand. She is visibly tired after a long day but remains focused, delicately drawing fine floral and paisley patterns with a mehendi cone.\n\nThe table is cluttered with several empty mehendi cone wrappers, tissue papers, and practice sheets, showing months of effort and dedication. Beside her hand lies a smartphone with the screen clearly visible. Instagram profile open. The screen prominently shows 114 followers, no direct messages, no booking inquiries, no bridal orders, low engagement notifications. The phone screen should be sharp and readable.\n\nStanding near the bedroom doorway in the background is her mother-in-law, a middle-aged Indian woman wearing a dark green saree, grey hair tied back, reading glasses hanging from her neck. She stands with crossed hands, visibly frustrated and disapproving. She wrinkles her nose slightly as if bothered by the strong smell of fresh mehendi in the room. Her facial expression conveys disappointment, skepticism, and annoyance without speaking.\n\nForeground focus on Kajal's delicate mehendi work. Midground focus on the phone screen displaying 114 followers. Background focus on the judgmental mother-in-law standing at the entrance.\n\nKajal briefly glances at the phone screen, noticing the lack of orders. Her eyes become slightly watery. A subtle feeling of failure and self-doubt fills the room.\n\nPhotorealistic Indian faces, realistic skin texture, authentic middle-class Indian home, emotional storytelling, natural body language, realistic mehendi texture, cinematic depth of field, warm practical lighting, subtle shadows, premium social media advertisement quality, realistic smartphone UI, ultra detailed hands, shallow focus, emotional realism, 4K commercial film look.\n\nCamera\n\nMedium-wide shot slowly pushing in toward Kajal.\n\nLens\n\n50mm cinematic lens, f/1.8 shallow depth of field.\n\nMood\n\nQuiet disappointment, hard work without results, emotional struggle before transformation.\n\nNegative Prompt\n\nextra fingers, distorted hands, unreadable phone screen, exaggerated expressions, glamour makeup, luxury interior, western home, cartoon style, unrealistic lighting, blurred Instagram UI, duplicate people, deformed mehendi patterns, oversaturated colors, AI artifacts.",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "104",
+        0
+      ],
+      "images.image_2": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "103": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "104": {
+    "inputs": {
+      "image": "kajal_00001_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "105": {
+    "inputs": {
+      "image": "ComfyUI_00067_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "106": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "107": {
+    "inputs": {
+      "image": "ComfyUI_00072_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "108": {
+    "inputs": {
+      "prompt": "A realistic middle-class Indian bedroom at night, warm yellow tube-light illumination. Kajal, a young Indian woman in a mustard yellow kurta and light blue dupatta, sits at a small wooden table practicing intricate bridal mehendi on her own hand. Empty mehendi cone wrappers and tissues are scattered across the table, showing months of effort.\n\nHer smartphone lies beside her with Instagram open, clearly displaying only 114 followers, no order inquiries, and no messages.\n\nIn the doorway stands her mother-in-law, a middle-aged Indian woman wearing a dark green saree with reading glasses hanging around her neck. She wrinkles her nose slightly as if bothered by the smell of fresh mehendi. Her arms are folded and her expression is frustrated, skeptical, and judgmental.\n\nThe camera slowly pushes toward Kajal while keeping the mother-in-law visible in the background. Kajal continues drawing mehendi quietly but looks emotionally exhausted.\n\nThe mother-in-law shakes her head slightly and speaks naturally in Hindi with a realistic Indian accent:\n\nSasu Maa Dialogue (lip-synced Hindi):\n\"6 mahine ho gaye bahu... ek paisa bhi nahi aaya. Yeh online-wonline apne bas ki baat nahi.\"\n\nAs the dialogue finishes, Kajal briefly glances at the phone screen showing 114 followers. Her eyes become watery and her hand slows down. The room feels emotionally heavy and silent.\n\nCamera: Slow cinematic dolly-in, handheld realism\nLens: 50mm cinematic lens\nLighting: Warm practical household lighting, realistic shadows\nMood: Disappointment, doubt, emotional pressure\nAudio: Natural room ambience, ceiling fan hum, distant neighborhood sounds, realistic voice performance\n\nNegative Prompt\n\ncartoon, overacting, exaggerated expressions, glamour makeup, luxury house, studio lighting, western interior, smiling mother-in-law, unreadable phone screen, extra fingers, distorted hands, artificial emotions, dramatic Bollywood acting, subtitles, text overlays, low realism, CGI look, beauty filter, AI artifacts.",
+      "duration": "8",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "107",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "109": {
+    "inputs": {
+      "prompt": "kajal chup rahi.\nPar andar kuch bura lag raha tha.\n\nkajal ko mehandi lagana aata tha.\nReel banana aata tha.\nPar 6 mahine, roz ek post —\nphir bhi wahi 40–50 views.\nWoh sochti —\n'Roz daali reel.\nPhir bhi kuch nahi?\nAakhir kya ho raha hai mere saath?'\n\nkajal ne Seekho download kiya.\nPehli baar samjha —\nlog reel kyun chhod dete hain.\nMehandi ki video mein hook kaise daalo.\nLog rukenge kaise.\n\n2 mahine baad —\n114 se 9,000 followers.\nInstagram pe bridal orders ki line.\nGhar nahi badla.\nMehandi design nahi badli.\nBas Instagram chalana seekh liya.\n\nFollowers atke hain? Tension mat lo aur seekhna shuru karo.\nSeekho App kholo.\nInstagram Growth dekho.\nAur apni pehchaan khud banao.",
+      "model": "3.1 Flash",
+      "voice_name": "Leda (Youthful)"
+    },
+    "class_type": "Official_GeminiTTSSingleNode",
+    "_meta": {
+      "title": "Gemini Text to Speech"
+    }
+  },
+  "110": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "108",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "111": {
+    "inputs": {
+      "filename_prefix": "audio/ComfyUI",
+      "quality": "V0",
+      "audioUI": "",
+      "audio": [
+        "109",
+        0
+      ]
+    },
+    "class_type": "SaveAudioMP3",
+    "_meta": {
+      "title": "Save Audio (MP3)"
+    }
+  },
+  "112": {
+    "inputs": {
+      "prompt": "Continuation of the previous scene inside the same modest middle-class Indian bedroom at night. Warm yellow household lighting. Kajal sits alone at the wooden table covered with mehendi cone wrappers and practice sheets.\n\nThe mother-in-law's taunting words have just ended. The room becomes quiet.\n\nMedium close-up on Kajal.\n\nShe remains completely silent. She doesn't argue back. She keeps staring at the unfinished bridal mehendi design on her hand while holding the cone motionless.\n\nA long pause.\n\nHer eyes begin to fill with tears. She blinks repeatedly, trying hard not to cry. Her jaw tightens slightly. She takes a small breath and swallows her emotions.\n\nThe camera slowly pushes closer.\n\nKajal briefly looks toward her phone screen showing only 114 followers and no orders. The disappointment hits harder.\n\nHer eyes become glossy. A tear almost forms but she quickly looks down and blinks it away. She forces herself to stay composed.\n\nHer lips tremble slightly for a moment before she regains control.\n\nShe lowers her gaze toward the unfinished mehendi design and gently places the cone down beside the steel bowl.\n\nShe does not cry openly.\n\nShe is trying very hard to hide her pain.\n\nThe expression should feel deeply relatable—someone who has heard criticism many times before and has learned to suffer quietly.\n\nCamera\n\nSlow cinematic push-in from medium close-up to tight close-up.\n\nLens\n\n85mm portrait lens, shallow depth of field.\n\nLighting\n\nWarm practical tube-light, realistic household shadows, subtle catchlight in eyes emphasizing moisture.\n\nActing Notes\nNo dramatic crying.\nNo sobbing.\nNo wiping tears.\nEyes becoming watery.\nRepeated blinking to stop tears.\nLip tremble for less than one second.\nSilent emotional breakdown hidden behind self-control.\nVisual Focus\nWatery eyes\nTrembling lips\nUnfinished mehendi design\nPhone screen showing lack of success\nFeeling of isolation despite being in her own home\nNegative Prompt\n\nmelodrama, Bollywood crying, tears streaming down face, loud emotions, exaggerated acting, smiling, glamour makeup, beauty filter, luxury interior, cinematic rain, dramatic music video style, overacting, cartoon emotions, AI artifacts, distorted hands, extra fingers, unrealistic facial expressions.",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "113",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "113": {
+    "inputs": {
+      "image": "videoframe_8000 (2).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "114": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "112",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "115": {
+    "inputs": {
+      "prompt": "Night inside a modest Tier-3 Indian middle-class bedroom. Kajal, a 26-year-old Indian woman wearing a mustard yellow kurta and light blue dupatta, sits alone on her bed after hearing criticism from her mother-in-law. The room is dimly lit by warm household lighting.\n\nOver-the-shoulder camera angle from behind Kajal. The backside of her smartphone is clearly visible in her hand as she continuously scrolls with her thumb. Her posture is slightly slouched, showing disappointment and exhaustion.\n\nA realistic floating smartphone UI overlay appears beside her, synchronized with her scrolling movements.\n\nThe UI displays her phone gallery containing hundreds of mehendi videos:\n\nBridal full-hand mehendi designs\nArabic mehendi patterns\nChappa mehendi designs\nTime-lapse application videos\nNext-day dark red color reveal videos\nDetailed cone work close-ups\nWedding mehendi transformations\n\nThe gallery scrolls rapidly, revealing months of content creation and effort.\n\nThe UI transitions into her Instagram reels page.\n\nEvery reel shows extremely low engagement:\n\n42 views\n37 views\n51 views\n46 views\n39 views\n\nThe low view counts repeat across multiple posts.\n\nKajal's thumb continues scrolling.\n\nThe UI changes to successful competing mehendi artists.\n\nInstagram pages display:\n\n8.2K followers\n15.4K followers\n12.7K followers\n\nComments and messages appear:\n\n\"Bridal booking available?\"\n\"Karwa Chauth slots open\"\n\"Waiting list full\"\n\"Book your date now\"\n\nBeautiful bridal clients and successful mehendi businesses fill the screen.\n\nKajal pauses scrolling.\n\nThe UI transitions to her own Instagram profile.\n\nThe page looks empty.\n\nOnly 114 followers.\n\nNo booking inquiries.\n\nNo unread messages.\n\nNo orders.\n\nHer thumb stops moving.\n\nA moment of silence.\n\nShe stares at the screen for a few seconds.\n\nDisappointed, she exits Instagram and locks the phone.\n\nHer face reflects quiet defeat.\n\nPhotorealistic Indian woman, realistic smartphone interaction, authentic Instagram-style UI overlay, social media advertisement cinematography, emotional realism, realistic hand movement, natural scrolling behavior, cinematic depth of field, warm practical lighting, ultra-realistic phone graphics, premium commercial quality.\n\nCamera\n\nOver-the-shoulder shot from behind Kajal.\n\nLens\n\n50mm cinematic lens.\n\nUI Direction\n\nFloating screen-recording style overlay occupying 35–40% of frame.\n\nPhone remains physically visible in Kajal's hand throughout.\n\nMood\n\nMonths of effort.\nNo results.\nComparison with successful creators.\nGrowing self-doubt.\n\nNegative Prompt\n\nfront-facing phone only, unreadable UI, fake social media interface, exaggerated reactions, luxury room, glamour styling, over-bright colors, distorted fingers, floating hands, cartoon graphics, unrealistic Instagram layout, AI artifacts, low-resolution phone screen, text glitches.",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "116": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "115",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "117": {
+    "inputs": {
+      "prompt": "she says with confidence and enthusiasm, energetic, camera stays still through out the video\n\" Maine sirf apna pehla frame fix kiya. अगले हफ़्ते छहहज़ार चारसौ व्यूज़ आए। Yeh magic nahi tha — yeh sirf sahi cheez pehli baar seekhna tha. Main guarantee nahi de sakti tumhare views kal viral honge. \"\nNEGATIVE PROMPT:\nmis pronounciation random words",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "118": {
+    "inputs": {
+      "image": "ComfyUI_00073_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "119": {
+    "inputs": {
+      "prompt": "Night inside a modest Tier-3 Indian bedroom. Kajal sits alone on her bed, holding her smartphone. Warm household lighting creates a quiet, emotional atmosphere.\n\nClose-up of her thumb scrolling through her Instagram reels.\n\nA visual montage rapidly shows the passage of time:\n\nDifferent calendar dates changing over several months.\nKajal uploading reel after reel of bridal mehendi designs.\nNew posts appearing consistently.\nMultiple reels showing similar engagement numbers:\n42 views, 47 views, 39 views, 51 views, 45 views.\nMonth after month passes, but the numbers barely change.\n\nThe camera slowly pushes closer.\n\nKajal continues scrolling through her own profile. Her expression becomes increasingly confused and discouraged.\n\nQuick flashes of her best work:\n\nBridal full-hand mehendi.\nArabic designs.\nDark color reveal videos.\nDetailed cone work.\n\nDespite the quality, every reel remains stuck around 40–50 views.\n\nShe pauses scrolling.\n\nClose-up on her face.\n\nHer eyes move thoughtfully as she starts analyzing her profile. She scrolls back through older posts, studying them carefully.\n\nShe tilts her head slightly, wondering what she is doing wrong.\n\nThe camera circles slowly around her.\n\nShe opens a few reels again, watches them critically, comparing thumbnails, captions, and opening seconds.\n\nA feeling of self-reflection replaces disappointment.\n\nShe rests her chin lightly on her hand, staring at the screen.\n\nThe final moment shows Kajal looking determined but confused, silently searching for answers on how to improve and grow.\n\nCamera\n\nOver-the-shoulder → Phone close-ups → Slow push-in to face → Circular movement around Kajal.\n\nLens\n\n50mm cinematic lens, shallow depth of field.\n\nEmotion\n\nConfusion → Frustration → Self-analysis → Desire to improve.\n\nVisual Style\n\nUltra-realistic Indian creator journey, authentic social media struggle, natural acting, realistic smartphone UI, premium commercial storytelling, emotional but hopeful.\n\nNegative Prompt\n\ncrying, dramatic breakdown, success indicators, viral reels, high follower counts, exaggerated reactions, luxury room, glamour makeup, cartoon UI, unreadable screen, overacting, AI artifacts, unrealistic social media interface.",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "118",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "120": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "119",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "121": {
+    "inputs": {
+      "prompt": "(reference image 1 is kaja and image 2 is sunita)A realistic Tier-3 Indian middle-class home dining area during evening. Warm household lighting, authentic lived-in atmosphere. Kajal and her neighbor Sunita are sitting together at a simple dining table.\n\nKajal, a 26-year-old Indian woman wearing a mustard yellow kurta with a light blue dupatta, looks visibly stressed and emotionally exhausted. She holds her smartphone in both hands and leans slightly forward while showing it to Sunita. The backside of the phone is visible only. The phone screen is never shown to the camera.\n\nKajal gestures while explaining her struggle. Her body language reflects frustration, confusion, and disappointment after months of effort. She occasionally shakes her head, sighs softly, and looks worried.\n\nAcross from her sits Sunita, a friendly Indian woman in her early 30s wearing a simple saree. She remains calm, patient, and attentive. She listens carefully without interrupting, maintaining eye contact and showing genuine concern.\n\nSunita leans forward slightly, trying to understand Kajal's problem. Her facial expression gradually changes from curiosity to surprise as she realizes how much work Kajal has already put in.\n\nThe conversation feels natural and supportive. Kajal occasionally points toward the phone while explaining, while Sunita nods thoughtfully and listens.\n\nThe camera captures subtle emotional moments:\n\nKajal speaking with frustration.\nSunita listening quietly.\nKajal feeling stuck despite hard work.\nSunita beginning to understand the issue.\nA supportive friendship dynamic.\n\nNo phone screen visible at any point. Only the back of the phone is shown naturally in Kajal's hands.\n\nPhotorealistic Indian women, authentic Tier-3 household environment, realistic facial expressions, natural conversation body language, emotional realism, warm practical lighting, cinematic depth of field, premium social media advertisement quality, realistic Indian dining room, relatable female creator journey.\n\nCamera\n\nMedium two-shot across the dining table.\n\nSlow cinematic push-in as Kajal talks.\n\nOccasional over-the-shoulder shots showing only the backside of the smartphone.\n\nLens\n\n50mm cinematic lens.\n\nMood\n\nSupportive friendship.\n\nCreator frustration.\n\nSearching for answers.\n\nThe first moment someone genuinely listens to her struggle.\n\nNegative Prompt\n\nphone screen visible, floating UI, Instagram interface, app interface, text overlays, luxury interior, glamour styling, exaggerated acting, crying, overacting, cartoon style, unrealistic expressions, AI artifacts, distorted hands, extra fingers, staged corporate office, western household, social media graphics.",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "122": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "121",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "123": {
+    "inputs": {
+      "image": "Sunita_00001_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "124": {
+    "inputs": {
+      "image": "Screenshot 2026-06-23 160947.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "125": {
+    "inputs": {
+      "prompt": "upscale image 1",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "124",
+        0
+      ],
+      "images.image_2": [
+        "123",
+        0
+      ],
+      "images.image_3": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "126": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "125",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "127": {
+    "inputs": {
+      "prompt": "A realistic Tier-3 Indian middle-class dining area during evening. Warm household lighting. Kajal and her neighbor Sunita are sitting across from each other at a simple dining table.\n\nKajal looks emotionally drained and frustrated. She holds her smartphone and turns it toward Sunita while explaining her situation. The audience only sees the backside of the phone. The screen is never visible.\n\nKajal speaks with worried hand gestures, occasionally pointing toward the phone and expressing confusion through her facial expressions. Her posture is slightly slumped, showing the weight of months of effort without results.\n\nSunita sits calmly and attentively, listening without interrupting. She maintains soft eye contact and occasionally nods, allowing Kajal to vent her frustrations.\n\nAs Kajal continues explaining, Sunita's expression gradually changes from curiosity to surprise. She realizes how much effort Kajal has put into her work.\n\nKajal scrolls briefly on her phone while showing it to Sunita, still keeping the screen hidden from the camera. She shakes her head slightly as if saying, \"I've tried everything.\"\n\nSunita leans forward, becoming more engaged in the conversation. She listens carefully, thinking about a possible solution.\n\nThe scene ends with Kajal looking defeated and confused, while Sunita appears thoughtful, as if she has just understood the real problem and is about to help.\n\nCamera\n\nNatural conversational coverage.\n\nStart with a medium two-shot across the table.\n\nSlow push-in toward Kajal as she explains.\n\nCut to Sunita's reaction shots.\n\nFinish on a shared frame showing both women.\n\nLens\n\n50mm cinematic lens.\n\nLighting\n\nWarm practical household lighting.\n\nSoft natural shadows.\n\nAuthentic Indian home atmosphere.\n\nActing Notes\n\nKajal:\n\nStressed but controlled.\nFrustrated after months of effort.\nSeeking understanding.\nNo crying.\n\nSunita:\n\nCalm.\nSupportive.\nPatient listener.\nGradually surprised by Kajal's struggle.\nMood\n\nFriend-to-friend conversation.\n\nEmotional support.\n\nSomeone finally listening.\n\nA turning point before discovering the solution.\n\nNegative Prompt\n\nphone screen visible, app UI, floating graphics, text overlays, Seekho interface visible, crying, overacting, dramatic Bollywood reactions, luxury house, glamour makeup, corporate office setting, unrealistic expressions, AI artifacts, distorted hands, extra fingers, cartoon style, exaggerated gestures. no words only action",
+      "duration": "8",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "124",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "128": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "129": {
+    "inputs": {
+      "image": "videoframe_0 (2).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "130": {
+    "inputs": {
+      "prompt": "A realistic Tier-3 Indian middle-class dining room. Warm evening household lighting. Kajal and Sunita sit across from each other at a simple dining table.\n\nKajal looks discouraged and emotionally exhausted after explaining her struggle. Her shoulders are slightly slumped, and she avoids eye contact for a moment, feeling defeated.\n\nSunita sits calmly beside her, leaning slightly forward with a caring and supportive expression. She gently places her hand on the table near Kajal in a reassuring manner, speaking like a close friend rather than giving advice.\n\nThe camera stays mostly on a medium two-shot, occasionally cutting to close-ups of their faces.\n\nAs Sunita talks, Kajal listens quietly. Her expression slowly changes from disappointment to curiosity and hope. She begins paying closer attention.\n\nSunita speaks naturally, warmly, and confidently, as someone who genuinely wants to help a friend. No preaching, no lecturing—just simple, relatable encouragement.\n\nSunita Dialogue (Natural Hindi, lip-synced):\n\n\"kajal, mehandi sabko nahi aati — tujhe aati hai. Par reel chalana bhi seekhna padta hai. Main Seekho से सीखती हूँ।. Tu bhi dekh aur seekh wahan se.\"\n\nWhile speaking, Sunita smiles reassuringly and nods slightly, encouraging Kajal not to give up.\n\nKajal looks at Sunita with growing interest. For the first time in the story, she appears to feel understood. A subtle spark of hope appears in her expression.\n\nThe scene ends with Kajal attentively looking at Sunita, ready to listen.\n\nCamera\nMedium two-shot across the dining table\nSlow cinematic push-in during Sunita's dialogue\nClose-up on Kajal's reaction toward the end\nNatural conversational framing\nLens\n\n50mm cinematic lens\n\nLighting\n\nWarm practical household lighting\n\nSoft shadows\n\nAuthentic Indian home atmosphere\n\nActing Notes\n\nSunita:\n\nCalm and confident\nFriendly neighbor energy\nGenuine concern\nSoft smile\nEncouraging tone\nTalking as an equal, not a teacher\n\nKajal:\n\nInitially discouraged\nListening carefully\nGradually becoming hopeful\nFeeling understood for the first time\nMood\n\nSupportive friendship\n\nEmotional reassurance\n\nA turning point in Kajal's journey\n\nThe moment someone shows her a path forward\n\nNegative Prompt\n\naggressive advice, lecturing, overacting, crying, dramatic Bollywood emotions, luxury house, corporate setting, exaggerated gestures, fake smiles, cartoon expressions, AI artifacts, distorted faces, unrealistic lip sync, glamour makeup, motivational speaker energy, pointing fingers, angry conversation.",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "129",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "131": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "130",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "132": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "130",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "133": {
+    "inputs": {
+      "prompt": "Night inside a modest Tier-3 Indian middle-class bedroom. Warm yellow household lighting. A ceiling fan rotates slowly above. The room feels simple and lived-in.\n\nKajal sits alone on her bed, leaning against the wall with her smartphone in her hands. Her expression initially carries the same frustration and confusion from months of struggling online.\n\nShe begins scrolling through her phone attentively.\n\nThe audience never sees the phone screen.\n\nAt first, her movements are casual and skeptical. She scrolls quickly, almost absentmindedly.\n\nThen something catches her attention.\n\nHer thumb slows down.\n\nShe leans slightly forward.\n\nHer eyes become more focused.\n\nShe stops scrolling and carefully watches something on the phone.\n\nA subtle realization appears on her face.\n\nShe rewinds slightly, watches again, and nods faintly as if a concept is finally making sense.\n\nHer posture changes from slouched and discouraged to engaged and attentive.\n\nShe begins exploring further, scrolling with purpose now.\n\nThe camera slowly pushes closer.\n\nKajal's expression gradually transforms:\n\nConfused → Curious\nCurious → Interested\nInterested → Understanding\n\nShe occasionally raises her eyebrows in realization.\n\nA small \"aha\" moment appears naturally.\n\nShe looks thoughtful, mentally connecting the dots.\n\nFor the first time, she seems to understand why her videos were not working.\n\nShe pauses, thinking deeply.\n\nThen she looks motivated.\n\nA faint smile appears.\n\nNot happiness yet—just clarity.\n\nThe scene ends with Kajal sitting upright, fully focused on learning, continuing to explore her phone with renewed interest and determination.\n\nCamera\n\nMedium shot from side of bed.\n\nSlow cinematic push-in throughout the scene.\n\nOccasional close-ups on facial reactions and thumb movement.\n\nLens\n\n50mm cinematic lens.\n\nLighting\n\nWarm practical bedroom lighting.\n\nSoft shadows.\n\nAuthentic Tier-3 Indian home atmosphere.\n\nActing Progression\n\nStart:\n\nFrustrated\nMentally exhausted\nSkeptical\n\nMiddle:\n\nSomething catches attention\nEyes narrow in concentration\nLeaning forward\n\nEnd:\n\nUnderstanding\nRealization\nHopeful determination\nReady to improve\nMood\n\nLearning something important for the first time.\n\nThe moment confusion starts turning into clarity.\n\nThe beginning of a transformation.\n\nNegative Prompt\n\nphone UI visible, app interface visible, floating graphics, text overlays, exaggerated excitement, jumping with happiness, crying, dramatic reactions, luxury bedroom, glamour styling, motivational speaker behavior, overacting, cartoon expressions, unrealistic gestures, AI artifacts, distorted hands, extra fingers, fake influencer setup.\nno talking  only actions",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "135",
+        0
+      ],
+      "images.image_2": [
+        "136",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "134": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "135": {
+    "inputs": {
+      "image": "ComfyUI_00073_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "136": {
+    "inputs": {
+      "image": "kajal_00001_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "137": {
+    "inputs": {
+      "image": "videoframe_7567.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "138": {
+    "inputs": {
+      "prompt": "A cinematic transformation montage inside a realistic Tier-3 Indian home. Fast-paced but emotionally grounded. Warm natural lighting throughout.\n\nShot 1 (0–2 sec)\n\nExtreme macro close-up of a mehendi cone tip touching skin.\n\nThe first precise bridal mehendi line is drawn beautifully.\n\nProfessional creator-style framing.\n\nKajal is now more confident and intentional while creating content.\n\nQuick cuts of her carefully positioning the camera and recording better shots.\n\nShot 2 (2–4 sec)\n\nFast time-lapse sequence.\n\nA completely empty hand gradually transforms into a stunning full bridal mehendi design.\n\nMultiple quick angles:\n\nCone detailing\nPalm patterns\nWrist extensions\nBridal finishing touches\n\nThe content looks more engaging and professionally presented.\n\nKajal reviews the footage with satisfaction.\n\nShot 3 (4–6 sec)\n\nClose-up of Kajal holding her phone.\n\nThe audience briefly sees Instagram growth numbers rapidly increasing:\n\n114 → 1,200 → 4,500 → 9,000\n\nThe numbers animate upward quickly.\n\nKajal's eyes widen slightly in disbelief.\n\nShe begins smiling naturally.\n\nPhone notification sounds start appearing.\n\nShot 4 (6–8 sec)\n\nSeveral message notifications arrive one after another.\n\nVisible notification previews:\n\n\"Didi, beti ki shaadi hai...\"\n\n\"Bridal mehandi ka order dena hai.\"\n\n\"Booking available?\"\n\n\"Date confirm karni hai.\"\n\nKajal excitedly reads them.\n\nHer confidence grows.\n\nShe can hardly believe it.\n\nShot 5 (8–10 sec)\n\nInside the house living room.\n\nThe same mother-in-law who once doubted her is now proudly standing with a neighbor.\n\nA proud smile on her face.\n\nShe enthusiastically shows Kajal's phone to the neighbor.\n\nThe neighbor looks impressed.\n\nConfusion → Learning → Improvement → Growth → Orders → Family Pride\n\nVisual Style\n\nUltra-realistic Indian creator success story, authentic Tier-3 household, social media growth journey, premium advertisement cinematography, realistic smartphone interactions, emotional transformation, relatable female entrepreneur success.\n\nNegative Prompt\n\nviral influencer mansion, luxury interiors, unrealistic follower counts, exaggerated celebrations, jumping, dancing, Bollywood reactions, fake success, crying, overacting, cartoon UI, unreadable notifications, distorted hands, AI artifacts, western household, glamour fashion shoot, unrealistic social media interface.",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "137",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "139": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "138",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "140": {
+    "inputs": {
+      "image": "ChatGPT Image Jun 23, 2026, 04_48_59 PM.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "141": {
+    "inputs": {
+      "prompt": "upscale this image and also add mehendi on the yellow kurti girl",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "140",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "142": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "141",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
     }
   }
 }

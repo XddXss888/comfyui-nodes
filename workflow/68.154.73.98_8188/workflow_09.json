@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_62aa58104ba34413ae46ea65c9f00019.png"
+      "image": "ref_5b6df8bc385e4f18a5dd9eec13bd14c3.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "Change her clothes to beach underwear",
+      "prompt": "Let both characters sit with legs normally ",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 232058359548954,
+      "seed": 758915342998124,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",

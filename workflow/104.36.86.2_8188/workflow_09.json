@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 1959354378,
+      "seed": 812929966,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,dirty,anus,brown eyes,jewelry,necklace,lips,(anus dirty:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,brown eyes,freckles,mole,(bien hoy terminara temprano la clase :1.0),(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202411/2/ea3e403aa6e54e68b73936cdac57d02b.png",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202411/4/19f03b33ad4a44fcb422bd7568edb27e.png",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

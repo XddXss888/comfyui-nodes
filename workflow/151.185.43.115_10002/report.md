@@ -1,18 +1,18 @@
 # 151.185.43.115:10002
 
-**GPU**: CPU | **显存**: — | **空闲**: 12 GB
-**内存**: 29 GB (空闲 12 GB)
+**GPU**: CPU | **显存**: — | **空闲**: 9 GB
+**内存**: 29 GB (空闲 9 GB)
 **版本**: 0.14.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-23 08:08:11
-**历史总数**: 266 | **成功**: 10
+**扫描时间**: 2026-06-24 08:09:04
+**历史总数**: 381 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `34e6b7a0-8072-482f-b618-7ea613f75021`
+- **Prompt ID**: `a5b7f68d-17b9-4271-b578-5df74b96b89f`
 - **类型**: 视频编辑
-- **节点数**: 23
+- **节点数**: 140
 - **模型** (0):
 - **提示词**:
   - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
@@ -33,9 +33,9 @@ OM
 " Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
 
 ### 2. workflow_02.json
-- **Prompt ID**: `c7e30989-a41e-4470-b7e2-2f5e79816511`
+- **Prompt ID**: `9cbdddfc-31ac-452d-85d2-86830e0a8511`
 - **类型**: 视频编辑
-- **节点数**: 23
+- **节点数**: 140
 - **模型** (0):
 - **提示词**:
   - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
@@ -56,9 +56,9 @@ OM
 " Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
 
 ### 3. workflow_03.json
-- **Prompt ID**: `434cc70a-2b2d-4ea6-a4f6-2b01fb1d6171`
+- **Prompt ID**: `2c12114b-ab22-404f-8dd1-e9c9e3ee5d88`
 - **类型**: 视频编辑
-- **节点数**: 23
+- **节点数**: 140
 - **模型** (0):
 - **提示词**:
   - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
@@ -79,9 +79,9 @@ OM
 " Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
 
 ### 4. workflow_04.json
-- **Prompt ID**: `34c0bf20-16db-415a-bfe5-84e082aa7a80`
+- **Prompt ID**: `967722f6-a8fb-4c25-8c29-c4404b78eb9f`
 - **类型**: 视频编辑
-- **节点数**: 26
+- **节点数**: 146
 - **模型** (0):
 - **提示词**:
   - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
@@ -102,9 +102,9 @@ OM
 " Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
 
 ### 5. workflow_05.json
-- **Prompt ID**: `1e4ed549-52ec-451c-ae9f-d1f93ebacfb2`
+- **Prompt ID**: `9f72a773-9630-41a3-8bac-6f05e4b3eb98`
 - **类型**: 视频编辑
-- **节点数**: 26
+- **节点数**: 145
 - **模型** (0):
 - **提示词**:
   - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
@@ -125,9 +125,9 @@ OM
 " Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
 
 ### 6. workflow_06.json
-- **Prompt ID**: `daad6fa7-a37d-48ca-b37c-db17a53f3cb1`
+- **Prompt ID**: `261c1445-ad9d-48d5-831a-556f222df5ee`
 - **类型**: 视频编辑
-- **节点数**: 26
+- **节点数**: 149
 - **模型** (0):
 - **提示词**:
   - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
@@ -148,9 +148,9 @@ OM
 " Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
 
 ### 7. workflow_07.json
-- **Prompt ID**: `b7e8c451-4330-48a2-87ed-e6cf72d31a44`
+- **Prompt ID**: `71e769ce-8d0a-47a4-9f36-813065d3ebb3`
 - **类型**: 视频编辑
-- **节点数**: 28
+- **节点数**: 155
 - **模型** (0):
 - **提示词**:
   - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
@@ -171,9 +171,9 @@ OM
 " Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
 
 ### 8. workflow_08.json
-- **Prompt ID**: `100329fc-bc5c-4d24-88d8-da8a0b3adb17`
+- **Prompt ID**: `b72d1e92-5944-4ca0-b328-5097a2caa2dd`
 - **类型**: 视频编辑
-- **节点数**: 28
+- **节点数**: 155
 - **模型** (0):
 - **提示词**:
   - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
@@ -194,9 +194,9 @@ OM
 " Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
 
 ### 9. workflow_09.json
-- **Prompt ID**: `4b59a395-9b89-43d8-a5b5-887f4483869e`
+- **Prompt ID**: `1cd941bb-8bfe-446b-aa2e-13ecd66959ac`
 - **类型**: 视频编辑
-- **节点数**: 29
+- **节点数**: 155
 - **模型** (0):
 - **提示词**:
   - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
@@ -217,9 +217,9 @@ OM
 " Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
 
 ### 10. workflow_10.json
-- **Prompt ID**: `bf75dc0b-eb55-4a68-9822-0c5db5447673`
+- **Prompt ID**: `c1db2b81-2c93-4c6f-8bd6-c2c9499eaa68`
 - **类型**: 视频编辑
-- **节点数**: 31
+- **节点数**: 155
 - **模型** (0):
 - **提示词**:
   - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY

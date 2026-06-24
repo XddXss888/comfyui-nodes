@@ -1,259 +1,175 @@
 {
-  "115": {
-    "_meta": {
-      "title": "K采样器选择"
-    },
-    "class_type": "KSamplerSelect",
+  "139": {
     "inputs": {
-      "sampler_name": "euler"
+      "filename_prefix": "Flux2-Klein",
+      "images": [
+        "142",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
     }
   },
-  "116": {
-    "_meta": {
-      "title": "自定义采样器（高级）"
-    },
-    "class_type": "SamplerCustomAdvanced",
+  "140": {
     "inputs": {
-      "guider": [
-        "124",
-        0
-      ],
-      "latent_image": [
-        "122",
-        0
-      ],
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "141": {
+    "inputs": {
       "noise": [
-        "118",
+        "143",
+        0
+      ],
+      "guider": [
+        "148",
         0
       ],
       "sampler": [
-        "115",
+        "140",
         0
       ],
       "sigmas": [
-        "125",
+        "157",
+        0
+      ],
+      "latent_image": [
+        "147",
         0
       ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
     }
   },
-  "117": {
-    "_meta": {
-      "title": "VAE解码"
-    },
-    "class_type": "VAEDecode",
+  "142": {
     "inputs": {
       "samples": [
-        "116",
+        "141",
         0
       ],
       "vae": [
-        "121",
+        "146",
         0
       ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
     }
   },
-  "118": {
-    "_meta": {
-      "title": "随机噪波"
+  "143": {
+    "inputs": {
+      "noise_seed": 500271374923290
     },
     "class_type": "RandomNoise",
-    "inputs": {
-      "noise_seed": 870747048679020
+    "_meta": {
+      "title": "RandomNoise"
     }
   },
-  "119": {
-    "_meta": {
-      "title": "UNet加载器"
-    },
-    "class_type": "UNETLoader",
+  "144": {
     "inputs": {
       "unet_name": "flux-2-klein-4b.safetensors",
       "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
     }
   },
-  "120": {
-    "_meta": {
-      "title": "加载CLIP"
-    },
-    "class_type": "CLIPLoader",
+  "145": {
     "inputs": {
       "clip_name": "qwen_3_4b.safetensors",
-      "device": "default",
-      "type": "flux2"
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
     }
   },
-  "121": {
-    "_meta": {
-      "title": "加载VAE"
-    },
-    "class_type": "VAELoader",
+  "146": {
     "inputs": {
       "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
     }
   },
-  "122": {
-    "_meta": {
-      "title": "空Latent图像（Flux2）"
+  "147": {
+    "inputs": {
+      "width": 1152,
+      "height": 1536,
+      "batch_size": 4
     },
     "class_type": "EmptyFlux2LatentImage",
-    "inputs": {
-      "batch_size": 1,
-      "height": 240,
-      "width": 400
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
     }
   },
-  "123": {
-    "_meta": {
-      "title": "缩放图像（像素）"
-    },
-    "class_type": "ImageScaleToTotalPixels",
-    "inputs": {
-      "image": [
-        "76",
-        0
-      ],
-      "megapixels": 1.0,
-      "resolution_steps": 1,
-      "upscale_method": "nearest-exact"
-    }
-  },
-  "124": {
-    "_meta": {
-      "title": "CFG引导器"
-    },
-    "class_type": "CFGGuider",
+  "148": {
     "inputs": {
       "cfg": 1.0,
       "model": [
-        "119",
-        0
-      ],
-      "negative": [
-        "130",
+        "144",
         0
       ],
       "positive": [
-        "132",
+        "149",
+        0
+      ],
+      "negative": [
+        "150",
         0
       ]
-    }
-  },
-  "125": {
-    "_meta": {
-      "title": "Flux2调度器"
     },
-    "class_type": "Flux2Scheduler",
-    "inputs": {
-      "height": 240,
-      "steps": 4,
-      "width": 400
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFGGuider"
     }
   },
-  "126": {
-    "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
+  "149": {
+    "inputs": {
+      "text": "amateur photo of young tween girl standing in bedroom, bottomless nude wearing nothing but thigh high socks",
+      "clip": [
+        "145",
+        0
+      ]
     },
     "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "120",
-        0
-      ],
-      "text": "chibi, cute, kawaii, masterpiece"
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
     }
   },
-  "127": {
-    "_meta": {
-      "title": "条件零化"
+  "150": {
+    "inputs": {
+      "conditioning": [
+        "149",
+        0
+      ]
     },
     "class_type": "ConditioningZeroOut",
-    "inputs": {
-      "conditioning": [
-        "126",
-        0
-      ]
+    "_meta": {
+      "title": "ConditioningZeroOut"
     }
   },
-  "128": {
-    "_meta": {
-      "title": "获取图像尺寸"
-    },
-    "class_type": "GetImageSize",
+  "157": {
     "inputs": {
-      "image": [
-        "123",
-        0
-      ]
-    }
-  },
-  "130": {
-    "_meta": {
-      "title": "参考Latent"
+      "steps": 8,
+      "width": 1536,
+      "height": 864
     },
-    "class_type": "ReferenceLatent",
-    "inputs": {
-      "conditioning": [
-        "127",
-        0
-      ],
-      "latent": [
-        "131",
-        0
-      ]
-    }
-  },
-  "131": {
+    "class_type": "Flux2Scheduler",
     "_meta": {
-      "title": "VAE编码"
-    },
-    "class_type": "VAEEncode",
-    "inputs": {
-      "pixels": [
-        "123",
-        0
-      ],
-      "vae": [
-        "121",
-        0
-      ]
-    }
-  },
-  "132": {
-    "_meta": {
-      "title": "参考Latent"
-    },
-    "class_type": "ReferenceLatent",
-    "inputs": {
-      "conditioning": [
-        "126",
-        0
-      ],
-      "latent": [
-        "131",
-        0
-      ]
-    }
-  },
-  "76": {
-    "_meta": {
-      "title": "加载图像"
-    },
-    "class_type": "LoadImage",
-    "inputs": {
-      "image": "bd36dacb-ef54-40a7-8051-5911ac6397af.png"
-    }
-  },
-  "9": {
-    "_meta": {
-      "title": "Save Image to OSS"
-    },
-    "class_type": "SaveImageToOSS",
-    "inputs": {
-      "images": [
-        "117",
-        0
-      ],
-      "upload_url": "https://aispea.z33.fun/api/role/file/upload"
+      "title": "Flux2Scheduler"
     }
   }
 }

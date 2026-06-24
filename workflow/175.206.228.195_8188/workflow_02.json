@@ -33,7 +33,7 @@
   },
   "4": {
     "inputs": {
-      "seed": 7511181938,
+      "seed": 5336016874,
       "steps": [
         "13",
         0
@@ -102,8 +102,8 @@
   },
   "13": {
     "inputs": {
-      "steps": 27,
-      "cfg": 6.0
+      "steps": 32,
+      "cfg": 5.5
     },
     "class_type": "StepsAndCfg",
     "_meta": {
@@ -112,8 +112,8 @@
   },
   "17": {
     "inputs": {
-      "Width": 1184,
-      "Height": 888,
+      "Width": 1366,
+      "Height": 768,
       "Batch": 1,
       "Landscape": false,
       "HiResMultiplier": 1.7000000000000002
@@ -125,7 +125,7 @@
   },
   "20": {
     "inputs": {
-      "seed": 7511181938,
+      "seed": 5336016874,
       "steps": 10,
       "cfg": [
         "13",
@@ -205,7 +205,7 @@
   },
   "32": {
     "inputs": {
-      "text": "Base_Eve(eversoul), 1girl, from behind, all fours, m legs, furrowed brow,  smile, closed lips, looking back, pussy, puckered anus, dark anus, hairy, excessive pubic hair, anal hair, blush, heavy breathing, heart, indoors, multiple views, \n\ndisembodied hand, hand on another's ass, spread anus, \n\n\nsharp focus, extremely detailed, intricate details, perfect anatomy, correct proportions, anatomically correct, proportional body, detailed face, detailed eyes, detailed fingers,, masterpiece, best quality, amazing quality"
+      "text": "ever_garnet_base, [], ,musume, train interior, night,  no headwear, huge breasts, no text, moaning,  ,comic,  shota, groping, faceless male, gyaru, dress, chikan, masterpiece, best quality, amazing quality"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -214,7 +214,7 @@
   },
   "33": {
     "inputs": {
-      "text": "bad quality,worst quality,worst detail,sketch,censor,muscular, extra hands, fat, (worst quality, low quality, normal quality:1.4), blurry, jpeg artifacts, lowres, cropped, text, watermark, signature, extra limbs, fused fingers, too many fingers, hand up"
+      "text": "bad quality,worst quality,worst detail,sketch,censor, [], text focus,text,, watermark,ugly, puffy sleeves, puffy short sleeves,"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -277,7 +277,7 @@
   },
   "65": {
     "inputs": {
-      "data": "[{\"name\": \"os_Base_Eveeversoul.safetensors\", \"strength\": 0.67, \"strength_clip\": 0.9}]",
+      "data": "[{\"name\": \"garnet_base.safetensors\", \"strength\": 0.7, \"strength_clip\": 0.6}]",
       "model": [
         "36",
         0

@@ -1,0 +1,596 @@
+{
+  "2": {
+    "inputs": {
+      "unet_name": "Boogu\\boogu_image_base_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "3": {
+    "inputs": {
+      "samples": [
+        "32",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "5": {
+    "inputs": {
+      "vae_name": "flux-vae-bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "7": {
+    "inputs": {
+      "clip_name": "qwen3vl_8b_fp8_scaled.safetensors",
+      "type": "boogu",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "9": {
+    "inputs": {
+      "conditioning": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "11": {
+    "inputs": {
+      "text": [
+        "33",
+        0
+      ],
+      "clip": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "30": {
+    "inputs": {
+      "images": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "32": {
+    "inputs": {
+      "seed": 25489368851006,
+      "steps": 10,
+      "cfg": 1.2,
+      "sampler_name": "ddim",
+      "scheduler": "linear_quadratic",
+      "denoise": 1.0,
+      "model": [
+        "50",
+        0
+      ],
+      "positive": [
+        "47",
+        0
+      ],
+      "negative": [
+        "9",
+        0
+      ],
+      "latent_image": [
+        "37",
+        3
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "33": {
+    "inputs": {
+      "text_input": "Снизу слева мелкая подпись пропись: OreX. Внимательно опиши стиль.",
+      "system_prompt": "",
+      "system_preset": "BooguImage-SysPrompt",
+      "model_key": "google/gemma-4-12b-qat",
+      "include_reasoning": false,
+      "auto_unload_model": true,
+      "unload_delay": 0,
+      "clean_vram_before": true,
+      "seed": 427958230677725,
+      "context_length": 4096,
+      "max_tokens": 0,
+      "generation_parameters": false,
+      "temperature": 0.7,
+      "top_k": 40,
+      "top_p": 0.95,
+      "repeat_penalty": 1.1,
+      "image": [
+        "35",
+        0
+      ]
+    },
+    "class_type": "orex LMStudio",
+    "_meta": {
+      "title": "🤖 LMStudio (OreX)"
+    }
+  },
+  "35": {
+    "inputs": {
+      "image": "50_a_prison_st01.png"
+    },
+    "class_type": "orex Load Image",
+    "_meta": {
+      "title": "🖼️ Load Image (OreX)"
+    }
+  },
+  "36": {
+    "inputs": {
+      "text_0": "A high-quality oil painting on canvas, characterized by expressive brushwork and impressionistic realism, in the style of John Singer Sargent and Joaquín Sorolla. The scene is captured from a low angle, looking upward at the subjects to emphasize their sense of wonder. The lighting is bright, natural daylight, creating high-contrast highlights on the children's faces and deep, rich shadows within the train carriage.\nIn the center of the frame, three small children are leaning out of a train window. In the middle, a petite girl with blonde hair tied with a small, bright red bow is laughing joyfully; she wears a white dress with delicate red lace trim around the collar and sleeves. To her left, in the foreground, a young boy with messy blonde hair and an athletic, small build is leaning out, his face expressing pure ecstasy with a wide-open mouth. He is wearing an olive-green jacket with a vibrant orange collar. On the right side of the window, slightly higher up, another small boy with blonde hair and a white shirt looks toward the sky with a beaming expression of awe.\nThe train carriage itself is a massive, deep emerald-green structure that occupies the right side and bottom of the frame, featuring dark brown wooden window frames and metallic rivets. In the bottom left corner, there is a tiny, delicate cursive signature in black ink that reads \"OreX\". \nIn the background, occupying the top left and center portions of the image, is a brilliant cerulean blue sky filled with large, fluffy white clouds. The brushstrokes are visible and textured, particularly in the highlights of the children's hair and the reflections on the train's surface. The overall atmosphere is nostalgic, vibrant, and overflowing with childhood joy.",
+      "text": [
+        "33",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "37": {
+    "inputs": {
+      "ratio": "1:1 ◻",
+      "Megapixel": 1.5,
+      "Megapixel = 1024^2": true,
+      "Multiplicity": 16,
+      "custom_width": 1248,
+      "custom_height": 1248,
+      "ratio_preview": null
+    },
+    "class_type": "orex Ratio",
+    "_meta": {
+      "title": "📐 Ratio (OreX)"
+    }
+  },
+  "46": {
+    "inputs": {
+      "rgthree_comparer": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_faipe_00009_.png&type=temp&subfolder=&rand=0.5151629129846356"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_faipe_00010_.png&type=temp&subfolder=&rand=0.19757033388741718"
+          }
+        ]
+      },
+      "image_a": [
+        "45:21",
+        0
+      ],
+      "image_b": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "Image Comparer (rgthree)",
+    "_meta": {
+      "title": "Image Comparer (rgthree)"
+    }
+  },
+  "47": {
+    "inputs": {
+      "anything": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "easy cleanGpuUsed",
+    "_meta": {
+      "title": "Clean VRAM Used"
+    }
+  },
+  "48": {
+    "inputs": {
+      "value": "# ROLE\nYou are a professional Prompt Engineer and an expert in computer vision. Your task is to create maximally detailed, structured prompts for image generation.\n\n# INPUT HANDLING AND MODIFICATION INSTRUCTIONS\n1. **If an input image is provided:** analyze it and thoroughly describe every detail, strictly following all the rules below.\n2. **If a text query is provided (without an image):** take the user's base idea and independently expand it, adding rich details, atmosphere, and specific elements according to the rules.\n3. **User Modification Instructions (CRITICAL):** The user's prompt will contain a main instruction on how to modify the image or base description (e.g., \"change the car to a motorcycle,\" \"make it daytime,\" \"change the character's clothing\"). You MUST prioritize this instruction. Seamlessly integrate the requested changes into the final generated prompt, ensuring the lighting, background, and other elements logically adapt to this modification.\n4. **Output Language:** Always generate the final output prompt in English for maximum compatibility with diffusion models.\n\n# STRICT PROMPT FORMATTING RULES\n\n**1. Style and Artists (STRICTLY AT THE BEGINNING)**\nThe prompt must always begin by specifying the medium and style (e.g., photography, 3D render, oil painting, cyberpunk illustration). You must include the names of artists, illustrators, or photographers whose style matches the scene.\n\n**2. Photorealism and Camera Settings**\nIf the style implies photorealism or photography, immediately following the style, you must specify:\n* **Lighting:** warm light, cold light, golden hour, sunset, sunrise, studio lighting, neon lighting, etc.\n* **Camera Angle (Shot Type):** low angle, eye-level, bird's-eye view, shot from behind, overhead, etc.\n* **Camera Type and Parameters:** lens type, film format, shooting style (e.g., DSLR, 35mm lens, f/1.8, Kodak Portra 400).\n\n**3. Spatial Positioning**\nAll objects in the scene must have strict spatial coordinates. Use phrases such as: on the left, on the right, in the top right corner, in the bottom left corner, in the center, in the foreground, in the background.\n\n**4. Size and Visibility of Objects**\nFor EVERY single object, you must explicitly state:\n* **Size:** small, large, massive, filling the screen, etc.\n* **Visibility:** fully visible, half-visible, partially cropped by the edge.\n\n**5. Color Coding**\nAbsolutely every mentioned object, background element, light source, or piece of clothing must have a clearly specified color (e.g., dark-red jacket, pale-blue sky, bright-yellow taxi).\n\n**6. Character Attributes (Emotions and Physique)**\nIf the scene includes a person or humanoid character, you MUST explicitly describe:\n* **Physique/Body Type:** e.g., muscular, slim, overweight, athletic, tall, petite.\n* **Emotions/Facial Expression:** e.g., expressing deep sadness, smiling joyfully, showing intense anger, projecting calm confidence. \n\n**7. Highly Detailed Background**\nThe background must not be an empty or vague space. You must describe the background environment in rich detail. Include specific architectural structures, landscapes, weather effects, or atmospheric elements. Every background element must also follow the rules for spatial positioning, size, visibility, and color.\n\n---\n\n# FINAL PROMPT STRUCTURE\n[Style, medium, artists/photographers] + [Camera type, angle, lighting] + [Main object/Character: color, size, position, visibility, physique, emotions] + [Secondary objects: colors, sizes, positions, visibility] + [Detailed Background: specific environment elements, colors, sizes, positions, visibility] + [General atmosphere].\n\n---\n\n# FEW-SHOT EXAMPLE\n\n**User Input:** \n*Base idea:* A cyberpunk car on the street with a driver standing next to it.\n*Main Modification Instruction:* Change the driver to a female cyborg, change the car to a hover-motorcycle, and make it a warm sunny morning instead of night. Photorealism.\n\n**Your Response (Generated Prompt):**\nA photorealistic image, highly detailed photography, in the style of Roger Deakins and Syd Mead. Shot from a low angle, looking up. Warm golden hour sunlight casting long shadows, set during a bright morning. Captured on a RED Digital Cinema camera, 50mm lens, f/2.8, cinematic lens flare. \nIn the center of the frame, a large, half-visible sleek futuristic hover-motorcycle is floating slightly above the ground. The hover-motorcycle is metallic pale-silver with bright-orange glowing thrusters. \nOn the left side of the hover-motorcycle, in the foreground, a tall, fully visible female cyborg is standing. She has a slim, athletic physique and is wearing a form-fitting pale-white sci-fi suit. Her facial expression shows calm confidence and subtle curiosity. \nTo the left of the woman, in the bottom left corner, there is a small, fully visible bright-green plant growing through the cracked pavement. \nOn the right side of the frame, taking up the entire vertical edge, is a massive, partially cropped glass building reflecting the warm-yellow sunlight. \nIn the background, occupying the top center and top left, there is a highly detailed, massive futuristic city skyline. The skyscrapers are gleaming bright-white in color, accented by large, fully visible bright-blue holographic billboards. In the far background, positioned directly in the top center, a pale-blue morning sky is fully visible, dotted with small, fully visible fluffy white clouds. The overall atmosphere is vibrant, hopeful, and cinematic."
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (Multiline)"
+    }
+  },
+  "50": {
+    "inputs": {
+      "lora_name": "Boogu\\boogu_image_turbo_lora_rank_128_bf16.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "51": {
+    "inputs": {
+      "active": false,
+      "output_path": "",
+      "create_current_date_folder": true,
+      "create_processed_folder": false,
+      "filename_prefix_1": "Image",
+      "filename_prefix_2": "",
+      "filename_prefix_3": "",
+      "filename_separator": "_",
+      "use_counter": true,
+      "embed_workflow": true,
+      "image_format": "png",
+      "jpg_quality": 90,
+      "webp_quality": 0,
+      "optimize_png": false,
+      "images": [
+        "45:21",
+        0
+      ]
+    },
+    "class_type": "orex Save Image",
+    "_meta": {
+      "title": "💾 Save Image (OreX)"
+    }
+  },
+  "45:39": {
+    "inputs": {
+      "vae_name": "pixel_space"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "45:40": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "45:1",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "45:41": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "45:1",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "45:42": {
+    "inputs": {
+      "shift": 1.5,
+      "model": [
+        "45:6",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "ModelSamplingSD3"
+    }
+  },
+  "45:10": {
+    "inputs": {
+      "sigmas": "0.999,0.866,0.634,0.342,0"
+    },
+    "class_type": "ManualSigmas",
+    "_meta": {
+      "title": "ManualSigmas"
+    }
+  },
+  "45:43": {
+    "inputs": {
+      "context_length": 2048,
+      "context_overlap": 512,
+      "context_schedule": "standard_static",
+      "context_stride": 1,
+      "closed_loop": false,
+      "fuse_method": "pyramid",
+      "dim": 2,
+      "freenoise": false,
+      "cond_retain_index_list": "",
+      "split_conds_to_windows": false,
+      "causal_window_fix": false,
+      "model": [
+        "45:42",
+        0
+      ]
+    },
+    "class_type": "ContextWindowsManual",
+    "_meta": {
+      "title": "Context Windows (Manual)"
+    }
+  },
+  "45:12": {
+    "inputs": {
+      "add_noise": true,
+      "noise_seed": 118841766576017,
+      "cfg": 1.0,
+      "model": [
+        "45:43",
+        0
+      ],
+      "positive": [
+        "45:13",
+        0
+      ],
+      "negative": [
+        "45:40",
+        0
+      ],
+      "sampler": [
+        "45:14",
+        0
+      ],
+      "sigmas": [
+        "45:10",
+        0
+      ],
+      "latent_image": [
+        "45:15",
+        0
+      ]
+    },
+    "class_type": "SamplerCustom",
+    "_meta": {
+      "title": "SamplerCustom"
+    }
+  },
+  "45:15": {
+    "inputs": {
+      "width": 4096,
+      "height": 4096,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "45:16": {
+    "inputs": {
+      "pixels": [
+        "45:23",
+        0
+      ],
+      "vae": [
+        "45:4",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "45:17": {
+    "inputs": {
+      "samples": [
+        "45:12",
+        0
+      ],
+      "vae": [
+        "45:39",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "45:18": {
+    "inputs": {
+      "rgthree_comparer": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_lhtyp_00009_.png&type=temp&subfolder=&rand=0.3886343796850228"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_lhtyp_00010_.png&type=temp&subfolder=&rand=0.17065325237993678"
+          }
+        ]
+      },
+      "image_a": [
+        "45:21",
+        0
+      ],
+      "image_b": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "Image Comparer (rgthree)",
+    "_meta": {
+      "title": "Image Comparer (rgthree)"
+    }
+  },
+  "45:21": {
+    "inputs": {
+      "invert_mask": true,
+      "detect": "mask_area",
+      "top_reserve": 0,
+      "bottom_reserve": 0,
+      "left_reserve": 0,
+      "right_reserve": 0,
+      "round_to_multiple": "8",
+      "image": [
+        "45:17",
+        0
+      ],
+      "mask": [
+        "45:22",
+        3
+      ]
+    },
+    "class_type": "LayerUtility: CropByMask V2",
+    "_meta": {
+      "title": "LayerUtility: CropByMask V2"
+    }
+  },
+  "45:22": {
+    "inputs": {
+      "width": 4096,
+      "height": 4096,
+      "upscale_method": "bicubic",
+      "keep_proportion": "resize",
+      "pad_color": "0, 0, 0",
+      "crop_position": "center",
+      "divisible_by": 2,
+      "device": "cpu",
+      "image": [
+        "45:23",
+        0
+      ],
+      "mask": [
+        "45:23",
+        1
+      ]
+    },
+    "class_type": "ImageResizeKJv2",
+    "_meta": {
+      "title": "Resize Image v2"
+    }
+  },
+  "45:23": {
+    "inputs": {
+      "target_width": 1024,
+      "target_height": 1024,
+      "feathering": 0,
+      "upscale_method": "lanczos",
+      "image": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "ImagePadForOutpaintTargetSize",
+    "_meta": {
+      "title": "Image Pad For Outpaint Target Size"
+    }
+  },
+  "45:44": {
+    "inputs": {
+      "unet_name": "PID\\pid_flux1_1024_to_4096_4step_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "45:1": {
+    "inputs": {
+      "clip_name": "PID\\gemma_2_2b_it_elm_bf16.safetensors",
+      "type": "pixeldit",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "45:4": {
+    "inputs": {
+      "vae_name": "flux-vae-bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "45:6": {
+    "inputs": {
+      "sage_attention": "disabled",
+      "allow_compile": false,
+      "model": [
+        "45:44",
+        0
+      ]
+    },
+    "class_type": "PathchSageAttentionKJ",
+    "_meta": {
+      "title": "Patch Sage Attention KJ"
+    }
+  },
+  "45:14": {
+    "inputs": {
+      "sampler_name": "lcm"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "45:13": {
+    "inputs": {
+      "latent_format": "flux",
+      "degrade_sigma": 0.1,
+      "positive": [
+        "45:41",
+        0
+      ],
+      "latent": [
+        "45:16",
+        0
+      ]
+    },
+    "class_type": "PiDConditioning",
+    "_meta": {
+      "title": "PiD Conditioning"
+    }
+  }
+}

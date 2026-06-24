@@ -4,7 +4,7 @@
 **内存**: 47 GB (空闲 12 GB)
 **版本**: 0.20.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-23 08:07:42
+**扫描时间**: 2026-06-24 08:08:43
 **历史总数**: 12 | **成功**: 10
 
 ## 工作流列表
@@ -138,4 +138,3 @@ Bugatti sport car silver, red. doors open, really beautiful and sexy black woman
   - z_image_turbo_bf16(1).safetensors
 - **提示词**:
   - [CLIPTextEncode::text] Using previous image remove or blur text “Bambu Lab “ uManufacturing setting 3D Printing Farm, Bambu Lab A1 series, clean surroundings, Text “WePrint3D2” , for advertising
-rtising

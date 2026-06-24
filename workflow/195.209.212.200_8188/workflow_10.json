@@ -14,7 +14,7 @@
   "16": {
     "inputs": {
       "positive_prompt": "d2z0h2a6yv, portrait of a man",
-      "negative_prompt": "glasses, earbuds, mustache, beard, sideburns, imperial beard, stubble, shaggy mustache, horseshoe mustache, Italian mustache, Fu Manchu mustache, pencil mustache, horseshoe mustache, full beard, goatee, Van Dyke beard, Hollywood beard, Garfield beard, skate beard, Amish beard, Balbo beard, Verdi beard, three-day stubble, week-long stubble, Mexican stubble, Bredin sideburns/cheeks, Elvis sideburns, skipper beard, French fork split beard",
+      "negative_prompt": "fingers, glasses, earbuds, mustache, beard, sideburns, imperial beard, stubble, shaggy mustache, horseshoe mustache, Italian mustache, Fu Manchu mustache, pencil mustache, horseshoe mustache, full beard, goatee, Van Dyke beard, Hollywood beard, Garfield beard, skate beard, Amish beard, Balbo beard, Verdi beard, three-day stubble, week-long stubble, Mexican stubble, Bredin sideburns/cheeks, Elvis sideburns, skipper beard, French fork split beard",
       "force_offload": true,
       "use_disk_cache": false,
       "device": "gpu",
@@ -98,7 +98,7 @@
       ],
       "cfg": 3.0,
       "shift": 8.0,
-      "seed": 15477,
+      "seed": 28475,
       "force_offload": true,
       "scheduler": "dpm++_sde",
       "riflex_freq_index": 0,
@@ -189,7 +189,7 @@
   },
   "124": {
     "inputs": {
-      "value": 173
+      "value": 307
     },
     "class_type": "JWInteger",
     "_meta": {
@@ -348,7 +348,7 @@
   },
   "197": {
     "inputs": {
-      "value": "/DATA/Jive/processing/8_serie/0140/0140_a_vasilev/"
+      "value": "/DATA/Jive/processing/8_serie/0130-v2/0130-v2_a_vasilev/"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -357,7 +357,7 @@
   },
   "198": {
     "inputs": {
-      "value": "/DATA/Jive/Yandex.Disk/Dzhave/work/8_serie/0140/0140_a_vasilev/"
+      "value": "/DATA/Jive/Yandex.Disk/Dzhave/work/8_serie/0130-v2/0130-v2_a_vasilev/"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -605,7 +605,7 @@
   },
   "215": {
     "inputs": {
-      "value": "_0140_a_vasilev_epoch10_15477"
+      "value": "_0130-v2_a_vasilev_epoch10_28475"
     },
     "class_type": "PrimitiveString",
     "_meta": {

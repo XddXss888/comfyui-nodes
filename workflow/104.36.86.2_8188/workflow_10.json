@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 1177546997,
+      "seed": 2082058007,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,long hair, blonde hair, brown hair, brown eyes, curvy, wide hips, mature, realistic, shiny skin, thighs, highleg, thick thighs, wet clothes, bedroom, lie back on bed, flirtatious, toy with hair, lean in closer, squeeze, stroke, play, flirt, encourage,(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,brown eyes,freckles,mole,mole on breast,realistic,(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20251/16/535763a7986847c2a9dd522621c47916.webp",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202411/4/19f03b33ad4a44fcb422bd7568edb27e.png",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

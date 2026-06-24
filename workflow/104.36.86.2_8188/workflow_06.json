@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 2123646868,
+      "seed": 1216538118,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,bangs,tongue out,freckles,Medium body,black hair,brown eyes,(Lola with bangs and her tongue out wanting dick:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,curvy,wide hips,thighs,highleg,shiny skin,wet,indoors,bedroom,(Göğüs yakın çekim:1.0),(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202410/14/d7203c538558400bb4e3a2acedede5ec.jpg",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20251/16/535763a7986847c2a9dd522621c47916.webp",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image_path_or_URL": "https://cos.credit99.cn/2026-06-05/6a17e2300eae9fa57b61d09b/upload/20260605140850452-r3fk0w.png",
+      "image_path_or_URL": "https://cos.credit99.cn/2026-06-23/69d367054c6e2e96ca9f00fc/upload/20260623223618658-61-v7abgi.png",
       "image": "",
       "upscale_method": "lanczos",
       "megapixels": 0.0,
@@ -16,7 +16,7 @@
   },
   "2": {
     "inputs": {
-      "image_path_or_URL": "https://cos.credit99.cn/2026-06-21/69d367054c6e2e96ca9f00fc/upload/20260621180307532-image-gbv5dd.png",
+      "image_path_or_URL": "https://cos.credit99.cn/2026-06-23/69d367054c6e2e96ca9f00fc/upload/20260623223618658-image-ueuppb.png",
       "image": "",
       "upscale_method": "lanczos",
       "megapixels": 0,
@@ -33,7 +33,7 @@
     "inputs": {
       "action": "append",
       "tidy_tags": "no",
-      "text_a": "{\n  \"task_objective\": \"Product Detail Page Generator - Generate complete detail page strictly following Image 1 framework structure, with Image 2 product as variable input, auto-adapting copywriting and visuals\",\n  \"input_assets\": {\n    \"layout_framework\": {\n      \"source\": \"Image 1 - Detail Page Layout Framework\",\n      \"focus\": \"Page layout structure, module order, column arrangement, component positioning, visual hierarchy, text block placement, section proportions, copywriting format, image treatment style, layer effects\",\n      \"role\": \"Definitive structural blueprint — all output must strictly follow this framework\",\n      \"constraints\": \"1:1 replica of this framework's layout structure, visual style, and copywriting format\"\n    },\n    \"product_image\": {\n      \"source\": \"Image 2 - Uploaded Product Image (VARIABLE)\",\n      \"focus\": \"Product appearance, color variants, material texture, design details, craftsmanship features, visual selling points\",\n      \"role\": \"Core product visual content for all product showcase sections\",\n      \"constraints\": \"Present product exactly as shown — no design modifications. Image treatment must match framework's style\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Analyze Image 1 framework: extract layout structure, module order, visual hierarchy, copywriting format, image treatment style, and all layer effects\",\n    \"step_2\": \"Analyze Image 2 product: extract type, shape, color, material, design details, selling points. Place product visuals into framework zones with matching effects\",\n    \"step_3\": \"Generate all copywriting following framework style + campaign section + color system from product image, assemble complete detail page\"\n  },\n  \"outputs\": {\n    \"page_header\": \"Header with dynamic product title following framework layout\",\n    \"main_content_modules\": \"All framework content modules with product visuals in corresponding zones\",\n    \"campaign_section\": \"Campaign featuring uploaded product following framework layout\",\n    \"color_system\": \"Color palette extracted from product image in framework format\",\n    \"footer_section\": \"Footer following framework layout and style\"\n  },\n  \"output_requirements\": [\n    \"FRAMEWORK FIDELITY: Strictly follow Image 1 layout — no module additions, deletions, or reordering\",\n    \"VISUAL FIDELITY: All visual effects (overlays, gradients, shadows, masks, blending modes, color grading) must match Image 1\",\n    \"COPYWRITING FIDELITY: Text style, tone, format, heading hierarchy, and bilingual pattern must replicate Image 1\",\n    \"PRODUCT FIDELITY: Product must be presented exactly as shown in Image 2 without modifications\",\n    \"DYNAMIC ADAPTATION: Auto-detect product category, extract selling points, generate context-aware copywriting, apply framework visual style to product images\",\n    \"Premium atmosphere: product-color gradient bg, cinematic vignette, unified color grading, luxury white space, editorial retouching\",\n    \"AI copywriting: Chinese-primary + English-secondary, series title + feature highlights + material recommendations + craftsmanship details + style positioning, elegant typography matching framework\"\n  ]\n}\n",
+      "text_a": "    \"Model type selection (Asian  female model) with auto-adapted body proportions and skin tone, 100% consistent across all wear views\",",
       "text_b": "",
       "text_c": ""
     },
@@ -44,13 +44,39 @@
   },
   "4": {
     "inputs": {
+      "index": 0,
+      "text0": [
+        "8",
+        0
+      ],
+      "text1": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "easy textIndexSwitch",
+    "_meta": {
+      "title": "文本编号切换"
+    }
+  },
+  "5": {
+    "inputs": {
+      "ratio": "3:4"
+    },
+    "class_type": "ratio_selector",
+    "_meta": {
+      "title": "ratio selector"
+    }
+  },
+  "6": {
+    "inputs": {
       "inputcount": 2,
       "prompt": [
-        "3",
+        "4",
         0
       ],
       "aspect_ratio": [
-        "6",
+        "5",
         0
       ],
       "resolution": "2k",
@@ -70,18 +96,18 @@
       "trd_node": true
     }
   },
-  "5": {
+  "7": {
     "inputs": {
       "prompt": [
-        "3",
+        "4",
         0
       ],
       "temperature": 0.9,
       "top_p": 0.95,
-      "seed": 591304602,
+      "seed": 685450917,
       "max_tokens": 32768,
       "aspect_ratio": [
-        "6",
+        "5",
         0
       ],
       "resolution": "2K",
@@ -104,24 +130,47 @@
       "trd_node": true
     }
   },
-  "6": {
+  "8": {
     "inputs": {
-      "ratio": "1:1"
+      "action": "append",
+      "tidy_tags": "no",
+      "text_a": "{\n  \"task_objective\": \"Fashion Promo Page & 3+1 Layout -3-top (inspiration→sketch→render) + 1-bottom (campaign)\",\n  \"input_assets\": {\n    \"structural_reference\": {\n      \"source\": \"Figure 1 Line Art\",\n      \"focus\": \"EXACT garment structural framework - proportions, silhouette form, seam placement, hemline positioning, collar styling, sleeve length, waistline, and overall garment length - ABSOLUTE PRESERVATION REQUIRED\",\n      \"role\": \"Provide locked structural blueprint for garment design generation\"\n    },\n    \"aesthetic_reference\": {\n      \"source\": \"Figure 2 Inspiration\",\n      \"focus\": \"Color system, fabric texture, pattern or detailing, and overall style tone\",\n      \"role\": \"Provide aesthetic elements to be applied onto the garment structure\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Analyze Figure 2 inspiration + parse Figure 1 garment structure\",\n    \"step_2\": \"Generate sketch → render from Figure 1 structure + Figure 2 aesthetics, pixel-precise, NO structural deviation\",\n    \"step_3\": \"Generate brand campaign, assemble 3-top + 1-bottom layout with premium atmosphere & transformation flow\"\n  },\n  \"outputs\": {\n    \"top_left\": \"Inspiration Source - Figure 2 original image with premium framing. Label: 灵感溯源 INSPIRATION\",\n    \"top_center\": \"Sketch Design - Figure 1 structure + Figure 2 aesthetics sketch. Label: 草图设计 SKETCH\",\n    \"top_right\": \"Garment Render - High-fidelity render, realistic fabric. Label: 服装渲染 RENDER. SOURCE OF TRUTH\",\n    \"bottom_full\": \"Brand Campaign - Dynamic editorial pose, stylish setting matching Figure 2 mood, spanning full width. Label: 品牌时尚 FASHION CAMPAIGN\"\n  },\n  \"output_requirements\": [\n    \"Figure 1 structure LOCKED; Figure 2 aesthetics pixel-precise\",\n    \"Campaign garment 100% identical to top_right render\",\n\n",
+      "text_b": [
+        "3",
+        0
+      ],
+      "text_c": "\n    \"SFW; realistic fabric; consistent lighting; NO oily shine; NO oversaturation\",\n    \"3-top + 1-bottom layout - gradient bg from Figure 2 colors, glow around top-left, cinematic vignette, luxury white space\",\n    \"Subtle flow lines connecting inspiration→sketch→render→campaign, indicating creative transformation journey\",\n    \"Coherent lighting: garment shadows on body, ambient occlusion at folds, consistent light direction\",\n    \"Premium atmosphere: Figure 2 color gradient bg, glow around center, cinematic vignette, unified color grading, luxury white space, editorial retouching\",\n    \"AI copywriting: Chinese-primary + English-secondary, series poetic title + inspiration analysis, elegant typography with theme-matching decorative icons\"\n   ]\n}"
     },
-    "class_type": "ratio_selector",
+    "class_type": "StringFunction|pysssss",
     "_meta": {
-      "title": "ratio selector"
+      "title": "String Function 🐍"
     }
   },
-  "7": {
+  "9": {
+    "inputs": {
+      "action": "append",
+      "tidy_tags": "no",
+      "text_a": "{\n  \"task_objective\": \"Fashion Promo Page & 6-View Fashion Layout - center inspiration with surrounding design views\",\n  \"input_assets\": {\n    \"structural_reference\": {\n      \"source\": \"Figure 1 Line Art\",\n      \"focus\": \"EXACT garment structural framework - proportions, silhouette form, seam placement, hemline positioning, collar styling, sleeve length, waistline, and overall garment length - ABSOLUTE PRESERVATION REQUIRED\",\n      \"role\": \"Provide locked structural blueprint for garment design generation\"\n    },\n    \"aesthetic_reference\": {\n      \"source\": \"Figure 2 Inspiration\",\n      \"focus\": \"Color system, fabric texture, pattern or detailing, and overall style tone\",\n      \"role\": \"Provide aesthetic elements to be applied onto the garment structure\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Analyze Figure 2 inspiration + parse Figure 1 garment structure\",\n    \"step_2\": \"Generate sketch → render from Figure 1 structure + Figure 2 aesthetics, pixel-precise, NO structural deviation\",\n    \"step_3\": \"Generate model wearing views + brand campaign, assemble diamond layout with premium atmosphere\"\n  },\n  \"outputs\": {\n    \"center_inspiration\": \"Figure 2 Inspiration - Original image at center with premium framing & glow. Label: 灵感溯源 INSPIRATION SOURCE\",\n    \"top_left\": \"Sketch Design - Figure 1 structure + Figure 2 aesthetics sketch. Label: 草图设计 SKETCH\",\n    \"top_right\": \"Garment Render - High-fidelity render, realistic fabric. Label: 服装渲染 GARMENT RENDER. SOURCE OF TRUTH\",\n    \"left_view\": \"Side Profile - Model side view, silhouette & drape emphasis. Label: 侧面效果 SIDE\",\n    \"right_view\": \"Detail Closeup - Dutch angle collar/detail, texture & craftsmanship. Label: 细节特写 DETAIL\",\n    \"bottom_campaign\": \"Brand Campaign - Dynamic editorial pose, stylish setting matching Figure 2 mood. Label: 品牌时尚 FASHION CAMPAIGN\"\n  },\n  \"output_requirements\": [\n    \"NO text/labels/watermarks except view labels; Figure 1 structure LOCKED; Figure 2 aesthetics pixel-precise\",\n    \"All wear views garment 100% identical to top_right render\",\n\n",
+      "text_b": [
+        "3",
+        0
+      ],
+      "text_c": "\n    \"SFW; realistic fabric; consistent lighting; NO oily shine; NO oversaturation\",\n    \"Coherent lighting: garment shadows on body, ambient occlusion at folds, consistent light direction\",\n    \"Premium atmosphere: Figure 2 color gradient bg, glow around center, cinematic vignette, unified color grading, luxury white space, editorial retouching\",\n    \"AI copywriting: Chinese-primary + English-secondary, series poetic title + inspiration analysis + garment spec + DNA mapping (icon-annotated), elegant typography with theme-matching decorative icons\"\n  ]\n}"
+    },
+    "class_type": "StringFunction|pysssss",
+    "_meta": {
+      "title": "String Function 🐍"
+    }
+  },
+  "10": {
     "inputs": {
       "index": 0,
       "image0": [
-        "4",
+        "6",
         0
       ],
       "image1": [
-        "5",
+        "7",
         0
       ]
     },
@@ -130,11 +179,11 @@
       "title": "图像编号切换"
     }
   },
-  "8": {
+  "11": {
     "inputs": {
       "filename_prefix": "cloth150",
       "images": [
-        "7",
+        "10",
         0
       ]
     },

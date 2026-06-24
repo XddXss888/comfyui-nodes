@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "A breathtaking ancient Chinese woman sits gracefully in an ornate wooden pavilion, wearing exquisite off-white hanfu embroidered with gold thread and an elaborate golden phoenix pearl headdress with swaying beaded chains. Her serene, elegant expression and tender gaze evoke timeless charm. Soft silk sleeves and flowing skirts ripple gently in the breeze; cherry blossoms drift weightlessly through sunlit air. Warm golden light filters through rustic wooden pillars, casting ethereal, cinematic shadows. Masterpiece, best quality, ultra-detailed, 8K, poetic classical Chinese aesthetic., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "Photorealistic studio portrait of a classical white plaster bust of David, dramatic chiaroscuro lighting, marble texture detail, shallow depth of field, masterpiece, best quality, ultra-detailed, professional photography., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -32,15 +32,15 @@
   "5": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 1024,
-      "height": 768,
-      "batch_size": 4
+      "width": 768,
+      "height": 1024,
+      "batch_size": 1
     }
   },
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 705651137,
+      "seed": 86803572,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -90,7 +90,7 @@
   "9": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_2K",
+      "filename_prefix": "DOOOOR_4K",
       "images": [
         "14",
         0
@@ -113,7 +113,7 @@
   "11": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_2K_TH",
+      "filename_prefix": "DOOOOR_4K_TH",
       "images": [
         "10",
         0
@@ -123,7 +123,7 @@
   "13": {
     "class_type": "UpscaleModelLoader",
     "inputs": {
-      "model_name": "2xLexicaRRDBNet_Sharp.pth"
+      "model_name": "4x-UltraSharp.pth"
     }
   },
   "14": {

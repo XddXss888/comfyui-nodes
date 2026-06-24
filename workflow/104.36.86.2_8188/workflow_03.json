@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 113232749,
+      "seed": 1408339751,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,indoors,bed,bedroom,lamp,(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,,(الركوع:1.0),(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2026/05/12/1778612335486.jpg",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20263/29/d40c12a2fa4e497f9751868a82bb5983.jpeg",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

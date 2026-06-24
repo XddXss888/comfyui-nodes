@@ -1,26 +1,29 @@
 {
   "3": {
     "inputs": {
-      "seed": 129922612186422,
-      "steps": 20,
+      "seed": [
+        "78",
+        0
+      ],
+      "steps": 25,
       "cfg": 5.0,
-      "sampler_name": "dpmpp_2m_sde",
+      "sampler_name": "dpmpp_sde",
       "scheduler": "karras",
-      "denoise": 0.6,
+      "denoise": 1.0,
       "model": [
-        "4",
+        "63",
         0
       ],
       "positive": [
-        "51",
+        "10",
         0
       ],
       "negative": [
-        "51",
+        "10",
         1
       ],
       "latent_image": [
-        "39",
+        "5",
         0
       ]
     },
@@ -31,29 +34,33 @@
   },
   "4": {
     "inputs": {
-      "ckpt_name": "epicphotogasm_v1.safetensors"
+      "ckpt_name": "XLHxzmixInteriorAnd_v10.safetensors"
     },
     "class_type": "CheckpointLoaderSimple",
     "_meta": {
       "title": "Load Checkpoint"
     }
   },
-  "6": {
+  "5": {
     "inputs": {
-      "text": "masterpiece, ultra realistics, highres",
-      "clip": [
-        "4",
+      "width": [
+        "16",
+        0
+      ],
+      "height": [
+        "16",
         1
-      ]
+      ],
+      "batch_size": 1
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "EmptyLatentImage",
     "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
+      "title": "Empty Latent Image"
     }
   },
   "7": {
     "inputs": {
-      "text": "drawing,paiting,crayon,sketch,graphite,impressionist,noisy,blurry,soft,deformed,ugly,lowers,bad anatomy,bad hands,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,(monochrome,greyscale,old photo), text",
+      "text": "nsfw,,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing,nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing,nsfw",
       "clip": [
         "4",
         1
@@ -71,7 +78,7 @@
         0
       ],
       "vae": [
-        "40",
+        "64",
         0
       ]
     },
@@ -80,75 +87,13 @@
       "title": "VAE Decode"
     }
   },
-  "13": {
+  "10": {
     "inputs": {
-      "image": "resized_image.jpg_1782167418751"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "14": {
-    "inputs": {
-      "rm_nearest": 0.0,
-      "rm_background": 0.0,
-      "boost": "disable",
-      "resolution": 512,
-      "image": [
-        "13",
-        0
-      ]
-    },
-    "class_type": "LeReS-DepthMapPreprocessor",
-    "_meta": {
-      "title": "LeReS Depth Map (enable boost for leres++)"
-    }
-  },
-  "17": {
-    "inputs": {
-      "detect_hand": "enable",
-      "detect_body": "enable",
-      "detect_face": "enable",
-      "resolution": 512,
-      "bbox_detector": "yolox_l.onnx",
-      "pose_estimator": "dw-ll_ucoco_384.onnx",
-      "scale_stick_for_xinsr_cn": "disable",
-      "image": [
-        "13",
-        0
-      ]
-    },
-    "class_type": "DWPreprocessor",
-    "_meta": {
-      "title": "DWPose Estimator"
-    }
-  },
-  "20": {
-    "inputs": {
-      "control_net_name": "control_v11f1p_sd15_depth.pth"
-    },
-    "class_type": "ControlNetLoader",
-    "_meta": {
-      "title": "Load ControlNet Model (for Depth Map)"
-    }
-  },
-  "22": {
-    "inputs": {
-      "control_net_name": "control_v11p_sd15_openpose.pth"
-    },
-    "class_type": "ControlNetLoader",
-    "_meta": {
-      "title": "Load ControlNet Model (for DWPose)"
-    }
-  },
-  "24": {
-    "inputs": {
-      "strength": 0.4,
+      "strength": 0.7000000000000001,
       "start_percent": 0.0,
-      "end_percent": 1.0,
+      "end_percent": 0.8,
       "positive": [
-        "6",
+        "52",
         0
       ],
       "negative": [
@@ -156,221 +101,193 @@
         0
       ],
       "control_net": [
-        "20",
+        "11",
         0
       ],
       "image": [
-        "14",
-        0
-      ]
-    },
-    "class_type": "ControlNetApplyAdvanced",
-    "_meta": {
-      "title": "Apply ControlNet"
-    }
-  },
-  "25": {
-    "inputs": {
-      "strength": 1.0,
-      "start_percent": 0.0,
-      "end_percent": 1.0,
-      "positive": [
-        "24",
-        0
-      ],
-      "negative": [
-        "24",
-        1
-      ],
-      "control_net": [
-        "22",
-        0
-      ],
-      "image": [
-        "17",
-        0
-      ]
-    },
-    "class_type": "ControlNetApplyAdvanced",
-    "_meta": {
-      "title": "Apply ControlNet"
-    }
-  },
-  "37": {
-    "inputs": {
-      "pixels": [
-        "57",
+        "61",
         0
       ],
       "vae": [
-        "40",
+        "64",
         0
       ]
     },
-    "class_type": "VAEEncode",
+    "class_type": "ControlNetApplyAdvanced",
     "_meta": {
-      "title": "VAE Encode"
+      "title": "Apply ControlNet"
     }
   },
-  "39": {
+  "11": {
     "inputs": {
+      "control_net_name": "mistoLine_rank256.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "16": {
+    "inputs": {
+      "image": [
+        "61",
+        0
+      ]
+    },
+    "class_type": "ImageGenResolutionFromImage",
+    "_meta": {
+      "title": "Generation Resolution From Image"
+    }
+  },
+  "23": {
+    "inputs": {
+      "preset": "PLUS (high strength)",
+      "model": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "IPAdapterUnifiedLoader",
+    "_meta": {
+      "title": "IPAdapter Unified Loader"
+    }
+  },
+  "24": {
+    "inputs": {
+      "image": "example_1782259406386.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image ref"
+    }
+  },
+  "38": {
+    "inputs": {
+      "merge_with_lineart": "lineart_standard",
+      "resolution": 1280,
+      "lineart_lower_bound": 0.0,
+      "lineart_upper_bound": 1.0,
+      "object_min_size": 36,
+      "object_connectivity": 1,
+      "image": [
+        "77",
+        0
+      ]
+    },
+    "class_type": "AnyLineArtPreprocessor_aux",
+    "_meta": {
+      "title": "AnyLine Lineart"
+    }
+  },
+  "52": {
+    "inputs": {
+      "text": "High quality, masterpiece, 8k, high definition, anime artwork,",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "57": {
+    "inputs": {
+      "clip_name": "CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors"
+    },
+    "class_type": "CLIPVisionLoader",
+    "_meta": {
+      "title": "Load CLIP Vision"
+    }
+  },
+  "61": {
+    "inputs": {
+      "width": 1224,
+      "height": 1224,
       "upscale_method": "nearest-exact",
-      "width": 512,
-      "height": 0,
-      "crop": "disabled",
-      "samples": [
-        "37",
+      "keep_proportion": true,
+      "divisible_by": 2,
+      "crop": "center",
+      "image": [
+        "38",
         0
       ]
     },
-    "class_type": "LatentUpscale",
+    "class_type": "ImageResizeKJ",
     "_meta": {
-      "title": "Upscale Latent"
+      "title": "Resize Image (deprecated)"
     }
   },
-  "40": {
+  "63": {
     "inputs": {
-      "vae_name": "vae-ft-mse-840000-ema-pruned.safetensors"
+      "weight": 1.0,
+      "weight_type": "style transfer",
+      "combine_embeds": "concat",
+      "start_at": 0.0,
+      "end_at": 1.0,
+      "embeds_scaling": "V only",
+      "model": [
+        "23",
+        0
+      ],
+      "ipadapter": [
+        "23",
+        1
+      ],
+      "image": [
+        "24",
+        0
+      ],
+      "clip_vision": [
+        "57",
+        0
+      ]
+    },
+    "class_type": "IPAdapterAdvanced",
+    "_meta": {
+      "title": "IPAdapter Advanced"
+    }
+  },
+  "64": {
+    "inputs": {
+      "vae_name": "sdxl_vae.safetensors"
     },
     "class_type": "VAELoader",
     "_meta": {
       "title": "Load VAE"
     }
   },
-  "41": {
+  "77": {
     "inputs": {
-      "enabled": true,
-      "swap_model": "inswapper_128.onnx",
-      "facedetection": "retinaface_resnet50",
-      "face_restore_model": "codeformer.pth",
-      "face_restore_visibility": 1.0,
-      "codeformer_weight": 1.0,
-      "detect_gender_input": "no",
-      "detect_gender_source": "no",
-      "input_faces_index": "0,1,2,3,4,5,6,7,8,9",
-      "source_faces_index": "0,1,2,3,4,5,6,7,8,9",
-      "console_log_level": 1,
-      "input_image": [
-        "8",
-        0
-      ],
-      "source_image": [
-        "13",
-        0
-      ]
+      "image": "example_1782259398492.jpg"
     },
-    "class_type": "ReActorFaceSwap",
+    "class_type": "LoadImage",
     "_meta": {
-      "title": "ReActor 🌌 Fast Face Swap"
+      "title": "Load Image source"
     }
   },
-  "43": {
+  "78": {
     "inputs": {
-      "coarse": "disable",
-      "resolution": 512,
-      "image": [
-        "13",
-        0
-      ]
+      "min": 0,
+      "max": 999999999999
     },
-    "class_type": "LineArtPreprocessor",
+    "class_type": "RandomInt",
     "_meta": {
-      "title": "Realistic Lineart"
+      "title": "Random Int"
     }
   },
-  "50": {
+  "79": {
     "inputs": {
-      "control_net_name": "control_v11p_sd15_lineart.pth"
-    },
-    "class_type": "ControlNetLoader",
-    "_meta": {
-      "title": "Load ControlNet Model (for Realistic LineArt)"
-    }
-  },
-  "51": {
-    "inputs": {
-      "strength": 0.8,
-      "start_percent": 0.0,
-      "end_percent": 1.0,
-      "positive": [
-        "25",
-        0
-      ],
-      "negative": [
-        "25",
-        1
-      ],
-      "control_net": [
-        "50",
-        0
-      ],
-      "image": [
-        "43",
-        0
-      ]
-    },
-    "class_type": "ControlNetApplyAdvanced",
-    "_meta": {
-      "title": "Apply ControlNet"
-    }
-  },
-  "57": {
-    "inputs": {
-      "upscale_method": "nearest-exact",
-      "width": 512,
-      "height": 0,
-      "crop": "disabled",
-      "image": [
-        "13",
-        0
-      ]
-    },
-    "class_type": "ImageScale",
-    "_meta": {
-      "title": "Upscale Image"
-    }
-  },
-  "63": {
-    "inputs": {
-      "filename_prefix": "restore046",
+      "filename_prefix": "homeai_refstyle",
       "images": [
-        "64",
+        "8",
         0
       ]
     },
     "class_type": "SaveImage",
     "_meta": {
       "title": "Save Image"
-    }
-  },
-  "64": {
-    "inputs": {
-      "score": 0.9,
-      "image": [
-        "41",
-        0
-      ],
-      "alternative_image": [
-        "73",
-        0
-      ]
-    },
-    "class_type": "NSFWDetection",
-    "_meta": {
-      "title": "NSFWDetection"
-    }
-  },
-  "73": {
-    "inputs": {
-      "width": 512,
-      "height": 512,
-      "red": 255,
-      "green": 255,
-      "blue": 255
-    },
-    "class_type": "Image Blank",
-    "_meta": {
-      "title": "Image Blank"
     }
   }
 }

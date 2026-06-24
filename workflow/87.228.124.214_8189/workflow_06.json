@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "wh1te, short white hair, extremely thin woman, A woman stands on a rooftop at sunset with the city skyline behind her, bathed in golden hour light and warm evening glow, her body angled slightly toward the viewer with a soft smile and head tilted gently, one hand resting lightly on the railing, the other relaxed at her side, wearing a simple fitted top and skirt with natural fabric folds, gazing forward in a calm intimate expression, medium close-up framing, realistic lighting and clear silhouette.",
+      "text": "seductive young curvy woman with long black hair, A woman in an apartment hallway at late evening, leaning closer with mouth wide open in a scream, eyes intense and gaze fixed forward, dim corridor lighting casting soft shadows across her figure and the walls, mysterious neighbor encounter atmosphere, medium close-up framing, stable pose with natural posture and believable body support.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "White_short_ZiT.safetensors",
-      "strength_model": 0.73,
-      "strength_clip": 0.8,
+      "lora_name": "izumi_v.2.safetensors",
+      "strength_model": 0.9,
+      "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -137,7 +137,7 @@
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 177176581693080,
+      "seed": 26161571962184,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

@@ -1,158 +1,130 @@
 # 14.224.131.103:8188
 
-**GPU**: RTX 4070 Ti | **显存**: 16 GB | **空闲**: 5 GB
-**内存**: 31 GB (空闲 16 GB)
-**版本**: 0.3.27
+**GPU**: RTX 4070 Ti | **显存**: 16 GB | **空闲**: 7 GB
+**内存**: 31 GB (空闲 12 GB)
+**版本**: 0.26.0
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-23 08:07:40
-**历史总数**: 90 | **成功**: 10
+**扫描时间**: 2026-06-24 08:08:41
+**历史总数**: 498 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `98887b7b-8f67-48c8-b549-62b38d333542`
-- **类型**: 图片超分
-- **节点数**: 23
-- **模型** (6):
-  - codeformer.pth
-  - control_v11f1p_sd15_depth.pth
-  - control_v11p_sd15_lineart.pth
-  - control_v11p_sd15_openpose.pth
-  - epicphotogasm_v1.safetensors
-  - vae-ft-mse-840000-ema-pruned.safetensors
+- **Prompt ID**: `436722e1-0c33-476a-a676-81acddc5fab2`
+- **类型**: 图生图
+- **节点数**: 19
+- **模型** (4):
+  - CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors
+  - XLHxzmixInteriorAnd_v10.safetensors
+  - mistoLine_rank256.safetensors
+  - sdxl_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] masterpiece, ultra realistics, highres
-  - [CLIPTextEncode::text] drawing,paiting,crayon,sketch,graphite,impressionist,noisy,blurry,soft,deformed,ugly,lowers,bad anatomy,bad hands,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,
+  - [CLIPTextEncode::text] nsfw,,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing,nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing,nsfw
+  - [CLIPTextEncode::text] High quality, masterpiece, 8k, high definition, anime artwork,
 
 ### 2. workflow_02.json
-- **Prompt ID**: `b15c5ba2-ff20-4faa-8f08-ee5bfa80a7a1`
-- **类型**: 图片超分
-- **节点数**: 12
+- **Prompt ID**: `faafc122-9f50-4fa8-90fb-80140266e9bf`
+- **类型**: 图生图
+- **节点数**: 20
 - **模型** (3):
-  - RealESRGAN_x2.pth
-  - epicrealismXL_v8Kiss.safetensors
+  - XLHxzmixInteriorAnd_v10.safetensors
   - mistoLine_rank256.safetensors
+  - sdxl_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] masterpiece, best quality, highres, ultra realistics
-  - [CLIPTextEncode::text] (worst quality, low quality, normal quality:2)
+  - [CLIPTextEncode::text] nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing
+  - [ttN text::text] High quality, masterpiece, 8k, high definition
 
 ### 3. workflow_03.json
-- **Prompt ID**: `1dbe43d3-9d9c-453a-9e86-dce5f70f2cbe`
-- **类型**: 图片超分
-- **节点数**: 12
+- **Prompt ID**: `a5ca086d-3479-476c-9e09-82f5279f0ccc`
+- **类型**: 图生图
+- **节点数**: 20
 - **模型** (3):
-  - RealESRGAN_x2.pth
-  - epicrealismXL_v8Kiss.safetensors
+  - XLHxzmixInteriorAnd_v10.safetensors
   - mistoLine_rank256.safetensors
+  - sdxl_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] masterpiece, best quality, highres, ultra realistics
-  - [CLIPTextEncode::text] (worst quality, low quality, normal quality:2)
+  - [CLIPTextEncode::text] nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing
+  - [ttN text::text] Living room
+  - [ttN text::text] High quality, masterpiece, 8k, high definition
 
 ### 4. workflow_04.json
-- **Prompt ID**: `75053f8d-bcd2-47ba-8ddd-5adc7b4b6810`
+- **Prompt ID**: `73b9e03b-7c30-4229-a0d1-7a72115a44a6`
 - **类型**: 图生图
-- **节点数**: 26
-- **模型** (8):
-  - GTA5_Artwork.safetensors
-  - add_detail.safetensors
-  - control_v11f1p_sd15_depth.pth
-  - control_v11p_sd15_canny.pth
-  - controlnetT2IAdapter_t2iAdapterColor.safetensors
-  - depth_anything_v2_vitl.pth
-  - flat2DAnimerge_v45Sharp.safetensors
-  - vae-ft-mse-840000-ema-pruned.safetensors
+- **节点数**: 20
+- **模型** (3):
+  - XLHxzmixInteriorAnd_v10.safetensors
+  - mistoLine_rank256.safetensors
+  - sdxl_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] blurry, illustration, distorted, horror，nsfw, text, watermark, EasyNegative, (((White))) (((bad anatomy))), (liquid body), (liquid tongue), (((disfigured))), ((((malformed)))), (((mutated))) ((anatomi
-  - [JjkText::text] gtav style, grand thief auto, gta official artwork, flat color, 2d
+  - [CLIPTextEncode::text] nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing
+  - [ttN text::text] Randomly choose a new option that best fits the image. Do not preserve the original selection.
+  - [ttN text::text] neutral gray-beige color palette, soft and muted
 
 ### 5. workflow_05.json
-- **Prompt ID**: `7c93e47c-c376-4be3-8fc8-d5b54abdd89a`
+- **Prompt ID**: `53a8573f-5d33-46d7-9e59-1ffcd841e557`
 - **类型**: 图生图
-- **节点数**: 26
-- **模型** (8):
-  - GTA5_Artwork.safetensors
-  - add_detail.safetensors
-  - control_v11f1p_sd15_depth.pth
-  - control_v11p_sd15_canny.pth
-  - controlnetT2IAdapter_t2iAdapterColor.safetensors
-  - depth_anything_v2_vitl.pth
-  - flat2DAnimerge_v45Sharp.safetensors
-  - vae-ft-mse-840000-ema-pruned.safetensors
+- **节点数**: 20
+- **模型** (3):
+  - XLHxzmixInteriorAnd_v10.safetensors
+  - mistoLine_rank256.safetensors
+  - sdxl_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] blurry, illustration, distorted, horror，nsfw, text, watermark, EasyNegative, (((White))) (((bad anatomy))), (liquid body), (liquid tongue), (((disfigured))), ((((malformed)))), (((mutated))) ((anatomi
-  - [JjkText::text] gtav style, grand thief auto, gta official artwork, flat color, 2d
+  - [CLIPTextEncode::text] nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing
+  - [ttN text::text] Ocean blue palette
+  - [ttN text::text] High quality, masterpiece, 8k, high definition
 
 ### 6. workflow_06.json
-- **Prompt ID**: `fceb83dd-6f8b-43ba-ba8c-a87cba62728a`
+- **Prompt ID**: `c0805640-5328-4b24-b94e-f5a021b7e99c`
 - **类型**: 图生图
-- **节点数**: 26
-- **模型** (8):
-  - GTA5_Artwork.safetensors
-  - add_detail.safetensors
-  - control_v11f1p_sd15_depth.pth
-  - control_v11p_sd15_canny.pth
-  - controlnetT2IAdapter_t2iAdapterColor.safetensors
-  - depth_anything_v2_vitl.pth
-  - flat2DAnimerge_v45Sharp.safetensors
-  - vae-ft-mse-840000-ema-pruned.safetensors
+- **节点数**: 18
+- **模型** (3):
+  - XLHxzmixInteriorAnd_v10.safetensors
+  - mistoLine_rank256.safetensors
+  - sdxl_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] blurry, illustration, distorted, horror，nsfw, text, watermark, EasyNegative, (((White))) (((bad anatomy))), (liquid body), (liquid tongue), (((disfigured))), ((((malformed)))), (((mutated))) ((anatomi
-  - [JjkText::text] gtav style, grand thief auto, gta official artwork, flat color, 2d
+  - [CLIPTextEncode::text] nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing
+  - [ttN text::text] High quality, masterpiece, 8k, high definition,
 
 ### 7. workflow_07.json
-- **Prompt ID**: `e6872915-733f-42a7-9a22-2863184b319b`
+- **Prompt ID**: `3e60bf7b-e7a8-45af-bb89-7b0825cbb9c6`
 - **类型**: 图生图
-- **节点数**: 26
-- **模型** (8):
-  - GTA5_Artwork.safetensors
-  - add_detail.safetensors
-  - control_v11f1p_sd15_depth.pth
-  - control_v11p_sd15_canny.pth
-  - controlnetT2IAdapter_t2iAdapterColor.safetensors
-  - depth_anything_v2_vitl.pth
-  - flat2DAnimerge_v45Sharp.safetensors
-  - vae-ft-mse-840000-ema-pruned.safetensors
+- **节点数**: 20
+- **模型** (3):
+  - XLHxzmixInteriorAnd_v10.safetensors
+  - mistoLine_rank256.safetensors
+  - sdxl_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] blurry, illustration, distorted, horror，nsfw, text, watermark, EasyNegative, (((White))) (((bad anatomy))), (liquid body), (liquid tongue), (((disfigured))), ((((malformed)))), (((mutated))) ((anatomi
-  - [JjkText::text] gtav style, grand thief auto, gta official artwork, flat color, 2d
+  - [CLIPTextEncode::text] nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing
+  - [ttN text::text] High quality, masterpiece, 8k, high definition
 
 ### 8. workflow_08.json
-- **Prompt ID**: `8a3e092b-f065-4949-9571-ed47d7b58a43`
+- **Prompt ID**: `13171768-88bf-46f0-8b6c-cba592d18492`
 - **类型**: 图生图
-- **节点数**: 29
-- **模型** (5):
-  - CN-anytest_v4-marged.safetensors
-  - StudioGhibli.Redmond-StdGBRRedmAF-StudioGhibli.safetensors
-  - depth_anything_v2_vits_fp16.safetensors
-  - ip-adapter_pulid_sdxl_fp16.safetensors
-  - sd_xl_base_1.0.safetensors
+- **节点数**: 20
+- **模型** (3):
+  - XLHxzmixInteriorAnd_v10.safetensors
+  - mistoLine_rank256.safetensors
+  - sdxl_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Colorful, colorful,embedding:ng_deepnegative_v1_75t, 
-  - [Textbox::text] Lines, brushstrokes,High quality, masterpiece, 8k, HD, pencil drawing, simple white background, High quality, masterpiece, 8k, HD, Black and white sketch,pencil drawing, simple solid background, line 
+  - [CLIPTextEncode::text] nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing
+  - [ttN text::text] Ocean blue palette
+  - [ttN text::text] High quality, masterpiece, 8k, high definition
 
 ### 9. workflow_09.json
-- **Prompt ID**: `d6ec942c-6ba0-4cdd-b5a1-f62f3aa62e1d`
-- **类型**: 图生图
-- **节点数**: 29
-- **模型** (5):
-  - CN-anytest_v4-marged.safetensors
-  - StudioGhibli.Redmond-StdGBRRedmAF-StudioGhibli.safetensors
-  - depth_anything_v2_vits_fp16.safetensors
-  - ip-adapter_pulid_sdxl_fp16.safetensors
-  - sd_xl_base_1.0.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] Colorful, colorful,embedding:ng_deepnegative_v1_75t, 
-  - [Textbox::text] Lines, brushstrokes,High quality, masterpiece, 8k, HD, pencil drawing, simple white background, High quality, masterpiece, 8k, HD, Black and white sketch,pencil drawing, simple solid background, line 
+- **Prompt ID**: `085d566d-90af-40a6-a349-47514e20db80`
+- **类型**: 文生视频
+- **节点数**: 2
+- **模型** (0):
 
 ### 10. workflow_10.json
-- **Prompt ID**: `efd9caf9-d6c0-4295-8d28-9eaeb09e8451`
+- **Prompt ID**: `32851008-b8f7-4581-8661-cd79e4ac4c2c`
 - **类型**: 图生图
-- **节点数**: 21
-- **模型** (4):
-  - CHEYENNE_v16.safetensors
-  - control-lora-depth-rank256.safetensors
-  - control-lora-sketch-rank256.safetensors
-  - depth_anything_vitl14.pth
+- **节点数**: 20
+- **模型** (3):
+  - XLHxzmixInteriorAnd_v10.safetensors
+  - mistoLine_rank256.safetensors
+  - sdxl_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] 2d, photo, nsfw, paintings, worst quality, low quality, normal quality, lowres, watermark, monochrome, grayscale, ugly, blurry, bad anatomy, morbid, malformation, amputation, bad proportions, missing 
-  - [CR Text::text] , (masterpiece),(highest quality),Anime,(extremely detailed),figurine, best quality,4K,super detail,
+  - [CLIPTextEncode::text] nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing
+  - [ttN text::text] Randomly choose a new option that best fits the image. Do not preserve the original selection.
+  - [ttN text::text] Randomly choose a new option that best fits the image. Do not preserve the original selection.

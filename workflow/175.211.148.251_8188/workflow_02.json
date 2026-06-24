@@ -1,86 +1,101 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "UNETLoader",
     "inputs": {
-      "ckpt_name": "ponyrealismV22VAE.gWd2.safetensors"
-    }
-  },
-  "2": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "text": "Logo discord avec les lettres RS pour un developpeur",
-      "clip": [
-        "1",
-        1
-      ]
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
     }
   },
   "3": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "CLIPLoader",
     "inputs": {
-      "text": "blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality",
-      "clip": [
-        "1",
-        1
-      ]
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
     }
   },
   "4": {
-    "class_type": "EmptyLatentImage",
+    "class_type": "VAELoader",
     "inputs": {
-      "width": 1024,
-      "height": 1024,
-      "batch_size": 1
+      "vae_name": "ae.safetensors"
     }
   },
   "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "3",
+        0
+      ],
+      "text": "Amateur photo of young girl standing in bedroom. She is wearing nothing but thigh high socks."
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "3",
+        0
+      ],
+      "text": ""
+    }
+  },
+  "7": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    }
+  },
+  "8": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 1025984445,
-      "steps": 25,
-      "cfg": 7.0,
-      "sampler_name": "dpmpp_2m",
-      "scheduler": "karras",
-      "denoise": 1.0,
       "model": [
         "1",
         0
       ],
       "positive": [
-        "2",
+        "5",
         0
       ],
       "negative": [
-        "3",
+        "6",
         0
       ],
       "latent_image": [
+        "7",
+        0
+      ],
+      "seed": 1202410039,
+      "steps": 9,
+      "cfg": 1.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "beta",
+      "denoise": 1.0
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
         "4",
         0
       ]
     }
   },
-  "6": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "samples": [
-        "5",
-        0
-      ],
-      "vae": [
-        "1",
-        2
-      ]
-    }
-  },
-  "7": {
+  "10": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "6",
+        "9",
         0
       ],
-      "filename_prefix": "fantasy"
+      "filename_prefix": "zimg/유이_canonical"
     }
   }
 }

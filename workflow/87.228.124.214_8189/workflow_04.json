@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "ameg2, A nude woman sitting on a wooden bench inside a steamy sauna with warm ambient lighting and towels scattered around, legs spread apart, both hands gripping and forcefully spreading her labia wide open with fingers digging into the folds, torso leaning slightly forward, head tilted with a tense aroused expression and direct gaze toward the viewer, steam rising around her body, medium close-up framing on her waist-up figure and hands, natural skin tones and realistic hand placement.",
+      "text": "seductive young curvy woman with long black hair, A woman lying completely naked on her back on a large bed in a dimly lit elegant hotel room, her body relaxed with arms resting at her sides and legs slightly parted, soft evening light from a bedside lamp casting gentle shadows across her skin, composed expression and direct gaze toward the viewer, private intimate atmosphere, medium shot framing from chest to knees.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 1.73,
+      "shift": 12.0,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "ameg2_con_char.safetensors",
+      "lora_name": "izumi_v.2.safetensors",
       "strength_model": 0.9,
-      "strength_clip": 0.9,
+      "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -133,11 +133,11 @@
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 8,
+      "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 415093436776455,
+      "seed": 26161571962184,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

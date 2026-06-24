@@ -1,66 +1,7 @@
 {
-  "48": {
+  "4": {
     "inputs": {
-      "text": [
-        "223",
-        0
-      ],
-      "clip": [
-        "133",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
-    }
-  },
-  "72": {
-    "inputs": {
-      "pixels": [
-        "276",
-        0
-      ],
-      "vae": [
-        "134",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE编码"
-    }
-  },
-  "74": {
-    "inputs": {
-      "separator": "",
-      "text1": [
-        "291",
-        0
-      ],
-      "text2": [
-        "221",
-        0
-      ]
-    },
-    "class_type": "CR Text Concatenate",
-    "_meta": {
-      "title": "🔤 CR Text Concatenate"
-    }
-  },
-  "132": {
-    "inputs": {
-      "unet_name": "wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "133": {
-    "inputs": {
-      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "clip_name": "umt5_xxl_fp16.safetensors",
       "type": "wan",
       "device": "default"
     },
@@ -69,7 +10,7 @@
       "title": "加载CLIP"
     }
   },
-  "134": {
+  "5": {
     "inputs": {
       "vae_name": "wan_2.1_vae.safetensors"
     },
@@ -78,39 +19,327 @@
       "title": "加载VAE"
     }
   },
-  "136": {
+  "10": {
     "inputs": {
-      "lora_name": "Wan2.1_I2V_14B_FusionX_LoRA_I2V_14B.safetensors",
-      "strength_model": 0.6,
       "model": [
-        "132",
+        "70",
         0
       ]
     },
-    "class_type": "LoraLoaderModelOnly",
+    "class_type": "wanBlockSwap",
     "_meta": {
-      "title": "LoRA加载器（仅模型）"
+      "title": "wanBlockSwap"
     }
   },
-  "137": {
+  "11": {
     "inputs": {
-      "lora_name": "lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors",
-      "strength_model": 1.0,
+      "clip_name": "clip_vision_H.safetensors"
+    },
+    "class_type": "CLIPVisionLoader",
+    "_meta": {
+      "title": "加载CLIP视觉"
+    }
+  },
+  "13": {
+    "inputs": {
+      "value": 683
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "15": {
+    "inputs": {
+      "value": 49
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "23": {
+    "inputs": {
+      "value": true
+    },
+    "class_type": "easy boolean",
+    "_meta": {
+      "title": "Boolean"
+    }
+  },
+  "24": {
+    "inputs": {
+      "value": "原地滚动一圈！"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "字符串（多行）"
+    }
+  },
+  "26": {
+    "inputs": {
+      "unet_name": "Wan2.2_Remix_NSFW_i2v_14b_high_lighting_v2.0.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "27": {
+    "inputs": {
+      "unet_name": "Wan2.2_Remix_NSFW_i2v_14b_low_lighting_v2.0.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "28": {
+    "inputs": {
       "model": [
-        "136",
+        "27",
         0
       ]
     },
-    "class_type": "LoraLoaderModelOnly",
+    "class_type": "wanBlockSwap",
     "_meta": {
-      "title": "LoRA加载器（仅模型）"
+      "title": "wanBlockSwap"
     }
   },
-  "138": {
+  "29": {
     "inputs": {
-      "text": "色调艳丽，过曝，细节模糊不清，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，三条腿，痣，黑点",
+      "value": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走,"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "字符串（多行）"
+    }
+  },
+  "31": {
+    "inputs": {
+      "boundary": 0.9,
+      "seed": 745166733798789,
+      "steps": 6,
+      "cfg_high_noise": 1.1,
+      "cfg_low_noise": 1.1,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "sigma_shift": 6.0,
+      "denoise": 1.0,
+      "model_high_noise": [
+        "10",
+        0
+      ],
+      "model_low_noise": [
+        "28",
+        0
+      ],
+      "positive": [
+        "68",
+        0
+      ],
+      "negative": [
+        "68",
+        1
+      ],
+      "latent_image": [
+        "68",
+        2
+      ]
+    },
+    "class_type": "WanMoeKSampler",
+    "_meta": {
+      "title": "Wan MoE KSampler"
+    }
+  },
+  "34": {
+    "inputs": {
+      "samples": [
+        "31",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "36": {
+    "inputs": {
+      "frame_rate": [
+        "37",
+        0
+      ],
+      "loop_count": 0,
+      "filename_prefix": "AnimateDiff",
+      "format": "video/h264-mp4",
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "34",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "Video Combine 🎥🅥🅗🅢"
+    }
+  },
+  "37": {
+    "inputs": {
+      "value": 16.0
+    },
+    "class_type": "easy float",
+    "_meta": {
+      "title": "Float"
+    }
+  },
+  "44": {
+    "inputs": {
+      "crop": "none",
+      "clip_vision": [
+        "11",
+        0
+      ],
+      "image": [
+        "53",
+        0
+      ]
+    },
+    "class_type": "CLIPVisionEncode",
+    "_meta": {
+      "title": "CLIP视觉编码"
+    }
+  },
+  "45": {
+    "inputs": {
+      "crop": "none",
+      "clip_vision": [
+        "11",
+        0
+      ],
+      "image": [
+        "54",
+        0
+      ]
+    },
+    "class_type": "CLIPVisionEncode",
+    "_meta": {
+      "title": "CLIP视觉编码"
+    }
+  },
+  "46": {
+    "inputs": {
+      "image": "input_1782186973642.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "47": {
+    "inputs": {
+      "image": "input_1782186974040.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "53": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": [
+        "13",
+        0
+      ],
+      "background_color": "#000000",
+      "image": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "LayerUtility: ImageScaleByAspectRatio V2"
+    }
+  },
+  "54": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": [
+        "13",
+        0
+      ],
+      "background_color": "#000000",
+      "image": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "LayerUtility: ImageScaleByAspectRatio V2"
+    }
+  },
+  "64": {
+    "inputs": {
+      "any_01": [
+        "53",
+        4
+      ],
+      "any_02": [
+        "54",
+        4
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)"
+    }
+  },
+  "65": {
+    "inputs": {
+      "any_01": [
+        "53",
+        3
+      ],
+      "any_02": [
+        "54",
+        3
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)"
+    }
+  },
+  "66": {
+    "inputs": {
+      "text": [
+        "24",
+        0
+      ],
       "clip": [
-        "133",
+        "4",
         0
       ]
     },
@@ -119,188 +348,83 @@
       "title": "CLIP文本编码"
     }
   },
-  "139": {
+  "67": {
     "inputs": {
-      "shift": 8.000000000000002,
-      "model": [
-        "137",
+      "text": [
+        "29",
+        0
+      ],
+      "clip": [
+        "4",
         0
       ]
     },
-    "class_type": "ModelSamplingSD3",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "采样算法（SD3）"
+      "title": "CLIP文本编码"
     }
   },
-  "140": {
+  "68": {
     "inputs": {
-      "seed": [
-        "280",
+      "width": [
+        "65",
         0
       ],
-      "steps": 20,
-      "cfg": 1.0,
-      "sampler_name": "res_2m",
-      "scheduler": "beta57",
-      "denoise": 0.1,
-      "model": [
-        "139",
+      "height": [
+        "64",
         0
       ],
+      "length": [
+        "15",
+        0
+      ],
+      "batch_size": 1,
       "positive": [
-        "48",
+        "66",
         0
       ],
       "negative": [
-        "138",
-        0
-      ],
-      "latent_image": [
-        "72",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "218": {
-    "inputs": {
-      "image": "input_1782118019025_b6a1f213-5a80-4f13-a6e8-e3095012540c_f3d568af-d62d-41ca-b4a1-abaf86f2f698.png",
-      "upload": "image"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "219": {
-    "inputs": {
-      "text_input": "",
-      "task": "more_detailed_caption",
-      "fill_mask": true,
-      "keep_model_loaded": false,
-      "max_new_tokens": 1024,
-      "num_beams": 3,
-      "do_sample": true,
-      "output_mask_select": "",
-      "seed": 1079154992435369,
-      "image": [
-        "218",
-        0
-      ],
-      "florence2_model": [
-        "220",
-        0
-      ]
-    },
-    "class_type": "Florence2Run",
-    "_meta": {
-      "title": "Florence2Run"
-    }
-  },
-  "220": {
-    "inputs": {
-      "model": "Florence-2-Flux-Large",
-      "precision": "fp16",
-      "attention": "sdpa",
-      "convert_to_safetensors": false
-    },
-    "class_type": "Florence2ModelLoader",
-    "_meta": {
-      "title": "Florence2ModelLoader"
-    }
-  },
-  "221": {
-    "inputs": {
-      "text_0": "The image is a close-up portrait of a young woman with long dark hair. She is standing in front of a blurred background of greenery. The woman is wearing a beige sweater with a white turtleneck underneath. She has a slight smile on her face and is looking directly at the camera. Her hair is styled in loose waves and falls over her shoulders. The lighting is soft and natural, highlighting the woman's features. The overall mood of the image is peaceful and serene.",
-      "text": [
-        "219",
-        2
-      ]
-    },
-    "class_type": "ShowText|pysssss",
-    "_meta": {
-      "title": "Show Text 🐍"
-    }
-  },
-  "223": {
-    "inputs": {
-      "text_0": "(masterpiece), (best quality), (ultra-detailed),highly detailed.4k. The image is a close-up portrait of a young woman with long dark hair. She is standing in front of a blurred background of greenery. The woman is wearing a beige sweater with a white turtleneck underneath. She has a slight smile on her face and is looking directly at the camera. Her hair is styled in loose waves and falls over her shoulders. The lighting is soft and natural, highlighting the woman's features. The overall mood of the image is peaceful and serene.",
-      "text": [
-        "74",
-        0
-      ]
-    },
-    "class_type": "ShowText|pysssss",
-    "_meta": {
-      "title": "Show Text 🐍"
-    }
-  },
-  "239": {
-    "inputs": {
-      "tile_size": 512,
-      "overlap": 64,
-      "temporal_size": 64,
-      "temporal_overlap": 8,
-      "samples": [
-        "140",
+        "67",
         0
       ],
       "vae": [
-        "134",
+        "5",
+        0
+      ],
+      "clip_vision_start_image": [
+        "44",
+        0
+      ],
+      "clip_vision_end_image": [
+        "45",
+        0
+      ],
+      "start_image": [
+        "53",
+        0
+      ],
+      "end_image": [
+        "54",
         0
       ]
     },
-    "class_type": "VAEDecodeTiled",
+    "class_type": "WanFirstLastFrameToVideo",
     "_meta": {
-      "title": "VAE解码（分块）"
+      "title": "WanFirstLastFrameToVideo"
     }
   },
-  "259": {
+  "70": {
     "inputs": {
-      "filename_prefix": "2025-11-08/wan-regenerated",
-      "images": [
-        "239",
+      "lora_name": "Wan2.2 - I2V_VBVR_HIGH_rank_64_fp16.safetensors",
+      "strength_model": 0.3,
+      "model": [
+        "26",
         0
       ]
     },
-    "class_type": "SaveImage",
+    "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "保存图像"
-    }
-  },
-  "276": {
-    "inputs": {
-      "upscale_method": "nearest-exact",
-      "scale_by": 2.0,
-      "image": [
-        "218",
-        0
-      ]
-    },
-    "class_type": "ImageScaleBy",
-    "_meta": {
-      "title": "缩放图像（比例）"
-    }
-  },
-  "280": {
-    "inputs": {
-      "seed": 85445159158056
-    },
-    "class_type": "easy seed",
-    "_meta": {
-      "title": "随机种"
-    }
-  },
-  "291": {
-    "inputs": {
-      "text": "(masterpiece), (best quality), (ultra-detailed),highly detailed.4k. "
-    },
-    "class_type": "Text Multiline",
-    "_meta": {
-      "title": "Text Multiline"
+      "title": "LoRA加载器（仅模型）"
     }
   }
 }

@@ -1,27 +1,68 @@
 {
-  "10": {
+  "3": {
     "inputs": {
-      "image": "2026-06-22T23:39:33.540668.png"
+      "seed": [
+        "87",
+        0
+      ],
+      "steps": 25,
+      "cfg": 7.0,
+      "sampler_name": "dpmpp_sde",
+      "scheduler": "karras",
+      "denoise": 1.0,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "10",
+        0
+      ],
+      "negative": [
+        "10",
+        1
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
     },
-    "class_type": "LoadImage",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "Load Image"
+      "title": "KSampler"
     }
   },
-  "24": {
+  "4": {
     "inputs": {
-      "ckpt_name": "epicrealismXL_v8Kiss.safetensors"
+      "ckpt_name": "XLHxzmixInteriorAnd_v10.safetensors"
     },
     "class_type": "CheckpointLoaderSimple",
     "_meta": {
       "title": "Load Checkpoint"
     }
   },
-  "27": {
+  "5": {
     "inputs": {
-      "text": "masterpiece, best quality, highres, ultra realistics",
+      "width": [
+        "16",
+        0
+      ],
+      "height": [
+        "16",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing",
       "clip": [
-        "24",
+        "4",
         1
       ]
     },
@@ -30,7 +71,54 @@
       "title": "CLIP Text Encode (Prompt)"
     }
   },
-  "32": {
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "64",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "10": {
+    "inputs": {
+      "strength": 0.7000000000000001,
+      "start_percent": 0.0,
+      "end_percent": 0.8,
+      "positive": [
+        "83",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "control_net": [
+        "11",
+        0
+      ],
+      "image": [
+        "61",
+        0
+      ],
+      "vae": [
+        "64",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet"
+    }
+  },
+  "11": {
     "inputs": {
       "control_net_name": "mistoLine_rank256.safetensors"
     },
@@ -39,154 +127,170 @@
       "title": "Load ControlNet Model"
     }
   },
-  "33": {
-    "inputs": {
-      "strength": 0.6,
-      "conditioning": [
-        "27",
-        0
-      ],
-      "control_net": [
-        "32",
-        0
-      ],
-      "image": [
-        "60",
-        0
-      ]
-    },
-    "class_type": "ControlNetApply",
-    "_meta": {
-      "title": "Apply ControlNet (OLD)"
-    }
-  },
-  "42": {
-    "inputs": {
-      "text": "(worst quality, low quality, normal quality:2)",
-      "clip": [
-        "24",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
-    }
-  },
-  "59": {
-    "inputs": {
-      "model_name": "RealESRGAN_x2.pth"
-    },
-    "class_type": "UpscaleModelLoader",
-    "_meta": {
-      "title": "Load Upscale Model"
-    }
-  },
-  "60": {
+  "16": {
     "inputs": {
       "image": [
-        "10",
+        "61",
         0
       ]
     },
-    "class_type": "AnyLinePreprocessor",
+    "class_type": "ImageGenResolutionFromImage",
     "_meta": {
-      "title": "TheMisto.ai Anyline"
+      "title": "Generation Resolution From Image"
+    }
+  },
+  "38": {
+    "inputs": {
+      "merge_with_lineart": "lineart_standard",
+      "resolution": 1080,
+      "lineart_lower_bound": 0.0,
+      "lineart_upper_bound": 1.0,
+      "object_min_size": 36,
+      "object_connectivity": 1,
+      "image": [
+        "77",
+        0
+      ]
+    },
+    "class_type": "AnyLineArtPreprocessor_aux",
+    "_meta": {
+      "title": "AnyLine Lineart"
     }
   },
   "61": {
     "inputs": {
-      "upscale_by": 1.5,
-      "seed": 737354594752915,
-      "steps": 6,
-      "cfg": 2.0,
-      "sampler_name": "dpmpp_sde",
-      "scheduler": "karras",
-      "denoise": 0.35000000000000003,
-      "mode_type": "Linear",
-      "tile_width": 1024,
-      "tile_height": 1024,
-      "mask_blur": 8,
-      "tile_padding": 32,
-      "seam_fix_mode": "None",
-      "seam_fix_denoise": 1.0,
-      "seam_fix_width": 64,
-      "seam_fix_mask_blur": 8,
-      "seam_fix_padding": 16,
-      "force_uniform_tiles": true,
-      "tiled_decode": false,
-      "batch_size": 1,
+      "width": 1080,
+      "height": 1080,
+      "upscale_method": "nearest-exact",
+      "keep_proportion": true,
+      "divisible_by": 2,
+      "crop": "disabled",
       "image": [
-        "10",
-        0
-      ],
-      "model": [
-        "24",
-        0
-      ],
-      "positive": [
-        "33",
-        0
-      ],
-      "negative": [
-        "42",
-        0
-      ],
-      "vae": [
-        "24",
-        2
-      ],
-      "upscale_model": [
-        "59",
+        "38",
         0
       ]
     },
-    "class_type": "UltimateSDUpscale",
+    "class_type": "ImageResizeKJ",
     "_meta": {
-      "title": "Ultimate SD Upscale"
+      "title": "Resize Image (deprecated)"
     }
   },
-  "69": {
+  "64": {
     "inputs": {
-      "score": 0.9,
-      "image": [
-        "61",
-        0
-      ],
-      "alternative_image": [
-        "70",
-        0
-      ]
+      "vae_name": "sdxl_vae.safetensors"
     },
-    "class_type": "NSFWDetection",
+    "class_type": "VAELoader",
     "_meta": {
-      "title": "NSFWDetection"
+      "title": "Load VAE"
     }
   },
-  "70": {
+  "76": {
     "inputs": {
-      "width": 512,
-      "height": 512,
-      "red": 255,
-      "green": 255,
-      "blue": 255
-    },
-    "class_type": "Image Blank",
-    "_meta": {
-      "title": "Image Blank"
-    }
-  },
-  "71": {
-    "inputs": {
-      "filename_prefix": "enhance",
       "images": [
-        "69",
+        "8",
         0
       ]
     },
-    "class_type": "SaveImage",
+    "class_type": "PreviewImage",
     "_meta": {
-      "title": "Save Image With Callback"
+      "title": "Preview Image"
+    }
+  },
+  "77": {
+    "inputs": {
+      "image": "1782259036712.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "78": {
+    "inputs": {
+      "text": "Living room"
+    },
+    "class_type": "ttN text",
+    "_meta": {
+      "title": "room"
+    }
+  },
+  "79": {
+    "inputs": {
+      "text": "Pink"
+    },
+    "class_type": "ttN text",
+    "_meta": {
+      "title": "palette"
+    }
+  },
+  "80": {
+    "inputs": {
+      "text": "Minimalist"
+    },
+    "class_type": "ttN text",
+    "_meta": {
+      "title": "style"
+    }
+  },
+  "81": {
+    "inputs": {
+      "text": "High quality, masterpiece, 8k, high definition"
+    },
+    "class_type": "ttN text",
+    "_meta": {
+      "title": "default"
+    }
+  },
+  "82": {
+    "inputs": {
+      "delimiter": ", ",
+      "clean_whitespace": "true",
+      "text_a": [
+        "81",
+        0
+      ],
+      "text_b": [
+        "78",
+        0
+      ],
+      "text_c": [
+        "80",
+        0
+      ],
+      "text_d": [
+        "79",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "83": {
+    "inputs": {
+      "clip": [
+        "4",
+        1
+      ],
+      "text": [
+        "82",
+        0
+      ]
+    },
+    "class_type": "Text to Conditioning",
+    "_meta": {
+      "title": "Text to Conditioning"
+    }
+  },
+  "87": {
+    "inputs": {
+      "min": 0,
+      "max": 999999999999999
+    },
+    "class_type": "RandomInt",
+    "_meta": {
+      "title": "Random Int"
     }
   }
 }

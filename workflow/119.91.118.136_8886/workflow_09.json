@@ -1,0 +1,184 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "mPMix_NSFW_V9_fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "主模型加载"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "z-image-qwen.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "4": {
+    "inputs": {
+      "seed": 674698520767632,
+      "steps": 9,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "26",
+        0
+      ],
+      "positive": [
+        "27",
+        0
+      ],
+      "negative": [
+        "29",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "5": {
+    "inputs": {
+      "text": "现代写实, Base scene: uid=0umzfzj|race=黄种人|sex=男|apparent_age=外观年龄约19岁|face=五官端正, 却能在陈墨瞳面前无缝切换回纯净无害的模样|eyes=眼神坚毅, 却能在陈墨瞳面前无缝切换回纯净无害的模样|nose_mouth=鼻唇关系端正|skin=肤质干净自然, 外观年龄约19岁|aura=气质中逐渐蜕变出深邃, 从容的上位者压迫感, 穿着廉价且洗得有些发白的蓝色休闲服, 半靠在床头的枕头上, 单手举着手机, 视线专注地盯着手机屏幕, 手机屏幕的幽光清晰地照亮他的脸庞, 嘴角带着一丝隐秘的冷笑, 位于画面右侧前景, 林沐|男性, 年轻男性, 黄种人, 东亚人外貌, 清透年轻面部, 年轻面部软组织饱满, 干净年轻肤质, uid=1yr2k5k|race=黄种人|sex=男|apparent_age=外观年龄约19岁|face=五官颇为俊朗|eyes=眉宇间带着不加掩饰的傲慢与优越感|nose_mouth=唇形边界清楚|skin=肤质干净自然, 宿舍里的现充, 穿着一身, 位于画面左侧中景斜对面的床铺上, 侧身躺在被褥中, 正烦躁地翻身, 眉头微皱, 身体轮廓在昏暗的背景光线中若隐若现, 作为背景陪衬, 吴磊|男性, 竖向画幅, 竖屏构图, 576:1024 画幅比例, 完整竖向画面, 不要输出横屏画面或横向裁切",
+      "嵌入提示词": null,
+      "clip": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "正面提示词"
+    }
+  },
+  "7": {
+    "inputs": {
+      "width": 576,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "分辨率调整"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "4",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "22": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "26": {
+    "inputs": {
+      "sage_attention": "auto",
+      "allow_compile": false,
+      "model": [
+        "30",
+        0
+      ]
+    },
+    "class_type": "PathchSageAttentionKJ",
+    "_meta": {
+      "title": "Sage 加速"
+    }
+  },
+  "27": {
+    "inputs": {
+      "threshold": 0.2,
+      "strength": 6.0,
+      "conditioning": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "ConditioningNoiseInjection",
+    "_meta": {
+      "title": "出图差异化"
+    }
+  },
+  "28": {
+    "inputs": {
+      "clip_name": "Qwen3-4B-UD-Q5_K_XL.gguf",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "ClipLoaderGGUF",
+    "_meta": {
+      "title": "GGUF 文本编码器"
+    }
+  },
+  "29": {
+    "inputs": {
+      "text": "",
+      "嵌入提示词": null,
+      "clip": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "负面提示词"
+    }
+  },
+  "30": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": true,
+        "lora": "Z-image\\Z-TX-WH13.safetensors",
+        "strength": 0.8
+      },
+      "lora_2": {
+        "on": false,
+        "lora": "None",
+        "strength": 0.8
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "权重Lora加载器"
+    }
+  }
+}

@@ -1,70 +1,106 @@
 # 14.103.167.239:8032
 
-**GPU**: A100 | **显存**: 79 GB | **空闲**: 58 GB
-**内存**: 482 GB (空闲 444 GB)
+**GPU**: A100 | **显存**: 79 GB | **空闲**: 67 GB
+**内存**: 482 GB (空闲 435 GB)
 **版本**: 0.21.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-23 08:07:37
-**历史总数**: 38 | **成功**: 10
+**扫描时间**: 2026-06-24 08:08:38
+**历史总数**: 14 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `ab4b06bd-dc5f-4b65-82e1-3d29b86146a8`
-- **类型**: 其他/工具
-- **节点数**: 1
-- **模型** (0):
-
-### 2. workflow_02.json
-- **Prompt ID**: `9bf5940c-4358-4bd5-9f34-f62773fe6b4e`
-- **类型**: 其他/工具
-- **节点数**: 1
-- **模型** (0):
-
-### 3. workflow_03.json
-- **Prompt ID**: `5a89e014-93e2-490e-9a0e-fbc5459f7498`
-- **类型**: 其他/工具
-- **节点数**: 1
-- **模型** (0):
-
-### 4. workflow_04.json
-- **Prompt ID**: `e36627c7-089a-489a-a11f-a24942fa0372`
-- **类型**: 其他/工具
-- **节点数**: 1
-- **模型** (0):
-
-### 5. workflow_05.json
-- **Prompt ID**: `edec7fbf-b875-4812-9d22-1c683d5ebfaa`
-- **类型**: 其他/工具
-- **节点数**: 1
-- **模型** (0):
-
-### 6. workflow_06.json
-- **Prompt ID**: `301bb6f0-6933-41cf-98f9-db31de4fb1fd`
-- **类型**: 其他/工具
-- **节点数**: 1
-- **模型** (0):
-
-### 7. workflow_07.json
-- **Prompt ID**: `a1205d3e-b43b-4619-af92-4146104a74a8`
-- **类型**: 其他/工具
-- **节点数**: 1
-- **模型** (0):
-
-### 8. workflow_08.json
-- **Prompt ID**: `dae1fb19-6b1d-4ba6-b18d-9a8126055311`
+- **Prompt ID**: `f26a973c-e014-4804-80da-9d4b4ea97280`
 - **类型**: 文生视频
 - **节点数**: 3
 - **模型** (0):
 
+### 2. workflow_02.json
+- **Prompt ID**: `deadcf89-0545-4664-bc71-aff14616259a`
+- **类型**: 文生图
+- **节点数**: 12
+- **模型** (4):
+  - ace_1.5_vae.safetensors
+  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
+  - qwen_0.6b_ace15-fp8.safetensors
+  - qwen_4b_ace15-fp8.safetensors
+
+### 3. workflow_03.json
+- **Prompt ID**: `1bc5764e-cf27-44be-9863-ef45efa9a91a`
+- **类型**: 文生图
+- **节点数**: 12
+- **模型** (4):
+  - ace_1.5_vae.safetensors
+  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
+  - qwen_0.6b_ace15-fp8.safetensors
+  - qwen_4b_ace15-fp8.safetensors
+
+### 4. workflow_04.json
+- **Prompt ID**: `69b37f81-0f64-4df9-a353-fa5e0abab6b2`
+- **类型**: 文生图
+- **节点数**: 12
+- **模型** (4):
+  - ace_1.5_vae.safetensors
+  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
+  - qwen_0.6b_ace15-fp8.safetensors
+  - qwen_4b_ace15-fp8.safetensors
+
+### 5. workflow_05.json
+- **Prompt ID**: `7cb84e66-8cdc-4949-bb4c-c2dafd37f36a`
+- **类型**: 文生图
+- **节点数**: 12
+- **模型** (4):
+  - ace_1.5_vae.safetensors
+  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
+  - qwen_0.6b_ace15-fp8.safetensors
+  - qwen_4b_ace15-fp8.safetensors
+
+### 6. workflow_06.json
+- **Prompt ID**: `f2eaa382-64a2-463b-b343-265ec5db6ecf`
+- **类型**: 文生图
+- **节点数**: 12
+- **模型** (4):
+  - ace_1.5_vae.safetensors
+  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
+  - qwen_0.6b_ace15-fp8.safetensors
+  - qwen_4b_ace15-fp8.safetensors
+
+### 7. workflow_07.json
+- **Prompt ID**: `52943b6e-a3d3-4868-ab2a-9e3afbd033f1`
+- **类型**: 文生图
+- **节点数**: 12
+- **模型** (4):
+  - ace_1.5_vae.safetensors
+  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
+  - qwen_0.6b_ace15-fp8.safetensors
+  - qwen_4b_ace15-fp8.safetensors
+
+### 8. workflow_08.json
+- **Prompt ID**: `f08a7b21-3c02-47ba-9135-a205802cae63`
+- **类型**: 文生图
+- **节点数**: 12
+- **模型** (4):
+  - ace_1.5_vae.safetensors
+  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
+  - qwen_0.6b_ace15-fp8.safetensors
+  - qwen_4b_ace15-fp8.safetensors
+
 ### 9. workflow_09.json
-- **Prompt ID**: `5978803c-408d-4e21-b55f-045e431844eb`
-- **类型**: 其他/工具
-- **节点数**: 1
-- **模型** (0):
+- **Prompt ID**: `7186e7c6-48ba-41c4-98b3-3262380116e1`
+- **类型**: 文生图
+- **节点数**: 12
+- **模型** (4):
+  - ace_1.5_vae.safetensors
+  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
+  - qwen_0.6b_ace15-fp8.safetensors
+  - qwen_4b_ace15-fp8.safetensors
 
 ### 10. workflow_10.json
-- **Prompt ID**: `284ac241-99be-483e-be4f-ce26453fe28c`
-- **类型**: 其他/工具
-- **节点数**: 1
-- **模型** (0):
+- **Prompt ID**: `0f2693f7-2dbf-48bb-9b1d-67ffa44b19b0`
+- **类型**: 文生图
+- **节点数**: 12
+- **模型** (4):
+  - ace_1.5_vae.safetensors
+  - acestep_v1.5_xl_sft_turbo_nvfp4.safetensors
+  - qwen_0.6b_ace15-fp8.safetensors
+  - qwen_4b_ace15-fp8.safetensors

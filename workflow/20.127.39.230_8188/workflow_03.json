@@ -1,126 +1,86 @@
 {
-  "3": {
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "seed": 549545904171980,
-      "steps": 20,
-      "cfg": 2.0,
-      "sampler_name": "euler_ancestral_cfg_pp",
-      "scheduler": "normal",
-      "denoise": 1.0,
-      "model": [
-        "10",
-        0
-      ],
-      "positive": [
-        "6",
-        0
-      ],
-      "negative": [
-        "7",
-        0
-      ],
-      "latent_image": [
-        "5",
-        0
+      "ckpt_name": "RetroDiffusion128xModel.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "Logo discord avec les lettres RS pour un developpeur",
+      "clip": [
+        "1",
+        1
       ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
+    }
+  },
+  "3": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality",
+      "clip": [
+        "1",
+        1
+      ]
     }
   },
   "4": {
+    "class_type": "EmptyLatentImage",
     "inputs": {
-      "ckpt_name": "RetroDiffusion128xModel.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "Загрузить сheckpoint"
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
     }
   },
   "5": {
+    "class_type": "KSampler",
     "inputs": {
-      "width": 512,
-      "height": 512,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "Пустое латентное изображение"
-    }
-  },
-  "6": {
-    "inputs": {
-      "text": "dragon knight",
-      "clip": [
-        "10",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "Кодирование текста CLIP (Запрос)"
-    }
-  },
-  "7": {
-    "inputs": {
-      "text": "",
-      "clip": [
-        "10",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "Кодирование текста CLIP (Запрос)"
-    }
-  },
-  "8": {
-    "inputs": {
-      "samples": [
+      "seed": 3431178313,
+      "steps": 20,
+      "cfg": 7.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1.0,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
         "3",
         0
       ],
-      "vae": [
+      "latent_image": [
         "4",
-        2
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "Декодировать VAE"
-    }
-  },
-  "9": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "8",
         0
       ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Сохранить изображение"
     }
   },
-  "10": {
+  "6": {
+    "class_type": "VAEDecode",
     "inputs": {
-      "lora_name": "retro_spum_set_v3-000050.safetensors",
-      "strength_model": 0.7,
-      "strength_clip": 0.1,
-      "model": [
-        "4",
+      "samples": [
+        "5",
         0
       ],
-      "clip": [
-        "4",
-        1
+      "vae": [
+        "1",
+        2
       ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Загрузить LoRA"
+    }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "6",
+        0
+      ],
+      "filename_prefix": "fantasy"
     }
   }
 }

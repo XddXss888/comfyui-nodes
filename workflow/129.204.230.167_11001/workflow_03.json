@@ -1,8 +1,178 @@
 {
   "1": {
-    "class_type": "VisualizeCUDAMemoryHistory",
     "inputs": {
-      "snapshot_path": "/root/comfy/ComfyUI/input/cuda_snap_1782063994.pkl"
+      "image_path_or_URL": "https://cos.credit99.cn/2026-06-23/69d367054c6e2e96ca9f00fc/upload/20260623192911078-32-41r6s9.png",
+      "image": "",
+      "upscale_method": "lanczos",
+      "megapixels": 0.0,
+      "scale_by": 1.0,
+      "resize_mode": "longest_side",
+      "size": 1024
+    },
+    "class_type": "AILab_LoadImage",
+    "_meta": {
+      "title": "加载图像 (RMBG) 🖼️"
+    }
+  },
+  "2": {
+    "inputs": {
+      "image_path_or_URL": "https://cos.credit99.cn/2026-06-23/69d367054c6e2e96ca9f00fc/upload/20260623193259003-ScreenShot_2026-06--5inh7b.png",
+      "image": "",
+      "upscale_method": "lanczos",
+      "megapixels": 0,
+      "scale_by": 1,
+      "resize_mode": "longest_side",
+      "size": 768
+    },
+    "class_type": "AILab_LoadImage",
+    "_meta": {
+      "title": "加载图像 (RMBG) 🖼️"
+    }
+  },
+  "3": {
+    "inputs": {
+      "action": "append",
+      "tidy_tags": "no",
+      "text_a": "",
+      "text_b": "",
+      "text_c": "",
+      "result": ""
+    },
+    "class_type": "StringFunction|pysssss",
+    "_meta": {
+      "title": "String Function 🐍"
+    }
+  },
+  "4": {
+    "inputs": {
+      "action": "append",
+      "tidy_tags": "no",
+      "text_a": "{\n  \"task_objective\": \"Game Character Action Frame Atlas & 9-Frame 3x3 - Map Image 2 character model onto Image 1's 9 action poses (ONLY pose changes, character identity + equipment FULLY PRESERVED, full-body auto-completion applied)\",\n  \"input_assets\": {\n    \"pose_reference\": \"Image 1 9-Pose Grid - 9 distinct action poses (body position, limb angles, posture, hand placement, weapon/equipment grip, camera angle, composition) - ONLY Provide action poses for game character\",\n    \"model_image\": \"Image 2 Character Model (VARIABLE) - Facial features, skin tone, body proportions, hairstyle, armor/equipment, accessories - FULLY PRESERVED, ZERO deviation; full-body auto-completion applied for any cropped/partial views\"\n  },\n  \"workflow\": {\n    \"step_1\": \"Extract all 9 action poses from Image 1 + analyze Image 2 character identity & equipment details (armor style, weapon type, color palette, material texture, accessory design)\",\n    \"step_2\": \"Full-body auto-completion on Image 2 character — reconstruct any missing lower body, hands, feet, or cropped areas based on character design consistency; then map completed character onto each of 9 action poses, ONLY pose changes to Image 1, character identity & equipment 100% preserved\",\n    \"step_3\": \"Generate 9 action frames with clear transition flow, assemble 3x3 grid matching Image 1 layout, consistent sprite proportions, transparent-friendly background, game-ready format\"\n  },\n  \"outputs\": {\n    \"frame_1\": \"Action Frame 1 - Image 2 character (full-body completed) in Image 1 pose 1, exact body position, limb angles & camera angle\",\n    \"frame_2\": \"Action Frame 2 - Image 2 character (full-body completed) in Image 1 pose 2, exact body position, limb angles & camera angle\",\n    \"frame_3\": \"Action Frame 3 - Image 2 character (full-body completed) in Image 1 pose 3, exact body position, limb angles & camera angle\",\n    \"frame_4\": \"Action Frame 4 - Image 2 character (full-body completed) in Image 1 pose 4, exact body position, limb angles & camera angle\",\n    \"frame_5\": \"Action Frame 5 - Image 2 character (full-body completed) in Image 1 pose 5, exact body position, limb angles & camera angle\",\n    \"frame_6\": \"Action Frame 6 - Image 2 character (full-body completed) in Image 1 pose 6, exact body position, limb angles & camera angle\",\n    \"frame_7\": \"Action Frame 7 - Image 2 character (full-body completed) in Image 1 pose 7, exact body position, limb angles & camera angle\",\n    \"frame_8\": \"Action Frame 8 - Image 2 character (full-body completed) in Image 1 pose 8, exact body position, limb angles & camera angle\",\n    \"frame_9\": \"Action Frame 9 - Image 2 character (full-body completed) in Image 1 pose 9, exact body position, limb angles & camera angle\"\n  },\n  \"output_requirements\": [\n    \"NO text/labels/watermarks; ALL 9 action poses MUST be identical to Image 1 — zero deviation in body position, limb angles, posture, weapon grip, camera angle\",\n    \"Character identity + equipment MUST remain exactly as Image 2 — consistent facial features, skin tone, proportions, hairstyle, ARMOR/WEAPON/ACCESSORIES across all 9 frames; full-body auto-completion must be seamless and match character design style\",\n    \"Natural body mechanics in each action pose; consistent character proportions across all frames; smooth action transition flow between adjacent frames; game-art style rendering with clean edges\",\n    \"SFW; NO oily shine; NO oversaturation; NO motion blur; All 9 frames must be generated — no missing or merged frames; each frame must be clearly distinguishable as a distinct action phase\",\n    \"Standard 3x3 grid matching Image 1 layout; uniform frame size and character scale across all 9 cells; clean neutral background suitable for sprite extraction; game-engine-ready proportions with consistent pivot point alignment\"\n  ]\n}\n",
+      "text_b": [
+        "3",
+        0
+      ],
+      "text_c": "",
+      "result": "{\n  \"task_objective\": \"Game Character Action Frame Atlas & 9-Frame 3x3 - Map Image 2 character model onto Image 1's 9 action poses (ONLY pose changes, character identity + equipment FULLY PRESERVED, full-body auto-completion applied)\",\n  \"input_assets\": {\n    \"pose_reference\": \"Image 1 9-Pose Grid - 9 distinct action poses (body position, limb angles, posture, hand placement, weapon/equipment grip, camera angle, composition) - ONLY Provide action poses for game character\",\n    \"model_image\": \"Image 2 Character Model (VARIABLE) - Facial features, skin tone, body proportions, hairstyle, armor/equipment, accessories - FULLY PRESERVED, ZERO deviation; full-body auto-completion applied for any cropped/partial views\"\n  },\n  \"workflow\": {\n    \"step_1\": \"Extract all 9 action poses from Image 1 + analyze Image 2 character identity & equipment details (armor style, weapon type, color palette, material texture, accessory design)\",\n    \"step_2\": \"Full-body auto-completion on Image 2 character — reconstruct any missing lower body, hands, feet, or cropped areas based on character design consistency; then map completed character onto each of 9 action poses, ONLY pose changes to Image 1, character identity & equipment 100% preserved\",\n    \"step_3\": \"Generate 9 action frames with clear transition flow, assemble 3x3 grid matching Image 1 layout, consistent sprite proportions, transparent-friendly background, game-ready format\"\n  },\n  \"outputs\": {\n    \"frame_1\": \"Action Frame 1 - Image 2 character (full-body completed) in Image 1 pose 1, exact body position, limb angles & camera angle\",\n    \"frame_2\": \"Action Frame 2 - Image 2 character (full-body completed) in Image 1 pose 2, exact body position, limb angles & camera angle\",\n    \"frame_3\": \"Action Frame 3 - Image 2 character (full-body completed) in Image 1 pose 3, exact body position, limb angles & camera angle\",\n    \"frame_4\": \"Action Frame 4 - Image 2 character (full-body completed) in Image 1 pose 4, exact body position, limb angles & camera angle\",\n    \"frame_5\": \"Action Frame 5 - Image 2 character (full-body completed) in Image 1 pose 5, exact body position, limb angles & camera angle\",\n    \"frame_6\": \"Action Frame 6 - Image 2 character (full-body completed) in Image 1 pose 6, exact body position, limb angles & camera angle\",\n    \"frame_7\": \"Action Frame 7 - Image 2 character (full-body completed) in Image 1 pose 7, exact body position, limb angles & camera angle\",\n    \"frame_8\": \"Action Frame 8 - Image 2 character (full-body completed) in Image 1 pose 8, exact body position, limb angles & camera angle\",\n    \"frame_9\": \"Action Frame 9 - Image 2 character (full-body completed) in Image 1 pose 9, exact body position, limb angles & camera angle\"\n  },\n  \"output_requirements\": [\n    \"NO text/labels/watermarks; ALL 9 action poses MUST be identical to Image 1 — zero deviation in body position, limb angles, posture, weapon grip, camera angle\",\n    \"Character identity + equipment MUST remain exactly as Image 2 — consistent facial features, skin tone, proportions, hairstyle, ARMOR/WEAPON/ACCESSORIES across all 9 frames; full-body auto-completion must be seamless and match character design style\",\n    \"Natural body mechanics in each action pose; consistent character proportions across all frames; smooth action transition flow between adjacent frames; game-art style rendering with clean edges\",\n    \"SFW; NO oily shine; NO oversaturation; NO motion blur; All 9 frames must be generated — no missing or merged frames; each frame must be clearly distinguishable as a distinct action phase\",\n    \"Standard 3x3 grid matching Image 1 layout; uniform frame size and character scale across all 9 cells; clean neutral background suitable for sprite extraction; game-engine-ready proportions with consistent pivot point alignment\"\n  ]\n}\n"
+    },
+    "class_type": "StringFunction|pysssss",
+    "_meta": {
+      "title": "String Function 🐍"
+    }
+  },
+  "5": {
+    "inputs": {
+      "inputcount": 2,
+      "prompt": [
+        "4",
+        0
+      ],
+      "aspect_ratio": [
+        "7",
+        0
+      ],
+      "resolution": "2k",
+      "Update inputs(支持多图点我）": null,
+      "images": [
+        "1",
+        0
+      ],
+      "image_2": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "BizyAir_GPT_IMAGE_2_I2I_API",
+    "_meta": {
+      "title": "☁️BizyAir GPT Image 2 Image To Image",
+      "trd_node": true
+    }
+  },
+  "6": {
+    "inputs": {
+      "prompt": [
+        "4",
+        0
+      ],
+      "temperature": 0.9,
+      "top_p": 0.95,
+      "seed": 867120314,
+      "max_tokens": 32768,
+      "aspect_ratio": [
+        "7",
+        0
+      ],
+      "resolution": "2K",
+      "thinking_level": "disabled",
+      "inputcount": 2,
+      "Update inputs(支持多图点我）": null,
+      "mode": "third-party",
+      "images": [
+        "1",
+        0
+      ],
+      "image_2": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "BizyAir_NanoBanana2",
+    "_meta": {
+      "title": "☁️BizyAir NanoBanana 2",
+      "trd_node": true
+    }
+  },
+  "7": {
+    "inputs": {
+      "ratio": "3:4"
+    },
+    "class_type": "ratio_selector",
+    "_meta": {
+      "title": "ratio selector"
+    }
+  },
+  "8": {
+    "inputs": {
+      "index": 1,
+      "image0": [
+        "5",
+        0
+      ],
+      "image1": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "easy imageIndexSwitch",
+    "_meta": {
+      "title": "图像编号切换"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "cloth120",
+      "images": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "15": {
+    "inputs": {
+      "row": 3,
+      "column": 3,
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "easy imageSplitGrid",
+    "_meta": {
+      "title": "图像拆分网格"
     }
   }
 }

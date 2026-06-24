@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "/app/services/comfyui-worker/temp/uploads/81aecd6ddb4571b88d8f78818b3beb9177f9f97abfe49c195af27c3a9578453b.png"
+      "image": "/app/services/comfyui-worker/temp/uploads/47aef77a3c8cdb7158eed926f53e5a7ccf59c125a9de6701d3e42a24f0194efc.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -117,7 +117,7 @@
   },
   "99": {
     "inputs": {
-      "path": "/app/services/comfyui-worker/temp/results/4b115146-49a5-42e9-9758-159ef70e0eb5.png",
+      "path": "/app/services/comfyui-worker/temp/results/69580258-f562-41cc-9d01-77b3ad29ade1.png",
       "overwrite": "true",
       "image": [
         "130",
@@ -243,7 +243,7 @@
   },
   "75:74": {
     "inputs": {
-      "text": "Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a sticker using the user's photo. Preserve the original gender and identity from the input image. Do not gender-swap the character. No opposite-gender appearance, no feminine features on a male input, no masculine features on a female input. A football Character sticker wearing a Chelsea blue goalkeeper football kit, dark blue goalkeeper jersey with lighter blue pattern details, long blue sleeves, matching goalkeeper shorts, athletic football socks, hands on hips, serious focused facial expression, strong confident stance, competitive goalkeeper attitude, realistic sports photography cutout sticker style, sharp silhouette, high contrast lighting, detailed fabric texture, isolated on transparent background, high detail, no text. Keep the face of the human in the image and the skin color of the human in the image. Use sticker style, gray background"
+      "text": "Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a 3D reaction sticker from the photo. The character has shocked confused expression, wide open eyes, the mouth is small,  slightly curved downwards, bewildered face, “confused shocked” reaction. Looking up at a huge, cracked stone question mark next to it. One hand on the hip, the other hand pointing its index finger upwards towards the mouth, placed under the chin—a classic thinking pose, clear sticker composition, clean bright background, bold white outline, soft smooth fur, cinematic soft lighting, highly expressive face. Sticker design with bold white outline, transparent background, high quality 3D render, sharp sticker. Keep the face of the human in the image and the skin color of the human in the image. Use sticker style, gray background"
     },
     "class_type": "JWString",
     "_meta": {

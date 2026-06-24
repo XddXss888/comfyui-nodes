@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 298957315172976,
+      "seed": 50529770040427,
       "steps": 20,
       "cfg": 2.0,
       "sampler_name": "euler_ancestral_cfg_pp",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "dragon knight",
+      "text": "happy meal",
       "clip": [
         "10",
         1
@@ -120,7 +120,7 @@
     },
     "class_type": "LoraLoader",
     "_meta": {
-      "title": "Load LoRA"
+      "title": "Load LoRA (Model and CLIP)"
     }
   }
 }

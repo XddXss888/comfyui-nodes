@@ -31,7 +31,7 @@
   },
   "66": {
     "inputs": {
-      "shift": 3.0,
+      "shift": 3,
       "model": [
         "6600",
         0
@@ -44,7 +44,7 @@
   },
   "75": {
     "inputs": {
-      "strength": 1.0,
+      "strength": 1,
       "model": [
         "66",
         0
@@ -58,7 +58,7 @@
   "89": {
     "inputs": {
       "lora_name": "Qwen-Image-Edit-2509-Lightning-8steps-V1.0-fp32.safetensors",
-      "strength_model": 1.0,
+      "strength_model": 1,
       "model": [
         "37",
         0
@@ -83,7 +83,7 @@
   },
   "5939": {
     "inputs": {
-      "scale": 1.0,
+      "scale": 1,
       "method": "lanczos",
       "scale_by": "longest",
       "scale_by_length": [
@@ -600,7 +600,7 @@
   },
   "7000": {
     "inputs": {
-      "scale": 1.0,
+      "scale": 1,
       "method": "lanczos",
       "scale_by": "longest",
       "scale_by_length": [
@@ -747,7 +747,7 @@
         1
       ],
       "image2": [
-        "6619",
+        "7000",
         0
       ]
     },
@@ -758,7 +758,7 @@
   },
   "7339": {
     "inputs": {
-      "prompt": "图1是衣服局部图，图2是胸针产品图。\n保持衣物原本的纹理、颜色和褶皱绝对不变。将图2的胸针稳固地锚定在衣服的表面，要求如下：\n1. 胸针所有主体结构必须完全来自图2，禁止新增、删除或替换任何部件；\n2. 所有可见悬挂结构、链状结构、垂落结构、连接结构均属于胸针主体的一部分，而非附属装饰；\n3. 胸针上柔性结构（例如链条、流苏、细线等）表现出真实的自然下垂重力感；\n4. 胸针主体的底部与衣物接触处，产生真实的物理接触阴影；\n5. 超高分辨率细节还原，8K；",
+      "prompt": "图1是模特，图2是胸针产品图。\n请将图2的胸针原样佩戴在图1模特胸口位置（约心脏上方、锁骨下方），严格要求如下：\n1. 胸针所有主体结构必须完全来自图2，禁止新增、删除或替换任何部件；\n2. 所有可见悬挂结构、链状结构、垂落结构、连接结构均属于胸针主体的一部分，而非附属装饰；\n3. 保持图2中胸针所有尖角、折角、镂空边缘、内部轮廓与锐利金属边界不变；\n4. 保持图2中胸针每一处金属光泽、材质纹理、宝石切面、色彩、尺寸比例不变；\n5. 纠正佩戴透视使胸针自然贴合衣物表面，针杆隐于布料之后，仅露装饰面；\n6. 衣物与胸针接触处阴影自然过渡，根据布料厚度呈现轻微拉扯褶皱；\n7. 保持衣物原有颜色、纹理和褶皱，仅在胸针接触处生成轻微阴影或自然褶皱，不修改其他衣物部分；\n8. 超高分辨率细节还原，8K；",
       "clip": [
         "38",
         0
@@ -772,7 +772,7 @@
         1
       ],
       "image2": [
-        "6619",
+        "7000",
         0
       ]
     },
@@ -844,7 +844,7 @@
   },
   "7343": {
     "inputs": {
-      "multiplier": 2.0,
+      "multiplier": 2,
       "model": [
         "75",
         0
@@ -873,7 +873,7 @@
       "cfg": 1.2,
       "sampler_name": "euler",
       "scheduler": "normal",
-      "denoise": 1.0,
+      "denoise": 1,
       "model": [
         "7343",
         0
@@ -1249,7 +1249,7 @@
   },
   "7620": {
     "inputs": {
-      "value": 1536
+      "value": 1024
     },
     "class_type": "INTConstant",
     "_meta": {
@@ -1304,6 +1304,18 @@
     "class_type": "TrueRandomSeedSimple",
     "_meta": {
       "title": "True Random Seed Simple"
+    }
+  },
+  "7628": {
+    "inputs": {
+      "images": [
+        "7000",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
     }
   },
   "7619:7606": {
@@ -1407,10 +1419,10 @@
       "mask_blend_pixels": 32,
       "mask_hipass_filter": 0.3,
       "extend_for_outpainting": false,
-      "extend_up_factor": 1.0,
-      "extend_down_factor": 1.0,
-      "extend_left_factor": 1.0,
-      "extend_right_factor": 1.0,
+      "extend_up_factor": 1,
+      "extend_down_factor": 1,
+      "extend_left_factor": 1,
+      "extend_right_factor": 1,
       "context_from_mask_extend_factor": 1.2,
       "output_resize_to_target_size": true,
       "output_target_width": [
@@ -1822,23 +1834,6 @@
       "title": "预览图像"
     }
   },
-  "7060:6591": {
-    "inputs": {
-      "value": 1.0,
-      "width": [
-        "7060:6594",
-        0
-      ],
-      "height": [
-        "7060:6594",
-        1
-      ]
-    },
-    "class_type": "SolidMask",
-    "_meta": {
-      "title": "纯块遮罩"
-    }
-  },
   "7060:6594": {
     "inputs": {
       "image": [
@@ -1849,18 +1844,6 @@
     "class_type": "GetImageSize+",
     "_meta": {
       "title": "🔧 Get Image Size"
-    }
-  },
-  "7060:6592": {
-    "inputs": {
-      "mask": [
-        "7060:6591",
-        0
-      ]
-    },
-    "class_type": "MaskToImage",
-    "_meta": {
-      "title": "遮罩转换为图像"
     }
   },
   "7060:6714": {
@@ -1906,8 +1889,8 @@
   "7060:6593": {
     "inputs": {
       "mode": "normal",
-      "foreground_opacity": 1.0,
-      "foreground_scale": 1.0,
+      "foreground_opacity": 1,
+      "foreground_scale": 1,
       "position_x": 50,
       "position_y": 50,
       "foreground": [
@@ -1915,7 +1898,7 @@
         3
       ],
       "background": [
-        "7060:6592",
+        "7060:7627",
         0
       ]
     },
@@ -1959,6 +1942,67 @@
       "title": "ImagePad KJ"
     }
   },
+  "7060:7627": {
+    "inputs": {
+      "size": "custom",
+      "custom_width": [
+        "7060:6594",
+        0
+      ],
+      "custom_height": [
+        "7060:6594",
+        1
+      ],
+      "color": "#3FE57F"
+    },
+    "class_type": "LayerUtility: ColorImage V2",
+    "_meta": {
+      "title": "图层工具：纯色图像 V2"
+    }
+  },
+  "7060:7629": {
+    "inputs": {
+      "model": "BiRefNet-HR-matting",
+      "mask_blur": 0,
+      "mask_offset": 0,
+      "invert_output": false,
+      "refine_foreground": false,
+      "background": "Color",
+      "background_color": "#1dcd6a",
+      "image": [
+        "7060:6714",
+        3
+      ]
+    },
+    "class_type": "BiRefNetRMBG",
+    "_meta": {
+      "title": "BiRefNet 去除背景 (RMBG)"
+    }
+  },
+  "7060:7630": {
+    "inputs": {
+      "images": [
+        "7060:7629",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "7060:7631": {
+    "inputs": {
+      "images": [
+        "7060:6714",
+        3
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
   "7069:72": {
     "inputs": {
       "comparison": "a == b",
@@ -1978,7 +2022,7 @@
   },
   "7069:71": {
     "inputs": {
-      "value": 0.0
+      "value": 0
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -1988,7 +2032,7 @@
   "7069:70": {
     "inputs": {
       "side": -1,
-      "anchor_side_ratio": 0.0,
+      "anchor_side_ratio": 0,
       "anchor_vertical_ratio": 0.28,
       "neck_mask": [
         "6981",
@@ -2171,7 +2215,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7069:90",
         0
@@ -2187,7 +2231,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7069:7321",
         0
@@ -2379,7 +2423,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7062",
         0
@@ -2392,7 +2436,7 @@
   },
   "7069:86": {
     "inputs": {
-      "value": 0.0,
+      "value": 0,
       "width": [
         "7069:7324",
         0
@@ -2500,7 +2544,7 @@
         1
       ],
       "width_ratio": 0.2,
-      "height_ratio": 100.0,
+      "height_ratio": 100,
       "feather": 0,
       "invert": false
     },
@@ -2562,7 +2606,7 @@
         1
       ],
       "side": -1,
-      "anchor_side_ratio": 0.0,
+      "anchor_side_ratio": 0,
       "anchor_vertical_ratio": 0.28,
       "pose_keypoints": [
         "6810",
@@ -2631,7 +2675,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7000",
         1
@@ -2647,7 +2691,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7052:7097",
         0
@@ -2748,7 +2792,7 @@
   },
   "7052:7089": {
     "inputs": {
-      "value": 0.0
+      "value": 0
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -2958,8 +3002,8 @@
       "x": 0,
       "y": 0,
       "mirror": "None",
-      "scale": 1.0,
-      "aspect_ratio": 1.0,
+      "scale": 1,
+      "aspect_ratio": 1,
       "rotate": [
         "7052:7095",
         0
@@ -3111,7 +3155,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7052:6814",
         0
@@ -3254,7 +3298,7 @@
   },
   "7052:7004": {
     "inputs": {
-      "scale": 1.0,
+      "scale": 1,
       "method": "lanczos",
       "scale_by": "longest",
       "scale_by_length": [
@@ -3381,7 +3425,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7000",
         1
@@ -3397,7 +3441,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7064:7121",
         0
@@ -3498,7 +3542,7 @@
   },
   "7064:7110": {
     "inputs": {
-      "value": 0.0
+      "value": 0
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -3708,8 +3752,8 @@
       "x": 0,
       "y": 0,
       "mirror": "None",
-      "scale": 1.0,
-      "aspect_ratio": 1.0,
+      "scale": 1,
+      "aspect_ratio": 1,
       "rotate": [
         "7064:7119",
         0
@@ -3861,7 +3905,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7064:7131",
         0
@@ -4004,7 +4048,7 @@
   },
   "7064:7139": {
     "inputs": {
-      "scale": 1.0,
+      "scale": 1,
       "method": "lanczos",
       "scale_by": "longest",
       "scale_by_length": [
@@ -4131,7 +4175,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7000",
         1
@@ -4147,7 +4191,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7065:7165",
         0
@@ -4248,7 +4292,7 @@
   },
   "7065:7154": {
     "inputs": {
-      "value": 0.0
+      "value": 0
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -4458,8 +4502,8 @@
       "x": 0,
       "y": 0,
       "mirror": "None",
-      "scale": 1.0,
-      "aspect_ratio": 1.0,
+      "scale": 1,
+      "aspect_ratio": 1,
       "rotate": [
         "7065:7163",
         0
@@ -4611,7 +4655,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7065:7175",
         0
@@ -4754,7 +4798,7 @@
   },
   "7065:7183": {
     "inputs": {
-      "scale": 1.0,
+      "scale": 1,
       "method": "lanczos",
       "scale_by": "longest",
       "scale_by_length": [
@@ -4881,7 +4925,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7000",
         1
@@ -4897,7 +4941,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7066:7209",
         0
@@ -4998,7 +5042,7 @@
   },
   "7066:7198": {
     "inputs": {
-      "value": 0.0
+      "value": 0
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -5208,8 +5252,8 @@
       "x": 0,
       "y": 0,
       "mirror": "None",
-      "scale": 1.0,
-      "aspect_ratio": 1.0,
+      "scale": 1,
+      "aspect_ratio": 1,
       "rotate": [
         "7066:7207",
         0
@@ -5361,7 +5405,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7066:7219",
         0
@@ -5504,7 +5548,7 @@
   },
   "7066:7227": {
     "inputs": {
-      "scale": 1.0,
+      "scale": 1,
       "method": "lanczos",
       "scale_by": "longest",
       "scale_by_length": [
@@ -5631,7 +5675,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7000",
         1
@@ -5647,7 +5691,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7067:7253",
         0
@@ -5748,7 +5792,7 @@
   },
   "7067:7242": {
     "inputs": {
-      "value": 0.0
+      "value": 0
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -5958,8 +6002,8 @@
       "x": 0,
       "y": 0,
       "mirror": "None",
-      "scale": 1.0,
-      "aspect_ratio": 1.0,
+      "scale": 1,
+      "aspect_ratio": 1,
       "rotate": [
         "7067:7251",
         0
@@ -6111,7 +6155,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7067:7263",
         0
@@ -6254,7 +6298,7 @@
   },
   "7067:7271": {
     "inputs": {
-      "scale": 1.0,
+      "scale": 1,
       "method": "lanczos",
       "scale_by": "longest",
       "scale_by_length": [
@@ -6381,7 +6425,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7000",
         1
@@ -6397,7 +6441,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7068:7297",
         0
@@ -6498,7 +6542,7 @@
   },
   "7068:7286": {
     "inputs": {
-      "value": 0.0
+      "value": 0
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -6708,8 +6752,8 @@
       "x": 0,
       "y": 0,
       "mirror": "None",
-      "scale": 1.0,
-      "aspect_ratio": 1.0,
+      "scale": 1,
+      "aspect_ratio": 1,
       "rotate": [
         "7068:7295",
         0
@@ -6861,7 +6905,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7068:7307",
         0
@@ -7004,7 +7048,7 @@
   },
   "7068:7315": {
     "inputs": {
-      "scale": 1.0,
+      "scale": 1,
       "method": "lanczos",
       "scale_by": "longest",
       "scale_by_length": [

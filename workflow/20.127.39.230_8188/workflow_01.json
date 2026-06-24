@@ -1,14 +1,14 @@
 {
   "3": {
     "inputs": {
-      "seed": 12345,
+      "seed": 549545904171980,
       "steps": 20,
-      "cfg": 1.0,
+      "cfg": 2.0,
       "sampler_name": "euler_ancestral_cfg_pp",
-      "scheduler": "simple",
+      "scheduler": "normal",
       "denoise": 1.0,
       "model": [
-        "4",
+        "10",
         0
       ],
       "positive": [
@@ -24,13 +24,19 @@
         0
       ]
     },
-    "class_type": "KSampler"
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
   },
   "4": {
     "inputs": {
       "ckpt_name": "RetroDiffusion128xModel.safetensors"
     },
-    "class_type": "CheckpointLoaderSimple"
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Загрузить сheckpoint"
+    }
   },
   "5": {
     "inputs": {
@@ -38,27 +44,36 @@
       "height": 512,
       "batch_size": 1
     },
-    "class_type": "EmptyLatentImage"
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Пустое латентное изображение"
+    }
   },
   "6": {
     "inputs": {
-      "text": "pixel art sword",
+      "text": "dragon knight",
       "clip": [
-        "4",
+        "10",
         1
       ]
     },
-    "class_type": "CLIPTextEncode"
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Кодирование текста CLIP (Запрос)"
+    }
   },
   "7": {
     "inputs": {
-      "text": "low quality",
+      "text": "",
       "clip": [
-        "4",
+        "10",
         1
       ]
     },
-    "class_type": "CLIPTextEncode"
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Кодирование текста CLIP (Запрос)"
+    }
   },
   "8": {
     "inputs": {
@@ -71,16 +86,41 @@
         2
       ]
     },
-    "class_type": "VAEDecode"
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "Декодировать VAE"
+    }
   },
   "9": {
     "inputs": {
-      "filename_prefix": "SPUM_AI",
+      "filename_prefix": "ComfyUI",
       "images": [
         "8",
         0
       ]
     },
-    "class_type": "SaveImage"
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Сохранить изображение"
+    }
+  },
+  "10": {
+    "inputs": {
+      "lora_name": "retro_spum_set_v3-000050.safetensors",
+      "strength_model": 0.7,
+      "strength_clip": 0.1,
+      "model": [
+        "4",
+        0
+      ],
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Загрузить LoRA"
+    }
   }
 }

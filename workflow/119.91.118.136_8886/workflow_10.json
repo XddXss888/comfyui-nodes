@@ -1,0 +1,184 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "mPMix_NSFW_V9_fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "主模型加载"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "z-image-qwen.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "4": {
+    "inputs": {
+      "seed": 674698520767632,
+      "steps": 9,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "26",
+        0
+      ],
+      "positive": [
+        "27",
+        0
+      ],
+      "negative": [
+        "29",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "5": {
+    "inputs": {
+      "text": "现代写实, Base scene: 1boy, 黄种人, 外观年龄约19岁, 年轻男性, 清透年轻面部, 年轻面部软组织饱满, 干净年轻肤质, 五官端正, 眼神坚毅, 鼻唇关系端正, 气质中带有深邃, 从容的压迫感, 身高约178cm, 骨架匀称, 肌肉线条紧实, 穿着廉价且洗得有些发白的蓝色休闲服, 黑色牛仔裤, 浑身上下无多余配饰, 位于画面中央偏左的下铺床上, 背靠昏暗的床铺墙壁, 姿态半躺, 单手举着发亮的手机, 手机屏幕冷光照亮他的脸庞, 嘴角勾起一抹玩味的弧度, 视线专注地盯着手机屏幕, 1boy, 五官颇为俊朗, 眉宇间带着傲慢与优越感, 唇形边界清楚, 头发打理得一丝不苟, 身高约182cm, 窄肩长腿, 穿着昂贵的Supreme潮牌卫衣, 潮牌破洞牛仔裤, 手戴Apple Watch, 位于画面右侧的对面下铺, 侧卧在床上, 背对镜头, 身体呈现翻身的静态姿势, 床铺被褥因翻身动作略显褶皱, 处于昏暗的阴影之中, 竖向画幅, 竖屏构图, 576:1024 画幅比例, 完整竖向画面, 不要输出横屏画面或横向裁切",
+      "嵌入提示词": null,
+      "clip": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "正面提示词"
+    }
+  },
+  "7": {
+    "inputs": {
+      "width": 576,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "分辨率调整"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "4",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "22": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "26": {
+    "inputs": {
+      "sage_attention": "auto",
+      "allow_compile": false,
+      "model": [
+        "30",
+        0
+      ]
+    },
+    "class_type": "PathchSageAttentionKJ",
+    "_meta": {
+      "title": "Sage 加速"
+    }
+  },
+  "27": {
+    "inputs": {
+      "threshold": 0.2,
+      "strength": 6.0,
+      "conditioning": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "ConditioningNoiseInjection",
+    "_meta": {
+      "title": "出图差异化"
+    }
+  },
+  "28": {
+    "inputs": {
+      "clip_name": "Qwen3-4B-UD-Q5_K_XL.gguf",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "ClipLoaderGGUF",
+    "_meta": {
+      "title": "GGUF 文本编码器"
+    }
+  },
+  "29": {
+    "inputs": {
+      "text": "",
+      "嵌入提示词": null,
+      "clip": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "负面提示词"
+    }
+  },
+  "30": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": true,
+        "lora": "Z-image\\Z-TX-WH13.safetensors",
+        "strength": 0.8
+      },
+      "lora_2": {
+        "on": false,
+        "lora": "None",
+        "strength": 0.8
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "权重Lora加载器"
+    }
+  }
+}

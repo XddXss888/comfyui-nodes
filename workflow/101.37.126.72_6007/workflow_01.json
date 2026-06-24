@@ -88,15 +88,6 @@
       "title": "PD:Image Blend V1"
     }
   },
-  "16": {
-    "inputs": {
-      "image": "Clipboard - 2026-06-17 17.02.00.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
   "17": {
     "inputs": {
       "clip_name": "qwen_3_8b_fp8mixed.safetensors",
@@ -176,7 +167,7 @@
       "device": "cuda",
       "max_megapixels": 2.0,
       "image": [
-        "196",
+        "206",
         0
       ],
       "birefnet_model": [
@@ -191,7 +182,7 @@
   },
   "48": {
     "inputs": {
-      "seed": 474332961798923,
+      "seed": 815030056534305,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -367,57 +358,12 @@
   },
   "64": {
     "inputs": {
-      "aspect_ratio": "2:3",
+      "aspect_ratio": "1:1",
       "max_size": 1024
     },
     "class_type": "PDRatioSelector",
     "_meta": {
       "title": "PD:ratio selector"
-    }
-  },
-  "67": {
-    "inputs": {
-      "image": "Clipboard - 2026-06-17 17.01.47.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "69": {
-    "inputs": {
-      "image": "Clipboard - 2026-06-17 17.02.09.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "121": {
-    "inputs": {
-      "image": "2.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "122": {
-    "inputs": {
-      "image": "3.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "123": {
-    "inputs": {
-      "image": "1-1.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
     }
   },
   "158": {
@@ -436,39 +382,39 @@
       "X3": 50.0,
       "Y3": 53.0,
       "front1": [
-        "123",
+        "199",
         0
       ],
       "mask1": [
-        "123",
+        "199",
         1
       ],
       "back1": [
-        "69",
+        "204",
         0
       ],
       "front2": [
-        "122",
+        "200",
         0
       ],
       "mask2": [
-        "122",
+        "200",
         1
       ],
       "back2": [
-        "16",
+        "203",
         0
       ],
       "front3": [
-        "121",
+        "201",
         0
       ],
       "mask3": [
-        "121",
+        "201",
         1
       ],
       "back3": [
-        "67",
+        "202",
         0
       ]
     },
@@ -574,13 +520,67 @@
       "title": "String to Integer"
     }
   },
-  "196": {
+  "199": {
     "inputs": {
-      "image": "024_08_北京天坛打卡_male_2026_06_04_14_29_44.jpg"
+      "image": "1-1.png"
     },
     "class_type": "PD_load_image_v1",
     "_meta": {
       "title": "PD Load Image"
+    }
+  },
+  "200": {
+    "inputs": {
+      "image": "3.png"
+    },
+    "class_type": "PD_load_image_v1",
+    "_meta": {
+      "title": "PD Load Image"
+    }
+  },
+  "201": {
+    "inputs": {
+      "image": "2.png"
+    },
+    "class_type": "PD_load_image_v1",
+    "_meta": {
+      "title": "PD Load Image"
+    }
+  },
+  "202": {
+    "inputs": {
+      "image": "3 (1).png"
+    },
+    "class_type": "PD_load_image_v1",
+    "_meta": {
+      "title": "PD Load Image"
+    }
+  },
+  "203": {
+    "inputs": {
+      "image": "2 (1).png"
+    },
+    "class_type": "PD_load_image_v1",
+    "_meta": {
+      "title": "PD Load Image"
+    }
+  },
+  "204": {
+    "inputs": {
+      "image": "Clipboard - 2026-06-17 17.02.09.png"
+    },
+    "class_type": "PD_load_image_v1",
+    "_meta": {
+      "title": "PD Load Image"
+    }
+  },
+  "206": {
+    "inputs": {
+      "image": "cmqq9coeo00jplv01a20fv3of.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
     }
   }
 }

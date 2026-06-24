@@ -1,53 +1,7 @@
 {
-  "3": {
-    "inputs": {
-      "seed": 691405474740495,
-      "steps": 8,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "normal",
-      "denoise": 1.0,
-      "model": [
-        "244",
-        0
-      ],
-      "positive": [
-        "245",
-        0
-      ],
-      "negative": [
-        "245",
-        1
-      ],
-      "latent_image": [
-        "244",
-        1
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "8": {
-    "inputs": {
-      "samples": [
-        "3",
-        0
-      ],
-      "vae": [
-        "39",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
   "37": {
     "inputs": {
-      "unet_name": "qwen_image_edit_2511_fp8mixed.safetensors",
+      "unet_name": "Qwen-Image-Edit-2509/qwen_image_edit_2509_fp8_e4m3fn_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -77,9 +31,9 @@
   },
   "66": {
     "inputs": {
-      "shift": 3.0,
+      "shift": 3,
       "model": [
-        "89",
+        "6600",
         0
       ]
     },
@@ -90,7 +44,7 @@
   },
   "75": {
     "inputs": {
-      "strength": 1.0,
+      "strength": 1,
       "model": [
         "66",
         0
@@ -103,8 +57,8 @@
   },
   "89": {
     "inputs": {
-      "lora_name": "Qwen-Image-Edit-2511-Lightning-8steps-V1.0-bf16.safetensors",
-      "strength_model": 1.0,
+      "lora_name": "Qwen-Image-Edit-2509-Lightning-8steps-V1.0-fp32.safetensors",
+      "strength_model": 1,
       "model": [
         "37",
         0
@@ -113,208 +67,6 @@
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
       "title": "LoRA加载器（仅模型）"
-    }
-  },
-  "110": {
-    "inputs": {
-      "prompt": "visible pin, exposed needle, pierced fabric, detached back plate, extra pin, missing gem, distorted metal, stretched brooch, broken setting, floating brooch, double brooch, blurry texture, unrealistic physics, fabric puncture artifacts, skin artifacts, hand, fingers",
-      "clip": [
-        "38",
-        0
-      ],
-      "vae": [
-        "39",
-        0
-      ],
-      "image1": [
-        "246",
-        1
-      ],
-      "image2": [
-        "7000",
-        0
-      ]
-    },
-    "class_type": "TextEncodeQwenImageEditPlus",
-    "_meta": {
-      "title": "文本编码（QwenImageEditPlus）"
-    }
-  },
-  "111": {
-    "inputs": {
-      "prompt": "图1是衣服局部图，图2是胸针产品图。\n让胸针自然浮于衣物表面，仅生成胸针底部的轻微物理接触阴影（drop shadow）和金属高光。绝对禁止修改衣物本身的颜色和纹理。",
-      "clip": [
-        "38",
-        0
-      ],
-      "vae": [
-        "39",
-        0
-      ],
-      "image1": [
-        "246",
-        1
-      ],
-      "image2": [
-        "7000",
-        0
-      ]
-    },
-    "class_type": "TextEncodeQwenImageEditPlus",
-    "_meta": {
-      "title": "文本编码（QwenImageEditPlus）"
-    }
-  },
-  "244": {
-    "inputs": {
-      "multiplier": 2.0,
-      "model": [
-        "75",
-        0
-      ],
-      "samples": [
-        "245",
-        2
-      ],
-      "mask": [
-        "7337",
-        0
-      ]
-    },
-    "class_type": "DifferentialDiffusionAdvanced",
-    "_meta": {
-      "title": "Differential Diffusion Advanced"
-    }
-  },
-  "245": {
-    "inputs": {
-      "noise_mask": true,
-      "positive": [
-        "251",
-        0
-      ],
-      "negative": [
-        "7333",
-        0
-      ],
-      "vae": [
-        "39",
-        0
-      ],
-      "pixels": [
-        "246",
-        1
-      ],
-      "mask": [
-        "7337",
-        0
-      ]
-    },
-    "class_type": "InpaintModelConditioning",
-    "_meta": {
-      "title": "内补模型条件"
-    }
-  },
-  "246": {
-    "inputs": {
-      "downscale_algorithm": "lanczos",
-      "upscale_algorithm": "lanczos",
-      "preresize": false,
-      "preresize_mode": "ensure minimum resolution",
-      "preresize_min_width": 1024,
-      "preresize_min_height": 1024,
-      "preresize_max_width": 16384,
-      "preresize_max_height": 16384,
-      "mask_fill_holes": true,
-      "mask_expand_pixels": 0,
-      "mask_invert": false,
-      "mask_blend_pixels": 32,
-      "mask_hipass_filter": 0.5,
-      "extend_for_outpainting": false,
-      "extend_up_factor": 1.0,
-      "extend_down_factor": 1.0,
-      "extend_left_factor": 1.0,
-      "extend_right_factor": 1.0,
-      "context_from_mask_extend_factor": 1.2,
-      "output_resize_to_target_size": true,
-      "output_target_width": 1536,
-      "output_target_height": 1536,
-      "output_padding": "0",
-      "device_mode": "cpu (compatible)",
-      "image": [
-        "5939",
-        0
-      ],
-      "mask": [
-        "6601",
-        0
-      ]
-    },
-    "class_type": "InpaintCropImproved",
-    "_meta": {
-      "title": "✂️ Inpaint Crop"
-    }
-  },
-  "251": {
-    "inputs": {
-      "conditioning": [
-        "111",
-        0
-      ],
-      "latent": [
-        "253",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "参考Latent"
-    }
-  },
-  "253": {
-    "inputs": {
-      "pixels": [
-        "246",
-        1
-      ],
-      "vae": [
-        "39",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE编码"
-    }
-  },
-  "291": {
-    "inputs": {
-      "expand": 0,
-      "tapered_corners": true,
-      "mask": [
-        "246",
-        2
-      ]
-    },
-    "class_type": "GrowMask",
-    "_meta": {
-      "title": "扩展遮罩"
-    }
-  },
-  "880": {
-    "inputs": {
-      "stitcher": [
-        "246",
-        0
-      ],
-      "inpainted_image": [
-        "6602",
-        0
-      ]
-    },
-    "class_type": "InpaintStitchImproved",
-    "_meta": {
-      "title": "✂️ Inpaint Stitch"
     }
   },
   "5862": {
@@ -331,7 +83,7 @@
   },
   "5939": {
     "inputs": {
-      "scale": 1.0,
+      "scale": 1,
       "method": "lanczos",
       "scale_by": "longest",
       "scale_by_length": [
@@ -348,48 +100,6 @@
       "title": "图层工具：缩放恢复 V2"
     }
   },
-  "5946": {
-    "inputs": {
-      "dilation": 20,
-      "mask": [
-        "7056",
-        0
-      ]
-    },
-    "class_type": "ImpactDilateMask",
-    "_meta": {
-      "title": "Dilate Mask"
-    }
-  },
-  "5948": {
-    "inputs": {
-      "blend_percentage": 0.5,
-      "image_a": [
-        "5939",
-        0
-      ],
-      "image_b": [
-        "5949",
-        0
-      ]
-    },
-    "class_type": "Image Blend",
-    "_meta": {
-      "title": "Image Blend"
-    }
-  },
-  "5949": {
-    "inputs": {
-      "mask": [
-        "6606",
-        0
-      ]
-    },
-    "class_type": "MaskToImage",
-    "_meta": {
-      "title": "遮罩转换为图像"
-    }
-  },
   "5990": {
     "inputs": {
       "image": "胸针_亚洲_女_智敏_特写_温柔.png"
@@ -399,54 +109,23 @@
       "title": "加载图像"
     }
   },
-  "6601": {
+  "6600": {
     "inputs": {
-      "anything": [
-        "6606",
+      "lora_name": "Fusion_lora.safetensors",
+      "strength_model": 0.3,
+      "model": [
+        "89",
         0
       ]
     },
-    "class_type": "easy clearCacheAll",
+    "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "清除全部缓存"
-    }
-  },
-  "6602": {
-    "inputs": {
-      "anything": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "easy clearCacheAll",
-    "_meta": {
-      "title": "清除全部缓存"
-    }
-  },
-  "6606": {
-    "inputs": {
-      "mode": "combine",
-      "mask_1": [
-        "6637",
-        0
-      ],
-      "mask_2": [
-        "6637",
-        0
-      ],
-      "mask_3": [
-        "6637",
-        0
-      ]
-    },
-    "class_type": "AILab_MaskCombiner",
-    "_meta": {
-      "title": "合并"
+      "title": "LoRA加载器（仅模型）"
     }
   },
   "6619": {
     "inputs": {
-      "image": "brooch_005.png"
+      "image": "brooch_007.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -457,72 +136,13 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "880",
+        "7467",
         0
       ]
     },
     "class_type": "SaveImage",
     "_meta": {
       "title": "保存图像"
-    }
-  },
-  "6636": {
-    "inputs": {
-      "image": [
-        "5939",
-        0
-      ]
-    },
-    "class_type": "GetImageSize",
-    "_meta": {
-      "title": "获取图像尺寸"
-    }
-  },
-  "6637": {
-    "inputs": {
-      "width": [
-        "6636",
-        0
-      ],
-      "height": [
-        "6636",
-        1
-      ],
-      "keep_proportions": false,
-      "upscale_method": "nearest-exact",
-      "crop": "disabled",
-      "mask": [
-        "5946",
-        0
-      ]
-    },
-    "class_type": "ResizeMask",
-    "_meta": {
-      "title": "Resize Mask"
-    }
-  },
-  "6683": {
-    "inputs": {
-      "anything": [
-        "880",
-        0
-      ]
-    },
-    "class_type": "easy cleanGpuUsed",
-    "_meta": {
-      "title": "清理显存占用"
-    }
-  },
-  "6684": {
-    "inputs": {
-      "anything": [
-        "6683",
-        0
-      ]
-    },
-    "class_type": "easy clearCacheAll",
-    "_meta": {
-      "title": "清除全部缓存"
     }
   },
   "6702": {
@@ -759,22 +379,10 @@
       "title": "Mask Width Ratio"
     }
   },
-  "6866": {
-    "inputs": {
-      "mask": [
-        "291",
-        0
-      ]
-    },
-    "class_type": "MaskPreview+",
-    "_meta": {
-      "title": "🔧 Mask Preview"
-    }
-  },
   "6876": {
     "inputs": {
       "mask": [
-        "291",
+        "7619:7616",
         0
       ]
     },
@@ -787,7 +395,7 @@
     "inputs": {
       "blend_percentage": 0.5,
       "image_a": [
-        "246",
+        "7619:7615",
         1
       ],
       "image_b": [
@@ -798,25 +406,6 @@
     "class_type": "Image Blend",
     "_meta": {
       "title": "Image Blend"
-    }
-  },
-  "6947": {
-    "inputs": {
-      "x": 0,
-      "y": 0,
-      "operation": "and",
-      "destination": [
-        "7062",
-        0
-      ],
-      "source": [
-        "5946",
-        0
-      ]
-    },
-    "class_type": "MaskComposite",
-    "_meta": {
-      "title": "合成遮罩"
     }
   },
   "6956": {
@@ -1000,64 +589,6 @@
       "title": "SAM3 Segmentation Fallback (RMBG)"
     }
   },
-  "6987": {
-    "inputs": {
-      "blend_percentage": 0.5,
-      "image_a": [
-        "5939",
-        0
-      ],
-      "image_b": [
-        "6988",
-        0
-      ]
-    },
-    "class_type": "Image Blend",
-    "_meta": {
-      "title": "Image Blend"
-    }
-  },
-  "6988": {
-    "inputs": {
-      "mask": [
-        "6947",
-        0
-      ]
-    },
-    "class_type": "MaskToImage",
-    "_meta": {
-      "title": "遮罩转换为图像"
-    }
-  },
-  "6990": {
-    "inputs": {
-      "mask": [
-        "6637",
-        0
-      ]
-    },
-    "class_type": "MaskToImage",
-    "_meta": {
-      "title": "遮罩转换为图像"
-    }
-  },
-  "6991": {
-    "inputs": {
-      "blend_percentage": 0.5,
-      "image_a": [
-        "5939",
-        0
-      ],
-      "image_b": [
-        "6990",
-        0
-      ]
-    },
-    "class_type": "Image Blend",
-    "_meta": {
-      "title": "Image Blend"
-    }
-  },
   "6999": {
     "inputs": {
       "value": 480
@@ -1131,23 +662,6 @@
       "title": "获取图像尺寸"
     }
   },
-  "7056": {
-    "inputs": {
-      "erode_dilate": 32,
-      "fill_holes": 33,
-      "remove_isolated_pixels": 0,
-      "smooth": 32,
-      "blur": 0,
-      "mask": [
-        "6835",
-        0
-      ]
-    },
-    "class_type": "MaskFix+",
-    "_meta": {
-      "title": "🔧 Mask Fix"
-    }
-  },
   "7061": {
     "inputs": {
       "invert_mask": true,
@@ -1217,144 +731,1107 @@
       "title": "Float Constant"
     }
   },
-  "7325": {
+  "7338": {
     "inputs": {
-      "mask": [
-        "7337",
+      "prompt": "visible pin, exposed needle, pierced fabric, detached back plate, extra pin, missing gem, distorted metal, stretched brooch, broken setting, floating brooch, double brooch, blurry texture, unrealistic physics, fabric puncture artifacts, skin artifacts, hand, fingers",
+      "clip": [
+        "38",
         0
-      ]
-    },
-    "class_type": "MaskPreview+",
-    "_meta": {
-      "title": "🔧 Mask Preview"
-    }
-  },
-  "7326": {
-    "inputs": {
-      "images": [
-        "246",
+      ],
+      "vae": [
+        "39",
+        0
+      ],
+      "image1": [
+        "7619:7615",
         1
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
-    }
-  },
-  "7327": {
-    "inputs": {
-      "images": [
+      ],
+      "image2": [
         "7000",
         0
       ]
     },
-    "class_type": "PreviewImage",
+    "class_type": "TextEncodeQwenImageEditPlus",
     "_meta": {
-      "title": "预览图像"
+      "title": "文本编码（QwenImageEditPlus）"
     }
   },
-  "7329": {
+  "7339": {
     "inputs": {
-      "primary_prompt": "brooch",
-      "fallback_prompt": "accessories",
-      "sam3_model": "sam3",
-      "device": "Auto",
-      "primary_confidence": 0.25,
-      "fallback_confidence": 0.25,
-      "primary_empty_threshold": 0.01,
-      "mask_blur": 9,
-      "mask_offset": 0,
-      "invert_output": false,
-      "unload_model": true,
-      "background": "Alpha",
-      "background_color": "#222222",
-      "image": [
+      "prompt": "图1是模特，图2是胸针产品图。\n请将图2的胸针原样佩戴在图1模特胸口位置（约心脏上方、锁骨下方），严格要求如下：\n1. 胸针所有主体结构必须完全来自图2，禁止新增、删除或替换任何部件；\n2. 所有可见悬挂结构、链状结构、垂落结构、连接结构均属于胸针主体的一部分，而非附属装饰；\n3. 保持图2中胸针所有尖角、折角、镂空边缘、内部轮廓与锐利金属边界不变；\n4. 保持图2中胸针每一处金属光泽、材质纹理、宝石切面、色彩、尺寸比例不变；\n5. 纠正佩戴透视使胸针自然贴合衣物表面，针杆隐于布料之后，仅露装饰面；\n6. 衣物与胸针接触处阴影自然过渡，根据布料厚度呈现轻微拉扯褶皱；\n7. 保持衣物原有颜色、纹理和褶皱，仅在胸针接触处生成轻微阴影或自然褶皱，不修改其他衣物部分；\n8. 超高分辨率细节还原，8K；",
+      "clip": [
+        "38",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ],
+      "image1": [
+        "7619:7615",
+        1
+      ],
+      "image2": [
         "7000",
         0
       ]
     },
-    "class_type": "SAM3SegmentFallback",
+    "class_type": "TextEncodeQwenImageEditPlus",
     "_meta": {
-      "title": "SAM3 Segmentation Fallback (RMBG)"
+      "title": "文本编码（QwenImageEditPlus）"
     }
   },
-  "7330": {
+  "7340": {
     "inputs": {
-      "images": [
-        "7329",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
-    }
-  },
-  "7331": {
-    "inputs": {
-      "images": [
-        "246",
+      "pixels": [
+        "7619:7615",
         1
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
-    }
-  },
-  "7332": {
-    "inputs": {
-      "images": [
-        "8",
+      ],
+      "vae": [
+        "39",
         0
       ]
     },
-    "class_type": "PreviewImage",
+    "class_type": "VAEEncode",
     "_meta": {
-      "title": "预览图像"
+      "title": "VAE编码"
     }
   },
-  "7333": {
+  "7341": {
     "inputs": {
       "conditioning": [
-        "111",
+        "7339",
+        0
+      ],
+      "latent": [
+        "7340",
         0
       ]
     },
-    "class_type": "ConditioningZeroOut",
+    "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "条件零化"
+      "title": "参考Latent"
     }
   },
-  "7337": {
+  "7342": {
     "inputs": {
-      "amount": 64,
-      "device": "auto",
+      "noise_mask": true,
+      "positive": [
+        "7341",
+        0
+      ],
+      "negative": [
+        "7338",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ],
+      "pixels": [
+        "7619:7615",
+        1
+      ],
       "mask": [
-        "291",
+        "7619:7616",
         0
       ]
     },
-    "class_type": "MaskBlur+",
+    "class_type": "InpaintModelConditioning",
     "_meta": {
-      "title": "🔧 Mask Blur"
+      "title": "内补模型条件"
     }
   },
-  "7060:6591": {
+  "7343": {
     "inputs": {
-      "value": 1.0,
+      "multiplier": 2,
+      "model": [
+        "75",
+        0
+      ],
+      "samples": [
+        "7342",
+        2
+      ],
+      "mask": [
+        "7619:7616",
+        0
+      ]
+    },
+    "class_type": "DifferentialDiffusionAdvanced",
+    "_meta": {
+      "title": "Differential Diffusion Advanced"
+    }
+  },
+  "7344": {
+    "inputs": {
+      "seed": [
+        "7626",
+        0
+      ],
+      "steps": 8,
+      "cfg": 1.2,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [
+        "7343",
+        0
+      ],
+      "positive": [
+        "7342",
+        0
+      ],
+      "negative": [
+        "7342",
+        1
+      ],
+      "latent_image": [
+        "7343",
+        1
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "7345": {
+    "inputs": {
+      "samples": [
+        "7344",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "7440": {
+    "inputs": {
+      "prompt": "皮肤, 人体, 胸部, 锁骨, 肉体, 裸露,\n遮挡错误生成皮肤, 错误人体补全,\n新增表面层, 多层结构,\n重新设计衣服, 改变衣服结构,\n胸针变形, 饰品重绘,\n光照重建, 风格化重绘,\n过度平滑, AI补全身体",
+      "clip": [
+        "38",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ],
+      "image1": [
+        "7558:7537",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "文本编码（QwenImageEditPlus）"
+    }
+  },
+  "7441": {
+    "inputs": {
+      "prompt": "对胸针佩戴区域进行局部修复，重点修复遮挡关系与边界连续性。\n\n严格保持以下约束：\n\n1. 胸针必须完整保持原始设计，不允许任何结构变化\n2. 衣物必须在胸针下方保持连续结构，视为同一层织物被遮挡\n3. 被胸针遮挡的区域必须恢复为“衣物纹理”，不能出现皮肤或人体结构\n4. 胸针边缘与衣物之间必须自然融合，但不能产生新的表面层\n5. 仅允许进行局部纹理补全与遮挡修复，不允许重新生成内容\n\n目标是恢复真实的“衣物被胸针压住”的物理遮挡关系",
+      "clip": [
+        "38",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ],
+      "image1": [
+        "7558:7537",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "文本编码（QwenImageEditPlus）"
+    }
+  },
+  "7442": {
+    "inputs": {
+      "pixels": [
+        "7588:7584",
+        1
+      ],
+      "vae": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "7443": {
+    "inputs": {
+      "conditioning": [
+        "7441",
+        0
+      ],
+      "latent": [
+        "7442",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "7444": {
+    "inputs": {
+      "noise_mask": true,
+      "positive": [
+        "7443",
+        0
+      ],
+      "negative": [
+        "7440",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ],
+      "pixels": [
+        "7588:7584",
+        1
+      ],
+      "mask": [
+        "7588:7585",
+        0
+      ]
+    },
+    "class_type": "InpaintModelConditioning",
+    "_meta": {
+      "title": "内补模型条件"
+    }
+  },
+  "7445": {
+    "inputs": {
+      "multiplier": 2,
+      "model": [
+        "75",
+        0
+      ],
+      "samples": [
+        "7444",
+        2
+      ],
+      "mask": [
+        "7588:7585",
+        0
+      ]
+    },
+    "class_type": "DifferentialDiffusionAdvanced",
+    "_meta": {
+      "title": "Differential Diffusion Advanced"
+    }
+  },
+  "7446": {
+    "inputs": {
+      "seed": [
+        "7625",
+        0
+      ],
+      "steps": 8,
+      "cfg": 1.2,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [
+        "7445",
+        0
+      ],
+      "positive": [
+        "7444",
+        0
+      ],
+      "negative": [
+        "7444",
+        1
+      ],
+      "latent_image": [
+        "7445",
+        1
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "7448": {
+    "inputs": {
+      "samples": [
+        "7446",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "7466": {
+    "inputs": {
+      "anything": [
+        "7448",
+        0
+      ]
+    },
+    "class_type": "easy clearCacheAll",
+    "_meta": {
+      "title": "清除全部缓存"
+    }
+  },
+  "7467": {
+    "inputs": {
+      "stitcher": [
+        "7588:7584",
+        0
+      ],
+      "inpainted_image": [
+        "7466",
+        0
+      ]
+    },
+    "class_type": "InpaintStitchImproved",
+    "_meta": {
+      "title": "✂️ Inpaint Stitch"
+    }
+  },
+  "7469": {
+    "inputs": {
+      "anything": [
+        "7467",
+        0
+      ]
+    },
+    "class_type": "easy cleanGpuUsed",
+    "_meta": {
+      "title": "清理显存占用"
+    }
+  },
+  "7470": {
+    "inputs": {
+      "anything": [
+        "7469",
+        0
+      ]
+    },
+    "class_type": "easy clearCacheAll",
+    "_meta": {
+      "title": "清除全部缓存"
+    }
+  },
+  "7475": {
+    "inputs": {
+      "stitcher": [
+        "7619:7615",
+        0
+      ],
+      "inpainted_image": [
+        "7345",
+        0
+      ]
+    },
+    "class_type": "InpaintStitchImproved",
+    "_meta": {
+      "title": "✂️ Inpaint Stitch"
+    }
+  },
+  "7476": {
+    "inputs": {
+      "images": [
+        "7475",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "7510": {
+    "inputs": {
+      "mask": [
+        "7588:7585",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "7511": {
+    "inputs": {
+      "blend_percentage": 0.5,
+      "image_a": [
+        "7588:7584",
+        1
+      ],
+      "image_b": [
+        "7510",
+        0
+      ]
+    },
+    "class_type": "Image Blend",
+    "_meta": {
+      "title": "Image Blend"
+    }
+  },
+  "7512": {
+    "inputs": {
+      "images": [
+        "7511",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "7542": {
+    "inputs": {
+      "blend_percentage": 0.5,
+      "image_a": [
+        "7558:7537",
+        1
+      ],
+      "image_b": [
+        "7543",
+        0
+      ]
+    },
+    "class_type": "Image Blend",
+    "_meta": {
+      "title": "Image Blend"
+    }
+  },
+  "7543": {
+    "inputs": {
+      "mask": [
+        "7558:7540",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "7544": {
+    "inputs": {
+      "images": [
+        "7542",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "7620": {
+    "inputs": {
+      "value": 1024
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "INT Constant"
+    }
+  },
+  "7621": {
+    "inputs": {
+      "value": 2
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
+    }
+  },
+  "7622": {
+    "inputs": {
+      "value": 1024
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "INT Constant"
+    }
+  },
+  "7623": {
+    "inputs": {
+      "value": 2
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
+    }
+  },
+  "7624": {
+    "inputs": {
+      "value": 1024
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "INT Constant"
+    }
+  },
+  "7625": {
+    "inputs": {},
+    "class_type": "TrueRandomSeedSimple",
+    "_meta": {
+      "title": "True Random Seed Simple"
+    }
+  },
+  "7626": {
+    "inputs": {},
+    "class_type": "TrueRandomSeedSimple",
+    "_meta": {
+      "title": "True Random Seed Simple"
+    }
+  },
+  "7628": {
+    "inputs": {
+      "images": [
+        "7000",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "7619:7606": {
+    "inputs": {
+      "erode_dilate": 32,
+      "fill_holes": 33,
+      "remove_isolated_pixels": 0,
+      "smooth": 32,
+      "blur": 0,
+      "mask": [
+        "6835",
+        0
+      ]
+    },
+    "class_type": "MaskFix+",
+    "_meta": {
+      "title": "🔧 Mask Fix"
+    }
+  },
+  "7619:7608": {
+    "inputs": {
+      "image": [
+        "5939",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "获取图像尺寸"
+    }
+  },
+  "7619:7610": {
+    "inputs": {
       "width": [
-        "7060:6594",
+        "7619:7608",
         0
       ],
       "height": [
-        "7060:6594",
+        "7619:7608",
+        1
+      ],
+      "keep_proportions": false,
+      "upscale_method": "nearest-exact",
+      "crop": "disabled",
+      "mask": [
+        "7619:7617",
+        0
+      ]
+    },
+    "class_type": "ResizeMask",
+    "_meta": {
+      "title": "Resize Mask"
+    }
+  },
+  "7619:7613": {
+    "inputs": {
+      "mode": "combine",
+      "mask_1": [
+        "7619:7610",
+        0
+      ],
+      "mask_2": [
+        "7619:7610",
+        0
+      ],
+      "mask_3": [
+        "7619:7610",
+        0
+      ]
+    },
+    "class_type": "AILab_MaskCombiner",
+    "_meta": {
+      "title": "合并"
+    }
+  },
+  "7619:7614": {
+    "inputs": {
+      "anything": [
+        "7619:7613",
+        0
+      ]
+    },
+    "class_type": "easy clearCacheAll",
+    "_meta": {
+      "title": "清除全部缓存"
+    }
+  },
+  "7619:7615": {
+    "inputs": {
+      "downscale_algorithm": "lanczos",
+      "upscale_algorithm": "lanczos",
+      "preresize": false,
+      "preresize_mode": "ensure minimum resolution",
+      "preresize_min_width": 1024,
+      "preresize_min_height": 1024,
+      "preresize_max_width": 16384,
+      "preresize_max_height": 16384,
+      "mask_fill_holes": true,
+      "mask_expand_pixels": 0,
+      "mask_invert": false,
+      "mask_blend_pixels": 32,
+      "mask_hipass_filter": 0.3,
+      "extend_for_outpainting": false,
+      "extend_up_factor": 1,
+      "extend_down_factor": 1,
+      "extend_left_factor": 1,
+      "extend_right_factor": 1,
+      "context_from_mask_extend_factor": 1.2,
+      "output_resize_to_target_size": true,
+      "output_target_width": [
+        "7620",
+        0
+      ],
+      "output_target_height": [
+        "7620",
+        0
+      ],
+      "output_padding": "0",
+      "device_mode": "cpu (compatible)",
+      "image": [
+        "5939",
+        0
+      ],
+      "mask": [
+        "7619:7614",
+        0
+      ]
+    },
+    "class_type": "InpaintCropImproved",
+    "_meta": {
+      "title": "✂️ Inpaint Crop"
+    }
+  },
+  "7619:7616": {
+    "inputs": {
+      "expand": 0,
+      "tapered_corners": true,
+      "mask": [
+        "7619:7615",
+        2
+      ]
+    },
+    "class_type": "GrowMask",
+    "_meta": {
+      "title": "扩展遮罩"
+    }
+  },
+  "7619:7617": {
+    "inputs": {
+      "dilation": 20,
+      "mask": [
+        "7619:7606",
+        0
+      ]
+    },
+    "class_type": "ImpactDilateMask",
+    "_meta": {
+      "title": "Dilate Mask"
+    }
+  },
+  "7619:7618": {
+    "inputs": {
+      "images": [
+        "7619:7615",
         1
       ]
     },
-    "class_type": "SolidMask",
+    "class_type": "PreviewImage",
     "_meta": {
-      "title": "纯块遮罩"
+      "title": "预览图像"
+    }
+  },
+  "7558:7520": {
+    "inputs": {
+      "erode_dilate": 32,
+      "fill_holes": 33,
+      "remove_isolated_pixels": 0,
+      "smooth": 32,
+      "blur": 0,
+      "mask": [
+        "6835",
+        0
+      ]
+    },
+    "class_type": "MaskFix+",
+    "_meta": {
+      "title": "🔧 Mask Fix"
+    }
+  },
+  "7558:7525": {
+    "inputs": {
+      "image": [
+        "5939",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "获取图像尺寸"
+    }
+  },
+  "7558:7526": {
+    "inputs": {
+      "width": [
+        "7558:7525",
+        0
+      ],
+      "height": [
+        "7558:7525",
+        1
+      ],
+      "keep_proportions": false,
+      "upscale_method": "nearest-exact",
+      "crop": "disabled",
+      "mask": [
+        "7558:7559",
+        0
+      ]
+    },
+    "class_type": "ResizeMask",
+    "_meta": {
+      "title": "Resize Mask"
+    }
+  },
+  "7558:7531": {
+    "inputs": {
+      "mode": "combine",
+      "mask_1": [
+        "7558:7526",
+        0
+      ],
+      "mask_2": [
+        "7558:7526",
+        0
+      ],
+      "mask_3": [
+        "7558:7526",
+        0
+      ]
+    },
+    "class_type": "AILab_MaskCombiner",
+    "_meta": {
+      "title": "合并"
+    }
+  },
+  "7558:7535": {
+    "inputs": {
+      "anything": [
+        "7558:7531",
+        0
+      ]
+    },
+    "class_type": "easy clearCacheAll",
+    "_meta": {
+      "title": "清除全部缓存"
+    }
+  },
+  "7558:7537": {
+    "inputs": {
+      "downscale_algorithm": "lanczos",
+      "upscale_algorithm": "lanczos",
+      "preresize": false,
+      "preresize_mode": "ensure minimum resolution",
+      "preresize_min_width": 1024,
+      "preresize_min_height": 1024,
+      "preresize_max_width": 16384,
+      "preresize_max_height": 16384,
+      "mask_fill_holes": true,
+      "mask_expand_pixels": 0,
+      "mask_invert": false,
+      "mask_blend_pixels": 32,
+      "mask_hipass_filter": 0.3,
+      "extend_for_outpainting": false,
+      "extend_up_factor": 1,
+      "extend_down_factor": 1,
+      "extend_left_factor": 1,
+      "extend_right_factor": 1,
+      "context_from_mask_extend_factor": [
+        "7621",
+        0
+      ],
+      "output_resize_to_target_size": true,
+      "output_target_width": [
+        "7622",
+        0
+      ],
+      "output_target_height": [
+        "7622",
+        0
+      ],
+      "output_padding": "0",
+      "device_mode": "cpu (compatible)",
+      "image": [
+        "5939",
+        0
+      ],
+      "mask": [
+        "7558:7535",
+        0
+      ]
+    },
+    "class_type": "InpaintCropImproved",
+    "_meta": {
+      "title": "✂️ Inpaint Crop"
+    }
+  },
+  "7558:7540": {
+    "inputs": {
+      "expand": 0,
+      "tapered_corners": true,
+      "mask": [
+        "7558:7537",
+        2
+      ]
+    },
+    "class_type": "GrowMask",
+    "_meta": {
+      "title": "扩展遮罩"
+    }
+  },
+  "7558:7559": {
+    "inputs": {
+      "dilation": 40,
+      "mask": [
+        "7558:7520",
+        0
+      ]
+    },
+    "class_type": "ImpactDilateMask",
+    "_meta": {
+      "title": "Dilate Mask"
+    }
+  },
+  "7558:7573": {
+    "inputs": {
+      "images": [
+        "7558:7537",
+        1
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "7588:7575": {
+    "inputs": {
+      "erode_dilate": 32,
+      "fill_holes": 33,
+      "remove_isolated_pixels": 0,
+      "smooth": 32,
+      "blur": 0,
+      "mask": [
+        "6835",
+        0
+      ]
+    },
+    "class_type": "MaskFix+",
+    "_meta": {
+      "title": "🔧 Mask Fix"
+    }
+  },
+  "7588:7577": {
+    "inputs": {
+      "image": [
+        "7475",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "获取图像尺寸"
+    }
+  },
+  "7588:7579": {
+    "inputs": {
+      "width": [
+        "7588:7577",
+        0
+      ],
+      "height": [
+        "7588:7577",
+        1
+      ],
+      "keep_proportions": false,
+      "upscale_method": "nearest-exact",
+      "crop": "disabled",
+      "mask": [
+        "7588:7586",
+        0
+      ]
+    },
+    "class_type": "ResizeMask",
+    "_meta": {
+      "title": "Resize Mask"
+    }
+  },
+  "7588:7582": {
+    "inputs": {
+      "mode": "combine",
+      "mask_1": [
+        "7588:7579",
+        0
+      ],
+      "mask_2": [
+        "7588:7579",
+        0
+      ],
+      "mask_3": [
+        "7588:7579",
+        0
+      ]
+    },
+    "class_type": "AILab_MaskCombiner",
+    "_meta": {
+      "title": "合并"
+    }
+  },
+  "7588:7583": {
+    "inputs": {
+      "anything": [
+        "7588:7582",
+        0
+      ]
+    },
+    "class_type": "easy clearCacheAll",
+    "_meta": {
+      "title": "清除全部缓存"
+    }
+  },
+  "7588:7584": {
+    "inputs": {
+      "downscale_algorithm": "lanczos",
+      "upscale_algorithm": "lanczos",
+      "preresize": false,
+      "preresize_mode": "ensure minimum resolution",
+      "preresize_min_width": 1024,
+      "preresize_min_height": 1024,
+      "preresize_max_width": 16384,
+      "preresize_max_height": 16384,
+      "mask_fill_holes": true,
+      "mask_expand_pixels": 0,
+      "mask_invert": false,
+      "mask_blend_pixels": 32,
+      "mask_hipass_filter": 0.3,
+      "extend_for_outpainting": false,
+      "extend_up_factor": 1,
+      "extend_down_factor": 1,
+      "extend_left_factor": 1,
+      "extend_right_factor": 1,
+      "context_from_mask_extend_factor": [
+        "7623",
+        0
+      ],
+      "output_resize_to_target_size": true,
+      "output_target_width": [
+        "7624",
+        0
+      ],
+      "output_target_height": [
+        "7624",
+        0
+      ],
+      "output_padding": "0",
+      "device_mode": "cpu (compatible)",
+      "image": [
+        "7475",
+        0
+      ],
+      "mask": [
+        "7588:7583",
+        0
+      ]
+    },
+    "class_type": "InpaintCropImproved",
+    "_meta": {
+      "title": "✂️ Inpaint Crop"
+    }
+  },
+  "7588:7585": {
+    "inputs": {
+      "expand": 0,
+      "tapered_corners": true,
+      "mask": [
+        "7588:7584",
+        2
+      ]
+    },
+    "class_type": "GrowMask",
+    "_meta": {
+      "title": "扩展遮罩"
+    }
+  },
+  "7588:7586": {
+    "inputs": {
+      "dilation": 40,
+      "mask": [
+        "7588:7575",
+        0
+      ]
+    },
+    "class_type": "ImpactDilateMask",
+    "_meta": {
+      "title": "Dilate Mask"
+    }
+  },
+  "7588:7587": {
+    "inputs": {
+      "images": [
+        "7588:7584",
+        1
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
     }
   },
   "7060:6594": {
@@ -1367,18 +1844,6 @@
     "class_type": "GetImageSize+",
     "_meta": {
       "title": "🔧 Get Image Size"
-    }
-  },
-  "7060:6592": {
-    "inputs": {
-      "mask": [
-        "7060:6591",
-        0
-      ]
-    },
-    "class_type": "MaskToImage",
-    "_meta": {
-      "title": "遮罩转换为图像"
     }
   },
   "7060:6714": {
@@ -1433,7 +1898,7 @@
         3
       ],
       "background": [
-        "7060:6592",
+        "7060:7627",
         0
       ]
     },
@@ -1477,6 +1942,24 @@
       "title": "ImagePad KJ"
     }
   },
+  "7060:7627": {
+    "inputs": {
+      "size": "custom",
+      "custom_width": [
+        "7060:6594",
+        0
+      ],
+      "custom_height": [
+        "7060:6594",
+        1
+      ],
+      "color": "#7FE57F"
+    },
+    "class_type": "LayerUtility: ColorImage V2",
+    "_meta": {
+      "title": "图层工具：纯色图像 V2"
+    }
+  },
   "7069:72": {
     "inputs": {
       "comparison": "a == b",
@@ -1496,7 +1979,7 @@
   },
   "7069:71": {
     "inputs": {
-      "value": 0.0
+      "value": 0
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -1506,7 +1989,7 @@
   "7069:70": {
     "inputs": {
       "side": -1,
-      "anchor_side_ratio": 0.0,
+      "anchor_side_ratio": 0,
       "anchor_vertical_ratio": 0.28,
       "neck_mask": [
         "6981",
@@ -1689,7 +2172,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7069:90",
         0
@@ -1705,7 +2188,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7069:7321",
         0
@@ -1897,7 +2380,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7062",
         0
@@ -1910,7 +2393,7 @@
   },
   "7069:86": {
     "inputs": {
-      "value": 0.0,
+      "value": 0,
       "width": [
         "7069:7324",
         0
@@ -2018,7 +2501,7 @@
         1
       ],
       "width_ratio": 0.2,
-      "height_ratio": 100.0,
+      "height_ratio": 100,
       "feather": 0,
       "invert": false
     },
@@ -2080,7 +2563,7 @@
         1
       ],
       "side": -1,
-      "anchor_side_ratio": 0.0,
+      "anchor_side_ratio": 0,
       "anchor_vertical_ratio": 0.28,
       "pose_keypoints": [
         "6810",
@@ -2149,7 +2632,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7000",
         1
@@ -2165,7 +2648,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7052:7097",
         0
@@ -2266,7 +2749,7 @@
   },
   "7052:7089": {
     "inputs": {
-      "value": 0.0
+      "value": 0
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -2476,8 +2959,8 @@
       "x": 0,
       "y": 0,
       "mirror": "None",
-      "scale": 1.0,
-      "aspect_ratio": 1.0,
+      "scale": 1,
+      "aspect_ratio": 1,
       "rotate": [
         "7052:7095",
         0
@@ -2629,7 +3112,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7052:6814",
         0
@@ -2772,7 +3255,7 @@
   },
   "7052:7004": {
     "inputs": {
-      "scale": 1.0,
+      "scale": 1,
       "method": "lanczos",
       "scale_by": "longest",
       "scale_by_length": [
@@ -2899,7 +3382,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7000",
         1
@@ -2915,7 +3398,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7064:7121",
         0
@@ -3016,7 +3499,7 @@
   },
   "7064:7110": {
     "inputs": {
-      "value": 0.0
+      "value": 0
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -3226,8 +3709,8 @@
       "x": 0,
       "y": 0,
       "mirror": "None",
-      "scale": 1.0,
-      "aspect_ratio": 1.0,
+      "scale": 1,
+      "aspect_ratio": 1,
       "rotate": [
         "7064:7119",
         0
@@ -3379,7 +3862,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7064:7131",
         0
@@ -3522,7 +4005,7 @@
   },
   "7064:7139": {
     "inputs": {
-      "scale": 1.0,
+      "scale": 1,
       "method": "lanczos",
       "scale_by": "longest",
       "scale_by_length": [
@@ -3649,7 +4132,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7000",
         1
@@ -3665,7 +4148,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7065:7165",
         0
@@ -3766,7 +4249,7 @@
   },
   "7065:7154": {
     "inputs": {
-      "value": 0.0
+      "value": 0
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -3976,8 +4459,8 @@
       "x": 0,
       "y": 0,
       "mirror": "None",
-      "scale": 1.0,
-      "aspect_ratio": 1.0,
+      "scale": 1,
+      "aspect_ratio": 1,
       "rotate": [
         "7065:7163",
         0
@@ -4129,7 +4612,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7065:7175",
         0
@@ -4272,7 +4755,7 @@
   },
   "7065:7183": {
     "inputs": {
-      "scale": 1.0,
+      "scale": 1,
       "method": "lanczos",
       "scale_by": "longest",
       "scale_by_length": [
@@ -4399,7 +4882,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7000",
         1
@@ -4415,7 +4898,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7066:7209",
         0
@@ -4516,7 +4999,7 @@
   },
   "7066:7198": {
     "inputs": {
-      "value": 0.0
+      "value": 0
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -4726,8 +5209,8 @@
       "x": 0,
       "y": 0,
       "mirror": "None",
-      "scale": 1.0,
-      "aspect_ratio": 1.0,
+      "scale": 1,
+      "aspect_ratio": 1,
       "rotate": [
         "7066:7207",
         0
@@ -4879,7 +5362,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7066:7219",
         0
@@ -5022,7 +5505,7 @@
   },
   "7066:7227": {
     "inputs": {
-      "scale": 1.0,
+      "scale": 1,
       "method": "lanczos",
       "scale_by": "longest",
       "scale_by_length": [
@@ -5149,7 +5632,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7000",
         1
@@ -5165,7 +5648,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7067:7253",
         0
@@ -5266,7 +5749,7 @@
   },
   "7067:7242": {
     "inputs": {
-      "value": 0.0
+      "value": 0
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -5476,8 +5959,8 @@
       "x": 0,
       "y": 0,
       "mirror": "None",
-      "scale": 1.0,
-      "aspect_ratio": 1.0,
+      "scale": 1,
+      "aspect_ratio": 1,
       "rotate": [
         "7067:7251",
         0
@@ -5629,7 +6112,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7067:7263",
         0
@@ -5772,7 +6255,7 @@
   },
   "7067:7271": {
     "inputs": {
-      "scale": 1.0,
+      "scale": 1,
       "method": "lanczos",
       "scale_by": "longest",
       "scale_by_length": [
@@ -5899,7 +6382,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7000",
         1
@@ -5915,7 +6398,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7068:7297",
         0
@@ -6016,7 +6499,7 @@
   },
   "7068:7286": {
     "inputs": {
-      "value": 0.0
+      "value": 0
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -6226,8 +6709,8 @@
       "x": 0,
       "y": 0,
       "mirror": "None",
-      "scale": 1.0,
-      "aspect_ratio": 1.0,
+      "scale": 1,
+      "aspect_ratio": 1,
       "rotate": [
         "7068:7295",
         0
@@ -6379,7 +6862,7 @@
       "detect": "min_bounding_rect",
       "x_adjust": 0,
       "y_adjust": 0,
-      "scale_adjust": 1.0,
+      "scale_adjust": 1,
       "mask": [
         "7068:7307",
         0
@@ -6522,7 +7005,7 @@
   },
   "7068:7315": {
     "inputs": {
-      "scale": 1.0,
+      "scale": 1,
       "method": "lanczos",
       "scale_by": "longest",
       "scale_by_length": [

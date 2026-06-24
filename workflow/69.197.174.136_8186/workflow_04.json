@@ -1,14 +1,14 @@
 {
   "1": {
     "inputs": {
-      "tags": "Classic rock anthem featuring overdriven electric guitar riffs, punchy acoustic drums, and a driving bassline. The sound is raw and energetic with a stadium-rock feel, crisp production, and a powerful rhythmic groove.",
-      "lyrics": "[instrumental]",
+      "tags": "Industrial techno with mechanical precision, featuring rhythmic hydraulic sound effects, metallic percussion, and a cold robotic male vocal processed through a vocoder. The atmosphere is sterile and futuristic and a driving electronic bassline.",
+      "lyrics": "\n[Intro]\nListen, Shepherd,An idiot is attempting to reach you on your cellular device\n\n[Verse]\nListen, Shepherd,An idiot is attempting to reach you on your cellular device\n\n[Hook]\nListen, Shepherd,An idiot is attempting to reach you on your cellular device\n\n[Outro]\nThe machines power down one by one as the final robotic echo fades into silence.\n",
       "seed": 1100325964226750,
-      "bpm": 120,
+      "bpm": 100,
       "duration": 30.0,
       "timesignature": "4",
       "language": "en",
-      "keyscale": "E minor",
+      "keyscale": "D minor",
       "generate_audio_codes": false,
       "cfg_scale": 2.0,
       "temperature": 0.85,
@@ -78,7 +78,7 @@
   },
   "99": {
     "inputs": {
-      "filename_prefix": "/sda-disk/home/Ringtone/music-generation-system/temp/results/5813dc83-c198-4abd-8faa-4ae11a6c4d28.mp3",
+      "filename_prefix": "/sda-disk/home/Ringtone/music-generation-system/temp/results/04ae24d5-dc8b-40f6-beb1-e32623b92275.mp3",
       "quality": "320k",
       "audioUI": "",
       "audio": [

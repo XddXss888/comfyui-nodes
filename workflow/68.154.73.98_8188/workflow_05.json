@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_14e16f9a557e41629c16bc59375f3bb1.png"
+      "image": "ref_7427d932fb3a4777be2c58f4aaa662d9.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "Fill in the masked part: No pant",
+      "prompt": "ライトブルーのビキニ水着姿で立って両手を膝に置いてください",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 105444400964308,
-      "steps": 4,
+      "seed": 388976598253780,
+      "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "e1st_asn, A woman walking slowly on a quiet nighttime street, her fingers gently intertwined with her companion's hand in a soft hold, body angled slightly toward the contact, gentle warm expression with a soft smile and gaze directed forward, soft streetlight casting gentle illumination and soft shadows around them, medium shot framing from the waist up with the companion's arm and hand visible only at the edge of frame, natural posture and believable hand placement, simple dark street background with faint building edges, coherent low evening lighting.",
+      "text": "elvaross, In a quiet dorm room at night with soft warm lamplight, a woman kneels on the floor facing the viewer, skirt lifted around her waist, lips wrapped tightly around the erect penis as she performs oral sex while holding steady eye contact with a pleased expression, one hand gripping the base, simple student room interior with bed and desk in soft focus behind her, close framing on the intimate action and her face.",
       "clip": [
         "72",
         1
@@ -109,8 +109,8 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "nano_Korean.safetensors",
-      "strength_model": 0.81,
+      "lora_name": "TGZW383YGE7RTN4ZTNPAM4FT50.safetensors",
+      "strength_model": 0.88,
       "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.5,
+      "eta": 0.4,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
       "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 585375340973065,
+      "seed": 494111015108424,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

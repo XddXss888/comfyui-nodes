@@ -1,26 +1,29 @@
 {
   "3": {
     "inputs": {
-      "seed": 577825170533097,
-      "steps": 20,
-      "cfg": 6.0,
-      "sampler_name": "euler_ancestral",
+      "seed": [
+        "87",
+        0
+      ],
+      "steps": 25,
+      "cfg": 7.0,
+      "sampler_name": "dpmpp_sde",
       "scheduler": "karras",
       "denoise": 1.0,
       "model": [
-        "32",
+        "4",
         0
       ],
       "positive": [
-        "38",
+        "10",
         0
       ],
       "negative": [
-        "7",
-        0
+        "10",
+        1
       ],
       "latent_image": [
-        "24",
+        "5",
         0
       ]
     },
@@ -31,32 +34,33 @@
   },
   "4": {
     "inputs": {
-      "ckpt_name": "flat2DAnimerge_v45Sharp.safetensors"
+      "ckpt_name": "XLHxzmixInteriorAnd_v10.safetensors"
     },
     "class_type": "CheckpointLoaderSimple",
     "_meta": {
       "title": "Load Checkpoint"
     }
   },
-  "6": {
+  "5": {
     "inputs": {
-      "text": [
-        "75",
+      "width": [
+        "16",
         0
       ],
-      "clip": [
-        "32",
+      "height": [
+        "16",
         1
-      ]
+      ],
+      "batch_size": 1
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "EmptyLatentImage",
     "_meta": {
-      "title": "CLIP Text Encode (Positive)"
+      "title": "Empty Latent Image"
     }
   },
   "7": {
     "inputs": {
-      "text": "blurry, illustration, distorted, horror，nsfw, text, watermark, EasyNegative, (((White))) (((bad anatomy))), (liquid body), (liquid tongue), (((disfigured))), ((((malformed)))), (((mutated))) ((anatomical nonsense)), text font ui, error, ((malformed hands)), (long neck), ((blurred)), (((lowers))), ((lowres)), ((bad anatomy)), (bad proportions), (bad shadows), (uncoordinated body), ((unnatural body)), ((fused breasts)), bad breasts, poorly drawn breasts, extra breasts, liquid breasts, missing breasts, fused ears, bad ears, poorly drawn ears, extra ears, liquid ears, heavy ears, missing ears, fused animal ears, bad animal ears, poorly drawn animal ears, extra animal ears, liquid animal ears, heavy animal ears, missing animal ears, text, ui error, missing fingers, missing limb, fused fingers, one hand with more than 5 fingers, one hand with less than 5 fingers, watermark, username, blurry, jpeg artifact, signature, bad hair, poorly drawn hair, fused hair, liquid hair, grease hair, ugly hair, big muscles, ugly, bad faces, fused face, poorly drawn face, cloned face, big face, long face, bad eyes, poorly drawn eyes, fused eyes, extra eyes, ((bad mouth)), poorly drawn, mouth fused, mouth, quality low, quality normal, QR code, bar code. (((duplicate person))), bad teeth, poorly drawn teeth, fused teeth, teeth, quality low, out-of-frame, far_from_viewer, spread legs, low quality legs, bad quality legs, fused body parts, non-realistic, fake looking image, low quality hands, ugly hands, low quality fingers ugly fingers, (floating object), fused legs dismembered limbs mutation, mutated legs, mutated knees missing limbs, low detailed background out-of-frame, low detailed hair, weird background, pregnant, multiple_navel, 3 arms, 3 legs, 3 hands, extra limbs, floating object, floating limbs, disembodied limb, extra legs, UI icon",
+      "text": "nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing",
       "clip": [
         "4",
         1
@@ -64,7 +68,7 @@
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "CLIP Text Encode (Negative)"
+      "title": "CLIP Text Encode (Prompt)"
     }
   },
   "8": {
@@ -74,7 +78,7 @@
         0
       ],
       "vae": [
-        "11",
+        "64",
         0
       ]
     },
@@ -83,27 +87,40 @@
       "title": "VAE Decode"
     }
   },
+  "10": {
+    "inputs": {
+      "strength": 0.7000000000000001,
+      "start_percent": 0.0,
+      "end_percent": 0.8,
+      "positive": [
+        "83",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "control_net": [
+        "11",
+        0
+      ],
+      "image": [
+        "61",
+        0
+      ],
+      "vae": [
+        "64",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet"
+    }
+  },
   "11": {
     "inputs": {
-      "vae_name": "vae-ft-mse-840000-ema-pruned.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Load VAE"
-    }
-  },
-  "12": {
-    "inputs": {
-      "image": "Temp_1782170175015.jpeg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "14": {
-    "inputs": {
-      "control_net_name": "control_v11f1p_sd15_depth.pth"
+      "control_net_name": "mistoLine_rank256.safetensors"
     },
     "class_type": "ControlNetLoader",
     "_meta": {
@@ -112,279 +129,143 @@
   },
   "16": {
     "inputs": {
-      "strength": 0.5,
-      "conditioning": [
-        "35",
-        0
-      ],
-      "control_net": [
-        "14",
-        0
-      ],
       "image": [
-        "93",
+        "61",
         0
       ]
     },
-    "class_type": "ControlNetApply",
+    "class_type": "ImageGenResolutionFromImage",
     "_meta": {
-      "title": "Apply ControlNet (OLD)"
-    }
-  },
-  "24": {
-    "inputs": {
-      "pixels": [
-        "12",
-        0
-      ],
-      "vae": [
-        "4",
-        2
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE Encode"
-    }
-  },
-  "32": {
-    "inputs": {
-      "lora_name": "add_detail.safetensors",
-      "strength_model": 1.0,
-      "strength_clip": 1.0,
-      "model": [
-        "66",
-        0
-      ],
-      "clip": [
-        "66",
-        1
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Load LoRA"
-    }
-  },
-  "34": {
-    "inputs": {
-      "resolution": 768,
-      "image": [
-        "12",
-        0
-      ]
-    },
-    "class_type": "ColorPreprocessor",
-    "_meta": {
-      "title": "Color Pallete"
-    }
-  },
-  "35": {
-    "inputs": {
-      "strength": 0.5,
-      "conditioning": [
-        "6",
-        0
-      ],
-      "control_net": [
-        "36",
-        0
-      ],
-      "image": [
-        "34",
-        0
-      ]
-    },
-    "class_type": "ControlNetApply",
-    "_meta": {
-      "title": "Apply ControlNet (OLD)"
-    }
-  },
-  "36": {
-    "inputs": {
-      "control_net_name": "controlnetT2IAdapter_t2iAdapterColor.safetensors"
-    },
-    "class_type": "ControlNetLoader",
-    "_meta": {
-      "title": "Load ControlNet Model"
+      "title": "Generation Resolution From Image"
     }
   },
   "38": {
     "inputs": {
-      "strength": 0.5,
-      "conditioning": [
-        "16",
-        0
-      ],
-      "control_net": [
-        "39",
-        0
-      ],
+      "merge_with_lineart": "lineart_standard",
+      "resolution": 1080,
+      "lineart_lower_bound": 0.0,
+      "lineart_upper_bound": 1.0,
+      "object_min_size": 36,
+      "object_connectivity": 1,
       "image": [
-        "43",
+        "77",
         0
       ]
     },
-    "class_type": "ControlNetApply",
+    "class_type": "AnyLineArtPreprocessor_aux",
     "_meta": {
-      "title": "Apply ControlNet (OLD)"
+      "title": "AnyLine Lineart"
     }
   },
-  "39": {
+  "61": {
     "inputs": {
-      "control_net_name": "control_v11p_sd15_canny.pth"
-    },
-    "class_type": "ControlNetLoader",
-    "_meta": {
-      "title": "Load ControlNet Model"
-    }
-  },
-  "43": {
-    "inputs": {
-      "low_threshold": 20,
-      "high_threshold": 100,
-      "resolution": 768,
+      "width": 1080,
+      "height": 1080,
+      "upscale_method": "nearest-exact",
+      "keep_proportion": true,
+      "divisible_by": 2,
+      "crop": "disabled",
       "image": [
-        "12",
+        "38",
         0
       ]
     },
-    "class_type": "CannyEdgePreprocessor",
+    "class_type": "ImageResizeKJ",
     "_meta": {
-      "title": "Canny Edge"
+      "title": "Resize Image (deprecated)"
     }
   },
-  "46": {
+  "64": {
     "inputs": {
-      "model": "wd-v1-4-vit-tagger-v2",
-      "threshold": 0.35,
-      "character_threshold": 0.85,
-      "replace_underscore": false,
-      "trailing_comma": false,
-      "exclude_tags": "realistic",
-      "tags": "1girl, long_hair, looking_at_viewer, shirt, black_hair, navel, bare_shoulders, jewelry, outdoors, multiple_boys, solo_focus, midriff, pants, bracelet, lips, strapless, sandals, denim, ground_vehicle, motor_vehicle, faceless, faceless_male, jeans, bicycle",
-      "image": [
-        "12",
-        0
-      ]
+      "vae_name": "sdxl_vae.safetensors"
     },
-    "class_type": "WD14Tagger|pysssss",
+    "class_type": "VAELoader",
     "_meta": {
-      "title": "WD14 Tagger 🐍"
+      "title": "Load VAE"
     }
   },
-  "66": {
+  "77": {
     "inputs": {
-      "lora_name": "GTA5_Artwork.safetensors",
-      "strength_model": 1.0,
-      "strength_clip": 1.0,
-      "model": [
-        "4",
-        0
-      ],
-      "clip": [
-        "4",
-        1
-      ]
+      "image": "1782259537109.jpg"
     },
-    "class_type": "LoraLoader",
+    "class_type": "LoadImage",
     "_meta": {
-      "title": "Load LoRA"
+      "title": "Load Image"
     }
   },
-  "73": {
+  "78": {
     "inputs": {
+      "text": "HOME_AI"
+    },
+    "class_type": "ttN text",
+    "_meta": {
+      "title": "manual prompt"
+    }
+  },
+  "81": {
+    "inputs": {
+      "text": "High quality, masterpiece, 8k, high definition,"
+    },
+    "class_type": "ttN text",
+    "_meta": {
+      "title": "default"
+    }
+  },
+  "82": {
+    "inputs": {
+      "delimiter": ", ",
+      "clean_whitespace": "true",
       "text_a": [
-        "46",
+        "81",
         0
       ],
       "text_b": [
-        "76",
+        "78",
         0
       ]
     },
-    "class_type": "PromptComposerMerge",
+    "class_type": "Text Concatenate",
     "_meta": {
-      "title": "Prompt Composer Merge"
-    }
-  },
-  "75": {
-    "inputs": {
-      "text_0": "1girl, long_hair, looking_at_viewer, shirt, black_hair, navel, bare_shoulders, jewelry, outdoors, multiple_boys, solo_focus, midriff, pants, bracelet, lips, strapless, sandals, denim, ground_vehicle, motor_vehicle, faceless, faceless_male, jeans, bicycle, gtav style, grand thief auto, gta official artwork, flat color, 2d",
-      "text": [
-        "73",
-        0
-      ]
-    },
-    "class_type": "ShowText|pysssss",
-    "_meta": {
-      "title": "Show Text 🐍"
-    }
-  },
-  "76": {
-    "inputs": {
-      "text": "gtav style, grand thief auto, gta official artwork, flat color, 2d"
-    },
-    "class_type": "JjkText",
-    "_meta": {
-      "title": "Text"
+      "title": "Text Concatenate"
     }
   },
   "83": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
+      "clip": [
+        "4",
+        1
+      ],
+      "text": [
+        "82",
+        0
+      ]
+    },
+    "class_type": "Text to Conditioning",
+    "_meta": {
+      "title": "Text to Conditioning"
+    }
+  },
+  "87": {
+    "inputs": {
+      "min": 0,
+      "max": 999999999999999
+    },
+    "class_type": "RandomInt",
+    "_meta": {
+      "title": "Random Int"
+    }
+  },
+  "89": {
+    "inputs": {
+      "filename_prefix": "homeai_autodesign",
       "images": [
-        "86",
+        "8",
         0
       ]
     },
     "class_type": "SaveImage",
     "_meta": {
-      "title": "Save Image"
-    }
-  },
-  "86": {
-    "inputs": {
-      "score": 0.7000000000000001,
-      "image": [
-        "8",
-        0
-      ],
-      "alternative_image": [
-        "92",
-        0
-      ]
-    },
-    "class_type": "NSFWDetection",
-    "_meta": {
-      "title": "NSFWDetection"
-    }
-  },
-  "92": {
-    "inputs": {
-      "width": 512,
-      "height": 512,
-      "red": 255,
-      "green": 255,
-      "blue": 255
-    },
-    "class_type": "Image Blank",
-    "_meta": {
-      "title": "Image Blank"
-    }
-  },
-  "93": {
-    "inputs": {
-      "ckpt_name": "depth_anything_v2_vitl.pth",
-      "resolution": 512,
-      "image": [
-        "12",
-        0
-      ]
-    },
-    "class_type": "DepthAnythingV2Preprocessor",
-    "_meta": {
-      "title": "Depth Anything V2 - Relative"
+      "title": "save img"
     }
   }
 }

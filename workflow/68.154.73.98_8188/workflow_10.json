@@ -1,116 +1,12 @@
 {
-  "41": {
-    "inputs": {
-      "image": "ref_7b50591f668444ff9f7e9fae9854a322.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "92": {
-    "inputs": {
-      "filename_prefix": "Qwen_Edit_2511",
-      "images": [
-        "91:8",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
-    }
-  },
-  "91:61": {
-    "inputs": {
-      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
-      "type": "qwen_image",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载CLIP"
-    }
-  },
-  "91:67": {
-    "inputs": {
-      "shift": 3.1,
-      "model": [
-        "91:74",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingAuraFlow",
-    "_meta": {
-      "title": "采样算法（AuraFlow）"
-    }
-  },
-  "91:10": {
-    "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "91:12": {
-    "inputs": {
-      "unet_name": "qwen_image_edit_2511_fp8mixed.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "91:71": {
-    "inputs": {
-      "reference_latents_method": "index_timestep_zero",
-      "conditioning": [
-        "91:69",
-        0
-      ]
-    },
-    "class_type": "FluxKontextMultiReferenceLatentMethod",
-    "_meta": {
-      "title": "FluxKontext多参考潜在方法"
-    }
-  },
-  "91:70": {
-    "inputs": {
-      "reference_latents_method": "index_timestep_zero",
-      "conditioning": [
-        "91:68",
-        0
-      ]
-    },
-    "class_type": "FluxKontextMultiReferenceLatentMethod",
-    "_meta": {
-      "title": "FluxKontext多参考潜在方法"
-    }
-  },
-  "91:64": {
-    "inputs": {
-      "strength": 1.0,
-      "model": [
-        "91:67",
-        0
-      ]
-    },
-    "class_type": "CFGNorm",
-    "_meta": {
-      "title": "CFG归一化"
-    }
-  },
-  "91:8": {
+  "8": {
     "inputs": {
       "samples": [
-        "91:65",
+        "31",
         0
       ],
       "vae": [
-        "91:10",
+        "39",
         0
       ]
     },
@@ -119,91 +15,52 @@
       "title": "VAE解码"
     }
   },
-  "91:68": {
+  "9": {
     "inputs": {
-      "prompt": "Sexy 👙 pic\n",
-      "clip": [
-        "91:61",
-        0
-      ],
-      "vae": [
-        "91:10",
-        0
-      ],
-      "image1": [
-        "91:88",
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
         0
       ]
     },
-    "class_type": "TextEncodeQwenImageEditPlus",
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "TextEncodeQwenImageEditPlus (Positive)"
+      "title": "保存图像"
     }
   },
-  "91:75": {
+  "27": {
     "inputs": {
-      "pixels": [
-        "91:88",
-        0
-      ],
-      "vae": [
-        "91:10",
-        0
-      ]
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
     },
-    "class_type": "VAEEncode",
+    "class_type": "EmptySD3LatentImage",
     "_meta": {
-      "title": "VAE编码"
+      "title": "空Latent图像（SD3）"
     }
   },
-  "91:88": {
+  "31": {
     "inputs": {
-      "image": [
-        "41",
-        0
-      ]
-    },
-    "class_type": "FluxKontextImageScale",
-    "_meta": {
-      "title": "图像缩放为FluxKontext"
-    }
-  },
-  "91:74": {
-    "inputs": {
-      "lora_name": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "91:12",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA加载器（仅模型）"
-    }
-  },
-  "91:65": {
-    "inputs": {
-      "seed": 56564853515574,
-      "steps": 8,
+      "seed": 697219381161678,
+      "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0,
       "model": [
-        "91:64",
+        "38",
         0
       ],
       "positive": [
-        "91:70",
+        "41",
         0
       ],
       "negative": [
-        "91:71",
+        "42",
         0
       ],
       "latent_image": [
-        "91:75",
+        "27",
         0
       ]
     },
@@ -212,25 +69,62 @@
       "title": "K采样器"
     }
   },
-  "91:69": {
+  "38": {
     "inputs": {
-      "prompt": "",
+      "unet_name": "flux1-schnell.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "39": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "40": {
+    "inputs": {
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp16.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "双CLIP加载器"
+    }
+  },
+  "41": {
+    "inputs": {
+      "clip_l": "A realistic image of a modern classroom setting featuring a teacher demonstrating various AI tools on a large screen. The teacher, a middle-aged Asian woman, is engaging with a diverse group of attentive students seated at desks, with laptops open in front of them. The classroom is well-lit, with educational posters on the walls and a clean, organized appearance. The focus is on the interaction between the teacher and students, showcasing the use of technology in education.",
+      "t5xxl": "A realistic image of a modern classroom setting featuring a teacher demonstrating various AI tools on a large screen. The teacher, a middle-aged Asian woman, is engaging with a diverse group of attentive students seated at desks, with laptops open in front of them. The classroom is well-lit, with educational posters on the walls and a clean, organized appearance. The focus is on the interaction between the teacher and students, showcasing the use of technology in education.",
+      "guidance": 3.5,
       "clip": [
-        "91:61",
-        0
-      ],
-      "vae": [
-        "91:10",
-        0
-      ],
-      "image1": [
-        "91:88",
+        "40",
         0
       ]
     },
-    "class_type": "TextEncodeQwenImageEditPlus",
+    "class_type": "CLIPTextEncodeFlux",
     "_meta": {
-      "title": "文本编码（QwenImageEditPlus）"
+      "title": "CLIP文本编码Flux"
+    }
+  },
+  "42": {
+    "inputs": {
+      "conditioning": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
     }
   }
 }

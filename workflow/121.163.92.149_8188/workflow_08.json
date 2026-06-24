@@ -1,0 +1,143 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "boogu_image_turbo_nvfp4.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_fp8_scaled.safetensors",
+      "type": "boogu",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "flux1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "Isolated creature art of ONE single cute chibi three-headed dragon hydra in side profile. Its chubby FOUR-LEGGED dragon body faces to the RIGHT, standing on four legs, with a long tail that has small spikes along the back and tail extending to the RIGHT. THREE necks rise upward from the FRONT of its chest, and all THREE dragon heads are at the upper LEFT, all three heads facing and looking to the LEFT (all snouts point left, same direction). The necks are SHORT to medium length, close together, each neck has a lighter cream-yellow throat on its front. Each of the three heads has small horns and little fin-like frills. EXACTLY three heads, no more than three. Green scales with a cream-yellow belly and throat, big round glowing eyes, small wisps of pale green poison mist. Chibi cute, big heads, chubby body. ONE single creature, clean anatomy, three short necks joined at the front chest. Like a classic three-headed hydra dragon. Soft painterly storybook style, soft fluffy shading, cute monster mascot. Centered, plain flat pale gray background, soft even lighting, no scene, no ground, no text, no frame.",
+      "clip": [
+        "2",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "",
+      "clip": [
+        "2",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1536,
+      "batch_size": 1
+    }
+  },
+  "7": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "seed": 34367,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "6",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "12",
+        0
+      ],
+      "filename_prefix": "wf_h3"
+    }
+  },
+  "10": {
+    "class_type": "TransparentBGSession+",
+    "inputs": {
+      "mode": "base",
+      "use_jit": false
+    }
+  },
+  "11": {
+    "class_type": "ImageRemoveBackground+",
+    "inputs": {
+      "rembg_session": [
+        "10",
+        0
+      ],
+      "image": [
+        "8",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "InvertMask",
+    "inputs": {
+      "mask": [
+        "11",
+        1
+      ]
+    }
+  },
+  "12": {
+    "class_type": "JoinImageWithAlpha",
+    "inputs": {
+      "image": [
+        "8",
+        0
+      ],
+      "alpha": [
+        "13",
+        0
+      ]
+    }
+  }
+}

@@ -71,7 +71,7 @@
   },
   "15": {
     "inputs": {
-      "image": "ComfyUI_00253_.png"
+      "image": "ComfyUI_00356_.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -111,7 +111,7 @@
   },
   "44": {
     "inputs": {
-      "prompt": "动漫，视觉风格：动漫\n画面风格：动漫3D\n\n高度一致的人物，身份保留。与参考图像中完全相同的人的肖像，100%身份一致性，相同的面部结构，相同的发型，相同的服装，相同的妆容，相同的年龄和表情基础。\n视角完全切换为：纯左侧面,严格左侧面，90度纯侧面轮廓，耳朵清晰可见，从这个角度看到的同一人，正确的透视和轮廓，头部朝向自然符合该视角，无任何正面元素残留，无脸部扭曲\n演员姿态：站立挺直，中立姿势\n\n画面要求：\n- 超高细节，8k分辨率，极致锐度与纹理\n- 电影感浅景深，f/1.4大光圈，背景虚化自然明显\n- 专业商业人像摄影风格 + 当代电影剧照质感\n- 自然生动表情，富有故事感和角色沉浸感\n- 优秀构图，经典三分法或黄金分割构图\n- 完美贴合动漫视觉语言与动漫3D整体氛围，风格高度一致\n\n负面提示（强烈负面）：\nlow quality, worst quality, blurry, deformed, bad anatomy, bad hands, missing fingers, extra limbs, poorly drawn face, bad proportions, watermark, text, logo, signature, overexposed, underexposed, plastic skin, doll, lowres, jpeg artifacts, grainybad anime, deformed anime, low quality anime, flat color, flat shading, 3d render, cgi",
+      "prompt": "视觉风格：动漫\n画面风格：国漫\n\n高度一致的人物，身份保留。与参考图像中完全相同的人的肖像，100%身份一致性，相同的面部结构，相同的发型，相同的服装，相同的妆容，相同的年龄和表情基础。\n视角完全切换为：纯左侧面,严格左侧面，90度纯侧面轮廓，耳朵清晰可见，从这个角度看到的同一人，正确的透视和轮廓，头部朝向自然符合该视角，无任何正面元素残留，无脸部扭曲\n演员姿态：站立挺直，中立姿势\n\n画面要求：\n- 超高细节，8k分辨率，极致锐度与纹理\n- 电影感浅景深，f/1.4大光圈，背景虚化自然明显\n- 专业商业人像摄影风格 + 当代电影剧照质感\n- 自然生动表情，富有故事感和角色沉浸感\n- 优秀构图，经典三分法或黄金分割构图\n- 完美贴合动漫视觉语言与国漫整体氛围，风格高度一致",
       "clip": [
         "4",
         0
@@ -148,7 +148,7 @@
   },
   "47": {
     "inputs": {
-      "seed": 2031626990,
+      "seed": 462690362,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -178,7 +178,7 @@
   },
   "48": {
     "inputs": {
-      "prompt": "动漫，视觉风格：动漫\n画面风格：动漫3D\n\n高度一致的人物，身份保留。与参考图像中完全相同的人的肖像，100%身份一致性，相同的面部结构，相同的发型，相同的服装，相同的妆容，相同的年龄和表情基础。\n视角完全切换为：纯左侧面,严格左侧面，90度纯侧面轮廓，耳朵清晰可见，从这个角度看到的同一人，正确的透视和轮廓，头部朝向自然符合该视角，无任何正面元素残留，无脸部扭曲\n演员姿态：站立挺直，中立姿势\n\n画面要求：\n- 超高细节，8k分辨率，极致锐度与纹理\n- 电影感浅景深，f/1.4大光圈，背景虚化自然明显\n- 专业商业人像摄影风格 + 当代电影剧照质感\n- 自然生动表情，富有故事感和角色沉浸感\n- 优秀构图，经典三分法或黄金分割构图\n- 完美贴合动漫视觉语言与动漫3D整体氛围，风格高度一致\n\n负面提示（强烈负面）：\nlow quality, worst quality, blurry, deformed, bad anatomy, bad hands, missing fingers, extra limbs, poorly drawn face, bad proportions, watermark, text, logo, signature, overexposed, underexposed, plastic skin, doll, lowres, jpeg artifacts, grainybad anime, deformed anime, low quality anime, flat color, flat shading, 3d render, cgi",
+      "prompt": "视觉风格：动漫\n画面风格：国漫\n\n高度一致的人物，身份保留。与参考图像中完全相同的人的肖像，100%身份一致性，相同的面部结构，相同的发型，相同的服装，相同的妆容，相同的年龄和表情基础。\n视角完全切换为：纯左侧面,严格左侧面，90度纯侧面轮廓，耳朵清晰可见，从这个角度看到的同一人，正确的透视和轮廓，头部朝向自然符合该视角，无任何正面元素残留，无脸部扭曲\n演员姿态：站立挺直，中立姿势\n\n画面要求：\n- 超高细节，8k分辨率，极致锐度与纹理\n- 电影感浅景深，f/1.4大光圈，背景虚化自然明显\n- 专业商业人像摄影风格 + 当代电影剧照质感\n- 自然生动表情，富有故事感和角色沉浸感\n- 优秀构图，经典三分法或黄金分割构图\n- 完美贴合动漫视觉语言与国漫整体氛围，风格高度一致",
       "clip": [
         "4",
         0

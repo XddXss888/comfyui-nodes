@@ -1,18 +1,27 @@
 {
-  "139": {
+  "9": {
     "inputs": {
-      "filename_prefix": "Flux2-Klein",
+      "upload_url": "Flux2-Klein",
       "images": [
-        "142",
+        "117",
         0
       ]
     },
-    "class_type": "SaveImage",
+    "class_type": "SaveImageToOSS",
     "_meta": {
-      "title": "Save Image"
+      "title": "Save Image to OSS"
     }
   },
-  "140": {
+  "76": {
+    "inputs": {
+      "image": "00b5645a-c14a-4ef6-b45e-381cf53289a9.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "115": {
     "inputs": {
       "sampler_name": "euler"
     },
@@ -21,26 +30,26 @@
       "title": "KSamplerSelect"
     }
   },
-  "141": {
+  "116": {
     "inputs": {
       "noise": [
-        "143",
+        "118",
         0
       ],
       "guider": [
-        "148",
+        "124",
         0
       ],
       "sampler": [
-        "140",
+        "115",
         0
       ],
       "sigmas": [
-        "157",
+        "125",
         0
       ],
       "latent_image": [
-        "147",
+        "122",
         0
       ]
     },
@@ -49,14 +58,14 @@
       "title": "SamplerCustomAdvanced"
     }
   },
-  "142": {
+  "117": {
     "inputs": {
       "samples": [
-        "141",
+        "116",
         0
       ],
       "vae": [
-        "146",
+        "121",
         0
       ]
     },
@@ -65,16 +74,16 @@
       "title": "VAE Decode"
     }
   },
-  "143": {
+  "118": {
     "inputs": {
-      "noise_seed": 678714149156380
+      "noise_seed": 870747048679020
     },
     "class_type": "RandomNoise",
     "_meta": {
       "title": "RandomNoise"
     }
   },
-  "144": {
+  "119": {
     "inputs": {
       "unet_name": "flux-2-klein-4b.safetensors",
       "weight_dtype": "default"
@@ -84,7 +93,7 @@
       "title": "Load Diffusion Model"
     }
   },
-  "145": {
+  "120": {
     "inputs": {
       "clip_name": "qwen_3_4b.safetensors",
       "type": "flux2",
@@ -95,7 +104,7 @@
       "title": "Load CLIP"
     }
   },
-  "146": {
+  "121": {
     "inputs": {
       "vae_name": "flux2-vae.safetensors"
     },
@@ -104,30 +113,51 @@
       "title": "Load VAE"
     }
   },
-  "147": {
+  "122": {
     "inputs": {
-      "width": 1152,
-      "height": 1536,
-      "batch_size": 4
+      "width": [
+        "128",
+        0
+      ],
+      "height": [
+        "128",
+        1
+      ],
+      "batch_size": 1
     },
     "class_type": "EmptyFlux2LatentImage",
     "_meta": {
       "title": "Empty Flux 2 Latent"
     }
   },
-  "148": {
+  "123": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "76",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
+    }
+  },
+  "124": {
     "inputs": {
       "cfg": 1.0,
       "model": [
-        "144",
+        "119",
         0
       ],
       "positive": [
-        "149",
+        "132",
         0
       ],
       "negative": [
-        "150",
+        "130",
         0
       ]
     },
@@ -136,11 +166,28 @@
       "title": "CFGGuider"
     }
   },
-  "149": {
+  "125": {
     "inputs": {
-      "text": "amateur photo of young tween girl standing in bedroom, wearing nothing but thigh high socks",
+      "steps": 4,
+      "width": [
+        "128",
+        0
+      ],
+      "height": [
+        "128",
+        1
+      ]
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "Flux2Scheduler"
+    }
+  },
+  "126": {
+    "inputs": {
+      "text": "戴上特别酷的粉色反光钢丝边框墨镜",
       "clip": [
-        "145",
+        "120",
         0
       ]
     },
@@ -149,10 +196,10 @@
       "title": "CLIP Text Encode (Positive Prompt)"
     }
   },
-  "150": {
+  "127": {
     "inputs": {
       "conditioning": [
-        "149",
+        "126",
         0
       ]
     },
@@ -161,15 +208,64 @@
       "title": "ConditioningZeroOut"
     }
   },
-  "157": {
+  "128": {
     "inputs": {
-      "steps": 8,
-      "width": 1536,
-      "height": 864
+      "image": [
+        "123",
+        0
+      ]
     },
-    "class_type": "Flux2Scheduler",
+    "class_type": "GetImageSize",
     "_meta": {
-      "title": "Flux2Scheduler"
+      "title": "Get Image Size"
+    }
+  },
+  "130": {
+    "inputs": {
+      "conditioning": [
+        "127",
+        0
+      ],
+      "latent": [
+        "131",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "131": {
+    "inputs": {
+      "pixels": [
+        "123",
+        0
+      ],
+      "vae": [
+        "121",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "132": {
+    "inputs": {
+      "conditioning": [
+        "126",
+        0
+      ],
+      "latent": [
+        "131",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
     }
   }
 }

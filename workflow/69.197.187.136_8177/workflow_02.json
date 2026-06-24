@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "/app/services/comfyui-worker/temp/uploads/81aecd6ddb4571b88d8f78818b3beb9177f9f97abfe49c195af27c3a9578453b.png"
+      "image": "/app/services/comfyui-worker/temp/uploads/91437b84b83930ad7987cb2e28503039d271af38a0b86d013cc89a2846738ab4.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -117,7 +117,7 @@
   },
   "99": {
     "inputs": {
-      "path": "/app/services/comfyui-worker/temp/results/6789f42c-3993-488a-b941-dd19c45d5353.png",
+      "path": "/app/services/comfyui-worker/temp/results/54b5155c-928c-46da-b8eb-31d32c2fc438.png",
       "overwrite": "true",
       "image": [
         "130",
@@ -243,7 +243,7 @@
   },
   "75:74": {
     "inputs": {
-      "text": "Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: Create a sticker using the user's photo. Preserve the original gender and identity from the input image. Do not gender-swap the character. No opposite-gender appearance, no feminine features on a male input, no masculine features on a female input. A football Character sticker wearing a Bayern Munich red home football kit, red jersey with white stripes, red shorts, athletic football socks, expressive shocked reaction, mouth open as if shouting or protesting, both arms spread wide, dynamic upper-body pose, intense match-day emotion, realistic sports sticker style, sharp cutout silhouette, high contrast lighting, detailed fabric texture, isolated on transparent background, no text. Keep the face of the human in the image and the skin color of the human in the image. Use sticker style, gray background"
+      "text": "Create a humorous character meme-style sticker based on the face in the image. Full body sticker. Expression and posture: This cute 2D chibi character. Character is holding a hot cup of coffee in one hand and stretching with the other, giving the impression of just waking up. It's a 2D sticker style, along with the word Good Morning in black next to it. Create clearly readable, legible, write all the words, spelled exactly as written, clean sticker lettering with no distortion or extra characters. The 2D sticker with a black border is fun, bright, and adorable. Keep the face of the human in the image and the skin color of the human in the image. Use sticker style, gray background"
     },
     "class_type": "JWString",
     "_meta": {

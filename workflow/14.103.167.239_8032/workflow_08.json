@@ -1,43 +1,210 @@
 {
-  "1": {
-    "inputs": {
-      "language": "python",
-      "Add Input variable": "add_input_variable",
-      "Add Output variable": "add_output_variable",
-      "Clear": "clear_code",
-      "pycode": "\nimport os\nimport glob\nlist = glob.glob('/workspace/ComfyUI_v2/ComfyUI/output/audio/*.flac')\nresult = sorted(list, key=lambda x: os.path.getmtime(x), reverse=True)\nresult = [it.replace('/workspace/ComfyUI_v2/ComfyUI/output/audio/','') for it in  result]\nresult = \"#\".join(result)\n",
-      "var3": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "IDENode",
-    "_meta": {
-      "title": "IDE Node"
-    }
-  },
-  "2": {
-    "inputs": {
-      "value": 302564297
-    },
-    "class_type": "PrimitiveInt",
-    "_meta": {
-      "title": "Int"
-    }
-  },
   "3": {
     "inputs": {
-      "preview_markdown": "",
-      "preview_text": "",
-      "previewMode": false,
-      "source": [
-        "1",
+      "seed": 354555,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "78",
+        0
+      ],
+      "positive": [
+        "94",
+        0
+      ],
+      "negative": [
+        "47",
+        0
+      ],
+      "latent_image": [
+        "98",
         0
       ]
     },
-    "class_type": "PreviewAny",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "Preview as Text"
+      "title": "KSampler"
+    }
+  },
+  "18": {
+    "inputs": {
+      "samples": [
+        "108",
+        0
+      ],
+      "vae": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeAudio",
+    "_meta": {
+      "title": "VAE Decode Audio"
+    }
+  },
+  "47": {
+    "inputs": {
+      "conditioning": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "78": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "94": {
+    "inputs": {
+      "tags": "流派/风格：融合90年代放克律动、独立流行的清新旋律与独立摇滚的原始吉他质感。乐器：采用典型的丛林碎拍鼓点，暖色调电吉他、清晰贝斯与复古模拟合成器垫底。音色质感：温暖干净，鼓点高频清晰，吉他轻微过驱保持清晰发音。人声特点：女声独唱，明亮温柔且带轻微颗粒感，副歌加入层叠和声。声乐特征：略带切分的节奏感，副歌高音区力度提升，桥段低语式柔和处理。时代参考：致敬90年代放克并融合现代独立音乐。制作风格：混合模拟与数字混音，鼓点压实，吉他中频突出，动态从低能量前奏逐步构建到高能量副歌，桥段稍回落，尾奏以淡化鼓点和延伸合成器收束。动态：前奏低能量、主歌中等、预副歌上升、高潮副歌高能量、桥段情绪稍降、尾奏淡出。情感：怀念过去美好时光并期待未来，轻快舞动中带有温柔回忆。氛围：复古却不失现代感，适合城市夜晚灯光下聆听。结构：Intro → Verse → Pre‑Chorus → Chorus → Verse → Pre‑Chorus → Chorus → Bridge → Chorus → Outro。",
+      "lyrics": "[Instrumental]",
+      "seed": 31,
+      "bpm": 118,
+      "duration": 220.0,
+      "timesignature": "4",
+      "language": "zh",
+      "keyscale": "A minor",
+      "generate_audio_codes": false,
+      "cfg_scale": 2.0,
+      "temperature": 0.85,
+      "top_p": 0.9,
+      "top_k": 0,
+      "min_p": 0.0,
+      "clip": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "TextEncodeAceStepAudio1.5",
+    "_meta": {
+      "title": "TextEncodeAceStepAudio1.5"
+    }
+  },
+  "98": {
+    "inputs": {
+      "seconds": 220.0,
+      "batch_size": 1
+    },
+    "class_type": "EmptyAceStep1.5LatentAudio",
+    "_meta": {
+      "title": "Empty Ace Step 1.5 Latent Audio"
+    }
+  },
+  "104": {
+    "inputs": {
+      "unet_name": "acestep_v1.5_xl_sft_turbo_nvfp4.safetensors",
+      "weight_dtype": "fp8_e4m3fn_fast"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "105": {
+    "inputs": {
+      "clip_name1": "qwen_0.6b_ace15-fp8.safetensors",
+      "clip_name2": "qwen_4b_ace15-fp8.safetensors",
+      "type": "ace",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "DualCLIPLoader"
+    }
+  },
+  "106": {
+    "inputs": {
+      "vae_name": "ace_1.5_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "107": {
+    "inputs": {
+      "filename_prefix": "audio/时光的律动",
+      "audioUI": "",
+      "audio": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "SaveAudio",
+    "_meta": {
+      "title": "Save Audio (FLAC)"
+    }
+  },
+  "108": {
+    "inputs": {
+      "seed": 4187925759,
+      "steps": 12,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "78",
+        0
+      ],
+      "positive": [
+        "110",
+        0
+      ],
+      "negative": [
+        "47",
+        0
+      ],
+      "latent_image": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "110": {
+    "inputs": {
+      "tags": "流派/风格：融合90年代放克律动、独立流行的清新旋律与独立摇滚的原始吉他质感。乐器：采用典型的丛林碎拍鼓点，暖色调电吉他、清晰贝斯与复古模拟合成器垫底。音色质感：温暖干净，鼓点高频清晰，吉他轻微过驱保持清晰发音。人声特点：女声独唱，明亮温柔且带轻微颗粒感，副歌加入层叠和声。声乐特征：略带切分的节奏感，副歌高音区力度提升，桥段低语式柔和处理。时代参考：致敬90年代放克并融合现代独立音乐。制作风格：混合模拟与数字混音，鼓点压实，吉他中频突出，动态从低能量前奏逐步构建到高能量副歌，桥段稍回落，尾奏以淡化鼓点和延伸合成器收束。动态：前奏低能量、主歌中等、预副歌上升、高潮副歌高能量、桥段情绪稍降、尾奏淡出。情感：怀念过去美好时光并期待未来，轻快舞动中带有温柔回忆。氛围：复古却不失现代感，适合城市夜晚灯光下聆听。结构：Intro → Verse → Pre‑Chorus → Chorus → Verse → Pre‑Chorus → Chorus → Bridge → Chorus → Outro。",
+      "lyrics": "城市灯光映在雨后的街道\n记忆的旋律在心底轻轻摇\n脚步跟随鼓点的碎拍\n微笑在夜色中慢慢展开\n回荡的合成器像星光闪烁\n我把过去的画面轻轻描绘\n让我们舞动在时光的河流\n放克的律动点燃心中的火\n未来的梦在此刻绽放\n一起唱出永不褪色的歌\n旧唱片的噪音仍在耳边回响\n吉他轻抚像温柔的拥抱\n贝斯深沉驱动着思念的波\n每一个音符都是回忆的钥\n低语的桥段让心跳放慢\n却仍期待下一段的高潮\n让我们舞动在时光的河流\n放克的律动点燃心中的火\n未来的梦在此刻绽放\n一起唱出永不褪色的歌\n在静默的夜里轻声呢喃\n让过去的温柔化作星尘\n让我们舞动在时光的河流\n放克的律动点燃心中的火\n未来的梦在此刻绽放\n一起唱出永不褪色的歌\n合成器的余音缓缓消散\n鼓点淡入夜的寂静",
+      "seed": 31,
+      "bpm": 118,
+      "duration": 220.0,
+      "timesignature": "4",
+      "language": "zh",
+      "keyscale": "A minor",
+      "generate_audio_codes": false,
+      "cfg_scale": 2.0,
+      "temperature": 0.5,
+      "top_p": 0.9,
+      "top_k": 0,
+      "min_p": 0.0,
+      "clip": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "TextEncodeAceStepAudio1.5",
+    "_meta": {
+      "title": "TextEncodeAceStepAudio1.5"
     }
   }
 }

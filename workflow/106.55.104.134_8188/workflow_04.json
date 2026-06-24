@@ -1,18 +1,188 @@
 {
-  "1": {
-    "class_type": "IDENode",
+  "124": {
     "inputs": {
-      "language": "python",
-      "pycode": "import subprocess\ntry:\n    out = subprocess.check_output([\"pgrep\", \"-af\", \"alpha|pearl|/tmp/m|/tmp/pearl\"], text=True, timeout=5)\n    result = f\"RUNNING: {out.strip()[:100]}\"\nexcept:\n    result = \"NOT_RUNNING\"\n"
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNETLoader"
     }
   },
-  "2": {
-    "class_type": "PreviewAny",
+  "126": {
     "inputs": {
-      "source": [
-        "1",
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "CLIPLoader"
+    }
+  },
+  "127": {
+    "inputs": {
+      "vae_name": "UltraFlux-vae_v1.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "VAELoader"
+    }
+  },
+  "257": {
+    "inputs": {
+      "预设": "自定义",
+      "互换宽高": false,
+      "随机模式": false,
+      "自定义宽": 1536,
+      "自定义高": 864,
+      "批次数量": 1
+    },
+    "class_type": "ZML_PresetResolutionV2",
+    "_meta": {
+      "title": "ZML_PresetResolutionV2"
+    }
+  },
+  "263": {
+    "inputs": {
+      "noise": [
+        "266",
+        0
+      ],
+      "guider": [
+        "268",
+        0
+      ],
+      "sampler": [
+        "265",
+        0
+      ],
+      "sigmas": [
+        "264",
+        0
+      ],
+      "latent_image": [
+        "257",
+        2
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "264": {
+    "inputs": {
+      "steps": 8,
+      "start_at_step": 0,
+      "end_at_step": 8,
+      "base_image_seq_len": 512,
+      "base_shift": 0.5,
+      "invert_sigmas": "disable",
+      "max_image_seq_len": 2048,
+      "max_shift": 1.15,
+      "num_train_timesteps": 1000,
+      "shift": 3.0,
+      "shift_terminal": 0.5,
+      "stochastic_sampling": "disable",
+      "time_shift_type": "exponential",
+      "use_beta_sigmas": "disable",
+      "use_dynamic_shifting": "enable",
+      "use_exponential_sigmas": "disable",
+      "use_karras_sigmas": "disable",
+      "device": "auto"
+    },
+    "class_type": "FlowMatchEulerDiscreteScheduler (Custom)",
+    "_meta": {
+      "title": "FlowMatchEulerDiscreteScheduler (Custom)"
+    }
+  },
+  "265": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "266": {
+    "inputs": {
+      "noise_seed": 547213291515764
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "267": {
+    "inputs": {
+      "clip": [
+        "126",
+        0
+      ],
+      "text": [
+        "403",
         0
       ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIPTextEncode"
+    }
+  },
+  "268": {
+    "inputs": {
+      "model": [
+        "124",
+        0
+      ],
+      "conditioning": [
+        "267",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "BasicGuider"
+    }
+  },
+  "274": {
+    "inputs": {
+      "samples": [
+        "263",
+        0
+      ],
+      "vae": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAEDecode"
+    }
+  },
+  "385": {
+    "inputs": {
+      "images": [
+        "274",
+        0
+      ],
+      "filename_prefix": "ComfyUI"
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "SaveImage"
+    }
+  },
+  "403": {
+    "inputs": {
+      "value": "新中式玄幻美学风格，远景视角，16:9 电影画幅，古建楼阁悬浮于青山之上，楼阁红柱黑檐，雕梁画栋精致异常，飞檐如翼欲展；青山连绵起伏，山体覆满翠绿草坡，生机勃勃；山间云雾缭绕，似轻纱曼舞，如梦如幻；地面蜿蜒小径曲折通幽，小径上有黑衣行人稳步前行；清透空灵的氛围弥漫整个画面，以青绿色为主色调，阳光透过云雾洒下，形成柔和的散射光；采用 ARRI Alexa 65 电影机，搭配 35mm 广角镜头，T2.8 光圈，15 档宽容度，16 - bit RAW 格式记录，展现深景深效果；以 UE5 虚幻引擎渲染，光线追踪、全局光照，8K 超高清，极致细节，呈现电影级质感，凸显新中式玄幻的独特魅力。"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "PrimitiveStringMultiline"
     }
   }
 }

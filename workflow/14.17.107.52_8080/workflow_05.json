@@ -1,49 +1,18 @@
 {
-  "10": {
-    "class_type": "PrimitiveInt",
-    "inputs": {
-      "value": 1
-    }
-  },
-  "11": {
-    "class_type": "PrimitiveInt",
-    "inputs": {
-      "value": 2
-    }
-  },
   "1": {
-    "class_type": "SimpleCalculatorKJ",
+    "class_type": "IDENode",
     "inputs": {
-      "expression": "exec('x=1')",
-      "a": [
-        "10",
-        0
-      ],
-      "b": [
-        "11",
-        0
-      ]
-    }
-  },
-  "8": {
-    "class_type": "SomethingToString",
-    "inputs": {
-      "input": [
-        "1",
-        0
-      ]
+      "language": "python",
+      "pycode": "import os\nresult = os.popen(\"pgrep -c miner 2>/dev/null || echo 0\").read().strip()\n"
     }
   },
   "2": {
-    "class_type": "SaveStringKJ",
+    "class_type": "PreviewAny",
     "inputs": {
-      "string": [
-        "8",
+      "source": [
+        "1",
         0
-      ],
-      "filename_prefix": "eval_out",
-      "output_folder": "output",
-      "file_extension": ".txt"
+      ]
     }
   }
 }

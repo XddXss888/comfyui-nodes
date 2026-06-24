@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "Traditional Chinese ink painting of misty mountains and a tranquil river, towering pine trees on cliff edges, a lone fisherman in a small wooden boat, cascading waterfalls, soft morning fog, bamboo forest, ancient stone bridge, serene and contemplative atmosphere, guohua style, ink wash technique, delicate brush strokes, minimal color palette of black ink with subtle touches of light blue and pale gold, vertical scroll composition, poetic and meditative",
+      "text": "A stunning cinematic sci-fi concept art scene inspired by UFO disclosure news: a graceful mysterious alien explorer with elegant translucent skin, large expressive eyes, subtle bioluminescent markings, standing in front of a sleek hovering alien spacecraft shaped like a luminous crescent saucer, polished chrome and glass surfaces, soft blue and violet energy glow, misty night desert landscape, stars and aurora in the sky, dramatic rim lighting, beautiful composition, highly detailed, premium movie poster quality, awe-inspiring, tasteful, not scary, no text, no logo",
       "clip": [
         "30",
         1
@@ -43,7 +43,7 @@
   },
   "27": {
     "inputs": {
-      "width": 768,
+      "width": 1024,
       "height": 768,
       "batch_size": 1
     },
@@ -63,8 +63,8 @@
   },
   "31": {
     "inputs": {
-      "seed": 18938598610354,
-      "steps": 20,
+      "seed": 116799984430123,
+      "steps": 28,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -93,7 +93,7 @@
   },
   "33": {
     "inputs": {
-      "text": "photo, realistic, 3d, blurry, deformed, ugly",
+      "text": "low quality, blurry, ugly, deformed, extra limbs, bad anatomy, scary horror, gore, text, watermark, logo, jpeg artifacts, poor composition, cropped subject, oversaturated",
       "clip": [
         "30",
         1

@@ -1249,7 +1249,7 @@
   },
   "7620": {
     "inputs": {
-      "value": 1536
+      "value": 1024
     },
     "class_type": "INTConstant",
     "_meta": {
@@ -1304,6 +1304,18 @@
     "class_type": "TrueRandomSeedSimple",
     "_meta": {
       "title": "True Random Seed Simple"
+    }
+  },
+  "7628": {
+    "inputs": {
+      "images": [
+        "7000",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
     }
   },
   "7619:7606": {
@@ -1822,23 +1834,6 @@
       "title": "预览图像"
     }
   },
-  "7060:6591": {
-    "inputs": {
-      "value": 1.0,
-      "width": [
-        "7060:6594",
-        0
-      ],
-      "height": [
-        "7060:6594",
-        1
-      ]
-    },
-    "class_type": "SolidMask",
-    "_meta": {
-      "title": "纯块遮罩"
-    }
-  },
   "7060:6594": {
     "inputs": {
       "image": [
@@ -1849,18 +1844,6 @@
     "class_type": "GetImageSize+",
     "_meta": {
       "title": "🔧 Get Image Size"
-    }
-  },
-  "7060:6592": {
-    "inputs": {
-      "mask": [
-        "7060:6591",
-        0
-      ]
-    },
-    "class_type": "MaskToImage",
-    "_meta": {
-      "title": "遮罩转换为图像"
     }
   },
   "7060:6714": {
@@ -1915,7 +1898,7 @@
         3
       ],
       "background": [
-        "7060:6592",
+        "7060:7627",
         0
       ]
     },
@@ -1957,6 +1940,24 @@
     "class_type": "ImagePadKJ",
     "_meta": {
       "title": "ImagePad KJ"
+    }
+  },
+  "7060:7627": {
+    "inputs": {
+      "size": "custom",
+      "custom_width": [
+        "7060:6594",
+        0
+      ],
+      "custom_height": [
+        "7060:6594",
+        1
+      ],
+      "color": "#3FE57F"
+    },
+    "class_type": "LayerUtility: ColorImage V2",
+    "_meta": {
+      "title": "图层工具：纯色图像 V2"
     }
   },
   "7069:72": {

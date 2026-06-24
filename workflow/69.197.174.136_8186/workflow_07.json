@@ -1,11 +1,11 @@
 {
   "1": {
     "inputs": {
-      "tags": "Modern Pop, upbeat indie pop, groovy bassline, acoustic guitar strums, cheerful synth accents, playful male vocals",
-      "lyrics": "[Intro]\nExcuse me \n\n[Verse]\nExcuse me , Yo phone ringing, yo phone ringing, big boy come pick up yo phone, why you not pick up yo phone? Yo phone ringing, yo phone ’bout to go to voicemail, goodbye!",
-      "seed": 831368546178445,
+      "tags": "A fast-paced Synth-Pop and Comedy Electronic track at 122 BPM. The instrumentation features a bouncy synth bassline, crisp electronic drum hits, and playful sound effects like warning sirens and phone rings. Featuring a confident male lead vocal with a conversational, rhythmic delivery (similar to talk-singing), contrasted by high-pitched, energetic female/chipmunk backing vocals reacting in the background (\"Uh-oh!\", \"Papa!\"). The overall mood is alarmingly fun, chaotic, and catchy.",
+      "lyrics": "[Intro]\nWarning, \n\n[Verse]\nWarning, \nCalling again\nYeah, it's alarming\n\nPhone lighting up, here we go\nBetter pick up\nUh-oh, uh-oh",
+      "seed": 373019989125933,
       "bpm": 150,
-      "duration": 30.0,
+      "duration": 20.0,
       "timesignature": "4",
       "language": "en",
       "keyscale": "C major",
@@ -52,11 +52,11 @@
   },
   "99": {
     "inputs": {
-      "filename_prefix": "/sda-disk/home/Ringtone/music-generation-system/temp/results/bd1bfbd8-c3ce-45bc-a1c7-b6668e366cc3.mp3",
+      "filename_prefix": "/sda-disk/home/Ringtone/music-generation-system/temp/results/3237c74e-c937-4ff3-9995-8e25086277ba.mp3",
       "quality": "320k",
-      "audioUI": "/api/view?filename=ComfyUI.mp3&type=output&subfolder=audio&rand=0.06096895522565604",
+      "audioUI": "/api/view?filename=ComfyUI.mp3&type=output&subfolder=audio&rand=0.5202683185749689",
       "audio": [
-        "1015",
+        "105",
         0
       ]
     },
@@ -67,12 +67,12 @@
   },
   "101": {
     "inputs": {
-      "seed": 436845366789223,
+      "seed": 872642109237325,
       "steps": 8,
       "cfg": 2.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 0.4,
+      "denoise": 0.35,
       "model": [
         "78",
         0
@@ -129,8 +129,8 @@
   },
   "111": {
     "inputs": {
-      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_15/EN/t15_en_raw_song_2.MP3",
-      "audioUI": "/api/view?filename=t15_en_raw_song_2.MP3&type=input&subfolder=&rand=0.7026850514197839"
+      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_7/EN/t7_en_raw_song_2.mp3",
+      "audioUI": "/api/view?filename=t7_en_raw_song_2.mp3&type=input&subfolder=&rand=0.635754993904492"
     },
     "class_type": "LoadAudio",
     "_meta": {
@@ -139,8 +139,8 @@
   },
   "222": {
     "inputs": {
-      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_15/EN/t15_en_raw_song_2.MP3",
-      "audioUI": "/api/view?filename=t9_jp_raw_song_2.MP3&type=input&subfolder=&rand=0.6536712189155954"
+      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_7/EN/t7_en_raw_song_2.mp3",
+      "audioUI": "/api/view?filename=beat_1%20(5).mp3&type=input&subfolder=&rand=0.936237599040422"
     },
     "class_type": "LoadAudio",
     "_meta": {
@@ -178,6 +178,38 @@
       "title": "Load VAE"
     }
   },
+  "1004": {
+    "inputs": {
+      "chunk_fade_shape": "linear",
+      "chunk_length": 10,
+      "chunk_overlap": 0.1,
+      "audio": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "AudioSeparation",
+    "_meta": {
+      "title": "AudioSeparation"
+    }
+  },
+  "1005": {
+    "inputs": {
+      "merge_method": "add",
+      "audio1": [
+        "1004",
+        3
+      ],
+      "audio2": [
+        "1011",
+        0
+      ]
+    },
+    "class_type": "AudioMerge",
+    "_meta": {
+      "title": "Audio Merge"
+    }
+  },
   "1011": {
     "inputs": {
       "volume": 4,
@@ -189,64 +221,6 @@
     "class_type": "AudioAdjustVolume",
     "_meta": {
       "title": "Audio Adjust Volume"
-    }
-  },
-  "1014": {
-    "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_ifhit.flac&type=temp&subfolder=&rand=0.8791144174047741",
-      "audio": [
-        "105",
-        0
-      ]
-    },
-    "class_type": "PreviewAudio",
-    "_meta": {
-      "title": "Preview Audio"
-    }
-  },
-  "1015": {
-    "inputs": {
-      "direction": "after",
-      "audio1": [
-        "1016",
-        0
-      ],
-      "audio2": [
-        "1018",
-        0
-      ]
-    },
-    "class_type": "AudioConcat",
-    "_meta": {
-      "title": "Audio Concat"
-    }
-  },
-  "1016": {
-    "inputs": {
-      "start_time": 0.0,
-      "end_time": 3.0,
-      "audio": [
-        "105",
-        0
-      ]
-    },
-    "class_type": "AudioTrim",
-    "_meta": {
-      "title": "Audio Trim ⚡🅡🅞🅣🅘"
-    }
-  },
-  "1018": {
-    "inputs": {
-      "start_time": 3.0,
-      "end_time": 0.0,
-      "audio": [
-        "111",
-        0
-      ]
-    },
-    "class_type": "AudioTrim",
-    "_meta": {
-      "title": "Audio Trim ⚡🅡🅞🅣🅘"
     }
   }
 }

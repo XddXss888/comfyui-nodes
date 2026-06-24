@@ -1,43 +1,368 @@
 {
-  "20": {
+  "4": {
     "inputs": {
-      "image": "input_1782116912055_4e9d2bd2-bed5-4c72-8285-e5f055da26da_e46d1341-b564-46ea-9aa5-95e3f19a0f8e.png",
-      "upload": "image"
+      "clip_name": "umt5_xxl_fp16.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "5": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "10": {
+    "inputs": {
+      "model": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "wanBlockSwap",
+    "_meta": {
+      "title": "wanBlockSwap"
+    }
+  },
+  "11": {
+    "inputs": {
+      "clip_name": "clip_vision_H.safetensors"
+    },
+    "class_type": "CLIPVisionLoader",
+    "_meta": {
+      "title": "加载CLIP视觉"
+    }
+  },
+  "13": {
+    "inputs": {
+      "value": 683
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "15": {
+    "inputs": {
+      "value": 65
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "23": {
+    "inputs": {
+      "value": true
+    },
+    "class_type": "easy boolean",
+    "_meta": {
+      "title": "Boolean"
+    }
+  },
+  "24": {
+    "inputs": {
+      "value": "石头顺时针滚动动画"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "字符串（多行）"
+    }
+  },
+  "26": {
+    "inputs": {
+      "unet_name": "Wan2.2_Remix_NSFW_i2v_14b_high_lighting_v2.0.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "27": {
+    "inputs": {
+      "unet_name": "Wan2.2_Remix_NSFW_i2v_14b_low_lighting_v2.0.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "28": {
+    "inputs": {
+      "model": [
+        "70",
+        0
+      ]
+    },
+    "class_type": "wanBlockSwap",
+    "_meta": {
+      "title": "wanBlockSwap"
+    }
+  },
+  "29": {
+    "inputs": {
+      "value": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走, censored, mosaic censoring, bar censor, pixelated, glowing, bloom, blurry, day, out of focus, low detail, bad anatomy, ugly, overexposed, underexposed, distorted face, extra limbs, cartoonish, 3d render artifacts, duplicate people, unnatural lighting, bad composition, missing shadows, low resolution, poorly textured, glitch, noise, grain, static, motionless, still frame, overall grayish, worst quality, low quality, JPEG compression artifacts, subtitles, stylized, artwork, painting, illustration, cluttered background, many people in background, three legs, walking backward, zoom out, zoom in, mouth speaking, moving mouth, talking, speaking, mute speaking, unnatural skin tone, discolored eyelid, red eyelids, red upper eyelids, no red eyeshadow, closed eyes, no wide-open innocent eyes, poorly drawn hands, extra fingers, fused fingers, poorly drawn face, deformed, disfigured, malformed limbs, thighs, fog, mist, voluminous eyelashes, blush,"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "字符串（多行）"
+    }
+  },
+  "31": {
+    "inputs": {
+      "boundary": 0.9,
+      "seed": 560837176448160,
+      "steps": 6,
+      "cfg_high_noise": 1.0,
+      "cfg_low_noise": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "sigma_shift": 8.0,
+      "denoise": 1.0,
+      "model_high_noise": [
+        "10",
+        0
+      ],
+      "model_low_noise": [
+        "28",
+        0
+      ],
+      "positive": [
+        "68",
+        0
+      ],
+      "negative": [
+        "68",
+        1
+      ],
+      "latent_image": [
+        "68",
+        2
+      ]
+    },
+    "class_type": "WanMoeKSampler",
+    "_meta": {
+      "title": "Wan MoE KSampler"
+    }
+  },
+  "34": {
+    "inputs": {
+      "samples": [
+        "31",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "36": {
+    "inputs": {
+      "frame_rate": [
+        "37",
+        0
+      ],
+      "loop_count": 0,
+      "filename_prefix": "AnimateDiff",
+      "format": "video/h264-mp4",
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "34",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "Video Combine 🎥🅥🅗🅢"
+    }
+  },
+  "37": {
+    "inputs": {
+      "value": 16.0
+    },
+    "class_type": "easy float",
+    "_meta": {
+      "title": "Float"
+    }
+  },
+  "44": {
+    "inputs": {
+      "crop": "none",
+      "clip_vision": [
+        "11",
+        0
+      ],
+      "image": [
+        "53",
+        0
+      ]
+    },
+    "class_type": "CLIPVisionEncode",
+    "_meta": {
+      "title": "CLIP视觉编码"
+    }
+  },
+  "46": {
+    "inputs": {
+      "image": "input_1782185470034.png"
     },
     "class_type": "LoadImage",
     "_meta": {
       "title": "加载图像"
     }
   },
-  "21": {
+  "53": {
     "inputs": {
-      "model": "BiRefNet-general",
-      "mask_blur": 0,
-      "mask_offset": 0,
-      "background": "Alpha",
-      "invert_output": false,
-      "refine_foreground": true,
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": [
+        "13",
+        0
+      ],
+      "background_color": "#000000",
       "image": [
-        "20",
+        "46",
         0
       ]
     },
-    "class_type": "BiRefNetRMBG",
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
     "_meta": {
-      "title": "BiRefNet (RMBG)"
+      "title": "LayerUtility: ImageScaleByAspectRatio V2"
     }
   },
-  "22": {
+  "64": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "21",
+      "any_01": [
+        "53",
+        4
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)"
+    }
+  },
+  "65": {
+    "inputs": {
+      "any_01": [
+        "53",
+        3
+      ],
+      "any_02": [
+        "13",
         0
       ]
     },
-    "class_type": "SaveImage",
+    "class_type": "Any Switch (rgthree)",
     "_meta": {
-      "title": "保存图像"
+      "title": "Any Switch (rgthree)"
+    }
+  },
+  "66": {
+    "inputs": {
+      "text": [
+        "24",
+        0
+      ],
+      "clip": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "67": {
+    "inputs": {
+      "text": [
+        "29",
+        0
+      ],
+      "clip": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "68": {
+    "inputs": {
+      "width": [
+        "65",
+        0
+      ],
+      "height": [
+        "64",
+        0
+      ],
+      "length": [
+        "15",
+        0
+      ],
+      "batch_size": 1,
+      "positive": [
+        "66",
+        0
+      ],
+      "negative": [
+        "67",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ],
+      "clip_vision_start_image": [
+        "44",
+        0
+      ],
+      "start_image": [
+        "53",
+        0
+      ]
+    },
+    "class_type": "WanFirstLastFrameToVideo",
+    "_meta": {
+      "title": "WanFirstLastFrameToVideo"
+    }
+  },
+  "70": {
+    "inputs": {
+      "lora_name": "Wan2.2 - I2V_VBVR_HIGH_rank_64_fp16.safetensors",
+      "strength_model": 0.3,
+      "model": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
     }
   }
 }

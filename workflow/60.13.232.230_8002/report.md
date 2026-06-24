@@ -1,70 +1,27 @@
 # 60.13.232.230:8002
 
-**GPU**: RTX 4090 | **显存**: 47 GB | **空闲**: 43 GB
-**内存**: 1007 GB (空闲 918 GB)
+**GPU**: RTX 4090 | **显存**: 47 GB | **空闲**: 11 GB
+**内存**: 1007 GB (空闲 945 GB)
 **版本**: 0.20.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-23 08:07:39
-**历史总数**: 13 | **成功**: 10
+**扫描时间**: 2026-06-24 08:08:38
+**历史总数**: 1 | **成功**: 1
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `02a650ec-725b-473a-944e-dedd4c2768f3`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 2. workflow_02.json
-- **Prompt ID**: `c508373c-63d4-4e1c-9488-62e5377f331c`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 3. workflow_03.json
-- **Prompt ID**: `ac8ffac1-e374-4908-ab89-e3e858aea494`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 4. workflow_04.json
-- **Prompt ID**: `f4164660-7c83-46df-b06a-abc461522f81`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 5. workflow_05.json
-- **Prompt ID**: `c0b8c9c7-f969-44c1-9b2a-5eac3495943d`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 6. workflow_06.json
-- **Prompt ID**: `506bda7e-d001-46ca-b207-ffe083bd8b7a`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 7. workflow_07.json
-- **Prompt ID**: `f7f108ba-d5de-4f94-b8ee-6a0db75d1d0b`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 8. workflow_08.json
-- **Prompt ID**: `38297bbf-2b63-4095-91ad-3b9b8eb45a78`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 9. workflow_09.json
-- **Prompt ID**: `2a6dd317-bc90-4a94-bb2a-48ae15aec782`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 10. workflow_10.json
-- **Prompt ID**: `15ffa1f2-06f1-47e0-8c49-eb3490bf9d27`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
+- **Prompt ID**: `3276f438-cc1f-43f4-aad5-938b675d1393`
+- **类型**: 图生视频
+- **节点数**: 228
+- **模型** (7):
+  - 2511_000015210A100.safetensors
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - ema_vae_fp16.safetensors
+  - qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - qwen_image_vae.safetensors
+  - seedvr2_ema_3b_fp16.safetensors
+- **提示词**:
+  - [TextEncodeQwenImageEditPlus::prompt] Fill the line art with colors taken directly from the reference garment photo. Keep the original line art structure intact, no shape distortion. Flat lighting, solid colors, no shadows, no wrinkles, c
+  - [TextEncodeQwenImageEditPlus::prompt] Fill the line art with colors taken directly from the reference garment photo. Keep the original line art structure intact, no shape distortion. Flat lighting, solid colors, no shadows, no wrinkles, c
+  - [TextEncodeQwenImageEditPlus::prompt] Fill the line art with colors taken directly from the reference garment photo. Keep the original line art structure intact, no shape distortion. Flat lighting, solid colors, no shadows, no wrinkles, c

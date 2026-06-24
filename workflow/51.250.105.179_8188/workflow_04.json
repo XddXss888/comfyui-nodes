@@ -56,8 +56,8 @@
       "crop_h": 0,
       "target_width": 1024,
       "target_height": 1024,
-      "text_g": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_pendant, pendant, fWgvccV359O1A9S28_arch_pattern, arch pattern, silver, pendant with kun oyuu pattern",
-      "text_l": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_pendant, pendant, fWgvccV359O1A9S28_arch_pattern, arch pattern, silver, pendant with kun oyuu pattern",
+      "text_g": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_female_ring, female ring, fWgvccV359O1A9S28_heart_pattern, heart pattern, silver, ring, heart pattern",
+      "text_l": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_female_ring, female ring, fWgvccV359O1A9S28_heart_pattern, heart pattern, silver, ring, heart pattern",
       "clip": [
         "50",
         1
@@ -91,7 +91,7 @@
   "36": {
     "inputs": {
       "add_noise": "enable",
-      "noise_seed": 16041942192666551452,
+      "noise_seed": 17649421532582423013,
       "steps": 35,
       "cfg": 5.5,
       "sampler_name": "dpmpp_2m_sde",
@@ -133,7 +133,7 @@
   "38": {
     "inputs": {
       "add_noise": "disable",
-      "noise_seed": 16041942192666551452,
+      "noise_seed": 17649421532582423013,
       "steps": 35,
       "cfg": 5.5,
       "sampler_name": "dpmpp_2m_sde",
@@ -177,7 +177,7 @@
       "ascore": 6.0,
       "width": 1024,
       "height": 1024,
-      "text": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_pendant, pendant, fWgvccV359O1A9S28_arch_pattern, arch pattern, silver, pendant with kun oyuu pattern",
+      "text": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_female_ring, female ring, fWgvccV359O1A9S28_heart_pattern, heart pattern, silver, ring, heart pattern",
       "clip": [
         "39",
         1

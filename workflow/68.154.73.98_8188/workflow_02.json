@@ -1,7 +1,16 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_878193017f8945969b7ee651bf60a0e1.png"
+      "image": "ref_d6621f66a2304a949297c2901b5816af.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "83": {
+    "inputs": {
+      "image": "ref_fa9eb633cfa24141998e90e3e474ebd6.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +130,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "Change shirt to a powder blue color ",
+      "prompt": "make them kiss",
       "clip": [
         "91:61",
         0
@@ -132,6 +141,10 @@
       ],
       "image1": [
         "91:88",
+        0
+      ],
+      "image2": [
+        "83",
         0
       ]
     },
@@ -184,7 +197,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 159588003495370,
+      "seed": 91055404756831,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -225,6 +238,10 @@
       ],
       "image1": [
         "91:88",
+        0
+      ],
+      "image2": [
+        "83",
         0
       ]
     },
