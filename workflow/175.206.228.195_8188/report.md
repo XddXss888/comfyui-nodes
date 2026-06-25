@@ -1,122 +1,128 @@
 # 175.206.228.195:8188
 
-**GPU**: RTX 3060 | **显存**: 12 GB | **空闲**: 6 GB
-**内存**: 46 GB (空闲 8 GB)
+**GPU**: RTX 3060 | **显存**: 12 GB | **空闲**: 2 GB
+**内存**: 46 GB (空闲 11 GB)
 **版本**: 0.22.0
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-24 08:08:48
-**历史总数**: 7749 | **成功**: 10
+**扫描时间**: 2026-06-25 21:36:21
+**历史总数**: 8218 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `47fdd8e1-560e-4722-a9c7-0106e6bf5b94`
+- **Prompt ID**: `386b9834-ad8c-4175-bcea-44be5542a1a4`
 - **类型**: 文生图
 - **节点数**: 18
 - **模型** (2):
   - RealESRGAN_x4.pth
   - waiIllustriousSDXL_v140.safetensors
 - **提示词**:
-  - [TextBoxMira::text] ever_daphne_base,  dashed eyes, full-face blush, upturned eyes, afterglow, torogao, cheek rest,bed, drooling, head on pillow, masterpiece, best quality, amazing quality
-  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor,
+  - [TextBoxMira::text] ever_linzy_school, masterpiece,best_quality,1girl,serious, annoyed, jealous,blush, wavy mouth,frown, closed eyes, open mouth,shouting, leaning forward, arms between legs, hands on own thighs,looking a
+  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor,bad anatomy, bad perspective, bad feet, bad hands, bad proportions, wrong foot, wrong hand,multiple views, split screen, monster, furry,5fingers, v
 
 ### 2. workflow_02.json
-- **Prompt ID**: `a12ac509-af77-4f95-b01e-4c9cba9365bf`
+- **Prompt ID**: `1daf065d-1da8-400c-aa2a-695a2cfc5bc6`
 - **类型**: 文生图
 - **节点数**: 18
 - **模型** (2):
   - RealESRGAN_x4.pth
   - waiIllustriousSDXL_v140.safetensors
 - **提示词**:
-  - [TextBoxMira::text] ever_garnet_base, [], ,musume, train interior, night,  no headwear, huge breasts, no text, moaning,  ,comic,  shota, groping, faceless male, gyaru, dress, chikan, masterpiece, best quality, amazing qu
-  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor, [], text focus,text,, watermark,ugly, puffy sleeves, puffy short sleeves,
+  - [TextBoxMira::text] ever_linzy_school, masterpiece,best_quality,1girl,serious, annoyed, jealous,blush, wavy mouth,frown, closed eyes, open mouth,shouting, emphasis lines, shout lines,leaning forward, arms between legs, h
+  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor,bad anatomy, bad perspective, bad feet, bad hands, bad proportions, wrong foot, wrong hand,multiple views, split screen, monster, furry,5fingers, v
 
 ### 3. workflow_03.json
-- **Prompt ID**: `cc361a39-af7a-4774-ba0d-7dbbb92cab4d`
-- **类型**: 文生图
-- **节点数**: 18
-- **模型** (2):
+- **Prompt ID**: `1d75fa31-eb18-4e24-b0f4-fd5681587b05`
+- **类型**: 图片超分
+- **节点数**: 23
+- **模型** (3):
   - RealESRGAN_x4.pth
+  - controlnet-union-sdxl-1.0-promax.safetensors
   - waiIllustriousSDXL_v140.safetensors
 - **提示词**:
-  - [TextBoxMira::text] ever_daphne_base,  dashed eyes, full-face blush, upturned eyes, afterglow, torogao, cheek rest,bed, drooling, head on pillow, wet spot, masterpiece, best quality, amazing quality
-  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor,
+  - [TextBoxMira::text] ever_lilith_love, moonlight through full-length windows, warm tones French crystal chandelier upon the high ceiling, French crystal wall lights in living room, silk pillows on royal chaise longue, cha
+  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor, wrong hand, bad hands, bad feet, wrong foot, rabbit ears, rabbit, hood
 
 ### 4. workflow_04.json
-- **Prompt ID**: `8e0c4121-ba16-4b20-a53e-ccbfc6f7c3c6`
-- **类型**: 文生图
-- **节点数**: 18
-- **模型** (2):
+- **Prompt ID**: `c981b131-5ef9-427c-b88a-50198b9400e5`
+- **类型**: 图片超分
+- **节点数**: 23
+- **模型** (3):
   - RealESRGAN_x4.pth
+  - controlnet-union-sdxl-1.0-promax.safetensors
   - waiIllustriousSDXL_v140.safetensors
 - **提示词**:
-  - [TextBoxMira::text] ever_garnet_base, [], ,musume, outdoors, night,  no headwear, huge breasts, no text, moaning,  ,comic,  shota, groping, faceless male, gyaru, dress, chikan, masterpiece, best quality, amazing quality
-  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor, [], text focus,text,, watermark,ugly, puffy sleeves, puffy short sleeves,
+  - [TextBoxMira::text] ever_lilith_love, moonlight through full-length windows, warm tones French crystal chandelier upon the high ceiling, French crystal wall lights in living room, silk pillows on royal chaise longue, cha
+  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor, wrong hand, bad hands, bad feet, wrong foot, rabbit ears, rabbit, hood
 
 ### 5. workflow_05.json
-- **Prompt ID**: `87d25f61-f249-4a22-8004-7ab346e44b1f`
-- **类型**: 文生图
-- **节点数**: 18
-- **模型** (2):
+- **Prompt ID**: `47b25664-5f96-4d52-906c-23b63f305c34`
+- **类型**: 图片超分
+- **节点数**: 23
+- **模型** (3):
   - RealESRGAN_x4.pth
+  - controlnet-union-sdxl-1.0-promax.safetensors
   - waiIllustriousSDXL_v140.safetensors
 - **提示词**:
-  - [TextBoxMira::text] ever_beleth_love, 1girl, wavy hair, medium hair, wedding dress, white thighhighs, white high heels, looking at viewer, smile, seductive, necklace, bracelet, earring, day, fountain, town square, standi
-  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor,halo, ahegao, glove, hood,
+  - [TextBoxMira::text] ever_lilith_love, moonlight through full-length windows, warm tones French crystal chandelier upon the high ceiling, French crystal wall lights in living room, silk pillows on royal chaise longue, cha
+  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor, wrong hand, bad hands, bad feet, wrong foot, rabbit ears, rabbit, hood
 
 ### 6. workflow_06.json
-- **Prompt ID**: `af5f3cf0-1ffe-4b80-b71a-ab6d4193b4ab`
-- **类型**: 文生图
-- **节点数**: 18
-- **模型** (2):
+- **Prompt ID**: `23c63180-23a6-4cd9-a57d-4f1ec9d01cd4`
+- **类型**: 图片超分
+- **节点数**: 23
+- **模型** (3):
   - RealESRGAN_x4.pth
+  - controlnet-union-sdxl-1.0-promax.safetensors
   - waiIllustriousSDXL_v140.safetensors
 - **提示词**:
-  - [TextBoxMira::text] Onyx(eversoul), 1girl, from behind, all fours, back, furrowed brow,  aroused, looking at viewer, pussy, anus, completely nude, heavy breathing, heart, bathtub, wet,
-
-disembodied hand, hand on another'
-  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor,muscular, extra hands, fat, (worst quality, low quality, normal quality:1.4), blurry, jpeg artifacts, lowres, cropped, text, watermark, signature, 
+  - [TextBoxMira::text] ever_lilith_love, moonlight through full-length windows, warm tones French crystal chandelier upon the high ceiling, French crystal wall lights in living room, silk pillows on royal chaise longue, cha
+  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor, wrong hand, bad hands, bad feet, wrong foot, rabbit ears, rabbit, hood
 
 ### 7. workflow_07.json
-- **Prompt ID**: `1aa2ef46-fa5a-414a-bc0e-cc1c66e6f5e5`
-- **类型**: 文生图
-- **节点数**: 18
-- **模型** (2):
+- **Prompt ID**: `1984db32-5589-4a41-85a9-c4524f85ca38`
+- **类型**: 图片超分
+- **节点数**: 23
+- **模型** (3):
   - RealESRGAN_x4.pth
+  - controlnet-union-sdxl-1.0-promax.safetensors
   - waiIllustriousSDXL_v140.safetensors
 - **提示词**:
-  - [TextBoxMira::text] ever_garnet_base, [], ,musume, outdoors, night,  no headwear, huge breasts, no text, moaning,  ,comic,  shota, groping, faceless male, gyaru, chikan, pervert, masterpiece, best quality, amazing qualit
-  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor, [], text focus,text,, watermark,ugly, puffy sleeves, puffy short sleeves,
+  - [TextBoxMira::text] ever_lilith_love, moonlight through full-length windows, warm tones French crystal chandelier upon the high ceiling, French crystal wall lights in living room, silk pillows on royal chaise longue, cha
+  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor, wrong hand, bad hands, bad feet, wrong foot, rabbit ears, rabbit, hood
 
 ### 8. workflow_08.json
-- **Prompt ID**: `9aabe990-4828-4c07-929e-84bf54e6628c`
-- **类型**: 文生图
-- **节点数**: 18
-- **模型** (2):
+- **Prompt ID**: `b36903d9-2bfd-426b-b6cc-b26f71c32953`
+- **类型**: 图片超分
+- **节点数**: 23
+- **模型** (3):
   - RealESRGAN_x4.pth
+  - controlnet-union-sdxl-1.0-promax.safetensors
   - waiIllustriousSDXL_v140.safetensors
 - **提示词**:
-  - [TextBoxMira::text] ever_garnet_base, [], ,musume, outdoors, night,  no headwear, huge breasts, no text, moaning,  ,comic,  shota, groping, faceless male, gyaru, chikan, pervert, masterpiece, best quality, amazing qualit
-  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor, [], text focus,text,, watermark,ugly, puffy sleeves, puffy short sleeves,
+  - [TextBoxMira::text] ever_lilith_love, moonlight through full-length windows, warm tones French crystal chandelier upon the high ceiling, French crystal wall lights in living room, silk pillows on royal chaise longue, cha
+  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor, wrong hand, bad hands, bad feet, wrong foot, rabbit ears, rabbit, hood
 
 ### 9. workflow_09.json
-- **Prompt ID**: `142eae22-03a0-4549-8792-806ef47d6fb8`
-- **类型**: 文生图
-- **节点数**: 18
-- **模型** (2):
+- **Prompt ID**: `b595a8a2-7968-4230-bd7c-016cd6c36bf2`
+- **类型**: 图片超分
+- **节点数**: 23
+- **模型** (3):
   - RealESRGAN_x4.pth
+  - controlnet-union-sdxl-1.0-promax.safetensors
   - waiIllustriousSDXL_v140.safetensors
 - **提示词**:
-  - [TextBoxMira::text] ever_beleth_love, 1girl, wavy hair, medium hair, wedding dress, white thighhighs, white high heels, looking at viewer, smile, seductive, necklace, bracelet, earring, day, fountain, cathedral_interior,
-  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor,halo, ahegao, glove, hood,
+  - [TextBoxMira::text] ever_lilith_love, moonlight through full-length windows, warm tones French crystal chandelier upon the high ceiling, French crystal wall lights in living room, silk pillows on royal chaise longue, cha
+  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor, wrong hand, bad hands, bad feet, wrong foot, rabbit ears, rabbit, hood
 
 ### 10. workflow_10.json
-- **Prompt ID**: `414acdc7-e93a-456d-bba7-c04dab144e48`
-- **类型**: 文生图
-- **节点数**: 18
-- **模型** (2):
+- **Prompt ID**: `1abf7db9-9ef2-43c5-a64e-e96fc2313e4c`
+- **类型**: 图片超分
+- **节点数**: 23
+- **模型** (3):
   - RealESRGAN_x4.pth
+  - controlnet-union-sdxl-1.0-promax.safetensors
   - waiIllustriousSDXL_v140.safetensors
 - **提示词**:
-  - [TextBoxMira::text] ever_beleth_love, 1girl, wavy hair, medium hair, wedding dress, white thighhighs, white high heels, looking at viewer, smile, seductive, necklace, bracelet, earring, day, fountain, cathedral_interior,
-  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor,halo, ahegao, glove, hood,
+  - [TextBoxMira::text] ever_lilith_love, moonlight through full-length windows, warm tones French crystal chandelier upon the high ceiling, French crystal wall lights in living room, silk pillows on royal chaise longue, cha
+  - [TextBoxMira::text] bad quality,worst quality,worst detail,sketch,censor, wrong hand, bad hands, bad feet, wrong foot, rabbit ears, rabbit, hood

@@ -33,7 +33,7 @@
   },
   "4": {
     "inputs": {
-      "seed": 4963228400,
+      "seed": 7891237693,
       "steps": [
         "13",
         0
@@ -102,8 +102,8 @@
   },
   "13": {
     "inputs": {
-      "steps": 26,
-      "cfg": 6.1
+      "steps": 28,
+      "cfg": 7.0
     },
     "class_type": "StepsAndCfg",
     "_meta": {
@@ -125,7 +125,7 @@
   },
   "20": {
     "inputs": {
-      "seed": 4963228400,
+      "seed": 7891237693,
       "steps": 10,
       "cfg": [
         "13",
@@ -205,7 +205,7 @@
   },
   "32": {
     "inputs": {
-      "text": "ever_beleth_love, 1girl, wavy hair, medium hair, wedding dress, white thighhighs, white high heels, looking at viewer, smile, seductive, necklace, bracelet, earring, day, fountain, cathedral_interior, standing, happy tears, white garter belt, bouquet, full body, wedding ring, masterpiece, best quality, amazing quality"
+      "text": "ever_beleth_base, masterpiece,best_quality,1girl,skirt lift,pantyshot, red bow,bow panties, white panties, no print,shy, flustered,false smile, closed eyes,night,bedroom, lamp,pov, masterpiece, best quality, amazing quality"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -214,7 +214,7 @@
   },
   "33": {
     "inputs": {
-      "text": "bad quality,worst quality,worst detail,sketch,censor,halo, ahegao, glove, hood,"
+      "text": "bad quality,worst quality,worst detail,sketch,censor,bad anatomy, bad perspective, bad feet, bad hands, bad proportions, wrong foot, wrong hand,multiple views, split screen, monster, furry,5fingers, variations, chest harness, o-ring harness, criss-cross halter, bad link, bad source, corrupted metadata, english text, ranguage, text print, futanari, futa with female, korean commentary, korean text, bad arm,artistic error,too many hands,too many finger, extra arms,extra legs, long neck, 3d, 3d background, paper texture, 2girls, 3girls, yuri, segmented comic, 2koma, 3koma, 4koma, torn clothes, front slit, too many belts,belt, criss-cross halter, diamond button, buttons, buckle, double-breasted, choker, ribbon, belt buckle, belt bow, computer, computer keyboard, computer mouse, computer tower, comic, accessories, corset, front slit, frontless outfit, 3d, censored, mosaic censoring, bar censor, convenient censoring, knee boots,mouse \\(animal\\), yellow, red,pink,halterneck, criss-cross halter,front slit, front slit,hip vent, neckerchief, sailor collar,collar, front-tie top, front-tie bikini top,front list, clothing cutout,side slit,slit skirt, ribbon-trimmed skirt, skirt cutout,2girls, twins, glint, shiny clothes, selfcest, coat, bow, bra, cleavage, pleated skirt, tribadism, puffy short sleeves, puffy long sleeves, embroidery, criss-cross straps, strap, thigh belt, animal hood,cat hood, bear hood, print shirt, print hoodie, print sweater,horn hood,demon hood, coat, trench coat, stomach cutout, censored nipples, 4koma, 5koma, 6koma, tongue out, lace-up, jpeg artifacts, bloom, dolphin shorts, against railing, hand on railing, against wall, on railing, arm support, look-alike, dual persona, multiple persona, purple hair, brown hair, bags under eyes, censored, bar censor, steam censor, blank censor, light censor, bad reflection,bad neck, bad vulva,wand,leotard, bloom, glowing"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -277,7 +277,7 @@
   },
   "65": {
     "inputs": {
-      "data": "[{\"name\": \"beleth_love.safetensors\", \"strength\": 0.5, \"strength_clip\": 0.86}]",
+      "data": "[{\"name\": \"beleth_base.safetensors\", \"strength\": 0.85, \"strength_clip\": 1.0}]",
       "model": [
         "36",
         0

@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 320204340,
+      "seed": 313006740,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,blowjob,large cock,standing,indoors,bed,bedroom,realistic,(show me blowjob on large cock:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,legs,feet,toes,panties,indoors,couch,plant,(what’s this:1.0),(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202411/20/2de8d7331fba420cb143daf699fb6e98.jpg",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202411/30/63c3b53bd0aa40b489f59504b29bf723.webp",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",
