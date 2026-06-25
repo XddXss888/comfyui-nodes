@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "seductive young curvy woman with long black hair, A woman standing completely naked in a dimly lit elegant hotel room with sophisticated interior and evening atmosphere, soft warm lighting gently illuminating her skin, medium close-up framing from waist up, subtle curious expression with slightly raised eyebrow, natural relaxed posture, simple background, private setting.",
+      "text": "elvaross, A fully nude woman in an intimate bedroom, standing with both hands cupping and squeezing her breasts, fingers pressing firmly into the soft flesh, body arched slightly forward in arousal, head tilted back with mouth parted and eyes half-closed in pleasure, soft warm directional lighting casting gentle shadows across her skin, medium close-up framing from the chest up, clean composition with simple background and stable pose.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,8 +109,8 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "izumi_v.2.safetensors",
-      "strength_model": 0.9,
+      "lora_name": "TGZW383YGE7RTN4ZTNPAM4FT50.safetensors",
+      "strength_model": 0.88,
       "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.5,
+      "eta": 0.4,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 26161571962184,
+      "seed": 494111015108424,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

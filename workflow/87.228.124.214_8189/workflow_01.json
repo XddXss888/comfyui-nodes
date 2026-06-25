@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "wh1te, short white hair, extremely thin woman, A woman walking on an evening city sidewalk under glowing streetlights, playfully turning with a light spin after a stroll, her expression mysterious and inviting as she chooses to let herself be carried by the night, soft warm lighting on her figure, medium close-up framing with simple blurred city background, natural posture and readable silhouette.",
+      "text": "elvaross, A woman reclining with legs spread wide open, knees bent and thighs parted, skirt lifted high around her waist to fully expose her vagina, passionately kissing while embraced from the front with hands gripping her buttocks, aroused expression with eyes half-closed, medium close-up framing, soft warm indoor lighting, natural skin tones and realistic anatomy.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "White_short_ZiT.safetensors",
-      "strength_model": 0.73,
-      "strength_clip": 0.8,
+      "lora_name": "TGZW383YGE7RTN4ZTNPAM4FT50.safetensors",
+      "strength_model": 0.88,
+      "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.5,
+      "eta": 0.4,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 177176581693080,
+      "seed": 494111015108424,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

@@ -1,93 +1,123 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "UNETLoader",
     "inputs": {
-      "ckpt_name": "epicRealismXL_pureFix.safetensors"
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
     }
   },
   "2": {
-    "class_type": "VAELoader",
+    "class_type": "DualCLIPLoader",
     "inputs": {
-      "vae_name": "sdxl_vae.safetensors"
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp16.safetensors",
+      "type": "flux"
     }
   },
   "3": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip": [
+      "vae_name": "ae.safetensors"
+    }
+  },
+  "11": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
         "1",
-        1
+        0
       ],
-      "text": "Failed to authenticate. API Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"Invalid authentication credentials\"},\"request_id\":\"req_011CcFDLDLrAaqBUWPUPAYaP\"}"
+      "lora_name": "sakura_korean_flux.safetensors",
+      "strength_model": 0.78
     }
   },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
-        "1",
-        1
+        "2",
+        0
       ],
-      "text": "lowres, blurry, bad anatomy, watermark, signature, oversaturated, harsh lighting, plastic skin"
+      "text": "A stunning Korean idol-style woman with chestnut brown hair in a braided half-up style, delicate features and a button nose, cool edgy expression with smoky eye makeup and nude matte lips. Shot on 85mm f/1.4 with creamy bokeh, over-the-shoulder pose glancing back at camera, off-center rule of thirds composition. Blue hour twilight ambient lighting casting soft indigo and amber tones across her face. Standing on a narrow old European cobblestone street lined with weathered stone buildings and wrought-iron balconies. Wearing an oversized cream turtleneck layered under a tailored charcoal wool coat, collar turned up against the evening chill. Wind catches loose strands framing her jawline. Cinematic atmosphere, editorial fashion portrait, ultra-realistic, flawless luminous skin, 8K detail."
     }
   },
   "5": {
-    "class_type": "EmptyLatentImage",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "width": 896,
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "text, watermark, logo, low detail"
+    }
+  },
+  "6": {
+    "class_type": "FluxGuidance",
+    "inputs": {
+      "conditioning": [
+        "4",
+        0
+      ],
+      "guidance": 3.9
+    }
+  },
+  "7": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 1024,
       "height": 1280,
       "batch_size": 1
     }
   },
-  "6": {
+  "8": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "1",
+        "11",
         0
       ],
       "positive": [
-        "3",
-        0
-      ],
-      "negative": [
-        "4",
-        0
-      ],
-      "latent_image": [
-        "5",
-        0
-      ],
-      "seed": 1306069215,
-      "control_after_generate": "fixed",
-      "steps": 30,
-      "cfg": 5.0,
-      "sampler_name": "dpmpp_2m",
-      "scheduler": "karras",
-      "denoise": 1.0
-    }
-  },
-  "7": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "samples": [
         "6",
         0
       ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ],
+      "seed": 1755822927,
+      "control_after_generate": "fixed",
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
       "vae": [
-        "2",
+        "3",
         0
       ]
     }
   },
-  "8": {
+  "10": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "7",
+        "9",
         0
       ],
-      "filename_prefix": "portrait_1306069215"
+      "filename_prefix": "portrait_1755822927"
     }
   }
 }

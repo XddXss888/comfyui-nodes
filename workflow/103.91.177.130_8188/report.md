@@ -1,16 +1,16 @@
 # 103.91.177.130:8188
 
 **GPU**: RTX 4090 | **显存**: 47 GB | **空闲**: 39 GB
-**内存**: 125 GB (空闲 71 GB)
+**内存**: 125 GB (空闲 94 GB)
 **版本**: 0.8.2
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-24 08:08:38
-**历史总数**: 33 | **成功**: 10
+**扫描时间**: 2026-06-25 21:22:15
+**历史总数**: 46 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `5dc0a201-e3d1-4fdf-93a2-8bcbf479cd0b`
+- **Prompt ID**: `5aa9c380-282b-478f-b0e1-6dde8bf60d29`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (3):
@@ -19,7 +19,7 @@
   - z_image_turbo_bf16.safetensors
 
 ### 2. workflow_02.json
-- **Prompt ID**: `99f84aac-a7ab-4d22-bef3-5366e056e079`
+- **Prompt ID**: `61885cdf-e2af-4ef6-8e58-c359d298c322`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (3):
@@ -28,7 +28,7 @@
   - z_image_turbo_bf16.safetensors
 
 ### 3. workflow_03.json
-- **Prompt ID**: `b00ebbde-2b4a-434a-9f76-b5cb3220f3d5`
+- **Prompt ID**: `97203f25-c7dd-48e0-85e5-70b06f77a1f7`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (3):
@@ -37,7 +37,7 @@
   - z_image_turbo_bf16.safetensors
 
 ### 4. workflow_04.json
-- **Prompt ID**: `44dbb9a8-ddf6-4ebb-a13a-e1b37f6a641d`
+- **Prompt ID**: `7baddfab-6302-42c9-a9b1-ec1dea13c649`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (3):
@@ -46,52 +46,7 @@
   - z_image_turbo_bf16.safetensors
 
 ### 5. workflow_05.json
-- **Prompt ID**: `a85a8b8a-bfac-4af8-afae-2ee1b2a1be46`
-- **类型**: 文生图
-- **节点数**: 12
-- **模型** (3):
-  - ae.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
-
-### 6. workflow_06.json
-- **Prompt ID**: `8b00ab9f-edc6-4444-a05a-1aaeea914752`
-- **类型**: 文生图
-- **节点数**: 12
-- **模型** (3):
-  - ae.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
-
-### 7. workflow_07.json
-- **Prompt ID**: `c26cc1e4-fb42-4890-a74a-ed19a37bbdf9`
-- **类型**: 文生图
-- **节点数**: 12
-- **模型** (3):
-  - ae.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
-
-### 8. workflow_08.json
-- **Prompt ID**: `75bd6754-b4ce-4c12-a936-4e73f0538dd1`
-- **类型**: 文生图
-- **节点数**: 12
-- **模型** (3):
-  - ae.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
-
-### 9. workflow_09.json
-- **Prompt ID**: `b43004b7-1ecc-4bdf-9266-42072237b36b`
-- **类型**: 文生图
-- **节点数**: 12
-- **模型** (3):
-  - ae.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
-
-### 10. workflow_10.json
-- **Prompt ID**: `97da0dd4-8459-46dd-821b-73f1cf54028b`
+- **Prompt ID**: `26c1d1f3-38f0-421f-93b5-35c44176807d`
 - **类型**: 文生图
 - **节点数**: 15
 - **模型** (4):
@@ -100,4 +55,52 @@
   - hunyuanvideo15_vae_fp16.safetensors
   - qwen_2.5_vl_7b_fp8_scaled.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] A paper airplane released from the top of a skyscraper, gliding through urban canyons, crossing traffic, flying over streets, spiraling upward between buildings. The camera follows the paper airplane'
+  - [CLIPTextEncode::text] A Chinese girl looks like Angelababy with big boobs and hip, cosplay as Tiantian in Naruto, having severe sexual intercourse with Naruto on a tree branch. Creative camera movement, free perspective, p
+
+### 6. workflow_06.json
+- **Prompt ID**: `af4c9f92-ad12-41be-a757-fe7a83fbb9e7`
+- **类型**: 文生图
+- **节点数**: 12
+- **模型** (3):
+  - ae.safetensors
+  - qwen_3_4b.safetensors
+  - z_image_turbo_bf16.safetensors
+
+### 7. workflow_07.json
+- **Prompt ID**: `a0267b50-ce11-4e89-b0de-293e0371f5bd`
+- **类型**: 文生图
+- **节点数**: 7
+- **模型** (1):
+  - Realistic_Vision_V5.1.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] beautiful scenery nature glass bottle landscape, , purple galaxy bottle,
+  - [CLIPTextEncode::text] text, watermark
+
+### 8. workflow_08.json
+- **Prompt ID**: `513c2a5b-5809-4169-95b7-a1678a846a5b`
+- **类型**: 文生图
+- **节点数**: 7
+- **模型** (1):
+  - Realistic_Vision_V5.1.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] beautiful scenery nature glass bottle landscape, , purple galaxy bottle,习近平
+  - [CLIPTextEncode::text] text, watermark
+
+### 9. workflow_09.json
+- **Prompt ID**: `549d5d91-78e5-4a73-a884-1354eab9803b`
+- **类型**: 文生图
+- **节点数**: 7
+- **模型** (1):
+  - Realistic_Vision_V5.1.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] beautiful scenery nature glass bottle landscape, , purple galaxy bottle,习近平，共产党
+  - [CLIPTextEncode::text] text, watermark
+
+### 10. workflow_10.json
+- **Prompt ID**: `630a9ce3-3f56-4f07-8b5d-b15aed29e0f0`
+- **类型**: 文生图
+- **节点数**: 7
+- **模型** (1):
+  - Realistic_Vision_V5.1.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] text, watermark

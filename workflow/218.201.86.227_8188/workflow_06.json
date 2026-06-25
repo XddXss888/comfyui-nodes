@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "An elegant illustration of the Great Wall of China winding across green mountains at sunrise, traditional Chinese landscape atmosphere, warm golden light, mist in the valleys, detailed yet clean digital illustration, painterly style, harmonious composition, no text, no watermark",
+      "text": "A stunning wide panoramic travel banner featuring a modern white passenger airplane flying low over a tropical coastline, sparkling turquoise ocean, gentle waves, golden sandy beach, a few palm leaves framing the edges, bright summer sunlight, clear blue sky with soft clouds, clean premium tourism advertising style, cinematic wide composition, vibrant yet natural colors, high detail, professional digital illustration, spacious composition suitable for website hero banner, no text, no logo, no watermark",
       "clip": [
         "30",
         1
@@ -30,7 +30,7 @@
   },
   "9": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
+      "filename_prefix": "airplane_ocean_beach_banner_2048x768",
       "images": [
         "8",
         0
@@ -43,7 +43,7 @@
   },
   "27": {
     "inputs": {
-      "width": 1024,
+      "width": 2048,
       "height": 768,
       "batch_size": 1
     },
@@ -63,8 +63,8 @@
   },
   "31": {
     "inputs": {
-      "seed": 722612455081049,
-      "steps": 20,
+      "seed": 346635614588223,
+      "steps": 24,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -93,7 +93,7 @@
   },
   "33": {
     "inputs": {
-      "text": "text, watermark, logo, blurry, low quality, distorted architecture, extra walls, people close-up",
+      "text": "text, logo, watermark, words, letters, people, crowded, distorted airplane, extra wings, blurry, low quality, ugly, deformed, dark, gloomy",
       "clip": [
         "30",
         1

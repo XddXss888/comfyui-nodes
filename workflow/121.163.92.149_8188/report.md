@@ -4,13 +4,13 @@
 **内存**: 31 GB (空闲 10 GB)
 **版本**: 0.25.0
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-24 08:08:38
-**历史总数**: 285 | **成功**: 10
+**扫描时间**: 2026-06-25 21:22:24
+**历史总数**: 376 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `8970b0fb-a6e4-4e81-a8be-73420ed3c9e9`
+- **Prompt ID**: `f7d1c160-3c1b-4569-af8f-0fab12e2ffcd`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (3):
@@ -18,10 +18,10 @@
   - flux1_vae_bf16.safetensors
   - qwen3vl_8b_fp8_scaled.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Isolated creature art of ONE single cute chibi hydra in side profile facing RIGHT. A horizontal four-legged dragon body on four legs, long tail to the left. It has EXACTLY THREE heads — only three, no
+  - [CLIPTextEncode::text] Isolated character art of a militia warrior hero holding a spear, simple leather and cloth armor, determined. ONE single cute chibi hero character in full body, standing straight, front view. STRICT C
 
 ### 2. workflow_02.json
-- **Prompt ID**: `a5af9d4e-7b05-4661-a929-fdc5557df9ce`
+- **Prompt ID**: `06e36009-b967-415b-abf6-257a77d64faf`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (3):
@@ -29,10 +29,10 @@
   - flux1_vae_bf16.safetensors
   - qwen3vl_8b_fp8_scaled.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Isolated creature art of ONE single cute chibi hydra in side profile facing RIGHT. A horizontal four-legged dragon body on four legs, long tail to the left. It has EXACTLY THREE heads — only three, no
+  - [CLIPTextEncode::text] Isolated character art of a wandering rogue hero holding a dagger, wearing a hooded cloak, sneaky and nimble. ONE single cute chibi hero character in full body, standing straight, front view. STRICT C
 
 ### 3. workflow_03.json
-- **Prompt ID**: `8cbe46a0-8e2a-4b45-aebd-a687e89be26f`
+- **Prompt ID**: `48e2b1d1-d09b-44aa-b868-aaf78b6871a2`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (3):
@@ -40,10 +40,10 @@
   - flux1_vae_bf16.safetensors
   - qwen3vl_8b_fp8_scaled.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Isolated creature art of ONE single cute chibi hydra in side profile facing RIGHT. A horizontal four-legged dragon body on four legs, long tail to the left. It has EXACTLY THREE heads — only three, no
+  - [CLIPTextEncode::text] Isolated character art of a paladin hero holding a sword and a round shield, shining silver plate armor, holy. ONE single cute chibi hero character in full body, standing straight, front view. STRICT 
 
 ### 4. workflow_04.json
-- **Prompt ID**: `4d5716ba-0858-4915-89d3-d69f423023f2`
+- **Prompt ID**: `eac650e8-85f7-4503-b535-b7e98fa52696`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (3):
@@ -51,10 +51,10 @@
   - flux1_vae_bf16.safetensors
   - qwen3vl_8b_fp8_scaled.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Isolated creature art of ONE single cute chibi hydra in side profile facing RIGHT. A horizontal four-legged dragon body on four legs, long tail to the left. It has EXACTLY THREE heads — only three, no
+  - [CLIPTextEncode::text] Isolated character art of a rune guardian hero holding a big shield covered in glowing blue runes, sturdy armor. ONE single cute chibi hero character in full body, standing straight, front view. STRIC
 
 ### 5. workflow_05.json
-- **Prompt ID**: `e1e6dc81-2b9c-4f53-b14b-e308267461db`
+- **Prompt ID**: `afe21916-9709-4ff5-9283-7fdbe03ddfb7`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (3):
@@ -62,10 +62,10 @@
   - flux1_vae_bf16.safetensors
   - qwen3vl_8b_fp8_scaled.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Isolated creature art of ONE single cute chibi three-headed dragon hydra in side profile. Its chubby FOUR-LEGGED dragon body faces to the RIGHT, standing on four legs, with a long tail that has small 
+  - [CLIPTextEncode::text] Isolated character art of a twin-sword warrior hero holding two swords, light armor. ONE single cute chibi hero character in full body, standing straight, front view. STRICT CONSISTENT CHIBI PROPORTIO
 
 ### 6. workflow_06.json
-- **Prompt ID**: `160d6b52-d80a-4026-9af7-45bef271dc5e`
+- **Prompt ID**: `ec1dbe3f-441f-42a6-95f5-4a285b8b6670`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (3):
@@ -73,10 +73,10 @@
   - flux1_vae_bf16.safetensors
   - qwen3vl_8b_fp8_scaled.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Isolated creature art of ONE single cute chibi three-headed dragon hydra in side profile. Its chubby FOUR-LEGGED dragon body faces to the RIGHT, standing on four legs, with a long tail that has small 
+  - [CLIPTextEncode::text] Isolated character art of an old ancient wizard hero with a long white beard, a tall magic staff, flowing robes. ONE single cute chibi hero character in full body, standing straight, front view. STRIC
 
 ### 7. workflow_07.json
-- **Prompt ID**: `3be4f8ca-5a6a-47b5-8e9f-3bd0d139ac48`
+- **Prompt ID**: `4ee51cf2-b667-4c5e-bda4-cf5df195a559`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (3):
@@ -84,10 +84,10 @@
   - flux1_vae_bf16.safetensors
   - qwen3vl_8b_fp8_scaled.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Isolated creature art of ONE single cute chibi three-headed dragon hydra in side profile. Its chubby FOUR-LEGGED dragon body faces to the RIGHT, standing on four legs, with a long tail that has small 
+  - [CLIPTextEncode::text] Isolated character art of a swift gale swordsman hero holding a slim sword, soft swirling wind around him. ONE single cute chibi hero character in full body, standing straight, front view. STRICT CONS
 
 ### 8. workflow_08.json
-- **Prompt ID**: `d4e42643-4b13-48ff-a4e2-f991fc9cc080`
+- **Prompt ID**: `144ae371-d2ec-4e20-8b4c-45866e135dd2`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (3):
@@ -95,10 +95,10 @@
   - flux1_vae_bf16.safetensors
   - qwen3vl_8b_fp8_scaled.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Isolated creature art of ONE single cute chibi three-headed dragon hydra in side profile. Its chubby FOUR-LEGGED dragon body faces to the RIGHT, standing on four legs, with a long tail that has small 
+  - [CLIPTextEncode::text] Isolated character art of a holy saintess hero holding a glowing staff, a flowing white-and-gold robe, gentle healing light. ONE single cute chibi hero character in full body, standing straight, front
 
 ### 9. workflow_09.json
-- **Prompt ID**: `773f4e98-2075-4e65-a8b4-3b83af31d48b`
+- **Prompt ID**: `c5fe2747-4c68-45d5-9604-dd61e860e8d2`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (3):
@@ -106,10 +106,10 @@
   - flux1_vae_bf16.safetensors
   - qwen3vl_8b_fp8_scaled.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Isolated creature art of ONE single cute chibi three-headed dragon hydra in side profile. Its chubby FOUR-LEGGED dragon body faces to the RIGHT, standing on four legs, with a long tail that has small 
+  - [CLIPTextEncode::text] Isolated character art of a magic swordsman hero holding a glowing enchanted sword, a half-knight half-mage with arcane runes. ONE single cute chibi hero character in full body, standing straight, fro
 
 ### 10. workflow_10.json
-- **Prompt ID**: `7d642fae-e43d-4617-b609-01c81f52c9f9`
+- **Prompt ID**: `34b5ef51-59db-4161-9408-7c1e0ea8fe08`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (3):
@@ -117,4 +117,4 @@
   - flux1_vae_bf16.safetensors
   - qwen3vl_8b_fp8_scaled.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Isolated creature art of ONE single cute chibi three-headed dragon hydra in side profile. Its chubby FOUR-LEGGED dragon body faces to the RIGHT, standing on four legs, with a long tail that has small 
+  - [CLIPTextEncode::text] Isolated character art of the legendary hero holding a large ornate golden sword and a shield, heroic ornate armor with a cape. ONE single cute chibi hero character in full body, standing straight, fr

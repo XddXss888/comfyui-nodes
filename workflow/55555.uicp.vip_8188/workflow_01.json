@@ -1,80 +1,215 @@
 {
-  "9": {
+  "75": {
     "inputs": {
-      "filename_prefix": "z-image-turbo",
-      "images": [
-        "57:8",
+      "filename_prefix": "video/LTX-2_random",
+      "format": "mp4",
+      "codec": "auto",
+      "video": [
+        "92:97",
         0
       ]
     },
-    "class_type": "SaveImage",
+    "class_type": "SaveVideo",
     "_meta": {
-      "title": "保存图像"
+      "title": "保存视频"
     }
   },
-  "57:30": {
+  "92:9": {
     "inputs": {
-      "clip_name": "qwen_3_4b.safetensors",
-      "type": "lumina2",
+      "steps": 20,
+      "max_shift": 2.05,
+      "base_shift": 0.95,
+      "stretch": true,
+      "terminal": 0.1,
+      "latent": [
+        "92:56",
+        0
+      ]
+    },
+    "class_type": "LTXVScheduler",
+    "_meta": {
+      "title": "LTXV调度器"
+    }
+  },
+  "92:60": {
+    "inputs": {
+      "text_encoder": "gemma_3_12B_it_fp4_mixed.safetensors",
+      "ckpt_name": "ltx-2-19b-dev-fp8.safetensors",
       "device": "default"
     },
-    "class_type": "CLIPLoader",
+    "class_type": "LTXAVTextEncoderLoader",
     "_meta": {
-      "title": "加载CLIP"
+      "title": "LTXV音频文本编码器加载器"
     }
   },
-  "57:29": {
+  "92:73": {
     "inputs": {
-      "vae_name": "ae.safetensors"
+      "sigmas": "0.909375, 0.725, 0.421875, 0.0"
     },
-    "class_type": "VAELoader",
+    "class_type": "ManualSigmas",
     "_meta": {
-      "title": "加载VAE"
+      "title": "自定义Sigmas"
     }
   },
-  "57:33": {
+  "92:76": {
     "inputs": {
-      "conditioning": [
-        "57:27",
-        0
-      ]
+      "model_name": "ltx-2-spatial-upscaler-x2-1.0.safetensors"
     },
-    "class_type": "ConditioningZeroOut",
+    "class_type": "LatentUpscaleModelLoader",
     "_meta": {
-      "title": "条件零化"
+      "title": "加载Latent放大模型"
     }
   },
-  "57:8": {
+  "92:81": {
     "inputs": {
-      "samples": [
-        "57:3",
+      "positive": [
+        "92:22",
         0
       ],
-      "vae": [
-        "57:29",
+      "negative": [
+        "92:22",
+        1
+      ],
+      "latent": [
+        "92:80",
         0
       ]
     },
-    "class_type": "VAEDecode",
+    "class_type": "LTXVCropGuides",
     "_meta": {
-      "title": "VAE解码"
+      "title": "LTXV裁剪指导"
     }
   },
-  "57:28": {
+  "92:82": {
     "inputs": {
-      "unet_name": "z_image_turbo_bf16.safetensors",
-      "weight_dtype": "default"
+      "cfg": 1.0,
+      "model": [
+        "92:68",
+        0
+      ],
+      "positive": [
+        "92:81",
+        0
+      ],
+      "negative": [
+        "92:81",
+        1
+      ]
     },
-    "class_type": "UNETLoader",
+    "class_type": "CFGGuider",
     "_meta": {
-      "title": "UNet加载器"
+      "title": "CFG引导器"
     }
   },
-  "57:27": {
+  "92:90": {
     "inputs": {
-      "text": "现代商务风格插画，一位成熟自信的男性中级职业经理人站在讲台前，手持发光的数据面板（显示“战略规划”、“团队领导”、“业务优化”字样），背景是抽象的企业大楼和上升的业绩图表。左右两侧分别有悬浮的3D立体徽章，左侧显示“90天提升”，右侧有课程模块图标（战略管理/团队激励/绩效提升）。整体采用深蓝色+银灰色的专业色系，底部留白处有课程名称“中级职业经理人课程”的立体发光字，背景带若隐若现的齿轮、网络图等管理元素。",
+      "upscale_method": "lanczos",
+      "scale_by": 0.5,
+      "image": [
+        "92:89",
+        0
+      ]
+    },
+    "class_type": "ImageScaleBy",
+    "_meta": {
+      "title": "缩放图像（比例）"
+    }
+  },
+  "92:91": {
+    "inputs": {
+      "image": [
+        "92:90",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "获取图像尺寸"
+    }
+  },
+  "92:51": {
+    "inputs": {
+      "frames_number": [
+        "92:62",
+        0
+      ],
+      "frame_rate": [
+        "92:99",
+        0
+      ],
+      "batch_size": 1,
+      "audio_vae": [
+        "92:48",
+        0
+      ]
+    },
+    "class_type": "LTXVEmptyLatentAudio",
+    "_meta": {
+      "title": "LTXV 空音频潜空间"
+    }
+  },
+  "92:22": {
+    "inputs": {
+      "frame_rate": [
+        "92:102",
+        0
+      ],
+      "positive": [
+        "92:3",
+        0
+      ],
+      "negative": [
+        "92:4",
+        0
+      ]
+    },
+    "class_type": "LTXVConditioning",
+    "_meta": {
+      "title": "LTXV条件"
+    }
+  },
+  "92:43": {
+    "inputs": {
+      "width": [
+        "92:91",
+        0
+      ],
+      "height": [
+        "92:91",
+        1
+      ],
+      "length": [
+        "92:62",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLTXVLatentVideo",
+    "_meta": {
+      "title": "空Latent视频（LTXV）"
+    }
+  },
+  "92:56": {
+    "inputs": {
+      "video_latent": [
+        "92:43",
+        0
+      ],
+      "audio_latent": [
+        "92:51",
+        0
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "92:4": {
+    "inputs": {
+      "text": "blurry, low quality, still frame, frames, watermark, overlay, titles, has blurbox, has subtitles",
       "clip": [
-        "57:30",
+        "92:60",
         0
       ]
     },
@@ -83,58 +218,321 @@
       "title": "CLIP文本编码"
     }
   },
-  "57:13": {
+  "92:89": {
     "inputs": {
-      "width": 1024,
-      "height": 512,
-      "batch_size": 1
+      "width": 1280,
+      "height": 1280,
+      "batch_size": 1,
+      "color": 0
     },
-    "class_type": "EmptySD3LatentImage",
+    "class_type": "EmptyImage",
     "_meta": {
-      "title": "空Latent图像（SD3）"
+      "title": "空图像"
     }
   },
-  "57:11": {
+  "92:62": {
     "inputs": {
-      "shift": 3.0,
-      "model": [
-        "57:28",
-        0
-      ]
+      "value": 121
     },
-    "class_type": "ModelSamplingAuraFlow",
+    "class_type": "PrimitiveInt",
     "_meta": {
-      "title": "采样算法（AuraFlow）"
+      "title": "Length"
     }
   },
-  "57:3": {
+  "92:41": {
     "inputs": {
-      "seed": 606169442365949,
-      "steps": 8,
-      "cfg": 1.0,
-      "sampler_name": "res_multistep",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "57:11",
+      "noise": [
+        "92:11",
         0
       ],
-      "positive": [
-        "57:27",
+      "guider": [
+        "92:47",
         0
       ],
-      "negative": [
-        "57:33",
+      "sampler": [
+        "92:8",
+        0
+      ],
+      "sigmas": [
+        "92:9",
         0
       ],
       "latent_image": [
-        "57:13",
+        "92:56",
         0
       ]
     },
-    "class_type": "KSampler",
+    "class_type": "SamplerCustomAdvanced",
     "_meta": {
-      "title": "K采样器"
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "92:67": {
+    "inputs": {
+      "noise_seed": 0
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  },
+  "92:11": {
+    "inputs": {
+      "noise_seed": 10
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  },
+  "92:80": {
+    "inputs": {
+      "av_latent": [
+        "92:41",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXV分离音视频潜空间"
+    }
+  },
+  "92:83": {
+    "inputs": {
+      "video_latent": [
+        "92:84",
+        0
+      ],
+      "audio_latent": [
+        "92:80",
+        1
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "92:84": {
+    "inputs": {
+      "samples": [
+        "92:81",
+        2
+      ],
+      "upscale_model": [
+        "92:76",
+        0
+      ],
+      "vae": [
+        "92:1",
+        2
+      ]
+    },
+    "class_type": "LTXVLatentUpsampler",
+    "_meta": {
+      "title": "spatial"
+    }
+  },
+  "92:70": {
+    "inputs": {
+      "noise": [
+        "92:67",
+        0
+      ],
+      "guider": [
+        "92:82",
+        0
+      ],
+      "sampler": [
+        "92:66",
+        0
+      ],
+      "sigmas": [
+        "92:73",
+        0
+      ],
+      "latent_image": [
+        "92:83",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "92:3": {
+    "inputs": {
+      "text": "3D动画。清晨，阳光透过薄雾洒在宁静的湖面上，波光粼粼。一只毛茸茸的橘色小猫，戴着小小的草帽，坐在湖边的木桩上，手里晃悠悠地握着一根竹制鱼竿。镜头从远景缓缓推近，绕着小猫半圈，展示它专注又好奇的神情。湖面偶尔泛起涟漪，水下隐约有鱼影游过。小猫小声嘀咕：“妈妈说，钓鱼要耐心……可为什么还没有鱼来呀？”突然，鱼线猛地一沉，小猫吓一跳，手忙脚乱地往回拉，结果鱼钩上挂着一只破靴子，水花溅了它一脸。它懊恼地甩甩头，镜头拉回中景，它再次坐下，深呼吸。这时旁白轻声响起（温柔女声）：“别着急，小猫咪，安静等待，最好的东西总会来。”镜头切换至水下，一条漂亮的红鲤鱼正慢慢向鱼饵靠近。小猫伏低身子，屏住呼吸。最终，它轻轻一提竿，一条闪光的小鱼跃出水面。小猫开心地笑了，阳光照亮它湿漉漉的胡须。 尺寸：768*1024",
+      "clip": [
+        "92:60",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "92:97": {
+    "inputs": {
+      "fps": [
+        "92:102",
+        0
+      ],
+      "images": [
+        "92:98",
+        0
+      ],
+      "audio": [
+        "92:96",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "92:48": {
+    "inputs": {
+      "ckpt_name": "ltx-2-19b-dev-fp8.safetensors"
+    },
+    "class_type": "LTXVAudioVAELoader",
+    "_meta": {
+      "title": "LTXV音频VAE加载器"
+    }
+  },
+  "92:94": {
+    "inputs": {
+      "av_latent": [
+        "92:70",
+        1
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXV分离音视频潜空间"
+    }
+  },
+  "92:98": {
+    "inputs": {
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 4096,
+      "temporal_overlap": 8,
+      "samples": [
+        "92:94",
+        0
+      ],
+      "vae": [
+        "92:1",
+        2
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE解码（分块）"
+    }
+  },
+  "92:96": {
+    "inputs": {
+      "samples": [
+        "92:94",
+        1
+      ],
+      "audio_vae": [
+        "92:48",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEDecode",
+    "_meta": {
+      "title": "LTXV音频VAE解码"
+    }
+  },
+  "92:47": {
+    "inputs": {
+      "cfg": 4.0,
+      "model": [
+        "92:1",
+        0
+      ],
+      "positive": [
+        "92:22",
+        0
+      ],
+      "negative": [
+        "92:22",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG引导器"
+    }
+  },
+  "92:102": {
+    "inputs": {
+      "value": 24.0
+    },
+    "class_type": "PrimitiveFloat",
+    "_meta": {
+      "title": "Frame Rate(float)"
+    }
+  },
+  "92:99": {
+    "inputs": {
+      "value": 24
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Frame Rate(int)"
+    }
+  },
+  "92:68": {
+    "inputs": {
+      "lora_name": "ltx-2-19b-distilled-lora-384.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "92:1",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "92:8": {
+    "inputs": {
+      "sampler_name": "euler_ancestral",
+      "steps": 20,
+      "cfg": 4
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "92:66": {
+    "inputs": {
+      "sampler_name": "euler_ancestral",
+      "steps": 20,
+      "cfg": 4
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "92:1": {
+    "inputs": {
+      "ckpt_name": "ltx-2-19b-dev-fp8.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Checkpoint加载器（简易）"
     }
   }
 }

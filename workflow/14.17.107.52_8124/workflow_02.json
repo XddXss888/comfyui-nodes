@@ -7,12 +7,12 @@
     },
     "class_type": "CLIPLoader",
     "_meta": {
-      "title": "加载CLIP"
+      "title": "Load CLIP"
     }
   },
   "72": {
     "inputs": {
-      "text": "低画质，模糊，变形，过曝，画面太暗，死黑阴影，阴天，冷色调，蓝色调，人物，现代元素，多的院子，赛博朋克，卡通，Q版，萌系，嘈杂混乱",
+      "text": "人物、行人、现代建筑、电线、汽车、鲜艳刺眼高饱和色彩、模糊低分辨率、畸形扭曲桃树、破损崩坏古建筑、水印、文字、垃圾杂物、阴雨暗沉画面、卡通二次元画风、飞鸟、塑料质感道具、积雪、枯枝无花\n",
       "clip": [
         "71",
         0
@@ -29,19 +29,19 @@
     },
     "class_type": "VAELoader",
     "_meta": {
-      "title": "加载VAE"
+      "title": "Load VAE"
     }
   },
   "74": {
     "inputs": {
-      "width": 1088,
-      "height": 1920,
+      "width": 720,
+      "height": 1280,
       "length": 1,
       "batch_size": 2
     },
     "class_type": "EmptyHunyuanLatentVideo",
     "_meta": {
-      "title": "空Latent视频（Hunyuan）"
+      "title": "Empty HunyuanVideo 1.0 Latent"
     }
   },
   "75": {
@@ -51,7 +51,7 @@
     },
     "class_type": "UNETLoader",
     "_meta": {
-      "title": "UNet加载器"
+      "title": "Load Diffusion Model"
     }
   },
   "76": {
@@ -61,7 +61,7 @@
     },
     "class_type": "UNETLoader",
     "_meta": {
-      "title": "UNet加载器"
+      "title": "Load Diffusion Model"
     }
   },
   "82": {
@@ -74,7 +74,7 @@
     },
     "class_type": "ModelSamplingSD3",
     "_meta": {
-      "title": "采样算法（SD3）"
+      "title": "ModelSamplingSD3"
     }
   },
   "83": {
@@ -88,7 +88,7 @@
     },
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "LoRA加载器（仅模型）"
+      "title": "Load LoRA"
     }
   },
   "85": {
@@ -102,7 +102,7 @@
     },
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "LoRA加载器（仅模型）"
+      "title": "Load LoRA"
     }
   },
   "86": {
@@ -115,7 +115,7 @@
     },
     "class_type": "ModelSamplingSD3",
     "_meta": {
-      "title": "采样算法（SD3）"
+      "title": "ModelSamplingSD3"
     }
   },
   "87": {
@@ -131,12 +131,12 @@
     },
     "class_type": "VAEDecode",
     "_meta": {
-      "title": "VAE解码"
+      "title": "VAE Decode"
     }
   },
   "89": {
     "inputs": {
-      "text": "玄幻古风插画漫画风格，俯拍中景，上谷里有一大片桃花树。桃花开得正盛，如烟如霞，粉白交织，地上落满花瓣，有种种秘境感，远处泥路上隐约看见一座被桃树围绕着的中式建筑的庭院，院子围墙是青深色的。深宅大院\n",
+      "text": "玄幻古风插画漫画风格，高空俯视取景，中式古典江南合院古民居，双层主建筑搭配两侧厢房，青灰翘角黛瓦，深棕色雕花木质门窗回廊，院落铺满青石板步道，中央小型圆形草坪，置景观石盆栽，院内悬挂多盏竹编古风灯笼，白墙黑瓦围墙，雕花中式院门，石板阶梯小路；画面四周环绕大片茂密桃林，高大老桃树，枝桠交错缀满粉嫩桃花，地面铺满飘落粉色桃花瓣，春日柔和晴天，淡蓝天空点缀轻薄白云，通透自然光，树叶花枝光影洒落庭院，景深前景桃树枝条天然画框，远山朦胧淡青，写实电影级质感，8K 超清，细腻古建筑木纹、墙面斑驳质感，花草花瓣细节丰富，静谧雅致治愈氛围，无人物，纵深感构图，低饱和柔和自然色调，国风写实园林摄影，柔和漫反射光影（让房子复古破旧点，色彩深色点）",
       "clip": [
         "71",
         0
@@ -160,7 +160,7 @@
     },
     "class_type": "VAEDecode",
     "_meta": {
-      "title": "VAE解码"
+      "title": "VAE Decode"
     }
   },
   "115": {
@@ -172,7 +172,7 @@
     },
     "class_type": "PreviewImage",
     "_meta": {
-      "title": "预览图像"
+      "title": "Preview Image"
     }
   },
   "116": {
@@ -184,7 +184,7 @@
     },
     "class_type": "PreviewImage",
     "_meta": {
-      "title": "预览图像"
+      "title": "Preview Image"
     }
   },
   "117": {
@@ -214,7 +214,7 @@
     },
     "class_type": "KSampler",
     "_meta": {
-      "title": "K采样器"
+      "title": "KSampler"
     }
   },
   "118": {
@@ -244,7 +244,7 @@
     },
     "class_type": "KSampler",
     "_meta": {
-      "title": "K采样器"
+      "title": "KSampler"
     }
   },
   "119": {
@@ -257,7 +257,7 @@
     },
     "class_type": "SaveImage",
     "_meta": {
-      "title": "保存图像"
+      "title": "Save Image"
     }
   }
 }

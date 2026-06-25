@@ -1,7 +1,7 @@
 {
-  "1": {
+  "20": {
     "inputs": {
-      "image": "input_1782218182891_584fec9f-27d2-4db2-b6c6-068b133800a3_1fa28ded-43b4-493d-add8-d169c0b75ff3.png",
+      "image": "input_1782282353165_1b8fc6eb-d03e-4752-a589-2da618970c22_5ef54075-4389-4649-b47e-70150ffdbe61.png",
       "upload": "image"
     },
     "class_type": "LoadImage",
@@ -9,89 +9,35 @@
       "title": "加载图像"
     }
   },
-  "2": {
+  "21": {
     "inputs": {
-      "model": "layerdifforg/seethroughv0.0.2_layerdiff3d",
-      "vae_ckpt": "",
-      "unet_ckpt": ""
-    },
-    "class_type": "SeeThrough_LoadLayerDiffModel",
-    "_meta": {
-      "title": "SeeThrough Load LayerDiff Model"
-    }
-  },
-  "3": {
-    "inputs": {
-      "model": "24yearsold/seethroughv0.0.1_marigold"
-    },
-    "class_type": "SeeThrough_LoadDepthModel",
-    "_meta": {
-      "title": "SeeThrough Load Depth Model"
-    }
-  },
-  "5": {
-    "inputs": {
-      "seed": 548021857,
-      "layers": [
-        "9",
-        0
-      ],
-      "depth_model": [
-        "3",
-        0
-      ]
-    },
-    "class_type": "SeeThrough_GenerateDepth",
-    "_meta": {
-      "title": "SeeThrough Generate Depth"
-    }
-  },
-  "6": {
-    "inputs": {
-      "tblr_split": true,
-      "use_lama": true,
-      "layers_depth": [
-        "5",
-        0
-      ]
-    },
-    "class_type": "SeeThrough_PostProcess",
-    "_meta": {
-      "title": "SeeThrough Post Process"
-    }
-  },
-  "7": {
-    "inputs": {
-      "filename_prefix": "seethrough",
-      "Download PSD": null,
-      "Download Depth PSD": null,
-      "parts": [
-        "6",
-        0
-      ]
-    },
-    "class_type": "SeeThrough_SavePSD",
-    "_meta": {
-      "title": "SeeThrough Save PSD"
-    }
-  },
-  "9": {
-    "inputs": {
-      "seed": 548021857,
-      "resolution": 1280,
-      "num_inference_steps": 50,
+      "model": "BiRefNet-general",
+      "mask_blur": 0,
+      "mask_offset": 0,
+      "background": "Alpha",
+      "invert_output": false,
+      "refine_foreground": true,
       "image": [
-        "1",
-        0
-      ],
-      "layerdiff_model": [
-        "2",
+        "20",
         0
       ]
     },
-    "class_type": "SeeThrough_GenerateLayers",
+    "class_type": "BiRefNetRMBG",
     "_meta": {
-      "title": "SeeThrough Generate Layers"
+      "title": "BiRefNet (RMBG)"
+    }
+  },
+  "22": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
     }
   }
 }

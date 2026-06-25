@@ -56,8 +56,8 @@
       "crop_h": 0,
       "target_width": 1024,
       "target_height": 1024,
-      "text_g": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_female_ring, female ring, fWgvccV359O1A9S28_heart_pattern, heart pattern, silver, ring, heart pattern",
-      "text_l": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_female_ring, female ring, fWgvccV359O1A9S28_heart_pattern, heart pattern, silver, ring, heart pattern",
+      "text_g": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_brooch, brooch, fWgvccV359O1A9S28_arch_pattern, arch pattern, silver, brooch design, Yakutian traditional ornaments",
+      "text_l": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_brooch, brooch, fWgvccV359O1A9S28_arch_pattern, arch pattern, silver, brooch design, Yakutian traditional ornaments",
       "clip": [
         "50",
         1
@@ -91,9 +91,9 @@
   "36": {
     "inputs": {
       "add_noise": "enable",
-      "noise_seed": 17649421532582423013,
+      "noise_seed": 2200987901698864366,
       "steps": 35,
-      "cfg": 5.5,
+      "cfg": 5.9,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "exponential",
       "start_at_step": 0,
@@ -133,9 +133,9 @@
   "38": {
     "inputs": {
       "add_noise": "disable",
-      "noise_seed": 17649421532582423013,
+      "noise_seed": 2200987901698864366,
       "steps": 35,
-      "cfg": 5.5,
+      "cfg": 5.9,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "karras",
       "start_at_step": 25,
@@ -177,7 +177,7 @@
       "ascore": 6.0,
       "width": 1024,
       "height": 1024,
-      "text": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_female_ring, female ring, fWgvccV359O1A9S28_heart_pattern, heart pattern, silver, ring, heart pattern",
+      "text": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_brooch, brooch, fWgvccV359O1A9S28_arch_pattern, arch pattern, silver, brooch design, Yakutian traditional ornaments",
       "clip": [
         "39",
         1
@@ -207,8 +207,8 @@
   "50": {
     "inputs": {
       "lora_name": "jeweler-ai-v1.5-000037.safetensors",
-      "strength_model": 0.75,
-      "strength_clip": 0.75,
+      "strength_model": 0.9,
+      "strength_clip": 0.9,
       "model": [
         "4",
         0

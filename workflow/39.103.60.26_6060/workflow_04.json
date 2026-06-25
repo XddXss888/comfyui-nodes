@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "input_823af39e1ca1.jpg"
+      "image": "input_13c38dc4b83c.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -41,7 +41,7 @@
     },
     "class_type": "LayerUtility: RoundedRectangle",
     "_meta": {
-      "title": "LayerUtility: RoundedRectangle"
+      "title": "图层工具：圆角矩形"
     }
   },
   "13": {
@@ -56,7 +56,7 @@
       "scale_to_length": 928,
       "background_color": "#000000",
       "image": [
-        "16",
+        "14",
         0
       ]
     },
@@ -65,9 +65,9 @@
       "title": "按宽高比缩放_V2"
     }
   },
-  "16": {
+  "14": {
     "inputs": {
-      "prompt": "保持图中人物的一致性，生成他们和熊猫合影的画面，左右两侧有可爱的熊猫趴在他们肩头，背景是竹园风光。写真摄影风格，轻微美颜，人像精修",
+      "prompt": "保持图中人物的一致性，生成他们和熊猫合影的画面，左右两侧有可爱的熊猫趴在他们肩头，背景是竹林和五颜六色的花朵，有一只熊猫抱着竹子，画面是2D卡通风格",
       "model": "doubao-seedream-4-0-250828",
       "response_format": "url",
       "resolution": "4K",
@@ -77,7 +77,7 @@
       "apikey": "fe023f32-413c-41f8-a35d-694231e4c96a",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 944522458,
+      "seed": 1355203547,
       "watermark": false,
       "stream": false,
       "image1": [

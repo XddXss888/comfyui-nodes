@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "Traditional Chinese ink painting of misty mountains and a tranquil river, towering pine trees on cliff edges, a lone fisherman in a small wooden boat, cascading waterfalls, soft morning fog, bamboo forest, ancient stone bridge, serene and contemplative atmosphere, guohua style, ink wash technique, delicate brush strokes, minimal color palette of black ink with subtle touches of light blue and pale gold, vertical scroll composition, poetic and meditative",
+      "text": "An elegant illustration of the Great Wall of China winding across green mountains at sunrise, traditional Chinese landscape atmosphere, warm golden light, mist in the valleys, detailed yet clean digital illustration, painterly style, harmonious composition, no text, no watermark",
       "clip": [
         "30",
         1
@@ -43,7 +43,7 @@
   },
   "27": {
     "inputs": {
-      "width": 768,
+      "width": 1024,
       "height": 768,
       "batch_size": 1
     },
@@ -63,7 +63,7 @@
   },
   "31": {
     "inputs": {
-      "seed": 18938598610354,
+      "seed": 722612455081049,
       "steps": 20,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -93,7 +93,7 @@
   },
   "33": {
     "inputs": {
-      "text": "photo, realistic, 3d, blurry, deformed, ugly",
+      "text": "text, watermark, logo, blurry, low quality, distorted architecture, extra walls, people close-up",
       "clip": [
         "30",
         1

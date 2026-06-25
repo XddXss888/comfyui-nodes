@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "input_8914b5763230.jpg"
+      "image": "input_221cfd0404e8.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -24,37 +24,37 @@
   "8": {
     "inputs": {
       "aspect_ratio": "custom",
-      "proportional_width": 2622,
-      "proportional_height": 1772,
+      "proportional_width": 1016,
+      "proportional_height": 1520,
       "fit": "crop",
-      "method": "bicubic",
-      "round_to_multiple": "None",
+      "method": "lanczos",
+      "round_to_multiple": "8",
       "scale_to_side": "width",
-      "scale_to_length": 2622,
+      "scale_to_length": 1016,
       "background_color": "#000000",
       "image": [
-        "14",
+        "15",
         0
       ]
     },
     "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
     "_meta": {
-      "title": "图层工具：按宽高比缩放 V2"
+      "title": "按宽高比缩放_V2"
     }
   },
-  "14": {
+  "15": {
     "inputs": {
-      "prompt": "参考图中主要人物，严格保持人物面部和动作一致，生成喜庆吉祥的新春插画风格图像，人物面部写实，超高清真人写真，电影级光影，人物服装改为国潮风的重工刺绣正红吉服，衣身布满金线织就的缠枝莲纹样，质感厚重奢华。身旁是一只拟人化的熊猫，熊猫穿着红色中山装，手里拿着一个金色的“福”字，拱手给大家拜年。背景为橙红渐变放射状条纹，空中悬浮大量金元宝与金币，动态飘落特效，身后是一颗巨大的金色金币摇钱树。整体色调红金交织，质感华丽，光影对比强烈，氛围喜庆震撼，商业级精修，8K 分辨率。",
+      "prompt": "保持图中人物的一致性，生成他们和熊猫合影的画面，左右两侧有可爱的熊猫趴在他们肩头，背景是竹园风光。写真摄影风格，中远景景别，轻微美颜，人像精修",
       "model": "doubao-seedream-4-0-250828",
       "response_format": "url",
       "resolution": "4K",
-      "aspect_ratio": "16:9",
+      "aspect_ratio": "2:3",
       "width": 1024,
       "height": 1024,
       "apikey": "fe023f32-413c-41f8-a35d-694231e4c96a",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 1382224540,
+      "seed": 235345089,
       "watermark": false,
       "stream": false,
       "image1": [

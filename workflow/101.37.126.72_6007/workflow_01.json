@@ -1,94 +1,181 @@
 {
-  "5": {
+  "278": {
+    "inputs": {
+      "image": "cmqsujh4x00d1lv01vsnty9kk.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "LoadImage"
+    }
+  },
+  "352": {
+    "inputs": {
+      "text": "让照片的这个男人手上戴着劳力士手表，穿着白色衬衫、黑色马甲和领带，坐着身体半侧靠在米色办公椅上，保持脸部一致，自信的微笑着看向镜头,背景是带有暖色灯光的书架，摆放着书籍和装饰物，营造出温馨而有质感的室内环境。前景有桌面和文件本，奢华，整体色调柔和，光线自然，给人一种商务、精英、理性且沉稳的感觉。"
+    },
+    "class_type": "CR Text",
+    "_meta": {
+      "title": "CR Text"
+    }
+  },
+  "378": {
+    "inputs": {
+      "model": [
+        "388",
+        0
+      ],
+      "positive": [
+        "385",
+        0
+      ],
+      "negative": [
+        "383",
+        0
+      ],
+      "latent_image": [
+        "379",
+        0
+      ],
+      "seed": 484865308044076,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "379": {
     "inputs": {
       "width": [
-        "64",
+        "403",
         1
       ],
       "height": [
-        "64",
+        "403",
         2
       ],
       "batch_size": 1
     },
     "class_type": "EmptyFlux2LatentImage",
     "_meta": {
-      "title": "空Latent图像（Flux2）"
+      "title": "EmptyFlux2LatentImage"
     }
   },
-  "7": {
+  "380": {
     "inputs": {
-      "vae_name": "flux2-vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "11": {
-    "inputs": {
-      "version": "RMBG-2.0"
-    },
-    "class_type": "LayerMask: LoadBiRefNetModelV2",
-    "_meta": {
-      "title": "图层遮罩：加载BiRefNet模型 V2（高级）"
-    }
-  },
-  "12": {
-    "inputs": {
-      "select": "mask1",
-      "sort_by": "area_desc",
-      "min_area": 100,
-      "padding": 10,
-      "output_mode": "crop",
       "image": [
-        "43",
+        "278",
         0
       ],
-      "mask": [
-        "43",
-        1
-      ]
+      "aspect_ratio": "original",
+      "proportional_width": 2,
+      "proportional_height": 3,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": 1024,
+      "background_color": "#000000"
     },
-    "class_type": "PD_Mask Selector",
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
     "_meta": {
-      "title": "PD_Mask Selector"
+      "title": "LayerUtility: ImageScaleByAspectRatio V2"
     }
   },
-  "14": {
+  "381": {
     "inputs": {
-      "blend_mode": "normal",
-      "opacity": 100,
-      "x_percent": [
-        "158",
-        7
-      ],
-      "y_percent": [
-        "158",
-        8
-      ],
-      "scale": 1.0,
-      "align_mode": "bottom_align",
-      "invert_mask": true,
-      "background_image": [
-        "174",
+      "clip": [
+        "389",
         0
       ],
-      "layer_image": [
-        "173",
-        0
-      ],
-      "layer_mask": [
-        "183",
+      "text": [
+        "352",
         0
       ]
     },
-    "class_type": "ImageBlendV1",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "PD:Image Blend V1"
+      "title": "CLIPTextEncode"
     }
   },
-  "17": {
+  "382": {
+    "inputs": {
+      "pixels": [
+        "380",
+        0
+      ],
+      "vae": [
+        "390",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAEEncode"
+    }
+  },
+  "383": {
+    "inputs": {
+      "conditioning": [
+        "384",
+        0
+      ],
+      "latent": [
+        "382",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "384": {
+    "inputs": {
+      "conditioning": [
+        "381",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "385": {
+    "inputs": {
+      "conditioning": [
+        "381",
+        0
+      ],
+      "latent": [
+        "382",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "388": {
+    "inputs": {
+      "model": [
+        "394",
+        0
+      ],
+      "lora_name": "training/霸道总裁KB2_v2_000003000.safetensors",
+      "strength_model": 1.0
+    },
+    "class_type": "PD_lora_loader",
+    "_meta": {
+      "title": "PD_lora_loader"
+    }
+  },
+  "389": {
     "inputs": {
       "clip_name": "qwen_3_8b_fp8mixed.safetensors",
       "type": "flux2",
@@ -96,491 +183,65 @@
     },
     "class_type": "CLIPLoader",
     "_meta": {
-      "title": "加载CLIP"
+      "title": "CLIPLoader"
     }
   },
-  "23": {
+  "390": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "VAELoader"
+    }
+  },
+  "393": {
+    "inputs": {
+      "samples": [
+        "378",
+        0
+      ],
+      "vae": [
+        "390",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAEDecode"
+    }
+  },
+  "394": {
     "inputs": {
       "unet_name": "flux-2-klein-9b-fp8.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
     "_meta": {
-      "title": "UNet加载器"
+      "title": "UNETLoader"
     }
   },
-  "26": {
+  "403": {
     "inputs": {
-      "text": "PD, transform the real photograph into PDstyle,保持服装和颜色完全一致，背景不变"
-    },
-    "class_type": "CR Text",
-    "_meta": {
-      "title": "🔤 CR Text"
-    }
-  },
-  "37": {
-    "inputs": {
-      "upscale_method": "lanczos",
-      "megapixels": 1.0,
-      "resolution_steps": 1,
-      "image": [
-        "58",
-        0
-      ]
-    },
-    "class_type": "ImageScaleToTotalPixels",
-    "_meta": {
-      "title": "缩放图像（像素）"
-    }
-  },
-  "39": {
-    "inputs": {
-      "invert_mask": false,
-      "detect": "mask_area",
-      "top_reserve": 20,
-      "bottom_reserve": 20,
-      "left_reserve": 20,
-      "right_reserve": 20,
-      "round_to_multiple": "8",
-      "image": [
-        "12",
-        0
-      ],
-      "mask": [
-        "12",
-        1
-      ]
-    },
-    "class_type": "LayerUtility: CropByMask V2",
-    "_meta": {
-      "title": "图层工具：遮罩裁剪 V2"
-    }
-  },
-  "43": {
-    "inputs": {
-      "detail_method": "VITMatte",
-      "detail_erode": 4,
-      "detail_dilate": 2,
-      "black_point": 0.01,
-      "white_point": 0.99,
-      "process_detail": false,
-      "device": "cuda",
-      "max_megapixels": 2.0,
-      "image": [
-        "206",
-        0
-      ],
-      "birefnet_model": [
-        "11",
-        0
-      ]
-    },
-    "class_type": "LayerMask: BiRefNetUltraV2",
-    "_meta": {
-      "title": "图层遮罩：BiRefNet Ultra V2（高级）"
-    }
-  },
-  "48": {
-    "inputs": {
-      "seed": 815030056534305,
-      "steps": 8,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "55",
-        0
-      ],
-      "positive": [
-        "52",
-        0
-      ],
-      "negative": [
-        "51",
-        0
-      ],
-      "latent_image": [
-        "5",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "50": {
-    "inputs": {
-      "pixels": [
-        "37",
-        0
-      ],
-      "vae": [
-        "7",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE编码"
-    }
-  },
-  "51": {
-    "inputs": {
-      "conditioning": [
-        "53",
-        0
-      ],
-      "latent": [
-        "50",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "参考Latent"
-    }
-  },
-  "52": {
-    "inputs": {
-      "conditioning": [
-        "54",
-        0
-      ],
-      "latent": [
-        "50",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "参考Latent"
-    }
-  },
-  "53": {
-    "inputs": {
-      "conditioning": [
-        "54",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "条件零化"
-    }
-  },
-  "54": {
-    "inputs": {
-      "text": [
-        "26",
-        0
-      ],
-      "clip": [
-        "17",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
-    }
-  },
-  "55": {
-    "inputs": {
-      "lora_name": "training/写实动漫-小AI-RA_FK_v2_000002000.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "23",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA加载器（仅模型）"
-    }
-  },
-  "56": {
-    "inputs": {
-      "samples": [
-        "48",
-        0
-      ],
-      "vae": [
-        "7",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "58": {
-    "inputs": {
-      "blend_mode": "normal",
-      "opacity": 100,
-      "x_percent": 50.0,
-      "y_percent": 50.0,
-      "scale": 1.0,
-      "align_mode": "default",
-      "invert_mask": true,
-      "background_image": [
-        "14",
-        0
-      ],
-      "layer_image": [
-        "181",
-        0
-      ],
-      "layer_mask": [
-        "181",
-        1
-      ]
-    },
-    "class_type": "ImageBlendV1",
-    "_meta": {
-      "title": "PD:Image Blend V1"
-    }
-  },
-  "62": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "56",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
-    }
-  },
-  "64": {
-    "inputs": {
-      "aspect_ratio": "1:1",
+      "aspect_ratio": "2:3",
       "max_size": 1024
     },
     "class_type": "PDRatioSelector",
     "_meta": {
-      "title": "PD:ratio selector"
+      "title": "PDRatioSelector"
     }
   },
-  "158": {
+  "407": {
     "inputs": {
-      "aspect_ratio": [
-        "64",
+      "images": [
+        "393",
         0
       ],
-      "int1": 768,
-      "int2": 820,
-      "int3": 640,
-      "X1": 50.0,
-      "Y1": 53.0,
-      "X2": 50.0,
-      "Y2": 53.0,
-      "X3": 50.0,
-      "Y3": 53.0,
-      "front1": [
-        "199",
-        0
-      ],
-      "mask1": [
-        "199",
-        1
-      ],
-      "back1": [
-        "204",
-        0
-      ],
-      "front2": [
-        "200",
-        0
-      ],
-      "mask2": [
-        "200",
-        1
-      ],
-      "back2": [
-        "203",
-        0
-      ],
-      "front3": [
-        "201",
-        0
-      ],
-      "mask3": [
-        "201",
-        1
-      ],
-      "back3": [
-        "202",
-        0
-      ]
+      "filename_prefix": "ComfyUI"
     },
-    "class_type": "PDSelectorSumT3",
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "PD-selector-sum-T3"
-    }
-  },
-  "173": {
-    "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 1,
-      "proportional_height": 1,
-      "fit": "letterbox",
-      "method": "nearest",
-      "scale_to_side": "longest",
-      "scale_to_length": [
-        "158",
-        3
-      ],
-      "round_to_multiple": "8",
-      "background_color": "#FFFFFF",
-      "pixels": [
-        "39",
-        0
-      ],
-      "mask_optional": [
-        "39",
-        1
-      ]
-    },
-    "class_type": "PDImageResizeV2",
-    "_meta": {
-      "title": "PDimage_resize_V2"
-    }
-  },
-  "174": {
-    "inputs": {
-      "size": [
-        "194",
-        0
-      ],
-      "interpolation": "bicubic",
-      "image": [
-        "158",
-        2
-      ]
-    },
-    "class_type": "PDIMAGE_LongerSize",
-    "_meta": {
-      "title": "PDIMAGE:LongerSize"
-    }
-  },
-  "181": {
-    "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 1,
-      "proportional_height": 1,
-      "fit": "letterbox",
-      "method": "lanczos",
-      "scale_to_side": "longest",
-      "scale_to_length": [
-        "194",
-        0
-      ],
-      "round_to_multiple": "8",
-      "background_color": "#000000",
-      "pixels": [
-        "158",
-        0
-      ],
-      "mask_optional": [
-        "158",
-        1
-      ]
-    },
-    "class_type": "PDImageResizeV2",
-    "_meta": {
-      "title": "PDimage_resize_V2"
-    }
-  },
-  "183": {
-    "inputs": {
-      "mask": [
-        "173",
-        1
-      ]
-    },
-    "class_type": "InvertMask",
-    "_meta": {
-      "title": "反转遮罩"
-    }
-  },
-  "194": {
-    "inputs": {
-      "text": [
-        "64",
-        4
-      ]
-    },
-    "class_type": "JWStringToInteger",
-    "_meta": {
-      "title": "String to Integer"
-    }
-  },
-  "199": {
-    "inputs": {
-      "image": "1-1.png"
-    },
-    "class_type": "PD_load_image_v1",
-    "_meta": {
-      "title": "PD Load Image"
-    }
-  },
-  "200": {
-    "inputs": {
-      "image": "3.png"
-    },
-    "class_type": "PD_load_image_v1",
-    "_meta": {
-      "title": "PD Load Image"
-    }
-  },
-  "201": {
-    "inputs": {
-      "image": "2.png"
-    },
-    "class_type": "PD_load_image_v1",
-    "_meta": {
-      "title": "PD Load Image"
-    }
-  },
-  "202": {
-    "inputs": {
-      "image": "3 (1).png"
-    },
-    "class_type": "PD_load_image_v1",
-    "_meta": {
-      "title": "PD Load Image"
-    }
-  },
-  "203": {
-    "inputs": {
-      "image": "2 (1).png"
-    },
-    "class_type": "PD_load_image_v1",
-    "_meta": {
-      "title": "PD Load Image"
-    }
-  },
-  "204": {
-    "inputs": {
-      "image": "Clipboard - 2026-06-17 17.02.09.png"
-    },
-    "class_type": "PD_load_image_v1",
-    "_meta": {
-      "title": "PD Load Image"
-    }
-  },
-  "206": {
-    "inputs": {
-      "image": "cmqq9coeo00jplv01a20fv3of.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
+      "title": "SaveImage"
     }
   }
 }

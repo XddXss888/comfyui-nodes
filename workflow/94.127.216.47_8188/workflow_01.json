@@ -1,83 +1,116 @@
 {
-  "37": {
+  "2": {
     "inputs": {
-      "aspect_ratio": "1:1 (Square)",
-      "megapixels": 2.0,
-      "multiple": 8
-    },
-    "class_type": "ResolutionSelector",
-    "_meta": {
-      "title": "Resolution Selector"
-    }
-  },
-  "111": {
-    "inputs": {
-      "source": [
-        "37",
+      "seed": 0,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "er_sde",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "25",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "8",
+        0
+      ],
+      "latent_image": [
+        "10",
         0
       ]
     },
-    "class_type": "PreviewAny",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "Preview as Text"
+      "title": "KSampler"
     }
   },
-  "177": {
+  "3": {
     "inputs": {
-      "number_type": "integer",
-      "minimum": 1,
-      "maximum": 1000000000,
-      "seed": 1103898885381392
+      "samples": [
+        "2",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ]
     },
-    "class_type": "Random Number",
+    "class_type": "VAEDecode",
     "_meta": {
-      "title": "Random Number"
+      "title": "VAE Decode"
     }
   },
-  "179": {
+  "4": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "A grim dark painting, rendered in oil, mud and blood, with broad, bold brushstrokes. Duel of Space Marine \\(White Scars legion\\) and Chaos Space marine \\(Thousand Sons legion\\) from Warhammer 40000. Shape marine fights with iconic chainsword and bolt-pistol. Chaos Space Marine fights with a khopesh-like axe adorned with the symbols of Tzeentch. The Space Marine parries the blow from the Chaos Space Marine's axe; bright sparks fly where the sword and axe collide.\nOn background ruined city and explosions. ",
+      "clip": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "10": {
     "inputs": {
       "width": [
-        "37",
+        "23",
         0
       ],
       "height": [
-        "37",
+        "23",
         1
       ],
-      "high_level_description": "Professional photoshoot. A cyberpunk scene depicting a girl squatting at the entrance of a futuristic club, smoking a cigarette in one hand while gripping a katana in the other, illuminated by neon reflections and rain-slicked urban surroundings.",
-      "background": "A rain-slicked, neon-drenched city alleyway with flickering blue and pink signs, distant skyscrapers with glowing holographic ads, and a narrow entrance with a glowing red door. The environment is dimly lit with reflections on wet surfaces.",
-      "style": "photo",
-      "style.photo": "DSLR photography",
-      "aesthetics": "cyberpunk, high contrast, dystopian atmosphere, mechanical details, neon glow",
-      "lighting": "drenched in neon rain reflections, cold blue and magenta ambient lighting, volumetric shadows",
-      "medium": "photography",
-      "style_palette_data": "[\"#0F0F2E\",\"#002B4F\",\"#FF1744\",\"#00B4D8\",\"#8A0000\",\"#D36D23\",\"#333333\",\"#1A1A1A\"]",
-      "elements_data": "[{\"type\":\"obj\",\"text\":\"\",\"desc\":\"Cyberpunk Moscow street. Neon signs. Night sky.\\n\",\"palette\":[],\"x\":0.001,\"y\":0.098,\"w\":0.973,\"h\":0.845},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"A young woman squatting on the ground with her elbows on the wall at the club entrance, wearing a black tactical vest with glowing circuit patterns and a jacket. Holographic cat ears are projected onto her head. Her left eye is mechanical and pupil glows red. She holds a lit cigarette in her right hand and a long katana in her left, the blade slightly sheathed and reflecting neon light. She is squatting in a relaxed posture, leaning against the wall and gazing absently into the distance.\",\"palette\":[\"#0F0F2E\",\"#FF1744\",\"#00B4D8\"],\"x\":0.598,\"y\":0.311,\"w\":0.287,\"h\":0.506},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"A glowing red door with a partially open to the left, lit with a pulsing red neon light. The text 'НЕОН' is faintly visible in a cracked, pixelated font on the door.\",\"palette\":[\"#FF1744\",\"#00B4D8\"],\"x\":0.225,\"y\":0.139,\"w\":0.356,\"h\":0.642},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"A smoking cigarette\",\"palette\":[],\"x\":0.602,\"y\":0.416,\"w\":0.057,\"h\":0.035},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"Glowing red mechanical eye\",\"palette\":[\"#A51D2D\",\"#FF0000\",\"#4D1717\"],\"x\":0.698,\"y\":0.383,\"w\":0.024,\"h\":0.023},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"Mechanical arm\",\"palette\":[],\"x\":0.672,\"y\":0.419,\"w\":0.194,\"h\":0.251},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"Wall of night club\",\"palette\":[],\"x\":0.58,\"y\":0.046,\"w\":0.387,\"h\":0.92},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"The entrance to the room, bathed in red light\",\"palette\":[],\"x\":0.548,\"y\":0.138,\"w\":0.223,\"h\":0.635},{\"type\":\"text\",\"text\":\"БАР НЕОН\",\"desc\":\"Neon signboard.\",\"palette\":[\"#3584E4\",\"#62A0EA\"],\"x\":0.347,\"y\":0,\"w\":0.341,\"h\":0.182},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"She is holding the katana vertically, with the blade resting on the ground. Her hand rests loosely on the hilt.\",\"palette\":[],\"x\":0.628,\"y\":0.44,\"w\":0.093,\"h\":0.441},{\"x\":0.7656854696415811,\"y\":0.2244880862962586,\"w\":0.17656444657091896,\"h\":0.1233823720596734,\"type\":\"text\",\"text\":\"Продам гараж\",\"desc\":\"A paper notice advertising a sale. There are tear-off sections at the bottom with a telephone number.\",\"palette\":[]}]",
-      "bg_brightness": 100,
-      "import_mode": "when empty",
-      "output_format": "compact"
+      "batch_size": 1
     },
-    "class_type": "Ideogram4PromptBuilderKJ",
+    "class_type": "EmptyLatentImage",
     "_meta": {
-      "title": "Ideogram 4 Prompt Builder KJ"
+      "title": "Empty Latent Image"
     }
   },
-  "180": {
+  "13": {
     "inputs": {
-      "source": [
-        "179",
-        0
-      ]
+      "clip_name": "krea2/qwen3vl_4b_fp8_scaled.safetensors",
+      "type": "krea2",
+      "device": "default"
     },
-    "class_type": "PreviewAny",
+    "class_type": "CLIPLoader",
     "_meta": {
-      "title": "Preview as Text"
+      "title": "Load CLIP"
     }
   },
-  "182": {
+  "22": {
     "inputs": {
       "output_path": "[time(%Y-%m-%d)]",
-      "filename_prefix": "Ideogram",
+      "filename_prefix": "Krea2-turbo",
       "filename_delimiter": "_",
       "filename_number_padding": 4,
       "filename_number_start": "false",
@@ -90,11 +123,40 @@
       "show_history": "false",
       "show_history_by_prefix": "true",
       "embed_workflow": "true",
-      "show_previews": "true"
+      "show_previews": "true",
+      "images": [
+        "3",
+        0
+      ]
     },
     "class_type": "Image Save",
     "_meta": {
       "title": "Image Save"
+    }
+  },
+  "23": {
+    "inputs": {
+      "aspect_ratio": "16:9 (Widescreen)",
+      "megapixels": 1.5,
+      "multiple": 16
+    },
+    "class_type": "ResolutionSelector",
+    "_meta": {
+      "title": "Resolution Selector"
+    }
+  },
+  "25": {
+    "inputs": {
+      "unet_name": "Krea2-Turbo-int8-ConvRot.safetensors",
+      "weight_dtype": "default",
+      "model_type": "krea2",
+      "on_the_fly_quantization": false,
+      "enable_convrot": true,
+      "lora_mode": "None"
+    },
+    "class_type": "OTUNetLoaderW8A8",
+    "_meta": {
+      "title": "Load Diffusion Model INT8 (W8A8)"
     }
   }
 }

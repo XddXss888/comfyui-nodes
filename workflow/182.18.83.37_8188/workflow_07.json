@@ -1,139 +1,123 @@
 {
-  "3": {
+  "10": {
     "inputs": {
-      "seed": 781508467081,
-      "steps": 25,
+      "image": "drama_20260625_1750_ep6_sc10_f4.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "13": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan"
+    },
+    "class_type": "CLIPLoader"
+  },
+  "14": {
+    "inputs": {
+      "text": "vault-busting leap over falling beams, radiation hair trails like comet, grudge stick pulses in sync with heartbeat, emergency lights flash, hazard suit girl bolts through collapsing lab, modified grudge stick glows with stolen code. Radiation hair streams in neon trails as she leaps over falling debris, crimson grid eye scans emergency exits.. 陆昭然: 22yo female, 168cm, silver-streaked black hair in messy bob, left eye cybernetic prosthetic with glowing crimson grid, w, over-the-shoulder shot, showing character's point of view",
+      "clip": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "15": {
+    "inputs": {
+      "text": "static, blurry, low quality, distorted, deformed, ugly, watermark, text",
+      "clip": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "16": {
+    "inputs": {
+      "unet_name": "wan2.2_ti2v_5B_fp16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "17": {
+    "inputs": {
+      "vae_name": "wan2.2_vae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "20": {
+    "inputs": {
+      "vae": [
+        "17",
+        0
+      ],
+      "width": 832,
+      "height": 480,
+      "length": 81,
+      "batch_size": 1,
+      "start_image": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "Wan22ImageToVideoLatent"
+  },
+  "25": {
+    "inputs": {
+      "seed": 782387584616,
+      "steps": 20,
       "cfg": 1.0,
-      "sampler_name": "euler",
+      "sampler_name": "uni_pc_bh2",
       "scheduler": "simple",
       "denoise": 1.0,
       "model": [
-        "48",
+        "16",
         0
       ],
       "positive": [
-        "35",
+        "14",
         0
       ],
       "negative": [
-        "33",
+        "15",
         0
       ],
       "latent_image": [
-        "43",
+        "20",
         0
       ]
     },
     "class_type": "KSampler"
   },
-  "31": {
-    "inputs": {
-      "text": [
-        "46",
-        0
-      ],
-      "clip": [
-        "47",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode"
-  },
-  "33": {
-    "inputs": {
-      "text": "low quality, blurry, distorted, ugly, watermark, text, logo, nsfw, realistic photo, 3d render",
-      "clip": [
-        "47",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode"
-  },
-  "35": {
-    "inputs": {
-      "guidance": 3.5,
-      "conditioning": [
-        "31",
-        0
-      ]
-    },
-    "class_type": "FluxGuidance"
-  },
-  "36": {
-    "inputs": {
-      "filename_prefix": "drama_20260615_1400_ep17_sc10_f4",
-      "images": [
-        "37",
-        0
-      ]
-    },
-    "class_type": "SaveImage"
-  },
-  "37": {
+  "21": {
     "inputs": {
       "samples": [
-        "3",
+        "25",
         0
       ],
       "vae": [
-        "49",
+        "17",
         0
       ]
     },
     "class_type": "VAEDecode"
   },
-  "41": {
+  "22": {
     "inputs": {
-      "value": 1280
-    },
-    "class_type": "easy int"
-  },
-  "42": {
-    "inputs": {
-      "value": 720
-    },
-    "class_type": "easy int"
-  },
-  "43": {
-    "inputs": {
-      "width": [
-        "41",
+      "frame_rate": 16.0,
+      "loop_count": 0,
+      "filename_prefix": "drama_20260625_1750_ep6_sc10_f4_i2v",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 20,
+      "images": [
+        "21",
         0
       ],
-      "height": [
-        "42",
-        0
-      ],
-      "batch_size": 1
+      "pingpong": false,
+      "save_output": true
     },
-    "class_type": "EmptyLatentImage"
-  },
-  "46": {
-    "inputs": {
-      "value": "black and white manga style, detailed ink illustration, dramatic shading, screen tones, Japanese manga aesthetic, Bai Kui's shattered panda mask reflecting 29 falling holograms, digital tattoos shifting to show her real face. Peacock chrysalis open wide to reveal miniature dome ecosystem, raindrops crystallizing midair., over-the-shoulder shot, showing character's point of view"
-    },
-    "class_type": "PrimitiveStringMultiline"
-  },
-  "47": {
-    "inputs": {
-      "clip_name1": "clip_l.safetensors",
-      "clip_name2": "t5xxl_fp8_e4m3fn.safetensors",
-      "type": "flux",
-      "device": "default"
-    },
-    "class_type": "DualCLIPLoader"
-  },
-  "48": {
-    "inputs": {
-      "unet_name": "flux1-dev.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader"
-  },
-  "49": {
-    "inputs": {
-      "vae_name": "ae.safetensors"
-    },
-    "class_type": "VAELoader"
+    "class_type": "VHS_VideoCombine"
   }
 }

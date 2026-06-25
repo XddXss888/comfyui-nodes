@@ -1,117 +1,158 @@
 {
-  "311": {
+  "1": {
     "inputs": {
-      "upscale_method": "nearest-exact",
-      "megapixels": 8.0,
-      "resolution_steps": 10,
-      "image": [
-        "362",
+      "clip_name": "qwen_3_06b_base.safetensors",
+      "type": "stable_diffusion",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "2": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "3": {
+    "inputs": {
+      "text": "low quality,\nworst quality,\nbad anatomy,\nbad hands,\nextra fingers,\nextra arms,\nextra legs,\ndeformed,\ncropped,\nblurry,\ntext,\nwatermark,\nlogo,\nnsfw",
+      "clip": [
+        "1",
         0
       ]
     },
-    "class_type": "ImageScaleToTotalPixels",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "Scale Image to Total Pixels"
+      "title": "CLIP Text Encode (Negative Prompt)"
     }
   },
-  "312": {
+  "5": {
     "inputs": {
-      "frame_rate": 30.0,
-      "framing_mode": "expand",
-      "transform_mode": "perspective",
-      "camera_lock": false,
-      "strength": 0.05,
-      "smooth": 0.15,
-      "keep_fov": 0.0,
-      "padding_color": "127, 127, 127",
-      "frames": [
-        "311",
-        0
-      ]
-    },
-    "class_type": "video_stabilizer_flow",
-    "_meta": {
-      "title": "Video Stabilizer (Flow)"
-    }
-  },
-  "313": {
-    "inputs": {
-      "width": 4096,
-      "height": 2160,
-      "upscale_method": "nvidia_rtx_vsr",
-      "keep_proportion": "crop",
-      "pad_color": "0, 0, 0",
-      "crop_position": "center",
-      "divisible_by": 16,
-      "device": "gpu",
-      "image": [
-        "312",
+      "seed": 529369988821174,
+      "steps": 30,
+      "cfg": 4.0,
+      "sampler_name": "er_sde",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "17",
         0
       ],
-      "mask": [
-        "312",
-        1
-      ]
-    },
-    "class_type": "ImageResizeKJv2",
-    "_meta": {
-      "title": "Resize Image v2"
-    }
-  },
-  "339": {
-    "inputs": {
-      "ckpt_name": "rife49.pth",
-      "clear_cache_after_n_frames": 10,
-      "multiplier": 2,
-      "fast_mode": false,
-      "ensemble": true,
-      "scale_factor": 1,
-      "frames": [
-        "313",
+      "positive": [
+        "9",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "latent_image": [
+        "8",
         0
       ]
     },
-    "class_type": "RIFE VFI",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "RIFE VFI (recommend rife47 and rife49)"
+      "title": "KSampler"
     }
   },
-  "340": {
+  "6": {
     "inputs": {
-      "frame_rate": 60.0,
-      "loop_count": 0,
-      "filename_prefix": "023.abigail-neff-onebite/segment 4/Test-2",
-      "format": "video/h264-mp4",
-      "pix_fmt": "yuv420p",
-      "crf": 19,
-      "save_metadata": true,
-      "trim_to_audio": false,
-      "pingpong": false,
-      "save_output": true,
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "7": {
+    "inputs": {
+      "filename_prefix": "ComfyUI/animatest",
       "images": [
-        "339",
+        "6",
         0
       ]
     },
-    "class_type": "VHS_VideoCombine",
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "Video Combine 🎥🅥🅗🅢"
+      "title": "Save Image"
     }
   },
-  "362": {
+  "8": {
     "inputs": {
-      "video": "cek-4K.mp4",
-      "force_rate": 0.0,
-      "custom_width": 0,
-      "custom_height": 0,
-      "frame_load_cap": 0,
-      "skip_first_frames": 0,
-      "select_every_nth": 1,
-      "format": "AnimateDiff"
+      "width": 1360,
+      "height": 968,
+      "batch_size": 1
     },
-    "class_type": "VHS_LoadVideo",
+    "class_type": "EmptyLatentImage",
     "_meta": {
-      "title": "Load Video (Upload) 🎥🅥🅗🅢"
+      "title": "Empty Latent Image"
+    }
+  },
+  "9": {
+    "inputs": {
+      "text": "masterpiece, best quality, score_9, score_8_up, score_7_up, fate \\(series\\)\n\nCharacters:\n\nArtoria Pendragon: 1girl, solo focus, blonde hair, very long hair, braided bun, ahoge, blue ribbon, green eyes, white short sleeve school shirt, black necktie, cheerful smile, waving, energetic, youthful\n\nFujimaru Ritsuka \\(Male\\): 1boy, blue eyes, black hair, short hair, chaldea uniform, white jacket with blue accents, black undersuit, black gloves, attentive expression, looking toward Artoria, standing naturally\n\nScene:\n\nA bright morning at a modern Japanese high school courtyard. Artoria enthusiastically waves one hand high in the air while greeting Fujimaru Ritsuka across the open courtyard. Fujimaru stands in the foreground with his back partially facing the viewer as he notices Artoria calling to him. Modern school buildings surround the courtyard with large windows, clean architecture, green trees, neatly trimmed bushes, and a peaceful campus atmosphere. Warm morning sunlight creates soft shadows and a welcoming mood.\n\nCamera:\n\nOver-the-shoulder shot from behind Fujimaru Ritsuka, wide shot, slight low angle, cinematic perspective, natural depth, dynamic composition\n\nStyle:\n\n@kantoku",
+      "clip": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "10": {
+    "inputs": {
+      "unet_name": "animayume_v10.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "16": {
+    "inputs": {
+      "image": "9 c (1).jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "17": {
+    "inputs": {
+      "lllite_name": "anima-lllite-any-test-like-v2.safetensors",
+      "strength": 0.8,
+      "start_percent": 0.0,
+      "end_percent": 1.0,
+      "preserve_wrapper": true,
+      "model": [
+        "10",
+        0
+      ],
+      "image": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "AnimaLLLiteApply",
+    "_meta": {
+      "title": "Apply Anima ControlNet-LLLite"
     }
   }
 }

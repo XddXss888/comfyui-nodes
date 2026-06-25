@@ -37,7 +37,7 @@
   },
   "7": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1 nature,tree,forest,boots,brown footwear,leather,belt,green skin,colored skin,muscular,scar,scar on face,scar across eye,(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl barefoot,indoors,couch,thighs,feet,drunk,beer,can,alcohol,(Handjob:1.0),(nude:0.8)",
       "clip": [
         "1",
         1
@@ -63,7 +63,7 @@
   },
   "9": {
     "inputs": {
-      "seed": 1547047335,
+      "seed": 1823100715,
       "steps": 20,
       "cfg": 6.5,
       "sampler_name": "dpmpp_sde",
@@ -133,7 +133,7 @@
   },
   "14": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://d1geezib455z5s.cloudfront.net/album/2025/04/08/1744121144018.png",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20254/3/57628f8e088d4c2ba5334214b6f1c825.webp",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

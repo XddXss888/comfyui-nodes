@@ -1,0 +1,57 @@
+{
+  "1": {
+    "inputs": {
+      "prompt": "Old man talking to camera holding a microphone",
+      "keep_original_sound": true,
+      "character_orientation": "video",
+      "mode": "pro",
+      "model": "kling-v3",
+      "reference_image": [
+        "2",
+        0
+      ],
+      "reference_video": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "KlingMotionControl",
+    "_meta": {
+      "title": "Kling Control de Movimiento"
+    }
+  },
+  "2": {
+    "inputs": {
+      "image": "magnific_swap-the-boy-from-img1-wi_rlCPCcbxtc.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Cargar Imagen"
+    }
+  },
+  "3": {
+    "inputs": {
+      "file": "recap mayo_1781785286612.mp4",
+      "video-preview": ""
+    },
+    "class_type": "LoadVideo",
+    "_meta": {
+      "title": "Cargar video"
+    }
+  },
+  "4": {
+    "inputs": {
+      "filename_prefix": "video/kling_motion_control3.0",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Guardar video"
+    }
+  }
+}

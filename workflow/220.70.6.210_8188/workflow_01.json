@@ -1,86 +1,103 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "DownloadAndLoadCogVideoModel",
     "inputs": {
-      "ckpt_name": "flux1-schnell-fp8.safetensors"
+      "model": "THUDM/CogVideoX-2b",
+      "precision": "fp16"
     }
   },
   "2": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "CLIPLoader",
     "inputs": {
-      "clip": [
-        "1",
-        1
-      ],
-      "text": "SaaS dashboard,  data visualization, professional photography, balanced composition, contextually relevant, natural lighting, expert specialist, trustworthy local professional, personalized service, no text, no watermark, no logo, photorealistic"
+      "clip_name": "t5xxl_fp8_e4m3fn.safetensors",
+      "type": "sd3"
     }
   },
   "3": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "CogVideoTextEncode",
     "inputs": {
       "clip": [
-        "1",
-        1
+        "2",
+        0
       ],
-      "text": "text, watermark, logo, signature, letters, numbers, blurry, low quality, distorted, ugly, cartoon, anime, illustration, 3d render, CGI, oversaturated, noise, grain, duplicate, deformed"
+      "prompt": "a cat walking slowly in a cozy cafe, warm light, gentle camera motion"
     }
   },
   "4": {
+    "class_type": "CogVideoTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "prompt": ""
+    }
+  },
+  "10": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 1024,
-      "height": 576,
+      "width": 720,
+      "height": 480,
       "batch_size": 1
     }
   },
   "5": {
-    "class_type": "KSampler",
+    "class_type": "CogVideoSampler",
     "inputs": {
       "model": [
         "1",
         0
       ],
       "positive": [
-        "2",
-        0
-      ],
-      "negative": [
         "3",
         0
       ],
-      "latent_image": [
+      "negative": [
         "4",
         0
       ],
-      "seed": 32252104810886720,
-      "steps": 4,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0
+      "num_frames": 49,
+      "steps": 20,
+      "cfg": 6.0,
+      "seed": 505951546804165648,
+      "scheduler": "CogVideoXDDIM",
+      "samples": [
+        "10",
+        0
+      ]
     }
   },
   "6": {
-    "class_type": "VAEDecode",
+    "class_type": "CogVideoDecode",
     "inputs": {
+      "vae": [
+        "1",
+        1
+      ],
       "samples": [
         "5",
         0
       ],
-      "vae": [
-        "1",
-        2
-      ]
+      "enable_vae_tiling": true,
+      "tile_sample_min_height": 240,
+      "tile_sample_min_width": 360,
+      "tile_overlap_factor_height": 0.2,
+      "tile_overlap_factor_width": 0.2,
+      "auto_tile_size": true
     }
   },
   "7": {
-    "class_type": "SaveImage",
+    "class_type": "SaveAnimatedWEBP",
     "inputs": {
       "images": [
         "6",
         0
       ],
-      "filename_prefix": "sb_a3c1e290_general"
+      "filename_prefix": "vid_a3c1e290",
+      "fps": 8.0,
+      "lossless": false,
+      "quality": 85,
+      "method": "default"
     }
   }
 }

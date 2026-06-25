@@ -21,26 +21,37 @@
     }
   },
   "4": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "lora_name": "flux_illustration.safetensors",
+      "strength_model": 0.9
+    }
+  },
+  "5": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
         "2",
         0
       ],
-      "text": "Failed to authenticate. API Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"Invalid authentication credentials\"},\"request_id\":\"req_011CcFqwMJVH2kE8RVKujwsE\"}"
+      "text": "Aerial view of a vast minimalist grid yard at golden hour, massive translucent containers slowly rearranging themselves like puzzle pieces guided by invisible hands, geometric path lines glowing soft cyan trace optimal routes between orderly stacks, a single decision tree structure rising from the center casting long architectural shadows, clean isometric perspective, muted steel and ocean teal palette with warm amber highlights, crisp vector-illustration style with subtle depth-of-field"
     }
   },
-  "5": {
+  "6": {
     "class_type": "FluxGuidance",
     "inputs": {
       "conditioning": [
-        "4",
+        "5",
         0
       ],
       "guidance": 3.5
     }
   },
-  "6": {
+  "7": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
@@ -50,34 +61,34 @@
       "text": ""
     }
   },
-  "7": {
+  "8": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "width": 1920,
-      "height": 816,
+      "width": 1344,
+      "height": 768,
       "batch_size": 1
     }
   },
-  "8": {
+  "9": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "1",
+        "4",
         0
       ],
       "positive": [
-        "5",
-        0
-      ],
-      "negative": [
         "6",
         0
       ],
-      "latent_image": [
+      "negative": [
         "7",
         0
       ],
-      "seed": 1385518108,
+      "latent_image": [
+        "8",
+        0
+      ],
+      "seed": 1398208896,
       "control_after_generate": "fixed",
       "steps": 22,
       "cfg": 1.0,
@@ -86,11 +97,11 @@
       "denoise": 1.0
     }
   },
-  "9": {
+  "10": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "8",
+        "9",
         0
       ],
       "vae": [
@@ -99,14 +110,14 @@
       ]
     }
   },
-  "10": {
+  "11": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "9",
+        "10",
         0
       ],
-      "filename_prefix": "portrait_1385518108"
+      "filename_prefix": "blog_1398208896"
     }
   }
 }

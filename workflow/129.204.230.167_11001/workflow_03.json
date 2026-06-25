@@ -1,13 +1,13 @@
 {
   "1": {
     "inputs": {
-      "image_path_or_URL": "https://cos.credit99.cn/2026-06-23/69d367054c6e2e96ca9f00fc/upload/20260623192911078-32-41r6s9.png",
-      "image": "",
+      "image_path_or_URL": "https://cos.credit99.cn/2026-06-25/69d367054c6e2e96ca9f00fc/upload/20260625180809334-101-sl51ls.png",
+      "image": "https://bizyair-prod.oss-cn-shanghai.aliyuncs.com/inputs/20260625/G5f41PA7w4DoroMe1NoIuCGOWloU0Fna.png",
       "upscale_method": "lanczos",
       "megapixels": 0.0,
       "scale_by": 1.0,
       "resize_mode": "longest_side",
-      "size": 1024
+      "size": 768
     },
     "class_type": "AILab_LoadImage",
     "_meta": {
@@ -16,8 +16,8 @@
   },
   "2": {
     "inputs": {
-      "image_path_or_URL": "https://cos.credit99.cn/2026-06-23/69d367054c6e2e96ca9f00fc/upload/20260623193259003-ScreenShot_2026-06--5inh7b.png",
-      "image": "",
+      "image_path_or_URL": "https://cos.credit99.cn/2026-06-25/69d367054c6e2e96ca9f00fc/upload/20260625180809335-image-yralwr.png",
+      "image": "https://bizyair-prod.oss-cn-shanghai.aliyuncs.com/inputs/20260625/TIgYLTFnpSi7MAKxPWOyrABvw88IWu9b.png",
       "upscale_method": "lanczos",
       "megapixels": 0,
       "scale_by": 1,
@@ -33,10 +33,10 @@
     "inputs": {
       "action": "append",
       "tidy_tags": "no",
-      "text_a": "",
+      "text_a": "    \"Model type selection (Asian  female model) with auto-adapted body proportions and skin tone, 100% consistent across all wear views\",",
       "text_b": "",
       "text_c": "",
-      "result": ""
+      "result": "    \"Model type selection (Caucasian female model) with auto-adapted body proportions and skin tone, 100% consistent across all wear views\","
     },
     "class_type": "StringFunction|pysssss",
     "_meta": {
@@ -45,22 +45,35 @@
   },
   "4": {
     "inputs": {
-      "action": "append",
-      "tidy_tags": "no",
-      "text_a": "{\n  \"task_objective\": \"Game Character Action Frame Atlas & 9-Frame 3x3 - Map Image 2 character model onto Image 1's 9 action poses (ONLY pose changes, character identity + equipment FULLY PRESERVED, full-body auto-completion applied)\",\n  \"input_assets\": {\n    \"pose_reference\": \"Image 1 9-Pose Grid - 9 distinct action poses (body position, limb angles, posture, hand placement, weapon/equipment grip, camera angle, composition) - ONLY Provide action poses for game character\",\n    \"model_image\": \"Image 2 Character Model (VARIABLE) - Facial features, skin tone, body proportions, hairstyle, armor/equipment, accessories - FULLY PRESERVED, ZERO deviation; full-body auto-completion applied for any cropped/partial views\"\n  },\n  \"workflow\": {\n    \"step_1\": \"Extract all 9 action poses from Image 1 + analyze Image 2 character identity & equipment details (armor style, weapon type, color palette, material texture, accessory design)\",\n    \"step_2\": \"Full-body auto-completion on Image 2 character — reconstruct any missing lower body, hands, feet, or cropped areas based on character design consistency; then map completed character onto each of 9 action poses, ONLY pose changes to Image 1, character identity & equipment 100% preserved\",\n    \"step_3\": \"Generate 9 action frames with clear transition flow, assemble 3x3 grid matching Image 1 layout, consistent sprite proportions, transparent-friendly background, game-ready format\"\n  },\n  \"outputs\": {\n    \"frame_1\": \"Action Frame 1 - Image 2 character (full-body completed) in Image 1 pose 1, exact body position, limb angles & camera angle\",\n    \"frame_2\": \"Action Frame 2 - Image 2 character (full-body completed) in Image 1 pose 2, exact body position, limb angles & camera angle\",\n    \"frame_3\": \"Action Frame 3 - Image 2 character (full-body completed) in Image 1 pose 3, exact body position, limb angles & camera angle\",\n    \"frame_4\": \"Action Frame 4 - Image 2 character (full-body completed) in Image 1 pose 4, exact body position, limb angles & camera angle\",\n    \"frame_5\": \"Action Frame 5 - Image 2 character (full-body completed) in Image 1 pose 5, exact body position, limb angles & camera angle\",\n    \"frame_6\": \"Action Frame 6 - Image 2 character (full-body completed) in Image 1 pose 6, exact body position, limb angles & camera angle\",\n    \"frame_7\": \"Action Frame 7 - Image 2 character (full-body completed) in Image 1 pose 7, exact body position, limb angles & camera angle\",\n    \"frame_8\": \"Action Frame 8 - Image 2 character (full-body completed) in Image 1 pose 8, exact body position, limb angles & camera angle\",\n    \"frame_9\": \"Action Frame 9 - Image 2 character (full-body completed) in Image 1 pose 9, exact body position, limb angles & camera angle\"\n  },\n  \"output_requirements\": [\n    \"NO text/labels/watermarks; ALL 9 action poses MUST be identical to Image 1 — zero deviation in body position, limb angles, posture, weapon grip, camera angle\",\n    \"Character identity + equipment MUST remain exactly as Image 2 — consistent facial features, skin tone, proportions, hairstyle, ARMOR/WEAPON/ACCESSORIES across all 9 frames; full-body auto-completion must be seamless and match character design style\",\n    \"Natural body mechanics in each action pose; consistent character proportions across all frames; smooth action transition flow between adjacent frames; game-art style rendering with clean edges\",\n    \"SFW; NO oily shine; NO oversaturation; NO motion blur; All 9 frames must be generated — no missing or merged frames; each frame must be clearly distinguishable as a distinct action phase\",\n    \"Standard 3x3 grid matching Image 1 layout; uniform frame size and character scale across all 9 cells; clean neutral background suitable for sprite extraction; game-engine-ready proportions with consistent pivot point alignment\"\n  ]\n}\n",
-      "text_b": [
-        "3",
+      "index": 2,
+      "text0": [
+        "8",
         0
       ],
-      "text_c": "",
-      "result": "{\n  \"task_objective\": \"Game Character Action Frame Atlas & 9-Frame 3x3 - Map Image 2 character model onto Image 1's 9 action poses (ONLY pose changes, character identity + equipment FULLY PRESERVED, full-body auto-completion applied)\",\n  \"input_assets\": {\n    \"pose_reference\": \"Image 1 9-Pose Grid - 9 distinct action poses (body position, limb angles, posture, hand placement, weapon/equipment grip, camera angle, composition) - ONLY Provide action poses for game character\",\n    \"model_image\": \"Image 2 Character Model (VARIABLE) - Facial features, skin tone, body proportions, hairstyle, armor/equipment, accessories - FULLY PRESERVED, ZERO deviation; full-body auto-completion applied for any cropped/partial views\"\n  },\n  \"workflow\": {\n    \"step_1\": \"Extract all 9 action poses from Image 1 + analyze Image 2 character identity & equipment details (armor style, weapon type, color palette, material texture, accessory design)\",\n    \"step_2\": \"Full-body auto-completion on Image 2 character — reconstruct any missing lower body, hands, feet, or cropped areas based on character design consistency; then map completed character onto each of 9 action poses, ONLY pose changes to Image 1, character identity & equipment 100% preserved\",\n    \"step_3\": \"Generate 9 action frames with clear transition flow, assemble 3x3 grid matching Image 1 layout, consistent sprite proportions, transparent-friendly background, game-ready format\"\n  },\n  \"outputs\": {\n    \"frame_1\": \"Action Frame 1 - Image 2 character (full-body completed) in Image 1 pose 1, exact body position, limb angles & camera angle\",\n    \"frame_2\": \"Action Frame 2 - Image 2 character (full-body completed) in Image 1 pose 2, exact body position, limb angles & camera angle\",\n    \"frame_3\": \"Action Frame 3 - Image 2 character (full-body completed) in Image 1 pose 3, exact body position, limb angles & camera angle\",\n    \"frame_4\": \"Action Frame 4 - Image 2 character (full-body completed) in Image 1 pose 4, exact body position, limb angles & camera angle\",\n    \"frame_5\": \"Action Frame 5 - Image 2 character (full-body completed) in Image 1 pose 5, exact body position, limb angles & camera angle\",\n    \"frame_6\": \"Action Frame 6 - Image 2 character (full-body completed) in Image 1 pose 6, exact body position, limb angles & camera angle\",\n    \"frame_7\": \"Action Frame 7 - Image 2 character (full-body completed) in Image 1 pose 7, exact body position, limb angles & camera angle\",\n    \"frame_8\": \"Action Frame 8 - Image 2 character (full-body completed) in Image 1 pose 8, exact body position, limb angles & camera angle\",\n    \"frame_9\": \"Action Frame 9 - Image 2 character (full-body completed) in Image 1 pose 9, exact body position, limb angles & camera angle\"\n  },\n  \"output_requirements\": [\n    \"NO text/labels/watermarks; ALL 9 action poses MUST be identical to Image 1 — zero deviation in body position, limb angles, posture, weapon grip, camera angle\",\n    \"Character identity + equipment MUST remain exactly as Image 2 — consistent facial features, skin tone, proportions, hairstyle, ARMOR/WEAPON/ACCESSORIES across all 9 frames; full-body auto-completion must be seamless and match character design style\",\n    \"Natural body mechanics in each action pose; consistent character proportions across all frames; smooth action transition flow between adjacent frames; game-art style rendering with clean edges\",\n    \"SFW; NO oily shine; NO oversaturation; NO motion blur; All 9 frames must be generated — no missing or merged frames; each frame must be clearly distinguishable as a distinct action phase\",\n    \"Standard 3x3 grid matching Image 1 layout; uniform frame size and character scale across all 9 cells; clean neutral background suitable for sprite extraction; game-engine-ready proportions with consistent pivot point alignment\"\n  ]\n}\n"
+      "text1": [
+        "9",
+        0
+      ],
+      "text2": [
+        "12",
+        0
+      ]
     },
-    "class_type": "StringFunction|pysssss",
+    "class_type": "easy textIndexSwitch",
     "_meta": {
-      "title": "String Function 🐍"
+      "title": "文本编号切换"
     }
   },
   "5": {
+    "inputs": {
+      "ratio": "3:4"
+    },
+    "class_type": "ratio_selector",
+    "_meta": {
+      "title": "ratio selector"
+    }
+  },
+  "6": {
     "inputs": {
       "inputcount": 2,
       "prompt": [
@@ -68,7 +81,7 @@
         0
       ],
       "aspect_ratio": [
-        "7",
+        "5",
         0
       ],
       "resolution": "2k",
@@ -88,7 +101,7 @@
       "trd_node": true
     }
   },
-  "6": {
+  "7": {
     "inputs": {
       "prompt": [
         "4",
@@ -96,10 +109,10 @@
       ],
       "temperature": 0.9,
       "top_p": 0.95,
-      "seed": 867120314,
+      "seed": 44512202,
       "max_tokens": 32768,
       "aspect_ratio": [
-        "7",
+        "5",
         0
       ],
       "resolution": "2K",
@@ -122,24 +135,49 @@
       "trd_node": true
     }
   },
-  "7": {
-    "inputs": {
-      "ratio": "3:4"
-    },
-    "class_type": "ratio_selector",
-    "_meta": {
-      "title": "ratio selector"
-    }
-  },
   "8": {
     "inputs": {
-      "index": 1,
+      "action": "append",
+      "tidy_tags": "no",
+      "text_a": "{\n  \"task_objective\": \"Fashion Promo Page & 3+1 Layout -3-top (inspiration→sketch→render) + 1-bottom (campaign)\",\n  \"input_assets\": {\n    \"structural_reference\": {\n      \"source\": \"Figure 1 Line Art\",\n      \"focus\": \"EXACT garment structural framework - proportions, silhouette form, seam placement, hemline positioning, collar styling, sleeve length, waistline, and overall garment length - ABSOLUTE PRESERVATION REQUIRED\",\n      \"role\": \"Provide locked structural blueprint for garment design generation\"\n    },\n    \"aesthetic_reference\": {\n      \"source\": \"Figure 2 Inspiration\",\n      \"focus\": \"Color system, fabric texture, pattern or detailing, and overall style tone\",\n      \"role\": \"Provide aesthetic elements to be applied onto the garment structure\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Analyze Figure 2 inspiration + parse Figure 1 garment structure\",\n    \"step_2\": \"Generate sketch → render from Figure 1 structure + Figure 2 aesthetics, pixel-precise, NO structural deviation\",\n    \"step_3\": \"Generate brand campaign, assemble 3-top + 1-bottom layout with premium atmosphere & transformation flow\"\n  },\n  \"outputs\": {\n    \"top_left\": \"Inspiration Source - Figure 2 original image with premium framing. Label: 灵感溯源 INSPIRATION\",\n    \"top_center\": \"Sketch Design - Figure 1 structure + Figure 2 aesthetics sketch. Label: 草图设计 SKETCH\",\n    \"top_right\": \"Garment Render - High-fidelity render, realistic fabric. Label: 服装渲染 RENDER. SOURCE OF TRUTH\",\n    \"bottom_full\": \"Brand Campaign - Dynamic editorial pose, stylish setting matching Figure 2 mood, spanning full width. Label: 品牌时尚 FASHION CAMPAIGN\"\n  },\n  \"output_requirements\": [\n    \"Figure 1 structure LOCKED; Figure 2 aesthetics pixel-precise\",\n    \"Campaign garment 100% identical to top_right render\",\n\n",
+      "text_b": [
+        "3",
+        0
+      ],
+      "text_c": "\n    \"SFW; realistic fabric; consistent lighting; NO oily shine; NO oversaturation\",\n    \"3-top + 1-bottom layout - gradient bg from Figure 2 colors, glow around top-left, cinematic vignette, luxury white space\",\n    \"Subtle flow lines connecting inspiration→sketch→render→campaign, indicating creative transformation journey\",\n    \"Coherent lighting: garment shadows on body, ambient occlusion at folds, consistent light direction\",\n    \"Premium atmosphere: Figure 2 color gradient bg, glow around center, cinematic vignette, unified color grading, luxury white space, editorial retouching\",\n    \"AI copywriting: Chinese-primary + English-secondary, series poetic title + inspiration analysis, elegant typography with theme-matching decorative icons\"\n   ]\n}",
+      "result": "{\n  \"task_objective\": \"Fashion Promo Page & 3+1 Layout -3-top (inspiration→sketch→render) + 1-bottom (campaign)\",\n  \"input_assets\": {\n    \"structural_reference\": {\n      \"source\": \"Figure 1 Line Art\",\n      \"focus\": \"EXACT garment structural framework - proportions, silhouette form, seam placement, hemline positioning, collar styling, sleeve length, waistline, and overall garment length - ABSOLUTE PRESERVATION REQUIRED\",\n      \"role\": \"Provide locked structural blueprint for garment design generation\"\n    },\n    \"aesthetic_reference\": {\n      \"source\": \"Figure 2 Inspiration\",\n      \"focus\": \"Color system, fabric texture, pattern or detailing, and overall style tone\",\n      \"role\": \"Provide aesthetic elements to be applied onto the garment structure\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Analyze Figure 2 inspiration + parse Figure 1 garment structure\",\n    \"step_2\": \"Generate sketch → render from Figure 1 structure + Figure 2 aesthetics, pixel-precise, NO structural deviation\",\n    \"step_3\": \"Generate brand campaign, assemble 3-top + 1-bottom layout with premium atmosphere & transformation flow\"\n  },\n  \"outputs\": {\n    \"top_left\": \"Inspiration Source - Figure 2 original image with premium framing. Label: 灵感溯源 INSPIRATION\",\n    \"top_center\": \"Sketch Design - Figure 1 structure + Figure 2 aesthetics sketch. Label: 草图设计 SKETCH\",\n    \"top_right\": \"Garment Render - High-fidelity render, realistic fabric. Label: 服装渲染 RENDER. SOURCE OF TRUTH\",\n    \"bottom_full\": \"Brand Campaign - Dynamic editorial pose, stylish setting matching Figure 2 mood, spanning full width. Label: 品牌时尚 FASHION CAMPAIGN\"\n  },\n  \"output_requirements\": [\n    \"Figure 1 structure LOCKED; Figure 2 aesthetics pixel-precise\",\n    \"Campaign garment 100% identical to top_right render\",\n\n    \"Model type selection (Caucasian female model) with auto-adapted body proportions and skin tone, 100% consistent across all wear views\",\n    \"SFW; realistic fabric; consistent lighting; NO oily shine; NO oversaturation\",\n    \"3-top + 1-bottom layout - gradient bg from Figure 2 colors, glow around top-left, cinematic vignette, luxury white space\",\n    \"Subtle flow lines connecting inspiration→sketch→render→campaign, indicating creative transformation journey\",\n    \"Coherent lighting: garment shadows on body, ambient occlusion at folds, consistent light direction\",\n    \"Premium atmosphere: Figure 2 color gradient bg, glow around center, cinematic vignette, unified color grading, luxury white space, editorial retouching\",\n    \"AI copywriting: Chinese-primary + English-secondary, series poetic title + inspiration analysis, elegant typography with theme-matching decorative icons\"\n   ]\n}"
+    },
+    "class_type": "StringFunction|pysssss",
+    "_meta": {
+      "title": "String Function 🐍"
+    }
+  },
+  "9": {
+    "inputs": {
+      "action": "append",
+      "tidy_tags": "no",
+      "text_a": "{\n  \"task_objective\": \"Fashion Promo Page & 6-View Fashion Layout - center inspiration with surrounding design views\",\n  \"input_assets\": {\n    \"structural_reference\": {\n      \"source\": \"Figure 1 Line Art\",\n      \"focus\": \"EXACT garment structural framework - proportions, silhouette form, seam placement, hemline positioning, collar styling, sleeve length, waistline, and overall garment length - ABSOLUTE PRESERVATION REQUIRED\",\n      \"role\": \"Provide locked structural blueprint for garment design generation\"\n    },\n    \"aesthetic_reference\": {\n      \"source\": \"Figure 2 Inspiration\",\n      \"focus\": \"Color system, fabric texture, pattern or detailing, and overall style tone\",\n      \"role\": \"Provide aesthetic elements to be applied onto the garment structure\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Analyze Figure 2 inspiration + parse Figure 1 garment structure\",\n    \"step_2\": \"Generate sketch → render from Figure 1 structure + Figure 2 aesthetics, pixel-precise, NO structural deviation\",\n    \"step_3\": \"Generate model wearing views + brand campaign, assemble diamond layout with premium atmosphere\"\n  },\n  \"outputs\": {\n    \"center_inspiration\": \"Figure 2 Inspiration - Original image at center with premium framing & glow. Label: 灵感溯源 INSPIRATION SOURCE\",\n    \"top_left\": \"Sketch Design - Figure 1 structure + Figure 2 aesthetics sketch. Label: 草图设计 SKETCH\",\n    \"top_right\": \"Garment Render - High-fidelity render, realistic fabric. Label: 服装渲染 GARMENT RENDER. SOURCE OF TRUTH\",\n    \"left_view\": \"Side Profile - Model side view, silhouette & drape emphasis. Label: 侧面效果 SIDE\",\n    \"right_view\": \"Detail Closeup - Dutch angle collar/detail, texture & craftsmanship. Label: 细节特写 DETAIL\",\n    \"bottom_campaign\": \"Brand Campaign - Dynamic editorial pose, stylish setting matching Figure 2 mood. Label: 品牌时尚 FASHION CAMPAIGN\"\n  },\n  \"output_requirements\": [\n    \"NO text/labels/watermarks except view labels; Figure 1 structure LOCKED; Figure 2 aesthetics pixel-precise\",\n    \"All wear views garment 100% identical to top_right render\",\n\n",
+      "text_b": [
+        "3",
+        0
+      ],
+      "text_c": "\n    \"SFW; realistic fabric; consistent lighting; NO oily shine; NO oversaturation\",\n    \"Coherent lighting: garment shadows on body, ambient occlusion at folds, consistent light direction\",\n    \"Premium atmosphere: Figure 2 color gradient bg, glow around center, cinematic vignette, unified color grading, luxury white space, editorial retouching\",\n    \"AI copywriting: Chinese-primary + English-secondary, series poetic title + inspiration analysis + garment spec + DNA mapping (icon-annotated), elegant typography with theme-matching decorative icons\"\n  ]\n}",
+      "result": "{\n  \"task_objective\": \"Fashion Promo Page & 6-View Fashion Layout - center inspiration with surrounding design views\",\n  \"input_assets\": {\n    \"structural_reference\": {\n      \"source\": \"Figure 1 Line Art\",\n      \"focus\": \"EXACT garment structural framework - proportions, silhouette form, seam placement, hemline positioning, collar styling, sleeve length, waistline, and overall garment length - ABSOLUTE PRESERVATION REQUIRED\",\n      \"role\": \"Provide locked structural blueprint for garment design generation\"\n    },\n    \"aesthetic_reference\": {\n      \"source\": \"Figure 2 Inspiration\",\n      \"focus\": \"Color system, fabric texture, pattern or detailing, and overall style tone\",\n      \"role\": \"Provide aesthetic elements to be applied onto the garment structure\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Analyze Figure 2 inspiration + parse Figure 1 garment structure\",\n    \"step_2\": \"Generate sketch → render from Figure 1 structure + Figure 2 aesthetics, pixel-precise, NO structural deviation\",\n    \"step_3\": \"Generate model wearing views + brand campaign, assemble diamond layout with premium atmosphere\"\n  },\n  \"outputs\": {\n    \"center_inspiration\": \"Figure 2 Inspiration - Original image at center with premium framing & glow. Label: 灵感溯源 INSPIRATION SOURCE\",\n    \"top_left\": \"Sketch Design - Figure 1 structure + Figure 2 aesthetics sketch. Label: 草图设计 SKETCH\",\n    \"top_right\": \"Garment Render - High-fidelity render, realistic fabric. Label: 服装渲染 GARMENT RENDER. SOURCE OF TRUTH\",\n    \"left_view\": \"Side Profile - Model side view, silhouette & drape emphasis. Label: 侧面效果 SIDE\",\n    \"right_view\": \"Detail Closeup - Dutch angle collar/detail, texture & craftsmanship. Label: 细节特写 DETAIL\",\n    \"bottom_campaign\": \"Brand Campaign - Dynamic editorial pose, stylish setting matching Figure 2 mood. Label: 品牌时尚 FASHION CAMPAIGN\"\n  },\n  \"output_requirements\": [\n    \"NO text/labels/watermarks except view labels; Figure 1 structure LOCKED; Figure 2 aesthetics pixel-precise\",\n    \"All wear views garment 100% identical to top_right render\",\n\n    \"Model type selection (Caucasian female model) with auto-adapted body proportions and skin tone, 100% consistent across all wear views\",\n    \"SFW; realistic fabric; consistent lighting; NO oily shine; NO oversaturation\",\n    \"Coherent lighting: garment shadows on body, ambient occlusion at folds, consistent light direction\",\n    \"Premium atmosphere: Figure 2 color gradient bg, glow around center, cinematic vignette, unified color grading, luxury white space, editorial retouching\",\n    \"AI copywriting: Chinese-primary + English-secondary, series poetic title + inspiration analysis + garment spec + DNA mapping (icon-annotated), elegant typography with theme-matching decorative icons\"\n  ]\n}"
+    },
+    "class_type": "StringFunction|pysssss",
+    "_meta": {
+      "title": "String Function 🐍"
+    }
+  },
+  "10": {
+    "inputs": {
+      "index": 0,
       "image0": [
-        "5",
+        "6",
         0
       ],
       "image1": [
-        "6",
+        "7",
         0
       ]
     },
@@ -148,11 +186,11 @@
       "title": "图像编号切换"
     }
   },
-  "9": {
+  "11": {
     "inputs": {
-      "filename_prefix": "cloth120",
+      "filename_prefix": "cloth150",
       "images": [
-        "15",
+        "10",
         0
       ]
     },
@@ -161,18 +199,21 @@
       "title": "保存图像"
     }
   },
-  "15": {
+  "12": {
     "inputs": {
-      "row": 3,
-      "column": 3,
-      "images": [
-        "8",
+      "action": "append",
+      "tidy_tags": "no",
+      "text_a": "{\n  \"task_objective\": \"Fashion Promo Page & 1-left + 3-right Layout - Left half brand campaign + Right column (inspiration → design sketch → render)\",\n  \"input_assets\": {\n    \"structural_reference\": {\n      \"source\": \"Figure 1 Line Art / Design Sketch\",\n      \"focus\": \"EXACT garment structural framework - proportions, silhouette form, seam placement, hemline positioning, collar styling, sleeve length, waistline, and overall garment length - ABSOLUTE PRESERVATION REQUIRED\",\n      \"role\": \"Provide locked structural blueprint for garment design generation\"\n    },\n    \"aesthetic_reference\": {\n      \"source\": \"Figure 2 Inspiration\",\n      \"focus\": \"Color system, fabric texture, pattern or detailing, cultural artifact mood, and overall style tone\",\n      \"role\": \"Provide aesthetic elements to be applied onto the garment structure\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Analyze Figure 2 inspiration + parse Figure 1 garment structure\",\n    \"step_2\": \"Generate design sketch → render from Figure 1 structure + Figure 2 aesthetics, pixel-precise, NO structural deviation\",\n    \"step_3\": \"Generate brand campaign image in the left-half hero area wearing the exact same garment, assemble 1-left + 3-right layout with premium atmosphere & transformation flow\"\n  },\n  \"outputs\": {\n    \"left_hero\": \"Brand Campaign - Full-body editorial model wearing the final garment, elegant pose, premium setting matching Figure 2 mood. Spans left half of layout. Label: 品牌大片 BRAND CAMPAIGN\",\n    \"right_top\": \"Inspiration Source - Figure 2 original inspiration image (cultural artifact/nature/object) with premium framing. Label: 灵感溯源 INSPIRATION\",\n    \"right_center\": \"Design Sketch - Figure 1 structure + Figure 2 aesthetics fashion illustration. Label: 设计稿 SKETCH\",\n    \"right_bottom\": \"Garment Render - High-fidelity render of the final garment, realistic fabric and detailing. Label: 服装渲染 RENDER\"\n  },\n  \"output_requirements\": [\n    \"Left hero campaign garment 100% identical to right-side sketch and render garments; Figure 1 structure LOCKED; Figure 2 aesthetics pixel-precise\",\n    \"Right column reading flow: inspiration → design sketch → render, visual connection guides the eye downward\",\n",
+      "text_b": [
+        "3",
         0
-      ]
+      ],
+      "text_c": "    \"Premium Visual Presentation & Cinematic Lighting:SFW compliant; render realistic fabric transparency, layering, and folds (NO oily shine or oversaturation). Implement a seamless 1-left + 3-right responsive layout with no visible dividers, using color transitions or gradients to unify the background, while maintaining luxury white space, cinematic vignette, and cross-screen visual hierarchy. Apply a unified cinematic color palette from Figure 2 with consistent brightness, contrast, and saturation. Use a single dominant light direction with soft diffused key light and gentle fill for natural shadows and ambient occlusion (AO) on fabric layers. Finish with a subtle hero glow, refined editorial retouching, and a museum-catalog aesthetic.\",\n    \"Decorative cultural captions: Chinese-primary + English-secondary, poetic series title + inspiration source + design story, elegant typography with theme-matching decorative icons\"\n    ]\n}",
+      "result": "{\n  \"task_objective\": \"Fashion Promo Page & 1-left + 3-right Layout - Left half brand campaign + Right column (inspiration → design sketch → render)\",\n  \"input_assets\": {\n    \"structural_reference\": {\n      \"source\": \"Figure 1 Line Art / Design Sketch\",\n      \"focus\": \"EXACT garment structural framework - proportions, silhouette form, seam placement, hemline positioning, collar styling, sleeve length, waistline, and overall garment length - ABSOLUTE PRESERVATION REQUIRED\",\n      \"role\": \"Provide locked structural blueprint for garment design generation\"\n    },\n    \"aesthetic_reference\": {\n      \"source\": \"Figure 2 Inspiration\",\n      \"focus\": \"Color system, fabric texture, pattern or detailing, cultural artifact mood, and overall style tone\",\n      \"role\": \"Provide aesthetic elements to be applied onto the garment structure\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Analyze Figure 2 inspiration + parse Figure 1 garment structure\",\n    \"step_2\": \"Generate design sketch → render from Figure 1 structure + Figure 2 aesthetics, pixel-precise, NO structural deviation\",\n    \"step_3\": \"Generate brand campaign image in the left-half hero area wearing the exact same garment, assemble 1-left + 3-right layout with premium atmosphere & transformation flow\"\n  },\n  \"outputs\": {\n    \"left_hero\": \"Brand Campaign - Full-body editorial model wearing the final garment, elegant pose, premium setting matching Figure 2 mood. Spans left half of layout. Label: 品牌大片 BRAND CAMPAIGN\",\n    \"right_top\": \"Inspiration Source - Figure 2 original inspiration image (cultural artifact/nature/object) with premium framing. Label: 灵感溯源 INSPIRATION\",\n    \"right_center\": \"Design Sketch - Figure 1 structure + Figure 2 aesthetics fashion illustration. Label: 设计稿 SKETCH\",\n    \"right_bottom\": \"Garment Render - High-fidelity render of the final garment, realistic fabric and detailing. Label: 服装渲染 RENDER\"\n  },\n  \"output_requirements\": [\n    \"Left hero campaign garment 100% identical to right-side sketch and render garments; Figure 1 structure LOCKED; Figure 2 aesthetics pixel-precise\",\n    \"Right column reading flow: inspiration → design sketch → render, visual connection guides the eye downward\",\n    \"Model type selection (Caucasian female model) with auto-adapted body proportions and skin tone, 100% consistent across all wear views\",    \"Premium Visual Presentation & Cinematic Lighting:SFW compliant; render realistic fabric transparency, layering, and folds (NO oily shine or oversaturation). Implement a seamless 1-left + 3-right responsive layout with no visible dividers, using color transitions or gradients to unify the background, while maintaining luxury white space, cinematic vignette, and cross-screen visual hierarchy. Apply a unified cinematic color palette from Figure 2 with consistent brightness, contrast, and saturation. Use a single dominant light direction with soft diffused key light and gentle fill for natural shadows and ambient occlusion (AO) on fabric layers. Finish with a subtle hero glow, refined editorial retouching, and a museum-catalog aesthetic.\",\n    \"Decorative cultural captions: Chinese-primary + English-secondary, poetic series title + inspiration source + design story, elegant typography with theme-matching decorative icons\"\n    ]\n}"
     },
-    "class_type": "easy imageSplitGrid",
+    "class_type": "StringFunction|pysssss",
     "_meta": {
-      "title": "图像拆分网格"
+      "title": "String Function 🐍"
     }
   }
 }

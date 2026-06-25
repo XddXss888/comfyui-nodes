@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "A cluster of vibrant flowers viewed through hazy, fragmented glass—soft refraction, dreamy bokeh, muted pastel tones, delicate petals and green foliage. Masterpiece, best quality, highly detailed, professional photography, soft natural lighting., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "A 25-year-old beautiful East Asian woman with fair smooth skin, stylish short black hair, slim figure, delicate facial features, straight nose, natural rosy lips, and confident dark eyes. She wears a glossy light teal off-shoulder top, one hand touching her cheek, the other on her hip, posing elegantly against a clean white background. Soft, shadowless lighting enhances her natural beauty. Masterpiece, best quality, highly detailed, professional portrait., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -32,22 +32,22 @@
   "5": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 1024,
-      "height": 576,
+      "width": 576,
+      "height": 1024,
       "batch_size": 1
     }
   },
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 597192187,
+      "seed": 1012011802,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "sgm_uniform",
       "denoise": 1.0,
       "model": [
-        "1",
+        "12",
         0
       ],
       "positive": [
@@ -118,6 +118,22 @@
         "10",
         0
       ]
+    }
+  },
+  "12": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "2",
+        0
+      ],
+      "lora_name": "bfs_head_v1_flux-klein_9b_step3500_rank128.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.8
     }
   },
   "13": {

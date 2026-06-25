@@ -1,45 +1,64 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "UNETLoader",
     "inputs": {
-      "ckpt_name": "epicRealismXL_pureFix.safetensors"
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
     }
   },
   "2": {
-    "class_type": "VAELoader",
+    "class_type": "DualCLIPLoader",
     "inputs": {
-      "vae_name": "sdxl_vae.safetensors"
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp16.safetensors",
+      "type": "flux"
     }
   },
   "3": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip": [
-        "1",
-        1
-      ],
-      "text": "Failed to authenticate. API Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"Invalid authentication credentials\"},\"request_id\":\"req_011CcG162b9ph3tZ8XWGR91c\"}"
+      "vae_name": "ae.safetensors"
     }
   },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
-        "1",
-        1
+        "2",
+        0
       ],
-      "text": "lowres, blurry, bad anatomy, watermark, signature, oversaturated, harsh lighting, plastic skin"
+      "text": "A vast ocean chart table at dawn, nautical maps layered with translucent data overlays, brass navigation instruments beside neatly organized document stacks, golden morning light streaming through a ship bridge window, fog lifting to reveal structured shipping lanes stretching toward the horizon, each lane glowing faintly like organized data streams, cinematic depth of field, warm amber and deep navy tones, 16:9 composition"
     }
   },
   "5": {
-    "class_type": "EmptyLatentImage",
+    "class_type": "FluxGuidance",
     "inputs": {
-      "width": 896,
-      "height": 1280,
-      "batch_size": 1
+      "conditioning": [
+        "4",
+        0
+      ],
+      "guidance": 3.5
     }
   },
   "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
+    }
+  },
+  "7": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 1344,
+      "height": 768,
+      "batch_size": 1
+    }
+  },
+  "8": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
@@ -47,47 +66,47 @@
         0
       ],
       "positive": [
-        "3",
-        0
-      ],
-      "negative": [
-        "4",
-        0
-      ],
-      "latent_image": [
         "5",
         0
       ],
-      "seed": 1499185717,
-      "control_after_generate": "fixed",
-      "steps": 30,
-      "cfg": 5.0,
-      "sampler_name": "dpmpp_2m",
-      "scheduler": "karras",
-      "denoise": 1.0
-    }
-  },
-  "7": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "samples": [
+      "negative": [
         "6",
         0
       ],
+      "latent_image": [
+        "7",
+        0
+      ],
+      "seed": 2051175471,
+      "control_after_generate": "fixed",
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
       "vae": [
-        "2",
+        "3",
         0
       ]
     }
   },
-  "8": {
+  "10": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "7",
+        "9",
         0
       ],
-      "filename_prefix": "portrait_1499185717"
+      "filename_prefix": "blog_2051175471"
     }
   }
 }

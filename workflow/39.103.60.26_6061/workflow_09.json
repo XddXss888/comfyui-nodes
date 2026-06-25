@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "jimeng-2026-02-09-2106-身着淡粉色长袖职业女性，年轻，正脸，淡淡的微笑，手自然垂落，8K高清，实景拍摄效....png"
+      "image": "input_2d455457a76c.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -12,7 +12,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "33",
+        "17",
         0
       ]
     },
@@ -21,60 +21,42 @@
       "title": "保存图像"
     }
   },
-  "15": {
+  "17": {
     "inputs": {
-      "prompt": [
-        "28",
-        0
-      ],
-      "model": "doubao-seedream-4-5-251128",
-      "response_format": "url",
-      "resolution": "4K",
-      "aspect_ratio": "Custom",
-      "width": 1120,
-      "height": 800,
-      "apikey": "a44228f5-f1b2-44e9-860a-d3c8eb5ac03e",
-      "sequential_image_generation": "disabled",
-      "max_images": 1,
-      "seed": 1652468489,
-      "watermark": false,
-      "stream": false,
-      "image1": [
-        "1",
-        0
-      ],
-      "image2": [
-        "25",
+      "rounded_rect_radius": 100,
+      "anti_aliasing": 2,
+      "top": 0.0,
+      "bottom": 0.0,
+      "left": 0.0,
+      "right": 0.0,
+      "detect": "max_inscribed_rect",
+      "obj_ext_top": 0.0,
+      "obj_ext_bottom": 0.0,
+      "obj_ext_left": 0.0,
+      "obj_ext_right": 0.0,
+      "image": [
+        "18",
         0
       ]
     },
-    "class_type": "Comfly_Doubao_Seedream_4",
+    "class_type": "LayerUtility: RoundedRectangle",
     "_meta": {
-      "title": "Comfly Doubao Seedream4.0"
+      "title": "图层工具：圆角矩形"
     }
   },
-  "25": {
+  "18": {
     "inputs": {
-      "image": "qnd.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "26": {
-    "inputs": {
-      "aspect_ratio": "custom",
-      "proportional_width": 1120,
-      "proportional_height": 800,
+      "aspect_ratio": "1:1",
+      "proportional_width": 1024,
+      "proportional_height": 1024,
       "fit": "crop",
       "method": "bicubic",
       "round_to_multiple": "None",
       "scale_to_side": "width",
-      "scale_to_length": 1120,
+      "scale_to_length": 928,
       "background_color": "#000000",
       "image": [
-        "15",
+        "29",
         0
       ]
     },
@@ -83,70 +65,29 @@
       "title": "图层工具：按宽高比缩放 V2"
     }
   },
-  "27": {
-    "inputs": {
-      "seed": 629796774315906
-    },
-    "class_type": "Seed (rgthree)",
-    "_meta": {
-      "title": "Seed (rgthree)"
-    }
-  },
-  "28": {
-    "inputs": {
-      "old": "[偏向]",
-      "new": [
-        "29",
-        0
-      ],
-      "use_regex": false,
-      "string": [
-        "31",
-        0
-      ]
-    },
-    "class_type": "String Replace (mtb)",
-    "_meta": {
-      "title": "String Replace (mtb)"
-    }
-  },
   "29": {
     "inputs": {
-      "max_count": 1,
-      "mutable_prompt": "左侧\n右侧",
-      "immutable_prompt": "",
-      "random_sample": "enable",
-      "upload": null,
-      "seed": [
-        "27",
+      "prompt": "保持图1中主要人物一致，回眸看向镜头，清新水彩绘本风格。秋天的金色和橙红色渐变颜色背景画面中可见中国尊、CBD、秋天的长城、天坛轮廓、树影与远山的抽象融合，呈现宁静与现代并存的意境。红橙渐变，营造出秋日北京的温暖氛围。整体构图极简大气，层次分明，光影自然过渡。结合数字艺术风格，细节通透、色彩丰富，鲜艳明亮",
+      "model": "doubao-seedream-4-5-251128",
+      "response_format": "url",
+      "resolution": "4K",
+      "aspect_ratio": "1:1",
+      "width": 1024,
+      "height": 1024,
+      "apikey": "a44228f5-f1b2-44e9-860a-d3c8eb5ac03e",
+      "sequential_image_generation": "disabled",
+      "max_images": 1,
+      "seed": 1368043958,
+      "watermark": false,
+      "stream": false,
+      "image1": [
+        "1",
         0
       ]
     },
-    "class_type": "RandomPrompt",
+    "class_type": "Comfly_Doubao_Seedream_4",
     "_meta": {
-      "title": "Random Prompt ♾️Mixlab"
-    }
-  },
-  "31": {
-    "inputs": {
-      "value": "参考图一中的主要人物，2D线稿插画风格，主体为图一人物站在前景[偏向]位置，正面朝向镜头，怀抱书籍，头发边缘被照亮，氛围感。背景是北京天坛祈年殿远景（参考图二建筑），祈年殿完整明显，蓝天白云，灰色地砖。高对比，高饱和，鲜艳的色彩，画面具有东方哲学与时间沉淀气质，电影级国风叙事海报，高级商业视觉"
-    },
-    "class_type": "PrimitiveString",
-    "_meta": {
-      "title": "字符串"
-    }
-  },
-  "33": {
-    "inputs": {
-      "rotation": "270 degrees",
-      "image": [
-        "26",
-        0
-      ]
-    },
-    "class_type": "ImageRotate",
-    "_meta": {
-      "title": "图像旋转"
+      "title": "Comfly Doubao Seedream4.0"
     }
   }
 }

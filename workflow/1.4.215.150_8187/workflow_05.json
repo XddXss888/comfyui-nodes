@@ -47,7 +47,7 @@
   },
   "6": {
     "inputs": {
-      "text": "extra limbs,naked,nipples",
+      "text": "flat 2D comic drawing, ink illustration on paper, comic panel, frame, mug handle, floating tentacles, extra tentacles, seven arms, nine arms, text, watermark, multiple mugs, cluttered background, harsh shadows, cropped",
       "clip": [
         "80",
         1
@@ -71,7 +71,7 @@
   },
   "10": {
     "inputs": {
-      "steps": 14,
+      "steps": 22,
       "width": 1280,
       "height": 1024
     },
@@ -91,7 +91,7 @@
   },
   "12": {
     "inputs": {
-      "cfg": 4.5,
+      "cfg": 2.5,
       "model": [
         "80",
         0
@@ -107,7 +107,7 @@
     },
     "class_type": "CFGGuider",
     "_meta": {
-      "title": "CFGGuider"
+      "title": "CFG Guider"
     }
   },
   "13": {
@@ -168,10 +168,11 @@
   },
   "17": {
     "inputs": {
-      "text": "a realistic tiki mug  in the slightly Whimsical kitsch style of \n{{ jack Kirby | Dali | Frank Frazetta | Escher | Traditional Polynesian | Papua New Guinea | eskimo  }},  \nin the form of  \n{{ a scuba diver  | cthulhu | a monitor lizard   | a monkey  | an alien xenomorph face| an evil clown    | an elephant face   | a bimbo woman with large lips and puffed cheeks }}\nplain background,\n8k , detailed.",
-      "seed": 489878224620371,
-      "iteration": -1,
-      "computed_prompt": "a realistic tiki mug  in the slightly Whimsical kitsch style of \nTraditional Polynesian,  \nin the form of  \nan elephant face\nplain background,\n8k , detailed."
+      "text": "A studio product photograph of a single ceramic tiki mug, a tall cylindrical glazed-stoneware vessel shown front-on and centered, the whole mug visible. The mug is sculpted in the style of {{ jack Kirby | Dali | Frank Frazetta | Escher | Traditional Polynesian | Papua New Guinea | eskimo  }},\nin high relief. relief depicts an octopus: its domed mantle and two very large eyes sit high on the front, and all eight thick tentacles sweep behind and wrap around the cylindrical surface, every tentacle staying flush against and carved into the mug surface with none floating free, rows of suckers along each arm.   Even soft studio lighting, seamless off-white background, soft contact shadow, sharp focus, fine detail. 8k.",
+      "delimiter_style": "curly { }",
+      "seed": 1005999705498544,
+      "iteration": 0,
+      "computed_prompt": "A studio product photograph of a single ceramic tiki mug, a tall cylindrical glazed-stoneware vessel shown front-on and centered, the whole mug visible. The mug is sculpted in the style of jack Kirby,\nin high relief. relief depicts an octopus: its domed mantle and two very large eyes sit high on the front, and all eight thick tentacles sweep behind and wrap around the cylindrical surface, every tentacle staying flush against and carved into the mug surface with none floating free, rows of suckers along each arm.   Even soft studio lighting, seamless off-white background, soft contact shadow, sharp focus, fine detail. 8k."
     },
     "class_type": "GPrompts",
     "_meta": {
@@ -180,8 +181,8 @@
   },
   "79": {
     "inputs": {
-      "filename_prefix": "tikiglass",
-      "album": "tikiglass",
+      "filename_prefix": "octtikiglass625",
+      "album": "octtikiglass625",
       "tags": "",
       "save_also": true,
       "image": [

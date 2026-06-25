@@ -167,7 +167,7 @@
   "133": {
     "inputs": {
       "use_naia_settings": false,
-      "pre_prompt": "(@na tarapisu153), @nihirumastyle, (@healthyman:0.5), (@eonsang:0.4), (@moni monico:0.4), \n\nphoto background, (real world location), masterpiece, best quality, hyper detail, very aesthetic, newest, year2025, \n\nhighres, HDR, absurdres, finely detailed, (beautiful eyes and detailed face), (realistic:2), (photorealistic:2), detailed eyes, deepblue and purple eyes, \n\nnorma hollowell, 1girl, solo, (loli:0.2), white thighhighs rolled down to the calves, looking at viewer, no gloves, sitting, closed mouth, (blush), no boots, (breasts close up, breasts focus:1.7), \n\n(large breasts:0.8), no hat, no panties, thickthigh, bare neck, ",
+      "pre_prompt": "(@na tarapisu153), @nihirumastyle, (@healthyman:0.5), (@eonsang:0.4), (@moni monico:0.4), \n\nreal world background, (real world location), masterpiece, best quality, hyper detail, very aesthetic, newest, year2025, \n\nhighres, HDR, absurdres, finely detailed, (beautiful eyes and detailed face), (realistic:2), (photorealistic:2), detailed eyes, deepblue and purple eyes, \n\nnorma hollowell, 1girl, solo, (loli:0.2), looking at viewer, no gloves, closed mouth, (blush),\n\n(large breasts:0.8), no hat, (thickthigh), bare neck, ",
       "post_prompt": "",
       "auto_hide": "robot joints, dark skin",
       "remove_author": "on",
@@ -221,7 +221,7 @@
   },
   "150": {
     "inputs": {
-      "seed": 813808771918153,
+      "seed": 896704632514818,
       "steps": 30,
       "cfg": 4.0,
       "sampler_name": "er_sde_cns",
@@ -243,7 +243,7 @@
         0
       ],
       "latent_image": [
-        "119",
+        "167",
         0
       ],
       "clip": [
@@ -394,6 +394,17 @@
     "class_type": "VAEDecode",
     "_meta": {
       "title": "VAE 디코드"
+    }
+  },
+  "167": {
+    "inputs": {
+      "width": 1216,
+      "height": 832,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "빈 잠재 이미지"
     }
   }
 }

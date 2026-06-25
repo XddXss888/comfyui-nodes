@@ -1,181 +1,78 @@
 {
-  "10": {
+  "3": {
     "_meta": {
-      "title": "加载VAE"
+      "title": "K采样器"
     },
-    "class_type": "VAELoader",
+    "class_type": "KSampler",
     "inputs": {
-      "vae_name": "hunyuanvideo15_vae_fp16.safetensors"
-    }
-  },
-  "101": {
-    "_meta": {
-      "title": "创建视频"
-    },
-    "class_type": "CreateVideo",
-    "inputs": {
-      "fps": 24,
-      "images": [
-        "8",
-        0
-      ]
-    }
-  },
-  "102": {
-    "_meta": {
-      "title": "保存视频"
-    },
-    "class_type": "SaveVideo",
-    "inputs": {
-      "codec": "h264",
-      "filename_prefix": "video/hunyuan_video_1.5",
-      "format": "auto",
-      "video": [
-        "101",
-        0
-      ]
-    }
-  },
-  "11": {
-    "_meta": {
-      "title": "双CLIP加载器"
-    },
-    "class_type": "DualCLIPLoader",
-    "inputs": {
-      "clip_name1": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
-      "clip_name2": "byt5_small_glyphxl_fp16.safetensors",
-      "device": "default",
-      "type": "hunyuan_video_15"
-    }
-  },
-  "12": {
-    "_meta": {
-      "title": "UNet加载器"
-    },
-    "class_type": "UNETLoader",
-    "inputs": {
-      "unet_name": "hunyuanvideo1.5_720p_t2v_fp16.safetensors",
-      "weight_dtype": "default"
-    }
-  },
-  "124": {
-    "_meta": {
-      "title": "Empty HunyuanVideo 1.5 Latent"
-    },
-    "class_type": "EmptyHunyuanVideo15Latent",
-    "inputs": {
-      "batch_size": 1,
-      "height": 150,
-      "length": 120,
-      "width": 150
-    }
-  },
-  "127": {
-    "_meta": {
-      "title": "自定义采样器（高级）"
-    },
-    "class_type": "SamplerCustomAdvanced",
-    "inputs": {
-      "guider": [
-        "131",
-        0
-      ],
-      "latent_image": [
-        "124",
-        0
-      ],
-      "noise": [
-        "129",
-        0
-      ],
-      "sampler": [
-        "130",
-        0
-      ],
-      "sigmas": [
-        "128",
-        0
-      ]
-    }
-  },
-  "128": {
-    "_meta": {
-      "title": "基本调度器"
-    },
-    "class_type": "BasicScheduler",
-    "inputs": {
+      "cfg": 8,
       "denoise": 1,
-      "model": [
-        "12",
+      "latent_image": [
+        "5",
         0
       ],
-      "scheduler": "simple",
-      "steps": 20
-    }
-  },
-  "129": {
-    "_meta": {
-      "title": "随机噪波"
-    },
-    "class_type": "RandomNoise",
-    "inputs": {
-      "noise_seed": 887963123424675
-    }
-  },
-  "130": {
-    "_meta": {
-      "title": "K采样器选择"
-    },
-    "class_type": "KSamplerSelect",
-    "inputs": {
-      "sampler_name": "euler"
-    }
-  },
-  "131": {
-    "_meta": {
-      "title": "CFG引导器"
-    },
-    "class_type": "CFGGuider",
-    "inputs": {
-      "cfg": 6,
       "model": [
-        "132",
+        "4",
         0
       ],
       "negative": [
-        "93",
+        "7",
         0
       ],
       "positive": [
-        "44",
-        0
-      ]
-    }
-  },
-  "132": {
-    "_meta": {
-      "title": "采样算法（SD3）"
-    },
-    "class_type": "ModelSamplingSD3",
-    "inputs": {
-      "model": [
-        "12",
+        "6",
         0
       ],
-      "shift": 7
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "seed": 726800611663881,
+      "steps": 20
     }
   },
-  "44": {
+  "4": {
     "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
+      "title": "Checkpoint加载器（简易）"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "Realistic_Vision_V5.1.safetensors"
+    }
+  },
+  "5": {
+    "_meta": {
+      "title": "空Latent图像"
+    },
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "batch_size": 1,
+      "height": 512,
+      "width": 512
+    }
+  },
+  "6": {
+    "_meta": {
+      "title": "CLIP文本编码"
     },
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
-        "11",
-        0
+        "4",
+        1
       ],
-      "text": "A paper airplane released from the top of a skyscraper, gliding through urban canyons, crossing traffic, flying over streets, spiraling upward between buildings. The camera follows the paper airplane's perspective, shooting cityscape in first-person POV, finally flying toward the sunset, disappearing in golden light. Creative camera movement, free perspective, dreamlike colors."
+      "text": "习近平，共产党"
+    }
+  },
+  "7": {
+    "_meta": {
+      "title": "CLIP文本编码"
+    },
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "4",
+        1
+      ],
+      "text": "text, watermark"
     }
   },
   "8": {
@@ -185,26 +82,26 @@
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "127",
+        "3",
         0
       ],
       "vae": [
-        "10",
-        0
+        "4",
+        2
       ]
     }
   },
-  "93": {
+  "9": {
     "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
+      "title": "保存图像"
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "SaveImage",
     "inputs": {
-      "clip": [
-        "11",
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
         0
-      ],
-      "text": "一个小猴子\n"
+      ]
     }
   }
 }

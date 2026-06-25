@@ -1,8 +1,67 @@
 {
-  "1": {
-    "class_type": "VisualizeCUDAMemoryHistory",
+  "28": {
+    "class_type": "KokoroZHRun",
     "inputs": {
-      "snapshot_path": "input/d.pkl"
+      "voice": "zm_013.pt",
+      "voice_s2": "zf_001.pt",
+      "unload_model": true,
+      "enable_dialogue": false,
+      "text": [
+        "32",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Kokoro ZH Run"
+    }
+  },
+  "30": {
+    "class_type": "SaveAudioMP3",
+    "inputs": {
+      "filename_prefix": "0bf69b392e6844e1b9c49b8aec63d09a/0bf69b392e6844e1b9c49b8aec63d09a",
+      "audio": [
+        "28",
+        0
+      ],
+      "audioUI": "/api/view?filename=ComfyUI_00019_.mp3&type=output&subfolder=audio&rand=0.6467680289380505",
+      "quality": "V0"
+    },
+    "_meta": {
+      "title": "保存音频 (MP3)"
+    }
+  },
+  "41": {
+    "class_type": "PrimitiveString",
+    "inputs": {
+      "value": "雨中漫步，伞下身影"
+    },
+    "_meta": {
+      "title": "字符串"
+    }
+  },
+  "31": {
+    "class_type": "Seed (rgthree)",
+    "inputs": {
+      "seed": -1
+    },
+    "_meta": {
+      "title": "随机种"
+    }
+  },
+  "32": {
+    "class_type": "Text Random Line",
+    "inputs": {
+      "seed": [
+        "31",
+        0
+      ],
+      "text": [
+        "41",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "文本随机行"
     }
   }
 }

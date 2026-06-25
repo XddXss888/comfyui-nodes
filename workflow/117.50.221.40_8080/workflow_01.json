@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Photorealistic studio portrait of a classical white marble David bust sculpture, dramatic chiaroscuro lighting, soft shadow gradient, ultra-detailed texture, masterpiece, best quality, professional photography, 8K resolution, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "A 25-year-old beautiful East Asian woman with fair smooth skin, stylish mullet short hair, slim figure, delicate facial features, straight nose, natural rosy lips, and confident black eyes. She wears a glossy light teal off-shoulder top, arms crossed in a model pose. Pure white background, soft even lighting, no harsh shadows. Masterpiece, best quality, ultra-detailed, professional portrait., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -32,7 +32,7 @@
   "5": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 1024,
+      "width": 576,
       "height": 1024,
       "batch_size": 1
     }
@@ -40,14 +40,14 @@
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 2022589685,
+      "seed": 46311943,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "sgm_uniform",
       "denoise": 1.0,
       "model": [
-        "1",
+        "12",
         0
       ],
       "positive": [
@@ -90,9 +90,9 @@
   "9": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_1K",
+      "filename_prefix": "DOOOOR_2K",
       "images": [
-        "8",
+        "14",
         0
       ]
     }
@@ -113,9 +113,44 @@
   "11": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_1K_TH",
+      "filename_prefix": "DOOOOR_2K_TH",
       "images": [
         "10",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "2",
+        0
+      ],
+      "lora_name": "bfs_head_v1_flux-klein_9b_step3500_rank128.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.8
+    }
+  },
+  "13": {
+    "class_type": "UpscaleModelLoader",
+    "inputs": {
+      "model_name": "2xLexicaRRDBNet_Sharp.pth"
+    }
+  },
+  "14": {
+    "class_type": "ImageUpscaleWithModel",
+    "inputs": {
+      "upscale_model": [
+        "13",
+        0
+      ],
+      "image": [
+        "8",
         0
       ]
     }

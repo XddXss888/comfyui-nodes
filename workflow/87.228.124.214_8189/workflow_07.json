@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "seductive young curvy woman with long black hair, A woman in a tight dress stands in a dimly lit apartment hallway at night, body angled away from the viewer with hips and ass pushed back as she shakes them in a slow rhythmic motion, hands resting on her upper thighs, looking back over her shoulder with an intense commanding gaze, dim corridor lighting casting soft shadows across the walls and her figure, medium close-up framing from waist to head emphasizing her pose and expression.",
+      "text": "DENISE, A seductive woman lowers her dress to expose her full curves and bare breasts, kneeling in front of the man with her hands gripping his open jeans, her mouth wrapped around his large erect penis as she performs oral sex, gazing upward with a playful aroused expression, soft intimate lighting on her skin and the visible contact, medium close-up framing, clear natural pose with believable hand placement and body support.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "izumi_v.2.safetensors",
-      "strength_model": 0.9,
-      "strength_clip": 1.0,
+      "lora_name": "DENISE_SYNTH_zimg_v1.safetensors",
+      "strength_model": 0.78,
+      "strength_clip": 0.8,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -133,11 +133,11 @@
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 26161571962184,
+      "seed": 1031310649651904,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

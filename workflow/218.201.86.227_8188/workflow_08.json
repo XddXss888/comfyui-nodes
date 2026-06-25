@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "A beautiful wide landscape of rice paddies in the countryside, lush golden-green rice field, gentle breeze implied by flowing rice stalks, reflective irrigation water channels, distant blue mountains, soft white clouds drifting in a bright sky, warm late afternoon sunlight, cinematic peaceful atmosphere, highly detailed natural scenery, photorealistic digital art, no people, no text, 16:9 composition",
+      "text": "A wide panoramic illustration of Tiananmen Gate in Beijing, iconic red walls and golden roof tiles, Chinese national architectural landmark, festive but elegant atmosphere, clean hand-drawn digital illustration, refined vector-like details, warm sunrise light, soft blue sky, subtle clouds, balanced symmetrical composition, cinematic wide shot, rich red and gold color palette, no crowds, no text, high quality artwork",
       "clip": [
         "30",
         1
@@ -30,7 +30,7 @@
   },
   "9": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
+      "filename_prefix": "tiananmen_2048x768_illustration",
       "images": [
         "8",
         0
@@ -43,8 +43,8 @@
   },
   "27": {
     "inputs": {
-      "width": 1024,
-      "height": 576,
+      "width": 2048,
+      "height": 768,
       "batch_size": 1
     },
     "class_type": "EmptySD3LatentImage",
@@ -63,8 +63,8 @@
   },
   "31": {
     "inputs": {
-      "seed": 993778131594979,
-      "steps": 28,
+      "seed": 73592184610237,
+      "steps": 24,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -93,7 +93,7 @@
   },
   "33": {
     "inputs": {
-      "text": "text, watermark, logo, people, buildings, blurry, low quality, distorted horizon, overexposed",
+      "text": "photorealistic, photo, 3d render, text, watermark, logo, blurry, distorted architecture, deformed roof, extra towers, low quality, oversaturated, crowded foreground",
       "clip": [
         "30",
         1

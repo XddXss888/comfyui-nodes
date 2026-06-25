@@ -1,74 +1,38 @@
 {
-  "1": {
+  "10": {
     "inputs": {
-      "unet_name": "flux-2-klein-9b-fp8.safetensors",
-      "weight_dtype": "default"
+      "image": "v4_cutout_1782382208920_adcc41d4beb18.jpg"
     },
-    "class_type": "UNETLoader",
+    "class_type": "LoadImage",
     "_meta": {
-      "title": "UNet加载器"
+      "title": "加载图像"
     }
   },
-  "2": {
+  "11": {
     "inputs": {
-      "clip_name": "qwen_3_8b_fp8mixed .safetensors",
-      "type": "flux2",
-      "device": "default"
+      "color": "#ffffff",
+      "mode": "HEX"
     },
-    "class_type": "CLIPLoader",
+    "class_type": "LayerUtility: ColorPicker",
     "_meta": {
-      "title": "加载CLIP"
+      "title": "LayerUtility: ColorPicker"
     }
   },
-  "3": {
+  "12": {
     "inputs": {
-      "pixels": [
-        "25",
-        0
-      ],
-      "vae": [
-        "8",
-        0
-      ]
+      "color": "#ffffff",
+      "mode": "HEX"
     },
-    "class_type": "VAEEncode",
+    "class_type": "LayerUtility: ColorPicker",
     "_meta": {
-      "title": "VAE编码"
+      "title": "LayerUtility: ColorPicker"
     }
   },
-  "4": {
-    "inputs": {
-      "conditioning": [
-        "13",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "条件零化"
-    }
-  },
-  "5": {
-    "inputs": {
-      "conditioning": [
-        "13",
-        0
-      ],
-      "latent": [
-        "3",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "参考Latent"
-    }
-  },
-  "6": {
+  "16": {
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "12",
+        "26",
         0
       ]
     },
@@ -77,208 +41,155 @@
       "title": "保存图像"
     }
   },
-  "7": {
+  "17": {
     "inputs": {
-      "rgthree_comparer": {
-        "images": [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_tdpzy_00102_.png&type=temp&subfolder=&rand=0.25610244600608834"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_tdpzy_00103_.png&type=temp&subfolder=&rand=0.41026285890163305"
-          }
-        ]
-      },
-      "image_a": [
-        "25",
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "27",
         0
-      ],
-      "image_b": [
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "18": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "19": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "21": {
+    "inputs": {
+      "torchscript_jit": "default",
+      "image": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "InspyrenetRembg",
+    "_meta": {
+      "title": "Inspyrenet Rembg"
+    }
+  },
+  "22": {
+    "inputs": {
+      "fill_background": true,
+      "background_color": [
         "12",
         0
-      ]
-    },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "图像对比"
-    }
-  },
-  "8": {
-    "inputs": {
-      "vae_name": "FLUX.2-dev-vae\\diffusion_pytorch_model.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "9": {
-    "inputs": {
-      "seed": 439860633603542,
-      "steps": 6,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 0.9000000000000001,
-      "model": [
-        "1",
-        0
       ],
-      "positive": [
-        "5",
-        0
-      ],
-      "negative": [
-        "4",
-        0
-      ],
-      "latent_image": [
-        "3",
+      "RGBA_image": [
+        "21",
         0
       ]
     },
-    "class_type": "KSampler",
+    "class_type": "LayerUtility: ImageRemoveAlpha",
     "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "10": {
-    "inputs": {
-      "image": [
-        "14",
-        0
-      ]
-    },
-    "class_type": "FluxKontextImageScale",
-    "_meta": {
-      "title": "图像缩放为FluxKontext"
-    }
-  },
-  "11": {
-    "inputs": {
-      "samples": [
-        "9",
-        0
-      ],
-      "vae": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "12": {
-    "inputs": {
-      "method": "mkl",
-      "strength": 1.0,
-      "multithread": true,
-      "image_ref": [
-        "25",
-        0
-      ],
-      "image_target": [
-        "11",
-        0
-      ]
-    },
-    "class_type": "ColorMatch",
-    "_meta": {
-      "title": "Color Match"
-    }
-  },
-  "13": {
-    "inputs": {
-      "text": "修复图像，修复后整体外观精致。图像风格写实,逼真的玻璃光泽和反射，玻璃细节和形态表现突出",
-      "clip": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
-    }
-  },
-  "14": {
-    "inputs": {
-      "image": "v11_refine_1782203643382_819aa2d58a3608.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
+      "title": "LayerUtility: ImageRemoveAlpha"
     }
   },
   "23": {
     "inputs": {
-      "image": [
-        "14",
+      "RGB_image": [
+        "22",
         0
+      ],
+      "mask": [
+        "21",
+        1
       ]
     },
-    "class_type": "GetImageSize",
+    "class_type": "LayerUtility: ImageCombineAlpha",
     "_meta": {
-      "title": "获取图像尺寸"
+      "title": "LayerUtility: ImageCombineAlpha"
     }
   },
   "24": {
     "inputs": {
-      "expression": "max(max(a,b)-c,0)",
-      "values.a": [
-        "23",
-        0
-      ],
-      "values.b": [
-        "23",
-        1
-      ],
-      "values.c": [
-        "26",
-        0
-      ]
+      "model": "BiRefNet-general-epoch_244.pth"
     },
-    "class_type": "ComfyMathExpression",
+    "class_type": "LayerMask: LoadBiRefNetModel",
     "_meta": {
-      "title": "是否超过阈值：超过=True"
+      "title": "LayerMask: Load BiRefNet Model"
     }
   },
   "25": {
     "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 1,
-      "proportional_height": 1,
-      "fit": "letterbox",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_side": "longest",
-      "scale_to_length": [
-        "26",
+      "detail_method": "VITMatte",
+      "detail_erode": 4,
+      "detail_dilate": 2,
+      "black_point": 0.01,
+      "white_point": 0.99,
+      "process_detail": false,
+      "device": "cuda",
+      "max_megapixels": 2.0,
+      "image": [
+        "10",
         0
       ],
-      "background_color": "#000000",
-      "image": [
-        "14",
+      "birefnet_model": [
+        "24",
         0
       ]
     },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "class_type": "LayerMask: BiRefNetUltraV2",
     "_meta": {
-      "title": "LayerUtility: ImageScaleByAspectRatio V2"
+      "title": "LayerMask: BiRefNet Ultra V2"
     }
   },
   "26": {
     "inputs": {
-      "value": 2048
+      "fill_background": true,
+      "background_color": [
+        "11",
+        0
+      ],
+      "RGBA_image": [
+        "25",
+        0
+      ]
     },
-    "class_type": "PrimitiveInt",
+    "class_type": "LayerUtility: ImageRemoveAlpha",
     "_meta": {
-      "title": "最长边阈值 / 缩放目标"
+      "title": "LayerUtility: ImageRemoveAlpha"
+    }
+  },
+  "27": {
+    "inputs": {
+      "RGB_image": [
+        "26",
+        0
+      ],
+      "mask": [
+        "25",
+        1
+      ]
+    },
+    "class_type": "LayerUtility: ImageCombineAlpha",
+    "_meta": {
+      "title": "LayerUtility: ImageCombineAlpha"
     }
   }
 }

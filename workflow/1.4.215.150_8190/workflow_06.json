@@ -1,100 +1,7 @@
 {
-  "76": {
+  "1": {
     "inputs": {
-      "image": "tikiglass_00020_.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "81": {
-    "inputs": {
-      "image": "tikiglass_00020_.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "94": {
-    "inputs": {
-      "filename_prefix": "Flux2_Klein_9b_kv",
-      "images": [
-        "124",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
-    }
-  },
-  "122": {
-    "inputs": {
-      "sampler_name": "euler"
-    },
-    "class_type": "KSamplerSelect",
-    "_meta": {
-      "title": "KSamplerSelect"
-    }
-  },
-  "123": {
-    "inputs": {
-      "noise": [
-        "125",
-        0
-      ],
-      "guider": [
-        "138",
-        0
-      ],
-      "sampler": [
-        "122",
-        0
-      ],
-      "sigmas": [
-        "137",
-        0
-      ],
-      "latent_image": [
-        "129",
-        0
-      ]
-    },
-    "class_type": "SamplerCustomAdvanced",
-    "_meta": {
-      "title": "SamplerCustomAdvanced"
-    }
-  },
-  "124": {
-    "inputs": {
-      "samples": [
-        "123",
-        0
-      ],
-      "vae": [
-        "127",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
-    }
-  },
-  "125": {
-    "inputs": {
-      "noise_seed": 1030902975186458
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "RandomNoise"
-    }
-  },
-  "126": {
-    "inputs": {
-      "unet_name": "flux-2-klein-9b-kv-fp8.safetensors",
+      "unet_name": "flux-2-klein-base-9b-fp8.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -102,75 +9,7 @@
       "title": "Load Diffusion Model"
     }
   },
-  "127": {
-    "inputs": {
-      "vae_name": "flux2-vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Load VAE"
-    }
-  },
-  "128": {
-    "inputs": {
-      "image": [
-        "130",
-        0
-      ]
-    },
-    "class_type": "GetImageSize",
-    "_meta": {
-      "title": "Get Image Size"
-    }
-  },
-  "129": {
-    "inputs": {
-      "width": [
-        "128",
-        0
-      ],
-      "height": [
-        "128",
-        1
-      ],
-      "batch_size": 1
-    },
-    "class_type": "EmptyFlux2LatentImage",
-    "_meta": {
-      "title": "Empty Flux 2 Latent"
-    }
-  },
-  "130": {
-    "inputs": {
-      "upscale_method": "lanczos",
-      "megapixels": 1.0,
-      "resolution_steps": 1,
-      "image": [
-        "76",
-        0
-      ]
-    },
-    "class_type": "ImageScaleToTotalPixels",
-    "_meta": {
-      "title": "Scale Image to Total Pixels"
-    }
-  },
-  "131": {
-    "inputs": {
-      "upscale_method": "lanczos",
-      "megapixels": 1.0,
-      "resolution_steps": 1,
-      "image": [
-        "81",
-        0
-      ]
-    },
-    "class_type": "ImageScaleToTotalPixels",
-    "_meta": {
-      "title": "Scale Image to Total Pixels"
-    }
-  },
-  "133": {
+  "2": {
     "inputs": {
       "clip_name": "qwen_3_8b_fp8mixed.safetensors",
       "type": "flux2",
@@ -181,12 +20,24 @@
       "title": "Load CLIP"
     }
   },
-  "135": {
+  "3": {
     "inputs": {
-      "text": "This is a stylized Tiki mug of a scuba diver.\nhave the 6 tips of an octopus tentacle visibhle  at the edges of the image around the \nscuba diver  in Figure 1 . The tips  show be near but not touch the scuba diver. \npretend the octopus is at the other side of the mug and is not visible, only the tips of its tentacles are visible.\nThe tentacles are attached to the surface of the mug \nand must not leave the surface.\nthe tentacles must not be free standing and detached from the  surafce of the tiki mug.",
-      "clip": [
-        "133",
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "5": {
+    "inputs": {
+      "text": [
+        "17",
         0
+      ],
+      "clip": [
+        "80",
+        1
       ]
     },
     "class_type": "CLIPTextEncode",
@@ -194,36 +45,63 @@
       "title": "CLIP Text Encode (Positive Prompt)"
     }
   },
-  "137": {
+  "6": {
     "inputs": {
-      "steps": 4,
-      "width": [
-        "128",
-        0
-      ],
-      "height": [
-        "128",
+      "text": "flat 2D comic drawing, ink illustration on paper, comic panel, frame, mug handle, floating tentacles, extra tentacles, seven arms, nine arms, text, watermark, multiple mugs, cluttered background, harsh shadows, cropped",
+      "clip": [
+        "80",
         1
       ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "9": {
+    "inputs": {
+      "width": 1280,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "10": {
+    "inputs": {
+      "steps": 22,
+      "width": 1280,
+      "height": 1024
     },
     "class_type": "Flux2Scheduler",
     "_meta": {
       "title": "Flux2Scheduler"
     }
   },
-  "138": {
+  "11": {
     "inputs": {
-      "cfg": 1.8,
+      "sampler_name": "res_2s_ode"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "12": {
+    "inputs": {
+      "cfg": 3.5,
       "model": [
-        "139",
+        "80",
         0
       ],
       "positive": [
-        "132:121",
+        "5",
         0
       ],
       "negative": [
-        "132:119",
+        "6",
         0
       ]
     },
@@ -232,38 +110,87 @@
       "title": "CFG Guider"
     }
   },
-  "139": {
+  "13": {
     "inputs": {
-      "model": [
-        "126",
+      "noise_seed": [
+        "17",
+        3
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "14": {
+    "inputs": {
+      "noise": [
+        "13",
+        0
+      ],
+      "guider": [
+        "12",
+        0
+      ],
+      "sampler": [
+        "11",
+        0
+      ],
+      "sigmas": [
+        "10",
+        0
+      ],
+      "latent_image": [
+        "9",
         0
       ]
     },
-    "class_type": "FluxKVCache",
+    "class_type": "SamplerCustomAdvanced",
     "_meta": {
-      "title": "Flux KV Cache"
+      "title": "SamplerCustomAdvanced"
     }
   },
-  "685": {
+  "15": {
     "inputs": {
-      "conditioning": [
-        "135",
+      "samples": [
+        "14",
+        0
+      ],
+      "vae": [
+        "3",
         0
       ]
     },
-    "class_type": "ConditioningZeroOut",
+    "class_type": "VAEDecode",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "VAE Decode"
     }
   },
-  "693": {
+  "17": {
     "inputs": {
-      "filename_prefix": "diver2",
-      "album": "diver2",
+      "text": "A studio product photograph of a single ceramic tiki mug, a tall cylindrical glazed-stoneware vessel shown front-on and centered, the whole mug visible. The mug is sculpted in high relief. relief depicts an octopus: its domed mantle and two very large eyes sit high on the front, and all eight thick tentacles sweep behind and wrap around the cylindrical surface, every tentacle staying flush against and carved into the mug surface with none floating free, rows of suckers along each arm.   Even soft studio lighting, seamless off-white background, soft contact shadow, sharp focus, fine detail. 8k.",
+      "delimiter_style": "curly { }",
+      "seed": 402448151915678,
+      "iteration": 0,
+      "computed_prompt": "A studio product photograph of a single ceramic tiki mug, a tall cylindrical glazed-stoneware vessel shown front-on and centered, the whole mug visible. The mug is sculpted in high relief. relief depicts an octopus: its domed mantle and two very large eyes sit high on the front, and all eight thick tentacles sweep behind and wrap around the cylindrical surface, every tentacle staying flush against and carved into the mug surface with none floating free, rows of suckers along each arm.   Even soft studio lighting, seamless off-white background, soft contact shadow, sharp focus, fine detail. 8k."
+    },
+    "class_type": "GPrompts",
+    "_meta": {
+      "title": "GPrompts"
+    }
+  },
+  "79": {
+    "inputs": {
+      "filename_prefix": "oct2tikiglass625",
+      "album": "oct2tikiglass625",
       "tags": "",
       "save_also": true,
       "image": [
-        "124",
+        "15",
+        0
+      ],
+      "notes": [
+        "94",
         0
       ]
     },
@@ -272,100 +199,73 @@
       "title": "Save Image to Immich Server"
     }
   },
-  "134:116": {
+  "80": {
     "inputs": {
-      "conditioning": [
-        "685",
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": false,
+        "lora": "Kleinflux29b\\80sFantasyKlein9b_000002000H1000.safetensors",
+        "strength": 1.1
+      },
+      "lora_2": {
+        "on": false,
+        "lora": "Kleinflux29b\\FolkHorrorKlein9b.safetensors",
+        "strength": 0.76
+      },
+      "lora_3": {
+        "on": false,
+        "lora": "Kleinflux29b\\Giger_Style_Hall.safetensors",
+        "strength": 0.6
+      },
+      "lora_4": {
+        "on": false,
+        "lora": "Kleinflux29b/Realism_Engine_Klein_V2.safetensors",
+        "strength": 0.8
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "1",
         0
       ],
-      "latent": [
-        "134:117",
+      "clip": [
+        "2",
         0
       ]
     },
-    "class_type": "ReferenceLatent",
+    "class_type": "Power Lora Loader (rgthree)",
     "_meta": {
-      "title": "ReferenceLatent"
+      "title": "Power Lora Loader (rgthree)"
     }
   },
-  "134:117": {
+  "88": {
     "inputs": {
-      "pixels": [
-        "130",
-        0
-      ],
-      "vae": [
-        "127",
+      "images": [
+        "15",
         0
       ]
     },
-    "class_type": "VAEEncode",
+    "class_type": "PreviewImage",
     "_meta": {
-      "title": "VAE Encode"
+      "title": "Preview Image"
     }
   },
-  "134:118": {
+  "94": {
     "inputs": {
-      "conditioning": [
-        "135",
-        0
+      "format_string": "The prompt is \n$a, \nthe seed is $b, Generated at $datetime on $hostname, Operating system $os",
+      "a": [
+        "17",
+        2
       ],
-      "latent": [
-        "134:117",
-        0
+      "b": [
+        "17",
+        3
       ]
     },
-    "class_type": "ReferenceLatent",
+    "class_type": "String Formatter",
     "_meta": {
-      "title": "ReferenceLatent"
-    }
-  },
-  "132:119": {
-    "inputs": {
-      "conditioning": [
-        "134:116",
-        0
-      ],
-      "latent": [
-        "132:120",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "ReferenceLatent"
-    }
-  },
-  "132:120": {
-    "inputs": {
-      "pixels": [
-        "131",
-        0
-      ],
-      "vae": [
-        "127",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE Encode"
-    }
-  },
-  "132:121": {
-    "inputs": {
-      "conditioning": [
-        "134:118",
-        0
-      ],
-      "latent": [
-        "132:120",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "ReferenceLatent"
+      "title": "String Formatter"
     }
   }
 }

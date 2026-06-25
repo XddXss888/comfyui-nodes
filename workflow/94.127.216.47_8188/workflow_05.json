@@ -1,80 +1,116 @@
 {
-  "37": {
+  "2": {
     "inputs": {
-      "aspect_ratio": "16:9 (Widescreen)",
-      "megapixels": 1.5
-    },
-    "class_type": "ResolutionSelector",
-    "_meta": {
-      "title": "Resolution Selector"
-    }
-  },
-  "111": {
-    "inputs": {
-      "source": [
-        "37",
+      "seed": 3,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "er_sde",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "25",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "8",
+        0
+      ],
+      "latent_image": [
+        "10",
         0
       ]
     },
-    "class_type": "PreviewAny",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "Preview as Text"
+      "title": "KSampler"
     }
   },
-  "177": {
+  "3": {
     "inputs": {
-      "number_type": "integer",
-      "minimum": 1,
-      "maximum": 1000000000,
-      "seed": 1003080730536279
+      "samples": [
+        "2",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ]
     },
-    "class_type": "Random Number",
+    "class_type": "VAEDecode",
     "_meta": {
-      "title": "Random Number"
+      "title": "VAE Decode"
     }
   },
-  "179": {
+  "4": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "A grim dark painting, rendered in oil, mud and blood, with broad, bold brushstrokes. Portrait of Adeptus Mechanicus Techpriest from Warhammer 40000. Factory workshop on background",
+      "clip": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "10": {
     "inputs": {
       "width": [
-        "37",
+        "23",
         0
       ],
       "height": [
-        "37",
+        "23",
         1
       ],
-      "high_level_description": "An amateur photograph from 1981, showing a MiG-27 in combat with a flying saucer; a cruise missile explosion is visible on the saucer, and the jet's power shield absorbing a laser beam, with a red star visible on the fighter's interior; the second missile flies into a flying saucer",
-      "background": "A vast, stormy sky with a dark blue base, showing a MiG-27 and a flying saucer in mid-combat. The background includes visible smoke trails and distant stars. A cruise missile explosion emits a bright white flash and orange fire.",
-      "style": "photo",
-      "style.photo": "amateur 1980s film stock, handheld, low-resolution, visible lens flare and film grain",
-      "aesthetics": "surreal, high-contrast, grainy, vintage film texture, retro sci-fi aesthetic",
-      "lighting": "harsh artificial lighting, dramatic shadows, uneven exposure",
-      "medium": "photograph",
-      "style_palette_data": "[\"#D11C1C\",\"#4A4A4A\",\"#1E1E1E\",\"#FFC107\",\"#000000\",\"#FF5733\",\"#333333\",\"#8B0000\"]",
-      "elements_data": "[{\"type\":\"obj\",\"text\":\"\",\"desc\":\"A MiG-27 fighter jet flying at a steep angle, with a red star on the cockpit panel. The jet is angled to the right, with visible cockpit windows.\",\"palette\":[\"#D11C1C\",\"#8B0000\",\"#1E1E1E\"],\"x\":0.029483825522288926,\"y\":0.2972990669948938,\"w\":0.3350344171726569,\"h\":0.32643014314404106},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"A large flying saucer hovering in the sky, with a visible explosion from a cruise missile striking its side. The object emits a bright white flash and orange fire, with smoke rising from the impact point.\",\"palette\":[\"#FFC107\",\"#FF5733\",\"#000000\"],\"x\":0.618,\"y\":0.074,\"w\":0.37,\"h\":0.445},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"A laser beam shooting from the flying saucer toward the MiG-27, hitting a power shield of the jet and creating a bright flash\",\"palette\":[\"#FF5733\",\"#FFFFFF\",\"#000000\"],\"x\":0.405,\"y\":0.437,\"w\":0.311,\"h\":0.188},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"The second cruise missile flies into a flying saucer. A long smoke trail stretches behind the rocket.\",\"palette\":[\"#C0BFBC\",\"#F6D32D\",\"#77767B\",\"#1B6415\"],\"x\":0.481,\"y\":0.172,\"w\":0.146,\"h\":0.167},{\"type\":\"obj\",\"text\":\"\",\"desc\":\"A force field protecting the aircraft. There is a bright flash at the point where the laser and the force field collide.\",\"palette\":[\"#62A0EA\",\"#F6F5F4\",\"#F9F06B\"],\"x\":0.373,\"y\":0.265,\"w\":0.067,\"h\":0.461}]",
-      "bg_brightness": 25
+      "batch_size": 1
     },
-    "class_type": "Ideogram4PromptBuilderKJ",
+    "class_type": "EmptyLatentImage",
     "_meta": {
-      "title": "Ideogram 4 Prompt Builder KJ"
+      "title": "Empty Latent Image"
     }
   },
-  "180": {
+  "13": {
     "inputs": {
-      "source": [
-        "179",
-        0
-      ]
+      "clip_name": "krea2/qwen3vl_4b_fp8_scaled.safetensors",
+      "type": "krea2",
+      "device": "default"
     },
-    "class_type": "PreviewAny",
+    "class_type": "CLIPLoader",
     "_meta": {
-      "title": "Preview as Text"
+      "title": "Load CLIP"
     }
   },
-  "182": {
+  "22": {
     "inputs": {
       "output_path": "[time(%Y-%m-%d)]",
-      "filename_prefix": "Igeogram",
+      "filename_prefix": "Krea2-turbo",
       "filename_delimiter": "_",
       "filename_number_padding": 4,
       "filename_number_start": "false",
@@ -87,11 +123,40 @@
       "show_history": "false",
       "show_history_by_prefix": "true",
       "embed_workflow": "true",
-      "show_previews": "true"
+      "show_previews": "true",
+      "images": [
+        "3",
+        0
+      ]
     },
     "class_type": "Image Save",
     "_meta": {
       "title": "Image Save"
+    }
+  },
+  "23": {
+    "inputs": {
+      "aspect_ratio": "16:9 (Widescreen)",
+      "megapixels": 1.5,
+      "multiple": 16
+    },
+    "class_type": "ResolutionSelector",
+    "_meta": {
+      "title": "Resolution Selector"
+    }
+  },
+  "25": {
+    "inputs": {
+      "unet_name": "Krea2-Turbo-int8-ConvRot.safetensors",
+      "weight_dtype": "default",
+      "model_type": "krea2",
+      "on_the_fly_quantization": false,
+      "enable_convrot": true,
+      "lora_mode": "None"
+    },
+    "class_type": "OTUNetLoaderW8A8",
+    "_meta": {
+      "title": "Load Diffusion Model INT8 (W8A8)"
     }
   }
 }

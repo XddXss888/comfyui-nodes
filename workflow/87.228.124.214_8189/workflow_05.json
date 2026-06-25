@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "asig2, A naked woman sits on a couch in a cozy living room during evening with warm home lighting, her body in a horny aroused state with flushed skin and an eager open-mouthed expression, receiving simultaneous penetration from two men with one penis deep in her vagina and the other in her anus while she leans to perform oral sex on one shaft, her hands gripping their thighs for support, clear visible intimate contact and anatomy, medium shot framing the woman as primary subject with simple background.",
+      "text": "A woman in a strict dark suit with a tight pencil skirt and glasses stands in an empty classroom after school, bent forward over the teacher's desk with her skirt lifted and hips angled back, her asshole visibly stretched wide around a thick cock penetrating her from behind, one hand braced on the desk near a wooden pointer, confrontational expression with direct gaze over her shoulder, soft afternoon light from the windows, medium close-up framing, stable composition with clear anatomy and natural proportions.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 1.73,
+      "shift": 12.0,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "zimg_asig2_conchar.safetensors",
-      "strength_model": 0.63,
-      "strength_clip": 0.7,
+      "lora_name": "ULRIKANB_SYNTH_zimg_v1.safetensors",
+      "strength_model": 0.82,
+      "strength_clip": 0.86,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.33,
+      "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 8,
+      "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 661743540426963,
+      "seed": 1109815001262350,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

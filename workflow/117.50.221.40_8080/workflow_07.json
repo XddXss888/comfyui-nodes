@@ -2,7 +2,7 @@
   "1": {
     "class_type": "UnetLoaderGGUF",
     "inputs": {
-      "unet_name": "flux1-dev-Q8_0.gguf"
+      "unet_name": "sd3.5_large_turbo-Q8_0.gguf"
     }
   },
   "2": {
@@ -10,19 +10,19 @@
     "inputs": {
       "clip_name1": "t5xxl_fp8_e4m3fn.safetensors",
       "clip_name2": "clip_l.safetensors",
-      "type": "flux"
+      "type": "sd3"
     }
   },
   "3": {
     "class_type": "VAELoader",
     "inputs": {
-      "vae_name": "ae_flux1.safetensors"
+      "vae_name": "sd3_vae.safetensors"
     }
   },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Transparent glass of fresh orange juice with ice cubes and mint leaves, placed on a pure white minimalist surface, side-back lighting for translucent glow, 8K product photography, sharp reflection, no color contamination, masterpiece, best quality, highly detailed, professional, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "Masterpiece, best quality, detailed professional 3D render of an irregular-shaped 4-meter-long display stand, 49 cm tall at sides, 37 cm at center focus—featuring vibrant fresh fruit and juice theme: oranges, apples, lemons, and glass bottles of freshly squeezed juice, with soft natural lighting and clean modern aesthetic., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -32,36 +32,26 @@
   "5": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 576,
+      "width": 1024,
       "height": 1024,
-      "batch_size": 4
-    }
-  },
-  "12": {
-    "class_type": "FluxGuidance",
-    "inputs": {
-      "guidance": 3.5,
-      "conditioning": [
-        "4",
-        0
-      ]
+      "batch_size": 1
     }
   },
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 880129997,
-      "steps": 28,
+      "seed": 350473055,
+      "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
-      "scheduler": "simple",
+      "scheduler": "sgm_uniform",
       "denoise": 1.0,
       "model": [
         "1",
         0
       ],
       "positive": [
-        "12",
+        "4",
         0
       ],
       "negative": [
@@ -100,9 +90,9 @@
   "9": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_4K",
+      "filename_prefix": "DOOOOR_1K",
       "images": [
-        "15",
+        "8",
         0
       ]
     }
@@ -123,28 +113,9 @@
   "11": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_4K_TH",
+      "filename_prefix": "DOOOOR_1K_TH",
       "images": [
         "10",
-        0
-      ]
-    }
-  },
-  "14": {
-    "class_type": "UpscaleModelLoader",
-    "inputs": {
-      "model_name": "4x-UltraSharp.pth"
-    }
-  },
-  "15": {
-    "class_type": "ImageUpscaleWithModel",
-    "inputs": {
-      "upscale_model": [
-        "14",
-        0
-      ],
-      "image": [
-        "8",
         0
       ]
     }

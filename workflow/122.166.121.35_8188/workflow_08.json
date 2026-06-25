@@ -22,16 +22,16 @@
       ],
       "sampler_name": "euler",
       "scheduler": "simple",
-      "seed": 6259649032777,
-      "steps": 6
+      "seed": 21600520308615,
+      "steps": 4
     }
   },
   "5": {
     "class_type": "EmptyLatentImage",
     "inputs": {
       "batch_size": 1,
-      "height": 1216,
-      "width": 832
+      "height": 1024,
+      "width": 1024
     }
   },
   "6": {
@@ -41,7 +41,7 @@
         "11",
         0
       ],
-      "text": "Create fitness  user, masterpiece, best quality, highly detailed, sharp focus, hyper-realistic, 8k resolution, cinematic lighting, photorealistic, intricate details, professional photography"
+      "text": "create an image of child sipping juice"
     }
   },
   "7": {

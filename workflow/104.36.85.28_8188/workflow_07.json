@@ -37,7 +37,7 @@
   },
   "7": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl kneeling,blush,green eyes,thighs,thigh gap,wide hips,pantyhose,black pantyhose,indoors,window,sunlight,(how about you try getting on your knees for me :1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl sitting,barefoot,indoors,legs,feet,thighs,drunk,beer,cumshot,(show me cumshot:1.0),(nude:0.8)",
       "clip": [
         "1",
         1
@@ -63,7 +63,7 @@
   },
   "9": {
     "inputs": {
-      "seed": 1458164672,
+      "seed": 1000937832,
       "steps": 20,
       "cfg": 6.5,
       "sampler_name": "dpmpp_sde",
@@ -133,7 +133,7 @@
   },
   "14": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202511/9/1eed51f9e1d64399a6c0f966dd8c4100.jpg",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20254/3/57628f8e088d4c2ba5334214b6f1c825.webp",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

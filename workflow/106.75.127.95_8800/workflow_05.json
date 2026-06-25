@@ -1,7 +1,7 @@
 {
   "81": {
     "inputs": {
-      "image": "image (150).jpg"
+      "image": "image (19).png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -83,7 +83,7 @@
   },
   "172": {
     "inputs": {
-      "seed": 1309106458,
+      "seed": 1580360010,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -206,7 +206,7 @@
   },
   "377": {
     "inputs": {
-      "lora_name": "klein_3mm_0130_000010000.safetensors",
+      "lora_name": "klein_8mm_0130_000010000.safetensors",
       "strength_model": 1.0,
       "model": [
         "128",
@@ -263,7 +263,7 @@
   },
   "385": {
     "inputs": {
-      "seed": 453211415
+      "seed": 1943932506
     },
     "class_type": "GenerateUniquePrefix",
     "_meta": {

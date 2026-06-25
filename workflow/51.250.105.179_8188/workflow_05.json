@@ -56,8 +56,8 @@
       "crop_h": 0,
       "target_width": 1024,
       "target_height": 1024,
-      "text_g": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_female_ring, female ring, fWgvccV359O1A9S28_heart_pattern, heart pattern, silver, ring, heart pattern",
-      "text_l": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_female_ring, female ring, fWgvccV359O1A9S28_heart_pattern, heart pattern, silver, ring, heart pattern",
+      "text_g": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_brooch, brooch, fWgvccV359O1A9S28_arch_pattern, arch pattern, silver, brooch design, Yakutian traditional ornaments",
+      "text_l": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_brooch, brooch, fWgvccV359O1A9S28_arch_pattern, arch pattern, silver, brooch design, Yakutian traditional ornaments",
       "clip": [
         "50",
         1
@@ -91,7 +91,7 @@
   "36": {
     "inputs": {
       "add_noise": "enable",
-      "noise_seed": 8653460963766327501,
+      "noise_seed": 12041460509518193994,
       "steps": 35,
       "cfg": 5.5,
       "sampler_name": "dpmpp_2m_sde",
@@ -133,7 +133,7 @@
   "38": {
     "inputs": {
       "add_noise": "disable",
-      "noise_seed": 8653460963766327501,
+      "noise_seed": 12041460509518193994,
       "steps": 35,
       "cfg": 5.5,
       "sampler_name": "dpmpp_2m_sde",
@@ -177,7 +177,7 @@
       "ascore": 6.0,
       "width": 1024,
       "height": 1024,
-      "text": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_female_ring, female ring, fWgvccV359O1A9S28_heart_pattern, heart pattern, silver, ring, heart pattern",
+      "text": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_brooch, brooch, fWgvccV359O1A9S28_arch_pattern, arch pattern, silver, brooch design, Yakutian traditional ornaments",
       "clip": [
         "39",
         1
@@ -207,8 +207,8 @@
   "50": {
     "inputs": {
       "lora_name": "jeweler-ai-v1.5-000037.safetensors",
-      "strength_model": 0.5,
-      "strength_clip": 0.5,
+      "strength_model": 0.75,
+      "strength_clip": 0.75,
       "model": [
         "4",
         0

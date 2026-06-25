@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "A stunning wide panoramic travel banner featuring a modern white passenger airplane flying low over a tropical coastline, sparkling turquoise ocean, gentle waves, golden sandy beach, a few palm leaves framing the edges, bright summer sunlight, clear blue sky with soft clouds, clean premium tourism advertising style, cinematic wide composition, vibrant yet natural colors, high detail, professional digital illustration, spacious composition suitable for website hero banner, no text, no logo, no watermark",
+      "text": "A realistic photographic wide panoramic view of Tiananmen Gate in Beijing, accurate traditional Chinese imperial architecture, red city wall, golden glazed tile roofs, early morning natural sunlight, clear blue sky, subtle clouds, empty foreground plaza, clean composition, ultra realistic, high detail, DSLR photography, 35mm lens, balanced symmetry, natural colors, no illustration style, no painting style",
       "clip": [
         "30",
         1
@@ -30,7 +30,7 @@
   },
   "9": {
     "inputs": {
-      "filename_prefix": "airplane_ocean_beach_banner_2048x768",
+      "filename_prefix": "tiananmen_realistic_2048x768",
       "images": [
         "8",
         0
@@ -63,7 +63,7 @@
   },
   "31": {
     "inputs": {
-      "seed": 346635614588223,
+      "seed": 439110412505194,
       "steps": 24,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -93,7 +93,7 @@
   },
   "33": {
     "inputs": {
-      "text": "text, logo, watermark, words, letters, people, crowded, distorted airplane, extra wings, blurry, low quality, ugly, deformed, dark, gloomy",
+      "text": "illustration, cartoon, vector art, anime, watercolor, oil painting, sketch, 3d render, CGI, unreal engine, distorted architecture, warped roof, text, watermark, logo, blurry, low quality, oversaturated, crowded foreground",
       "clip": [
         "30",
         1

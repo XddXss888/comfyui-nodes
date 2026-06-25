@@ -2,7 +2,7 @@
   "1": {
     "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "ckpt_name": "zavychromaxl_v10.safetensors"
+      "ckpt_name": "juggernautXL_ragnarok.safetensors"
     }
   },
   "2": {
@@ -18,7 +18,7 @@
         "1",
         1
       ],
-      "text": "Failed to authenticate. API Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"Invalid authentication credentials\"},\"request_id\":\"req_011CcFXe37XwwGBBHnzp5s6y\"}"
+      "text": "A fierce Korean idol woman stands on a snow-covered street at night, shot from ground level looking upward with a 24mm wide angle lens creating dramatic perspective. Chestnut brown long hair with wispy bangs whips sideways in cold wind. Sharp jawline and intense cat-like eyes with smoky editorial makeup pierce through falling snowflakes. She wears an oversized vintage band t-shirt tucked loosely into nothing but black leather combat boots, legs elongated by the low angle. Cross lighting from two opposing streetlamps casts golden and cool blue highlights across flawless porcelain skin with visible pores. Full body head to toe framing. Runway attitude, one boot stepping forward on fresh powder. Cinematic color grading, hyperrealistic SDXL detail, bokeh city lights behind her."
     }
   },
   "4": {
@@ -28,7 +28,7 @@
         "1",
         1
       ],
-      "text": "lowres, deformed, blurry, watermark, ugly, low quality"
+      "text": "lowres, blurry, bad anatomy, deformed, watermark, signature, extra fingers, cartoon, anime, painting"
     }
   },
   "5": {
@@ -58,11 +58,11 @@
         "5",
         0
       ],
-      "seed": 1110830515,
+      "seed": 1827486319,
       "control_after_generate": "fixed",
-      "steps": 28,
-      "cfg": 6.0,
-      "sampler_name": "dpmpp_2m",
+      "steps": 30,
+      "cfg": 4.0,
+      "sampler_name": "dpmpp_2m_sde",
       "scheduler": "karras",
       "denoise": 1.0
     }
@@ -87,7 +87,7 @@
         "7",
         0
       ],
-      "filename_prefix": "portrait_1110830515"
+      "filename_prefix": "portrait_1827486319"
     }
   }
 }

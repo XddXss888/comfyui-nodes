@@ -1,18 +1,45 @@
 {
-  "1": {
-    "class_type": "IDENode",
+  "252": {
     "inputs": {
-      "language": "python",
-      "pycode": "import platform\nresult = f\"{platform.system()}|{platform.machine()}\"\n"
+      "image": "2026-06-25-2032554189.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
     }
   },
-  "2": {
-    "class_type": "PreviewAny",
+  "291": {
     "inputs": {
-      "source": [
-        "1",
+      "model": "RMBG-2.0",
+      "sensitivity": 1.0,
+      "process_res": 1024,
+      "mask_blur": 0,
+      "mask_offset": 0,
+      "invert_output": false,
+      "refine_foreground": false,
+      "background": "Alpha",
+      "background_color": "#222222",
+      "image": [
+        "252",
         0
       ]
+    },
+    "class_type": "RMBG",
+    "_meta": {
+      "title": "去除背景 (RMBG)"
+    }
+  },
+  "34": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "291",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
     }
   }
 }

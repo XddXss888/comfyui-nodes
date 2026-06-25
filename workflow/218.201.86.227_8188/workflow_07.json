@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "A peaceful early morning illustration of the Great Wall of China winding over quiet mountains, soft dawn light, pale blue and warm peach sky, gentle sunrise glow on ancient stone walls, thin morning mist floating through the valleys, serene traditional Chinese landscape atmosphere, clean detailed digital illustration, painterly style, wide composition, no text, no watermark",
+      "text": "A stunning wide panoramic travel banner in autumn, featuring a modern white passenger airplane flying above a serene coastal landscape, deep blue ocean, calm waves, golden sandy beach, autumn foliage in warm orange red and golden tones along the shore, a few maple leaves subtly framing the foreground, soft warm late-afternoon sunlight, clear sky with gentle clouds, premium tourism advertising style, cinematic wide composition, vibrant natural autumn colors, high detail, professional digital illustration, spacious website hero banner composition, no text, no logo, no watermark",
       "clip": [
         "30",
         1
@@ -30,7 +30,7 @@
   },
   "9": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
+      "filename_prefix": "autumn_airplane_ocean_beach_banner_2048x768",
       "images": [
         "8",
         0
@@ -43,7 +43,7 @@
   },
   "27": {
     "inputs": {
-      "width": 1024,
+      "width": 2048,
       "height": 768,
       "batch_size": 1
     },
@@ -63,8 +63,8 @@
   },
   "31": {
     "inputs": {
-      "seed": 275406857943669,
-      "steps": 20,
+      "seed": 727437957995708,
+      "steps": 24,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -93,7 +93,7 @@
   },
   "33": {
     "inputs": {
-      "text": "text, watermark, logo, blurry, low quality, harsh noon light, night scene, crowded people, distorted architecture",
+      "text": "text, logo, watermark, words, letters, people, crowded, distorted airplane, extra wings, blurry, low quality, ugly, deformed, dark, gloomy, snow, winter",
       "clip": [
         "30",
         1

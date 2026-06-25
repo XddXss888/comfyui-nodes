@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "seductive young curvy woman with long black hair, A woman lying completely naked on her back on a large bed in a dimly lit elegant hotel room, her body relaxed with arms resting at her sides and legs slightly parted, soft evening light from a bedside lamp casting gentle shadows across her skin, composed expression and direct gaze toward the viewer, private intimate atmosphere, medium shot framing from chest to knees.",
+      "text": "In an empty classroom after school, a strict female teacher in a fitted suit jacket and tight skirt stands beside the desk wearing glasses, her right hand extended forward from delivering a sharp slap with a confrontational expression and direct downward gaze, pointer resting on the desk, warm overhead lighting, medium close-up framing on her upper body and face.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "izumi_v.2.safetensors",
-      "strength_model": 0.9,
-      "strength_clip": 1.0,
+      "lora_name": "ULRIKANB_SYNTH_zimg_v1.safetensors",
+      "strength_model": 0.82,
+      "strength_clip": 0.86,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -137,7 +137,7 @@
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 26161571962184,
+      "seed": 1109815001262350,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

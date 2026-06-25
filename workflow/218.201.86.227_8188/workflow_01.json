@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "A 3D digital art render created with C4D: a single elegant Chinese calligraphy brush hovering at the upper-right, its tip touching the end of a sweeping luminous brushstroke curve flowing from lower-left to upper-right on a pure white background with minimalist negative space. Inside the translucent frosted glass brushstroke, miniature traditional Chinese architectural landscapes of Yantai are revealed: Yantaishan scenic area with its historic lighthouse on the hill, Kunyushan National Park with ancient misty peaks and pine forests, Penglai Pavilion iconic red pillars and golden roof overlooking the Bohai Sea, the legendary Eight Immortals crossing the misty waters, Haichang Fisherman's Wharf with its European-style buildings, Mou's Manor grand traditional courtyard complex, and Yantai's breathtaking coastline with golden sunlight reflecting on the waves. The architecture models are highly detailed traditional Chinese buildings rendered in frosted glass, translucent acrylic, and frosted matte material with subtle refraction and light scattering effects. C4D style, modern tech aesthetic, frosted glass morphism, soft gradient lighting, clean minimalist composition, ultra high definition, 8K render quality, glassmorphism material, subtle blue and gold color accents, digital art masterpiece, pristine white background, generous negative space.",
+      "text": "A stunning cinematic sci-fi concept art scene inspired by UFO disclosure news: a graceful mysterious alien explorer with elegant translucent skin, large expressive eyes, subtle bioluminescent markings, standing in front of a sleek hovering alien spacecraft shaped like a luminous crescent saucer, polished chrome and glass surfaces, soft blue and violet energy glow, misty night desert landscape, stars and aurora in the sky, dramatic rim lighting, beautiful composition, highly detailed, premium movie poster quality, awe-inspiring, tasteful, not scary, no text, no logo",
       "clip": [
         "30",
         1
@@ -44,7 +44,7 @@
   "27": {
     "inputs": {
       "width": 1024,
-      "height": 1024,
+      "height": 768,
       "batch_size": 1
     },
     "class_type": "EmptySD3LatentImage",
@@ -63,8 +63,8 @@
   },
   "31": {
     "inputs": {
-      "seed": 582343527734636,
-      "steps": 20,
+      "seed": 116799984430123,
+      "steps": 28,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -93,7 +93,7 @@
   },
   "33": {
     "inputs": {
-      "text": "traditional ink painting, guohua, watercolor, brush ink texture, paper texture, blurry, low quality, distorted, watermark, signature, frame, border, dark background, cluttered, messy, realistic photo, hand-drawn sketch",
+      "text": "low quality, blurry, ugly, deformed, extra limbs, bad anatomy, scary horror, gore, text, watermark, logo, jpeg artifacts, poor composition, cropped subject, oversaturated",
       "clip": [
         "30",
         1

@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "A stunning cinematic sci-fi concept art scene inspired by UFO disclosure news: a graceful mysterious alien explorer with elegant translucent skin, large expressive eyes, subtle bioluminescent markings, standing in front of a sleek hovering alien spacecraft shaped like a luminous crescent saucer, polished chrome and glass surfaces, soft blue and violet energy glow, misty night desert landscape, stars and aurora in the sky, dramatic rim lighting, beautiful composition, highly detailed, premium movie poster quality, awe-inspiring, tasteful, not scary, no text, no logo",
+      "text": "A beautiful wide landscape of rice paddies in the countryside, lush golden-green rice field, gentle breeze implied by flowing rice stalks, reflective irrigation water channels, distant blue mountains, soft white clouds drifting in a bright sky, warm late afternoon sunlight, cinematic peaceful atmosphere, highly detailed natural scenery, photorealistic digital art, no people, no text, 16:9 composition",
       "clip": [
         "30",
         1
@@ -44,7 +44,7 @@
   "27": {
     "inputs": {
       "width": 1024,
-      "height": 768,
+      "height": 576,
       "batch_size": 1
     },
     "class_type": "EmptySD3LatentImage",
@@ -63,7 +63,7 @@
   },
   "31": {
     "inputs": {
-      "seed": 116799984430123,
+      "seed": 993778131594979,
       "steps": 28,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -93,7 +93,7 @@
   },
   "33": {
     "inputs": {
-      "text": "low quality, blurry, ugly, deformed, extra limbs, bad anatomy, scary horror, gore, text, watermark, logo, jpeg artifacts, poor composition, cropped subject, oversaturated",
+      "text": "text, watermark, logo, people, buildings, blurry, low quality, distorted horizon, overexposed",
       "clip": [
         "30",
         1

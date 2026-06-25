@@ -1,16 +1,16 @@
 # https://56c4900261e42554-8188.us-ca-1.gpu-instance.novita.ai
 
 **GPU**: RTX 4090 | **显存**: 24 GB | **空闲**: 22 GB
-**内存**: 503 GB (空闲 433 GB)
+**内存**: 503 GB (空闲 431 GB)
 **版本**: 0.20.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-23 08:07:50
-**历史总数**: 184 | **成功**: 10
+**扫描时间**: 2026-06-25 21:22:43
+**历史总数**: 212 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `b8fac2a6-9519-4066-8400-107475ed3775`
+- **Prompt ID**: `000dac9f-3b21-4d9c-8899-ac38ddb9f54e`
 - **类型**: 文生图
 - **节点数**: 15
 - **模型** (5):
@@ -20,64 +20,70 @@
   - t5xxl_fp8_e4m3fn.safetensors
   - v3ctora.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Vectorial illustration,A black background with the text "Dada, Daddy, Daddy. Dad. Bruh." The text is in different colors, including red, yellow, green, and blue. The font is bold and modern, with a sl
+  - [CLIPTextEncode::text] Vectorial illustration,spiderman
+ in the style of v3ctora, black lines, white background, Vector art, minimalist，only black and white
   - [CLIPTextEncode::text] Colors other than black and white,colorful，red,yellow,blue,green,
 
 
 ### 2. workflow_02.json
-- **Prompt ID**: `bcbfc334-03b5-4bdd-8783-4ea4dbd9da10`
+- **Prompt ID**: `6e464bbc-0bae-4ab9-ba96-d2998e821e88`
 - **类型**: 图片编辑
 - **节点数**: 6
 - **模型** (0):
 
 ### 3. workflow_03.json
-- **Prompt ID**: `48df9ef3-2e02-46a1-8caf-0eb44a74b358`
+- **Prompt ID**: `3108720b-e308-470a-b7cb-f8042c8b5560`
 - **类型**: 图片编辑
 - **节点数**: 6
 - **模型** (0):
 
 ### 4. workflow_04.json
-- **Prompt ID**: `88b7f1a4-e2d7-4b0e-994a-080fb9b4e789`
+- **Prompt ID**: `5fcf59f6-29d7-43df-bff5-f6a11f195e92`
 - **类型**: 图片编辑
 - **节点数**: 6
 - **模型** (0):
 
 ### 5. workflow_05.json
-- **Prompt ID**: `cb8a08d5-43b2-4938-b5c0-eb23f21dadd3`
+- **Prompt ID**: `f7c3e68e-1092-41d1-91ad-b4a7a0a424a8`
 - **类型**: 图片编辑
 - **节点数**: 6
 - **模型** (0):
 
 ### 6. workflow_06.json
-- **Prompt ID**: `e8c742e8-d0a3-4d00-b205-3d00e52b3360`
+- **Prompt ID**: `01f5a811-a803-4596-8fe4-8a81251e0de7`
 - **类型**: 图片编辑
 - **节点数**: 6
 - **模型** (0):
 
 ### 7. workflow_07.json
-- **Prompt ID**: `bbd69e19-e3de-4b4f-bfa5-8f4ce3589c5e`
-- **类型**: 文生图
-- **节点数**: 16
-- **模型** (4):
-  - Harrlogos_v2.0.safetensors
-  - MW_极简logo_icon PRO_1.0.safetensors
-  - RealitiesEdgeXLSDXL_TURBOXLV2.safetensors
-  - v3ctora.safetensors
+- **Prompt ID**: `c8849d31-fa2b-4458-bca5-ec6e26674182`
+- **类型**: 图片编辑
+- **节点数**: 6
+- **模型** (0):
 
 ### 8. workflow_08.json
-- **Prompt ID**: `b10ecba4-9f6f-4f76-aad3-0a0a4d78e7aa`
+- **Prompt ID**: `6fab9324-36b6-4dc6-923a-2a565c8c2235`
 - **类型**: 图片编辑
 - **节点数**: 6
 - **模型** (0):
 
 ### 9. workflow_09.json
-- **Prompt ID**: `d185b245-af82-4dc3-8449-90dc8c69d5dd`
-- **类型**: 图片编辑
-- **节点数**: 6
-- **模型** (0):
+- **Prompt ID**: `0fe07f1a-4484-44e1-9781-f2b6cb47f18d`
+- **类型**: 文生图
+- **节点数**: 15
+- **模型** (5):
+  - ae.safetensors
+  - clip_l.safetensors
+  - flux1-dev-fp8.safetensors
+  - t5xxl_fp8_e4m3fn.safetensors
+  - v3ctora.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Vectorial illustration,Give me a highly detailed SVG file, a multi-layered, art-decorated birthday cake with the clearly readable number 6 and the elegant font "Julian" name on it, in a cheerful, colo
+  - [CLIPTextEncode::text] Colors other than black and white,colorful，red,yellow,blue,green,
+
 
 ### 10. workflow_10.json
-- **Prompt ID**: `977d991f-6ccc-486d-8e27-f1c3da1c65f4`
+- **Prompt ID**: `dce55b65-247a-4042-8094-9118ba7da0d6`
 - **类型**: 图片编辑
 - **节点数**: 6
 - **模型** (0):

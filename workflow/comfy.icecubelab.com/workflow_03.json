@@ -1,64 +1,45 @@
 {
   "1": {
-    "class_type": "UNETLoader",
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "unet_name": "flux1-dev.safetensors",
-      "weight_dtype": "default"
+      "ckpt_name": "juggernautXL_ragnarok.safetensors"
     }
   },
   "2": {
-    "class_type": "DualCLIPLoader",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip_name1": "clip_l.safetensors",
-      "clip_name2": "t5xxl_fp16.safetensors",
-      "type": "flux"
+      "vae_name": "sdxl_vae.safetensors"
     }
   },
   "3": {
-    "class_type": "VAELoader",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "vae_name": "ae.safetensors"
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "A stunning Korean idol-style woman with honey blonde highlights in an elegant updo, wisps framing her slim fox-like face. Gentle, soft expression with luminous eyes gazing past camera. Shot on 85mm f/1.4 lens, creamy bokeh dissolving a misty mountain temple backdrop into ethereal haze. Three-quarter view, off-center rule of thirds composition. Studio butterfly lighting from above sculpts her flawless cheekbones, casting delicate shadows beneath. She wears a midnight navy evening gown with cascading sequins catching light like scattered stars. One hand rests lightly on a weathered stone railing. Dewy porcelain skin with visible pores, editorial makeup with gradient rose lips and soft smoky eyes. Cinematic color grading, cool teal shadows, warm golden highlights. Hyperrealistic SDXL render, 8K detail."
     }
   },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
-        "2",
-        0
+        "1",
+        1
       ],
-      "text": "Failed to authenticate. API Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"Invalid authentication credentials\"},\"request_id\":\"req_011CcFLp35Z2Xd4GNgUh268j\"}"
+      "text": "lowres, blurry, bad anatomy, deformed, watermark, signature, extra fingers, cartoon, anime, painting"
     }
   },
   "5": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "EmptyLatentImage",
     "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": "text, watermark, logo, blurry"
-    }
-  },
-  "6": {
-    "class_type": "FluxGuidance",
-    "inputs": {
-      "conditioning": [
-        "4",
-        0
-      ],
-      "guidance": 3.4
-    }
-  },
-  "7": {
-    "class_type": "EmptySD3LatentImage",
-    "inputs": {
-      "width": 1344,
-      "height": 768,
+      "width": 896,
+      "height": 1280,
       "batch_size": 1
     }
   },
-  "8": {
+  "6": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
@@ -66,47 +47,47 @@
         0
       ],
       "positive": [
-        "6",
+        "3",
         0
       ],
       "negative": [
-        "5",
+        "4",
         0
       ],
       "latent_image": [
-        "7",
+        "5",
         0
       ],
-      "seed": 155989091,
+      "seed": 415128737,
       "control_after_generate": "fixed",
-      "steps": 20,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
+      "steps": 30,
+      "cfg": 4.0,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
       "denoise": 1.0
     }
   },
-  "9": {
+  "7": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "8",
+        "6",
         0
       ],
       "vae": [
-        "3",
+        "2",
         0
       ]
     }
   },
-  "10": {
+  "8": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "9",
+        "7",
         0
       ],
-      "filename_prefix": "blog_155989091"
+      "filename_prefix": "portrait_415128737"
     }
   }
 }

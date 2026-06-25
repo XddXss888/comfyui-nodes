@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "elvaross, In a quiet dorm room at night with soft warm lamplight, a woman kneels on the floor facing the viewer, skirt lifted around her waist, lips wrapped tightly around the erect penis as she performs oral sex while holding steady eye contact with a pleased expression, one hand gripping the base, simple student room interior with bed and desk in soft focus behind her, close framing on the intimate action and her face.",
+      "text": "In an empty classroom after school, a woman stands behind the teacher's desk wearing a strict suit with her blouse fallen open to reveal delicate lace beneath, tight skirt, and glasses, her expression intensely focused as she looks down, one hand moving forward, pointer resting on the desk, medium close-up framing with soft indoor lighting and simple background.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 1.73,
+      "shift": 12.0,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "TGZW383YGE7RTN4ZTNPAM4FT50.safetensors",
-      "strength_model": 0.88,
-      "strength_clip": 1.0,
+      "lora_name": "ULRIKANB_SYNTH_zimg_v1.safetensors",
+      "strength_model": 0.82,
+      "strength_clip": 0.86,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.4,
+      "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 8,
+      "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 494111015108424,
+      "seed": 1109815001262350,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

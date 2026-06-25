@@ -1,16 +1,16 @@
 # 182.140.218.229:20000
 
-**GPU**: RTX 4090 | **显存**: 47 GB | **空闲**: 47 GB
-**内存**: 944 GB (空闲 322 GB)
+**GPU**: RTX 4090 | **显存**: 47 GB | **空闲**: 28 GB
+**内存**: 944 GB (空闲 300 GB)
 **版本**: 0.3.46
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-24 08:11:34
+**扫描时间**: 2026-06-25 21:25:03
 **历史总数**: 10001 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `e910e94a-514b-4e06-87a5-21e704d8c0e5`
+- **Prompt ID**: `25b26953-a06a-40dd-a051-764149933215`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -21,11 +21,11 @@
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] Cartoon Tom the bluish grey cat, Jerry the clever brown mouse, Spike the muscular bulldog and his son Tyke the bulldog pup from Tom and Jerry, happily wearing an inflatable ultra shiny black squeaky l
-  - [PrimitiveStringMultiline::text] Cartoon Tom the bluish grey cat, Jerry the clever brown mouse, Spike the muscular bulldog and his son Tyke the bulldog pup from Tom and Jerry, happily wearing an inflatable ultra shiny black squeaky l
+  - [PrimitiveStringMultiline::positive] She is feeling very agitated  shocked and confused. He  and the guys just checking to make sure she has no lumps he pulls her top off, opens up. Takes  off the bra so we can make sure there’s nothing 
+  - [PrimitiveStringMultiline::text] She is feeling very agitated  shocked and confused. He  and the guys just checking to make sure she has no lumps he pulls her top off, opens up. Takes  off the bra so we can make sure there’s nothing 
 
 ### 2. workflow_02.json
-- **Prompt ID**: `bffe20ef-ab56-4f95-8945-53f013e69e25`
+- **Prompt ID**: `42c7b6fe-900a-4435-bbb4-6f29719d6b6e`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -36,11 +36,11 @@
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] ((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her bra and loo
-  - [PrimitiveStringMultiline::text] ((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her bra and loo
+  - [PrimitiveStringMultiline::positive] Bàn tay của một cô gái chạm nhẹ vào sản phẩm một cách tự nhiên rồi từ từ rút ra, sản phẩm vẫn giữ nguyên kích thước và hình dáng ban đầu. Tỷ lệ giữa tay và sản phẩm đúng với thực tế, không bị biến dạn
+  - [PrimitiveStringMultiline::text] Bàn tay của một cô gái chạm nhẹ vào sản phẩm một cách tự nhiên rồi từ từ rút ra, sản phẩm vẫn giữ nguyên kích thước và hình dáng ban đầu. Tỷ lệ giữa tay và sản phẩm đúng với thực tế, không bị biến dạn
 
 ### 3. workflow_03.json
-- **Prompt ID**: `06170379-665a-4798-aefb-b03b70f53f00`
+- **Prompt ID**: `68085f8e-30c1-46db-9708-d6aa0810acdf`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -51,11 +51,11 @@
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] ((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her bra and loo
-  - [PrimitiveStringMultiline::text] ((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her bra and loo
+  - [PrimitiveStringMultiline::positive] Generate a high-quality, sharp, high-resolution video with natural, smooth movement based on the image. The video style is realistic. Maintain the color and clarity of the original image. Do not inclu
+  - [PrimitiveStringMultiline::text] Generate a high-quality, sharp, high-resolution video with natural, smooth movement based on the image. The video style is realistic. Maintain the color and clarity of the original image. Do not inclu
 
 ### 4. workflow_04.json
-- **Prompt ID**: `fce63db8-869b-483d-b572-755006f5afc1`
+- **Prompt ID**: `9052fb6a-08f4-46ee-9e8a-011acd0ce98b`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -66,11 +66,11 @@
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] Remove and change my outfit for just a lacy red string thong lingerie set which is attached together by strings and long heel boot stockings, make me stand up walk to the camera and turn around while 
-  - [PrimitiveStringMultiline::text] Remove and change my outfit for just a lacy red string thong lingerie set which is attached together by strings and long heel boot stockings, make me stand up walk to the camera and turn around while 
+  - [PrimitiveStringMultiline::positive] passionately kissing and hold the girl's bra
+  - [PrimitiveStringMultiline::text] passionately kissing and hold the girl's bra
 
 ### 5. workflow_05.json
-- **Prompt ID**: `9fd75e80-b970-4a9c-aaa6-edaabd4d36b9`
+- **Prompt ID**: `c12dec0a-f2ed-4af1-92b4-837169e43193`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -81,11 +81,11 @@
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] ((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her party dress
-  - [PrimitiveStringMultiline::text] ((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her party dress
+  - [PrimitiveStringMultiline::positive] Her clothes instantly, in a single frame, disappear, Exposed breasts, ((Old saggy breasts)), small breasts. No cleavage, Flat nipples
+  - [PrimitiveStringMultiline::text] Her clothes instantly, in a single frame, disappear, Exposed breasts, ((Old saggy breasts)), small breasts. No cleavage, Flat nipples
 
 ### 6. workflow_06.json
-- **Prompt ID**: `ce747ce2-3db0-4f79-855a-c0d3ef05830d`
+- **Prompt ID**: `c2233e8e-0efa-455d-a646-0c0448757877`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -96,17 +96,11 @@
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] Uma cena cinematográfica sensual, mas de bom gosto. CENA ULTRA-REALÍSTICA em vídeo horizontal 
-, vista lateral. A câmera diminui o zoom para capturar o corpo inteiro.
-
-UMA MULHER de  liangery  SENTADA
-  - [PrimitiveStringMultiline::text] Uma cena cinematográfica sensual, mas de bom gosto. CENA ULTRA-REALÍSTICA em vídeo horizontal 
-, vista lateral. A câmera diminui o zoom para capturar o corpo inteiro.
-
-UMA MULHER de  liangery  SENTADA
+  - [PrimitiveStringMultiline::positive] She is feeling very agitated  shocked and confused. He  and the guys just checking to make sure she has no lumps he pulls her top off, opens up. Takes  off the bra so we can make sure there’s nothing 
+  - [PrimitiveStringMultiline::text] She is feeling very agitated  shocked and confused. He  and the guys just checking to make sure she has no lumps he pulls her top off, opens up. Takes  off the bra so we can make sure there’s nothing 
 
 ### 7. workflow_07.json
-- **Prompt ID**: `edc4a0f2-7b83-4311-9311-28103018da4e`
+- **Prompt ID**: `570dc6ab-a4b1-4555-b598-9916aebb9aa4`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -117,11 +111,11 @@ UMA MULHER de  liangery  SENTADA
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] A small, tiny invisible drone slowly moves across the woman’s body from top to bottom like a scanning device. Wherever the drone passes, that part of her clothes disappears and reveals her naked body 
-  - [PrimitiveStringMultiline::text] A small, tiny invisible drone slowly moves across the woman’s body from top to bottom like a scanning device. Wherever the drone passes, that part of her clothes disappears and reveals her naked body 
+  - [PrimitiveStringMultiline::positive] kissing while lying on the bed
+  - [PrimitiveStringMultiline::text] kissing while lying on the bed
 
 ### 8. workflow_08.json
-- **Prompt ID**: `1e0896d1-937c-4296-80b8-2fd72b4539d6`
+- **Prompt ID**: `3496338e-5ff0-4df0-b96c-6a7b5d9e59c2`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -132,11 +126,11 @@ UMA MULHER de  liangery  SENTADA
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] A small, tiny invisible drone slowly moves across the woman’s body from top to bottom like a scanning device. Wherever the drone passes, that part of her clothes disappears and reveals her naked body 
-  - [PrimitiveStringMultiline::text] A small, tiny invisible drone slowly moves across the woman’s body from top to bottom like a scanning device. Wherever the drone passes, that part of her clothes disappears and reveals her naked body 
+  - [PrimitiveStringMultiline::positive] Bàn tay của một cô gái chạm nhẹ vào sản phẩm một cách tự nhiên rồi từ từ rút ra, sản phẩm vẫn giữ nguyên kích thước và hình dáng ban đầu. Tỷ lệ giữa tay và sản phẩm đúng với thực tế, không bị biến dạn
+  - [PrimitiveStringMultiline::text] Bàn tay của một cô gái chạm nhẹ vào sản phẩm một cách tự nhiên rồi từ từ rút ra, sản phẩm vẫn giữ nguyên kích thước và hình dáng ban đầu. Tỷ lệ giữa tay và sản phẩm đúng với thực tế, không bị biến dạn
 
 ### 9. workflow_09.json
-- **Prompt ID**: `38fae8ae-d41a-4d54-a964-5cf5dfe43552`
+- **Prompt ID**: `77f0aecb-7419-47f9-a7e5-8142eea0aaa7`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -147,11 +141,11 @@ UMA MULHER de  liangery  SENTADA
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] A small, tiny invisible drone slowly moves across the woman’s body from top to bottom like a scanning device. Wherever the drone passes, that part of her clothes disappears and reveals her naked body 
-  - [PrimitiveStringMultiline::text] A small, tiny invisible drone slowly moves across the woman’s body from top to bottom like a scanning device. Wherever the drone passes, that part of her clothes disappears and reveals her naked body 
+  - [PrimitiveStringMultiline::positive] Bàn tay của một cô gái chạm nhẹ vào sản phẩm một cách tự nhiên rồi từ từ rút ra, sản phẩm vẫn giữ nguyên kích thước và hình dáng ban đầu. Tỷ lệ giữa tay và sản phẩm đúng với thực tế, không bị biến dạn
+  - [PrimitiveStringMultiline::text] Bàn tay của một cô gái chạm nhẹ vào sản phẩm một cách tự nhiên rồi từ từ rút ra, sản phẩm vẫn giữ nguyên kích thước và hình dáng ban đầu. Tỷ lệ giữa tay và sản phẩm đúng với thực tế, không bị biến dạn
 
 ### 10. workflow_10.json
-- **Prompt ID**: `a879e023-f73c-453e-af3e-f42ea4f5ef61`
+- **Prompt ID**: `c9c3703e-d4fd-474d-82e4-1d38df6561b6`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -162,5 +156,5 @@ UMA MULHER de  liangery  SENTADA
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] A small, tiny invisible drone slowly moves across the woman’s body from top to bottom like a scanning device. Wherever the drone passes, that part of her clothes disappears and reveals her naked body 
-  - [PrimitiveStringMultiline::text] A small, tiny invisible drone slowly moves across the woman’s body from top to bottom like a scanning device. Wherever the drone passes, that part of her clothes disappears and reveals her naked body 
+  - [PrimitiveStringMultiline::positive] Woman continues to take selfie video in the mirror. Woman moves the camera slightly to the right and up to change the end: perspective. Woman continues to admire herself in the mirror. Woman reaches f
+  - [PrimitiveStringMultiline::text] Woman continues to take selfie video in the mirror. Woman moves the camera slightly to the right and up to change the end: perspective. Woman continues to admire herself in the mirror. Woman reaches f

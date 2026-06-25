@@ -1,7 +1,7 @@
 {
-  "1": {
+  "20": {
     "inputs": {
-      "image": "input_1782200930255_f388713a-65bf-4ba6-b519-27e68922ea13_166bee77-5a47-4ca4-beb2-fdacac76441b.png",
+      "image": "input_1782282266595_e7ef82d6-cef1-4474-8b95-75830e74a997_42b253e9-65ac-4cc1-9fce-3e88fcc82b05.png",
       "upload": "image"
     },
     "class_type": "LoadImage",
@@ -9,188 +9,35 @@
       "title": "加载图像"
     }
   },
-  "2": {
+  "21": {
     "inputs": {
-      "upscale_method": "lanczos",
-      "width": 512,
-      "height": 768,
-      "crop": "disabled",
+      "model": "BiRefNet-general",
+      "mask_blur": 0,
+      "mask_offset": 0,
+      "background": "Alpha",
+      "invert_output": false,
+      "refine_foreground": true,
       "image": [
-        "1",
+        "20",
         0
       ]
     },
-    "class_type": "ImageScale",
+    "class_type": "BiRefNetRMBG",
     "_meta": {
-      "title": "图像缩放"
+      "title": "BiRefNet (RMBG)"
     }
   },
-  "3": {
+  "22": {
     "inputs": {
-      "ckpt_name": "XL_插画\\animaPencilXL_v100.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "Checkpoint加载器（简易）"
-    }
-  },
-  "4": {
-    "inputs": {
-      "text": "",
-      "clip": [
-        "3",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "正向提示"
-    }
-  },
-  "5": {
-    "inputs": {
-      "text": " ",
-      "clip": [
-        "3",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "反向提示"
-    }
-  },
-  "6": {
-    "inputs": {
-      "pixels": [
-        "2",
-        0
-      ],
-      "vae": [
-        "3",
-        2
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE编码"
-    }
-  },
-  "11": {
-    "inputs": {
-      "seed": 1,
-      "steps": 20,
-      "cfg": 7.0,
-      "sampler_name": "euler",
-      "scheduler": "karras",
-      "denoise": 1.0,
-      "model": [
-        "3",
-        0
-      ],
-      "positive": [
-        "17",
-        0
-      ],
-      "negative": [
-        "5",
-        0
-      ],
-      "latent_image": [
-        "6",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "12": {
-    "inputs": {
-      "samples": [
-        "11",
-        0
-      ],
-      "vae": [
-        "3",
-        2
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "13": {
-    "inputs": {
-      "filename_prefix": "PANG_painter_SDXL_1782200930614_0_0",
+      "filename_prefix": "ComfyUI",
       "images": [
-        "12",
+        "21",
         0
       ]
     },
     "class_type": "SaveImage",
     "_meta": {
       "title": "保存图像"
-    }
-  },
-  "14": {
-    "inputs": {
-      "guassian_sigma": 6.0,
-      "intensity_threshold": 8,
-      "resolution": 768,
-      "image": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "LineartStandardPreprocessor",
-    "_meta": {
-      "title": "Draft Invert线稿预处理"
-    }
-  },
-  "15": {
-    "inputs": {
-      "image": [
-        "14",
-        0
-      ]
-    },
-    "class_type": "ImageInvert",
-    "_meta": {
-      "title": "Draft Invert反相"
-    }
-  },
-  "16": {
-    "inputs": {
-      "control_net_name": "xinsir_controlnet-scribble-sdxl-1.0.safetensors"
-    },
-    "class_type": "ControlNetLoader",
-    "_meta": {
-      "title": "Draft Invert ControlNet加载器"
-    }
-  },
-  "17": {
-    "inputs": {
-      "switch": "On",
-      "strength": 0.45,
-      "conditioning": [
-        "4",
-        0
-      ],
-      "control_net": [
-        "16",
-        0
-      ],
-      "image": [
-        "15",
-        0
-      ]
-    },
-    "class_type": "CR Apply ControlNet",
-    "_meta": {
-      "title": "Draft Invert ControlNet应用"
     }
   }
 }

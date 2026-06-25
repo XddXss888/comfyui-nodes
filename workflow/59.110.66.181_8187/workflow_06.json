@@ -2,24 +2,10 @@
   "22": {
     "class_type": "Text Multiline",
     "inputs": {
-      "text": "纯正面角度的笔记本电脑图像，电脑屏幕完全展开，掌托右下角印有thinkpad标志， 清晨薄雾中，镜头掠过朱红宫墙，导游身着藏青西装，黑色短发利落，手持讲解器，目光望向镜头。 [描述主体和环境+镜头逐渐向前推进，展示……描述画面变化]"
+      "text": "一个黑发女性，黑色长发束成马尾，米白色连衣裙配黑色皮鞋，回眸时发梢垂落"
     },
     "_meta": {
       "title": "多行文本"
-    }
-  },
-  "44": {
-    "class_type": "LoraLoaderModelOnly",
-    "inputs": {
-      "lora_name": "ThinkPadx9_zimageTurbo_model.safetensors",
-      "strength_model": 0.8,
-      "model": [
-        "1",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "LoRA加载器(仅模型)"
     }
   },
   "37": {
@@ -94,7 +80,7 @@
       "cfg": 1.0,
       "sampler_name": "euler",
       "model": [
-        "44",
+        "1",
         0
       ],
       "positive": [
@@ -111,7 +97,7 @@
     "class_type": "CLIPTextEncode",
     "inputs": {
       "text": [
-        "42",
+        "22",
         0
       ],
       "clip": [
@@ -189,7 +175,7 @@
   "20": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "ae20ef5e907940ccbb37cc7290373d83/ae20ef5e907940ccbb37cc7290373d83",
+      "filename_prefix": "562f3964f84a414ebd9e07a66886e0da/562f3964f84a414ebd9e07a66886e0da",
       "images": [
         "8",
         0
@@ -197,33 +183,6 @@
     },
     "_meta": {
       "title": "保存图像"
-    }
-  },
-  "42": {
-    "class_type": "Text Concatenate",
-    "inputs": {
-      "delimiter": ", ",
-      "text_a": [
-        "43",
-        0
-      ],
-      "clean_whitespace": "true",
-      "text_b": [
-        "22",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "文本连锁"
-    }
-  },
-  "43": {
-    "class_type": "Text Multiline",
-    "inputs": {
-      "text": ""
-    },
-    "_meta": {
-      "title": "多行文本"
     }
   }
 }

@@ -23,7 +23,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Isolated creature art of ONE single cute chibi three-headed dragon hydra in side profile. Its chubby FOUR-LEGGED dragon body faces to the RIGHT, standing on four legs, with a long tail that has small spikes along the back and tail extending to the RIGHT. THREE necks rise upward from the FRONT of its chest, and all THREE dragon heads are at the upper LEFT, all three heads facing and looking to the LEFT (all snouts point left, same direction). The necks are SHORT to medium length, close together, each neck has a lighter cream-yellow throat on its front. Each of the three heads has small horns and little fin-like frills. EXACTLY three heads, no more than three. Green scales with a cream-yellow belly and throat, big round glowing eyes, small wisps of pale green poison mist. Chibi cute, big heads, chubby body. ONE single creature, clean anatomy, three short necks joined at the front chest. Like a classic three-headed hydra dragon. Soft painterly storybook style, soft fluffy shading, cute monster mascot. Centered, plain flat pale gray background, soft even lighting, no scene, no ground, no text, no frame.",
+      "text": "Isolated character art of a swift gale swordsman hero holding a slim sword, soft swirling wind around him. ONE single cute chibi hero character in full body, standing straight, front view. STRICT CONSISTENT CHIBI PROPORTIONS: a big round head about one-third of the total body height, a small chubby torso, short stubby arms and legs, the whole character about two-and-a-half heads tall. Use exactly this proportion. Big round eyes, adorable and heroic. Soft painterly storybook style, soft fluffy hand-painted shading, cute mascot character. ONE single character, correct anatomy (two arms, two legs, one head). Centered, full body fully visible from head to feet, plain flat pale gray background, soft even lighting, no scene, no ground, no text, no frame.",
       "clip": [
         "2",
         0
@@ -36,41 +36,6 @@
       "text": "",
       "clip": [
         "2",
-        0
-      ]
-    }
-  },
-  "6": {
-    "class_type": "EmptySD3LatentImage",
-    "inputs": {
-      "width": 1024,
-      "height": 1536,
-      "batch_size": 1
-    }
-  },
-  "7": {
-    "class_type": "KSampler",
-    "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "seed": 29578,
-      "steps": 8,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "positive": [
-        "4",
-        0
-      ],
-      "negative": [
-        "5",
-        0
-      ],
-      "latent_image": [
-        "6",
         0
       ]
     }
@@ -95,7 +60,42 @@
         "12",
         0
       ],
-      "filename_prefix": "wf_h2"
+      "filename_prefix": "wf_H10_질풍검객"
+    }
+  },
+  "6": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1536,
+      "batch_size": 1
+    }
+  },
+  "7": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "seed": 99051,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "6",
+        0
+      ]
     }
   },
   "10": {

@@ -27,8 +27,8 @@
         "1",
         0
       ],
-      "lora_name": "sakura_korean_flux.safetensors",
-      "strength_model": 0.78
+      "lora_name": "korean_realism_flux.safetensors",
+      "strength_model": 0.8
     }
   },
   "4": {
@@ -38,7 +38,7 @@
         "2",
         0
       ],
-      "text": "Failed to authenticate. API Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"Invalid authentication credentials\"},\"request_id\":\"req_011CcFNV4xs7fCRLqi8TocQu\"}"
+      "text": "A stunning Korean woman with burgundy red blunt cut hair and wispy bangs, baby face with delicate aegyo-sal under-eye charm, playful and energetic expression with a mischievous half-smile. She wears a flowy lavender summer dress with thin straps, caught mid-turn in a dimly lit parking garage. Harsh fluorescent tubes cast cool overhead light while a single dramatic spotlight carves her silhouette from the darkness, creating deep contrast and cinematic shadows across concrete pillars. Shot on 50mm lens, profile view side angle, half body waist up framing. Her chin tilts slightly upward with confident poise, one hand brushing hair behind her ear. Flawless porcelain skin, editorial makeup with gradient berry lips, luminous highlight on cheekbones. Ultra-realistic, 8K detail."
     }
   },
   "5": {
@@ -48,7 +48,7 @@
         "2",
         0
       ],
-      "text": "text, watermark, logo, low detail"
+      "text": "text, watermark, logo"
     }
   },
   "6": {
@@ -58,7 +58,7 @@
         "4",
         0
       ],
-      "guidance": 3.9
+      "guidance": 3.3
     }
   },
   "7": {
@@ -88,7 +88,7 @@
         "7",
         0
       ],
-      "seed": 1917040269,
+      "seed": 1387149981,
       "control_after_generate": "fixed",
       "steps": 20,
       "cfg": 1.0,
@@ -117,7 +117,7 @@
         "9",
         0
       ],
-      "filename_prefix": "portrait_1917040269"
+      "filename_prefix": "portrait_1387149981"
     }
   }
 }

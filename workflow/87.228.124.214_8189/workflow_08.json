@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "seductive young curvy woman with long black hair, Marianna stands in the dimly lit apartment hallway at night, legs spread in a stable stance, naked from the waist down with her hips tilted forward, urinating a visible stream directly downward into the open mouth below in a clear POV composition, her torso upright, hands resting on her thighs for balance, gaze directed down with a satisfied expression, soft corridor lighting highlighting the contact and wet surfaces, medium close-up framing focused on her lower body and the explicit action.",
+      "text": "DENISE, A woman kneeling in front of a standing man, her hands pulling open his unbuttoned jeans to expose his large erect penis, her fingers gently gripping the thick shaft and feeling its weight, torso leaned forward with knees on the floor for support, head tilted up slightly as she gazes directly at it with parted lips and aroused expression, soft indoor lighting casting gentle shadows across her hands and the visible erection, medium close-up framing focused tightly on the intimate interaction and her upper body, clean simple background, natural proportions and stable pose.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "izumi_v.2.safetensors",
-      "strength_model": 0.9,
-      "strength_clip": 1.0,
+      "lora_name": "DENISE_SYNTH_zimg_v1.safetensors",
+      "strength_model": 0.78,
+      "strength_clip": 0.8,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -133,11 +133,11 @@
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 26161571962184,
+      "seed": 1031310649651904,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

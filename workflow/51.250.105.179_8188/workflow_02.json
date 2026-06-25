@@ -56,8 +56,8 @@
       "crop_h": 0,
       "target_width": 1024,
       "target_height": 1024,
-      "text_g": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_female_ring, female ring, fWgvccV359O1A9S28_heart_pattern, heart pattern, silver, ring, heart pattern",
-      "text_l": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_female_ring, female ring, fWgvccV359O1A9S28_heart_pattern, heart pattern, silver, ring, heart pattern",
+      "text_g": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_female_ring, female ring, fWgvccV359O1A9S28_leaf_pattern, leaf pattern, silver, ring",
+      "text_l": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_female_ring, female ring, fWgvccV359O1A9S28_leaf_pattern, leaf pattern, silver, ring",
       "clip": [
         "50",
         1
@@ -91,9 +91,9 @@
   "36": {
     "inputs": {
       "add_noise": "enable",
-      "noise_seed": 2700347833328836058,
+      "noise_seed": 10403013810396113149,
       "steps": 35,
-      "cfg": 6.0,
+      "cfg": 5.5,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "exponential",
       "start_at_step": 0,
@@ -133,9 +133,9 @@
   "38": {
     "inputs": {
       "add_noise": "disable",
-      "noise_seed": 2700347833328836058,
+      "noise_seed": 10403013810396113149,
       "steps": 35,
-      "cfg": 6.0,
+      "cfg": 5.5,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "karras",
       "start_at_step": 25,
@@ -177,7 +177,7 @@
       "ascore": 6.0,
       "width": 1024,
       "height": 1024,
-      "text": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_female_ring, female ring, fWgvccV359O1A9S28_heart_pattern, heart pattern, silver, ring, heart pattern",
+      "text": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_female_ring, female ring, fWgvccV359O1A9S28_leaf_pattern, leaf pattern, silver, ring",
       "clip": [
         "39",
         1
@@ -207,8 +207,8 @@
   "50": {
     "inputs": {
       "lora_name": "jeweler-ai-v1.5-000037.safetensors",
-      "strength_model": 1.0,
-      "strength_clip": 1.0,
+      "strength_model": 0.5,
+      "strength_clip": 0.5,
       "model": [
         "4",
         0

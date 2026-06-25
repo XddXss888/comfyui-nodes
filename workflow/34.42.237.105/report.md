@@ -4,28 +4,31 @@
 **内存**: 15 GB (空闲 9 GB)
 **版本**: 0.3.59
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-24 08:09:09
-**历史总数**: 136 | **成功**: 10
+**扫描时间**: 2026-06-25 21:23:07
+**历史总数**: 171 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `2f61bdfd-3b75-4a38-8baf-8da31f1a7254`
-- **类型**: 其他/工具
-- **节点数**: 1
-- **模型** (0):
+- **Prompt ID**: `243a692a-2d3e-4d83-9592-ea8c243be983`
+- **类型**: 图片超分
+- **节点数**: 16
+- **模型** (3):
+  - RealESRGAN_x2.pth
+  - depth_anything_v2_vits_fp16.safetensors
+  - isnet-general-use.pth
 
 ### 2. workflow_02.json
-- **Prompt ID**: `3152826d-5a37-41c0-a2df-39b4633ad801`
-- **类型**: 其他
-- **节点数**: 20
+- **Prompt ID**: `f1e62832-12b8-49c1-9e10-98c6d5835842`
+- **类型**: 图片超分
+- **节点数**: 16
 - **模型** (3):
   - RealESRGAN_x2.pth
   - depth_anything_v2_vits_fp16.safetensors
   - isnet-general-use.pth
 
 ### 3. workflow_03.json
-- **Prompt ID**: `576d1a8d-1425-4fb3-8d42-635990365abc`
+- **Prompt ID**: `ea495afc-7c97-4794-9313-7e7d6191f465`
 - **类型**: 图片超分
 - **节点数**: 16
 - **模型** (3):
@@ -34,7 +37,7 @@
   - isnet-general-use.pth
 
 ### 4. workflow_04.json
-- **Prompt ID**: `7e71faf8-69fa-4aa7-8c8c-86d728c17a93`
+- **Prompt ID**: `5f93872b-6b25-4812-9dca-88e3235f65ae`
 - **类型**: 图片超分
 - **节点数**: 16
 - **模型** (3):
@@ -43,7 +46,7 @@
   - isnet-general-use.pth
 
 ### 5. workflow_05.json
-- **Prompt ID**: `1217f3c0-4972-4ded-94fb-79b359ec30ee`
+- **Prompt ID**: `ee127311-fce2-4b23-bf62-f26eac563b50`
 - **类型**: 图片超分
 - **节点数**: 16
 - **模型** (3):
@@ -52,45 +55,33 @@
   - isnet-general-use.pth
 
 ### 6. workflow_06.json
-- **Prompt ID**: `e804d6ad-a155-43ce-a496-495b3eb8ddef`
-- **类型**: 图片超分
-- **节点数**: 16
-- **模型** (3):
-  - RealESRGAN_x2.pth
-  - depth_anything_v2_vits_fp16.safetensors
-  - isnet-general-use.pth
+- **Prompt ID**: `5f753d43-ad11-4a9a-a4cd-176e6c0db572`
+- **类型**: 其他/工具
+- **节点数**: 1
+- **模型** (0):
 
 ### 7. workflow_07.json
-- **Prompt ID**: `1d33efd5-0e16-49dd-80ad-29f803b18fe6`
-- **类型**: 图片超分
-- **节点数**: 16
-- **模型** (3):
-  - RealESRGAN_x2.pth
-  - depth_anything_v2_vits_fp16.safetensors
-  - isnet-general-use.pth
+- **Prompt ID**: `0271d309-3e4c-435f-9827-eff3c3c899d7`
+- **类型**: 其他/工具
+- **节点数**: 1
+- **模型** (0):
 
 ### 8. workflow_08.json
-- **Prompt ID**: `c421b705-3c2b-451b-bcb4-a795566caa1d`
-- **类型**: 图片超分
-- **节点数**: 16
-- **模型** (3):
-  - RealESRGAN_x2.pth
-  - depth_anything_v2_vits_fp16.safetensors
-  - isnet-general-use.pth
+- **Prompt ID**: `dad2802e-7b22-4ceb-8699-261823b7569c`
+- **类型**: 其他/工具
+- **节点数**: 1
+- **模型** (0):
 
 ### 9. workflow_09.json
-- **Prompt ID**: `a7d67369-03f6-41a3-b28b-f37550a081a7`
-- **类型**: 图片超分
-- **节点数**: 16
-- **模型** (3):
-  - RealESRGAN_x2.pth
-  - depth_anything_v2_vits_fp16.safetensors
-  - isnet-general-use.pth
+- **Prompt ID**: `cf419509-c4fe-479a-8b1d-12a488082954`
+- **类型**: 其他/工具
+- **节点数**: 1
+- **模型** (0):
 
 ### 10. workflow_10.json
-- **Prompt ID**: `69f4ab1e-fcb7-4e74-90e4-99d67a995c83`
-- **类型**: 其他
-- **节点数**: 20
+- **Prompt ID**: `f8957c39-9fb4-4bdc-9945-efceb72b0a03`
+- **类型**: 图片超分
+- **节点数**: 16
 - **模型** (3):
   - RealESRGAN_x2.pth
   - depth_anything_v2_vits_fp16.safetensors

@@ -1,213 +1,93 @@
 {
   "1": {
+    "class_type": "LoadImageOutput",
+    "widgets_values": [
+      "YOUR_FILE_NAME.png [output]",
+      false,
+      "refresh",
+      "image"
+    ],
     "inputs": {
-      "image": "ai_edit_src_26024D13-D1ED-4E7D-9A15-BA6EB8A73012.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
+      "image": "ai_input_FB7D5E83-8434-4FA8-899F-53A5F424403E.png"
     }
   },
   "2": {
+    "class_type": "UpscaleModelLoader",
     "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
+      "model_name": "4x_foolhardy_Remacri.pth"
     },
-    "class_type": "VAELoader",
     "_meta": {
-      "title": "Load VAE"
+      "title": "Load Upscale Model"
     }
   },
-  "6": {
+  "3": {
+    "class_type": "ImageUpscaleWithModel",
     "inputs": {
-      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
-      "type": "qwen_image",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "Load CLIP"
-    }
-  },
-  "37": {
-    "inputs": {
-      "weight_dtype": "default",
-      "unet_name": "Qwen-Image-Edit-2511-FP8_e4m3fn.safetensors"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Load Diffusion Model"
-    }
-  },
-  "89": {
-    "inputs": {
-      "model": [
-        "37",
-        0
-      ],
-      "lora_name": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
-      "strength_model": 1.0
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoraLoaderModelOnly"
-    }
-  },
-  "66": {
-    "inputs": {
-      "model": [
-        "89",
-        0
-      ],
-      "shift": 3.0
-    },
-    "class_type": "ModelSamplingAuraFlow",
-    "_meta": {
-      "title": "ModelSamplingAuraFlow"
-    }
-  },
-  "75": {
-    "inputs": {
-      "model": [
-        "66",
-        0
-      ],
-      "strength": 1.0
-    },
-    "class_type": "CFGNorm",
-    "_meta": {
-      "title": "CFGNorm"
-    }
-  },
-  "93": {
-    "inputs": {
-      "upscale_method": "lanczos",
       "image": [
         "1",
         0
       ],
-      "megapixels": 1.0,
-      "resolution_steps": 64
-    },
-    "class_type": "ImageScaleToTotalPixels",
-    "_meta": {
-      "title": "Scale Image to Total Pixels"
-    }
-  },
-  "88": {
-    "inputs": {
-      "pixels": [
-        "93",
-        0
-      ],
-      "vae": [
+      "upscale_model": [
         "2",
         0
       ]
     },
-    "class_type": "VAEEncode",
     "_meta": {
-      "title": "VAE Encode"
-    }
-  },
-  "3": {
-    "inputs": {
-      "clip": [
-        "6",
-        0
-      ],
-      "vae": [
-        "2",
-        0
-      ],
-      "image1": [
-        "93",
-        0
-      ],
-      "prompt": "make more realistic"
-    },
-    "class_type": "TextEncodeQwenImageEditPlus",
-    "_meta": {
-      "title": "TextEncodeQwenImageEditPlus (positive)"
-    }
-  },
-  "4": {
-    "inputs": {
-      "clip": [
-        "6",
-        0
-      ],
-      "vae": [
-        "2",
-        0
-      ],
-      "image1": [
-        "93",
-        0
-      ],
-      "prompt": ""
-    },
-    "class_type": "TextEncodeQwenImageEditPlus",
-    "_meta": {
-      "title": "TextEncodeQwenImageEditPlus (negative)"
+      "title": "Upscale x4 (Model)"
     }
   },
   "5": {
+    "class_type": "AILab_ImageMaskResize",
     "inputs": {
-      "model": [
-        "75",
-        0
-      ],
-      "positive": [
+      "width": 0,
+      "height": 0,
+      "scale_by": 1.0,
+      "upscale_method": "bicubic",
+      "resize_mode": "resize",
+      "pad_color": "#ffffff",
+      "crop_position": "center",
+      "divisible_by": 1,
+      "device": "gpu",
+      "image": [
         "3",
         0
       ],
-      "negative": [
-        "4",
-        0
-      ],
-      "latent_image": [
-        "88",
-        0
-      ],
-      "cfg": 1.0,
-      "denoise": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "seed": 2633604736138488,
-      "steps": 4
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
-    }
-  },
-  "8": {
-    "inputs": {
-      "samples": [
-        "5",
-        0
-      ],
-      "vae": [
-        "2",
-        0
+      "mask": [
+        "1",
+        1
       ]
     },
-    "class_type": "VAEDecode",
     "_meta": {
-      "title": "VAE Decode"
+      "title": "Resize Alpha to Upscaled Size (no padding)"
     }
   },
-  "7": {
+  "6": {
+    "class_type": "JoinImageWithAlpha",
     "inputs": {
-      "images": [
-        "8",
+      "image": [
+        "3",
         0
       ],
-      "filename_prefix": "iqueue_edit_26024D13-D1ED-4E7D-9A15-BA6EB8A73012"
+      "alpha": [
+        "5",
+        1
+      ]
     },
-    "class_type": "SaveImage",
     "_meta": {
-      "title": "Save Image"
+      "title": "Join Upscaled Image + Alpha Mask"
+    }
+  },
+  "4": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "6",
+        0
+      ],
+      "filename_prefix": "iqueue_upscale_FB7D5E83-8434-4FA8-899F-53A5F424403E"
+    },
+    "_meta": {
+      "title": "Save Upscaled"
     }
   }
 }

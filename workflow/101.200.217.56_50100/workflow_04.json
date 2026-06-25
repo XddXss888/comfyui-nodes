@@ -22,7 +22,7 @@
   "10": {
     "inputs": {
       "model": [
-        "26",
+        "70",
         0
       ]
     },
@@ -51,7 +51,7 @@
   },
   "15": {
     "inputs": {
-      "value": 65
+      "value": 68
     },
     "class_type": "easy int",
     "_meta": {
@@ -69,7 +69,7 @@
   },
   "24": {
     "inputs": {
-      "value": "石头顺时针滚动动画"
+      "value": "原地顺时帧往右快速滚动！不要动镜头，比例大小不变！"
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -99,7 +99,7 @@
   "28": {
     "inputs": {
       "model": [
-        "70",
+        "27",
         0
       ]
     },
@@ -110,7 +110,7 @@
   },
   "29": {
     "inputs": {
-      "value": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走, censored, mosaic censoring, bar censor, pixelated, glowing, bloom, blurry, day, out of focus, low detail, bad anatomy, ugly, overexposed, underexposed, distorted face, extra limbs, cartoonish, 3d render artifacts, duplicate people, unnatural lighting, bad composition, missing shadows, low resolution, poorly textured, glitch, noise, grain, static, motionless, still frame, overall grayish, worst quality, low quality, JPEG compression artifacts, subtitles, stylized, artwork, painting, illustration, cluttered background, many people in background, three legs, walking backward, zoom out, zoom in, mouth speaking, moving mouth, talking, speaking, mute speaking, unnatural skin tone, discolored eyelid, red eyelids, red upper eyelids, no red eyeshadow, closed eyes, no wide-open innocent eyes, poorly drawn hands, extra fingers, fused fingers, poorly drawn face, deformed, disfigured, malformed limbs, thighs, fog, mist, voluminous eyelashes, blush,"
+      "value": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走,"
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -120,13 +120,13 @@
   "31": {
     "inputs": {
       "boundary": 0.9,
-      "seed": 560837176448160,
+      "seed": 643135790720631,
       "steps": 6,
-      "cfg_high_noise": 1.0,
-      "cfg_low_noise": 1.0,
+      "cfg_high_noise": 1.1,
+      "cfg_low_noise": 1.1,
       "sampler_name": "euler",
       "scheduler": "normal",
-      "sigma_shift": 8.0,
+      "sigma_shift": 6.0,
       "denoise": 1.0,
       "model_high_noise": [
         "10",
@@ -217,9 +217,35 @@
       "title": "CLIP视觉编码"
     }
   },
+  "45": {
+    "inputs": {
+      "crop": "none",
+      "clip_vision": [
+        "11",
+        0
+      ],
+      "image": [
+        "54",
+        0
+      ]
+    },
+    "class_type": "CLIPVisionEncode",
+    "_meta": {
+      "title": "CLIP视觉编码"
+    }
+  },
   "46": {
     "inputs": {
-      "image": "input_1782185470034.png"
+      "image": "input_1782217231827.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "47": {
+    "inputs": {
+      "image": "input_1782217242918.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -250,10 +276,38 @@
       "title": "LayerUtility: ImageScaleByAspectRatio V2"
     }
   },
+  "54": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": [
+        "13",
+        0
+      ],
+      "background_color": "#000000",
+      "image": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "LayerUtility: ImageScaleByAspectRatio V2"
+    }
+  },
   "64": {
     "inputs": {
       "any_01": [
         "53",
+        4
+      ],
+      "any_02": [
+        "54",
         4
       ]
     },
@@ -269,8 +323,8 @@
         3
       ],
       "any_02": [
-        "13",
-        0
+        "54",
+        3
       ]
     },
     "class_type": "Any Switch (rgthree)",
@@ -341,8 +395,16 @@
         "44",
         0
       ],
+      "clip_vision_end_image": [
+        "45",
+        0
+      ],
       "start_image": [
         "53",
+        0
+      ],
+      "end_image": [
+        "54",
         0
       ]
     },

@@ -72,14 +72,14 @@
   },
   "94": {
     "inputs": {
-      "tags": "这是一首温柔忧郁的流行民谣作品，整体呈现出温暖而内敛的情感色彩。以干净的琶音原声吉他为核心织体，音色清澈通透，富有木质共鸣感。主旋律由轻柔细腻的女声演绎，声音纯净且富有情感穿透力，采用自然的演唱技巧，偶尔带有轻微气音增强亲密感。伴奏编排遵循渐进式结构：从独奏吉他开场，随后加入稳定而克制的鼓机节奏和温润的贝斯线条，奠定基础律动。副歌部分通过叠加人声和声与柔和的合成器垫底音色（pad），营造出层次丰富却不繁复的音响空间，合成器带来一丝梦幻与渴望的情绪张力。歌曲中部设置独特过渡段，运用马来语与英语交替演唱的方式制造文化交融感，人声经过轻微混响处理形成催眠般的氛围效果。整体动态变化温和，起伏自然，情感表达深沉却不激烈，弥漫着一种静谧的忧郁与隐隐的希望交织的氛围。结构清晰，包含完整的主歌、副歌及桥段，尾声回归至单纯的吉他与人声，以极简方式完成情绪收束。",
+      "tags": "这首作品属于独立流行风格，融合了梦幻流行与新民谣元素。整体音乐语言温暖而内敛，情感色彩偏向温柔忧郁，同时隐含希望的微光。核心织体围绕一把干净的琶音原声吉他展开，其音色清澈通透，具有明显的木质共鸣质感，为整首歌曲奠定了宁静而亲密的基调。主旋律由一位轻柔细腻的女声演绎，她的嗓音纯净、富有穿透力，在演唱中采用了自然的发声技巧，并巧妙地加入了轻微气音以增强人声的表现力与亲和力。伴奏结构遵循渐进式安排：起初仅由独奏吉他引入情绪氛围，接着逐步加入克制稳定的鼓机节奏以及温润厚实的贝斯线条，构建出基础但稳固的律动骨架。进入副歌后，通过添加人声和声与柔和的合成器垫底音色（pad），创造出层次丰富却毫不繁复的声音空间；其中合成器的加入不仅增强了音响厚度，也带来了梦幻朦胧的情绪张力，使忧郁之中泛起隐隐渴望。中部设置了独特的过渡段落，采用中文演唱并施以轻微混响处理的人声，制造出一种略带催眠感的氛围体验。整首曲目的动态变化温和自然，没有剧烈起伏，而是依靠乐器与人声之间的互动来推进情感递进。整体情绪表达深沉而不激烈，弥漫着静谧忧郁与隐约希望交织的独特氛围。结构方面清晰明确，包含完整的主歌、副歌及桥段发展，结尾则回归至最初的吉他与人声组合，以极简的方式完成情绪上的闭环收束。",
       "lyrics": "[Instrumental]",
       "seed": 31,
       "bpm": 78,
-      "duration": 255.0,
+      "duration": 256.0,
       "timesignature": "4",
       "language": "zh",
-      "keyscale": "G major",
+      "keyscale": "D minor",
       "generate_audio_codes": false,
       "cfg_scale": 2.0,
       "temperature": 0.85,
@@ -98,7 +98,7 @@
   },
   "98": {
     "inputs": {
-      "seconds": 255.0,
+      "seconds": 256.0,
       "batch_size": 1
     },
     "class_type": "EmptyAceStep1.5LatentAudio",
@@ -139,7 +139,7 @@
   },
   "107": {
     "inputs": {
-      "filename_prefix": "audio/温柔的渴望",
+      "filename_prefix": "audio/温柔的忧郁",
       "audioUI": "",
       "audio": [
         "18",
@@ -153,7 +153,7 @@
   },
   "108": {
     "inputs": {
-      "seed": 4078377654,
+      "seed": 3219403804,
       "steps": 12,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -183,14 +183,14 @@
   },
   "110": {
     "inputs": {
-      "tags": "这是一首温柔忧郁的流行民谣作品，整体呈现出温暖而内敛的情感色彩。以干净的琶音原声吉他为核心织体，音色清澈通透，富有木质共鸣感。主旋律由轻柔细腻的女声演绎，声音纯净且富有情感穿透力，采用自然的演唱技巧，偶尔带有轻微气音增强亲密感。伴奏编排遵循渐进式结构：从独奏吉他开场，随后加入稳定而克制的鼓机节奏和温润的贝斯线条，奠定基础律动。副歌部分通过叠加人声和声与柔和的合成器垫底音色（pad），营造出层次丰富却不繁复的音响空间，合成器带来一丝梦幻与渴望的情绪张力。歌曲中部设置独特过渡段，运用马来语与英语交替演唱的方式制造文化交融感，人声经过轻微混响处理形成催眠般的氛围效果。整体动态变化温和，起伏自然，情感表达深沉却不激烈，弥漫着一种静谧的忧郁与隐隐的希望交织的氛围。结构清晰，包含完整的主歌、副歌及桥段，尾声回归至单纯的吉他与人声，以极简方式完成情绪收束。",
-      "lyrics": "[Intro - Acoustic Guitar Arpeggios]\n[guitar arpeggios, no lyrics]\n\n\n[Verse 1 - Soft Female Vocal]\nDi antara bayangan yang hilang\nBetween the shadows that fade away\nHatiku masih menyimpan cahaya\nMy heart still holds a gentle light\n\n[Pre-Chorus - Building Layers]\nDan waktu terus berbisik\nAnd time keeps whispering\nKamu tak pernah benar-benar pergi\nYou were never truly gone\n\n[Chorus - Harmonized Vocals, Synth Pad]\nAku merindukan hangatmu\nI miss your warmth so deep inside\nDalam sunyi ini ku rasakan\nIn this silence I can feel\nSebuah harapan yang masih hidup\nA hope that’s quietly alive\n\n[Verse 2 - Gentle Bass Enters]\nJalan kita yang terputus\nThe path we walked is now apart\nMasih membisikkan kenangan\nStill whispers memories in my heart\n\n[Pre-Chorus - Drum Machine Joins]\nDan bintang pun mulai menari\nAnd stars begin to softly dance\nDi langit yang sunyi dan redup\nIn skies both quiet and dim\n\n[Chorus - Full Harmonies, Layered Synths]\nAku merindukan hangatmu\nI miss your warmth so deep inside\nDalam sunyi ini ku rasakan\nIn this silence I can feel\nSebuah harapan yang masih hidup\nA hope that’s quietly alive\n\n[Bridge - Malay-English Overlap, Dreamy Effect]\nKehilangan itu seperti embun pagi\nLoss feels like morning dew\nCepat menguap, namun meninggalkan jejak\nQuick to fade but leaves a trace\nCan you hear me now?\nSuaramu masih terngiang\nYour voice still echoes through\n\n[Final Chorus - Stripped Back, Emotional]\nAku merindukan hangatmu\nI miss your warmth so deep inside\nDalam sunyi ini ku rasakan\nIn this silence I can feel\nSebuah harapan yang masih hidup\nA hope that’s quietly alive\n\n[Outro - Acoustic Guitar & Final Line]\n[guitar fingerpicking with soft vocal]\nSebuah harapan… yang masih hidup\nA hope… that’s quietly alive\n[Fade Out]",
+      "tags": "这首作品属于独立流行风格，融合了梦幻流行与新民谣元素。整体音乐语言温暖而内敛，情感色彩偏向温柔忧郁，同时隐含希望的微光。核心织体围绕一把干净的琶音原声吉他展开，其音色清澈通透，具有明显的木质共鸣质感，为整首歌曲奠定了宁静而亲密的基调。主旋律由一位轻柔细腻的女声演绎，她的嗓音纯净、富有穿透力，在演唱中采用了自然的发声技巧，并巧妙地加入了轻微气音以增强人声的表现力与亲和力。伴奏结构遵循渐进式安排：起初仅由独奏吉他引入情绪氛围，接着逐步加入克制稳定的鼓机节奏以及温润厚实的贝斯线条，构建出基础但稳固的律动骨架。进入副歌后，通过添加人声和声与柔和的合成器垫底音色（pad），创造出层次丰富却毫不繁复的声音空间；其中合成器的加入不仅增强了音响厚度，也带来了梦幻朦胧的情绪张力，使忧郁之中泛起隐隐渴望。中部设置了独特的过渡段落，采用中文演唱并施以轻微混响处理的人声，制造出一种略带催眠感的氛围体验。整首曲目的动态变化温和自然，没有剧烈起伏，而是依靠乐器与人声之间的互动来推进情感递进。整体情绪表达深沉而不激烈，弥漫着静谧忧郁与隐约希望交织的独特氛围。结构方面清晰明确，包含完整的主歌、副歌及桥段发展，结尾则回归至最初的吉他与人声组合，以极简的方式完成情绪上的闭环收束。",
+      "lyrics": "[Intro - Fingerpicked Guitar]\n[guitar solo, no lyrics]\n\n\n[Verse 1 - Soft Female Vocal]\n窗外雨滴轻轻落下\n打湿回忆里的花\n你说过的话还在耳边绕啊\n像风一样自由却抓不住呀\n\n[Pre-Chorus - Building Layers]\n时间悄悄走过\n带走多少不舍\n只剩下这夜晚的灯火\n陪我沉默\n\n[Chorus - Harmonized Vocals, Pad]\n温柔的忧郁漫上心头\n像海浪拍打着沙滩不休\n那些美好是否还会停留\n在这梦里不愿醒的时候\n\n[Verse 2 - Acoustic Texture]\n旧照片泛黄的模样\n是你笑得那么亮\n如今只剩一个人看夕阳\n把思念藏进夜的漫长\n\n[Bridge - Whispered Chinese Vocals, Reverb]\n如果风知道答案\n能不能别太快吹散\n让我再多看一眼\n那曾经温暖的画面\n\n[Chorus - Full Arrangement]\n温柔的忧郁漫上心头\n像海浪拍打着沙滩不休\n那些美好是否还会停留\n在这梦里不愿醒的时候\n\n[Outro - Stripped Down]\n就让这首歌陪着我\n直到天明不再难过\n",
       "seed": 31,
       "bpm": 78,
-      "duration": 255.0,
+      "duration": 256.0,
       "timesignature": "4",
       "language": "zh",
-      "keyscale": "G major",
+      "keyscale": "D minor",
       "generate_audio_codes": false,
       "cfg_scale": 2.0,
       "temperature": 0.5,

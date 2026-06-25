@@ -1,14 +1,14 @@
 {
   "3": {
     "inputs": {
-      "seed": 781508497134,
+      "seed": 782387638964,
       "steps": 25,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0,
       "model": [
-        "48",
+        "60",
         0
       ],
       "positive": [
@@ -33,8 +33,8 @@
         0
       ],
       "clip": [
-        "47",
-        0
+        "60",
+        1
       ]
     },
     "class_type": "CLIPTextEncode"
@@ -43,8 +43,8 @@
     "inputs": {
       "text": "low quality, blurry, distorted, ugly, watermark, text, logo, nsfw, realistic photo, 3d render",
       "clip": [
-        "47",
-        0
+        "60",
+        1
       ]
     },
     "class_type": "CLIPTextEncode"
@@ -61,7 +61,7 @@
   },
   "36": {
     "inputs": {
-      "filename_prefix": "drama_20260615_1400_ep17_sc10_f5",
+      "filename_prefix": "drama_20260625_1750_ep6_sc10_f5",
       "images": [
         "37",
         0
@@ -110,7 +110,7 @@
   },
   "46": {
     "inputs": {
-      "value": "black and white manga style, detailed ink illustration, dramatic shading, screen tones, Japanese manga aesthetic, Bai Kui's shattered panda mask reflecting 29 falling holograms, digital tattoos shifting to show her real face. Peacock chrysalis open wide to reveal miniature dome ecosystem, raindrops crystallizing midair., wide establishing shot, full scene visible"
+      "value": "vibrant colorful anime style, detailed digital illustration, cinematic lighting, rich color palette, Japanese anime aesthetic, high quality, masterpiece, hazard suit girl bolts through collapsing lab, modified grudge stick glows with stolen code. Radiation hair streams in neon trails as she leaps over falling debris, crimson grid eye scans emergency exits.. 陆昭然: 22yo female, 168cm, silver-streaked black hair in messy bob, left eye cybernetic prosthetic with glowing crimson grid, w, wide establishing shot, full scene visible"
     },
     "class_type": "PrimitiveStringMultiline"
   },
@@ -135,5 +135,21 @@
       "vae_name": "ae.safetensors"
     },
     "class_type": "VAELoader"
+  },
+  "60": {
+    "inputs": {
+      "lora_name": "comicstrips_flux_lora_v1.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "48",
+        0
+      ],
+      "clip": [
+        "47",
+        0
+      ],
+      "strength_clip": 0.8
+    },
+    "class_type": "LoraLoader"
   }
 }
