@@ -1,9 +1,18 @@
 {
-  "90": {
+  "41": {
     "inputs": {
-      "filename_prefix": "Qwen-Image-2512",
+      "image": "ref_e6f2dddd12b947b0a4e9bbd7193847f6.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "92": {
+    "inputs": {
+      "filename_prefix": "Qwen_Edit_2511",
       "images": [
-        "92:8",
+        "91:8",
         0
       ]
     },
@@ -12,25 +21,7 @@
       "title": "保存图像"
     }
   },
-  "91": {
-    "inputs": {
-      "value": "Subject: Three young adult East Asian women, each with distinct facial features, wearing casual summer clothing\nPose: Standing, each extending one foot forward to showcase their bare feet\nEnvironment: A sun-drenched beach with soft sand and gentle waves in the background\nLighting: Bright, natural sunlight creating soft shadows\nCamera/Style: Wide-angle lens, naturalistic photography, high detail"
-    },
-    "class_type": "PrimitiveStringMultiline",
-    "_meta": {
-      "title": "Prompt"
-    }
-  },
-  "92:39": {
-    "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "92:38": {
+  "91:61": {
     "inputs": {
       "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
       "type": "qwen_image",
@@ -41,11 +32,11 @@
       "title": "加载CLIP"
     }
   },
-  "92:66": {
+  "91:67": {
     "inputs": {
-      "shift": 3.1000000000000005,
+      "shift": 3.1,
       "model": [
-        "92:73",
+        "91:74",
         0
       ]
     },
@@ -54,30 +45,72 @@
       "title": "采样算法（AuraFlow）"
     }
   },
-  "92:6": {
+  "91:10": {
     "inputs": {
-      "text": [
-        "91",
-        0
-      ],
-      "clip": [
-        "92:38",
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "91:12": {
+    "inputs": {
+      "unet_name": "qwen_image_edit_2511_fp8mixed.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "91:71": {
+    "inputs": {
+      "reference_latents_method": "index_timestep_zero",
+      "conditioning": [
+        "91:69",
         0
       ]
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
     "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
+      "title": "FluxKontext多参考潜在方法"
     }
   },
-  "92:8": {
+  "91:70": {
+    "inputs": {
+      "reference_latents_method": "index_timestep_zero",
+      "conditioning": [
+        "91:68",
+        0
+      ]
+    },
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "_meta": {
+      "title": "FluxKontext多参考潜在方法"
+    }
+  },
+  "91:64": {
+    "inputs": {
+      "strength": 1.0,
+      "model": [
+        "91:67",
+        0
+      ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "CFG归一化"
+    }
+  },
+  "91:8": {
     "inputs": {
       "samples": [
-        "92:3",
+        "91:65",
         0
       ],
       "vae": [
-        "92:39",
+        "91:10",
         0
       ]
     },
@@ -86,36 +119,61 @@
       "title": "VAE解码"
     }
   },
-  "92:58": {
+  "91:68": {
     "inputs": {
-      "width": 768,
-      "height": 1024,
-      "batch_size": 1
-    },
-    "class_type": "EmptySD3LatentImage",
-    "_meta": {
-      "title": "空Latent图像（SD3）"
-    }
-  },
-  "92:7": {
-    "inputs": {
-      "text": "",
+      "prompt": "一位原創超級英雄站在未來感十足的城市屋頂，夜晚場景，背景是高樓與霓虹燈交錯的賽博城市。英雄身穿高科技戰甲，主色調為深藍與銀色，金屬質感細膩，披風隨風飄揚。臉部輪廓英俊而堅毅，眼神充滿正義與力量。強烈電影級光影效果，低角度視角，史詩氛圍，寫實風格，超高細節",
       "clip": [
-        "92:38",
+        "91:61",
+        0
+      ],
+      "vae": [
+        "91:10",
+        0
+      ],
+      "image1": [
+        "91:88",
         0
       ]
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "TextEncodeQwenImageEditPlus",
     "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
+      "title": "TextEncodeQwenImageEditPlus (Positive)"
     }
   },
-  "92:73": {
+  "91:75": {
     "inputs": {
-      "lora_name": "Qwen-Image-Lightning-4steps-V1.0.safetensors",
+      "pixels": [
+        "91:88",
+        0
+      ],
+      "vae": [
+        "91:10",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "91:88": {
+    "inputs": {
+      "image": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "FluxKontextImageScale",
+    "_meta": {
+      "title": "图像缩放为FluxKontext"
+    }
+  },
+  "91:74": {
+    "inputs": {
+      "lora_name": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
       "strength_model": 1.0,
       "model": [
-        "92:37",
+        "91:12",
         0
       ]
     },
@@ -124,44 +182,55 @@
       "title": "LoRA加载器（仅模型）"
     }
   },
-  "92:37": {
+  "91:65": {
     "inputs": {
-      "unet_name": "qwen_image_2512_fp8_e4m3fn.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "92:3": {
-    "inputs": {
-      "seed": 222017731810061,
-      "steps": 8,
+      "seed": 516420313213730,
+      "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0,
       "model": [
-        "92:66",
+        "91:64",
         0
       ],
       "positive": [
-        "92:6",
+        "91:70",
         0
       ],
       "negative": [
-        "92:7",
+        "91:71",
         0
       ],
       "latent_image": [
-        "92:58",
+        "91:75",
         0
       ]
     },
     "class_type": "KSampler",
     "_meta": {
       "title": "K采样器"
+    }
+  },
+  "91:69": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "91:61",
+        0
+      ],
+      "vae": [
+        "91:10",
+        0
+      ],
+      "image1": [
+        "91:88",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "文本编码（QwenImageEditPlus）"
     }
   }
 }

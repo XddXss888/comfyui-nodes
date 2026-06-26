@@ -1,7 +1,37 @@
 {
+  "3": {
+    "inputs": {
+      "seed": 509929596228011,
+      "steps": 30,
+      "cfg": 10.0,
+      "sampler_name": "uni_pc",
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "model": [
+        "37",
+        0
+      ],
+      "positive": [
+        "51",
+        0
+      ],
+      "negative": [
+        "51",
+        1
+      ],
+      "latent_image": [
+        "51",
+        2
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
   "6": {
     "inputs": {
-      "text": "Skirt lift",
+      "text": "Pulling in and out of the shot is strictly prohibited.Shaking the camera is strictly prohibited, as well as with the background，Please generate a video where the person in the frame remains static in a full - body pose and the background stays unchanged. The person should have a natural standing posture, a calm expression, and look straight ahead. The only change in the video is the person's natural blinking action, demonstrating real human physiological characteristics. Please ensure that the blinking action is natural and smooth, without any deliberate or exaggerated elements. The entire video should maintain a documentary photography style to capture the person's natural state truthfully and accurately. The picture quality should be clear and the colors should be true, matching the style and color tone of the original full - body photo.",
       "clip": [
         "38",
         0
@@ -14,7 +44,7 @@
   },
   "7": {
     "inputs": {
-      "text": "Low quality, deformed hands, deformed facial features, any transitions",
+      "text": "Overexposure, blurred details, subtitles, paintings, pictures, still image, overall gray, worst quality, low quality, JPEG compression residue, ugly, mutilated, redundant fingers, poorly painted hands, poorly painted faces, deformed, disfigured, deformed limbs, fused fingers, cluttered background, three legs, multiple people in the background, upside down, any arm movement, any leg movement, torso twisting, excessive head rotation, unnatural mouth movement, static mouth, no lip animation, camera movement, camera zoom, camera panning, camera tilting, shifting perspective, dynamic camera angles.",
       "clip": [
         "38",
         0
@@ -28,7 +58,7 @@
   "8": {
     "inputs": {
       "samples": [
-        "90",
+        "3",
         0
       ],
       "vae": [
@@ -44,7 +74,7 @@
   "28": {
     "inputs": {
       "filename_prefix": "ComfyUI",
-      "fps": 6.000000000000001,
+      "fps": 16.000000000000004,
       "lossless": false,
       "quality": 90,
       "method": "default",
@@ -88,68 +118,11 @@
       "title": "加载VAE"
     }
   },
-  "49": {
-    "inputs": {
-      "clip_name": "clip_vision_h.safetensors"
-    },
-    "class_type": "CLIPVisionLoader",
-    "_meta": {
-      "title": "加载CLIP视觉"
-    }
-  },
   "51": {
-    "inputs": {
-      "crop": "none",
-      "clip_vision": [
-        "49",
-        0
-      ],
-      "image": [
-        "52",
-        0
-      ]
-    },
-    "class_type": "CLIPVisionEncode",
-    "_meta": {
-      "title": "CLIP视觉编码"
-    }
-  },
-  "52": {
-    "inputs": {
-      "image": "1000007163.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Start_image"
-    }
-  },
-  "72": {
-    "inputs": {
-      "image": "1000007161.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "End_image"
-    }
-  },
-  "79": {
-    "inputs": {
-      "shift": 8.0,
-      "model": [
-        "37",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingSD3",
-    "_meta": {
-      "title": "采样算法（SD3）"
-    }
-  },
-  "83": {
     "inputs": {
       "width": 720,
       "height": 1280,
-      "length": 5,
+      "length": 65,
       "batch_size": 1,
       "positive": [
         "6",
@@ -163,37 +136,29 @@
         "39",
         0
       ],
-      "clip_vision_start_image": [
-        "51",
-        0
-      ],
-      "clip_vision_end_image": [
-        "87",
-        0
-      ],
-      "start_image": [
+      "clip_vision_output": [
         "52",
         0
       ],
-      "end_image": [
-        "72",
+      "start_image": [
+        "54",
         0
       ]
     },
-    "class_type": "WanFirstLastFrameToVideo",
+    "class_type": "WanImageToVideo",
     "_meta": {
-      "title": "WanFirstLastFrameToVideo"
+      "title": "Wan图像到视频"
     }
   },
-  "87": {
+  "52": {
     "inputs": {
       "crop": "none",
       "clip_vision": [
-        "49",
+        "53",
         0
       ],
       "image": [
-        "72",
+        "54",
         0
       ]
     },
@@ -202,40 +167,28 @@
       "title": "CLIP视觉编码"
     }
   },
-  "90": {
+  "53": {
     "inputs": {
-      "seed": 1089608711162545,
-      "steps": 20,
-      "cfg": 12.0,
-      "sampler_name": "uni_pc",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "79",
-        0
-      ],
-      "positive": [
-        "83",
-        0
-      ],
-      "negative": [
-        "83",
-        1
-      ],
-      "latent_image": [
-        "83",
-        2
-      ]
+      "clip_name": "clip_vision_h.safetensors"
     },
-    "class_type": "KSampler",
+    "class_type": "CLIPVisionLoader",
     "_meta": {
-      "title": "K采样器"
+      "title": "加载CLIP视觉"
     }
   },
-  "91": {
+  "54": {
+    "inputs": {
+      "image": "微信图片_20250508183719 (1).jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "60": {
     "inputs": {
       "filename_prefix": "ComfyUI",
-      "fps": 16.000000000000004,
+      "fps": 6.0,
       "compress_level": 4,
       "images": [
         "8",

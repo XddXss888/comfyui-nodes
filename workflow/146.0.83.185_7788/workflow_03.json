@@ -1,0 +1,743 @@
+{
+  "74": {
+    "inputs": {
+      "image": "42240032.JPG"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "76": {
+    "inputs": {
+      "shift": 3.1,
+      "model": [
+        "114",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "77": {
+    "inputs": {
+      "sage_attention": "auto",
+      "allow_compile": false,
+      "model": [
+        "76",
+        0
+      ]
+    },
+    "class_type": "PathchSageAttentionKJ",
+    "_meta": {
+      "title": "Patch Sage Attention KJ"
+    }
+  },
+  "81": {
+    "inputs": {
+      "images": [
+        "84:66",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "82": {
+    "inputs": {
+      "images": [
+        "88",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "83": {
+    "inputs": {
+      "crop_left": 0.0,
+      "crop_right": 0.0,
+      "crop_top": 0.0,
+      "crop_bottom": 0.0,
+      "width": 1008,
+      "height": 1008,
+      "multiplicity": 16,
+      "resolution (MP)": 1.0,
+      "upscale_method": "bicubic",
+      "aspect_ratio": "1:1",
+      "Ratio Presets": "1:1",
+      "ratio_lock": false,
+      "Full Image": null,
+      "Center": null,
+      "Maximize": null,
+      "crop_preview": null,
+      "image": [
+        "74",
+        0
+      ]
+    },
+    "class_type": "orex Crop",
+    "_meta": {
+      "title": "🔳Crop (OreX)"
+    }
+  },
+  "88": {
+    "inputs": {
+      "text_x": 10,
+      "text_y": 2,
+      "height": 160,
+      "font_size": 50,
+      "font_color": "black",
+      "label_color": "white",
+      "font": "FreeMono.ttf",
+      "text": [
+        "122",
+        0
+      ],
+      "direction": "down",
+      "image": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "AddLabel",
+    "_meta": {
+      "title": "Add Label"
+    }
+  },
+  "90": {
+    "inputs": {
+      "direction": "right",
+      "match_image_size": true,
+      "image1": [
+        "83",
+        0
+      ],
+      "image2": [
+        "84:66",
+        0
+      ]
+    },
+    "class_type": "ImageConcanate",
+    "_meta": {
+      "title": "ImageConcanate"
+    }
+  },
+  "99": {
+    "inputs": {
+      "anything": [
+        "116",
+        0
+      ]
+    },
+    "class_type": "easy cleanGpuUsed",
+    "_meta": {
+      "title": "Clean VRAM Used"
+    }
+  },
+  "100": {
+    "inputs": {
+      "anything": [
+        "116",
+        0
+      ]
+    },
+    "class_type": "easy clearCacheAll",
+    "_meta": {
+      "title": "Clear Cache All"
+    }
+  },
+  "104": {
+    "inputs": {
+      "samples": [
+        "108",
+        0
+      ],
+      "vae": [
+        "113",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "105": {
+    "inputs": {
+      "images": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "106": {
+    "inputs": {
+      "active": false,
+      "output_path": "",
+      "create_current_date_folder": true,
+      "create_processed_folder": false,
+      "filename_prefix_1": "Image",
+      "filename_prefix_2": "",
+      "filename_prefix_3": "",
+      "filename_separator": "_",
+      "use_counter": true,
+      "embed_workflow": true,
+      "image_format": "png",
+      "jpg_quality": 90,
+      "webp_quality": 0,
+      "optimize_png": false,
+      "images": [
+        "84:66",
+        0
+      ]
+    },
+    "class_type": "orex Save Image",
+    "_meta": {
+      "title": "💾 Save Image (OreX)"
+    }
+  },
+  "108": {
+    "inputs": {
+      "seed": 482252255386455,
+      "steps": 30,
+      "cfg": 1.0,
+      "sampler_name": "rk_beta",
+      "scheduler": "beta57",
+      "denoise": 1.0,
+      "model": [
+        "128",
+        0
+      ],
+      "positive": [
+        "116",
+        0
+      ],
+      "negative": [
+        "116",
+        1
+      ],
+      "latent_image": [
+        "130",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "113": {
+    "inputs": {
+      "vae_name": "flux-vae-bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "114": {
+    "inputs": {
+      "unet_name": "Boogu\\boogu_image_edit_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "115": {
+    "inputs": {
+      "clip_name": "qwen3vl_8b_fp8_scaled.safetensors",
+      "type": "boogu",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "116": {
+    "inputs": {
+      "prompt": [
+        "127",
+        0
+      ],
+      "negative_prompt": "low quality, low detailed",
+      "clip": [
+        "115",
+        0
+      ],
+      "vae": [
+        "113",
+        0
+      ],
+      "images.image_1": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "TextEncodeBooguEdit",
+    "_meta": {
+      "title": "TextEncodeBooguEdit"
+    }
+  },
+  "121": {
+    "inputs": {
+      "value": "Сделай фото цветным"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "PROMPT"
+    }
+  },
+  "122": {
+    "inputs": {
+      "string_function": "Boogu Edit\n{A}",
+      "insert_buttons": null,
+      "A": [
+        "121",
+        0
+      ]
+    },
+    "class_type": "orex String Function",
+    "_meta": {
+      "title": "✍️ String Function (OreX)"
+    }
+  },
+  "127": {
+    "inputs": {
+      "text_input": [
+        "121",
+        0
+      ],
+      "system_prompt": "",
+      "system_preset": "English translator",
+      "model_key": "hy-mt1.5-1.8b",
+      "include_reasoning": false,
+      "auto_unload_model": true,
+      "unload_delay": 0,
+      "clean_vram_before": false,
+      "seed": 398342111062390,
+      "context_length": 4096,
+      "max_tokens": 0,
+      "generation_parameters": false,
+      "temperature": 0.7,
+      "top_k": 40,
+      "top_p": 0.95,
+      "repeat_penalty": 1.1
+    },
+    "class_type": "orex LMStudio",
+    "_meta": {
+      "title": "🤖 LMStudio (OreX)"
+    }
+  },
+  "128": {
+    "inputs": {
+      "enable": true,
+      "model_type": "Qwen-Image",
+      "warmup_steps": 5,
+      "skip_interval": 0,
+      "print_summary": true,
+      "model": [
+        "77",
+        0
+      ]
+    },
+    "class_type": "CacheDiT_Model_Optimizer",
+    "_meta": {
+      "title": "⚡ CacheDiT Accelerator"
+    }
+  },
+  "129": {
+    "inputs": {
+      "text_0": "Replace the sword with a torch. Replace the background with a desert.",
+      "text": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "130": {
+    "inputs": {
+      "width": [
+        "83",
+        2
+      ],
+      "height": [
+        "83",
+        3
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "133": {
+    "inputs": {
+      "crop_left": 0.0,
+      "crop_right": 0.0,
+      "crop_top": 0.0,
+      "crop_bottom": 0.0,
+      "width": 2000,
+      "height": 2000,
+      "multiplicity": 16,
+      "resolution (MP)": 4.0,
+      "upscale_method": "bicubic",
+      "aspect_ratio": "1:1",
+      "Ratio Presets": "1:1",
+      "ratio_lock": false,
+      "Full Image": null,
+      "Center": null,
+      "Maximize": null,
+      "crop_preview": null,
+      "image": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "orex Crop",
+    "_meta": {
+      "title": "🔳Crop (OreX)"
+    }
+  },
+  "84:28": {
+    "inputs": {
+      "vae_name": "pixel_space"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "84:29": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "84:69",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "84:30": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "84:69",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "84:31": {
+    "inputs": {
+      "shift": 1.5,
+      "model": [
+        "84:71",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "ModelSamplingSD3"
+    }
+  },
+  "84:61": {
+    "inputs": {
+      "sigmas": "0.999,0.866,0.634,0.342,0"
+    },
+    "class_type": "ManualSigmas",
+    "_meta": {
+      "title": "ManualSigmas"
+    }
+  },
+  "84:11": {
+    "inputs": {
+      "context_length": 2048,
+      "context_overlap": 512,
+      "context_schedule": "standard_static",
+      "context_stride": 1,
+      "closed_loop": false,
+      "fuse_method": "pyramid",
+      "dim": 2,
+      "freenoise": false,
+      "cond_retain_index_list": "",
+      "split_conds_to_windows": false,
+      "latent_retain_index_list": "False",
+      "causal_window_fix": true,
+      "model": [
+        "84:31",
+        0
+      ]
+    },
+    "class_type": "ContextWindowsManual",
+    "_meta": {
+      "title": "Context Windows (Manual)"
+    }
+  },
+  "84:62": {
+    "inputs": {
+      "add_noise": true,
+      "noise_seed": 118841766576017,
+      "cfg": 1.0,
+      "model": [
+        "84:11",
+        0
+      ],
+      "positive": [
+        "84:73",
+        0
+      ],
+      "negative": [
+        "84:29",
+        0
+      ],
+      "sampler": [
+        "84:72",
+        0
+      ],
+      "sigmas": [
+        "84:61",
+        0
+      ],
+      "latent_image": [
+        "84:63",
+        0
+      ]
+    },
+    "class_type": "SamplerCustom",
+    "_meta": {
+      "title": "SamplerCustom"
+    }
+  },
+  "84:63": {
+    "inputs": {
+      "width": 4096,
+      "height": 4096,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "84:64": {
+    "inputs": {
+      "pixels": [
+        "84:37",
+        0
+      ],
+      "vae": [
+        "84:70",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "84:34": {
+    "inputs": {
+      "samples": [
+        "84:62",
+        0
+      ],
+      "vae": [
+        "84:28",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "84:35": {
+    "inputs": {
+      "rgthree_comparer": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_gbfml_00047_.png&type=temp&subfolder=&rand=0.0778872655021069"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_gbfml_00048_.png&type=temp&subfolder=&rand=0.7353262000057188"
+          }
+        ]
+      },
+      "image_a": [
+        "84:66",
+        0
+      ],
+      "image_b": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "Image Comparer (rgthree)",
+    "_meta": {
+      "title": "Image Comparer (rgthree)"
+    }
+  },
+  "84:66": {
+    "inputs": {
+      "invert_mask": true,
+      "detect": "mask_area",
+      "top_reserve": 0,
+      "bottom_reserve": 0,
+      "left_reserve": 0,
+      "right_reserve": 0,
+      "round_to_multiple": "8",
+      "image": [
+        "84:34",
+        0
+      ],
+      "mask": [
+        "84:67",
+        3
+      ]
+    },
+    "class_type": "LayerUtility: CropByMask V2",
+    "_meta": {
+      "title": "LayerUtility: CropByMask V2"
+    }
+  },
+  "84:67": {
+    "inputs": {
+      "width": 4096,
+      "height": 4096,
+      "upscale_method": "bicubic",
+      "keep_proportion": "resize",
+      "pad_color": "0, 0, 0",
+      "crop_position": "center",
+      "divisible_by": 2,
+      "device": "cpu",
+      "image": [
+        "84:37",
+        0
+      ],
+      "mask": [
+        "84:37",
+        1
+      ]
+    },
+    "class_type": "ImageResizeKJv2",
+    "_meta": {
+      "title": "Resize Image v2"
+    }
+  },
+  "84:37": {
+    "inputs": {
+      "target_width": 1024,
+      "target_height": 1024,
+      "feathering": 0,
+      "upscale_method": "lanczos",
+      "image": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "ImagePadForOutpaintTargetSize",
+    "_meta": {
+      "title": "Image Pad For Outpaint Target Size"
+    }
+  },
+  "84:68": {
+    "inputs": {
+      "unet_name": "PID\\pid_flux1_1024_to_4096_4step_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "84:69": {
+    "inputs": {
+      "clip_name": "PID\\gemma_2_2b_it_elm_bf16.safetensors",
+      "type": "pixeldit",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "84:70": {
+    "inputs": {
+      "vae_name": "flux-vae-bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "84:71": {
+    "inputs": {
+      "sage_attention": "disabled",
+      "allow_compile": false,
+      "model": [
+        "84:68",
+        0
+      ]
+    },
+    "class_type": "PathchSageAttentionKJ",
+    "_meta": {
+      "title": "Patch Sage Attention KJ"
+    }
+  },
+  "84:72": {
+    "inputs": {
+      "sampler_name": "lcm"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "84:73": {
+    "inputs": {
+      "latent_format": "flux",
+      "degrade_sigma": 0.1,
+      "positive": [
+        "84:30",
+        0
+      ],
+      "latent": [
+        "84:64",
+        0
+      ]
+    },
+    "class_type": "PiDConditioning",
+    "_meta": {
+      "title": "PiD Conditioning"
+    }
+  }
+}

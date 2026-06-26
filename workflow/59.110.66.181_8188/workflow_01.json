@@ -1,91 +1,9 @@
 {
-  "13": {
-    "class_type": "SaveImage",
+  "1": {
+    "class_type": "VisualizeCUDAMemoryHistory",
     "inputs": {
-      "filename_prefix": "a30186699d524426aafeba1fb8c8a627/a30186699d524426aafeba1fb8c8a627",
-      "images": [
-        "5",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "保存图像"
-    }
-  },
-  "3": {
-    "class_type": "ImageUpscaleWithModel",
-    "inputs": {
-      "image": [
-        "14",
-        0
-      ],
-      "upscale_model": [
-        "4",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "图像通过模型放大"
-    }
-  },
-  "14": {
-    "class_type": "LoadImageFromUrl",
-    "inputs": {
-      "image": "http://59.110.66.181:9201/file/upload/material/images/8d58bb8af49e4460ba40589ea1f7ae06.png",
-      "keep_alpha_channel": false,
-      "output_mode": true
-    },
-    "_meta": {
-      "title": "Load Image From URL"
-    }
-  },
-  "4": {
-    "class_type": "UpscaleModelLoader",
-    "inputs": {
-      "model_name": "4x-ClearRealityV1.pth"
-    },
-    "_meta": {
-      "title": "放大模型加载器"
-    }
-  },
-  "5": {
-    "class_type": "ImageScale",
-    "inputs": {
-      "image": [
-        "3",
-        0
-      ],
-      "width": [
-        "9",
-        0
-      ],
-      "upscale_method": "area",
-      "crop": "center",
-      "height": [
-        "8",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "图像缩放"
-    }
-  },
-  "8": {
-    "class_type": "easy int",
-    "inputs": {
-      "value": 1440
-    },
-    "_meta": {
-      "title": "整数"
-    }
-  },
-  "9": {
-    "class_type": "easy int",
-    "inputs": {
-      "value": 2560
-    },
-    "_meta": {
-      "title": "整数"
+      "snapshot_path": "C:/ComfyUI_POC2/ComfyUI_1/ComfyUI/input/x_41478.pkl",
+      "unique_id": "x_41478"
     }
   }
 }

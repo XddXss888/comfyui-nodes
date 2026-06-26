@@ -1,93 +1,38 @@
 {
   "1": {
-    "class_type": "LoadImageOutput",
-    "widgets_values": [
-      "YOUR_FILE_NAME.png [output]",
-      false,
-      "refresh",
-      "image"
-    ],
+    "class_type": "LoadImage",
     "inputs": {
-      "image": "ai_input_FB7D5E83-8434-4FA8-899F-53A5F424403E.png"
+      "image": "test_usa_topo_b4f7bd77-748e-4e9f-a9d0-62b7147f5d70.png"
     }
   },
   "2": {
-    "class_type": "UpscaleModelLoader",
+    "class_type": "DownloadAndLoadDepthAnythingV2Model",
     "inputs": {
-      "model_name": "4x_foolhardy_Remacri.pth"
-    },
-    "_meta": {
-      "title": "Load Upscale Model"
+      "model": "depth_anything_v2_vitl_fp32.safetensors",
+      "precision": "fp32"
     }
   },
   "3": {
-    "class_type": "ImageUpscaleWithModel",
+    "class_type": "DepthAnything_V2",
     "inputs": {
-      "image": [
-        "1",
-        0
-      ],
-      "upscale_model": [
+      "da_model": [
         "2",
         0
-      ]
-    },
-    "_meta": {
-      "title": "Upscale x4 (Model)"
-    }
-  },
-  "5": {
-    "class_type": "AILab_ImageMaskResize",
-    "inputs": {
-      "width": 0,
-      "height": 0,
-      "scale_by": 1.0,
-      "upscale_method": "bicubic",
-      "resize_mode": "resize",
-      "pad_color": "#ffffff",
-      "crop_position": "center",
-      "divisible_by": 1,
-      "device": "gpu",
-      "image": [
-        "3",
-        0
       ],
-      "mask": [
+      "images": [
         "1",
-        1
-      ]
-    },
-    "_meta": {
-      "title": "Resize Alpha to Upscaled Size (no padding)"
-    }
-  },
-  "6": {
-    "class_type": "JoinImageWithAlpha",
-    "inputs": {
-      "image": [
-        "3",
         0
-      ],
-      "alpha": [
-        "5",
-        1
       ]
-    },
-    "_meta": {
-      "title": "Join Upscaled Image + Alpha Mask"
     }
   },
   "4": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "6",
+        "3",
         0
       ],
-      "filename_prefix": "iqueue_upscale_FB7D5E83-8434-4FA8-899F-53A5F424403E"
-    },
-    "_meta": {
-      "title": "Save Upscaled"
+      "filename_prefix": "iqueue_mode_compare_usa_topo_b4f7bd77-748e-4e9f-a9d0-62b7147f5d70"
     }
   }
 }

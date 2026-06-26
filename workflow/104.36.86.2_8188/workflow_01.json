@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 1513354976,
+      "seed": 311084154,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,ass, hit, hug, partially submerged, pool, water, window, blinds, plant, indoors, lips,(and send ma a pic of ur hit hug ass:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,Panty,looking at viewer,smile,short,blue eyes,blonde,indoors,lips,realistic,(Panty:1.0),(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2025/10/12/1760283995314.jpg",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202411/2/f6e0954d7eb243f2b78a6c022704986d.png",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

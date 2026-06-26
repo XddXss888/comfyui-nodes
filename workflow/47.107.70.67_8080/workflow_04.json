@@ -25,7 +25,7 @@
   "3": {
     "inputs": {
       "lora_name": "anima\\anima-base-1-masterpiece-v51.safetensors",
-      "strength_model": 1.0,
+      "strength_model": 0.3,
       "model": [
         "2",
         0
@@ -53,7 +53,7 @@
   "46": {
     "inputs": {
       "lora_name": "anima\\gpt-image-2_anima-base1_v1-1.safetensors",
-      "strength_model": 0.0,
+      "strength_model": 0.2,
       "model": [
         "4",
         0
@@ -67,7 +67,7 @@
   "47": {
     "inputs": {
       "lora_name": "anima\\虹甜蜜点-@NJSW33T.safetensors",
-      "strength_model": 1.0,
+      "strength_model": 0.5,
       "model": [
         "46",
         0
@@ -122,7 +122,7 @@
         "45",
         0
       ],
-      "text": "masterpiece, best quality, safe,very aesthetic, ultra-detailed, abstract, nsfw, @gpt-image-2, @meionANIMAstyle,@sw33t,@NJSW33T,${promot}, nsfw, dim_light, cool_lighting, soft_shading, blue_tint, depth_of_field, (1girl, 1boy), oral_sex, blowjob, kneeling, deepthroat, ( POV, pov_from_male:1.2), intimate_moment, kitchen_scene, morning_routine, steam_rising, warm_atmosphere BREAK\n1girl, Sumire, female_focus, 20yo, japanese, tall_woman, curvy_figure, brown_hair,八字刘海马尾, light_brown_eyes, eyes_closed, fair_skin, large_breasts, j_cup_breasts, hanging_strap_silhouette, loose_sling_dress, no_bra, erect_nipples_visible, kneeling_on_floor, head_down, performing_deepthroat, saliva_dripping, (parted_lips), glossy_lips, heavy_blush, messy_hair, swallowing, throat_stretched, taking_deep BREAK\n1boy, male_focus, partner, visible_penis, penis_in_mouth, deep_penetration, hard_penis, veins, male_perspective, kitchen_apron, hand_on_partner_s_head, pushing_head, pulling_hair, erection, pre_cum_dripping BREAK\n(indoors), kitchen, gas_stove, miso_soup_pot, steam_rising, morning_light, 6am, japanese_style_house, homey_atmosphere"
+      "text": "masterpiece, best quality,very aesthetic, mature woman,ultra-detailed, nsfw, @gpt-image-2, @meionANIMAstyle,@sw33t,@NJSW33T,${promot}, A cinematic photo from the side of a man and a woman sitting on a yacht deck at sunset. BREAK (1girl, Yu Guiwan:1.1), female_focus, 48yo, visual_age_30, mature female, sitting_on_sofa, leaning_forward, legs_crossed, holding_champagne_glass, looking_at_partner, (black_hair, retro_curls, messy_hair, windblown_hair, red_lips:1.2), seductive_smile, half_closed_eyes, (burgundy_silk_slip_dress, high_slit_dress, revealing_thighs), elegant_posture. BREAK (1boy, zy:1.1), male_focus, sitting_opposite, holding_whiskey_glass, calm_expression, (short_black_hair, navy_blue_silk_shirt, unbuttoned_collar, black_pants). BREAK (outdoors), yacht_deck, white_leather_sofa, ocean_background, warm golden hour sunset lighting, strong backlighting, volumetric rays, dramatic_shadows, high_tension, depth_of_field."
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
@@ -172,7 +172,7 @@
         0
       ],
       "seed": 317540284430183,
-      "steps": 47,
+      "steps": 12,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

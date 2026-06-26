@@ -128,7 +128,7 @@
   },
   "11": {
     "inputs": {
-      "image": "ComfyUI_00261_.png"
+      "image": "ComfyUI_00266_.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -156,6 +156,44 @@
       "filename_prefix": "ComfyUI",
       "images": [
         "12",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "14": {
+    "inputs": {
+      "image": "ComfyUI_00265_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "15": {
+    "inputs": {
+      "prompt": "keep everything exactly the same, but with clean and neat sofa, not torn",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "16:9",
+      "images.image_1": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "16": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "15",
         0
       ]
     },

@@ -1,119 +1,93 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "LoadImageOutput",
+    "widgets_values": [
+      "YOUR_FILE_NAME.png [output]",
+      false,
+      "refresh",
+      "image"
+    ],
     "inputs": {
-      "ckpt_name": "flux1-schnell-fp8.safetensors"
-    },
-    "_meta": {
-      "title": "Checkpoint Loader (Model/CLIP/VAE)"
+      "image": "ai_input_90063E6D-9579-48F5-9B9A-97DF6670F778.png"
     }
   },
   "2": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "UpscaleModelLoader",
     "inputs": {
-      "clip": [
-        "1",
-        1
-      ],
-      "text": "CREATE AN AMERICAN FLAG THAT IS STANDARD SIZE FOR A HARD HAT STICKER NO POLE AND NOT WAVING\r\n\r\n"
+      "model_name": "RealESRGAN_x4plus.safetensors"
     },
     "_meta": {
-      "title": "Positive Prompt"
+      "title": "Load Upscale Model"
     }
   },
   "3": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "ImageUpscaleWithModel",
     "inputs": {
-      "clip": [
-        "1",
-        1
-      ],
-      "text": "low quality, bad anatomy, deformed, extra limbs, blurry, watermark"
-    },
-    "_meta": {
-      "title": "Negative Prompt"
-    }
-  },
-  "4": {
-    "class_type": "EmptyLatentImage",
-    "inputs": {
-      "batch_size": 1,
-      "height": 1024,
-      "width": 1024
-    },
-    "_meta": {
-      "title": "Empty Latent (Width/Height/Batch)"
-    }
-  },
-  "5": {
-    "class_type": "KSampler",
-    "inputs": {
-      "model": [
+      "image": [
         "1",
         0
       ],
-      "positive": [
+      "upscale_model": [
         "2",
         0
-      ],
-      "negative": [
-        "3",
-        0
-      ],
-      "latent_image": [
-        "4",
-        0
-      ],
-      "cfg": 1.0,
-      "denoise": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "normal",
-      "seed": 4294812802822540,
-      "steps": 30
-    },
-    "_meta": {
-      "title": "Sampler (Seed/Steps/CFG/Sampler/Scheduler)"
-    }
-  },
-  "6": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "samples": [
-        "5",
-        0
-      ],
-      "vae": [
-        "1",
-        2
       ]
     },
     "_meta": {
-      "title": "VAE Decode"
+      "title": "Upscale x4 (Model)"
     }
   },
-  "7": {
+  "5": {
+    "class_type": "AILab_ImageMaskResize",
+    "inputs": {
+      "width": 0,
+      "height": 0,
+      "scale_by": 1.0,
+      "upscale_method": "bicubic",
+      "resize_mode": "resize",
+      "pad_color": "#ffffff",
+      "crop_position": "center",
+      "divisible_by": 1,
+      "device": "gpu",
+      "image": [
+        "3",
+        0
+      ],
+      "mask": [
+        "1",
+        1
+      ]
+    },
+    "_meta": {
+      "title": "Resize Alpha to Upscaled Size (no padding)"
+    }
+  },
+  "6": {
+    "class_type": "JoinImageWithAlpha",
+    "inputs": {
+      "image": [
+        "3",
+        0
+      ],
+      "alpha": [
+        "5",
+        1
+      ]
+    },
+    "_meta": {
+      "title": "Join Upscaled Image + Alpha Mask"
+    }
+  },
+  "4": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
         "6",
         0
       ],
-      "filename_prefix": "iqueue_4C1C8204-6C33-4F46-B913-3923BDB52ACA"
+      "filename_prefix": "iqueue_upscale_90063E6D-9579-48F5-9B9A-97DF6670F778"
     },
     "_meta": {
-      "title": "Save to Disk"
-    }
-  },
-  "8": {
-    "class_type": "SaveImageWebsocket",
-    "inputs": {
-      "images": [
-        "6",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "Stream via Websocket"
+      "title": "Save Upscaled"
     }
   }
 }

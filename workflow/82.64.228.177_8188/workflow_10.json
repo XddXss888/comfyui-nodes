@@ -1,0 +1,106 @@
+{
+  "1": {
+    "inputs": {
+      "ckpt_name": "z-image-turbo-fp8-aio.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "2": {
+    "inputs": {
+      "samples": [
+        "9",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "5": {
+    "inputs": {
+      "text": "yo mama",
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "9": {
+    "inputs": {
+      "seed": 440268439118644,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "10",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "10": {
+    "inputs": {
+      "text": "The image shows a portrait of a Portuguese woman as if it came from a photomaton, with multiple portraits combined on one print. She has long and wavy brown hair tied in a high ponytail that's slightly lifted by an silver clip, with some golden strands framing her face. Her large and expressive eyes are almost black under fine lashes, giving her a soft yet perceptive gaze. In the first portrait, she wears a white tank top that accentuates her curvaceous figure. She has a wide and warm smile revealing her straight and white teeth behind full and slightly curved lips. In the second portrait, she looks down with a gentle and tender expression as if reading thoughts in someone else's eyes. The third portrait captures her looking up, her closed eyelids hinting at a contented moment. Her skin is soft and velvety, her respiration light and soothing. In the fourth portrait, she has a smaller but still warm smile, her eyes wide with a slightly surprised look. The fifth portrait shows her with one eye open, her gaze focused yet curious. She has a smaller and more subtle smile, her lips slightly parted. The sixth portrait depicts her closing both eyes in thought or daydreaming. In the final seventh portrait, she has a wide and cheerful smile that illuminates her fair skin, with the warm sunlight of a Portuguese spring morning casting golden highlights on her hair and face.",
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "16": {
+    "inputs": {
+      "images": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  }
+}

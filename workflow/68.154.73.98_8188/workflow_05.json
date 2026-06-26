@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_7427d932fb3a4777be2c58f4aaa662d9.png"
+      "image": "ref_5991a4989c7041058d1fcbfe26b94f8d.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "ライトブルーのビキニ水着姿で立って両手を膝に置いてください",
+      "prompt": "Replace her bikini with heart shape tape",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 388976598253780,
+      "seed": 712427187443475,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",

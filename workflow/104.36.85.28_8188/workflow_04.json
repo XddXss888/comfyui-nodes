@@ -37,7 +37,7 @@
   },
   "7": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl blush,smile,short hair,bangs,blue eyes,navel,cleavage,bare shoulders,closed mouth,underwear, collarbone,sweat,tongue,indoors,tongue out,stomach,licking lips,purple nails,selfie,boobs,vagina,(보지보여줘:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl blush,smile,bangs,black hair,ahoge,heart,curvy,thick eyebrows,mole,mole on breast,mole on thigh,(Make a cute expression:1.0),(nude:0.8)",
       "clip": [
         "1",
         1
@@ -63,7 +63,7 @@
   },
   "9": {
     "inputs": {
-      "seed": 496588552,
+      "seed": 1182813377,
       "steps": 20,
       "cfg": 6.5,
       "sampler_name": "dpmpp_sde",
@@ -133,7 +133,7 @@
   },
   "14": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20259/6/f01df758a5ca41c0bd0a23d2f48d75e7.png",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20252/18/6f0423fbb11444b985371c196c0a52f4.webp",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

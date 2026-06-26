@@ -1,0 +1,197 @@
+{
+  "1": {
+    "inputs": {
+      "ckpt_name": "Qwen-Rapid-AIO-NSFW-v18.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Checkpoint加载器（简易）"
+    }
+  },
+  "7": {
+    "inputs": {
+      "image": "高晓冉 - 副本.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "10": {
+    "inputs": {
+      "text": "保持图中女人五官不变。\n8K超高清, 细节拉满, 电影级质感, 构图完美, 主体突出, 色彩自然, HDR高动态范围, 锐化抗锯齿, 无噪点, RAW格式, 杰作, 最佳质量, 精细CG, 壁纸级画质\n女人穿着新中式改良旗袍，哑光暗纹提花墨绿面料，立领盘扣搭配珍珠流苏，高开叉边缘绣银线海棠花纹。\n女人的衣服半透明，乳房和阴部隐约可见。\n显示女人全身。"
+    },
+    "class_type": "Text Multiline",
+    "_meta": {
+      "title": "Text Multiline"
+    }
+  },
+  "33": {
+    "inputs": {
+      "width": 576,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Final Image Size"
+    }
+  },
+  "40": {
+    "inputs": {
+      "lora_name": "Qwen/Qwen-Image-Edit-F2P.safetensors",
+      "strength_model": 0.35,
+      "model": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "48": {
+    "inputs": {
+      "filename_prefix": "千问AIO单图编辑",
+      "images": [
+        "50:44",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "51": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": false,
+        "lora": "qwen/双腿抬高.safetensors",
+        "strength": 1
+      },
+      "lora_2": {
+        "on": false,
+        "lora": "qwen/屁眼.safetensors",
+        "strength": 0.45
+      },
+      "lora_3": {
+        "on": false,
+        "lora": "qwen/假阳具.safetensors",
+        "strength": 0.5
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree)"
+    }
+  },
+  "50:47": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "1",
+        1
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus Negative (leave blank)"
+    }
+  },
+  "50:46": {
+    "inputs": {
+      "prompt": [
+        "10",
+        0
+      ],
+      "clip": [
+        "1",
+        1
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "image1": [
+        "50:49",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus Input Prompt"
+    }
+  },
+  "50:44": {
+    "inputs": {
+      "samples": [
+        "50:45",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "50:49": {
+    "inputs": {
+      "any_02": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)"
+    }
+  },
+  "50:45": {
+    "inputs": {
+      "seed": 536578423955627,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "beta",
+      "denoise": 1.0,
+      "model": [
+        "51",
+        0
+      ],
+      "positive": [
+        "50:46",
+        0
+      ],
+      "negative": [
+        "50:47",
+        0
+      ],
+      "latent_image": [
+        "33",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  }
+}

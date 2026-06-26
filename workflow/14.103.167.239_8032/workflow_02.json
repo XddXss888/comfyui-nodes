@@ -72,13 +72,13 @@
   },
   "94": {
     "inputs": {
-      "tags": "这首作品属于独立流行风格，融合了梦幻流行与新民谣元素。整体音乐语言温暖而内敛，情感色彩偏向温柔忧郁，同时隐含希望的微光。核心织体围绕一把干净的琶音原声吉他展开，其音色清澈通透，具有明显的木质共鸣质感，为整首歌曲奠定了宁静而亲密的基调。主旋律由一位轻柔细腻的女声演绎，她的嗓音纯净、富有穿透力，在演唱中采用了自然的发声技巧，并巧妙地加入了轻微气音以增强人声的表现力与亲和力。伴奏结构遵循渐进式安排：起初仅由独奏吉他引入情绪氛围，接着逐步加入克制稳定的鼓机节奏以及温润厚实的贝斯线条，构建出基础但稳固的律动骨架。进入副歌后，通过添加人声和声与柔和的合成器垫底音色（pad），创造出层次丰富却毫不繁复的声音空间；其中合成器的加入不仅增强了音响厚度，也带来了梦幻朦胧的情绪张力，使忧郁之中泛起隐隐渴望。中部设置了独特的过渡段落，采用中文演唱并施以轻微混响处理的人声，制造出一种略带催眠感的氛围体验。整首曲目的动态变化温和自然，没有剧烈起伏，而是依靠乐器与人声之间的互动来推进情感递进。整体情绪表达深沉而不激烈，弥漫着静谧忧郁与隐约希望交织的独特氛围。结构方面清晰明确，包含完整的主歌、副歌及桥段发展，结尾则回归至最初的吉他与人声组合，以极简的方式完成情绪上的闭环收束。",
+      "tags": "这是一首融合环境音乐、非洲传统打击乐与摇滚元素的作品，整体基调为D小调，营造出神秘且充满力量的氛围。前奏使用柔和的风声、水滴声与远处雷鸣作为自然环境音效，引导听者进入宁静的冥想状态。随后逐步加入康加鼓、邦戈鼓和沙锤等非洲打击乐器，形成多层次的多部节奏结构，节奏感强烈却不失流动性。电吉他的失真音色在低频贝斯线的支撑下，提供摇滚的张力与冲击力。管乐部分交替使用萨克斯风和长笛，萨克斯的温暖音色与长笛的空灵旋律相互呼应，增添忧郁而悠扬的旋律线。人声采用低吟浅唱的方式演绎，声音温暖磁性，在关键段落加入轻柔的和声叠加，提升情感厚度。整体动态从安静的环境氛围逐渐构建到激昂的节奏爆发，再回归到淡出式的自然宁静。结构上包含两个主歌、两个副歌以及一个桥段，最后以渐弱的方式收尾，整体时长约3分10秒，适合在现场或影像配乐中表现自然的壮阔与细腻。",
       "lyrics": "[Instrumental]",
       "seed": 31,
-      "bpm": 78,
-      "duration": 256.0,
+      "bpm": 108,
+      "duration": 190.0,
       "timesignature": "4",
-      "language": "zh",
+      "language": "en",
       "keyscale": "D minor",
       "generate_audio_codes": false,
       "cfg_scale": 2.0,
@@ -98,7 +98,7 @@
   },
   "98": {
     "inputs": {
-      "seconds": 256.0,
+      "seconds": 190.0,
       "batch_size": 1
     },
     "class_type": "EmptyAceStep1.5LatentAudio",
@@ -139,7 +139,7 @@
   },
   "107": {
     "inputs": {
-      "filename_prefix": "audio/温柔的忧郁",
+      "filename_prefix": "audio/Echoes of the Wild",
       "audioUI": "",
       "audio": [
         "18",
@@ -153,7 +153,7 @@
   },
   "108": {
     "inputs": {
-      "seed": 3219403804,
+      "seed": 216131790,
       "steps": 12,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -183,13 +183,13 @@
   },
   "110": {
     "inputs": {
-      "tags": "这首作品属于独立流行风格，融合了梦幻流行与新民谣元素。整体音乐语言温暖而内敛，情感色彩偏向温柔忧郁，同时隐含希望的微光。核心织体围绕一把干净的琶音原声吉他展开，其音色清澈通透，具有明显的木质共鸣质感，为整首歌曲奠定了宁静而亲密的基调。主旋律由一位轻柔细腻的女声演绎，她的嗓音纯净、富有穿透力，在演唱中采用了自然的发声技巧，并巧妙地加入了轻微气音以增强人声的表现力与亲和力。伴奏结构遵循渐进式安排：起初仅由独奏吉他引入情绪氛围，接着逐步加入克制稳定的鼓机节奏以及温润厚实的贝斯线条，构建出基础但稳固的律动骨架。进入副歌后，通过添加人声和声与柔和的合成器垫底音色（pad），创造出层次丰富却毫不繁复的声音空间；其中合成器的加入不仅增强了音响厚度，也带来了梦幻朦胧的情绪张力，使忧郁之中泛起隐隐渴望。中部设置了独特的过渡段落，采用中文演唱并施以轻微混响处理的人声，制造出一种略带催眠感的氛围体验。整首曲目的动态变化温和自然，没有剧烈起伏，而是依靠乐器与人声之间的互动来推进情感递进。整体情绪表达深沉而不激烈，弥漫着静谧忧郁与隐约希望交织的独特氛围。结构方面清晰明确，包含完整的主歌、副歌及桥段发展，结尾则回归至最初的吉他与人声组合，以极简的方式完成情绪上的闭环收束。",
-      "lyrics": "[Intro - Fingerpicked Guitar]\n[guitar solo, no lyrics]\n\n\n[Verse 1 - Soft Female Vocal]\n窗外雨滴轻轻落下\n打湿回忆里的花\n你说过的话还在耳边绕啊\n像风一样自由却抓不住呀\n\n[Pre-Chorus - Building Layers]\n时间悄悄走过\n带走多少不舍\n只剩下这夜晚的灯火\n陪我沉默\n\n[Chorus - Harmonized Vocals, Pad]\n温柔的忧郁漫上心头\n像海浪拍打着沙滩不休\n那些美好是否还会停留\n在这梦里不愿醒的时候\n\n[Verse 2 - Acoustic Texture]\n旧照片泛黄的模样\n是你笑得那么亮\n如今只剩一个人看夕阳\n把思念藏进夜的漫长\n\n[Bridge - Whispered Chinese Vocals, Reverb]\n如果风知道答案\n能不能别太快吹散\n让我再多看一眼\n那曾经温暖的画面\n\n[Chorus - Full Arrangement]\n温柔的忧郁漫上心头\n像海浪拍打着沙滩不休\n那些美好是否还会停留\n在这梦里不愿醒的时候\n\n[Outro - Stripped Down]\n就让这首歌陪着我\n直到天明不再难过\n",
+      "tags": "这是一首融合环境音乐、非洲传统打击乐与摇滚元素的作品，整体基调为D小调，营造出神秘且充满力量的氛围。前奏使用柔和的风声、水滴声与远处雷鸣作为自然环境音效，引导听者进入宁静的冥想状态。随后逐步加入康加鼓、邦戈鼓和沙锤等非洲打击乐器，形成多层次的多部节奏结构，节奏感强烈却不失流动性。电吉他的失真音色在低频贝斯线的支撑下，提供摇滚的张力与冲击力。管乐部分交替使用萨克斯风和长笛，萨克斯的温暖音色与长笛的空灵旋律相互呼应，增添忧郁而悠扬的旋律线。人声采用低吟浅唱的方式演绎，声音温暖磁性，在关键段落加入轻柔的和声叠加，提升情感厚度。整体动态从安静的环境氛围逐渐构建到激昂的节奏爆发，再回归到淡出式的自然宁静。结构上包含两个主歌、两个副歌以及一个桥段，最后以渐弱的方式收尾，整体时长约3分10秒，适合在现场或影像配乐中表现自然的壮阔与细腻。",
+      "lyrics": "[Intro - ambient]\n\n[Verse - low whisper]\n\nIn the hush of wind and rain,\nThe earth breathes a silent song.\nDrums awaken, pulse like rain,\nA heartbeat deep and strong.\n\n[Chorus - high energy, harmonies]\nFeel the fire, feel the tide,\nRocking souls on ancient stride.\nSax and flute, they intertwine,\nEchoes rise, the wild aligns.\n\n[Verse - low whisper]\nShadows dance on river stones,\nWhispers curl through forest tones.\nBass and guitar, gritty, raw,\nGuide the night to dawn’s first draw.\n\n[Chorus - high energy, harmonies]\nFeel the fire, feel the tide,\nRocking souls on ancient stride.\nSax and flute, they intertwine,\nEchoes rise, the wild aligns.\n\n[Bridge - building energy]\nThunder rolls, the world expands,\nRhythms surge, we understand.\nLayers lift, the sky ignites,\nNature’s pulse, our spirits light.\n\n[Outro - fade out]\nFrom the storm to quiet breath,\nWe return where silence rests.\nThe drums fade, the strings retreat,\nIn the wild, our hearts still beat.",
       "seed": 31,
-      "bpm": 78,
-      "duration": 256.0,
+      "bpm": 108,
+      "duration": 190.0,
       "timesignature": "4",
-      "language": "zh",
+      "language": "en",
       "keyscale": "D minor",
       "generate_audio_codes": false,
       "cfg_scale": 2.0,

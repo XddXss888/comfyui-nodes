@@ -87,7 +87,7 @@
   },
   "32": {
     "inputs": {
-      "seed": 25489368851006,
+      "seed": 310352960138955,
       "steps": 10,
       "cfg": 1.2,
       "sampler_name": "ddim",
@@ -145,7 +145,7 @@
   },
   "35": {
     "inputs": {
-      "image": "50_a_prison_st01.png"
+      "image": "ComfyUI_temp_jdyme_00001_.png"
     },
     "class_type": "orex Load Image",
     "_meta": {
@@ -154,7 +154,7 @@
   },
   "36": {
     "inputs": {
-      "text_0": "A high-quality oil painting on canvas, characterized by expressive brushwork and impressionistic realism, in the style of John Singer Sargent and Joaquín Sorolla. The scene is captured from a low angle, looking upward at the subjects to emphasize their sense of wonder. The lighting is bright, natural daylight, creating high-contrast highlights on the children's faces and deep, rich shadows within the train carriage.\nIn the center of the frame, three small children are leaning out of a train window. In the middle, a petite girl with blonde hair tied with a small, bright red bow is laughing joyfully; she wears a white dress with delicate red lace trim around the collar and sleeves. To her left, in the foreground, a young boy with messy blonde hair and an athletic, small build is leaning out, his face expressing pure ecstasy with a wide-open mouth. He is wearing an olive-green jacket with a vibrant orange collar. On the right side of the window, slightly higher up, another small boy with blonde hair and a white shirt looks toward the sky with a beaming expression of awe.\nThe train carriage itself is a massive, deep emerald-green structure that occupies the right side and bottom of the frame, featuring dark brown wooden window frames and metallic rivets. In the bottom left corner, there is a tiny, delicate cursive signature in black ink that reads \"OreX\". \nIn the background, occupying the top left and center portions of the image, is a brilliant cerulean blue sky filled with large, fluffy white clouds. The brushstrokes are visible and textured, particularly in the highlights of the children's hair and the reflections on the train's surface. The overall atmosphere is nostalgic, vibrant, and overflowing with childhood joy.",
+      "text_0": "Since you requested a careful description of the style and a transformation into a high-quality prompt based on the provided image, I have analyzed the aesthetic: it is a **Traditional-Modern (Transitional) Interior Style**. It combines classic elements (floral wallpaper, ornate mirror shape, oak wood) with modern functionality (built-in cabinetry, clean lines).\nHere is the maximally detailed prompt based on your input and the image provided:\n**Generated Prompt:**\nA photorealistic interior photograph in the style of high-end real estate photography and *Architectural Digest*. Eye-level shot, wide-angle lens, f/8 aperture to ensure sharp focus across the entire furniture unit. The scene is flooded with high-contrast, bright natural sunlight streaming from a balcony door on the far left, creating distinct diagonal shadows and highlights on the floor and wood surfaces. \nIn the center of the frame, a massive, floor-to-ceiling built-in wardrobe and vanity unit made of warm light-oak wood with a distinct natural grain is fully visible. The vanity section is positioned in the center, featuring a long wooden desk surface, multiple drawers with small gold-toned circular handles, and a large, vertical mirror with a decorative, slightly curved top edge. To the immediate left and right of the vanity, large vertical wardrobe doors span the wall. \nOn the far left of the frame, a large glass balcony door is partially visible, covered by long, translucent white curtains that catch the bright morning light. The wall directly behind the vanity unit is covered in a light-cream wallpaper featuring a repeating, subtle beige floral pattern. The floor is composed of dark-brown polished wood planks, showing the reflection of the sunlight. In the bottom left corner, there is a very small, elegant, white cursive signature that reads \"OreX\". The overall atmosphere is bright, serene, and domestically organized, capturing a peaceful morning in a well-maintained apartment.",
       "text": [
         "33",
         0
@@ -167,12 +167,12 @@
   },
   "37": {
     "inputs": {
-      "ratio": "1:1 ◻",
-      "Megapixel": 1.5,
+      "ratio": "Custom",
+      "Megapixel": 1.27,
       "Megapixel = 1024^2": true,
       "Multiplicity": 16,
-      "custom_width": 1248,
-      "custom_height": 1248,
+      "custom_width": 1440,
+      "custom_height": 928,
       "ratio_preview": null
     },
     "class_type": "orex Ratio",
@@ -187,12 +187,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_faipe_00009_.png&type=temp&subfolder=&rand=0.5151629129846356"
+            "url": "/api/view?filename=rgthree.compare._temp_faipe_00003_.png&type=temp&subfolder=&rand=0.8085976922975981"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_faipe_00010_.png&type=temp&subfolder=&rand=0.19757033388741718"
+            "url": "/api/view?filename=rgthree.compare._temp_faipe_00004_.png&type=temp&subfolder=&rand=0.686246869753959"
           }
         ]
       },
@@ -245,39 +245,16 @@
       "title": "Load LoRA"
     }
   },
-  "51": {
+  "57": {
     "inputs": {
-      "active": false,
-      "output_path": "",
-      "create_current_date_folder": true,
-      "create_processed_folder": false,
-      "filename_prefix_1": "Image",
-      "filename_prefix_2": "",
-      "filename_prefix_3": "",
-      "filename_separator": "_",
-      "use_counter": true,
-      "embed_workflow": true,
-      "image_format": "png",
-      "jpg_quality": 90,
-      "webp_quality": 0,
-      "optimize_png": false,
       "images": [
         "45:21",
         0
       ]
     },
-    "class_type": "orex Save Image",
+    "class_type": "PreviewImage",
     "_meta": {
-      "title": "💾 Save Image (OreX)"
-    }
-  },
-  "45:39": {
-    "inputs": {
-      "vae_name": "pixel_space"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Load VAE"
+      "title": "Preview Image"
     }
   },
   "45:40": {
@@ -326,29 +303,6 @@
     "class_type": "ManualSigmas",
     "_meta": {
       "title": "ManualSigmas"
-    }
-  },
-  "45:43": {
-    "inputs": {
-      "context_length": 2048,
-      "context_overlap": 512,
-      "context_schedule": "standard_static",
-      "context_stride": 1,
-      "closed_loop": false,
-      "fuse_method": "pyramid",
-      "dim": 2,
-      "freenoise": false,
-      "cond_retain_index_list": "",
-      "split_conds_to_windows": false,
-      "causal_window_fix": false,
-      "model": [
-        "45:42",
-        0
-      ]
-    },
-    "class_type": "ContextWindowsManual",
-    "_meta": {
-      "title": "Context Windows (Manual)"
     }
   },
   "45:12": {
@@ -436,12 +390,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_lhtyp_00009_.png&type=temp&subfolder=&rand=0.3886343796850228"
+            "url": "/api/view?filename=rgthree.compare._temp_lhtyp_00003_.png&type=temp&subfolder=&rand=0.011559237307392056"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_lhtyp_00010_.png&type=temp&subfolder=&rand=0.17065325237993678"
+            "url": "/api/view?filename=rgthree.compare._temp_lhtyp_00004_.png&type=temp&subfolder=&rand=0.7345080779093826"
           }
         ]
       },
@@ -506,43 +460,6 @@
       "title": "Resize Image v2"
     }
   },
-  "45:23": {
-    "inputs": {
-      "target_width": 1024,
-      "target_height": 1024,
-      "feathering": 0,
-      "upscale_method": "lanczos",
-      "image": [
-        "3",
-        0
-      ]
-    },
-    "class_type": "ImagePadForOutpaintTargetSize",
-    "_meta": {
-      "title": "Image Pad For Outpaint Target Size"
-    }
-  },
-  "45:44": {
-    "inputs": {
-      "unet_name": "PID\\pid_flux1_1024_to_4096_4step_bf16.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Load Diffusion Model"
-    }
-  },
-  "45:1": {
-    "inputs": {
-      "clip_name": "PID\\gemma_2_2b_it_elm_bf16.safetensors",
-      "type": "pixeldit",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "Load CLIP"
-    }
-  },
   "45:4": {
     "inputs": {
       "vae_name": "flux-vae-bf16.safetensors"
@@ -591,6 +508,76 @@
     "class_type": "PiDConditioning",
     "_meta": {
       "title": "PiD Conditioning"
+    }
+  },
+  "45:44": {
+    "inputs": {
+      "unet_name": "PID\\pid_flux1_1024_to_4096_4step_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "45:1": {
+    "inputs": {
+      "clip_name": "PID\\gemma_2_2b_it_elm_bf16.safetensors",
+      "type": "pixeldit",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "45:39": {
+    "inputs": {
+      "vae_name": "pixel_space"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "45:43": {
+    "inputs": {
+      "context_length": 2048,
+      "context_overlap": 512,
+      "context_schedule": "standard_static",
+      "context_stride": 1,
+      "closed_loop": false,
+      "fuse_method": "pyramid",
+      "dim": 2,
+      "freenoise": false,
+      "cond_retain_index_list": "",
+      "split_conds_to_windows": false,
+      "latent_retain_index_list": "",
+      "causal_window_fix": true,
+      "model": [
+        "45:42",
+        0
+      ]
+    },
+    "class_type": "ContextWindowsManual",
+    "_meta": {
+      "title": "Context Windows (Manual)"
+    }
+  },
+  "45:23": {
+    "inputs": {
+      "target_width": 1024,
+      "target_height": 1024,
+      "feathering": 0,
+      "upscale_method": "lanczos",
+      "image": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "ImagePadForOutpaintTargetSize",
+    "_meta": {
+      "title": "Image Pad For Outpaint Target Size"
     }
   }
 }

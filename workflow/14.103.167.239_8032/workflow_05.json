@@ -72,13 +72,13 @@
   },
   "94": {
     "inputs": {
-      "tags": "流派/风格：融合90年代放克律动、独立流行的清新旋律与独立摇滚的原始吉他质感。乐器：采用典型的丛林碎拍鼓点，暖色调电吉他、清晰贝斯与复古模拟合成器垫底。音色质感：温暖干净，鼓点高频清晰，吉他轻微过驱保持清晰发音。人声特点：女声独唱，明亮温柔且带轻微颗粒感，副歌加入层叠和声。声乐特征：略带切分的节奏感，副歌高音区力度提升，桥段低语式柔和处理。时代参考：致敬90年代放克并融合现代独立音乐。制作风格：混合模拟与数字混音，鼓点压实，吉他中频突出，动态从低能量前奏逐步构建到高能量副歌，桥段稍回落，尾奏以淡化鼓点和延伸合成器收束。动态：前奏低能量、主歌中等、预副歌上升、高潮副歌高能量、桥段情绪稍降、尾奏淡出。情感：怀念过去美好时光并期待未来，轻快舞动中带有温柔回忆。氛围：复古却不失现代感，适合城市夜晚灯光下聆听。结构：Intro → Verse → Pre‑Chorus → Chorus → Verse → Pre‑Chorus → Chorus → Bridge → Chorus → Outro。",
+      "tags": "这是一首中速（115 BPM）4/4拍的流行摇滚作品，融合了布鲁斯元素。整体采用立体声宽阔的混音，吉他在左右声道交替出现，营造出宽广的空间感。吉他使用复古Blues放大器模拟，音色温暖、带有轻微过载和滑音，演奏方式以清晰、干净的即兴为主。贝斯采用指弹与指弹混合的弹奏方式，低频圆润、扎实，为整体提供稳固的节奏支撑。鼓组为标准摇滚鼓套，踢鼓、军鼓、踩镲配合紧凑且干净的混响，突出攻击感。键盘可选轻柔的合成垫，为和声提供柔和的背景。人声为男声主唱，音域中高，声音清晰真挚并带有轻微颗粒感，采用直录加轻微压缩，主旋律流畅，副歌部分加入高能量的和声叠加。制作参考2000年代后期的欧美流行摇滚，如Foo Fighters和Kings of Leon的制作手法，注重层次感与动态变化。结构上从清晰的吉他即兴前奏开始，进入稳健的主歌，随后副歌能量提升；桥段以吉他独奏提升张力，随后再次全力爆发的副歌，最终通过吉他滑音淡出收尾，留给听者余韵悠长。情感上表现出激情、励志与向前冲的力量感，同时带有一点蓝调的忧郁，适合现场演出时的明亮、宽广氛围。",
       "lyrics": "[Instrumental]",
       "seed": 31,
-      "bpm": 118,
-      "duration": 220.0,
+      "bpm": 115,
+      "duration": 210.0,
       "timesignature": "4",
-      "language": "zh",
+      "language": "en",
       "keyscale": "A minor",
       "generate_audio_codes": false,
       "cfg_scale": 2.0,
@@ -98,7 +98,7 @@
   },
   "98": {
     "inputs": {
-      "seconds": 220.0,
+      "seconds": 210.0,
       "batch_size": 1
     },
     "class_type": "EmptyAceStep1.5LatentAudio",
@@ -139,7 +139,7 @@
   },
   "107": {
     "inputs": {
-      "filename_prefix": "audio/时光的律动",
+      "filename_prefix": "audio/Rising Road",
       "audioUI": "",
       "audio": [
         "18",
@@ -153,7 +153,7 @@
   },
   "108": {
     "inputs": {
-      "seed": 429205187,
+      "seed": 3936248140,
       "steps": 12,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -183,13 +183,13 @@
   },
   "110": {
     "inputs": {
-      "tags": "流派/风格：融合90年代放克律动、独立流行的清新旋律与独立摇滚的原始吉他质感。乐器：采用典型的丛林碎拍鼓点，暖色调电吉他、清晰贝斯与复古模拟合成器垫底。音色质感：温暖干净，鼓点高频清晰，吉他轻微过驱保持清晰发音。人声特点：女声独唱，明亮温柔且带轻微颗粒感，副歌加入层叠和声。声乐特征：略带切分的节奏感，副歌高音区力度提升，桥段低语式柔和处理。时代参考：致敬90年代放克并融合现代独立音乐。制作风格：混合模拟与数字混音，鼓点压实，吉他中频突出，动态从低能量前奏逐步构建到高能量副歌，桥段稍回落，尾奏以淡化鼓点和延伸合成器收束。动态：前奏低能量、主歌中等、预副歌上升、高潮副歌高能量、桥段情绪稍降、尾奏淡出。情感：怀念过去美好时光并期待未来，轻快舞动中带有温柔回忆。氛围：复古却不失现代感，适合城市夜晚灯光下聆听。结构：Intro → Verse → Pre‑Chorus → Chorus → Verse → Pre‑Chorus → Chorus → Bridge → Chorus → Outro。",
-      "lyrics": "[Intro - instrumental]\n\n[Verse - medium energy]\n\n城市灯光映在雨后的街道\n记忆的旋律在心底轻轻摇\n脚步跟随鼓点的碎拍\n微笑在夜色中慢慢展开\n\n[Pre-Chorus - building]\n回荡的合成器像星光闪烁\n我把过去的画面轻轻描绘\n\n[Chorus - high energy, euphoric, harmonies]\n让我们舞动在时光的河流\n放克的律动点燃心中的火\n未来的梦在此刻绽放\n一起唱出永不褪色的歌\n\n[Verse - medium energy]\n旧唱片的噪音仍在耳边回响\n吉他轻抚像温柔的拥抱\n贝斯深沉驱动着思念的波\n每一个音符都是回忆的钥\n\n[Pre-Chorus - building]\n低语的桥段让心跳放慢\n却仍期待下一段的高潮\n\n[Chorus - high energy, euphoric, harmonies]\n让我们舞动在时光的河流\n放克的律动点燃心中的火\n未来的梦在此刻绽放\n一起唱出永不褪色的歌\n\n[Bridge - low energy, whispered]\n在静默的夜里轻声呢喃\n让过去的温柔化作星尘\n\n[Chorus - high energy, euphoric, harmonies]\n让我们舞动在时光的河流\n放克的律动点燃心中的火\n未来的梦在此刻绽放\n一起唱出永不褪色的歌\n\n[Outro - fade out, ambient]\n合成器的余音缓缓消散\n鼓点淡入夜的寂静",
+      "tags": "这是一首中速（115 BPM）4/4拍的流行摇滚作品，融合了布鲁斯元素。整体采用立体声宽阔的混音，吉他在左右声道交替出现，营造出宽广的空间感。吉他使用复古Blues放大器模拟，音色温暖、带有轻微过载和滑音，演奏方式以清晰、干净的即兴为主。贝斯采用指弹与指弹混合的弹奏方式，低频圆润、扎实，为整体提供稳固的节奏支撑。鼓组为标准摇滚鼓套，踢鼓、军鼓、踩镲配合紧凑且干净的混响，突出攻击感。键盘可选轻柔的合成垫，为和声提供柔和的背景。人声为男声主唱，音域中高，声音清晰真挚并带有轻微颗粒感，采用直录加轻微压缩，主旋律流畅，副歌部分加入高能量的和声叠加。制作参考2000年代后期的欧美流行摇滚，如Foo Fighters和Kings of Leon的制作手法，注重层次感与动态变化。结构上从清晰的吉他即兴前奏开始，进入稳健的主歌，随后副歌能量提升；桥段以吉他独奏提升张力，随后再次全力爆发的副歌，最终通过吉他滑音淡出收尾，留给听者余韵悠长。情感上表现出激情、励志与向前冲的力量感，同时带有一点蓝调的忧郁，适合现场演出时的明亮、宽广氛围。",
+      "lyrics": "[Intro - guitar solo]\n\n[Verse]\n\nFeel the road beneath my feet, a sunrise in the haze\nEvery step a promise, every breath a fire that stays\nThe city lights are fading, but the pulse inside won't die\nWe chase the echo of tomorrow, under an open sky\n\n[Chorus - high energy, powerful belting, harmonies]\nWe’re rising, we’re moving, no turning back again\nA thousand miles of thunder, we’re the storm inside the wind\nHold the fire, break the silence, let the world hear our name\nTogether we’ll ignite, the night will never end\n\n[Verse]\nShadows of the past are whispering, but I’m louder than the night\nThe rhythm of the highway drives the doubts out of sight\nWith every chord that shatters, the doubts begin to fade\nWe write our story on the wind, a melody unafraid\n\n[Chorus - high energy, powerful belting, harmonies]\nWe’re rising, we’re moving, no turning back again\nA thousand miles of thunder, we’re the storm inside the wind\nHold the fire, break the silence, let the world hear our name\nTogether we’ll ignite, the night will never end\n\n[Bridge - guitar solo]\n\n[Chorus - high energy, powerful belting, harmonies]\nWe’re rising, we’re moving, no turning back again\nA thousand miles of thunder, we’re the storm inside the wind\nHold the fire, break the silence, let the world hear our name\nTogether we’ll ignite, the night will never end\n\n[Outro - guitar fade]\n\n[Fade Out]",
       "seed": 31,
-      "bpm": 118,
-      "duration": 220.0,
+      "bpm": 115,
+      "duration": 210.0,
       "timesignature": "4",
-      "language": "zh",
+      "language": "en",
       "keyscale": "A minor",
       "generate_audio_codes": false,
       "cfg_scale": 2.0,

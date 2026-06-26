@@ -184,9 +184,21 @@
       "title": "Load VAE"
     }
   },
+  "76": {
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
   "77": {
     "inputs": {
-      "image": "example_1782392866029.jpg"
+      "image": "1782431896104.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -195,16 +207,16 @@
   },
   "78": {
     "inputs": {
-      "text": "House"
+      "text": "Bedroom"
     },
     "class_type": "ttN text",
     "_meta": {
-      "title": "building type"
+      "title": "room"
     }
   },
   "79": {
     "inputs": {
-      "text": "Mint"
+      "text": "Blue"
     },
     "class_type": "ttN text",
     "_meta": {
@@ -279,19 +291,6 @@
     "class_type": "RandomInt",
     "_meta": {
       "title": "Random Int"
-    }
-  },
-  "89": {
-    "inputs": {
-      "filename_prefix": "homeai_exterior",
-      "images": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "save img"
     }
   }
 }

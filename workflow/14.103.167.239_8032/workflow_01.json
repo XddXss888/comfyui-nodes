@@ -1,210 +1,56 @@
 {
+  "1": {
+    "inputs": {
+      "language": "python",
+      "Add Input variable": "add_input_variable",
+      "Add Output variable": "add_output_variable",
+      "Clear": "clear_code",
+      "pycode": "\nfrom mutagen.flac import FLAC\nimport json\nv = json.loads(FLAC(f\"/workspace/ComfyUI_v2/ComfyUI/output/audio/{var4}\")['prompt'][0])[\"110\"][\"inputs\"]\nv0=v[\"timesignature\"]  \nv1=v[\"language\"]       \nv2=v[\"keyscale\"]       \nv3=v[\"duration\"]       \nv4=v[\"bpm\"]             \nv5=v[\"tags\"]           \nv6=v[\"lyrics\"]         \nresult=f'{v0}###{v1}###{v2}###{v3}###{v4}###{v5}###{v6}'\n",
+      "var3": [
+        "3",
+        0
+      ],
+      "var4": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "IDENode",
+    "_meta": {
+      "title": "IDE Node"
+    }
+  },
+  "2": {
+    "inputs": {
+      "preview_markdown": "",
+      "preview_text": "",
+      "previewMode": null,
+      "source": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
+    }
+  },
   "3": {
     "inputs": {
-      "seed": 354555,
-      "steps": 8,
-      "cfg": 1,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1,
-      "model": [
-        "78",
-        0
-      ],
-      "positive": [
-        "94",
-        0
-      ],
-      "negative": [
-        "47",
-        0
-      ],
-      "latent_image": [
-        "98",
-        0
-      ]
+      "value": 1141363147
     },
-    "class_type": "KSampler",
+    "class_type": "PrimitiveInt",
     "_meta": {
-      "title": "KSampler"
+      "title": "Int"
     }
   },
-  "18": {
+  "10": {
     "inputs": {
-      "samples": [
-        "108",
-        0
-      ],
-      "vae": [
-        "106",
-        0
-      ]
+      "value": "回归自然的呼唤_00001_.flac"
     },
-    "class_type": "VAEDecodeAudio",
+    "class_type": "PrimitiveString",
     "_meta": {
-      "title": "VAE Decode Audio"
-    }
-  },
-  "47": {
-    "inputs": {
-      "conditioning": [
-        "94",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "ConditioningZeroOut"
-    }
-  },
-  "78": {
-    "inputs": {
-      "shift": 3.0,
-      "model": [
-        "104",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingAuraFlow",
-    "_meta": {
-      "title": "ModelSamplingAuraFlow"
-    }
-  },
-  "94": {
-    "inputs": {
-      "tags": "这是一首温柔忧郁的流行民谣作品，整体呈现出温暖而内敛的情感色彩。以干净的琶音原声吉他为核心织体，音色清澈通透，富有木质共鸣感。主旋律由轻柔细腻的女声演绎，声音纯净且富有情感穿透力，采用自然的演唱技巧，偶尔带有轻微气音增强亲密感。伴奏编排遵循渐进式结构：从独奏吉他开场，随后加入稳定而克制的鼓机节奏和温润的贝斯线条，奠定基础律动。副歌部分通过叠加人声和声与柔和的合成器垫底音色（pad），营造出层次丰富却不繁复的音响空间，合成器带来一丝梦幻与渴望的情绪张力。歌曲中部设置独特过渡段，运用中文演唱，人声经过轻微混响处理形成催眠般的氛围效果。整体动态变化温和，起伏自然，情感表达深沉却不激烈，弥漫着一种静谧的忧郁与隐隐的希望交织的氛围。结构清晰，包含完整的主歌、副歌及桥段，尾声回归至单纯的吉他与人声，以极简方式完成情绪收束。",
-      "lyrics": "[Instrumental]",
-      "seed": 31,
-      "bpm": 78,
-      "duration": 255.0,
-      "timesignature": "4",
-      "language": "zh",
-      "keyscale": "G major",
-      "generate_audio_codes": false,
-      "cfg_scale": 2.0,
-      "temperature": 0.85,
-      "top_p": 0.9,
-      "top_k": 0,
-      "min_p": 0.0,
-      "clip": [
-        "105",
-        0
-      ]
-    },
-    "class_type": "TextEncodeAceStepAudio1.5",
-    "_meta": {
-      "title": "TextEncodeAceStepAudio1.5"
-    }
-  },
-  "98": {
-    "inputs": {
-      "seconds": 255.0,
-      "batch_size": 1
-    },
-    "class_type": "EmptyAceStep1.5LatentAudio",
-    "_meta": {
-      "title": "Empty Ace Step 1.5 Latent Audio"
-    }
-  },
-  "104": {
-    "inputs": {
-      "unet_name": "acestep_v1.5_xl_sft_turbo_nvfp4.safetensors",
-      "weight_dtype": "fp8_e4m3fn_fast"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Load Diffusion Model"
-    }
-  },
-  "105": {
-    "inputs": {
-      "clip_name1": "qwen_0.6b_ace15-fp8.safetensors",
-      "clip_name2": "qwen_4b_ace15-fp8.safetensors",
-      "type": "ace",
-      "device": "default"
-    },
-    "class_type": "DualCLIPLoader",
-    "_meta": {
-      "title": "DualCLIPLoader"
-    }
-  },
-  "106": {
-    "inputs": {
-      "vae_name": "ace_1.5_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Load VAE"
-    }
-  },
-  "107": {
-    "inputs": {
-      "filename_prefix": "audio/静谧的忧郁",
-      "audioUI": "",
-      "audio": [
-        "18",
-        0
-      ]
-    },
-    "class_type": "SaveAudio",
-    "_meta": {
-      "title": "Save Audio (FLAC)"
-    }
-  },
-  "108": {
-    "inputs": {
-      "seed": 648030807,
-      "steps": 12,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "78",
-        0
-      ],
-      "positive": [
-        "110",
-        0
-      ],
-      "negative": [
-        "47",
-        0
-      ],
-      "latent_image": [
-        "98",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
-    }
-  },
-  "110": {
-    "inputs": {
-      "tags": "这是一首温柔忧郁的流行民谣作品，整体呈现出温暖而内敛的情感色彩。以干净的琶音原声吉他为核心织体，音色清澈通透，富有木质共鸣感。主旋律由轻柔细腻的女声演绎，声音纯净且富有情感穿透力，采用自然的演唱技巧，偶尔带有轻微气音增强亲密感。伴奏编排遵循渐进式结构：从独奏吉他开场，随后加入稳定而克制的鼓机节奏和温润的贝斯线条，奠定基础律动。副歌部分通过叠加人声和声与柔和的合成器垫底音色（pad），营造出层次丰富却不繁复的音响空间，合成器带来一丝梦幻与渴望的情绪张力。歌曲中部设置独特过渡段，运用中文演唱，人声经过轻微混响处理形成催眠般的氛围效果。整体动态变化温和，起伏自然，情感表达深沉却不激烈，弥漫着一种静谧的忧郁与隐隐的希望交织的氛围。结构清晰，包含完整的主歌、副歌及桥段，尾声回归至单纯的吉他与人声，以极简方式完成情绪收束。",
-      "lyrics": "[Intro - Acoustic Guitar Arpeggios]\n\n[Verse 1]\n\n夜色悄悄爬上窗台\n回忆像潮水般涌来\n那些未曾说出的话语\n如今只剩风中尘埃\n\n[Chorus - Layered Vocals, Soft Pad]\n我在这里静静等待\n等一个不会回来的人\n心中那片温柔海洋\n早已结成冰霜\n\n[Verse 2]\n月光洒在旧照片上\n你的笑容如此明亮\n可时光它从不回头望\n只留下孤单的影子长\n\n[Pre-Chorus - Building Energy]\n也许明天会有阳光\n也许梦里还能相见\n但此刻我只是这样\n守着这份沉默思念\n\n[Chorus - Layered Vocals, Soft Pad]\n我在这里静静等待\n等一个不会回来的人\n心中那片温柔海洋\n早已结成冰霜\n\n[Bridge - Dreamy Reverb, Whispered]\n如果时间能够倒流\n我会紧紧握住你的手\n不让遗憾成为永恒\n在这寂静夜晚之中\n\n[Guitar Solo - Emotional Lead]\n\n[Final Chorus - Powerful Belting, Harmonies]\n我在这里静静等待\n哪怕世界已经改变\n心中的爱永不褪色\n就像星辰永远闪烁\n\n[Outro - Acoustic Guitar, Raspy Vocal]\n夜深了 你也累了\n就让这首歌陪你入睡\n",
-      "seed": 31,
-      "bpm": 78,
-      "duration": 255.0,
-      "timesignature": "4",
-      "language": "zh",
-      "keyscale": "G major",
-      "generate_audio_codes": false,
-      "cfg_scale": 2.0,
-      "temperature": 0.5,
-      "top_p": 0.9,
-      "top_k": 0,
-      "min_p": 0.0,
-      "clip": [
-        "105",
-        0
-      ]
-    },
-    "class_type": "TextEncodeAceStepAudio1.5",
-    "_meta": {
-      "title": "TextEncodeAceStepAudio1.5"
+      "title": "String"
     }
   }
 }

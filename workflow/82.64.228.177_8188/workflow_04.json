@@ -1,0 +1,106 @@
+{
+  "1": {
+    "inputs": {
+      "ckpt_name": "z-image-turbo-fp8-aio.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "2": {
+    "inputs": {
+      "samples": [
+        "9",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "5": {
+    "inputs": {
+      "text": "yo mama",
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "9": {
+    "inputs": {
+      "seed": 305460505279180,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "10",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "10": {
+    "inputs": {
+      "text": "The woman is about 1.55 meters tall and has a slender figure. She wears a fitted jeans that accentuates her silhouette, and a white tank top that highlights her full, heavy breasts. Her long, wavy hair is tied back in a loose ponytail secured by a simple silver clip, with a few strands of golden highlights framing her face. Her eyes are large and expressive, almost black under fine lashes that give them a gentle yet perceptive look. She has a warm, welcoming smile that reveals her white, even teeth, and her lips are full and slightly outlined. She sits with a relaxed posture, her hair gently flowing over her shoulders like a delicate stream of gold. Her skin is soft and velvety, with a rosy hue. The warmth of her body seems to envelop the scene in a tender embrace. Her smile illuminates her face, making each line of her smooth, creamy skin more captivating. She has a gentle, peaceful expression as she looks at someone with her eyes half-closed, then locks her gaze into theirs, as if reading every thought that passes through their minds.",
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "16": {
+    "inputs": {
+      "images": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  }
+}

@@ -25,7 +25,7 @@
   "3": {
     "inputs": {
       "lora_name": "anima\\anima-base-1-masterpiece-v51.safetensors",
-      "strength_model": 1.0,
+      "strength_model": 0.3,
       "model": [
         "2",
         0
@@ -53,7 +53,7 @@
   "46": {
     "inputs": {
       "lora_name": "anima\\gpt-image-2_anima-base1_v1-1.safetensors",
-      "strength_model": 0.0,
+      "strength_model": 0.2,
       "model": [
         "4",
         0
@@ -67,7 +67,7 @@
   "47": {
     "inputs": {
       "lora_name": "anima\\虹甜蜜点-@NJSW33T.safetensors",
-      "strength_model": 1.0,
+      "strength_model": 0.5,
       "model": [
         "46",
         0
@@ -122,7 +122,7 @@
         "45",
         0
       ],
-      "text": "masterpiece, best quality, safe,very aesthetic, ultra-detailed, abstract, nsfw, @gpt-image-2, @meionANIMAstyle,@sw33t,@NJSW33T,${promot}, A high-quality cinematic POV photo in a brightly lit bathroom. A mature woman is standing under a shower, eyes closed, being washed. BREAK (1girl, LinZhiQiu:1.1), female_focus, 40yo, housewife, standing_under_shower, wet_body, closed_eyes, relaxed_posture, (long_black_hair, wet_hair, hair_sticking_to_body, fair_skin, large_breasts), completely_nude, no_clothes, no_panties, water_drops, dripping_water, (parted_lips:1.1), flushed_face. BREAK (1boy, unseen_partner), pov, pov_from_male, visible_hand, touching_thigh, washing_partner. BREAK (indoors), luxury_bathroom, shower_head, running_water, wet_tiles, bright artificial indoor lighting, cinematic illumination, bloom, depth_of_field."
+      "text": "masterpiece, best quality,very aesthetic, mature woman,ultra-detailed, nsfw, @gpt-image-2, @meionANIMAstyle,@sw33t,@NJSW33T,${promot}, A cinematic photo from a high angle of a man looking down at a woman sitting on the floor in a sunlit bedroom. BREAK (1girl, Tang Shiyun:1.1), female_focus, 40yo, mature female, sitting_on_floor, fallen, supporting_herself_with_hands, looking_away, (black_hair, messy_hair, biting_lower_lip:1.2), flushed_face, stubborn_expression, (silver_grey_silk_nightgown, messy_clothes), (black_lace_panties, stained). BREAK (1boy, zy:1.1), male_focus, standing, looking_down_at_partner, (short_black_hair, wet_hair), shirtless, muscular_build, wearing_white_towel_around_waist. BREAK (indoors), bedroom, sunlight_streaming_through_window, bright natural daylight, balanced exposure, vivid colors, dramatic_shadows, high_tension, depth_of_field."
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
@@ -172,7 +172,7 @@
         0
       ],
       "seed": 317540284430183,
-      "steps": 47,
+      "steps": 12,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

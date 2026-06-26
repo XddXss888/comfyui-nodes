@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "DENISE, A nude woman lying on her back on a bed in missionary position, legs spread wide and knees pulled up, with thick white semen visibly leaking from her vagina after a creampie, her hips tilted upward, hands gripping the sheets beside her, flushed face showing pleasure with parted lips and eyes half-closed looking toward the viewer, soft warm bedroom lighting, medium close-up framing from a low angle focusing on her torso and hips, clean composition with simple dark sheets background.",
+      "text": "seductive young curvy woman with long black hair, A close-up of a woman with her mouth open, thick cum visibly dripping from her lower lip and chin in glossy strands, her gaze directed upward with a satisfied expression, soft warm indoor lighting catching the wet texture on her skin, medium close-up framing centered on her face and mouth, clean composition with natural proportions and stable details.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "DENISE_SYNTH_zimg_v1.safetensors",
-      "strength_model": 0.78,
-      "strength_clip": 0.8,
+      "lora_name": "izumi_v.2.safetensors",
+      "strength_model": 0.9,
+      "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -133,11 +133,11 @@
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 8,
+      "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 1031310649651904,
+      "seed": 26161571962184,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

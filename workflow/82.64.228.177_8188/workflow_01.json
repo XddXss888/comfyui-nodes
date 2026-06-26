@@ -1,0 +1,106 @@
+{
+  "1": {
+    "inputs": {
+      "ckpt_name": "z-image-turbo-fp8-aio.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "2": {
+    "inputs": {
+      "samples": [
+        "9",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "5": {
+    "inputs": {
+      "text": "yo mama",
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "9": {
+    "inputs": {
+      "seed": 778038490359651,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "10",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "10": {
+    "inputs": {
+      "text": "Imagine a sheep, as the Little Prince envisioned it. The sheep has a gentle and friendly appearance with soft, fluffy fur that is predominantly white with a hint of creamy beige. Its face is round and its eyes are large and expressive, giving it an endearing look. The ears are slightly pointed at the tips, providing just enough detail to make them recognizable. The mouth is small but well-defined, framed by a gentle curve in the side of the muzzle. The legs are short and sturdy, with hooves that appear to be perfectly round, each one outlined in a soft brown color. The tail is long and thin, curving slightly downward towards the end, where it tapers into a fine point. The overall shape of the sheep is rounded and compact, giving it a peaceful and contented appearance.",
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "16": {
+    "inputs": {
+      "images": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  }
+}

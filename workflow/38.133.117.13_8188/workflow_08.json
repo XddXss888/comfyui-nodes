@@ -1,337 +1,140 @@
 {
   "1": {
+    "class_type": "UNETLoader",
     "inputs": {
-      "samples": [
-        "2",
-        0
-      ],
-      "vae": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
+      "unet_name": "qwen_image_fp8_e4m3fn.safetensors",
+      "weight_dtype": "default"
     }
   },
   "2": {
+    "class_type": "CLIPLoader",
     "inputs": {
-      "seed": 829176465314407,
-      "steps": 8,
-      "cfg": 1.0,
-      "sampler_name": "er_sde",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "9",
-        0
-      ],
-      "positive": [
-        "11",
-        0
-      ],
-      "negative": [
-        "5",
-        0
-      ],
-      "latent_image": [
-        "6",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
     }
   },
   "4": {
+    "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "images": [
-        "1",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
+      "width": 1344,
+      "height": 768,
+      "batch_size": 1
     }
   },
   "5": {
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "conditioning": [
-        "11",
+      "clip": [
+        "2",
         0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "ConditioningZeroOut"
+      ],
+      "text": "A formal engineering blueprint / technical patent diagram of a plate of spaghetti and meatballs, drawn as precise white and pale-cyan line work on a deep blueprint-blue background. The pasta is rendered as an exploded technical schematic: individual strands of spaghetti labeled with part numbers and leader lines, cross-sectional cutaway views of a meatball showing concentric internal layers with callout annotations, and a fork mid-twirl diagrammed with curved motion arrows and angle-of-rotation degrees marked in dotted arcs. Dimension lines with arrowheads measure the plate's diameter and the noodle gauge, complete with tolerance notations. A neat title block in the lower-right corner reads like a patent header with grid coordinates, \"FIG. 1,\" and faux revision numbers. Sauce coverage shown as a hatched fill pattern with a density legend. Top-down orthographic projection plus a small isometric inset in the corner. Everything is monochromatic blueprint cyan-on-blue, crisp uniform line weights, faint grid paper texture underneath, slight aging and fold creases on the paper. Flat, even technical-document lighting with no shadows, as if scanned. Shot as a high-resolution flatbed scan, fine paper grain, the clean reproduction of archival drafting film. Precise, deadpan, wonderfully over-engineered."
     }
   },
   "6": {
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "width": 2560,
-      "height": 1440,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "Empty Latent Image"
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
     }
   },
   "7": {
+    "class_type": "CFGGuider",
     "inputs": {
-      "clip_name": "qwen3vl_4b_fp8_scaled.safetensors",
-      "type": "krea2",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "Load CLIP"
-    }
-  },
-  "8": {
-    "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Load VAE"
-    }
-  },
-  "9": {
-    "inputs": {
-      "unet_name": "Krea-2-Turbo.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Load Turbo Model"
-    }
-  },
-  "11": {
-    "inputs": {
-      "text": [
-        "40",
-        0
-      ],
-      "clip": [
-        "7",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
-    }
-  },
-  "16": {
-    "inputs": {
-      "conditioning": [
-        "18",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "ConditioningZeroOut"
-    }
-  },
-  "18": {
-    "inputs": {
-      "text": [
-        "40",
-        0
-      ],
-      "clip": [
-        "7",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
-    }
-  },
-  "19": {
-    "inputs": {
-      "seed": 888,
-      "steps": 4,
-      "cfg": 1.0,
-      "sampler_name": "er_sde",
-      "scheduler": "simple",
-      "denoise": 0.15,
       "model": [
-        "21",
+        "1",
         0
       ],
       "positive": [
-        "18",
+        "5",
         0
       ],
       "negative": [
-        "16",
+        "6",
+        0
+      ],
+      "cfg": 2.5
+    }
+  },
+  "8": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "scheduler": "beta",
+      "steps": 20,
+      "denoise": 1.0
+    }
+  },
+  "9": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 1463307961
+    }
+  },
+  "10": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "11": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "9",
+        0
+      ],
+      "guider": [
+        "7",
+        0
+      ],
+      "sampler": [
+        "10",
+        0
+      ],
+      "sigmas": [
+        "8",
         0
       ],
       "latent_image": [
-        "23",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
-    }
-  },
-  "20": {
-    "inputs": {
-      "samples": [
-        "19",
-        0
-      ],
-      "vae": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
-    }
-  },
-  "21": {
-    "inputs": {
-      "sage_attention": "auto",
-      "allow_compile": false,
-      "model": [
-        "9",
-        0
-      ]
-    },
-    "class_type": "PathchSageAttentionKJ",
-    "_meta": {
-      "title": "Patch Sage Attention KJ"
-    }
-  },
-  "22": {
-    "inputs": {
-      "images": [
-        "20",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
-    }
-  },
-  "23": {
-    "inputs": {
-      "pixels": [
-        "33",
-        0
-      ],
-      "vae": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE Encode"
-    }
-  },
-  "27": {
-    "inputs": {
-      "value": "Overhead top-down shot looking straight down through clear, shallow turquoise water onto a pale sandy bottom, capturing intricate caustic light patterns dancing across the floor. Bright sunlight refracts through the gently rippling surface, splitting into a shifting web of interlocking bright lines and soft-edged cells of light — the caustics — woven across the rippled sand below, with darker channels between them. The water surface above shows faint overlapping ripples and a few suspended bubbles catching the sun as pinpoint sparkles. Subtle gradient from deeper teal at the edges to luminous aqua where the light pools. A scattering of small smooth pebbles on the bottom casts long soft shadows that bend and waver through the moving water. Crisp midday sunlight from directly overhead, high clarity, no harsh glare. Shot on a 35mm lens, f/8 for edge-to-edge sharpness, ISO 100, fast shutter to freeze the rippling light. Clean, bright, the crisp color rendering of Kodak Ektar 100 — fine grain, true blues and warm sand tones. Mesmerizing, tranquil, hyper-detailed nature abstract."
-    },
-    "class_type": "PrimitiveStringMultiline",
-    "_meta": {
-      "title": "Text String (Multiline)"
-    }
-  },
-  "32": {
-    "inputs": {
-      "rgthree_comparer": {
-        "images": [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_aupgp_00019_.png&type=temp&subfolder=&rand=0.7651519110713394"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_aupgp_00020_.png&type=temp&subfolder=&rand=0.28129912410082636"
-          }
-        ]
-      },
-      "image_a": [
         "4",
         0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "vae": [
+        "3",
+        0
       ],
-      "image_b": [
-        "22",
-        0
+      "samples": [
+        "11",
+        1
       ]
-    },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "Image Comparer (rgthree)"
     }
   },
-  "33": {
+  "13": {
+    "class_type": "ETN_SaveImageCache",
     "inputs": {
-      "upscale_method": "lanczos",
-      "scale_by": 1.5,
-      "image": [
-        "1",
-        0
-      ]
-    },
-    "class_type": "ImageScaleBy",
-    "_meta": {
-      "title": "Upscale Image By"
-    }
-  },
-  "34": {
-    "inputs": {
-      "filename_prefix": "img",
-      "filename_keys": "%F %H-%M-%S",
-      "foldername_prefix": "",
-      "foldername_keys": "krea2",
-      "delimiter": "-",
-      "save_job_data": "disabled",
-      "job_data_per_image": false,
-      "job_custom_text": "",
-      "save_metadata": true,
-      "counter_digits": 4,
-      "counter_position": "last",
-      "one_counter_per_folder": true,
-      "image_preview": false,
-      "output_ext": ".png",
-      "quality": 90,
       "images": [
-        "22",
+        "12",
         0
-      ]
-    },
-    "class_type": "SaveImageExtended",
-    "_meta": {
-      "title": "💾 Save Image Extended"
-    }
-  },
-  "40": {
-    "inputs": {
-      "any_01": [
-        "27",
-        0
-      ]
-    },
-    "class_type": "Any Switch (rgthree)",
-    "_meta": {
-      "title": "Any Switch (rgthree)"
+      ],
+      "format": "PNG"
     }
   }
 }

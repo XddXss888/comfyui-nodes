@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "elvaross, A woman reclining with legs spread wide open, knees bent and thighs parted, skirt lifted high around her waist to fully expose her vagina, passionately kissing while embraced from the front with hands gripping her buttocks, aroused expression with eyes half-closed, medium close-up framing, soft warm indoor lighting, natural skin tones and realistic anatomy.",
+      "text": "seductive young curvy woman with long black hair, A seductive woman standing in a softly lit hallway, fully nude with smooth skin, intensely touching herself with one hand between her spread thighs, fingers pressing and rubbing firmly against her exposed clitoris and vagina in a focused rhythm, her other hand gripping her breast, hips tilted forward, torso slightly arched, head tilted back with eyes half-closed and mouth parted in pleasure, medium close-up framing from the waist up, warm directional lighting casting gentle shadows across her body.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 1.73,
+      "shift": 12.0,
       "model": [
         "72",
         0
@@ -109,8 +109,8 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "TGZW383YGE7RTN4ZTNPAM4FT50.safetensors",
-      "strength_model": 0.88,
+      "lora_name": "izumi_v.2.safetensors",
+      "strength_model": 0.9,
       "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.4,
+      "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 8,
+      "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 494111015108424,
+      "seed": 26161571962184,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

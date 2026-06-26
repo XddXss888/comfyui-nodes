@@ -1857,7 +1857,7 @@
   },
   "141": {
     "inputs": {
-      "prompt": "upscale this image and also add mehendi on the yellow kurti girl",
+      "prompt": "upscale this image",
       "model": "Pro",
       "model.resolution": "2K",
       "aspect_ratio": "9:16",
@@ -1886,104 +1886,38 @@
   },
   "143": {
     "inputs": {
-      "image": "ComfyUI_00079_.png"
+      "prompt": "जिस लड़के को मैं हमेशा अपने से कम समझता था, एक दिन वो Instagram से मुझसे ज़्यादा कमाने लगा।\nऔर तभी मुझे डर लगने लगा कि कहीं मैं ज़िंदगी भर बस दूसरों को आगे बढ़ते हुए ही न देखता रह जाऊँ।\nकुछ महीने पहले तक हम दोनों एक जैसी ज़िंदगी जी रहे थे।\nएक जैसी नौकरी।\nएक जैसी सैलरी।\nलेकिन फिर उसने Instagram पर काम शुरू किया।\nशुरू में मैंने मज़ाक उड़ाया।\nसोचा, \"रील्स बनाकर कौन पैसे कमाता है?\"\nलेकिन धीरे-धीरे चीज़ें बदलने लगीं।\nवो नए फोन खरीदने लगा।\nनए कपड़े पहनने लगा।\nऔर मैं अब भी महीने के आखिर में पैसों का हिसाब लगा रहा था।\nएक दिन मैंने उससे पूछ ही लिया।\n\"भाई, सच-सच बता... ये सब कैसे हो रहा है?\"\nवो हँसकर बोला,\n\"मैं भी पहले कुछ नहीं जानता था।\"\n\"फिर मैंने Seekho App पर Instagram Growth Secrets शो देखा।\"\nउस समय मुझे लगा, ये भी कोई सीखने की चीज़ है?\nलेकिन अंदर ही अंदर मुझे डर लग रहा था।\nकहीं ऐसा न हो कि मैं हमेशा सोचता रह जाऊँ और बाकी लोग आगे निकल जाएँ।\nउसकी बात मानकर मैंने भी Seekho App डाउनलोड कर लिया।\nवहाँ पहली बार समझ आया कि Instagram पर कमाई सिर्फ़ वीडियो डालने से नहीं होती।\nलोग किसी रील पर रुकते क्यों हैं।\nव्यूज़ क्यों नहीं आते।\nफॉलोवर्स कैसे बढ़ते हैं।\nऔर Instagram का एल्गोरिदम आखिर काम कैसे करता है।\nसब कुछ आसान भाषा में।\nछोटे-छोटे वीडियो में।\nबिना किसी फालतू थ्योरी के।\nमैंने सीखी हुई चीज़ें अपनी रील्स में लागू करनी शुरू कीं।\nधीरे-धीरे व्यूज़ बढ़े।\nफॉलोवर्स बढ़े।\nऔर फिर पहली बार Instagram से कमाई भी हुई।\nउस दिन समझ आया...\nसमस्या मेहनत की नहीं थी।\nसमस्या ये थी कि मुझे सही तरीका पता ही नहीं था।\nअगर आप भी Instagram से कमाना चाहते हैं, लेकिन समझ नहीं आ रहा कहाँ से शुरू करें...\nतो अंदाज़े से मत चलो।\nSeekho App पर Instagram Growth Secrets देखो।\nसही स्ट्रैटेजी सीखो।\nInstagram पर अपनी ऑडियंस बनाओ।\nऔर कमाई शुरू करो।\nतो इंस्टॉल बटन पर क्लिक करो और अभी Seekho App डाउनलोड करो।",
+      "model": "3.1 Flash",
+      "voice_name": "Algenib (Gravelly)"
     },
-    "class_type": "LoadImage",
+    "class_type": "Official_GeminiTTSSingleNode",
     "_meta": {
-      "title": "Load Image"
+      "title": "Gemini Text to Speech"
     }
   },
   "144": {
     "inputs": {
-      "prompt": "sasu maa in green saree says very proudly about the yellow kurti girl\n\" Hamaari bahu ki mehandi poore mohalle mein mashoor hai! \"",
-      "duration": "8",
-      "aspect_ratio": "9:16",
-      "resolution": "720p",
-      "seed": 0,
-      "images.image_1": [
+      "filename_prefix": "audio/ComfyUI",
+      "quality": "V0",
+      "audioUI": "",
+      "audio": [
         "143",
         0
       ]
     },
-    "class_type": "Kie_GeminiOmniVideoNode",
+    "class_type": "SaveAudioMP3",
     "_meta": {
-      "title": "Gemini Omni Video"
+      "title": "Save Audio (MP3)"
     }
   },
   "145": {
     "inputs": {
-      "filename_prefix": "video/ComfyUI",
-      "format": "auto",
-      "codec": "auto",
-      "video-preview": "",
-      "video": [
-        "148",
-        0
-      ]
-    },
-    "class_type": "SaveVideo",
-    "_meta": {
-      "title": "Save Video"
-    }
-  },
-  "146": {
-    "inputs": {
-      "prompt": "A cinematic transformation montage inside a realistic Tier-3 Indian home. Fast-paced but emotionally grounded. Warm natural lighting throughout.\n\nShot 1 (0–2 sec)\n\nExtreme macro close-up of a mehendi cone tip touching skin.\n\nThe first precise bridal mehendi line is drawn beautifully.\n\nProfessional creator-style framing.\n\nKajal is now more confident and intentional while creating content.\n\nQuick cuts of her carefully positioning the camera and recording better shots.\n\nShot 2 (2–4 sec)\n\nFast time-lapse sequence.\n\nA completely empty hand gradually transforms into a stunning full bridal mehendi design.\n\nMultiple quick angles:\n\nCone detailing\nPalm patterns\nWrist extensions\nBridal finishing touches\n\nThe content looks more engaging and professionally presented.\n\nKajal reviews the footage with satisfaction.\n\nShot 3 (4–6 sec)\n\nClose-up of Kajal holding her phone.\n\nThe audience briefly sees Instagram growth numbers rapidly increasing:\n\n114 → 1,200 → 4,500 → 9,000\n\nThe numbers animate upward quickly.\n\nKajal's eyes widen slightly in disbelief.\n\nShe begins smiling naturally.\n\nPhone notification sounds start appearing.\n\nShot 4 (6–8 sec)\n\nSeveral message notifications arrive one after another.\n\nVisible notification previews:\n\n\"Didi, beti ki shaadi hai...\"\n\n\"Bridal mehandi ka order dena hai.\"\n\n\"Booking available?\"\n\n\"Date confirm karni hai.\"\n\nKajal excitedly reads them.\n\nHer confidence grows.\n\nShe can hardly believe it.\n\nShot 5 (8–10 sec)\n\nInside the house living room.\n\nThe same mother-in-law who once doubted her is now proudly standing with a neighbor.\n\nA proud smile on her face.\n\nShe enthusiastically shows Kajal's phone to the neighbor.\n\nThe neighbor looks impressed.\n\nConfusion → Learning → Improvement → Growth → Orders → Family Pride\n\nVisual Style\n\nUltra-realistic Indian creator success story, authentic Tier-3 household, social media growth journey, premium advertisement cinematography, realistic smartphone interactions, emotional transformation, relatable female entrepreneur success.\n\nNegative Prompt\n\nviral influencer mansion, luxury interiors, unrealistic follower counts, exaggerated celebrations, jumping, dancing, Bollywood reactions, fake success, crying, overacting, cartoon UI, unreadable notifications, distorted hands, AI artifacts, western household, glamour fashion shoot, unrealistic social media interface.",
-      "aspect_ratio": "9:16",
-      "resolution": "720p",
-      "duration": 15,
-      "nsfw_checker": true,
-      "image": [
-        "137",
-        0
-      ]
-    },
-    "class_type": "Kie_GrokImagineVideo15PreviewNode",
-    "_meta": {
-      "title": "Grok Imagine Video 1.5 Preview"
-    }
-  },
-  "147": {
-    "inputs": {
-      "filename_prefix": "video/ComfyUI",
-      "format": "auto",
-      "codec": "auto",
-      "video-preview": "",
-      "video": [
-        "146",
-        0
-      ]
-    },
-    "class_type": "SaveVideo",
-    "_meta": {
-      "title": "Save Video"
-    }
-  },
-  "148": {
-    "inputs": {
-      "prompt": "sasu maa in green saree says very proudly about the yellow kurti girl\n\" Hamaari bahu ki mehandi poore mohalle mein mashoor hai! \"",
-      "aspect_ratio": "9:16",
-      "resolution": "720p",
-      "duration": 6,
-      "nsfw_checker": true,
-      "image": [
-        "143",
-        0
-      ]
-    },
-    "class_type": "Kie_GrokImagineVideo15PreviewNode",
-    "_meta": {
-      "title": "Grok Imagine Video 1.5 Preview"
-    }
-  },
-  "149": {
-    "inputs": {
-      "prompt": "A realistic Tier-3 Indian middle-class home. Warm natural daylight entering through a nearby window, creating a soft cinematic glow. Kajal, a 26-year-old Indian mehendi artist, stands confidently in the center of the frame.\n\nShe wears a simple mustard yellow kurta with a light blue dupatta. Her posture is upright and self-assured.\n\nIn one hand, she confidently holds a mehendi cone ready to continue working. On her other hand, a beautiful half-finished bridal mehendi design is visible, showcasing intricate floral and bridal patterns extending across the palm and wrist.\n\nUnlike earlier scenes, Kajal now radiates confidence and quiet success. A natural smile appears on her face—not exaggerated, but the smile of someone whose hard work is finally paying off.\n\nThe camera slowly pushes in as she looks slightly toward the camera while continuing to work on the design. Her eyes show pride, confidence, and optimism.\n\nThe background remains an authentic Indian home environment—simple walls, modest furniture, realistic household details. Nothing luxurious. The success feels relatable and earned.\n\nThe bridal mehendi design should be exceptionally detailed and professional, clearly showing her skill and craftsmanship.\n\nPhotorealistic Indian woman, realistic skin texture, authentic facial features, natural smile, premium commercial quality, ultra-detailed mehendi patterns, realistic hand anatomy, warm natural lighting, shallow depth of field, cinematic portrait photography, social media advertisement quality, female entrepreneur success story.\n\nComposition\nVertical 9:16 frame\nKajal centered\nMedium portrait shot\nMehendi cone clearly visible\nHalf-completed bridal design prominently visible\nConfident creator success visual\nCamera\n\nSlow cinematic push-in.\n\nLens\n\n85mm portrait lens.\n\nLighting\n\nSoft window light from one side.\n\nWarm natural highlights.\n\nProfessional commercial portrait look.\n\nEmotion\n\nHard work paid off.\n\nConfidence without arrogance.\n\nA skilled creator who finally found her audience.\n\nNegative Prompt\n\nluxury mansion, influencer studio, glamour model pose, excessive makeup, exaggerated smile, celebration pose, trophy, money flying, western clothing, blurry mehendi, distorted hands, extra fingers, AI artifacts, unrealistic beauty filter, fashion photoshoot, overexposed lighting, cartoon style, fake social media influencer aesthetic.",
+      "prompt": "Use the uploaded reference image as the style for character reference. Maintain identical face, hairstyle, skin tone, clothing style, proportions, expressive eyes, and the same premium 3D animated cartoon look throughout. Do not redesign the character.\n\nA modern middle-class Indian apartment during warm late-afternoon sunlight. The main character stands in the living room holding a smartphone at chest height. He is scrolling when something catches his attention. His confident expression slowly fades into surprise and quiet disbelief. His eyebrows tighten slightly, his eyes widen, and his lips part as he realizes that someone he always considered less capable is now earning significantly more through Instagram. The phone screen is visible only as colorful blurred content with generic social media elements—no readable text or logos.\n\nCamera: Medium close-up, eye level, 50mm lens.\n\nLighting: Warm natural window light from the side, soft bounce fill, subtle rim light separating the character from the background.\n\nEnvironment: Clean Indian apartment with layered depth—foreground sofa edge, character in the midground, softly blurred hallway and wall décor in the background.\n\nMotion: Natural breathing, slow blink, subtle head tilt, slight tightening of the grip on the phone, realistic eye movement as the realization sinks in.",
       "model": "Pro",
       "model.resolution": "2K",
       "aspect_ratio": "9:16",
       "images.image_1": [
-        "150",
+        "147",
         0
       ]
     },
@@ -1992,20 +1926,71 @@
       "title": "Nano Banana Image Generation"
     }
   },
-  "150": {
+  "146": {
     "inputs": {
-      "image": "kajal_00001_.png"
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "145",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "147": {
+    "inputs": {
+      "image": "Screenshot 2026-06-25 110507.png"
     },
     "class_type": "LoadImage",
     "_meta": {
       "title": "Load Image"
     }
   },
+  "148": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "145",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "149": {
+    "inputs": {
+      "image": "ComfyUI_00083_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "150": {
+    "inputs": {
+      "prompt": "keeping everything else exactly the same, just change the back of the android phone to back cover",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "149",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
   "151": {
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "149",
+        "150",
         0
       ]
     },
@@ -2016,22 +2001,13 @@
   },
   "152": {
     "inputs": {
-      "image": "ComfyUI_00080_.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "153": {
-    "inputs": {
-      "prompt": "A realistic Tier-3 Indian bedroom during daytime. Warm natural sunlight enters through the window, creating a bright and hopeful atmosphere. The room is simple and authentic, with modest furniture and everyday household details.\n\nKajal, a 26-year-old Indian mehendi artist wearing a mustard yellow kurta and light blue dupatta, sits comfortably on her bed creating content. In front of her is a simple smartphone recording setup on a small tripod, pointed directly at her.\n\nThe camera captures Kajal from a slight angle, showing both her and the recording setup.\n\nShe confidently applies intricate bridal mehendi on her own forearm using a mehendi cone. Her movements are smooth, skilled, and practiced.\n\nUnlike earlier scenes, she appears relaxed and self-assured.\n\nAs she works, she occasionally glances toward the recording phone camera and smiles naturally, like a creator who now understands how to make engaging content.\n\nThe half-finished bridal mehendi design on her arm is detailed and beautiful.\n\nShe adjusts her arm slightly to get a better recording angle, then continues drawing elegant mehendi patterns with confidence.\n\nThe recording setup, content creation process, and her positive energy should clearly communicate that she is now creating reels professionally and intentionally.\n\nThe camera slowly pushes in as Kajal smiles while working, fully immersed in her craft.\n\nPhotorealistic Indian woman, authentic Tier-3 home, realistic smartphone tripod setup, natural creator workflow, detailed bridal mehendi patterns, warm sunlight, cinematic depth of field, premium commercial quality, social media creator success story, realistic hand movement, natural facial expressions.\n\nCamera\n\nMedium shot with visible recording setup.\n\nSlow cinematic push-in.\n\nLens\n\n50mm cinematic lens.\n\nLighting\n\nNatural window light.\n\nSoft warm highlights.\n\nBright optimistic mood.\n\nEmotion\n\nConfident creator.\n\nEnjoying the process.\n\nProud of her skill.\n\nSuccess through learning and consistency.\n\nNegative Prompt\n\nluxury influencer studio, professional film crew, ring light overload, glamour model pose, exaggerated smile, dancing, celebration, money, flashy setup, western bedroom, distorted hands, extra fingers, blurry mehendi, AI artifacts, fake influencer aesthetic, overacting, beauty filter.",
-      "duration": "8",
+      "prompt": "A young Indian man stands alone in a modern middle-class apartment during warm golden-hour lighting, holding a smartphone naturally with both hands. The phone screen is always turned away from the camera or hidden from view, and its display is never visible.\n\nHe silently looks at the phone for a few moments. His expression gradually changes from calm confidence to quiet disappointment. His smile slowly disappears, his eyebrows subtly tighten, his eyes lose their brightness, and he exhales softly. His grip on the phone becomes slightly firmer before his shoulders gently slump, conveying the realization that someone he underestimated has become more successful than him. The emotion is restrained, realistic, and internal rather than exaggerated.\n\nThe character does not speak. His lips remain closed throughout the shot. The emotion is communicated entirely through facial expressions, eye movement, breathing, and body language.\n\nThe camera begins with a medium shot and slowly dollies in to a close-up, emphasizing the emotional shift. The apartment has strong visual depth with a softly blurred sofa in the foreground, the character in the midground, and a naturally lit hallway in the background. Warm sunlight enters through a side window, creating cinematic contrast, soft rim lighting around the character, realistic shadows, and premium global illumination.\n\nNatural breathing, subtle blinking, realistic eye movement, slight head tilt, believable hand movement, smooth cloth simulation, expressive facial animation, shallow depth of field, premium Pixar-quality 3D rendering, cinematic color grading, ultra-high production quality, vertical 9:16.\n\nNegative Prompt\n\nVisible phone screen, phone UI, social media interface, Instagram logo, text, icons, notifications, readable display, talking, lip-sync, mouth movement, dialogue, subtitles, watermark, extra characters, exaggerated crying, cartoon slapstick expressions, distorted anatomy, inconsistent face, blurry rendering, jittery motion, stiff animation, duplicate limbs, overexposed lighting, camera shake.",
+      "duration": "10",
       "aspect_ratio": "9:16",
       "resolution": "720p",
       "seed": 0,
       "images.image_1": [
-        "152",
+        "153",
         0
       ]
     },
@@ -2040,13 +2016,22 @@
       "title": "Gemini Omni Video"
     }
   },
-  "154": {
+  "153": {
+    "inputs": {
+      "image": "ComfyUI_00085_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "155": {
     "inputs": {
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
       "video": [
-        "153",
+        "152",
         0
       ]
     },
@@ -2055,31 +2040,744 @@
       "title": "Save Video"
     }
   },
-  "155": {
+  "156": {
     "inputs": {
-      "prompt": "kajal confident — ek haath mein mehandi cone, doosre haath par half-done bridal design, chehre pe muskaan",
+      "prompt": "The young Indian man stands motionless in his apartment, still holding his smartphone lowered near his waist after seeing someone else's success. His expression shifts from disappointment to deep anxiety. His eyes become distant, his shoulders slowly slump, and he takes a quiet breath as the fear of falling behind begins to consume him.\n\nThe world around him subtly comes alive in a symbolic way. Soft, semi-transparent silhouettes of people in the background confidently walk forward toward a bright future, gradually moving away from him. They remain out of focus and anonymous, representing everyone else progressing in life while he stays frozen in place. He watches them with a helpless expression, feeling left behind. The silhouettes should feel dreamlike and metaphorical rather than supernatural.\n\nThe camera begins behind his shoulder, then slowly arcs around to the front, ending in a close-up of his face as the emotional realization settles in. His eyes follow the moving figures while he remains completely still. His breathing becomes slightly heavier, his fingers loosen around the phone, and his expression reflects fear, self-doubt, and uncertainty about his future.\n\nThe apartment is warmly lit with late-afternoon sunlight streaming through the windows, creating cinematic contrast. Foreground furniture, the character in the midground, and the softly blurred moving silhouettes in the background create strong visual depth. Realistic lighting, natural shadow falloff, subtle volumetric light rays, premium global illumination, expressive facial animation, realistic cloth physics, shallow depth of field, production-quality Pixar-inspired 3D rendering, vertical 9:16.\n\nNegative Prompt\n\nNo exaggerated crying, no horror atmosphere, no dark fantasy effects, no ghosts, no text overlays, no readable phone screen, no real Instagram logo, no distorted anatomy, no inconsistent character design, no extra foreground characters, no low-quality rendering, no jittery animation, no stiff expressions, no camera shake, no watermark, no subtitles.  no extra poeple",
+      "duration": "10",
       "aspect_ratio": "9:16",
-      "resolution": "480p",
-      "duration": 3,
-      "nsfw_checker": true,
-      "image": [
-        "152",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "153",
         0
       ]
     },
-    "class_type": "Kie_GrokImagineVideo15PreviewNode",
+    "class_type": "Kie_GeminiOmniVideoNode",
     "_meta": {
-      "title": "Grok Imagine Video 1.5 Preview"
+      "title": "Gemini Omni Video"
     }
   },
-  "156": {
+  "157": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "156",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "158": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "156",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "159": {
+    "inputs": {
+      "prompt": "Top Half: The main character (matching the uploaded reference exactly) is sitting in a modest middle-class Indian apartment after work. He wears a simple casual outfit, places his backpack beside the sofa, sets a cup of tea on the coffee table, and casually scrolls through his phone. His apartment is clean, simple, and affordable with basic furniture.\n\nBottom Half: His friend is a different person with a clearly different face, different hairstyle, different eyebrows, slightly different skin tone, and different facial structure. He is approximately the same age but immediately recognizable as another individual. He is in a nearly identical middle-class apartment with furniture of similar quality. He wears different casual clothes in another color, places his backpack beside the sofa, sets a cup of tea on the table, and casually scrolls through his phone.\n\nBoth halves should look like parallel versions of the same lifestyle, not the same person. Their financial situation appears identical through similar furniture quality, similar room size, similar backpacks, similar tea cups, and similar smartphones.\n\nBoth characters perform perfectly synchronized actions:\n\nboth sit down at the same moment,\nboth place their backpack beside the sofa,\nboth pick up their tea,\nboth begin scrolling on their phones simultaneously,\nboth smile casually while relaxing after work.\n\nThe synchronization should make it feel like two people living almost identical daily routines.\n\nCamera: Static front-facing wide shot with perfectly aligned framing in both halves.\n\nLens: 35mm.\n\nLighting: Warm evening practical lighting mixed with soft window light. Both halves should have matching lighting, color grading, and composition.\n\nComposition: Symmetrical split screen with identical camera angle, identical framing, and matching furniture placement, while the characters remain visually different.\n\nPremium Pixar/DreamWorks-inspired 3D animation, expressive facial animation, cinematic lighting, realistic cloth simulation, strong foreground-midground-background depth, shallow depth of field, production-quality rendering, vertical 9:16.\n\nNegative Prompt\n\nIdentical faces, twins, cloned characters, duplicate hairstyle, same facial features, mirror image, luxury house, expensive furniture, sports car, readable phone UI, text, logos, watermark, distorted anatomy, blurry render, low quality, inconsistent lighting, asymmetrical split screen, exaggerated expressions.\n\nThis split-screen approach also sets up the next scene perfectly. After this, you can break the synchronization:\n\nThe friend's side starts showing growth (better clothes, better phone, happier life).\nThe protagonist's side remains almost unchanged.\n\nThat contrast becomes much more powerful than trying to compare them in the same frame.",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "153",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "160": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "159",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "161": {
+    "inputs": {
+      "image": "ComfyUI_00087_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "162": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "159",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "163": {
+    "inputs": {
+      "prompt": "Top Half: The main character (matching the uploaded reference exactly) is sitting in a modest middle-class Indian apartment after work. He wears a simple casual outfit, places his backpack beside the sofa, sets a cup of tea on the coffee table, and casually scrolls through his phone. His apartment is clean, simple, and affordable with basic furniture.\n\nBottom Half: His friend is a different person with a clearly different face, different hairstyle, different eyebrows, slightly different skin tone, and different facial structure. He is approximately the same age but immediately recognizable as another individual. He is in a nearly identical middle-class apartment with furniture of similar quality. He wears different casual clothes in another color, places his backpack beside the sofa, sets a cup of tea on the table, and casually scrolls through his phone.\n\nBoth halves should look like parallel versions of the same lifestyle, not the same person. Their financial situation appears identical through similar furniture quality, similar room size, similar backpacks, similar tea cups, and similar smartphones.\n\nBoth characters perform perfectly synchronized actions:\n\nboth sit down at the same moment,\nboth place their backpack beside the sofa,\nboth pick up their tea,\nboth begin scrolling on their phones simultaneously,\nboth smile casually while relaxing after work.\n\nThe synchronization should make it feel like two people living almost identical daily routines.\n\nCamera: Static front-facing wide shot with perfectly aligned framing in both halves.\n\nLens: 35mm.\n\nLighting: Warm evening practical lighting mixed with soft window light. Both halves should have matching lighting, color grading, and composition.\n\nComposition: Symmetrical split screen with identical camera angle, identical framing, and matching furniture placement, while the characters remain visually different.\n\nPremium Pixar/DreamWorks-inspired 3D animation, expressive facial animation, cinematic lighting, realistic cloth simulation, strong foreground-midground-background depth, shallow depth of field, production-quality rendering, vertical 9:16.\n\nNegative Prompt\n\nIdentical faces, twins, cloned characters, duplicate hairstyle, same facial features, mirror image, luxury house, expensive furniture, sports car, readable phone UI, text, logos, watermark, distorted anatomy, blurry render, low quality, inconsistent lighting, asymmetrical split screen, exaggerated expressions.\n\nThis split-screen approach also sets up the next scene perfectly. After this, you can break the synchronization:\n\nThe friend's side starts showing growth (better clothes, better phone, happier life).\nThe protagonist's side remains almost unchanged.\n\nThat contrast becomes much more powerful than trying to compare them in the same frame.",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "171",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "164": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "163",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "165": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "163",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "166": {
+    "inputs": {
+      "image": "ComfyUI_00093_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "167": {
+    "inputs": {
+      "prompt": "A perfectly aligned horizontal split-screen showing the parallel lives of two young Indian men living almost identical middle-class lifestyles.\n\nTop Half: The main character sits comfortably on a simple sofa inside a modest Indian apartment after returning from work. A backpack rests beside him on the sofa, a cup of tea sits on the wooden coffee table, and he casually holds a smartphone. The apartment is neat and simple, featuring basic furniture, indoor plants, framed wall art, and warm evening sunlight entering through a large window.\n\nBottom Half: His friend sits in a nearly identical apartment with the same middle-class atmosphere and similar furniture arrangement. He has a distinctly different face, different hairstyle, different eyebrows, a slightly different skin tone, and wears a different colored kurta. A backpack rests beside him, a cup of tea is placed on the coffee table, and he also holds a smartphone. Although both environments are nearly identical, the two characters are clearly different individuals.\n\nBoth halves mirror the same everyday routine, emphasizing that they share the same lifestyle, same financial condition, and similar daily habits. The framing, furniture placement, lighting direction, room layout, and composition are intentionally matched to create a strong visual comparison between their parallel lives.\n\nWarm golden-hour sunlight enters through the left-side window in both apartments, creating soft cinematic lighting, realistic shadows, natural depth, and a cozy middle-class atmosphere. A wooden coffee table occupies the foreground, the characters sit centered in the midground, and the softly blurred apartment interiors provide depth in the background.\n\nPremium Pixar/DreamWorks-inspired 3D animated style, expressive facial features, realistic fabric textures, high-quality global illumination, cinematic color grading, shallow depth of field, ultra-detailed rendering, clean composition, vertical",
+      "duration": "8",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "166",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "168": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "167",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "169": {
+    "inputs": {
+      "prompt": "the top character only, preserving his exact facial features, hairstyle, skin tone, proportions, and overall appearance.\n\nThe bottom character should be a clearly different young Indian man with a different face, hairstyle, eyebrows, and facial structure while remaining the same age and middle-class background.\n\nCreate a perfectly synchronized horizontal split-screen showing both men working at identical office jobs.\n\nTop Half:\nThe main character sits at a standard office desk inside a modern middle-class corporate office. He wears a simple office ID card around his neck, types on a laptop, occasionally uses a mouse, checks paperwork beside the laptop, and drinks tea from a ceramic mug. His workspace is modest with a notebook, keyboard, mouse, pen holder, and a small indoor plant.\n\nBottom Half:\nHis friend works in a nearly identical office with the same desk layout, similar office furniture, matching office lighting, and the same type of corporate workstation. He also wears an employee ID card and performs the exact same office work using a laptop and paperwork. His face, hairstyle, clothing color, and accessories remain different from the top character.\n\nBoth characters perform nearly identical actions in synchronization:\n\nboth type on their laptops simultaneously\nboth stop typing briefly\nboth reach for their mouse together\nboth glance at paperwork at the same moment\nboth pick up their tea mug simultaneously\nboth take a sip together\nboth return to typing almost in sync\n\nThe timing should be natural, with one character trailing the other by a fraction of a second to avoid robotic movement.\n\nThe camera remains completely static with identical framing in both halves. The desk layouts, monitor positions, office chairs, lighting direction, and background depth should closely match, emphasizing that both have the same office job and same working conditions.\n\nCamera: Static medium-wide shot, eye level, 35mm lens.\n\nLighting: Bright office daylight entering from side windows combined with soft overhead office lighting, realistic shadows, cinematic contrast, premium global illumination.\n\nComposition: Office desk in the foreground, character in the midground, softly blurred office cubicles, glass partitions, and coworkers in the distant background creating strong foreground–midground–background depth.\n\nPremium Pixar/DreamWorks-quality 3D animation, expressive facial animation, realistic typing motions, believable cloth simulation, cinematic color grading, shallow depth of field, ultra-high production quality, vertical 9:16.\n\nNegative Prompt\n\nSame face, cloned characters, twins, luxury executive office, CEO cabin, expensive office, gaming setup, readable computer screen, logos, company branding, text, watermark, exaggerated expressions, stiff poses, distorted anatomy, blurry rendering, inconsistent lighting, different camera angles, camera movement, split-screen misalignment, unrealistic typing animation.",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "166",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "170": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "169",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "171": {
+    "inputs": {
+      "image": "ComfyUI_00091_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "172": {
+    "inputs": {
+      "prompt": "change the face and facial features subtly of the guy in blue only looking at the phone",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16"
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "173": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "163",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "174": {
+    "inputs": {
+      "image": "ComfyUI_00092_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "175": {
+    "inputs": {
+      "prompt": "keep the top half exactly the same, just change the office setup of the bottom half guy to home setup , bottom guy sitting on a sofa and  keeping his bag next to the sofa and scrolling thorugh hte phone",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "174",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "176": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "175",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "177": {
+    "inputs": {
+      "image": "ComfyUI_00091_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "178": {
+    "inputs": {
+      "prompt": "The main character sits upright at his workstation, wearing a simple office ID card over a maroon kurta. He is completely focused on his work, looking at his laptop while typing with one hand and using the mouse with the other. A notebook, documents, pen holder, and small desk plant are neatly arranged on his desk. His expression is calm, attentive, and professional.\n\nBottom Half:\nHis friend sits at a nearly identical workstation in a similar office. He has a distinctly different face, curly hairstyle, different eyebrows, and wears a blue kurta with an office ID card. He is equally focused on his work, concentrating on his laptop while occasionally using the mouse and reviewing documents on the desk. His workspace mirrors the same modest corporate setup.\n\nBoth offices feature matching layouts with glass meeting rooms, coworkers working quietly in the background, large windows allowing soft daylight to enter, ergonomic office chairs, and clean corporate interiors. The environments should communicate that both men work the same type of office job with similar responsibilities and similar salaries.\n\nBoth characters remain deeply engaged in their tasks with subtle, realistic movements:\n\ntyping continuously on their laptops\noccasionally moving the mouse\nbriefly glancing at paperwork beside the laptop\nmaintaining focused eye contact with the screen\nsubtle blinking and natural breathing\nslight posture adjustments while working\ncalm, concentrated facial expressions\n\nThe camera remains completely locked off with identical framing in both halves. The split-screen divider stays perfectly straight, and both office environments share matching composition, lighting direction, desk arrangement, and perspective, reinforcing that they are living parallel professional lives.\n\nSoft natural daylight fills both offices through large windows, complemented by clean overhead office lighting. Realistic shadows, premium global illumination, cinematic contrast, shallow depth of field, Pixar-inspired 3D animated style, ultra-detailed rendering, expressive facial animation, production-quality visuals, vertical 9:16.\n\nAvoid: talking, lip movement, phone usage, exaggerated expressions, readable laptop screens, logos, text overlays, watermarks, camera movement, shaky motion, cloned faces, luxury executive offices, distorted anatomy, blurry rendering, inconsistent lighting, or split-screen misalignment.",
+      "duration": "8",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "177",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "179": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "178",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "180": {
+    "inputs": {
+      "prompt": "both are sitting in cafeteria office steup and both get the message pop up in there phone - salary credited - no split screen ",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "177",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "181": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "180",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "182": {
+    "inputs": {
+      "prompt": "Two young Indian office colleagues are sitting across from each other at a small cafeteria table inside a modern corporate office during lunch break. Both wear neatly tucked-in office shirts and formal trousers with employee ID cards around their necks. The atmosphere is warm, friendly, and reflects the life of two middle-class salaried employees.\n\nA laptop is open in front of each person, along with a cup of tea and a few office documents neatly placed on the table.\n\nWhile casually talking, both smartphones vibrate almost at the same moment. They naturally pick up their phones and glance at the screens. Their expressions immediately brighten with genuine happiness as they realize their monthly salary has been credited. The phone screens always face toward the characters and remain unreadable to the camera—no visible text, logos, banking apps, or notification UI.\n\nThey exchange a quick excited look, smile at each other, then simultaneously raise one hand and give each other a cheerful high five across the table. After the high five, they laugh naturally, still smiling with quiet satisfaction before placing their phones back on the table and returning to their tea.\n\nThe emotion should feel authentic and relatable—happy because payday has arrived, but not exaggerated or overacted.\n\nThe office cafeteria is bright and modern with large windows allowing soft natural daylight to fill the room. Glass meeting rooms, coworkers eating lunch and chatting quietly, indoor plants, and clean corporate interiors create a realistic workplace environment. The table occupies the foreground, the two colleagues sit centered in the midground, and the softly blurred cafeteria creates natural depth in the background.\n\nNatural body language, realistic eye contact, subtle facial expressions, believable hand interaction during the high five, smooth cloth simulation, premium Pixar-inspired 3D animation, cinematic lighting, realistic shadows, high-quality global illumination, shallow depth of field, production-quality rendering, vertical 9:16.\n\nAvoid: readable phone screens, visible notification text, salary amount, bank names, payment app logos, company logos, text overlays, watermarks, exaggerated cheering, jumping, shouting, lip-sync dialogue, distorted anatomy, cloned faces, stiff animation, blurry rendering, shaky camera, or luxury office interiors.",
+      "duration": "8",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "187",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "183": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "182",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "184": {
+    "inputs": {
+      "image": "Screenshot 2026-06-25 120353.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "185": {
+    "inputs": {
+      "prompt": "make both in shirt and pant and upscale the image, and make it in 9:16",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "184",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "186": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "185",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "187": {
+    "inputs": {
+      "image": "ChatGPT Image Jun 25, 2026, 12_09_29 PM.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "188": {
+    "inputs": {
+      "image": "ChatGPT Image Jun 25, 2026, 12_12_18 PM.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "189": {
+    "inputs": {
+      "prompt": "The young Indian man with curly hair sits comfortably on a sofa in his modest middle-class apartment during warm golden-hour lighting. He wears a casual blue shirt and beige trousers. A cup of tea rests on the coffee table, a notebook lies nearby, and the apartment feels clean, cozy, and relatable with indoor plants, framed wall art, and soft natural light streaming through the window.\n\nHe is actively scrolling through Instagram on his smartphone with relaxed thumb movements. The phone is held naturally at a slight angle facing only him, and the back of the phone is always visible to the camera. The display is never shown at any point. The audience understands he is browsing Instagram entirely through his thumb scrolling, focused eye movements, occasional subtle smiles, and engaged facial expressions—not by seeing the screen.\n\nHis attention is fully absorbed in the phone. He occasionally pauses scrolling, smiles slightly as if he has discovered an interesting idea, then continues scrolling with curiosity and growing interest. His body language is relaxed, leaning slightly forward with complete focus on what he is watching.\n\nThe camera begins with a medium shot and slowly pushes in to a medium close-up, emphasizing his growing interest and curiosity. Warm sunlight creates cinematic highlights on his face with soft rim lighting around his hair. The foreground features the wooden coffee table, the character sits in the midground, and the softly blurred apartment interior provides clean depth in the background.\n\nNatural breathing, realistic eye tracking, subtle blinking, smooth thumb scrolling, believable hand movement, expressive facial animation, realistic cloth simulation, premium Pixar-inspired 3D animation, cinematic lighting, realistic global illumination, shallow depth of field, ultra-high production quality, vertical 9:16.\n\nAvoid: visible phone screen, phone UI, Instagram interface, Instagram logo, readable text, app icons, reflections showing the display, talking, lip-sync, subtitles, watermark, exaggerated expressions, camera shake, blurry rendering, distorted anatomy, inconsistent character design, low-quality textures.",
+      "duration": "8",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "188",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "190": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "189",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "191": {
+    "inputs": {
+      "image": "ChatGPT Image Jun 25, 2026, 12_16_06 PM.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "192": {
+    "inputs": {
+      "prompt": "keep the image exactly the same just remove the dialogue bubble",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "191",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "193": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "192",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "194": {
+    "inputs": {
+      "image": "ComfyUI_00102_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "195": {
+    "inputs": {
+      "prompt": "Inside a cozy middle-class Indian apartment during warm golden-hour lighting, two young Indian men are spending time together in the living room.\n\nThe blue-shirted man sits confidently on a chair in front of a smartphone mounted vertically on a small tripod. He is recording himself in selfie mode, speaking naturally to the front-facing camera with enthusiasm and confidence. He occasionally smiles, gestures with his hands, and maintains eye contact with the phone as if creating an Instagram Reel. The phone screen always faces him and is never visible to the audience. No phone UI, recording interface, or app screen is ever shown.\n\nThe red-shirted man sits comfortably on the sofa in the background, watching him. He cannot help but laugh and make fun of him. He smirks, chuckles quietly, points toward his friend with a playful grin, lightly shakes his head, and exchanges an amused expression as if thinking, \"What is he doing?\" His reaction feels teasing and dismissive rather than cruel or aggressive.\n\nThe blue-shirted man notices the laughter but chooses to ignore it completely. He remains focused on recording, continuing to speak confidently to the camera without losing his smile or breaking concentration.\n\nThe camera frames both characters in a medium-wide shot, with the blue-shirted man positioned in the foreground as the primary subject and the red-shirted man slightly behind him on the sofa, allowing both reactions to be visible within the same composition. The tripod remains partially visible to reinforce that he is creating content.\n\nThe apartment features warm evening sunlight streaming through large windows, indoor plants, framed artwork, a wooden coffee table with a notebook and tea cup, and soft practical lighting that creates cinematic depth. Foreground, midground, and background are clearly layered to produce a premium commercial look.\n\nNatural body language, realistic eye contact, subtle facial expressions, believable hand gestures, smooth cloth simulation, expressive Pixar-inspired 3D animation, cinematic lighting, realistic shadows, premium global illumination, shallow depth of field, ultra-high production quality, vertical 9:16.\n\nAvoid: visible phone screen, recording UI, Instagram interface, app icons, text overlays, subtitles, logos, watermarks, exaggerated laughing, bullying, angry expressions, distorted anatomy, cloned faces, shaky camera, blurry rendering, inconsistent character design, or low-quality textures.",
+      "duration": "8",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "194",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "196": {
+    "inputs": {
+      "prompt": "keep the image exactly the same just remove the dialogue bubble",
+      "aspect_ratio": "9:16",
+      "image_resolution": "2K",
+      "random_seed": 1,
+      "images.image_1": [
+        "191",
+        0
+      ]
+    },
+    "class_type": "Kie_Seedream4EditNode",
+    "_meta": {
+      "title": "Seedream 4 Image to Image"
+    }
+  },
+  "197": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "196",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "198": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "195",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "199": {
+    "inputs": {
+      "prompt": "A cinematic close-up of the red-shirted young Indian man sitting comfortably on a sofa inside a warm, middle-class apartment immediately after laughing at his friend.\n\nThe camera slowly pushes in from a medium close-up to a tight close-up on his face. He glances sideways toward his friend, who is off-camera recording Instagram videos. A subtle smirk forms on his face. He lets out a quiet chuckle, slightly shakes his head in disbelief, raises one eyebrow, and briefly rolls his eyes as if silently questioning what he's watching.\n\nHis body language conveys a dismissive attitude. He leans back casually into the sofa, lightly shrugs one shoulder, tilts his head with an amused expression, and makes a small hand gesture that subtly says, \"Seriously? What is he even doing?\" His expression reflects skepticism rather than cruelty. It feels like someone who genuinely believes making Instagram Reels is a waste of time.\n\nHe never speaks. His lips remain closed except for a natural smile while chuckling softly. The emotion is communicated entirely through facial expressions and body language.\n\nThe blue-shirted friend remains softly blurred in the distant background, seated in front of a phone on a tripod while happily recording himself. He stays out of focus so the audience understands what the red-shirted man is reacting to without drawing attention away from the main subject.\n\nWarm golden-hour sunlight enters through the apartment window, creating soft highlights across the character's face and subtle rim lighting around his hair. The sofa occupies the foreground, the character remains sharply in focus in the midground, and the softly blurred apartment interior creates cinematic depth.\n\nNatural eye movement, subtle blinking, realistic breathing, expressive micro-expressions, believable shoulder movement, smooth cloth simulation, premium Pixar-inspired 3D animation, cinematic lighting, realistic shadows, high-quality global illumination, shallow depth of field, ultra-high production quality, vertical 9:16.\n\nAvoid: talking, lip-sync, subtitles, thought bubbles, comic effects, text overlays, exaggerated laughter, pointing directly at the camera, visible phone screen, Instagram UI, logos, watermarks, distorted anatomy, shaky camera, blurry rendering, inconsistent character design, or low-quality textures.",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "194",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "200": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "199",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "202": {
+    "inputs": {
+      "prompt": "The scene takes place inside a warm, middle-class Indian apartment during golden hour.\n\nThe blue-shirted young man sits at a wooden dining table opening the box of a brand-new premium smartphone. He carefully lifts the phone out of its packaging with genuine excitement and admiration. His smile is calm and authentic, reflecting the satisfaction of achieving something through his hard work.\n\nIn the background, the red-shirted young man walks into the room carrying a cup of tea. As he notices the new phone being unboxed, he instinctively slows down.\n\nHis expression immediately changes.\n\nHis eyebrows rise.\n\nHis eyes widen.\n\nHis smile disappears.\n\nHe stops walking.\n\nHe looks back at the phone once more as if trying to confirm what he just saw.\n\nWithout saying anything, his face clearly communicates:\n\n\"Wait... how did he afford that?\"\n\nThe blue-shirted character remains completely unaware of the reaction behind him and continues happily setting up his new phone.\n\nThe room remains modest and middle-class. The new phone is the only visual element that signals life is beginning to improve. - no logo on the phone",
+      "aspect_ratio": "9:16",
+      "quality": "medium",
+      "image": [
+        "194",
+        0
+      ]
+    },
+    "class_type": "Fal_GPTImage2ImageToImageNode",
+    "_meta": {
+      "title": "GPT Image 2 Image to Image — Fal"
+    }
+  },
+  "203": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "202",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "204": {
+    "inputs": {
+      "image": "ComfyUI_00114_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "205": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "202",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "206": {
+    "inputs": {
+      "prompt": "Use the uploaded character references exactly. Preserve the blue-shirted character's curly hairstyle, facial features, body proportions, clothing, and premium Pixar-inspired 3D animated appearance. Preserve the red-shirted character's facial identity, hairstyle, clothing, and proportions exactly. Maintain complete character consistency with previous scenes.\n\nInside a warm, modern middle-class Indian apartment during golden hour, the blue-shirted character is sitting comfortably on the sofa, holding his smartphone with a genuine smile. He has just received a generic earnings notification indicating he has earned money from his online content. The phone screen is only partially visible from his perspective, showing an abstract notification design with blurred placeholder elements only—no readable text, no currency amount, no logos, no Instagram branding, no payment app interface.\n\nThe blue-shirted character smiles with quiet satisfaction, looking proud but humble. He naturally lowers the phone while still smiling.\n\nStanding a few feet away, the red-shirted character accidentally notices his friend's happy reaction. He glances toward the phone, then back at his friend's face. His own expression slowly changes.\n\nHis eyebrows tighten.\n\nHis smile disappears.\n\nHis eyes lose their confidence.\n\nHis shoulders drop slightly.\n\nHe silently realizes that his friend is now earning more than him.\n\nHis expression should communicate surprise, insecurity, and quiet jealousy, not anger or resentment. It feels like the moment he begins comparing himself to his friend.\n\nThe composition should place the blue-shirted character in the foreground, softly illuminated by warm sunlight, while the red-shirted character remains in the midground watching him. The emotional contrast between one person's quiet success and the other's growing self-doubt is the visual focus of the frame.\n\nThe apartment remains simple and middle-class with a wooden coffee table, indoor plants, framed artwork, and warm evening sunlight streaming through large windows. Strong foreground, midground, and background layering create cinematic depth. Soft rim lighting, realistic global illumination, subtle volumetric light, and premium cinematic color grading reinforce the emotional tone.\n\nCamera: Medium cinematic shot, eye level, 50mm lens.\n\nStyle: Premium Pixar/DreamWorks-inspired 3D animation, expressive facial performance, ultra-detailed textures, realistic cloth simulation, shallow depth of field, cinematic lighting, production-quality rendering, vertical 9:16.\n\nNegative Prompt\n\nReadable notification text, currency amounts, bank names, payment app logos, Instagram logo, visible app interface, phone brand logos, watermark, subtitles, exaggerated cartoon reactions, evil expressions, shouting, luxury mansion, distorted anatomy, blurry rendering, cloned faces, inconsistent character design, duplicate limbs, stiff poses, low-quality textures. - amount credited",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "194",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "207": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "206",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "208": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "206",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "209": {
+    "inputs": {
+      "image": "ComfyUI_00104_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "210": {
+    "inputs": {
+      "prompt": "A premium Pixar-inspired 3D animated scene inside a warm, middle-class Indian apartment during golden hour. The atmosphere feels calm, cinematic, and emotionally grounded.\n\nThe blue-shirted young Indian man sits comfortably on the sofa holding his smartphone. He has a relaxed, confident smile as he casually checks something on his phone. His posture is more confident than before—he sits upright, looking content and optimistic, as if life is beginning to work in his favor. The phone screen always faces him and remains completely hidden from the camera. No phone UI, notifications, logos, or readable text are visible.\n\nSeveral feet behind him, the red-shirted young Indian man has just entered the room and quietly stops walking. He watches his friend from a distance.\n\nHis expression slowly changes.\n\nHe notices how much happier and more confident his friend has become.\n\nHis smile fades.\n\nHis eyebrows tighten slightly.\n\nHis shoulders drop.\n\nHe looks at his friend for a few seconds before lowering his gaze toward the floor.\n\nWithout speaking, his face conveys a quiet realization:\n\n\"He's slowly moving ahead in life.\"\n\nThe blue-shirted character remains unaware that he is being observed. He naturally smiles while using his phone, then places it beside him and leans back comfortably, reflecting growing confidence and peace of mind.\n\nThe camera begins with a medium-wide shot showing both characters. It slowly pushes toward the red-shirted character as his realization settles in, keeping the blue-shirted friend softly in focus in the foreground. The visual emphasis shifts from the successful friend to the emotional reaction of the observer.\n\nWarm golden sunlight pours through the large window, creating soft rim lighting around both characters, realistic shadows, cinematic contrast, and premium global illumination. The foreground coffee table, the blue-shirted character in the midground, and the red-shirted character standing in the background create strong visual layering and depth.\n\nNatural breathing, subtle eye movement, realistic posture shifts, expressive facial animation, believable cloth simulation, premium Pixar-quality 3D rendering, cinematic lighting, shallow depth of field, production-level visuals, vertical 9:16.\n\nAvoid: visible phone screen, phone UI, Instagram interface, readable text, logos, watermarks, talking, lip-sync, exaggerated sadness, crying, dramatic gestures, luxury interiors, distorted anatomy, cloned faces, shaky camera, blurry rendering, or low-quality textures.",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "204",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "211": {
     "inputs": {
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
       "video-preview": "",
       "video": [
-        "155",
+        "210",
         0
       ]
     },
@@ -2088,17 +2786,132 @@
       "title": "Save Video"
     }
   },
-  "157": {
+  "212": {
     "inputs": {
-      "prompt": "A realistic Tier-3 Indian bedroom during daytime. Warm natural sunlight enters through the window, creating a bright and hopeful atmosphere. The room is simple and authentic, with modest furniture and everyday household details.\n\nKajal, a 26-year-old Indian mehendi artist wearing a mustard yellow kurta and light blue dupatta, sits comfortably on her bed creating content. In front of her is a simple smartphone recording setup on a small tripod, pointed directly at her.\n\nThe camera captures Kajal from a slight angle, showing both her and the recording setup.\n\nShe confidently applies intricate bridal mehendi on her own forearm using a mehendi cone. Her movements are smooth, skilled, and practiced.\n\nUnlike earlier scenes, she appears relaxed and self-assured.\n\nAs she works, she occasionally glances toward the recording phone camera and smiles naturally, like a creator who now understands how to make engaging content.\n\nThe half-finished bridal mehendi design on her arm is detailed and beautiful.\n\nShe adjusts her arm slightly to get a better recording angle, then continues drawing elegant mehendi patterns with confidence.\n\nThe recording setup, content creation process, and her positive energy should clearly communicate that she is now creating reels professionally and intentionally.\n\nThe camera slowly pushes in as Kajal smiles while working, fully immersed in her craft.\n\nPhotorealistic Indian woman, authentic Tier-3 home, realistic smartphone tripod setup, natural creator workflow, detailed bridal mehendi patterns, warm sunlight, cinematic depth of field, premium commercial quality, social media creator success story, realistic hand movement, natural facial expressions.\n\nCamera\n\nMedium shot with visible recording setup.\n\nSlow cinematic push-in.\n\nLens\n\n50mm cinematic lens.\n\nLighting\n\nNatural window light.\n\nSoft warm highlights.\n\nBright optimistic mood.\n\nEmotion\n\nConfident creator.\n\nEnjoying the process.\n\nProud of her skill.\n\nSuccess through learning and consistency.\n\nNegative Prompt\n\nluxury influencer studio, professional film crew, ring light overload, glamour model pose, exaggerated smile, dancing, celebration, money, flashy setup, western bedroom, distorted hands, extra fingers, blurry mehendi, AI artifacts, fake influencer aesthetic, overacting, beauty filter.",
+      "prompt": "A premium Pixar-inspired 3D animated cinematic montage inside modern middle-class Indian environments. Every shot has cinematic lighting, realistic physics, expressive facial animation, strong foreground–midground–background layering, premium global illumination, shallow depth of field, and vertical 9:16 framing.\n\nShot 1 (0–2.5s) – New Phone\n\nThe blue-shirted young Indian man walks out of a modern electronics store carrying a sleek shopping bag. He smiles naturally as he opens the bag and lifts out a brand-new premium smartphone while walking. Warm evening sunlight reflects softly across the phone, emphasizing that his lifestyle is improving. His confidence is calm and effortless.\n\nCut.\n\nShot 2 (2.5–5s) – New Clothes\n\nInside a stylish clothing store, the blue-shirted character stands in front of a full-length mirror wearing a fresh, well-fitted casual outfit. Several branded-looking shopping bags (generic with no logos) rest around his feet. He adjusts his shirt sleeves, smiles with quiet confidence, and picks up another shopping bag before walking away. The environment feels modern and aspirational without appearing luxurious.\n\nCut.\n\nShot 3 (5–6.5s) – Success Growing\n\nBack at his apartment, the blue-shirted character drops multiple shopping bags onto his neatly made bed. The bed gradually fills with neatly arranged bags containing clothes and lifestyle purchases. He looks around his room with satisfaction before placing the new phone on the bed beside the bags. The room itself remains modest, showing that his lifestyle has improved naturally rather than extravagantly.\n\nCut.\n\nShot 4 (6.5–10s) – Month-End Struggle\n\nContrast sharply with the previous shots.\n\nThe red-shirted young Indian man sits alone at a small wooden dining table inside the same type of modest apartment late at night.\n\nA single warm table lamp illuminates the room.\n\nThe atmosphere feels quiet.\n\nBills, a small notebook, loose cash, coins, and a calculator are spread across the table.\n\nHe slowly counts the remaining cash in his wallet.\n\nHe writes numbers in the notebook.\n\nHe pauses.\n\nHe counts again.\n\nHis eyebrows tighten.\n\nHe sighs quietly.\n\nHe rubs his forehead while looking at the small amount of money left.\n\nHe glances toward a nearly empty kitchen shelf in the background before looking back at the notebook, silently calculating how to make the remaining money last until salary day.\n\nNo dialogue.\n\nNo exaggerated sadness.\n\nOnly realistic financial stress and quiet frustration.\n\nThe montage ends on a close-up of his worried expression as he stares at the remaining cash.\n\nVisual Direction\nFast commercial-style pacing with clean hard cuts.\nEmotional contrast increases with each cut.\nBlue character = steady progress.\nRed character = financial stagnation.\nKeep the environments grounded and relatable rather than luxurious.\nAvoid\n\nVisible brand logos, readable phone screens, luxury cars, mansions, flashy wealth, exaggerated acting, crying, shouting, text overlays, subtitles, watermarks, shaky camera, distorted anatomy, or low-quality rendering.",
+      "duration": "10",
       "aspect_ratio": "9:16",
-      "resolution": "480p",
-      "duration": 10,
-      "nsfw_checker": true
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "209",
+        0
+      ]
     },
-    "class_type": "Kie_GrokImagineVideo15PreviewNode",
+    "class_type": "Kie_GeminiOmniVideoNode",
     "_meta": {
-      "title": "Grok Imagine Video 1.5 Preview"
+      "title": "Gemini Omni Video"
+    }
+  },
+  "213": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video-preview": "",
+      "video": [
+        "212",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "214": {
+    "inputs": {
+      "image": "ComfyUI_00115_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "215": {
+    "inputs": {
+      "image": "ChatGPT Image Jun 25, 2026, 06_41_03 PM.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "216": {
+    "inputs": {
+      "prompt": "upscale the image",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "215",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "217": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "216",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "218": {
+    "inputs": {
+      "prompt": "A premium Pixar-inspired 3D animated scene inside a modern specialty café during late afternoon. Warm golden sunlight streams through large glass windows, creating cinematic lighting, realistic shadows, and premium depth. The café feels upscale but welcoming, with wooden furniture, indoor plants, baristas working in the background, and softly blurred customers enjoying coffee.\n\nThe blue-shirted young Indian man sits comfortably with a premium cup of coffee on the table. He appears relaxed, confident, and genuinely happy—not arrogant. His posture is open and calm, reflecting someone whose life has recently improved through consistent effort.\n\nAcross the table, the red-shirted young Indian man sits quietly. His body language reflects uncertainty and frustration. His shoulders are slightly slumped, his hands are loosely clasped together on the table, and he looks down for a brief moment before gathering the courage to look at his friend.\n\nThe camera opens with a medium two-shot showing both characters seated across from each other.\n\nThe red-shirted character takes a slow breath, looks directly at his friend with an honest expression, and softly asks,\n\n\"भाई... ये सब कैसे हो रहा है?\"\n\nHis voice carries curiosity and helplessness rather than jealousy.\n\nThe blue-shirted character smiles warmly, nods slightly, and naturally replies,\n\n\"मैंने Seekho App पर Instagram Growth Secrets सीखा।\"\n\nAs he speaks, he casually reaches for his smartphone, unlocks it, and briefly turns it toward himself, opening the Seekho App. The audience only catches a subtle glimpse of the app interface without focusing on small UI details. His gesture feels natural, as if he is about to show his friend exactly what helped him.\n\nThe red-shirted character leans forward slightly, listening carefully. His expression changes from helplessness to genuine curiosity and hope.\n\nThe conversation feels authentic, friendly, and supportive. There is no arrogance or boasting—only one friend sincerely helping another.\n\nThe camera slowly pushes in throughout the conversation, ending in a balanced two-shot with both characters in focus, emphasizing connection and trust.\n\nNatural eye contact, realistic facial animation, subtle blinking, believable lip sync, smooth hand gestures, realistic cloth simulation, premium Pixar-inspired 3D animation, cinematic color grading, shallow depth of field, production-quality rendering, vertical 9:16.\n\nVisual Direction\nEmotional tone: Hope replaces insecurity.\nBlue character should feel like a mentor, not someone showing off.\nRed character should look vulnerable but receptive.\nKeep the café warm, intimate, and uncluttered so the dialogue remains the focus.\nAvoid\n\nAggressive acting, exaggerated emotions, visible phone UI close-ups, readable small text, brand clutter, shaky camera, stiff animation, distorted anatomy, watermarks, subtitles, low-quality rendering, or overly dramatic reactions.",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "214",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "219": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video-preview": "",
+      "video": [
+        "218",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "220": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "218",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
     }
   }
 }

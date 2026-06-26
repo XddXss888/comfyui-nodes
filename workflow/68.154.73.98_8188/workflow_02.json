@@ -1,16 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_d6621f66a2304a949297c2901b5816af.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "83": {
-    "inputs": {
-      "image": "ref_fa9eb633cfa24141998e90e3e474ebd6.png"
+      "image": "ref_55951d9e3eee40978bfd9446e64edbd9.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -130,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "make them kiss",
+      "prompt": "将图片中的人物替换为極簡主義3D人體模型，保持人物姿势和服装风格一 服裝改穿白色短版休閒服 保持手部細節完美呈現\n",
       "clip": [
         "91:61",
         0
@@ -141,10 +132,6 @@
       ],
       "image1": [
         "91:88",
-        0
-      ],
-      "image2": [
-        "83",
         0
       ]
     },
@@ -197,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 91055404756831,
+      "seed": 424406548515747,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -238,10 +225,6 @@
       ],
       "image1": [
         "91:88",
-        0
-      ],
-      "image2": [
-        "83",
         0
       ]
     },

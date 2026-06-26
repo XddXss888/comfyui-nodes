@@ -23,7 +23,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "A magical, interactive mirror floating in a dreamy space, radiating vibrant, soft colorful gradients of emotions, ethereal, minimalist, art style, digital art, high quality, soft lighting, concept art, professional, cinematic lighting, detailed, masterpiece, best quality, highly detailed, 4k",
+      "text": "A magical ornate mirror for a little girl, inside the mirror there are swirling vibrant colors representing different emotions, like a kaleidoscope of flowing clouds, bright pinks, sunny yellows, ocean blues, and soft purples, magical sparkles around, whimsical storybook illustration style, dreamy and warm lighting, cozy atmosphere., digital illustration, vibrant colors, detailed, artistic, masterpiece, best quality, highly detailed, 4k",
       "clip": [
         "1",
         0
@@ -60,7 +60,7 @@
   "8": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 961468983817,
+      "seed": 772749807788,
       "steps": 9,
       "cfg": 1.0,
       "sampler_name": "res_multistep",

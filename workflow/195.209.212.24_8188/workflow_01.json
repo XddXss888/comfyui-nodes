@@ -13,8 +13,8 @@
   },
   "16": {
     "inputs": {
-      "positive_prompt": "d2z0h2a6yv, portrait of a man with snow-white hair, one person",
-      "negative_prompt": "highlighted hair, multicolored strands of hair, black and gray spots, shadow, fingers, cloth, bandages, leaves, mask, hats, gray and black spots, grey and black stripes, tattoos, glasses, mustache, beard, sideburns, imperial beard, stubble, shaggy mustache, horseshoe mustache, Italian mustache, Fu Manchu mustache, pencil mustache, horseshoe mustache, full beard, goatee, Van Dyke beard, Hollywood beard, Garfield beard, skate beard, Amish beard, Balbo beard, Verdi beard, three-day stubble, week-long stubble, Mexican stubble, Bredin sideburns/cheeks, Elvis sideburns, skipper beard, French fork split beard",
+      "positive_prompt": "d2z0h2a6yv, portrait of a man with a lock of women's hair on his face",
+      "negative_prompt": "fingers, glasses, earbuds, mustache, beard, sideburns, imperial beard, stubble, shaggy mustache, horseshoe mustache, Italian mustache, Fu Manchu mustache, pencil mustache, horseshoe mustache, full beard, goatee, Van Dyke beard, Hollywood beard, Garfield beard, skate beard, Amish beard, Balbo beard, Verdi beard, three-day stubble, week-long stubble, Mexican stubble, Bredin sideburns/cheeks, Elvis sideburns, skipper beard, French fork split beard",
       "force_offload": true,
       "use_disk_cache": false,
       "device": "gpu",
@@ -62,9 +62,9 @@
   },
   "71": {
     "inputs": {
-      "model": "Wan2_2/wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
+      "model": "Wan2_2/Wan2.2_T2V_Low_Noise_14B_VACE_fp16.safetensors",
       "base_precision": "bf16",
-      "quantization": "fp8_e4m3fn_scaled",
+      "quantization": "disabled",
       "load_device": "offload_device",
       "attention_mode": "sageattn",
       "rms_norm_function": "default"
@@ -98,9 +98,9 @@
       ],
       "cfg": 3.0,
       "shift": 8.0,
-      "seed": 307,
+      "seed": 47,
       "force_offload": true,
-      "scheduler": "euler",
+      "scheduler": "dpm++_sde",
       "riflex_freq_index": 0,
       "denoise_strength": 1.0,
       "batched_cfg": false,
@@ -113,7 +113,7 @@
         0
       ],
       "image_embeds": [
-        "99",
+        "220",
         0
       ],
       "text_embeds": [
@@ -166,20 +166,6 @@
       "title": "WanVideo Encode"
     }
   },
-  "99": {
-    "inputs": {
-      "width": 720,
-      "height": 720,
-      "num_frames": [
-        "210",
-        0
-      ]
-    },
-    "class_type": "WanVideoEmptyEmbeds",
-    "_meta": {
-      "title": "WanVideo Empty Embeds"
-    }
-  },
   "106": {
     "inputs": {
       "directory": [
@@ -203,7 +189,7 @@
   },
   "124": {
     "inputs": {
-      "value": 106
+      "value": 307
     },
     "class_type": "JWInteger",
     "_meta": {
@@ -226,7 +212,7 @@
         0
       ],
       "mask": [
-        "191",
+        "234",
         0
       ]
     },
@@ -252,8 +238,8 @@
   },
   "168": {
     "inputs": {
-      "lora": "training_results/actor_Svyatoslav/look_01/training_results_wan21_01/14B/20260408_17-26-09/epoch2/adapter_model.safetensors",
-      "strength": 1.0,
+      "lora": "training_results/actor_Anton_Vasilev/look_01/training_results_wan21_03_720p_only/14B/20260415_13-31-47/epoch10/adapter_model.safetensors",
+      "strength": 1.2,
       "low_mem_load": false,
       "merge_loras": false
     },
@@ -317,7 +303,7 @@
       "add_double": false,
       "remove_double": false,
       "count_double": 0,
-      "need_zip": true,
+      "need_zip": false,
       "images": [
         "214",
         0
@@ -362,7 +348,7 @@
   },
   "197": {
     "inputs": {
-      "value": "/DATA/Jive/processing/8_serie/0250-v2/0250-v2_s_rogojan/"
+      "value": "/DATA/Jive/processing/8_serie/0130-v2/0130-v2_a_vasilev/"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -371,7 +357,7 @@
   },
   "198": {
     "inputs": {
-      "value": "/DATA/Jive/Yandex.Disk/Dzhave/work/8_serie/0250-v2/0250-v2_s_rogojan/"
+      "value": "/DATA/Jive/Yandex.Disk/Dzhave/work/8_serie/0130-v2/0130-v2_a_vasilev/"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -414,7 +400,7 @@
       "return_list": false,
       "Update inputs": null,
       "string_1": [
-        "197",
+        "198",
         0
       ],
       "string_2": [
@@ -429,7 +415,7 @@
   },
   "202": {
     "inputs": {
-      "value": "/02_mask_green"
+      "value": "/02_mask"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -619,7 +605,7 @@
   },
   "215": {
     "inputs": {
-      "value": "_0250-v2_s_rogojan_epoch2_307"
+      "value": "_0130-v2_a_vasilev_epoch10_47"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -654,7 +640,7 @@
         0
       ],
       "filename_prefix": [
-        "220",
+        "232",
         0
       ],
       "images": [
@@ -689,29 +675,90 @@
   },
   "220": {
     "inputs": {
-      "inputcount": 3,
-      "delimiter": "_",
-      "return_list": false,
-      "Update inputs": null,
-      "string_1": [
-        "216",
+      "width": 720,
+      "height": 720,
+      "num_frames": [
+        "210",
         0
       ],
-      "string_2": [
-        "222",
+      "strength": 0.8,
+      "vace_start_percent": 0.0,
+      "vace_end_percent": 1.0,
+      "tiled_vae": false,
+      "vae": [
+        "38",
         0
       ],
-      "string_3": [
+      "input_frames": [
+        "227",
+        0
+      ]
+    },
+    "class_type": "WanVideoVACEEncode",
+    "_meta": {
+      "title": "WanVideo VACE Encode"
+    }
+  },
+  "221": {
+    "inputs": {
+      "coarse": "disable",
+      "resolution": 1088,
+      "image": [
+        "209",
+        0
+      ]
+    },
+    "class_type": "LineArtPreprocessor",
+    "_meta": {
+      "title": "Realistic Lineart"
+    }
+  },
+  "222": {
+    "inputs": {
+      "width": 720,
+      "height": 720,
+      "upscale_method": "area",
+      "keep_proportion": "resize",
+      "pad_color": "0, 0, 0",
+      "crop_position": "center",
+      "divisible_by": 1,
+      "device": "cpu",
+      "image": [
         "221",
         0
       ]
     },
-    "class_type": "JoinStringMulti",
+    "class_type": "ImageResizeKJv2",
     "_meta": {
-      "title": "Join String Multi"
+      "title": "Resize Image v2"
     }
   },
-  "221": {
+  "227": {
+    "inputs": {
+      "image": [
+        "238",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image"
+    }
+  },
+  "230": {
+    "inputs": {
+      "value": [
+        "125",
+        0
+      ],
+      "format_string": "{:04d}"
+    },
+    "class_type": "JWIntegerToString",
+    "_meta": {
+      "title": "Integer to String"
+    }
+  },
+  "231": {
     "inputs": {
       "value": [
         "124",
@@ -724,17 +771,117 @@
       "title": "Integer to String"
     }
   },
-  "222": {
+  "232": {
     "inputs": {
-      "value": [
-        "125",
+      "inputcount": 3,
+      "delimiter": "_",
+      "return_list": false,
+      "Update inputs": null,
+      "string_1": [
+        "216",
         0
       ],
-      "format_string": "{:04d}"
+      "string_2": [
+        "230",
+        0
+      ],
+      "string_3": [
+        "231",
+        0
+      ]
     },
-    "class_type": "JWIntegerToString",
+    "class_type": "JoinStringMulti",
     "_meta": {
-      "title": "Integer to String"
+      "title": "Join String Multi"
+    }
+  },
+  "233": {
+    "inputs": {
+      "value": 0.5,
+      "width": [
+        "235",
+        0
+      ],
+      "height": [
+        "235",
+        1
+      ]
+    },
+    "class_type": "SolidMask",
+    "_meta": {
+      "title": "SolidMask"
+    }
+  },
+  "234": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "operation": "multiply",
+      "destination": [
+        "191",
+        0
+      ],
+      "source": [
+        "233",
+        0
+      ]
+    },
+    "class_type": "MaskComposite",
+    "_meta": {
+      "title": "MaskComposite"
+    }
+  },
+  "235": {
+    "inputs": {
+      "image": [
+        "213",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "Get Image Size"
+    }
+  },
+  "238": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "resize_source": false,
+      "destination": [
+        "222",
+        0
+      ],
+      "source": [
+        "240",
+        0
+      ],
+      "mask": [
+        "191",
+        0
+      ]
+    },
+    "class_type": "ImageCompositeMasked",
+    "_meta": {
+      "title": "ImageCompositeMasked"
+    }
+  },
+  "240": {
+    "inputs": {
+      "width": [
+        "235",
+        0
+      ],
+      "height": [
+        "235",
+        1
+      ],
+      "batch_size": 1,
+      "color": 0
+    },
+    "class_type": "EmptyImage",
+    "_meta": {
+      "title": "EmptyImage"
     }
   }
 }

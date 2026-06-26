@@ -1,18 +1,18 @@
 {
   "1": {
     "inputs": {
-      "tags": "A polished modern pop track featuring bright synth melodies, a punchy electronic drum kit, and a groovy electric bassline. The production is high-fidelity and energetic, with a catchy rhythmic drive and a clean, radio-ready mix. The atmosphere is uplifting and vibrant, suitable for a contemporary dance-pop anthem.",
-      "lyrics": "[instrumental]",
-      "seed": 1100325964226750,
-      "bpm": 120,
+      "tags": "alarm,pop,male,morning,energy",
+      "lyrics": "[Intro]\nGretel ¡Oye tú!\n\n[Verse]\nGretel ¡Oye tú! \n¡Muévete ya! El despertador no va a parar. Siente el bajo, siente el compás, ¡Fuera de la cama, un paso más ¡Arriba, arriba, muévete bien! Este día corre como un tren ¡Despierta ya, no duermas más. Que la vida es bella y tú reinarás!",
+      "seed": 224161114067267,
+      "bpm": 150,
       "duration": 30.0,
       "timesignature": "4",
       "language": "en",
-      "keyscale": "G major",
+      "keyscale": "C major",
       "generate_audio_codes": false,
-      "cfg_scale": 2.0,
-      "temperature": 0.85,
-      "top_p": 0.9,
+      "cfg_scale": 5.0,
+      "temperature": 0.3,
+      "top_p": 0.3,
       "top_k": 0,
       "min_p": 0.0,
       "clip": [
@@ -23,22 +23,6 @@
     "class_type": "TextEncodeAceStepAudio1.5",
     "_meta": {
       "title": "TextEncodeAceStepAudio1.5"
-    }
-  },
-  "18": {
-    "inputs": {
-      "samples": [
-        "102",
-        0
-      ],
-      "vae": [
-        "999",
-        0
-      ]
-    },
-    "class_type": "VAEDecodeAudio",
-    "_meta": {
-      "title": "VAE Decode Audio"
     }
   },
   "47": {
@@ -66,23 +50,13 @@
       "title": "ModelSamplingAuraFlow"
     }
   },
-  "98": {
-    "inputs": {
-      "seconds": 30.0,
-      "batch_size": 1
-    },
-    "class_type": "EmptyAceStep1.5LatentAudio",
-    "_meta": {
-      "title": "Empty Ace Step 1.5 Latent Audio"
-    }
-  },
   "99": {
     "inputs": {
-      "filename_prefix": "/sda-disk/home/Ringtone/music-generation-system/temp/results/2970002f-621b-4288-a521-bd02cef1c646.mp3",
+      "filename_prefix": "/sda-disk/home/Ringtone/music-generation-system/temp/results/cc9f9546-5d9a-4f61-a494-b684f0996cdf.mp3",
       "quality": "320k",
-      "audioUI": "",
+      "audioUI": "/api/view?filename=ComfyUI.mp3&type=output&subfolder=audio&rand=0.38132935163071024",
       "audio": [
-        "18",
+        "1015",
         0
       ]
     },
@@ -91,44 +65,14 @@
       "title": "Save Audio (MP3)"
     }
   },
-  "100": {
-    "inputs": {
-      "seed": 551920112546168,
-      "steps": 4,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 0.35,
-      "model": [
-        "78",
-        0
-      ],
-      "positive": [
-        "1",
-        0
-      ],
-      "negative": [
-        "47",
-        0
-      ],
-      "latent_image": [
-        "101",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
-    }
-  },
   "101": {
     "inputs": {
-      "seed": 756750936558355,
+      "seed": 910724108924292,
       "steps": 8,
-      "cfg": 1.0,
+      "cfg": 2.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 1.0,
+      "denoise": 0.38,
       "model": [
         "78",
         0
@@ -142,7 +86,7 @@
         0
       ],
       "latent_image": [
-        "98",
+        "110",
         0
       ]
     },
@@ -151,34 +95,66 @@
       "title": "KSampler"
     }
   },
-  "102": {
+  "105": {
     "inputs": {
-      "seed": 602997888106553,
-      "steps": 2,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 0.15,
-      "model": [
-        "78",
+      "samples": [
+        "101",
         0
       ],
-      "positive": [
-        "1",
-        0
-      ],
-      "negative": [
-        "47",
-        0
-      ],
-      "latent_image": [
-        "100",
+      "vae": [
+        "999",
         0
       ]
     },
-    "class_type": "KSampler",
+    "class_type": "VAEDecodeAudio",
     "_meta": {
-      "title": "KSampler"
+      "title": "VAE Decode Audio"
+    }
+  },
+  "110": {
+    "inputs": {
+      "audio": [
+        "111",
+        0
+      ],
+      "vae": [
+        "999",
+        0
+      ]
+    },
+    "class_type": "VAEEncodeAudio",
+    "_meta": {
+      "title": "VAE Encode Audio"
+    }
+  },
+  "111": {
+    "inputs": {
+      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_36/ES/t36_es_raw_song.mp3",
+      "audioUI": "/api/view?filename=t36_es_raw_song.mp3&type=input&subfolder=&rand=0.33866992991479394"
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "Raw Song"
+    }
+  },
+  "222": {
+    "inputs": {
+      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_36/ES/t36_es_raw_song.mp3",
+      "audioUI": "/api/view?filename=background_alarm260526001.mp3&type=input&subfolder=&rand=0.6736348667030362"
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "Beat"
+    }
+  },
+  "777": {
+    "inputs": {
+      "unet_name": "acestep_v1.5_xl_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
     }
   },
   "888": {
@@ -202,14 +178,88 @@
       "title": "Load VAE"
     }
   },
-  "777": {
+  "1011": {
     "inputs": {
-      "unet_name": "acestep_v1.5_xl_turbo_bf16.safetensors",
-      "weight_dtype": "default"
+      "volume": 4,
+      "audio": [
+        "222",
+        0
+      ]
     },
-    "class_type": "UNETLoader",
+    "class_type": "AudioAdjustVolume",
     "_meta": {
-      "title": "Load Diffusion Model"
+      "title": "Audio Adjust Volume"
+    }
+  },
+  "1014": {
+    "inputs": {
+      "audioUI": "/api/view?filename=ComfyUI_temp_tzdqy.flac&type=temp&subfolder=&rand=0.9686245485524595",
+      "audio": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "PreviewAudio",
+    "_meta": {
+      "title": "Preview Audio"
+    }
+  },
+  "1015": {
+    "inputs": {
+      "direction": "after",
+      "audio1": [
+        "1016",
+        0
+      ],
+      "audio2": [
+        "1018",
+        0
+      ]
+    },
+    "class_type": "AudioConcat",
+    "_meta": {
+      "title": "Audio Concat"
+    }
+  },
+  "1016": {
+    "inputs": {
+      "start_time": 0.0,
+      "end_time": 4.2,
+      "audio": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "AudioTrim",
+    "_meta": {
+      "title": "Audio Trim ⚡🅡🅞🅣🅘"
+    }
+  },
+  "1018": {
+    "inputs": {
+      "start_time": 4.2,
+      "end_time": 0.0,
+      "audio": [
+        "111",
+        0
+      ]
+    },
+    "class_type": "AudioTrim",
+    "_meta": {
+      "title": "Audio Trim ⚡🅡🅞🅣🅘"
+    }
+  },
+  "1022": {
+    "inputs": {
+      "audioUI": "/api/view?filename=ComfyUI_temp_mxsyz.flac&type=temp&subfolder=&rand=0.9691641839669538",
+      "audio": [
+        "1015",
+        0
+      ]
+    },
+    "class_type": "PreviewAudio",
+    "_meta": {
+      "title": "Preview Audio"
     }
   }
 }

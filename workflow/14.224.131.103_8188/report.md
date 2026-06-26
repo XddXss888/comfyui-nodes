@@ -1,16 +1,16 @@
 # 14.224.131.103:8188
 
 **GPU**: RTX 4070 Ti | **显存**: 16 GB | **空闲**: 6 GB
-**内存**: 31 GB (空闲 15 GB)
+**内存**: 31 GB (空闲 16 GB)
 **版本**: 0.26.0
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-25 21:22:31
-**历史总数**: 52 | **成功**: 10
+**扫描时间**: 2026-06-26 08:08:54
+**历史总数**: 290 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `2503c8d6-6b00-4c48-a80a-e803d1c627df`
+- **Prompt ID**: `54077ae6-4d17-4adb-be47-c04dfd3f3cac`
 - **类型**: 图生图
 - **节点数**: 20
 - **模型** (3):
@@ -19,11 +19,23 @@
   - sdxl_vae.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing
-  - [ttN text::text] Randomly choose a new option that best fits the image. Do not preserve the original selection.
-  - [ttN text::text] Randomly choose a new option that best fits the image. Do not preserve the original selection.
+  - [ttN text::text] Living room
+  - [ttN text::text] High quality, masterpiece, 8k, high definition
 
 ### 2. workflow_02.json
-- **Prompt ID**: `cb2af1f0-ed9e-4c68-8bb4-c1e07434541a`
+- **Prompt ID**: `ebae45da-d82c-475b-b34c-30c775667095`
+- **类型**: 图生图
+- **节点数**: 20
+- **模型** (3):
+  - XLHxzmixInteriorAnd_v10.safetensors
+  - mistoLine_rank256.safetensors
+  - sdxl_vae.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing
+  - [ttN text::text] High quality, masterpiece, 8k, high definition
+
+### 3. workflow_03.json
+- **Prompt ID**: `3fbd7e12-d2f2-4ae0-b00b-df8f1a572df2`
 - **类型**: 图生图
 - **节点数**: 20
 - **模型** (3):
@@ -35,21 +47,8 @@
   - [ttN text::text] Contemporary
   - [ttN text::text] High quality, masterpiece, 8k, high definition
 
-### 3. workflow_03.json
-- **Prompt ID**: `7aa9b5af-880b-4a9f-8ea3-703b6b136c24`
-- **类型**: 图生图
-- **节点数**: 20
-- **模型** (3):
-  - XLHxzmixInteriorAnd_v10.safetensors
-  - mistoLine_rank256.safetensors
-  - sdxl_vae.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing
-  - [ttN text::text] neutral gray-beige color palette, soft and muted
-  - [ttN text::text] High quality, masterpiece, 8k, high definition
-
 ### 4. workflow_04.json
-- **Prompt ID**: `34f53410-311c-4288-8b06-ca690de08584`
+- **Prompt ID**: `9d05fd17-17ad-4640-b550-b01cb1440630`
 - **类型**: 图生图
 - **节点数**: 20
 - **模型** (3):
@@ -61,7 +60,7 @@
   - [ttN text::text] High quality, masterpiece, 8k, high definition
 
 ### 5. workflow_05.json
-- **Prompt ID**: `50e59df0-1ad6-41b3-b938-642735e91aa7`
+- **Prompt ID**: `e9ad1094-b319-4d52-9861-3b848407b396`
 - **类型**: 图生图
 - **节点数**: 20
 - **模型** (3):
@@ -70,11 +69,11 @@
   - sdxl_vae.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing
-  - [ttN text::text] Ocean blue palette
-  - [ttN text::text] Contemporary
+  - [ttN text::text] Randomly choose a new option that best fits the image. Do not preserve the original selection.
+  - [ttN text::text] High quality, masterpiece, 8k, high definition
 
 ### 6. workflow_06.json
-- **Prompt ID**: `af201a5d-a9f0-4b10-aa42-1c6548990c24`
+- **Prompt ID**: `61b8bf9f-cc5d-4217-819a-21eb04942078`
 - **类型**: 图生图
 - **节点数**: 20
 - **模型** (3):
@@ -86,19 +85,20 @@
   - [ttN text::text] High quality, masterpiece, 8k, high definition
 
 ### 7. workflow_07.json
-- **Prompt ID**: `8786e1f6-4ca3-4cc4-acc2-c49213737d12`
+- **Prompt ID**: `d341a071-d731-4948-b57e-645cb70977f3`
 - **类型**: 图生图
-- **节点数**: 20
-- **模型** (3):
+- **节点数**: 19
+- **模型** (4):
+  - CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors
   - XLHxzmixInteriorAnd_v10.safetensors
   - mistoLine_rank256.safetensors
   - sdxl_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing
-  - [ttN text::text] High quality, masterpiece, 8k, high definition
+  - [CLIPTextEncode::text] nsfw,,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing,nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing,nsfw
+  - [CLIPTextEncode::text] High quality, masterpiece, 8k, high definition, anime artwork,
 
 ### 8. workflow_08.json
-- **Prompt ID**: `35e6be8a-4efb-4e2d-a283-49cfe7f4a1f0`
+- **Prompt ID**: `bf3e2b29-956b-46fd-9e32-56ad4b37386d`
 - **类型**: 图生图
 - **节点数**: 20
 - **模型** (3):
@@ -110,19 +110,7 @@
   - [ttN text::text] High quality, masterpiece, 8k, high definition
 
 ### 9. workflow_09.json
-- **Prompt ID**: `a324f195-f145-42b7-bd1c-131bbbd7246d`
-- **类型**: 图生图
-- **节点数**: 18
-- **模型** (3):
-  - XLHxzmixInteriorAnd_v10.safetensors
-  - mistoLine_rank256.safetensors
-  - sdxl_vae.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing
-  - [ttN text::text] High quality, masterpiece, 8k, high definition,
-
-### 10. workflow_10.json
-- **Prompt ID**: `11dce329-434c-4b6a-bbb7-bd3ac2153746`
+- **Prompt ID**: `9851983f-ec97-420f-9365-d1297eebd465`
 - **类型**: 图生图
 - **节点数**: 20
 - **模型** (3):
@@ -131,5 +119,16 @@
   - sdxl_vae.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing
-  - [ttN text::text] Ocean blue palette
+  - [ttN text::text] High quality, masterpiece, 8k, high definition
+
+### 10. workflow_10.json
+- **Prompt ID**: `31c75ed3-775c-42c8-b15d-66a8dd75e676`
+- **类型**: 图生图
+- **节点数**: 20
+- **模型** (3):
+  - XLHxzmixInteriorAnd_v10.safetensors
+  - mistoLine_rank256.safetensors
+  - sdxl_vae.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing
   - [ttN text::text] High quality, masterpiece, 8k, high definition

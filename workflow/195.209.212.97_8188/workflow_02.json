@@ -13,7 +13,7 @@
   },
   "16": {
     "inputs": {
-      "positive_prompt": "d2z0h2a6yv, portrait of a man who does not lower his head",
+      "positive_prompt": "d2z0h2a6yv, portrait of a man who does not lower his head, one person",
       "negative_prompt": "mustache, beard, sideburns, imperial beard, stubble, shaggy mustache, horseshoe mustache, Italian mustache, Fu Manchu mustache, pencil mustache, horseshoe mustache, full beard, goatee, Van Dyke beard, Hollywood beard, Garfield beard, skate beard, Amish beard, Balbo beard, Verdi beard, three-day stubble, week-long stubble, Mexican stubble, Bredin sideburns/cheeks, Elvis sideburns, skipper beard, French fork split beard",
       "force_offload": true,
       "use_disk_cache": false,
@@ -98,7 +98,7 @@
       ],
       "cfg": 3.0,
       "shift": 8.0,
-      "seed": 28475,
+      "seed": 114747,
       "force_offload": true,
       "scheduler": "dpm++_sde",
       "riflex_freq_index": 0,
@@ -619,7 +619,7 @@
   },
   "215": {
     "inputs": {
-      "value": "_0040_anar_epoch1_28475"
+      "value": "_0040_anar_epoch1_114747"
     },
     "class_type": "PrimitiveString",
     "_meta": {

@@ -10,7 +10,7 @@
   },
   "2": {
     "inputs": {
-      "prompt": "replace the BG with a living room, house being a lower middle class house setup, he is sitting and working in his living room, keep the same camera angle, and the look of the person exactly the same",
+      "prompt": "replace the BG with a living room, house being a lower middle class house setup, he is sitting and working in his living room, keep the same camera angle, and the look of the person exactly the same, keep the chair exactly the same as the reference image",
       "model": "Pro",
       "model.resolution": "2K",
       "aspect_ratio": "16:9",
@@ -86,7 +86,7 @@
   },
   "8": {
     "inputs": {
-      "prompt": "replace the BG with a background, he is standing in front of the flat, in bg there will be neighbours flat door, keep the camera angle exactly the same and the person exactly the same ",
+      "prompt": "Replace the existing background with the exterior corridor of a residential apartment building. Keep the person completely unchanged — same appearance, clothing, pose, expression, body position, scale, and placement in the frame. Maintain the exact same camera angle, framing, perspective, lens characteristics, depth of field, and lighting on the subject.\n\nThe person should be standing directly in front of their apartment door in a realistic Indian residential apartment corridor. In the background, visible neighboring flat doors line the corridor on both sides, along with authentic apartment details such as door numbers, doorbells, corridor walls, railings, and natural residential building elements.\n\nPreserve the original composition exactly. Only replace the background environment. Ensure seamless integration with realistic shadows, reflections, perspective matching, and natural lighting consistency between the subject and the new apartment corridor setting. High realism, photorealistic residential environment, natural architectural details, premium image quality.\n",
       "model": "Pro",
       "model.resolution": "2K",
       "aspect_ratio": "16:9",
@@ -105,6 +105,57 @@
       "filename_prefix": "ComfyUI",
       "images": [
         "2",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "10": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "11": {
+    "inputs": {
+      "image": "ComfyUI_00259_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "12": {
+    "inputs": {
+      "prompt": "keep the BG exactly the same just remove the person",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "13": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "12",
         0
       ]
     },

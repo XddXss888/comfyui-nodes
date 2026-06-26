@@ -13,8 +13,8 @@
   },
   "16": {
     "inputs": {
-      "positive_prompt": "d2z0h2a6yv, portrait of a woman",
-      "negative_prompt": "orange spots, highlights",
+      "positive_prompt": "d2z0h2a6yv, portrait of a man with snow-white hair, one person",
+      "negative_prompt": "nose,highlighted hair, multicolored strands of hair, black and gray spots, shadow, fingers, cloth, bandages, leaves, mask, hats, gray and black spots, grey and black stripes, tattoos, glasses, mustache, beard, sideburns, imperial beard, stubble, shaggy mustache, horseshoe mustache, Italian mustache, Fu Manchu mustache, pencil mustache, horseshoe mustache, full beard, goatee, Van Dyke beard, Hollywood beard, Garfield beard, skate beard, Amish beard, Balbo beard, Verdi beard, three-day stubble, week-long stubble, Mexican stubble, Bredin sideburns/cheeks, Elvis sideburns, skipper beard, French fork split beard",
       "force_offload": true,
       "use_disk_cache": false,
       "device": "gpu",
@@ -98,7 +98,7 @@
       ],
       "cfg": 3.0,
       "shift": 8.0,
-      "seed": 28475,
+      "seed": 43,
       "force_offload": true,
       "scheduler": "dpm++_sde",
       "riflex_freq_index": 0,
@@ -203,7 +203,7 @@
   },
   "124": {
     "inputs": {
-      "value": 66
+      "value": 106
     },
     "class_type": "JWInteger",
     "_meta": {
@@ -252,7 +252,7 @@
   },
   "168": {
     "inputs": {
-      "lora": "training_results/actor_Angelina/look_04/training_results_wan21_01/14B/20260430_21-26-07/epoch1/adapter_model.safetensors",
+      "lora": "training_results/actor_Svyatoslav/look_01/training_results_wan21_01/14B/20260408_17-26-09/epoch2/adapter_model.safetensors",
       "strength": 1.0,
       "low_mem_load": false,
       "merge_loras": false
@@ -362,7 +362,7 @@
   },
   "197": {
     "inputs": {
-      "value": "/DATA/Jive/processing/8_serie/0300/0300_a_pahomova/"
+      "value": "/DATA/Jive/processing/8_serie/0250-v2/0250-v2_s_rogojan/"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -371,7 +371,7 @@
   },
   "198": {
     "inputs": {
-      "value": "/DATA/Jive/Yandex.Disk/Dzhave/work/8_serie/0300/0300_a_pahomova/"
+      "value": "/DATA/Jive/Yandex.Disk/Dzhave/work/8_serie/0250-v2/0250-v2_s_rogojan/"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -619,7 +619,7 @@
   },
   "215": {
     "inputs": {
-      "value": "_0300_a_pahomova_epoch1_28475"
+      "value": "_0250-v2_s_rogojan_epoch2_43"
     },
     "class_type": "PrimitiveString",
     "_meta": {

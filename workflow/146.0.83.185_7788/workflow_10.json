@@ -1,0 +1,547 @@
+{
+  "74": {
+    "inputs": {
+      "image": "42240032.JPG"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "76": {
+    "inputs": {
+      "shift": 3.1,
+      "model": [
+        "114",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "77": {
+    "inputs": {
+      "sage_attention": "auto",
+      "allow_compile": false,
+      "model": [
+        "76",
+        0
+      ]
+    },
+    "class_type": "PathchSageAttentionKJ",
+    "_meta": {
+      "title": "Patch Sage Attention KJ"
+    }
+  },
+  "81": {
+    "inputs": {
+      "images": [
+        "203:199",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "82": {
+    "inputs": {
+      "images": [
+        "88",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "83": {
+    "inputs": {
+      "crop_left": 0.0,
+      "crop_right": 0.0,
+      "crop_top": 0.0,
+      "crop_bottom": 0.0,
+      "width": 1232,
+      "height": 816,
+      "multiplicity": 16,
+      "resolution (MP)": 1.0,
+      "upscale_method": "bicubic",
+      "aspect_ratio": "3089:2045",
+      "Ratio Presets": "Custom",
+      "ratio_lock": false,
+      "Full Image": null,
+      "Center": null,
+      "Maximize": null,
+      "crop_preview": null,
+      "image": [
+        "74",
+        0
+      ]
+    },
+    "class_type": "orex Crop",
+    "_meta": {
+      "title": "🔳Crop (OreX)"
+    }
+  },
+  "88": {
+    "inputs": {
+      "text_x": 10,
+      "text_y": 2,
+      "height": 160,
+      "font_size": 50,
+      "font_color": "black",
+      "label_color": "white",
+      "font": "FreeMono.ttf",
+      "text": [
+        "122",
+        0
+      ],
+      "direction": "down",
+      "image": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "AddLabel",
+    "_meta": {
+      "title": "Add Label"
+    }
+  },
+  "90": {
+    "inputs": {
+      "direction": "right",
+      "match_image_size": true,
+      "image1": [
+        "83",
+        0
+      ],
+      "image2": [
+        "203:199",
+        0
+      ]
+    },
+    "class_type": "ImageConcanate",
+    "_meta": {
+      "title": "ImageConcanate"
+    }
+  },
+  "99": {
+    "inputs": {
+      "anything": [
+        "116",
+        0
+      ]
+    },
+    "class_type": "easy cleanGpuUsed",
+    "_meta": {
+      "title": "Clean VRAM Used"
+    }
+  },
+  "100": {
+    "inputs": {
+      "anything": [
+        "116",
+        0
+      ]
+    },
+    "class_type": "easy clearCacheAll",
+    "_meta": {
+      "title": "Clear Cache All"
+    }
+  },
+  "104": {
+    "inputs": {
+      "samples": [
+        "108",
+        0
+      ],
+      "vae": [
+        "113",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "105": {
+    "inputs": {
+      "images": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "106": {
+    "inputs": {
+      "active": false,
+      "output_path": "",
+      "create_current_date_folder": true,
+      "create_processed_folder": false,
+      "filename_prefix_1": "Image",
+      "filename_prefix_2": "",
+      "filename_prefix_3": "",
+      "filename_separator": "_",
+      "use_counter": true,
+      "embed_workflow": true,
+      "image_format": "png",
+      "jpg_quality": 90,
+      "webp_quality": 100,
+      "optimize_png": false,
+      "images": [
+        "203:199",
+        0
+      ]
+    },
+    "class_type": "orex Save Image",
+    "_meta": {
+      "title": "💾 Save Image (OreX)"
+    }
+  },
+  "108": {
+    "inputs": {
+      "seed": 666150045718979,
+      "steps": 30,
+      "cfg": 1.0,
+      "sampler_name": "uni_pc",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "128",
+        0
+      ],
+      "positive": [
+        "116",
+        0
+      ],
+      "negative": [
+        "116",
+        1
+      ],
+      "latent_image": [
+        "130",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "113": {
+    "inputs": {
+      "vae_name": "flux-vae-bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "114": {
+    "inputs": {
+      "unet_name": "Boogu\\boogu_image_edit_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "115": {
+    "inputs": {
+      "clip_name": "qwen3vl_8b_fp8_scaled.safetensors",
+      "type": "boogu",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "116": {
+    "inputs": {
+      "prompt": [
+        "127",
+        0
+      ],
+      "negative_prompt": "low quality, low detailed",
+      "clip": [
+        "115",
+        0
+      ],
+      "vae": [
+        "113",
+        0
+      ],
+      "images.image_1": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "TextEncodeBooguEdit",
+    "_meta": {
+      "title": "TextEncodeBooguEdit"
+    }
+  },
+  "121": {
+    "inputs": {
+      "value": "Убери повреждения и сделай фото цветным и современным, замени локацию словно они седят на ценральной пложадь мегаполиса возле фонтана"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "PROMPT"
+    }
+  },
+  "122": {
+    "inputs": {
+      "string_function": "Boogu Edit\n{A}",
+      "insert_buttons": null,
+      "A": [
+        "121",
+        0
+      ]
+    },
+    "class_type": "orex String Function",
+    "_meta": {
+      "title": "✍️ String Function (OreX)"
+    }
+  },
+  "127": {
+    "inputs": {
+      "text_input": [
+        "121",
+        0
+      ],
+      "system_prompt": "",
+      "system_preset": "English translator",
+      "model_key": "hy-mt1.5-1.8b",
+      "include_reasoning": false,
+      "auto_unload_model": true,
+      "unload_delay": 0,
+      "clean_vram_before": false,
+      "seed": 398342111062390,
+      "context_length": 4096,
+      "max_tokens": 0,
+      "generation_parameters": false,
+      "temperature": 0.7,
+      "top_k": 40,
+      "top_p": 0.95,
+      "repeat_penalty": 1.1
+    },
+    "class_type": "orex LMStudio",
+    "_meta": {
+      "title": "🤖 LMStudio (OreX)"
+    }
+  },
+  "128": {
+    "inputs": {
+      "enable": true,
+      "model_type": "Qwen-Image",
+      "warmup_steps": 5,
+      "skip_interval": 0,
+      "print_summary": true,
+      "model": [
+        "77",
+        0
+      ]
+    },
+    "class_type": "CacheDiT_Model_Optimizer",
+    "_meta": {
+      "title": "⚡ CacheDiT Accelerator"
+    }
+  },
+  "129": {
+    "inputs": {
+      "text_0": "Remove any damages, and take a colorful and modern photo. Also, change the location to something like they’re sitting on the grey stone pavement of the city, near a fountain.",
+      "text": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "130": {
+    "inputs": {
+      "width": [
+        "83",
+        2
+      ],
+      "height": [
+        "83",
+        3
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "133": {
+    "inputs": {
+      "crop_left": 0.0,
+      "crop_right": 0.0,
+      "crop_top": 0.0,
+      "crop_bottom": 0.0,
+      "width": 2000,
+      "height": 2000,
+      "multiplicity": 16,
+      "resolution (MP)": 4.0,
+      "upscale_method": "bicubic",
+      "aspect_ratio": "1:1",
+      "Ratio Presets": "1:1",
+      "ratio_lock": false,
+      "Full Image": null,
+      "Center": null,
+      "Maximize": null,
+      "crop_preview": null,
+      "image": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "orex Crop",
+    "_meta": {
+      "title": "🔳Crop (OreX)"
+    }
+  },
+  "203:192": {
+    "inputs": {
+      "model": "ema_vae_fp16.safetensors",
+      "device": "cuda:0",
+      "encode_tiled": true,
+      "encode_tile_size": 1024,
+      "encode_tile_overlap": 128,
+      "decode_tiled": true,
+      "decode_tile_size": 1024,
+      "decode_tile_overlap": 128,
+      "tile_debug": "false",
+      "offload_device": "cpu",
+      "cache_model": false
+    },
+    "class_type": "SeedVR2LoadVAEModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load VAE Model"
+    }
+  },
+  "203:193": {
+    "inputs": {
+      "model": "seedvr2_ema_7b_sharp-Q4_K_M.gguf",
+      "device": "cuda:0",
+      "blocks_to_swap": 16,
+      "swap_io_components": false,
+      "offload_device": "cpu",
+      "cache_model": false,
+      "attention_mode": "sageattn_2"
+    },
+    "class_type": "SeedVR2LoadDiTModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load DiT Model"
+    }
+  },
+  "203:194": {
+    "inputs": {
+      "image": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "Get Image Size"
+    }
+  },
+  "203:196": {
+    "inputs": {
+      "mode": true,
+      "a": [
+        "203:194",
+        0
+      ],
+      "b": [
+        "203:194",
+        1
+      ]
+    },
+    "class_type": "ImpactMinMax",
+    "_meta": {
+      "title": "ImpactMinMax"
+    }
+  },
+  "203:198": {
+    "inputs": {
+      "switch": true,
+      "on_false": [
+        "203:196",
+        0
+      ],
+      "on_true": [
+        "203:197",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "Switch"
+    }
+  },
+  "203:197": {
+    "inputs": {
+      "value": 3000
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Max Res"
+    }
+  },
+  "203:199": {
+    "inputs": {
+      "seed": 4105350075,
+      "resolution": [
+        "203:198",
+        0
+      ],
+      "max_resolution": [
+        "203:198",
+        0
+      ],
+      "batch_size": 1,
+      "uniform_batch_size": false,
+      "color_correction": "lab",
+      "temporal_overlap": 16,
+      "prepend_frames": 0,
+      "input_noise_scale": 0.0,
+      "latent_noise_scale": 0.0,
+      "offload_device": "cpu",
+      "enable_debug": false,
+      "image": [
+        "104",
+        0
+      ],
+      "dit": [
+        "203:193",
+        0
+      ],
+      "vae": [
+        "203:192",
+        0
+      ]
+    },
+    "class_type": "SeedVR2VideoUpscaler",
+    "_meta": {
+      "title": "SeedVR2 Video Upscaler (v2.5.24)"
+    }
+  }
+}

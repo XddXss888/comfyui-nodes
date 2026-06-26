@@ -25,7 +25,7 @@
   "3": {
     "inputs": {
       "lora_name": "anima\\anima-base-1-masterpiece-v51.safetensors",
-      "strength_model": 1.0,
+      "strength_model": 0.3,
       "model": [
         "2",
         0
@@ -53,7 +53,7 @@
   "46": {
     "inputs": {
       "lora_name": "anima\\gpt-image-2_anima-base1_v1-1.safetensors",
-      "strength_model": 0.0,
+      "strength_model": 0.2,
       "model": [
         "4",
         0
@@ -67,7 +67,7 @@
   "47": {
     "inputs": {
       "lora_name": "anima\\虹甜蜜点-@NJSW33T.safetensors",
-      "strength_model": 1.0,
+      "strength_model": 0.5,
       "model": [
         "46",
         0
@@ -122,7 +122,7 @@
         "45",
         0
       ],
-      "text": "masterpiece, best quality, safe,very aesthetic, ultra-detailed, abstract, nsfw, @gpt-image-2, @meionANIMAstyle,@sw33t,@NJSW33T,${promot}, A high-quality cinematic POV photo in a pitch-black elevator cabin. A mature woman is kneeling on the floor, performing oral sex, while another woman leans against the wall nearby. BREAK (1girl, LinZhiQiu:1.1), female_focus, 40yo, housewife, kneeling_on_floor, performing_fellatio, penis_in_mouth, holding_penis, looking_up, (long_black_hair, fair_skin), (white_midi_dress, pulled_down_collar), (parted_lips:1.2), pussy_juice, ahegao, sweat. BREAK (1girl, ShenManci:0.9), background_character, leaning_against_wall, wearing_black_blindfold, clenched_fists, tense_posture, (black_business_suit). BREAK (1boy, unseen_partner), pov, pov_from_male, standing, visible_penis. BREAK (indoors), pitch_black, metal_walls, elevator_cabin, extremely_dark, claustrophobic, depth_of_field."
+      "text": "masterpiece, best quality,very aesthetic, mature woman,ultra-detailed, nsfw, @gpt-image-2, @meionANIMAstyle,@sw33t,@NJSW33T,${promot}, A cinematic photo of an intense, close-up interaction between a man and a woman on a yacht deck. The man has stepped closer, holding the woman's wrist, whispering in her ear. BREAK (1girl, Shen Manci:1.1), female_focus, 45yo, visual_age_30, mature female, standing, stiff_posture, wrist_grabbed_by_partner, (black_hair, elegant_updo, red_lips:1.2), wide_eyes, subtle_panic, flushed_cheeks, (black_evening_gown, deep_v_neckline). BREAK (1boy, zy:1.1), male_focus, standing_very_close, holding_partner_wrist, leaning_in, whispering_in_ear, dominant_posture, intense_gaze, (short_black_hair, navy_blue_silk_shirt, buttoned_up). BREAK (outdoors), yacht_deck, ocean_background, warm golden hour sunset lighting, strong backlighting, dramatic cinematic shadows, high_tension, close_up, depth_of_field."
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
@@ -172,7 +172,7 @@
         0
       ],
       "seed": 317540284430183,
-      "steps": 47,
+      "steps": 12,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

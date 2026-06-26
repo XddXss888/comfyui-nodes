@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "A man roughly grabs a woman by her hair and pulls her head back. He violently kisses her mouth, kissing her roughly with open mouth. She stays motionless and passive. Rough brutal forcible kiss, aggressive, wild, raw, direct, cinematic lighting.",
+      "text": "A man and a woman stand face to face. He grabs her by the hair and roughly kisses her mouth. She stands still and does not move. Rough brutal kiss, aggressive, raw, cinematic lighting.",
       "clip": [
         "97",
         0
@@ -11,7 +11,7 @@
   },
   "7": {
     "inputs": {
-      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走，nsfw，nude，naked",
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
       "clip": [
         "97",
         0
@@ -42,7 +42,7 @@
     "inputs": {
       "shift": 8.0,
       "model": [
-        "77",
+        "201",
         0
       ]
     },
@@ -52,7 +52,7 @@
     "inputs": {
       "shift": 8.0,
       "model": [
-        "103",
+        "202",
         0
       ]
     },
@@ -61,9 +61,9 @@
   "57": {
     "inputs": {
       "add_noise": "enable",
-      "noise_seed": 555555555555,
+      "noise_seed": 719040098724,
       "steps": 8,
-      "cfg": 1.0,
+      "cfg": 2.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "start_at_step": 0,
@@ -91,9 +91,9 @@
   "58": {
     "inputs": {
       "add_noise": "disable",
-      "noise_seed": 555555555555,
+      "noise_seed": 719040098724,
       "steps": 8,
-      "cfg": 1.0,
+      "cfg": 2.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "start_at_step": 4,
@@ -187,10 +187,32 @@
         "99",
         0
       ],
-      "filename_prefix": "seg1_capture_kiss",
+      "filename_prefix": "seg1_lora_lightning_05",
       "format": "mp4",
       "codec": "h264"
     },
     "class_type": "SaveVideo"
+  },
+  "201": {
+    "inputs": {
+      "model": [
+        "77",
+        0
+      ],
+      "lora_name": "Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors",
+      "strength_model": 0.5
+    },
+    "class_type": "LoraLoaderModelOnly"
+  },
+  "202": {
+    "inputs": {
+      "model": [
+        "103",
+        0
+      ],
+      "lora_name": "Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors",
+      "strength_model": 0.5
+    },
+    "class_type": "LoraLoaderModelOnly"
   }
 }

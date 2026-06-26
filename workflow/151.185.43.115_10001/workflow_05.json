@@ -86,7 +86,7 @@
   },
   "8": {
     "inputs": {
-      "prompt": "Replace the existing background with the exterior corridor of a residential apartment building. Keep the person completely unchanged — same appearance, clothing, pose, expression, body position, scale, and placement in the frame. Maintain the exact same camera angle, framing, perspective, lens characteristics, depth of field, and lighting on the subject.\n\nThe person should be standing directly in front of their apartment door in a realistic Indian residential apartment corridor. In the background, visible neighboring flat doors line the corridor on both sides, along with authentic apartment details such as door numbers, doorbells, corridor walls, railings, and natural residential building elements.\n\nPreserve the original composition exactly. Only replace the background environment. Ensure seamless integration with realistic shadows, reflections, perspective matching, and natural lighting consistency between the subject and the new apartment corridor setting. High realism, photorealistic residential environment, natural architectural details, premium image quality.\n",
+      "prompt": "Replace only the background with a simple apartment corridor wall. Keep the person exactly the same — same pose, expression, clothing, position, scale, lighting, and camera angle. Do not change the framing or perspective in any way.\n\nThe person is standing directly outside their flat door. Behind them is a flat, straight apartment corridor wall with one neighboring flat door visible in the background. The corridor should appear mostly parallel to the camera, avoiding strong depth, perspective distortion, long hallways, or dramatic architectural elements.\n\nKeep the background clean and minimal: apartment doors, door numbers, doorbells, plain painted walls, and subtle residential details. No wide corridors, no deep vanishing points, no excessive background clutter.\n\nMaintain a flat background appearance with shallow depth of field so the subject remains the primary focus. Realistic Indian apartment building corridor, natural lighting, photorealistic integration, seamless background replacement, preserving the original composition exactly.\n",
       "model": "Pro",
       "model.resolution": "2K",
       "aspect_ratio": "16:9",
@@ -128,7 +128,7 @@
   },
   "11": {
     "inputs": {
-      "image": "ComfyUI_00259_.png"
+      "image": "ComfyUI_00261_.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -140,7 +140,7 @@
       "prompt": "keep the BG exactly the same just remove the person",
       "model": "Pro",
       "model.resolution": "2K",
-      "aspect_ratio": "9:16",
+      "aspect_ratio": "16:9",
       "images.image_1": [
         "11",
         0

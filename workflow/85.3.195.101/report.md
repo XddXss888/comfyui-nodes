@@ -1,70 +1,32 @@
 # 85.3.195.101
 
-**GPU**: MPS | **显存**: 96 GB | **空闲**: 57 GB
-**内存**: 96 GB (空闲 57 GB)
+**GPU**: MPS | **显存**: 96 GB | **空闲**: 81 GB
+**内存**: 96 GB (空闲 81 GB)
 **版本**: 0.24.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-25 21:22:37
-**历史总数**: 15 | **成功**: 10
+**扫描时间**: 2026-06-26 08:09:22
+**历史总数**: 10 | **成功**: 2
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `b72c2099-7b50-4114-b7b5-442e61b45965`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
+- **Prompt ID**: `84bd4971-181b-40d3-9025-028983cbf3d7`
+- **类型**: 文生图
+- **节点数**: 10
+- **模型** (3):
+  - ae.safetensors
+  - qwen_3_4b.safetensors
+  - z_image_turbo_bf16.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Subject: A playful slim European teenager woman completely naked, fully adorned with glossy Snow White themed bodypaint on bare skin without any fabric clothing or suit seams. Outfit (Paint): Royal bl
 
 ### 2. workflow_02.json
-- **Prompt ID**: `ff6f100e-6a6b-4e8e-94ea-177b2bca50ff`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 3. workflow_03.json
-- **Prompt ID**: `1fb7d447-a132-4a0c-ac84-c98e8ade1fb5`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 4. workflow_04.json
-- **Prompt ID**: `650df6b4-f9bc-4c1e-a825-9f2337f71bc4`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 5. workflow_05.json
-- **Prompt ID**: `9e3cb0f8-ce05-4e58-9b06-b8d6486f364c`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 6. workflow_06.json
-- **Prompt ID**: `92fc7154-791b-4dab-a387-2defb59fc4d8`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 7. workflow_07.json
-- **Prompt ID**: `19ed3eb7-6d43-4be5-bdaf-064bcbb47fb4`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 8. workflow_08.json
-- **Prompt ID**: `ff29b68a-a3cd-456b-ad85-5186e4f9ad01`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 9. workflow_09.json
-- **Prompt ID**: `0b351e48-f45b-4ba6-ab40-14528fc3240c`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 10. workflow_10.json
-- **Prompt ID**: `7bc30389-2a5e-469d-b9c9-b473023f4fec`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
+- **Prompt ID**: `a3bd8ea3-9af4-4975-81ca-b9e2ffa6b55f`
+- **类型**: 文生图
+- **节点数**: 10
+- **模型** (3):
+  - ae.safetensors
+  - qwen_3_4b.safetensors
+  - z_image_turbo_bf16.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Subject: A playful slim European teenager woman completely naked, fully adorned with glossy Snow White themed bodypaint on bare skin without any fabric clothing or suit seams. Outfit (Paint): Royal bl

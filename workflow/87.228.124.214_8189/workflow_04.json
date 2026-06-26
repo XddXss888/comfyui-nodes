@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "In an empty classroom after school, a strict female teacher in a fitted suit jacket and tight skirt stands beside the desk wearing glasses, her right hand extended forward from delivering a sharp slap with a confrontational expression and direct downward gaze, pointer resting on the desk, warm overhead lighting, medium close-up framing on her upper body and face.",
+      "text": "seductive young curvy woman with long black hair, In a dimly lit apartment hallway at night, a woman stands in medium close-up, her blouse open at the front exposing her breasts, one hand resting lightly on a partially visible man's shoulder while her other hand holds his wrist, his head inclined as he kisses her breast, her expression calm and slightly teasing, soft corridor shadows falling across her torso and the wall behind, intimate and stable composition with clear contact and natural posture.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "ULRIKANB_SYNTH_zimg_v1.safetensors",
-      "strength_model": 0.82,
-      "strength_clip": 0.86,
+      "lora_name": "izumi_v.2.safetensors",
+      "strength_model": 0.9,
+      "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -137,7 +137,7 @@
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 1109815001262350,
+      "seed": 26161571962184,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [
