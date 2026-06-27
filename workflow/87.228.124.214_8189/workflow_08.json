@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "seductive young curvy woman with long black hair, A nude woman sits with legs spread wide on a simple surface, using both hands to pull her cum-covered pussy open wider, fingers gripping the wet folds and spreading them apart so thick white cum drips visibly from inside, her torso slightly leaned back for support, head tilted forward with a direct seductive gaze toward the viewer, soft warm lighting highlighting the glossy skin and fluid, medium close-up framing from the waist down with clear focus on the explicit pose and contact, clean simple background, natural proportions, stable readable anatomy.",
+      "text": "ameg2, A woman wrapped in a white towel stands near the shower area after swimming, warm humid atmosphere with soft steam around, she has a playful squinted expression and slight smirk while touching her own bicep with one hand, medium close-up framing, natural posture, clear visible arms and shoulders, simple tiled shower background, gentle warm lighting.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "izumi_v.2.safetensors",
+      "lora_name": "ameg2_con_char.safetensors",
       "strength_model": 0.9,
-      "strength_clip": 1.0,
+      "strength_clip": 0.9,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -133,11 +133,11 @@
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 26161571962184,
+      "seed": 415093436776455,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

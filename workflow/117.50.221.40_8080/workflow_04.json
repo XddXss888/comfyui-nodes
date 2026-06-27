@@ -1,107 +1,93 @@
 {
   "1": {
-    "class_type": "UnetLoaderGGUF",
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "unet_name": "sd3.5_large_turbo-Q8_0.gguf"
+      "ckpt_name": "flux1-schnell.safetensors"
     }
   },
   "2": {
-    "class_type": "DualCLIPLoader",
-    "inputs": {
-      "clip_name1": "t5xxl_fp8_e4m3fn.safetensors",
-      "clip_name2": "clip_l.safetensors",
-      "type": "sd3"
-    }
-  },
-  "3": {
-    "class_type": "VAELoader",
-    "inputs": {
-      "vae_name": "sd3_vae.safetensors"
-    }
-  },
-  "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "A 20-year-old beautiful East Asian woman, centered composition with balanced negative space, fair smooth skin, stylish short black hair, slim figure, delicate facial features—defined jawline, straight nose, natural rosy lips, confident dark eyes. She wears a glossy light teal off-shoulder top; one hand touches her cheek, the other rests on her hip in a poised modeling pose. Pure white background, soft even lighting, no harsh shadows. Masterpiece, best quality, ultra-detailed, professional photography., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "Red poster with elegant baozi silhouette, luxury texture, minimalist fashion design, soft ambient lighting, cinematic color grading, masterpiece, best quality, highly detailed, professional photography, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
-        "2",
-        0
+        "1",
+        1
       ]
     }
   },
-  "5": {
+  "3": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 576,
-      "height": 1024,
-      "batch_size": 1
+      "width": 1024,
+      "height": 576,
+      "batch_size": 4
     }
   },
-  "6": {
+  "4": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 810153517,
+      "seed": 154778303,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "sgm_uniform",
       "denoise": 1.0,
       "model": [
-        "12",
+        "10",
         0
       ],
       "positive": [
-        "4",
+        "2",
         0
       ],
       "negative": [
-        "7",
+        "5",
         0
       ],
       "latent_image": [
-        "5",
-        0
-      ]
-    }
-  },
-  "7": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "text": "",
-      "clip": [
-        "2",
-        0
-      ]
-    }
-  },
-  "8": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "samples": [
-        "6",
-        0
-      ],
-      "vae": [
         "3",
         0
       ]
     }
   },
-  "9": {
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "6": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "4",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "7": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_2K",
+      "filename_prefix": "DOOOOR_1K",
       "images": [
-        "14",
+        "6",
         0
       ]
     }
   },
-  "10": {
+  "8": {
     "class_type": "ImageScale",
     "inputs": {
       "image": [
-        "8",
+        "6",
         0
       ],
       "width": 400,
@@ -110,17 +96,17 @@
       "upscale_method": "nearest-exact"
     }
   },
-  "11": {
+  "9": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_2K_TH",
+      "filename_prefix": "DOOOOR_1K_TH",
       "images": [
-        "10",
+        "8",
         0
       ]
     }
   },
-  "12": {
+  "10": {
     "class_type": "LoraLoader",
     "inputs": {
       "model": [
@@ -128,31 +114,12 @@
         0
       ],
       "clip": [
-        "2",
-        0
+        "1",
+        1
       ],
       "lora_name": "bfs_head_v1_flux-klein_9b_step3500_rank128.safetensors",
       "strength_model": 0.8,
       "strength_clip": 0.8
-    }
-  },
-  "13": {
-    "class_type": "UpscaleModelLoader",
-    "inputs": {
-      "model_name": "2xLexicaRRDBNet_Sharp.pth"
-    }
-  },
-  "14": {
-    "class_type": "ImageUpscaleWithModel",
-    "inputs": {
-      "upscale_model": [
-        "13",
-        0
-      ],
-      "image": [
-        "8",
-        0
-      ]
     }
   }
 }

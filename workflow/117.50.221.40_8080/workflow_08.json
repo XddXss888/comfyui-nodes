@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Masterpiece, best quality, detailed professional illustration of a vibrant, cheerful kindergarten entrance in autumn: warm golden leaves, bright red and yellow banners, smiling diverse children holding apples and acorns, cozy brick building with large windows, soft sunlight, inviting atmosphere — no text, no slogans, pure visual appeal.",
+      "text": "Ultra-high-resolution photography, flat composition, sharp focus, studio lighting, professional color grading, masterpiece, best quality, highly detailed, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -40,7 +40,7 @@
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 1921879040,
+      "seed": 931360016,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",

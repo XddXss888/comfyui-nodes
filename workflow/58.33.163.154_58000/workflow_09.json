@@ -23,7 +23,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "a gentle warm little galaxy in a quiet deep night sky after rain, clear blue-black atmosphere, tiny glowing stars like diary fragments, soft radio waves floating like ribbons, cozy bedside window with faint warm light, peaceful and healing mood, delicate illustration, dreamy, atmospheric, tender, high detail, soft lighting, digital illustration, vibrant colors, detailed, artistic, masterpiece, best quality, highly detailed, 4k",
+      "text": "a gentle healing hand-drawn watercolor illustration of a quiet city alley at dusk, warm yellow streetlamp glowing, small wildflowers growing near the wall corner, an old nostalgic shop sign, soft shadows and golden light, a small cat walking through the alley, subtle envelope and letter motif suggesting friendship, cozy everyday urban life, tender atmosphere, delicate details, pastel colors, storybook illustration, digital illustration, vibrant colors, detailed, artistic, masterpiece, best quality, highly detailed, 4k",
       "clip": [
         "1",
         0
@@ -60,7 +60,7 @@
   "8": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 519346281002,
+      "seed": 320491634809,
       "steps": 9,
       "cfg": 1.0,
       "sampler_name": "res_multistep",

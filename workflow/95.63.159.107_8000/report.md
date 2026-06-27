@@ -1,11 +1,11 @@
 # 95.63.159.107:8000
 
 **GPU**: RTX 4070 | **显存**: 12 GB | **空闲**: 11 GB
-**内存**: 63 GB (空闲 36 GB)
+**内存**: 63 GB (空闲 29 GB)
 **版本**: 0.16.4
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-25 21:22:24
-**历史总数**: 6 | **成功**: 4
+**扫描时间**: 2026-06-27 08:08:06
+**历史总数**: 7 | **成功**: 5
 
 ## 工作流列表
 
@@ -40,3 +40,11 @@
 - **模型** (0):
 - **提示词**:
   - [KlingMotionControl::prompt] man with blue suit and glasses talking to camera holding a microphone
+
+### 5. workflow_05.json
+- **Prompt ID**: `7b48495e-1090-4955-b1f4-49cfaca22d23`
+- **类型**: 视频编辑
+- **节点数**: 4
+- **模型** (0):
+- **提示词**:
+  - [KlingMotionControl::prompt] man with beige tshirt talking to camera with a microphone

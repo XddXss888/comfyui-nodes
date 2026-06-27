@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_413c1a89a2c74d17b3ae8c389e3a8557.png"
+      "image": "ref_bd40a52f566e4a499f52187d379871ae.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "衣服换成一字肩紧身衣服 很多大条的鱼钻进衣服里和大腿之间的缝里 胸型是严重自然外扩型 水滴型胸型（上胸较饱满、下缘自然）大鱼钻进衣服里面。弄成重阴影。迷你裙裙坐在凳子上。水底场景。",
+      "prompt": "sit on the sofa,Raise both legs up beside her head and spread them wide. Expose both nipples. ",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 46553500617787,
-      "steps": 8,
+      "seed": 61407294476481,
+      "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

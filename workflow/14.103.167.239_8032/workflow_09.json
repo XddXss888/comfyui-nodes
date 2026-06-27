@@ -1,56 +1,222 @@
 {
   "1": {
     "inputs": {
-      "language": "python",
-      "Add Input variable": "add_input_variable",
-      "Add Output variable": "add_output_variable",
-      "Clear": "clear_code",
-      "pycode": "\nfrom mutagen.flac import FLAC\nimport json\nv = json.loads(FLAC(f\"/workspace/ComfyUI_v2/ComfyUI/output/audio/{var4}\")['prompt'][0])[\"110\"][\"inputs\"]\nv0=v[\"timesignature\"]  \nv1=v[\"language\"]       \nv2=v[\"keyscale\"]       \nv3=v[\"duration\"]       \nv4=v[\"bpm\"]             \nv5=v[\"tags\"]           \nv6=v[\"lyrics\"]         \nresult=f'{v0}###{v1}###{v2}###{v3}###{v4}###{v5}###{v6}'\n",
-      "var3": [
-        "3",
-        0
-      ],
-      "var4": [
-        "10",
-        0
-      ]
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
     },
-    "class_type": "IDENode",
+    "class_type": "UNETLoader",
     "_meta": {
-      "title": "IDE Node"
+      "title": "UNET加载器"
     }
   },
   "2": {
     "inputs": {
-      "preview_markdown": "",
-      "preview_text": "",
-      "previewMode": null,
-      "source": [
-        "1",
-        0
-      ]
+      "vae_name": "ae.safetensors"
     },
-    "class_type": "PreviewAny",
+    "class_type": "VAELoader",
     "_meta": {
-      "title": "Preview as Text"
+      "title": "VAE加载器"
     }
   },
   "3": {
     "inputs": {
-      "value": 602510182
+      "clip_name1": "t5xxl_fp16.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "flux",
+      "device": "default"
     },
-    "class_type": "PrimitiveInt",
+    "class_type": "DualCLIPLoader",
     "_meta": {
-      "title": "Int"
+      "title": "双CLIP加载器"
+    }
+  },
+  "4": {
+    "inputs": {
+      "text": "[cl-dress-v2], dog",
+      "clip": [
+        "174",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码器"
+    }
+  },
+  "5": {
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
     }
   },
   "10": {
     "inputs": {
-      "value": "静谧的忧郁_00001_.flac"
+      "guidance": 3.5,
+      "conditioning": [
+        "4",
+        0
+      ]
     },
-    "class_type": "PrimitiveString",
+    "class_type": "FluxGuidance",
     "_meta": {
-      "title": "String"
+      "title": "Flux引导"
+    }
+  },
+  "11": {
+    "inputs": {
+      "noise": [
+        "12",
+        0
+      ],
+      "guider": [
+        "13",
+        0
+      ],
+      "sampler": [
+        "14",
+        0
+      ],
+      "sigmas": [
+        "15",
+        0
+      ],
+      "latent_image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器(高级)"
+    }
+  },
+  "12": {
+    "inputs": {
+      "noise_seed": [
+        "169",
+        0
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  },
+  "13": {
+    "inputs": {
+      "model": [
+        "174",
+        0
+      ],
+      "conditioning": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "基础引导"
+    }
+  },
+  "14": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "15": {
+    "inputs": {
+      "scheduler": "beta",
+      "steps": 25,
+      "denoise": 1.0,
+      "model": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "基础调度器"
+    }
+  },
+  "16": {
+    "inputs": {
+      "max_shift": 1.1500000000000001,
+      "base_shift": 0.5,
+      "width": 768,
+      "height": 1024,
+      "model": [
+        "174",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingFlux",
+    "_meta": {
+      "title": "模型采样算法Flux"
+    }
+  },
+  "23": {
+    "inputs": {
+      "width": 768,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "空Latent_SD3"
+    }
+  },
+  "162": {
+    "inputs": {
+      "images": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "169": {
+    "inputs": {
+      "seed": -1
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "随机种"
+    }
+  },
+  "174": {
+    "inputs": {
+      "lora_name": "cl-dress-v2/cl-dress-v2_000016000.safetensors",
+      "strength_model": 0.8000000000000002,
+      "strength_clip": 1.0,
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA"
     }
   }
 }

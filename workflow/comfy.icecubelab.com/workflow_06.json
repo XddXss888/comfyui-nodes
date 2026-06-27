@@ -1,93 +1,123 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "UNETLoader",
     "inputs": {
-      "ckpt_name": "juggernautXL_ragnarok.safetensors"
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
     }
   },
   "2": {
-    "class_type": "VAELoader",
+    "class_type": "DualCLIPLoader",
     "inputs": {
-      "vae_name": "sdxl_vae.safetensors"
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp16.safetensors",
+      "type": "flux"
     }
   },
   "3": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip": [
-        "1",
-        1
-      ],
-      "text": "A fierce Korean idol woman stands on a snow-covered street at night, shot from ground level looking upward with a 24mm wide angle lens creating dramatic perspective. Chestnut brown long hair with wispy bangs whips sideways in cold wind. Sharp jawline and intense cat-like eyes with smoky editorial makeup pierce through falling snowflakes. She wears an oversized vintage band t-shirt tucked loosely into nothing but black leather combat boots, legs elongated by the low angle. Cross lighting from two opposing streetlamps casts golden and cool blue highlights across flawless porcelain skin with visible pores. Full body head to toe framing. Runway attitude, one boot stepping forward on fresh powder. Cinematic color grading, hyperrealistic SDXL detail, bokeh city lights behind her."
+      "vae_name": "ae.safetensors"
     }
   },
   "4": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "1",
-        1
-      ],
-      "text": "lowres, blurry, bad anatomy, deformed, watermark, signature, extra fingers, cartoon, anime, painting"
-    }
-  },
-  "5": {
-    "class_type": "EmptyLatentImage",
-    "inputs": {
-      "width": 896,
-      "height": 1280,
-      "batch_size": 1
-    }
-  },
-  "6": {
-    "class_type": "KSampler",
+    "class_type": "LoraLoaderModelOnly",
     "inputs": {
       "model": [
         "1",
         0
       ],
-      "positive": [
-        "3",
+      "lora_name": "flux_korean_girl.safetensors",
+      "strength_model": 0.8
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
         0
       ],
-      "negative": [
-        "4",
-        0
-      ],
-      "latent_image": [
+      "text": "A melancholic Korean woman with a dark short bob cut featuring soft face-framing caramel highlights, shot on a 24mm wide angle lens creating subtle dynamic perspective distortion. Extreme close-up, eye-level straight on, centered symmetrical composition. She wears an oversized cream hoodie, collar slightly pulled up framing her jawline. Backlit rim light traces a luminous silhouette edge along her hair and shoulders against a minimalist white studio. Hyper detailed dewy skin, glassy dark eyes reflecting pinpoint catchlights, delicate button nose, sheer pink lip tint. Her expression is distant and poetic, gaze soft yet piercing, as if remembering something beautiful and lost. Shallow depth of field, cinematic color grading, editorial portrait photography."
+    }
+  },
+  "6": {
+    "class_type": "FluxGuidance",
+    "inputs": {
+      "conditioning": [
         "5",
         0
       ],
-      "seed": 1827486319,
-      "control_after_generate": "fixed",
-      "steps": 30,
-      "cfg": 4.0,
-      "sampler_name": "dpmpp_2m_sde",
-      "scheduler": "karras",
-      "denoise": 1.0
+      "guidance": 3.5
     }
   },
   "7": {
-    "class_type": "VAEDecode",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "samples": [
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
+    }
+  },
+  "8": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "9": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
         "6",
         0
       ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "8",
+        0
+      ],
+      "seed": 2118778354,
+      "control_after_generate": "fixed",
+      "steps": 24,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "10": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "9",
+        0
+      ],
       "vae": [
-        "2",
+        "3",
         0
       ]
     }
   },
-  "8": {
+  "11": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "7",
+        "10",
         0
       ],
-      "filename_prefix": "portrait_1827486319"
+      "filename_prefix": "portrait_2118778354"
     }
   }
 }

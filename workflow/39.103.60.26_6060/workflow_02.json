@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "input_bf52fe6292ef.jpg"
+      "image": "input_1237961bf0bb.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -12,7 +12,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "13",
+        "18",
         0
       ]
     },
@@ -21,7 +21,32 @@
       "title": "保存图像"
     }
   },
-  "13": {
+  "17": {
+    "inputs": {
+      "prompt": "保持图中人物的一致性，生成他们和熊猫合影的画面。人物正面半身居中，一只熊猫端着一盘热气腾腾的饺子微笑。背景是飘雪的庭院和红灯笼。有雪花落在身上，空气中弥漫热气，氛围温馨喜庆。画面明亮立体，充满立冬团圆气息。梦幻3D半写实风格，毛发细节清晰，轻微美颜，人像精修，光影自然，色彩明亮鲜明。",
+      "model": "doubao-seedream-4-0-250828",
+      "response_format": "url",
+      "resolution": "4K",
+      "aspect_ratio": "1:1",
+      "width": 1024,
+      "height": 1024,
+      "apikey": "fe023f32-413c-41f8-a35d-694231e4c96a",
+      "sequential_image_generation": "disabled",
+      "max_images": 1,
+      "seed": 88175735,
+      "watermark": false,
+      "stream": false,
+      "image1": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "Comfly_Doubao_Seedream_4",
+    "_meta": {
+      "title": "Comfly Doubao Seedream4.0"
+    }
+  },
+  "18": {
     "inputs": {
       "aspect_ratio": "custom",
       "proportional_width": 800,
@@ -33,38 +58,13 @@
       "scale_to_length": 800,
       "background_color": "#000000",
       "image": [
-        "16",
+        "17",
         0
       ]
     },
     "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
     "_meta": {
       "title": "按宽高比缩放_V2"
-    }
-  },
-  "16": {
-    "inputs": {
-      "prompt": "保持图中人物的一致性，生成人物和熊猫合影的画面，左右两侧有可爱的熊猫趴在人物肩头，背景是竹园风光。写真摄影风格，轻微美颜，人像精修",
-      "model": "doubao-seedream-4-0-250828",
-      "response_format": "url",
-      "resolution": "4K",
-      "aspect_ratio": "1:1",
-      "width": 1024,
-      "height": 1024,
-      "apikey": "fe023f32-413c-41f8-a35d-694231e4c96a",
-      "sequential_image_generation": "disabled",
-      "max_images": 1,
-      "seed": 275528134,
-      "watermark": false,
-      "stream": false,
-      "image1": [
-        "1",
-        0
-      ]
-    },
-    "class_type": "Comfly_Doubao_Seedream_4",
-    "_meta": {
-      "title": "Comfly Doubao Seedream4.0"
     }
   }
 }

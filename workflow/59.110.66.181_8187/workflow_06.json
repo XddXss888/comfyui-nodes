@@ -1,10 +1,197 @@
 {
-  "13": {
+  "22": {
+    "class_type": "Text Multiline",
+    "inputs": {
+      "text": "纯正面角度的笔记本电脑图像，电脑屏幕完全展开，掌托右下角印有thinkpad标志， 清晨薄雾中，来了一只猫"
+    },
+    "_meta": {
+      "title": "多行文本"
+    }
+  },
+  "44": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "lora_name": "ThinkPadx9_zimageTurbo_model.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "1",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "LoRA加载器(仅模型)"
+    }
+  },
+  "37": {
+    "class_type": "Seed (rgthree)",
+    "inputs": {
+      "seed": -1
+    },
+    "_meta": {
+      "title": "随机种"
+    }
+  },
+  "39": {
+    "class_type": "ReservedVRAMSetter",
+    "inputs": {
+      "mode": "auto",
+      "seed": 373056724175929,
+      "reserved": 0.8,
+      "auto_max_reserved": 0.0,
+      "clean_gpu_before": true
+    },
+    "_meta": {
+      "title": "Set Reserved VRAM(GB) ⚙️"
+    }
+  },
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "z_image_turbo_bf16.safetensors"
+    },
+    "_meta": {
+      "title": "UNET加载器"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "_meta": {
+      "title": "CLIP加载器"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "Z-vae.safetensors"
+    },
+    "_meta": {
+      "title": "VAE加载器"
+    }
+  },
+  "4": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "negative": [
+        "6",
+        0
+      ],
+      "denoise": 1.0,
+      "latent_image": [
+        "7",
+        0
+      ],
+      "seed": [
+        "37",
+        0
+      ],
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "model": [
+        "44",
+        0
+      ],
+      "positive": [
+        "5",
+        0
+      ],
+      "steps": 9
+    },
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": [
+        "42",
+        0
+      ],
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "CLIP文本编码器"
+    }
+  },
+  "6": {
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "5",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "7": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "batch_size": 1,
+      "width": [
+        "40",
+        0
+      ],
+      "height": [
+        "41",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "空Latent"
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "vae": [
+        "3",
+        0
+      ],
+      "samples": [
+        "4",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "40": {
+    "class_type": "easy int",
+    "inputs": {
+      "value": 1920
+    },
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "41": {
+    "class_type": "easy int",
+    "inputs": {
+      "value": 1080
+    },
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "20": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "227115a474d84548a2e33a341b073b6d/227115a474d84548a2e33a341b073b6d",
+      "filename_prefix": "06211ae13e0b47e69c8ebae4453d14aa/06211ae13e0b47e69c8ebae4453d14aa",
       "images": [
-        "5",
+        "8",
         0
       ]
     },
@@ -12,80 +199,31 @@
       "title": "保存图像"
     }
   },
-  "3": {
-    "class_type": "ImageUpscaleWithModel",
+  "42": {
+    "class_type": "Text Concatenate",
     "inputs": {
-      "image": [
-        "14",
+      "delimiter": ", ",
+      "text_a": [
+        "43",
         0
       ],
-      "upscale_model": [
-        "4",
+      "clean_whitespace": "true",
+      "text_b": [
+        "22",
         0
       ]
     },
     "_meta": {
-      "title": "图像通过模型放大"
+      "title": "文本连锁"
     }
   },
-  "14": {
-    "class_type": "LoadImageFromUrl",
+  "43": {
+    "class_type": "Text Multiline",
     "inputs": {
-      "image": "http://59.110.66.181:9201/file/upload/material/images/d85fb1ef5e8a40e794f862295f7ca0e6.png",
-      "keep_alpha_channel": false,
-      "output_mode": true
+      "text": ""
     },
     "_meta": {
-      "title": "Load Image From URL"
-    }
-  },
-  "4": {
-    "class_type": "UpscaleModelLoader",
-    "inputs": {
-      "model_name": "4x-ClearRealityV1.pth"
-    },
-    "_meta": {
-      "title": "放大模型加载器"
-    }
-  },
-  "5": {
-    "class_type": "ImageScale",
-    "inputs": {
-      "image": [
-        "3",
-        0
-      ],
-      "width": [
-        "9",
-        0
-      ],
-      "upscale_method": "area",
-      "crop": "center",
-      "height": [
-        "8",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "图像缩放"
-    }
-  },
-  "8": {
-    "class_type": "easy int",
-    "inputs": {
-      "value": 1440
-    },
-    "_meta": {
-      "title": "整数"
-    }
-  },
-  "9": {
-    "class_type": "easy int",
-    "inputs": {
-      "value": 2560
-    },
-    "_meta": {
-      "title": "整数"
+      "title": "多行文本"
     }
   }
 }

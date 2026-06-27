@@ -1,7 +1,7 @@
 {
   "81": {
     "inputs": {
-      "image": "image (17).jpg"
+      "image": "image (328).jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -83,7 +83,7 @@
   },
   "172": {
     "inputs": {
-      "seed": 282797968,
+      "seed": 705328977,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -141,7 +141,7 @@
   },
   "364": {
     "inputs": {
-      "prompt": "Convert this image to grayscale while preserving all original structures",
+      "prompt": "Convert this image to grayscale while preserving all original structures,black background",
       "ref_longest_edge": 2048,
       "clip": [
         "111",
@@ -263,7 +263,7 @@
   },
   "385": {
     "inputs": {
-      "seed": 182233041
+      "seed": 1206006469
     },
     "class_type": "GenerateUniquePrefix",
     "_meta": {

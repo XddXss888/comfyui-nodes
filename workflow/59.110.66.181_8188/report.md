@@ -1,71 +1,28 @@
 # 59.110.66.181:8188
 
 **GPU**: RTX 5880 Ada | **显存**: 48 GB | **空闲**: 46 GB
-**内存**: 511 GB (空闲 382 GB)
+**内存**: 511 GB (空闲 404 GB)
 **版本**: 0.19.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-26 08:10:58
-**历史总数**: 3576 | **成功**: 10
+**扫描时间**: 2026-06-27 08:07:52
+**历史总数**: 4 | **成功**: 2
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `2de35600-6d26-4a71-abd7-a7e964988c19`
-- **类型**: 其他
-- **节点数**: 1
-- **模型** (0):
+- **Prompt ID**: `1ee5491c-4d7e-40d6-8544-778ce5144cb4`
+- **类型**: 文生图
+- **节点数**: 24
+- **模型** (4):
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - qwen_2.5_vl_7b.safetensors
+  - qwen_image_edit_2511_bf16.safetensors
+  - qwen_image_vae.safetensors
+- **提示词**:
+  - [TextEncodeQwenImageEditPlus::prompt] 低质量，最差质量，坏的图片
 
 ### 2. workflow_02.json
-- **Prompt ID**: `596de1cb-6d00-4db7-b04c-a071d7f4d1d4`
-- **类型**: 其他
-- **节点数**: 7
-- **模型** (1):
-  - 4x-ClearRealityV1.pth
-
-### 3. workflow_03.json
-- **Prompt ID**: `80a00b9a-0956-4164-bf38-7db3f30f22e0`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 4. workflow_04.json
-- **Prompt ID**: `4a9ddae7-31cf-43ea-88c6-0947de8784f8`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 5. workflow_05.json
-- **Prompt ID**: `610f05e9-89b8-4422-a7ae-2fd57c79eced`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 6. workflow_06.json
-- **Prompt ID**: `c72207a4-5fe9-4ad2-afeb-147c6d939f32`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 7. workflow_07.json
-- **Prompt ID**: `3ea816d0-5496-4821-a702-c1c39594ab26`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 8. workflow_08.json
-- **Prompt ID**: `82031d48-acf4-41d6-afdc-62a58b2f1ea2`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 9. workflow_09.json
-- **Prompt ID**: `c778bd10-a416-4d14-b8a0-0e16ac15b02c`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 10. workflow_10.json
-- **Prompt ID**: `55496314-aaee-4e78-bd47-0a045108db7b`
-- **类型**: 文生视频
-- **节点数**: 2
+- **Prompt ID**: `576c515b-2917-44ce-a7e1-e9ef7c3057a6`
+- **类型**: 其他/工具
+- **节点数**: 1
 - **模型** (0):

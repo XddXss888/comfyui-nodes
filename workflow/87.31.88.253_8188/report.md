@@ -1,150 +1,148 @@
 # 87.31.88.253:8188
 
-**GPU**: GB10 | **显存**: 122 GB | **空闲**: 11 GB
-**内存**: 121 GB (空闲 52 GB)
+**GPU**: GB10 | **显存**: 122 GB | **空闲**: 31 GB
+**内存**: 121 GB (空闲 71 GB)
 **版本**: 0.19.3
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-26 08:08:56
-**历史总数**: 429 | **成功**: 10
+**扫描时间**: 2026-06-27 08:07:57
+**历史总数**: 27 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `592787ad-99c4-4e6b-a997-d575d4f88c20`
+- **Prompt ID**: `c8f73181-a788-4734-9dda-388b75f1a5f5`
 - **类型**: 图生图
 - **节点数**: 18
 - **模型** (5):
+  - KLEIN-Unchained-V2.safetensors
   - flux-2-klein-9b-fp8.safetensors
   - flux2-vae.safetensors
   - klein-9b-turn2real_v1.5_ep9.safetensors
-  - klein_slider_anatomy.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CR Text::text] The exact same perfect petite slim teen girl in a high-production porn photoshoot, sexy breasts spilling in a dangerously tight , extreme cleavage, shiny wet glossy bimbo lips slightly open, flawless 
+  - [CR Text::text] Cinematic photorealistic nude image of the identical petite 18yo reference girl Exact same girl from the reference image, identical face, identical body, exact same woman, preserving exact facial feat
   - [CLIPTextEncode::text] blurry, fake, cartoon, animated, low quality, bad anatomy, small penis, tiny penis, micro penis, deformed penis, clothed, partially clothed, covered, censored, mosaic censor, black bars, pixel censor,
 
 ### 2. workflow_02.json
-- **Prompt ID**: `e5f797f9-741d-473e-9da8-bf548db40bb0`
+- **Prompt ID**: `fb54467e-f9fd-426d-83a5-3b9b819be96a`
 - **类型**: 图生图
 - **节点数**: 18
-- **模型** (5):
+- **模型** (7):
+  - Cum_Covered.safetensors
+  - KLEIN-Unchained-V2.safetensors
+  - cowgirl_20260123_04-36-14epoch35.safetensors
   - flux-2-klein-9b-fp8.safetensors
   - flux2-vae.safetensors
   - klein-9b-turn2real_v1.5_ep9.safetensors
-  - klein_slider_anatomy.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CR Text::text] The exact same perfect petite slim teen girl in a high-production porn photoshoot, sexy breasts spilling in a dangerously tight , extreme cleavage, shiny wet glossy bimbo lips slightly open, flawless 
+  - [CR Text::text] Cinematic hyper-realistic photorealistic image of the identical sexy mature MILF from the reference photo, now transformed by full body plastic surgery into ultimate pornstar perfection. She has a cra
   - [CLIPTextEncode::text] blurry, fake, cartoon, animated, low quality, bad anatomy, small penis, tiny penis, micro penis, deformed penis, clothed, partially clothed, covered, censored, mosaic censor, black bars, pixel censor,
 
 ### 3. workflow_03.json
-- **Prompt ID**: `7debb510-69dc-42c2-95f0-d3d7465daf9f`
+- **Prompt ID**: `924babda-23d2-494c-931b-79dfd8315736`
 - **类型**: 图生图
 - **节点数**: 18
-- **模型** (5):
+- **模型** (7):
+  - Cum_Covered.safetensors
+  - KLEIN-Unchained-V2.safetensors
+  - cowgirl_20260123_04-36-14epoch35.safetensors
   - flux-2-klein-9b-fp8.safetensors
   - flux2-vae.safetensors
   - klein-9b-turn2real_v1.5_ep9.safetensors
-  - klein_slider_anatomy.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CR Text::text] The exact same perfect petite slim teen girl in a high-production porn photoshoot, sexy breasts spilling in a dangerously tight , extreme cleavage, shiny wet glossy bimbo lips slightly open, flawless 
+  - [CR Text::text] Exact same girl from the reference image, identical face, identical body, exact same woman, preserving exact facial features and body, exact same face as reference, do not change her face at all, do n
   - [CLIPTextEncode::text] blurry, fake, cartoon, animated, low quality, bad anatomy, small penis, tiny penis, micro penis, deformed penis, clothed, partially clothed, covered, censored, mosaic censor, black bars, pixel censor,
 
 ### 4. workflow_04.json
-- **Prompt ID**: `3777cd70-482d-4346-9231-a257b4e35c58`
+- **Prompt ID**: `1ec38803-90c3-408f-9126-66fd3496fab1`
 - **类型**: 图生图
 - **节点数**: 18
-- **模型** (5):
+- **模型** (4):
   - flux-2-klein-9b-fp8.safetensors
   - flux2-vae.safetensors
   - klein-9b-turn2real_v1.5_ep9.safetensors
-  - klein_slider_anatomy.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CR Text::text] The exact same perfect petite slim teen girl in a high-production porn photoshoot, sexy breasts spilling in a dangerously tight , extreme cleavage, shiny wet glossy bimbo lips slightly open, flawless 
+  - [CR Text::text] Exact same girl from the reference image, identical face, identical body, exact same woman, preserving exact facial features and body, exact same face as reference, do not change her face at all, do n
   - [CLIPTextEncode::text] blurry, fake, cartoon, animated, low quality, bad anatomy, small penis, tiny penis, micro penis, deformed penis, clothed, partially clothed, covered, censored, mosaic censor, black bars, pixel censor,
 
 ### 5. workflow_05.json
-- **Prompt ID**: `81e810cc-f70d-4638-aca4-a36f1baaac97`
+- **Prompt ID**: `c2a757f5-cf88-43ab-b20d-524ee224510c`
 - **类型**: 图生图
 - **节点数**: 18
 - **模型** (5):
+  - Teencoreclub_-_Chroma-000012.safetensors
   - flux-2-klein-9b-fp8.safetensors
   - flux2-vae.safetensors
   - klein-9b-turn2real_v1.5_ep9.safetensors
-  - klein_slider_anatomy.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CR Text::text] The exact same perfect petite slim teen girl in a high-production porn photoshoot, sexy breasts spilling in a dangerously tight , extreme cleavage, shiny wet glossy bimbo lips slightly open, flawless 
+  - [CR Text::text] Exact same girl from the reference image, identical face, identical body, exact same woman, preserving exact facial features and body, exact same face as reference, do not change her face at all, do n
   - [CLIPTextEncode::text] blurry, fake, cartoon, animated, low quality, bad anatomy, small penis, tiny penis, micro penis, deformed penis, clothed, partially clothed, covered, censored, mosaic censor, black bars, pixel censor,
 
 ### 6. workflow_06.json
-- **Prompt ID**: `805e8782-7514-43ac-9672-46d3db166b2b`
+- **Prompt ID**: `b2ca1fbf-e539-460e-9e63-72a0e81e3bab`
 - **类型**: 图生图
 - **节点数**: 18
-- **模型** (5):
+- **模型** (4):
   - flux-2-klein-9b-fp8.safetensors
   - flux2-vae.safetensors
   - klein-9b-turn2real_v1.5_ep9.safetensors
-  - klein_slider_anatomy.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CR Text::text] The exact same perfect petite slim teen girl in a high-production porn photoshoot, sexy breasts spilling in a dangerously tight , extreme cleavage, shiny wet glossy bimbo lips slightly open, flawless 
+  - [CR Text::text] Exact same girl from the reference image, identical face, identical body, exact same woman, preserving exact facial features and body, exact same face as reference, do not change her face at all, do n
   - [CLIPTextEncode::text] blurry, fake, cartoon, animated, low quality, bad anatomy, small penis, tiny penis, micro penis, deformed penis, clothed, partially clothed, covered, censored, mosaic censor, black bars, pixel censor,
 
 ### 7. workflow_07.json
-- **Prompt ID**: `587fe5d0-665e-429c-9581-ad197bd722d7`
+- **Prompt ID**: `19feba56-2869-4bb0-99d3-44709394f2b2`
 - **类型**: 图生图
 - **节点数**: 18
-- **模型** (5):
+- **模型** (4):
   - flux-2-klein-9b-fp8.safetensors
   - flux2-vae.safetensors
   - klein-9b-turn2real_v1.5_ep9.safetensors
-  - klein_slider_anatomy.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CR Text::text] The exact same perfect petite slim teen girl in a high-production porn photoshoot, sexy breasts spilling in a dangerously tight , extreme cleavage, shiny wet glossy bimbo lips slightly open, flawless 
+  - [CR Text::text] Exact same girl from the reference image, identical face, identical body, exact same woman, preserving exact facial features and body, exact same face as reference, do not change her face at all, do n
   - [CLIPTextEncode::text] blurry, fake, cartoon, animated, low quality, bad anatomy, small penis, tiny penis, micro penis, deformed penis, clothed, partially clothed, covered, censored, mosaic censor, black bars, pixel censor,
 
 ### 8. workflow_08.json
-- **Prompt ID**: `7849a67d-4995-43c9-972f-6d9b7491ba62`
+- **Prompt ID**: `111e501a-2229-4f1f-a15b-e30236861c34`
 - **类型**: 图生图
 - **节点数**: 18
-- **模型** (5):
+- **模型** (4):
   - flux-2-klein-9b-fp8.safetensors
   - flux2-vae.safetensors
   - klein-9b-turn2real_v1.5_ep9.safetensors
-  - klein_slider_anatomy.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CR Text::text] The exact same perfect petite slim teen girl in a high-production porn photoshoot, sexy breasts spilling in a dangerously tight , extreme cleavage, shiny wet glossy bimbo lips slightly open, flawless 
+  - [CR Text::text] Exact same girl from the reference image, identical face, identical body, exact same woman, preserving exact facial features and body, exact same face as reference, do not change her face at all, do n
   - [CLIPTextEncode::text] blurry, fake, cartoon, animated, low quality, bad anatomy, small penis, tiny penis, micro penis, deformed penis, clothed, partially clothed, covered, censored, mosaic censor, black bars, pixel censor,
 
 ### 9. workflow_09.json
-- **Prompt ID**: `df0e4bc3-db1d-47ed-8df6-84bdaf69e61e`
+- **Prompt ID**: `06d2f974-f9d8-45c4-a02e-b510a388af1e`
 - **类型**: 图生图
 - **节点数**: 18
-- **模型** (5):
+- **模型** (4):
   - flux-2-klein-9b-fp8.safetensors
   - flux2-vae.safetensors
   - klein-9b-turn2real_v1.5_ep9.safetensors
-  - klein_slider_anatomy.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CR Text::text] The exact same perfect petite slim teen girl in a high-production porn photoshoot, sexy breasts spilling in a dangerously tight , extreme cleavage, shiny wet glossy bimbo lips slightly open, flawless 
+  - [CR Text::text] Exact same girl from the reference image, identical face, identical body, exact same woman, preserving exact facial features and body, exact same face as reference, do not change her face at all, do n
   - [CLIPTextEncode::text] blurry, fake, cartoon, animated, low quality, bad anatomy, small penis, tiny penis, micro penis, deformed penis, clothed, partially clothed, covered, censored, mosaic censor, black bars, pixel censor,
 
 ### 10. workflow_10.json
-- **Prompt ID**: `6d2a534a-b65a-49a3-9b23-1b13642a07fc`
+- **Prompt ID**: `6acc0cb4-8963-4c6c-9835-38f220e676ec`
 - **类型**: 图生图
 - **节点数**: 18
-- **模型** (5):
+- **模型** (4):
   - flux-2-klein-9b-fp8.safetensors
   - flux2-vae.safetensors
   - klein-9b-turn2real_v1.5_ep9.safetensors
-  - klein_slider_anatomy.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CR Text::text] The exact same perfect petite slim teen girl in a high-production porn photoshoot, sexy breasts spilling in a dangerously tight , extreme cleavage, shiny wet glossy bimbo lips slightly open, flawless 
+  - [CR Text::text] Exact same girl from the reference image, identical face, identical facial features, do not change her face at all, do not change eye colour, keep exact same hair colour and hairstyle, preserving her 
   - [CLIPTextEncode::text] blurry, fake, cartoon, animated, low quality, bad anatomy, small penis, tiny penis, micro penis, deformed penis, clothed, partially clothed, covered, censored, mosaic censor, black bars, pixel censor,

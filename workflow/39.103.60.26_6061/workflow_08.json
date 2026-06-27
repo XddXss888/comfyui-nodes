@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "jimeng-2026-03-31-6680.png"
+      "image": "jimeng-2026-06-10-1991-优雅气质的美女，在森林里微笑着面对镜头，穿着白底写意晕染模糊粉白玫瑰真丝飘逸长裙....png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -12,7 +12,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "29",
+        "28",
         0
       ]
     },
@@ -23,17 +23,17 @@
   },
   "15": {
     "inputs": {
-      "prompt": "参考图一中的主要人物，人物3D卡通风格，在居中偏右侧；采用俯瞰构图，人物位于画面前景，占据绝对视觉重心。背景为曲线构图，晕染，彩色丝线层层叠叠组成的蜿蜒曲线中融合进抽象的立体内发光镂空鎏金的建筑结合珐琅彩工艺构成（参考图2），大面积留白，细小的金粒子点缀，细节精美丰富，边线光线勾略，高级感，高科技流沙质感，东方美学",
+      "prompt": "参考图一中的主要人物和图二的吉祥物，保持图二吉祥物头部外形不变，图一人物轻微美颜、磨皮和美白，花野治愈陪伴风格。主体为图一人物和图二吉祥物并肩坐在草地花海中，人物靠在吉祥物肩上，二者都佩戴花环，占据视觉中心。人物和吉祥物互动亲密自然，吉祥物面向镜头，自然微笑。前景有茂密的花花草草，背景是茂密的草地花海边，河流、草甸和远山，整体为温柔、梦幻、治愈的插画写意风，氛围轻柔，复古色调，高对比度。",
       "model": "doubao-seedream-4-5-251128",
       "response_format": "url",
       "resolution": "4K",
       "aspect_ratio": "Custom",
-      "width": 1120,
+      "width": 1184,
       "height": 800,
       "apikey": "a44228f5-f1b2-44e9-860a-d3c8eb5ac03e",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 1284524712,
+      "seed": 1754222348,
       "watermark": false,
       "stream": false,
       "image1": [
@@ -41,7 +41,7 @@
         0
       ],
       "image2": [
-        "30",
+        "26",
         0
       ]
     },
@@ -50,16 +50,16 @@
       "title": "Comfly Doubao Seedream4.0"
     }
   },
-  "26": {
+  "18": {
     "inputs": {
       "aspect_ratio": "custom",
-      "proportional_width": 1120,
-      "proportional_height": 800,
+      "proportional_width": 2662,
+      "proportional_height": 1772,
       "fit": "crop",
       "method": "bicubic",
       "round_to_multiple": "None",
       "scale_to_side": "width",
-      "scale_to_length": 1120,
+      "scale_to_length": 2662,
       "background_color": "#000000",
       "image": [
         "15",
@@ -71,26 +71,26 @@
       "title": "图层工具：按宽高比缩放 V2"
     }
   },
-  "29": {
+  "26": {
+    "inputs": {
+      "image": "cym.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "28": {
     "inputs": {
       "rotation": "270 degrees",
       "image": [
-        "26",
+        "18",
         0
       ]
     },
     "class_type": "ImageRotate",
     "_meta": {
       "title": "图像旋转"
-    }
-  },
-  "30": {
-    "inputs": {
-      "image": "jimeng-2026-06-25-2021-曲线构图，晕染，彩色丝线层层叠叠组成的蜿蜒曲线中融合进抽象的立体内发光镂空鎏金的....png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
     }
   }
 }

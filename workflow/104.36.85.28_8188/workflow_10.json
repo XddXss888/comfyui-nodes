@@ -37,7 +37,7 @@
   },
   "7": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl naked,indoors,wet,shiny skin,window,leaning forward,towel,areola slip,glasses,black-framed eyewear,lips,parted lips,mole,cleavage,(Przybliżenie klatki piersiowej:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl standing,ass,thighs,sweat,shiny,indoors,wet,shiny skin,skindentation,door,doorway,black eyes,blush,bangs,long hair,black hair,(nude:0.8)",
       "clip": [
         "1",
         1
@@ -63,7 +63,7 @@
   },
   "9": {
     "inputs": {
-      "seed": 367300502,
+      "seed": 121734435,
       "steps": 20,
       "cfg": 6.5,
       "sampler_name": "dpmpp_sde",
@@ -133,7 +133,7 @@
   },
   "14": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20256/18/86ce73d37842411291d07eb8d3e607ce.png",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202512/22/1a89d432167a4e99807016a9e4fc01a6.webp",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

@@ -1,140 +1,178 @@
 {
-  "9": {
-    "inputs": {
-      "filename_prefix": "z-image-turbo",
-      "images": [
-        "57:8",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
-    }
-  },
-  "57:30": {
-    "inputs": {
-      "clip_name": "qwen_3_4b.safetensors",
-      "type": "lumina2",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载CLIP"
-    }
-  },
-  "57:29": {
-    "inputs": {
-      "vae_name": "ae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "57:33": {
-    "inputs": {
-      "conditioning": [
-        "57:27",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "条件零化"
-    }
-  },
-  "57:8": {
+  "13": {
     "inputs": {
       "samples": [
-        "57:3",
+        "16",
         0
       ],
       "vae": [
-        "57:29",
+        "19",
         0
       ]
     },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
+    "class_type": "VAEDecode"
   },
-  "57:28": {
+  "14": {
     "inputs": {
-      "unet_name": "z_image_turbo_bf16.safetensors",
+      "unet_name": "Qwen-Image/qwen_image_edit_2511_fp8mixed.safetensors",
       "weight_dtype": "default"
     },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
+    "class_type": "UNETLoader"
   },
-  "57:27": {
+  "15": {
     "inputs": {
-      "text": "Latina female with thick wavy hair, harbor boats and pastel houses behind. Breezy seaside light, warm tones, cinematic close-up. ",
-      "clip": [
-        "57:30",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
-    }
-  },
-  "57:13": {
-    "inputs": {
-      "width": 1024,
-      "height": 1024,
-      "batch_size": 1
-    },
-    "class_type": "EmptySD3LatentImage",
-    "_meta": {
-      "title": "空Latent图像（SD3）"
-    }
-  },
-  "57:11": {
-    "inputs": {
-      "shift": 3.0,
+      "lora_name": "Qwen-Image/Qwen-Image-Edit-Lightning-8steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
       "model": [
-        "57:28",
+        "14",
         0
       ]
     },
-    "class_type": "ModelSamplingAuraFlow",
-    "_meta": {
-      "title": "采样算法（AuraFlow）"
-    }
+    "class_type": "LoraLoaderModelOnly"
   },
-  "57:3": {
+  "16": {
     "inputs": {
-      "seed": 0,
+      "seed": 42,
       "steps": 8,
-      "cfg": 1.0,
-      "sampler_name": "res_multistep",
+      "cfg": 1.5,
+      "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0,
       "model": [
-        "57:11",
+        "21",
         0
       ],
       "positive": [
-        "57:27",
+        "25",
         0
       ],
       "negative": [
-        "57:33",
+        "20",
         0
       ],
       "latent_image": [
-        "57:13",
+        "22",
         0
       ]
     },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
+    "class_type": "KSampler"
+  },
+  "17": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow"
+  },
+  "18": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader"
+  },
+  "19": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "20": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "18",
+        0
+      ],
+      "vae": [
+        "19",
+        0
+      ],
+      "image1": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus"
+  },
+  "21": {
+    "inputs": {
+      "strength": 1.0,
+      "model": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "CFGNorm"
+  },
+  "22": {
+    "inputs": {
+      "width": 1024,
+      "height": 1536,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "23": {
+    "inputs": {
+      "filename_prefix": "ant_closeup",
+      "images": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "24": {
+    "inputs": {
+      "image": "Screenshot_2026-06-25-23-16-02-056_com.lemurbrowser.exts.jpg"
+    },
+    "class_type": "LoadImage"
+  },
+  "25": {
+    "inputs": {
+      "prompt": [
+        "27",
+        0
+      ],
+      "clip": [
+        "18",
+        0
+      ],
+      "vae": [
+        "19",
+        0
+      ],
+      "image1": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus"
+  },
+  "27": {
+    "inputs": {
+      "horizontal_angle": 0,
+      "vertical_angle": -30,
+      "zoom": 8.0,
+      "default_prompts": true,
+      "camera_view": false
+    },
+    "class_type": "QwenMultiangleCameraNode"
+  },
+  "28": {
+    "inputs": {
+      "lora_name": "Qwen-Image/qwen-image-edit-2511-multiple-angles-lora.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly"
   }
 }

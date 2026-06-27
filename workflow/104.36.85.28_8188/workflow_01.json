@@ -37,7 +37,7 @@
   },
   "7": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl long hair,blush,blonde hair,navel,thighs,sweat,indoors,shiny,shiny skin,parted bangs,yellow eyes,brown eyes,closed mouth,lips,standing,opening door,pov doorway,room,(yeah fuck lets talk things in my room better :1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl ,(nude:0.8)",
       "clip": [
         "1",
         1
@@ -63,7 +63,7 @@
   },
   "9": {
     "inputs": {
-      "seed": 607412999,
+      "seed": 2045236351,
       "steps": 20,
       "cfg": 6.5,
       "sampler_name": "dpmpp_sde",
@@ -133,7 +133,7 @@
   },
   "14": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202510/12/f3d299ea7de34248ad0fdd426075df5d.jpeg",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20254/25/4d18c9e5aae74ceab9c5940937e33bba.jpeg",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

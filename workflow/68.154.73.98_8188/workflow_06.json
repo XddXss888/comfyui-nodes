@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_440503a046fa47ddb1d5685601c8760f.png"
+      "image": "ref_ead19594f63340b1921a8159a2d99c28.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "Make this girl in anime hard manga style on her knees sitting in a magic night forest surrounded with grimoires",
+      "prompt": "Make the person in the image wear a string bikini dont change anything else about the image or the person ",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 849762202609505,
-      "steps": 8,
+      "seed": 633440193976376,
+      "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

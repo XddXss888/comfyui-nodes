@@ -1,210 +1,56 @@
 {
+  "1": {
+    "inputs": {
+      "language": "python",
+      "Add Input variable": "add_input_variable",
+      "Add Output variable": "add_output_variable",
+      "Clear": "clear_code",
+      "pycode": "\nfrom mutagen.flac import FLAC\nimport json\nv = json.loads(FLAC(f\"/workspace/ComfyUI_v2/ComfyUI/output/audio/{var4}\")['prompt'][0])[\"110\"][\"inputs\"]\nv0=v[\"timesignature\"]  \nv1=v[\"language\"]       \nv2=v[\"keyscale\"]       \nv3=v[\"duration\"]       \nv4=v[\"bpm\"]             \nv5=v[\"tags\"]           \nv6=v[\"lyrics\"]         \nresult=f'{v0}###{v1}###{v2}###{v3}###{v4}###{v5}###{v6}'\n",
+      "var3": [
+        "3",
+        0
+      ],
+      "var4": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "IDENode",
+    "_meta": {
+      "title": "IDE Node"
+    }
+  },
+  "2": {
+    "inputs": {
+      "preview_markdown": "",
+      "preview_text": "",
+      "previewMode": null,
+      "source": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
+    }
+  },
   "3": {
     "inputs": {
-      "seed": 354555,
-      "steps": 8,
-      "cfg": 1,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1,
-      "model": [
-        "78",
-        0
-      ],
-      "positive": [
-        "94",
-        0
-      ],
-      "negative": [
-        "47",
-        0
-      ],
-      "latent_image": [
-        "98",
-        0
-      ]
+      "value": 602510182
     },
-    "class_type": "KSampler",
+    "class_type": "PrimitiveInt",
     "_meta": {
-      "title": "KSampler"
+      "title": "Int"
     }
   },
-  "18": {
+  "10": {
     "inputs": {
-      "samples": [
-        "108",
-        0
-      ],
-      "vae": [
-        "106",
-        0
-      ]
+      "value": "静谧的忧郁_00001_.flac"
     },
-    "class_type": "VAEDecodeAudio",
+    "class_type": "PrimitiveString",
     "_meta": {
-      "title": "VAE Decode Audio"
-    }
-  },
-  "47": {
-    "inputs": {
-      "conditioning": [
-        "94",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "ConditioningZeroOut"
-    }
-  },
-  "78": {
-    "inputs": {
-      "shift": 3.0,
-      "model": [
-        "104",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingAuraFlow",
-    "_meta": {
-      "title": "ModelSamplingAuraFlow"
-    }
-  },
-  "94": {
-    "inputs": {
-      "tags": "这是一首融合环境音乐、非洲传统打击乐与摇滚元素的作品，整体基调为D小调，营造出神秘且充满力量的氛围。前奏使用柔和的风声、水滴声与远处雷鸣作为自然环境音效，引导听者进入宁静的冥想状态。随后逐步加入康加鼓、邦戈鼓和沙锤等非洲打击乐器，形成多层次的多部节奏结构，节奏感强烈却不失流动性。电吉他的失真音色在低频贝斯线的支撑下，提供摇滚的张力与冲击力。管乐部分交替使用萨克斯风和长笛，萨克斯的温暖音色与长笛的空灵旋律相互呼应，增添忧郁而悠扬的旋律线。人声采用低吟浅唱的方式演绎，声音温暖磁性，在关键段落加入轻柔的和声叠加，提升情感厚度。整体动态从安静的环境氛围逐渐构建到激昂的节奏爆发，再回归到淡出式的自然宁静。结构上包含两个主歌、两个副歌以及一个桥段，最后以渐弱的方式收尾，整体时长约3分10秒，适合在现场或影像配乐中表现自然的壮阔与细腻。",
-      "lyrics": "[Instrumental]",
-      "seed": 31,
-      "bpm": 108,
-      "duration": 190.0,
-      "timesignature": "4",
-      "language": "en",
-      "keyscale": "D minor",
-      "generate_audio_codes": false,
-      "cfg_scale": 2.0,
-      "temperature": 0.85,
-      "top_p": 0.9,
-      "top_k": 0,
-      "min_p": 0.0,
-      "clip": [
-        "105",
-        0
-      ]
-    },
-    "class_type": "TextEncodeAceStepAudio1.5",
-    "_meta": {
-      "title": "TextEncodeAceStepAudio1.5"
-    }
-  },
-  "98": {
-    "inputs": {
-      "seconds": 190.0,
-      "batch_size": 1
-    },
-    "class_type": "EmptyAceStep1.5LatentAudio",
-    "_meta": {
-      "title": "Empty Ace Step 1.5 Latent Audio"
-    }
-  },
-  "104": {
-    "inputs": {
-      "unet_name": "acestep_v1.5_xl_sft_turbo_nvfp4.safetensors",
-      "weight_dtype": "fp8_e4m3fn_fast"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Load Diffusion Model"
-    }
-  },
-  "105": {
-    "inputs": {
-      "clip_name1": "qwen_0.6b_ace15-fp8.safetensors",
-      "clip_name2": "qwen_4b_ace15-fp8.safetensors",
-      "type": "ace",
-      "device": "default"
-    },
-    "class_type": "DualCLIPLoader",
-    "_meta": {
-      "title": "DualCLIPLoader"
-    }
-  },
-  "106": {
-    "inputs": {
-      "vae_name": "ace_1.5_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Load VAE"
-    }
-  },
-  "107": {
-    "inputs": {
-      "filename_prefix": "audio/Echoes of the Wild",
-      "audioUI": "",
-      "audio": [
-        "18",
-        0
-      ]
-    },
-    "class_type": "SaveAudio",
-    "_meta": {
-      "title": "Save Audio (FLAC)"
-    }
-  },
-  "108": {
-    "inputs": {
-      "seed": 216131790,
-      "steps": 12,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "78",
-        0
-      ],
-      "positive": [
-        "110",
-        0
-      ],
-      "negative": [
-        "47",
-        0
-      ],
-      "latent_image": [
-        "98",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
-    }
-  },
-  "110": {
-    "inputs": {
-      "tags": "这是一首融合环境音乐、非洲传统打击乐与摇滚元素的作品，整体基调为D小调，营造出神秘且充满力量的氛围。前奏使用柔和的风声、水滴声与远处雷鸣作为自然环境音效，引导听者进入宁静的冥想状态。随后逐步加入康加鼓、邦戈鼓和沙锤等非洲打击乐器，形成多层次的多部节奏结构，节奏感强烈却不失流动性。电吉他的失真音色在低频贝斯线的支撑下，提供摇滚的张力与冲击力。管乐部分交替使用萨克斯风和长笛，萨克斯的温暖音色与长笛的空灵旋律相互呼应，增添忧郁而悠扬的旋律线。人声采用低吟浅唱的方式演绎，声音温暖磁性，在关键段落加入轻柔的和声叠加，提升情感厚度。整体动态从安静的环境氛围逐渐构建到激昂的节奏爆发，再回归到淡出式的自然宁静。结构上包含两个主歌、两个副歌以及一个桥段，最后以渐弱的方式收尾，整体时长约3分10秒，适合在现场或影像配乐中表现自然的壮阔与细腻。",
-      "lyrics": "[Intro - ambient]\n\n[Verse - low whisper]\n\nIn the hush of wind and rain,\nThe earth breathes a silent song.\nDrums awaken, pulse like rain,\nA heartbeat deep and strong.\n\n[Chorus - high energy, harmonies]\nFeel the fire, feel the tide,\nRocking souls on ancient stride.\nSax and flute, they intertwine,\nEchoes rise, the wild aligns.\n\n[Verse - low whisper]\nShadows dance on river stones,\nWhispers curl through forest tones.\nBass and guitar, gritty, raw,\nGuide the night to dawn’s first draw.\n\n[Chorus - high energy, harmonies]\nFeel the fire, feel the tide,\nRocking souls on ancient stride.\nSax and flute, they intertwine,\nEchoes rise, the wild aligns.\n\n[Bridge - building energy]\nThunder rolls, the world expands,\nRhythms surge, we understand.\nLayers lift, the sky ignites,\nNature’s pulse, our spirits light.\n\n[Outro - fade out]\nFrom the storm to quiet breath,\nWe return where silence rests.\nThe drums fade, the strings retreat,\nIn the wild, our hearts still beat.",
-      "seed": 31,
-      "bpm": 108,
-      "duration": 190.0,
-      "timesignature": "4",
-      "language": "en",
-      "keyscale": "D minor",
-      "generate_audio_codes": false,
-      "cfg_scale": 2.0,
-      "temperature": 0.5,
-      "top_p": 0.9,
-      "top_k": 0,
-      "min_p": 0.0,
-      "clip": [
-        "105",
-        0
-      ]
-    },
-    "class_type": "TextEncodeAceStepAudio1.5",
-    "_meta": {
-      "title": "TextEncodeAceStepAudio1.5"
+      "title": "String"
     }
   }
 }

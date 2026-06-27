@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Masterpiece, best quality, detailed professional 3D render of an irregular-shaped 4-meter-long juice bar display: vibrant fresh fruit and cold-pressed juice theme, with citrus, berries, and leafy greens; soft natural lighting, glossy textures, clean modern aesthetic, height variations (49cm sides, 37cm center), elegant minimalist design — no text visible.",
+      "text": "Red poster with elegant steamed bun silhouette, luxury texture, minimalist fashion aesthetic, soft ambient lighting, high-end design, masterpiece, best quality, detailed, professional, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -33,14 +33,14 @@
     "class_type": "EmptyLatentImage",
     "inputs": {
       "width": 1024,
-      "height": 1024,
-      "batch_size": 1
+      "height": 576,
+      "batch_size": 4
     }
   },
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 232842380,
+      "seed": 1668958853,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",

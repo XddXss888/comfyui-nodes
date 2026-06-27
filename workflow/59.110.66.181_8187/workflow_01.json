@@ -1,91 +1,188 @@
 {
-  "13": {
-    "class_type": "SaveImage",
+  "22": {
+    "class_type": "Text Multiline",
     "inputs": {
-      "filename_prefix": "0ad47d9f625f46afaf3c42ede8be1c88/0ad47d9f625f46afaf3c42ede8be1c88",
-      "images": [
+      "text": "动态坐标系呈现时间轴，X9的轮廓在坐标系中随时间推移逐渐放大"
+    },
+    "_meta": {
+      "title": "多行文本"
+    }
+  },
+  "37": {
+    "class_type": "Seed (rgthree)",
+    "inputs": {
+      "seed": -1
+    },
+    "_meta": {
+      "title": "随机种"
+    }
+  },
+  "39": {
+    "class_type": "ReservedVRAMSetter",
+    "inputs": {
+      "mode": "auto",
+      "seed": 373056724175929,
+      "reserved": 0.8,
+      "auto_max_reserved": 0.0,
+      "clean_gpu_before": true
+    },
+    "_meta": {
+      "title": "Set Reserved VRAM(GB) ⚙️"
+    }
+  },
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "z_image_turbo_bf16.safetensors"
+    },
+    "_meta": {
+      "title": "UNET加载器"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "_meta": {
+      "title": "CLIP加载器"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "Z-vae.safetensors"
+    },
+    "_meta": {
+      "title": "VAE加载器"
+    }
+  },
+  "4": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "negative": [
+        "6",
+        0
+      ],
+      "denoise": 1.0,
+      "latent_image": [
+        "7",
+        0
+      ],
+      "seed": [
+        "37",
+        0
+      ],
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "5",
+        0
+      ],
+      "steps": 9
+    },
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": [
+        "22",
+        0
+      ],
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "CLIP文本编码器"
+    }
+  },
+  "6": {
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
         "5",
         0
       ]
     },
     "_meta": {
-      "title": "保存图像"
+      "title": "条件零化"
     }
   },
-  "3": {
-    "class_type": "ImageUpscaleWithModel",
+  "7": {
+    "class_type": "EmptyLatentImage",
     "inputs": {
-      "image": [
-        "14",
+      "batch_size": 1,
+      "width": [
+        "40",
         0
       ],
-      "upscale_model": [
+      "height": [
+        "41",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "空Latent"
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "vae": [
+        "3",
+        0
+      ],
+      "samples": [
         "4",
         0
       ]
     },
     "_meta": {
-      "title": "图像通过模型放大"
+      "title": "VAE解码"
     }
   },
-  "14": {
-    "class_type": "LoadImageFromUrl",
+  "40": {
+    "class_type": "easy int",
     "inputs": {
-      "image": "http://59.110.66.181:9201/file/upload/material/images/d1f6f45546184e7686aaa4db48d521a7.png",
-      "keep_alpha_channel": false,
-      "output_mode": true
+      "value": 1920
     },
     "_meta": {
-      "title": "Load Image From URL"
+      "title": "整数"
     }
   },
-  "4": {
-    "class_type": "UpscaleModelLoader",
+  "41": {
+    "class_type": "easy int",
     "inputs": {
-      "model_name": "4x-ClearRealityV1.pth"
+      "value": 1080
     },
     "_meta": {
-      "title": "放大模型加载器"
+      "title": "整数"
     }
   },
-  "5": {
-    "class_type": "ImageScale",
+  "20": {
+    "class_type": "SaveImage",
     "inputs": {
-      "image": [
-        "3",
-        0
-      ],
-      "width": [
-        "9",
-        0
-      ],
-      "upscale_method": "area",
-      "crop": "center",
-      "height": [
+      "filename_prefix": "a2b93e4148624a22913f97d9539ede42/a2b93e4148624a22913f97d9539ede42",
+      "images": [
         "8",
         0
       ]
     },
     "_meta": {
-      "title": "图像缩放"
-    }
-  },
-  "8": {
-    "class_type": "easy int",
-    "inputs": {
-      "value": 1440
-    },
-    "_meta": {
-      "title": "整数"
-    }
-  },
-  "9": {
-    "class_type": "easy int",
-    "inputs": {
-      "value": 2560
-    },
-    "_meta": {
-      "title": "整数"
+      "title": "保存图像"
     }
   }
 }

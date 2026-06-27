@@ -20,15 +20,25 @@
       "vae_name": "ae.safetensors"
     }
   },
-  "4": {
+  "11": {
     "class_type": "LoraLoaderModelOnly",
     "inputs": {
       "model": [
         "1",
         0
       ],
-      "lora_name": "flux_illustration.safetensors",
-      "strength_model": 0.9
+      "lora_name": "sakura_korean_flux.safetensors",
+      "strength_model": 0.82
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "A stunning Korean idol-style woman with burgundy red textured shag cut hair stands in a vintage film studio, shot on 24mm wide angle lens with dynamic low perspective. Full body head to toe composition, silhouetted against a warm backlight that rims her oval face and monolid eyes with golden halos. Ring light beauty lighting illuminates her flawless porcelain skin and sculpted makeup — smoky burgundy eyeshadow, glass-skin highlight, nude lip. She wears a sheer mesh layered avant-garde ensemble with architectural draping and structured shoulders, legs elongated by the wide angle distortion. Her pose is a slow confident turn, chin tilted down, mysterious and alluring gaze piercing through shadow. Moody cinematic atmosphere, shallow depth of field, no text, no watermarks."
     }
   },
   "5": {
@@ -38,42 +48,32 @@
         "2",
         0
       ],
-      "text": "Aerial view of a vast minimalist grid yard at golden hour, massive translucent containers slowly rearranging themselves like puzzle pieces guided by invisible hands, geometric path lines glowing soft cyan trace optimal routes between orderly stacks, a single decision tree structure rising from the center casting long architectural shadows, clean isometric perspective, muted steel and ocean teal palette with warm amber highlights, crisp vector-illustration style with subtle depth-of-field"
+      "text": "cropped legs, cropped feet, cropped shoes, text, watermark, logo"
     }
   },
   "6": {
     "class_type": "FluxGuidance",
     "inputs": {
       "conditioning": [
-        "5",
+        "4",
         0
       ],
-      "guidance": 3.5
+      "guidance": 3.7
     }
   },
   "7": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": ""
-    }
-  },
-  "8": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "width": 1344,
-      "height": 768,
+      "width": 1024,
+      "height": 1536,
       "batch_size": 1
     }
   },
-  "9": {
+  "8": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "4",
+        "11",
         0
       ],
       "positive": [
@@ -81,27 +81,27 @@
         0
       ],
       "negative": [
-        "7",
+        "5",
         0
       ],
       "latent_image": [
-        "8",
+        "7",
         0
       ],
-      "seed": 1398208896,
+      "seed": 420106097,
       "control_after_generate": "fixed",
-      "steps": 22,
+      "steps": 20,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0
     }
   },
-  "10": {
+  "9": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "9",
+        "8",
         0
       ],
       "vae": [
@@ -110,14 +110,14 @@
       ]
     }
   },
-  "11": {
+  "10": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "10",
+        "9",
         0
       ],
-      "filename_prefix": "blog_1398208896"
+      "filename_prefix": "portrait_420106097"
     }
   }
 }

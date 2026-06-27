@@ -7,12 +7,12 @@
     },
     "class_type": "CLIPLoader",
     "_meta": {
-      "title": "加载CLIP"
+      "title": "Load CLIP"
     }
   },
   "72": {
     "inputs": {
-      "text": "畸形肢体，多余手指，少手指，断手，扭曲手臂，畸形腿，姿势不自然，面部崩坏，歪嘴，斜眼，斗鸡眼，五官不对称，脸部模糊，没有眼睛，三只眼，鼻子缺失，嘴巴畸形，雀斑过多，皮肤纹理异常，皮肤过滑如塑料，油光满面，身体比例失调，脖子过长或过短，头身比怪异",
+      "text": "人物、行人、现代建筑、电线、汽车、鲜艳刺眼高饱和色彩、模糊低分辨率、畸形扭曲桃树、破损崩坏古建筑、水印、文字、垃圾杂物、阴雨暗沉画面、卡通二次元画风、飞鸟、塑料质感道具、积雪、枯枝无花\n",
       "clip": [
         "71",
         0
@@ -29,19 +29,19 @@
     },
     "class_type": "VAELoader",
     "_meta": {
-      "title": "加载VAE"
+      "title": "Load VAE"
     }
   },
   "74": {
     "inputs": {
-      "width": 1280,
+      "width": 720,
       "height": 1280,
       "length": 1,
       "batch_size": 2
     },
     "class_type": "EmptyHunyuanLatentVideo",
     "_meta": {
-      "title": "空Latent视频（Hunyuan）"
+      "title": "Empty HunyuanVideo 1.0 Latent"
     }
   },
   "75": {
@@ -51,7 +51,7 @@
     },
     "class_type": "UNETLoader",
     "_meta": {
-      "title": "UNet加载器"
+      "title": "Load Diffusion Model"
     }
   },
   "76": {
@@ -61,7 +61,7 @@
     },
     "class_type": "UNETLoader",
     "_meta": {
-      "title": "UNet加载器"
+      "title": "Load Diffusion Model"
     }
   },
   "82": {
@@ -74,7 +74,7 @@
     },
     "class_type": "ModelSamplingSD3",
     "_meta": {
-      "title": "采样算法（SD3）"
+      "title": "ModelSamplingSD3"
     }
   },
   "83": {
@@ -88,7 +88,7 @@
     },
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "LoRA加载器（仅模型）"
+      "title": "Load LoRA"
     }
   },
   "85": {
@@ -102,7 +102,7 @@
     },
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "LoRA加载器（仅模型）"
+      "title": "Load LoRA"
     }
   },
   "86": {
@@ -115,7 +115,7 @@
     },
     "class_type": "ModelSamplingSD3",
     "_meta": {
-      "title": "采样算法（SD3）"
+      "title": "ModelSamplingSD3"
     }
   },
   "87": {
@@ -131,12 +131,12 @@
     },
     "class_type": "VAEDecode",
     "_meta": {
-      "title": "VAE解码"
+      "title": "VAE Decode"
     }
   },
   "89": {
     "inputs": {
-      "text": "玄幻古风插画漫画风格女，26岁，178高，面容尚带一分少女的柔和，鹅蛋脸，下颌线条柔和但清晰，带一丝倔强，但眼神已沉淀出医者的沉静，眉形细长如远山，眉尾略挑，带英气；眼型为杏眼，眼尾微垂，瞳色为深琥珀色，鼻梁秀挺，唇形薄而唇角天然微扬，但极少笑，肤色为暖白，乌黑长发半束高髻，银纹镶玉发冠横簪固定，大半发丝随风飘逸散开，碎发轻盈飘动，发丝细腻有光泽，身穿一袭月白长袍，月白（冷白中透淡青）、青灰色，交领宽袖长袍，袖口与领口绣有暗银色的草药纹（当归、灵芝轮廓），腰束墨绿色丝绦，悬挂一枚古玉佩（谷主信物），白底青面布鞋，绣有云纹。（（全身正面构图，人物双手自然垂下。背景纯白色底。））",
+      "text": "玄幻古风插画漫画风格，高俯视全景镜头一座深山桃林中的中式古典院落，整体氛围静谧、古朴、充满禅意。画面中建筑为典型的江南或徽派风格，飞檐翘角、青瓦白墙、木构门窗，四周被茂密的桃树环抱，庭院内设有石径、灯笼、盆景,原木圆桌+圆凳与2个木质多层晒药架，体现“采药、晒药、制药”的生活气息也营造出“隐于山林、归心自然”的意境。",
       "clip": [
         "71",
         0
@@ -160,7 +160,7 @@
     },
     "class_type": "VAEDecode",
     "_meta": {
-      "title": "VAE解码"
+      "title": "VAE Decode"
     }
   },
   "115": {
@@ -172,7 +172,7 @@
     },
     "class_type": "PreviewImage",
     "_meta": {
-      "title": "预览图像"
+      "title": "Preview Image"
     }
   },
   "116": {
@@ -184,7 +184,7 @@
     },
     "class_type": "PreviewImage",
     "_meta": {
-      "title": "预览图像"
+      "title": "Preview Image"
     }
   },
   "117": {
@@ -214,7 +214,7 @@
     },
     "class_type": "KSampler",
     "_meta": {
-      "title": "K采样器"
+      "title": "KSampler"
     }
   },
   "118": {
@@ -244,7 +244,7 @@
     },
     "class_type": "KSampler",
     "_meta": {
-      "title": "K采样器"
+      "title": "KSampler"
     }
   },
   "119": {
@@ -257,7 +257,7 @@
     },
     "class_type": "SaveImage",
     "_meta": {
-      "title": "保存图像"
+      "title": "Save Image"
     }
   }
 }

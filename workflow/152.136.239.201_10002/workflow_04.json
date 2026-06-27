@@ -1,101 +1,165 @@
 {
-  "1": {
-    "class_type": "UNETLoader",
+  "13": {
     "inputs": {
-      "unet_name": "FLUX-KLEIN/flux-2-klein-9b.safetensors",
+      "samples": [
+        "16",
+        0
+      ],
+      "vae": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "14": {
+    "inputs": {
+      "unet_name": "Qwen-Image/qwen_image_edit_2511_fp8mixed.safetensors",
       "weight_dtype": "default"
-    }
+    },
+    "class_type": "UNETLoader"
   },
-  "2": {
-    "class_type": "CLIPLoader",
+  "15": {
     "inputs": {
-      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
-      "type": "flux2",
-      "device": "default"
-    }
-  },
-  "3": {
-    "class_type": "VAELoader",
-    "inputs": {
-      "vae_name": "flux2-vae.safetensors"
-    }
-  },
-  "4": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "text": "a beautiful portrait of Fan Bingbing, chinese actress, detailed face, high quality, 4k",
-      "clip": [
-        "2",
+      "lora_name": "Qwen-Image/Qwen-Image-Edit-Lightning-8steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "14",
         0
       ]
-    }
+    },
+    "class_type": "LoraLoaderModelOnly"
   },
-  "5": {
-    "class_type": "CLIPTextEncode",
+  "16": {
     "inputs": {
-      "text": "",
-      "clip": [
-        "2",
-        0
-      ]
-    }
-  },
-  "6": {
-    "class_type": "EmptyFlux2LatentImage",
-    "inputs": {
-      "width": 1040,
-      "height": 1320,
-      "batch_size": 1
-    }
-  },
-  "7": {
-    "class_type": "KSampler",
-    "inputs": {
-      "seed": 946450653131005,
-      "steps": 4,
-      "cfg": 1.0,
+      "seed": 42,
+      "steps": 8,
+      "cfg": 1.5,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0,
       "model": [
-        "1",
+        "21",
         0
       ],
       "positive": [
-        "4",
+        "25",
         0
       ],
       "negative": [
-        "5",
+        "20",
         0
       ],
       "latent_image": [
-        "6",
+        "22",
         0
       ]
-    }
+    },
+    "class_type": "KSampler"
   },
-  "8": {
-    "class_type": "VAEDecode",
+  "17": {
     "inputs": {
-      "samples": [
-        "7",
+      "shift": 3.0,
+      "model": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow"
+  },
+  "18": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader"
+  },
+  "19": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "20": {
+    "inputs": {
+      "prompt": "worm eye view, extreme low angle shot, camera at ground level looking upward from right front, dramatic upward perspective, legs together standing naturally, feet close together",
+      "clip": [
+        "18",
         0
       ],
       "vae": [
-        "3",
+        "19",
+        0
+      ],
+      "image1": [
+        "24",
         0
       ]
-    }
+    },
+    "class_type": "TextEncodeQwenImageEditPlus"
   },
-  "9": {
-    "class_type": "SaveImage",
+  "21": {
     "inputs": {
-      "filename_prefix": "fbb_pure_txt2img",
-      "images": [
-        "8",
+      "strength": 1.0,
+      "model": [
+        "17",
         0
       ]
-    }
+    },
+    "class_type": "CFGNorm"
+  },
+  "22": {
+    "inputs": {
+      "width": 1024,
+      "height": 1536,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "23": {
+    "inputs": {
+      "filename_prefix": "99_ant_right",
+      "images": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "24": {
+    "inputs": {
+      "image": "99.png"
+    },
+    "class_type": "LoadImage"
+  },
+  "25": {
+    "inputs": {
+      "prompt": "worm eye view, extreme low angle shot, camera at ground level looking upward from right front, dramatic upward perspective, legs together standing naturally, feet close together",
+      "clip": [
+        "18",
+        0
+      ],
+      "vae": [
+        "19",
+        0
+      ],
+      "image1": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus"
+  },
+  "28": {
+    "inputs": {
+      "lora_name": "Qwen-Image/qwen-image-edit-2511-multiple-angles-lora.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly"
   }
 }

@@ -4,117 +4,117 @@
 **内存**: 58 GB (空闲 40 GB)
 **版本**: v0.2.2-94-g614377a
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-26 08:09:01
-**历史总数**: 5494 | **成功**: 10
+**扫描时间**: 2026-06-27 08:08:14
+**历史总数**: 5728 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `8fd1728e-3b0d-4844-8c3b-1ebfca9eb093`
+- **Prompt ID**: `6af56015-cc04-47b9-82e4-89376e1decba`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (2):
   - GFPGANv1.3.pth
   - realDream_sdxlPony12.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,Panty,looking at viewer,smile,short,blue eyes,blonde,indoors,lips,realistic,(Panty:1.0),(nude:0.8)
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,sitting,indoors,couch,plant,spread legs,feet,toes,lips,black panties,holding phone,phone,cellphone,smartphone,masturbation,realistic,(what are you thinking about si
   - [CLIPTextEncode::text] anime,cartoon,3d render,child,old,overexposed,underexposed,monochrome,watermark
 
 ### 2. workflow_02.json
-- **Prompt ID**: `b7c85082-0492-48da-8f36-0053e9846056`
+- **Prompt ID**: `0a1e4643-4140-47af-bac5-0e6073328439`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (2):
   - GFPGANv1.3.pth
   - realDream_sdxlPony12.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,indoors,window,bed,on bed,plant,sitting,realistic,(surprised that abigail knew of private pictures i just sat still waiting. :1.0),(nude:0.8)
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,blue eyes,blonde hair,indoors,couch,realistic,photo background,photo inset,(What? *I stop the TV.* :1.0),(nude:0.8)
   - [CLIPTextEncode::text] anime,cartoon,3d render,child,old,overexposed,underexposed,monochrome,watermark
 
 ### 3. workflow_03.json
-- **Prompt ID**: `60d6a648-1d63-4248-8dca-ee2a333fd8f5`
+- **Prompt ID**: `8b295014-7394-41d4-8dce-24aa6820ada1`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (2):
   - GFPGANv1.3.pth
   - realDream_sdxlPony12.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,sex, fuck, fucks, horny, lovin', physical attention, intimate, cuddling, kissing, oral sex, intercourse, orgasm, masturbation, eroticism, seduction, foreplay, penet
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,horse,tree,grass,fence,denim,jeans,outdoors,day,brown footwear,(Mamada:1.0),(nude:0.8)
   - [CLIPTextEncode::text] anime,cartoon,3d render,child,old,overexposed,underexposed,monochrome,watermark
 
 ### 4. workflow_04.json
-- **Prompt ID**: `73f5555e-981b-4f11-8508-9b270c1a8f23`
+- **Prompt ID**: `d55bb3f3-7300-4115-8c34-058cca688e4b`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (2):
   - GFPGANv1.3.pth
   - realDream_sdxlPony12.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,indoors,kneeling,all fours,realistic,(now lilly. show me you are a good girl too:1.0),(nude:0.8)
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,outdoors,tree,grass,fence,horse,(Primer plano del pecho:1.0),(nude:0.8)
   - [CLIPTextEncode::text] anime,cartoon,3d render,child,old,overexposed,underexposed,monochrome,watermark
 
 ### 5. workflow_05.json
-- **Prompt ID**: `16d0b87c-1045-4453-88ef-e69f1d2dcd6c`
+- **Prompt ID**: `33654212-55de-4419-99a7-6672e4088f54`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (2):
   - GFPGANv1.3.pth
   - realDream_sdxlPony12.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,,(дай задание :1.0),(nude:0.8)
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,horse,tree,grass,fence,outdoors,day,brown footwear,denim,jeans,torn pants,torn jeans,wariza,(enseñame las tetas:1.0),(nude:0.8)
   - [CLIPTextEncode::text] anime,cartoon,3d render,child,old,overexposed,underexposed,monochrome,watermark
 
 ### 6. workflow_06.json
-- **Prompt ID**: `9f44bf54-74b5-416a-a5ae-33e13de116f9`
+- **Prompt ID**: `a352a8ff-1bb1-4eb5-bea0-fdd8a6c13d52`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (2):
   - GFPGANv1.3.pth
   - realDream_sdxlPony12.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,,(дай задание :1.0),(nude:0.8)
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,outdoors,tree,grass,fence,horse,day,brown eyes,brown footwear,denim,jeans,pants,torn pants,torn jeans,(Selfie:1.0),(nude:0.8)
   - [CLIPTextEncode::text] anime,cartoon,3d render,child,old,overexposed,underexposed,monochrome,watermark
 
 ### 7. workflow_07.json
-- **Prompt ID**: `423a0971-c812-4666-9af4-fc70398c2b0d`
+- **Prompt ID**: `7021340b-db18-4a60-a3a3-0636d914c6cf`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (2):
   - GFPGANv1.3.pth
   - realDream_sdxlPony12.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,bathroom, kitchen, sink, faucet, tiles, jeans, denim, indoors, mole, ring, wedding ring, necklace, lips, parted lips, flirtare, baciare, aiutare, accompagnare, abba
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,handjob,indoors,basket,washing machine,(Handjob:1.0),(nude:0.8)
   - [CLIPTextEncode::text] anime,cartoon,3d render,child,old,overexposed,underexposed,monochrome,watermark
 
 ### 8. workflow_08.json
-- **Prompt ID**: `d5292b4c-10d8-4b02-83af-11dffb901ce1`
+- **Prompt ID**: `1c49b353-3618-4b80-b086-6269b37c5593`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (2):
   - GFPGANv1.3.pth
   - realDream_sdxlPony12.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,flirtare, corteggiare, baciare, toccare, abbassare la zip, estrarre il pene, tenere in mano il pene, looking at viewer, parted lips, indoors, tiles, sink, faucet,(n
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,masturbating,looking at viewer,spread legs,barefoot,feet,toes,lips,indoors,couch,plant,holding phone,phone,cellphone,smartphone,(nude:0.8)
   - [CLIPTextEncode::text] anime,cartoon,3d render,child,old,overexposed,underexposed,monochrome,watermark
 
 ### 9. workflow_09.json
-- **Prompt ID**: `575c3b6d-5d7b-41fb-9baa-b7d9630d5dc5`
+- **Prompt ID**: `899a41d2-a7b2-49c9-bac1-bc5a372fd760`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (2):
   - GFPGANv1.3.pth
   - realDream_sdxlPony12.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,fuck, suck, gag, face-fuck, choke, withdraw, rub, pant, speak, moan, gasp, invite, spread, smile, lean, stroke, cum, nipples, panties, earrings, mole, huge breasts,
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,panty,looking at viewer,smile,outdoors,ground vehicle,motor vehicle,car,watch,wristwatch,photo background,(Panty:1.0),(nude:0.8)
   - [CLIPTextEncode::text] anime,cartoon,3d render,child,old,overexposed,underexposed,monochrome,watermark
 
 ### 10. workflow_10.json
-- **Prompt ID**: `21f597c3-c321-4d2c-b1a4-4d77a282f007`
+- **Prompt ID**: `85d30f4d-d645-408d-a044-3981bae7516b`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (2):
   - GFPGANv1.3.pth
   - realDream_sdxlPony12.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,fuck, mouth, throat, gagging, choking, face-fucked, cum, drool, saliva, sweat, thrusts, penetrate, deep, hard, black cock, bull cock, cunt, long hair, brown hair, n
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,1 girl,boobes,looking at viewer,smile,large breasts,huge breasts,realistic,(boobes:1.0),(nude:0.8)
   - [CLIPTextEncode::text] anime,cartoon,3d render,child,old,overexposed,underexposed,monochrome,watermark

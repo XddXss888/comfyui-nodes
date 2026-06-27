@@ -2775,7 +2775,6 @@
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
-      "video-preview": "",
       "video": [
         "210",
         0
@@ -2808,7 +2807,6 @@
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
-      "video-preview": "",
       "video": [
         "212",
         0
@@ -2830,7 +2828,7 @@
   },
   "215": {
     "inputs": {
-      "image": "ChatGPT Image Jun 25, 2026, 06_49_03 PM.png"
+      "image": "ChatGPT Image Jun 25, 2026, 06_57_59 PM.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -2888,7 +2886,6 @@
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
-      "video-preview": "",
       "video": [
         "218",
         0
@@ -2979,6 +2976,331 @@
     "class_type": "SaveVideo",
     "_meta": {
       "title": "Save Video"
+    }
+  },
+  "226": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "216",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "227": {
+    "inputs": {
+      "image": "ComfyUI_00118_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "228": {
+    "inputs": {
+      "prompt": "A premium Pixar-inspired 3D animated cinematic scene inside a modest middle-class Indian bedroom late at night. The room is softly illuminated by a warm bedside lamp while cool moonlight enters through the window, creating rich cinematic contrast. The environment is simple and relatable—a study table with a notebook and pen, a neatly made bed, indoor plant, bookshelf, and minimal décor. Strong foreground, midground, and background layering create premium visual depth.\n\nBeat 1 – Decision (0–3s)\n\nThe red-shirted young Indian man sits cross-legged beside his bed, holding his smartphone with both hands. He looks thoughtful for a moment, then makes a confident decision. He taps the phone once with his thumb.\n\nA clean generic holographic installation animation appears floating slightly above the phone—a simple circular progress ring and an abstract download icon. The graphic is minimal and futuristic, with no app logo, no brand name, no readable text, no UI, and no identifiable interface. It simply communicates that an app is being installed.\n\nHis expression shifts from uncertainty to curiosity.\n\nBeat 2 – Learning (3–7s)\n\nThe installation animation gently dissolves.\n\nHe continues looking at the phone with complete focus.\n\nHis eyes move as if carefully studying lessons.\n\nHe leans slightly forward.\n\nHe occasionally nods while naturally scrolling.\n\nThe audience never sees the phone display.\n\nEverything is conveyed through his changing expressions.\n\nHe reaches for a notebook lying beside him and begins writing a few quick notes while occasionally looking back at the phone.\n\nBeat 3 – Realization (7–10s)\n\nHe pauses writing.\n\nHe slowly lowers the pen.\n\nA thoughtful smile appears.\n\nHe nods to himself as something finally clicks.\n\nWithout seeing the phone screen, the audience understands he has realized:\n\nPosting videos alone isn't enough. There is a strategy behind growth.\n\nHe writes one final note in the notebook with renewed confidence before looking back at the phone, now feeling motivated instead of confused.\n\nThe camera begins with a medium shot from the corner of the room and slowly pushes into a close-up as the realization settles in. The notebook remains softly visible in the foreground while the warm bedside lamp creates cinematic highlights and natural depth.\n\nNatural breathing, realistic eye movement, subtle blinking, believable hand movements, smooth note-taking, expressive facial animation, realistic cloth simulation, premium Pixar-quality 3D rendering, cinematic lighting, realistic global illumination, shallow depth of field, ultra-high production quality, vertical 9:16.\n\nAvoid\n\nVisible phone screen, Seekho logo, Instagram logo, app UI, readable text, holographic menus, notifications, subtitles, watermarks, exaggerated acting, lip-sync, cluttered room, shaky camera, distorted anatomy, blurry rendering, or low-quality textures.",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "227",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "229": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "228",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "230": {
+    "inputs": {
+      "prompt": "मैंने भी Seekho App डाउनलोड किया। वहाँ पता चला कि Instagram पर सिर्फ़ वीडियो डालना काफी नहीं है। लोग रील पर रुकते क्यों हैं, फॉलोवर्स कैसे बढ़ते हैं, और एल्गोरिदम कैसे काम करता है—सब आसान भाषा में, छोटे-छोटे वीडियो में समझाया गया था।\n",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "232": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "233",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "233": {
+    "inputs": {
+      "prompt": "A premium Pixar-inspired 3D animated cinematic scene inside a modest middle-class Indian bedroom late at night. The room is softly illuminated by a warm bedside lamp while cool moonlight enters through the window, creating rich cinematic contrast. The environment is simple and relatable—a study table with a notebook and pen, a neatly made bed, indoor plant, bookshelf, and minimal décor. Strong foreground, midground, and background layering create premium visual depth.\n\nBeat 1 – Decision (0–3s)\n\nThe red-shirted young Indian man sits cross-legged beside his bed, holding his smartphone with both hands. He looks thoughtful for a moment, then makes a confident decision. He taps the phone once with his thumb.\n\nA clean generic holographic installation animation appears floating slightly above the phone—a simple circular progress ring and an abstract download icon. The graphic is minimal and futuristic, with no app logo, no brand name, no readable text, no UI, and no identifiable interface. It simply communicates that an app is being installed.\n\nHis expression shifts from uncertainty to curiosity.\n\nBeat 2 – Learning (3–7s)\n\nThe installation animation gently dissolves.\n\nHe continues looking at the phone with complete focus.\n\nHis eyes move as if carefully studying lessons.\n\nHe leans slightly forward.\n\nHe occasionally nods while naturally scrolling.\n\nThe audience never sees the phone display.\n\nEverything is conveyed through his changing expressions.\n\nHe reaches for a notebook lying beside him and begins writing a few quick notes while occasionally looking back at the phone.\n\nBeat 3 – Realization (7–10s)\n\nHe pauses writing.\n\nHe slowly lowers the pen.\n\nA thoughtful smile appears.\n\nHe nods to himself as something finally clicks.\n\nWithout seeing the phone screen, the audience understands he has realized:\n\nPosting videos alone isn't enough. There is a strategy behind growth.\n\nHe writes one final note in the notebook with renewed confidence before looking back at the phone, now feeling motivated instead of confused.\n\nThe camera begins with a medium shot from the corner of the room and slowly pushes into a close-up as the realization settles in. The notebook remains softly visible in the foreground while the warm bedside lamp creates cinematic highlights and natural depth.\n\nNatural breathing, realistic eye movement, subtle blinking, believable hand movements, smooth note-taking, expressive facial animation, realistic cloth simulation, premium Pixar-quality 3D rendering, cinematic lighting, realistic global illumination, shallow depth of field, ultra-high production quality, vertical 9:16.\n\nAvoid\n\nVisible phone screen, Seekho logo, Instagram logo, app UI, readable text, holographic menus, notifications, subtitles, watermarks, exaggerated acting, lip-sync, cluttered room, shaky camera, distorted anatomy, blurry rendering, or low-quality textures.",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "duration": 10,
+      "nsfw_checker": true,
+      "image": [
+        "227",
+        0
+      ]
+    },
+    "class_type": "Kie_GrokImagineVideo15PreviewNode",
+    "_meta": {
+      "title": "Grok Imagine Video 1.5 Preview"
+    }
+  },
+  "234": {
+    "inputs": {
+      "image": "ChatGPT Image Jun 26, 2026, 12_11_52 PM.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "235": {
+    "inputs": {
+      "prompt": "A premium Pixar-inspired 3D animated cinematic montage inside a modest middle-class Indian apartment during warm golden-hour lighting. The atmosphere feels energetic, optimistic, and motivating. Cinematic lighting, realistic shadows, premium global illumination, strong foreground–midground–background layering, shallow depth of field, and production-quality visuals. Vertical 9:16.\n\nBeat 1 (0–2.5s) – Setting Up\n\nThe red-shirted young Indian man enthusiastically sets up his smartphone on a small tripod in his living room. He adjusts the camera angle, straightens his shirt, smiles with excitement, and takes one confident step back into frame. His movements feel purposeful and natural, showing that he is applying what he has learned.\n\nBeat 2 (2.5–5s) – Creating Content\n\nHe begins recording himself in selfie mode. He speaks confidently toward the phone with expressive hand gestures, genuine energy, and a natural smile. He experiments with different poses, changes his framing slightly, and confidently presents his content. The smartphone screen always faces him and is never visible to the audience. No UI, recording interface, or app logos are shown.\n\nBeat 3 (5–7.5s) – Improving\n\nCut to another angle in the same room. He reviews his setup, slightly adjusts the tripod height, changes the room lighting by opening the curtains wider, repositions a chair and a small plant to improve the background, then immediately starts recording again with much more confidence. His expression shows that he is actively applying new techniques rather than guessing.\n\nBeat 4 (7.5–10s) – Consistency\n\nThe final shot shows him happily recording another Reel with growing confidence. His expressions are natural, his gestures feel polished, and he enjoys the creative process. He finishes recording, lowers the phone slightly, smiles proudly to himself, and gives a subtle nod as if thinking,\n\n\"Now I'm doing it the right way.\"\n\nThe camera slowly pushes toward him throughout the final shot, ending on a confident smile filled with optimism and motivation.\n\nNatural eye contact, realistic facial expressions, subtle blinking, believable hand gestures, smooth body movement, realistic cloth simulation, expressive Pixar-inspired 3D animation, cinematic color grading, premium lighting, ultra-high production quality.\n\nAvoid\n\nVisible phone screen, Instagram UI, recording interface, app logos, readable text, subtitles, watermarks, exaggerated acting, fake influencer poses, talking directly to the audience outside the scene, cluttered background, shaky camera, distorted anatomy, blurry rendering, or low-quality textures. - maintain the hair texture it should look curly",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "234",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "236": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "235",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "237": {
+    "inputs": {
+      "prompt": "Use the uploaded character reference exactly. Preserve the red-shirted young Indian man's facial features, hairstyle, eyebrows, skin tone, body proportions, clothing, and premium Pixar-inspired 3D animated appearance. Maintain complete character consistency with previous scenes.\n\nInside his warm, middle-class apartment during golden hour, the red-shirted young Indian man sits comfortably on the sofa holding his smartphone. His posture is relaxed and confident, reflecting someone whose efforts are finally paying off.\n\nHe is naturally scrolling through his phone with one hand while smiling with quiet satisfaction. The phone remains angled mostly toward him.\n\nAbove the phone, create a clean floating holographic infographic that visually represents steady social media growth. The graphics should be abstract and premium, consisting of:\n\nupward-trending line graphs\nincreasing bar charts\nrising follower icons\ngrowing engagement symbols\nfloating upward arrows\nsubtle success indicators\nclean circular analytics graphics\n\nThe graphics should feel modern, minimal, and futuristic.\n\nDo not recreate Instagram.\n\nDo not show Instagram UI.\n\nDo not show reels feed.\n\nDo not show profile pages.\n\nDo not show likes, comments, or messages.\n\nDo not show readable numbers.\n\nEverything should remain intentionally abstract while clearly communicating continuous growth.\n\nThe red-shirted character occasionally pauses scrolling, smiles a little wider, gives a subtle nod to himself, and continues browsing with growing confidence. His facial expression should communicate pride, relief, and motivation—not arrogance.\n\nThe apartment remains simple and relatable with a wooden coffee table, indoor plants, framed artwork, and warm evening sunlight entering through a large window. The room hasn't become luxurious; only his confidence has changed.\n\nStrong foreground, midground, and background layering. Warm golden-hour cinematic lighting. Realistic global illumination. Soft rim lighting around the character. Cinematic color grading. Shallow depth of field.\n\nCamera: Medium close-up from slightly over the coffee table, eye level, 50mm lens, focusing primarily on his facial expressions while the holographic growth graphics float subtly above the phone.\n\nStyle: Premium Pixar/DreamWorks-inspired 3D animation, expressive facial performance, ultra-detailed textures, realistic cloth simulation, production-level cinematic rendering, vertical 9:16.\n\nNegative Prompt\n\nInstagram logo, Instagram interface, Instagram feed, readable analytics, readable follower count, readable views, readable text, phone brand logos, notification pop-ups, payment app UI, watermarks, subtitles, exaggerated celebration, luxury interiors, distorted anatomy, cloned faces, blurry rendering, inconsistent character design, duplicate limbs, low-quality textures, cluttered holographic UI.",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "234",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "238": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "237",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "240": {
+    "inputs": {
+      "image": "ChatGPT Image Jun 26, 2026, 12_29_24 PM.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "241": {
+    "inputs": {
+      "prompt": "A premium Pixar-inspired 3D animated cinematic scene inside a warm, middle-class Indian apartment during golden hour. The living room is softly illuminated by warm sunlight streaming through large windows, creating cinematic contrast, realistic shadows, premium global illumination, and strong foreground, midground, and background layering. The atmosphere feels hopeful, emotional, and rewarding after weeks of consistent effort.\n\nThe red-shirted young Indian man sits comfortably on the sofa, holding his smartphone naturally with both hands. His posture is relaxed yet attentive as he casually scrolls through his content performance. The smartphone screen always faces him and is never fully visible to the audience.\n\nAs he scrolls, abstract holographic analytics begin to appear subtly above and around the phone. The graphics are clean, minimal, and futuristic—not an Instagram interface. They consist of gently rising line graphs, upward-moving bar charts, increasing engagement icons, growing audience symbols, floating upward arrows, and soft glowing particles. The analytics continuously animate upward, clearly communicating that his views, followers, and overall performance are steadily increasing.\n\nThe character's expression evolves naturally throughout the scene.\n\nBeat 1 (0–3s)\n\nHe scrolls casually with a neutral expression.\n\nHis eyes suddenly pause on something.\n\nHis eyebrows lift slightly.\n\nA small smile begins to form.\n\nHe scrolls again to confirm what he's seeing.\n\nThe holographic growth indicators continue climbing.\n\nBeat 2 (3–7s)\n\nHis smile grows wider.\n\nHe leans slightly forward in disbelief.\n\nHis eyes brighten.\n\nHe gently places one hand over his mouth while still holding the phone with the other.\n\nHe softly shakes his head with an expression that says,\n\n\"Is this really happening?\"\n\nThe floating analytics continue rising smoothly around the phone, becoming slightly brighter while remaining elegant and uncluttered.\n\nBeat 3 (7–10s)\n\nEmotion quietly overwhelms him.\n\nHis eyes become slightly watery.\n\nA single happy tear slowly rolls down his cheek.\n\nHe smiles through the emotion without crying dramatically.\n\nHe lets out a silent breath of relief.\n\nHe looks toward the ceiling for a brief moment, closes his eyes, then looks back at the phone with gratitude and quiet pride.\n\nThe holographic growth graphics slowly fade into soft glowing particles, leaving only his emotional expression as the focus.\n\nThe camera begins with a medium shot across the coffee table and slowly pushes into a close-up throughout the scene, ending on his smiling face with the single happy tear. Warm golden sunlight creates soft rim lighting around his hair while the background gently falls out of focus, producing a premium cinematic commercial look.\n\nNatural eye movement, subtle blinking, realistic breathing, believable thumb scrolling, expressive facial animation, realistic cloth simulation, premium Pixar/DreamWorks-inspired 3D animation, cinematic color grading, shallow depth of field, ultra-high production quality, vertical 9:16.\n\nAvoid\n\nVisible Instagram interface, Instagram logo, readable analytics, readable follower counts, readable view counts, payment app UI, phone brand logos, text overlays, subtitles, watermarks, exaggerated crying, sobbing, dramatic emotional breakdown, luxury interiors, shaky camera, distorted anatomy, blurry rendering, low-quality textures, cluttered holographic graphics, or inconsistent character design.",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "240",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "242": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "241",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "243": {
+    "inputs": {
+      "image": "ChatGPT Image Jun 26, 2026, 12_39_27 PM.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "244": {
+    "inputs": {
+      "prompt": "he says to the camera with full confidence and proud feeling\n\" अगर आप भी Instagram से कमाना चाहते हैं, तो अंदाज़े से काम मत करो।\nSeekho App पर Instagram Growth Secrets सीखो, \"",
+      "duration": "8",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "video-preview": "",
+      "images.image_1": [
+        "243",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "245": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video-preview": "",
+      "video": [
+        "244",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "246": {
+    "inputs": {
+      "image": "videoframe_6918.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "247": {
+    "inputs": {
+      "prompt": "he says to the camera with full confidence and proud feeling\n\" अपनी ऑडियंस बनाओ और कमाई शुरू करो।\nअभी इंस्टॉल बटन पर क्लिक करो और Seekho App डाउनलोड करो। \"",
+      "duration": "8",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "246",
+        0
+      ],
+      "images.image_2": [
+        "243",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "248": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video-preview": "",
+      "video": [
+        "247",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "249": {
+    "inputs": {
+      "prompt": "Voice Style:\n\nGenerate the voice as if it is coming from an old, partially damaged electronic payment soundbox.\n\nThe speaker should sound synthetic and robotic with intermittent electrical interference. Introduce realistic static crackles, radio-like distortion, speaker clipping, buzzing, signal dropouts, and brief digital glitches throughout the announcement. Parts of words should cut out momentarily before reconnecting. The distortion should sound random and authentic, as if the speaker hardware is failing, but the announcement should still remain mostly understandable.\n\nAdd:\n• Electrical crackling\n• Static bursts\n• Digital clipping\n• Speaker buzz\n• Radio interference\n• Short signal interruptions\n• Distorted frequency response\n• Metallic speaker resonance\n• Slight compression artifacts\n\nAvoid exaggerated sci-fi effects. Keep it sounding like a real damaged QR payment speaker used in Indian shops.\n\nDialogue:\n\"Aapke khaate mein baarah sau rupaye prapt hue hain.\"",
+      "model": "3.1 Flash",
+      "voice_name": "Leda (Youthful)"
+    },
+    "class_type": "Official_GeminiTTSSingleNode",
+    "_meta": {
+      "title": "Gemini Text to Speech"
+    }
+  },
+  "250": {
+    "inputs": {
+      "filename_prefix": "audio/ComfyUI",
+      "quality": "V0",
+      "audioUI": "/api/view?filename=ComfyUI_00015_.mp3&type=output&subfolder=audio&rand=0.79740552826242",
+      "audio": [
+        "249",
+        0
+      ]
+    },
+    "class_type": "SaveAudioMP3",
+    "_meta": {
+      "title": "Save Audio (MP3)"
     }
   }
 }

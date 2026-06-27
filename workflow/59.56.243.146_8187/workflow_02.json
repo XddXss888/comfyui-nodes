@@ -1,36 +1,76 @@
 {
-  "12": {
+  "10": {
     "inputs": {
-      "unet_name": "FLUX1\\flux1-dev-fp8.safetensors",
-      "weight_dtype": "fp8_e4m3fn"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "13": {
-    "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 1,
-      "proportional_height": 1,
-      "fit": "letterbox",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_side": "longest",
-      "scale_to_length": 1024,
-      "background_color": "#000000",
-      "image": [
-        "71",
+      "conditioning": [
+        "106",
         0
       ]
     },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "LayerUtility: ImageScaleByAspectRatio V2"
+      "title": "条件零化"
     }
   },
-  "14": {
+  "12": {
+    "inputs": {
+      "seed": 284609410940312,
+      "steps": 30,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "26",
+        0
+      ],
+      "positive": [
+        "16",
+        0
+      ],
+      "negative": [
+        "10",
+        0
+      ],
+      "latent_image": [
+        "118",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "16": {
+    "inputs": {
+      "guidance": 2.5,
+      "conditioning": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "Flux引导"
+    }
+  },
+  "17": {
+    "inputs": {
+      "conditioning": [
+        "106",
+        0
+      ],
+      "latent": [
+        "118",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "22": {
     "inputs": {
       "clip_name1": "clip_l.safetensors",
       "clip_name2": "t5xxl_fp8_e4m3fn.safetensors",
@@ -42,214 +82,23 @@
       "title": "双CLIP加载器"
     }
   },
-  "15": {
+  "23": {
     "inputs": {
-      "vae_name": "ae.safetensors"
+      "vae_name": "FLUX\\ae.sft"
     },
     "class_type": "VAELoader",
     "_meta": {
       "title": "加载VAE"
     }
   },
-  "16": {
-    "inputs": {
-      "model": "thwri/CogFlorence-2.1-Large",
-      "precision": "fp16",
-      "attention": "sdpa",
-      "convert_to_safetensors": false
-    },
-    "class_type": "DownloadAndLoadFlorence2Model",
-    "_meta": {
-      "title": "DownloadAndLoadFlorence2Model"
-    }
-  },
-  "17": {
-    "inputs": {
-      "text_input": "",
-      "task": "more_detailed_caption",
-      "fill_mask": true,
-      "keep_model_loaded": false,
-      "max_new_tokens": 1024,
-      "num_beams": 3,
-      "do_sample": true,
-      "output_mask_select": "",
-      "seed": 1111890462640623,
-      "image": [
-        "13",
-        0
-      ],
-      "florence2_model": [
-        "16",
-        0
-      ]
-    },
-    "class_type": "Florence2Run",
-    "_meta": {
-      "title": "Florence2Run"
-    }
-  },
-  "18": {
-    "inputs": {
-      "text": [
-        "17",
-        2
-      ],
-      "clip": [
-        "14",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
-    }
-  },
-  "19": {
-    "inputs": {
-      "conditioning": [
-        "18",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "条件零化"
-    }
-  },
-  "20": {
-    "inputs": {
-      "guidance": 3.5,
-      "conditioning": [
-        "18",
-        0
-      ]
-    },
-    "class_type": "FluxGuidance",
-    "_meta": {
-      "title": "Flux引导"
-    }
-  },
-  "21": {
-    "inputs": {
-      "downsampling_factor": 2.0,
-      "downsampling_function": "area",
-      "mode": "autocrop with mask",
-      "weight": 1.0,
-      "autocrop_margin": 0.1,
-      "conditioning": [
-        "20",
-        0
-      ],
-      "style_model": [
-        "23",
-        0
-      ],
-      "clip_vision": [
-        "26",
-        0
-      ],
-      "image": [
-        "13",
-        0
-      ],
-      "mask": [
-        "52",
-        1
-      ]
-    },
-    "class_type": "ReduxAdvanced",
-    "_meta": {
-      "title": "ReduxAdvanced"
-    }
-  },
-  "22": {
-    "inputs": {
-      "pixels": [
-        "13",
-        0
-      ],
-      "vae": [
-        "15",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE编码"
-    }
-  },
-  "23": {
-    "inputs": {
-      "style_model_name": "flux1-redux-dev.safetensors"
-    },
-    "class_type": "StyleModelLoader",
-    "_meta": {
-      "title": "加载风格模型"
-    }
-  },
   "24": {
     "inputs": {
-      "batch_size": 1,
-      "latents": [
-        "40",
-        0
-      ]
-    },
-    "class_type": "RebatchLatents",
-    "_meta": {
-      "title": "重设Latent批次"
-    }
-  },
-  "25": {
-    "inputs": {
-      "add_noise": "enable",
-      "noise_seed": 873429955703958,
-      "steps": 20,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "beta",
-      "start_at_step": 0,
-      "end_at_step": 1000,
-      "return_with_leftover_noise": "disable",
-      "model": [
+      "samples": [
         "12",
         0
       ],
-      "positive": [
-        "43",
-        0
-      ],
-      "negative": [
-        "43",
-        1
-      ],
-      "latent_image": [
-        "24",
-        0
-      ]
-    },
-    "class_type": "KSamplerAdvanced",
-    "_meta": {
-      "title": "K采样器（高级）"
-    }
-  },
-  "26": {
-    "inputs": {
-      "clip_name": "sigclip_vision_patch14_384.safetensors"
-    },
-    "class_type": "CLIPVisionLoader",
-    "_meta": {
-      "title": "加载CLIP视觉"
-    }
-  },
-  "28": {
-    "inputs": {
-      "samples": [
-        "25",
-        0
-      ],
       "vae": [
-        "15",
+        "23",
         0
       ]
     },
@@ -258,16 +107,228 @@
       "title": "VAE解码"
     }
   },
-  "29": {
+  "26": {
     "inputs": {
-      "output_path": "D:/comfyui/ComfyUI/output/image/graph_fission",
+      "unet_name": "F.1\\diffusion_models\\flux1-kontext-dev.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "106": {
+    "inputs": {
+      "text": "Identify the main subject in the image, convert it to pure white and the background to absolute black, while keeping the subject’s original position unchanged.",
+      "clip": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "117": {
+    "inputs": {
+      "image": [
+        "137",
+        0
+      ]
+    },
+    "class_type": "FluxKontextImageScale",
+    "_meta": {
+      "title": "图像缩放为FluxKontext"
+    }
+  },
+  "118": {
+    "inputs": {
+      "pixels": [
+        "117",
+        0
+      ],
+      "vae": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "123": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "upscale_method": "lanczos",
+      "keep_proportion": true,
+      "divisible_by": 1,
+      "crop": "disabled",
+      "image": [
+        "24",
+        0
+      ],
+      "get_image_size": [
+        "117",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJ",
+    "_meta": {
+      "title": "Resize Image (deprecated)"
+    }
+  },
+  "127": {
+    "inputs": {
+      "image": [
+        "123",
+        0
+      ]
+    },
+    "class_type": "SplitImageChannels",
+    "_meta": {
+      "title": "Split Image Channels"
+    }
+  },
+  "128": {
+    "inputs": {
+      "brightness": 1.5,
+      "contrast": 1.0,
+      "saturation": 1.0,
+      "image": [
+        "127",
+        1
+      ]
+    },
+    "class_type": "LayerColor: Brightness & Contrast",
+    "_meta": {
+      "title": "LayerColor: Brightness & Contrast"
+    }
+  },
+  "129": {
+    "inputs": {
+      "channel": "green",
+      "image": [
+        "128",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "130": {
+    "inputs": {
+      "mask": [
+        "129",
+        0
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "反转遮罩"
+    }
+  },
+  "132": {
+    "inputs": {
+      "invert_mask": false,
+      "grow": 1,
+      "blur": 2,
+      "mask": [
+        "130",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskGrow",
+    "_meta": {
+      "title": "LayerMask: MaskGrow"
+    }
+  },
+  "133": {
+    "inputs": {
+      "image": [
+        "117",
+        0
+      ],
+      "alpha": [
+        "132",
+        0
+      ]
+    },
+    "class_type": "JoinImageWithAlpha",
+    "_meta": {
+      "title": "合并图像Alpha"
+    }
+  },
+  "134": {
+    "inputs": {
+      "mask": [
+        "130",
+        0
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "反转遮罩"
+    }
+  },
+  "135": {
+    "inputs": {
+      "method": "VITMatte",
+      "mask_grow": 0,
+      "fix_gap": 0,
+      "fix_threshold": 0.75,
+      "edge_erode": 1,
+      "edte_dilate": 1,
+      "black_point": 0.01,
+      "white_point": 0.99,
+      "device": "cuda",
+      "max_megapixels": 2.0,
+      "image": [
+        "133",
+        0
+      ],
+      "mask": [
+        "134",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskEdgeUltraDetail V2",
+    "_meta": {
+      "title": "LayerMask: MaskEdgeUltraDetail V2"
+    }
+  },
+  "137": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "upscale_method": "lanczos",
+      "keep_proportion": true,
+      "divisible_by": 1,
+      "crop": "disabled",
+      "image": [
+        "161",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJ",
+    "_meta": {
+      "title": "Resize Image (deprecated)"
+    }
+  },
+  "160": {
+    "inputs": {
+      "output_path": "D:/comfyui/ComfyUI/output/image/rembg",
       "filename_prefix": "ComfyUI",
       "filename_delimiter": "_",
       "filename_number_padding": 4,
       "filename_number_start": "false",
-      "extension": "jpeg",
+      "extension": "png",
       "dpi": 300,
-      "quality": 90,
+      "quality": 100,
       "optimize_image": "true",
       "lossless_webp": "false",
       "overwrite_mode": "false",
@@ -276,7 +337,7 @@
       "embed_workflow": "false",
       "show_previews": "true",
       "images": [
-        "74",
+        "135",
         0
       ]
     },
@@ -285,222 +346,25 @@
       "title": "Image Save"
     }
   },
-  "40": {
+  "161": {
     "inputs": {
-      "batch_size": 2,
-      "latent": [
-        "22",
-        0
-      ]
+      "image": "D:/comfyui/ComfyUI/input/image/rembg/a13224/6a3eaf54d56b5.png"
     },
-    "class_type": "CR Latent Batch Size",
+    "class_type": "LoadImage",
     "_meta": {
-      "title": "⚙️ CR Latent Batch Size"
+      "title": "加载图像"
     }
   },
-  "41": {
+  "162": {
     "inputs": {
-      "control_net_name": "diffusion_pytorch_model.safetensors"
-    },
-    "class_type": "ControlNetLoader",
-    "_meta": {
-      "title": "加载ControlNet模型"
-    }
-  },
-  "42": {
-    "inputs": {
-      "type": "openpose",
-      "control_net": [
-        "41",
-        0
-      ]
-    },
-    "class_type": "SetUnionControlNetType",
-    "_meta": {
-      "title": "设置UnionControlNet类型"
-    }
-  },
-  "43": {
-    "inputs": {
-      "strength": 0.5000000000000001,
-      "start_percent": 0.0,
-      "end_percent": 0.6000000000000001,
-      "positive": [
-        "21",
-        0
-      ],
-      "negative": [
-        "19",
-        0
-      ],
-      "control_net": [
-        "42",
-        0
-      ],
-      "image": [
-        "44",
-        0
-      ],
-      "vae": [
-        "15",
-        0
-      ]
-    },
-    "class_type": "ControlNetApplyAdvanced",
-    "_meta": {
-      "title": "应用ControlNet（旧版高级）"
-    }
-  },
-  "44": {
-    "inputs": {
-      "preprocessor": "OpenposePreprocessor",
-      "resolution": 512,
-      "image": [
-        "13",
-        0
-      ]
-    },
-    "class_type": "AIO_Preprocessor",
-    "_meta": {
-      "title": "AIO Aux Preprocessor"
-    }
-  },
-  "52": {
-    "inputs": {
-      "sam_model": "sam_vit_h (2.56GB)",
-      "grounding_dino_model": "GroundingDINO_SwinT_OGC (694MB)",
-      "threshold": 0.35000000000000003,
-      "detail_method": "VITMatte(local)",
-      "detail_erode": 12,
-      "detail_dilate": 6,
-      "black_point": 0.01,
-      "white_point": 0.99,
-      "process_detail": true,
-      "prompt": "clothes",
-      "device": "cuda",
-      "max_megapixels": 2.0,
-      "cache_model": false,
-      "image": [
-        "13",
-        0
-      ]
-    },
-    "class_type": "LayerMask: SegmentAnythingUltra V2",
-    "_meta": {
-      "title": "LayerMask: SegmentAnythingUltra V2"
-    }
-  },
-  "55": {
-    "inputs": {
-      "mask": [
-        "52",
-        1
-      ]
-    },
-    "class_type": "MaskPreview+",
-    "_meta": {
-      "title": "🔧 Mask Preview"
-    }
-  },
-  "64": {
-    "inputs": {
-      "anything": [
-        "29",
-        0
-      ]
-    },
-    "class_type": "easy cleanGpuUsed",
-    "_meta": {
-      "title": "清理显存占用"
-    }
-  },
-  "65": {
-    "inputs": {
-      "purge_cache": true,
-      "purge_models": true,
-      "anything": [
-        "64",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: PurgeVRAM",
-    "_meta": {
-      "title": "LayerUtility: Purge VRAM"
-    }
-  },
-  "68": {
-    "inputs": {
-      "batch_size": 1,
       "images": [
-        "28",
+        "160",
         0
       ]
     },
-    "class_type": "RebatchImages",
+    "class_type": "PreviewImage",
     "_meta": {
-      "title": "重设图像批次"
-    }
-  },
-  "70": {
-    "inputs": {
-      "seed": 0
-    },
-    "class_type": "Seed Everywhere",
-    "_meta": {
-      "title": "Seed Everywhere"
-    }
-  },
-  "71": {
-    "inputs": {
-      "mode": "single_image",
-      "seed": 0,
-      "index": [
-        "70",
-        0
-      ],
-      "label": "Batch 001",
-      "path": "D:/comfyui/ComfyUI/input/image/graph_fission/b97283_repair",
-      "pattern": "*",
-      "allow_RGBA_output": "false",
-      "filename_text_extension": "true"
-    },
-    "class_type": "Load Image Batch",
-    "_meta": {
-      "title": "Load Image Batch"
-    }
-  },
-  "73": {
-    "inputs": {
-      "image": [
-        "71",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: GetImageSize",
-    "_meta": {
-      "title": "LayerUtility: GetImageSize"
-    }
-  },
-  "74": {
-    "inputs": {
-      "target_width": [
-        "73",
-        0
-      ],
-      "target_height": [
-        "73",
-        1
-      ],
-      "padding_color": "white",
-      "interpolation": "area",
-      "image": [
-        "68",
-        0
-      ]
-    },
-    "class_type": "ResizeAndPadImage",
-    "_meta": {
-      "title": "ResizeAndPadImage"
+      "title": "预览图像"
     }
   }
 }

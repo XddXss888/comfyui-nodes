@@ -1,140 +1,337 @@
 {
   "1": {
-    "class_type": "UNETLoader",
     "inputs": {
-      "unet_name": "qwen_image_fp8_e4m3fn.safetensors",
-      "weight_dtype": "default"
+      "samples": [
+        "2",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
     }
   },
   "2": {
-    "class_type": "CLIPLoader",
     "inputs": {
-      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
-      "type": "qwen_image"
-    }
-  },
-  "3": {
-    "class_type": "VAELoader",
-    "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    }
-  },
-  "4": {
-    "class_type": "EmptySD3LatentImage",
-    "inputs": {
-      "width": 1344,
-      "height": 768,
-      "batch_size": 1
-    }
-  },
-  "5": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": "Extreme macro close-up of a single ladybug perched on the curved edge of a vivid green leaf, framed so that only three-quarters of the beetle is visible — the rear of its body extending out of frame on the right. Its domed carapace is glossy candy-apple red with deep black spots, the shell so polished it shows a tiny mirrored highlight and a soft reflection of the surrounding greenery across its surface. Fine texture visible where the elytra meet, the seam crisp and dark. Delicate hairs and the beaded black head with small antennae catch the light at the front. Tiny droplets of morning dew bead on the leaf's waxy surface and on the shell itself, each droplet acting as a miniature lens. Soft directional morning sunlight rakes in from the upper left, creating a bright specular hotspot on the carapace and gentle shadow beneath the beetle. Background dissolves into smooth, creamy green and gold bokeh. Shot on a 100mm macro lens, f/4 for a razor-thin plane of focus across the front of the shell, ISO 100, natural diffused light. The look of fine-grain film, Fujifilm Velvia 50 — saturated, punchy reds and greens, rich micro-contrast. Pin-sharp detail, vibrant, jewel-like, professional macro photography."
-    }
-  },
-  "6": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": ""
-    }
-  },
-  "7": {
-    "class_type": "CFGGuider",
-    "inputs": {
+      "seed": 688822677737096,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "er_sde",
+      "scheduler": "simple",
+      "denoise": 1.0,
       "model": [
-        "1",
-        0
-      ],
-      "positive": [
-        "5",
-        0
-      ],
-      "negative": [
-        "6",
-        0
-      ],
-      "cfg": 2.5
-    }
-  },
-  "8": {
-    "class_type": "BasicScheduler",
-    "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "scheduler": "beta",
-      "steps": 20,
-      "denoise": 1.0
-    }
-  },
-  "9": {
-    "class_type": "RandomNoise",
-    "inputs": {
-      "noise_seed": 1888968180
-    }
-  },
-  "10": {
-    "class_type": "KSamplerSelect",
-    "inputs": {
-      "sampler_name": "euler"
-    }
-  },
-  "11": {
-    "class_type": "SamplerCustomAdvanced",
-    "inputs": {
-      "noise": [
         "9",
         0
       ],
-      "guider": [
-        "7",
+      "positive": [
+        "11",
         0
       ],
-      "sampler": [
-        "10",
-        0
-      ],
-      "sigmas": [
-        "8",
+      "negative": [
+        "5",
         0
       ],
       "latent_image": [
-        "4",
+        "6",
         0
       ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
     }
   },
-  "12": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "vae": [
-        "3",
-        0
-      ],
-      "samples": [
-        "11",
-        1
-      ]
-    }
-  },
-  "13": {
-    "class_type": "ETN_SaveImageCache",
+  "4": {
     "inputs": {
       "images": [
-        "12",
+        "1",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "5": {
+    "inputs": {
+      "conditioning": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "6": {
+    "inputs": {
+      "width": 2560,
+      "height": 1440,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "7": {
+    "inputs": {
+      "clip_name": "qwen3vl_4b_fp8_scaled.safetensors",
+      "type": "krea2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "8": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "9": {
+    "inputs": {
+      "unet_name": "Krea-2-Turbo.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Turbo Model"
+    }
+  },
+  "11": {
+    "inputs": {
+      "text": [
+        "40",
         0
       ],
-      "format": "PNG"
+      "clip": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "16": {
+    "inputs": {
+      "conditioning": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "18": {
+    "inputs": {
+      "text": [
+        "40",
+        0
+      ],
+      "clip": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "19": {
+    "inputs": {
+      "seed": 888,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "er_sde",
+      "scheduler": "simple",
+      "denoise": 0.15,
+      "model": [
+        "21",
+        0
+      ],
+      "positive": [
+        "18",
+        0
+      ],
+      "negative": [
+        "16",
+        0
+      ],
+      "latent_image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "20": {
+    "inputs": {
+      "samples": [
+        "19",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "21": {
+    "inputs": {
+      "sage_attention": "auto",
+      "allow_compile": false,
+      "model": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "PathchSageAttentionKJ",
+    "_meta": {
+      "title": "Patch Sage Attention KJ"
+    }
+  },
+  "22": {
+    "inputs": {
+      "images": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "23": {
+    "inputs": {
+      "pixels": [
+        "33",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "27": {
+    "inputs": {
+      "value": "A fine-art figure study of a single seated woman, composed in the tradition of classical painterly nude photography, emphasizing form, light, and gesture rather than display. She is posed facing the camera on a simple wooden stool, her breasts are bare and visible, the nipples are erect, head tilted gently downward so her face is in soft profile shadow, one arm drawn across to rest a hand on the opposite knee in a quiet, self-contained pose. Long hair falls loosely across one shoulder. A length of soft draped linen pools across her lap and the stool, the fabric doing the work of the composition. The setting is a bare studio with a seamless deep-charcoal backdrop. Single large softbox positioned high and to the left as a directional key, raking low across her form to sculpt the topography of the spine, shoulder blade, and the muscles of the back into gentle gradients of light and shadow — strong chiaroscuro, a luminous highlight along the lit edge falling into deep shadow on the far side. A subtle cool rim light traces her silhouette on the right. Skin rendered with natural texture, no glamour gloss. Shot on an 85mm lens, f/4, ISO 100, studio strobe. The warm tonality, fine grain, and gentle highlight roll-off of Kodak Portra 400. Restrained, sculptural, timeless black-and-white-leaning fine-art photography."
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (Multiline)"
+    }
+  },
+  "32": {
+    "inputs": {
+      "rgthree_comparer": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_hlunj_00001_.png&type=temp&subfolder=&rand=0.6113317224012097"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_hlunj_00002_.png&type=temp&subfolder=&rand=0.5737425419878964"
+          }
+        ]
+      },
+      "image_a": [
+        "4",
+        0
+      ],
+      "image_b": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "Image Comparer (rgthree)",
+    "_meta": {
+      "title": "Image Comparer (rgthree)"
+    }
+  },
+  "33": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "scale_by": 1.5,
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ImageScaleBy",
+    "_meta": {
+      "title": "Upscale Image By"
+    }
+  },
+  "34": {
+    "inputs": {
+      "filename_prefix": "img",
+      "filename_keys": "%F %H-%M-%S",
+      "foldername_prefix": "",
+      "foldername_keys": "krea2",
+      "delimiter": "-",
+      "save_job_data": "disabled",
+      "job_data_per_image": false,
+      "job_custom_text": "",
+      "save_metadata": true,
+      "counter_digits": 4,
+      "counter_position": "last",
+      "one_counter_per_folder": true,
+      "image_preview": false,
+      "output_ext": ".png",
+      "quality": 90,
+      "images": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "SaveImageExtended",
+    "_meta": {
+      "title": "💾 Save Image Extended"
+    }
+  },
+  "40": {
+    "inputs": {
+      "any_01": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)"
     }
   }
 }

@@ -1,11 +1,11 @@
 # 115.190.79.65:8188
 
-**GPU**: A100 | **显存**: 79 GB | **空闲**: 12 GB
-**内存**: 964 GB (空闲 818 GB)
+**GPU**: A100 | **显存**: 79 GB | **空闲**: 11 GB
+**内存**: 964 GB (空闲 823 GB)
 **版本**: 0.3.49
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-26 08:08:50
-**历史总数**: 126 | **成功**: 10
+**扫描时间**: 2026-06-27 08:07:52
+**历史总数**: 108 | **成功**: 10
 
 ## 工作流列表
 
@@ -88,38 +88,39 @@
   - [CLIPTextEncode::text] Amateur selfie of young tween girl nude standing in bedroom. wearing thigh high socks.
 
 ### 8. workflow_08.json
-- **Prompt ID**: `d428b54c-d5eb-48ad-8068-c81fbb34f2e0`
-- **类型**: 图生视频
-- **节点数**: 16
+- **Prompt ID**: `3268d311-c2c9-4547-92cd-1bc21ddac2fe`
+- **类型**: 文生图
+- **节点数**: 14
 - **模型** (4):
-  - clip_vision_h.safetensors
-  - umt5_xxl_fp8_e4m3fn_scaled.safetensors
-  - wan2.1_i2v_720p_14B_fp16.safetensors
-  - wan_2.1_vae.safetensors
+  - ae.safetensors
+  - clip_l.safetensors
+  - flux1-dev.safetensors
+  - t5xxl_fp16.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Low quality, deformed hands, deformed facial features, any transitions
+  - [CLIPTextEncode::text] Moody Photography, 20岁可爱中国女生，精致妆容，韩风冷色调网红美白滤镜，极致冷白皮，通体雪白。
+
+幽暗、阴凉、充满混凝土回音。她倚靠在一根方形水泥柱上，一条腿笔直支撑，另一条腿屈起，双腿张开，脚底踩在柱面，膝盖几乎顶到下巴。穿的是亮橘色编织细带高跟凉鞋，带子只覆盖脚趾和脚踝，脚弓完全裸露，因用力而凹陷。牛仔短裤是撕裂毛边款，从侧面能看见髋骨突出的棘点。黑色宽带工字背心，领口低到
 
 ### 9. workflow_09.json
-- **Prompt ID**: `643d72d5-d076-4b3a-bca3-94782a5c3508`
-- **类型**: 图生视频
-- **节点数**: 16
+- **Prompt ID**: `748f8573-533a-4793-8fd4-25f31ba9e6c5`
+- **类型**: 文生图
+- **节点数**: 14
 - **模型** (4):
-  - clip_vision_h.safetensors
-  - umt5_xxl_fp16.safetensors
-  - wan2.1_i2v_720p_14B_fp16.safetensors
-  - wan_2.1_vae.safetensors
+  - ae.safetensors
+  - clip_l.safetensors
+  - flux1-dev.safetensors
+  - t5xxl_fp16.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Low quality, deformed hands, deformed facial features, any transitions
+  - [CLIPTextEncode::text] Amateur selfie of young tween girl nude standing in bedroom. wearing thigh high socks.
 
 ### 10. workflow_10.json
-- **Prompt ID**: `1e2991ab-2c57-4579-abfa-e2d27dc088ed`
-- **类型**: 图生视频
-- **节点数**: 13
+- **Prompt ID**: `61871e05-0e62-4053-8056-eeba27a5d5cf`
+- **类型**: 文生图
+- **节点数**: 14
 - **模型** (4):
-  - clip_vision_h.safetensors
-  - umt5_xxl_fp16.safetensors
-  - wan2.1_i2v_720p_14B_fp16.safetensors
-  - wan_2.1_vae.safetensors
+  - ae.safetensors
+  - clip_l.safetensors
+  - flux1-dev.safetensors
+  - t5xxl_fp16.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Pulling in and out of the shot is strictly prohibited.Shaking the camera is strictly prohibited, as well as with the background，Please generate a video where the person in the frame remains static in 
-  - [CLIPTextEncode::text] Overexposure, blurred details, subtitles, paintings, pictures, still image, overall gray, worst quality, low quality, JPEG compression residue, ugly, mutilated, redundant fingers, poorly painted hands
+  - [CLIPTextEncode::text] Amateur selfie of young tween girl nude siting in bedroom. wearing thigh high socks.

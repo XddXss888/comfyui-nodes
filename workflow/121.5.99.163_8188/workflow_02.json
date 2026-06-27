@@ -1,423 +1,335 @@
 {
-  "67": {
-    "class_type": "FluxGuidance",
+  "66": {
+    "class_type": "LayerUtility: If ",
     "inputs": {
-      "guidance": 6.0,
-      "conditioning": [
-        "104",
+      "when_FALSE": [
+        "18",
+        0
+      ],
+      "when_TRUE": [
+        "41",
+        0
+      ],
+      "if_condition": [
+        "65",
         0
       ]
     },
     "_meta": {
-      "title": "Flux引导"
+      "title": "图层工具：条件判断"
     }
   },
-  "68": {
-    "class_type": "Automatic CFG",
+  "27": {
+    "class_type": "LoadImage",
     "inputs": {
-      "boost": false,
-      "model": [
-        "127",
+      "image": "https://genai.holopix.cn/uploads/20260625/1782377484519-vIX63hgt2WJTvYSlP-Zx3.jpg"
+    },
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "49": {
+    "class_type": "Save Image with Censor",
+    "inputs": {
+      "filename_prefix": "Holopix",
+      "images": [
+        "76",
         0
       ],
-      "hard_mode": false
+      "format": "PNG",
+      "skip_censor": false
     },
     "_meta": {
-      "title": "Automatic CFG"
+      "title": "Save Image with Censor"
     }
   },
-  "130": {
-    "class_type": "CR LoRA Stack",
+  "29": {
+    "class_type": "CFGNorm",
     "inputs": {
-      "clip_weight_3": 1.0,
-      "clip_weight_2": 1.0,
-      "lora_name_3": "None",
-      "clip_weight_1": 1.0,
-      "switch_3": "Off",
-      "lora_name_2": "None",
-      "lora_name_1": "None",
-      "model_weight_2": 1.0,
-      "model_weight_1": 1.0,
-      "model_weight_3": 1.0,
-      "switch_1": "Off",
-      "switch_2": "Off"
-    },
-    "_meta": {
-      "title": "💊 CR LoRA Stack"
-    }
-  },
-  "132": {
-    "class_type": "CR Apply LoRA Stack",
-    "inputs": {
+      "strength": 1.0,
       "model": [
         "30",
         0
-      ],
-      "lora_stack": [
-        "95",
-        0
-      ],
-      "clip": [
-        "30",
-        1
       ]
     },
     "_meta": {
-      "title": "💊 CR Apply LoRA Stack"
+      "title": "CFG归一化"
     }
   },
-  "133": {
-    "class_type": "AnyLinePreprocessor",
+  "51": {
+    "class_type": "UNETLoader",
     "inputs": {
-      "image": [
-        "108",
-        0
-      ]
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_edit_2511_fp8mixed.safetensors"
     },
     "_meta": {
-      "title": "TheMisto.ai Anyline"
-    }
-  },
-  "134": {
-    "class_type": "easy int",
-    "inputs": {
-      "value": 2
-    },
-    "_meta": {
-      "title": "自由画布尺寸控制2"
-    }
-  },
-  "135": {
-    "class_type": "CM_IntUnaryOperation",
-    "inputs": {
-      "op": "Dec",
-      "a": [
-        "134",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "IntUnaryOperation"
-    }
-  },
-  "114": {
-    "class_type": "DownloadAndLoadDepthAnythingV2Model",
-    "inputs": {
-      "model": "depth_anything_v2_vitl_fp32.safetensors"
-    },
-    "_meta": {
-      "title": "DownloadAndLoadDepthAnythingV2Model"
-    }
-  },
-  "136": {
-    "class_type": "easy imageIndexSwitch",
-    "inputs": {
-      "index": [
-        "135",
-        0
-      ],
-      "image1": [
-        "137",
-        0
-      ],
-      "image0": [
-        "8",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "图像编号切换"
-    }
-  },
-  "137": {
-    "class_type": "ImageScaleToMaxDimension",
-    "inputs": {
-      "image": [
-        "8",
-        0
-      ],
-      "rescale_factor": 1.5,
-      "largest_size": 1536,
-      "upscale_method": "bicubic"
-    },
-    "_meta": {
-      "title": "图像缩放到最大尺寸"
-    }
-  },
-  "119": {
-    "class_type": "FaceDetailer",
-    "inputs": {
-      "sam_bbox_expansion": 0,
-      "feather": 5,
-      "force_inpaint": true,
-      "guide_size": 384.0,
-      "seed": 1450395506,
-      "sam_model_opt": [
-        "120",
-        0
-      ],
-      "bbox_dilation": 10,
-      "cycle": 1,
-      "wildcard": "",
-      "scheduler": "karras",
-      "negative": [
-        "38",
-        0
-      ],
-      "sam_mask_hint_use_negative": "False",
-      "sam_detection_hint": "center-1",
-      "sampler_name": "dpmpp_sde",
-      "tiled_decode": false,
-      "model": [
-        "68",
-        0
-      ],
-      "vae": [
-        "30",
-        2
-      ],
-      "guide_size_for": true,
-      "sam_mask_hint_threshold": 0.7,
-      "image": [
-        "136",
-        0
-      ],
-      "cfg": 2.0,
-      "sam_threshold": 0.93,
-      "noise_mask_feather": 20,
-      "inpaint_model": false,
-      "positive": [
-        "6",
-        0
-      ],
-      "steps": 4,
-      "max_size": 1024.0,
-      "denoise": 0.4,
-      "sam_dilation": 0,
-      "drop_size": 10,
-      "noise_mask": true,
-      "bbox_threshold": 0.5,
-      "bbox_crop_factor": 3.0,
-      "segm_detector_opt": [
-        "121",
-        1
-      ],
-      "tiled_encode": false,
-      "bbox_detector": [
-        "121",
-        0
-      ],
-      "clip": [
-        "132",
-        1
-      ]
-    },
-    "_meta": {
-      "title": "FaceDetailer"
-    }
-  },
-  "95": {
-    "class_type": "CR LoRA Stack",
-    "inputs": {
-      "clip_weight_3": 1.0,
-      "clip_weight_2": 1.0,
-      "lora_name_3": "None",
-      "clip_weight_1": 0.8,
-      "switch_3": "Off",
-      "lora_name_2": "None",
-      "lora_name_1": "cuteMoe.safetensors",
-      "model_weight_2": 1.0,
-      "model_weight_1": 0.8,
-      "lora_stack": [
-        "130",
-        0
-      ],
-      "model_weight_3": 1.0,
-      "switch_1": "On",
-      "switch_2": "Off"
-    },
-    "_meta": {
-      "title": "💊 CR LoRA Stack"
+      "title": "UNet加载器"
     }
   },
   "30": {
-    "class_type": "Cached Checkpoint Loader",
+    "class_type": "ModelSamplingAuraFlow",
     "inputs": {
-      "ckpt_name": "flux1-dev-fp8.safetensors",
-      "max_loaded_models": 4
+      "shift": 3.0,
+      "model": [
+        "5",
+        0
+      ]
     },
     "_meta": {
-      "title": "Cached Checkpoint Loader"
+      "title": "采样算法（AuraFlow）"
+    }
+  },
+  "52": {
+    "class_type": "GetImageSize",
+    "inputs": {
+      "image": [
+        "27",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "获取图像尺寸"
     }
   },
   "31": {
     "class_type": "KSampler",
     "inputs": {
-      "scheduler": "beta",
+      "scheduler": "simple",
       "negative": [
-        "104",
-        1
+        "19",
+        0
       ],
       "denoise": 1.0,
       "latent_image": [
-        "125",
+        "33",
         0
       ],
-      "seed": 2681423186,
+      "seed": 279762073328501,
       "cfg": 1.0,
       "sampler_name": "euler",
       "model": [
-        "68",
+        "29",
         0
       ],
       "positive": [
-        "67",
+        "32",
         0
       ],
-      "steps": 25
+      "steps": 4,
+      "value": 5713147695534518149
     },
     "_meta": {
       "title": "K采样器"
     }
   },
-  "38": {
-    "class_type": "CLIPTextEncode",
+  "53": {
+    "class_type": "easy showAnything",
     "inputs": {
-      "text": "",
-      "clip": [
-        "132",
-        1
+      "text": "1456",
+      "anything": [
+        "55",
+        0
       ]
     },
     "_meta": {
-      "title": "CLIP文本编码"
+      "title": "展示任何"
     }
   },
-  "120": {
-    "class_type": "SAMLoader",
+  "32": {
+    "class_type": "TextEncodeQwenImageEditPlus",
     "inputs": {
-      "model_name": "sam_vit_b_01ec64.pth",
-      "device_mode": "AUTO"
-    },
-    "_meta": {
-      "title": "SAMLoader (Impact)"
-    }
-  },
-  "121": {
-    "class_type": "UltralyticsDetectorProvider",
-    "inputs": {
-      "model_name": "bbox/face_yolov8m.pt"
-    },
-    "_meta": {
-      "title": "UltralyticsDetectorProvider"
-    }
-  },
-  "123": {
-    "class_type": "ControlNetLoader",
-    "inputs": {
-      "control_net_name": "FLUX.1-dev-ControlNet-Union-Pro-2.0.safetensors"
-    },
-    "_meta": {
-      "title": "加载ControlNet模型"
-    }
-  },
-  "124": {
-    "class_type": "SetUnionControlNetType",
-    "inputs": {
-      "control_net": [
-        "123",
+      "vae": [
+        "2",
         0
       ],
-      "type": "canny/lineart/anime_lineart/mlsd"
-    },
-    "_meta": {
-      "title": "设置UnionControlNet类型"
-    }
-  },
-  "125": {
-    "class_type": "EmptyLatentImage",
-    "inputs": {
-      "batch_size": 1,
-      "width": [
-        "108",
-        1
+      "image1": [
+        "57",
+        0
       ],
-      "height": [
-        "108",
-        2
+      "prompt": [
+        "14",
+        0
+      ],
+      "clip": [
+        "1",
+        0
       ]
     },
     "_meta": {
-      "title": "空Latent图像"
+      "title": "文本编码（QwenImageEditPlus）"
     }
   },
-  "104": {
-    "class_type": "ControlNetApplySD3",
+  "54": {
+    "class_type": "LayerUtility: BooleanOperatorV2",
+    "inputs": {
+      "a": [
+        "52",
+        0
+      ],
+      "b": [
+        "52",
+        1
+      ],
+      "a_value": "",
+      "operator": ">=",
+      "b_value": ""
+    },
+    "_meta": {
+      "title": "图层工具：布尔运算符 V2"
+    }
+  },
+  "76": {
+    "class_type": "ImageResizeKJ",
     "inputs": {
       "image": [
-        "133",
+        "18",
         0
       ],
-      "negative": [
-        "38",
+      "get_image_size": [
+        "27",
         0
       ],
-      "control_net": [
-        "124",
-        0
-      ],
-      "strength": 0.58,
-      "start_percent": 0.0,
-      "positive": [
-        "6",
+      "divisible_by": 2,
+      "width": 472,
+      "keep_proportion": false,
+      "upscale_method": "bicubic",
+      "crop": "disabled",
+      "height": 512
+    },
+    "_meta": {
+      "title": "Resize Image"
+    }
+  },
+  "33": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "57",
         0
       ],
       "vae": [
-        "30",
-        2
-      ],
-      "end_percent": 1.0
-    },
-    "_meta": {
-      "title": "应用ControlNet"
-    }
-  },
-  "6": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "text": "a cut32e_mo8e style ofA female character with long hair, lavender hair, a wreath of small white flowers on her head, and a dark brown feather-like ornament pinned to the right side of her hair. She has purple eyes, a slight blush on her cheeks, and a smile on her lips. He wore a white collar around his neck, a blue gem pendant hung on the collar, and a wreath of small pink flowers was also worn around his neck. Wearing a blue-and-white dress with gold patterns on the skirt, white lining on the chest, gold lace decoration at the neckline, and a gold belt around the waist with blue gems on the belt. The sleeves are white strapless long sleeves with lace cuffs. She placed her left hand on her waist and reached out her right hand forward. Blue sky, white clouds and distant mountains can be seen in the background.",
-      "clip": [
-        "132",
-        1
+        "2",
+        0
       ]
     },
     "_meta": {
-      "title": "CLIP文本编码"
+      "title": "VAE编码"
     }
   },
-  "127": {
-    "class_type": "ApplyFBCacheOnModel",
+  "55": {
+    "class_type": "LayerUtility: If ",
     "inputs": {
-      "residual_diff_threshold": 0.12,
-      "start": 0.2,
-      "end": 1.0,
-      "model": [
-        "132",
+      "when_FALSE": [
+        "52",
+        1
+      ],
+      "when_TRUE": [
+        "52",
         0
       ],
-      "object_to_patch": "diffusion_model",
-      "max_consecutive_cache_hits": -1
+      "if_condition": [
+        "54",
+        0
+      ]
     },
     "_meta": {
-      "title": "Apply First Block Cache"
+      "title": "图层工具：条件判断"
     }
   },
-  "8": {
+  "56": {
+    "class_type": "LayerUtility: BooleanOperatorV2",
+    "inputs": {
+      "a": [
+        "55",
+        0
+      ],
+      "a_value": "",
+      "operator": ">",
+      "b_value": "1536"
+    },
+    "_meta": {
+      "title": "图层工具：布尔运算符 V2"
+    }
+  },
+  "57": {
+    "class_type": "LayerUtility: If ",
+    "inputs": {
+      "when_FALSE": [
+        "27",
+        0
+      ],
+      "when_TRUE": [
+        "7",
+        0
+      ],
+      "if_condition": [
+        "56",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "图层工具：条件判断"
+    }
+  },
+  "14": {
+    "class_type": "Text Multiline",
+    "inputs": {
+      "text": "<sks> front view eye-level shot medium shot"
+    },
+    "_meta": {
+      "title": "Prompt"
+    }
+  },
+  "37": {
+    "class_type": "UpscaleModelLoader",
+    "inputs": {
+      "model_name": "RealESRGAN_x4plus_anime_6B.pth"
+    },
+    "_meta": {
+      "title": "加载放大模型"
+    }
+  },
+  "59": {
+    "class_type": "LayerUtility: BooleanOperatorV2",
+    "inputs": {
+      "a": [
+        "62",
+        0
+      ],
+      "b": [
+        "62",
+        1
+      ],
+      "a_value": "",
+      "operator": ">=",
+      "b_value": ""
+    },
+    "_meta": {
+      "title": "图层工具：布尔运算符 V2"
+    }
+  },
+  "38": {
+    "class_type": "ImageUpscaleWithModel",
+    "inputs": {
+      "image": [
+        "18",
+        0
+      ],
+      "upscale_model": [
+        "37",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "使用模型放大图像"
+    }
+  },
+  "18": {
     "class_type": "VAEDecode",
     "inputs": {
       "vae": [
-        "30",
-        2
+        "2",
+        0
       ],
       "samples": [
         "31",
@@ -428,64 +340,171 @@
       "title": "VAE解码"
     }
   },
-  "107": {
-    "class_type": "LoadImage",
+  "19": {
+    "class_type": "TextEncodeQwenImageEditPlus",
     "inputs": {
-      "image": "https://genai.holopix.cn/2026-06-11/17812333030541781233364862-83908b82c46b5952c202f430684f9937_00001_.png"
-    },
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "129": {
-    "class_type": "Save Image with Censor",
-    "inputs": {
-      "filename_prefix": "1781233413931",
-      "images": [
-        "119",
+      "vae": [
+        "2",
         0
       ],
-      "skip_censor": false
+      "image1": [
+        "57",
+        0
+      ],
+      "prompt": "低分辨率，低画质，肢体畸形，手指畸形，画面过饱和，蜡像感，人脸无细节，过度光滑，画面具有AI感。构图混乱。文字模糊，扭曲",
+      "clip": [
+        "1",
+        0
+      ]
     },
     "_meta": {
-      "title": "Save Image with Censor"
+      "title": "文本编码（QwenImageEditPlus）"
     }
   },
-  "108": {
-    "class_type": "ImageResize+",
+  "1": {
+    "class_type": "CLIPLoader",
     "inputs": {
-      "multiple_of": 0,
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "2": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "4": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "lora_name": "QwenEdit/Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "51",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "5": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "lora_name": "QwenEdit/qwen-image-edit-2511-multiple-angles-lora.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "4",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "7": {
+    "class_type": "DF_Image_scale_to_side",
+    "inputs": {
       "image": [
-        "107",
+        "27",
         0
       ],
-      "interpolation": "bicubic",
-      "condition": "always",
-      "method": "keep proportion",
-      "width": [
-        "109",
-        0
-      ],
-      "keep_proportion": true,
-      "height": [
-        "109",
+      "side": "Longest",
+      "side_length": 1536,
+      "upscale_method": "bicubic",
+      "crop": "disabled"
+    },
+    "_meta": {
+      "title": "Image scale to side"
+    }
+  },
+  "60": {
+    "class_type": "LayerUtility: If ",
+    "inputs": {
+      "when_FALSE": [
+        "62",
         1
-      ]
-    },
-    "_meta": {
-      "title": "🔧 Image Resize"
-    }
-  },
-  "109": {
-    "class_type": "CM_NearestSDXLResolution",
-    "inputs": {
-      "image": [
-        "107",
+      ],
+      "when_TRUE": [
+        "62",
+        0
+      ],
+      "if_condition": [
+        "59",
         0
       ]
     },
     "_meta": {
-      "title": "NearestSDXLResolution"
+      "title": "图层工具：条件判断"
+    }
+  },
+  "61": {
+    "class_type": "easy showAnything",
+    "inputs": {
+      "text": "1456",
+      "anything": [
+        "60",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "62": {
+    "class_type": "GetImageSize",
+    "inputs": {
+      "image": [
+        "27",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "获取图像尺寸"
+    }
+  },
+  "41": {
+    "class_type": "ImageResizeKJ",
+    "inputs": {
+      "image": [
+        "38",
+        0
+      ],
+      "get_image_size": [
+        "27",
+        0
+      ],
+      "divisible_by": 2,
+      "width": 472,
+      "keep_proportion": false,
+      "upscale_method": "bicubic",
+      "crop": "disabled",
+      "height": 512
+    },
+    "_meta": {
+      "title": "Resize Image"
+    }
+  },
+  "65": {
+    "class_type": "LayerUtility: BooleanOperatorV2",
+    "inputs": {
+      "a": [
+        "60",
+        0
+      ],
+      "a_value": "",
+      "operator": ">",
+      "b_value": "1536"
+    },
+    "_meta": {
+      "title": "图层工具：布尔运算符 V2"
     }
   }
 }

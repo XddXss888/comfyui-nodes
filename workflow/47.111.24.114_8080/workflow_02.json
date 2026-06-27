@@ -1,10 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": [
-        "162",
-        0
-      ],
+      "text": "核心主体：参考图\n二、场景环境：现代轻奢石材独栋别墅庭院\n建筑外立面\n背景为大块天然凹凸米黄石材干挂墙体，石材表面带有自然粗糙肌理，墙面搭配长条嵌入式暖光壁灯；右侧是通顶黑色细框落地玻璃落地窗，室内透出柔和暖黄光；左侧探出翠绿乔木枝叶，冷暖材质结合，打造低调奢华的高端私宅立面。\n地面场地\n车辆停放在平整大块浅灰色石材铺装入户庭院，地面干净空旷无杂物，柔和壁灯光线铺满地面，画面边缘虚化绿植形成天然画框，收拢视觉焦点集中于车身。\n四、光影、色调与整体氛围\n光影时段\n夜间庭院人工暖光照明，壁灯打出柔和漫射暖黄色光束打亮石材墙面，明暗过渡舒缓，无强烈硬阴影，车身金属漆面均匀承接暖光，质感高级温润。\n色彩搭配\n米黄石材墙面、深灰石板地面为暖中性基底，冷调藏蓝色车身形成沉稳对比，暖黄色灯光平衡冷色车身，低饱和配色克制显贵。\n\n",
       "clip": [
         "18",
         0
@@ -111,7 +108,7 @@
   },
   "97": {
     "inputs": {
-      "image": "1cb0dcaec4674945809992d4a0814fee~1200x0.png"
+      "image": "45度 (1).jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +118,7 @@
   "99": {
     "inputs": {
       "add_noise": "enable",
-      "noise_seed": 475410047259753,
+      "noise_seed": 504680047817874,
       "steps": 9,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -170,7 +167,7 @@
   "102": {
     "inputs": {
       "add_noise": "disable",
-      "noise_seed": 635530763888498,
+      "noise_seed": 871676330239655,
       "steps": 9,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -240,8 +237,8 @@
   },
   "120": {
     "inputs": {
-      "target_width": 1664,
-      "target_height": 936,
+      "target_width": 1126,
+      "target_height": 1264,
       "padding_color": "black",
       "interpolation": "area",
       "image": [
@@ -256,10 +253,10 @@
   },
   "129": {
     "inputs": {
-      "left": 128,
-      "top": 112,
-      "right": 128,
-      "bottom": 40,
+      "left": 24,
+      "top": 472,
+      "right": 24,
+      "bottom": 80,
       "feathering": 40,
       "image": [
         "120",
@@ -291,7 +288,7 @@
   },
   "148": {
     "inputs": {
-      "seed": 3602519306,
+      "seed": 1677875300,
       "resolution": 3840,
       "max_resolution": 3840,
       "batch_size": 1,
@@ -323,7 +320,7 @@
   },
   "150": {
     "inputs": {
-      "model": "seedvr2_ema_7b_fp16.safetensors",
+      "model": "seedvr2_ema_7b_fp8_e4m3fn.safetensors",
       "device": "cuda:0",
       "blocks_to_swap": 0,
       "swap_io_components": false,
@@ -357,8 +354,8 @@
   },
   "157": {
     "inputs": {
-      "width": 3840,
-      "height": 2160,
+      "width": 2160,
+      "height": 3480,
       "position": "center",
       "x_offset": 0,
       "y_offset": 0,
@@ -399,8 +396,8 @@
   },
   "160": {
     "inputs": {
-      "seed": 4259860278,
-      "scene_type": ""
+      "seed": 3122060173,
+      "scene_type": "山水"
     },
     "class_type": "PromptLibraryRandom",
     "_meta": {
@@ -421,28 +418,26 @@
   },
   "162": {
     "inputs": {
-      "keywords": "赛博朋克",
-      "top_k": 1,
-      "mode": "random",
-      "scene_type": "",
-      "light_tag": "",
-      "reload": false
-    },
-    "class_type": "PromptLibrarySearch",
-    "_meta": {
-      "title": "🔍 提示词库搜索"
-    }
-  },
-  "163": {
-    "inputs": {
-      "source": [
-        "162",
+      "images": [
+        "129",
         0
       ]
     },
-    "class_type": "PreviewAny",
+    "class_type": "PreviewImage",
     "_meta": {
-      "title": "预览任意"
+      "title": "预览图像"
+    }
+  },
+  "164": {
+    "inputs": {
+      "images": [
+        "115",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
     }
   }
 }

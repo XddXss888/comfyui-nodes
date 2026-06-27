@@ -23,7 +23,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "A cute, friendly AI assistant, cartoon style, warm colors, gentle lighting, soft background, digital art, anime style, cel shading, vibrant, Japanese animation, masterpiece, best quality, highly detailed, 4k",
+      "text": "A serene deep blue night sky, dotted with glowing warm orange light particles, magical atmosphere, dreamy, cozy, digital art, highly detailed, minimalist aesthetic., surrealism, dreamlike, abstract, imaginative, masterpiece, best quality, highly detailed, 4k",
       "clip": [
         "1",
         0
@@ -60,7 +60,7 @@
   "8": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 812363118359,
+      "seed": 362086309351,
       "steps": 9,
       "cfg": 1.0,
       "sampler_name": "res_multistep",

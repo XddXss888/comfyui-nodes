@@ -56,8 +56,8 @@
       "crop_h": 0,
       "target_width": 1024,
       "target_height": 1024,
-      "text_g": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_signet_ring, signet ring, fWgvccV359O1A9S28_leaf_pattern, leaf pattern, silver, signet ring",
-      "text_l": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_signet_ring, signet ring, fWgvccV359O1A9S28_leaf_pattern, leaf pattern, silver, signet ring",
+      "text_g": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_female_ring, female ring, fWgvccV359O1A9S28_heart_pattern, heart pattern, gold, ring with heart pattern",
+      "text_l": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_female_ring, female ring, fWgvccV359O1A9S28_heart_pattern, heart pattern, gold, ring with heart pattern",
       "clip": [
         "50",
         1
@@ -91,7 +91,7 @@
   "36": {
     "inputs": {
       "add_noise": "enable",
-      "noise_seed": 6290593312336228922,
+      "noise_seed": 928186013900709513,
       "steps": 35,
       "cfg": 5.5,
       "sampler_name": "dpmpp_2m_sde",
@@ -133,7 +133,7 @@
   "38": {
     "inputs": {
       "add_noise": "disable",
-      "noise_seed": 6290593312336228922,
+      "noise_seed": 928186013900709513,
       "steps": 35,
       "cfg": 5.5,
       "sampler_name": "dpmpp_2m_sde",
@@ -177,7 +177,7 @@
       "ascore": 6.0,
       "width": 1024,
       "height": 1024,
-      "text": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_signet_ring, signet ring, fWgvccV359O1A9S28_leaf_pattern, leaf pattern, silver, signet ring",
+      "text": "fWgvccV359O1A9S28, fWgvccV359O1A9S28_female_ring, female ring, fWgvccV359O1A9S28_heart_pattern, heart pattern, gold, ring with heart pattern",
       "clip": [
         "39",
         1

@@ -1,342 +1,235 @@
 {
-  "1": {
-    "inputs": {
-      "model_name": "wan_2.1_vae.safetensors",
-      "precision": "bf16",
-      "use_cpu_cache": false,
-      "verbose": false
-    },
-    "class_type": "BerniniVAELoader",
-    "_meta": {
-      "title": "Bernini VAE Loader"
-    }
-  },
-  "2": {
-    "inputs": {
-      "blocks_to_swap": 15,
-      "offload_img_emb": false,
-      "offload_txt_emb": false,
-      "use_non_blocking": false,
-      "vace_blocks_to_swap": 0,
-      "prefetch_blocks": 0,
-      "block_swap_debug": false
-    },
-    "class_type": "BerniniBlockSwap",
-    "_meta": {
-      "title": "Bernini Block Swap"
-    }
-  },
-  "3": {
-    "inputs": {
-      "model": "Wan22_Bernini_HIGH_fp8_e4m3fn_scaled.safetensors",
-      "base_precision": "bf16",
-      "quantization": "disabled",
-      "load_device": "offload_device",
-      "attention_mode": "sageattn",
-      "rms_norm_function": "default"
-    },
-    "class_type": "BerniniModelLoader",
-    "_meta": {
-      "title": "Bernini HIGH"
-    }
-  },
-  "4": {
-    "inputs": {
-      "model": "Wan22_Bernini_LOW_fp8_e4m3fn_scaled.safetensors",
-      "base_precision": "bf16",
-      "quantization": "disabled",
-      "load_device": "offload_device",
-      "attention_mode": "sageattn",
-      "rms_norm_function": "default"
-    },
-    "class_type": "BerniniModelLoader",
-    "_meta": {
-      "title": "Bernini LOW"
-    }
-  },
-  "5": {
-    "inputs": {
-      "model": [
-        "3",
-        0
-      ],
-      "block_swap_args": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "BerniniSetBlockSwap",
-    "_meta": {
-      "title": "Bernini Set Block Swap"
-    }
-  },
-  "6": {
-    "inputs": {
-      "model": [
-        "4",
-        0
-      ],
-      "block_swap_args": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "BerniniSetBlockSwap",
-    "_meta": {
-      "title": "Bernini Set Block Swap"
-    }
-  },
-  "7": {
-    "inputs": {
-      "lora_0": "wan2.2_t2v_A14b_high_noise_lora_rank64_lightx2v_4step_1217.safetensors",
-      "strength_0": 1.0,
-      "lora_1": "none",
-      "strength_1": 1.0,
-      "lora_2": "none",
-      "strength_2": 1.0,
-      "lora_3": "none",
-      "strength_3": 1.0,
-      "lora_4": "none",
-      "strength_4": 1.0,
-      "low_mem_load": false,
-      "merge_loras": false
-    },
-    "class_type": "BerniniLoraSelectMulti",
-    "_meta": {
-      "title": "Bernini LoRA Select Multi"
-    }
-  },
-  "8": {
-    "inputs": {
-      "lora_0": "wan2.2_t2v_A14b_low_noise_lora_rank64_lightx2v_4step_1217.safetensors",
-      "strength_0": 1.0,
-      "lora_1": "none",
-      "strength_1": 1.0,
-      "lora_2": "none",
-      "strength_2": 1.0,
-      "lora_3": "none",
-      "strength_3": 1.0,
-      "lora_4": "none",
-      "strength_4": 1.0,
-      "low_mem_load": false,
-      "merge_loras": false
-    },
-    "class_type": "BerniniLoraSelectMulti",
-    "_meta": {
-      "title": "Bernini LoRA Select Multi"
-    }
-  },
   "9": {
     "inputs": {
-      "model": [
-        "5",
-        0
-      ],
-      "lora": [
-        "7",
-        0
-      ]
-    },
-    "class_type": "BerniniSetLoRAs",
-    "_meta": {
-      "title": "Bernini Set LoRAs"
-    }
-  },
-  "10": {
-    "inputs": {
-      "model": [
-        "6",
-        0
-      ],
-      "lora": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "BerniniSetLoRAs",
-    "_meta": {
-      "title": "Bernini Set LoRAs"
-    }
-  },
-  "11": {
-    "inputs": {
-      "context_schedule": "uniform_standard",
-      "context_frames": 32,
-      "context_stride": 4,
-      "context_overlap": 16,
-      "freenoise": true,
-      "verbose": false,
-      "fuse_method": "linear"
-    },
-    "class_type": "BerniniContextOptions",
-    "_meta": {
-      "title": "Bernini Context Options"
-    }
-  },
-  "12": {
-    "inputs": {
-      "riflex_freq_index": 0,
-      "rope_function": "comfy",
-      "guidance_mode": "apg",
-      "apg_eta": 0.5,
-      "apg_momentum": -0.5,
-      "apg_norm_threshold": 50.0,
-      "context_options": [
-        "11",
-        0
-      ]
-    },
-    "class_type": "BerniniSamplerExtraArgs",
-    "_meta": {
-      "title": "Bernini Sampler Extra Args"
-    }
-  },
-  "13": {
-    "inputs": {
-      "scheduler": "euler",
-      "steps": 8,
-      "shift": 5.0,
-      "start_step": 0,
-      "end_step": 4,
-      "enhance_hf": false
-    },
-    "class_type": "BerniniScheduler",
-    "_meta": {
-      "title": "Scheduler HIGH"
-    }
-  },
-  "14": {
-    "inputs": {
-      "scheduler": "euler",
-      "steps": 8,
-      "shift": 5.0,
-      "start_step": 4,
-      "end_step": 1000,
-      "enhance_hf": false
-    },
-    "class_type": "BerniniScheduler",
-    "_meta": {
-      "title": "Scheduler LOW"
-    }
-  },
-  "15": {
-    "inputs": {
-      "model_name": "umt5-xxl-enc-bf16.safetensors",
-      "precision": "bf16",
-      "quantization": "disabled",
-      "use_disk_cache": true,
-      "device": "gpu"
-    },
-    "class_type": "BerniniT5Config",
-    "_meta": {
-      "title": "Bernini T5 Config"
-    }
-  },
-  "16": {
-    "inputs": {
-      "task_type": "rv2v — 参考素材改视频",
-      "global_prompt": "把视频中的人物替换为参考图0中的人物，去除视频中所有的水印",
-      "negative_prompt": "bad video",
-      "bd_grp_high": "高噪采样设置",
-      "high_noise_cfg": 1.0,
-      "high_noise_seed": 661859872079248,
-      "high_noise_force_offload": true,
-      "high_noise_add_noise_to_samples": true,
-      "bd_grp_low": "低噪采样设置",
-      "low_noise_cfg": 1.0,
-      "low_noise_seed": 1041357104015717,
-      "low_noise_force_offload": true,
-      "low_noise_add_noise_to_samples": false,
-      "bd_grp_decode": "Decode 解码设置",
-      "enable_vae_tiling": false,
-      "tile_x": 272,
-      "tile_y": 272,
-      "tile_stride_x": 144,
-      "tile_stride_y": 128,
-      "normalization": "default",
-      "frame_rate": 48.17,
-      "width": 480,
-      "height": 848,
-      "ref_max_size": 848,
-      "total_frames": 1602,
-      "timeline_data": "{\"version\":4,\"editMode\":\"global\",\"totalFrames\":1602,\"frameRate\":48.17,\"width\":480,\"height\":848,\"refMaxSize\":848,\"output\":{\"mode\":\"long_edge\",\"longEdge\":848,\"width\":480,\"height\":848,\"maxExportFrames\":0,\"exportMode\":\"segments\"},\"video\":{\"id\":\"mqs7bdtf5nsu0\",\"fileName\":\"104922_raw.mov\",\"videoFile\":\"104922_raw.mov\",\"subfolder\":\"\",\"type\":\"input\",\"width\":720,\"height\":1280,\"duration\":33.26,\"nativeFps\":48.1659651232712,\"nativeFrameCount\":1602,\"sourceFrameCount\":1602,\"storageWidth\":480,\"storageHeight\":848,\"frames\":[],\"frameMap\":[],\"deletedSourceRanges\":[]},\"global\":{\"taskType\":\"rv2v — 参考素材改视频\",\"prompt\":\"把视频中的人物替换为参考图0中的人物，去除视频中所有的水印\",\"refs\":[{\"index\":0,\"imageFile\":\"IMG_1591.png\",\"imageB64\":\"\"}],\"genImage\":{\"imageFile\":\"\"}},\"segments\":[{\"id\":\"mqs7xupp9uf8u\",\"start\":0,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppqfdcn\",\"start\":23,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp4lpkp\",\"start\":46,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppbvphu\",\"start\":69,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppnp1ct\",\"start\":92,\"length\":22,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":22,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp0ncdk\",\"start\":114,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppwh1d6\",\"start\":137,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupptkx3u\",\"start\":160,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppk30tl\",\"start\":183,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppo4pwr\",\"start\":206,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupprrgme\",\"start\":229,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppp0r7u\",\"start\":252,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppknoe8\",\"start\":275,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp148un\",\"start\":298,\"length\":22,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":22,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppnjf1f\",\"start\":320,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp8scc5\",\"start\":343,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppdgcnw\",\"start\":366,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppcvk4v\",\"start\":389,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp3g8uj\",\"start\":412,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppaah3q\",\"start\":435,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppj0yag\",\"start\":458,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp8fld7\",\"start\":481,\"length\":22,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":22,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppz6230\",\"start\":503,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppn3dbr\",\"start\":526,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppdarsf\",\"start\":549,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppum9xk\",\"start\":572,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp6szx1\",\"start\":595,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp3qfbf\",\"start\":618,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupphfxgh\",\"start\":641,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp404zk\",\"start\":664,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppovfh8\",\"start\":687,\"length\":22,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":22,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp13hzy\",\"start\":709,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppl0jib\",\"start\":732,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp8szs5\",\"start\":755,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppbzqh8\",\"start\":778,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp167ow\",\"start\":801,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppvv42m\",\"start\":824,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppvfczw\",\"start\":847,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupppyqiv\",\"start\":870,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppfg8hd\",\"start\":893,\"length\":22,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":22,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppsm0a5\",\"start\":915,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupput256\",\"start\":938,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp7vlup\",\"start\":961,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp7ivz4\",\"start\":984,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppqae0u\",\"start\":1007,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp9kyhc\",\"start\":1030,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupplffog\",\"start\":1053,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppxzrtu\",\"start\":1076,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp87ks9\",\"start\":1099,\"length\":22,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":22,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp45kcu\",\"start\":1121,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupptydpx\",\"start\":1144,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppbx7ps\",\"start\":1167,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppbprfw\",\"start\":1190,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppx35kw\",\"start\":1213,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppremqk\",\"start\":1236,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp331dx\",\"start\":1259,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp9i3ht\",\"start\":1282,\"length\":22,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":22,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp4l2gl\",\"start\":1304,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppuhgoa\",\"start\":1327,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp0zwvo\",\"start\":1350,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupps9jc6\",\"start\":1373,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupptegkd\",\"start\":1396,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppu1nir\",\"start\":1419,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp20otk\",\"start\":1442,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppl2q8r\",\"start\":1465,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp4k7gb\",\"start\":1488,\"length\":22,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":22,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupp6l7a1\",\"start\":1510,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xupphqoyi\",\"start\":1533,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppoi1mr\",\"start\":1556,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"},{\"id\":\"mqs7xuppkudc8\",\"start\":1579,\"length\":23,\"prompt\":\"\",\"taskType\":\"\",\"refs\":[],\"frameCount\":23,\"genImage\":{\"imageFile\":\"\"},\"negativePrompt\":\"\"}],\"videoClips\":[{\"id\":\"mqs7bdtf5nsu0\",\"fileName\":\"104922_raw.mov\",\"videoFile\":\"104922_raw.mov\",\"subfolder\":\"\",\"type\":\"input\",\"width\":720,\"height\":1280,\"duration\":33.26,\"nativeFps\":48.1659651232712,\"nativeFrameCount\":1602,\"sourceFrameCount\":1602,\"storageWidth\":480,\"storageHeight\":848}],\"gen\":{\"defaultFrameCount\":81},\"timelineMode\":\"video\",\"runSelectEnabled\":true,\"runSelection\":[0,1]}",
-      "bd_grp_context": "Context 编码设置",
-      "tiled_vae": false,
-      "vae_force_offload": true,
-      "bd_grp_perf": "",
-      "clear_vram_between_segments": true,
-      "enable_teacache": false,
-      "export_source_images": false,
-      "bernini_director_ui": "",
-      "vae": [
-        "1",
-        0
-      ],
-      "model_high": [
-        "9",
-        0
-      ],
-      "model_low": [
-        "10",
-        0
-      ],
-      "scheduler_high": [
-        "13",
-        0
-      ],
-      "scheduler_low": [
-        "14",
-        0
-      ],
-      "t5_config": [
-        "15",
-        0
-      ],
-      "high_noise_extra_args": [
-        "12",
-        0
-      ]
-    },
-    "class_type": "BerniniDirector",
-    "_meta": {
-      "title": "Bernini Director"
-    }
-  },
-  "17": {
-    "inputs": {
-      "frame_rate": 24.0,
-      "loop_count": 0,
-      "filename_prefix": "BerniniDirector",
-      "format": "video/h264-mp4",
-      "pix_fmt": "yuv420p",
-      "crf": 19,
-      "save_metadata": true,
-      "trim_to_audio": false,
-      "pingpong": false,
-      "save_output": true,
+      "filename_prefix": "Qwen_Edit_2511/image",
       "images": [
-        "16",
+        "158",
         0
       ]
     },
-    "class_type": "VHS_VideoCombine",
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "Video Combine 🎥🅥🅗🅢"
+      "title": "保存图像"
     }
   },
-  "18": {
+  "41": {
     "inputs": {
-      "preview_markdown": "",
-      "preview_text": "",
-      "previewMode": null,
-      "source": [
-        "16",
-        3
+      "image": "edit_input_1782452138.jpeg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "144": {
+    "inputs": {
+      "shift": 3.1,
+      "model": [
+        "168",
+        0
       ]
     },
-    "class_type": "PreviewAny",
+    "class_type": "ModelSamplingAuraFlow",
     "_meta": {
-      "title": "Director 运行报告"
+      "title": "采样算法（AuraFlow）"
+    }
+  },
+  "145": {
+    "inputs": {
+      "vae_name": "Qwen\\qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "146": {
+    "inputs": {
+      "reference_latents_method": "index_timestep_zero",
+      "conditioning": [
+        "148",
+        0
+      ]
+    },
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "_meta": {
+      "title": "FluxKontext多参考潜在方法"
+    }
+  },
+  "147": {
+    "inputs": {
+      "reference_latents_method": "index_timestep_zero",
+      "conditioning": [
+        "150",
+        0
+      ]
+    },
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "_meta": {
+      "title": "FluxKontext多参考潜在方法"
+    }
+  },
+  "148": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "163",
+        0
+      ],
+      "vae": [
+        "145",
+        0
+      ],
+      "image1": [
+        "161",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "文本编码（QwenImageEditPlus）"
+    }
+  },
+  "150": {
+    "inputs": {
+      "prompt": "涂鸦手账PLOG风，对照原图所有物件添加白色手绘描边与随手注解。白色细线勾勒轮廓，线条自然，抖动，搭配箭头，虚线，弯引线。零散分布中文手写小字，记录食物口感，饮品感受、场景氛围与生活碎碎念，文字统一白色，小字号，不遮挡主体。少量点缀爱心，星光、热气，简笔表情符号，保留大量留白，避免拥挤。整体呈现日系居家手账氛围ins日常故事页+复古杂志风，低饱和配色，柔和自然光，淡淡胶片颗粒感，清爽简约，松弛治愈，高级生活化氛围",
+      "clip": [
+        "163",
+        0
+      ],
+      "vae": [
+        "145",
+        0
+      ],
+      "image1": [
+        "161",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus (Positive)"
+    }
+  },
+  "151": {
+    "inputs": {
+      "strength": 1.0,
+      "model": [
+        "144",
+        0
+      ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "CFG归一化"
+    }
+  },
+  "152": {
+    "inputs": {
+      "lora_name": "Qwen-Image-Edit\\Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "151",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "156": {
+    "inputs": {
+      "pixels": [
+        "161",
+        0
+      ],
+      "vae": [
+        "145",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "158": {
+    "inputs": {
+      "samples": [
+        "159",
+        0
+      ],
+      "vae": [
+        "145",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "159": {
+    "inputs": {
+      "seed": 1059110371870382,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "152",
+        0
+      ],
+      "positive": [
+        "147",
+        0
+      ],
+      "negative": [
+        "146",
+        0
+      ],
+      "latent_image": [
+        "156",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "161": {
+    "inputs": {
+      "image": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "FluxKontextImageScale",
+    "_meta": {
+      "title": "图像缩放为FluxKontext"
+    }
+  },
+  "163": {
+    "inputs": {
+      "clip_name": "Qwen\\qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "168": {
+    "inputs": {
+      "unet_name": "Qwen_Image_Edit\\Qwen_Image_Edit_2511\\qwen-image-edit-2511-Q6_K.gguf"
+    },
+    "class_type": "UnetLoaderGGUF",
+    "_meta": {
+      "title": "Unet Loader (GGUF)"
     }
   }
 }

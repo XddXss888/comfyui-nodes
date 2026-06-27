@@ -19,8 +19,8 @@
     "class_type": "EmptySD3LatentImage",
     "inputs": {
       "batch_size": 1,
-      "height": 834,
-      "width": 1112
+      "height": 720,
+      "width": 1280
     }
   },
   "57:27": {
@@ -33,7 +33,7 @@
         "57:30",
         0
       ],
-      "text": "这里为你提供几组适用于不同风格和平台的文生图提示词，可以直接复制使用。\n\n---\n\n### 1. 通用基础款（适合大多数模型）\n适合 Midjourney、Stable Diffusion、DALL·E 等，中英文均可。\n- **中文**：一只可爱的小猫，毛茸茸的，蓝色大眼睛，粉色鼻子，在阳光下的草地上玩耍，高清，细节丰富\n- **英文**：A cute fluffy kitten with big blue eyes and a pink nose, playing on the grass in the sunlight, high definition, detailed fur\n\n### 2. 真实摄影风格（超写实）\n模拟相机拍摄，强调光影与质感。\n- **中文**：一只橘色虎斑小猫，站在窗台，侧逆光，柔和的晨光透过窗户，毛发细节清晰，浅景深，50mm镜头，胶片感，高分辨率\n- **英文**：An orange tabby kitten sitting on a windowsill, soft morning light through the window, side backlighting, detailed fur texture, shallow depth of field, 50mm lens, photorealistic, 8k\n\n### 3. 可爱插画/动漫风格\n适合生成头像、卡通壁纸。\n- **中文**：宫崎骏风格，一只戴着小草帽的小猫，在花丛中，水彩画，柔和的色调，治愈感，高清\n- **英文**：Studio Ghibli style, a kitten wearing a tiny straw hat, sitting in a flower field, watercolor illustration, soft pastel colors, cozy and healing, high quality\n\n### 4. 极简水墨/国风\n- **中文**：一只小猫，水墨画，写意，大量留白，竹叶点缀，中国风，笔触流畅，宣纸纹理\n- **英文**：A kitten in Chinese ink wash painting style, freehand brushwork, plenty of negative space, bamboo leaves, traditional Chinese art, rice paper texture\n\n### 5. 趣味创意设定\n- **中文**：一只穿着宇航服的小猫，在月球上跳跃，地球悬挂在星空背景中，科幻，超现实，细节丰富\n- **英文**：A kitten wearing an astronaut suit, jumping on the moon, planet Earth in the starry sky background, sci-fi, surreal, highly detailed\n\n---\n\n**小贴士**：如果你使用的工具对英文响应更好，可以直接复制英文提示词；如果平台支持中文，直接用中文描述即可。还可以根据你的喜好把“小猫”替换成“布偶猫”、“橘猫”、“黑猫”等具体品种，得到更精准的结果。\n\n生成一只玩耍的小猫"
+      "text": "【整体美学】\n真人实拍摄影质感。\n\n【画面规格】\n物品参考图，\"奥迪A6L钥匙\"。完整物品展示，单个物品，垂直放置，居中构图，纯白背景，正面视角，清晰展示物品全貌与表面质感。\n\n【物品档案】\n形状：一把奥迪车系典型的三键遥控钥匙，轮廓呈扁长梯形，底部稍宽，顶部略窄。尺寸：长约七点五厘米，宽约三点五厘米，厚约一点二厘米。材质：工程塑料壳体，电镀银色边框，金属钥匙头。颜色：壳体为银灰色，按键区黑色，奥迪四环标为高亮镀铬。表面处理：壳体表面为细腻的磨砂质感，但边角常年摩擦已显现油亮光斑，左下角位置一道从外壳边缘延伸至按键区的裂痕，裂口边缘微微翘起。显著标记：钥匙壳左下角一道长约两厘米的裂痕，是碰撞造成的永久残损。\n\n(不出现任何字幕、文字、Logo、水印；不出现持握者、手、人物、人影；不出现背景环境)"
     }
   },
   "57:28": {
@@ -81,7 +81,7 @@
       ],
       "sampler_name": "res_multistep",
       "scheduler": "simple",
-      "seed": 5792912085833463,
+      "seed": 1126999785,
       "steps": 8
     }
   },

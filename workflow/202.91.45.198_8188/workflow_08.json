@@ -1,30 +1,133 @@
 {
-  "10": {
-    "class_type": "SimpleMath+",
+  "3": {
     "inputs": {
-      "value": "20+22"
-    }
-  },
-  "20": {
-    "class_type": "EmptyImage",
-    "inputs": {
-      "width": [
-        "10",
+      "seed": 437278441986981,
+      "steps": 20,
+      "cfg": 2.5,
+      "sampler_name": "euler",
+      "scheduler": "karras",
+      "denoise": 1.0,
+      "model": [
+        "14",
         0
       ],
-      "height": 1,
-      "batch_size": 1,
-      "color": 0
+      "positive": [
+        "12",
+        0
+      ],
+      "negative": [
+        "12",
+        1
+      ],
+      "latent_image": [
+        "12",
+        2
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
     }
   },
-  "30": {
-    "class_type": "SaveImage",
+  "8": {
     "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "15",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "12": {
+    "inputs": {
+      "width": 848,
+      "height": 1232,
+      "video_frames": 16,
+      "motion_bucket_id": 127,
+      "fps": 10,
+      "augmentation_level": 0.0,
+      "clip_vision": [
+        "15",
+        1
+      ],
+      "init_image": [
+        "23",
+        0
+      ],
+      "vae": [
+        "15",
+        2
+      ]
+    },
+    "class_type": "SVD_img2vid_Conditioning",
+    "_meta": {
+      "title": "SVD_img2vid_Conditioning"
+    }
+  },
+  "14": {
+    "inputs": {
+      "min_cfg": 1.0,
+      "model": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "VideoLinearCFGGuidance",
+    "_meta": {
+      "title": "VideoLinearCFGGuidance"
+    }
+  },
+  "15": {
+    "inputs": {
+      "ckpt_name": "svd.safetensors"
+    },
+    "class_type": "ImageOnlyCheckpointLoader",
+    "_meta": {
+      "title": "Image Only Checkpoint Loader (img2vid model)"
+    }
+  },
+  "23": {
+    "inputs": {
+      "image": "ComfyUI_00242_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "25": {
+    "inputs": {
+      "fps": 10.0,
       "images": [
-        "20",
+        "8",
         0
-      ],
-      "filename_prefix": "wp"
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "Create Video"
+    }
+  },
+  "26": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
     }
   }
 }

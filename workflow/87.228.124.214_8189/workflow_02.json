@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "seductive young curvy woman with long black hair, A nude woman with a large round butt kneels on all fours on a bed, back arched and hips raised, as a man penetrates her deeply anally from behind with his hips pressed tight against her, clear intimate contact visible at the point of entry, her upper body supported on her forearms, head turned to look back over one shoulder with a flushed expression of intense pleasure, softly lit bedroom interior, medium close-up side angle framing the torso and contact point.",
+      "text": "eurameg1, In a dimly lit VIP room at a party with soft shadows and muffled music beyond the door, a woman in a glamorous form-fitting evening dress stands in medium close-up, tilting her head with a playful mischievous smile and a wink, her gaze directed toward the viewer in a flirty expression of excitement, one hand lightly resting on her hip, the fabric of her dress showing natural tension and folds across her body under the low ambient lighting.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "izumi_v.2.safetensors",
-      "strength_model": 0.9,
-      "strength_clip": 1.0,
+      "lora_name": "zimg-eurameg1-refine-con-char.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.8,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -132,12 +132,12 @@
     "inputs": {
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
-      "scheduler": "bong_tangent",
+      "scheduler": "beta57",
       "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 26161571962184,
+      "seed": 453373455444780,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

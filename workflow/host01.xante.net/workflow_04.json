@@ -8,13 +8,13 @@
       "image"
     ],
     "inputs": {
-      "image": "ai_input_EC5ED467-C508-4462-A6FA-6C8BDBC8E099.png"
+      "image": "ai_input_7BA94003-87D6-40E3-9CD1-D0CBA6CA657D.png"
     }
   },
   "2": {
     "class_type": "UpscaleModelLoader",
     "inputs": {
-      "model_name": "4x_foolhardy_Remacri.pth"
+      "model_name": "4xFaceUpDAT.safetensors"
     },
     "_meta": {
       "title": "Load Upscale Model"
@@ -84,7 +84,7 @@
         "6",
         0
       ],
-      "filename_prefix": "iqueue_upscale_EC5ED467-C508-4462-A6FA-6C8BDBC8E099"
+      "filename_prefix": "iqueue_upscale_7BA94003-87D6-40E3-9CD1-D0CBA6CA657D"
     },
     "_meta": {
       "title": "Save Upscaled"

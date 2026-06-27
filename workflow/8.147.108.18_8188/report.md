@@ -4,13 +4,13 @@
 **内存**: 58 GB (空闲 42 GB)
 **版本**: 0.3.29
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-26 08:09:00
+**扫描时间**: 2026-06-27 08:08:03
 **历史总数**: 10001 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `3d83d18a-012f-42c6-aaf3-7e5fb4f6d662`
+- **Prompt ID**: `1b85b599-3380-42ad-8ec1-38efb1fcda0a`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (4):
@@ -21,10 +21,11 @@
 - **提示词**:
   - [CLIPTextEncode::text] **Scene Description:**
 
-The scene is set in a cozy, vibrant bedroom bathed in the soft, warm glow of a bedside lamp. The room is filled with playful and whimsical elements, creating a dreamy and invit
+**Visual Style:**
+- The scene is rendered in a vibrant, Pixar-style 3D animation with warm, inviting colors. The lighting is soft and natural, casting gentle shadows that add d
 
 ### 2. workflow_02.json
-- **Prompt ID**: `e1005c32-e7f2-4154-b856-253ca1daadf1`
+- **Prompt ID**: `808a1099-1c14-44aa-8f5f-5ecaa118521f`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (4):
@@ -35,11 +36,10 @@ The scene is set in a cozy, vibrant bedroom bathed in the soft, warm glow of a b
 - **提示词**:
   - [CLIPTextEncode::text] **Scene Description:**
 
-**Visual Style:**
-- The scene is rendered in a vibrant and warm Pixar 3D animation style, with soft, natural lighting and smooth shading. The colors are bright and inviting, cr
+The scene is set in a cozy, sunlit art studio with large windows that let in warm, golden light. The room is filled with vibrant colors and playful elements, such as colorful p
 
 ### 3. workflow_03.json
-- **Prompt ID**: `3d73feee-1f56-46ce-a9f2-02797b8fa8b4`
+- **Prompt ID**: `9fe5b33f-4b28-4913-8a40-89f899e16cd6`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (4):
@@ -51,10 +51,10 @@ The scene is set in a cozy, vibrant bedroom bathed in the soft, warm glow of a b
   - [CLIPTextEncode::text] **Scene Description:**
 
 **Visual Style:**
-- The scene is rendered in a vibrant and warm Pixar 3D animation style, with soft, natural lighting and smooth shading. The colors are rich and inviting, crea
+- The scene is rendered in a vibrant, Pixar 3D animation style with warm, inviting colors. The lighting is soft and natural, creating a cozy and comforting at
 
 ### 4. workflow_04.json
-- **Prompt ID**: `faa3506e-939a-4dc8-926c-3dc4c2cfb766`
+- **Prompt ID**: `d54c5a99-23fe-4f4b-8018-3fd676cf6e01`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (4):
@@ -65,11 +65,10 @@ The scene is set in a cozy, vibrant bedroom bathed in the soft, warm glow of a b
 - **提示词**:
   - [CLIPTextEncode::text] **Scene Description:**
 
-**Setting:**
-- The scene is set in a lush, vibrant meadow with tall, swaying grass and a variety of colorful wildflowers. The sky above is a warm, gradient blue, transitioning 
+The scene opens in a vibrant, sunlit backyard, filled with lush green grass and colorful flowers. The sky is a warm, clear blue, with a few fluffy white clouds drifting lazily 
 
 ### 5. workflow_05.json
-- **Prompt ID**: `133d56d7-3f4a-4d1a-b025-90a39684d4db`
+- **Prompt ID**: `d0a568d3-0da8-406a-809e-3173b5c37d8b`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (4):
@@ -80,11 +79,10 @@ The scene is set in a cozy, vibrant bedroom bathed in the soft, warm glow of a b
 - **提示词**:
   - [CLIPTextEncode::text] **Scene Description:**
 
-**Visual Style:**
-- The scene is rendered in the signature Pixar 3D animation style, with vibrant and warm colors that evoke a sense of comfort and joy. The lighting is soft an
+The scene opens with a vibrant, Pixar-style 3D animated environment. The setting is a cozy, warmly lit room with a large, colorful bookshelf in the background, filled with book
 
 ### 6. workflow_06.json
-- **Prompt ID**: `dc1e27b9-df65-4df7-9e4d-43d30e092b14`
+- **Prompt ID**: `25f18197-e1d9-47f5-bbf7-55f0cc71f472`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (4):
@@ -93,13 +91,12 @@ The scene is set in a cozy, vibrant bedroom bathed in the soft, warm glow of a b
   - flux1-schnell.safetensors
   - t5xxl_fp16.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] ### Scene Description
+  - [CLIPTextEncode::text] **Scene Description:**
 
-**Visual Style:**
-- The scene is rendered in a vibrant, Pixar-style 3D animation with warm, inviting colors. The lighting is soft and diffused, creating a cozy and magical atmos
+The scene opens with a warm, inviting forest clearing, bathed in the soft, golden light of a setting sun. The sky is a gradient of pastel pinks and oranges, with a few fluffy c
 
 ### 7. workflow_07.json
-- **Prompt ID**: `f1aef54e-233e-4d8b-afdb-aa43fb787280`
+- **Prompt ID**: `02905dda-9082-45a4-aca2-d972a3d513c2`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (4):
@@ -111,10 +108,10 @@ The scene is set in a cozy, vibrant bedroom bathed in the soft, warm glow of a b
   - [CLIPTextEncode::text] **Scene Description:**
 
 **Visual Style:**
-- The scene is rendered in a vibrant, Pixar-style 3D animation with warm, autumnal colors. The lighting is soft and golden, casting a cozy, inviting glow over
+- The scene is rendered in a vibrant and warm Pixar 3D animation style. The colors are rich and inviting, with soft, ambient lighting that creates a cozy and 
 
 ### 8. workflow_08.json
-- **Prompt ID**: `c1b7f9fd-3b8a-43f3-9d4d-da5f24dabe6d`
+- **Prompt ID**: `2ba1d1f2-1eef-461b-9350-1aeed3a99858`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (4):
@@ -126,10 +123,10 @@ The scene is set in a cozy, vibrant bedroom bathed in the soft, warm glow of a b
   - [CLIPTextEncode::text] **Scene Description:**
 
 **Visual Style:**
-- The scene is rendered in a vibrant, Pixar 3D animation style with warm, inviting colors. The lighting is soft and diffused, creating a cozy and welcoming at
+- The scene is rendered in a vibrant, Pixar 3D animation style with warm, inviting colors. Soft, ambient lighting creates a cozy and welcoming atmosphere. The
 
 ### 9. workflow_09.json
-- **Prompt ID**: `623cc8cf-cab9-4f61-bfd0-9a5e87956aa8`
+- **Prompt ID**: `44225464-6220-4327-a93f-4274f8f6f54d`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (4):
@@ -140,11 +137,10 @@ The scene is set in a cozy, vibrant bedroom bathed in the soft, warm glow of a b
 - **提示词**:
   - [CLIPTextEncode::text] **Scene Description:**
 
-**Visual Style:**
-- The scene is rendered in the vibrant and warm Pixar 3D animation style, with soft, inviting colors that evoke a sense of comfort and joy. The lighting is ge
+The scene opens in a cozy, whimsical bedroom, bathed in the warm, golden light of a late afternoon sun. The walls are painted a soft, pastel blue, and the floor is covered with
 
 ### 10. workflow_10.json
-- **Prompt ID**: `93ba4596-87a5-4721-9ccc-0c7baef0f5b3`
+- **Prompt ID**: `aac478a4-66cf-473e-9dbf-b652be2e488b`
 - **类型**: 文生图
 - **节点数**: 13
 - **模型** (4):
@@ -156,4 +152,4 @@ The scene is set in a cozy, vibrant bedroom bathed in the soft, warm glow of a b
   - [CLIPTextEncode::text] **Scene Description:**
 
 **Visual Style:**
-- The scene is rendered in the vibrant and warm Pixar 3D animation style, with soft, natural lighting and smooth shading. The colors are bright and inviting, 
+- The scene is rendered in the vibrant and warm Pixar 3D animation style, with soft, inviting colors and smooth, natural shading. The lighting is gentle and w

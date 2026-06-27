@@ -19,8 +19,8 @@
     "class_type": "EmptySD3LatentImage",
     "inputs": {
       "batch_size": 1,
-      "height": 856,
-      "width": 480
+      "height": 720,
+      "width": 1280
     }
   },
   "57:27": {
@@ -33,7 +33,7 @@
         "57:30",
         0
       ],
-      "text": "【整体美学】\n真人实拍摄影质感。\n现代港式风格\n\n【画面规格】\n画风预览图，展示本世界选定画风的整体影像气质与光影色彩倾向。\n\n(不出现任何字幕、文字、Logo、水印；不出现具体剧情角色面部特写；不出现分镜编号或 UI 叠层)"
+      "text": "中式美女，温厚大气，22岁"
     }
   },
   "57:28": {
@@ -81,7 +81,7 @@
       ],
       "sampler_name": "res_multistep",
       "scheduler": "simple",
-      "seed": 1947644926,
+      "seed": 279952046,
       "steps": 8
     }
   },

@@ -1,0 +1,790 @@
+{
+  "1": {
+    "inputs": {
+      "image": "e6ef0a3a-90ab-4aba-b297-503053934e84.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "2": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "None",
+      "scale_to_length": 2000,
+      "background_color": "#000000",
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    }
+  },
+  "3": {
+    "inputs": {
+      "strength": 0.65,
+      "start_percent": 0.0,
+      "end_percent": 1.0,
+      "positive": [
+        "17",
+        0
+      ],
+      "negative": [
+        "21",
+        0
+      ],
+      "control_net": [
+        "5",
+        0
+      ],
+      "image": [
+        "161",
+        0
+      ],
+      "vae_optional": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "ACN_AdvancedControlNetApply",
+    "_meta": {
+      "title": "高级ControlNet应用🛂🅐🅒🅝"
+    }
+  },
+  "4": {
+    "inputs": {
+      "vae_name": "flux_ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "5": {
+    "inputs": {
+      "control_net_name": "diffusion_pytorch_model.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "加载ControlNet模型"
+    }
+  },
+  "11": {
+    "inputs": {
+      "seed": [
+        "42",
+        0
+      ],
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "114",
+        0
+      ],
+      "positive": [
+        "51",
+        0
+      ],
+      "negative": [
+        "51",
+        1
+      ],
+      "latent_image": [
+        "148",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "13": {
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "16": {
+    "inputs": {
+      "text": "Moist, shiny hair, hair model,High-quality realistic photos, with clear and distinct characters and scenes, fine hair full of texture, and delicate clothes"
+    },
+    "class_type": "Text Multiline",
+    "_meta": {
+      "title": "多行文本"
+    }
+  },
+  "17": {
+    "inputs": {
+      "text": [
+        "16",
+        0
+      ],
+      "clip": [
+        "180",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "21": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "180",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "42": {
+    "inputs": {
+      "seed": -1
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "随机种子"
+    }
+  },
+  "51": {
+    "inputs": {
+      "noise_mask": true,
+      "positive": [
+        "3",
+        0
+      ],
+      "negative": [
+        "3",
+        1
+      ],
+      "vae": [
+        "4",
+        0
+      ],
+      "pixels": [
+        "161",
+        0
+      ],
+      "mask": [
+        "239",
+        0
+      ]
+    },
+    "class_type": "InpaintModelConditioning",
+    "_meta": {
+      "title": "内补模型条件"
+    }
+  },
+  "56": {
+    "inputs": {
+      "expand": -45,
+      "incremental_expandrate": 0.0,
+      "tapered_corners": true,
+      "flip_input": false,
+      "blur_radius": [
+        "62",
+        0
+      ],
+      "lerp_alpha": 1.0,
+      "decay_factor": 1.0,
+      "fill_holes": false,
+      "mask": [
+        "124",
+        0
+      ]
+    },
+    "class_type": "GrowMaskWithBlur",
+    "_meta": {
+      "title": "遮罩模糊生长"
+    }
+  },
+  "62": {
+    "inputs": {
+      "value": 10.4
+    },
+    "class_type": "ImpactFloat",
+    "_meta": {
+      "title": "浮点"
+    }
+  },
+  "64": {
+    "inputs": {
+      "pixels": [
+        "161",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "74": {
+    "inputs": {
+      "any_01": [
+        "51",
+        2
+      ],
+      "any_02": [
+        "64",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "任意切换"
+    }
+  },
+  "114": {
+    "inputs": {
+      "lora_name": "细节加强丨重绘专用Max.safetensors",
+      "lora_strength": 0.83,
+      "model": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "NunchakuFluxLoraLoader",
+    "_meta": {
+      "title": "Nunchaku FluxLora 加载器"
+    }
+  },
+  "119": {
+    "inputs": {
+      "model_name": "segm/face_yolov8m-seg_60.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "检测加载器"
+    }
+  },
+  "124": {
+    "inputs": {
+      "threshold": 0.5,
+      "dilation": 0,
+      "segm_detector": [
+        "119",
+        1
+      ],
+      "image": [
+        "161",
+        0
+      ]
+    },
+    "class_type": "SegmDetectorCombined_v2",
+    "_meta": {
+      "title": "Segm检测器v2"
+    }
+  },
+  "127": {
+    "inputs": {
+      "model_path": "svdq-fp4_r32-flux.1-dev.safetensors",
+      "cache_threshold": 0.05,
+      "attention": "nunchaku-fp16",
+      "cpu_offload": "auto",
+      "device_id": 0,
+      "data_type": "bfloat16",
+      "i2f_mode": "enabled"
+    },
+    "class_type": "NunchakuFluxDiTLoader",
+    "_meta": {
+      "title": "Nunchaku FluxDiT 加载器"
+    }
+  },
+  "141": {
+    "inputs": {
+      "model_name": "segm/hair_yolov8n-seg_60.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "检测加载器"
+    }
+  },
+  "142": {
+    "inputs": {
+      "threshold": 0.5,
+      "dilation": 0,
+      "segm_detector": [
+        "141",
+        1
+      ],
+      "image": [
+        "182",
+        0
+      ]
+    },
+    "class_type": "SegmDetectorCombined_v2",
+    "_meta": {
+      "title": "Segm检测器v2"
+    }
+  },
+  "148": {
+    "inputs": {
+      "amount": 1,
+      "samples": [
+        "74",
+        0
+      ]
+    },
+    "class_type": "RepeatLatentBatch",
+    "_meta": {
+      "title": "复制Latent批次"
+    }
+  },
+  "155": {
+    "inputs": {
+      "invert_mask": false,
+      "detect": "mask_area",
+      "top_reserve": [
+        "234",
+        0
+      ],
+      "bottom_reserve": [
+        "234",
+        0
+      ],
+      "left_reserve": [
+        "234",
+        0
+      ],
+      "right_reserve": [
+        "234",
+        0
+      ],
+      "round_to_multiple": "8",
+      "image": [
+        "182",
+        0
+      ],
+      "mask": [
+        "142",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: CropByMask V2",
+    "_meta": {
+      "title": "图层工具：遮罩裁剪 V2"
+    }
+  },
+  "159": {
+    "inputs": {
+      "scale": 1.0,
+      "method": "lanczos",
+      "scale_by": "by_scale",
+      "scale_by_length": 1024,
+      "image": [
+        "13",
+        0
+      ],
+      "mask": [
+        "160",
+        0
+      ],
+      "original_size": [
+        "161",
+        2
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleRestore V2",
+    "_meta": {
+      "title": "图层工具：缩放恢复 V2"
+    }
+  },
+  "160": {
+    "inputs": {
+      "expand": 16,
+      "incremental_expandrate": 0.0,
+      "tapered_corners": true,
+      "flip_input": false,
+      "blur_radius": 6.5,
+      "lerp_alpha": 1.0,
+      "decay_factor": 1.0,
+      "fill_holes": false,
+      "mask": [
+        "161",
+        1
+      ]
+    },
+    "class_type": "GrowMaskWithBlur",
+    "_meta": {
+      "title": "遮罩模糊生长"
+    }
+  },
+  "161": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": 850,
+      "background_color": "#000000",
+      "image": [
+        "155",
+        0
+      ],
+      "mask": [
+        "155",
+        1
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    }
+  },
+  "163": {
+    "inputs": {
+      "invert_mask": false,
+      "background_image": [
+        "182",
+        0
+      ],
+      "croped_image": [
+        "159",
+        0
+      ],
+      "crop_box": [
+        "155",
+        2
+      ],
+      "croped_mask": [
+        "159",
+        1
+      ]
+    },
+    "class_type": "LayerUtility: RestoreCropBox",
+    "_meta": {
+      "title": "图层工具：恢复裁剪框"
+    }
+  },
+  "164": {
+    "inputs": {
+      "images": [
+        "165",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "165": {
+    "inputs": {
+      "inputcount": 2,
+      "direction": "right",
+      "match_image_size": false,
+      "Update inputs": null,
+      "image_1": [
+        "163",
+        0
+      ],
+      "image_2": [
+        "182",
+        0
+      ]
+    },
+    "class_type": "ImageConcatMulti",
+    "_meta": {
+      "title": "图像联结（多个）"
+    }
+  },
+  "171": {
+    "inputs": {
+      "cmp": "a >= b",
+      "a": [
+        "179",
+        0
+      ],
+      "b": [
+        "174",
+        0
+      ]
+    },
+    "class_type": "ImpactCompare",
+    "_meta": {
+      "title": "比较"
+    }
+  },
+  "172": {
+    "inputs": {
+      "if_condition": [
+        "171",
+        0
+      ],
+      "when_TRUE": [
+        "2",
+        0
+      ],
+      "when_FALSE": [
+        "175",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: If ",
+    "_meta": {
+      "title": "图层工具：条件判断"
+    }
+  },
+  "174": {
+    "inputs": {
+      "value": 1000000
+    },
+    "class_type": "ImpactInt",
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "175": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "None",
+      "scale_to_length": 900,
+      "background_color": "#000000",
+      "image": [
+        "181",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    }
+  },
+  "178": {
+    "inputs": {
+      "filename_prefix": "0818测试",
+      "images": [
+        "163",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "179": {
+    "inputs": {
+      "operator": "*",
+      "a": [
+        "2",
+        3
+      ],
+      "b": [
+        "2",
+        4
+      ]
+    },
+    "class_type": "LayerUtility: NumberCalculator",
+    "_meta": {
+      "title": "图层工具：数字计算器"
+    }
+  },
+  "180": {
+    "inputs": {
+      "model_type": "flux",
+      "text_encoder1": "clip_l.safetensors",
+      "text_encoder2": "t5xxl_fp8_e4m3fn.safetensors",
+      "t5_min_length": 512,
+      "use_4bit_t5": "disable",
+      "int4_model": "none"
+    },
+    "class_type": "NunchakuTextEncoderLoader",
+    "_meta": {
+      "title": "Nunchaku CLIP文本编码加载器"
+    }
+  },
+  "181": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.1000000000000003,
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "182": {
+    "inputs": {
+      "any_01": [
+        "172",
+        0
+      ],
+      "any_02": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "任意切换"
+    }
+  },
+  "215": {
+    "inputs": {
+      "lora_name": "private/细节加强丨重绘专用Max.safetensors",
+      "lora_strength": 0.83,
+      "model": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "NunchakuFluxLoraLoader",
+    "_meta": {
+      "title": "Nunchaku FluxLora 加载器"
+    }
+  },
+  "232": {
+    "inputs": {
+      "image": [
+        "182",
+        0
+      ]
+    },
+    "class_type": "GetImageSizeAndCount",
+    "_meta": {
+      "title": "获取图像尺寸数量"
+    }
+  },
+  "234": {
+    "inputs": {
+      "operator": "*",
+      "a": [
+        "237",
+        0
+      ],
+      "b": [
+        "238",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: NumberCalculator",
+    "_meta": {
+      "title": "图层工具：数字计算器"
+    }
+  },
+  "236": {
+    "inputs": {
+      "cmp": "a >= b",
+      "a": [
+        "232",
+        1
+      ],
+      "b": [
+        "232",
+        2
+      ]
+    },
+    "class_type": "ImpactCompare",
+    "_meta": {
+      "title": "比较"
+    }
+  },
+  "237": {
+    "inputs": {
+      "if_condition": [
+        "236",
+        0
+      ],
+      "when_TRUE": [
+        "232",
+        1
+      ],
+      "when_FALSE": [
+        "232",
+        2
+      ]
+    },
+    "class_type": "LayerUtility: If ",
+    "_meta": {
+      "title": "图层工具：条件判断"
+    }
+  },
+  "238": {
+    "inputs": {
+      "value": 0.07
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "浮点常量"
+    }
+  },
+  "239": {
+    "inputs": {
+      "mask": [
+        "56",
+        0
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "反转遮罩"
+    }
+  },
+  "240": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "None",
+      "scale_to_length": 1024,
+      "background_color": "#000000",
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "图层工具：按宽高比缩放 V2"
+    }
+  }
+}

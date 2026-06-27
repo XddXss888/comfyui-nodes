@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Masterpiece, best quality, detailed professional illustration of a vibrant, cheerful kindergarten entrance in autumn: golden maple leaves, warm sunlight, smiling diverse children holding small red lanterns, modern colorful building with playful architecture, soft bokeh background, inviting atmosphere — no text, no slogans, pure visual appeal.",
+      "text": "Ultra-high-resolution photography, flat composition, sharp focus, studio lighting, professional color grading, masterpiece, best quality, highly detailed, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -34,13 +34,13 @@
     "inputs": {
       "width": 1024,
       "height": 1024,
-      "batch_size": 2
+      "batch_size": 1
     }
   },
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 1931503975,
+      "seed": 2053437614,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -90,9 +90,9 @@
   "9": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_2K",
+      "filename_prefix": "DOOOOR_1K",
       "images": [
-        "14",
+        "8",
         0
       ]
     }
@@ -113,28 +113,9 @@
   "11": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_2K_TH",
+      "filename_prefix": "DOOOOR_1K_TH",
       "images": [
         "10",
-        0
-      ]
-    }
-  },
-  "13": {
-    "class_type": "UpscaleModelLoader",
-    "inputs": {
-      "model_name": "2xLexicaRRDBNet_Sharp.pth"
-    }
-  },
-  "14": {
-    "class_type": "ImageUpscaleWithModel",
-    "inputs": {
-      "upscale_model": [
-        "13",
-        0
-      ],
-      "image": [
-        "8",
         0
       ]
     }

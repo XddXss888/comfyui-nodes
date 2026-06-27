@@ -12,7 +12,7 @@
         "1",
         1
       ],
-      "text": "e-commerce platform,  modern design, professional photography, balanced composition, contextually relevant, natural lighting, expert specialist, trustworthy local professional, personalized service, no text, no watermark, no logo, photorealistic"
+      "text": "고양이 가 커피를 마시는 장면, wide angle cinematic shot, golden hour lighting, dramatic depth of field, high resolution 4k, professional photography, no text, no watermark, no logo, photorealistic"
     }
   },
   "3": {
@@ -28,7 +28,7 @@
   "4": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 1024,
+      "width": 1280,
       "height": 576,
       "batch_size": 1
     }
@@ -52,8 +52,8 @@
         "4",
         0
       ],
-      "seed": 841948729032975237,
-      "steps": 4,
+      "seed": 1074533924173766581,
+      "steps": 6,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -80,7 +80,7 @@
         "6",
         0
       ],
-      "filename_prefix": "sb_a3c1e290_general"
+      "filename_prefix": "sb_7c2e4e53_hero"
     }
   }
 }

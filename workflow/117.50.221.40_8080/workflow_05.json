@@ -8,7 +8,7 @@
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "A 20-year-old beautiful East Asian woman, centered composition with balanced negative space, fair smooth skin, stylish short black hair, slender figure, delicate facial features—defined jawline, straight nose, natural rosy lips, confident dark eyes. She wears a glossy light teal off-shoulder top, one hand touching her cheek, the other on her hip, posing elegantly. Pure white background, soft even lighting, no harsh shadows. Masterpiece, best quality, highly detailed, professional portrait., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "Red poster with silhouette of steamed buns, elegant and luxurious texture, modern minimalist style, soft ambient lighting, high-end fashion aesthetic, masterpiece, best quality, detailed, professional, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "1",
         1
@@ -18,15 +18,15 @@
   "3": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 576,
-      "height": 1024,
-      "batch_size": 1
+      "width": 1024,
+      "height": 576,
+      "batch_size": 4
     }
   },
   "4": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 380529812,
+      "seed": 1903146540,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -76,9 +76,9 @@
   "7": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_2K",
+      "filename_prefix": "DOOOOR_1K",
       "images": [
-        "12",
+        "6",
         0
       ]
     }
@@ -99,28 +99,9 @@
   "9": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_2K_TH",
+      "filename_prefix": "DOOOOR_1K_TH",
       "images": [
         "8",
-        0
-      ]
-    }
-  },
-  "11": {
-    "class_type": "UpscaleModelLoader",
-    "inputs": {
-      "model_name": "2xLexicaRRDBNet_Sharp.pth"
-    }
-  },
-  "12": {
-    "class_type": "ImageUpscaleWithModel",
-    "inputs": {
-      "upscale_model": [
-        "11",
-        0
-      ],
-      "image": [
-        "6",
         0
       ]
     }

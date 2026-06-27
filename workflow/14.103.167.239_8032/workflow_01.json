@@ -5,13 +5,9 @@
       "Add Input variable": "add_input_variable",
       "Add Output variable": "add_output_variable",
       "Clear": "clear_code",
-      "pycode": "\nfrom mutagen.flac import FLAC\nimport json\nv = json.loads(FLAC(f\"/workspace/ComfyUI_v2/ComfyUI/output/audio/{var4}\")['prompt'][0])[\"110\"][\"inputs\"]\nv0=v[\"timesignature\"]  \nv1=v[\"language\"]       \nv2=v[\"keyscale\"]       \nv3=v[\"duration\"]       \nv4=v[\"bpm\"]             \nv5=v[\"tags\"]           \nv6=v[\"lyrics\"]         \nresult=f'{v0}###{v1}###{v2}###{v3}###{v4}###{v5}###{v6}'\n",
+      "pycode": "\nimport os\nimport glob\nlist = glob.glob('/workspace/ComfyUI_v2/ComfyUI/output/audio/*.flac')\nresult = sorted(list, key=lambda x: os.path.getmtime(x), reverse=True)\nresult = [it.replace('/workspace/ComfyUI_v2/ComfyUI/output/audio/','') for it in  result]\nresult = \"#\".join(result)\n",
       "var3": [
-        "3",
-        0
-      ],
-      "var4": [
-        "10",
+        "2",
         0
       ]
     },
@@ -22,9 +18,18 @@
   },
   "2": {
     "inputs": {
+      "value": 3073042065
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Int"
+    }
+  },
+  "3": {
+    "inputs": {
       "preview_markdown": "",
       "preview_text": "",
-      "previewMode": null,
+      "previewMode": false,
       "source": [
         "1",
         0
@@ -33,24 +38,6 @@
     "class_type": "PreviewAny",
     "_meta": {
       "title": "Preview as Text"
-    }
-  },
-  "3": {
-    "inputs": {
-      "value": 1141363147
-    },
-    "class_type": "PrimitiveInt",
-    "_meta": {
-      "title": "Int"
-    }
-  },
-  "10": {
-    "inputs": {
-      "value": "回归自然的呼唤_00001_.flac"
-    },
-    "class_type": "PrimitiveString",
-    "_meta": {
-      "title": "String"
     }
   }
 }

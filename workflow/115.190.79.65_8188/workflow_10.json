@@ -1,68 +1,12 @@
 {
-  "3": {
-    "inputs": {
-      "seed": 509929596228011,
-      "steps": 30,
-      "cfg": 10.0,
-      "sampler_name": "uni_pc",
-      "scheduler": "normal",
-      "denoise": 1.0,
-      "model": [
-        "37",
-        0
-      ],
-      "positive": [
-        "51",
-        0
-      ],
-      "negative": [
-        "51",
-        1
-      ],
-      "latent_image": [
-        "51",
-        2
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "6": {
-    "inputs": {
-      "text": "Pulling in and out of the shot is strictly prohibited.Shaking the camera is strictly prohibited, as well as with the background，Please generate a video where the person in the frame remains static in a full - body pose and the background stays unchanged. The person should have a natural standing posture, a calm expression, and look straight ahead. The only change in the video is the person's natural blinking action, demonstrating real human physiological characteristics. Please ensure that the blinking action is natural and smooth, without any deliberate or exaggerated elements. The entire video should maintain a documentary photography style to capture the person's natural state truthfully and accurately. The picture quality should be clear and the colors should be true, matching the style and color tone of the original full - body photo.",
-      "clip": [
-        "38",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
-    }
-  },
-  "7": {
-    "inputs": {
-      "text": "Overexposure, blurred details, subtitles, paintings, pictures, still image, overall gray, worst quality, low quality, JPEG compression residue, ugly, mutilated, redundant fingers, poorly painted hands, poorly painted faces, deformed, disfigured, deformed limbs, fused fingers, cluttered background, three legs, multiple people in the background, upside down, any arm movement, any leg movement, torso twisting, excessive head rotation, unnatural mouth movement, static mouth, no lip animation, camera movement, camera zoom, camera panning, camera tilting, shifting perspective, dynamic camera angles.",
-      "clip": [
-        "38",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
-    }
-  },
   "8": {
     "inputs": {
       "samples": [
-        "3",
+        "40",
         0
       ],
       "vae": [
-        "39",
+        "10",
         0
       ]
     },
@@ -71,133 +15,178 @@
       "title": "VAE解码"
     }
   },
-  "28": {
+  "10": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
-      "fps": 16.000000000000004,
-      "lossless": false,
-      "quality": 90,
-      "method": "default",
-      "images": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "SaveAnimatedWEBP",
-    "_meta": {
-      "title": "保存动画（WEBP）"
-    }
-  },
-  "37": {
-    "inputs": {
-      "unet_name": "wan2.1_i2v_720p_14B_fp16.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "38": {
-    "inputs": {
-      "clip_name": "umt5_xxl_fp16.safetensors",
-      "type": "wan",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载CLIP"
-    }
-  },
-  "39": {
-    "inputs": {
-      "vae_name": "wan_2.1_vae.safetensors"
+      "vae_name": "ae.safetensors"
     },
     "class_type": "VAELoader",
     "_meta": {
       "title": "加载VAE"
     }
   },
-  "51": {
+  "11": {
     "inputs": {
-      "width": 720,
-      "height": 1280,
-      "length": 65,
-      "batch_size": 1,
-      "positive": [
-        "6",
-        0
-      ],
-      "negative": [
-        "7",
-        0
-      ],
-      "vae": [
-        "39",
-        0
-      ],
-      "clip_vision_output": [
-        "52",
-        0
-      ],
-      "start_image": [
-        "54",
+      "clip_name1": "t5xxl_fp16.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "双CLIP加载器"
+    }
+  },
+  "17": {
+    "inputs": {
+      "scheduler": "normal",
+      "steps": 25,
+      "denoise": 1.0,
+      "model": [
+        "46",
         0
       ]
     },
-    "class_type": "WanImageToVideo",
+    "class_type": "BasicScheduler",
     "_meta": {
-      "title": "Wan图像到视频"
+      "title": "基本调度器"
     }
   },
-  "52": {
+  "38": {
     "inputs": {
-      "crop": "none",
-      "clip_vision": [
-        "53",
+      "model": [
+        "46",
         0
       ],
-      "image": [
-        "54",
+      "conditioning": [
+        "42",
         0
       ]
     },
-    "class_type": "CLIPVisionEncode",
+    "class_type": "BasicGuider",
     "_meta": {
-      "title": "CLIP视觉编码"
+      "title": "基本引导器"
     }
   },
-  "53": {
-    "inputs": {
-      "clip_name": "clip_vision_h.safetensors"
-    },
-    "class_type": "CLIPVisionLoader",
-    "_meta": {
-      "title": "加载CLIP视觉"
-    }
-  },
-  "54": {
-    "inputs": {
-      "image": "微信图片_20250508183719 (1).jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "60": {
+  "39": {
     "inputs": {
       "filename_prefix": "ComfyUI",
-      "fps": 6.0,
-      "compress_level": 4,
       "images": [
         "8",
         0
       ]
     },
-    "class_type": "SaveAnimatedPNG",
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "保存动画（APNG）"
+      "title": "保存图像"
+    }
+  },
+  "40": {
+    "inputs": {
+      "noise": [
+        "45",
+        0
+      ],
+      "guider": [
+        "38",
+        0
+      ],
+      "sampler": [
+        "47",
+        0
+      ],
+      "sigmas": [
+        "17",
+        0
+      ],
+      "latent_image": [
+        "44",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "42": {
+    "inputs": {
+      "guidance": 3.5,
+      "conditioning": [
+        "43",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "Flux引导"
+    }
+  },
+  "43": {
+    "inputs": {
+      "text": "Amateur selfie of young tween girl nude siting in bedroom. wearing thigh high socks.",
+      "clip": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "44": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "空Latent图像（SD3）"
+    }
+  },
+  "45": {
+    "inputs": {
+      "noise_seed": 594086604462843
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  },
+  "46": {
+    "inputs": {
+      "max_shift": 1.15,
+      "base_shift": 0.5,
+      "width": 1024,
+      "height": 1024,
+      "model": [
+        "48",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingFlux",
+    "_meta": {
+      "title": "采样算法（Flux）"
+    }
+  },
+  "47": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "48": {
+    "inputs": {
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
     }
   }
 }

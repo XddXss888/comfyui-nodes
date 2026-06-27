@@ -27,27 +27,27 @@
         "2",
         0
       ],
-      "text": "A vast ocean chart table at dawn, nautical maps layered with translucent data overlays, brass navigation instruments beside neatly organized document stacks, golden morning light streaming through a ship bridge window, fog lifting to reveal structured shipping lanes stretching toward the horizon, each lane glowing faintly like organized data streams, cinematic depth of field, warm amber and deep navy tones, 16:9 composition"
+      "text": "A vast minimal white architectural space with a single translucent glass partition standing upright, casting a long geometric shadow. On one side, scattered abstract origami shapes in muted warm tones float in ordered formation. On the other side, a few crumpled forms dissolve into dust. Soft directional light from upper left. Clean negative space dominates the composition. Subtle grid lines etched into the marble floor suggest underlying structure. Calm, balanced, deliberate atmosphere. 16:9 landscape."
     }
   },
   "5": {
-    "class_type": "FluxGuidance",
-    "inputs": {
-      "conditioning": [
-        "4",
-        0
-      ],
-      "guidance": 3.5
-    }
-  },
-  "6": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
         "2",
         0
       ],
-      "text": ""
+      "text": "text, watermark, logo, crowded layout, cluttered background"
+    }
+  },
+  "6": {
+    "class_type": "FluxGuidance",
+    "inputs": {
+      "conditioning": [
+        "4",
+        0
+      ],
+      "guidance": 3.8
     }
   },
   "7": {
@@ -66,18 +66,18 @@
         0
       ],
       "positive": [
-        "5",
+        "6",
         0
       ],
       "negative": [
-        "6",
+        "5",
         0
       ],
       "latent_image": [
         "7",
         0
       ],
-      "seed": 2051175471,
+      "seed": 1604275839,
       "control_after_generate": "fixed",
       "steps": 20,
       "cfg": 1.0,
@@ -106,7 +106,7 @@
         "9",
         0
       ],
-      "filename_prefix": "blog_2051175471"
+      "filename_prefix": "blog_1604275839"
     }
   }
 }

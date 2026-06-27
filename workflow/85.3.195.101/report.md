@@ -1,11 +1,11 @@
 # 85.3.195.101
 
-**GPU**: MPS | **显存**: 96 GB | **空闲**: 81 GB
-**内存**: 96 GB (空闲 81 GB)
+**GPU**: MPS | **显存**: 96 GB | **空闲**: 73 GB
+**内存**: 96 GB (空闲 73 GB)
 **版本**: 0.24.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-26 08:09:22
-**历史总数**: 10 | **成功**: 2
+**扫描时间**: 2026-06-27 08:08:14
+**历史总数**: 12 | **成功**: 4
 
 ## 工作流列表
 
@@ -30,3 +30,15 @@
   - z_image_turbo_bf16.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] Subject: A playful slim European teenager woman completely naked, fully adorned with glossy Snow White themed bodypaint on bare skin without any fabric clothing or suit seams. Outfit (Paint): Royal bl
+
+### 3. workflow_03.json
+- **Prompt ID**: `6ea25f8f-3b27-4e81-b003-052dd1e97fdf`
+- **类型**: 文生视频
+- **节点数**: 2
+- **模型** (0):
+
+### 4. workflow_04.json
+- **Prompt ID**: `adead250-ea71-485f-b8c6-d23638c53e18`
+- **类型**: 文生视频
+- **节点数**: 2
+- **模型** (0):

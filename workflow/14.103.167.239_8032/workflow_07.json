@@ -1,43 +1,222 @@
 {
   "1": {
     "inputs": {
-      "language": "python",
-      "Add Input variable": "add_input_variable",
-      "Add Output variable": "add_output_variable",
-      "Clear": "clear_code",
-      "pycode": "\nimport os\nimport glob\nlist = glob.glob('/workspace/ComfyUI_v2/ComfyUI/output/audio/*.flac')\nresult = sorted(list, key=lambda x: os.path.getmtime(x), reverse=True)\nresult = [it.replace('/workspace/ComfyUI_v2/ComfyUI/output/audio/','') for it in  result]\nresult = \"#\".join(result)\n",
-      "var3": [
-        "2",
-        0
-      ]
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
     },
-    "class_type": "IDENode",
+    "class_type": "UNETLoader",
     "_meta": {
-      "title": "IDE Node"
+      "title": "UNET加载器"
     }
   },
   "2": {
     "inputs": {
-      "value": 3965762317
+      "vae_name": "ae.safetensors"
     },
-    "class_type": "PrimitiveInt",
+    "class_type": "VAELoader",
     "_meta": {
-      "title": "Int"
+      "title": "VAE加载器"
     }
   },
   "3": {
     "inputs": {
-      "preview_markdown": "",
-      "preview_text": "",
-      "previewMode": false,
-      "source": [
-        "1",
+      "clip_name1": "t5xxl_fp16.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "双CLIP加载器"
+    }
+  },
+  "4": {
+    "inputs": {
+      "text": "[hobbs-dress-v2], A UK female model wearing a short-sleeved printed midi dress.\n\n**Silhouette:** A-line, midi length, natural waistline.\n\n**Style Features:** V-neck, short puff sleeves, belt, all-over botanical print.\n\n**Design Details:** The bodice features a deep V-neckline with subtle pleating at the shoulder seams. The short sleeves are voluminous with gathers at the sleeve heads and finished with narrow trim at the cuffs. A wide, self-fabric belt at the waist is tied into a bow at the center front. The skirt falls in an A-line silhouette with excellent drape.\n\n**Construction Details:** Gathered sleeve heads, piped sleeve cuffs, waist seam concealed beneath the belt, and visible topstitching on the skirt hem.\n\n**Fabric & Placement:** The entire garment is crafted from a crisp, slightly lustrous ivory-based woven fabric. It features an extensive, spaced-out print of translucent yellow floral motifs and slender green stems, which drape asymmetrically across the bodice and skirt.\n\n**Accessories:** A wide, matching self-fabric belt tied at the waist. A cross-body olive-grey bag strap worn over the left shoulder. The model is wearing olive-grey lace-up wedge sandals adorned with metallic studs on the upper.",
+      "clip": [
+        "174",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码器"
+    }
+  },
+  "5": {
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "2",
         0
       ]
     },
-    "class_type": "PreviewAny",
+    "class_type": "VAEDecode",
     "_meta": {
-      "title": "Preview as Text"
+      "title": "VAE解码"
+    }
+  },
+  "10": {
+    "inputs": {
+      "guidance": 3.5,
+      "conditioning": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "Flux引导"
+    }
+  },
+  "11": {
+    "inputs": {
+      "noise": [
+        "12",
+        0
+      ],
+      "guider": [
+        "13",
+        0
+      ],
+      "sampler": [
+        "14",
+        0
+      ],
+      "sigmas": [
+        "15",
+        0
+      ],
+      "latent_image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器(高级)"
+    }
+  },
+  "12": {
+    "inputs": {
+      "noise_seed": [
+        "169",
+        0
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  },
+  "13": {
+    "inputs": {
+      "model": [
+        "174",
+        0
+      ],
+      "conditioning": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "基础引导"
+    }
+  },
+  "14": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "15": {
+    "inputs": {
+      "scheduler": "beta",
+      "steps": 25,
+      "denoise": 1.0,
+      "model": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "基础调度器"
+    }
+  },
+  "16": {
+    "inputs": {
+      "max_shift": 1.1500000000000001,
+      "base_shift": 0.5,
+      "width": 768,
+      "height": 1024,
+      "model": [
+        "174",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingFlux",
+    "_meta": {
+      "title": "模型采样算法Flux"
+    }
+  },
+  "23": {
+    "inputs": {
+      "width": 768,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "空Latent_SD3"
+    }
+  },
+  "162": {
+    "inputs": {
+      "images": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "169": {
+    "inputs": {
+      "seed": -1
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "随机种"
+    }
+  },
+  "174": {
+    "inputs": {
+      "lora_name": "250829hobbs-v2/250829hobbs-v2.safetensors",
+      "strength_model": 0.8000000000000002,
+      "strength_clip": 1.0,
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA"
     }
   }
 }

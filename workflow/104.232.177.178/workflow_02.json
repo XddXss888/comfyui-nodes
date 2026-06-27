@@ -1,38 +1,93 @@
 {
   "1": {
-    "class_type": "LoadImage",
+    "class_type": "LoadImageOutput",
+    "widgets_values": [
+      "YOUR_FILE_NAME.png [output]",
+      false,
+      "refresh",
+      "image"
+    ],
     "inputs": {
-      "image": "test_landscape_6d0e8525-244e-4633-8ba6-67c857e854f6.png"
+      "image": "ai_input_DCFCC9EE-F4BC-4775-BF9B-25B9207F4992.png"
     }
   },
   "2": {
-    "class_type": "DownloadAndLoadDepthAnythingV2Model",
+    "class_type": "UpscaleModelLoader",
     "inputs": {
-      "model": "depth_anything_v2_vitl_fp32.safetensors",
-      "precision": "fp32"
+      "model_name": "RealESRGAN_x4plus.safetensors"
+    },
+    "_meta": {
+      "title": "Load Upscale Model"
     }
   },
   "3": {
-    "class_type": "DepthAnything_V2",
+    "class_type": "ImageUpscaleWithModel",
     "inputs": {
-      "da_model": [
-        "2",
-        0
-      ],
-      "images": [
+      "image": [
         "1",
         0
+      ],
+      "upscale_model": [
+        "2",
+        0
       ]
+    },
+    "_meta": {
+      "title": "Upscale x4 (Model)"
+    }
+  },
+  "5": {
+    "class_type": "AILab_ImageMaskResize",
+    "inputs": {
+      "width": 0,
+      "height": 0,
+      "scale_by": 1.0,
+      "upscale_method": "bicubic",
+      "resize_mode": "resize",
+      "pad_color": "#ffffff",
+      "crop_position": "center",
+      "divisible_by": 1,
+      "device": "gpu",
+      "image": [
+        "3",
+        0
+      ],
+      "mask": [
+        "1",
+        1
+      ]
+    },
+    "_meta": {
+      "title": "Resize Alpha to Upscaled Size (no padding)"
+    }
+  },
+  "6": {
+    "class_type": "JoinImageWithAlpha",
+    "inputs": {
+      "image": [
+        "3",
+        0
+      ],
+      "alpha": [
+        "5",
+        1
+      ]
+    },
+    "_meta": {
+      "title": "Join Upscaled Image + Alpha Mask"
     }
   },
   "4": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "3",
+        "6",
         0
       ],
-      "filename_prefix": "iqueue_mode_compare_landscape_6d0e8525-244e-4633-8ba6-67c857e854f6"
+      "filename_prefix": "iqueue_upscale_DCFCC9EE-F4BC-4775-BF9B-25B9207F4992"
+    },
+    "_meta": {
+      "title": "Save Upscaled"
     }
   }
 }

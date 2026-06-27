@@ -2,24 +2,10 @@
   "22": {
     "class_type": "Text Multiline",
     "inputs": {
-      "text": "纯正面角度的笔记本电脑图像，电脑屏幕完全展开，掌托右下角印有thinkpad标志， 女子倚栏远眺，夕阳为黄瓦镀上金边，她凝视角楼飞檐上的风铃，暮色中传来隐约的钟声荡漾"
+      "text": "抽象线条延伸出触控板轮廓，男性手指在虚拟键盘上滑动，形成思维轨迹"
     },
     "_meta": {
       "title": "多行文本"
-    }
-  },
-  "44": {
-    "class_type": "LoraLoaderModelOnly",
-    "inputs": {
-      "lora_name": "ThinkPadx9_zimageTurbo_model.safetensors",
-      "strength_model": 0.8,
-      "model": [
-        "1",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "LoRA加载器(仅模型)"
     }
   },
   "37": {
@@ -94,7 +80,7 @@
       "cfg": 1.0,
       "sampler_name": "euler",
       "model": [
-        "44",
+        "1",
         0
       ],
       "positive": [
@@ -111,7 +97,7 @@
     "class_type": "CLIPTextEncode",
     "inputs": {
       "text": [
-        "42",
+        "22",
         0
       ],
       "clip": [
@@ -189,7 +175,7 @@
   "20": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "9c2edef40414408680dbf595bf290566/9c2edef40414408680dbf595bf290566",
+      "filename_prefix": "f65da240714c405fb2881de7c048c997/f65da240714c405fb2881de7c048c997",
       "images": [
         "8",
         0
@@ -197,33 +183,6 @@
     },
     "_meta": {
       "title": "保存图像"
-    }
-  },
-  "42": {
-    "class_type": "Text Concatenate",
-    "inputs": {
-      "delimiter": ", ",
-      "text_a": [
-        "43",
-        0
-      ],
-      "clean_whitespace": "true",
-      "text_b": [
-        "22",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "文本连锁"
-    }
-  },
-  "43": {
-    "class_type": "Text Multiline",
-    "inputs": {
-      "text": ""
-    },
-    "_meta": {
-      "title": "多行文本"
     }
   }
 }

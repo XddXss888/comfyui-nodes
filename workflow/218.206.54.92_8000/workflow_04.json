@@ -1,36 +1,38 @@
 {
-  "174": {
+  "10": {
     "inputs": {
-      "value": 2
-    },
-    "class_type": "easy int",
-    "_meta": {
-      "title": "设置【出图尺寸】"
-    }
-  },
-  "191": {
-    "inputs": {
-      "value": 96
-    },
-    "class_type": "easy int",
-    "_meta": {
-      "title": "设置【 DPI 】"
-    }
-  },
-  "228": {
-    "inputs": {
-      "image": "v12_upscale_1782381464126_c64e74890999a8.jpg"
+      "image": "v4_cutout_1782465874895_cddb024c74c9b8.png"
     },
     "class_type": "LoadImage",
     "_meta": {
       "title": "加载图像"
     }
   },
-  "230": {
+  "11": {
+    "inputs": {
+      "color": "#ffffff",
+      "mode": "HEX"
+    },
+    "class_type": "LayerUtility: ColorPicker",
+    "_meta": {
+      "title": "LayerUtility: ColorPicker"
+    }
+  },
+  "12": {
+    "inputs": {
+      "color": "#ffffff",
+      "mode": "HEX"
+    },
+    "class_type": "LayerUtility: ColorPicker",
+    "_meta": {
+      "title": "LayerUtility: ColorPicker"
+    }
+  },
+  "16": {
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "217:232",
+        "26",
         0
       ]
     },
@@ -39,356 +41,155 @@
       "title": "保存图像"
     }
   },
-  "231": {
+  "17": {
     "inputs": {
-      "rgthree_comparer": {
-        "images": [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_eaehb_00007_.png&type=temp&subfolder=&rand=0.367556268442236"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_eaehb_00008_.png&type=temp&subfolder=&rand=0.5743140919650986"
-          }
-        ]
-      },
-      "image_a": [
-        "228",
-        0
-      ],
-      "image_b": [
-        "217:232",
-        0
-      ]
-    },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "图像对比"
-    }
-  },
-  "217:193": {
-    "inputs": {
-      "value": 2048
-    },
-    "class_type": "easy int",
-    "_meta": {
-      "title": "整数"
-    }
-  },
-  "217:194": {
-    "inputs": {
-      "batch_index": [
-        "217:195",
-        1
-      ],
-      "length": 1,
-      "image": [
-        "217:196",
-        0
-      ]
-    },
-    "class_type": "ImageFromBatch",
-    "_meta": {
-      "title": "从批次获取图像"
-    }
-  },
-  "217:195": {
-    "inputs": {
-      "total": [
-        "217:200",
-        0
-      ]
-    },
-    "class_type": "easy forLoopStart",
-    "_meta": {
-      "title": "For循环-开始"
-    }
-  },
-  "217:196": {
-    "inputs": {
-      "tile_width": [
-        "217:193",
-        0
-      ],
-      "tile_height": [
-        "217:193",
-        0
-      ],
-      "image": [
-        "217:208",
-        0
-      ]
-    },
-    "class_type": "TTP_Image_Tile_Batch",
-    "_meta": {
-      "title": "TTP_图像瓦片批处理"
-    }
-  },
-  "217:197": {
-    "inputs": {
-      "any_1": [
-        "217:195",
-        2
-      ],
-      "any_2": [
-        "217:199",
-        0
-      ]
-    },
-    "class_type": "easy batchAnything",
-    "_meta": {
-      "title": "任何批次组合"
-    }
-  },
-  "217:198": {
-    "inputs": {
-      "flow": [
-        "217:195",
-        0
-      ],
-      "initial_value1": [
-        "217:197",
-        0
-      ]
-    },
-    "class_type": "easy forLoopEnd",
-    "_meta": {
-      "title": "For循环-结束"
-    }
-  },
-  "217:199": {
-    "inputs": {
-      "seed": 72459922,
-      "resolution": [
-        "217:205",
-        0
-      ],
-      "max_resolution": 0,
-      "batch_size": 1,
-      "uniform_batch_size": false,
-      "color_correction": "lab",
-      "temporal_overlap": 0,
-      "prepend_frames": 0,
-      "input_noise_scale": 0.0,
-      "latent_noise_scale": 0.0,
-      "offload_device": "cpu",
-      "enable_debug": false,
-      "image": [
-        "217:202",
-        0
-      ],
-      "dit": [
-        "217:204",
-        0
-      ],
-      "vae": [
-        "217:203",
-        0
-      ]
-    },
-    "class_type": "SeedVR2VideoUpscaler",
-    "_meta": {
-      "title": "SeedVR2视频放大器"
-    }
-  },
-  "217:200": {
-    "inputs": {
+      "filename_prefix": "ComfyUI",
       "images": [
-        "217:196",
+        "27",
         0
       ]
     },
-    "class_type": "easy imageCount",
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "图像计数"
+      "title": "保存图像"
     }
   },
-  "217:201": {
+  "18": {
     "inputs": {
-      "image": [
-        "217:194",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: GetImageSize",
-    "_meta": {
-      "title": "LayerUtility: GetImageSize"
-    }
-  },
-  "217:202": {
-    "inputs": {
-      "width": 1280,
-      "height": 1280,
-      "interpolation": "nearest-exact",
-      "method": "keep proportion",
-      "condition": "always",
-      "multiple_of": 0,
-      "image": [
-        "217:194",
-        0
-      ]
-    },
-    "class_type": "ImageResize+",
-    "_meta": {
-      "title": "🔧 Image Resize"
-    }
-  },
-  "217:203": {
-    "inputs": {
-      "model": "ema_vae_fp16.safetensors",
-      "device": "cuda:0",
-      "encode_tiled": true,
-      "encode_tile_size": 1024,
-      "encode_tile_overlap": 128,
-      "decode_tiled": true,
-      "decode_tile_size": 1024,
-      "decode_tile_overlap": 128,
-      "tile_debug": "false",
-      "offload_device": "cpu",
-      "cache_model": false
-    },
-    "class_type": "SeedVR2LoadVAEModel",
-    "_meta": {
-      "title": "加载SeedVR2 VAE模型"
-    }
-  },
-  "217:205": {
-    "inputs": {
-      "mode": false,
-      "a": [
-        "217:201",
-        0
-      ],
-      "b": [
-        "217:201",
-        1
-      ]
-    },
-    "class_type": "ImpactMinMax",
-    "_meta": {
-      "title": "求极值"
-    }
-  },
-  "217:206": {
-    "inputs": {
-      "padding": 64,
-      "tiles": [
-        "217:198",
-        0
-      ],
-      "positions": [
-        "217:196",
-        1
-      ],
-      "original_size": [
-        "217:196",
-        2
-      ],
-      "grid_size": [
-        "217:196",
-        3
-      ]
-    },
-    "class_type": "TTP_Image_Assy",
-    "_meta": {
-      "title": "TTP_图像拼接/重组"
-    }
-  },
-  "217:192": {
-    "inputs": {
-      "value": "a*b-80",
-      "a": [
-        "174",
-        0
-      ],
-      "b": [
-        "217:193",
-        0
-      ]
-    },
-    "class_type": "SimpleMath+",
-    "_meta": {
-      "title": "🔧 Simple Math"
-    }
-  },
-  "217:208": {
-    "inputs": {
-      "width": [
-        "217:192",
-        0
-      ],
-      "height": [
-        "217:192",
-        0
-      ],
-      "interpolation": "lanczos",
-      "method": "keep proportion",
-      "condition": "always",
-      "multiple_of": 8,
-      "image": [
-        "228",
-        0
-      ]
-    },
-    "class_type": "ImageResize+",
-    "_meta": {
-      "title": "🔧 Image Resize"
-    }
-  },
-  "217:207": {
-    "inputs": {
-      "custom_path": "",
-      "custom_filename": "",
-      "filename_prefix": "comfyui",
-      "timestamp": "None",
-      "dpi": [
-        "191",
-        0
-      ],
-      "format": "jpg",
-      "quality": 100,
-      "meta_data": false,
-      "blind_watermark": "",
-      "save_workflow_as_json": false,
-      "preview": false,
+      "filename_prefix": "ComfyUI",
       "images": [
-        "217:232",
+        "23",
         0
       ]
     },
-    "class_type": "LayerUtility: SaveImagePlusV2",
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "LayerUtility: SaveImagePlus V2(Advance)"
+      "title": "保存图像"
     }
   },
-  "217:204": {
+  "19": {
     "inputs": {
-      "model": "seedvr2_ema_3b_fp8_e4m3fn.safetensors",
-      "device": "cuda:0",
-      "blocks_to_swap": 32,
-      "swap_io_components": false,
-      "offload_device": "cpu",
-      "cache_model": false,
-      "attention_mode": "sdpa"
-    },
-    "class_type": "SeedVR2LoadDiTModel",
-    "_meta": {
-      "title": "加载SeedVR2 DiT模型"
-    }
-  },
-  "217:232": {
-    "inputs": {
-      "anything": [
-        "217:206",
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "22",
         0
       ]
     },
-    "class_type": "easy cleanGpuUsed",
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "清理显存占用"
+      "title": "保存图像"
+    }
+  },
+  "21": {
+    "inputs": {
+      "torchscript_jit": "default",
+      "image": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "InspyrenetRembg",
+    "_meta": {
+      "title": "Inspyrenet Rembg"
+    }
+  },
+  "22": {
+    "inputs": {
+      "fill_background": true,
+      "background_color": [
+        "12",
+        0
+      ],
+      "RGBA_image": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageRemoveAlpha",
+    "_meta": {
+      "title": "LayerUtility: ImageRemoveAlpha"
+    }
+  },
+  "23": {
+    "inputs": {
+      "RGB_image": [
+        "22",
+        0
+      ],
+      "mask": [
+        "21",
+        1
+      ]
+    },
+    "class_type": "LayerUtility: ImageCombineAlpha",
+    "_meta": {
+      "title": "LayerUtility: ImageCombineAlpha"
+    }
+  },
+  "24": {
+    "inputs": {
+      "model": "BiRefNet-general-epoch_244.pth"
+    },
+    "class_type": "LayerMask: LoadBiRefNetModel",
+    "_meta": {
+      "title": "LayerMask: Load BiRefNet Model"
+    }
+  },
+  "25": {
+    "inputs": {
+      "detail_method": "VITMatte",
+      "detail_erode": 4,
+      "detail_dilate": 2,
+      "black_point": 0.01,
+      "white_point": 0.99,
+      "process_detail": false,
+      "device": "cuda",
+      "max_megapixels": 2.0,
+      "image": [
+        "10",
+        0
+      ],
+      "birefnet_model": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "LayerMask: BiRefNetUltraV2",
+    "_meta": {
+      "title": "LayerMask: BiRefNet Ultra V2"
+    }
+  },
+  "26": {
+    "inputs": {
+      "fill_background": true,
+      "background_color": [
+        "11",
+        0
+      ],
+      "RGBA_image": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageRemoveAlpha",
+    "_meta": {
+      "title": "LayerUtility: ImageRemoveAlpha"
+    }
+  },
+  "27": {
+    "inputs": {
+      "RGB_image": [
+        "26",
+        0
+      ],
+      "mask": [
+        "25",
+        1
+      ]
+    },
+    "class_type": "LayerUtility: ImageCombineAlpha",
+    "_meta": {
+      "title": "LayerUtility: ImageCombineAlpha"
     }
   }
 }

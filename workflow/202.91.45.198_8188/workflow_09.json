@@ -1,183 +1,133 @@
 {
-  "1": {
-    "inputs": {
-      "image": "c5-before.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Загрузить изображение"
-    }
-  },
-  "2": {
-    "inputs": {
-      "iterations": 3,
-      "model_name": "GFPGANv1.4.pth",
-      "weight": 0.25,
-      "upscale": 1,
-      "only_center_face": false,
-      "aligned": false,
-      "use_bg_upsampler": false,
-      "image": [
-        "19",
-        0
-      ]
-    },
-    "class_type": "IterativeGFPGANNode",
-    "_meta": {
-      "title": "Iterative GFPGAN Node"
-    }
-  },
   "3": {
     "inputs": {
-      "expand_mask": true,
-      "dilation_size": 5,
-      "image": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "MouthDetectionNode",
-    "_meta": {
-      "title": "Mouth Detection Node"
-    }
-  },
-  "4": {
-    "inputs": {
-      "match_brightness": false,
-      "match_contrast": false,
-      "source_image": [
-        "22",
+      "seed": 830392650852884,
+      "steps": 20,
+      "cfg": 2.5,
+      "sampler_name": "euler",
+      "scheduler": "karras",
+      "denoise": 1.0,
+      "model": [
+        "14",
         0
       ],
-      "target_image": [
-        "19",
-        0
-      ]
-    },
-    "class_type": "ColorMatchingNode",
-    "_meta": {
-      "title": "Color Matching Node"
-    }
-  },
-  "5": {
-    "inputs": {
-      "feather_distance": 50,
-      "feather_strength": 1.5,
-      "source_image": [
-        "4",
+      "positive": [
+        "12",
         0
       ],
-      "target_image": [
-        "19",
-        0
-      ],
-      "mask": [
-        "3",
+      "negative": [
+        "12",
         1
+      ],
+      "latent_image": [
+        "12",
+        2
       ]
     },
-    "class_type": "SeamlessBlendingNode",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "Seamless Blending Node"
-    }
-  },
-  "6": {
-    "inputs": {
-      "images": [
-        "5",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Предварительный просмотр изображения"
-    }
-  },
-  "7": {
-    "inputs": {
-      "images": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Предварительный просмотр изображения"
+      "title": "KSampler"
     }
   },
   "8": {
     "inputs": {
-      "images": [
+      "samples": [
         "3",
         0
+      ],
+      "vae": [
+        "15",
+        2
       ]
     },
-    "class_type": "PreviewImage",
+    "class_type": "VAEDecode",
     "_meta": {
-      "title": "Предварительный просмотр изображения"
+      "title": "VAE Decode"
     }
   },
-  "9": {
+  "12": {
     "inputs": {
-      "images": [
-        "4",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Предварительный просмотр изображения"
-    }
-  },
-  "10": {
-    "inputs": {
-      "mask": [
-        "3",
+      "width": 848,
+      "height": 1232,
+      "video_frames": 18,
+      "motion_bucket_id": 130,
+      "fps": 9,
+      "augmentation_level": 0.0,
+      "clip_vision": [
+        "15",
         1
+      ],
+      "init_image": [
+        "23",
+        0
+      ],
+      "vae": [
+        "15",
+        2
       ]
     },
-    "class_type": "MaskPreview+",
+    "class_type": "SVD_img2vid_Conditioning",
     "_meta": {
-      "title": "🔧 Mask Preview"
+      "title": "SVD_img2vid_Conditioning"
     }
   },
-  "19": {
+  "14": {
     "inputs": {
-      "max_pixels": 1080,
-      "upscale_method": "nearest-exact",
-      "image": [
-        "1",
+      "min_cfg": 1.0,
+      "model": [
+        "15",
         0
       ]
     },
-    "class_type": "ConditionalRescale",
+    "class_type": "VideoLinearCFGGuidance",
     "_meta": {
-      "title": "Conditional Rescale"
+      "title": "VideoLinearCFGGuidance"
     }
   },
-  "22": {
+  "15": {
     "inputs": {
-      "amount": 0.8,
-      "image": [
-        "2",
-        0
-      ]
+      "ckpt_name": "svd.safetensors"
     },
-    "class_type": "ContrastAdaptiveSharpeningNode",
+    "class_type": "ImageOnlyCheckpointLoader",
     "_meta": {
-      "title": "CAS Sharpening"
+      "title": "Image Only Checkpoint Loader (img2vid model)"
     }
   },
   "23": {
     "inputs": {
+      "image": "ComfyUI_00242_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "25": {
+    "inputs": {
+      "fps": 10.0,
       "images": [
-        "22",
+        "8",
         0
       ]
     },
-    "class_type": "PreviewImage",
+    "class_type": "CreateVideo",
     "_meta": {
-      "title": "Предварительный просмотр изображения"
+      "title": "Create Video"
+    }
+  },
+  "26": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
     }
   }
 }

@@ -1,123 +1,93 @@
 {
   "1": {
-    "class_type": "UNETLoader",
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "unet_name": "flux1-dev.safetensors",
-      "weight_dtype": "default"
+      "ckpt_name": "juggernautXL_ragnarok.safetensors"
     }
   },
   "2": {
-    "class_type": "DualCLIPLoader",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip_name1": "clip_l.safetensors",
-      "clip_name2": "t5xxl_fp16.safetensors",
-      "type": "flux"
+      "vae_name": "sdxl_vae.safetensors"
     }
   },
   "3": {
-    "class_type": "VAELoader",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "vae_name": "ae.safetensors"
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "A stunning Korean idol in a cozy cream turtleneck and tailored camel coat, standing in endless rows of blooming lavender in Provence. Jet black long straight hair falls like silk past her shoulders, catching harsh midday sunlight. Extreme close-up macro lens captures every luminous skin pore, tiny peach fuzz along her jawline. Delicate features, small button nose, coy half-smile as she glances away shyly. Her reflection caught in a vintage hand mirror she holds near her chin, doubling her beauty. Sharp noon shadows cut dramatic lines across her flawless complexion. Styled gradient lip tint, subtle champagne highlighter on cheekbones. Cinematic color grading, warm golden tones against cool purple lavender bokeh. Hyperrealistic SDXL render, no text, no watermarks."
     }
   },
   "4": {
-    "class_type": "LoraLoaderModelOnly",
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "lowres, blurry, bad anatomy, deformed, watermark, signature, extra fingers, cartoon, anime, painting"
+    }
+  },
+  "5": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 896,
+      "height": 1280,
+      "batch_size": 1
+    }
+  },
+  "6": {
+    "class_type": "KSampler",
     "inputs": {
       "model": [
         "1",
         0
       ],
-      "lora_name": "flux_illustration.safetensors",
-      "strength_model": 0.9
-    }
-  },
-  "5": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": "A vast aerial view of a modern container port at twilight, three distinct luminous pathways diverging from a single glowing nexus point — one flowing as structured paper origami ships, another as predictive wave patterns with geometric probability curves, the third as a miniature sandbox training arena with moving pieces. Cool steel-blue and warm amber lighting, clean isometric perspective, architectural precision, minimal and diagrammatic aesthetic."
-    }
-  },
-  "6": {
-    "class_type": "FluxGuidance",
-    "inputs": {
-      "conditioning": [
-        "5",
-        0
-      ],
-      "guidance": 3.5
-    }
-  },
-  "7": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": ""
-    }
-  },
-  "8": {
-    "class_type": "EmptySD3LatentImage",
-    "inputs": {
-      "width": 1344,
-      "height": 768,
-      "batch_size": 1
-    }
-  },
-  "9": {
-    "class_type": "KSampler",
-    "inputs": {
-      "model": [
-        "4",
-        0
-      ],
       "positive": [
-        "6",
+        "3",
         0
       ],
       "negative": [
-        "7",
+        "4",
         0
       ],
       "latent_image": [
-        "8",
+        "5",
         0
       ],
-      "seed": 107660575,
+      "seed": 1486730014,
       "control_after_generate": "fixed",
-      "steps": 22,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
+      "steps": 30,
+      "cfg": 4.0,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
       "denoise": 1.0
     }
   },
-  "10": {
+  "7": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "9",
+        "6",
         0
       ],
       "vae": [
-        "3",
+        "2",
         0
       ]
     }
   },
-  "11": {
+  "8": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "10",
+        "7",
         0
       ],
-      "filename_prefix": "blog_107660575"
+      "filename_prefix": "portrait_1486730014"
     }
   }
 }

@@ -33,7 +33,7 @@
   },
   "4": {
     "inputs": {
-      "seed": 4296976948,
+      "seed": 7036479378,
       "steps": [
         "13",
         0
@@ -102,8 +102,8 @@
   },
   "13": {
     "inputs": {
-      "steps": 32,
-      "cfg": 5.5
+      "steps": 27,
+      "cfg": 6.0
     },
     "class_type": "StepsAndCfg",
     "_meta": {
@@ -112,8 +112,8 @@
   },
   "17": {
     "inputs": {
-      "Width": 1024,
-      "Height": 1024,
+      "Width": 888,
+      "Height": 1184,
       "Batch": 1,
       "Landscape": false,
       "HiResMultiplier": 1.7000000000000002
@@ -125,7 +125,7 @@
   },
   "20": {
     "inputs": {
-      "seed": 4296976948,
+      "seed": 7036479378,
       "steps": 10,
       "cfg": [
         "13",
@@ -205,7 +205,7 @@
   },
   "32": {
     "inputs": {
-      "text": "ever_garnet_base, ever_garnet_base,  cafeteria, burger, holding,indoors,solo, large breasts, masterpiece, best quality, amazing quality"
+      "text": "ever_mephi_dawn_base, ((1girl)), uncensored, waero, dark, shade, pink theme, multicolored halo, blue halo, pink halo, no gloves, kidnapped, laboratory, completely nude, stasis tank, too many cables, cable, tube, oxygen mask, milking machine, corruption, closed eyes, air bubble, restrained, standing, cleft of venus, dark, shadow, pink theme, floating,, masterpiece, best quality, amazing quality"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -214,7 +214,7 @@
   },
   "33": {
     "inputs": {
-      "text": "bad quality,worst quality,worst detail,sketch,censor, [], text focus,text,, watermark,ugly, puffy sleeves, puffy short sleeves,"
+      "text": "bad quality,worst quality,worst detail,sketch,censor, glaring, (leotard), extra navel, floating hair, (arms up), leotard pull, ass cutout, head out of frame, eyes out of frame, pantyhose, garter straps, horizontal navel"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -277,7 +277,7 @@
   },
   "65": {
     "inputs": {
-      "data": "[{\"name\": \"garnet_base.safetensors\", \"strength\": 1.0, \"strength_clip\": 0.6}, {\"name\": \"garnet_base.safetensors\", \"strength\": 0.28, \"strength_clip\": 0.29}]",
+      "data": "[{\"name\": \"mephi_dawn_base.safetensors\", \"strength\": 0.85, \"strength_clip\": 1.0}]",
       "model": [
         "36",
         0

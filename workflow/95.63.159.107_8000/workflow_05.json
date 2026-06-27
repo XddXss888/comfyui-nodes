@@ -1,0 +1,58 @@
+{
+  "1": {
+    "inputs": {
+      "prompt": "man with beige tshirt talking to camera with a microphone",
+      "keep_original_sound": true,
+      "character_orientation": "video",
+      "mode": "pro",
+      "model": "kling-v3",
+      "reference_image": [
+        "2",
+        0
+      ],
+      "reference_video": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "KlingMotionControl",
+    "_meta": {
+      "title": "Kling Control de Movimiento"
+    }
+  },
+  "2": {
+    "inputs": {
+      "image": "6ffe6c26-4a50-4821-a3bc-063560e767b2.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Cargar Imagen"
+    }
+  },
+  "3": {
+    "inputs": {
+      "file": "2026-06-26 10-19-57.mp4",
+      "video-preview": ""
+    },
+    "class_type": "LoadVideo",
+    "_meta": {
+      "title": "Cargar video"
+    }
+  },
+  "4": {
+    "inputs": {
+      "filename_prefix": "video/kling_motion_control3.0",
+      "format": "auto",
+      "codec": "auto",
+      "video-preview": "",
+      "video": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Guardar video"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_81ce302497fe4a99baa1aa6e130ede73.png"
+      "image": "ref_2f4b3eaf83b348e290e1e96fc34b7f0c.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "衣服换成一字肩紧身衣服 很多大条的鱼钻进衣服里和大腿之间的缝里 胸型是严重自然外扩型 水滴型胸型（上胸较饱满、下缘自然）大鱼钻进衣服里面。弄成重阴影。",
+      "prompt": "A new version of the given picture transformed into an anime drawing style. The anime drawing should have characteristic features such as large expressive eyes, stylized hair, and clean lines, capturing the essence and details of the original picture in an anime art style.",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 422671692462404,
-      "steps": 8,
+      "seed": 692596193179251,
+      "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

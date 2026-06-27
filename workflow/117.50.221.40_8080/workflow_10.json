@@ -1,32 +1,46 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "UnetLoaderGGUF",
     "inputs": {
-      "ckpt_name": "flux1-schnell.safetensors"
+      "unet_name": "sd3.5_large_turbo-Q8_0.gguf"
     }
   },
   "2": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "DualCLIPLoader",
     "inputs": {
-      "text": "Masterpiece, best quality, detailed professional illustration of a vibrant, cheerful kindergarten entrance in autumn: golden maple leaves, warm sunlight, smiling diverse children holding balloons, modern colorful building with playful architecture, soft bokeh background — no text, no slogans, purely visual appeal.",
-      "clip": [
-        "1",
-        1
-      ]
+      "clip_name1": "t5xxl_fp8_e4m3fn.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "sd3"
     }
   },
   "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "sd3_vae.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "Ultra-high-resolution photography, flat composition, sharp focus, studio lighting, professional color grading, masterpiece, best quality, highly detailed, cinematic clarity, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "clip": [
+        "2",
+        0
+      ]
+    }
+  },
+  "5": {
     "class_type": "EmptyLatentImage",
     "inputs": {
       "width": 1024,
       "height": 1024,
-      "batch_size": 2
+      "batch_size": 1
     }
   },
-  "4": {
+  "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 1023986304,
+      "seed": 1174168932,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -37,57 +51,57 @@
         0
       ],
       "positive": [
-        "2",
-        0
-      ],
-      "negative": [
-        "5",
-        0
-      ],
-      "latent_image": [
-        "3",
-        0
-      ]
-    }
-  },
-  "5": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "text": "",
-      "clip": [
-        "1",
-        1
-      ]
-    }
-  },
-  "6": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "samples": [
         "4",
         0
       ],
-      "vae": [
-        "1",
-        2
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
       ]
     }
   },
   "7": {
-    "class_type": "SaveImage",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "filename_prefix": "DOOOOR_2K",
-      "images": [
-        "12",
+      "text": "",
+      "clip": [
+        "2",
         0
       ]
     }
   },
   "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "6",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "DOOOOR_1K",
+      "images": [
+        "8",
+        0
+      ]
+    }
+  },
+  "10": {
     "class_type": "ImageScale",
     "inputs": {
       "image": [
-        "6",
+        "8",
         0
       ],
       "width": 400,
@@ -96,31 +110,12 @@
       "upscale_method": "nearest-exact"
     }
   },
-  "9": {
+  "11": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_2K_TH",
+      "filename_prefix": "DOOOOR_1K_TH",
       "images": [
-        "8",
-        0
-      ]
-    }
-  },
-  "11": {
-    "class_type": "UpscaleModelLoader",
-    "inputs": {
-      "model_name": "2xLexicaRRDBNet_Sharp.pth"
-    }
-  },
-  "12": {
-    "class_type": "ImageUpscaleWithModel",
-    "inputs": {
-      "upscale_model": [
-        "11",
-        0
-      ],
-      "image": [
-        "6",
+        "10",
         0
       ]
     }

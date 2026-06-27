@@ -148,7 +148,7 @@
   },
   "125": {
     "inputs": {
-      "seed": 534784622810943,
+      "seed": 802338685624642,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -313,7 +313,7 @@
   },
   "160": {
     "inputs": {
-      "text": "557",
+      "text": "-20",
       "anything": [
         "97",
         12
@@ -326,7 +326,7 @@
   },
   "161": {
     "inputs": {
-      "text": "568",
+      "text": "1570",
       "anything": [
         "97",
         13
@@ -339,7 +339,7 @@
   },
   "188": {
     "inputs": {
-      "image": "ComfyUI_00512_.png"
+      "image": "ComfyUI_00604_.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -375,7 +375,7 @@
   },
   "213": {
     "inputs": {
-      "image": "1cb0dcaec4674945809992d4a0814fee~1200x0.png"
+      "image": "45度 (1).jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -384,7 +384,7 @@
   },
   "214": {
     "inputs": {
-      "lora_name": "强光影_偏写实质感.safetensors",
+      "lora_name": "中等光影_偏写实质感.safetensors",
       "strength_model": 1.0,
       "model": [
         "4",

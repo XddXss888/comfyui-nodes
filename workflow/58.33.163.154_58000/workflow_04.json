@@ -23,7 +23,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "a galaxy made of warm glowing particles, soft bokeh, ethereal dreamlike atmosphere, 3D Gaussian Splatting aesthetic, volumetric lighting, gentle golden and soft blue hues, cinematic composition, surrealism, dreamlike, abstract, imaginative, masterpiece, best quality, highly detailed, 4k",
+      "text": "traditional Chinese landscape after rain, clear and gentle celadon blue sky, sunlight breaking through clouds, misty mountains, calm water surface reflecting the sky, healing and serene atmosphere, soft light, traditional Chinese ink painting, minimalist, brush strokes, elegant, masterpiece, best quality, highly detailed, 4k",
       "clip": [
         "1",
         0
@@ -60,7 +60,7 @@
   "8": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 160569512228,
+      "seed": 249713977011,
       "steps": 9,
       "cfg": 1.0,
       "sampler_name": "res_multistep",

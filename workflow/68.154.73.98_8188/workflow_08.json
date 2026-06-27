@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_2de8712cf211435eb09bea308d466343.png"
+      "image": "ref_c564c142527b4c998d2b6861cf3fdd3d.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "将图片中的人物替换为極簡主義3D人體模型，保持人物姿势和服装风格一 服裝改穿白色短版休閒服 修復手部細節完美呈現\n",
+      "prompt": "sit on the sofa,Raise both legs up beside her head and spread them wide. Expose both nipples. Clearly depicts the cleft of the crotch.\n",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 446587285079325,
-      "steps": 8,
+      "seed": 370730047822388,
+      "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

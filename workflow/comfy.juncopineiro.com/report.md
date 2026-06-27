@@ -1,10 +1,10 @@
-# https://comfy.juncopineiro.com
+# comfy.juncopineiro.com
 
 **GPU**: CPU | **显存**: — | **空闲**: 5 GB
 **内存**: 7 GB (空闲 5 GB)
 **版本**: 0.19.3
 **ComfyUI报告历史**: 无
-**扫描时间**: 2026-06-25 21:22:26
+**扫描时间**: 2026-06-27 08:07:55
 
 ## 工作流列表
 

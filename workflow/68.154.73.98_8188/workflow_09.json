@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_4ffe6f9dae5e41088ce897605074514e.png"
+      "image": "ref_e4ec0ac67b7842be91e1cddd69b06a8f.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "将图片中的人物替换为極簡主義3D人體模型，保持人物姿势和服装风格一 服裝改穿白色短版休閒服 修復手部細節真實呈現\n",
+      "prompt": "女性の衣装を過激にしてください",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 946589858403484,
+      "seed": 447824180908797,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",

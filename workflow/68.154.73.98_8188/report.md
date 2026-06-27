@@ -4,13 +4,13 @@
 **内存**: 216 GB (空闲 189 GB)
 **版本**: 0.13.0
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-26 08:09:03
+**扫描时间**: 2026-06-27 08:08:06
 **历史总数**: 10001 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `4a60c1ab-3341-4b28-b48f-099215044e29`
+- **Prompt ID**: `8ad1ac20-3ce4-41e2-926b-209c7f7f3f31`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -19,10 +19,10 @@
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 衣服换成一字肩紧身衣服 很多大条的鱼钻进衣服里和大腿之间的缝里 胸型是严重自然外扩型 水滴型胸型（上胸较饱满、下缘自然）大鱼钻进衣服里面。弄成重阴影。
+  - [TextEncodeQwenImageEditPlus::prompt] A new version of the given picture transformed into an anime drawing style. The anime drawing should have characteristic features such as large expressive eyes, stylized hair, and clean lines, capturi
 
 ### 2. workflow_02.json
-- **Prompt ID**: `05e0da7c-6137-4c91-be8d-f3499e5a3445`
+- **Prompt ID**: `d0086516-5a1f-4b67-b29f-1410c5c66b63`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -31,11 +31,10 @@
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 将图片中的人物替换为極簡主義3D人體模型，保持人物姿势和服装风格一 服裝改穿白色短版休閒服 保持手部細節完美呈現
-
+  - [TextEncodeQwenImageEditPlus::prompt] Transparent bikini 
 
 ### 3. workflow_03.json
-- **Prompt ID**: `a66ca4a2-5f54-46d0-8333-fa755c7c6861`
+- **Prompt ID**: `69771202-295b-4414-b422-3af1f2b9ffcc`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -44,22 +43,20 @@
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 衣服换成一字肩紧身衣服 很多大条的鱼钻进衣服里和大腿之间的缝里 胸型是严重自然外扩型 水滴型胸型（上胸较饱满、下缘自然）大鱼钻进衣服里面。弄成重阴影。迷你裙裙坐在凳子上。水底场景。
+  - [TextEncodeQwenImageEditPlus::prompt] sit on the sofa,Raise both legs up beside her head and spread them wide. Expose both nipples. 
 
 ### 4. workflow_04.json
-- **Prompt ID**: `fa62d27e-8543-4809-a74b-ffb69c893aaa`
-- **类型**: 图生图
-- **节点数**: 16
+- **Prompt ID**: `99748208-4cb6-4518-9557-fa80069e6d05`
+- **类型**: 文生图
+- **节点数**: 12
 - **模型** (4):
-  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Lightning-4steps-V1.0.safetensors
   - qwen_2.5_vl_7b_fp8_scaled.safetensors
-  - qwen_image_edit_2511_fp8mixed.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
   - qwen_image_vae.safetensors
-- **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 一位原創超級英雄站在未來感十足的城市屋頂，夜晚場景，背景是高樓與霓虹燈交錯的賽博城市。英雄身穿高科技戰甲，主色調為深藍與銀色，金屬質感細膩，披風隨風飄揚。臉部輪廓英俊而堅毅，眼神充滿正義與力量。強烈電影級光影效果，低角度視角，史詩氛圍，寫實風格，超高細節
 
 ### 5. workflow_05.json
-- **Prompt ID**: `5c79cd84-1b71-44d5-9167-2d0f134bfd55`
+- **Prompt ID**: `48c803ed-f118-4269-a271-35285e7bc181`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -68,10 +65,10 @@
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] Replace her bikini with heart shape tape
+  - [TextEncodeQwenImageEditPlus::prompt] 請幫我生成她穿內衣的樣子
 
 ### 6. workflow_06.json
-- **Prompt ID**: `78e443f1-5ef2-4cf0-bcc0-5e924b56187b`
+- **Prompt ID**: `9a3f20eb-b7f7-475e-b680-4c9afba1073a`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -80,10 +77,10 @@
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] Make this girl in anime hard manga style on her knees sitting in a magic night forest surrounded with grimoires
+  - [TextEncodeQwenImageEditPlus::prompt] Make the person in the image wear a string bikini dont change anything else about the image or the person 
 
 ### 7. workflow_07.json
-- **Prompt ID**: `639250a0-20bd-421d-81c2-0894e3de0c57`
+- **Prompt ID**: `f9bcd9eb-712b-484f-8fb2-7ad69b36be47`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -92,10 +89,11 @@
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] faire qu elles soient grosse en bas 
+  - [TextEncodeQwenImageEditPlus::prompt] sit on the sofa,Raise both legs up beside her head and spread them wide. Expose both nipples. Depict the cleft of the crotch.
+
 
 ### 8. workflow_08.json
-- **Prompt ID**: `aa6487d6-ca49-4e43-87ee-f8900f738970`
+- **Prompt ID**: `d9d13dfd-9617-4891-aff7-1aac06dd621e`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -104,11 +102,11 @@
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 将图片中的人物替换为極簡主義3D人體模型，保持人物姿势和服装风格一 服裝改穿白色短版休閒服 修復手部細節完美呈現
+  - [TextEncodeQwenImageEditPlus::prompt] sit on the sofa,Raise both legs up beside her head and spread them wide. Expose both nipples. Clearly depicts the cleft of the crotch.
 
 
 ### 9. workflow_09.json
-- **Prompt ID**: `6fd538aa-fc94-4e3d-821f-be4eb4c26114`
+- **Prompt ID**: `cc3ba13e-8a3d-4255-bcd5-75a2bb9bf93d`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -117,11 +115,10 @@
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 将图片中的人物替换为極簡主義3D人體模型，保持人物姿势和服装风格一 服裝改穿白色短版休閒服 修復手部細節真實呈現
-
+  - [TextEncodeQwenImageEditPlus::prompt] 女性の衣装を過激にしてください
 
 ### 10. workflow_10.json
-- **Prompt ID**: `5227f14b-2d24-4cba-bb5f-1d36ea6929ba`
+- **Prompt ID**: `77dd9265-93e4-4bee-8836-33b996975b9c`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -130,4 +127,4 @@
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] Remove the number 2026
+  - [TextEncodeQwenImageEditPlus::prompt] 똑같이 생긴 두명의 쌍둥이,서로 마주보고 상대방의 몸매를 보고 있음

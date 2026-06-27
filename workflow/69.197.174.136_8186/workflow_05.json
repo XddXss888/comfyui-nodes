@@ -1,9 +1,9 @@
 {
   "1": {
     "inputs": {
-      "tags": "alarm,pop,male,morning,energy",
-      "lyrics": "[Intro]\nGretel ¡Oye tú!\n\n[Verse]\nGretel ¡Oye tú! \n¡Muévete ya! El despertador no va a parar. Siente el bajo, siente el compás, ¡Fuera de la cama, un paso más ¡Arriba, arriba, muévete bien! Este día corre como un tren ¡Despierta ya, no duermas más. Que la vida es bella y tú reinarás!",
-      "seed": 224161114067267,
+      "tags": "alarm,pop,morning,energy",
+      "lyrics": "[Intro]\n\n\n[Verse]\n rise in His light! Joyful hearts, spirits bright Step into His love today. Loop this grace, guide your way!",
+      "seed": 486703203651001,
       "bpm": 150,
       "duration": 30.0,
       "timesignature": "4",
@@ -52,11 +52,11 @@
   },
   "99": {
     "inputs": {
-      "filename_prefix": "/sda-disk/home/Ringtone/music-generation-system/temp/results/cc9f9546-5d9a-4f61-a494-b684f0996cdf.mp3",
+      "filename_prefix": "/sda-disk/home/Ringtone/music-generation-system/temp/results/345e621a-eb4f-4dd0-a6f0-04074d31bb86.mp3",
       "quality": "320k",
-      "audioUI": "/api/view?filename=ComfyUI.mp3&type=output&subfolder=audio&rand=0.38132935163071024",
+      "audioUI": "/api/view?filename=ComfyUI.mp3&type=output&subfolder=audio&rand=0.36733299582283296",
       "audio": [
-        "1015",
+        "1020",
         0
       ]
     },
@@ -67,12 +67,12 @@
   },
   "101": {
     "inputs": {
-      "seed": 910724108924292,
+      "seed": 807193839657641,
       "steps": 8,
       "cfg": 2.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 0.38,
+      "denoise": 0.4,
       "model": [
         "78",
         0
@@ -114,7 +114,7 @@
   "110": {
     "inputs": {
       "audio": [
-        "111",
+        "1025",
         0
       ],
       "vae": [
@@ -129,22 +129,12 @@
   },
   "111": {
     "inputs": {
-      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_36/ES/t36_es_raw_song.mp3",
-      "audioUI": "/api/view?filename=t36_es_raw_song.mp3&type=input&subfolder=&rand=0.33866992991479394"
+      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_41/EN/t41_en_raw_song.mp3",
+      "audioUI": "/api/view?filename=t41_en_raw_song.mp3&type=input&subfolder=&rand=0.8347527323171213"
     },
     "class_type": "LoadAudio",
     "_meta": {
       "title": "Raw Song"
-    }
-  },
-  "222": {
-    "inputs": {
-      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_36/ES/t36_es_raw_song.mp3",
-      "audioUI": "/api/view?filename=background_alarm260526001.mp3&type=input&subfolder=&rand=0.6736348667030362"
-    },
-    "class_type": "LoadAudio",
-    "_meta": {
-      "title": "Beat"
     }
   },
   "777": {
@@ -178,24 +168,11 @@
       "title": "Load VAE"
     }
   },
-  "1011": {
-    "inputs": {
-      "volume": 4,
-      "audio": [
-        "222",
-        0
-      ]
-    },
-    "class_type": "AudioAdjustVolume",
-    "_meta": {
-      "title": "Audio Adjust Volume"
-    }
-  },
   "1014": {
     "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_tzdqy.flac&type=temp&subfolder=&rand=0.9686245485524595",
+      "audioUI": "/api/view?filename=ComfyUI_temp_ehjlq.flac&type=temp&subfolder=&rand=0.4595424451345912",
       "audio": [
-        "105",
+        "1030",
         0
       ]
     },
@@ -204,11 +181,25 @@
       "title": "Preview Audio"
     }
   },
-  "1015": {
+  "1018": {
+    "inputs": {
+      "start_time": 1.7,
+      "end_time": 0.0,
+      "audio": [
+        "1025",
+        0
+      ]
+    },
+    "class_type": "AudioTrim",
+    "_meta": {
+      "title": "Audio Trim ⚡🅡🅞🅣🅘"
+    }
+  },
+  "1020": {
     "inputs": {
       "direction": "after",
       "audio1": [
-        "1016",
+        "1022",
         0
       ],
       "audio2": [
@@ -221,10 +212,10 @@
       "title": "Audio Concat"
     }
   },
-  "1016": {
+  "1022": {
     "inputs": {
       "start_time": 0.0,
-      "end_time": 4.2,
+      "end_time": 1.7,
       "audio": [
         "105",
         0
@@ -235,9 +226,49 @@
       "title": "Audio Trim ⚡🅡🅞🅣🅘"
     }
   },
-  "1018": {
+  "1023": {
     "inputs": {
-      "start_time": 4.2,
+      "audioUI": "/api/view?filename=ComfyUI_temp_jlpim.flac&type=temp&subfolder=&rand=0.7264378419666794",
+      "audio": [
+        "1022",
+        0
+      ]
+    },
+    "class_type": "PreviewAudio",
+    "_meta": {
+      "title": "Preview Audio"
+    }
+  },
+  "1024": {
+    "inputs": {
+      "audioUI": "/api/view?filename=ComfyUI_temp_sdtop.flac&type=temp&subfolder=&rand=0.8675492871229513",
+      "audio": [
+        "1018",
+        0
+      ]
+    },
+    "class_type": "PreviewAudio",
+    "_meta": {
+      "title": "Preview Audio"
+    }
+  },
+  "1025": {
+    "inputs": {
+      "start_time": 0.0,
+      "end_time": 30.0,
+      "audio": [
+        "111",
+        0
+      ]
+    },
+    "class_type": "AudioTrim",
+    "_meta": {
+      "title": "Audio Trim ⚡🅡🅞🅣🅘"
+    }
+  },
+  "1026": {
+    "inputs": {
+      "start_time": 0.0,
       "end_time": 0.0,
       "audio": [
         "111",
@@ -249,17 +280,47 @@
       "title": "Audio Trim ⚡🅡🅞🅣🅘"
     }
   },
-  "1022": {
+  "1028": {
     "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_mxsyz.flac&type=temp&subfolder=&rand=0.9691641839669538",
+      "audioUI": "/api/view?filename=ComfyUI_temp_bmxot.flac&type=temp&subfolder=&rand=0.5823706272971352",
       "audio": [
-        "1015",
+        "1026",
         0
       ]
     },
     "class_type": "PreviewAudio",
     "_meta": {
       "title": "Preview Audio"
+    }
+  },
+  "1029": {
+    "inputs": {
+      "audioUI": "/api/view?filename=ComfyUI_temp_jclii.flac&type=temp&subfolder=&rand=0.636426778204416",
+      "audio": [
+        "1025",
+        0
+      ]
+    },
+    "class_type": "PreviewAudio",
+    "_meta": {
+      "title": "Preview Audio"
+    }
+  },
+  "1030": {
+    "inputs": {
+      "direction": "after",
+      "audio1": [
+        "1026",
+        0
+      ],
+      "audio2": [
+        "1020",
+        0
+      ]
+    },
+    "class_type": "AudioConcat",
+    "_meta": {
+      "title": "Audio Concat"
     }
   }
 }

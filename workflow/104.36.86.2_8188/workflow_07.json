@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 470682737,
+      "seed": 1838252102,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,bathroom, kitchen, sink, faucet, tiles, jeans, denim, indoors, mole, ring, wedding ring, necklace, lips, parted lips, flirtare, baciare, aiutare, accompagnare, abbassare zip, toccare genitali,(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,handjob,indoors,basket,washing machine,(Handjob:1.0),(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2025/10/15/1760519291222.png",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2025/10/15/1760517537780.png",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

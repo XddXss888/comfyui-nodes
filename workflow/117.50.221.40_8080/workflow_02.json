@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "A 25-year-old beautiful East Asian woman with fair smooth skin, stylish mullet short black hair, slim figure, delicate facial features, straight nose, natural rosy lips, and confident dark eyes. She wears a glossy light teal off-shoulder top, one hand touching her cheek, the other on her hip, posing confidently against a clean white background. Soft even lighting, no harsh shadows. Masterpiece, best quality, highly detailed, professional portrait., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "Adorable Halloween ghost and cute pumpkin, circular sticker design, pastel colors, soft shadows, clean vector style, playful and whimsical, masterpiece, best quality, detailed, professional illustration, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -32,7 +32,7 @@
   "5": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 576,
+      "width": 1024,
       "height": 1024,
       "batch_size": 1
     }
@@ -40,7 +40,7 @@
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 819866895,
+      "seed": 1800245454,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -90,9 +90,9 @@
   "9": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_2K",
+      "filename_prefix": "DOOOOR_1K",
       "images": [
-        "14",
+        "8",
         0
       ]
     }
@@ -113,7 +113,7 @@
   "11": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_2K_TH",
+      "filename_prefix": "DOOOOR_1K_TH",
       "images": [
         "10",
         0
@@ -131,28 +131,9 @@
         "2",
         0
       ],
-      "lora_name": "bfs_head_v1_flux-klein_9b_step3500_rank128.safetensors",
+      "lora_name": "动漫转真人.safetensors",
       "strength_model": 0.8,
       "strength_clip": 0.8
-    }
-  },
-  "13": {
-    "class_type": "UpscaleModelLoader",
-    "inputs": {
-      "model_name": "2xLexicaRRDBNet_Sharp.pth"
-    }
-  },
-  "14": {
-    "class_type": "ImageUpscaleWithModel",
-    "inputs": {
-      "upscale_model": [
-        "13",
-        0
-      ],
-      "image": [
-        "8",
-        0
-      ]
     }
   }
 }

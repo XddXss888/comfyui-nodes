@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "seductive young curvy woman with long black hair, A nude woman with large natural breasts lies on her back on a bed, pressing them together around a visible erect penis in a titfuck, her hands cupping the outer sides of her chest to create tight cleavage, head tilted back slightly with a seductive gaze directed upward and parted lips, soft warm bedroom lighting casting gentle shadows across her skin and curves, medium close-up framing from above that keeps the torso and contact centered, clean composition with clear anatomy and stable pose.",
+      "text": "eurameg1, In a dimly lit VIP room with soft warm lighting and muffled party music beyond the door, a glamorous woman in a fitted elegant outfit stands with a knowing smile and slightly widened eyes, her body angled slightly as a man steps close from the side, his hand gently placed on her butt after a playful slap while leaning in to whisper near her ear, captured in a stable medium close-up framing that keeps her as the clear primary subject with natural posture and readable contact.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "izumi_v.2.safetensors",
-      "strength_model": 0.9,
-      "strength_clip": 1.0,
+      "lora_name": "zimg-eurameg1-refine-con-char.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.8,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -132,12 +132,12 @@
     "inputs": {
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
-      "scheduler": "bong_tangent",
+      "scheduler": "beta57",
       "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 26161571962184,
+      "seed": 453373455444780,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

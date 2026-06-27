@@ -20,25 +20,15 @@
       "vae_name": "ae.safetensors"
     }
   },
-  "11": {
+  "4": {
     "class_type": "LoraLoaderModelOnly",
     "inputs": {
       "model": [
         "1",
         0
       ],
-      "lora_name": "korean_realism_flux.safetensors",
-      "strength_model": 0.8
-    }
-  },
-  "4": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": "A stunning Korean woman with burgundy red blunt cut hair and wispy bangs, baby face with delicate aegyo-sal under-eye charm, playful and energetic expression with a mischievous half-smile. She wears a flowy lavender summer dress with thin straps, caught mid-turn in a dimly lit parking garage. Harsh fluorescent tubes cast cool overhead light while a single dramatic spotlight carves her silhouette from the darkness, creating deep contrast and cinematic shadows across concrete pillars. Shot on 50mm lens, profile view side angle, half body waist up framing. Her chin tilts slightly upward with confident poise, one hand brushing hair behind her ear. Flawless porcelain skin, editorial makeup with gradient berry lips, luminous highlight on cheekbones. Ultra-realistic, 8K detail."
+      "lora_name": "flux_korean_girl.safetensors",
+      "strength_model": 0.85
     }
   },
   "5": {
@@ -48,32 +38,42 @@
         "2",
         0
       ],
-      "text": "text, watermark, logo"
+      "text": "A stunning Korean idol portrait, shot on 135mm telephoto with compressed bokeh background. High angle looking down at a beautiful young woman half-submerged in a crystal-clear swimming pool, wearing an oversized cream knit sweater clinging wet to her shoulders. Jet black short bob cut, sleek and damp, framing her slim face. Fox-like eyes gazing upward with serene, contemplative expression. Ring light reflected as perfect circles in the water surface and her dark irises. Flawless porcelain skin, dewy makeup with gradient coral lips. Negative space on the left filled with turquoise rippling water. Golden hour warm light filtering through, casting honey-toned highlights across her cheekbones. Soft steam rising from the heated pool. Ethereal, dreamlike atmosphere."
     }
   },
   "6": {
     "class_type": "FluxGuidance",
     "inputs": {
       "conditioning": [
-        "4",
+        "5",
         0
       ],
-      "guidance": 3.3
+      "guidance": 3.5
     }
   },
   "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
+    }
+  },
+  "8": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "width": 1024,
+      "width": 896,
       "height": 1280,
       "batch_size": 1
     }
   },
-  "8": {
+  "9": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "11",
+        "4",
         0
       ],
       "positive": [
@@ -81,27 +81,27 @@
         0
       ],
       "negative": [
-        "5",
-        0
-      ],
-      "latent_image": [
         "7",
         0
       ],
-      "seed": 1387149981,
+      "latent_image": [
+        "8",
+        0
+      ],
+      "seed": 1078237182,
       "control_after_generate": "fixed",
-      "steps": 20,
+      "steps": 22,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0
     }
   },
-  "9": {
+  "10": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "8",
+        "9",
         0
       ],
       "vae": [
@@ -110,14 +110,14 @@
       ]
     }
   },
-  "10": {
+  "11": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "9",
+        "10",
         0
       ],
-      "filename_prefix": "portrait_1387149981"
+      "filename_prefix": "portrait_1078237182"
     }
   }
 }

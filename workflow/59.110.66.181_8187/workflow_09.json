@@ -1,95 +1,27 @@
 {
-  "12": {
-    "class_type": "UNETLoader",
-    "inputs": {
-      "weight_dtype": "default",
-      "unet_name": "qwen_image_edit_2511_bf16.safetensors"
-    },
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "67": {
-    "class_type": "ModelSamplingAuraFlow",
-    "inputs": {
-      "shift": 3.1,
-      "model": [
-        "93",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "采样算法（AuraFlow）"
-    }
-  },
-  "68": {
-    "class_type": "TextEncodeQwenImageEditPlus",
-    "inputs": {
-      "vae": [
-        "10",
-        0
-      ],
-      "image1": [
-        "73",
-        0
-      ],
-      "prompt": [
-        "111",
-        0
-      ],
-      "clip": [
-        "61",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "TextEncodeQwenImageEditPlus (Positive)"
-    }
-  },
-  "69": {
-    "class_type": "TextEncodeQwenImageEditPlus",
-    "inputs": {
-      "vae": [
-        "10",
-        0
-      ],
-      "image1": [
-        "73",
-        0
-      ],
-      "prompt": "低质量，最差质量，坏的图片",
-      "clip": [
-        "61",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "文本编码（QwenImageEditPlus）"
-    }
-  },
-  "111": {
+  "22": {
     "class_type": "Text Multiline",
     "inputs": {
-      "text": "在图上加一只猫"
+      "text": "丹顶鹤"
     },
     "_meta": {
-      "title": "Text Multiline"
+      "title": "多行文本"
     }
   },
-  "112": {
-    "class_type": "easy int",
+  "37": {
+    "class_type": "Seed (rgthree)",
     "inputs": {
-      "value": 1920
+      "seed": -1
     },
     "_meta": {
-      "title": "整数"
+      "title": "随机种"
     }
   },
-  "102": {
+  "39": {
     "class_type": "ReservedVRAMSetter",
     "inputs": {
       "mode": "auto",
-      "seed": 605613374246717,
+      "seed": 373056724175929,
       "reserved": 0.8,
       "auto_max_reserved": 0.0,
       "clean_gpu_before": true
@@ -98,7 +30,140 @@
       "title": "Set Reserved VRAM(GB) ⚙️"
     }
   },
-  "113": {
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "z_image_turbo_bf16.safetensors"
+    },
+    "_meta": {
+      "title": "UNET加载器"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "_meta": {
+      "title": "CLIP加载器"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "Z-vae.safetensors"
+    },
+    "_meta": {
+      "title": "VAE加载器"
+    }
+  },
+  "4": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "negative": [
+        "6",
+        0
+      ],
+      "denoise": 1.0,
+      "latent_image": [
+        "7",
+        0
+      ],
+      "seed": [
+        "37",
+        0
+      ],
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "5",
+        0
+      ],
+      "steps": 9
+    },
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": [
+        "22",
+        0
+      ],
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "CLIP文本编码器"
+    }
+  },
+  "6": {
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "5",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "7": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "batch_size": 1,
+      "width": [
+        "40",
+        0
+      ],
+      "height": [
+        "41",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "空Latent"
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "vae": [
+        "3",
+        0
+      ],
+      "samples": [
+        "4",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "40": {
+    "class_type": "easy int",
+    "inputs": {
+      "value": 1920
+    },
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "41": {
     "class_type": "easy int",
     "inputs": {
       "value": 1080
@@ -107,257 +172,17 @@
       "title": "整数"
     }
   },
-  "103": {
-    "class_type": "Seed (rgthree)",
-    "inputs": {
-      "seed": -1
-    },
-    "_meta": {
-      "title": "Seed (rgthree)"
-    }
-  },
-  "114": {
-    "class_type": "LoadImageFromUrl",
-    "inputs": {
-      "image": "http://59.110.66.181:9201/file/upload/material/images/fbc72171907b4202917dfaf63b470d85.png",
-      "keep_alpha_channel": false,
-      "output_mode": true
-    },
-    "_meta": {
-      "title": "Load Image From URL"
-    }
-  },
-  "104": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "vae": [
-        "10",
-        0
-      ],
-      "samples": [
-        "108",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "105": {
-    "class_type": "LatentUpscaleBy",
-    "inputs": {
-      "scale_by": 1.5,
-      "upscale_method": "nearest-exact",
-      "samples": [
-        "65",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "缩放Latent（比例）"
-    }
-  },
-  "106": {
+  "20": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "f2d0cefab8114c7db9e440c32a5fb106/f2d0cefab8114c7db9e440c32a5fb106",
+      "filename_prefix": "1257719bffe448048ccc3fd8f20996fe/1257719bffe448048ccc3fd8f20996fe",
       "images": [
-        "104",
+        "8",
         0
       ]
     },
     "_meta": {
       "title": "保存图像"
-    }
-  },
-  "70": {
-    "class_type": "FluxKontextMultiReferenceLatentMethod",
-    "inputs": {
-      "conditioning": [
-        "68",
-        0
-      ],
-      "reference_latents_method": "index_timestep_zero"
-    },
-    "_meta": {
-      "title": "Edit Model Reference Method"
-    }
-  },
-  "108": {
-    "class_type": "KSamplerAdvanced",
-    "inputs": {
-      "latent_image": [
-        "105",
-        0
-      ],
-      "cfg": 1.0,
-      "return_with_leftover_noise": "disable",
-      "end_at_step": 10000,
-      "positive": [
-        "70",
-        0
-      ],
-      "add_noise": "enable",
-      "steps": 5,
-      "scheduler": "simple",
-      "negative": [
-        "71",
-        0
-      ],
-      "start_at_step": 2,
-      "sampler_name": "euler",
-      "noise_seed": [
-        "103",
-        0
-      ],
-      "model": [
-        "64",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "K采样器（高级）"
-    }
-  },
-  "71": {
-    "class_type": "FluxKontextMultiReferenceLatentMethod",
-    "inputs": {
-      "conditioning": [
-        "69",
-        0
-      ],
-      "reference_latents_method": "index_timestep_zero"
-    },
-    "_meta": {
-      "title": "Edit Model Reference Method"
-    }
-  },
-  "82": {
-    "class_type": "EmptySD3LatentImage",
-    "inputs": {
-      "batch_size": 1,
-      "width": [
-        "112",
-        0
-      ],
-      "height": [
-        "113",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "空Latent图像（SD3）"
-    }
-  },
-  "93": {
-    "class_type": "LoraLoaderModelOnly",
-    "inputs": {
-      "lora_name": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "12",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "LoRA加载器（仅模型）"
-    }
-  },
-  "61": {
-    "class_type": "CLIPLoader",
-    "inputs": {
-      "clip_name": "qwen_2.5_vl_7b.safetensors",
-      "type": "qwen_image",
-      "device": "default"
-    },
-    "_meta": {
-      "title": "加载CLIP"
-    }
-  },
-  "73": {
-    "class_type": "ImageScaleToTotalPixels",
-    "inputs": {
-      "image": [
-        "114",
-        0
-      ],
-      "megapixels": 1.5,
-      "resolution_steps": 1,
-      "upscale_method": "lanczos"
-    },
-    "_meta": {
-      "title": "缩放图像（像素）"
-    }
-  },
-  "74": {
-    "class_type": "VAEEncode",
-    "inputs": {
-      "pixels": [
-        "73",
-        0
-      ],
-      "vae": [
-        "10",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "VAE编码"
-    }
-  },
-  "64": {
-    "class_type": "CFGNorm",
-    "inputs": {
-      "strength": 1.0,
-      "model": [
-        "67",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "CFG归一化"
-    }
-  },
-  "10": {
-    "class_type": "VAELoader",
-    "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    },
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "65": {
-    "class_type": "KSampler",
-    "inputs": {
-      "scheduler": "simple",
-      "negative": [
-        "71",
-        0
-      ],
-      "denoise": 1.0,
-      "latent_image": [
-        "82",
-        0
-      ],
-      "seed": [
-        "103",
-        0
-      ],
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "model": [
-        "64",
-        0
-      ],
-      "positive": [
-        "70",
-        0
-      ],
-      "steps": 6
-    },
-    "_meta": {
-      "title": "K采样器"
     }
   }
 }

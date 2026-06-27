@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_6ddc5d64954e4ac69d6b72e31b7de09e.png"
+      "image": "ref_c6652edf93ff49d19cddd51a7a658f7c.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "Remove the number 2026",
+      "prompt": "똑같이 생긴 두명의 쌍둥이,서로 마주보고 상대방의 몸매를 보고 있음",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 191466295472740,
+      "seed": 357146297208654,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",

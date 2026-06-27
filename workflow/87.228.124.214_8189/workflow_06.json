@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "seductive young curvy woman with long black hair, A close-up of a woman with her mouth open, thick cum visibly dripping from her lower lip and chin in glossy strands, her gaze directed upward with a satisfied expression, soft warm indoor lighting catching the wet texture on her skin, medium close-up framing centered on her face and mouth, clean composition with natural proportions and stable details.",
+      "text": "eurameg1, A nude woman kneeling at a luxury auction event in a glamorous VIP setting, confidently smiling with a playful expression and head tilted slightly, performing oral sex with an erect penis in her mouth, hands resting on his thighs for support, stage lighting illuminating her body, medium close-up from the man's perspective focusing on her face and upper torso.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "izumi_v.2.safetensors",
-      "strength_model": 0.9,
-      "strength_clip": 1.0,
+      "lora_name": "zimg-eurameg1-refine-con-char.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.8,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -132,12 +132,12 @@
     "inputs": {
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
-      "scheduler": "bong_tangent",
+      "scheduler": "beta57",
       "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 26161571962184,
+      "seed": 453373455444780,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

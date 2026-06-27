@@ -20,17 +20,6 @@
       "vae_name": "ae.safetensors"
     }
   },
-  "11": {
-    "class_type": "LoraLoaderModelOnly",
-    "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "lora_name": "sakura_korean_flux.safetensors",
-      "strength_model": 0.78
-    }
-  },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
@@ -38,34 +27,34 @@
         "2",
         0
       ],
-      "text": "A stunning Korean idol-style woman with chestnut brown hair in a braided half-up style, delicate features and a button nose, cool edgy expression with smoky eye makeup and nude matte lips. Shot on 85mm f/1.4 with creamy bokeh, over-the-shoulder pose glancing back at camera, off-center rule of thirds composition. Blue hour twilight ambient lighting casting soft indigo and amber tones across her face. Standing on a narrow old European cobblestone street lined with weathered stone buildings and wrought-iron balconies. Wearing an oversized cream turtleneck layered under a tailored charcoal wool coat, collar turned up against the evening chill. Wind catches loose strands framing her jawline. Cinematic atmosphere, editorial fashion portrait, ultra-realistic, flawless luminous skin, 8K detail."
+      "text": "A stunning Korean idol-style woman stands in endless lavender fields of Provence at golden hour, shot on 50mm lens, Dutch angle tilted frame, cowboy shot from thighs up. Platinum blonde hair swept into a loose messy bun with wispy tendrils catching the warm breeze. High cheekbones catch cross lighting from two sides, creating sculptural shadows across her elegant nose and dewy, flawless skin. She wears a flowing ivory summer dress with delicate straps, fabric rippling softly. Her expression is warm and approachable, a gentle knowing smile with soft crescent eyes. Styled with gradient coral lips and shimmer highlighter. Cinematic 21:9 widescreen composition, rich film grain, anamorphic bokeh rendering purple lavender into dreamy oval light orbs. Golden diffused atmosphere, editorial fashion photography."
     }
   },
   "5": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": "text, watermark, logo, low detail"
-    }
-  },
-  "6": {
     "class_type": "FluxGuidance",
     "inputs": {
       "conditioning": [
         "4",
         0
       ],
-      "guidance": 3.9
+      "guidance": 3.5
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
     }
   },
   "7": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "width": 1024,
-      "height": 1280,
+      "width": 1920,
+      "height": 816,
       "batch_size": 1
     }
   },
@@ -73,24 +62,24 @@
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "11",
+        "1",
         0
       ],
       "positive": [
-        "6",
+        "5",
         0
       ],
       "negative": [
-        "5",
+        "6",
         0
       ],
       "latent_image": [
         "7",
         0
       ],
-      "seed": 1755822927,
+      "seed": 1031842549,
       "control_after_generate": "fixed",
-      "steps": 20,
+      "steps": 22,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -117,7 +106,7 @@
         "9",
         0
       ],
-      "filename_prefix": "portrait_1755822927"
+      "filename_prefix": "portrait_1031842549"
     }
   }
 }

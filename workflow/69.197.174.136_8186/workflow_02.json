@@ -2,7 +2,7 @@
   "1": {
     "inputs": {
       "tags": "Modern Pop, upbeat indie pop, groovy bassline, acoustic guitar strums, cheerful synth accents, playful male vocals",
-      "lyrics": "[Intro]\nOye \n\n[Verse]\nOye , tu móvil suena tu móvil suena. Oye bro ven y contesta ya. Por qué no coges el teléfono ya? Tu móvil suena. Tu móvil va al buzón adiós!",
+      "lyrics": "[Intro]\nExcuse me \n\n[Verse]\nExcuse me , Yo phone ringing, yo phone ringing, big boy come pick up yo phone, why you not pick up yo phone? Yo phone ringing, yo phone ’bout to go to voicemail, goodbye!",
       "seed": 831368546178445,
       "bpm": 150,
       "duration": 30.0,
@@ -52,9 +52,9 @@
   },
   "99": {
     "inputs": {
-      "filename_prefix": "/sda-disk/home/Ringtone/music-generation-system/temp/results/13a66faa-04e3-48e2-b3c9-a37f049c91db.mp3",
+      "filename_prefix": "/sda-disk/home/Ringtone/music-generation-system/temp/results/97f615df-3b79-42ea-81ed-da6f2d84a4b8.mp3",
       "quality": "320k",
-      "audioUI": "/api/view?filename=ComfyUI.mp3&type=output&subfolder=audio&rand=0.4924722780430826",
+      "audioUI": "/api/view?filename=ComfyUI.mp3&type=output&subfolder=audio&rand=0.06096895522565604",
       "audio": [
         "1015",
         0
@@ -67,12 +67,12 @@
   },
   "101": {
     "inputs": {
-      "seed": 659510118930300,
+      "seed": 436845366789223,
       "steps": 8,
       "cfg": 2.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 0.45,
+      "denoise": 0.4,
       "model": [
         "78",
         0
@@ -129,8 +129,8 @@
   },
   "111": {
     "inputs": {
-      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_15/ES/t15_es_raw_song_2.MP3",
-      "audioUI": "/api/view?filename=t15_es_raw_song_2.MP3&type=input&subfolder=&rand=0.24160415293400284"
+      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_15/EN/t15_en_raw_song_2.MP3",
+      "audioUI": "/api/view?filename=t15_en_raw_song_2.MP3&type=input&subfolder=&rand=0.7026850514197839"
     },
     "class_type": "LoadAudio",
     "_meta": {
@@ -139,8 +139,8 @@
   },
   "222": {
     "inputs": {
-      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_15/ES/t15_es_raw_song_2.MP3",
-      "audioUI": "/api/view?filename=t9_jp_raw_song_2.MP3&type=input&subfolder=&rand=0.4181124574746081"
+      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_15/EN/t15_en_raw_song_2.MP3",
+      "audioUI": "/api/view?filename=t9_jp_raw_song_2.MP3&type=input&subfolder=&rand=0.6536712189155954"
     },
     "class_type": "LoadAudio",
     "_meta": {
@@ -193,7 +193,7 @@
   },
   "1014": {
     "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_inemp.flac&type=temp&subfolder=&rand=0.15515276514130882",
+      "audioUI": "/api/view?filename=ComfyUI_temp_ifhit.flac&type=temp&subfolder=&rand=0.8791144174047741",
       "audio": [
         "105",
         0
@@ -224,7 +224,7 @@
   "1016": {
     "inputs": {
       "start_time": 0.0,
-      "end_time": 1.5,
+      "end_time": 3.0,
       "audio": [
         "105",
         0
@@ -237,7 +237,7 @@
   },
   "1018": {
     "inputs": {
-      "start_time": 1.5,
+      "start_time": 3.0,
       "end_time": 0.0,
       "audio": [
         "111",

@@ -1,8 +1,195 @@
 {
   "1": {
-    "class_type": "VisualizeCUDAMemoryHistory",
     "inputs": {
-      "snapshot_path": "/root/comfy/ComfyUI/input/cuda_snap_1782403495.pkl"
+      "image_path_or_URL": "https://cos.credit99.cn/2026-05-27/69d367054c6e2e96ca9f00fc/upload/20260527232924084-1-fzjti2.jpg",
+      "image": "",
+      "upscale_method": "lanczos",
+      "megapixels": 0.0,
+      "scale_by": 1.0,
+      "resize_mode": "longest_side",
+      "size": 768
+    },
+    "class_type": "AILab_LoadImage",
+    "_meta": {
+      "title": "加载图像 (RMBG) 🖼️"
+    }
+  },
+  "2": {
+    "inputs": {
+      "image_path_or_URL": "https://cos.credit99.cn/image/temps/69d367054c6e2e96ca9f00fc/cloth150_00299_-20260625130321812.png",
+      "image": "",
+      "upscale_method": "lanczos",
+      "megapixels": 0,
+      "scale_by": 1,
+      "resize_mode": "longest_side",
+      "size": 768
+    },
+    "class_type": "AILab_LoadImage",
+    "_meta": {
+      "title": "加载图像 (RMBG) 🖼️"
+    }
+  },
+  "3": {
+    "inputs": {
+      "action": "append",
+      "tidy_tags": "no",
+      "text_a": "    \"Model hand type selection (Caucasian female model) with auto-adapted body proportions and skin tone, 100% consistent across all wear views\",",
+      "text_b": "5 Short Square nail shape,",
+      "text_c": ""
+    },
+    "class_type": "StringFunction|pysssss",
+    "_meta": {
+      "title": "String Function 🐍"
+    }
+  },
+  "4": {
+    "inputs": {
+      "index": 0,
+      "text0": [
+        "10",
+        0
+      ],
+      "text1": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "easy textIndexSwitch",
+    "_meta": {
+      "title": "文本编号切换"
+    }
+  },
+  "5": {
+    "inputs": {
+      "inputcount": 2,
+      "prompt": [
+        "4",
+        0
+      ],
+      "aspect_ratio": [
+        "7",
+        0
+      ],
+      "resolution": "2k",
+      "Update inputs(支持多图点我）": null,
+      "images": [
+        "1",
+        0
+      ],
+      "image_2": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "BizyAir_GPT_IMAGE_2_I2I_API",
+    "_meta": {
+      "title": "☁️BizyAir GPT Image 2 Image To Image",
+      "trd_node": true
+    }
+  },
+  "6": {
+    "inputs": {
+      "prompt": [
+        "4",
+        0
+      ],
+      "temperature": 0.9,
+      "top_p": 0.95,
+      "seed": 454246024,
+      "max_tokens": 32768,
+      "aspect_ratio": [
+        "7",
+        0
+      ],
+      "resolution": "2K",
+      "thinking_level": "disabled",
+      "inputcount": 2,
+      "Update inputs(支持多图点我）": null,
+      "mode": "third-party",
+      "images": [
+        "1",
+        0
+      ],
+      "image_2": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "BizyAir_NanoBanana2",
+    "_meta": {
+      "title": "☁️BizyAir NanoBanana 2",
+      "trd_node": true
+    }
+  },
+  "7": {
+    "inputs": {
+      "ratio": "3:4"
+    },
+    "class_type": "ratio_selector",
+    "_meta": {
+      "title": "ratio selector"
+    }
+  },
+  "8": {
+    "inputs": {
+      "index": 0,
+      "image0": [
+        "5",
+        0
+      ],
+      "image1": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "easy imageIndexSwitch",
+    "_meta": {
+      "title": "图像编号切换"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "shoe350",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "10": {
+    "inputs": {
+      "action": "append",
+      "tidy_tags": "no",
+      "text_a": "{\n  \"task_objective\": \"Nail Art Promo Page & 3+1 Layout - 3-top (inspiration→sketch→render) + 1-bottom (campaign)\",\n  \"input_assets\": {\n    \"structural_reference\": {\n      \"source\": \"Figure 1 Line Art\",\n      \"focus\": \"EXACT nail structural framework - nail shape, length, curvature, outline, proportions, spacing - ABSOLUTE PRESERVATION REQUIRED\",\n      \"role\": \"Provide locked structural blueprint for nail design generation\"\n    },\n    \"aesthetic_reference\": {\n      \"source\": \"Figure 2 Inspiration\",\n      \"focus\": \"Color system, texture, pattern or detailing, and overall style tone\",\n      \"role\": \"Provide aesthetic elements to be applied onto the nail structure\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Analyze Figure 2 inspiration + parse Figure 1 nail structure\",\n    \"step_2\": \"Generate sketch → render from Figure 1 structure + Figure 2 aesthetics, pixel-precise, NO structural deviation\",\n    \"step_3\": \"Generate brand campaign, assemble 3-top + 1-bottom layout with premium atmosphere & transformation flow\"\n  },\n  \"outputs\": {\n    \"top_left\": \"Inspiration Source - Figure 2 original image with premium framing. Label: 灵感溯源 INSPIRATION\",\n    \"top_center\": \"Sketch Design - Figure 1 structure + Figure 2 aesthetics sketch. Label: 草图设计 SKETCH\",\n    \"top_right\": \"Nail Render - High-fidelity render, realistic texture. Label: 美甲渲染 RENDER. SOURCE OF TRUTH\",\n    \"bottom_full\": \"Brand Campaign - Model hand in elegant editorial pose, stylish setting matching Figure 2 mood, spanning full width. Label: 品牌时尚 FASHION CAMPAIGN\"\n  },\n  \"output_requirements\": [\n    \"Figure 1 nail structure LOCKED; Figure 2 aesthetics pixel-precise\",\n    \"Campaign nail design 100% identical to top_right render\",\n\n",
+      "text_b": [
+        "3",
+        0
+      ],
+      "text_c": " \n    \"SFW; realistic nail texture (gloss, matte, shimmer); consistent lighting; NO oily shine; NO oversaturation\",\n    \"3-top + 1-bottom layout - gradient bg from Figure 2 colors, glow around top-left, cinematic vignette, luxury white space\",\n    \"Subtle flow lines connecting inspiration→sketch→render→campaign, indicating creative transformation journey\",\n    \"Coherent lighting: nail highlights & shadows, ambient occlusion, consistent light direction\",\n    \"Premium atmosphere: Figure 2 color gradient bg, glow around center, cinematic vignette, unified color grading, luxury white space, editorial retouching\",\n    \"AI copywriting: Chinese-primary + English-secondary, series poetic title + inspiration analysis, elegant typography with theme-matching decorative icons\"\n  ]\n}"
+    },
+    "class_type": "StringFunction|pysssss",
+    "_meta": {
+      "title": "String Function 🐍"
+    }
+  },
+  "11": {
+    "inputs": {
+      "action": "append",
+      "tidy_tags": "no",
+      "text_a": "{\n  \"task_objective\": \"Nail Art Promo Page & 6-View Fashion Layout - center inspiration with surrounding design views\",\n  \"input_assets\": {\n    \"structural_reference\": {\n      \"source\": \"Figure 1 Line Art\",\n      \"focus\": \"EXACT nail structural framework - nail shape, length, curvature, outline, proportions, spacing - ABSOLUTE PRESERVATION REQUIRED\",\n      \"role\": \"Provide locked structural blueprint for nail design generation\"\n    },\n    \"aesthetic_reference\": {\n      \"source\": \"Figure 2 Inspiration\",\n      \"focus\": \"Color system, texture, pattern or detailing, and overall style tone\",\n      \"role\": \"Provide aesthetic elements to be applied onto the nail structure\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Analyze Figure 2 inspiration + parse Figure 1 nail structure\",\n    \"step_2\": \"Generate sketch → render from Figure 1 structure + Figure 2 aesthetics, pixel-precise, NO structural deviation\",\n    \"step_3\": \"Generate model hand wearing views + brand campaign, assemble diamond layout with premium atmosphere\"\n  },\n  \"outputs\": {\n    \"center_inspiration\": \"Figure 2 Inspiration - Original image at center with premium framing & glow. Label: 灵感溯源 INSPIRATION SOURCE\",\n    \"top_left\": \"Sketch Design - Figure 1 structure + Figure 2 aesthetics sketch. Label: 草图设计 SKETCH\",\n    \"top_right\": \"Nail Render - High-fidelity render, realistic texture. Label: 美甲渲染 NAIL RENDER. SOURCE OF TRUTH\",\n    \"left_view\": \"Back of Hand - Model hand fingers spread, full nail design display. Label: 手背展示 BACK\",\n    \"right_view\": \"Detail Closeup - Dutch angle nail close-up, pattern & craftsmanship. Label: 细节特写 DETAIL\",\n    \"bottom_campaign\": \"Brand Campaign - Elegant hand editorial pose, stylish setting matching Figure 2 mood. Label: 品牌时尚 FASHION CAMPAIGN\"\n  },\n  \"output_requirements\": [\n    \"Figure 1 nail structure LOCKED; Figure 2 aesthetics pixel-precise\",\n    \"All wear views nail design 100% identical to top_right render\",\n",
+      "text_b": [
+        "3",
+        0
+      ],
+      "text_c": "\n    \"SFW; realistic nail texture (gloss, matte, shimmer); consistent lighting; NO oily shine; NO oversaturation\",\n    \"Coherent lighting: nail highlights & shadows, ambient occlusion, consistent light direction\",\n    \"Premium atmosphere: Figure 2 color gradient bg, glow around center, cinematic vignette, unified color grading, luxury white space, editorial retouching\",\n    \"AI copywriting: Chinese-primary + English-secondary, series poetic title + inspiration analysis + nail spec + DNA mapping (icon-annotated), elegant typography with theme-matching decorative icons\"\n  ]\n}\n"
+    },
+    "class_type": "StringFunction|pysssss",
+    "_meta": {
+      "title": "String Function 🐍"
     }
   }
 }

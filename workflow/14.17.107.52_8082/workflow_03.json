@@ -46,7 +46,7 @@
   },
   "75": {
     "inputs": {
-      "unet_name": "wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors",
+      "unet_name": "wan2.2_t2v_high_noise_14B_fp16.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -56,7 +56,7 @@
   },
   "76": {
     "inputs": {
-      "unet_name": "wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
+      "unet_name": "wan2.2_t2v_low_noise_14B_fp16.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -79,7 +79,7 @@
   },
   "83": {
     "inputs": {
-      "lora_name": "20260624155825.safetensors",
+      "lora_name": "20260625181631.safetensors",
       "strength_model": 0.6,
       "model": [
         "75",
@@ -93,7 +93,7 @@
   },
   "85": {
     "inputs": {
-      "lora_name": "20260624155825.safetensors",
+      "lora_name": "20260625181631.safetensors",
       "strength_model": 0.6,
       "model": [
         "76",
@@ -136,7 +136,7 @@
   },
   "89": {
     "inputs": {
-      "text": "A young girl with soft",
+      "text": "A young girl with soft, wavy hair adorned with a delicate bow sits at a table in a cozy café. Her soft, light pink blouse complements the warm, inviting ambiance of the setting, where soft lights hang from the ceiling, casting a gentle glow. She rests her chin on her hand, gazing thoughtfully, with a cup of coffee or tea in front of her, featuring a straw. The background reveals blurred tables and chairs, suggesting a relaxed and pleasant atmosphere.2222",
       "clip": [
         "71",
         0
@@ -149,7 +149,7 @@
   },
   "117": {
     "inputs": {
-      "seed": 27935778957391,
+      "seed": 751445676016326,
       "steps": 10,
       "cfg": 1.5,
       "sampler_name": "euler",
@@ -179,7 +179,7 @@
   },
   "118": {
     "inputs": {
-      "seed": 998698259054766,
+      "seed": 29783049045249,
       "steps": 10,
       "cfg": 1.5,
       "sampler_name": "euler",

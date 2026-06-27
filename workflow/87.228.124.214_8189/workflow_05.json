@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "seductive young curvy woman with long black hair, A nude woman with a large round butt stands facing forward, legs slightly apart and body leaning subtly against a surface for support, as a man penetrates her from behind in a standing position with his hips pressed close, his climax occurring inside her; her hands rest forward for balance, back arched, head turned slightly with a flushed expression of pleasure and half-closed eyes, soft warm indoor lighting accentuating skin tones and natural body curves in a medium close-up side angle framing that keeps focus on her form and the intimate contact.",
+      "text": "elvaross, A young woman stands in a quiet dorm room at night, soft warm lamplight illuminating her from the side, wearing a lifted short skirt and pulled-up top that fully exposes her bare breasts and shaved pussy. She holds the skirt hem up with one hand and lifts her top with the other, legs slightly parted in a natural stance, body facing forward with a shy smile and lower lip bitten, gazing toward the viewer. The simple student room background shows a bed and desk behind her, intimate private indoor atmosphere, medium close-up framing focused on her torso and hips, clear visible anatomy and contact with clothing, natural proportions, readable pose.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,8 +109,8 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "izumi_v.2.safetensors",
-      "strength_model": 0.9,
+      "lora_name": "TGZW383YGE7RTN4ZTNPAM4FT50.safetensors",
+      "strength_model": 0.88,
       "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.5,
+      "eta": 0.4,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 26161571962184,
+      "seed": 494111015108424,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

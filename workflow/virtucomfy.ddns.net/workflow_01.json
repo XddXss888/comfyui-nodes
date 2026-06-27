@@ -1,8 +1,156 @@
 {
-  "1": {
+  "265": {
     "inputs": {
-      "clip_name": "qwen_3_06b_base.safetensors",
-      "type": "stable_diffusion",
+      "video": "Preprocess_Depth_00001.mp4",
+      "force_rate": 0.0,
+      "custom_width": [
+        "2845:2852",
+        0
+      ],
+      "custom_height": [
+        "2845:2852",
+        1
+      ],
+      "frame_load_cap": [
+        "2845:1556",
+        0
+      ],
+      "skip_first_frames": [
+        "2845:361",
+        0
+      ],
+      "select_every_nth": 1,
+      "format": "AnimateDiff"
+    },
+    "class_type": "VHS_LoadVideo",
+    "_meta": {
+      "title": "INPUT VIDEO"
+    }
+  },
+  "280": {
+    "inputs": {
+      "width": [
+        "2845:2852",
+        0
+      ],
+      "height": [
+        "2845:2852",
+        1
+      ],
+      "upscale_method": "lanczos",
+      "keep_proportion": "pad_edge_pixel",
+      "pad_color": "0, 0, 0",
+      "crop_position": "center",
+      "divisible_by": 2,
+      "device": "cpu",
+      "image": [
+        "282",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJv2",
+    "_meta": {
+      "title": "Resize Image v2"
+    }
+  },
+  "282": {
+    "inputs": {
+      "image": "3a7cb892-5151-4b4a-a2aa-3d3b98c49e1f.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Start Image / Reference Image 1"
+    }
+  },
+  "2607": {
+    "inputs": {
+      "video_info": [
+        "265",
+        3
+      ]
+    },
+    "class_type": "VHS_VideoInfo",
+    "_meta": {
+      "title": "Video Info 🎥🅥🅗🅢"
+    }
+  },
+  "3001": {
+    "inputs": {
+      "frame_rate": 24.0,
+      "loop_count": 0,
+      "filename_prefix": "AnimateDiff",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": false,
+      "images": [
+        "3272:3278",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "PREVIEW PREPROCESS"
+    }
+  },
+  "3326": {
+    "inputs": {
+      "unet_name": "wan/wan-14B_vace_skyreels_v3_R2V_e4m3fn_v1.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "3327": {
+    "inputs": {
+      "lora_name": "Wan2.1_T2V_14B_FusionX_LoRA.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "3326",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "3328": {
+    "inputs": {
+      "lora_name": "wan/Lenovo.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "3327",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "3329": {
+    "inputs": {
+      "shift": 6.000000000000001,
+      "model": [
+        "3328",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "ModelSamplingSD3"
+    }
+  },
+  "3333": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
       "device": "default"
     },
     "class_type": "CLIPLoader",
@@ -10,20 +158,116 @@
       "title": "Load CLIP"
     }
   },
-  "2": {
+  "3334": {
     "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
+      "vae_name": "wan_2.1_vae.safetensors"
     },
     "class_type": "VAELoader",
     "_meta": {
       "title": "Load VAE"
     }
   },
-  "3": {
+  "3345": {
     "inputs": {
-      "text": "low quality,\nworst quality,\nbad anatomy,\nbad hands,\nextra fingers,\nextra arms,\nextra legs,\ndeformed,\ncropped,\nblurry,\ntext,\nwatermark,\nlogo,\nnsfw",
+      "video": "Preprocess_Canny_00001.mp4",
+      "force_rate": 0.0,
+      "custom_width": [
+        "2845:2852",
+        0
+      ],
+      "custom_height": [
+        "2845:2852",
+        1
+      ],
+      "frame_load_cap": [
+        "2845:1556",
+        0
+      ],
+      "skip_first_frames": [
+        "2845:361",
+        0
+      ],
+      "select_every_nth": 1,
+      "format": "AnimateDiff"
+    },
+    "class_type": "VHS_LoadVideo",
+    "_meta": {
+      "title": "INPUT VIDEO"
+    }
+  },
+  "3348": {
+    "inputs": {
+      "method": "lanczos",
+      "image_1": [
+        "280",
+        0
+      ]
+    },
+    "class_type": "ImageBatchMultiple+",
+    "_meta": {
+      "title": "🔧 Images Batch Multiple [Max 4 for Phantom]"
+    }
+  },
+  "3372": {
+    "inputs": {
+      "frame_rate": [
+        "2607",
+        0
+      ],
+      "loop_count": 0,
+      "filename_prefix": "AI_Render",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "3228:3252",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "Video Combine 🎥🅥🅗🅢"
+    }
+  },
+  "2845:1556": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "frame_load_cap"
+    }
+  },
+  "2845:361": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "skip"
+    }
+  },
+  "2845:2852": {
+    "inputs": {
+      "resolution": "576p",
+      "aspect_ratio": "16:9",
+      "custom_width": 1280,
+      "custom_height": 720
+    },
+    "class_type": "WanResolutionPicker",
+    "_meta": {
+      "title": "WAN Resolution Picker"
+    }
+  },
+  "3228:3262": {
+    "inputs": {
+      "text": "过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走,",
       "clip": [
-        "1",
+        "3333",
         0
       ]
     },
@@ -32,29 +276,57 @@
       "title": "CLIP Text Encode (Negative Prompt)"
     }
   },
-  "5": {
+  "3228:3268": {
     "inputs": {
-      "seed": 815539837705745,
-      "steps": 30,
-      "cfg": 4.0,
-      "sampler_name": "er_sde",
-      "scheduler": "simple",
+      "trim_amount": [
+        "3228:3255",
+        5
+      ],
+      "samples": [
+        "3228:3253",
+        0
+      ]
+    },
+    "class_type": "TrimVideoLatent",
+    "_meta": {
+      "title": "TrimVideoLatent"
+    }
+  },
+  "3228:3254": {
+    "inputs": {
+      "anything": [
+        "3228:3268",
+        0
+      ]
+    },
+    "class_type": "easy cleanGpuUsed",
+    "_meta": {
+      "title": "Clean VRAM Used"
+    }
+  },
+  "3228:3253": {
+    "inputs": {
+      "seed": 1006498752047286,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "res_2s",
+      "scheduler": "beta57",
       "denoise": 1.0,
       "model": [
-        "17",
+        "3228:3257",
         0
       ],
       "positive": [
-        "9",
-        0
+        "3228:3255",
+        1
       ],
       "negative": [
-        "3",
+        "3228:3258",
         0
       ],
       "latent_image": [
-        "8",
-        0
+        "3228:3255",
+        4
       ]
     },
     "class_type": "KSampler",
@@ -62,14 +334,37 @@
       "title": "KSampler"
     }
   },
-  "6": {
+  "3228:3261": {
+    "inputs": {
+      "num_frames": [
+        "3228:3375",
+        3
+      ],
+      "empty_frame_level": 0.5,
+      "start_index": 0,
+      "end_index": -1,
+      "start_image": [
+        "3228:3290:3280",
+        0
+      ],
+      "control_images": [
+        "3228:3375",
+        0
+      ]
+    },
+    "class_type": "WanVideoVACEStartToEndFrame",
+    "_meta": {
+      "title": "WanVideo VACE Start To End Frame"
+    }
+  },
+  "3228:3252": {
     "inputs": {
       "samples": [
-        "5",
+        "3228:3254",
         0
       ],
       "vae": [
-        "2",
+        "3334",
         0
       ]
     },
@@ -78,35 +373,60 @@
       "title": "VAE Decode"
     }
   },
-  "7": {
+  "3228:3375": {
     "inputs": {
-      "filename_prefix": "ComfyUI/animatest",
-      "images": [
-        "6",
+      "image": [
+        "3272:3278",
         0
       ]
     },
-    "class_type": "SaveImage",
+    "class_type": "GetImageSizeAndCount",
     "_meta": {
-      "title": "Save Image"
+      "title": "Get Image Size & Count"
     }
   },
-  "8": {
+  "3228:3258": {
     "inputs": {
-      "width": 1360,
-      "height": 968,
-      "batch_size": 1
+      "conditioning_1": [
+        "3228:3255",
+        2
+      ],
+      "conditioning_2": [
+        "3228:3255",
+        3
+      ]
     },
-    "class_type": "EmptyLatentImage",
+    "class_type": "ConditioningCombine",
     "_meta": {
-      "title": "Empty Latent Image"
+      "title": "Conditioning (Combine)"
     }
   },
-  "9": {
+  "3228:3257": {
     "inputs": {
-      "text": "masterpiece, best quality, score_9, score_8_up, score_7_up, fate \\(series\\)\n\nCharacters:\n\nArtoria Pendragon: 1girl, solo focus, blonde hair, very long hair, braided bun, ahoge, blue ribbon, green eyes, school uniform, black necktie, cheerful smile, waving, energetic, youthful\n\nFujimaru Ritsuka \\(Male\\): 1boy, blue eyes, black hair, short hair, school uniform, attentive expression, looking toward Artoria, standing naturally\n\nScene:\n\nA bright morning at a modern Japanese high school courtyard. pose following reference image\n\nCamera:\n\nOver-the-shoulder shot from behind Fujimaru Ritsuka, wide shot, slight low angle, cinematic perspective, natural depth, dynamic composition\n\n\nStyle:\n\n@kantoku",
+      "nag_scale": 11.0,
+      "nag_alpha": 0.25,
+      "nag_tau": 2.5,
+      "input_type": "default",
+      "inplace": false,
+      "model": [
+        "3228:3255",
+        0
+      ],
+      "conditioning": [
+        "3228:3258",
+        0
+      ]
+    },
+    "class_type": "WanVideoNAG",
+    "_meta": {
+      "title": "WanVideoNAG"
+    }
+  },
+  "3228:3249": {
+    "inputs": {
+      "text": "Photorealistic close-up shot of a passenger inside a public transit bus, natural lighting shifting through the windows, high-fidelity textures on clothes and skin, shallow depth of field, blurred background with other passengers, professional color grading, shot on Arri Alexa.",
       "clip": [
-        "1",
+        "3333",
         0
       ]
     },
@@ -115,44 +435,213 @@
       "title": "CLIP Text Encode (Positive Prompt)"
     }
   },
-  "10": {
+  "3228:3295": {
     "inputs": {
-      "unet_name": "animayume_v10.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Load Diffusion Model"
-    }
-  },
-  "16": {
-    "inputs": {
-      "image": "9 c (1).jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "17": {
-    "inputs": {
-      "lllite_name": "anima-lllite-any-test-like-v2.safetensors",
-      "strength": 0.6,
-      "start_percent": 0.0,
-      "end_percent": 1.0,
-      "preserve_wrapper": true,
-      "model": [
-        "10",
+      "conditioning": [
+        "3228:3249",
         0
       ],
-      "image": [
-        "16",
+      "latent": [
+        "3228:3294",
         0
       ]
     },
-    "class_type": "AnimaLLLiteApply",
+    "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "Apply Anima ControlNet-LLLite"
+      "title": "ReferenceLatent"
+    }
+  },
+  "3228:3294": {
+    "inputs": {
+      "pixels": [
+        "3228:3375",
+        0
+      ],
+      "vae": [
+        "3334",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "3228:3255": {
+    "inputs": {
+      "width": [
+        "3228:3375",
+        1
+      ],
+      "height": [
+        "3228:3375",
+        2
+      ],
+      "length": [
+        "3228:3375",
+        3
+      ],
+      "batch_size": 1,
+      "vace_strength": 1.0,
+      "vace_ref_strength": 0.0,
+      "model": [
+        "3329",
+        0
+      ],
+      "positive": [
+        "3228:3295",
+        0
+      ],
+      "negative": [
+        "3228:3262",
+        0
+      ],
+      "vae": [
+        "3334",
+        0
+      ],
+      "control_video": [
+        "3228:3261",
+        0
+      ],
+      "vace_reference": [
+        "280",
+        0
+      ],
+      "phantom_images": [
+        "3348",
+        0
+      ]
+    },
+    "class_type": "WanVacePhantomSimpleV2",
+    "_meta": {
+      "title": "WanVacePhantomSimpleV2"
+    }
+  },
+  "3228:3290:3376": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "1"
+    }
+  },
+  "3228:3290:3280": {
+    "inputs": {
+      "boolean": [
+        "3228:3290:3284",
+        0
+      ],
+      "on_true": [
+        "280",
+        0
+      ],
+      "on_false": [
+        "3228:3290:3288",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "3228:3290:3288": {
+    "inputs": {
+      "select": 1,
+      "sel_mode": false
+    },
+    "class_type": "ImpactSwitch",
+    "_meta": {
+      "title": "Disable Input"
+    }
+  },
+  "3228:3290:3287": {
+    "inputs": {
+      "images": [
+        "3348",
+        0
+      ]
+    },
+    "class_type": "VHS_GetImageCount",
+    "_meta": {
+      "title": "Get Image Count 🎥🅥🅗🅢"
+    }
+  },
+  "3228:3290:3284": {
+    "inputs": {
+      "cmp": "a <= b",
+      "a": [
+        "3228:3290:3287",
+        0
+      ],
+      "b": [
+        "3228:3290:3376",
+        0
+      ]
+    },
+    "class_type": "ImpactCompare",
+    "_meta": {
+      "title": "ImpactCompare"
+    }
+  },
+  "3228:3290:3292": {
+    "inputs": {
+      "text1": "This node is just to get the RES4LYF nodepack in the missing nodes list of the manager."
+    },
+    "class_type": "TextBox1",
+    "_meta": {
+      "title": "Install RES4LYF"
+    }
+  },
+  "3272:3278": {
+    "inputs": {
+      "boolean": false,
+      "on_true": [
+        "3272:3273",
+        0
+      ],
+      "on_false": [
+        "265",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "3272:3286": {
+    "inputs": {
+      "value": 0.2,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "class_type": "ClampFloat",
+    "_meta": {
+      "title": "Clamp Float"
+    }
+  },
+  "3272:3273": {
+    "inputs": {
+      "blend_factor": [
+        "3272:3286",
+        0
+      ],
+      "blend_mode": "normal",
+      "image1": [
+        "265",
+        0
+      ],
+      "image2": [
+        "3345",
+        0
+      ]
+    },
+    "class_type": "ImageBlend",
+    "_meta": {
+      "title": "Blend Images"
     }
   }
 }

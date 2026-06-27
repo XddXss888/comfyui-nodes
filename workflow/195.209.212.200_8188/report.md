@@ -1,54 +1,40 @@
 # 195.209.212.200:8188
 
 **GPU**: A100 | **显存**: 79 GB | **空闲**: 79 GB
-**内存**: 125 GB (空闲 97 GB)
+**内存**: 125 GB (空闲 111 GB)
 **版本**: 0.3.67
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-26 08:08:56
-**历史总数**: 374 | **成功**: 10
+**扫描时间**: 2026-06-27 08:08:09
+**历史总数**: 400 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `ec62dd79-bc7c-4d24-91b6-6d236b492b95`
-- **类型**: 其他
-- **节点数**: 12
+- **Prompt ID**: `3e0d80e6-ec78-41ff-aa2a-bd3b2a87ad29`
+- **类型**: 其他/工具
+- **节点数**: 1
 - **模型** (0):
 
 ### 2. workflow_02.json
-- **Prompt ID**: `52d9bec3-1359-4402-9741-3615a3015ab9`
+- **Prompt ID**: `71e5165a-08c0-4b2a-88cb-d7efcee41580`
 - **类型**: 其他
 - **节点数**: 19
 - **模型** (0):
 
 ### 3. workflow_03.json
-- **Prompt ID**: `89722e7b-ccc8-4841-8de2-395c680fa0b5`
-- **类型**: 文生视频
-- **节点数**: 46
-- **模型** (4):
-  - Wan2_2/wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
-  - WanVideo/Wan2_1_VAE_bf16.safetensors
-  - WanVideo/umt5-xxl-enc-bf16.safetensors
-  - training_results/actor_Svyatoslav/look_01/training_results_wan21_01/14B/20260408_17-26-09/epoch2/adapter_model.safetensors
+- **Prompt ID**: `ee9953e1-765d-4cae-8b03-bb6a69ecb6ff`
+- **类型**: 其他
+- **节点数**: 19
+- **模型** (0):
 
 ### 4. workflow_04.json
-- **Prompt ID**: `8eb08314-3a01-48d9-a37d-7cf278b8c502`
-- **类型**: 文生视频
-- **节点数**: 46
-- **模型** (4):
-  - Wan2_2/wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
-  - WanVideo/Wan2_1_VAE_bf16.safetensors
-  - WanVideo/umt5-xxl-enc-bf16.safetensors
-  - training_results/actor_Sofya/look_01/training_results_wan21_01/14B/20260408_20-26-38/epoch1/adapter_model.safetensors
-
-### 5. workflow_05.json
-- **Prompt ID**: `c251ce3f-34f8-4f26-97bd-431184900ec1`
+- **Prompt ID**: `81aaf3e7-59bc-430d-b3f2-1703bc225057`
 - **类型**: 其他
 - **节点数**: 19
 - **模型** (0):
 
-### 6. workflow_06.json
-- **Prompt ID**: `0bf66f6a-7a43-43d5-aae4-858f30035d36`
+### 5. workflow_05.json
+- **Prompt ID**: `bdaabe0e-3f17-4d74-9bda-6065ae36916e`
 - **类型**: 文生视频
 - **节点数**: 46
 - **模型** (4):
@@ -57,34 +43,40 @@
   - WanVideo/umt5-xxl-enc-bf16.safetensors
   - training_results/actor_Svyatoslav/look_01/training_results_wan21_01/14B/20260408_17-26-09/epoch2/adapter_model.safetensors
 
-### 7. workflow_07.json
-- **Prompt ID**: `1511a182-6af7-4d3d-8921-9941208c880c`
+### 6. workflow_06.json
+- **Prompt ID**: `0b19a9fc-ce37-43c5-ae47-da4d3cad464e`
 - **类型**: 其他
-- **节点数**: 19
+- **节点数**: 12
 - **模型** (0):
 
-### 8. workflow_08.json
-- **Prompt ID**: `fd594840-4aaa-4ccc-9263-9fca82b2a581`
+### 7. workflow_07.json
+- **Prompt ID**: `4f022f49-5a8a-44de-bd04-d1d8e3cbfbe2`
 - **类型**: 文生视频
-- **节点数**: 46
+- **节点数**: 54
 - **模型** (4):
-  - Wan2_2/wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
+  - Wan2_2/Wan2.2_T2V_Low_Noise_14B_VACE_fp16.safetensors
+  - WanVideo/Wan2_1_VAE_bf16.safetensors
+  - WanVideo/umt5-xxl-enc-bf16.safetensors
+  - training_results/actor_Svyatoslav/look_01/training_results_wan21_01/14B/20260408_17-26-09/epoch2/adapter_model.safetensors
+
+### 8. workflow_08.json
+- **Prompt ID**: `269d9854-8367-4d8e-9353-3401e9773896`
+- **类型**: 文生视频
+- **节点数**: 54
+- **模型** (4):
+  - Wan2_2/Wan2.2_T2V_Low_Noise_14B_VACE_fp16.safetensors
   - WanVideo/Wan2_1_VAE_bf16.safetensors
   - WanVideo/umt5-xxl-enc-bf16.safetensors
   - training_results/actor_Svyatoslav/look_01/training_results_wan21_01/14B/20260408_17-26-09/epoch2/adapter_model.safetensors
 
 ### 9. workflow_09.json
-- **Prompt ID**: `0a6948a5-cc0f-45c0-a9d4-5113cd243549`
-- **类型**: 其他
-- **节点数**: 19
+- **Prompt ID**: `637ac35b-ba13-4b7c-ae99-1ff99338b503`
+- **类型**: 其他/工具
+- **节点数**: 1
 - **模型** (0):
 
 ### 10. workflow_10.json
-- **Prompt ID**: `b3956bad-221c-45ec-8cc5-76d489143a10`
-- **类型**: 文生视频
-- **节点数**: 46
-- **模型** (4):
-  - Wan2_2/wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors
-  - WanVideo/Wan2_1_VAE_bf16.safetensors
-  - WanVideo/umt5-xxl-enc-bf16.safetensors
-  - training_results/actor_Svyatoslav/look_01/training_results_wan21_01/14B/20260408_17-26-09/epoch2/adapter_model.safetensors
+- **Prompt ID**: `03e595ee-c2fb-43c8-862c-bf8f99ca6a2f`
+- **类型**: 其他/工具
+- **节点数**: 1
+- **模型** (0):
