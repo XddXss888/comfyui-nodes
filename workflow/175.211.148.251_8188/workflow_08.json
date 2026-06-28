@@ -14,7 +14,7 @@
   },
   "57:30": {
     "inputs": {
-      "clip_name": "qwen_3_4b.safetensors",
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
       "type": "lumina2",
       "device": "default"
     },
@@ -62,7 +62,7 @@
   },
   "57:28": {
     "inputs": {
-      "unet_name": "z_image_turbo_bf16.safetensors",
+      "unet_name": "longcat_image_bf16.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -109,7 +109,7 @@
   },
   "57:3": {
     "inputs": {
-      "seed": 0,
+      "seed": 79258532709563,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "res_multistep",

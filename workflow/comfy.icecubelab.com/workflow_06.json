@@ -28,7 +28,7 @@
         0
       ],
       "lora_name": "flux_korean_girl.safetensors",
-      "strength_model": 0.8
+      "strength_model": 0.85
     }
   },
   "5": {
@@ -38,7 +38,7 @@
         "2",
         0
       ],
-      "text": "A melancholic Korean woman with a dark short bob cut featuring soft face-framing caramel highlights, shot on a 24mm wide angle lens creating subtle dynamic perspective distortion. Extreme close-up, eye-level straight on, centered symmetrical composition. She wears an oversized cream hoodie, collar slightly pulled up framing her jawline. Backlit rim light traces a luminous silhouette edge along her hair and shoulders against a minimalist white studio. Hyper detailed dewy skin, glassy dark eyes reflecting pinpoint catchlights, delicate button nose, sheer pink lip tint. Her expression is distant and poetic, gaze soft yet piercing, as if remembering something beautiful and lost. Shallow depth of field, cinematic color grading, editorial portrait photography."
+      "text": "A stunning Korean woman with a natural black bob cut shimmering with blue sheen, diamond face shape and defined arched brows, caught in a mirror reflection at a rooftop cafe during golden hour. She wears an elegant black dress, her bright cheerful smile radiating warmth as amber light wraps around her. Shot on 135mm telephoto, compressed background of blurred city skyline bathed in peach and gold. Wide environmental portrait, she appears small within the expansive frame of glass and sky. Window light creates a perfect Rembrandt triangle shadow on her cheek. Flawless porcelain skin, dewy rose-tinted makeup, lashes catching the fading sun. The reflection doubles the dreamy atmosphere, cinematic and ethereal."
     }
   },
   "6": {
@@ -64,8 +64,8 @@
   "8": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "width": 1024,
-      "height": 1024,
+      "width": 896,
+      "height": 1280,
       "batch_size": 1
     }
   },
@@ -88,9 +88,9 @@
         "8",
         0
       ],
-      "seed": 2118778354,
+      "seed": 883174545,
       "control_after_generate": "fixed",
-      "steps": 24,
+      "steps": 22,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -117,7 +117,7 @@
         "10",
         0
       ],
-      "filename_prefix": "portrait_2118778354"
+      "filename_prefix": "portrait_883174545"
     }
   }
 }

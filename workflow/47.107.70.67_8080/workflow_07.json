@@ -50,6 +50,134 @@
       "title": "LoRA 3：Meion风格"
     }
   },
+  "5": {
+    "inputs": {
+      "model": [
+        "48",
+        0
+      ],
+      "method": "from cond"
+    },
+    "class_type": "Support empty uncond",
+    "_meta": {
+      "title": "支持空负向条件"
+    }
+  },
+  "7": {
+    "inputs": {
+      "clip": [
+        "45",
+        0
+      ],
+      "text": "A beautiful phone camera selfie of the girl in the background. Himari is smiling playfully at the camera, while in the background, Nanoha is bent over at the window, with her JK skirt lifted, revealing her white panties and bare legs, while zy stands close behind her. BREAK 1girl, Himari, female_focus, 18yo, selfie, blonde_hair, twin_tails, gold_eyes, white_t_shirt, playful_smile. BREAK 1girl, Nanoha, in_background, bent_over, leaning_forward, short_black_hair, red_face, lifted_skirt, white_panties. BREAK 1boy, zy, in_background, standing_behind. BREAK indoors, bedroom, window, phone_camera_quality, depth_of_field."
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "正向提示词"
+    }
+  },
+  "8": {
+    "inputs": {
+      "clip": [
+        "45",
+        0
+      ],
+      "text": ""
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "负向提示词"
+    }
+  },
+  "9": {
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "10": {
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "positive": [
+        "7",
+        0
+      ],
+      "negative": [
+        "8",
+        0
+      ],
+      "latent_image": [
+        "9",
+        0
+      ],
+      "seed": 3841721303,
+      "steps": 12,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "11": {
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "12": {
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "15": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载Qwen VAE"
+    }
+  },
+  "45": {
+    "inputs": {
+      "clip_name": "qwen_3_06b_base.safetensors",
+      "type": "stable_diffusion",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载Qwen CLIP"
+    }
+  },
   "46": {
     "inputs": {
       "lora_name": "anima\\gpt-image-2_anima-base1_v1-1.safetensors",
@@ -90,134 +218,6 @@
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
       "title": "LoRA 6：饱和度增强"
-    }
-  },
-  "5": {
-    "inputs": {
-      "model": [
-        "48",
-        0
-      ],
-      "method": "from cond"
-    },
-    "class_type": "Support empty uncond",
-    "_meta": {
-      "title": "支持空负向条件"
-    }
-  },
-  "45": {
-    "inputs": {
-      "clip_name": "qwen_3_06b_base.safetensors",
-      "type": "stable_diffusion",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载Qwen CLIP"
-    }
-  },
-  "7": {
-    "inputs": {
-      "clip": [
-        "45",
-        0
-      ],
-      "text": "masterpiece, best quality,very aesthetic, mature woman,ultra-detailed, nsfw, @gpt-image-2, @meionANIMAstyle,@sw33t,@NJSW33T,${promot}, A cinematic photo of an intense, close-up interaction between a man and a woman on a yacht deck. The man has stepped closer, holding the woman's wrist, whispering in her ear. BREAK (1girl, Shen Manci:1.1), female_focus, 45yo, visual_age_30, mature female, standing, stiff_posture, wrist_grabbed_by_partner, (black_hair, elegant_updo, red_lips:1.2), wide_eyes, subtle_panic, flushed_cheeks, (black_evening_gown, deep_v_neckline). BREAK (1boy, zy:1.1), male_focus, standing_very_close, holding_partner_wrist, leaning_in, whispering_in_ear, dominant_posture, intense_gaze, (short_black_hair, navy_blue_silk_shirt, buttoned_up). BREAK (outdoors), yacht_deck, ocean_background, warm golden hour sunset lighting, strong backlighting, dramatic cinematic shadows, high_tension, close_up, depth_of_field."
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "正向提示词"
-    }
-  },
-  "8": {
-    "inputs": {
-      "clip": [
-        "45",
-        0
-      ],
-      "text": "worst quality, low quality, score_1, score_2, score_3, old, early, lowres, simple background, blurry, sepia"
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "负向提示词"
-    }
-  },
-  "9": {
-    "inputs": {
-      "width": 832,
-      "height": 1216,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "空Latent图像"
-    }
-  },
-  "10": {
-    "inputs": {
-      "model": [
-        "5",
-        0
-      ],
-      "positive": [
-        "7",
-        0
-      ],
-      "negative": [
-        "8",
-        0
-      ],
-      "latent_image": [
-        "9",
-        0
-      ],
-      "seed": 317540284430183,
-      "steps": 12,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "15": {
-    "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载Qwen VAE"
-    }
-  },
-  "11": {
-    "inputs": {
-      "samples": [
-        "10",
-        0
-      ],
-      "vae": [
-        "15",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "12": {
-    "inputs": {
-      "images": [
-        "11",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
     }
   }
 }

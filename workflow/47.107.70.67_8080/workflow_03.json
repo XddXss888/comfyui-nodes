@@ -50,6 +50,134 @@
       "title": "LoRA 3：Meion风格"
     }
   },
+  "5": {
+    "inputs": {
+      "model": [
+        "48",
+        0
+      ],
+      "method": "from cond"
+    },
+    "class_type": "Support empty uncond",
+    "_meta": {
+      "title": "支持空负向条件"
+    }
+  },
+  "7": {
+    "inputs": {
+      "clip": [
+        "45",
+        0
+      ],
+      "text": "A candid phone photo of the sex scene. Sumire is leaning over a dresser, looking back with a dazed expression and tongue out. BREAK 1girl, Sumire, female_focus, 20yo, bent_over, looking_back, ahegao, tongue_out, drooling, brown_hair, pony_tail, topless, large_breasts, sweaty, heavily_blushed. BREAK 1boy, zy, standing_behind, thrusting, naked, visible_penis, penis_in_vagina. BREAK indoors, bedroom, phone_camera_quality, amateur_photography."
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "正向提示词"
+    }
+  },
+  "8": {
+    "inputs": {
+      "clip": [
+        "45",
+        0
+      ],
+      "text": ""
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "负向提示词"
+    }
+  },
+  "9": {
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "10": {
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "positive": [
+        "7",
+        0
+      ],
+      "negative": [
+        "8",
+        0
+      ],
+      "latent_image": [
+        "9",
+        0
+      ],
+      "seed": 3121064276,
+      "steps": 12,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "11": {
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "12": {
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "15": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载Qwen VAE"
+    }
+  },
+  "45": {
+    "inputs": {
+      "clip_name": "qwen_3_06b_base.safetensors",
+      "type": "stable_diffusion",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载Qwen CLIP"
+    }
+  },
   "46": {
     "inputs": {
       "lora_name": "anima\\gpt-image-2_anima-base1_v1-1.safetensors",
@@ -90,134 +218,6 @@
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
       "title": "LoRA 6：饱和度增强"
-    }
-  },
-  "5": {
-    "inputs": {
-      "model": [
-        "48",
-        0
-      ],
-      "method": "from cond"
-    },
-    "class_type": "Support empty uncond",
-    "_meta": {
-      "title": "支持空负向条件"
-    }
-  },
-  "45": {
-    "inputs": {
-      "clip_name": "qwen_3_06b_base.safetensors",
-      "type": "stable_diffusion",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载Qwen CLIP"
-    }
-  },
-  "7": {
-    "inputs": {
-      "clip": [
-        "45",
-        0
-      ],
-      "text": "masterpiece, best quality,very aesthetic, mature woman,ultra-detailed, nsfw, @gpt-image-2, @meionANIMAstyle,@sw33t,@NJSW33T,${promot}, A cinematic photo from a high angle of a man looking down at a woman sitting on the floor in a sunlit bedroom. BREAK (1girl, Tang Shiyun:1.1), female_focus, 40yo, mature female, sitting_on_floor, fallen, supporting_herself_with_hands, looking_away, (black_hair, messy_hair, biting_lower_lip:1.2), flushed_face, stubborn_expression, (silver_grey_silk_nightgown, messy_clothes), (black_lace_panties, stained). BREAK (1boy, zy:1.1), male_focus, standing, looking_down_at_partner, (short_black_hair, wet_hair), shirtless, muscular_build, wearing_white_towel_around_waist. BREAK (indoors), bedroom, sunlight_streaming_through_window, bright natural daylight, balanced exposure, vivid colors, dramatic_shadows, high_tension, depth_of_field."
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "正向提示词"
-    }
-  },
-  "8": {
-    "inputs": {
-      "clip": [
-        "45",
-        0
-      ],
-      "text": "worst quality, low quality, score_1, score_2, score_3, old, early, lowres, simple background, blurry, sepia"
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "负向提示词"
-    }
-  },
-  "9": {
-    "inputs": {
-      "width": 832,
-      "height": 1216,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "空Latent图像"
-    }
-  },
-  "10": {
-    "inputs": {
-      "model": [
-        "5",
-        0
-      ],
-      "positive": [
-        "7",
-        0
-      ],
-      "negative": [
-        "8",
-        0
-      ],
-      "latent_image": [
-        "9",
-        0
-      ],
-      "seed": 317540284430183,
-      "steps": 12,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "15": {
-    "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载Qwen VAE"
-    }
-  },
-  "11": {
-    "inputs": {
-      "samples": [
-        "10",
-        0
-      ],
-      "vae": [
-        "15",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "12": {
-    "inputs": {
-      "images": [
-        "11",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
     }
   }
 }

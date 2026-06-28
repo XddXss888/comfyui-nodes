@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "Convert this image to grayscale while preserving all original structures",
+      "text": "Convert this image to grayscale while preserving all original structures,black background",
       "clip": [
         "38",
         0
@@ -30,7 +30,7 @@
   },
   "31": {
     "inputs": {
-      "seed": 589010890,
+      "seed": 529461553,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler_ancestral",
@@ -122,7 +122,7 @@
   },
   "142": {
     "inputs": {
-      "image": "image (28802).png",
+      "image": "image (28961).png",
       "refresh": "refresh"
     },
     "class_type": "LoadImageOutput",
@@ -412,7 +412,7 @@
   },
   "254": {
     "inputs": {
-      "seed": 1977829464
+      "seed": 1707885207
     },
     "class_type": "GenerateUniquePrefix",
     "_meta": {

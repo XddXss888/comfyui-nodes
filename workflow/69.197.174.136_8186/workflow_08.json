@@ -2,7 +2,7 @@
   "1": {
     "inputs": {
       "tags": "alarm,pop,morning,energy",
-      "lyrics": "[Intro]\nHello Alicia\n\n[Verse]\nHello Alicia, bless this day! Faith and love will guide your way. Step by step, with hope anew. Loop this peace, God’s light through you!",
+      "lyrics": "[Intro]\nRing ring! The match is calling,  !\n\n\n[Verse]\nRing ring! The match is calling,  ! \nYour team is ready, the whistle is near, Open your eyes, the fans are here. Blanket off, feet on the floor, World Cup fever is at your door! Goal goal goal, get up now! Don’t miss the game, don’t ask me how! Ring ring ring, it’s football time, Wake up fast, the cup is online! Match alert! Match alert! Wake up!",
       "seed": 486703203651001,
       "bpm": 150,
       "duration": 30.0,
@@ -52,11 +52,11 @@
   },
   "99": {
     "inputs": {
-      "filename_prefix": "/sda-disk/home/Ringtone/music-generation-system/temp/results/d9023fcc-3351-4a34-a4db-e7eac31fad1d.mp3",
+      "filename_prefix": "/sda-disk/home/Ringtone/music-generation-system/temp/results/340dc1a1-c58a-4c53-81cd-659451b7cc14.mp3",
       "quality": "320k",
-      "audioUI": "/api/view?filename=ComfyUI.mp3&type=output&subfolder=audio&rand=0.3261628657067174",
+      "audioUI": "/api/view?filename=ComfyUI.mp3&type=output&subfolder=audio&rand=0.12376745656005916",
       "audio": [
-        "1020",
+        "105",
         0
       ]
     },
@@ -129,8 +129,8 @@
   },
   "111": {
     "inputs": {
-      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_40/EN/t40_en_raw_song.mp3",
-      "audioUI": "/api/view?filename=t40_en_raw_song.mp3&type=input&subfolder=&rand=0.014952863244792614"
+      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_45/EN/t45_en_raw_song.mp3",
+      "audioUI": "/api/view?filename=t45_en_raw_song.mp3&type=input&subfolder=&rand=0.754036664236537"
     },
     "class_type": "LoadAudio",
     "_meta": {
@@ -168,25 +168,12 @@
       "title": "Load VAE"
     }
   },
-  "1014": {
+  "1025": {
     "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_kheft.flac&type=temp&subfolder=&rand=0.7357472762684717",
-      "audio": [
-        "1030",
-        0
-      ]
-    },
-    "class_type": "PreviewAudio",
-    "_meta": {
-      "title": "Preview Audio"
-    }
-  },
-  "1018": {
-    "inputs": {
-      "start_time": 2.2,
+      "start_time": 0.0,
       "end_time": 0.0,
       "audio": [
-        "1025",
+        "111",
         0
       ]
     },
@@ -195,15 +182,28 @@
       "title": "Audio Trim ⚡🅡🅞🅣🅘"
     }
   },
-  "1020": {
+  "1029": {
+    "inputs": {
+      "audioUI": "/api/view?filename=ComfyUI_temp_zvwej.flac&type=temp&subfolder=&rand=0.4927881171874642",
+      "audio": [
+        "1025",
+        0
+      ]
+    },
+    "class_type": "PreviewAudio",
+    "_meta": {
+      "title": "Preview Audio"
+    }
+  },
+  "1034": {
     "inputs": {
       "direction": "after",
       "audio1": [
-        "1022",
+        "105",
         0
       ],
       "audio2": [
-        "1018",
+        "1039",
         0
       ]
     },
@@ -212,115 +212,74 @@
       "title": "Audio Concat"
     }
   },
-  "1022": {
+  "1039": {
     "inputs": {
-      "start_time": 0.0,
-      "end_time": 2.5,
+      "start_time": 12.8,
+      "end_time": 0.0,
+      "audio": [
+        "111",
+        0
+      ]
+    },
+    "class_type": "AudioTrim",
+    "_meta": {
+      "title": "Audio Trim ⚡🅡🅞🅣🅘"
+    }
+  },
+  "1040": {
+    "inputs": {
+      "audioUI": "/api/view?filename=ComfyUI_temp_rcjrv.flac&type=temp&subfolder=&rand=0.009599735393819309",
+      "audio": [
+        "1039",
+        0
+      ]
+    },
+    "class_type": "PreviewAudio",
+    "_meta": {
+      "title": "Preview Audio"
+    }
+  },
+  "1041": {
+    "inputs": {
+      "audioUI": "/api/view?filename=ComfyUI_temp_onrev.flac&type=temp&subfolder=&rand=0.5600443531767177",
       "audio": [
         "105",
         0
       ]
     },
-    "class_type": "AudioTrim",
-    "_meta": {
-      "title": "Audio Trim ⚡🅡🅞🅣🅘"
-    }
-  },
-  "1023": {
-    "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_fprjk.flac&type=temp&subfolder=&rand=0.07926510691692701",
-      "audio": [
-        "1022",
-        0
-      ]
-    },
     "class_type": "PreviewAudio",
     "_meta": {
       "title": "Preview Audio"
     }
   },
-  "1024": {
-    "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_irrpo.flac&type=temp&subfolder=&rand=0.19597488340056934",
-      "audio": [
-        "1018",
-        0
-      ]
-    },
-    "class_type": "PreviewAudio",
-    "_meta": {
-      "title": "Preview Audio"
-    }
-  },
-  "1025": {
-    "inputs": {
-      "start_time": 0.0,
-      "end_time": 30.0,
-      "audio": [
-        "111",
-        0
-      ]
-    },
-    "class_type": "AudioTrim",
-    "_meta": {
-      "title": "Audio Trim ⚡🅡🅞🅣🅘"
-    }
-  },
-  "1026": {
-    "inputs": {
-      "start_time": 0.0,
-      "end_time": 0.0,
-      "audio": [
-        "111",
-        0
-      ]
-    },
-    "class_type": "AudioTrim",
-    "_meta": {
-      "title": "Audio Trim ⚡🅡🅞🅣🅘"
-    }
-  },
-  "1028": {
-    "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_pdnot.flac&type=temp&subfolder=&rand=0.852703076447622",
-      "audio": [
-        "1026",
-        0
-      ]
-    },
-    "class_type": "PreviewAudio",
-    "_meta": {
-      "title": "Preview Audio"
-    }
-  },
-  "1029": {
-    "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_oqoqb.flac&type=temp&subfolder=&rand=0.010464080901711359",
-      "audio": [
-        "1025",
-        0
-      ]
-    },
-    "class_type": "PreviewAudio",
-    "_meta": {
-      "title": "Preview Audio"
-    }
-  },
-  "1030": {
+  "1042": {
     "inputs": {
       "direction": "after",
       "audio1": [
-        "1026",
+        "1025",
         0
       ],
       "audio2": [
-        "1020",
+        "1039",
         0
       ]
     },
     "class_type": "AudioConcat",
     "_meta": {
       "title": "Audio Concat"
+    }
+  },
+  "1043": {
+    "inputs": {
+      "audioUI": "/api/view?filename=ComfyUI_temp_qljqi.flac&type=temp&subfolder=&rand=0.13015989820163398",
+      "audio": [
+        "1042",
+        0
+      ]
+    },
+    "class_type": "PreviewAudio",
+    "_meta": {
+      "title": "Preview Audio"
     }
   }
 }

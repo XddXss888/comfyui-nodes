@@ -1,43 +1,70 @@
 # 136.228.141.108:8188
 
-**GPU**: RTX 5080 | **显存**: 15 GB | **空闲**: 12 GB
-**内存**: 125 GB (空闲 99 GB)
-**版本**: 0.26.0
+**GPU**: - | **显存**: — | **空闲**: —
+**内存**: - (空闲 -)
+**版本**: ?
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-27 08:08:06
-**历史总数**: 6 | **成功**: 4
+**扫描时间**: 2026-06-28 08:07:55
+**历史总数**: 34 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `90d80246-3477-4872-87ee-83013bf60c77`
-- **类型**: 视频编辑
-- **节点数**: 35
-- **模型** (2):
-  - gemma_3_12B_it_fp4_mixed.safetensors
-  - ltx-2.3-22b-distilled-fp8.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] blurry, out of focus, overexposed, underexposed, low contrast, washed out colors, excessive noise, grainy texture, poor lighting, flickering, motion blur, distorted proportions, unnatural skin tones, 
-  - [CLIPTextEncode::text] 固定镜头。背景是静帧保持不变。只是前面的人物@在讲话，保持色调风格不变，保持人物的一致性。
+- **Prompt ID**: `d65d8301-66fa-47ab-9396-8b95c2311c3c`
+- **类型**: 文生视频
+- **节点数**: 3
+- **模型** (0):
 
 ### 2. workflow_02.json
-- **Prompt ID**: `0cf4a7b8-3317-4919-9bc6-889d8e4890d9`
+- **Prompt ID**: `864baf73-03d5-44f4-b0f6-4e61fd9067da`
 - **类型**: 文生视频
-- **节点数**: 13
-- **模型** (4):
-  - gummycandy_qwen.safetensors
-  - qwen_2.5_vl_7b_fp8_scaled.safetensors
-  - qwen_image_fp8_e4m3fn.safetensors
-  - qwen_image_vae.safetensors
+- **节点数**: 3
+- **模型** (0):
 
 ### 3. workflow_03.json
-- **Prompt ID**: `451933ab-8889-422f-85a9-8e3b7acdb51d`
+- **Prompt ID**: `0c7e5689-3c27-480c-95ac-5abf11a07329`
 - **类型**: 文生视频
 - **节点数**: 3
 - **模型** (0):
 
 ### 4. workflow_04.json
-- **Prompt ID**: `968e0496-ae6d-4118-a853-d26ec3364e57`
+- **Prompt ID**: `9d6c9379-a30b-4358-951b-47d134d1ee14`
+- **类型**: 文生视频
+- **节点数**: 3
+- **模型** (0):
+
+### 5. workflow_05.json
+- **Prompt ID**: `3aace2b0-6c37-40b8-96cd-027d23945bf2`
+- **类型**: 文生视频
+- **节点数**: 3
+- **模型** (0):
+
+### 6. workflow_06.json
+- **Prompt ID**: `745630f5-b8f8-4bae-9410-932b501b240a`
+- **类型**: 文生视频
+- **节点数**: 3
+- **模型** (0):
+
+### 7. workflow_07.json
+- **Prompt ID**: `08dce523-aabb-4d1a-847a-0afb8eea2e0f`
+- **类型**: 文生视频
+- **节点数**: 3
+- **模型** (0):
+
+### 8. workflow_08.json
+- **Prompt ID**: `8565528f-afb9-491c-95a8-7a16215c3e78`
+- **类型**: 文生视频
+- **节点数**: 3
+- **模型** (0):
+
+### 9. workflow_09.json
+- **Prompt ID**: `96771a0e-e94b-45eb-a2f2-5cc1bd4d4606`
+- **类型**: 文生视频
+- **节点数**: 3
+- **模型** (0):
+
+### 10. workflow_10.json
+- **Prompt ID**: `76e11ba7-78bf-457c-8773-db1ff06080ed`
 - **类型**: 文生视频
 - **节点数**: 3
 - **模型** (0):

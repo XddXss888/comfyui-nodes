@@ -67,11 +67,11 @@
         "7",
         0
       ],
-      "seed": 1202410039,
+      "seed": 130936708659866,
       "steps": 9,
       "cfg": 1.0,
-      "sampler_name": "euler_ancestral",
-      "scheduler": "beta",
+      "sampler_name": "euler",
+      "scheduler": "simple",
       "denoise": 1.0
     }
   },

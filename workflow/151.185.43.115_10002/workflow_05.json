@@ -3276,5 +3276,31 @@
     "_meta": {
       "title": "Save Video"
     }
+  },
+  "249": {
+    "inputs": {
+      "prompt": "\"Krrrzz... Aapke... shhhh... 1200... bzzzt... rupaye... prapt... krr-krr... hue hain...\"\n\n\"Krrr... Aapke khaate mein... bzzzt... baarah sau rupaye... shhhhhh... prapt hue hain... krrrzz...\"",
+      "model": "3.1 Flash",
+      "voice_name": "Leda (Youthful)"
+    },
+    "class_type": "Official_GeminiTTSSingleNode",
+    "_meta": {
+      "title": "Gemini Text to Speech"
+    }
+  },
+  "250": {
+    "inputs": {
+      "filename_prefix": "audio/ComfyUI",
+      "quality": "V0",
+      "audioUI": "/api/view?filename=ComfyUI_00013_.mp3&type=output&subfolder=audio&rand=0.6387839250707554",
+      "audio": [
+        "249",
+        0
+      ]
+    },
+    "class_type": "SaveAudioMP3",
+    "_meta": {
+      "title": "Save Audio (MP3)"
+    }
   }
 }

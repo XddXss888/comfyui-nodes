@@ -23,7 +23,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Isolated character art of an old ancient wizard hero with a long white beard, a tall magic staff, flowing robes. ONE single cute chibi hero character in full body, standing straight, front view. STRICT CONSISTENT CHIBI PROPORTIONS: a big round head about one-third of the total body height, a small chubby torso, short stubby arms and legs, the whole character about two-and-a-half heads tall. Use exactly this proportion. Big round eyes, adorable and heroic. Soft painterly storybook style, soft fluffy hand-painted shading, cute mascot character. ONE single character, correct anatomy (two arms, two legs, one head). Centered, full body fully visible from head to feet, plain flat pale gray background, soft even lighting, no scene, no ground, no text, no frame.",
+      "text": "A a holy saintess holding a glowing staff, a flowing white-and-gold robe. STRICT CONSISTENT PROPORTIONS: a slim adult character standing straight and facing front, full body fully visible from head to feet, the head is about one-fifth of the total body height (about FIVE heads tall) - use exactly this same head-to-body ratio for every character. A simple minimal stylized face. Flat minimalist vector illustration style, clean flat color shapes with soft simple two-tone flat shading and NO outlines, a limited muted elegant color palette, simple stylized geometric rounded forms, modern indie board-game art, clean and elegant. isolated on a PLAIN flat pale gray background (no background scene, no spotlight, the subject alone so it can be cut out for card compositing). No text, no numbers, no frame, no card border.",
       "clip": [
         "2",
         0
@@ -60,7 +60,7 @@
         "12",
         0
       ],
-      "filename_prefix": "wf_H09_고대마법사"
+      "filename_prefix": "wf_H11_성녀"
     }
   },
   "6": {
@@ -78,7 +78,7 @@
         "1",
         0
       ],
-      "seed": 94712,
+      "seed": 113390,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",

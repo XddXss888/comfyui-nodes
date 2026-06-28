@@ -33,7 +33,7 @@
   },
   "4": {
     "inputs": {
-      "seed": 5006027206,
+      "seed": 3860147733,
       "steps": [
         "13",
         0
@@ -112,8 +112,8 @@
   },
   "17": {
     "inputs": {
-      "Width": 888,
-      "Height": 1184,
+      "Width": 1024,
+      "Height": 1024,
       "Batch": 1,
       "Landscape": false,
       "HiResMultiplier": 1.7000000000000002
@@ -125,7 +125,7 @@
   },
   "20": {
     "inputs": {
-      "seed": 5006027206,
+      "seed": 3860147733,
       "steps": 10,
       "cfg": [
         "13",
@@ -205,7 +205,7 @@
   },
   "32": {
     "inputs": {
-      "text": "ever_mephi_dawn_base, ((1girl)), uncensored, waero, dark, shade, pink theme, multicolored halo, blue halo, pink halo, no gloves, kidnapped, laboratory, completely nude, stasis tank, too many cables, cable, tube, oxygen mask, milking machine, corruption, closed eyes, air bubble, restrained, standing, cleft of venus, dark, shadow, pink theme, floating,, masterpiece, best quality, amazing quality"
+      "text": "ever_eve_love, ((1girl)), waero, dark, shade, wings, underground, dungeon, sitting, arms up, bound wrists, knee up, scared, open mouth, surprised, surrounded by hands, too many hands, multiple boys, reaching towards another, masterpiece, best quality, amazing quality"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -277,7 +277,7 @@
   },
   "65": {
     "inputs": {
-      "data": "[{\"name\": \"mephi_dawn_base.safetensors\", \"strength\": 0.85, \"strength_clip\": 1.0}]",
+      "data": "[{\"name\": \"eve_love.safetensors\", \"strength\": 0.85, \"strength_clip\": 1.0}]",
       "model": [
         "36",
         0

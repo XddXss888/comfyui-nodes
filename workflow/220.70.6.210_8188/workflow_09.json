@@ -12,7 +12,7 @@
         "1",
         1
       ],
-      "text": "contact us,  customer service,  support, aerial or street-level map perspective, modern urban, clean signage, welcoming entrance, enterprise environment, corporate professionalism, B2B modern workspace, no text, no watermark, no logo, photorealistic"
+      "text": "A cute dog drinking coffee, eye-level medium shot, soft natural light, warm inviting tones, photorealistic, candid photography, highly detailed, sharp focus, professional photography, 8k."
     }
   },
   "3": {
@@ -29,7 +29,7 @@
     "class_type": "EmptyLatentImage",
     "inputs": {
       "width": 1024,
-      "height": 512,
+      "height": 576,
       "batch_size": 1
     }
   },
@@ -52,7 +52,7 @@
         "4",
         0
       ],
-      "seed": 229969757410061923,
+      "seed": 220312577161492021,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -80,7 +80,7 @@
         "6",
         0
       ],
-      "filename_prefix": "sb_a3c1e290_contact"
+      "filename_prefix": "sb_7c2e4e53_general"
     }
   }
 }

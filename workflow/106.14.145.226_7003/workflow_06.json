@@ -1,97 +1,167 @@
 {
-  "154": {
+  "9": {
     "inputs": {
-      "sampler_name": "euler_ancestral"
-    },
-    "class_type": "KSamplerSelect",
-    "_meta": {
-      "title": "K采样器选择"
-    }
-  },
-  "164": {
-    "inputs": {
-      "frame_rate": 25.0,
-      "positive": [
-        "607",
-        1
-      ],
-      "negative": [
-        "420",
+      "filename_prefix": "Qwen_Edit_2511/image",
+      "images": [
+        "158",
         0
       ]
     },
-    "class_type": "LTXVConditioning",
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "LTXV条件"
+      "title": "保存图像"
     }
   },
-  "358": {
+  "41": {
     "inputs": {
-      "start_step": 0,
-      "end_step": -1,
-      "sigmas": [
-        "514",
+      "image": "edit_input_1782570191.jpeg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "144": {
+    "inputs": {
+      "shift": 3.1,
+      "model": [
+        "168",
         0
       ]
     },
-    "class_type": "VisualizeSigmasKJ",
+    "class_type": "ModelSamplingAuraFlow",
     "_meta": {
-      "title": "VisualizeSigmasKJ"
+      "title": "采样算法（AuraFlow）"
     }
   },
-  "414": {
+  "145": {
     "inputs": {
-      "unet_name": "ltx-2.3-22b-distilled-1.1_transformer_only_fp8_scaled.safetensors",
-      "weight_dtype": "default"
+      "vae_name": "Qwen\\qwen_image_vae.safetensors"
     },
-    "class_type": "UNETLoader",
+    "class_type": "VAELoader",
     "_meta": {
-      "title": "UNet加载器"
+      "title": "加载VAE"
     }
   },
-  "416": {
+  "146": {
     "inputs": {
-      "clip_name1": "gemma_3_12B_it.safetensors",
-      "clip_name2": "ltx-2.3_text_projection_bf16.safetensors",
-      "type": "ltxv",
-      "device": "default"
-    },
-    "class_type": "DualCLIPLoader",
-    "_meta": {
-      "title": "双CLIP加载器"
-    }
-  },
-  "420": {
-    "inputs": {
+      "reference_latents_method": "index_timestep_zero",
       "conditioning": [
-        "607",
-        1
+        "148",
+        0
       ]
     },
-    "class_type": "ConditioningZeroOut",
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
     "_meta": {
-      "title": "条件零化"
+      "title": "FluxKontext多参考潜在方法"
     }
   },
-  "470": {
+  "147": {
     "inputs": {
-      "vae_name": "LTX-Kijai\\LTX23_audio_vae_bf16.safetensors",
-      "device": "main_device",
-      "weight_dtype": "bf16"
+      "reference_latents_method": "index_timestep_zero",
+      "conditioning": [
+        "150",
+        0
+      ]
     },
-    "class_type": "VAELoaderKJ",
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
     "_meta": {
-      "title": "VAELoader KJ"
+      "title": "FluxKontext多参考潜在方法"
     }
   },
-  "471": {
+  "148": {
     "inputs": {
-      "samples": [
-        "549",
+      "prompt": "",
+      "clip": [
+        "163",
         0
       ],
       "vae": [
-        "553",
+        "145",
+        0
+      ],
+      "image1": [
+        "161",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "文本编码（QwenImageEditPlus）"
+    }
+  },
+  "150": {
+    "inputs": {
+      "prompt": "人物更像一个六翼天使，翅膀更大更真实。\r\n人物皮肤白一点，稍微让腿部瘦一点\r\n肤色基调向冷色偏移5%，降低黄色饱和度10个单位，提升明亮度15个单位。严控过白或偏灰现象。\r\n提亮人物双腿，修复腿部欠曝，提升阴影亮度，保留皮肤纹理，光影自然柔和，肤色统一，不发白、不糊脸、不变形，背景保持原样，上身亮度不变，自然光过渡均匀，高清皮肤细节",
+      "clip": [
+        "163",
+        0
+      ],
+      "vae": [
+        "145",
+        0
+      ],
+      "image1": [
+        "161",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus (Positive)"
+    }
+  },
+  "151": {
+    "inputs": {
+      "strength": 1.0,
+      "model": [
+        "144",
+        0
+      ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "CFG归一化"
+    }
+  },
+  "152": {
+    "inputs": {
+      "lora_name": "Qwen-Image-Edit\\Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "151",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "156": {
+    "inputs": {
+      "pixels": [
+        "161",
+        0
+      ],
+      "vae": [
+        "145",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "158": {
+    "inputs": {
+      "samples": [
+        "159",
+        0
+      ],
+      "vae": [
+        "145",
         0
       ]
     },
@@ -100,262 +170,66 @@
       "title": "VAE解码"
     }
   },
-  "514": {
+  "159": {
     "inputs": {
-      "scheduler": "linear_quadratic",
-      "steps": 8,
+      "seed": 1059110371870382,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
       "denoise": 1.0,
       "model": [
-        "542",
-        0
-      ]
-    },
-    "class_type": "BasicScheduler",
-    "_meta": {
-      "title": "基本调度器"
-    }
-  },
-  "542": {
-    "inputs": {
-      "sage_attention": "auto",
-      "allow_compile": false,
-      "model": [
-        "414",
-        0
-      ]
-    },
-    "class_type": "PathchSageAttentionKJ",
-    "_meta": {
-      "title": "Patch Sage Attention KJ"
-    }
-  },
-  "547": {
-    "inputs": {
-      "frames_number": 489,
-      "frame_rate": 25,
-      "batch_size": 1,
-      "audio_vae": [
-        "470",
-        0
-      ]
-    },
-    "class_type": "LTXVEmptyLatentAudio",
-    "_meta": {
-      "title": "LTXV 空音频潜空间"
-    }
-  },
-  "548": {
-    "inputs": {
-      "video_latent": [
-        "582",
-        0
-      ],
-      "audio_latent": [
-        "547",
-        0
-      ]
-    },
-    "class_type": "LTXVConcatAVLatent",
-    "_meta": {
-      "title": "LTXVConcatAVLatent"
-    }
-  },
-  "549": {
-    "inputs": {
-      "av_latent": [
-        "561",
-        0
-      ]
-    },
-    "class_type": "LTXVSeparateAVLatent",
-    "_meta": {
-      "title": "LTXV分离音视频潜空间"
-    }
-  },
-  "550": {
-    "inputs": {
-      "samples": [
-        "549",
-        1
-      ],
-      "audio_vae": [
-        "470",
-        0
-      ]
-    },
-    "class_type": "LTXVAudioVAEDecode",
-    "_meta": {
-      "title": "LTXV音频VAE解码"
-    }
-  },
-  "553": {
-    "inputs": {
-      "vae_name": "LTX-Kijai\\LTX23_video_vae_bf16.safetensors",
-      "device": "main_device",
-      "weight_dtype": "bf16"
-    },
-    "class_type": "VAELoaderKJ",
-    "_meta": {
-      "title": "VAELoader KJ"
-    }
-  },
-  "561": {
-    "inputs": {
-      "add_noise": true,
-      "noise_seed": 17,
-      "cfg": 1.0,
-      "model": [
-        "588",
+        "152",
         0
       ],
       "positive": [
-        "164",
+        "147",
         0
       ],
       "negative": [
-        "164",
-        1
-      ],
-      "sampler": [
-        "154",
-        0
-      ],
-      "sigmas": [
-        "358",
+        "146",
         0
       ],
       "latent_image": [
-        "548",
+        "156",
         0
       ]
     },
-    "class_type": "SamplerCustom",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "自定义采样器"
+      "title": "K采样器"
     }
   },
-  "577": {
+  "161": {
     "inputs": {
-      "width": 640,
-      "height": 640,
-      "length": 888,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLTXVLatentVideo",
-    "_meta": {
-      "title": "空Latent视频（LTXV）"
-    }
-  },
-  "582": {
-    "inputs": {
-      "num_images": "1",
-      "num_images.strength_1": 1.0,
-      "num_images.index_1": 0,
-      "vae": [
-        "553",
-        0
-      ],
-      "latent": [
-        "577",
-        0
-      ],
-      "num_images.image_1": [
-        "586",
-        0
-      ]
-    },
-    "class_type": "LTXVImgToVideoInplaceKJ",
-    "_meta": {
-      "title": "LTXVImgToVideoInplaceKJ"
-    }
-  },
-  "584": {
-    "inputs": {
-      "image": "script_img_1782454245.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "586": {
-    "inputs": {
-      "img_compression": 30,
       "image": [
-        "584",
+        "41",
         0
       ]
     },
-    "class_type": "LTXVPreprocess",
+    "class_type": "FluxKontextImageScale",
     "_meta": {
-      "title": "LTXV预处理"
+      "title": "图像缩放为FluxKontext"
     }
   },
-  "588": {
+  "163": {
     "inputs": {
-      "preview_rate": 8,
-      "model": [
-        "607",
-        0
-      ]
+      "clip_name": "Qwen\\qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
     },
-    "class_type": "LTX2SamplingPreviewOverride",
+    "class_type": "CLIPLoader",
     "_meta": {
-      "title": "LTX2 Sampling Preview Override"
+      "title": "加载CLIP"
     }
   },
-  "604": {
+  "168": {
     "inputs": {
-      "frame_rate": 25.0,
-      "loop_count": 0,
-      "filename_prefix": "ltx23",
-      "format": "video/h264-mp4",
-      "pix_fmt": "yuv420p",
-      "crf": 19,
-      "save_metadata": true,
-      "trim_to_audio": false,
-      "pingpong": false,
-      "save_output": true,
-      "images": [
-        "471",
-        0
-      ],
-      "audio": [
-        "550",
-        0
-      ]
+      "unet_name": "Qwen_Image_Edit\\Qwen_Image_Edit_2511\\qwen-image-edit-2511-Q6_K.gguf"
     },
-    "class_type": "VHS_VideoCombine",
+    "class_type": "UnetLoaderGGUF",
     "_meta": {
-      "title": "v2"
-    }
-  },
-  "607": {
-    "inputs": {
-      "global_prompt": "一、核心风格（Core Style）\r\n• 关键词：奇幻，童趣，治愈，魔法\r\n• AI提示词：画面整体风格充满童真与奇幻色彩，色调明亮柔和，以粉蓝、鹅黄、浅紫等梦幻色系为主，场景可设定在洒满阳光的草坪或摆满玩偶的房间，突出小女孩施法时的惊喜与灵动，营造温暖治愈的魔法氛围。\r\n二、画面质感（Visual Texture）\r\n• 关键词：细腻，梦幻，光泽感，动态模糊\r\n• AI提示词：画面细节细腻，魔法元素（如光点、烟雾）带有柔和光泽与轻微动态模糊，人物皮肤质感通透，衣物布料柔软有纹理，光影呈现漫反射效果，整体画面如童话绘本般精致且富有动态感。\r\n三、人物/角色建模（Character Modeling）\r\n• 小女孩：梳着双马尾，发尾微微卷曲，扎着粉色蝴蝶结发绳。皮肤白皙，脸颊透着自然红晕，眼睛又大又圆，瞳孔呈浅棕色，睫毛纤长，鼻子小巧，嘴唇粉嫩。穿着白色泡泡袖衬衫，外面套着浅蓝色背带短裙，裙摆有白色蕾丝花边，脚上是白色长袜配棕色小皮鞋。身材小巧，四肢纤细，专属神态是专注时微微抿嘴、成功后眼睛发亮，标志性动作是举起右手食指绕圈（施法手势），专属配饰是脖子上挂着的银色星星吊坠。",
-      "max_frames": 888,
-      "timeline_data": "{\"segments\":[{\"prompt\":\"An old man says \\\"Well well... what do we have here?\\\" and takes his hat off\",\"length\":123,\"color\":\"#4f8edc\"},{\"prompt\":\"A red panda jumps onto the old mans lap\",\"length\":122,\"color\":\"#e07b3a\"},{\"prompt\":\"The old man feeds the red panda an ice cream cone\",\"length\":122,\"color\":\"#d9534f\"},{\"prompt\":\"The red panda grabs the ice cream cone and runs away, while the old man says \\\"oh, okay then... keep it\\\"\",\"length\":122,\"color\":\"#5cb85c\"}]}",
-      "local_prompts": "场景：户外草坪（背景有盛开的蒲公英和白色栅栏）\r\n镜头1：全景（缓慢推近）\r\n小女孩站在草坪中央，双手背在身后，歪头看着面前的蒲公英丛（好奇） | 镜头2：中景（轻微晃动）\r\n小女孩向前迈一步，伸出右手，食指指尖对准一朵闭合的蒲公英（认真） | 镜头3：特写（快速聚焦指尖）\r\n指尖冒出细碎的金色光点，顺着手指飘向蒲公英（神奇）\r\n小女孩轻声念：“飞呀飞，开花吧～” | 镜头4：中景（跟随光点移动）\r\n金色光点落在蒲公英上，花苞瞬间展开，白色绒毛轻轻晃动（惊喜）\r\n小女孩眼睛瞪圆，嘴角咧开，左手捂住嘴巴（惊讶又开心） | 镜头5：全景（轻微仰拍）\r\n蒲公英绒毛突然被光点带着飞起，在空中盘旋成小漩涡，小女孩踮起脚尖，伸出双手跟着旋转（兴奋） | 镜头6：近景（侧移）\r\n小女孩转了一圈后停下，看着飘散的绒毛和光点，笑着拍手（满足）",
-      "segment_lengths": "200,200,122,122,122,122",
-      "epsilon": 0.001,
-      "fps": 24.0,
-      "time_units": "frames",
-      "model": [
-        "542",
-        0
-      ],
-      "clip": [
-        "416",
-        0
-      ],
-      "latent": [
-        "577",
-        0
-      ]
-    },
-    "class_type": "PromptRelayEncodeTimeline",
-    "_meta": {
-      "title": "Prompt Relay Encode (Timeline)"
+      "title": "Unet Loader (GGUF)"
     }
   }
 }

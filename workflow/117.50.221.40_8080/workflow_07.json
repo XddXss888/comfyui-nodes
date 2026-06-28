@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Ancient Chinese woman in delicate pink hanfu, fabric gently slipping off one shoulder, standing in a weathered abandoned temple with crumbling walls and soft dusty light—masterpiece, best quality, highly detailed, cinematic lighting, elegant and serene atmosphere, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "Ancient Chinese martial arts scene: protagonist with fierce expression, sword blade glinting near cheek, rain-soaked night, dramatic lightning flash, cinematic lighting, intricate hanfu details, 8K ultra-detailed CG rendering, masterpiece, best quality, professional digital painting, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -40,7 +40,7 @@
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 762176296,
+      "seed": 1799538295,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",

@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 1490112426,
+      "seed": 1984033476,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,masturbating,looking at viewer,spread legs,barefoot,feet,toes,lips,indoors,couch,plant,holding phone,phone,cellphone,smartphone,(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,breasts,looking at viewer,indoors,ass,lips,realistic,(show me breasts:1.0),(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202411/30/63c3b53bd0aa40b489f59504b29bf723.webp",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20263/28/ac09f7cd5f30450f87526f68f66e4a70.jpg",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

@@ -3250,6 +3250,10 @@
       "images.image_1": [
         "246",
         0
+      ],
+      "images.image_2": [
+        "243",
+        0
       ]
     },
     "class_type": "Kie_GeminiOmniVideoNode",
@@ -3262,6 +3266,7 @@
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
+      "video-preview": "",
       "video": [
         "247",
         0
@@ -3270,6 +3275,32 @@
     "class_type": "SaveVideo",
     "_meta": {
       "title": "Save Video"
+    }
+  },
+  "249": {
+    "inputs": {
+      "prompt": "\"Krrrzz... Aapke... shhhh... 1200... bzzzt... rupaye... prapt... krr-krr... hue hain...\"",
+      "model": "3.1 Flash",
+      "voice_name": "Leda (Youthful)"
+    },
+    "class_type": "Official_GeminiTTSSingleNode",
+    "_meta": {
+      "title": "Gemini Text to Speech"
+    }
+  },
+  "250": {
+    "inputs": {
+      "filename_prefix": "audio/ComfyUI",
+      "quality": "V0",
+      "audioUI": "",
+      "audio": [
+        "249",
+        0
+      ]
+    },
+    "class_type": "SaveAudioMP3",
+    "_meta": {
+      "title": "Save Audio (MP3)"
     }
   }
 }

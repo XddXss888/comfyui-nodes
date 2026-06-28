@@ -1,19 +1,20 @@
 {
   "9": {
     "inputs": {
+      "filename_prefix": "z-image-base",
       "images": [
         "76:65",
         0
       ]
     },
-    "class_type": "PreviewImage",
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "Preview Image"
+      "title": "Save Image"
     }
   },
   "76:67": {
     "inputs": {
-      "text": "A brunette female museum curator in a classic blazer, standing in a grand gallery with a famous painting behind her, natural light from skylights, thoughtful knowledgeable expression, shot on Leica M10 with 85mm lens, editorial portrait, high-end editorial magazine portrait, Vogue-style professional portrait photography, clean premium composition, sophisticated wardrobe styling, true neutral white editorial lighting, balanced daylight color temperature around 5000K, neutral grey shadows, invisible off-camera diffused key light, subtle neutral rim light, no lighting equipment visible in frame, refined natural color grading, realistic skin texture, sharp eyes, shallow depth of field, no warm cast, no cool cast, no yellow cast, no blue cast, no amber cast, 2:3 vertical editorial portrait composition, subject looking directly into the camera",
+      "text": "Portrait of a female financial analyst in business suit, looking directly into camera, sitting at modern office desk with multiple monitors showing charts and graphs, city view through window, professional atmosphere, soft office lighting, 50mm lens, f/2.0, shallow depth of field, vertical portrait composition, photorealistic, high detail",
       "clip": [
         "76:80",
         1
@@ -26,8 +27,8 @@
   },
   "76:68": {
     "inputs": {
-      "width": 832,
-      "height": 1248,
+      "width": 1024,
+      "height": 1536,
       "batch_size": 1
     },
     "class_type": "EmptySD3LatentImage",
@@ -87,8 +88,8 @@
   "76:80": {
     "inputs": {
       "lora_name": "Portrait_SoloLoRA_ZIBv1.safetensors",
-      "strength_model": 0.5,
-      "strength_clip": 0.5,
+      "strength_model": 0.6,
+      "strength_clip": 0.6,
       "model": [
         "76:66",
         0
@@ -115,7 +116,7 @@
   },
   "76:71": {
     "inputs": {
-      "text": "extra fingers, deformed hands, watermark, text, yellow light, yellow color cast, amber light, golden light, warm light, warm color grading, orange lighting, sepia, tungsten yellow, blue light, blue color cast, cyan light, cold lighting, cool color grading, teal color grading, steel-blue shadows, visible softbox, softbox in frame, studio light in frame, light stand, umbrella light, lighting equipment, photographer equipment, behind-the-scenes gear, gritty action movie, movie poster, excessive smoke, heavy haze, harsh dramatic shadows, overprocessed cinematic look",
+      "text": "",
       "clip": [
         "76:80",
         1
@@ -128,8 +129,8 @@
   },
   "76:69": {
     "inputs": {
-      "seed": 8808105007539418069,
-      "steps": 30,
+      "seed": 1318854582440022771,
+      "steps": 40,
       "cfg": 4.0,
       "sampler_name": "res_multistep",
       "scheduler": "simple",

@@ -21,26 +21,37 @@
     }
   },
   "4": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "lora_name": "flux_korean_girl.safetensors",
+      "strength_model": 0.8
+    }
+  },
+  "5": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
         "2",
         0
       ],
-      "text": "A stunning Korean idol-style woman stands in endless lavender fields of Provence at golden hour, shot on 50mm lens, Dutch angle tilted frame, cowboy shot from thighs up. Platinum blonde hair swept into a loose messy bun with wispy tendrils catching the warm breeze. High cheekbones catch cross lighting from two sides, creating sculptural shadows across her elegant nose and dewy, flawless skin. She wears a flowing ivory summer dress with delicate straps, fabric rippling softly. Her expression is warm and approachable, a gentle knowing smile with soft crescent eyes. Styled with gradient coral lips and shimmer highlighter. Cinematic 21:9 widescreen composition, rich film grain, anamorphic bokeh rendering purple lavender into dreamy oval light orbs. Golden diffused atmosphere, editorial fashion photography."
+      "text": "Stunning Korean idol portrait, fox-like eyes with smoky copper liner, slim angular face, subtle auburn-tinted side-swept long hair cascading over one shoulder. Cool edgy expression, lips slightly parted with defiant confidence. Cowboy shot thighs up, wrap dress in warm earth tones cinched at the waist. Shot on 24mm wide angle with dynamic low perspective, reflected in a rain-streaked glass panel along a riverside boardwalk at dusk. Rembrandt triangle shadow cast by soft window light spilling from a nearby café. Golden hour glow on water behind her, shallow depth of field rendering the distant bridge lights into bokeh. Hyper detailed skin texture, luminous dewy highlight on cheekbones. Extreme close-up detail on crystalline iris reflections. No text, no watermarks."
     }
   },
-  "5": {
+  "6": {
     "class_type": "FluxGuidance",
     "inputs": {
       "conditioning": [
-        "4",
+        "5",
         0
       ],
       "guidance": 3.5
     }
   },
-  "6": {
+  "7": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
@@ -50,47 +61,47 @@
       "text": ""
     }
   },
-  "7": {
+  "8": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "width": 1920,
-      "height": 816,
+      "width": 1024,
+      "height": 1024,
       "batch_size": 1
     }
   },
-  "8": {
+  "9": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "1",
+        "4",
         0
       ],
       "positive": [
-        "5",
-        0
-      ],
-      "negative": [
         "6",
         0
       ],
-      "latent_image": [
+      "negative": [
         "7",
         0
       ],
-      "seed": 1031842549,
+      "latent_image": [
+        "8",
+        0
+      ],
+      "seed": 1786285381,
       "control_after_generate": "fixed",
-      "steps": 22,
+      "steps": 24,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0
     }
   },
-  "9": {
+  "10": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "8",
+        "9",
         0
       ],
       "vae": [
@@ -99,14 +110,14 @@
       ]
     }
   },
-  "10": {
+  "11": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "9",
+        "10",
         0
       ],
-      "filename_prefix": "portrait_1031842549"
+      "filename_prefix": "portrait_1786285381"
     }
   }
 }

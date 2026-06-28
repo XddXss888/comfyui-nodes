@@ -12,7 +12,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "6",
+        "28",
         0
       ]
     },
@@ -21,37 +21,19 @@
       "title": "保存图像"
     }
   },
-  "3": {
+  "15": {
     "inputs": {
-      "image": "ip.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "4": {
-    "inputs": {
-      "image": "游乐园.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "5": {
-    "inputs": {
-      "prompt": "参考图1中的主要人物，保持图2的泡泡小山IP角色造型不变，生成小巧的泡泡小山在人物旁边一起合影的画面，中近景半身人像构图，人物智能美颜，美式动漫插画风格，丝网印刷风格，颗粒肌理。背景是童话风游乐园场景，米白城堡与红顶塔楼在蓝天映衬下格外梦幻，巨大摩天轮如时光之轮静静伫立，湖面倒映着建筑与流云，垂柳轻拂，完全还原参考图3中的建筑造型。色调清新明快，光影柔和通透，整体风格是治愈系粉色调，颜色鲜亮，色彩饱和，高对比度，氛围感温馨，细节丰富，质感细腻。",
+      "prompt": "参考图一中的主要人物和图二的吉祥物，保持图二吉祥物头部外形不变，图一人物轻微美颜、磨皮和美白，花野治愈陪伴风格。主体为图一人物和图二吉祥物并肩坐在草地花海中，人物靠在吉祥物肩上，二者都佩戴花环，占据视觉中心。人物和吉祥物互动亲密自然，吉祥物面向镜头，自然微笑。前景有茂密的花花草草，背景是茂密的草地花海边，河流、草甸和远山，整体为温柔、梦幻、治愈的插画写意风，氛围轻柔，复古色调，高对比度。",
       "model": "doubao-seedream-4-5-251128",
       "response_format": "url",
       "resolution": "4K",
       "aspect_ratio": "Custom",
-      "width": 1120,
+      "width": 1184,
       "height": 800,
       "apikey": "a44228f5-f1b2-44e9-860a-d3c8eb5ac03e",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 1756243057,
+      "seed": 869343101,
       "watermark": false,
       "stream": false,
       "image1": [
@@ -59,11 +41,7 @@
         0
       ],
       "image2": [
-        "3",
-        0
-      ],
-      "image3": [
-        "4",
+        "26",
         0
       ]
     },
@@ -72,25 +50,47 @@
       "title": "Comfly Doubao Seedream4.0"
     }
   },
-  "6": {
+  "18": {
     "inputs": {
       "aspect_ratio": "custom",
-      "proportional_width": 1120,
-      "proportional_height": 800,
+      "proportional_width": 2622,
+      "proportional_height": 1772,
       "fit": "crop",
       "method": "bicubic",
       "round_to_multiple": "None",
       "scale_to_side": "width",
-      "scale_to_length": 1120,
+      "scale_to_length": 2622,
       "background_color": "#000000",
       "image": [
-        "5",
+        "15",
         0
       ]
     },
     "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
     "_meta": {
       "title": "图层工具：按宽高比缩放 V2"
+    }
+  },
+  "26": {
+    "inputs": {
+      "image": "cym.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "28": {
+    "inputs": {
+      "rotation": "270 degrees",
+      "image": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "ImageRotate",
+    "_meta": {
+      "title": "图像旋转"
     }
   }
 }

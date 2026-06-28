@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "jimeng-2026-06-10-1991-优雅气质的美女，在森林里微笑着面对镜头，穿着白底写意晕染模糊粉白玫瑰真丝飘逸长裙....png"
+      "image": "input_9aff056473f1.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -12,7 +12,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "6",
+        "8",
         0
       ]
     },
@@ -21,63 +21,50 @@
       "title": "保存图像"
     }
   },
-  "3": {
+  "8": {
     "inputs": {
-      "image": "石景山.png"
+      "aspect_ratio": "custom",
+      "proportional_width": 2622,
+      "proportional_height": 1772,
+      "fit": "crop",
+      "method": "bicubic",
+      "round_to_multiple": "None",
+      "scale_to_side": "width",
+      "scale_to_length": 2622,
+      "background_color": "#000000",
+      "image": [
+        "14",
+        0
+      ]
     },
-    "class_type": "LoadImage",
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
     "_meta": {
-      "title": "加载图像"
+      "title": "按宽高比缩放_V2"
     }
   },
-  "5": {
+  "14": {
     "inputs": {
-      "prompt": "整个画面可爱3D风格化，保持图1中主要人物一致，人物可爱3D风格化，近景半身人像构图。背景保持图2场景一致，转化为赛博石景山夜晚场景，流动数据波纹缠绕建筑、悬浮能、飞行器、发光粒子、时空裂缝光效，冷蓝紫霓虹流光贯穿，纵深极强，全身环绕蓝色电流光脉、数据代码流、高能粒子雾，地面反射高清科幻光影，8K 超写实，冷色调，高对比度",
-      "model": "doubao-seedream-4-5-251128",
+      "prompt": "保持图中人物的一致性，生成他们和熊猫合影的画面，左右两侧有可爱的熊猫趴在他们肩头，背景是竹园风光。写真摄影风格，中景景别，轻微美颜，人像精修",
+      "model": "doubao-seedream-4-0-250828",
       "response_format": "url",
-      "resolution": "4K",
-      "aspect_ratio": "3:2",
-      "width": 1120,
-      "height": 800,
-      "apikey": "a44228f5-f1b2-44e9-860a-d3c8eb5ac03e",
+      "resolution": "1K",
+      "aspect_ratio": "Custom",
+      "width": 3416,
+      "height": 2304,
+      "apikey": "fe023f32-413c-41f8-a35d-694231e4c96a",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 465930611,
+      "seed": 1966431764,
       "watermark": false,
       "stream": false,
       "image1": [
         "1",
-        0
-      ],
-      "image2": [
-        "3",
         0
       ]
     },
     "class_type": "Comfly_Doubao_Seedream_4",
     "_meta": {
       "title": "Comfly Doubao Seedream4.0"
-    }
-  },
-  "6": {
-    "inputs": {
-      "aspect_ratio": "custom",
-      "proportional_width": 1120,
-      "proportional_height": 800,
-      "fit": "crop",
-      "method": "bicubic",
-      "round_to_multiple": "None",
-      "scale_to_side": "width",
-      "scale_to_length": 1120,
-      "background_color": "#000000",
-      "image": [
-        "5",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
-    "_meta": {
-      "title": "图层工具：按宽高比缩放 V2"
     }
   }
 }

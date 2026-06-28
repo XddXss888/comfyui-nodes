@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Adorable Halloween ghost and cute pumpkin, circular sticker design, pastel colors, soft shadows, clean vector style, playful and whimsical, masterpiece, best quality, detailed, professional illustration, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "A yellow Lamborghini speeding through a desert, dynamic motion blur, flying sand and dust particles, intense sandstorm in background, dramatic golden-hour lighting, cinematic composition, masterpiece, best quality, ultra-detailed, professional photography., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -32,22 +32,22 @@
   "5": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 1024,
+      "width": 576,
       "height": 1024,
-      "batch_size": 1
+      "batch_size": 2
     }
   },
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 1800245454,
+      "seed": 568120919,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "sgm_uniform",
       "denoise": 1.0,
       "model": [
-        "12",
+        "1",
         0
       ],
       "positive": [
@@ -90,9 +90,9 @@
   "9": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_1K",
+      "filename_prefix": "DOOOOR_2K",
       "images": [
-        "8",
+        "14",
         0
       ]
     }
@@ -113,27 +113,30 @@
   "11": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_1K_TH",
+      "filename_prefix": "DOOOOR_2K_TH",
       "images": [
         "10",
         0
       ]
     }
   },
-  "12": {
-    "class_type": "LoraLoader",
+  "13": {
+    "class_type": "UpscaleModelLoader",
     "inputs": {
-      "model": [
-        "1",
+      "model_name": "2xLexicaRRDBNet_Sharp.pth"
+    }
+  },
+  "14": {
+    "class_type": "ImageUpscaleWithModel",
+    "inputs": {
+      "upscale_model": [
+        "13",
         0
       ],
-      "clip": [
-        "2",
+      "image": [
+        "8",
         0
-      ],
-      "lora_name": "动漫转真人.safetensors",
-      "strength_model": 0.8,
-      "strength_clip": 0.8
+      ]
     }
   }
 }

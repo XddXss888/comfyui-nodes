@@ -1,100 +1,62 @@
 # https://comfy.icecubelab.com
 
-**GPU**: RTX 3090 | **显存**: 24 GB | **空闲**: 3 GB
-**内存**: 31 GB (空闲 19 GB)
+**GPU**: RTX 3090 | **显存**: 24 GB | **空闲**: 2 GB
+**内存**: 31 GB (空闲 18 GB)
 **版本**: 0.25.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-27 08:08:15
-**历史总数**: 65 | **成功**: 10
+**扫描时间**: 2026-06-28 08:08:03
+**历史总数**: 78 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `ebf80a0a-570b-4f9e-b6ea-12119e5aa481`
-- **类型**: 文生图
-- **节点数**: 8
-- **模型** (2):
-  - RealVisXL_V5.0.safetensors
-  - sdxl_vae.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] RAW photo, ultra realistic skin texture, stunning Korean idol woman with ash brown side-swept long hair cascading over one shoulder, heart-shaped face with full lips, serene contemplative expression g
-  - [CLIPTextEncode::text] cartoon, anime, illustration, painting, low quality, blurry, deformed, extra fingers, bad anatomy, watermark, text, signature, oversaturated
-
-### 2. workflow_02.json
-- **Prompt ID**: `26022d25-f53e-4ef0-9e2e-60a776e7bd59`
-- **类型**: 文生图
-- **节点数**: 10
-- **模型** (4):
-  - ae.safetensors
-  - clip_l.safetensors
-  - flux1-dev.safetensors
-  - t5xxl_fp16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A stunning Korean idol-style woman stands in endless lavender fields of Provence at golden hour, shot on 50mm lens, Dutch angle tilted frame, cowboy shot from thighs up. Platinum blonde hair swept int
-
-### 3. workflow_03.json
-- **Prompt ID**: `f549e1b8-4e71-4483-a51e-ff37563994cc`
-- **类型**: 文生图
-- **节点数**: 11
-- **模型** (5):
-  - ae.safetensors
-  - clip_l.safetensors
-  - flux1-dev.safetensors
-  - flux_korean_girl.safetensors
-  - t5xxl_fp16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A serene Korean woman with burgundy red fluffy wolf cut hair sits in a zen garden at dawn, morning dew glistening on moss-covered stones around her. Shot from ground level looking upward with a macro 
-
-### 4. workflow_04.json
-- **Prompt ID**: `18fdca7d-a247-465e-9761-49aba0d11548`
-- **类型**: 文生图
-- **节点数**: 11
-- **模型** (5):
-  - ae.safetensors
-  - clip_l.safetensors
-  - flux1-dev.safetensors
-  - flux_korean_girl.safetensors
-  - t5xxl_fp16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A stunning Korean idol portrait, shot on 135mm telephoto with compressed bokeh background. High angle looking down at a beautiful young woman half-submerged in a crystal-clear swimming pool, wearing a
-
-### 5. workflow_05.json
-- **Prompt ID**: `a3b78146-ba94-4dc0-b9d9-bca6e3e92a29`
-- **类型**: 文生图
-- **节点数**: 8
-- **模型** (2):
-  - epicRealismXL_pureFix.safetensors
-  - sdxl_vae.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A stunning Korean idol-style woman in a vintage film studio, chestnut brown textured shag cut framing high cheekbones and an elegant nose, coy half-smile gazing away from camera. Half body waist up, s
-  - [CLIPTextEncode::text] lowres, blurry, bad anatomy, watermark, signature, oversaturated, harsh lighting, plastic skin
-
-### 6. workflow_06.json
-- **Prompt ID**: `263f8cac-24f6-4bf0-a085-0b39f94bde38`
-- **类型**: 文生图
-- **节点数**: 11
-- **模型** (5):
-  - ae.safetensors
-  - clip_l.safetensors
-  - flux1-dev.safetensors
-  - flux_korean_girl.safetensors
-  - t5xxl_fp16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A melancholic Korean woman with a dark short bob cut featuring soft face-framing caramel highlights, shot on a 24mm wide angle lens creating subtle dynamic perspective distortion. Extreme close-up, ey
-
-### 7. workflow_07.json
-- **Prompt ID**: `a44bf550-7524-4328-815a-1c20e225a31d`
+- **Prompt ID**: `aa2571e8-f73b-499b-ab2c-1f6590fc202a`
 - **类型**: 文生图
 - **节点数**: 8
 - **模型** (2):
   - juggernautXL_ragnarok.safetensors
   - sdxl_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] A stunning Korean idol in a cozy cream turtleneck and tailored camel coat, standing in endless rows of blooming lavender in Provence. Jet black long straight hair falls like silk past her shoulders, c
+  - [CLIPTextEncode::text] A stunning Korean idol woman with warm caramel balayage long hair and wispy bangs, diamond face shape with defined brows, serene contemplative expression, looking over her shoulder toward camera. Full
   - [CLIPTextEncode::text] lowres, blurry, bad anatomy, deformed, watermark, signature, extra fingers, cartoon, anime, painting
 
-### 8. workflow_08.json
-- **Prompt ID**: `c78dc3e2-5a48-43e2-b495-9a7e3052de9d`
+### 2. workflow_02.json
+- **Prompt ID**: `e4a080ed-b9cb-4b17-8b1c-5b15aa497b26`
+- **类型**: 文生图
+- **节点数**: 11
+- **模型** (5):
+  - ae.safetensors
+  - clip_l.safetensors
+  - flux1-dev.safetensors
+  - flux_korean_girl.safetensors
+  - t5xxl_fp16.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Stunning Korean idol portrait, fox-like eyes with smoky copper liner, slim angular face, subtle auburn-tinted side-swept long hair cascading over one shoulder. Cool edgy expression, lips slightly part
+
+### 3. workflow_03.json
+- **Prompt ID**: `1d2ce8ab-95e0-44b9-93f3-6b4970b90011`
+- **类型**: 文生图
+- **节点数**: 8
+- **模型** (2):
+  - juggernautXL_ragnarok.safetensors
+  - sdxl_vae.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] A stunning Korean idol-style woman with a rose gold short bob cut, oval face with elegant monolid eyes, dreamy ethereal expression gazing softly into distance. Half body waist up portrait, slight low 
+  - [CLIPTextEncode::text] lowres, blurry, bad anatomy, deformed, watermark, signature, extra fingers, cartoon, anime, painting
+
+### 4. workflow_04.json
+- **Prompt ID**: `6f840f95-b681-4668-bee6-455a55f7eb5e`
+- **类型**: 文生图
+- **节点数**: 8
+- **模型** (2):
+  - RealVisXL_V5.0.safetensors
+  - sdxl_vae.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] RAW photo, ultra realistic skin texture, stunning Korean idol woman on an urban rooftop at twilight, long straight black hair with dark face-framing highlights cascading over one shoulder, oval face w
+  - [CLIPTextEncode::text] cartoon, anime, illustration, painting, low quality, blurry, deformed, extra fingers, bad anatomy, watermark, text, signature, oversaturated
+
+### 5. workflow_05.json
+- **Prompt ID**: `5394abe5-6a19-48f0-8b1d-3d66f9bc2889`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (5):
@@ -104,24 +66,11 @@
   - sakura_korean_flux.safetensors
   - t5xxl_fp16.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] A stunning Korean idol-style woman with burgundy red textured shag cut hair stands in a vintage film studio, shot on 24mm wide angle lens with dynamic low perspective. Full body head to toe compositio
-  - [CLIPTextEncode::text] cropped legs, cropped feet, cropped shoes, text, watermark, logo
+  - [CLIPTextEncode::text] Profile view of a stunning Korean woman with honey blonde highlighted side-swept long hair cascading over one shoulder, sharp jawline and mesmerizing cat-like eyes caught in a gentle, soft expression.
+  - [CLIPTextEncode::text] text, watermark, logo, extra fingers, deformed hands
 
-### 9. workflow_09.json
-- **Prompt ID**: `a1a05601-407e-45f9-9680-a557556d81e8`
-- **类型**: 文生图
-- **节点数**: 10
-- **模型** (4):
-  - ae.safetensors
-  - clip_l.safetensors
-  - flux1-dev.safetensors
-  - t5xxl_fp16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A vast minimal white architectural space with a single translucent glass partition standing upright, casting a long geometric shadow. On one side, scattered abstract origami shapes in muted warm tones
-  - [CLIPTextEncode::text] text, watermark, logo, crowded layout, cluttered background
-
-### 10. workflow_10.json
-- **Prompt ID**: `92cf6287-d2c0-4e70-b045-d3cf1e09f605`
+### 6. workflow_06.json
+- **Prompt ID**: `a15473a6-10e5-4064-a0ab-78d12054c33d`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (5):
@@ -131,4 +80,55 @@
   - flux_korean_girl.safetensors
   - t5xxl_fp16.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] A stunning Korean idol portrait of a young woman with platinum blonde hair in a braided half-up style, heart-shaped face with full lips, dreamy ethereal expression gazing softly into the distance. She
+  - [CLIPTextEncode::text] A stunning Korean woman with a natural black bob cut shimmering with blue sheen, diamond face shape and defined arched brows, caught in a mirror reflection at a rooftop cafe during golden hour. She we
+
+### 7. workflow_07.json
+- **Prompt ID**: `ed6372a8-e8dd-47d7-8b57-83667ba13e7c`
+- **类型**: 文生图
+- **节点数**: 11
+- **模型** (5):
+  - ae.safetensors
+  - clip_l.safetensors
+  - flux1-dev.safetensors
+  - sakura_korean_flux.safetensors
+  - t5xxl_fp16.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] A stunning Korean idol-style woman caught in a surprised candid moment on a snow-covered street at night, mouth slightly open, eyes wide with delight as snowflakes drift around her. Subtle auburn tint
+  - [CLIPTextEncode::text] text, watermark, logo, extra fingers, deformed hands
+
+### 8. workflow_08.json
+- **Prompt ID**: `5986c155-9f76-46a6-b562-afef57023a24`
+- **类型**: 文生图
+- **节点数**: 8
+- **模型** (2):
+  - epicRealismXL_pureFix.safetensors
+  - sdxl_vae.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] A stunning Korean idol photographed from behind, looking over her shoulder with a dreamy ethereal gaze. Heart-shaped face with full lips, flawless porcelain skin, subtle auburn tint short bob cut catc
+  - [CLIPTextEncode::text] lowres, blurry, bad anatomy, watermark, signature, oversaturated, harsh lighting, plastic skin
+
+### 9. workflow_09.json
+- **Prompt ID**: `41c625fe-8d9c-4d91-983d-44bb5247565c`
+- **类型**: 文生图
+- **节点数**: 10
+- **模型** (4):
+  - ae.safetensors
+  - clip_l.safetensors
+  - flux1-dev.safetensors
+  - t5xxl_fp16.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] A vast cinematic landscape split by a monumental stone aqueduct stretching across an endless golden valley, one side wild overgrown meadows with scattered campfires, the other side geometric terraced 
+  - [CLIPTextEncode::text] text, watermark, logo, muddy colors
+
+### 10. workflow_10.json
+- **Prompt ID**: `134ccb95-399e-4852-983e-e120e0410710`
+- **类型**: 文生图
+- **节点数**: 11
+- **模型** (5):
+  - ae.safetensors
+  - clip_l.safetensors
+  - flux1-dev.safetensors
+  - flux_korean_girl.safetensors
+  - t5xxl_fp16.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] A stunning Korean idol photographed from behind at a bustling night market, glancing over her shoulder with a serene, contemplative expression. Dark wavy shoulder-length hair with warm face-framing hi

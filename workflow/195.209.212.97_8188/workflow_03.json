@@ -13,7 +13,7 @@
   },
   "16": {
     "inputs": {
-      "positive_prompt": "d2z0h2a6yv, portrait of a man with snow-white hair without streaks or dark patches, one person. The man's profile is visible",
+      "positive_prompt": "d2z0h2a6yv, portrait of a man with snow-white hair without streaks or dark patches, one person. The man's back is visible",
       "negative_prompt": "nose,highlighted hair, multicolored strands of hair, black and gray spots, shadow, fingers, cloth, bandages, leaves, mask, hats, gray and black spots, grey and black stripes, tattoos, glasses, mustache, beard, sideburns, imperial beard, stubble, shaggy mustache, horseshoe mustache, Italian mustache, Fu Manchu mustache, pencil mustache, horseshoe mustache, full beard, goatee, Van Dyke beard, Hollywood beard, Garfield beard, skate beard, Amish beard, Balbo beard, Verdi beard, three-day stubble, week-long stubble, Mexican stubble, Bredin sideburns/cheeks, Elvis sideburns, skipper beard, French fork split beard",
       "force_offload": true,
       "use_disk_cache": false,
@@ -203,7 +203,7 @@
   },
   "124": {
     "inputs": {
-      "value": 90
+      "value": 60
     },
     "class_type": "JWInteger",
     "_meta": {
@@ -212,7 +212,7 @@
   },
   "125": {
     "inputs": {
-      "value": 0
+      "value": 354
     },
     "class_type": "JWInteger",
     "_meta": {
@@ -362,7 +362,7 @@
   },
   "197": {
     "inputs": {
-      "value": "/DATA/Jive/processing/8_serie/0320/0320_s_rogojan/"
+      "value": "/DATA/Jive/processing/8_serie/0270/0270_s_rogojan/"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -371,7 +371,7 @@
   },
   "198": {
     "inputs": {
-      "value": "/DATA/Jive/Yandex.Disk/Dzhave/work/8_serie/0320/0320_s_rogojan/"
+      "value": "/DATA/Jive/Yandex.Disk/Dzhave/work/8_serie/0270/0270_s_rogojan/"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -619,7 +619,7 @@
   },
   "215": {
     "inputs": {
-      "value": "_0320_s_rogojan_epoch2_37"
+      "value": "_0270_s_rogojan_epoch2_37"
     },
     "class_type": "PrimitiveString",
     "_meta": {

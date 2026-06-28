@@ -1,21 +1,327 @@
 {
-  "158": {
+  "265": {
     "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
+      "video": "Depth.mp4",
+      "force_rate": 0.0,
+      "custom_width": [
+        "2845:2852",
+        0
+      ],
+      "custom_height": [
+        "2845:2852",
+        1
+      ],
+      "frame_load_cap": [
+        "2845:1556",
+        0
+      ],
+      "skip_first_frames": [
+        "2845:361",
+        0
+      ],
+      "select_every_nth": 1,
+      "format": "AnimateDiff"
+    },
+    "class_type": "VHS_LoadVideo",
+    "_meta": {
+      "title": "INPUT VIDEO"
+    }
+  },
+  "280": {
+    "inputs": {
+      "width": [
+        "2845:2852",
+        0
+      ],
+      "height": [
+        "2845:2852",
+        1
+      ],
+      "upscale_method": "lanczos",
+      "keep_proportion": "pad_edge_pixel",
+      "pad_color": "0, 0, 0",
+      "crop_position": "center",
+      "divisible_by": 2,
+      "device": "cpu",
+      "image": [
+        "282",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJv2",
+    "_meta": {
+      "title": "Resize Image v2"
+    }
+  },
+  "282": {
+    "inputs": {
+      "image": "QwenImage/qwen_00013_.png [output]"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Start Image / Reference Image 1"
+    }
+  },
+  "2607": {
+    "inputs": {
+      "video_info": [
+        "265",
+        3
+      ]
+    },
+    "class_type": "VHS_VideoInfo",
+    "_meta": {
+      "title": "Video Info 🎥🅥🅗🅢"
+    }
+  },
+  "3001": {
+    "inputs": {
+      "frame_rate": 24.0,
+      "loop_count": 0,
+      "filename_prefix": "hamid/video/cannydepth/aya_canny_depthj",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": false,
+      "images": [
+        "3272:3278",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "PREVIEW PREPROCESS"
+    }
+  },
+  "3326": {
+    "inputs": {
+      "unet_name": "wan/wan-14B_vace_skyreels_v3_R2V_e4m3fn_v1.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "3327": {
+    "inputs": {
+      "lora_name": "Wan2.1_T2V_14B_FusionX_LoRA.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "3326",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "3328": {
+    "inputs": {
+      "lora_name": "wan/Lenovo.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "3327",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "3329": {
+    "inputs": {
+      "shift": 6.000000000000001,
+      "model": [
+        "3328",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "ModelSamplingSD3"
+    }
+  },
+  "3333": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "3334": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
     },
     "class_type": "VAELoader",
     "_meta": {
       "title": "Load VAE"
     }
   },
-  "162": {
+  "3345": {
+    "inputs": {
+      "video": "Canny (1).mp4",
+      "force_rate": 0.0,
+      "custom_width": [
+        "2845:2852",
+        0
+      ],
+      "custom_height": [
+        "2845:2852",
+        1
+      ],
+      "frame_load_cap": [
+        "2845:1556",
+        0
+      ],
+      "skip_first_frames": [
+        "2845:361",
+        0
+      ],
+      "select_every_nth": 1,
+      "format": "AnimateDiff"
+    },
+    "class_type": "VHS_LoadVideo",
+    "_meta": {
+      "title": "INPUT VIDEO"
+    }
+  },
+  "3348": {
+    "inputs": {
+      "method": "lanczos",
+      "image_1": [
+        "280",
+        0
+      ]
+    },
+    "class_type": "ImageBatchMultiple+",
+    "_meta": {
+      "title": "🔧 Images Batch Multiple [Max 4 for Phantom]"
+    }
+  },
+  "3372": {
+    "inputs": {
+      "frame_rate": [
+        "2607",
+        0
+      ],
+      "loop_count": 0,
+      "filename_prefix": "hamid/video/cannydepth/aya_end",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "3228:3252",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "Video Combine 🎥🅥🅗🅢"
+    }
+  },
+  "2845:1556": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "frame_load_cap"
+    }
+  },
+  "2845:361": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "skip"
+    }
+  },
+  "2845:2852": {
+    "inputs": {
+      "resolution": "576p",
+      "aspect_ratio": "16:9",
+      "custom_width": 1280,
+      "custom_height": 720
+    },
+    "class_type": "WanResolutionPicker",
+    "_meta": {
+      "title": "WAN Resolution Picker"
+    }
+  },
+  "3228:3268": {
+    "inputs": {
+      "trim_amount": [
+        "3228:3255",
+        5
+      ],
+      "samples": [
+        "3228:3253",
+        0
+      ]
+    },
+    "class_type": "TrimVideoLatent",
+    "_meta": {
+      "title": "TrimVideoLatent"
+    }
+  },
+  "3228:3254": {
+    "inputs": {
+      "anything": [
+        "3228:3268",
+        0
+      ]
+    },
+    "class_type": "easy cleanGpuUsed",
+    "_meta": {
+      "title": "Clean VRAM Used"
+    }
+  },
+  "3228:3261": {
+    "inputs": {
+      "num_frames": [
+        "3228:3375",
+        3
+      ],
+      "empty_frame_level": 0.5,
+      "start_index": 0,
+      "end_index": -1,
+      "start_image": [
+        "3228:3290:3280",
+        0
+      ],
+      "control_images": [
+        "3228:3375",
+        0
+      ]
+    },
+    "class_type": "WanVideoVACEStartToEndFrame",
+    "_meta": {
+      "title": "WanVideo VACE Start To End Frame"
+    }
+  },
+  "3228:3252": {
     "inputs": {
       "samples": [
-        "282",
+        "3228:3254",
         0
       ],
       "vae": [
-        "158",
+        "3334",
         0
       ]
     },
@@ -24,24 +330,60 @@
       "title": "VAE Decode"
     }
   },
-  "166": {
+  "3228:3375": {
     "inputs": {
-      "unet_name": "krea2TurboOfficialComfy_krea2TurboBf16.safetensors",
-      "weight_dtype": "default"
+      "image": [
+        "3272:3278",
+        0
+      ]
     },
-    "class_type": "UNETLoader",
+    "class_type": "GetImageSizeAndCount",
     "_meta": {
-      "title": "Load Diffusion Model Main"
+      "title": "Get Image Size & Count"
     }
   },
-  "167": {
+  "3228:3258": {
     "inputs": {
-      "text": [
-        "271",
+      "conditioning_1": [
+        "3228:3255",
+        2
+      ],
+      "conditioning_2": [
+        "3228:3255",
+        3
+      ]
+    },
+    "class_type": "ConditioningCombine",
+    "_meta": {
+      "title": "Conditioning (Combine)"
+    }
+  },
+  "3228:3257": {
+    "inputs": {
+      "nag_scale": 11.0,
+      "nag_alpha": 0.25,
+      "nag_tau": 2.5,
+      "input_type": "default",
+      "inplace": false,
+      "model": [
+        "3228:3255",
         0
       ],
+      "conditioning": [
+        "3228:3258",
+        0
+      ]
+    },
+    "class_type": "WanVideoNAG",
+    "_meta": {
+      "title": "WanVideoNAG"
+    }
+  },
+  "3228:3249": {
+    "inputs": {
+      "text": "masterpiece, best quality, anime style, cute cafe waitress, young woman with long brown hair in high ponytail tied with yellow ribbons, brown eyes, white rolled-sleeve button-up shirt, orange-yellow apron with coffee bean logo, brown waist pouch, short black skirt, black thigh-high stockings, black loafers, warm smile, full green background, detailed face, consistent outfit, side profile, looking forward, clean lineart guidance from canny",
       "clip": [
-        "168",
+        "3333",
         0
       ]
     },
@@ -50,76 +392,171 @@
       "title": "CLIP Text Encode (Positive Prompt)"
     }
   },
-  "168": {
+  "3228:3295": {
     "inputs": {
-      "clip_name": "qwen3vl_8b_fp8_scaled.safetensors",
-      "type": "krea2",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "Load CLIP"
-    }
-  },
-  "209": {
-    "inputs": {
-      "anything": [
-        "166",
+      "conditioning": [
+        "3228:3249",
         0
       ],
-      "anything11": [
-        "168",
-        0
-      ],
-      "anything12": [
-        "158",
+      "latent": [
+        "3228:3294",
         0
       ]
     },
-    "class_type": "Anything Everywhere",
+    "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "Anything Everywhere"
+      "title": "ReferenceLatent"
     }
   },
-  "210": {
+  "3228:3294": {
     "inputs": {
-      "source": [
-        "231",
+      "pixels": [
+        "3228:3375",
+        0
+      ],
+      "vae": [
+        "3334",
         0
       ]
     },
-    "class_type": "PreviewAny",
+    "class_type": "VAEEncode",
     "_meta": {
-      "title": "JSON Preview"
+      "title": "VAE Encode"
     }
   },
-  "231": {
+  "3228:3255": {
     "inputs": {
-      "width": 2560,
-      "height": 1440,
-      "high_level_description": "",
-      "background": "",
-      "style": "photo",
-      "style.photo": "wide-angle shot with a shallow depth of field effect on the background elements, drawing focus to the central subject.",
-      "aesthetics": "cinematic, dramatic, and ethereal",
-      "lighting": "low-key, warm, and highly reflective, with numerous scattered bokeh-like lights creating a magical, deep atmosphere.",
-      "medium": "digital photograph",
-      "style_palette_data": "",
-      "elements_data": "",
-      "bg_brightness": 25,
-      "import_mode": "when empty",
-      "output_format": "compact"
+      "width": [
+        "3228:3375",
+        1
+      ],
+      "height": [
+        "3228:3375",
+        2
+      ],
+      "length": [
+        "3228:3375",
+        3
+      ],
+      "batch_size": 1,
+      "vace_strength": 1.0,
+      "vace_ref_strength": 0.0,
+      "model": [
+        "3329",
+        0
+      ],
+      "positive": [
+        "3228:3295",
+        0
+      ],
+      "negative": [
+        "3228:3262",
+        0
+      ],
+      "vae": [
+        "3334",
+        0
+      ],
+      "control_video": [
+        "3228:3261",
+        0
+      ],
+      "vace_reference": [
+        "280",
+        0
+      ],
+      "phantom_images": [
+        "3348",
+        0
+      ]
     },
-    "class_type": "Ideogram4PromptBuilderKJ",
+    "class_type": "WanVacePhantomSimpleV2",
     "_meta": {
-      "title": "Ideogram 4 Prompt Builder KJ"
+      "title": "WanVacePhantomSimpleV2"
     }
   },
-  "266": {
+  "3228:3290:3376": {
     "inputs": {
-      "text": "watermark",
+      "value": 1
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "1"
+    }
+  },
+  "3228:3290:3280": {
+    "inputs": {
+      "boolean": [
+        "3228:3290:3284",
+        0
+      ],
+      "on_true": [
+        "280",
+        0
+      ],
+      "on_false": [
+        "3228:3290:3288",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "3228:3290:3288": {
+    "inputs": {
+      "select": 1,
+      "sel_mode": false
+    },
+    "class_type": "ImpactSwitch",
+    "_meta": {
+      "title": "Disable Input"
+    }
+  },
+  "3228:3290:3287": {
+    "inputs": {
+      "images": [
+        "3348",
+        0
+      ]
+    },
+    "class_type": "VHS_GetImageCount",
+    "_meta": {
+      "title": "Get Image Count 🎥🅥🅗🅢"
+    }
+  },
+  "3228:3290:3284": {
+    "inputs": {
+      "cmp": "a <= b",
+      "a": [
+        "3228:3290:3287",
+        0
+      ],
+      "b": [
+        "3228:3290:3376",
+        0
+      ]
+    },
+    "class_type": "ImpactCompare",
+    "_meta": {
+      "title": "ImpactCompare"
+    }
+  },
+  "3228:3290:3292": {
+    "inputs": {
+      "text1": "This node is just to get the RES4LYF nodepack in the missing nodes list of the manager."
+    },
+    "class_type": "TextBox1",
+    "_meta": {
+      "title": "Install RES4LYF"
+    }
+  },
+  "3228:3262": {
+    "inputs": {
+      "text": "low quality, blurry, extra arms, extra legs, extra fingers, missing fingers, bad anatomy, wrong outfit, different clothes, different hair color, short hair, twin tails, hat, glasses, text, watermark, logo, cropped, deformed face, duplicate body, nsfw",
       "clip": [
-        "168",
+        "3333",
         0
       ]
     },
@@ -128,70 +565,83 @@
       "title": "CLIP Text Encode (Negative Prompt)"
     }
   },
-  "270": {
+  "3228:3253": {
     "inputs": {
-      "filename_prefix": "Krea2/krea2",
-      "images": [
-        "162",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
-    }
-  },
-  "271": {
-    "inputs": {
-      "select": 1,
-      "sel_mode": false,
-      "input1": [
-        "272",
-        0
-      ],
-      "input2": [
-        "231",
-        0
-      ]
-    },
-    "class_type": "ImpactSwitch",
-    "_meta": {
-      "title": "Switch Prompt"
-    }
-  },
-  "272": {
-    "inputs": {
-      "value": "Ultra-realistic candid cinematic still of a majestic Centaur, half human half horse, suddenly caught during a day time encounter. bright sunny day. grassy hills.\n\npowerful torso with visible muscle fibers, veins, chest hair, and realistic skin texture seamlessly merging into a strong equine lower body with detailed horse coat, powerful legs, hooves and flowing tail. \n\nThe Centaur is mid-gallop, looking directly at the camera.\n\n10 other Centaurs are standing on the rocky grassy hills, looking the main Centaur.\n\nPhotographic artifacts: high ISO digital noise/grain, slight motion blur on legs, realistic depth of field (sharp on torso and head, softer background), minor camera shake. Cool flash color cast, raw aesthetic, ultra-detailed textures, National Geographic cryptid style. "
-    },
-    "class_type": "PrimitiveStringMultiline",
-    "_meta": {
-      "title": "MANUAL Prompt"
-    }
-  },
-  "282": {
-    "inputs": {
-      "seed": 94790801907877,
-      "steps": 8,
+      "seed": 2,
+      "steps": 4,
       "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
+      "sampler_name": "res_2s",
+      "scheduler": "beta57",
       "denoise": 1.0,
       "model": [
-        "166",
+        "3228:3257",
         0
       ],
       "positive": [
-        "167",
-        0
+        "3228:3255",
+        1
       ],
       "negative": [
-        "266",
+        "3228:3258",
         0
+      ],
+      "latent_image": [
+        "3228:3255",
+        4
       ]
     },
     "class_type": "KSampler",
     "_meta": {
       "title": "KSampler"
+    }
+  },
+  "3272:3278": {
+    "inputs": {
+      "boolean": true,
+      "on_true": [
+        "3272:3273",
+        0
+      ],
+      "on_false": [
+        "265",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "3272:3286": {
+    "inputs": {
+      "value": 0.2,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "class_type": "ClampFloat",
+    "_meta": {
+      "title": "Clamp Float"
+    }
+  },
+  "3272:3273": {
+    "inputs": {
+      "blend_factor": [
+        "3272:3286",
+        0
+      ],
+      "blend_mode": "normal",
+      "image1": [
+        "265",
+        0
+      ],
+      "image2": [
+        "3345",
+        0
+      ]
+    },
+    "class_type": "ImageBlend",
+    "_meta": {
+      "title": "Blend Images"
     }
   }
 }

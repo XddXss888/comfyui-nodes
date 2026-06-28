@@ -1,19 +1,20 @@
 {
   "9": {
     "inputs": {
+      "filename_prefix": "z-image-base",
       "images": [
         "76:65",
         0
       ]
     },
-    "class_type": "PreviewImage",
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "Preview Image"
+      "title": "Save Image"
     }
   },
   "76:67": {
     "inputs": {
-      "text": "A red-headed female stunt performer in athletic gear, standing on a movie set with a car flip rig in the background, neutral daylight light, intense confident expression, shot on Sony A7R IV with 50mm lens, editorial action style, high-end editorial magazine portrait, Vogue-style professional portrait photography, clean premium composition, sophisticated wardrobe styling, true neutral white editorial lighting, balanced daylight color temperature around 5000K, neutral grey shadows, invisible off-camera diffused key light, subtle neutral rim light, no lighting equipment visible in frame, refined natural color grading, realistic skin texture, sharp eyes, shallow depth of field, no warm cast, no cool cast, no yellow cast, no blue cast, no amber cast, 2:3 vertical editorial portrait composition, subject looking directly into the camera",
+      "text": "Portrait of a female police officer in Russian police uniform with badge, looking directly into camera, standing in front of police station, Russian police car visible, daytime lighting, neat uniform with Russian police insignia, professional atmosphere, 35mm lens, f/2.8, realistic color reproduction, vertical portrait composition, photorealistic, high detail",
       "clip": [
         "76:80",
         1
@@ -26,8 +27,8 @@
   },
   "76:68": {
     "inputs": {
-      "width": 832,
-      "height": 1248,
+      "width": 1024,
+      "height": 1536,
       "batch_size": 1
     },
     "class_type": "EmptySD3LatentImage",
@@ -87,8 +88,8 @@
   "76:80": {
     "inputs": {
       "lora_name": "Portrait_SoloLoRA_ZIBv1.safetensors",
-      "strength_model": 0.5,
-      "strength_clip": 0.5,
+      "strength_model": 0.6,
+      "strength_clip": 0.6,
       "model": [
         "76:66",
         0
@@ -115,7 +116,7 @@
   },
   "76:71": {
     "inputs": {
-      "text": "extra fingers, deformed hands, watermark, text, logos, yellow light, yellow color cast, amber light, golden light, warm light, warm color grading, orange lighting, sepia, tungsten yellow, blue light, blue color cast, cyan light, cold lighting, cool color grading, teal color grading, steel-blue shadows, visible softbox, softbox in frame, studio light in frame, light stand, umbrella light, lighting equipment, photographer equipment, behind-the-scenes gear, gritty action movie, movie poster, excessive smoke, heavy haze, harsh dramatic shadows, overprocessed cinematic look",
+      "text": "",
       "clip": [
         "76:80",
         1
@@ -128,8 +129,8 @@
   },
   "76:69": {
     "inputs": {
-      "seed": 5059777610517402311,
-      "steps": 30,
+      "seed": 5091647358770456654,
+      "steps": 40,
       "cfg": 4.0,
       "sampler_name": "res_multistep",
       "scheduler": "simple",

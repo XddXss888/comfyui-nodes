@@ -1,175 +1,38 @@
 {
-  "78": {
+  "10": {
     "inputs": {
-      "image": "D:/comfyui/ComfyUI/input/image/extract_print/a13226/9c41d39c8f226b4e902926de1cf34c8c.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "436": {
-    "inputs": {
-      "strength": 1.0,
-      "model": [
-        "441",
+      "conditioning": [
+        "106",
         0
       ]
     },
-    "class_type": "CFGNorm",
+    "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "CFG归一化"
+      "title": "条件零化"
     }
   },
-  "437": {
+  "12": {
     "inputs": {
-      "vae_name": "qwen\\qwen_image_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "438": {
-    "inputs": {
-      "clip_name": "qwen\\qwen_2.5_vl_7b.safetensors",
-      "type": "qwen_image",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载CLIP"
-    }
-  },
-  "439": {
-    "inputs": {
-      "unet_name": "Qwen-Image-Edit-2509_fp8_e4m3fn.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "440": {
-    "inputs": {
-      "prompt": "",
-      "clip": [
-        "438",
-        0
-      ],
-      "vae": [
-        "437",
-        0
-      ],
-      "image1": [
-        "446",
-        0
-      ]
-    },
-    "class_type": "TextEncodeQwenImageEditPlus",
-    "_meta": {
-      "title": "文本编码（QwenImageEditPlus）"
-    }
-  },
-  "441": {
-    "inputs": {
-      "shift": 3.0,
-      "model": [
-        "449",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingAuraFlow",
-    "_meta": {
-      "title": "采样算法（AuraFlow）"
-    }
-  },
-  "442": {
-    "inputs": {
-      "prompt": "从T恤中提取印花。提取为印花图像。背景参考衣服颜色来。印花满铺图，不要有衣物纹理。使图像高清化。",
-      "clip": [
-        "438",
-        0
-      ],
-      "vae": [
-        "437",
-        0
-      ],
-      "image1": [
-        "446",
-        0
-      ]
-    },
-    "class_type": "TextEncodeQwenImageEditPlus",
-    "_meta": {
-      "title": "文本编码（QwenImageEditPlus）"
-    }
-  },
-  "444": {
-    "inputs": {
-      "samples": [
-        "447",
-        0
-      ],
-      "vae": [
-        "437",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "445": {
-    "inputs": {
-      "lora_name": "qwen\\加速\\Qwen-Image-Edit-Lightning-4steps-V1.0.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "439",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA加载器（仅模型）"
-    }
-  },
-  "446": {
-    "inputs": {
-      "image": [
-        "78",
-        0
-      ]
-    },
-    "class_type": "FluxKontextImageScale",
-    "_meta": {
-      "title": "图像缩放为FluxKontext"
-    }
-  },
-  "447": {
-    "inputs": {
-      "seed": 811959462087449,
-      "steps": 4,
+      "seed": 284609410940312,
+      "steps": 30,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0,
       "model": [
-        "436",
+        "26",
         0
       ],
       "positive": [
-        "442",
+        "16",
         0
       ],
       "negative": [
-        "440",
+        "10",
         0
       ],
       "latent_image": [
-        "451",
+        "118",
         0
       ]
     },
@@ -178,34 +41,287 @@
       "title": "K采样器"
     }
   },
-  "449": {
+  "16": {
     "inputs": {
-      "lora_name": "qwen\\2509\\提取纹理extract_texture_qwen_image_edit_2509_V1.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "445",
+      "guidance": 2.5,
+      "conditioning": [
+        "17",
         0
       ]
     },
-    "class_type": "LoraLoaderModelOnly",
+    "class_type": "FluxGuidance",
     "_meta": {
-      "title": "LoRA加载器（仅模型）"
+      "title": "Flux引导"
     }
   },
-  "451": {
+  "17": {
     "inputs": {
-      "width": 800,
-      "height": 1024,
-      "batch_size": 1
+      "conditioning": [
+        "106",
+        0
+      ],
+      "latent": [
+        "118",
+        0
+      ]
     },
-    "class_type": "EmptyLatentImage",
+    "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "空Latent图像"
+      "title": "参考Latent"
     }
   },
-  "452": {
+  "22": {
     "inputs": {
-      "output_path": "D:/comfyui/ComfyUI/output/image/extract_print",
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp8_e4m3fn.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "双CLIP加载器"
+    }
+  },
+  "23": {
+    "inputs": {
+      "vae_name": "FLUX\\ae.sft"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "24": {
+    "inputs": {
+      "samples": [
+        "12",
+        0
+      ],
+      "vae": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "26": {
+    "inputs": {
+      "unet_name": "F.1\\diffusion_models\\flux1-kontext-dev.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "106": {
+    "inputs": {
+      "text": "Identify the main subject in the image, convert it to pure white and the background to absolute black, while keeping the subject’s original position unchanged.",
+      "clip": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "117": {
+    "inputs": {
+      "image": [
+        "137",
+        0
+      ]
+    },
+    "class_type": "FluxKontextImageScale",
+    "_meta": {
+      "title": "图像缩放为FluxKontext"
+    }
+  },
+  "118": {
+    "inputs": {
+      "pixels": [
+        "117",
+        0
+      ],
+      "vae": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "123": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "upscale_method": "lanczos",
+      "keep_proportion": true,
+      "divisible_by": 1,
+      "crop": "disabled",
+      "image": [
+        "24",
+        0
+      ],
+      "get_image_size": [
+        "117",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJ",
+    "_meta": {
+      "title": "Resize Image (deprecated)"
+    }
+  },
+  "127": {
+    "inputs": {
+      "image": [
+        "123",
+        0
+      ]
+    },
+    "class_type": "SplitImageChannels",
+    "_meta": {
+      "title": "Split Image Channels"
+    }
+  },
+  "128": {
+    "inputs": {
+      "brightness": 1.5,
+      "contrast": 1.0,
+      "saturation": 1.0,
+      "image": [
+        "127",
+        1
+      ]
+    },
+    "class_type": "LayerColor: Brightness & Contrast",
+    "_meta": {
+      "title": "LayerColor: Brightness & Contrast"
+    }
+  },
+  "129": {
+    "inputs": {
+      "channel": "green",
+      "image": [
+        "128",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "图像转换为遮罩"
+    }
+  },
+  "130": {
+    "inputs": {
+      "mask": [
+        "129",
+        0
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "反转遮罩"
+    }
+  },
+  "132": {
+    "inputs": {
+      "invert_mask": false,
+      "grow": 1,
+      "blur": 2,
+      "mask": [
+        "130",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskGrow",
+    "_meta": {
+      "title": "LayerMask: MaskGrow"
+    }
+  },
+  "133": {
+    "inputs": {
+      "image": [
+        "117",
+        0
+      ],
+      "alpha": [
+        "132",
+        0
+      ]
+    },
+    "class_type": "JoinImageWithAlpha",
+    "_meta": {
+      "title": "合并图像Alpha"
+    }
+  },
+  "134": {
+    "inputs": {
+      "mask": [
+        "130",
+        0
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "反转遮罩"
+    }
+  },
+  "135": {
+    "inputs": {
+      "method": "VITMatte",
+      "mask_grow": 0,
+      "fix_gap": 0,
+      "fix_threshold": 0.75,
+      "edge_erode": 1,
+      "edte_dilate": 1,
+      "black_point": 0.01,
+      "white_point": 0.99,
+      "device": "cuda",
+      "max_megapixels": 2.0,
+      "image": [
+        "133",
+        0
+      ],
+      "mask": [
+        "134",
+        0
+      ]
+    },
+    "class_type": "LayerMask: MaskEdgeUltraDetail V2",
+    "_meta": {
+      "title": "LayerMask: MaskEdgeUltraDetail V2"
+    }
+  },
+  "137": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "upscale_method": "lanczos",
+      "keep_proportion": true,
+      "divisible_by": 1,
+      "crop": "disabled",
+      "image": [
+        "161",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJ",
+    "_meta": {
+      "title": "Resize Image (deprecated)"
+    }
+  },
+  "160": {
+    "inputs": {
+      "output_path": "D:/comfyui/ComfyUI/output/image/rembg",
       "filename_prefix": "ComfyUI",
       "filename_delimiter": "_",
       "filename_number_padding": 4,
@@ -221,13 +337,34 @@
       "embed_workflow": "false",
       "show_previews": "true",
       "images": [
-        "444",
+        "135",
         0
       ]
     },
     "class_type": "Image Save",
     "_meta": {
       "title": "Image Save"
+    }
+  },
+  "161": {
+    "inputs": {
+      "image": "D:/comfyui/ComfyUI/input/image/rembg/a13252/6a3fedb5039a1.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "162": {
+    "inputs": {
+      "images": [
+        "160",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
     }
   }
 }

@@ -1,93 +1,123 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "UNETLoader",
     "inputs": {
-      "ckpt_name": "epicRealismXL_pureFix.safetensors"
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
     }
   },
   "2": {
-    "class_type": "VAELoader",
+    "class_type": "DualCLIPLoader",
     "inputs": {
-      "vae_name": "sdxl_vae.safetensors"
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp16.safetensors",
+      "type": "flux"
     }
   },
   "3": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip": [
+      "vae_name": "ae.safetensors"
+    }
+  },
+  "11": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
         "1",
-        1
+        0
       ],
-      "text": "A stunning Korean idol-style woman in a vintage film studio, chestnut brown textured shag cut framing high cheekbones and an elegant nose, coy half-smile gazing away from camera. Half body waist up, shot on 24mm wide angle lens at eye-level straight on with dynamic perspective. Single spotlight cuts through darkness, casting dramatic shadows across her face and oversized casual hoodie. Flawless porcelain skin with dewy highlight on cheekbones, smoky gradient eye makeup, soft matte lip tint. One hand tucked in hoodie pocket, shoulder slightly turned. Cinematic film grain, shallow depth of field, rich contrast between warm spotlight and cool shadow tones. Epic SDXL photorealistic portrait quality."
+      "lora_name": "sakura_korean_flux.safetensors",
+      "strength_model": 0.9
     }
   },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
-        "1",
-        1
+        "2",
+        0
       ],
-      "text": "lowres, blurry, bad anatomy, watermark, signature, oversaturated, harsh lighting, plastic skin"
+      "text": "Profile view of a stunning Korean woman with honey blonde highlighted side-swept long hair cascading over one shoulder, sharp jawline and mesmerizing cat-like eyes caught in a gentle, soft expression. She wears an elegant black dress with subtle lace detailing at the neckline. Photographed in a serene zen garden glistening with morning dew on moss and stone. Golden hour warm side light bathes her face, highlighting flawless porcelain skin and glossy editorial makeup with peachy-coral lip tint and shimmering champagne eyeshadow. Shot on 85mm f/1.4 lens producing creamy bokeh, generous negative space on the left side. Delicate wisps of hair catch the light like spun gold. Ethereal, tranquil atmosphere with soft warmth radiating throughout."
     }
   },
   "5": {
-    "class_type": "EmptyLatentImage",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "width": 896,
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "text, watermark, logo, extra fingers, deformed hands"
+    }
+  },
+  "6": {
+    "class_type": "FluxGuidance",
+    "inputs": {
+      "conditioning": [
+        "4",
+        0
+      ],
+      "guidance": 3.6
+    }
+  },
+  "7": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 1024,
       "height": 1280,
       "batch_size": 1
     }
   },
-  "6": {
+  "8": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "1",
+        "11",
         0
       ],
       "positive": [
-        "3",
-        0
-      ],
-      "negative": [
-        "4",
-        0
-      ],
-      "latent_image": [
-        "5",
-        0
-      ],
-      "seed": 1155255954,
-      "control_after_generate": "fixed",
-      "steps": 30,
-      "cfg": 5.0,
-      "sampler_name": "dpmpp_2m",
-      "scheduler": "karras",
-      "denoise": 1.0
-    }
-  },
-  "7": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "samples": [
         "6",
         0
       ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ],
+      "seed": 169945282,
+      "control_after_generate": "fixed",
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
       "vae": [
-        "2",
+        "3",
         0
       ]
     }
   },
-  "8": {
+  "10": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "7",
+        "9",
         0
       ],
-      "filename_prefix": "portrait_1155255954"
+      "filename_prefix": "portrait_169945282"
     }
   }
 }

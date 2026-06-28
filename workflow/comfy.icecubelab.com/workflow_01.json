@@ -2,7 +2,7 @@
   "1": {
     "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "ckpt_name": "RealVisXL_V5.0.safetensors"
+      "ckpt_name": "juggernautXL_ragnarok.safetensors"
     }
   },
   "2": {
@@ -18,7 +18,7 @@
         "1",
         1
       ],
-      "text": "RAW photo, ultra realistic skin texture, stunning Korean idol woman with ash brown side-swept long hair cascading over one shoulder, heart-shaped face with full lips, serene contemplative expression gazing softly into distance. School uniform inspired preppy look with navy blazer and pleated skirt, standing small in frame within vast flower field at sunrise. Wide environmental portrait, ground-level upward shot capturing endless blooms stretching toward golden horizon. Single spotlight beam cutting through soft morning mist illuminating her figure against darkness of pre-dawn sky. Macro lens capturing extreme close-up skin texture details, visible pores, dewy highlight on cheekbones. Flawless styled makeup, gradient coral lips, natural flush. Atmospheric, cinematic, ethereal solitude. Window light quality, no text, no watermarks."
+      "text": "A stunning Korean idol woman with warm caramel balayage long hair and wispy bangs, diamond face shape with defined brows, serene contemplative expression, looking over her shoulder toward camera. Full body head to toe, shot from behind on 35mm lens, environmental portrait. She wears a midnight navy sequined evening gown that catches autumn light, standing on a leaf-strewn path in a golden autumn park. Crimson and amber leaves drift around her silhouette. Ring light beauty lighting illuminates her flawless porcelain skin with visible pores, styled dewy makeup with soft gradient lips. Cinematic color grading, warm amber tones, shallow depth of field, SDXL hyperrealism, extremely detailed, no text, no watermarks."
     }
   },
   "4": {
@@ -28,7 +28,7 @@
         "1",
         1
       ],
-      "text": "cartoon, anime, illustration, painting, low quality, blurry, deformed, extra fingers, bad anatomy, watermark, text, signature, oversaturated"
+      "text": "lowres, blurry, bad anatomy, deformed, watermark, signature, extra fingers, cartoon, anime, painting"
     }
   },
   "5": {
@@ -58,10 +58,10 @@
         "5",
         0
       ],
-      "seed": 2033064762,
+      "seed": 734913072,
       "control_after_generate": "fixed",
       "steps": 30,
-      "cfg": 4.5,
+      "cfg": 4.0,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "karras",
       "denoise": 1.0
@@ -87,7 +87,7 @@
         "7",
         0
       ],
-      "filename_prefix": "portrait_2033064762"
+      "filename_prefix": "portrait_734913072"
     }
   }
 }

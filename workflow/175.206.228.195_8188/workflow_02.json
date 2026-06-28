@@ -33,7 +33,7 @@
   },
   "4": {
     "inputs": {
-      "seed": 7983778082,
+      "seed": 6978554742,
       "steps": [
         "13",
         0
@@ -112,8 +112,8 @@
   },
   "17": {
     "inputs": {
-      "Width": 888,
-      "Height": 1184,
+      "Width": 1024,
+      "Height": 1024,
       "Batch": 1,
       "Landscape": false,
       "HiResMultiplier": 1.7000000000000002
@@ -125,7 +125,7 @@
   },
   "20": {
     "inputs": {
-      "seed": 7983778082,
+      "seed": 6978554742,
       "steps": 10,
       "cfg": [
         "13",
@@ -205,7 +205,7 @@
   },
   "32": {
     "inputs": {
-      "text": "ever_garnet_rapture_base,  dashed eyes, masterpiece, best quality, amazing quality"
+      "text": "ever_eve_love, ((1girl)), waero, dark, shade, wings, underground, dungeon, sitting, arms up, bound wrists, knee up, scared, one eye closed, clenched teeth, , masterpiece, best quality, amazing quality"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -214,7 +214,7 @@
   },
   "33": {
     "inputs": {
-      "text": "bad quality,worst quality,worst detail,sketch,censor,"
+      "text": "bad quality,worst quality,worst detail,sketch,censor, glaring, (leotard), extra navel, floating hair, (arms up), leotard pull, ass cutout, head out of frame, eyes out of frame, pantyhose, garter straps, horizontal navel"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -277,7 +277,7 @@
   },
   "65": {
     "inputs": {
-      "data": "[{\"name\": \"garnet_rapture_base.safetensors\", \"strength\": 0.9, \"strength_clip\": 1.0}]",
+      "data": "[{\"name\": \"eve_love.safetensors\", \"strength\": 0.85, \"strength_clip\": 1.0}]",
       "model": [
         "36",
         0

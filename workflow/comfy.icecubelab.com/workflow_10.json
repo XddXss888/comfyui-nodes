@@ -28,7 +28,7 @@
         0
       ],
       "lora_name": "flux_korean_girl.safetensors",
-      "strength_model": 0.85
+      "strength_model": 0.8
     }
   },
   "5": {
@@ -38,7 +38,7 @@
         "2",
         0
       ],
-      "text": "A stunning Korean idol portrait of a young woman with platinum blonde hair in a braided half-up style, heart-shaped face with full lips, dreamy ethereal expression gazing softly into the distance. She wears a champagne satin slip dress, standing in a vast flower field at golden sunrise. Shot on 85mm f/1.4 lens with creamy bokeh, Dutch angle tilted frame, tight headshot composition. Cross lighting from two sides casting warm amber and soft pink tones across her flawless porcelain skin. Styled dewy makeup with shimmering highlight on cheekbones, soft gradient lips. Morning mist diffusing light around wildflowers. Wisps of blonde hair catching sunlight like spun gold. Ethereal, magazine editorial quality, absolutely breathtaking beauty."
+      "text": "A stunning Korean idol photographed from behind at a bustling night market, glancing over her shoulder with a serene, contemplative expression. Dark wavy shoulder-length hair with warm face-framing highlights catches the glow of countless bokeh lights. Soft round face with luminous doe eyes reflecting neon colors. She wears an elegant black dress with a subtle open back. Shot on 85mm f/1.4 lens, creamy bokeh transforming market lanterns into golden orbs. Backlit rim light traces her silhouette with a warm halo edge. Medium shot capturing the vibrant environment behind her. Hyper detailed dewy skin, glass-like eye reflections, delicate lashes. Styled soft glam makeup with gradient lips. Dreamy, cinematic atmosphere, editorial fashion photography."
     }
   },
   "6": {
@@ -64,8 +64,8 @@
   "8": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "width": 896,
-      "height": 1280,
+      "width": 1024,
+      "height": 1024,
       "batch_size": 1
     }
   },
@@ -88,9 +88,9 @@
         "8",
         0
       ],
-      "seed": 1564927855,
+      "seed": 922652161,
       "control_after_generate": "fixed",
-      "steps": 22,
+      "steps": 24,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -117,7 +117,7 @@
         "10",
         0
       ],
-      "filename_prefix": "portrait_1564927855"
+      "filename_prefix": "portrait_922652161"
     }
   }
 }

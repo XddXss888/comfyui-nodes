@@ -37,7 +37,7 @@
   },
   "7": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl brown hair, grey eyes, freckles, mole, parted lips, lying, on back, on bed, pillow,(yea you can:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl beach,swimsuit,bikini,barefoot,blonde hair,blush,smile,earrings,choker,bracelet,navel,piercing,ear piercing,floral print,(Sexe à la plage:1.0),(nude:0.8)",
       "clip": [
         "1",
         1
@@ -63,7 +63,7 @@
   },
   "9": {
     "inputs": {
-      "seed": 2080880466,
+      "seed": 247696008,
       "steps": 20,
       "cfg": 6.5,
       "sampler_name": "dpmpp_sde",
@@ -133,7 +133,7 @@
   },
   "14": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20254/25/4d18c9e5aae74ceab9c5940937e33bba.jpeg",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20257/5/b09a5efcb43f421f8deea382ef328c3a.png",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

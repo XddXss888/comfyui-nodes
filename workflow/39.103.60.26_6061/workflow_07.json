@@ -32,7 +32,7 @@
   },
   "4": {
     "inputs": {
-      "image": "大跳台.jpg"
+      "image": "游乐园.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -41,17 +41,17 @@
   },
   "5": {
     "inputs": {
-      "prompt": "2DQ版卡通风格的合影，参考图1中的主要人物，保持图2的泡泡小山IP角色造型不变，生成泡泡小山在图1人物旁边一起亲密合影的画面，中近景半身人像构图，人物Q版眼睛轮廓（不要豆豆眼），2DQ版卡通风格。背景是卡通风格的图3滑雪大跳台 ，彩色渐变的跳台清晰完整，白色钢结构支撑，清澈湖水倒映建筑，水鸭点缀其间，完全还原参考图3中的建筑造型。",
+      "prompt": "参考图1中的主要人物，保持图2的泡泡小山IP角色造型不变，生成小巧的泡泡小山在人物旁边一起合影的画面，中近景半身人像构图，人物智能美颜，美式动漫插画风格，丝网印刷风格，颗粒肌理。背景是童话风游乐园场景，米白城堡与红顶塔楼在蓝天映衬下格外梦幻，巨大摩天轮如时光之轮静静伫立，湖面倒映着建筑与流云，垂柳轻拂，完全还原参考图3中的建筑造型。色调清新明快，光影柔和通透，整体风格是治愈系粉色调，颜色鲜亮，色彩饱和，高对比度，氛围感温馨，细节丰富，质感细腻。",
       "model": "doubao-seedream-4-5-251128",
       "response_format": "url",
       "resolution": "4K",
       "aspect_ratio": "Custom",
-      "width": 1120,
+      "width": 1184,
       "height": 800,
       "apikey": "a44228f5-f1b2-44e9-860a-d3c8eb5ac03e",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 1906929949,
+      "seed": 1817431676,
       "watermark": false,
       "stream": false,
       "image1": [
@@ -75,13 +75,13 @@
   "6": {
     "inputs": {
       "aspect_ratio": "custom",
-      "proportional_width": 1120,
-      "proportional_height": 800,
+      "proportional_width": 2622,
+      "proportional_height": 1772,
       "fit": "crop",
       "method": "bicubic",
       "round_to_multiple": "None",
       "scale_to_side": "width",
-      "scale_to_length": 1120,
+      "scale_to_length": 2622,
       "background_color": "#000000",
       "image": [
         "5",

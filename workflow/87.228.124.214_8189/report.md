@@ -4,25 +4,25 @@
 **内存**: 125 GB (空闲 119 GB)
 **版本**: 0.18.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-27 08:07:57
-**历史总数**: 14 | **成功**: 10
+**扫描时间**: 2026-06-28 08:07:54
+**历史总数**: 7 | **成功**: 7
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `00740adf-43c4-4958-aabd-a81f5a6bf8d9`
+- **Prompt ID**: `48f2241f-f4b5-4da6-b673-1100f8572ee0`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
-  - izumi_v.2.safetensors
   - model2.safetensors
+  - z-3l34n0r.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] seductive young curvy woman with long black hair, In a dimly lit elegant adult hotel room with soft evening lighting, a woman sits relaxed in a leather armchair, leaning back against the chair with le
+  - [CLIPTextEncode::text] l34n0r, chubby woman, A woman in delicate lingerie poses confidently in a photo studio, standing with one hand resting on her hip and her body angled slightly toward the camera, soft professional ligh
 
 ### 2. workflow_02.json
-- **Prompt ID**: `8c9286a3-74fb-4a40-8d03-3aa1f7705a8f`
+- **Prompt ID**: `23073a74-856e-4fee-a26e-fee1cf67e540`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
@@ -31,10 +31,10 @@
   - z_image_turbo_vae.safetensors
   - zimg-eurameg1-refine-con-char.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] eurameg1, In a dimly lit VIP room at a party with soft shadows and muffled music beyond the door, a woman in a glamorous form-fitting evening dress stands in medium close-up, tilting her head with a p
+  - [CLIPTextEncode::text] eurameg1, A seductive woman in a glamorous fitted evening dress sits closely on a luxurious sofa in a dimly lit VIP room, body angled toward her companion with one hand lightly touching the cushion be
 
 ### 3. workflow_03.json
-- **Prompt ID**: `2853befa-d36f-45d3-950a-03f2d993064d`
+- **Prompt ID**: `77f6ff0b-12b7-4719-8ad0-68d32d164465`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
@@ -43,10 +43,10 @@
   - z_image_turbo_vae.safetensors
   - zimg-eurameg1-refine-con-char.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] eurameg1, In a dimly lit VIP room with soft warm lighting and muffled party music beyond the door, a glamorous woman in a fitted elegant outfit stands with a knowing smile and slightly widened eyes, h
+  - [CLIPTextEncode::text] eurameg1, In a dimly lit luxurious home interior with soft ambient lighting, a glamorous woman in an elegant form-fitting dress sits barefoot on the edge of a sofa, holding a cocktail glass and tracin
 
 ### 4. workflow_04.json
-- **Prompt ID**: `77883150-3901-4269-807d-97bab62c19ad`
+- **Prompt ID**: `c8581898-4355-4d78-b874-b13ddd720ae9`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
@@ -55,58 +55,34 @@
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] In an empty classroom after school, a female teacher stands behind her desk wearing a strict fitted suit jacket and tight skirt, her glasses removed and placed on the desk beside a pointer. She leans 
+  - [CLIPTextEncode::text] The strict female tutor with glasses sits in her chair at the table in a quiet apartment after the tutoring session, notebooks and textbooks scattered around her, skirt lifted high around her waist an
 
 ### 5. workflow_05.json
-- **Prompt ID**: `9f9acbb6-74c9-4a65-a762-8432a4dc8604`
+- **Prompt ID**: `8629aef0-a607-49fd-98a2-4ab03859f3a1`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
-  - TGZW383YGE7RTN4ZTNPAM4FT50.safetensors
+  - izumi_v.2.safetensors
   - model2.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] elvaross, A young woman stands in a quiet dorm room at night, soft warm lamplight illuminating her from the side, wearing a lifted short skirt and pulled-up top that fully exposes her bare breasts and
+  - [CLIPTextEncode::text] seductive young curvy woman with long black hair, A woman lying on the hood of a car in a secluded natural spot outside the city at evening, her body relaxed and spread across the metal surface with o
 
 ### 6. workflow_06.json
-- **Prompt ID**: `fda6994d-2786-42a0-b119-29b5c8f4b889`
+- **Prompt ID**: `16c8f503-b2b5-4c42-9a2e-55a347733565`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
+  - izumi_v.2.safetensors
   - model2.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
-  - zimg-eurameg1-refine-con-char.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] eurameg1, A nude woman kneeling at a luxury auction event in a glamorous VIP setting, confidently smiling with a playful expression and head tilted slightly, performing oral sex with an erect penis in
+  - [CLIPTextEncode::text] seductive young curvy woman with long black hair, A woman leaning forward over the hood of a car in a secluded natural spot outside the city at evening, her abdomen visibly swollen and rounded, thick 
 
 ### 7. workflow_07.json
-- **Prompt ID**: `d6c5e195-86ed-4404-bdaa-de64b037bb9a`
-- **类型**: 文生图
-- **节点数**: 11
-- **模型** (4):
-  - White_short_ZiT.safetensors
-  - model2.safetensors
-  - z_image_turbo_text_encoder.safetensors
-  - z_image_turbo_vae.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] wh1te, short white hair, extremely thin woman, A confident woman with glistening skin lies pinned on a luxurious couch inside a modern Miami villa, her clothes ripped open and torn away to expose her 
-
-### 8. workflow_08.json
-- **Prompt ID**: `c4a5b18b-9c68-4bb4-b251-caf4ed98f1a6`
-- **类型**: 文生图
-- **节点数**: 11
-- **模型** (4):
-  - ameg2_con_char.safetensors
-  - model2.safetensors
-  - z_image_turbo_text_encoder.safetensors
-  - z_image_turbo_vae.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] ameg2, A woman wrapped in a white towel stands near the shower area after swimming, warm humid atmosphere with soft steam around, she has a playful squinted expression and slight smirk while touching 
-
-### 9. workflow_09.json
-- **Prompt ID**: `25f6a876-b786-45a6-8b36-97948ebf62ad`
+- **Prompt ID**: `3a489fe2-eaef-4fdc-8fec-47c092f74f72`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
@@ -115,16 +91,4 @@
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] seductive young curvy woman with long black hair, A woman sits at a small table in a cozy apartment during evening, soft warm lighting casting gentle shadows, intimate trust-game atmosphere. She leans
-
-### 10. workflow_10.json
-- **Prompt ID**: `3d29bbac-c347-4937-b13a-51e4fea4ad61`
-- **类型**: 文生图
-- **节点数**: 11
-- **模型** (4):
-  - izumi_v.2.safetensors
-  - model2.safetensors
-  - z_image_turbo_text_encoder.safetensors
-  - z_image_turbo_vae.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] seductive young curvy woman with long black hair, A nude woman lies on her back in missionary position on a large bed in a dimly lit elegant hotel room, totally naked with smooth skin and visible brea
+  - [CLIPTextEncode::text] seductive young curvy woman with long black hair, A young woman lying on her back on soft grass in a secluded evening forest clearing, completely naked with pale skin, one hand gripping her hip, a mal

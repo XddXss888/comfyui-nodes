@@ -50,6 +50,134 @@
       "title": "LoRA 3：Meion风格"
     }
   },
+  "5": {
+    "inputs": {
+      "model": [
+        "48",
+        0
+      ],
+      "method": "from cond"
+    },
+    "class_type": "Support empty uncond",
+    "_meta": {
+      "title": "支持空负向条件"
+    }
+  },
+  "7": {
+    "inputs": {
+      "clip": [
+        "45",
+        0
+      ],
+      "text": "A beautiful phone camera selfie of the girl in the background. Himari is smiling at the camera with a playful expression, while in the background, Nanoha is sitting on the floor, looking towards the viewer's direction with an extremely flushed face and wide, watery eyes. BREAK 1girl, Himari, female_focus, 18yo, selfie, looking_at_viewer, blonde_hair, twin_tails, gold_eyes, white_t_shirt, teasing_smile. BREAK 1girl, Nanoha, in_background, sitting, short_black_hair, dark_brown_eyes, heavy_blush, embarrassed_expression. BREAK indoors, bedroom, tatami, phone_camera_quality, depth_of_field."
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "正向提示词"
+    }
+  },
+  "8": {
+    "inputs": {
+      "clip": [
+        "45",
+        0
+      ],
+      "text": ""
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "负向提示词"
+    }
+  },
+  "9": {
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "10": {
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "positive": [
+        "7",
+        0
+      ],
+      "negative": [
+        "8",
+        0
+      ],
+      "latent_image": [
+        "9",
+        0
+      ],
+      "seed": 580833738,
+      "steps": 12,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "11": {
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "12": {
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "15": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载Qwen VAE"
+    }
+  },
+  "45": {
+    "inputs": {
+      "clip_name": "qwen_3_06b_base.safetensors",
+      "type": "stable_diffusion",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载Qwen CLIP"
+    }
+  },
   "46": {
     "inputs": {
       "lora_name": "anima\\gpt-image-2_anima-base1_v1-1.safetensors",
@@ -90,134 +218,6 @@
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
       "title": "LoRA 6：饱和度增强"
-    }
-  },
-  "5": {
-    "inputs": {
-      "model": [
-        "48",
-        0
-      ],
-      "method": "from cond"
-    },
-    "class_type": "Support empty uncond",
-    "_meta": {
-      "title": "支持空负向条件"
-    }
-  },
-  "45": {
-    "inputs": {
-      "clip_name": "qwen_3_06b_base.safetensors",
-      "type": "stable_diffusion",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载Qwen CLIP"
-    }
-  },
-  "7": {
-    "inputs": {
-      "clip": [
-        "45",
-        0
-      ],
-      "text": "masterpiece, best quality,very aesthetic, mature woman,ultra-detailed, nsfw, @gpt-image-2, @meionANIMAstyle,@sw33t,@NJSW33T,${promot}, A cinematic photo of a tense interaction between a man and a woman on a yacht deck. The man is leaning over the woman, grabbing her wrist, breaking her composed facade. BREAK (1girl, Yu Guiwan:1.1), female_focus, 48yo, visual_age_30, mature female, sitting_on_sofa, leaning_back, wrist_grabbed, (black_hair, retro_curls, red_lips:1.2), stiff_smile, wide_eyes, subtle_panic, (burgundy_silk_slip_dress, deep_cleavage). BREAK (1boy, zy:1.1), male_focus, standing, leaning_over_partner, arm_on_sofa_back, holding_partner_wrist, dominant_posture, intense_gaze, (short_black_hair, navy_blue_silk_shirt, unbuttoned_collar). BREAK (outdoors), yacht_deck, ocean_background, warm golden hour sunset lighting, strong backlighting, lens_flare, dramatic cinematic shadows, high_tension, close_up, depth_of_field."
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "正向提示词"
-    }
-  },
-  "8": {
-    "inputs": {
-      "clip": [
-        "45",
-        0
-      ],
-      "text": "worst quality, low quality, score_1, score_2, score_3, old, early, lowres, simple background, blurry, sepia"
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "负向提示词"
-    }
-  },
-  "9": {
-    "inputs": {
-      "width": 832,
-      "height": 1216,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "空Latent图像"
-    }
-  },
-  "10": {
-    "inputs": {
-      "model": [
-        "5",
-        0
-      ],
-      "positive": [
-        "7",
-        0
-      ],
-      "negative": [
-        "8",
-        0
-      ],
-      "latent_image": [
-        "9",
-        0
-      ],
-      "seed": 317540284430183,
-      "steps": 12,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "15": {
-    "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载Qwen VAE"
-    }
-  },
-  "11": {
-    "inputs": {
-      "samples": [
-        "10",
-        0
-      ],
-      "vae": [
-        "15",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "12": {
-    "inputs": {
-      "images": [
-        "11",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
     }
   }
 }

@@ -3204,6 +3204,7 @@
       "aspect_ratio": "9:16",
       "resolution": "720p",
       "seed": 0,
+      "video-preview": "",
       "images.image_1": [
         "243",
         0
@@ -3219,8 +3220,50 @@
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
+      "video-preview": "",
       "video": [
         "244",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "246": {
+    "inputs": {
+      "image": "videoframe_6918.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "247": {
+    "inputs": {
+      "prompt": "he says to the camera with full confidence and proud feeling\n\" अपनी ऑडियंस बनाओ और कमाई शुरू करो।\nअभी इंस्टॉल बटन पर क्लिक करो और Seekho App डाउनलोड करो। \"",
+      "duration": "8",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "246",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "248": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "247",
         0
       ]
     },

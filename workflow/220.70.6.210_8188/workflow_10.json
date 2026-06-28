@@ -1,86 +1,103 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "DownloadAndLoadCogVideoModel",
     "inputs": {
-      "ckpt_name": "flux1-schnell-fp8.safetensors"
+      "model": "THUDM/CogVideoX-2b",
+      "precision": "fp16"
     }
   },
   "2": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "CLIPLoader",
     "inputs": {
-      "text": "Logo discord avec les lettres RS pour un developpeur",
-      "clip": [
-        "1",
-        1
-      ]
+      "clip_name": "t5xxl_fp8_e4m3fn.safetensors",
+      "type": "sd3"
     }
   },
   "3": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "CogVideoTextEncode",
     "inputs": {
-      "text": "blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality",
       "clip": [
-        "1",
-        1
-      ]
+        "2",
+        0
+      ],
+      "prompt": "강아지가 커피 마시는 장면"
     }
   },
   "4": {
+    "class_type": "CogVideoTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "prompt": ""
+    }
+  },
+  "10": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 1024,
-      "height": 1024,
+      "width": 720,
+      "height": 480,
       "batch_size": 1
     }
   },
   "5": {
-    "class_type": "KSampler",
+    "class_type": "CogVideoSampler",
     "inputs": {
-      "seed": 3800916969,
-      "steps": 20,
-      "cfg": 7.0,
-      "sampler_name": "dpmpp_2m",
-      "scheduler": "karras",
-      "denoise": 1.0,
       "model": [
         "1",
         0
       ],
       "positive": [
-        "2",
-        0
-      ],
-      "negative": [
         "3",
         0
       ],
-      "latent_image": [
+      "negative": [
         "4",
+        0
+      ],
+      "num_frames": 49,
+      "steps": 20,
+      "cfg": 6.0,
+      "seed": 765825814734594694,
+      "scheduler": "CogVideoXDDIM",
+      "samples": [
+        "10",
         0
       ]
     }
   },
   "6": {
-    "class_type": "VAEDecode",
+    "class_type": "CogVideoDecode",
     "inputs": {
+      "vae": [
+        "1",
+        1
+      ],
       "samples": [
         "5",
         0
       ],
-      "vae": [
-        "1",
-        2
-      ]
+      "enable_vae_tiling": true,
+      "tile_sample_min_height": 240,
+      "tile_sample_min_width": 360,
+      "tile_overlap_factor_height": 0.2,
+      "tile_overlap_factor_width": 0.2,
+      "auto_tile_size": true
     }
   },
   "7": {
-    "class_type": "SaveImage",
+    "class_type": "SaveAnimatedWEBP",
     "inputs": {
       "images": [
         "6",
         0
       ],
-      "filename_prefix": "fantasy"
+      "filename_prefix": "vid_7c2e4e53",
+      "fps": 8.0,
+      "lossless": false,
+      "quality": 85,
+      "method": "default"
     }
   }
 }

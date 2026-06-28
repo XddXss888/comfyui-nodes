@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "19b369ec54a24a7c8bdd0b2070f860da.jpg"
+      "image": "jimeng-2026-06-10-1991-优雅气质的美女，在森林里微笑着面对镜头，穿着白底写意晕染模糊粉白玫瑰真丝飘逸长裙....png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -12,7 +12,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "28",
+        "6",
         0
       ]
     },
@@ -21,9 +21,27 @@
       "title": "保存图像"
     }
   },
-  "15": {
+  "3": {
     "inputs": {
-      "prompt": "参考图一中的主要人物和图二的马吉祥物，严格保持图二马吉祥物造型不变，图一人物轻微美颜和美白，漫画插画风格。主体为图一人物和图二马吉祥物在草原上奔跑放彩色风筝，马吉祥物表情夸张开心，人物动作有速度感和笑意，占据视觉中心。人物和马吉祥物互动亲密自然，马吉祥物面向镜头，自然微笑。背景是开阔草坡、蓝天白云、花草和远山，整体色彩明亮，画面轻快活泼，高饱和色彩。",
+      "image": "ip.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "4": {
+    "inputs": {
+      "image": "游乐园.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "5": {
+    "inputs": {
+      "prompt": "参考图1中的主要人物，保持图2的泡泡小山IP角色造型不变，生成小巧的泡泡小山在人物旁边一起合影的画面，中近景半身人像构图，人物智能美颜，美式动漫插画风格，丝网印刷风格，颗粒肌理。背景是童话风游乐园场景，米白城堡与红顶塔楼在蓝天映衬下格外梦幻，巨大摩天轮如时光之轮静静伫立，湖面倒映着建筑与流云，垂柳轻拂，完全还原参考图3中的建筑造型。色调清新明快，光影柔和通透，整体风格是治愈系粉色调，颜色鲜亮，色彩饱和，高对比度，氛围感温馨，细节丰富，质感细腻。",
       "model": "doubao-seedream-4-5-251128",
       "response_format": "url",
       "resolution": "4K",
@@ -33,7 +51,7 @@
       "apikey": "a44228f5-f1b2-44e9-860a-d3c8eb5ac03e",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 1477986690,
+      "seed": 1336107610,
       "watermark": false,
       "stream": false,
       "image1": [
@@ -41,7 +59,11 @@
         0
       ],
       "image2": [
-        "26",
+        "3",
+        0
+      ],
+      "image3": [
+        "4",
         0
       ]
     },
@@ -50,7 +72,7 @@
       "title": "Comfly Doubao Seedream4.0"
     }
   },
-  "18": {
+  "6": {
     "inputs": {
       "aspect_ratio": "custom",
       "proportional_width": 2622,
@@ -62,35 +84,13 @@
       "scale_to_length": 2622,
       "background_color": "#000000",
       "image": [
-        "15",
+        "5",
         0
       ]
     },
     "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
     "_meta": {
       "title": "图层工具：按宽高比缩放 V2"
-    }
-  },
-  "26": {
-    "inputs": {
-      "image": "cym.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "28": {
-    "inputs": {
-      "rotation": "270 degrees",
-      "image": [
-        "18",
-        0
-      ]
-    },
-    "class_type": "ImageRotate",
-    "_meta": {
-      "title": "图像旋转"
     }
   }
 }

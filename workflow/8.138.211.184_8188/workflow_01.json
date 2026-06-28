@@ -65,10 +65,7 @@
   },
   "112": {
     "inputs": {
-      "text": [
-        "273",
-        0
-      ],
+      "text": "全景全身视角展示一位身材丰满的丰满少女独自漫步在幽静的森林小径上。她身穿一件极简设计的半透明薄纱连体衣，布料极薄且带有细腻的蕾丝边缘，紧紧包裹着她圆润饱满的臀部、纤细的腰肢以及丰盈的上围，衣物在关键部位若隐若现地透出底下白皙光滑的肌肤，营造出强烈的性感擦边氛围。少女留着柔顺的长发，正回头看向镜头，眼神迷离而充满诱惑，嘴角带着一丝若有若无的微笑。\n\n环境背景是一条蜿蜒穿过茂密树林的林间小路，两侧是郁郁葱葱的高大树木和斑驳的落叶，空气中弥漫着湿润的自然气息。光线采用强烈的侧逆光拍摄，金色的阳光从树梢缝隙中穿透下来，在少女的身体轮廓、发丝边缘以及薄纱衣物上勾勒出耀眼的金色光晕（Rim Light），同时在她身体的凹陷处形成深邃柔和的阴影，极大地增强了立体感和肉欲感。\n\n画面整体呈现出经典的富士 C200 胶片质感，色彩略微偏暖且带有轻微的颗粒噪点，高光部分泛着淡淡的青绿色调，暗部则保留着丰富的细节和自然的褪色效果。构图上采用中心对称式的全景展示，确保少女的全身比例完美呈现，没有任何遮挡或裁剪。画面清晰锐利，光影过渡自然，氛围既私密又充满夏日午后的慵懒与热烈，完全聚焦于展现女性丰满肉体的极致美感与自然环境的和谐融合。",
       "clip": [
         "218",
         1
@@ -198,331 +195,9 @@
       "title": "UNet加载器"
     }
   },
-  "161": {
-    "inputs": {
-      "text": "1456",
-      "anything": [
-        "173",
-        0
-      ]
-    },
-    "class_type": "easy showAnything",
-    "_meta": {
-      "title": "展示任何"
-    }
-  },
-  "162": {
-    "inputs": {
-      "text": "1656",
-      "anything": [
-        "173",
-        1
-      ]
-    },
-    "class_type": "easy showAnything",
-    "_meta": {
-      "title": "展示任何"
-    }
-  },
-  "163": {
-    "inputs": {
-      "width": [
-        "173",
-        0
-      ],
-      "height": [
-        "173",
-        1
-      ],
-      "interpolation": "lanczos",
-      "method": "stretch",
-      "condition": "always",
-      "multiple_of": 8,
-      "image": [
-        "168",
-        0
-      ]
-    },
-    "class_type": "ImageResize+",
-    "_meta": {
-      "title": "🔧 Image Resize"
-    }
-  },
-  "164": {
-    "inputs": {
-      "model": "ema_vae_fp16.safetensors",
-      "device": "cuda:0",
-      "encode_tiled": false,
-      "encode_tile_size": 256,
-      "encode_tile_overlap": 32,
-      "decode_tiled": false,
-      "decode_tile_size": 256,
-      "decode_tile_overlap": 32,
-      "tile_debug": "false",
-      "offload_device": "none",
-      "cache_model": false
-    },
-    "class_type": "SeedVR2LoadVAEModel",
-    "_meta": {
-      "title": "SeedVR2 (Down)Load VAE Model"
-    }
-  },
-  "165": {
-    "inputs": {
-      "width": [
-        "175",
-        0
-      ],
-      "height": [
-        "175",
-        1
-      ],
-      "interpolation": "lanczos",
-      "method": "stretch",
-      "condition": "always",
-      "multiple_of": 8,
-      "image": [
-        "182",
-        0
-      ]
-    },
-    "class_type": "ImageResize+",
-    "_meta": {
-      "title": "🔧 Image Resize"
-    }
-  },
-  "166": {
-    "inputs": {
-      "text": "6144",
-      "anything": [
-        "175",
-        1
-      ]
-    },
-    "class_type": "easy showAnything",
-    "_meta": {
-      "title": "展示任何"
-    }
-  },
-  "167": {
-    "inputs": {
-      "text": "4096",
-      "anything": [
-        "175",
-        0
-      ]
-    },
-    "class_type": "easy showAnything",
-    "_meta": {
-      "title": "展示任何"
-    }
-  },
-  "168": {
-    "inputs": {
-      "seed": 2794489657,
-      "resolution": 1024,
-      "max_resolution": 0,
-      "batch_size": 1,
-      "uniform_batch_size": false,
-      "color_correction": "wavelet",
-      "temporal_overlap": 0,
-      "prepend_frames": 0,
-      "input_noise_scale": 0.0,
-      "latent_noise_scale": 0.0,
-      "offload_device": "cpu",
-      "enable_debug": false,
-      "image": [
-        "174",
-        0
-      ],
-      "dit": [
-        "171",
-        0
-      ],
-      "vae": [
-        "164",
-        0
-      ]
-    },
-    "class_type": "SeedVR2VideoUpscaler",
-    "_meta": {
-      "title": "SeedVR2 Video Upscaler (v2.5.24)"
-    }
-  },
-  "169": {
-    "inputs": {
-      "tile_width": [
-        "170",
-        0
-      ],
-      "tile_height": [
-        "170",
-        1
-      ],
-      "image": [
-        "165",
-        0
-      ]
-    },
-    "class_type": "TTP_Image_Tile_Batch",
-    "_meta": {
-      "title": "TTP_图像瓦片批处理"
-    }
-  },
-  "170": {
-    "inputs": {
-      "width_factor": 3,
-      "height_factor": 4,
-      "overlap_rate": 0.1,
-      "image": [
-        "165",
-        0
-      ]
-    },
-    "class_type": "TTP_Tile_image_size",
-    "_meta": {
-      "title": "TTP_瓦片图像尺寸"
-    }
-  },
-  "171": {
-    "inputs": {
-      "model": "seedvr2_ema_3b_fp8_e4m3fn.safetensors",
-      "device": "cuda:0",
-      "blocks_to_swap": 36,
-      "swap_io_components": false,
-      "offload_device": "cpu",
-      "cache_model": true,
-      "attention_mode": "sdpa"
-    },
-    "class_type": "SeedVR2LoadDiTModel",
-    "_meta": {
-      "title": "SeedVR2 (Down)Load DiT Model"
-    }
-  },
-  "173": {
-    "inputs": {
-      "image": [
-        "169",
-        0
-      ]
-    },
-    "class_type": "GetImageSize+",
-    "_meta": {
-      "title": "🔧 Get Image Size"
-    }
-  },
-  "174": {
-    "inputs": {
-      "upscale_method": "lanczos",
-      "scale_by": 0.25,
-      "image": [
-        "169",
-        0
-      ]
-    },
-    "class_type": "ImageScaleBy",
-    "_meta": {
-      "title": "缩放图像（比例）"
-    }
-  },
-  "175": {
-    "inputs": {
-      "image": [
-        "182",
-        0
-      ]
-    },
-    "class_type": "GetImageSize+",
-    "_meta": {
-      "title": "🔧 Get Image Size"
-    }
-  },
-  "176": {
-    "inputs": {
-      "padding": 64,
-      "tiles": [
-        "163",
-        0
-      ],
-      "positions": [
-        "169",
-        1
-      ],
-      "original_size": [
-        "169",
-        2
-      ],
-      "grid_size": [
-        "169",
-        3
-      ]
-    },
-    "class_type": "TTP_Image_Assy",
-    "_meta": {
-      "title": "TTP_图像拼接/重组"
-    }
-  },
-  "180": {
-    "inputs": {
-      "amount": 0.45000000000000007,
-      "image": [
-        "176",
-        0
-      ]
-    },
-    "class_type": "ImageCASharpening+",
-    "_meta": {
-      "title": "🔧 Image Contrast Adaptive Sharpening"
-    }
-  },
-  "181": {
-    "inputs": {
-      "images": [
-        "174",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
-    }
-  },
-  "182": {
-    "inputs": {
-      "anything": [
-        "186",
-        0
-      ]
-    },
-    "class_type": "easy cleanGpuUsed",
-    "_meta": {
-      "title": "清理显存占用"
-    }
-  },
-  "186": {
-    "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 1,
-      "proportional_height": 1,
-      "fit": "letterbox",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_side": "shortest",
-      "scale_to_length": 4096,
-      "background_color": "#000000",
-      "image": [
-        "114",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
-    "_meta": {
-      "title": "图层工具：按宽高比缩放 V2"
-    }
-  },
   "189": {
     "inputs": {
-      "Number": "1024"
+      "Number": "576"
     },
     "class_type": "Int",
     "_meta": {
@@ -547,34 +222,9 @@
       "title": "Checkpoint加载器（简易）"
     }
   },
-  "248": {
-    "inputs": {
-      "filename_prefix": "sese/2026-06-22/HUIHUI_",
-      "images": [
-        "180",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
-    }
-  },
-  "250": {
-    "inputs": {
-      "images": [
-        "114",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
-    }
-  },
   "252": {
     "inputs": {
-      "seed": 505474786377958
+      "seed": 415607616030
     },
     "class_type": "easy seed",
     "_meta": {
@@ -623,28 +273,17 @@
       "title": "LoRA加载器（仅模型）"
     }
   },
-  "273": {
+  "272": {
     "inputs": {
-      "text_0": "一位女性跪在花纹地毯上，身穿红色吊带内衣和黑色蕾丝边饰的服装，头发为黑色，额前有刘海，佩戴白色花朵发饰，涂有红色口红，眼睛化有眼妆，左耳佩戴耳环。一只手从上方按住她的头顶，该手涂有红色指甲油，手腕佩戴白色织带手环和银色戒指，手臂穿着黑色长袖。背景中可见白色沙发、白色砖墙和米色靠垫。",
-      "text": [
-        "274",
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "114",
         0
       ]
     },
-    "class_type": "ShowText|pysssss",
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "展示文本"
-    }
-  },
-  "274": {
-    "inputs": {
-      "seed": 131026978784261,
-      "max_side": 1600,
-      "excluded": ""
-    },
-    "class_type": "CosplayPromptFetcher",
-    "_meta": {
-      "title": "Cosplay提示词获取器"
+      "title": "保存图像"
     }
   }
 }

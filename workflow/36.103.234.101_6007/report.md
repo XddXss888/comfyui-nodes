@@ -1,16 +1,16 @@
 # 36.103.234.101:6007
 
 **GPU**: RTX 5090 | **显存**: 31 GB | **空闲**: 9 GB
-**内存**: 472 GB (空闲 451 GB)
+**内存**: 472 GB (空闲 450 GB)
 **版本**: 0.3.49
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-27 08:07:52
-**历史总数**: 17 | **成功**: 10
+**扫描时间**: 2026-06-28 08:07:47
+**历史总数**: 70 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `d6b6246c-528d-408c-94bd-9d73b9024224`
+- **Prompt ID**: `81d29726-e69e-4f9f-aa30-45bad5ec1118`
 - **类型**: 图生图
 - **节点数**: 47
 - **模型** (9):
@@ -27,7 +27,7 @@
   - [Text Multiline::text] Moist, shiny hair, hair model,High-quality realistic photos, with clear and distinct characters and scenes, fine hair full of texture, and delicate clothes
 
 ### 2. workflow_02.json
-- **Prompt ID**: `7f5dec77-42bd-4afd-be14-2055b0884b7a`
+- **Prompt ID**: `9cd9e650-86e4-4e09-84d1-acc070e3be20`
 - **类型**: 图生图
 - **节点数**: 47
 - **模型** (9):
@@ -44,7 +44,7 @@
   - [Text Multiline::text] Moist, shiny hair, hair model,High-quality realistic photos, with clear and distinct characters and scenes, fine hair full of texture, and delicate clothes
 
 ### 3. workflow_03.json
-- **Prompt ID**: `d9eb0e4a-38c2-467e-98f0-2bf866a398e1`
+- **Prompt ID**: `09ed034f-2f8e-42b6-ae05-682970ad74bc`
 - **类型**: 图生图
 - **节点数**: 47
 - **模型** (9):
@@ -61,7 +61,7 @@
   - [Text Multiline::text] Moist, shiny hair, hair model,High-quality realistic photos, with clear and distinct characters and scenes, fine hair full of texture, and delicate clothes
 
 ### 4. workflow_04.json
-- **Prompt ID**: `4884e993-7888-430c-8f5f-3381a0d60d5b`
+- **Prompt ID**: `38f83359-96e3-4db3-a54b-b6650e8b0248`
 - **类型**: 图生图
 - **节点数**: 47
 - **模型** (9):
@@ -78,7 +78,7 @@
   - [Text Multiline::text] Moist, shiny hair, hair model,High-quality realistic photos, with clear and distinct characters and scenes, fine hair full of texture, and delicate clothes
 
 ### 5. workflow_05.json
-- **Prompt ID**: `bcbbfeb4-90cb-4f00-91c7-ec16d7d87e50`
+- **Prompt ID**: `21adb3ee-5aab-4393-b653-f635fc01628f`
 - **类型**: 图生图
 - **节点数**: 47
 - **模型** (9):
@@ -95,7 +95,7 @@
   - [Text Multiline::text] Moist, shiny hair, hair model,High-quality realistic photos, with clear and distinct characters and scenes, fine hair full of texture, and delicate clothes
 
 ### 6. workflow_06.json
-- **Prompt ID**: `78882287-f4be-4f76-9b1a-4086b043ce2d`
+- **Prompt ID**: `34498607-4638-43df-a57f-62bd4911504d`
 - **类型**: 图生图
 - **节点数**: 47
 - **模型** (9):
@@ -112,7 +112,7 @@
   - [Text Multiline::text] Moist, shiny hair, hair model,High-quality realistic photos, with clear and distinct characters and scenes, fine hair full of texture, and delicate clothes
 
 ### 7. workflow_07.json
-- **Prompt ID**: `4730a806-7d74-48aa-82a6-e230d4db23fd`
+- **Prompt ID**: `71871d88-8d92-41d1-8073-292e2db51a7a`
 - **类型**: 图生图
 - **节点数**: 47
 - **模型** (9):
@@ -129,7 +129,7 @@
   - [Text Multiline::text] Moist, shiny hair, hair model,High-quality realistic photos, with clear and distinct characters and scenes, fine hair full of texture, and delicate clothes
 
 ### 8. workflow_08.json
-- **Prompt ID**: `57c6be92-ef89-4447-80a7-e869d8d4224c`
+- **Prompt ID**: `100a5fff-a4f3-4819-a5fa-93166dd0acdd`
 - **类型**: 图生图
 - **节点数**: 47
 - **模型** (9):
@@ -146,7 +146,7 @@
   - [Text Multiline::text] Moist, shiny hair, hair model,High-quality realistic photos, with clear and distinct characters and scenes, fine hair full of texture, and delicate clothes
 
 ### 9. workflow_09.json
-- **Prompt ID**: `26f65837-c6a3-4dd7-b111-d3b57b4ff98c`
+- **Prompt ID**: `64ce3bbd-e2ac-4766-beb5-a13a776cccb6`
 - **类型**: 图生图
 - **节点数**: 47
 - **模型** (9):
@@ -163,7 +163,7 @@
   - [Text Multiline::text] Moist, shiny hair, hair model,High-quality realistic photos, with clear and distinct characters and scenes, fine hair full of texture, and delicate clothes
 
 ### 10. workflow_10.json
-- **Prompt ID**: `02908b17-9b38-42d2-9568-655da5ff7468`
+- **Prompt ID**: `9122eaa8-dcc3-4236-b169-e9a493e98384`
 - **类型**: 图生图
 - **节点数**: 47
 - **模型** (9):

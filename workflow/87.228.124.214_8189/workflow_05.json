@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "elvaross, A young woman stands in a quiet dorm room at night, soft warm lamplight illuminating her from the side, wearing a lifted short skirt and pulled-up top that fully exposes her bare breasts and shaved pussy. She holds the skirt hem up with one hand and lifts her top with the other, legs slightly parted in a natural stance, body facing forward with a shy smile and lower lip bitten, gazing toward the viewer. The simple student room background shows a bed and desk behind her, intimate private indoor atmosphere, medium close-up framing focused on her torso and hips, clear visible anatomy and contact with clothing, natural proportions, readable pose.",
+      "text": "seductive young curvy woman with long black hair, A woman lying on the hood of a car in a secluded natural spot outside the city at evening, her body relaxed and spread across the metal surface with one arm resting at her side and legs slightly bent, wearing fitted clothing that shows natural folds and tension from the pose, soft dusk light casting gentle shadows across the scene, simple background of trees and open space with no other people, medium close-up framing from a slightly angled front view, realistic proportions and clear posture.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 1.73,
+      "shift": 12.0,
       "model": [
         "72",
         0
@@ -109,8 +109,8 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "TGZW383YGE7RTN4ZTNPAM4FT50.safetensors",
-      "strength_model": 0.88,
+      "lora_name": "izumi_v.2.safetensors",
+      "strength_model": 0.9,
       "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.4,
+      "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 8,
+      "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 494111015108424,
+      "seed": 26161571962184,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

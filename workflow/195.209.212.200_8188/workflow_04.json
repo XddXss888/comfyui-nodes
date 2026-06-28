@@ -14,60 +14,6 @@
       "title": "Load Images (Path) 🎥🅥🅗🅢"
     }
   },
-  "29": {
-    "inputs": {
-      "image": [
-        "27",
-        0
-      ]
-    },
-    "class_type": "GetImageSize+",
-    "_meta": {
-      "title": "🔧 Get Image Size"
-    }
-  },
-  "31": {
-    "inputs": {
-      "save_folder": [
-        "131",
-        0
-      ],
-      "name_imgs_from_folder": [
-        "86",
-        0
-      ],
-      "start_frame": 0,
-      "count": [
-        "29",
-        2
-      ],
-      "add_double": false,
-      "remove_double": false,
-      "count_double": 0,
-      "need_zip": true,
-      "images": [
-        "155",
-        0
-      ]
-    },
-    "class_type": "Save Image Batch Node",
-    "_meta": {
-      "title": "render_masks"
-    }
-  },
-  "62": {
-    "inputs": {
-      "channel": "red",
-      "image": [
-        "27",
-        0
-      ]
-    },
-    "class_type": "ImageToMask",
-    "_meta": {
-      "title": "Convert Image to Mask"
-    }
-  },
   "86": {
     "inputs": {
       "inputcount": 2,
@@ -88,39 +34,9 @@
       "title": "Join String Multi"
     }
   },
-  "114": {
-    "inputs": {
-      "width": [
-        "29",
-        0
-      ],
-      "height": [
-        "29",
-        1
-      ],
-      "batch_size": [
-        "29",
-        2
-      ],
-      "color": 0
-    },
-    "class_type": "EmptyImage",
-    "_meta": {
-      "title": "EmptyImage"
-    }
-  },
-  "117": {
-    "inputs": {
-      "value": 0.4
-    },
-    "class_type": "FloatConstant",
-    "_meta": {
-      "title": "Float Constant"
-    }
-  },
   "126": {
     "inputs": {
-      "value": "/DATA/Jive/Yandex.Disk/Dzhave/work/8_serie/0270/0270_s_rogojan/"
+      "value": "/DATA/Jive/Yandex.Disk/Dzhave/work/8_serie/0320/0320_s_rogojan/"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -129,7 +45,7 @@
   },
   "127": {
     "inputs": {
-      "value": "/02_mask"
+      "value": "/01_source_crop"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -138,7 +54,7 @@
   },
   "129": {
     "inputs": {
-      "value": "/DATA/Jive/processing/8_serie/0270/0270_s_rogojan/"
+      "value": "/DATA/Jive/processing/8_serie/0320/0320_s_rogojan/"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -147,7 +63,7 @@
   },
   "130": {
     "inputs": {
-      "value": "/02_mask_green"
+      "value": "/03_crop_render"
     },
     "class_type": "PrimitiveString",
     "_meta": {
@@ -174,77 +90,6 @@
       "title": "Join String Multi"
     }
   },
-  "152": {
-    "inputs": {
-      "x": 0,
-      "y": 0,
-      "operation": "multiply",
-      "destination": [
-        "62",
-        0
-      ],
-      "source": [
-        "153",
-        0
-      ]
-    },
-    "class_type": "MaskComposite",
-    "_meta": {
-      "title": "MaskComposite"
-    }
-  },
-  "153": {
-    "inputs": {
-      "value": [
-        "117",
-        0
-      ],
-      "width": [
-        "29",
-        0
-      ],
-      "height": [
-        "29",
-        1
-      ]
-    },
-    "class_type": "SolidMask",
-    "_meta": {
-      "title": "SolidMask"
-    }
-  },
-  "154": {
-    "inputs": {
-      "mask": [
-        "152",
-        0
-      ]
-    },
-    "class_type": "MaskToImage",
-    "_meta": {
-      "title": "Convert Mask to Image"
-    }
-  },
-  "155": {
-    "inputs": {
-      "red": [
-        "114",
-        0
-      ],
-      "green": [
-        "154",
-        0
-      ],
-      "blue": [
-        "114",
-        0
-      ]
-    },
-    "class_type": "MergeImageChannels",
-    "_meta": {
-      "title": "Merge Image Channels"
-    }
-  },
   "157": {
     "inputs": {
       "frame_rate": 24,
@@ -257,7 +102,7 @@
         0
       ],
       "images": [
-        "155",
+        "161",
         0
       ]
     },
@@ -293,6 +138,41 @@
     "class_type": "PrimitiveString",
     "_meta": {
       "title": "String"
+    }
+  },
+  "160": {
+    "inputs": {
+      "directory": [
+        "131",
+        0
+      ],
+      "image_load_cap": 0,
+      "skip_first_images": 0,
+      "select_every_nth": 1
+    },
+    "class_type": "VHS_LoadImagesPath",
+    "_meta": {
+      "title": "Load Images (Path) 🎥🅥🅗🅢"
+    }
+  },
+  "161": {
+    "inputs": {
+      "inputcount": 2,
+      "direction": "right",
+      "match_image_size": false,
+      "Update inputs": null,
+      "image_1": [
+        "27",
+        0
+      ],
+      "image_2": [
+        "160",
+        0
+      ]
+    },
+    "class_type": "ImageConcatMulti",
+    "_meta": {
+      "title": "Image Concatenate Multi"
     }
   }
 }

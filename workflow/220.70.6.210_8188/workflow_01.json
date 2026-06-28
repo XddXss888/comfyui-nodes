@@ -1,103 +1,86 @@
 {
-  "1": {
-    "class_type": "DownloadAndLoadCogVideoModel",
-    "inputs": {
-      "model": "THUDM/CogVideoX-2b",
-      "precision": "fp16"
-    }
-  },
-  "2": {
-    "class_type": "CLIPLoader",
-    "inputs": {
-      "clip_name": "t5xxl_fp8_e4m3fn.safetensors",
-      "type": "sd3"
-    }
-  },
   "3": {
-    "class_type": "CogVideoTextEncode",
+    "class_type": "KSampler",
     "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "prompt": "a cat walking slowly in a cozy cafe, warm light, gentle camera motion"
-    }
-  },
-  "4": {
-    "class_type": "CogVideoTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "prompt": ""
-    }
-  },
-  "10": {
-    "class_type": "EmptyLatentImage",
-    "inputs": {
-      "width": 720,
-      "height": 480,
-      "batch_size": 1
-    }
-  },
-  "5": {
-    "class_type": "CogVideoSampler",
-    "inputs": {
+      "seed": 129755397,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
       "model": [
-        "1",
-        0
-      ],
-      "positive": [
-        "3",
-        0
-      ],
-      "negative": [
         "4",
         0
       ],
-      "num_frames": 49,
-      "steps": 20,
-      "cfg": 6.0,
-      "seed": 505951546804165648,
-      "scheduler": "CogVideoXDDIM",
-      "samples": [
-        "10",
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
         0
       ]
     }
   },
-  "6": {
-    "class_type": "CogVideoDecode",
+  "4": {
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "vae": [
-        "1",
+      "ckpt_name": "flux1-schnell-fp8.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 576,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "CRITICAL CONSTRAINTS (MUST OBEY EXACTLY):\n- AT MOST ONE person visible. Never multiple people.\n- PREFER no hands visible at all (use facial close-ups, or show body from neck up, or hands hidden behind objects).\n- IF a hand must show, only ONE relaxed hand with five normal fingers, and only ONE hand at a time (not both hands raised together).\n- AVOID clenched fists, boxing pose, both fists raised, intense exaggerated gestures, hands covering face symmetrically.\n- AVOID hands holding head with both arms (cliché frustration pose).\n- NO floating disembodied hands, NO extra arms, NO finger deformities.\n- NO surreal or horror-like distortions, NO duplicate body parts.\n\nPOSE GUIDANCE: Use natural relaxed body language — tilted head, slumped shoulders, looking away, hand on chin (ONE hand), hand holding a single small object, or simply face-only composition.\n\nIMAGE DESCRIPTION:\n⚠️ **CRITICAL: EXACT PRODUCT/CHARACTER REPLICATION REQUIRED**\n\nYou are provided with a REFERENCE IMAGE. Your task is to create a scene that includes this EXACT subject.\n\n**MANDATORY RULES FOR ACCURACY**:\n\n1. **COLOR MATCHING** (HIGHEST PRIORITY):\n   - Extract the EXACT colors from the reference image\n   - DO NOT change or interpret colors\n   - Use a digital color picker approach: MATCH PIXEL BY PIXEL\n\n2. **SHAPE & DESIGN**:\n   - Maintain the EXACT shape, proportions, and form\n   - Keep all design elements identical\n\n3. **MATERIAL & TEXTURE**:\n   - Replicate the EXACT surface finish\n   - Match the material appearance precisely\n\n\nIMAGE STYLE: photorealistic, professional photography, realistic lighting and shadows\n\n\n**SCENE INTEGRATION**:\nCONTENT TYPE CONTEXT: Focus on showcasing the product features, benefits, and unique selling points. Commercial product photography style.\nScene Description: \"Close-up of a frustrated Korean person struggling to catch their breath while jogging, visible sweat dripping down their face, shaking their head in discomfort, tense facial expression, outdoor park setting, dramatic natural lighting, photorealistic, ultra-detailed, 8K, cinematic, 9:16 vertical\"\n\n\nPRODUCT EXPOSURE RULE FOR THIS CUT:\n- DO NOT show the product at all\n- Focus only on the problem, situation, or emotion\n- Show context without revealing the solution yet\n\n\n\n**COMPOSITION REQUIREMENTS**:\n- 9:16 vertical aspect ratio (portrait mode)\n- Subject positioned naturally within the scene\n- Photorealistic quality with proper shadows and reflections\n- NO TEXT, NO WORDS (except subject's own branding)\n\n**CRITICAL**:\nThe subject MUST look IDENTICAL to the reference image.\nAny color change, shape modification, or design alteration is a FAILURE.\n\nOUTPUT: A natural scene with the EXACT subject from the reference image., slightly desaturated tones, empathetic mood, relatable scene, natural soft lighting. Negative: blurry, low quality, distorted, ugly, bad anatomy, deformed, disfigured, mutation, out of frame, poorly drawn, extra limbs, extra hands, multiple hands, three hands, too many fingers, extra fingers, fused fingers, missing fingers, deformed hands, malformed hands, duplicate, duplicate person, multiple people, cloned face, watermark, signature, text overlay, logo, jpeg artifacts, compression artifacts, pixelated, off-topic background, irrelevant objects, unrelated product, random clutter, happy expression, smiling product",
+      "clip": [
+        "4",
         1
-      ],
-      "samples": [
-        "5",
-        0
-      ],
-      "enable_vae_tiling": true,
-      "tile_sample_min_height": 240,
-      "tile_sample_min_width": 360,
-      "tile_overlap_factor_height": 0.2,
-      "tile_overlap_factor_width": 0.2,
-      "auto_tile_size": true
+      ]
     }
   },
   "7": {
-    "class_type": "SaveAnimatedWEBP",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "images": [
-        "6",
+      "text": "blurry, low quality, distorted, ugly, bad anatomy, deformed, disfigured, mutation, out of frame, poorly drawn, extra limbs, extra hands, multiple hands, three hands, too many fingers, extra fingers, fused fingers, missing fingers, deformed hands, malformed hands, duplicate, duplicate person, multiple people, cloned face, watermark, signature, text overlay, logo, jpeg artifacts, compression artifacts, pixelated, off-topic background, irrelevant objects, unrelated product, random clutter, happy expression, smiling product",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "3",
         0
       ],
-      "filename_prefix": "vid_a3c1e290",
-      "fps": 8.0,
-      "lossless": false,
-      "quality": 85,
-      "method": "default"
+      "vae": [
+        "4",
+        2
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "goagent_e61f353e",
+      "images": [
+        "8",
+        0
+      ]
     }
   }
 }

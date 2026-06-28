@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_2693b5db58a1479e92507967b93eab93.png"
+      "image": "ref_d9101f1b491a4c2f968b370899990e7b.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "請幫我生成她穿內衣的樣子",
+      "prompt": "把表情改为吐舌头流口水滴落一点眼睛向上翻最好无ai痕迹",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 39727929995019,
+      "seed": 818992550143782,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",

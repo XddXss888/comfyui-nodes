@@ -1,123 +1,93 @@
 {
   "1": {
-    "class_type": "UNETLoader",
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "unet_name": "flux1-dev.safetensors",
-      "weight_dtype": "default"
+      "ckpt_name": "RealVisXL_V5.0.safetensors"
     }
   },
   "2": {
-    "class_type": "DualCLIPLoader",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip_name1": "clip_l.safetensors",
-      "clip_name2": "t5xxl_fp16.safetensors",
-      "type": "flux"
+      "vae_name": "sdxl_vae.safetensors"
     }
   },
   "3": {
-    "class_type": "VAELoader",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "vae_name": "ae.safetensors"
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "RAW photo, ultra realistic skin texture, stunning Korean idol woman on an urban rooftop at twilight, long straight black hair with dark face-framing highlights cascading over one shoulder, oval face with monolid eyes lined in smudged charcoal, mysterious and alluring expression with lips barely parted, flawless porcelain skin with natural texture, styled smoky makeup with gradient berry lips, wearing an oversized cream knit sweater slipping off one shoulder, shot on 35mm lens environmental portrait, Dutch angle tilted frame creating dramatic tension, off-center rule of thirds composition, ring light beauty lighting reflecting twin catchlights in her eyes mixed with golden twilight glow, city skyline blurred behind her, wind catching loose strands of hair, atmospheric haze, cinematic mood, no text, no watermarks"
     }
   },
   "4": {
-    "class_type": "LoraLoaderModelOnly",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "model": [
+      "clip": [
         "1",
-        0
+        1
       ],
-      "lora_name": "flux_korean_girl.safetensors",
-      "strength_model": 0.85
+      "text": "cartoon, anime, illustration, painting, low quality, blurry, deformed, extra fingers, bad anatomy, watermark, text, signature, oversaturated"
     }
   },
   "5": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": "A stunning Korean idol portrait, shot on 135mm telephoto with compressed bokeh background. High angle looking down at a beautiful young woman half-submerged in a crystal-clear swimming pool, wearing an oversized cream knit sweater clinging wet to her shoulders. Jet black short bob cut, sleek and damp, framing her slim face. Fox-like eyes gazing upward with serene, contemplative expression. Ring light reflected as perfect circles in the water surface and her dark irises. Flawless porcelain skin, dewy makeup with gradient coral lips. Negative space on the left filled with turquoise rippling water. Golden hour warm light filtering through, casting honey-toned highlights across her cheekbones. Soft steam rising from the heated pool. Ethereal, dreamlike atmosphere."
-    }
-  },
-  "6": {
-    "class_type": "FluxGuidance",
-    "inputs": {
-      "conditioning": [
-        "5",
-        0
-      ],
-      "guidance": 3.5
-    }
-  },
-  "7": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": ""
-    }
-  },
-  "8": {
-    "class_type": "EmptySD3LatentImage",
+    "class_type": "EmptyLatentImage",
     "inputs": {
       "width": 896,
       "height": 1280,
       "batch_size": 1
     }
   },
-  "9": {
+  "6": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "4",
+        "1",
         0
       ],
       "positive": [
-        "6",
+        "3",
         0
       ],
       "negative": [
-        "7",
+        "4",
         0
       ],
       "latent_image": [
-        "8",
+        "5",
         0
       ],
-      "seed": 1078237182,
+      "seed": 1919359042,
       "control_after_generate": "fixed",
-      "steps": 22,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
+      "steps": 30,
+      "cfg": 4.5,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
       "denoise": 1.0
     }
   },
-  "10": {
+  "7": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "9",
+        "6",
         0
       ],
       "vae": [
-        "3",
+        "2",
         0
       ]
     }
   },
-  "11": {
+  "8": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "10",
+        "7",
         0
       ],
-      "filename_prefix": "portrait_1078237182"
+      "filename_prefix": "portrait_1919359042"
     }
   }
 }

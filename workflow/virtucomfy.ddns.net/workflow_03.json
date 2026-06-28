@@ -1,51 +1,39 @@
 {
   "1": {
     "inputs": {
-      "clip_name": "qwen_3_06b_base.safetensors",
-      "type": "stable_diffusion",
-      "device": "default"
+      "prompt": "remove background, replace with green background\n",
+      "clip": [
+        "266:190",
+        0
+      ],
+      "vae": [
+        "266:185",
+        0
+      ],
+      "image1": [
+        "291",
+        0
+      ]
     },
-    "class_type": "CLIPLoader",
+    "class_type": "TextEncodeQwenImageEditPlus",
     "_meta": {
-      "title": "Load CLIP"
+      "title": "TextEncodeQwenImageEditPlus"
     }
   },
   "2": {
     "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Load VAE"
-    }
-  },
-  "3": {
-    "inputs": {
-      "text": "low quality,\nworst quality,\nbad anatomy,\nbad hands,\nextra fingers,\nextra arms,\nextra legs,\ndeformed,\ncropped,\nblurry,\ntext,\nwatermark,\nlogo,\nnsfw",
-      "clip": [
-        "1",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
-    }
-  },
-  "5": {
-    "inputs": {
-      "seed": 529369988821174,
-      "steps": 30,
-      "cfg": 4.0,
-      "sampler_name": "er_sde",
+      "seed": 59352592771769,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler_ancestral_cfg_pp",
       "scheduler": "simple",
       "denoise": 1.0,
       "model": [
-        "17",
+        "266:199",
         0
       ],
       "positive": [
-        "9",
+        "1",
         0
       ],
       "negative": [
@@ -53,7 +41,7 @@
         0
       ],
       "latent_image": [
-        "8",
+        "267",
         0
       ]
     },
@@ -62,27 +50,44 @@
       "title": "KSampler"
     }
   },
-  "6": {
+  "3": {
     "inputs": {
-      "samples": [
-        "5",
-        0
-      ],
-      "vae": [
-        "2",
+      "text": "(bad), ugly, lowres, worst quality, cropped, deformed,",
+      "clip": [
+        "266:190",
         0
       ]
     },
-    "class_type": "VAEDecode",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "VAE Decode"
+      "title": "Negative"
     }
   },
-  "7": {
+  "4": {
     "inputs": {
-      "filename_prefix": "ComfyUI/animatest",
+      "tile_size": 1024,
+      "overlap": 256,
+      "temporal_size": 64,
+      "temporal_overlap": 8,
+      "samples": [
+        "2",
+        0
+      ],
+      "vae": [
+        "266:185",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE Decode (Tiled)"
+    }
+  },
+  "5": {
+    "inputs": {
+      "filename_prefix": "QwenImage/qwen",
       "images": [
-        "6",
+        "4",
         0
       ]
     },
@@ -91,10 +96,10 @@
       "title": "Save Image"
     }
   },
-  "8": {
+  "267": {
     "inputs": {
-      "width": 1360,
-      "height": 968,
+      "width": 1536,
+      "height": 864,
       "batch_size": 1
     },
     "class_type": "EmptyLatentImage",
@@ -102,57 +107,97 @@
       "title": "Empty Latent Image"
     }
   },
-  "9": {
+  "291": {
     "inputs": {
-      "text": "masterpiece, best quality, score_9, score_8_up, score_7_up, fate \\(series\\)\n\nCharacters:\n\nArtoria Pendragon: 1girl, solo focus, blonde hair, very long hair, braided bun, ahoge, blue ribbon, green eyes, white short sleeve school shirt, black necktie, cheerful smile, waving, energetic, youthful\n\nFujimaru Ritsuka \\(Male\\): 1boy, blue eyes, black hair, short hair, chaldea uniform, white jacket with blue accents, black undersuit, black gloves, attentive expression, looking toward Artoria, standing naturally\n\nScene:\n\nA bright morning at a modern Japanese high school courtyard. Artoria enthusiastically waves one hand high in the air while greeting Fujimaru Ritsuka across the open courtyard. Fujimaru stands in the foreground with his back partially facing the viewer as he notices Artoria calling to him. Modern school buildings surround the courtyard with large windows, clean architecture, green trees, neatly trimmed bushes, and a peaceful campus atmosphere. Warm morning sunlight creates soft shadows and a welcoming mood.\n\nCamera:\n\nOver-the-shoulder shot from behind Fujimaru Ritsuka, wide shot, slight low angle, cinematic perspective, natural depth, dynamic composition\n\nStyle:\n\n@kantoku",
-      "clip": [
-        "1",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
-    }
-  },
-  "10": {
-    "inputs": {
-      "unet_name": "animayume_v10.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Load Diffusion Model"
-    }
-  },
-  "16": {
-    "inputs": {
-      "image": "9 c (1).jpg"
+      "image": "ComfyUI_00142_.png [output]"
     },
     "class_type": "LoadImage",
     "_meta": {
       "title": "Load Image"
     }
   },
-  "17": {
+  "266:185": {
     "inputs": {
-      "lllite_name": "anima-lllite-any-test-like-v2.safetensors",
-      "strength": 0.8,
-      "start_percent": 0.0,
-      "end_percent": 1.0,
-      "preserve_wrapper": true,
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "266:190": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "266:189": {
+    "inputs": {
+      "gguf_name": "qwen-image-edit-2511-Q5_0.gguf"
+    },
+    "class_type": "LoaderGGUF",
+    "_meta": {
+      "title": "GGUF Loader"
+    }
+  },
+  "266:198": {
+    "inputs": {
+      "shift": 3.0,
       "model": [
-        "10",
-        0
-      ],
-      "image": [
-        "16",
+        "266:290",
         0
       ]
     },
-    "class_type": "AnimaLLLiteApply",
+    "class_type": "ModelSamplingAuraFlow",
     "_meta": {
-      "title": "Apply Anima ControlNet-LLLite"
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "266:199": {
+    "inputs": {
+      "strength": 1.0,
+      "pre_cfg": false,
+      "model": [
+        "266:198",
+        0
+      ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "CFGNorm"
+    }
+  },
+  "266:290": {
+    "inputs": {
+      "lora_name": "qwen-image-edit-lightning/qwen-image-edit-2511-multiple-angles-lora.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "266:193",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "266:193": {
+    "inputs": {
+      "lora_name": "QWEN/Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "266:189",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
     }
   }
 }

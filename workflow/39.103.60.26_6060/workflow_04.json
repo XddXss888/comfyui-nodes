@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "input_4eb53eedd28f.jpg"
+      "image": "input_f7a000d335aa.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -12,7 +12,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "13",
+        "8",
         0
       ]
     },
@@ -21,19 +21,19 @@
       "title": "保存图像"
     }
   },
-  "13": {
+  "8": {
     "inputs": {
       "aspect_ratio": "custom",
-      "proportional_width": 800,
-      "proportional_height": 880,
+      "proportional_width": 2622,
+      "proportional_height": 1772,
       "fit": "crop",
       "method": "bicubic",
-      "round_to_multiple": "8",
+      "round_to_multiple": "None",
       "scale_to_side": "width",
-      "scale_to_length": 800,
+      "scale_to_length": 2622,
       "background_color": "#000000",
       "image": [
-        "16",
+        "14",
         0
       ]
     },
@@ -42,19 +42,19 @@
       "title": "按宽高比缩放_V2"
     }
   },
-  "16": {
+  "14": {
     "inputs": {
-      "prompt": "保持图中人物的一致性，生成人物和熊猫合影的画面，左右两侧有可爱的熊猫趴在人物肩头，背景是竹园风光。写真摄影风格，轻微美颜，人像精修",
+      "prompt": "保持图中人物的一致性，生成他们和熊猫合影的画面，左右两侧有可爱的熊猫趴在他们肩头，背景是竹园风光。写真摄影风格，中景景别，轻微美颜，人像精修",
       "model": "doubao-seedream-4-0-250828",
       "response_format": "url",
-      "resolution": "4K",
-      "aspect_ratio": "1:1",
-      "width": 1024,
-      "height": 1024,
+      "resolution": "1K",
+      "aspect_ratio": "Custom",
+      "width": 3416,
+      "height": 2304,
       "apikey": "fe023f32-413c-41f8-a35d-694231e4c96a",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 275528134,
+      "seed": 1966431764,
       "watermark": false,
       "stream": false,
       "image1": [

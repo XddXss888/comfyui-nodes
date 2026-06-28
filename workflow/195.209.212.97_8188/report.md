@@ -4,24 +4,12 @@
 **内存**: 125 GB (空闲 107 GB)
 **版本**: 0.3.67
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-27 08:08:09
-**历史总数**: 675 | **成功**: 10
+**扫描时间**: 2026-06-28 08:07:55
+**历史总数**: 677 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `697ec294-eff4-43b7-98f8-f494af7b3f52`
-- **类型**: 其他/工具
-- **节点数**: 1
-- **模型** (0):
-
-### 2. workflow_02.json
-- **Prompt ID**: `693bb9f4-ec4a-418d-aabb-6d9ed35e82bb`
-- **类型**: 其他
-- **节点数**: 19
-- **模型** (0):
-
-### 3. workflow_03.json
 - **Prompt ID**: `25a71008-1258-4802-96de-119fed819880`
 - **类型**: 文生视频
 - **节点数**: 46
@@ -31,13 +19,13 @@
   - WanVideo/umt5-xxl-enc-bf16.safetensors
   - training_results/actor_Svyatoslav/look_01/training_results_wan21_01/14B/20260408_17-26-09/epoch2/adapter_model.safetensors
 
-### 4. workflow_04.json
+### 2. workflow_02.json
 - **Prompt ID**: `c9b99fa1-85b6-493d-81b9-d5fb00c6ed06`
 - **类型**: 其他
 - **节点数**: 19
 - **模型** (0):
 
-### 5. workflow_05.json
+### 3. workflow_03.json
 - **Prompt ID**: `ebd8908d-ce6b-4d20-8498-f2b3e834a4ae`
 - **类型**: 文生视频
 - **节点数**: 46
@@ -47,7 +35,7 @@
   - WanVideo/umt5-xxl-enc-bf16.safetensors
   - training_results/actor_Svyatoslav/look_01/training_results_wan21_01/14B/20260408_17-26-09/epoch2/adapter_model.safetensors
 
-### 6. workflow_06.json
+### 4. workflow_04.json
 - **Prompt ID**: `7ef92d12-94a3-44e7-9884-bd47ca8aa968`
 - **类型**: 文生视频
 - **节点数**: 54
@@ -57,13 +45,13 @@
   - WanVideo/umt5-xxl-enc-bf16.safetensors
   - training_results/actor_Svyatoslav/look_01/training_results_wan21_01/14B/20260408_17-26-09/epoch2/adapter_model.safetensors
 
-### 7. workflow_07.json
+### 5. workflow_05.json
 - **Prompt ID**: `a965bd01-9ecc-4bec-b814-b53cf5a35d4f`
 - **类型**: 其他
 - **节点数**: 19
 - **模型** (0):
 
-### 8. workflow_08.json
+### 6. workflow_06.json
 - **Prompt ID**: `49dd0d14-156c-430c-a5e8-24fea7b44f4f`
 - **类型**: 文生视频
 - **节点数**: 46
@@ -73,14 +61,26 @@
   - WanVideo/umt5-xxl-enc-bf16.safetensors
   - training_results/actor_Svyatoslav/look_01/training_results_wan21_01/14B/20260408_17-26-09/epoch2/adapter_model.safetensors
 
-### 9. workflow_09.json
+### 7. workflow_07.json
 - **Prompt ID**: `ebdd2787-bfee-458e-a86e-6cb05eb7cd71`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):
 
-### 10. workflow_10.json
+### 8. workflow_08.json
 - **Prompt ID**: `bc8bd5f4-2e79-4328-99dd-7878e3362556`
+- **类型**: 其他/工具
+- **节点数**: 1
+- **模型** (0):
+
+### 9. workflow_09.json
+- **Prompt ID**: `6b66c707-cf13-401f-8983-7b7a9101eaf4`
+- **类型**: 其他/工具
+- **节点数**: 1
+- **模型** (0):
+
+### 10. workflow_10.json
+- **Prompt ID**: `9996869b-fae5-4743-8642-651affe1056c`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):

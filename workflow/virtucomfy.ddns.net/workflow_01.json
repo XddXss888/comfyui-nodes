@@ -1,7 +1,7 @@
 {
   "265": {
     "inputs": {
-      "video": "Preprocess_Depth_00001.mp4",
+      "video": "Depth0001-0075.mp4",
       "force_rate": 0.0,
       "custom_width": [
         "2845:2852",
@@ -55,7 +55,7 @@
   },
   "282": {
     "inputs": {
-      "image": "3a7cb892-5151-4b4a-a2aa-3d3b98c49e1f.png"
+      "image": "ComfyUI_00142_.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -78,7 +78,7 @@
     "inputs": {
       "frame_rate": 24.0,
       "loop_count": 0,
-      "filename_prefix": "AnimateDiff",
+      "filename_prefix": "hamid/video/cannydepth/aya_canny_depthj",
       "format": "video/h264-mp4",
       "pix_fmt": "yuv420p",
       "crf": 19,
@@ -169,7 +169,7 @@
   },
   "3345": {
     "inputs": {
-      "video": "Preprocess_Canny_00001.mp4",
+      "video": "Canny0001-0075.mp4",
       "force_rate": 0.0,
       "custom_width": [
         "2845:2852",
@@ -215,7 +215,7 @@
         0
       ],
       "loop_count": 0,
-      "filename_prefix": "AI_Render",
+      "filename_prefix": "hamid/video/cannydepth/aya_end",
       "format": "video/h264-mp4",
       "pix_fmt": "yuv420p",
       "crf": 19,
@@ -263,19 +263,6 @@
       "title": "WAN Resolution Picker"
     }
   },
-  "3228:3262": {
-    "inputs": {
-      "text": "过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走,",
-      "clip": [
-        "3333",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
-    }
-  },
   "3228:3268": {
     "inputs": {
       "trim_amount": [
@@ -302,36 +289,6 @@
     "class_type": "easy cleanGpuUsed",
     "_meta": {
       "title": "Clean VRAM Used"
-    }
-  },
-  "3228:3253": {
-    "inputs": {
-      "seed": 1006498752047286,
-      "steps": 4,
-      "cfg": 1.0,
-      "sampler_name": "res_2s",
-      "scheduler": "beta57",
-      "denoise": 1.0,
-      "model": [
-        "3228:3257",
-        0
-      ],
-      "positive": [
-        "3228:3255",
-        1
-      ],
-      "negative": [
-        "3228:3258",
-        0
-      ],
-      "latent_image": [
-        "3228:3255",
-        4
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
     }
   },
   "3228:3261": {
@@ -424,7 +381,7 @@
   },
   "3228:3249": {
     "inputs": {
-      "text": "Photorealistic close-up shot of a passenger inside a public transit bus, natural lighting shifting through the windows, high-fidelity textures on clothes and skin, shallow depth of field, blurred background with other passengers, professional color grading, shot on Arri Alexa.",
+      "text": "masterpiece, best quality, anime style, cute cafe waitress, young woman with long brown hair in high ponytail tied with yellow ribbons, brown eyes, white rolled-sleeve button-up shirt, orange-yellow apron with coffee bean logo, brown waist pouch, short black skirt, black thigh-high stockings, black loafers, warm smile, coffee shop interior, wooden counter, coffee machine, cups, shelves, cozy cafe, warm ambient lighting, detailed face, consistent outfit, side profile, looking forward, clean lineart guidance from canny",
       "clip": [
         "3333",
         0
@@ -595,9 +552,52 @@
       "title": "Install RES4LYF"
     }
   },
+  "3228:3262": {
+    "inputs": {
+      "text": "low quality, blurry, extra arms, extra legs, extra fingers, missing fingers, bad anatomy, wrong outfit, different clothes, different hair color, short hair, twin tails, hat, glasses, text, watermark, logo, cropped, deformed face, duplicate body, nsfw",
+      "clip": [
+        "3333",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "3228:3253": {
+    "inputs": {
+      "seed": 2,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "res_2s",
+      "scheduler": "beta57",
+      "denoise": 1.0,
+      "model": [
+        "3228:3257",
+        0
+      ],
+      "positive": [
+        "3228:3255",
+        1
+      ],
+      "negative": [
+        "3228:3258",
+        0
+      ],
+      "latent_image": [
+        "3228:3255",
+        4
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
   "3272:3278": {
     "inputs": {
-      "boolean": false,
+      "boolean": true,
       "on_true": [
         "3272:3273",
         0

@@ -12,7 +12,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "28",
+        "6",
         0
       ]
     },
@@ -21,9 +21,27 @@
       "title": "保存图像"
     }
   },
-  "15": {
+  "3": {
     "inputs": {
-      "prompt": "参考图一中的主要人物和图二的吉祥物，保持图二吉祥物头部外形不变，图一人物轻微美颜、磨皮和美白，3D风格。主体为图一人物和图二吉祥物半身位于前景中央亲密合照，占据视觉中心。人物和吉祥物互动亲密自然，吉祥物面向镜头，自然微笑。背景是图三博物院建筑，前景是大片草地和马兰花，夕阳光线，人物发丝被光线照亮，大朵的火烧云，氛围感。",
+      "image": "ip.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "4": {
+    "inputs": {
+      "image": "工业.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "5": {
+    "inputs": {
+      "prompt": "3DQ版卡通风格的合影，参考图1中的主要人物，保持图2的泡泡小山IP角色造型不变，生成泡泡小山在图1人物旁边一起亲密合影的画面，中近景半身人像构图，3DQ版卡通风格。背景是巨大的、生锈的工业高炉、圆柱形建筑和格构式桁架，以及它们在前方平静湖水中的倒影，完全还原参考图3中的场景",
       "model": "doubao-seedream-4-5-251128",
       "response_format": "url",
       "resolution": "4K",
@@ -33,7 +51,7 @@
       "apikey": "a44228f5-f1b2-44e9-860a-d3c8eb5ac03e",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 807646364,
+      "seed": 14108739,
       "watermark": false,
       "stream": false,
       "image1": [
@@ -41,11 +59,11 @@
         0
       ],
       "image2": [
-        "26",
+        "3",
         0
       ],
       "image3": [
-        "27",
+        "4",
         0
       ]
     },
@@ -54,7 +72,7 @@
       "title": "Comfly Doubao Seedream4.0"
     }
   },
-  "18": {
+  "6": {
     "inputs": {
       "aspect_ratio": "custom",
       "proportional_width": 2622,
@@ -66,44 +84,13 @@
       "scale_to_length": 2622,
       "background_color": "#000000",
       "image": [
-        "15",
+        "5",
         0
       ]
     },
     "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
     "_meta": {
       "title": "图层工具：按宽高比缩放 V2"
-    }
-  },
-  "26": {
-    "inputs": {
-      "image": "cym.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "27": {
-    "inputs": {
-      "image": "db2b0fb7a664d958a222b18b9e80e825.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "28": {
-    "inputs": {
-      "rotation": "270 degrees",
-      "image": [
-        "18",
-        0
-      ]
-    },
-    "class_type": "ImageRotate",
-    "_meta": {
-      "title": "图像旋转"
     }
   }
 }

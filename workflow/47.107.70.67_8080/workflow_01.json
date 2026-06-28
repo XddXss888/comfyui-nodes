@@ -50,134 +50,6 @@
       "title": "LoRA 3：Meion风格"
     }
   },
-  "5": {
-    "inputs": {
-      "model": [
-        "48",
-        0
-      ],
-      "method": "from cond"
-    },
-    "class_type": "Support empty uncond",
-    "_meta": {
-      "title": "支持空负向条件"
-    }
-  },
-  "7": {
-    "inputs": {
-      "clip": [
-        "45",
-        0
-      ],
-      "text": "masterpiece, best quality,very aesthetic, mature woman,ultra-detailed, nsfw, @gpt-image-2, @meionANIMAstyle,@sw33t,@NJSW33T,${promot}, 1girl, solo, anime illustration, live streaming, looking at viewer"
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "正向提示词"
-    }
-  },
-  "8": {
-    "inputs": {
-      "clip": [
-        "45",
-        0
-      ],
-      "text": "worst quality, low quality, score_1, score_2, score_3, old, early, lowres, simple background, blurry, sepia, worst quality, low quality, score_1, score_2, score_3, old, early, lowres, simple background, blurry, sepia"
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "负向提示词"
-    }
-  },
-  "9": {
-    "inputs": {
-      "width": 832,
-      "height": 1216,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "空Latent图像"
-    }
-  },
-  "10": {
-    "inputs": {
-      "model": [
-        "5",
-        0
-      ],
-      "positive": [
-        "7",
-        0
-      ],
-      "negative": [
-        "8",
-        0
-      ],
-      "latent_image": [
-        "9",
-        0
-      ],
-      "seed": 3881770878,
-      "steps": 12,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "11": {
-    "inputs": {
-      "samples": [
-        "10",
-        0
-      ],
-      "vae": [
-        "15",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "12": {
-    "inputs": {
-      "images": [
-        "11",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
-    }
-  },
-  "15": {
-    "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载Qwen VAE"
-    }
-  },
-  "45": {
-    "inputs": {
-      "clip_name": "qwen_3_06b_base.safetensors",
-      "type": "stable_diffusion",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载Qwen CLIP"
-    }
-  },
   "46": {
     "inputs": {
       "lora_name": "anima\\gpt-image-2_anima-base1_v1-1.safetensors",
@@ -218,6 +90,134 @@
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
       "title": "LoRA 6：饱和度增强"
+    }
+  },
+  "5": {
+    "inputs": {
+      "model": [
+        "48",
+        0
+      ],
+      "method": "from cond"
+    },
+    "class_type": "Support empty uncond",
+    "_meta": {
+      "title": "支持空负向条件"
+    }
+  },
+  "45": {
+    "inputs": {
+      "clip_name": "qwen_3_06b_base.safetensors",
+      "type": "stable_diffusion",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载Qwen CLIP"
+    }
+  },
+  "7": {
+    "inputs": {
+      "clip": [
+        "45",
+        0
+      ],
+      "text": "masterpiece, best quality,very aesthetic, mature woman,ultra-detailed, nsfw, @gpt-image-2, @meionANIMAstyle,@sw33t,@NJSW33T,${promot}, A bright POV photo of standing doggystyle sex. The viewer is grabbing the large, bouncing buttocks of the brunette girl and thrusting forcefully. BREAK\n1girl, Sumire, partial_appearance, back_view, waist_down, large_butt, thick_thighs, completely_nude, no_panties, pussy_juice, vaginal_penetration, intense_thrusting, trembling_thighs, sweat. BREAK\n1boy, Mark, pov_from_male, pov, grabbing_hips, visible_hands, gripping_tightly, fingers_sinking_in, visible_penis, penis_in_vagina. BREAK\nindoors, bedroom, daylight, bright natural daylight, depth_of_field, dynamic_motion."
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "正向提示词"
+    }
+  },
+  "8": {
+    "inputs": {
+      "clip": [
+        "45",
+        0
+      ],
+      "text": "worst quality, low quality, score_1, score_2, score_3, old, early, lowres, simple background, blurry, sepia"
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "负向提示词"
+    }
+  },
+  "9": {
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "10": {
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "positive": [
+        "7",
+        0
+      ],
+      "negative": [
+        "8",
+        0
+      ],
+      "latent_image": [
+        "9",
+        0
+      ],
+      "seed": 317540284430183,
+      "steps": 12,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "15": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载Qwen VAE"
+    }
+  },
+  "11": {
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "12": {
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
     }
   }
 }

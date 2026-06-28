@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_c6652edf93ff49d19cddd51a7a658f7c.png"
+      "image": "ref_0e47563469804dad9041a976fec1c078.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "똑같이 생긴 두명의 쌍둥이,서로 마주보고 상대방의 몸매를 보고 있음",
+      "prompt": "A photorealistic, high-resolution photograph of the specific subject from [Image 2], maintaining her original face, hair, full-body pose, and background environment, but now seamlessly wearing the exact complete outfit and accessories depicted in [Image 1]. The generation must precisely replicate the clothing details, fabric textures, and specific cuts from [Image 1] onto the subject in [Image 2]. The result must be a perfect fusion, preserving the identity and scene of [Image 2] while achieving a high-fidelity clothing swap from [Image 1]. Full body shot, sharp focus, 8k, masterwork.",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 357146297208654,
-      "steps": 8,
+      "seed": 755769224713071,
+      "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

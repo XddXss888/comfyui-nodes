@@ -1,459 +1,106 @@
 {
-  "3": {
-    "inputs": {
-      "ckpt_name": "ltx-2.3-22b-distilled-1.1.safetensors"
-    },
-    "class_type": "LowVRAMCheckpointLoader",
-    "_meta": {
-      "title": "🅛🅣🅧 Low VRAM Checkpoint Loader"
-    }
-  },
-  "5": {
-    "inputs": {
-      "text": "一、核心风格（Core Style）\r\n• 关键词：奇幻，童趣，治愈，魔法\r\n• AI提示词：画面整体风格充满童真与奇幻色彩，色调明亮柔和，以粉蓝、鹅黄、浅紫等梦幻色系为主，场景可设定在洒满阳光的草坪或摆满玩偶的房间，突出小女孩施法时的惊喜与灵动，营造温暖治愈的魔法氛围。\r\n二、画面质感（Visual Texture）\r\n• 关键词：细腻，梦幻，光泽感，动态模糊\r\n• AI提示词：画面细节细腻，魔法元素（如光点、烟雾）带有柔和光泽与轻微动态模糊，人物皮肤质感通透，衣物布料柔软有纹理，光影呈现漫反射效果，整体画面如童话绘本般精致且富有动态感。\r\n三、人物/角色建模（Character Modeling）\r\n• 小女孩：梳着双马尾，发尾微微卷曲，扎着粉色蝴蝶结发绳。皮肤白皙，脸颊透着自然红晕，眼睛又大又圆，瞳孔呈浅棕色，睫毛纤长，鼻子小巧，嘴唇粉嫩。穿着白色泡泡袖衬衫，外面套着浅蓝色背带短裙，裙摆有白色蕾丝花边，脚上是白色长袜配棕色小皮鞋。身材小巧，四肢纤细，专属神态是专注时微微抿嘴、成功后眼睛发亮，标志性动作是举起右手食指绕圈（施法手势），专属配饰是脖子上挂着的银色星星吊坠。\r\n四、脚本和分镜\r\n场景：户外草坪（背景有盛开的蒲公英和白色栅栏）\r\n镜头1：全景（缓慢推近）\r\n小女孩站在草坪中央，双手背在身后，歪头看着面前的蒲公英丛（好奇）\r\n镜头2：中景（轻微晃动）\r\n小女孩向前迈一步，伸出右手，食指指尖对准一朵闭合的蒲公英（认真）\r\n镜头3：特写（快速聚焦指尖）\r\n指尖冒出细碎的金色光点，顺着手指飘向蒲公英（神奇）\r\n小女孩轻声念：“飞呀飞，开花吧～”\r\n镜头4：中景（跟随光点移动）\r\n金色光点落在蒲公英上，花苞瞬间展开，白色绒毛轻轻晃动（惊喜）\r\n小女孩眼睛瞪圆，嘴角咧开，左手捂住嘴巴（惊讶又开心）\r\n镜头5：全景（轻微仰拍）\r\n蒲公英绒毛突然被光点带着飞起，在空中盘旋成小漩涡，小女孩踮起脚尖，伸出双手跟着旋转（兴奋）\r\n镜头6：近景（侧移）\r\n小女孩转了一圈后停下，看着飘散的绒毛和光点，笑着拍手（满足）",
-      "clip": [
-        "26",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
-    }
-  },
-  "6": {
-    "inputs": {
-      "text": "worst quality, blurry, jittery, distorted, inconsistent appearance，duplicate character, extra character, clone, crowd, multiple demons, multiple masters, multiple disciples, character duplication, orbit camera, circular camera movement, spinning camera, rotating camera around character, aerial orbit, drone shot, face change, costume change, hairstyle change, character fusion, floating character, flying combat, exaggerated martial arts, acrobatic jump, low quality, blurry, bad anatomy, extra limbs, distorted body, unstable composition",
-      "clip": [
-        "26",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
-    }
-  },
-  "7": {
-    "inputs": {
-      "frame_rate": 50.0,
-      "positive": [
-        "5",
-        0
-      ],
-      "negative": [
-        "6",
-        0
-      ]
-    },
-    "class_type": "LTXVConditioning",
-    "_meta": {
-      "title": "LTXV条件"
-    }
-  },
-  "8": {
-    "inputs": {
-      "width": [
-        "43",
-        0
-      ],
-      "height": [
-        "44",
-        0
-      ],
-      "length": [
-        "50",
-        0
-      ],
-      "batch_size": 1
-    },
-    "class_type": "EmptyLTXVLatentVideo",
-    "_meta": {
-      "title": "空Latent视频（LTXV）"
-    }
-  },
-  "9": {
-    "inputs": {
-      "frame_idx": 0,
-      "strength": 1.0,
-      "latent_downscale_factor": 1.0,
-      "crop": "center",
-      "use_tiled_encode": false,
-      "tile_size": 256,
-      "tile_overlap": 64,
-      "positive": [
-        "7",
-        0
-      ],
-      "negative": [
-        "7",
-        1
-      ],
-      "vae": [
-        "3",
-        2
-      ],
-      "latent": [
-        "8",
-        0
-      ],
-      "image": [
-        "28",
-        0
-      ]
-    },
-    "class_type": "LTXAddVideoICLoRAGuide",
-    "_meta": {
-      "title": "🅛🅣🅧 Add Video IC-LoRA Guide"
-    }
-  },
   "10": {
     "inputs": {
-      "lora_name": "LTX-2.3-Licon-MSR-V1.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "3",
+      "seed": 42,
+      "resolution": 4096,
+      "max_resolution": 4096,
+      "batch_size": 1,
+      "uniform_batch_size": false,
+      "color_correction": "lab",
+      "temporal_overlap": 0,
+      "prepend_frames": 0,
+      "input_noise_scale": 0.0,
+      "latent_noise_scale": 0.0,
+      "offload_device": "cpu",
+      "enable_debug": false,
+      "image": [
+        "17",
+        0
+      ],
+      "dit": [
+        "14",
+        0
+      ],
+      "vae": [
+        "13",
         0
       ]
     },
-    "class_type": "LTXICLoRALoaderModelOnly",
+    "class_type": "SeedVR2VideoUpscaler",
     "_meta": {
-      "title": "🅛🅣🅧 IC-LoRA Loader Model Only"
+      "title": "SeedVR2 Video Upscaler (v2.5.24)"
     }
   },
   "13": {
     "inputs": {
-      "sampler_name": "euler"
+      "model": "ema_vae_fp16.safetensors",
+      "device": "cuda:0",
+      "encode_tiled": true,
+      "encode_tile_size": 1024,
+      "encode_tile_overlap": 128,
+      "decode_tiled": true,
+      "decode_tile_size": 1024,
+      "decode_tile_overlap": 128,
+      "tile_debug": "false",
+      "offload_device": "cuda:0",
+      "cache_model": false
     },
-    "class_type": "KSamplerSelect",
+    "class_type": "SeedVR2LoadVAEModel",
     "_meta": {
-      "title": "K采样器选择"
+      "title": "SeedVR2 (Down)Load VAE Model"
+    }
+  },
+  "14": {
+    "inputs": {
+      "model": "seedvr2_ema_7b_sharp_fp16.safetensors",
+      "device": "cuda:0",
+      "blocks_to_swap": 36,
+      "swap_io_components": false,
+      "offload_device": "cpu",
+      "cache_model": false,
+      "attention_mode": "sdpa"
+    },
+    "class_type": "SeedVR2LoadDiTModel",
+    "_meta": {
+      "title": "SeedVR2 (Down)Load DiT Model"
     }
   },
   "15": {
     "inputs": {
-      "noise_seed": 767637577971003
+      "filename_prefix": "SeedVR2",
+      "images": [
+        "10",
+        0
+      ]
     },
-    "class_type": "RandomNoise",
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "随机噪波"
+      "title": "保存图像"
     }
   },
   "16": {
     "inputs": {
-      "noise": [
-        "15",
-        0
-      ],
-      "guider": [
-        "37",
-        0
-      ],
-      "sampler": [
-        "13",
-        0
-      ],
-      "sigmas": [
-        "27",
-        0
-      ],
-      "latent_image": [
-        "23",
-        0
-      ]
+      "image": "upscale_input_1782570248.png"
     },
-    "class_type": "SamplerCustomAdvanced",
+    "class_type": "LoadImage",
     "_meta": {
-      "title": "自定义采样器（高级）"
+      "title": "加载图像"
     }
   },
   "17": {
     "inputs": {
-      "positive": [
-        "9",
-        0
-      ],
-      "negative": [
-        "9",
-        1
-      ],
-      "latent": [
-        "24",
-        0
-      ]
-    },
-    "class_type": "LTXVCropGuides",
-    "_meta": {
-      "title": "LTXV裁剪指导"
-    }
-  },
-  "19": {
-    "inputs": {
-      "fps": 50.0,
-      "images": [
-        "38",
-        0
-      ],
-      "audio": [
-        "25",
-        0
-      ]
-    },
-    "class_type": "CreateVideo",
-    "_meta": {
-      "title": "创建视频"
-    }
-  },
-  "20": {
-    "inputs": {
-      "filename_prefix": "LTX-2/MSR_verify_iclora_guide",
-      "format": "auto",
-      "codec": "auto",
-      "video": [
-        "19",
-        0
-      ]
-    },
-    "class_type": "SaveVideo",
-    "_meta": {
-      "title": "保存视频"
-    }
-  },
-  "21": {
-    "inputs": {
-      "ckpt_name": "ltx-2.3-22b-distilled-1.1.safetensors"
-    },
-    "class_type": "LTXVAudioVAELoader",
-    "_meta": {
-      "title": "LTXV音频VAE加载器"
-    }
-  },
-  "22": {
-    "inputs": {
-      "frames_number": [
-        "50",
-        0
-      ],
-      "frame_rate": 50,
-      "batch_size": 1,
-      "audio_vae": [
-        "21",
-        0
-      ]
-    },
-    "class_type": "LTXVEmptyLatentAudio",
-    "_meta": {
-      "title": "LTXV 空音频潜空间"
-    }
-  },
-  "23": {
-    "inputs": {
-      "video_latent": [
-        "9",
-        2
-      ],
-      "audio_latent": [
-        "22",
-        0
-      ]
-    },
-    "class_type": "LTXVConcatAVLatent",
-    "_meta": {
-      "title": "LTXVConcatAVLatent"
-    }
-  },
-  "24": {
-    "inputs": {
-      "av_latent": [
+      "image": [
         "16",
         0
-      ]
-    },
-    "class_type": "LTXVSeparateAVLatent",
-    "_meta": {
-      "title": "LTXV分离音视频潜空间"
-    }
-  },
-  "25": {
-    "inputs": {
-      "samples": [
-        "24",
-        1
       ],
-      "audio_vae": [
-        "21",
-        0
-      ]
-    },
-    "class_type": "LTXVAudioVAEDecode",
-    "_meta": {
-      "title": "LTXV音频VAE解码"
-    }
-  },
-  "26": {
-    "inputs": {
-      "text_encoder": "gemma_3_12B_it_fp4_mixed.safetensors",
-      "ckpt_name": "ltx-2.3-22b-distilled-1.1.safetensors",
-      "device": "default"
-    },
-    "class_type": "LTXAVTextEncoderLoader",
-    "_meta": {
-      "title": "LTXV音频文本编码器加载器"
-    }
-  },
-  "27": {
-    "inputs": {
-      "sigmas": "1.0, 0.99375, 0.9875, 0.98125, 0.975, 0.909375, 0.725, 0.421875, 0.0"
-    },
-    "class_type": "ManualSigmas",
-    "_meta": {
-      "title": "自定义Sigmas"
-    }
-  },
-  "28": {
-    "inputs": {
-      "1": [
-        "29",
-        0
-      ],
-      "2": [
-        "40",
-        0
-      ],
-      "3": [
-        "33",
-        0
-      ],
-      "4": [
-        "80",
-        0
-      ],
-      "width": [
-        "43",
-        0
-      ],
-      "height": [
-        "44",
-        0
-      ],
-      "frame_count": 33,
-      "background": [
-        "30",
-        0
-      ]
-    },
-    "class_type": "LiconMSR",
-    "_meta": {
-      "title": "Licon MSR"
-    }
-  },
-  "29": {
-    "inputs": {
-      "image": "msr_ref0_1782454572.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "30": {
-    "inputs": {
-      "image": "msr_bg_1782454572.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "33": {
-    "inputs": {
-      "image": "msr_ref0_1782454572.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "37": {
-    "inputs": {
-      "cfg": 1.0,
-      "model": [
-        "10",
-        0
-      ],
-      "positive": [
-        "9",
-        0
-      ],
-      "negative": [
-        "9",
+      "alpha": [
+        "16",
         1
       ]
     },
-    "class_type": "CFGGuider",
+    "class_type": "JoinImageWithAlpha",
     "_meta": {
-      "title": "CFG引导器"
-    }
-  },
-  "38": {
-    "inputs": {
-      "samples": [
-        "17",
-        2
-      ],
-      "vae": [
-        "3",
-        2
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "40": {
-    "inputs": {
-      "image": "msr_ref0_1782454572.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "43": {
-    "inputs": {
-      "value": 760
-    },
-    "class_type": "INTConstant",
-    "_meta": {
-      "title": "INT Constant"
-    }
-  },
-  "44": {
-    "inputs": {
-      "value": 1280
-    },
-    "class_type": "INTConstant",
-    "_meta": {
-      "title": "INT Constant"
-    }
-  },
-  "50": {
-    "inputs": {
-      "value": 501
-    },
-    "class_type": "INTConstant",
-    "_meta": {
-      "title": "INT Constant"
-    }
-  },
-  "80": {
-    "inputs": {
-      "image": "msr_ref0_1782454572.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
+      "title": "合并图像Alpha"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_2f4b3eaf83b348e290e1e96fc34b7f0c.png"
+      "image": "ref_aa7451590764444cb8f2a6a6e7b8d8ca.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "A new version of the given picture transformed into an anime drawing style. The anime drawing should have characteristic features such as large expressive eyes, stylized hair, and clean lines, capturing the essence and details of the original picture in an anime art style.",
+      "prompt": "Maintain the original face exactly as shown in the reference image.\nKeep the person's pose the same.\nReplace the current outfit with a bra and panty. Keep the boobs size medium and thighs size medium.",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 692596193179251,
-      "steps": 4,
+      "seed": 812068764158560,
+      "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

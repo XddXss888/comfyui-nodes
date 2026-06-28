@@ -25,7 +25,7 @@
   "3": {
     "inputs": {
       "lora_name": "anima\\anima-base-1-masterpiece-v51.safetensors",
-      "strength_model": 1.0,
+      "strength_model": 0.3,
       "model": [
         "2",
         0
@@ -53,7 +53,7 @@
   "46": {
     "inputs": {
       "lora_name": "anima\\gpt-image-2_anima-base1_v1-1.safetensors",
-      "strength_model": 0.0,
+      "strength_model": 0.2,
       "model": [
         "4",
         0
@@ -67,7 +67,7 @@
   "47": {
     "inputs": {
       "lora_name": "anima\\虹甜蜜点-@NJSW33T.safetensors",
-      "strength_model": 1.0,
+      "strength_model": 0.5,
       "model": [
         "46",
         0
@@ -122,7 +122,7 @@
         "45",
         0
       ],
-      "text": "masterpiece, best quality, safe,very aesthetic, ultra-detailed, abstract, nsfw, @gpt-image-2, @meionANIMAstyle,@sw33t,@NJSW33T,${promot}, A high-quality cinematic POV photo in a pitch-black elevator cabin. Two mature women are kneeling on the floor, servicing their partner. BREAK (1girl, ShenManci:1.1), female_focus, 42yo, CEO, kneeling_on_floor, (open_shirt), completely_nude_breasts, huge_breasts, squeezing_penis_with_breasts, titjob, crying, flushed_face, (parted_lips:1.2), heavy_breathing, sweat, (long_black_hair, wavy_hair). BREAK (1girl, LinZhiQiu:1.1), 40yo, housewife, kneeling_lower, licking_testicles, holding_testicles, (white_midi_dress), looking_up, ahegao. BREAK (1boy, unseen_partner), pov, pov_from_male, standing, visible_penis, penis_between_breasts. BREAK (indoors), pitch_black, metal_walls, elevator_cabin, extremely_dark, claustrophobic, depth_of_field."
+      "text": "masterpiece, best quality,very aesthetic, mature woman,ultra-detailed, nsfw, @gpt-image-2, @meionANIMAstyle,@sw33t,@NJSW33T,${promot}, A bright POV photo of a paizuri scene in a bedroom. The brunette girl is kneeling and using her massive breasts to stroke the viewer's penis. She is looking up with an intense expression. BREAK\n1girl, Sumire, partial_appearance, waist_up, kneeling, looking_up_at_viewer, brown_hair, pony_tail, completely_nude, no_clothes, massive_breasts, large_areolae, squeezing_breasts_together, paizuri, breast_smothering, heavy_blush, sweat, parted_lips, tongue_out. BREAK\n1boy, Mark, pov_from_male, pov, visible_penis, penis_between_breasts. BREAK\nindoors, bedroom, tatami, daylight, bright natural daylight, depth_of_field, close-up."
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
@@ -172,7 +172,7 @@
         0
       ],
       "seed": 317540284430183,
-      "steps": 47,
+      "steps": 12,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

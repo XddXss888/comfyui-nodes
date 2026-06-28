@@ -1,123 +1,93 @@
 {
   "1": {
-    "class_type": "UNETLoader",
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "unet_name": "flux1-dev.safetensors",
-      "weight_dtype": "default"
+      "ckpt_name": "juggernautXL_ragnarok.safetensors"
     }
   },
   "2": {
-    "class_type": "DualCLIPLoader",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip_name1": "clip_l.safetensors",
-      "clip_name2": "t5xxl_fp16.safetensors",
-      "type": "flux"
+      "vae_name": "sdxl_vae.safetensors"
     }
   },
   "3": {
-    "class_type": "VAELoader",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "vae_name": "ae.safetensors"
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "A stunning Korean idol-style woman with a rose gold short bob cut, oval face with elegant monolid eyes, dreamy ethereal expression gazing softly into distance. Half body waist up portrait, slight low angle looking up creating an empowering perspective. She wears sleek black athletic wear with sporty chic styling, standing in a modern art gallery with minimalist white walls and abstract sculptures softly blurred behind her. Golden hour warm side light streaming through floor-to-ceiling windows, casting honeyed highlights across her flawless porcelain skin with visible pores and natural texture. Shot on 85mm f/1.4 lens, creamy bokeh dissolving the gallery backdrop. Cinematic color grading with warm amber tones, styled dewy makeup, soft coral lips, subtle highlighter on cheekbones. Hyperrealistic SDXL quality, no text, no watermarks."
     }
   },
   "4": {
-    "class_type": "LoraLoaderModelOnly",
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "lowres, blurry, bad anatomy, deformed, watermark, signature, extra fingers, cartoon, anime, painting"
+    }
+  },
+  "5": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 896,
+      "height": 1280,
+      "batch_size": 1
+    }
+  },
+  "6": {
+    "class_type": "KSampler",
     "inputs": {
       "model": [
         "1",
         0
       ],
-      "lora_name": "flux_korean_girl.safetensors",
-      "strength_model": 0.8
-    }
-  },
-  "5": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": "A serene Korean woman with burgundy red fluffy wolf cut hair sits in a zen garden at dawn, morning dew glistening on moss-covered stones around her. Shot from ground level looking upward with a macro lens capturing extreme close-up skin texture, water droplets clinging to her denim jacket sleeves. Medium shot framing includes raked sand patterns and a stone lantern behind her. A single spotlight cuts through pre-dawn darkness, illuminating her fox-like eyes and slim face in dramatic chiaroscuro. She gazes contemplatively into the distance, lips slightly parted, one hand resting on a wet river stone. Flawless porcelain skin, subtle smoky eye makeup, soft dewy highlight on cheekbones. Cinematic, ethereal, breathtaking beauty."
-    }
-  },
-  "6": {
-    "class_type": "FluxGuidance",
-    "inputs": {
-      "conditioning": [
-        "5",
-        0
-      ],
-      "guidance": 3.5
-    }
-  },
-  "7": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": ""
-    }
-  },
-  "8": {
-    "class_type": "EmptySD3LatentImage",
-    "inputs": {
-      "width": 896,
-      "height": 1280,
-      "batch_size": 4
-    }
-  },
-  "9": {
-    "class_type": "KSampler",
-    "inputs": {
-      "model": [
-        "4",
-        0
-      ],
       "positive": [
-        "6",
+        "3",
         0
       ],
       "negative": [
-        "7",
+        "4",
         0
       ],
       "latent_image": [
-        "8",
+        "5",
         0
       ],
-      "seed": 1352353445,
+      "seed": 1932208418,
       "control_after_generate": "fixed",
-      "steps": 22,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
+      "steps": 30,
+      "cfg": 4.0,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
       "denoise": 1.0
     }
   },
-  "10": {
+  "7": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "9",
+        "6",
         0
       ],
       "vae": [
-        "3",
+        "2",
         0
       ]
     }
   },
-  "11": {
+  "8": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "10",
+        "7",
         0
       ],
-      "filename_prefix": "portrait_1352353445"
+      "filename_prefix": "portrait_1932208418"
     }
   }
 }

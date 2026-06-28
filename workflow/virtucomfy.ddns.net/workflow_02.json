@@ -1,332 +1,48 @@
 {
-  "265": {
+  "1": {
     "inputs": {
-      "video": "Preprocess_Depth_00001.mp4",
-      "force_rate": 0.0,
-      "custom_width": [
-        "2845:2852",
-        0
-      ],
-      "custom_height": [
-        "2845:2852",
-        1
-      ],
-      "frame_load_cap": [
-        "2845:1556",
-        0
-      ],
-      "skip_first_frames": [
-        "2845:361",
-        0
-      ],
-      "select_every_nth": 1,
-      "format": "AnimateDiff"
-    },
-    "class_type": "VHS_LoadVideo",
-    "_meta": {
-      "title": "INPUT VIDEO"
-    }
-  },
-  "280": {
-    "inputs": {
-      "width": [
-        "2845:2852",
-        0
-      ],
-      "height": [
-        "2845:2852",
-        1
-      ],
-      "upscale_method": "lanczos",
-      "keep_proportion": "pad_edge_pixel",
-      "pad_color": "0, 0, 0",
-      "crop_position": "center",
-      "divisible_by": 2,
-      "device": "cpu",
-      "image": [
-        "282",
-        0
-      ]
-    },
-    "class_type": "ImageResizeKJv2",
-    "_meta": {
-      "title": "Resize Image v2"
-    }
-  },
-  "282": {
-    "inputs": {
-      "image": "3a7cb892-5151-4b4a-a2aa-3d3b98c49e1f.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Start Image / Reference Image 1"
-    }
-  },
-  "2607": {
-    "inputs": {
-      "video_info": [
-        "265",
-        3
-      ]
-    },
-    "class_type": "VHS_VideoInfo",
-    "_meta": {
-      "title": "Video Info 🎥🅥🅗🅢"
-    }
-  },
-  "3001": {
-    "inputs": {
-      "frame_rate": 24.0,
-      "loop_count": 0,
-      "filename_prefix": "AnimateDiff",
-      "format": "video/h264-mp4",
-      "pix_fmt": "yuv420p",
-      "crf": 19,
-      "save_metadata": true,
-      "trim_to_audio": false,
-      "pingpong": false,
-      "save_output": false,
-      "images": [
-        "3272:3278",
-        0
-      ]
-    },
-    "class_type": "VHS_VideoCombine",
-    "_meta": {
-      "title": "PREVIEW PREPROCESS"
-    }
-  },
-  "3326": {
-    "inputs": {
-      "unet_name": "wan/wan-14B_vace_skyreels_v3_R2V_e4m3fn_v1.safetensors",
-      "weight_dtype": "fp8_e4m3fn"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Load Diffusion Model"
-    }
-  },
-  "3327": {
-    "inputs": {
-      "lora_name": "Wan2.1_T2V_14B_FusionX_LoRA.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "3326",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "Load LoRA"
-    }
-  },
-  "3328": {
-    "inputs": {
-      "lora_name": "wan/Lenovo.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "3327",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "Load LoRA"
-    }
-  },
-  "3329": {
-    "inputs": {
-      "shift": 6.000000000000001,
-      "model": [
-        "3328",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingSD3",
-    "_meta": {
-      "title": "ModelSamplingSD3"
-    }
-  },
-  "3333": {
-    "inputs": {
-      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
-      "type": "wan",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "Load CLIP"
-    }
-  },
-  "3334": {
-    "inputs": {
-      "vae_name": "wan_2.1_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Load VAE"
-    }
-  },
-  "3345": {
-    "inputs": {
-      "video": "Preprocess_Canny_00001.mp4",
-      "force_rate": 0.0,
-      "custom_width": [
-        "2845:2852",
-        0
-      ],
-      "custom_height": [
-        "2845:2852",
-        1
-      ],
-      "frame_load_cap": [
-        "2845:1556",
-        0
-      ],
-      "skip_first_frames": [
-        "2845:361",
-        0
-      ],
-      "select_every_nth": 1,
-      "format": "AnimateDiff"
-    },
-    "class_type": "VHS_LoadVideo",
-    "_meta": {
-      "title": "INPUT VIDEO"
-    }
-  },
-  "3348": {
-    "inputs": {
-      "method": "lanczos",
-      "image_1": [
-        "280",
-        0
-      ]
-    },
-    "class_type": "ImageBatchMultiple+",
-    "_meta": {
-      "title": "🔧 Images Batch Multiple [Max 4 for Phantom]"
-    }
-  },
-  "3372": {
-    "inputs": {
-      "frame_rate": [
-        "2607",
-        0
-      ],
-      "loop_count": 0,
-      "filename_prefix": "AI_Render",
-      "format": "video/h264-mp4",
-      "pix_fmt": "yuv420p",
-      "crf": 19,
-      "save_metadata": true,
-      "trim_to_audio": false,
-      "pingpong": false,
-      "save_output": true,
-      "images": [
-        "3228:3252",
-        0
-      ]
-    },
-    "class_type": "VHS_VideoCombine",
-    "_meta": {
-      "title": "Video Combine 🎥🅥🅗🅢"
-    }
-  },
-  "2845:1556": {
-    "inputs": {
-      "value": 0
-    },
-    "class_type": "INTConstant",
-    "_meta": {
-      "title": "frame_load_cap"
-    }
-  },
-  "2845:361": {
-    "inputs": {
-      "value": 0
-    },
-    "class_type": "INTConstant",
-    "_meta": {
-      "title": "skip"
-    }
-  },
-  "2845:2852": {
-    "inputs": {
-      "resolution": "576p",
-      "aspect_ratio": "16:9",
-      "custom_width": 1280,
-      "custom_height": 720
-    },
-    "class_type": "WanResolutionPicker",
-    "_meta": {
-      "title": "WAN Resolution Picker"
-    }
-  },
-  "3228:3262": {
-    "inputs": {
-      "text": "过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走,",
+      "prompt": "remove background",
       "clip": [
-        "3333",
+        "266:190",
         0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
-    }
-  },
-  "3228:3268": {
-    "inputs": {
-      "trim_amount": [
-        "3228:3255",
-        5
       ],
-      "samples": [
-        "3228:3253",
+      "vae": [
+        "266:185",
+        0
+      ],
+      "image1": [
+        "291",
         0
       ]
     },
-    "class_type": "TrimVideoLatent",
+    "class_type": "TextEncodeQwenImageEditPlus",
     "_meta": {
-      "title": "TrimVideoLatent"
+      "title": "TextEncodeQwenImageEditPlus"
     }
   },
-  "3228:3254": {
+  "2": {
     "inputs": {
-      "anything": [
-        "3228:3268",
-        0
-      ]
-    },
-    "class_type": "easy cleanGpuUsed",
-    "_meta": {
-      "title": "Clean VRAM Used"
-    }
-  },
-  "3228:3253": {
-    "inputs": {
-      "seed": 1006498752047286,
-      "steps": 4,
+      "seed": 355309870750021,
+      "steps": 8,
       "cfg": 1.0,
-      "sampler_name": "res_2s",
-      "scheduler": "beta57",
+      "sampler_name": "euler_ancestral_cfg_pp",
+      "scheduler": "simple",
       "denoise": 1.0,
       "model": [
-        "3228:3257",
+        "266:199",
         0
       ],
       "positive": [
-        "3228:3255",
-        1
+        "1",
+        0
       ],
       "negative": [
-        "3228:3258",
+        "3",
         0
       ],
       "latent_image": [
-        "3228:3255",
-        4
+        "267",
+        0
       ]
     },
     "class_type": "KSampler",
@@ -334,314 +50,154 @@
       "title": "KSampler"
     }
   },
-  "3228:3261": {
+  "3": {
     "inputs": {
-      "num_frames": [
-        "3228:3375",
-        3
-      ],
-      "empty_frame_level": 0.5,
-      "start_index": 0,
-      "end_index": -1,
-      "start_image": [
-        "3228:3290:3280",
-        0
-      ],
-      "control_images": [
-        "3228:3375",
-        0
-      ]
-    },
-    "class_type": "WanVideoVACEStartToEndFrame",
-    "_meta": {
-      "title": "WanVideo VACE Start To End Frame"
-    }
-  },
-  "3228:3252": {
-    "inputs": {
-      "samples": [
-        "3228:3254",
-        0
-      ],
-      "vae": [
-        "3334",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
-    }
-  },
-  "3228:3375": {
-    "inputs": {
-      "image": [
-        "3272:3278",
-        0
-      ]
-    },
-    "class_type": "GetImageSizeAndCount",
-    "_meta": {
-      "title": "Get Image Size & Count"
-    }
-  },
-  "3228:3258": {
-    "inputs": {
-      "conditioning_1": [
-        "3228:3255",
-        2
-      ],
-      "conditioning_2": [
-        "3228:3255",
-        3
-      ]
-    },
-    "class_type": "ConditioningCombine",
-    "_meta": {
-      "title": "Conditioning (Combine)"
-    }
-  },
-  "3228:3257": {
-    "inputs": {
-      "nag_scale": 11.0,
-      "nag_alpha": 0.25,
-      "nag_tau": 2.5,
-      "input_type": "default",
-      "inplace": false,
-      "model": [
-        "3228:3255",
-        0
-      ],
-      "conditioning": [
-        "3228:3258",
-        0
-      ]
-    },
-    "class_type": "WanVideoNAG",
-    "_meta": {
-      "title": "WanVideoNAG"
-    }
-  },
-  "3228:3249": {
-    "inputs": {
-      "text": "Masterpiece cyberpunk videography, close-up anamorphic shot. Inside a sleek, neon-infused futuristic bus gliding through a rainy cyberpunk metropolis at midnight. A young passenger gazes thoughtfully at the passing cityscape through a wet window pane covered in trickling rain droplets. Intense crimson and emerald neon lights from external billboards flash across the passenger's face. Swirling volumetric neon smog and mist inside the cabin create a moody atmosphere. Extreme depth of field, sharp focus on the wet glass surface and passenger's profile, blurred high-tech bus interior background, high contrast, cinematic lighting, ray-traced reflections, Unreal Engine 5 render style, 8k resolution.",
+      "text": "(bad), ugly, lowres, worst quality, cropped, deformed,",
       "clip": [
-        "3333",
+        "266:190",
         0
       ]
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
+      "title": "Negative"
     }
   },
-  "3228:3295": {
+  "4": {
     "inputs": {
-      "conditioning": [
-        "3228:3249",
-        0
-      ],
-      "latent": [
-        "3228:3294",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "ReferenceLatent"
-    }
-  },
-  "3228:3294": {
-    "inputs": {
-      "pixels": [
-        "3228:3375",
+      "tile_size": 1024,
+      "overlap": 256,
+      "temporal_size": 64,
+      "temporal_overlap": 8,
+      "samples": [
+        "2",
         0
       ],
       "vae": [
-        "3334",
+        "266:185",
         0
       ]
     },
-    "class_type": "VAEEncode",
+    "class_type": "VAEDecodeTiled",
     "_meta": {
-      "title": "VAE Encode"
+      "title": "VAE Decode (Tiled)"
     }
   },
-  "3228:3255": {
+  "5": {
     "inputs": {
-      "width": [
-        "3228:3375",
-        1
-      ],
-      "height": [
-        "3228:3375",
-        2
-      ],
-      "length": [
-        "3228:3375",
-        3
-      ],
-      "batch_size": 1,
-      "vace_strength": 1.0,
-      "vace_ref_strength": 0.0,
-      "model": [
-        "3329",
-        0
-      ],
-      "positive": [
-        "3228:3295",
-        0
-      ],
-      "negative": [
-        "3228:3262",
-        0
-      ],
-      "vae": [
-        "3334",
-        0
-      ],
-      "control_video": [
-        "3228:3261",
-        0
-      ],
-      "vace_reference": [
-        "280",
-        0
-      ],
-      "phantom_images": [
-        "3348",
-        0
-      ]
-    },
-    "class_type": "WanVacePhantomSimpleV2",
-    "_meta": {
-      "title": "WanVacePhantomSimpleV2"
-    }
-  },
-  "3228:3290:3376": {
-    "inputs": {
-      "value": 1
-    },
-    "class_type": "PrimitiveInt",
-    "_meta": {
-      "title": "1"
-    }
-  },
-  "3228:3290:3280": {
-    "inputs": {
-      "boolean": [
-        "3228:3290:3284",
-        0
-      ],
-      "on_true": [
-        "280",
-        0
-      ],
-      "on_false": [
-        "3228:3290:3288",
-        0
-      ]
-    },
-    "class_type": "easy ifElse",
-    "_meta": {
-      "title": "If else"
-    }
-  },
-  "3228:3290:3288": {
-    "inputs": {
-      "select": 1,
-      "sel_mode": false
-    },
-    "class_type": "ImpactSwitch",
-    "_meta": {
-      "title": "Disable Input"
-    }
-  },
-  "3228:3290:3287": {
-    "inputs": {
+      "filename_prefix": "QwenImage/qwen",
       "images": [
-        "3348",
+        "4",
         0
       ]
     },
-    "class_type": "VHS_GetImageCount",
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "Get Image Count 🎥🅥🅗🅢"
+      "title": "Save Image"
     }
   },
-  "3228:3290:3284": {
+  "267": {
     "inputs": {
-      "cmp": "a <= b",
-      "a": [
-        "3228:3290:3287",
-        0
-      ],
-      "b": [
-        "3228:3290:3376",
+      "width": 1536,
+      "height": 864,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "291": {
+    "inputs": {
+      "image": "ComfyUI_00142_.png [output]"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "266:185": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "266:190": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "266:189": {
+    "inputs": {
+      "gguf_name": "qwen-image-edit-2511-Q5_0.gguf"
+    },
+    "class_type": "LoaderGGUF",
+    "_meta": {
+      "title": "GGUF Loader"
+    }
+  },
+  "266:198": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "266:290",
         0
       ]
     },
-    "class_type": "ImpactCompare",
+    "class_type": "ModelSamplingAuraFlow",
     "_meta": {
-      "title": "ImpactCompare"
+      "title": "ModelSamplingAuraFlow"
     }
   },
-  "3228:3290:3292": {
+  "266:199": {
     "inputs": {
-      "text1": "This node is just to get the RES4LYF nodepack in the missing nodes list of the manager."
-    },
-    "class_type": "TextBox1",
-    "_meta": {
-      "title": "Install RES4LYF"
-    }
-  },
-  "3272:3278": {
-    "inputs": {
-      "boolean": true,
-      "on_true": [
-        "3272:3273",
-        0
-      ],
-      "on_false": [
-        "265",
+      "strength": 1.0,
+      "pre_cfg": false,
+      "model": [
+        "266:198",
         0
       ]
     },
-    "class_type": "easy ifElse",
+    "class_type": "CFGNorm",
     "_meta": {
-      "title": "If else"
+      "title": "CFGNorm"
     }
   },
-  "3272:3286": {
+  "266:290": {
     "inputs": {
-      "value": 0.2,
-      "min": 0.0,
-      "max": 1.0
-    },
-    "class_type": "ClampFloat",
-    "_meta": {
-      "title": "Clamp Float"
-    }
-  },
-  "3272:3273": {
-    "inputs": {
-      "blend_factor": [
-        "3272:3286",
-        0
-      ],
-      "blend_mode": "normal",
-      "image1": [
-        "265",
-        0
-      ],
-      "image2": [
-        "3345",
+      "lora_name": "qwen-image-edit-lightning/qwen-image-edit-2511-multiple-angles-lora.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "266:193",
         0
       ]
     },
-    "class_type": "ImageBlend",
+    "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "Blend Images"
+      "title": "Load LoRA"
+    }
+  },
+  "266:193": {
+    "inputs": {
+      "lora_name": "QWEN/Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "266:189",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
     }
   }
 }

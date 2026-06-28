@@ -12,7 +12,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "28",
+        "6",
         0
       ]
     },
@@ -21,9 +21,18 @@
       "title": "保存图像"
     }
   },
-  "15": {
+  "3": {
     "inputs": {
-      "prompt": "参考图一中的主要人物和图二的吉祥物，保持图二吉祥物头部外形不变，图一人物轻微美颜、磨皮和美白，花野治愈陪伴风格。主体为图一人物和图二吉祥物并肩坐在草地花海中，人物靠在吉祥物肩上，二者都佩戴花环，占据视觉中心。人物和吉祥物互动亲密自然，吉祥物面向镜头，自然微笑。前景有茂密的花花草草，背景是茂密的草地花海边，河流、草甸和远山，整体为温柔、梦幻、治愈的插画写意风，氛围轻柔，复古色调，高对比度。",
+      "image": "石景山.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "5": {
+    "inputs": {
+      "prompt": "整个画面可爱3D风格化，保持图1中主要人物一致，人物可爱3D风格化，近景半身人像构图。背景保持图2场景一致，转化为赛博石景山夜晚场景，流动数据波纹缠绕建筑、悬浮能、飞行器、发光粒子、时空裂缝光效，冷蓝紫霓虹流光贯穿，纵深极强，全身环绕蓝色电流光脉、数据代码流、高能粒子雾，地面反射高清科幻光影，8K 超写实，冷色调，高对比度",
       "model": "doubao-seedream-4-5-251128",
       "response_format": "url",
       "resolution": "4K",
@@ -33,7 +42,7 @@
       "apikey": "a44228f5-f1b2-44e9-860a-d3c8eb5ac03e",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 1754222348,
+      "seed": 1099359284,
       "watermark": false,
       "stream": false,
       "image1": [
@@ -41,7 +50,7 @@
         0
       ],
       "image2": [
-        "26",
+        "3",
         0
       ]
     },
@@ -50,47 +59,25 @@
       "title": "Comfly Doubao Seedream4.0"
     }
   },
-  "18": {
+  "6": {
     "inputs": {
       "aspect_ratio": "custom",
-      "proportional_width": 2662,
+      "proportional_width": 2622,
       "proportional_height": 1772,
       "fit": "crop",
       "method": "bicubic",
       "round_to_multiple": "None",
       "scale_to_side": "width",
-      "scale_to_length": 2662,
+      "scale_to_length": 2622,
       "background_color": "#000000",
       "image": [
-        "15",
+        "5",
         0
       ]
     },
     "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
     "_meta": {
       "title": "图层工具：按宽高比缩放 V2"
-    }
-  },
-  "26": {
-    "inputs": {
-      "image": "cym.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "28": {
-    "inputs": {
-      "rotation": "270 degrees",
-      "image": [
-        "18",
-        0
-      ]
-    },
-    "class_type": "ImageRotate",
-    "_meta": {
-      "title": "图像旋转"
     }
   }
 }

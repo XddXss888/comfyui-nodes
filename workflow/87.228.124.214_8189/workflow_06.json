@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "eurameg1, A nude woman kneeling at a luxury auction event in a glamorous VIP setting, confidently smiling with a playful expression and head tilted slightly, performing oral sex with an erect penis in her mouth, hands resting on his thighs for support, stage lighting illuminating her body, medium close-up from the man's perspective focusing on her face and upper torso.",
+      "text": "seductive young curvy woman with long black hair, A woman leaning forward over the hood of a car in a secluded natural spot outside the city at evening, her abdomen visibly swollen and rounded, thick streams of semen flowing heavily from her vagina and dripping down her inner thighs, legs slightly parted for support, hands resting on the car surface, heavy breathing, natural evening light with soft shadows, medium close-up framing on the torso and hips, clean realistic anatomy, stable pose.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "zimg-eurameg1-refine-con-char.safetensors",
-      "strength_model": 0.8,
-      "strength_clip": 0.8,
+      "lora_name": "izumi_v.2.safetensors",
+      "strength_model": 0.9,
+      "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -132,12 +132,12 @@
     "inputs": {
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
-      "scheduler": "beta57",
+      "scheduler": "bong_tangent",
       "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 453373455444780,
+      "seed": 26161571962184,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

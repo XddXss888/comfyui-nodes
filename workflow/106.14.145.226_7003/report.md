@@ -1,16 +1,16 @@
 # 106.14.145.226:7003
 
 **GPU**: RTX 5080 | **显存**: 16 GB | **空闲**: 15 GB
-**内存**: 47 GB (空闲 38 GB)
+**内存**: 47 GB (空闲 39 GB)
 **版本**: 0.19.3
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-27 08:07:52
-**历史总数**: 19 | **成功**: 10
+**扫描时间**: 2026-06-28 08:07:47
+**历史总数**: 43 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `2426f8f4-73b9-4c81-8502-c8b723b1914b`
+- **Prompt ID**: `2da69908-bf90-4d70-9aeb-45fdc565467d`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -19,10 +19,12 @@
   - Qwen\qwen_image_vae.safetensors
   - Qwen_Image_Edit\Qwen_Image_Edit_2511\qwen-image-edit-2511-Q6_K.gguf
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 涂鸦手账PLOG风，对照原图所有物件添加白色手绘描边与随手注解。白色细线勾勒轮廓，线条自然，抖动，搭配箭头，虚线，弯引线。零散分布中文手写小字，记录食物口感，饮品感受、场景氛围与生活碎碎念，文字统一白色，小字号，不遮挡主体。少量点缀爱心，星光、热气，简笔表情符号，保留大量留白，避免拥挤。整体呈现日系居家手账氛围ins日常故事页+复古杂志风，低饱和配色，柔和自然光，淡淡胶片颗粒感，清爽简约，松弛治愈
+  - [TextEncodeQwenImageEditPlus::prompt] 人物更像一个天使，翅膀更真实。
+人物皮肤白一点，稍微让腿部瘦一点
+肤色基调向冷色偏移5%，降低黄色饱和度10个单位，提升明亮度15个单位。严控过白或偏灰现象。
 
 ### 2. workflow_02.json
-- **Prompt ID**: `bfc2a22b-9108-4009-905b-bbb3511499b9`
+- **Prompt ID**: `5a4e93d2-9491-4227-925a-6e055195d4ce`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -31,10 +33,12 @@
   - Qwen\qwen_image_vae.safetensors
   - Qwen_Image_Edit\Qwen_Image_Edit_2511\qwen-image-edit-2511-Q6_K.gguf
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 涂鸦手账PLOG风，对照原图所有物件添加白色手绘描边与随手注解。白色细线勾勒轮廓，线条自然，抖动，搭配箭头，虚线，弯引线。零散分布英文手写小字，记录食物口感，饮品感受、场景氛围与生活碎碎念，文字统一白色，小字号，不遮挡主体。少量点缀爱心，星光、热气，简笔表情符号，保留大量留白，避免拥挤。整体呈现日系居家手账氛围ins日常故事页+复古杂志风，低饱和配色，柔和自然光，淡淡胶片颗粒感，清爽简约，松弛治愈
+  - [TextEncodeQwenImageEditPlus::prompt] 人物更像一个六翼天使，翅膀更真实。
+人物皮肤白一点，稍微让腿部瘦一点
+肤色基调向冷色偏移5%，降低黄色饱和度10个单位，提升明亮度15个单位。严控过白或偏灰现象。
 
 ### 3. workflow_03.json
-- **Prompt ID**: `4d705ec0-6113-4652-8192-f000e839cf02`
+- **Prompt ID**: `af11969f-149b-41ca-96dc-2f72ce777ef2`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -43,12 +47,12 @@
   - Qwen\qwen_image_vae.safetensors
   - Qwen_Image_Edit\Qwen_Image_Edit_2511\qwen-image-edit-2511-Q6_K.gguf
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 8K超高清晰度，原画级人设设定表，纯白色无杂物背景，画布均等四格均分排版，严格四宫格布局，四个独立分隔方框，线条分割，每个格子只放单一全身人物，格子之间互不重叠，同一人物，五官身材服饰完全统一，标准笔直站立，无多余动作
-左上格子：人物正面全身完整立绘，从头到脚完整不裁切，高清精细面部特写，完整五官，清晰睫毛皮肤唇纹，全套服饰完整展示，纽扣刺绣褶皱配饰全部清晰
-右上格子：人物左侧全身纯侧面立绘，
+  - [TextEncodeQwenImageEditPlus::prompt] 人物更像一个六翼天使，翅膀更大更真实。
+人物皮肤白一点，稍微让腿部瘦一点
+肤色基调向冷色偏移5%，降低黄色饱和度10个单位，提升明亮度15个单位。严控过白或偏灰现象。
 
 ### 4. workflow_04.json
-- **Prompt ID**: `737a49e5-1320-4221-bdba-d7bacef454a0`
+- **Prompt ID**: `d98d67ab-b930-4601-be86-dc0e411cea44`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -57,63 +61,101 @@
   - Qwen\qwen_image_vae.safetensors
   - Qwen_Image_Edit\Qwen_Image_Edit_2511\qwen-image-edit-2511-Q6_K.gguf
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 根据照片，生成真人质感的，8K超高清晰度，原画级人设设定表，纯白色无杂物背景，画布均等四格均分排版，严格四宫格布局，四个独立分隔方框，线条分割，每个格子只放单一全身人物，格子之间互不重叠，同一人物，五官身材服饰完全统一，标准笔直站立，无多余动作
-左上格子：人物正面全身完整立绘，从头到脚完整不裁切，高清精细面部特写，完整五官，清晰睫毛皮肤唇纹，全套服饰完整展示，纽扣刺绣褶皱配饰全部清晰
-右上格子
+  - [TextEncodeQwenImageEditPlus::prompt] 人物更像一个六翼天使，翅膀更大更真实。
+人物皮肤白一点，稍微让腿部瘦一点
+肤色基调向冷色偏移5%，降低黄色饱和度10个单位，提升明亮度15个单位。严控过白或偏灰现象。
+模拟闪光灯拍照效果，人物正面有补光效果
 
 ### 5. workflow_05.json
-- **Prompt ID**: `26c45db4-a8d0-4a78-88a8-2b96ea89e7bc`
+- **Prompt ID**: `51981183-1653-4530-8142-ddd933e368b9`
 - **类型**: 图生图
-- **节点数**: 23
-- **模型** (5):
-  - LTX-Kijai\LTX23_audio_vae_bf16.safetensors
-  - LTX-Kijai\LTX23_video_vae_bf16.safetensors
-  - gemma_3_12B_it.safetensors
-  - ltx-2.3-22b-distilled-1.1_transformer_only_fp8_scaled.safetensors
-  - ltx-2.3_text_projection_bf16.safetensors
+- **节点数**: 16
+- **模型** (4):
+  - Qwen-Image-Edit\Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen\qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - Qwen\qwen_image_vae.safetensors
+  - Qwen_Image_Edit\Qwen_Image_Edit_2511\qwen-image-edit-2511-Q6_K.gguf
+- **提示词**:
+  - [TextEncodeQwenImageEditPlus::prompt] 人物更像一个六翼天使，翅膀更大更真实。
+人物皮肤白一点，稍微让腿部瘦一点
+肤色基调向冷色偏移5%，降低黄色饱和度10个单位，提升明亮度15个单位。严控过白或偏灰现象。
+人物正面提亮，避免腿部手部脸部颜色差距大
 
 ### 6. workflow_06.json
-- **Prompt ID**: `80e9cb59-78fc-48d1-a80a-abcaa5ba4796`
+- **Prompt ID**: `b71fd246-ebac-4b60-bb64-3f8ddbb02068`
 - **类型**: 图生图
-- **节点数**: 23
-- **模型** (5):
-  - LTX-Kijai\LTX23_audio_vae_bf16.safetensors
-  - LTX-Kijai\LTX23_video_vae_bf16.safetensors
-  - gemma_3_12B_it.safetensors
-  - ltx-2.3-22b-distilled-1.1_transformer_only_fp8_scaled.safetensors
-  - ltx-2.3_text_projection_bf16.safetensors
+- **节点数**: 16
+- **模型** (4):
+  - Qwen-Image-Edit\Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen\qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - Qwen\qwen_image_vae.safetensors
+  - Qwen_Image_Edit\Qwen_Image_Edit_2511\qwen-image-edit-2511-Q6_K.gguf
+- **提示词**:
+  - [TextEncodeQwenImageEditPlus::prompt] 人物更像一个六翼天使，翅膀更大更真实。
+人物皮肤白一点，稍微让腿部瘦一点
+肤色基调向冷色偏移5%，降低黄色饱和度10个单位，提升明亮度15个单位。严控过白或偏灰现象。
+提亮人物双腿，修复腿部欠曝，提升阴影亮度，保留皮肤纹理，光影自然柔和，肤色统一，不发白、不糊脸、不变形，背景保持原样，上身亮度不变，自然光过渡均匀，高清皮肤细节
 
 ### 7. workflow_07.json
-- **Prompt ID**: `d885c059-01a2-4044-89aa-2d8b1e570b86`
-- **类型**: 图生图
-- **节点数**: 31
-- **模型** (3):
-  - LTX-2.3-Licon-MSR-V1.safetensors
-  - gemma_3_12B_it_fp4_mixed.safetensors
-  - ltx-2.3-22b-distilled-1.1.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] 一、核心风格（Core Style）
-• 关键词：奇幻，童趣，治愈，魔法
-• AI提示词：画面整体风格充满童真与奇幻色彩，色调明亮柔和，以粉蓝、鹅黄、浅紫等梦幻色系为主，场景可设定在洒满阳光的草坪或摆满玩偶的房间，突出小女孩施法时的惊喜与灵动，营造温暖治愈的魔法氛围。
-二、画面质感（Visual Texture）
-• 关键词：细腻，梦幻，光泽感，动态模糊
-• AI提示词：画面细节细腻，魔
-  - [CLIPTextEncode::text] worst quality, blurry, jittery, distorted, inconsistent appearance，duplicate character, extra character, clone, crowd, multiple demons, multiple masters, multiple disciples, character duplication, orb
+- **Prompt ID**: `3dae2737-8f64-4cdd-a421-d921e19f3355`
+- **类型**: 图片超分
+- **节点数**: 6
+- **模型** (2):
+  - ema_vae_fp16.safetensors
+  - seedvr2_ema_7b_sharp_fp16.safetensors
 
 ### 8. workflow_08.json
-- **Prompt ID**: `e546ed4c-15c9-4c49-9d8f-b5bb4960f440`
-- **类型**: 其他/工具
-- **节点数**: 1
-- **模型** (0):
+- **Prompt ID**: `13ba14b7-26cb-4b72-9d15-a568fec63a05`
+- **类型**: 图生图
+- **节点数**: 16
+- **模型** (4):
+  - Qwen-Image-Edit\Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen\qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - Qwen\qwen_image_vae.safetensors
+  - Qwen_Image_Edit\Qwen_Image_Edit_2511\qwen-image-edit-2511-Q6_K.gguf
+- **提示词**:
+  - [TextEncodeQwenImageEditPlus::prompt] 正向调整
+
+1. 阴影大幅提亮，黑色色阶适度抬起，把立柱、拱廊、飞扶壁的暗部细节拉出来。
+
+2. 压低高光：尖顶、玻璃花窗、受光墙面容易过曝，锁住高光，保留雕花纹理。
+
+3. 对比度拉高，强化明暗反差，突出哥特式冷峻硬朗的结构线条。
+
+4. 增加纹理+清晰度，强化尖拱、肋拱顶、石雕花纹、石像鬼细节。
+
+色调风格
+
+• 冷调主色：深蓝、青灰，营造阴森、肃穆、中世纪氛围感；
+
 
 ### 9. workflow_09.json
-- **Prompt ID**: `2c8d5916-7705-4911-973e-bbb201886d03`
-- **类型**: 其他/工具
-- **节点数**: 1
-- **模型** (0):
+- **Prompt ID**: `d49b114b-71e9-4c91-91d5-32e9e1518cb1`
+- **类型**: 图生图
+- **节点数**: 16
+- **模型** (4):
+  - Qwen-Image-Edit\Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen\qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - Qwen\qwen_image_vae.safetensors
+  - Qwen_Image_Edit\Qwen_Image_Edit_2511\qwen-image-edit-2511-Q6_K.gguf
+- **提示词**:
+  - [TextEncodeQwenImageEditPlus::prompt] 正向调整
+
+1. 阴影大幅提亮，黑色色阶适度抬起，把立柱、拱廊、飞扶壁的暗部细节拉出来。
+
+2. 压低高光：尖顶、玻璃花窗、受光墙面容易过曝，锁住高光，保留雕花纹理。
+
+3. 对比度拉高，强化明暗反差，突出哥特式冷峻硬朗的结构线条。
+
+4. 增加纹理+清晰度，强化尖拱、肋拱顶、石雕花纹、石像鬼细节。
+
+色调风格
+
+• 冷调主色：深蓝、青灰，营造阴森、肃穆、中世纪氛围感；
+
 
 ### 10. workflow_10.json
-- **Prompt ID**: `7915c547-ee12-4f60-b6b7-13cf28753b4c`
+- **Prompt ID**: `eb4e0249-4f22-406d-85a0-ff7e265586ac`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):

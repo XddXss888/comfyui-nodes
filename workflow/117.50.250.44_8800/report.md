@@ -4,13 +4,13 @@
 **内存**: 62 GB (空闲 44 GB)
 **版本**: 0.6.0
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-27 08:08:06
-**历史总数**: 5881 | **成功**: 10
+**扫描时间**: 2026-06-28 08:07:54
+**历史总数**: 6130 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `8571e9bc-4b64-404a-97e8-161add42c1c9`
+- **Prompt ID**: `735bde2c-de9e-42e7-aab9-44c729e119bf`
 - **类型**: 文生视频
 - **节点数**: 32
 - **模型** (7):
@@ -25,7 +25,7 @@
   - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures,black background
 
 ### 2. workflow_02.json
-- **Prompt ID**: `4ec1a010-8dbd-4bc2-bc3d-ed0cb8498304`
+- **Prompt ID**: `7cee0de7-2d86-475c-b485-96c71ec29d77`
 - **类型**: 文生视频
 - **节点数**: 32
 - **模型** (7):
@@ -40,7 +40,7 @@
   - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures,black background
 
 ### 3. workflow_03.json
-- **Prompt ID**: `5e11a76f-e868-4bd0-b6cc-98ac79cc9eff`
+- **Prompt ID**: `7090d432-6edf-4009-aac5-af45613c228f`
 - **类型**: 文生视频
 - **节点数**: 32
 - **模型** (7):
@@ -55,7 +55,7 @@
   - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures,black background
 
 ### 4. workflow_04.json
-- **Prompt ID**: `9701a34d-8b29-4d26-8daa-593f9406b10c`
+- **Prompt ID**: `eb0e045e-c421-437f-aad5-32c46c80fb22`
 - **类型**: 文生视频
 - **节点数**: 32
 - **模型** (7):
@@ -63,14 +63,14 @@
   - ae.safetensors
   - clip_l.safetensors
   - drunet_gray.safetensors
-  - kontext_8mm_0130_000007000.safetensors
+  - kontext_1mmtd_0130_000005000.safetensors
   - svdq-int4_r32-flux.1-kontext-dev.safetensors
   - t5xxl_fp16.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures,black background
 
 ### 5. workflow_05.json
-- **Prompt ID**: `a0d4c203-99e1-4476-85b2-0dc82aa9f8a8`
+- **Prompt ID**: `000b1012-80a8-4a70-a3d1-a25190badff6`
 - **类型**: 文生视频
 - **节点数**: 32
 - **模型** (7):
@@ -85,22 +85,22 @@
   - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures,black background
 
 ### 6. workflow_06.json
-- **Prompt ID**: `10404e15-65cd-4e92-b2e2-14f03e4b2f96`
-- **类型**: 文生图
-- **节点数**: 30
+- **Prompt ID**: `2d309690-7dd5-4fa2-aa9c-c34afc3495a3`
+- **类型**: 文生视频
+- **节点数**: 32
 - **模型** (7):
   - FLUX.1-Turbo-Alpha.safetensors
   - ae.safetensors
   - clip_l.safetensors
   - drunet_gray.safetensors
-  - kontext_3mm_0130_000007000.safetensors
+  - kontext_15mm_0130_000007000.safetensors
   - svdq-int4_r32-flux.1-kontext-dev.safetensors
   - t5xxl_fp16.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures,black background
 
 ### 7. workflow_07.json
-- **Prompt ID**: `918e9677-5a60-4c3a-82fe-1d30cc645bda`
+- **Prompt ID**: `bebc573c-687c-4455-bfb1-4629c73f3e5f`
 - **类型**: 文生视频
 - **节点数**: 32
 - **模型** (7):
@@ -112,10 +112,10 @@
   - svdq-int4_r32-flux.1-kontext-dev.safetensors
   - t5xxl_fp16.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures
+  - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures,black background
 
 ### 8. workflow_08.json
-- **Prompt ID**: `a98a2fd1-7495-4550-899b-de4a614e2d0d`
+- **Prompt ID**: `2a0674ab-0406-4aa8-a845-8433fce45aba`
 - **类型**: 文生视频
 - **节点数**: 32
 - **模型** (7):
@@ -130,7 +130,7 @@
   - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures,black background
 
 ### 9. workflow_09.json
-- **Prompt ID**: `96e110a8-9f47-46a8-93c5-84711776fe04`
+- **Prompt ID**: `778fd3c9-fede-4931-8a67-00f849cb2837`
 - **类型**: 文生视频
 - **节点数**: 32
 - **模型** (7):
@@ -138,14 +138,14 @@
   - ae.safetensors
   - clip_l.safetensors
   - drunet_gray.safetensors
-  - kontext_3mm_0130_000007000.safetensors
+  - kontext_1mmtj_0130_000007000.safetensors
   - svdq-int4_r32-flux.1-kontext-dev.safetensors
   - t5xxl_fp16.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures
+  - [CLIPTextEncode::text] Convert this image to grayscale while preserving all original structures,black background
 
 ### 10. workflow_10.json
-- **Prompt ID**: `94f15f3d-9b1d-4f49-b11f-c91be958bd89`
+- **Prompt ID**: `025cffc8-826e-4be0-b46e-7ebd3fc05228`
 - **类型**: 文生视频
 - **节点数**: 32
 - **模型** (7):

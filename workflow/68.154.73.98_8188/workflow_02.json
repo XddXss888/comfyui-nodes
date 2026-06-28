@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_db7f956a1740453498d9c4d6814b06f6.png"
+      "image": "ref_80060a8b63ff471e9e94de72a8600d91.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "Transparent bikini ",
+      "prompt": "スカートをもっとミニスカートにして",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 804583428338022,
+      "seed": 868176154258295,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",

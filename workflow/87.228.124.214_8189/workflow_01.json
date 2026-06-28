@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "seductive young curvy woman with long black hair, In a dimly lit elegant adult hotel room with soft evening lighting, a woman sits relaxed in a leather armchair, leaning back against the chair with legs crossed, her body turned slightly toward the viewer. She meets the gaze with a subtle smile, the corners of her lips gently lifted, one hand resting on the armrest. The composition is a medium close-up framing her upper body and expression, with the private room background softly blurred, creating a calm and intimate atmosphere.",
+      "text": "l34n0r, chubby woman, A woman in delicate lingerie poses confidently in a photo studio, standing with one hand resting on her hip and her body angled slightly toward the camera, soft professional lighting gently illuminating her form against a simple studio backdrop, medium close-up framing with a warm yet composed expression and direct gaze, clean and stable composition.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "izumi_v.2.safetensors",
-      "strength_model": 0.9,
-      "strength_clip": 1.0,
+      "lora_name": "z-3l34n0r.safetensors",
+      "strength_model": 0.78,
+      "strength_clip": 0.8,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -137,7 +137,7 @@
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 26161571962184,
+      "seed": 699584008911822,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

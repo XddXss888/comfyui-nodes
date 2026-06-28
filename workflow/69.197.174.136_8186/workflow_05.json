@@ -1,18 +1,18 @@
 {
   "1": {
     "inputs": {
-      "tags": "alarm,pop,morning,energy",
-      "lyrics": "[Intro]\n\n\n[Verse]\n rise in His light! Joyful hearts, spirits bright Step into His love today. Loop this grace, guide your way!",
-      "seed": 486703203651001,
-      "bpm": 150,
+      "tags": "A cheerful and uplifting jingle featuring a bright acoustic piano melody over a lively chord progression. Light rhythmic elements and playful piano notes create a happy atmosphere. A male vocalist sings in a clear, warm, and friendly tone, listing different types of imprisonment in a simple and engaging way. The vocal is briefly layered with a soft lower harmony on the phrase “sung imprisonment,” adding a pleasant musical texture. The overall mood is joyful, lighthearted, and educational, suitable for a children’s song or a short, fun jingle.",
+      "lyrics": "\n[Intro]\nExcuse me Professor Sambish, please answer the phone. Someone is trying to reach you right now.\n\n[Verse]\nExcuse me Professor Sambish, please answer the phone. Someone is trying to reach you right now.\n\n[Hook]\nExcuse me Professor Sambish, please answer the phone. Someone is trying to reach you right now.\n\n[Outro]\nPiano and guitar softly resolve, leaving a warm and pleasant ending\n",
+      "seed": 1100325964226750,
+      "bpm": 100,
       "duration": 30.0,
       "timesignature": "4",
       "language": "en",
       "keyscale": "C major",
       "generate_audio_codes": false,
-      "cfg_scale": 5.0,
-      "temperature": 0.3,
-      "top_p": 0.3,
+      "cfg_scale": 2.0,
+      "temperature": 0.85,
+      "top_p": 0.9,
       "top_k": 0,
       "min_p": 0.0,
       "clip": [
@@ -23,6 +23,22 @@
     "class_type": "TextEncodeAceStepAudio1.5",
     "_meta": {
       "title": "TextEncodeAceStepAudio1.5"
+    }
+  },
+  "18": {
+    "inputs": {
+      "samples": [
+        "102",
+        0
+      ],
+      "vae": [
+        "999",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeAudio",
+    "_meta": {
+      "title": "VAE Decode Audio"
     }
   },
   "47": {
@@ -50,13 +66,23 @@
       "title": "ModelSamplingAuraFlow"
     }
   },
+  "98": {
+    "inputs": {
+      "seconds": 30.0,
+      "batch_size": 1
+    },
+    "class_type": "EmptyAceStep1.5LatentAudio",
+    "_meta": {
+      "title": "Empty Ace Step 1.5 Latent Audio"
+    }
+  },
   "99": {
     "inputs": {
-      "filename_prefix": "/sda-disk/home/Ringtone/music-generation-system/temp/results/345e621a-eb4f-4dd0-a6f0-04074d31bb86.mp3",
+      "filename_prefix": "/sda-disk/home/Ringtone/music-generation-system/temp/results/44a19783-13c4-4f5d-a3c5-d9f3b9d34334.mp3",
       "quality": "320k",
-      "audioUI": "/api/view?filename=ComfyUI.mp3&type=output&subfolder=audio&rand=0.36733299582283296",
+      "audioUI": "",
       "audio": [
-        "1020",
+        "18",
         0
       ]
     },
@@ -65,14 +91,14 @@
       "title": "Save Audio (MP3)"
     }
   },
-  "101": {
+  "100": {
     "inputs": {
-      "seed": 807193839657641,
-      "steps": 8,
-      "cfg": 2.0,
+      "seed": 551920112546168,
+      "steps": 4,
+      "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 0.4,
+      "denoise": 0.35,
       "model": [
         "78",
         0
@@ -86,7 +112,7 @@
         0
       ],
       "latent_image": [
-        "110",
+        "101",
         0
       ]
     },
@@ -95,56 +121,64 @@
       "title": "KSampler"
     }
   },
-  "105": {
+  "101": {
     "inputs": {
-      "samples": [
-        "101",
+      "seed": 756750936558355,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "78",
         0
       ],
-      "vae": [
-        "999",
+      "positive": [
+        "1",
+        0
+      ],
+      "negative": [
+        "47",
+        0
+      ],
+      "latent_image": [
+        "98",
         0
       ]
     },
-    "class_type": "VAEDecodeAudio",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "VAE Decode Audio"
+      "title": "KSampler"
     }
   },
-  "110": {
+  "102": {
     "inputs": {
-      "audio": [
-        "1025",
+      "seed": 602997888106553,
+      "steps": 2,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.15,
+      "model": [
+        "78",
         0
       ],
-      "vae": [
-        "999",
+      "positive": [
+        "1",
+        0
+      ],
+      "negative": [
+        "47",
+        0
+      ],
+      "latent_image": [
+        "100",
         0
       ]
     },
-    "class_type": "VAEEncodeAudio",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "VAE Encode Audio"
-    }
-  },
-  "111": {
-    "inputs": {
-      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_41/EN/t41_en_raw_song.mp3",
-      "audioUI": "/api/view?filename=t41_en_raw_song.mp3&type=input&subfolder=&rand=0.8347527323171213"
-    },
-    "class_type": "LoadAudio",
-    "_meta": {
-      "title": "Raw Song"
-    }
-  },
-  "777": {
-    "inputs": {
-      "unet_name": "acestep_v1.5_xl_turbo_bf16.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Load Diffusion Model"
+      "title": "KSampler"
     }
   },
   "888": {
@@ -168,159 +202,14 @@
       "title": "Load VAE"
     }
   },
-  "1014": {
+  "777": {
     "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_ehjlq.flac&type=temp&subfolder=&rand=0.4595424451345912",
-      "audio": [
-        "1030",
-        0
-      ]
+      "unet_name": "acestep_v1.5_xl_turbo_bf16.safetensors",
+      "weight_dtype": "default"
     },
-    "class_type": "PreviewAudio",
+    "class_type": "UNETLoader",
     "_meta": {
-      "title": "Preview Audio"
-    }
-  },
-  "1018": {
-    "inputs": {
-      "start_time": 1.7,
-      "end_time": 0.0,
-      "audio": [
-        "1025",
-        0
-      ]
-    },
-    "class_type": "AudioTrim",
-    "_meta": {
-      "title": "Audio Trim ⚡🅡🅞🅣🅘"
-    }
-  },
-  "1020": {
-    "inputs": {
-      "direction": "after",
-      "audio1": [
-        "1022",
-        0
-      ],
-      "audio2": [
-        "1018",
-        0
-      ]
-    },
-    "class_type": "AudioConcat",
-    "_meta": {
-      "title": "Audio Concat"
-    }
-  },
-  "1022": {
-    "inputs": {
-      "start_time": 0.0,
-      "end_time": 1.7,
-      "audio": [
-        "105",
-        0
-      ]
-    },
-    "class_type": "AudioTrim",
-    "_meta": {
-      "title": "Audio Trim ⚡🅡🅞🅣🅘"
-    }
-  },
-  "1023": {
-    "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_jlpim.flac&type=temp&subfolder=&rand=0.7264378419666794",
-      "audio": [
-        "1022",
-        0
-      ]
-    },
-    "class_type": "PreviewAudio",
-    "_meta": {
-      "title": "Preview Audio"
-    }
-  },
-  "1024": {
-    "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_sdtop.flac&type=temp&subfolder=&rand=0.8675492871229513",
-      "audio": [
-        "1018",
-        0
-      ]
-    },
-    "class_type": "PreviewAudio",
-    "_meta": {
-      "title": "Preview Audio"
-    }
-  },
-  "1025": {
-    "inputs": {
-      "start_time": 0.0,
-      "end_time": 30.0,
-      "audio": [
-        "111",
-        0
-      ]
-    },
-    "class_type": "AudioTrim",
-    "_meta": {
-      "title": "Audio Trim ⚡🅡🅞🅣🅘"
-    }
-  },
-  "1026": {
-    "inputs": {
-      "start_time": 0.0,
-      "end_time": 0.0,
-      "audio": [
-        "111",
-        0
-      ]
-    },
-    "class_type": "AudioTrim",
-    "_meta": {
-      "title": "Audio Trim ⚡🅡🅞🅣🅘"
-    }
-  },
-  "1028": {
-    "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_bmxot.flac&type=temp&subfolder=&rand=0.5823706272971352",
-      "audio": [
-        "1026",
-        0
-      ]
-    },
-    "class_type": "PreviewAudio",
-    "_meta": {
-      "title": "Preview Audio"
-    }
-  },
-  "1029": {
-    "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_jclii.flac&type=temp&subfolder=&rand=0.636426778204416",
-      "audio": [
-        "1025",
-        0
-      ]
-    },
-    "class_type": "PreviewAudio",
-    "_meta": {
-      "title": "Preview Audio"
-    }
-  },
-  "1030": {
-    "inputs": {
-      "direction": "after",
-      "audio1": [
-        "1026",
-        0
-      ],
-      "audio2": [
-        "1020",
-        0
-      ]
-    },
-    "class_type": "AudioConcat",
-    "_meta": {
-      "title": "Audio Concat"
+      "title": "Load Diffusion Model"
     }
   }
 }
