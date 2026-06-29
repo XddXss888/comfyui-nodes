@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_80060a8b63ff471e9e94de72a8600d91.png"
+      "image": "ref_acf75444790b4a0d9db1c8e464a9a2cc.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "スカートをもっとミニスカートにして",
+      "prompt": "Change the clothes and make the girl wear a big bra, then improve the image quality.",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 868176154258295,
+      "seed": 415227407586432,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",

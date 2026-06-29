@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 631254076,
+      "seed": 347560231,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,brown eyes,freckles,lips,bracelet,realistic,(*i reach sround and untie your bra*:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,kneeling,indoors,kitchen,window,chair,(Kneel down:1.0),(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2025/01/25/1737771529455.jpg",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2024/12/03/1733249473602.jpg",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

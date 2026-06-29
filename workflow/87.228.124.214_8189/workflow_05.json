@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "seductive young curvy woman with long black hair, A woman lying on the hood of a car in a secluded natural spot outside the city at evening, her body relaxed and spread across the metal surface with one arm resting at her side and legs slightly bent, wearing fitted clothing that shows natural folds and tension from the pose, soft dusk light casting gentle shadows across the scene, simple background of trees and open space with no other people, medium close-up framing from a slightly angled front view, realistic proportions and clear posture.",
+      "text": "asig2, A shy young woman sits on the edge of a bed, completely nude, with soft flushed cheeks and a hesitant expression. Her legs are gently parted, one hand resting between her thighs as her fingers press against her exposed vagina and clit in a slow, intimate masturbation motion. Her other hand supports her on the mattress behind her, torso slightly leaned back, gaze directed downward with a mix of embarrassment and building pleasure. Soft warm bedroom lighting highlights the natural curves of her body and the visible contact of her fingers on her intimate areas, medium close-up framing from the waist up with clear focus on her pose and expression, stable natural proportions and readable anatomy.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "izumi_v.2.safetensors",
-      "strength_model": 0.9,
-      "strength_clip": 1.0,
+      "lora_name": "zimg_asig2_conchar.safetensors",
+      "strength_model": 0.63,
+      "strength_clip": 0.7,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.5,
+      "eta": 0.33,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 26161571962184,
+      "seed": 661743540426963,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

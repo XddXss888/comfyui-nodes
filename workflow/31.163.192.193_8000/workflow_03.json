@@ -1,113 +1,160 @@
 {
-  "97": {
+  "4": {
     "inputs": {
-      "image": "1047.png"
+      "ckpt_name": "sd_xl_base_1.0.safetensors"
     },
-    "class_type": "LoadImage",
+    "class_type": "CheckpointLoaderSimple",
     "_meta": {
-      "title": "Загрузить изображение"
+      "title": "Load Checkpoint - BASE"
     }
   },
-  "108": {
+  "5": {
     "inputs": {
-      "filename_prefix": "video/Wan2.2_i2v",
-      "format": "auto",
-      "codec": "auto",
-      "video": [
-        "129:94",
-        0
-      ]
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
     },
-    "class_type": "SaveVideo",
+    "class_type": "EmptyLatentImage",
     "_meta": {
-      "title": "Сохранить видео"
+      "title": "Пустое латентное изображение"
     }
   },
-  "129:98": {
+  "6": {
     "inputs": {
-      "width": 640,
-      "height": 800,
-      "length": 81,
-      "batch_size": 1,
-      "positive": [
-        "129:93",
-        0
-      ],
-      "negative": [
-        "129:89",
-        0
-      ],
-      "vae": [
-        "129:90",
-        0
-      ],
-      "start_image": [
-        "97",
-        0
-      ]
-    },
-    "class_type": "WanImageToVideo",
-    "_meta": {
-      "title": "WanИзображениеВВидео"
-    }
-  },
-  "129:94": {
-    "inputs": {
-      "fps": 16.0,
-      "images": [
-        "129:87",
-        0
-      ]
-    },
-    "class_type": "CreateVideo",
-    "_meta": {
-      "title": "Создать видео"
-    }
-  },
-  "129:104": {
-    "inputs": {
-      "shift": 5.000000000000001,
-      "model": [
-        "129:116",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingSD3",
-    "_meta": {
-      "title": "Выборка модели SD3"
-    }
-  },
-  "129:89": {
-    "inputs": {
-      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "text": "evening sunset scenery blue sky nature, glass bottle with a galaxy in it",
       "clip": [
-        "129:84",
-        0
+        "4",
+        1
       ]
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
+      "title": "Кодирование текста CLIP (Запрос)"
     }
   },
-  "129:128": {
+  "7": {
     "inputs": {
-      "value": 20
+      "text": "text, watermark",
+      "clip": [
+        "4",
+        1
+      ]
     },
-    "class_type": "PrimitiveInt",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "Steps"
+      "title": "Кодирование текста CLIP (Запрос)"
     }
   },
-  "129:87": {
+  "10": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 721897303308196,
+      "steps": 25,
+      "cfg": 8.0,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 20,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "KSampler (Advanced) - BASE"
+    }
+  },
+  "11": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 25,
+      "cfg": 8.0,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 20,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "12",
+        0
+      ],
+      "positive": [
+        "15",
+        0
+      ],
+      "negative": [
+        "16",
+        0
+      ],
+      "latent_image": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "KSampler (Advanced) - REFINER"
+    }
+  },
+  "12": {
+    "inputs": {
+      "ckpt_name": "sd_xl_refiner_1.0.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint - REFINER"
+    }
+  },
+  "15": {
+    "inputs": {
+      "text": "evening sunset scenery blue sky nature, glass bottle with a galaxy in it",
+      "clip": [
+        "12",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Кодирование текста CLIP (Запрос)"
+    }
+  },
+  "16": {
+    "inputs": {
+      "text": "text, watermark",
+      "clip": [
+        "12",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Кодирование текста CLIP (Запрос)"
+    }
+  },
+  "17": {
     "inputs": {
       "samples": [
-        "129:85",
+        "11",
         0
       ],
       "vae": [
-        "129:90",
-        0
+        "12",
+        2
       ]
     },
     "class_type": "VAEDecode",
@@ -115,339 +162,17 @@
       "title": "Декодировать VAE"
     }
   },
-  "129:93": {
+  "19": {
     "inputs": {
-      "text": "A man appears, takes the girl by the head, inserts his penis deep into her mouth, then takes his penis out of the girl's mouth and inserts it into her anus. ",
-      "clip": [
-        "129:84",
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "17",
         0
       ]
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
-    }
-  },
-  "129:131": {
-    "inputs": {
-      "value": true
-    },
-    "class_type": "PrimitiveBoolean",
-    "_meta": {
-      "title": "Enable 4steps LoRA?"
-    }
-  },
-  "129:90": {
-    "inputs": {
-      "vae_name": "wan_2.1_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Загрузить VAE"
-    }
-  },
-  "129:84": {
-    "inputs": {
-      "clip_name": "nsfw_wan_umt5-xxl_fp8_scaled.safetensors",
-      "type": "wan",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "Загрузить CLIP"
-    }
-  },
-  "129:96": {
-    "inputs": {
-      "unet_name": "wan22RemixT2VI2V_i2vLowV30.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Загрузить модель диффузии"
-    }
-  },
-  "129:95": {
-    "inputs": {
-      "unet_name": "wan22RemixT2VI2V_i2vHighV30.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Загрузить модель диффузии"
-    }
-  },
-  "129:127": {
-    "inputs": {
-      "value": 10
-    },
-    "class_type": "PrimitiveInt",
-    "_meta": {
-      "title": "split_step"
-    }
-  },
-  "129:126": {
-    "inputs": {
-      "value": 3.5
-    },
-    "class_type": "PrimitiveFloat",
-    "_meta": {
-      "title": "CFG"
-    }
-  },
-  "129:102": {
-    "inputs": {
-      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
-      "strength_model": 1.0000000000000002,
-      "model": [
-        "129:96",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "Загрузчик LoRA (Только модель)"
-    }
-  },
-  "129:101": {
-    "inputs": {
-      "lora_name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
-      "strength_model": 1.0000000000000002,
-      "model": [
-        "129:95",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "Загрузчик LoRA (Только модель)"
-    }
-  },
-  "129:86": {
-    "inputs": {
-      "add_noise": "enable",
-      "noise_seed": 191763823016753,
-      "steps": [
-        "129:119",
-        0
-      ],
-      "cfg": [
-        "129:120",
-        0
-      ],
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "start_at_step": 0,
-      "end_at_step": [
-        "129:125",
-        0
-      ],
-      "return_with_leftover_noise": "enable",
-      "model": [
-        "129:104",
-        0
-      ],
-      "positive": [
-        "129:98",
-        0
-      ],
-      "negative": [
-        "129:98",
-        1
-      ],
-      "latent_image": [
-        "129:98",
-        2
-      ]
-    },
-    "class_type": "KSamplerAdvanced",
-    "_meta": {
-      "title": "KSampler (Расширенный)"
-    }
-  },
-  "129:85": {
-    "inputs": {
-      "add_noise": "disable",
-      "noise_seed": 0,
-      "steps": [
-        "129:119",
-        0
-      ],
-      "cfg": [
-        "129:120",
-        0
-      ],
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "start_at_step": [
-        "129:125",
-        0
-      ],
-      "end_at_step": [
-        "129:119",
-        0
-      ],
-      "return_with_leftover_noise": "disable",
-      "model": [
-        "129:103",
-        0
-      ],
-      "positive": [
-        "129:98",
-        0
-      ],
-      "negative": [
-        "129:98",
-        1
-      ],
-      "latent_image": [
-        "129:86",
-        0
-      ]
-    },
-    "class_type": "KSamplerAdvanced",
-    "_meta": {
-      "title": "KSampler (Расширенный)"
-    }
-  },
-  "129:122": {
-    "inputs": {
-      "value": 1.0
-    },
-    "class_type": "PrimitiveFloat",
-    "_meta": {
-      "title": "CFG"
-    }
-  },
-  "129:124": {
-    "inputs": {
-      "value": 2
-    },
-    "class_type": "PrimitiveInt",
-    "_meta": {
-      "title": "split_step"
-    }
-  },
-  "129:118": {
-    "inputs": {
-      "value": 4
-    },
-    "class_type": "PrimitiveInt",
-    "_meta": {
-      "title": "Steps"
-    }
-  },
-  "129:116": {
-    "inputs": {
-      "switch": [
-        "129:131",
-        0
-      ],
-      "on_false": [
-        "129:95",
-        0
-      ],
-      "on_true": [
-        "129:101",
-        0
-      ]
-    },
-    "class_type": "ComfySwitchNode",
-    "_meta": {
-      "title": "Switch (Model)"
-    }
-  },
-  "129:125": {
-    "inputs": {
-      "switch": [
-        "129:131",
-        0
-      ],
-      "on_false": [
-        "129:127",
-        0
-      ],
-      "on_true": [
-        "129:124",
-        0
-      ]
-    },
-    "class_type": "ComfySwitchNode",
-    "_meta": {
-      "title": "Switch (Split Step)"
-    }
-  },
-  "129:119": {
-    "inputs": {
-      "switch": [
-        "129:131",
-        0
-      ],
-      "on_false": [
-        "129:128",
-        0
-      ],
-      "on_true": [
-        "129:118",
-        0
-      ]
-    },
-    "class_type": "ComfySwitchNode",
-    "_meta": {
-      "title": "Switch (Steps)"
-    }
-  },
-  "129:120": {
-    "inputs": {
-      "switch": [
-        "129:131",
-        0
-      ],
-      "on_false": [
-        "129:126",
-        0
-      ],
-      "on_true": [
-        "129:122",
-        0
-      ]
-    },
-    "class_type": "ComfySwitchNode",
-    "_meta": {
-      "title": "Switch (CFG)"
-    }
-  },
-  "129:103": {
-    "inputs": {
-      "shift": 5.000000000000001,
-      "model": [
-        "129:117",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingSD3",
-    "_meta": {
-      "title": "Выборка модели SD3"
-    }
-  },
-  "129:117": {
-    "inputs": {
-      "switch": [
-        "129:131",
-        0
-      ],
-      "on_false": [
-        "129:96",
-        0
-      ],
-      "on_true": [
-        "129:102",
-        0
-      ]
-    },
-    "class_type": "ComfySwitchNode",
-    "_meta": {
-      "title": "Switch (Model)"
+      "title": "Сохранить изображение"
     }
   }
 }

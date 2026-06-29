@@ -20,17 +20,6 @@
       "vae_name": "ae.safetensors"
     }
   },
-  "11": {
-    "class_type": "LoraLoaderModelOnly",
-    "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "lora_name": "sakura_korean_flux.safetensors",
-      "strength_model": 0.9
-    }
-  },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
@@ -38,34 +27,34 @@
         "2",
         0
       ],
-      "text": "Profile view of a stunning Korean woman with honey blonde highlighted side-swept long hair cascading over one shoulder, sharp jawline and mesmerizing cat-like eyes caught in a gentle, soft expression. She wears an elegant black dress with subtle lace detailing at the neckline. Photographed in a serene zen garden glistening with morning dew on moss and stone. Golden hour warm side light bathes her face, highlighting flawless porcelain skin and glossy editorial makeup with peachy-coral lip tint and shimmering champagne eyeshadow. Shot on 85mm f/1.4 lens producing creamy bokeh, generous negative space on the left side. Delicate wisps of hair catch the light like spun gold. Ethereal, tranquil atmosphere with soft warmth radiating throughout."
+      "text": "A stunning Korean idol-style woman with rose gold wavy shoulder-length hair stands on a cobblestone European alleyway, shot from ground level looking upward. She wears a sharply tailored charcoal blazer over a cream silk top, one hand lightly touching an aged stone wall. Her small face features large expressive eyes with subtle smoky makeup, radiating quiet elegance and sophistication. A single dramatic spotlight cuts through the surrounding darkness, illuminating her figure and casting long cinematic shadows across weathered brick facades. Shot on 85mm f/1.4 with creamy bokeh dissolving the background into warm amber orbs from distant streetlamps. Medium shot capturing the narrow lane framing her poised silhouette. Flawless porcelain skin, editorial confidence, magazine-cover presence."
     }
   },
   "5": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": "text, watermark, logo, extra fingers, deformed hands"
-    }
-  },
-  "6": {
     "class_type": "FluxGuidance",
     "inputs": {
       "conditioning": [
         "4",
         0
       ],
-      "guidance": 3.6
+      "guidance": 3.5
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
     }
   },
   "7": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
       "width": 1024,
-      "height": 1280,
+      "height": 1024,
       "batch_size": 1
     }
   },
@@ -73,22 +62,22 @@
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "11",
+        "1",
         0
       ],
       "positive": [
-        "6",
+        "5",
         0
       ],
       "negative": [
-        "5",
+        "6",
         0
       ],
       "latent_image": [
         "7",
         0
       ],
-      "seed": 169945282,
+      "seed": 509792520,
       "control_after_generate": "fixed",
       "steps": 20,
       "cfg": 1.0,
@@ -117,7 +106,7 @@
         "9",
         0
       ],
-      "filename_prefix": "portrait_169945282"
+      "filename_prefix": "portrait_509792520"
     }
   }
 }

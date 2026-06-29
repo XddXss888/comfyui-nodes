@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "seductive young curvy woman with long black hair, A woman sits at a small table in a cozy apartment during evening, soft warm lighting casting gentle shadows, intimate trust-game atmosphere. She leans back lazily against the chair back, relaxed posture with shoulders slightly angled toward the viewer, one hand slowly tracing the rim of a glass on the table, fingers relaxed and natural. She wears a fitted top with visible fabric tension at the waist, gazing forward with a subtle intrigued smile and direct eye contact, head tilted slightly. Medium close-up framing from chest up, simple background with soft blurred interior details, calm and readable pose, natural proportions, coherent soft lighting.",
+      "text": "eurameg1, A nude woman lying on her back on soft sheets, body arched upward, head tilted back with eyes half-closed and lips parted in a soft gasp, legs spread and knees bent to allow clear access, a penis fully inserted into her vagina with visible intimate contact and natural skin tension, one hand resting near her hip, soft warm bedroom lighting casting gentle shadows across her torso and curves, medium close-up framing centered on her waist and hips, clean composition with simple background.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "izumi_v.2.safetensors",
-      "strength_model": 0.9,
-      "strength_clip": 1.0,
+      "lora_name": "zimg-eurameg1-refine-con-char.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.8,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -132,12 +132,12 @@
     "inputs": {
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
-      "scheduler": "bong_tangent",
+      "scheduler": "beta57",
       "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 26161571962184,
+      "seed": 453373455444780,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

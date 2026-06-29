@@ -38,7 +38,7 @@
         "2",
         0
       ],
-      "text": "A stunning Korean idol photographed from behind at a bustling night market, glancing over her shoulder with a serene, contemplative expression. Dark wavy shoulder-length hair with warm face-framing highlights catches the glow of countless bokeh lights. Soft round face with luminous doe eyes reflecting neon colors. She wears an elegant black dress with a subtle open back. Shot on 85mm f/1.4 lens, creamy bokeh transforming market lanterns into golden orbs. Backlit rim light traces her silhouette with a warm halo edge. Medium shot capturing the vibrant environment behind her. Hyper detailed dewy skin, glass-like eye reflections, delicate lashes. Styled soft glam makeup with gradient lips. Dreamy, cinematic atmosphere, editorial fashion photography."
+      "text": "A striking silhouette of a Korean woman framed against golden hour light streaming through floor-to-ceiling gallery windows, shot with a macro lens capturing extreme close-up skin texture and individual eyelash detail. Dark hair with honey-toned face-framing highlights falls in a blunt cut with wispy bangs across her forehead. Sharp jawline catches warm side light creating dramatic shadow play. Cat-like eyes gaze serenely past camera, contemplative and distant. Positioned off-center using rule of thirds, her profile partially backlit. She wears a faded denim jacket, collar casually popped. Flawless dewy skin, gradient lip tint, subtle champagne eyeshadow. Modern minimalist white gallery walls with abstract sculpture soft-focused behind her. Ethereal, magazine editorial quality."
     }
   },
   "6": {
@@ -64,9 +64,9 @@
   "8": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "width": 1024,
-      "height": 1024,
-      "batch_size": 1
+      "width": 896,
+      "height": 1280,
+      "batch_size": 4
     }
   },
   "9": {
@@ -88,9 +88,9 @@
         "8",
         0
       ],
-      "seed": 922652161,
+      "seed": 1880111556,
       "control_after_generate": "fixed",
-      "steps": 24,
+      "steps": 22,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -117,7 +117,7 @@
         "10",
         0
       ],
-      "filename_prefix": "portrait_922652161"
+      "filename_prefix": "portrait_1880111556"
     }
   }
 }

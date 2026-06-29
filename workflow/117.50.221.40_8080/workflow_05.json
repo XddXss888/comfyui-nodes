@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Ancient Chinese martial combat scene, warriors in ornate hanfu clashing with swords and spears, dynamic motion blur, misty mountain backdrop, dramatic golden-hour lighting, ink-wash texture blended with realistic detail, masterpiece, best quality, highly detailed, professional cinematic composition, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "Ancient Chinese martial arts scene: protagonist with fierce expression, sword blade glinting near cheek, rain-soaked night, dramatic lightning flash, cinematic lighting, intricate hanfu details, 8K ultra-detailed CG rendering, masterpiece, best quality, professional digital painting, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -40,7 +40,7 @@
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 1798392929,
+      "seed": 1799538295,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -131,7 +131,7 @@
         "2",
         0
       ],
-      "lora_name": "动漫转真人.safetensors",
+      "lora_name": "bfs_head_v1_flux-klein_9b_step3500_rank128.safetensors",
       "strength_model": 0.8,
       "strength_clip": 0.8
     }

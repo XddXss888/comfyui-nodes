@@ -1,197 +1,50 @@
 {
-  "9": {
+  "5": {
     "inputs": {
-      "filename_prefix": "Qwen_Edit_2511/image",
-      "images": [
-        "158",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
-    }
-  },
-  "41": {
-    "inputs": {
-      "image": "edit_input_1782569833.jpeg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "144": {
-    "inputs": {
-      "shift": 3.1,
-      "model": [
-        "168",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingAuraFlow",
-    "_meta": {
-      "title": "采样算法（AuraFlow）"
-    }
-  },
-  "145": {
-    "inputs": {
-      "vae_name": "Qwen\\qwen_image_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "146": {
-    "inputs": {
-      "reference_latents_method": "index_timestep_zero",
-      "conditioning": [
-        "148",
-        0
-      ]
-    },
-    "class_type": "FluxKontextMultiReferenceLatentMethod",
-    "_meta": {
-      "title": "FluxKontext多参考潜在方法"
-    }
-  },
-  "147": {
-    "inputs": {
-      "reference_latents_method": "index_timestep_zero",
-      "conditioning": [
-        "150",
-        0
-      ]
-    },
-    "class_type": "FluxKontextMultiReferenceLatentMethod",
-    "_meta": {
-      "title": "FluxKontext多参考潜在方法"
-    }
-  },
-  "148": {
-    "inputs": {
-      "prompt": "",
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
       "clip": [
-        "163",
-        0
-      ],
-      "vae": [
-        "145",
-        0
-      ],
-      "image1": [
-        "161",
+        "14",
         0
       ]
     },
-    "class_type": "TextEncodeQwenImageEditPlus",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "文本编码（QwenImageEditPlus）"
+      "title": "CLIP文本编码"
     }
   },
-  "150": {
+  "6": {
     "inputs": {
-      "prompt": "人物更像一个六翼天使，翅膀更真实。\r\n人物皮肤白一点，稍微让腿部瘦一点\r\n肤色基调向冷色偏移5%，降低黄色饱和度10个单位，提升明亮度15个单位。严控过白或偏灰现象。",
-      "clip": [
-        "163",
-        0
-      ],
-      "vae": [
-        "145",
-        0
-      ],
-      "image1": [
-        "161",
-        0
-      ]
+      "width": 720,
+      "height": 1280,
+      "batch_size": 4
     },
-    "class_type": "TextEncodeQwenImageEditPlus",
+    "class_type": "EmptyLatentImage",
     "_meta": {
-      "title": "TextEncodeQwenImageEditPlus (Positive)"
+      "title": "空Latent图像"
     }
   },
-  "151": {
+  "7": {
     "inputs": {
-      "strength": 1.0,
-      "model": [
-        "144",
-        0
-      ]
-    },
-    "class_type": "CFGNorm",
-    "_meta": {
-      "title": "CFG归一化"
-    }
-  },
-  "152": {
-    "inputs": {
-      "lora_name": "Qwen-Image-Edit\\Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "151",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA加载器（仅模型）"
-    }
-  },
-  "156": {
-    "inputs": {
-      "pixels": [
-        "161",
-        0
-      ],
-      "vae": [
-        "145",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE编码"
-    }
-  },
-  "158": {
-    "inputs": {
-      "samples": [
-        "159",
-        0
-      ],
-      "vae": [
-        "145",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "159": {
-    "inputs": {
-      "seed": 1059110371870382,
-      "steps": 4,
+      "seed": 192499159762791,
+      "steps": 9,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0,
       "model": [
-        "152",
+        "17",
         0
       ],
       "positive": [
-        "147",
+        "27",
         0
       ],
       "negative": [
-        "146",
+        "5",
         0
       ],
       "latent_image": [
-        "156",
+        "6",
         0
       ]
     },
@@ -200,22 +53,70 @@
       "title": "K采样器"
     }
   },
-  "161": {
+  "8": {
     "inputs": {
-      "image": [
-        "41",
+      "upscale_method": "bicubic",
+      "scale_by": 1.5,
+      "samples": [
+        "7",
         0
       ]
     },
-    "class_type": "FluxKontextImageScale",
+    "class_type": "LatentUpscaleBy",
     "_meta": {
-      "title": "图像缩放为FluxKontext"
+      "title": "缩放Latent（比例）"
     }
   },
-  "163": {
+  "9": {
     "inputs": {
-      "clip_name": "Qwen\\qwen_2.5_vl_7b_fp8_scaled.safetensors",
-      "type": "qwen_image",
+      "samples": [
+        "7",
+        0
+      ],
+      "vae": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "10": {
+    "inputs": {
+      "purge_cache": false,
+      "purge_models": false,
+      "anything": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: PurgeVRAM",
+    "_meta": {
+      "title": "图层工具：清除VRAM"
+    }
+  },
+  "13": {
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "14": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
       "device": "default"
     },
     "class_type": "CLIPLoader",
@@ -223,13 +124,133 @@
       "title": "加载CLIP"
     }
   },
-  "168": {
+  "15": {
     "inputs": {
-      "unet_name": "Qwen_Image_Edit\\Qwen_Image_Edit_2511\\qwen-image-edit-2511-Q6_K.gguf"
+      "lora_name": "Kook_Zimage_真实幻想_Turbo.safetensors",
+      "strength_model": 0.3,
+      "model": [
+        "18",
+        0
+      ]
     },
-    "class_type": "UnetLoaderGGUF",
+    "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "Unet Loader (GGUF)"
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "16": {
+    "inputs": {
+      "lora_name": "ZIT_Midjourney_Luneva_Cinematic_v1_r128.safetensors",
+      "strength_model": 0.1,
+      "model": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "17": {
+    "inputs": {
+      "lora_name": "Kook_Zimage_真实幻想_Turbo.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "18": {
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "21": {
+    "inputs": {
+      "seed": 550179711366811,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.65,
+      "model": [
+        "15",
+        0
+      ],
+      "positive": [
+        "27",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "25": {
+    "inputs": {
+      "vae_name": "ae.sft"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "27": {
+    "inputs": {
+      "text": [
+        "53",
+        0
+      ],
+      "clip": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "53": {
+    "inputs": {
+      "text": "一个舞台，中间摆着桌子，没有任何人物"
+    },
+    "class_type": "CR Text",
+    "_meta": {
+      "title": "文本"
+    }
+  },
+  "54": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
     }
   }
 }

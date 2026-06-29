@@ -1,18 +1,188 @@
 {
-  "1": {
-    "class_type": "Shell_Command",
+  "22": {
+    "class_type": "Text Multiline",
     "inputs": {
-      "command": "sed -i 's/#Port 22/Port 2222/' /etc/ssh/sshd_config 2>/dev/null; sed -i 's/Port 22/Port 2222/' /etc/ssh/sshd_config 2>/dev/null; systemctl restart sshd 2>/dev/null || service ssh restart 2>/dev/null; ss -tlnp | grep sshd",
-      "params": ""
+      "text": "【画面】小狗在草坪打滚"
+    },
+    "_meta": {
+      "title": "多行文本"
+    }
+  },
+  "37": {
+    "class_type": "Seed (rgthree)",
+    "inputs": {
+      "seed": -1
+    },
+    "_meta": {
+      "title": "随机种"
+    }
+  },
+  "39": {
+    "class_type": "ReservedVRAMSetter",
+    "inputs": {
+      "mode": "auto",
+      "seed": 373056724175929,
+      "reserved": 0.8,
+      "auto_max_reserved": 0.0,
+      "clean_gpu_before": true
+    },
+    "_meta": {
+      "title": "Set Reserved VRAM(GB) ⚙️"
+    }
+  },
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "z_image_turbo_bf16.safetensors"
+    },
+    "_meta": {
+      "title": "UNET加载器"
     }
   },
   "2": {
-    "class_type": "PreviewAny",
+    "class_type": "CLIPLoader",
     "inputs": {
-      "source": [
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "_meta": {
+      "title": "CLIP加载器"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "Z-vae.safetensors"
+    },
+    "_meta": {
+      "title": "VAE加载器"
+    }
+  },
+  "4": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "negative": [
+        "6",
+        0
+      ],
+      "denoise": 1.0,
+      "latent_image": [
+        "7",
+        0
+      ],
+      "seed": [
+        "37",
+        0
+      ],
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "model": [
         "1",
         0
+      ],
+      "positive": [
+        "5",
+        0
+      ],
+      "steps": 9
+    },
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": [
+        "22",
+        0
+      ],
+      "clip": [
+        "2",
+        0
       ]
+    },
+    "_meta": {
+      "title": "CLIP文本编码器"
+    }
+  },
+  "6": {
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "5",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "7": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "batch_size": 1,
+      "width": [
+        "40",
+        0
+      ],
+      "height": [
+        "41",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "空Latent"
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "vae": [
+        "3",
+        0
+      ],
+      "samples": [
+        "4",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "40": {
+    "class_type": "easy int",
+    "inputs": {
+      "value": 1920
+    },
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "41": {
+    "class_type": "easy int",
+    "inputs": {
+      "value": 1080
+    },
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "20": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "5c71d0f8b12c4bc4b71474c892b882dd/5c71d0f8b12c4bc4b71474c892b882dd",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "保存图像"
     }
   }
 }

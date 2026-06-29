@@ -1,0 +1,603 @@
+{
+  "3": {
+    "inputs": {
+      "vae_name": "LTX23_video_vae_bf16.safetensors",
+      "device": "main_device",
+      "weight_dtype": "bf16"
+    },
+    "class_type": "VAELoaderKJ",
+    "_meta": {
+      "title": "Video VAELoader"
+    }
+  },
+  "4": {
+    "inputs": {
+      "vae_name": "LTX23_audio_vae_bf16.safetensors",
+      "device": "main_device",
+      "weight_dtype": "bf16"
+    },
+    "class_type": "VAELoaderKJ",
+    "_meta": {
+      "title": "Audio VAELoader"
+    }
+  },
+  "5": {
+    "inputs": {
+      "frame_rate": [
+        "46",
+        5
+      ],
+      "positive": [
+        "46",
+        1
+      ],
+      "negative": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "LTXVConditioning",
+    "_meta": {
+      "title": "LTXV条件"
+    }
+  },
+  "7": {
+    "inputs": {
+      "video_latent": [
+        "8",
+        2
+      ],
+      "audio_latent": [
+        "46",
+        3
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "8": {
+    "inputs": {
+      "scale_by": 0.5,
+      "upscale_method": "bicubic",
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "5",
+        1
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "latent": [
+        "46",
+        2
+      ],
+      "guide_data": [
+        "46",
+        4
+      ]
+    },
+    "class_type": "LTXDirectorGuide",
+    "_meta": {
+      "title": "LTX Director Guide"
+    }
+  },
+  "9": {
+    "inputs": {
+      "cfg": 1.0,
+      "model": [
+        "46",
+        0
+      ],
+      "positive": [
+        "8",
+        0
+      ],
+      "negative": [
+        "8",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG引导器"
+    }
+  },
+  "10": {
+    "inputs": {
+      "noise": [
+        "28",
+        0
+      ],
+      "guider": [
+        "9",
+        0
+      ],
+      "sampler": [
+        "29",
+        0
+      ],
+      "sigmas": [
+        "11",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "11": {
+    "inputs": {
+      "scheduler": "linear_quadratic",
+      "steps": 8,
+      "denoise": 1.0,
+      "model": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "基本调度器"
+    }
+  },
+  "13": {
+    "inputs": {
+      "av_latent": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXV分离音视频潜空间"
+    }
+  },
+  "14": {
+    "inputs": {
+      "positive": [
+        "8",
+        0
+      ],
+      "negative": [
+        "8",
+        1
+      ],
+      "latent": [
+        "48",
+        0
+      ]
+    },
+    "class_type": "LTXVCropGuides",
+    "_meta": {
+      "title": "LTXV裁剪指导"
+    }
+  },
+  "15": {
+    "inputs": {
+      "samples": [
+        "14",
+        2
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "16": {
+    "inputs": {
+      "samples": [
+        "48",
+        1
+      ],
+      "audio_vae": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEDecode",
+    "_meta": {
+      "title": "LTXV音频VAE解码"
+    }
+  },
+  "17": {
+    "inputs": {
+      "fps": [
+        "46",
+        5
+      ],
+      "images": [
+        "15",
+        0
+      ],
+      "audio": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
+    }
+  },
+  "26": {
+    "inputs": {
+      "conditioning": [
+        "46",
+        1
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "28": {
+    "inputs": {
+      "noise_seed": 12
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  },
+  "29": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "30": {
+    "inputs": {
+      "filename_prefix": "video/LTX_Director",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  },
+  "46": {
+    "inputs": {
+      "global_prompt": "",
+      "duration_frames": 481,
+      "duration_seconds": 20.042,
+      "timeline_data": "{\"segments\":[{\"id\":\"1782389292685ecqv2\",\"start\":0,\"length\":479,\"prompt\":\"Ultra realistic cinematic photography, 8K UHD, hyper-detailed, photorealistic, natural raw camera texture, desaturated gloomy color grading, dramatic overcast cloudy sky, post-apocalyptic ruined city backdrop, all character appearance and scene layout consistent with reference image throughout the whole 20 seconds, fixed medium full shot, no zoom, no camera shake, slow subtle body movement only, shallow atmospheric haze, smoke floating between collapsed buildings, soft diffused cold daylight, gritty film grain, high dynamic range, realistic dirty skin texture, worn fabric texture, rust metal texture on abandoned cars\\nFixed character appearance lock:\\nYoung woman: short curly dark hair, patched multi-color stitching denim jumpsuit, mud-stained clothes, exhausted tired facial features, standing left side of frame, never change outfit and hairstyle\\nAsian middle-aged man: short black hair, scar on right cheek, thick dark dirty long coat, dark work trousers, standing right side of frame, back-to-back with woman, never change outfit and facial features\\nFixed scene lock: Collapsed broken high-rise apartment buildings all around, rusted bullet-riddled abandoned sedan cars on both sides, ground covered with rubble, garbage and broken concrete slabs, thin white smoke rising from building ruins, muddy dusty ground, no scene replacement, no object disappearance in all frames\\nShot 1 (0-4s): The two stand back-to-back motionless for a long time, both shoulders slump from extreme exhaustion, the woman slowly lowers her head, gasps tiredly, speaks Chinese line: \\\"我们已经走了三天了，真的还要继续撑下去吗？\\\"\\nShot 2 (4-9s): The man slowly tilts his head sideways, glances at the woman beside him, his voice hoarse, heavy tired eyes, speaks Chinese line: \\\"放弃的话，之前所有的路都白走了。\\\"\\nShot 3 (9-14s): The woman turns her body slightly to face the man, brows furrowed, eyes filled with despair, shoulders tremble slightly, speaks Chinese line: \\\"到处都是废墟，食物快吃完了，活下去到底有什么意义？\\\"\\nShot 4 (14-20s): The man straightens his back a little, turns half body to look at the woman, gaze firm and calm, speaks Chinese line: \\\"活着本身就是意义，只要我们还在一起，就还有希望。\\\"\\nanime, 3d render, illustration, painting, sketch, bright saturated colors, warm tone, clear blue sky, intact buildings, clean new cars, neat clothes, clean skin, deformed human face, distorted body, extra limbs, missing fingers, blurry, low resolution, ugly, disfigured, text watermark, floating text overlay, camera zoom, fast violent movement, glowing effect, fantasy elements, flowers, green plants, crowd, other people, soft clay doll, chibi style\",\"type\":\"image\",\"imageFile\":\"SceneName_00014_.png\",\"imageB64\":\"/api/view?filename=SceneName_00014_.png&type=input&subfolder=\"}],\"audioSegments\":[]}",
+      "local_prompts": "Ultra realistic cinematic photography, 8K UHD, hyper-detailed, photorealistic, natural raw camera texture, desaturated gloomy color grading, dramatic overcast cloudy sky, post-apocalyptic ruined city backdrop, all character appearance and scene layout consistent with reference image throughout the whole 20 seconds, fixed medium full shot, no zoom, no camera shake, slow subtle body movement only, shallow atmospheric haze, smoke floating between collapsed buildings, soft diffused cold daylight, gritty film grain, high dynamic range, realistic dirty skin texture, worn fabric texture, rust metal texture on abandoned cars\nFixed character appearance lock:\nYoung woman: short curly dark hair, patched multi-color stitching denim jumpsuit, mud-stained clothes, exhausted tired facial features, standing left side of frame, never change outfit and hairstyle\nAsian middle-aged man: short black hair, scar on right cheek, thick dark dirty long coat, dark work trousers, standing right side of frame, back-to-back with woman, never change outfit and facial features\nFixed scene lock: Collapsed broken high-rise apartment buildings all around, rusted bullet-riddled abandoned sedan cars on both sides, ground covered with rubble, garbage and broken concrete slabs, thin white smoke rising from building ruins, muddy dusty ground, no scene replacement, no object disappearance in all frames\nShot 1 (0-4s): The two stand back-to-back motionless for a long time, both shoulders slump from extreme exhaustion, the woman slowly lowers her head, gasps tiredly, speaks Chinese line: \"我们已经走了三天了，真的还要继续撑下去吗？\"\nShot 2 (4-9s): The man slowly tilts his head sideways, glances at the woman beside him, his voice hoarse, heavy tired eyes, speaks Chinese line: \"放弃的话，之前所有的路都白走了。\"\nShot 3 (9-14s): The woman turns her body slightly to face the man, brows furrowed, eyes filled with despair, shoulders tremble slightly, speaks Chinese line: \"到处都是废墟，食物快吃完了，活下去到底有什么意义？\"\nShot 4 (14-20s): The man straightens his back a little, turns half body to look at the woman, gaze firm and calm, speaks Chinese line: \"活着本身就是意义，只要我们还在一起，就还有希望。\"\nanime, 3d render, illustration, painting, sketch, bright saturated colors, warm tone, clear blue sky, intact buildings, clean new cars, neat clothes, clean skin, deformed human face, distorted body, extra limbs, missing fingers, blurry, low resolution, ugly, disfigured, text watermark, floating text overlay, camera zoom, fast violent movement, glowing effect, fantasy elements, flowers, green plants, crowd, other people, soft clay doll, chibi style",
+      "segment_lengths": "481",
+      "epsilon": 0.001,
+      "guide_strength": "1.00",
+      "use_custom_audio": false,
+      "frame_rate": 24.0,
+      "display_mode": "seconds",
+      "custom_width": 966,
+      "custom_height": 480,
+      "resize_method": "maintain aspect ratio",
+      "divisible_by": 32,
+      "img_compression": 18,
+      "timeline_ui": "",
+      "model": [
+        "98",
+        0
+      ],
+      "clip": [
+        "103",
+        0
+      ],
+      "audio_vae": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "LTXDirector",
+    "_meta": {
+      "title": "LTX Director"
+    }
+  },
+  "47": {
+    "inputs": {
+      "noise": [
+        "28",
+        0
+      ],
+      "guider": [
+        "49",
+        0
+      ],
+      "sampler": [
+        "53",
+        0
+      ],
+      "sigmas": [
+        "54",
+        0
+      ],
+      "latent_image": [
+        "50",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "48": {
+    "inputs": {
+      "av_latent": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXV分离音视频潜空间"
+    }
+  },
+  "49": {
+    "inputs": {
+      "cfg": 1.0,
+      "model": [
+        "46",
+        0
+      ],
+      "positive": [
+        "58",
+        0
+      ],
+      "negative": [
+        "58",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG引导器"
+    }
+  },
+  "50": {
+    "inputs": {
+      "video_latent": [
+        "58",
+        2
+      ],
+      "audio_latent": [
+        "13",
+        1
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "52": {
+    "inputs": {
+      "samples": [
+        "55",
+        2
+      ],
+      "upscale_model": [
+        "57",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "LTXVLatentUpsampler",
+    "_meta": {
+      "title": "LTXV潜空间上采样器"
+    }
+  },
+  "53": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "54": {
+    "inputs": {
+      "scheduler": "linear_quadratic",
+      "steps": 4,
+      "denoise": 0.42,
+      "model": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "基本调度器"
+    }
+  },
+  "55": {
+    "inputs": {
+      "positive": [
+        "8",
+        0
+      ],
+      "negative": [
+        "8",
+        1
+      ],
+      "latent": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "LTXVCropGuides",
+    "_meta": {
+      "title": "LTXV裁剪指导"
+    }
+  },
+  "57": {
+    "inputs": {
+      "model_name": "ltx-2.3-spatial-upscaler-x2-1.1.safetensors"
+    },
+    "class_type": "LatentUpscaleModelLoader",
+    "_meta": {
+      "title": "加载Latent放大模型"
+    }
+  },
+  "58": {
+    "inputs": {
+      "scale_by": 1.0,
+      "upscale_method": "bicubic",
+      "positive": [
+        "55",
+        0
+      ],
+      "negative": [
+        "55",
+        1
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "latent": [
+        "52",
+        0
+      ],
+      "guide_data": [
+        "46",
+        4
+      ]
+    },
+    "class_type": "LTXDirectorGuide",
+    "_meta": {
+      "title": "LTX Director Guide"
+    }
+  },
+  "78": {
+    "inputs": {
+      "vae_name": "taeltx2_3.safetensors",
+      "device": "main_device",
+      "weight_dtype": "bf16"
+    },
+    "class_type": "VAELoaderKJ",
+    "_meta": {
+      "title": "Tiny VAELoader KJ"
+    }
+  },
+  "79": {
+    "inputs": {
+      "preview_rate": 24,
+      "model": [
+        "101",
+        0
+      ],
+      "vae": [
+        "78",
+        0
+      ]
+    },
+    "class_type": "LTX2SamplingPreviewOverride",
+    "_meta": {
+      "title": "LTX2 Sampling Preview Override"
+    }
+  },
+  "98": {
+    "inputs": {
+      "lora_name": "仙侠风格.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "79",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "101": {
+    "inputs": {
+      "unet_name": "LTX-2.3-22B-distilled-1.1-Q4_K_M.gguf"
+    },
+    "class_type": "UnetLoaderGGUF",
+    "_meta": {
+      "title": "Unet Loader (GGUF)"
+    }
+  },
+  "103": {
+    "inputs": {
+      "clip_name1": "gemma-3-12b-it-Q4_K_M.gguf",
+      "clip_name2": "ltx-2.3_text_projection_bf16.safetensors",
+      "type": "ltxv",
+      "device": "cuda:1"
+    },
+    "class_type": "DualCLIPLoaderGGUFMultiGPU",
+    "_meta": {
+      "title": "DualCLIPLoaderGGUFMultiGPU"
+    }
+  },
+  "104": {
+    "inputs": {
+      "indexes": "-1",
+      "err_if_missing": true,
+      "err_if_empty": true,
+      "image": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "VHS_SelectImages",
+    "_meta": {
+      "title": "Select Images 🎥🅥🅗🅢"
+    }
+  },
+  "105": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "LamSaveOnly",
+    "_meta": {
+      "title": "仅保存图片"
+    }
+  },
+  "107": {
+    "inputs": {
+      "images": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  }
+}

@@ -1,22 +1,25 @@
 {
-  "13": {
-    "class_type": "SaveImage",
+  "11": {
+    "class_type": "VHS_LoadVideoPath",
     "inputs": {
-      "filename_prefix": "1998a28adb184f9496d49973e1626e0c/1998a28adb184f9496d49973e1626e0c",
-      "images": [
-        "5",
-        0
-      ]
+      "custom_height": 0,
+      "force_rate": 0.0,
+      "custom_width": 0,
+      "select_every_nth": 1,
+      "frame_load_cap": 0,
+      "format": "AnimateDiff",
+      "video": "http://59.110.66.181:9201/file/upload/material/videos/e12511cffccc490b9889eba1e679e530.mp4",
+      "skip_first_frames": 0
     },
     "_meta": {
-      "title": "保存图像"
+      "title": "加载视频（路径）"
     }
   },
   "3": {
     "class_type": "ImageUpscaleWithModel",
     "inputs": {
       "image": [
-        "14",
+        "11",
         0
       ],
       "upscale_model": [
@@ -26,17 +29,6 @@
     },
     "_meta": {
       "title": "图像通过模型放大"
-    }
-  },
-  "14": {
-    "class_type": "LoadImageFromUrl",
-    "inputs": {
-      "image": "http://59.110.66.181:9201/file/upload/material/images/86f226137d1d4221a0f95a778fc03ba6.png",
-      "keep_alpha_channel": false,
-      "output_mode": true
-    },
-    "_meta": {
-      "title": "Load Image From URL"
     }
   },
   "4": {
@@ -70,10 +62,48 @@
       "title": "图像缩放"
     }
   },
+  "6": {
+    "class_type": "VHS_VideoCombine",
+    "inputs": {
+      "save_output": true,
+      "filename_prefix": "1416531b88594dd8a941640581553911/1416531b88594dd8a941640581553911",
+      "images": [
+        "7",
+        0
+      ],
+      "loop_count": 0,
+      "pix_fmt": "yuv420p",
+      "save_metadata": true,
+      "crf": 19,
+      "trim_to_audio": false,
+      "format": "video/h264-mp4",
+      "frame_rate": 30.0,
+      "pingpong": false
+    },
+    "_meta": {
+      "title": "合并为视频"
+    }
+  },
+  "7": {
+    "class_type": "IFRNet VFI",
+    "inputs": {
+      "ckpt_name": "IFRNet_L_Vimeo90K.pth",
+      "frames": [
+        "5",
+        0
+      ],
+      "multiplier": 2,
+      "clear_cache_after_n_frames": 10,
+      "scale_factor": 1
+    },
+    "_meta": {
+      "title": "IFRNet VFI"
+    }
+  },
   "8": {
     "class_type": "easy int",
     "inputs": {
-      "value": 1440
+      "value": 720
     },
     "_meta": {
       "title": "整数"
@@ -82,7 +112,7 @@
   "9": {
     "class_type": "easy int",
     "inputs": {
-      "value": 2560
+      "value": 1280
     },
     "_meta": {
       "title": "整数"

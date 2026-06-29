@@ -1,7 +1,16 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_d9101f1b491a4c2f968b370899990e7b.png"
+      "image": "ref_1e3a845750e44edfb4262143f76a9a33.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "83": {
+    "inputs": {
+      "image": "ref_3362f3b73cd644dc96c9110d53190806.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +130,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "把表情改为吐舌头流口水滴落一点眼睛向上翻最好无ai痕迹",
+      "prompt": "Using the second image as reference, draw the male dragon in the pose in the sketch of the first image! flexing their bicep while standing confidently. ",
       "clip": [
         "91:61",
         0
@@ -132,6 +141,10 @@
       ],
       "image1": [
         "91:88",
+        0
+      ],
+      "image2": [
+        "83",
         0
       ]
     },
@@ -184,8 +197,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 818992550143782,
-      "steps": 8,
+      "seed": 208449507174135,
+      "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -225,6 +238,10 @@
       ],
       "image1": [
         "91:88",
+        0
+      ],
+      "image2": [
+        "83",
         0
       ]
     },

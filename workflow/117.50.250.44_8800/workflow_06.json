@@ -30,7 +30,7 @@
   },
   "31": {
     "inputs": {
-      "seed": 719058292,
+      "seed": 1670275795,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler_ancestral",
@@ -122,7 +122,7 @@
   },
   "142": {
     "inputs": {
-      "image": "image (28960).png",
+      "image": "image (15851).jpg",
       "refresh": "refresh"
     },
     "class_type": "LoadImageOutput",
@@ -186,7 +186,7 @@
   },
   "207": {
     "inputs": {
-      "lora_name": "kontext_15mm_0130_000007000.safetensors",
+      "lora_name": "kontext_8mm_0130_000007000.safetensors",
       "lora_strength": 1.0,
       "model": [
         "256",
@@ -412,7 +412,7 @@
   },
   "254": {
     "inputs": {
-      "seed": 1140428728
+      "seed": 691663412
     },
     "class_type": "GenerateUniquePrefix",
     "_meta": {

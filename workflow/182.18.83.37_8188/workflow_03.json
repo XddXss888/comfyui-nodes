@@ -1,123 +1,155 @@
 {
-  "10": {
+  "3": {
     "inputs": {
-      "image": "drama_20260625_1750_ep6_sc10_f2.png",
-      "upload": "image"
-    },
-    "class_type": "LoadImage"
-  },
-  "13": {
-    "inputs": {
-      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
-      "type": "wan"
-    },
-    "class_type": "CLIPLoader"
-  },
-  "14": {
-    "inputs": {
-      "text": "vault-busting leap over falling beams, radiation hair trails like comet, grudge stick pulses in sync with heartbeat, emergency lights flash, hazard suit girl bolts through collapsing lab, modified grudge stick glows with stolen code. Radiation hair streams in neon trails as she leaps over falling debris, crimson grid eye scans emergency exits.. 陆昭然: 22yo female, 168cm, silver-streaked black hair in messy bob, left eye cybernetic prosthetic with glowing crimson grid, w, close-up on character face, emotional expression",
-      "clip": [
-        "13",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode"
-  },
-  "15": {
-    "inputs": {
-      "text": "static, blurry, low quality, distorted, deformed, ugly, watermark, text",
-      "clip": [
-        "13",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode"
-  },
-  "16": {
-    "inputs": {
-      "unet_name": "wan2.2_ti2v_5B_fp16.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader"
-  },
-  "17": {
-    "inputs": {
-      "vae_name": "wan2.2_vae.safetensors"
-    },
-    "class_type": "VAELoader"
-  },
-  "20": {
-    "inputs": {
-      "vae": [
-        "17",
-        0
-      ],
-      "width": 832,
-      "height": 480,
-      "length": 81,
-      "batch_size": 1,
-      "start_image": [
-        "10",
-        0
-      ]
-    },
-    "class_type": "Wan22ImageToVideoLatent"
-  },
-  "25": {
-    "inputs": {
-      "seed": 782387382837,
-      "steps": 20,
+      "seed": 782675072191,
+      "steps": 25,
       "cfg": 1.0,
-      "sampler_name": "uni_pc_bh2",
+      "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0,
       "model": [
-        "16",
+        "60",
         0
       ],
       "positive": [
-        "14",
+        "35",
         0
       ],
       "negative": [
-        "15",
+        "33",
         0
       ],
       "latent_image": [
-        "20",
+        "43",
         0
       ]
     },
     "class_type": "KSampler"
   },
-  "21": {
+  "31": {
+    "inputs": {
+      "text": [
+        "46",
+        0
+      ],
+      "clip": [
+        "60",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "33": {
+    "inputs": {
+      "text": "low quality, blurry, distorted, ugly, watermark, text, logo, nsfw, realistic photo, 3d render",
+      "clip": [
+        "60",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "35": {
+    "inputs": {
+      "guidance": 3.5,
+      "conditioning": [
+        "31",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance"
+  },
+  "36": {
+    "inputs": {
+      "filename_prefix": "drama_20260628_1524_ep14_sc10_f3",
+      "images": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "37": {
     "inputs": {
       "samples": [
-        "25",
+        "3",
         0
       ],
       "vae": [
-        "17",
+        "49",
         0
       ]
     },
     "class_type": "VAEDecode"
   },
-  "22": {
+  "41": {
     "inputs": {
-      "frame_rate": 16.0,
-      "loop_count": 0,
-      "filename_prefix": "drama_20260625_1750_ep6_sc10_f2_i2v",
-      "format": "video/h264-mp4",
-      "pix_fmt": "yuv420p",
-      "crf": 20,
-      "images": [
-        "21",
+      "value": 1280
+    },
+    "class_type": "easy int"
+  },
+  "42": {
+    "inputs": {
+      "value": 720
+    },
+    "class_type": "easy int"
+  },
+  "43": {
+    "inputs": {
+      "width": [
+        "41",
         0
       ],
-      "pingpong": false,
-      "save_output": true
+      "height": [
+        "42",
+        0
+      ],
+      "batch_size": 1
     },
-    "class_type": "VHS_VideoCombine"
+    "class_type": "EmptyLatentImage"
+  },
+  "46": {
+    "inputs": {
+      "value": "vibrant colorful anime style, detailed digital illustration, cinematic lighting, rich color palette, Japanese anime aesthetic, high quality, masterpiece, 22yo and 45yo back-to-back on whale-deck, surrounded by glowing saplings. Her cybernetic eye now green, his bone flute shattered into data rain.. 陆昭然: 22yo female, 168cm, silver-streaked black hair in messy bob, left eye cybernetic prosthetic with glowing crimson grid, w 叶燃: 45yo male, 185cm, scarred right cheek covered in metallic tattoo, wears olive-green trench coat with hidden pockets, alw, dramatic low angle shot, imposing perspective"
+    },
+    "class_type": "PrimitiveStringMultiline"
+  },
+  "47": {
+    "inputs": {
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp8_e4m3fn.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader"
+  },
+  "48": {
+    "inputs": {
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "49": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "60": {
+    "inputs": {
+      "lora_name": "comicstrips_flux_lora_v1.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "48",
+        0
+      ],
+      "clip": [
+        "47",
+        0
+      ],
+      "strength_clip": 0.8
+    },
+    "class_type": "LoraLoader"
   }
 }

@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_6b401692dbcb4aea9d0fb77d8f8350f1.png"
+      "image": "ref_9429f8c0491b43b48dd54212da69aed7.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "雨が降っている状況にして",
+      "prompt": "ビーチでビキニ姿でうつ伏せ",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 266085575995580,
-      "steps": 4,
+      "seed": 124032782354426,
+      "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

@@ -33,7 +33,7 @@
   },
   "4": {
     "inputs": {
-      "seed": 5980368799,
+      "seed": 2143265338,
       "steps": [
         "13",
         0
@@ -102,7 +102,7 @@
   },
   "13": {
     "inputs": {
-      "steps": 27,
+      "steps": 30,
       "cfg": 6.0
     },
     "class_type": "StepsAndCfg",
@@ -112,8 +112,8 @@
   },
   "17": {
     "inputs": {
-      "Width": 1024,
-      "Height": 1024,
+      "Width": 1184,
+      "Height": 888,
       "Batch": 1,
       "Landscape": false,
       "HiResMultiplier": 1.7000000000000002
@@ -125,7 +125,7 @@
   },
   "20": {
     "inputs": {
-      "seed": 5980368799,
+      "seed": 2143265338,
       "steps": 10,
       "cfg": [
         "13",
@@ -205,7 +205,7 @@
   },
   "32": {
     "inputs": {
-      "text": "ever_eve_love, ((1girl)), waero, dark, shade, wings, underground, dungeon, sitting, arms up, bound wrists, scared, open mouth, surprised, surrounded by hands, too many hands, multiple boys, reaching towards another, facing up, tearing up, half-closed eyes, grabbing another's breasts, grabbing another's clothes, lifting another's clothes, masterpiece, best quality, amazing quality"
+      "text": "Love_Nini(eversoul), 1girl, from front, all fours, furrowed brow, torogao, female orgasm, open mouth, heart, blush, bottomless, long sleeves, pussy, puckered anus, dark anus, dark room, multiple views,\n\n1boy, sex from behind,\n\nintricate details, perfect anatomy, correct proportions, anatomically correct, proportional body, detailed face, detailed eyes, detailed fingers,, masterpiece, best quality, amazing quality"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -214,7 +214,7 @@
   },
   "33": {
     "inputs": {
-      "text": "bad quality,worst quality,worst detail,sketch,censor, glaring, (leotard), extra navel, floating hair, (arms up), leotard pull, ass cutout, head out of frame, eyes out of frame, pantyhose, garter straps, horizontal navel"
+      "text": "bad quality,worst quality,worst detail,sketch,censor,{muscular}, extra hands, fat, (worst quality, low quality, normal quality:1.4), blurry, jpeg artifacts, lowres, cropped, text, watermark, signature, extra limbs, fused fingers, too many fingers, hand up"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -277,7 +277,7 @@
   },
   "65": {
     "inputs": {
-      "data": "[{\"name\": \"eve_love.safetensors\", \"strength\": 0.85, \"strength_clip\": 1.0}]",
+      "data": "[{\"name\": \"os_Love_Ninieversoul.safetensors\", \"strength\": 0.67, \"strength_clip\": 0.9}]",
       "model": [
         "36",
         0

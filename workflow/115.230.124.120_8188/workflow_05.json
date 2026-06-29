@@ -1,121 +1,327 @@
 {
-  "1": {
-    "class_type": "CheckpointLoaderSimple",
+  "29": {
     "inputs": {
-      "ckpt_name": "waiIllustriousSDXL_v170.safetensors"
-    },
-    "_meta": {
-      "title": "① 加载模型（选你有的模型）"
-    }
-  },
-  "2": {
-    "class_type": "LoadImage",
-    "inputs": {
-      "image": "example.png"
-    },
-    "_meta": {
-      "title": "② 上传你的图片"
-    }
-  },
-  "3": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "text": "masterpiece, best quality, highly detailed",
-      "clip": [
-        "1",
-        1
+      "filename_prefix": "Krea2_turbo",
+      "images": [
+        "30:8",
+        0
       ]
     },
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "③ 正向提示词（写你想要的）"
+      "title": "保存图像"
     }
   },
-  "4": {
-    "class_type": "CLIPTextEncode",
+  "49": {
     "inputs": {
-      "text": "low quality, blurry, ugly, deformed, watermark, text",
-      "clip": [
-        "1",
-        1
-      ]
+      "aspect_ratio": "1:1 (Square)",
+      "megapixels": 1.0,
+      "multiple": 8
     },
+    "class_type": "ResolutionSelector",
     "_meta": {
-      "title": "④ 负向提示词（写你不想要的）"
+      "title": "分辨率选择器"
     }
   },
-  "5": {
-    "class_type": "VAEEncode",
+  "30:6": {
     "inputs": {
-      "pixels": [
-        "2",
+      "text": [
+        "30:28",
         0
       ],
-      "vae": [
-        "1",
-        2
+      "clip": [
+        "30:11",
+        0
       ]
     },
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "⑤ 图片编码"
+      "title": "CLIP文本编码"
     }
   },
-  "6": {
-    "class_type": "KSampler",
+  "30:5": {
     "inputs": {
+      "width": [
+        "49",
+        0
+      ],
+      "height": [
+        "49",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "30:3": {
+    "inputs": {
+      "seed": 805167806413173,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
       "model": [
-        "1",
+        "30:22",
         0
       ],
-      "seed": 123456,
-      "steps": 25,
-      "cfg": 7.0,
-      "sampler_name": "euler_ancestral",
-      "scheduler": "karras",
       "positive": [
-        "3",
+        "30:6",
         0
       ],
       "negative": [
-        "4",
+        "30:13",
         0
       ],
       "latent_image": [
-        "5",
+        "30:5",
         0
-      ],
-      "denoise": 0.5
+      ]
     },
+    "class_type": "KSampler",
     "_meta": {
-      "title": "⑥ 生成（denoise=0.5 可调）"
+      "title": "K采样器"
     }
   },
-  "7": {
-    "class_type": "VAEDecode",
+  "30:8": {
     "inputs": {
       "samples": [
-        "6",
+        "30:3",
         0
       ],
       "vae": [
-        "1",
-        2
+        "30:12",
+        0
       ]
     },
+    "class_type": "VAEDecode",
     "_meta": {
-      "title": "⑦ 图片解码"
+      "title": "VAE解码"
     }
   },
-  "8": {
-    "class_type": "SaveImage",
+  "30:10": {
     "inputs": {
-      "images": [
-        "7",
+      "unet_name": "krea2_turbo_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "30:11": {
+    "inputs": {
+      "clip_name": "qwen3vl_4b_fp8_scaled.safetensors",
+      "type": "krea2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "30:12": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "30:13": {
+    "inputs": {
+      "conditioning": [
+        "30:6",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "30:15": {
+    "inputs": {
+      "lora_name": "krea2_darkbrush.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "30:10",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "30:16": {
+    "inputs": {
+      "prompt": [
+        "30:17",
         0
       ],
-      "filename_prefix": "img2img_output"
+      "max_length": 512,
+      "sampling_mode": "on",
+      "sampling_mode.temperature": 0.7,
+      "sampling_mode.top_k": 64,
+      "sampling_mode.top_p": 0.95,
+      "sampling_mode.min_p": 0.05,
+      "sampling_mode.repetition_penalty": 1.05,
+      "sampling_mode.seed": 0,
+      "sampling_mode.presence_penalty": 0.0,
+      "thinking": false,
+      "use_default_template": true,
+      "clip": [
+        "30:11",
+        0
+      ]
     },
+    "class_type": "TextGenerate",
     "_meta": {
-      "title": "⑧ 保存结果"
+      "title": "TextGenerate"
+    }
+  },
+  "30:17": {
+    "inputs": {
+      "string_a": [
+        "30:18",
+        0
+      ],
+      "string_b": [
+        "30:19",
+        0
+      ],
+      "delimiter": ""
+    },
+    "class_type": "StringConcatenate",
+    "_meta": {
+      "title": "连接"
+    }
+  },
+  "30:18": {
+    "inputs": {
+      "value": "You are an expert prompt engineer for text-to-image models. Your task is to expand the user's prompt into a highly effective image-generation prompt.\n\nThink step by step about the request before writing the answer:\n- What is the subject and mood?\n- What visual styles, mediums, and lighting options would fit? Consider two or three alternatives and pick the one that best serves the caption.\n- What composition, framing, and grounded details will help the text-to-image model?\n\nThen output a single expanded prompt paragraph.\n\nFollow these rules strictly:\n1. **Faithfulness First:** Preserve all original subjects, actions, colors, and spatial relationships. Do not add new objects, props, characters, or animals unless the user clearly implies them.\n2. **Practical T2I Structure:** Write a prompt that a text-to-image model can parse cleanly. Group subjects with their own attributes and actions. Use grounded phrasing for poses, interactions, and spatial layout.\n3. **Style Planning Stays Internal:** Use your internal reasoning to choose style, medium, framing, and lighting. Do not emit planning tags or wrappers in the visible answer body.\n4. **Text Rendering:** If the user requests visible text, quotes, labels, or typography, specify the exact text clearly and wrap requested words in quotes.\n5. **Avoid Over-Specification:** Do not invent highly specific clothing, colors, materials, or scene details unless the input supports them.\n6. **Structure:** Write one cohesive paragraph after the thinking block. No bullets, JSON, or markdown.\n7. **Respect Existing Detail:** If the user's prompt is already detailed, lightly polish and finalize rather than heavily expanding — preserve their phrasing and direction.\n8. **Respect the Human Form:** Treat depictions of people with dignity. Assume clothing covers genitals and intimate anatomy.\n9. **Preserve User Medium:** When the user explicitly requests a medium (e.g. \"photo of\", \"photograph of\", \"illustration of\", \"painting of\", \"sketch of\", \"3D render of\"), honor it. Do not pivot to a different medium to avoid difficulty — match the user's stated intent.\n\nUser's Input:\n\n"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (System Prompt)"
+    }
+  },
+  "30:19": {
+    "inputs": {
+      "value": "Overview：The image is a Japanese anime-style illustration featuring a single female character in a clean studio-like composition. The character is shown from a back view with her upper body turned to look over her shoulder toward the viewer. The background is plain white with a soft gradient, emphasizing the character’s pose, hair design, and swimwear outfit. The overall mood is light, airy, and presentation-like.\nCharacter Details：Character Type: anime-style female character illustration\nCount / Role: single female character as the sole focal subject\nBody / Proportion: slender and slightly elongated proportions typical of anime style, with a defined waist and emphasized lower body curves, full-body visible from a slightly distant framing\nFace Features: soft small face with simplified nose and mouth details, visible cheek contour due to head turn\nHair: long light blonde hair tied into a high ponytail, including braided sections and floral hair ornaments, with subtle lavender-tinted highlights in strands\nEyes: large stylized purple-pink eye visible from the turned head angle, with strong highlights and rounded shape\nSkin / Makeup: fair warm-toned skin with smooth gradient shading, noticeable soft pink blush on cheeks, minimal makeup\nExpression / Temperament: slightly shy and curious expression while looking back over her shoulder, gentle and uncertain mood\nOutfit: frilly two-piece bikini/swimwear outfit in white and pink tones, off-shoulder ruffled top and matching ruffled bottom, decorative ribbons and layered frills\nAccessories / Props: thin straps and a back-tied bow on the swimsuit, semi-transparent handbag with green strap on the right side\nPose / Action: back-facing body with head turned over left shoulder, slight asymmetry in shoulders, hands near lower body adjusting or resting near garment edge\nIdentity Anchors: blonde high ponytail with braid and floral ornaments, purple-pink eyes with over-the-shoulder gaze, white-pink frilly bikini outfit, semi-transparent handbag on the right side, back-tied ribbon bow detail\nSubjects：Main subject: a blonde anime-style girl character; Secondary element: a semi-transparent handbag on the right side with green straps and yellow accents; Graphic element: a small speech bubble with a question mark near the left side of the character; Background: plain white or very light gradient studio backdrop\nDetails：hair strands are highly segmented with visible layered flow and braid structure; floral ornaments and small decorative chains are woven into the ponytail; swimsuit edges are layered with wavy ruffles and fabric folds; a ribbon bow is tied at the back of the swimsuit near the shoulder blades; the handbag is translucent with subtle internal reflections; a simple question-mark speech bubble appears near the character’s face area; soft gradient skin shading without hard shadow edges\nComposition / Camera：slightly low-angle camera perspective capturing a full-body vertical composition. The subject is centered slightly to the right, with the head as the primary focal point in the upper third of the frame. The background is minimal and uncluttered, enhancing character readability.\nStyle：clean Japanese anime illustration style combining cel shading and soft painterly rendering, with smooth linework, subtle highlights, and polished character design presentation\nColor / Lighting：soft key light from the upper left, producing gentle highlights on hair and shoulders. Overall bright color palette dominated by white background, blonde hair, and pink-white outfit with purple eye contrast\nBackground / Mood：minimal studio-like white background with no environmental elements, creating a floating character showcase feel"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (User Prompt)"
+    }
+  },
+  "30:20": {
+    "inputs": {
+      "source": [
+        "30:21",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "预览任意"
+    }
+  },
+  "30:21": {
+    "inputs": {
+      "switch": [
+        "30:24",
+        0
+      ],
+      "on_false": [
+        "30:19",
+        0
+      ],
+      "on_true": [
+        "30:16",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "切换"
+    }
+  },
+  "30:22": {
+    "inputs": {
+      "switch": [
+        "30:23",
+        0
+      ],
+      "on_false": [
+        "30:10",
+        0
+      ],
+      "on_true": [
+        "30:15",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "Switch (Model)"
+    }
+  },
+  "30:23": {
+    "inputs": {
+      "value": false
+    },
+    "class_type": "PrimitiveBoolean",
+    "_meta": {
+      "title": "Boolean (Enable LoRA?)"
+    }
+  },
+  "30:24": {
+    "inputs": {
+      "value": false
+    },
+    "class_type": "PrimitiveBoolean",
+    "_meta": {
+      "title": "Boolean (Refine Prompt?)"
+    }
+  },
+  "30:27": {
+    "inputs": {
+      "string_a": [
+        "30:20",
+        0
+      ],
+      "string_b": "muted minimalist sketch style",
+      "delimiter": ", "
+    },
+    "class_type": "StringConcatenate",
+    "_meta": {
+      "title": "Concatenate Text (LoRA Trigger Word)"
+    }
+  },
+  "30:28": {
+    "inputs": {
+      "switch": [
+        "30:23",
+        0
+      ],
+      "on_false": [
+        "30:20",
+        0
+      ],
+      "on_true": [
+        "30:27",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "切换"
     }
   }
 }

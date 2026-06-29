@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_dac3cd9729ab43fcadb8b4815dba720a.png"
+      "image": "ref_75a81fc4543c4199ad7414bc8752fa8d.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "faire que ces seins soient tres gros",
+      "prompt": "Fill in the masked part: J罩杯\n",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 904540316017551,
+      "seed": 413268832789035,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",

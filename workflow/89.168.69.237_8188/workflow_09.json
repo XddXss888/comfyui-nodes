@@ -1,86 +1,86 @@
 {
-  "1": {
-    "class_type": "CheckpointLoaderSimple",
-    "inputs": {
-      "ckpt_name": "sd_xl_turbo_1.0_fp16.safetensors"
-    }
-  },
-  "2": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "text": "A beautiful sunset over mountains, photorealistic, 4K",
-      "clip": [
-        "1",
-        1
-      ]
-    }
-  },
   "3": {
-    "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "ugly, blurry, low quality",
-      "clip": [
-        "1",
-        1
-      ]
-    }
-  },
-  "4": {
-    "class_type": "EmptyLatentImage",
-    "inputs": {
-      "width": 512,
-      "height": 512,
-      "batch_size": 1
-    }
-  },
-  "5": {
-    "class_type": "KSampler",
-    "inputs": {
-      "seed": 3135777594,
+      "seed": 156680208700286,
       "steps": 20,
-      "cfg": 7.0,
+      "cfg": 8.0,
       "sampler_name": "euler",
       "scheduler": "normal",
       "denoise": 1.0,
       "model": [
-        "1",
+        "4",
         0
       ],
       "positive": [
-        "2",
+        "6",
         0
       ],
       "negative": [
-        "3",
+        "7",
         0
       ],
       "latent_image": [
-        "4",
+        "5",
         0
       ]
-    }
+    },
+    "class_type": "KSampler"
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "sd_xl_turbo_1.0_fp16.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "5": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
   },
   "6": {
-    "class_type": "VAEDecode",
+    "inputs": {
+      "text": "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "7": {
+    "inputs": {
+      "text": "text, watermark",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "8": {
     "inputs": {
       "samples": [
-        "5",
+        "3",
         0
       ],
       "vae": [
-        "1",
+        "4",
         2
       ]
-    }
+    },
+    "class_type": "VAEDecode"
   },
-  "7": {
-    "class_type": "SaveImage",
+  "9": {
     "inputs": {
-      "filename_prefix": "nsfw_test",
+      "filename_prefix": "ComfyUI",
       "images": [
-        "6",
+        "8",
         0
       ]
-    }
+    },
+    "class_type": "SaveImage"
   }
 }

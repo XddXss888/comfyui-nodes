@@ -23,7 +23,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "A a baby fire drake dragon built like a four-legged crawling lizard, red scales and small folded wings. ONLY ONE single creature - just one, not two, not a pair, not a turnaround sheet, a single full-body figure, standing on all four legs in a natural four-legged stance, body low and horizontal, all four feet on the ground, NOT bipedal, NOT standing upright. Flat minimalist vector illustration style, clean flat color shapes with soft two-tone shading and NO outlines, a limited muted palette, simple geometric forms, modern indie board-game creature art, clean. isolated on a PLAIN flat pale gray background. No text, no frame, no card border.",
+      "text": "A cute three-headed dragon hydra, front three-quarter view, ONE single chubby green body with a continuous cream-yellow belly flowing up into the chest and into three necks (one connected piece), four legs, three heads with pale green poison mist. STRONG flat minimalist vector style: clean FLAT solid color shapes, absolutely NO outlines, NO dark linework, NO texture, simple flat color blocks, two-tone flat shading only, limited muted green palette, crisp vector look.",
       "clip": [
         "2",
         0
@@ -60,15 +60,39 @@
         "12",
         0
       ],
-      "filename_prefix": "wf_M24_c1"
+      "filename_prefix": "wf_k50"
     }
   },
-  "6": {
-    "class_type": "EmptySD3LatentImage",
+  "20": {
+    "class_type": "LoadImage",
     "inputs": {
+      "image": "_m25i85.png"
+    }
+  },
+  "21": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "20",
+        0
+      ],
+      "upscale_method": "bilinear",
       "width": 1024,
-      "height": 1536,
-      "batch_size": 1
+      "height": 1232,
+      "crop": "disabled"
+    }
+  },
+  "22": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
     }
   },
   "7": {
@@ -78,12 +102,12 @@
         "1",
         0
       ],
-      "seed": 95666,
+      "seed": 999,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 1.0,
+      "denoise": 0.5,
       "positive": [
         "4",
         0
@@ -93,7 +117,7 @@
         0
       ],
       "latent_image": [
-        "6",
+        "22",
         0
       ]
     }

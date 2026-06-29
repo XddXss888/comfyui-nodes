@@ -4,13 +4,13 @@
 **内存**: 216 GB (空闲 187 GB)
 **版本**: 0.13.0
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-28 08:08:00
+**扫描时间**: 2026-06-29 08:07:46
 **历史总数**: 10001 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `15c23ed1-040d-499c-8463-8b72a6a03508`
+- **Prompt ID**: `7cdd9b76-a35d-4181-9513-cea8c440b893`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -19,12 +19,11 @@
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] Maintain the original face exactly as shown in the reference image.
-Keep the person's pose the same.
-Replace the current outfit with a bra and panty. Keep the boobs size medium and thighs size medium.
+  - [TextEncodeQwenImageEditPlus::prompt] 중간에 텐트랑 있는 곳이 여수세계섬박락회 공사현장이야 현재는 공정율이 80%이상 진행되어가고 있어 경과 영상에 삽입할 영상으로 처음 허허벌판 흙밭에서 토지 다지고 나무가 심어지고 마지막에는 건물이 올라가는 과거부터 현재까지 결과가 이루어지는 모습을 역동적으로 모습을 담고 싶어 멋지게 표현해줘,Movie style, movie angle , movie lig
+  - [TextEncodeQwenImageEditPlus::prompt] ,anime, manga, illustration, cartoon, 3d, Photoshop, sketch, video game, draw, paint, cgi, canvas frame, watermark, signature, username, artist name
 
 ### 2. workflow_02.json
-- **Prompt ID**: `91e1e465-e76c-4be4-866f-bfa224b1f5f1`
+- **Prompt ID**: `8e87f103-2111-4c83-8d68-ae9ab6755403`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -33,10 +32,10 @@ Replace the current outfit with a bra and panty. Keep the boobs size medium and 
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] スカートをもっとミニスカートにして
+  - [TextEncodeQwenImageEditPlus::prompt] Change the clothes and make the girl wear a big bra, then improve the image quality.
 
 ### 3. workflow_03.json
-- **Prompt ID**: `16c804b2-4aec-49a2-91e2-490883a88b72`
+- **Prompt ID**: `5b17b9c7-7509-4c69-b720-990411c94f81`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -45,10 +44,10 @@ Replace the current outfit with a bra and panty. Keep the boobs size medium and 
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] faire que sont derriere soit gros
+  - [TextEncodeQwenImageEditPlus::prompt] 清除女人前的雜物和檯面，女人開胸襯衫，露出乳溝。
 
 ### 4. workflow_04.json
-- **Prompt ID**: `1ab86d57-2d4e-4a94-b3a8-8501f46fdbe1`
+- **Prompt ID**: `349f8b3d-f32c-4b60-9b59-7d910e25483d`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -57,34 +56,10 @@ Replace the current outfit with a bra and panty. Keep the boobs size medium and 
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 雨が降っている状況にして
+  - [TextEncodeQwenImageEditPlus::prompt] ビーチでビキニ姿でうつ伏せ
 
 ### 5. workflow_05.json
-- **Prompt ID**: `2b8df24c-ee95-4b68-b2fa-a8424c7eff5e`
-- **类型**: 图生图
-- **节点数**: 16
-- **模型** (4):
-  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
-  - qwen_2.5_vl_7b_fp8_scaled.safetensors
-  - qwen_image_edit_2511_fp8mixed.safetensors
-  - qwen_image_vae.safetensors
-- **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 把表情改为吐舌头流口水滴落一点眼睛向上翻最好无ai痕迹
-
-### 6. workflow_06.json
-- **Prompt ID**: `575c9622-d039-4ca4-9735-c0f566b248f2`
-- **类型**: 图生图
-- **节点数**: 16
-- **模型** (4):
-  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
-  - qwen_2.5_vl_7b_fp8_scaled.safetensors
-  - qwen_image_edit_2511_fp8mixed.safetensors
-  - qwen_image_vae.safetensors
-- **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] faire que ces seins soient tres gros
-
-### 7. workflow_07.json
-- **Prompt ID**: `cd36f5ab-f264-432c-b543-2a23cc45ed6f`
+- **Prompt ID**: `f500b030-a917-4335-a8f7-db7cb1dbd8fd`
 - **类型**: 图生图
 - **节点数**: 17
 - **模型** (4):
@@ -93,10 +68,35 @@ Replace the current outfit with a bra and panty. Keep the boobs size medium and 
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
 - **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] Show her clevage
+  - [TextEncodeQwenImageEditPlus::prompt] Using the second image as reference, draw the male dragon in the pose in the sketch of the first image! flexing their bicep while standing confidently. 
+
+### 6. workflow_06.json
+- **Prompt ID**: `4b0ef8eb-2e99-4d85-ab9c-a7ccc0947271`
+- **类型**: 图生图
+- **节点数**: 16
+- **模型** (4):
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - qwen_image_vae.safetensors
+- **提示词**:
+  - [TextEncodeQwenImageEditPlus::prompt] Fill in the masked part: J罩杯
+
+
+### 7. workflow_07.json
+- **Prompt ID**: `b4c7b6b9-40ee-4378-99bc-124ab5b8bc22`
+- **类型**: 图生图
+- **节点数**: 16
+- **模型** (4):
+  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - qwen_image_edit_2511_fp8mixed.safetensors
+  - qwen_image_vae.safetensors
+- **提示词**:
+  - [TextEncodeQwenImageEditPlus::prompt] ビーチでビキニ姿でうつ伏せ
 
 ### 8. workflow_08.json
-- **Prompt ID**: `61354e89-b9f9-4d7c-9b26-a08bc2c13278`
+- **Prompt ID**: `3cb5f1dc-b706-44a8-b9f0-220e1d3604d2`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -104,12 +104,9 @@ Replace the current outfit with a bra and panty. Keep the boobs size medium and 
   - qwen_2.5_vl_7b_fp8_scaled.safetensors
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
-- **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] Action: REMOVE bra
-Integration: Seamlessly blend the skin tone, lighting, and shadows with the surrounding chest area.
 
 ### 9. workflow_09.json
-- **Prompt ID**: `dcf19ebf-c356-495d-9b22-282e05ff398a`
+- **Prompt ID**: `307588b5-3e11-4e25-a051-8d9713c76d99`
 - **类型**: 图生图
 - **节点数**: 16
 - **模型** (4):
@@ -117,17 +114,13 @@ Integration: Seamlessly blend the skin tone, lighting, and shadows with the surr
   - qwen_2.5_vl_7b_fp8_scaled.safetensors
   - qwen_image_edit_2511_fp8mixed.safetensors
   - qwen_image_vae.safetensors
-- **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 把表情改为吐舌头流口水滴落一点眼睛向上翻最好无ai痕迹要非常真实符合现实
 
 ### 10. workflow_10.json
-- **Prompt ID**: `e4695b8f-24af-4ca4-9474-4c21ffc016ad`
-- **类型**: 图生图
-- **节点数**: 16
+- **Prompt ID**: `3f549b5b-c3eb-49e5-8bde-9588d7569fdc`
+- **类型**: 文生图
+- **节点数**: 12
 - **模型** (4):
-  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
+  - Qwen-Image-Lightning-4steps-V1.0.safetensors
   - qwen_2.5_vl_7b_fp8_scaled.safetensors
-  - qwen_image_edit_2511_fp8mixed.safetensors
+  - qwen_image_2512_fp8_e4m3fn.safetensors
   - qwen_image_vae.safetensors
-- **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] A photorealistic, high-resolution photograph of the specific subject from [Image 2], maintaining her original face, hair, full-body pose, and background environment, but now seamlessly wearing the exa

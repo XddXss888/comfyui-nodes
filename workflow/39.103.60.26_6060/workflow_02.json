@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "input_04f9b444b310.jpg"
+      "image": "input_de1dc39581a7.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -12,7 +12,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "8",
+        "12",
         0
       ]
     },
@@ -21,19 +21,42 @@
       "title": "保存图像"
     }
   },
-  "8": {
+  "12": {
     "inputs": {
-      "aspect_ratio": "custom",
-      "proportional_width": 2622,
-      "proportional_height": 1772,
+      "rounded_rect_radius": 100,
+      "anti_aliasing": 2,
+      "top": 0.0,
+      "bottom": 0.0,
+      "left": 0.0,
+      "right": 0.0,
+      "detect": "max_inscribed_rect",
+      "obj_ext_top": 0.0,
+      "obj_ext_bottom": 0.0,
+      "obj_ext_left": 0.0,
+      "obj_ext_right": 0.0,
+      "image": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: RoundedRectangle",
+    "_meta": {
+      "title": "LayerUtility: RoundedRectangle"
+    }
+  },
+  "13": {
+    "inputs": {
+      "aspect_ratio": "1:1",
+      "proportional_width": 1,
+      "proportional_height": 1,
       "fit": "crop",
       "method": "bicubic",
-      "round_to_multiple": "None",
-      "scale_to_side": "width",
-      "scale_to_length": 2622,
+      "round_to_multiple": "8",
+      "scale_to_side": "shortest",
+      "scale_to_length": 928,
       "background_color": "#000000",
       "image": [
-        "14",
+        "16",
         0
       ]
     },
@@ -42,19 +65,19 @@
       "title": "按宽高比缩放_V2"
     }
   },
-  "14": {
+  "16": {
     "inputs": {
-      "prompt": "保持图中人物的一致性，生成他们和熊猫合影的画面，左右两侧有可爱的熊猫趴在他们肩头，背景是竹园风光。写真摄影风格，中景景别，轻微美颜，人像精修",
+      "prompt": "保持图中人物的一致性，生成他们和熊猫合影的画面，左右两侧有可爱的熊猫趴在他们肩头，背景是竹园风光。写真摄影风格，轻微美颜，人像精修",
       "model": "doubao-seedream-4-0-250828",
       "response_format": "url",
-      "resolution": "1K",
-      "aspect_ratio": "Custom",
-      "width": 3416,
-      "height": 2304,
+      "resolution": "4K",
+      "aspect_ratio": "1:1",
+      "width": 1024,
+      "height": 1024,
       "apikey": "fe023f32-413c-41f8-a35d-694231e4c96a",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 1966431764,
+      "seed": 1947357542,
       "watermark": false,
       "stream": false,
       "image1": [

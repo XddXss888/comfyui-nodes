@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_a35eb5a03afa4d21add7e8268c1e96ed.png"
+      "image": "ref_5bc86ebb902547798cfe6a3690f831f2.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "Action: REMOVE bra\nIntegration: Seamlessly blend the skin tone, lighting, and shadows with the surrounding chest area.",
+      "prompt": "換成白色內褲",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 719747103755591,
+      "seed": 936474976045006,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",

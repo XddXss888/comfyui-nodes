@@ -1,93 +1,123 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "UNETLoader",
     "inputs": {
-      "ckpt_name": "epicRealismXL_pureFix.safetensors"
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
     }
   },
   "2": {
-    "class_type": "VAELoader",
+    "class_type": "DualCLIPLoader",
     "inputs": {
-      "vae_name": "sdxl_vae.safetensors"
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp16.safetensors",
+      "type": "flux"
     }
   },
   "3": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip": [
+      "vae_name": "ae.safetensors"
+    }
+  },
+  "11": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
         "1",
-        1
+        0
       ],
-      "text": "A stunning Korean idol photographed from behind, looking over her shoulder with a dreamy ethereal gaze. Heart-shaped face with full lips, flawless porcelain skin, subtle auburn tint short bob cut catching fluorescent overhead light. She wears a midnight blue sequined evening gown that shimmers under the harsh parking garage fluorescents, creating an unexpected contrast of glamour against concrete brutalism. Shot on 24mm wide angle, dynamic low perspective, wide environmental portrait with her figure small in frame. Blue hour twilight seeps through the garage entrance behind her, mixing cool ambient tones with warm artificial light. Dramatic cinematic shadows stretch across painted concrete columns. Styled editorial makeup, soft bokeh, film grain, epic cinematic quality."
+      "lora_name": "sakura_korean_flux.safetensors",
+      "strength_model": 0.82
     }
   },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
-        "1",
-        1
+        "2",
+        0
       ],
-      "text": "lowres, blurry, bad anatomy, watermark, signature, oversaturated, harsh lighting, plastic skin"
+      "text": "A stunning Korean idol-style woman with honey blonde highlights swept into a high ponytail, soft round face with doe eyes and warm approachable smile, standing small in frame on a rain-soaked city street at night. Bohemian layered outfit with flowing fabrics and earthy tones, caught mid-stride through puddles reflecting pink and blue neon signs. Shot on 24mm wide angle lens, eye-level straight on, dynamic perspective stretching the wet asphalt. Backlit rim light creating a glowing silhouette edge around her figure, rain droplets illuminated like tiny diamonds. Wide environmental portrait, cinematic atmosphere, flawless porcelain skin, styled dewy makeup, soft bokeh neon reflections. No text, no watermarks."
     }
   },
   "5": {
-    "class_type": "EmptyLatentImage",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "width": 896,
-      "height": 1280,
-      "batch_size": 1
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "cropped legs, cropped feet, cropped shoes, text, watermark, logo"
     }
   },
   "6": {
-    "class_type": "KSampler",
+    "class_type": "FluxGuidance",
     "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "positive": [
-        "3",
-        0
-      ],
-      "negative": [
+      "conditioning": [
         "4",
         0
       ],
-      "latent_image": [
-        "5",
-        0
-      ],
-      "seed": 923971051,
-      "control_after_generate": "fixed",
-      "steps": 30,
-      "cfg": 5.0,
-      "sampler_name": "dpmpp_2m",
-      "scheduler": "karras",
-      "denoise": 1.0
+      "guidance": 3.7
     }
   },
   "7": {
-    "class_type": "VAEDecode",
+    "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "samples": [
+      "width": 1024,
+      "height": 1536,
+      "batch_size": 1
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "11",
+        0
+      ],
+      "positive": [
         "6",
         0
       ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ],
+      "seed": 1392188509,
+      "control_after_generate": "fixed",
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
       "vae": [
-        "2",
+        "3",
         0
       ]
     }
   },
-  "8": {
+  "10": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "7",
+        "9",
         0
       ],
-      "filename_prefix": "portrait_923971051"
+      "filename_prefix": "portrait_1392188509"
     }
   }
 }

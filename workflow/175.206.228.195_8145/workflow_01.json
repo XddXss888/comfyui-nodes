@@ -33,7 +33,7 @@
   },
   "4": {
     "inputs": {
-      "seed": 2396968641,
+      "seed": 4915714101,
       "steps": [
         "13",
         0
@@ -102,8 +102,8 @@
   },
   "13": {
     "inputs": {
-      "steps": 27,
-      "cfg": 6.0
+      "steps": 28,
+      "cfg": 7.0
     },
     "class_type": "StepsAndCfg",
     "_meta": {
@@ -112,8 +112,8 @@
   },
   "17": {
     "inputs": {
-      "Width": 1024,
-      "Height": 1024,
+      "Width": 768,
+      "Height": 1366,
       "Batch": 1,
       "Landscape": false,
       "HiResMultiplier": 1.7000000000000002
@@ -125,7 +125,7 @@
   },
   "20": {
     "inputs": {
-      "seed": 2396968641,
+      "seed": 4915714101,
       "steps": 10,
       "cfg": [
         "13",
@@ -205,7 +205,7 @@
   },
   "32": {
     "inputs": {
-      "text": "ever_eve_love, ((1girl)), waero, dark, shade, wings, underground, dungeon, sitting, arms up, bound wrists, scared, open mouth, surprised, surrounded by hands, too many hands, multiple boys, reaching towards another, masterpiece, best quality, amazing quality"
+      "text": "ever_erusha_love, masterpiece,best_quality,1girl, borrowed clothes, alternate costume, narrowed eyes, naughty face,shy,hetero,happy, light blush,indoors,, masterpiece, best quality, amazing quality"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -214,7 +214,7 @@
   },
   "33": {
     "inputs": {
-      "text": "bad quality,worst quality,worst detail,sketch,censor, glaring, (leotard), extra navel, floating hair, (arms up), leotard pull, ass cutout, head out of frame, eyes out of frame, pantyhose, garter straps, horizontal navel"
+      "text": "bad quality,worst quality,worst detail,sketch,censor,bad anatomy, bad perspective, bad feet, bad hands, bad proportions, wrong foot, wrong hand,multiple views, split screen, monster, furry,5fingers, variations, chest harness, o-ring harness, criss-cross halter, bad link, bad source, corrupted metadata, english text, ranguage, text print, futanari, futa with female, korean commentary, korean text, bad arm,artistic error,too many hands,too many finger, extra arms,extra legs, long neck, 3d, 3d background, paper texture, 2girls, 3girls, yuri, segmented comic, 2koma, 3koma, 4koma, torn clothes, front slit, too many belts,belt, criss-cross halter, diamond button, buttons, buckle, double-breasted, choker, ribbon, belt buckle, belt bow, computer, computer keyboard, computer mouse, computer tower, comic, accessories, corset, front slit, frontless outfit, 3d, censored, mosaic censoring, bar censor, convenient censoring, knee boots,mouse \\(animal\\), yellow, red,pink,halterneck, criss-cross halter,front slit, front slit,hip vent, neckerchief, sailor collar,collar, front-tie top, front-tie bikini top,front list, clothing cutout,side slit,slit skirt, ribbon-trimmed skirt, skirt cutout,2girls, twins, glint, shiny clothes, selfcest, coat, bow, bra, cleavage, pleated skirt, tribadism, puffy short sleeves, puffy long sleeves, embroidery, criss-cross straps, strap, thigh belt, animal hood,cat hood, bear hood, print shirt, print hoodie, print sweater,horn hood,demon hood, coat, trench coat, stomach cutout, censored nipples, 4koma, 5koma, 6koma, tongue out, lace-up, jpeg artifacts, bloom, dolphin shorts, against railing, hand on railing, against wall, on railing, arm support, look-alike, dual persona, multiple persona, purple hair, brown hair, bags under eyes, censored, bar censor, steam censor, blank censor, light censor, bad reflection,bad neck, bad vulva,wand,leotard, bloom, glowing, print shirt, print hoodie, emblem, cross-laced sleeves, bustier, sleeveless dress, cross-laced dress, cross-laced clothes, bra peek"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -277,7 +277,7 @@
   },
   "65": {
     "inputs": {
-      "data": "[{\"name\": \"eve_love.safetensors\", \"strength\": 0.85, \"strength_clip\": 1.0}]",
+      "data": "[{\"name\": \"erusha_love.safetensors\", \"strength\": 0.9, \"strength_clip\": 1.0}]",
       "model": [
         "36",
         0

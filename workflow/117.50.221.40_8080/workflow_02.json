@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "A yellow Lamborghini speeding through a desert, dynamic motion blur, flying sand and dust particles, intense sandstorm in background, dramatic golden-hour lighting, cinematic composition, masterpiece, best quality, ultra-detailed, professional photography., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "Close-up of a yellow Ferrari’s window with iridescent, prismatic color effects, ultra-detailed reflections and glossy surface, cinematic lighting, masterpiece, best quality, photorealistic, 8K resolution, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -34,13 +34,13 @@
     "inputs": {
       "width": 576,
       "height": 1024,
-      "batch_size": 2
+      "batch_size": 4
     }
   },
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 568120919,
+      "seed": 1321738601,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",

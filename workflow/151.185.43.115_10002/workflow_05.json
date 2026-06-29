@@ -3279,7 +3279,7 @@
   },
   "249": {
     "inputs": {
-      "prompt": "\"Krrrzz... Aapke... shhhh... 1200... bzzzt... rupaye... prapt... krr-krr... hue hain...\"\n\n\"Krrr... Aapke khaate mein... bzzzt... baarah sau rupaye... shhhhhh... prapt hue hain... krrrzz...\"",
+      "prompt": "Voice Style:\n\nGenerate the voice as if it is coming from an old, partially damaged electronic payment soundbox.\n\nThe speaker should sound synthetic and robotic with intermittent electrical interference. Introduce realistic static crackles, radio-like distortion, speaker clipping, buzzing, signal dropouts, and brief digital glitches throughout the announcement. Parts of words should cut out momentarily before reconnecting. The distortion should sound random and authentic, as if the speaker hardware is failing, but the announcement should still remain mostly understandable.\n\nAdd:\n• Electrical crackling\n• Static bursts\n• Digital clipping\n• Speaker buzz\n• Radio interference\n• Short signal interruptions\n• Distorted frequency response\n• Metallic speaker resonance\n• Slight compression artifacts\n\nAvoid exaggerated sci-fi effects. Keep it sounding like a real damaged QR payment speaker used in Indian shops.\n\nDialogue:\n\"Aapke khaate mein baarah sau rupaye prapt hue hain.\"",
       "model": "3.1 Flash",
       "voice_name": "Leda (Youthful)"
     },
@@ -3292,7 +3292,7 @@
     "inputs": {
       "filename_prefix": "audio/ComfyUI",
       "quality": "V0",
-      "audioUI": "/api/view?filename=ComfyUI_00013_.mp3&type=output&subfolder=audio&rand=0.6387839250707554",
+      "audioUI": "/api/view?filename=ComfyUI_00014_.mp3&type=output&subfolder=audio&rand=0.7945210309609307",
       "audio": [
         "249",
         0

@@ -1,27 +1,22 @@
 # 59.110.66.181:8187
 
 **GPU**: RTX 5880 Ada | **显存**: 48 GB | **空闲**: 42 GB
-**内存**: 511 GB (空闲 420 GB)
+**内存**: 511 GB (空闲 359 GB)
 **版本**: 0.19.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-28 08:08:06
-**历史总数**: 1610 | **成功**: 10
+**扫描时间**: 2026-06-29 08:07:52
+**历史总数**: 1647 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `0a7cdb07-ddd8-4a79-8305-f11ee861f4a5`
-- **类型**: 文生图
-- **节点数**: 14
-- **模型** (3):
-  - Z-vae.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
-- **提示词**:
-  - [Text Multiline::text] 动态坐标系呈现时间轴，X9的轮廓在坐标系中随时间推移逐渐放大
+- **Prompt ID**: `53264c6a-2a55-403f-b4de-99a68c7f8cae`
+- **类型**: 其他/工具
+- **节点数**: 1
+- **模型** (0):
 
 ### 2. workflow_02.json
-- **Prompt ID**: `33d74b7b-0e05-4cad-b4fe-ccc4b9615755`
+- **Prompt ID**: `befd9a63-d75c-4f9b-a456-44ff5ba928a0`
 - **类型**: 文生图
 - **节点数**: 14
 - **模型** (3):
@@ -29,10 +24,10 @@
   - qwen_3_4b.safetensors
   - z_image_turbo_bf16.safetensors
 - **提示词**:
-  - [Text Multiline::text] 抽象线条延伸出触控板轮廓，男性手指在虚拟键盘上滑动，形成思维轨迹
+  - [Text Multiline::text] 【画面】柴犬尾尖勾住窗帘，侧身望向星空，爪垫轻触窗框发出共鸣
 
 ### 3. workflow_03.json
-- **Prompt ID**: `e93669c8-1c7f-4f31-ae61-eb0584da1648`
+- **Prompt ID**: `83af3abb-30e0-41ba-8671-bb0789415432`
 - **类型**: 文生图
 - **节点数**: 14
 - **模型** (3):
@@ -40,10 +35,10 @@
   - qwen_3_4b.safetensors
   - z_image_turbo_bf16.safetensors
 - **提示词**:
-  - [Text Multiline::text] 时间轴上不同场景的图标串联成链，X9的存储图标在链环中发光
+  - [Text Multiline::text] 【画面】柴犬尾尖勾住窗帘，侧身望向星空，爪垫轻触窗框发出共鸣
 
 ### 4. workflow_04.json
-- **Prompt ID**: `dc0b09d0-5753-402c-afe9-19ab131951b2`
+- **Prompt ID**: `de8b64a7-4c25-4f29-9e97-ea5f7488d05f`
 - **类型**: 文生图
 - **节点数**: 14
 - **模型** (3):
@@ -51,64 +46,64 @@
   - qwen_3_4b.safetensors
   - z_image_turbo_bf16.safetensors
 - **提示词**:
-  - [Text Multiline::text] 微光中X9屏幕显示待机界面，男性将电脑推入公文包，手指划过包带
+  - [Text Multiline::text] 【画面】蓝猫爪尖轻拨琴弦，毛发随音符颤动，阳光在琴键上形成光斑
 
 ### 5. workflow_05.json
-- **Prompt ID**: `8dacfa8a-bda5-4a9e-87ed-26b0d8f11609`
+- **Prompt ID**: `de8d0489-afd8-487d-9154-96e67acd4006`
+- **类型**: 其他
+- **节点数**: 7
+- **模型** (1):
+  - 4x-ClearRealityV1.pth
+
+### 6. workflow_06.json
+- **Prompt ID**: `202dd509-e58d-424b-9bec-888de4b06c9d`
+- **类型**: 文生图
+- **节点数**: 14
+- **模型** (3):
+  - Z-vae.safetensors
+  - qwen_3_4b.safetensors
+  - z_image_turbo_bf16.safetensors
+- **提示词**:
+  - [Text Multiline::text] change to a dog
+
+### 7. workflow_07.json
+- **Prompt ID**: `17697460-3937-4d80-8f5f-6e4251bb429f`
+- **类型**: 文生图
+- **节点数**: 14
+- **模型** (3):
+  - Z-vae.safetensors
+  - qwen_3_4b.safetensors
+  - z_image_turbo_bf16.safetensors
+- **提示词**:
+  - [Text Multiline::text] 【画面】卡皮巴拉爪尖轻拨琴弦，毛发随音符颤动，阳光在琴键上形成光斑
+
+### 8. workflow_08.json
+- **Prompt ID**: `0cf46cb0-005a-44d9-adf5-8690188eb43b`
+- **类型**: 文生图
+- **节点数**: 14
+- **模型** (3):
+  - Z-vae.safetensors
+  - qwen_3_4b.safetensors
+  - z_image_turbo_bf16.safetensors
+
+### 9. workflow_09.json
+- **Prompt ID**: `646ab58c-d055-4c5d-bdcd-e37a718bc628`
+- **类型**: 文生视频
+- **节点数**: 35
+- **模型** (5):
+  - Wan2.2-T2V-A14B-LowNoise-Q8_0.gguf
+  - lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors
+  - smoothMixWan22I2VT2V_t2vHighV20.safetensors
+  - umt5-xxl-enc-bf16.safetensors
+  - wan_2.1_vae_comfyorg.safetensors
+- **提示词**:
+  - [Text Multiline::text] 最高质量的视频，超高清
+  - [Text Multiline::text] create a lion
+
+### 10. workflow_10.json
+- **Prompt ID**: `f7d753e4-1e16-4254-9fce-c40482cd730b`
 - **类型**: 视频超分/处理
 - **节点数**: 8
 - **模型** (2):
   - 4x-ClearRealityV1.pth
   - IFRNet_L_Vimeo90K.pth
-
-### 6. workflow_06.json
-- **Prompt ID**: `e4eb84db-7795-4a67-82d4-559483d4d146`
-- **类型**: 文生图
-- **节点数**: 17
-- **模型** (4):
-  - ThinkPadx9_zimageTurbo_model.safetensors
-  - Z-vae.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
-- **提示词**:
-  - [Text Multiline::text] 纯正面角度的笔记本电脑图像，电脑屏幕完全展开，掌托右下角印有thinkpad标志， 清晨薄雾中，来了一只猫
-
-### 7. workflow_07.json
-- **Prompt ID**: `74a6bc4f-727e-49d7-a9bf-3d00d856fed6`
-- **类型**: 文生图
-- **节点数**: 24
-- **模型** (4):
-  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
-  - qwen_2.5_vl_7b.safetensors
-  - qwen_image_edit_2511_bf16.safetensors
-  - qwen_image_vae.safetensors
-- **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 低质量，最差质量，坏的图片
-
-### 8. workflow_08.json
-- **Prompt ID**: `fa0f0186-92ba-49a0-8510-f0a16345fb01`
-- **类型**: 文生图
-- **节点数**: 24
-- **模型** (4):
-  - Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors
-  - qwen_2.5_vl_7b.safetensors
-  - qwen_image_edit_2511_bf16.safetensors
-  - qwen_image_vae.safetensors
-- **提示词**:
-  - [TextEncodeQwenImageEditPlus::prompt] 低质量，最差质量，坏的图片
-
-### 9. workflow_09.json
-- **Prompt ID**: `08587eff-8e8c-4496-8e02-0a1e4bbbd887`
-- **类型**: 文生图
-- **节点数**: 14
-- **模型** (3):
-  - Z-vae.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
-
-### 10. workflow_10.json
-- **Prompt ID**: `7b0324cc-6ba7-4439-a7f9-748bc6fa03b5`
-- **类型**: 其他
-- **节点数**: 7
-- **模型** (1):
-  - 4x-ClearRealityV1.pth

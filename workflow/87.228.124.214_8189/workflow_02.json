@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "eurameg1, A seductive woman in a glamorous fitted evening dress sits closely on a luxurious sofa in a dimly lit VIP room, body angled toward her companion with one hand lightly touching the cushion beside her, leaning forward after a brief kiss, lips softly parted in an intrigued smile and eyes locked on him as she considers the invitation to leave together, soft warm ambient lighting and gentle shadows across her figure, medium close-up framing with simple elegant background.",
+      "text": "e1st_asn, A naked woman kneeling on the floor facing forward in a sexual pose, legs spread, using both hands to spread her pussy open with her fingers while masturbating, saliva dripping down her chest, visible intimate contact, natural proportions, clear hands and posture, simple indoor background, soft lighting, medium close-up framing.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "zimg-eurameg1-refine-con-char.safetensors",
-      "strength_model": 0.8,
-      "strength_clip": 0.8,
+      "lora_name": "nano_Korean.safetensors",
+      "strength_model": 0.81,
+      "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -132,12 +132,12 @@
     "inputs": {
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
-      "scheduler": "beta57",
-      "steps": 10,
+      "scheduler": "bong_tangent",
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 453373455444780,
+      "seed": 585375340973065,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

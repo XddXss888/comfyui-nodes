@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "jimeng-2026-06-10-1991-优雅气质的美女，在森林里微笑着面对镜头，穿着白底写意晕染模糊粉白玫瑰真丝飘逸长裙....png"
+      "image": "input_990d6ab6d8ec.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -12,7 +12,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "6",
+        "19",
         0
       ]
     },
@@ -21,49 +21,23 @@
       "title": "保存图像"
     }
   },
-  "3": {
+  "17": {
     "inputs": {
-      "image": "ip.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "4": {
-    "inputs": {
-      "image": "游乐园.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "5": {
-    "inputs": {
-      "prompt": "参考图1中的主要人物，保持图2的泡泡小山IP角色造型不变，生成小巧的泡泡小山在人物旁边一起合影的画面，中近景半身人像构图，人物智能美颜，美式动漫插画风格，丝网印刷风格，颗粒肌理。背景是童话风游乐园场景，米白城堡与红顶塔楼在蓝天映衬下格外梦幻，巨大摩天轮如时光之轮静静伫立，湖面倒映着建筑与流云，垂柳轻拂，完全还原参考图3中的建筑造型。色调清新明快，光影柔和通透，整体风格是治愈系粉色调，颜色鲜亮，色彩饱和，高对比度，氛围感温馨，细节丰富，质感细腻。",
-      "model": "doubao-seedream-4-5-251128",
+      "prompt": "保持图中主要人物的一致性，生成人物和熊猫合影的画面。新年主题画面，冬日雪景。人物正面半身摆拍，轻微美颜，商业精修，站在一座具有中国传统风格的庭院前。背景是红墙、飞檐屋顶与轻轻飘落的白雪，屋檐下悬挂着红色灯笼和中国结。两只圆润可爱的熊猫出现在人物身后，一只抱着金元宝，另一只抱着“福”字卷轴，神态温和友好。前景有落雪的松枝和红梅花点缀，冬日阳光正面洒在人物和熊猫身上。整体色彩鲜艳饱和，红色、白色与暖金色交织，画面通透清晰，节日氛围浓厚，细节丰富，具有新年贺岁海报质感。",
+      "model": "doubao-seedream-4-0-250828",
       "response_format": "url",
       "resolution": "4K",
-      "aspect_ratio": "Custom",
-      "width": 1184,
-      "height": 800,
-      "apikey": "a44228f5-f1b2-44e9-860a-d3c8eb5ac03e",
+      "aspect_ratio": "1:1",
+      "width": 1024,
+      "height": 1024,
+      "apikey": "fe023f32-413c-41f8-a35d-694231e4c96a",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 1336107610,
+      "seed": 36228670,
       "watermark": false,
       "stream": false,
       "image1": [
         "1",
-        0
-      ],
-      "image2": [
-        "3",
-        0
-      ],
-      "image3": [
-        "4",
         0
       ]
     },
@@ -72,19 +46,19 @@
       "title": "Comfly Doubao Seedream4.0"
     }
   },
-  "6": {
+  "19": {
     "inputs": {
       "aspect_ratio": "custom",
-      "proportional_width": 2622,
-      "proportional_height": 1772,
+      "proportional_width": 800,
+      "proportional_height": 880,
       "fit": "crop",
       "method": "bicubic",
-      "round_to_multiple": "None",
+      "round_to_multiple": "8",
       "scale_to_side": "width",
-      "scale_to_length": 2622,
+      "scale_to_length": 800,
       "background_color": "#000000",
       "image": [
-        "5",
+        "17",
         0
       ]
     },

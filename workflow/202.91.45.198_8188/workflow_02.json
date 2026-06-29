@@ -1,30 +1,183 @@
 {
-  "10": {
-    "class_type": "SimpleMath+",
+  "1": {
     "inputs": {
-      "value": "20+22"
+      "image": "c5-before.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Загрузить изображение"
     }
   },
-  "20": {
-    "class_type": "EmptyImage",
+  "2": {
     "inputs": {
-      "width": [
-        "10",
+      "iterations": 3,
+      "model_name": "GFPGANv1.4.pth",
+      "weight": 0.25,
+      "upscale": 1,
+      "only_center_face": false,
+      "aligned": false,
+      "use_bg_upsampler": false,
+      "image": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "IterativeGFPGANNode",
+    "_meta": {
+      "title": "Iterative GFPGAN Node"
+    }
+  },
+  "3": {
+    "inputs": {
+      "expand_mask": true,
+      "dilation_size": 5,
+      "image": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "MouthDetectionNode",
+    "_meta": {
+      "title": "Mouth Detection Node"
+    }
+  },
+  "4": {
+    "inputs": {
+      "match_brightness": false,
+      "match_contrast": false,
+      "source_image": [
+        "22",
         0
       ],
-      "height": 1,
-      "batch_size": 1,
-      "color": 0
+      "target_image": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "ColorMatchingNode",
+    "_meta": {
+      "title": "Color Matching Node"
     }
   },
-  "30": {
-    "class_type": "SaveImage",
+  "5": {
+    "inputs": {
+      "feather_distance": 50,
+      "feather_strength": 1.5,
+      "source_image": [
+        "4",
+        0
+      ],
+      "target_image": [
+        "19",
+        0
+      ],
+      "mask": [
+        "3",
+        1
+      ]
+    },
+    "class_type": "SeamlessBlendingNode",
+    "_meta": {
+      "title": "Seamless Blending Node"
+    }
+  },
+  "6": {
     "inputs": {
       "images": [
-        "20",
+        "5",
         0
-      ],
-      "filename_prefix": "wp"
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Предварительный просмотр изображения"
+    }
+  },
+  "7": {
+    "inputs": {
+      "images": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Предварительный просмотр изображения"
+    }
+  },
+  "8": {
+    "inputs": {
+      "images": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Предварительный просмотр изображения"
+    }
+  },
+  "9": {
+    "inputs": {
+      "images": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Предварительный просмотр изображения"
+    }
+  },
+  "10": {
+    "inputs": {
+      "mask": [
+        "3",
+        1
+      ]
+    },
+    "class_type": "MaskPreview+",
+    "_meta": {
+      "title": "🔧 Mask Preview"
+    }
+  },
+  "19": {
+    "inputs": {
+      "max_pixels": 1080,
+      "upscale_method": "nearest-exact",
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ConditionalRescale",
+    "_meta": {
+      "title": "Conditional Rescale"
+    }
+  },
+  "22": {
+    "inputs": {
+      "amount": 0.8,
+      "image": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "ContrastAdaptiveSharpeningNode",
+    "_meta": {
+      "title": "CAS Sharpening"
+    }
+  },
+  "23": {
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Предварительный просмотр изображения"
     }
   }
 }

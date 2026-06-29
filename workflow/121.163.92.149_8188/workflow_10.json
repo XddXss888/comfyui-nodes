@@ -23,7 +23,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "A a legendary hero holding a large ornate golden sword and shield, ornate armor and a cape. STRICT CONSISTENT PROPORTIONS: a slim adult character standing straight and facing front, full body fully visible from head to feet, the head is about one-fifth of the total body height (about FIVE heads tall) - use exactly this same head-to-body ratio for every character. A simple minimal stylized face. Flat minimalist vector illustration style, clean flat color shapes with soft simple two-tone flat shading and NO outlines, a limited muted elegant color palette, simple stylized geometric rounded forms, modern indie board-game art, clean and elegant. isolated on a PLAIN flat pale gray background (no background scene, no spotlight, the subject alone so it can be cut out for card compositing). No text, no numbers, no frame, no card border.",
+      "text": "A three-headed dragon hydra, front three-quarter view, ONE single chubby green body, continuous cream belly flowing into chest and three necks (one connected piece), four legs, three heads with green poison mist. PURE flat vector style: completely FLAT solid color fills, absolutely NO outlines, NO line art, NO texture, NO grain, smooth clean flat color blocks with simple two-tone shading, limited muted green palette, crisp minimalist vector, like a clean SVG illustration.",
       "clip": [
         "2",
         0
@@ -60,15 +60,39 @@
         "12",
         0
       ],
-      "filename_prefix": "wf_H13_전설의용사"
+      "filename_prefix": "wf_m65"
     }
   },
-  "6": {
-    "class_type": "EmptySD3LatentImage",
+  "20": {
+    "class_type": "LoadImage",
     "inputs": {
+      "image": "_m25k50.png"
+    }
+  },
+  "21": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "20",
+        0
+      ],
+      "upscale_method": "bilinear",
       "width": 1024,
-      "height": 1536,
-      "batch_size": 1
+      "height": 1232,
+      "crop": "disabled"
+    }
+  },
+  "22": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
     }
   },
   "7": {
@@ -78,12 +102,12 @@
         "1",
         0
       ],
-      "seed": 122068,
+      "seed": 1212,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 1.0,
+      "denoise": 0.65,
       "positive": [
         "4",
         0
@@ -93,7 +117,7 @@
         0
       ],
       "latent_image": [
-        "6",
+        "22",
         0
       ]
     }

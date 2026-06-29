@@ -1,70 +1,30 @@
 # 183.6.88.86:8188
 
 **GPU**: RTX 4090 | **显存**: 24 GB | **空闲**: 22 GB
-**内存**: 39 GB (空闲 29 GB)
+**内存**: 39 GB (空闲 32 GB)
 **版本**: 0.18.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-26 08:08:52
-**历史总数**: 429 | **成功**: 10
+**扫描时间**: 2026-06-29 08:07:37
+**历史总数**: 6 | **成功**: 2
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `4c338f94-15ed-46a1-885f-5fb0a525b2dc`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
+- **Prompt ID**: `ee297fdb-26b9-493a-8137-7cabef819655`
+- **类型**: 文生图
+- **节点数**: 17
+- **模型** (3):
+  - flux-2-klein-base-9b-fp8.safetensors
+  - flux2-vae.safetensors
+  - qwen_3_8b_fp8mixed.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] low quality, blurry, noise, jpeg artifacts, bad anatomy, deformed, distorted,
+extra limbs, missing limbs, fused fingers, incorrect proportions,
+messy composition, wrong perspective, broken structure,
+
 
 ### 2. workflow_02.json
-- **Prompt ID**: `547345f7-77f5-404d-8eac-d812754f795c`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 3. workflow_03.json
-- **Prompt ID**: `f33130f3-5e86-4154-a0e5-d152fe448948`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 4. workflow_04.json
-- **Prompt ID**: `c6de9577-d856-4fa1-adc1-4ccef3cb9410`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 5. workflow_05.json
-- **Prompt ID**: `c25b583f-a078-4767-9157-9674c32be401`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 6. workflow_06.json
-- **Prompt ID**: `359546e2-f975-4807-9c48-969e10a05aa4`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 7. workflow_07.json
-- **Prompt ID**: `59eb33a0-4e4b-4093-9350-da547f262b29`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 8. workflow_08.json
-- **Prompt ID**: `3dd0bbb0-6baa-482f-92e0-a4d64b621957`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 9. workflow_09.json
-- **Prompt ID**: `d4749efd-b94d-46dc-a5b4-d83b11cbc303`
-- **类型**: 文生视频
-- **节点数**: 2
-- **模型** (0):
-
-### 10. workflow_10.json
-- **Prompt ID**: `4a22a3be-3909-4335-b066-82ff9ec4bddc`
-- **类型**: 文生视频
+- **Prompt ID**: `0477bf7b-f5be-4b6a-9801-78a6a61e4269`
+- **类型**: 其他
 - **节点数**: 2
 - **模型** (0):

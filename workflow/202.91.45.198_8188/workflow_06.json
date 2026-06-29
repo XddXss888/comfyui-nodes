@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 805654725069116,
+      "seed": 514006424710624,
       "steps": 20,
       "cfg": 2.5,
       "sampler_name": "euler",
@@ -52,7 +52,7 @@
       "video_frames": 14,
       "motion_bucket_id": 127,
       "fps": 6,
-      "augmentation_level": 0.01,
+      "augmentation_level": 0.0,
       "clip_vision": [
         "15",
         1

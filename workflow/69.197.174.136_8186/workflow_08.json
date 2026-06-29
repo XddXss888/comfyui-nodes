@@ -1,18 +1,18 @@
 {
   "1": {
     "inputs": {
-      "tags": "alarm,pop,morning,energy",
-      "lyrics": "[Intro]\nRing ring! The match is calling,  !\n\n\n[Verse]\nRing ring! The match is calling,  ! \nYour team is ready, the whistle is near, Open your eyes, the fans are here. Blanket off, feet on the floor, World Cup fever is at your door! Goal goal goal, get up now! Don’t miss the game, don’t ask me how! Ring ring ring, it’s football time, Wake up fast, the cup is online! Match alert! Match alert! Wake up!",
-      "seed": 486703203651001,
-      "bpm": 150,
+      "tags": "A cheerful and uplifting jingle featuring a bright acoustic piano melody over a lively chord progression. Light rhythmic elements and playful piano notes create a happy atmosphere. A male vocalist sings in a clear, warm, and friendly tone, listing different types of imprisonment in a simple and engaging way. The vocal is briefly layered with a soft lower harmony on the phrase “sung imprisonment,” adding a pleasant musical texture. The overall mood is joyful, lighthearted, and educational, suitable for a children’s song or a short, fun jingle.",
+      "lyrics": "\n[Intro]\nListen, [Tu nombre],An idiot is attempting to reach you on your cellular device\n\n[Verse]\nListen, [Tu nombre],An idiot is attempting to reach you on your cellular device\n\n[Hook]\nListen, [Tu nombre],An idiot is attempting to reach you on your cellular device\n\n[Outro]\nPiano and guitar softly resolve, leaving a warm and pleasant ending\n",
+      "seed": 1100325964226750,
+      "bpm": 100,
       "duration": 30.0,
       "timesignature": "4",
       "language": "en",
       "keyscale": "C major",
       "generate_audio_codes": false,
-      "cfg_scale": 5.0,
-      "temperature": 0.3,
-      "top_p": 0.3,
+      "cfg_scale": 2.0,
+      "temperature": 0.85,
+      "top_p": 0.9,
       "top_k": 0,
       "min_p": 0.0,
       "clip": [
@@ -23,6 +23,22 @@
     "class_type": "TextEncodeAceStepAudio1.5",
     "_meta": {
       "title": "TextEncodeAceStepAudio1.5"
+    }
+  },
+  "18": {
+    "inputs": {
+      "samples": [
+        "102",
+        0
+      ],
+      "vae": [
+        "999",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeAudio",
+    "_meta": {
+      "title": "VAE Decode Audio"
     }
   },
   "47": {
@@ -50,13 +66,23 @@
       "title": "ModelSamplingAuraFlow"
     }
   },
+  "98": {
+    "inputs": {
+      "seconds": 30.0,
+      "batch_size": 1
+    },
+    "class_type": "EmptyAceStep1.5LatentAudio",
+    "_meta": {
+      "title": "Empty Ace Step 1.5 Latent Audio"
+    }
+  },
   "99": {
     "inputs": {
-      "filename_prefix": "/sda-disk/home/Ringtone/music-generation-system/temp/results/340dc1a1-c58a-4c53-81cd-659451b7cc14.mp3",
+      "filename_prefix": "/sda-disk/home/Ringtone/music-generation-system/temp/results/12254e2f-fff4-459b-8d27-df83085cae0c.mp3",
       "quality": "320k",
-      "audioUI": "/api/view?filename=ComfyUI.mp3&type=output&subfolder=audio&rand=0.12376745656005916",
+      "audioUI": "",
       "audio": [
-        "105",
+        "18",
         0
       ]
     },
@@ -65,14 +91,14 @@
       "title": "Save Audio (MP3)"
     }
   },
-  "101": {
+  "100": {
     "inputs": {
-      "seed": 807193839657641,
-      "steps": 8,
-      "cfg": 2.0,
+      "seed": 551920112546168,
+      "steps": 4,
+      "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 0.33,
+      "denoise": 0.35,
       "model": [
         "78",
         0
@@ -86,7 +112,7 @@
         0
       ],
       "latent_image": [
-        "110",
+        "101",
         0
       ]
     },
@@ -95,56 +121,64 @@
       "title": "KSampler"
     }
   },
-  "105": {
+  "101": {
     "inputs": {
-      "samples": [
-        "101",
+      "seed": 756750936558355,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "78",
         0
       ],
-      "vae": [
-        "999",
+      "positive": [
+        "1",
+        0
+      ],
+      "negative": [
+        "47",
+        0
+      ],
+      "latent_image": [
+        "98",
         0
       ]
     },
-    "class_type": "VAEDecodeAudio",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "VAE Decode Audio"
+      "title": "KSampler"
     }
   },
-  "110": {
+  "102": {
     "inputs": {
-      "audio": [
-        "1025",
+      "seed": 602997888106553,
+      "steps": 2,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.15,
+      "model": [
+        "78",
         0
       ],
-      "vae": [
-        "999",
+      "positive": [
+        "1",
+        0
+      ],
+      "negative": [
+        "47",
+        0
+      ],
+      "latent_image": [
+        "100",
         0
       ]
     },
-    "class_type": "VAEEncodeAudio",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "VAE Encode Audio"
-    }
-  },
-  "111": {
-    "inputs": {
-      "audio": "/sda-disk/home/Ringtone/music-generation-system/src/workflows/special_template/version_2/template_45/EN/t45_en_raw_song.mp3",
-      "audioUI": "/api/view?filename=t45_en_raw_song.mp3&type=input&subfolder=&rand=0.754036664236537"
-    },
-    "class_type": "LoadAudio",
-    "_meta": {
-      "title": "Raw Song"
-    }
-  },
-  "777": {
-    "inputs": {
-      "unet_name": "acestep_v1.5_xl_turbo_bf16.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Load Diffusion Model"
+      "title": "KSampler"
     }
   },
   "888": {
@@ -168,118 +202,14 @@
       "title": "Load VAE"
     }
   },
-  "1025": {
+  "777": {
     "inputs": {
-      "start_time": 0.0,
-      "end_time": 0.0,
-      "audio": [
-        "111",
-        0
-      ]
+      "unet_name": "acestep_v1.5_xl_turbo_bf16.safetensors",
+      "weight_dtype": "default"
     },
-    "class_type": "AudioTrim",
+    "class_type": "UNETLoader",
     "_meta": {
-      "title": "Audio Trim ⚡🅡🅞🅣🅘"
-    }
-  },
-  "1029": {
-    "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_zvwej.flac&type=temp&subfolder=&rand=0.4927881171874642",
-      "audio": [
-        "1025",
-        0
-      ]
-    },
-    "class_type": "PreviewAudio",
-    "_meta": {
-      "title": "Preview Audio"
-    }
-  },
-  "1034": {
-    "inputs": {
-      "direction": "after",
-      "audio1": [
-        "105",
-        0
-      ],
-      "audio2": [
-        "1039",
-        0
-      ]
-    },
-    "class_type": "AudioConcat",
-    "_meta": {
-      "title": "Audio Concat"
-    }
-  },
-  "1039": {
-    "inputs": {
-      "start_time": 12.8,
-      "end_time": 0.0,
-      "audio": [
-        "111",
-        0
-      ]
-    },
-    "class_type": "AudioTrim",
-    "_meta": {
-      "title": "Audio Trim ⚡🅡🅞🅣🅘"
-    }
-  },
-  "1040": {
-    "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_rcjrv.flac&type=temp&subfolder=&rand=0.009599735393819309",
-      "audio": [
-        "1039",
-        0
-      ]
-    },
-    "class_type": "PreviewAudio",
-    "_meta": {
-      "title": "Preview Audio"
-    }
-  },
-  "1041": {
-    "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_onrev.flac&type=temp&subfolder=&rand=0.5600443531767177",
-      "audio": [
-        "105",
-        0
-      ]
-    },
-    "class_type": "PreviewAudio",
-    "_meta": {
-      "title": "Preview Audio"
-    }
-  },
-  "1042": {
-    "inputs": {
-      "direction": "after",
-      "audio1": [
-        "1025",
-        0
-      ],
-      "audio2": [
-        "1039",
-        0
-      ]
-    },
-    "class_type": "AudioConcat",
-    "_meta": {
-      "title": "Audio Concat"
-    }
-  },
-  "1043": {
-    "inputs": {
-      "audioUI": "/api/view?filename=ComfyUI_temp_qljqi.flac&type=temp&subfolder=&rand=0.13015989820163398",
-      "audio": [
-        "1042",
-        0
-      ]
-    },
-    "class_type": "PreviewAudio",
-    "_meta": {
-      "title": "Preview Audio"
+      "title": "Load Diffusion Model"
     }
   }
 }

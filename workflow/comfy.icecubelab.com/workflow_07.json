@@ -1,123 +1,93 @@
 {
   "1": {
-    "class_type": "UNETLoader",
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "unet_name": "flux1-dev.safetensors",
-      "weight_dtype": "default"
+      "ckpt_name": "zavychromaxl_v10.safetensors"
     }
   },
   "2": {
-    "class_type": "DualCLIPLoader",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip_name1": "clip_l.safetensors",
-      "clip_name2": "t5xxl_fp16.safetensors",
-      "type": "flux"
+      "vae_name": "sdxl_vae.safetensors"
     }
   },
   "3": {
-    "class_type": "VAELoader",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "vae_name": "ae.safetensors"
-    }
-  },
-  "11": {
-    "class_type": "LoraLoaderModelOnly",
-    "inputs": {
-      "model": [
+      "clip": [
         "1",
-        0
+        1
       ],
-      "lora_name": "sakura_korean_flux.safetensors",
-      "strength_model": 0.9
+      "text": "A melancholic young woman with dark brown long straight black hair standing in a cozy bookstore bathed in warm amber light, fox-like eyes gazing downward with poetic sadness, slim face with flawless porcelain skin and subtle smoky makeup, wearing a fitted black crop top and camel high-waisted wide-leg pants, half body waist up composition, shot on 35mm lens environmental portrait, silhouette against a glowing vintage lamp behind her, cross lighting from two sides casting dramatic shadows across towering bookshelves, one hand resting on a leather-bound spine, dust particles floating in golden light beams, shallow depth of field, editorial fashion photography, SDXL vivid chromatic colors with rich warm tones and deep burgundy shadows, Korean idol aesthetic, absolutely stunning"
     }
   },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
-        "2",
-        0
+        "1",
+        1
       ],
-      "text": "A stunning Korean idol-style woman caught in a surprised candid moment on a snow-covered street at night, mouth slightly open, eyes wide with delight as snowflakes drift around her. Subtle auburn tint fluffy wolf cut tousled by winter breeze. Delicate features, button nose, flawless porcelain skin with glossy dewy makeup, shimmering highlighter on cheekbones. Wearing a retro 90s oversized denim jacket with fleece collar, high-waisted mom jeans, chunky platform boots. Wide environmental portrait, small in frame against the glowing amber streetlights and fresh white snow. Shot on 85mm f/1.4, creamy bokeh transforming distant lights into golden orbs. High angle looking down, cross lighting from two sides creating dramatic shadows. Ethereal winter atmosphere, cinematic mood."
+      "text": "lowres, deformed, blurry, watermark, ugly, low quality"
     }
   },
   "5": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "EmptyLatentImage",
     "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": "text, watermark, logo, extra fingers, deformed hands"
-    }
-  },
-  "6": {
-    "class_type": "FluxGuidance",
-    "inputs": {
-      "conditioning": [
-        "4",
-        0
-      ],
-      "guidance": 3.6
-    }
-  },
-  "7": {
-    "class_type": "EmptySD3LatentImage",
-    "inputs": {
-      "width": 1024,
+      "width": 896,
       "height": 1280,
       "batch_size": 1
     }
   },
-  "8": {
+  "6": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "11",
+        "1",
         0
       ],
       "positive": [
-        "6",
+        "3",
         0
       ],
       "negative": [
-        "5",
+        "4",
         0
       ],
       "latent_image": [
-        "7",
+        "5",
         0
       ],
-      "seed": 917100176,
+      "seed": 902004356,
       "control_after_generate": "fixed",
-      "steps": 20,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
+      "steps": 28,
+      "cfg": 6.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
       "denoise": 1.0
     }
   },
-  "9": {
+  "7": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "8",
+        "6",
         0
       ],
       "vae": [
-        "3",
+        "2",
         0
       ]
     }
   },
-  "10": {
+  "8": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "9",
+        "7",
         0
       ],
-      "filename_prefix": "portrait_917100176"
+      "filename_prefix": "portrait_902004356"
     }
   }
 }

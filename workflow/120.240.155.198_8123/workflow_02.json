@@ -1,8 +1,42 @@
 {
-  "1": {
-    "class_type": "VisualizeCUDAMemoryHistory",
+  "2": {
     "inputs": {
-      "snapshot_path": "/data/project/zj/ComfyUI-0.20.1/input/cuda_snap_1782471667.pkl"
+      "noise_seed": 1096966286973073
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "3": {
+    "inputs": {
+      "preview_markdown": "❌ SSH is NOT running (connection refused)",
+      "preview_text": "❌ SSH is NOT running (connection refused)",
+      "previewMode": null,
+      "source": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
+    }
+  },
+  "9": {
+    "inputs": {
+      "expression": "import subprocess\n\n# Try systemctl first\nresult = subprocess.run(['systemctl', 'start', 'sshd'], capture_output=True)\nif result.returncode == 0:\n    out1 = \"✅ SSH started with systemctl\"\nelse:\n    # Try service command\n    result = subprocess.run(['service', 'ssh', 'start'], capture_output=True)\n    if result.returncode == 0:\n        out1 = \"✅ SSH started with service\"\n    else:\n        out1 = \"❌ Failed to start SSH. Is it installed?\"",
+      "input_count": 1,
+      "print_to_console": "False",
+      "update": null,
+      "in1": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "EvaluateMultiple1",
+    "_meta": {
+      "title": "EvaluateMultiple1"
     }
   }
 }

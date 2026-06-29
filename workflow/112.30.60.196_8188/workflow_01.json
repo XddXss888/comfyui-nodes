@@ -1,0 +1,1293 @@
+{
+  "200": {
+    "inputs": {
+      "width": [
+        "1298",
+        0
+      ],
+      "height": [
+        "1299",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "空Latent图像（SD3）"
+    }
+  },
+  "208": {
+    "inputs": {
+      "filename_prefix": [
+        "1818",
+        0
+      ],
+      "images": [
+        "1605",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "213": {
+    "inputs": {
+      "image": "生成未来末世城市图片 (9).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "IMAGE 1"
+    }
+  },
+  "360": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "362": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "547": {
+    "inputs": {
+      "lora_name": "Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "1114",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "844": {
+    "inputs": {
+      "value": 4
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "STEPS"
+    }
+  },
+  "850": {
+    "inputs": {
+      "value": 1.0
+    },
+    "class_type": "PrimitiveFloat",
+    "_meta": {
+      "title": "CFG"
+    }
+  },
+  "1114": {
+    "inputs": {
+      "strength": 1.0,
+      "pre_cfg": false,
+      "model": [
+        "1997",
+        0
+      ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "CFG归一化"
+    }
+  },
+  "1115": {
+    "inputs": {
+      "shift": 3,
+      "model": [
+        "1997",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "采样算法（AuraFlow）"
+    }
+  },
+  "1199": {
+    "inputs": {
+      "prompt": "两个人背靠背站在，警惕这周围",
+      "clip": [
+        "1998",
+        0
+      ],
+      "vae": [
+        "360",
+        0
+      ],
+      "image1": [
+        "1286",
+        0
+      ],
+      "image2": [
+        "1287",
+        0
+      ],
+      "image3": [
+        "1610",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "文本编码（QwenImageEditPlus）"
+    }
+  },
+  "1284": {
+    "inputs": {
+      "image": "生成未来末世城市图片.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "IMAGE 2"
+    }
+  },
+  "1285": {
+    "inputs": {
+      "image": "生成未来末世城市图片 (1).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "IMAGE 3"
+    }
+  },
+  "1286": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "213",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "1287": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "1284",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "1288": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1605",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "1289": {
+    "inputs": {
+      "lora_name": "qwen-boreal-general-discrete-low-rank.safetensors",
+      "strength_model": 0.85,
+      "model": [
+        "547",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "1290": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1,
+      "resolution_steps": 1,
+      "image": [
+        "1285",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "1292": {
+    "inputs": {
+      "image": "客厅卡通图生成 (3).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "IMAGE 4 POSE"
+    }
+  },
+  "1293": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "1294",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "1294": {
+    "inputs": {
+      "detect_hand": "enable",
+      "detect_body": "enable",
+      "detect_face": "enable",
+      "resolution": 1024,
+      "bbox_detector": "yolox_l.onnx",
+      "pose_estimator": "dw-ll_ucoco_384_bs5.torchscript.pt",
+      "scale_stick_for_xinsr_cn": "disable",
+      "image": [
+        "1292",
+        0
+      ]
+    },
+    "class_type": "DWPreprocessor",
+    "_meta": {
+      "title": "DWPose Estimator"
+    }
+  },
+  "1295": {
+    "inputs": {
+      "images": [
+        "1293",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "POSE PREVIEW"
+    }
+  },
+  "1297": {
+    "inputs": {
+      "width": [
+        "1298",
+        0
+      ],
+      "height": [
+        "1299",
+        0
+      ],
+      "upscale_method": "nearest-exact",
+      "keep_proportion": "resize",
+      "pad_color": "0, 0, 0",
+      "crop_position": "center",
+      "divisible_by": 2,
+      "device": "cpu",
+      "image": [
+        "1294",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJv2",
+    "_meta": {
+      "title": "Image Resize KJ v2 (Swwan)"
+    }
+  },
+  "1298": {
+    "inputs": {
+      "value": 1920
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "WIDTH"
+    }
+  },
+  "1299": {
+    "inputs": {
+      "value": 1080
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "HEIGHT"
+    }
+  },
+  "1342": {
+    "inputs": {
+      "inputcount": 2,
+      "direction": "right",
+      "match_image_size": true,
+      "image_1": [
+        "1286",
+        0
+      ],
+      "image_2": [
+        "1287",
+        0
+      ]
+    },
+    "class_type": "ImageConcatMulti",
+    "_meta": {
+      "title": "Image Concat Multi (Swwan)"
+    }
+  },
+  "1343": {
+    "inputs": {
+      "images": [
+        "1515",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "1482": {
+    "inputs": {
+      "lora_name": "qwen-studio-realism.safetensors",
+      "strength_model": 0.7,
+      "model": [
+        "1289",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "1483": {
+    "inputs": {
+      "lora_name": "InSubject-0.5.safetensors",
+      "strength_model": 0.7,
+      "model": [
+        "547",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "1515": {
+    "inputs": {
+      "inputcount": 2,
+      "direction": "down",
+      "match_image_size": true,
+      "image_1": [
+        "1548",
+        0
+      ],
+      "image_2": [
+        "1342",
+        0
+      ]
+    },
+    "class_type": "ImageConcatMulti",
+    "_meta": {
+      "title": "Image Concat Multi (Swwan)"
+    }
+  },
+  "1522": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1527",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "1524": {
+    "inputs": {
+      "width": 2048,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "空Latent图像（SD3）"
+    }
+  },
+  "1525": {
+    "inputs": {
+      "seed": 1034973049061656,
+      "steps": [
+        "844",
+        0
+      ],
+      "cfg": [
+        "850",
+        0
+      ],
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "1554",
+        0
+      ],
+      "positive": [
+        "1546",
+        0
+      ],
+      "negative": [
+        "1546",
+        0
+      ],
+      "latent_image": [
+        "1524",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "1526": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1527",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "1527": {
+    "inputs": {
+      "samples": [
+        "1525",
+        0
+      ],
+      "vae": [
+        "360",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "1530": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1548",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "1532": {
+    "inputs": {
+      "prompt": "Remove the visible seam in the middle of the image. Remove the white bar. Keep the rest of the image exactly the same.",
+      "clip": [
+        "1998",
+        0
+      ],
+      "vae": [
+        "360",
+        0
+      ],
+      "image1": [
+        "1541",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "文本编码（QwenImageEditPlus）"
+    }
+  },
+  "1534": {
+    "inputs": {
+      "direction": "right",
+      "match_image_size": true,
+      "image1": [
+        "1527",
+        0
+      ],
+      "image2": [
+        "1527",
+        0
+      ]
+    },
+    "class_type": "ImageConcanate",
+    "_meta": {
+      "title": "Image Concatenate (Swwan)"
+    }
+  },
+  "1535": {
+    "inputs": {
+      "shape": "square",
+      "frames": 1,
+      "location_x": 1024,
+      "location_y": 512,
+      "grow": 0,
+      "frame_width": [
+        "1538",
+        1
+      ],
+      "frame_height": [
+        "1538",
+        2
+      ],
+      "shape_width": [
+        "1540",
+        0
+      ],
+      "shape_height": 1024
+    },
+    "class_type": "CreateShapeMask",
+    "_meta": {
+      "title": "Create Shape Mask"
+    }
+  },
+  "1536": {
+    "inputs": {
+      "mask": [
+        "1537",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "1537": {
+    "inputs": {
+      "expand": 0,
+      "incremental_expandrate": 0.0,
+      "tapered_corners": true,
+      "flip_input": false,
+      "blur_radius": [
+        "1539",
+        0
+      ],
+      "lerp_alpha": 1.0,
+      "decay_factor": 1.0,
+      "fill_holes": false,
+      "mask": [
+        "1535",
+        0
+      ]
+    },
+    "class_type": "GrowMaskWithBlur",
+    "_meta": {
+      "title": "Grow Mask With Blur"
+    }
+  },
+  "1538": {
+    "inputs": {
+      "width": 2048,
+      "height": 1024,
+      "upscale_method": "lanczos",
+      "keep_proportion": "crop",
+      "pad_color": "0, 0, 0",
+      "crop_position": "center",
+      "divisible_by": 2,
+      "device": "cpu",
+      "image": [
+        "1534",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJv2",
+    "_meta": {
+      "title": "Image Resize KJ v2 (Swwan)"
+    }
+  },
+  "1539": {
+    "inputs": {
+      "value": 20.0
+    },
+    "class_type": "PrimitiveFloat",
+    "_meta": {
+      "title": "Mask Blur"
+    }
+  },
+  "1540": {
+    "inputs": {
+      "value": 200
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Mask Size"
+    }
+  },
+  "1541": {
+    "inputs": {
+      "blend_factor": 1.0,
+      "blend_mode": "screen",
+      "image1": [
+        "1538",
+        0
+      ],
+      "image2": [
+        "1536",
+        0
+      ]
+    },
+    "class_type": "ImageBlend",
+    "_meta": {
+      "title": "混合图像"
+    }
+  },
+  "1542": {
+    "inputs": {
+      "seed": 1034973049061657,
+      "steps": [
+        "844",
+        0
+      ],
+      "cfg": [
+        "850",
+        0
+      ],
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "1482",
+        0
+      ],
+      "positive": [
+        "1543",
+        0
+      ],
+      "negative": [
+        "1543",
+        1
+      ],
+      "latent_image": [
+        "1543",
+        2
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "1543": {
+    "inputs": {
+      "noise_mask": true,
+      "positive": [
+        "1532",
+        0
+      ],
+      "negative": [
+        "1532",
+        0
+      ],
+      "vae": [
+        "360",
+        0
+      ],
+      "pixels": [
+        "1538",
+        0
+      ],
+      "mask": [
+        "1535",
+        0
+      ]
+    },
+    "class_type": "InpaintModelConditioning",
+    "_meta": {
+      "title": "内补模型条件"
+    }
+  },
+  "1546": {
+    "inputs": {
+      "prompt": "Create a 360 panoramic image of the cozy modern restaurant, summer evening. An ultra-wide HDRI image captured on a ricoh 360 degree camera, insta 360, equirectagular projection. Keep the style the same.",
+      "clip": [
+        "1998",
+        0
+      ],
+      "vae": [
+        "360",
+        0
+      ],
+      "image1": [
+        "1559",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "文本编码（QwenImageEditPlus）"
+    }
+  },
+  "1547": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1548",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "1548": {
+    "inputs": {
+      "samples": [
+        "1542",
+        0
+      ],
+      "vae": [
+        "360",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "1549": {
+    "inputs": {
+      "images": [
+        "1541",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "1550": {
+    "inputs": {
+      "images": [
+        "1538",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "1554": {
+    "inputs": {
+      "lora_name": "251018_MICKMUMPITZ_QWEN-EDIT_360_03.safetensors",
+      "strength_model": 0.9,
+      "model": [
+        "547",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "1556": {
+    "inputs": {
+      "left": [
+        "1557",
+        0
+      ],
+      "top": [
+        "1557",
+        0
+      ],
+      "right": [
+        "1557",
+        0
+      ],
+      "bottom": [
+        "1557",
+        0
+      ],
+      "feathering": 40,
+      "image": [
+        "1560",
+        0
+      ]
+    },
+    "class_type": "ImagePadForOutpaint",
+    "_meta": {
+      "title": "外补画板"
+    }
+  },
+  "1557": {
+    "inputs": {
+      "value": 400
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Padding"
+    }
+  },
+  "1558": {
+    "inputs": {
+      "images": [
+        "1559",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "1559": {
+    "inputs": {
+      "width": 1024,
+      "height": 512,
+      "upscale_method": "lanczos",
+      "keep_proportion": "pad",
+      "pad_color": "127, 127, 127",
+      "crop_position": "center",
+      "divisible_by": 2,
+      "device": "cpu",
+      "image": [
+        "1556",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJv2",
+    "_meta": {
+      "title": "Image Resize KJ v2 (Swwan)"
+    }
+  },
+  "1560": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "1610",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "1562": {
+    "inputs": {
+      "direction": "right",
+      "match_image_size": true,
+      "image1": [
+        "1548",
+        0
+      ],
+      "image2": [
+        "1548",
+        0
+      ]
+    },
+    "class_type": "ImageConcanate",
+    "_meta": {
+      "title": "Image Concatenate (Swwan)"
+    }
+  },
+  "1591": {
+    "inputs": {
+      "value": 1034973049061649
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "1604": {
+    "inputs": {
+      "seed": [
+        "1591",
+        0
+      ],
+      "steps": [
+        "844",
+        0
+      ],
+      "cfg": [
+        "850",
+        0
+      ],
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "1482",
+        0
+      ],
+      "positive": [
+        "1199",
+        0
+      ],
+      "negative": [
+        "1199",
+        0
+      ],
+      "latent_image": [
+        "200",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "1605": {
+    "inputs": {
+      "samples": [
+        "1604",
+        0
+      ],
+      "vae": [
+        "360",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "1607": {
+    "inputs": {
+      "lora_name": "next-scene_lora-v2-3000.safetensors",
+      "strength_model": 0.9,
+      "model": [
+        "1482",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "1610": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "1611",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "1611": {
+    "inputs": {
+      "image": "生成未来末世城市图片 (1).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "IMAGE 3"
+    }
+  },
+  "1613": {
+    "inputs": {
+      "filename_prefix": [
+        "1819",
+        0
+      ],
+      "images": [
+        "1627",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "1619": {
+    "inputs": {
+      "width": [
+        "1298",
+        0
+      ],
+      "height": [
+        "1299",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "空Latent图像（SD3）"
+    }
+  },
+  "1624": {
+    "inputs": {
+      "value": 1034973049061648
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "1625": {
+    "inputs": {
+      "prompt": "Next scene:  男人受伤，女人扶着男人",
+      "clip": [
+        "1998",
+        0
+      ],
+      "vae": [
+        "360",
+        0
+      ],
+      "image1": [
+        "1605",
+        0
+      ],
+      "image2": [
+        "1515",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "文本编码（QwenImageEditPlus）"
+    }
+  },
+  "1627": {
+    "inputs": {
+      "samples": [
+        "1629",
+        0
+      ],
+      "vae": [
+        "360",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "1628": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1627",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "1629": {
+    "inputs": {
+      "seed": [
+        "1624",
+        0
+      ],
+      "steps": [
+        "844",
+        0
+      ],
+      "cfg": [
+        "850",
+        0
+      ],
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "1607",
+        0
+      ],
+      "positive": [
+        "1625",
+        0
+      ],
+      "negative": [
+        "1625",
+        0
+      ],
+      "latent_image": [
+        "1619",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "1704": {
+    "inputs": {
+      "images": [
+        "1562",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "1705": {
+    "inputs": {
+      "images": [
+        "1548",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "1815": {
+    "inputs": {
+      "value": "SceneName"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "SCENE-NAME"
+    }
+  },
+  "1818": {
+    "inputs": {
+      "inputcount": 2,
+      "delimiter": "/",
+      "return_list": false,
+      "Update inputs": null,
+      "string_1": [
+        "1815",
+        0
+      ],
+      "string_2": [
+        "1815",
+        0
+      ]
+    },
+    "class_type": "JoinStringMulti",
+    "_meta": {
+      "title": "Join String Multi"
+    }
+  },
+  "1819": {
+    "inputs": {
+      "inputcount": 2,
+      "delimiter": "/",
+      "return_list": false,
+      "Update inputs": null,
+      "string_1": [
+        "1815",
+        0
+      ],
+      "string_2": [
+        "1815",
+        0
+      ]
+    },
+    "class_type": "JoinStringMulti",
+    "_meta": {
+      "title": "Join String Multi"
+    }
+  },
+  "1989": {
+    "inputs": {
+      "drawing_version": 1782388563309,
+      "crop_left": 2175,
+      "crop_right": 1433,
+      "crop_top": 378,
+      "crop_bottom": 371,
+      "crop_width": 488,
+      "crop_height": 275,
+      "last_width": 4096,
+      "last_height": 1024,
+      "Snap to": "none",
+      "Aspect Ratio": "16:9",
+      "Aspect Ratio Lock": true,
+      "Set Ratio from Crop": "set_ratio",
+      "Force Refresh": "refresh",
+      "Hide Info Text": null,
+      "Box Color": "Lime",
+      "Reset Crop": "reset",
+      "image": [
+        "1562",
+        0
+      ]
+    },
+    "class_type": "OlmDragCrop",
+    "_meta": {
+      "title": "Olm Drag Crop"
+    }
+  },
+  "1997": {
+    "inputs": {
+      "unet_name": "Qwen-Image-Edit-2509-Q5_0.gguf",
+      "device": "cuda:1"
+    },
+    "class_type": "UnetLoaderGGUFMultiGPU",
+    "_meta": {
+      "title": "UnetLoaderGGUFMultiGPU"
+    }
+  },
+  "1998": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "cuda:1"
+    },
+    "class_type": "CLIPLoaderMultiGPU",
+    "_meta": {
+      "title": "CLIPLoaderMultiGPU"
+    }
+  }
+}

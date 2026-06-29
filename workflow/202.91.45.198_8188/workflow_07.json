@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 514006424710624,
+      "seed": 437278441986981,
       "steps": 20,
       "cfg": 2.5,
       "sampler_name": "euler",
@@ -49,9 +49,9 @@
     "inputs": {
       "width": 848,
       "height": 1232,
-      "video_frames": 14,
+      "video_frames": 16,
       "motion_bucket_id": 127,
-      "fps": 6,
+      "fps": 10,
       "augmentation_level": 0.0,
       "clip_vision": [
         "15",
@@ -95,7 +95,7 @@
   },
   "23": {
     "inputs": {
-      "image": "ComfyUI_00015_ (1).png"
+      "image": "ComfyUI_00242_.png"
     },
     "class_type": "LoadImage",
     "_meta": {

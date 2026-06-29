@@ -1,131 +1,327 @@
 {
-  "1": {
-    "class_type": "UNETLoader",
+  "29": {
     "inputs": {
-      "unet_name": "anima-base-v1.0.safetensors",
-      "weight_dtype": "default"
-    },
-    "_meta": {
-      "title": "Load Diffusion Model"
-    }
-  },
-  "2": {
-    "class_type": "CLIPLoader",
-    "inputs": {
-      "clip_name": "qwen_3_06b_base.safetensors",
-      "type": "qwen_image",
-      "device": "default"
-    },
-    "_meta": {
-      "title": "Load CLIP"
-    }
-  },
-  "3": {
-    "class_type": "VAELoader",
-    "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    },
-    "_meta": {
-      "title": "Load VAE"
-    }
-  },
-  "4": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "text": "2girls",
-      "clip": [
-        "2",
+      "filename_prefix": "Krea2_turbo",
+      "images": [
+        "30:8",
         0
       ]
     },
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
+      "title": "保存图像"
     }
   },
-  "5": {
-    "class_type": "CLIPTextEncode",
+  "49": {
     "inputs": {
-      "text": "low quality, blurry, bad anatomy",
-      "clip": [
-        "2",
-        0
-      ]
+      "aspect_ratio": "1:1 (Square)",
+      "megapixels": 1.0,
+      "multiple": 8
     },
+    "class_type": "ResolutionSelector",
     "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
+      "title": "分辨率选择器"
     }
   },
-  "6": {
-    "class_type": "EmptyLatentImage",
+  "30:6": {
     "inputs": {
-      "width": 768,
-      "height": 768,
-      "batch_size": 1
-    },
-    "_meta": {
-      "title": "Empty Latent Image"
-    }
-  },
-  "7": {
-    "class_type": "KSampler",
-    "inputs": {
-      "model": [
-        "1",
+      "text": [
+        "30:28",
         0
       ],
-      "seed": 987935300,
-      "steps": 20,
-      "cfg": 7.0,
+      "clip": [
+        "30:11",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "30:5": {
+    "inputs": {
+      "width": [
+        "49",
+        0
+      ],
+      "height": [
+        "49",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "30:3": {
+    "inputs": {
+      "seed": 975826933476228,
+      "steps": 8,
+      "cfg": 1.0,
       "sampler_name": "euler",
-      "scheduler": "normal",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "30:22",
+        0
+      ],
       "positive": [
-        "4",
+        "30:6",
         0
       ],
       "negative": [
-        "5",
+        "30:13",
         0
       ],
       "latent_image": [
-        "6",
-        0
-      ],
-      "denoise": 1.0
-    },
-    "_meta": {
-      "title": "KSampler"
-    }
-  },
-  "8": {
-    "class_type": "VAEDecodeTiled",
-    "inputs": {
-      "samples": [
-        "7",
-        0
-      ],
-      "vae": [
-        "3",
-        0
-      ],
-      "tile_size": 512,
-      "overlap": 64,
-      "temporal_size": 64,
-      "temporal_overlap": 8
-    },
-    "_meta": {
-      "title": "VAE Decode (Tiled)"
-    }
-  },
-  "9": {
-    "class_type": "PreviewImage",
-    "inputs": {
-      "images": [
-        "8",
+        "30:5",
         0
       ]
     },
+    "class_type": "KSampler",
     "_meta": {
-      "title": "Preview Image"
+      "title": "K采样器"
+    }
+  },
+  "30:8": {
+    "inputs": {
+      "samples": [
+        "30:3",
+        0
+      ],
+      "vae": [
+        "30:12",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "30:10": {
+    "inputs": {
+      "unet_name": "krea2_turbo_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "30:11": {
+    "inputs": {
+      "clip_name": "qwen3vl_4b_fp8_scaled.safetensors",
+      "type": "krea2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "30:12": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "30:13": {
+    "inputs": {
+      "conditioning": [
+        "30:6",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "30:15": {
+    "inputs": {
+      "lora_name": "krea2_darkbrush.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "30:10",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "30:16": {
+    "inputs": {
+      "prompt": [
+        "30:17",
+        0
+      ],
+      "max_length": 512,
+      "sampling_mode": "on",
+      "sampling_mode.temperature": 0.7,
+      "sampling_mode.top_k": 64,
+      "sampling_mode.top_p": 0.95,
+      "sampling_mode.min_p": 0.05,
+      "sampling_mode.repetition_penalty": 1.05,
+      "sampling_mode.seed": 0,
+      "sampling_mode.presence_penalty": 0.0,
+      "thinking": false,
+      "use_default_template": true,
+      "clip": [
+        "30:11",
+        0
+      ]
+    },
+    "class_type": "TextGenerate",
+    "_meta": {
+      "title": "TextGenerate"
+    }
+  },
+  "30:17": {
+    "inputs": {
+      "string_a": [
+        "30:18",
+        0
+      ],
+      "string_b": [
+        "30:19",
+        0
+      ],
+      "delimiter": ""
+    },
+    "class_type": "StringConcatenate",
+    "_meta": {
+      "title": "连接"
+    }
+  },
+  "30:18": {
+    "inputs": {
+      "value": "You are an expert prompt engineer for text-to-image models. Your task is to expand the user's prompt into a highly effective image-generation prompt.\n\nThink step by step about the request before writing the answer:\n- What is the subject and mood?\n- What visual styles, mediums, and lighting options would fit? Consider two or three alternatives and pick the one that best serves the caption.\n- What composition, framing, and grounded details will help the text-to-image model?\n\nThen output a single expanded prompt paragraph.\n\nFollow these rules strictly:\n1. **Faithfulness First:** Preserve all original subjects, actions, colors, and spatial relationships. Do not add new objects, props, characters, or animals unless the user clearly implies them.\n2. **Practical T2I Structure:** Write a prompt that a text-to-image model can parse cleanly. Group subjects with their own attributes and actions. Use grounded phrasing for poses, interactions, and spatial layout.\n3. **Style Planning Stays Internal:** Use your internal reasoning to choose style, medium, framing, and lighting. Do not emit planning tags or wrappers in the visible answer body.\n4. **Text Rendering:** If the user requests visible text, quotes, labels, or typography, specify the exact text clearly and wrap requested words in quotes.\n5. **Avoid Over-Specification:** Do not invent highly specific clothing, colors, materials, or scene details unless the input supports them.\n6. **Structure:** Write one cohesive paragraph after the thinking block. No bullets, JSON, or markdown.\n7. **Respect Existing Detail:** If the user's prompt is already detailed, lightly polish and finalize rather than heavily expanding — preserve their phrasing and direction.\n8. **Respect the Human Form:** Treat depictions of people with dignity. Assume clothing covers genitals and intimate anatomy.\n9. **Preserve User Medium:** When the user explicitly requests a medium (e.g. \"photo of\", \"photograph of\", \"illustration of\", \"painting of\", \"sketch of\", \"3D render of\"), honor it. Do not pivot to a different medium to avoid difficulty — match the user's stated intent.\n\nUser's Input:\n\n"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (System Prompt)"
+    }
+  },
+  "30:19": {
+    "inputs": {
+      "value": "Overview：The image is a 2D anime-style indoor illustration showing a single pink-and-lavender-haired girl sitting on a bed in a dim bedroom. Soft cool white light streams in through right-side window blinds, forming striped highlights across the scene. Dust-like particles float in the air, enhancing a dreamy atmosphere. The girl wears a frilly white-and-purple nightdress and a cat-ear sleep mask on her head. The composition feels quiet, slightly sleepy, and softly surreal, with a yellow chick plush toy placed in the right foreground adding a cozy domestic touch.\nCharacter Details：Character Type: Anime-style girl illustration character\nCount / Role: Single character, the only human subject, seated on a bed as the central focus\nBody / Proportion: Typical anime proportions with a slim body and a head-to-body ratio around 1:6. She sits with bent legs on the bed, slightly leaning forward\nFace Features: Small soft face with rounded jawline; large stylized eyes dominate facial structure; minimal nose detail; small simplified mouth line typical of anime rendering\nHair: Long pastel pink hair with soft lavender gradient, voluminous and slightly wavy; loose bangs and side strands; long locks spread over shoulders and onto the bed, creating flowing shapes across the fabric\nEyes: Large round light-blue eyes with clear highlights; calm, slightly unfocused gaze suggesting sleepiness or daze\nSkin / Makeup: Fair light skin with smooth shading; minimal makeup with subtle blush on cheeks\nExpression / Temperament: Calm, slightly dazed and sleepy expression; relaxed mouth; soft, quiet, dreamy teenage mood\nOutfit: White off-shoulder frilly nightdress with layered ruffles and purple/pink bow accents; delicate lace-like trim; paired with purple thigh-high socks showing elastic folds and knit texture\nAccessories / Props: Cat-ear sleep mask worn on head (white base with soft purple markings); small hair clip; yellow chick plush toy placed in the right foreground on the bed\nPose / Action: Sitting on the bed slightly left of center, leaning forward with both hands supporting her weight on the mattress; legs bent and tucked in front; gaze directed slightly forward-left in a blank, sleepy stare\nIdentity Anchors: pastel pink-to-lavender long hair spread on bed, cat-ear sleep mask, large blue eyes, white and purple frilly nightdress, purple thigh-high socks, yellow chick plush toy\nSubjects：Main subject: pink-lavender haired girl sitting on bed; Secondary subject: yellow chick plush toy in the right foreground; Environment: bed, pillows, dim bedroom interior, right-side window blinds; Atmospheric elements: floating dust particles and light specks\nDetails：Soft fabric bedsheet with visible wrinkles and pressure folds; Hair strands spread across bed surface and over clothing; Sleep mask made of soft fabric with cat-ear shape structure; Dress features layered ruffles with purple edging; Socks show knitted texture and stretched folds around knees; Plush toy has smooth rounded stuffed texture; Right-side blinds cast vertical light beams across scene; Faint wall frame or decoration visible in background shadows; Floating particles visible in air enhancing depth; Strong contrast between lit and shadowed areas emphasizes subject\nComposition / Camera：Medium-close composition from a slightly low angle, as if viewed from bed level. The subject is placed slightly left of center and dominates the frame. The bed creates strong perspective depth into the background. The plush toy on the right foreground balances the composition visually. The character’s head sits in the upper half of the frame, with dark negative space in the background enhancing focus.\nStyle：2D anime illustration with soft cel shading combined with gentle painterly rendering. Clean but softened linework, smooth gradient transitions on skin and fabric, and a dreamy shallow depth-of-field effect\nColor / Lighting：Low-light indoor scene dominated by cool gray-blue ambient tones. Cool white directional light enters from the right window blinds, creating striped highlights and soft shadows across hair, face, and bedding. Color palette centers on pastel pink, lavender, blue, with a warm yellow accent from the plush toy\nBackground / Mood：Dim bedroom interior with subtle furniture silhouettes. Likely night or early dawn lighting. Soft haze and floating particles create a calm, dreamlike atmosphere with shallow focus"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (User Prompt)"
+    }
+  },
+  "30:20": {
+    "inputs": {
+      "source": [
+        "30:21",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "预览任意"
+    }
+  },
+  "30:21": {
+    "inputs": {
+      "switch": [
+        "30:24",
+        0
+      ],
+      "on_false": [
+        "30:19",
+        0
+      ],
+      "on_true": [
+        "30:16",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "切换"
+    }
+  },
+  "30:22": {
+    "inputs": {
+      "switch": [
+        "30:23",
+        0
+      ],
+      "on_false": [
+        "30:10",
+        0
+      ],
+      "on_true": [
+        "30:15",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "Switch (Model)"
+    }
+  },
+  "30:23": {
+    "inputs": {
+      "value": false
+    },
+    "class_type": "PrimitiveBoolean",
+    "_meta": {
+      "title": "Boolean (Enable LoRA?)"
+    }
+  },
+  "30:24": {
+    "inputs": {
+      "value": true
+    },
+    "class_type": "PrimitiveBoolean",
+    "_meta": {
+      "title": "Boolean (Refine Prompt?)"
+    }
+  },
+  "30:27": {
+    "inputs": {
+      "string_a": [
+        "30:20",
+        0
+      ],
+      "string_b": "muted minimalist sketch style",
+      "delimiter": ", "
+    },
+    "class_type": "StringConcatenate",
+    "_meta": {
+      "title": "Concatenate Text (LoRA Trigger Word)"
+    }
+  },
+  "30:28": {
+    "inputs": {
+      "switch": [
+        "30:23",
+        0
+      ],
+      "on_false": [
+        "30:20",
+        0
+      ],
+      "on_true": [
+        "30:27",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "切换"
     }
   }
 }

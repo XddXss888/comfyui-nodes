@@ -1,16 +1,16 @@
 # 46.225.241.162:9090
 
 **GPU**: RTX PRO 6000 BB | **显存**: 95 GB | **空闲**: 48 GB
-**内存**: 251 GB (空闲 145 GB)
+**内存**: 251 GB (空闲 168 GB)
 **版本**: 0.22.0
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-28 08:07:49
-**历史总数**: 332 | **成功**: 10
+**扫描时间**: 2026-06-29 08:07:38
+**历史总数**: 36 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `c3c44dfc-2a60-401e-9127-1ae41c421849`
+- **Prompt ID**: `c35c6b9d-9c49-489b-b57c-bcb615d322b1`
 - **类型**: 图生图
 - **节点数**: 21
 - **模型** (3):
@@ -18,10 +18,10 @@
   - flux2-vae.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] can you removed the frame
+  - [CLIPTextEncode::text] Apakah ada detail spesifik mengenai nama-nama hak paten yang dimiliki Tjandra Limanjaya?
 
 ### 2. workflow_02.json
-- **Prompt ID**: `1b85f5bf-259b-461d-9d43-2db9d22e2809`
+- **Prompt ID**: `95ce728e-877f-4e2f-964c-9c8601c3390d`
 - **类型**: 图生图
 - **节点数**: 21
 - **模型** (3):
@@ -29,10 +29,10 @@
   - flux2-vae.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] can you make the wallpaper in size 3000 x 3000
+  - [CLIPTextEncode::text] Apa profesi dan latar belakang pendidikan Ria Putri Andiningsih?
 
 ### 3. workflow_03.json
-- **Prompt ID**: `cca75719-4def-4617-970d-83d0120f54f3`
+- **Prompt ID**: `c01da7d6-f06e-4e78-be0b-aad127f0d733`
 - **类型**: 文生图
 - **节点数**: 15
 - **模型** (3):
@@ -40,10 +40,10 @@
   - full_encoder_small_decoder.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] A sleek, futuristic fighter jet soaring through clear blue skies at dawn. The aircraft features sharp angular wings with stealth geometry, a delta wing configuration, and twin vertical stabilizers ang
+  - [CLIPTextEncode::text] A formal portrait of Tjandra Limanjaya, an Indonesian businessman, seated in a well-appointed office or conference room with warm ambient lighting. He is wearing a dark-colored suit with a crisp white
 
 ### 4. workflow_04.json
-- **Prompt ID**: `5eb939f8-ad38-43aa-bad0-0bc17627d742`
+- **Prompt ID**: `07248f07-3d58-4444-a2c8-cce908317f45`
 - **类型**: 图生图
 - **节点数**: 21
 - **模型** (3):
@@ -51,10 +51,10 @@
   - flux2-vae.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] can you make another wallpaper with flowers, mountains and birds themed
+  - [CLIPTextEncode::text] Apakah ada perkembangan terbaru dari kasus suap IUP di Kalimantan Timur setelah Tjandra diperiksa oleh KPK?
 
 ### 5. workflow_05.json
-- **Prompt ID**: `cd5fa6ec-d227-45cd-8d66-4aea7b5f8f23`
+- **Prompt ID**: `dedafdc7-d67a-4a32-a5a9-bca20c76622b`
 - **类型**: 图生图
 - **节点数**: 21
 - **模型** (3):
@@ -62,10 +62,10 @@
   - flux2-vae.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] give me and images a room with this wallpaper
+  - [CLIPTextEncode::text] Apa kesimpulan akhir dari pemeriksaan Tjandra Limanjaya oleh KPK apakah beliau ditetapkan sebagai tersangka atau tetap sebagai saksi?
 
 ### 6. workflow_06.json
-- **Prompt ID**: `d9feffe6-e713-487b-8bb8-24fa2b26d7f2`
+- **Prompt ID**: `fb2eb9ec-59bc-4feb-af4f-c3eb0e53cb76`
 - **类型**: 图生图
 - **节点数**: 21
 - **模型** (3):
@@ -73,10 +73,10 @@
   - flux2-vae.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] give me an images of a room with this wallpaper
+  - [CLIPTextEncode::text] Apakah ada kemungkinan Tjandra Limanjaya ditetapkan sebagai tersangka di kemudian hari setelah proses penyidikan kasus IUP selesai?
 
 ### 7. workflow_07.json
-- **Prompt ID**: `b06fa0f3-8dc3-4063-b01a-ba1df7a06fb3`
+- **Prompt ID**: `17070e9e-5c69-4089-bb91-30b3f373671d`
 - **类型**: 图生图
 - **节点数**: 21
 - **模型** (3):
@@ -84,10 +84,10 @@
   - flux2-vae.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Apa saja faktor utama yang membuat desain pesawat tempur dianggap canggih?
+  - [CLIPTextEncode::text] Apakah kasus suap IUP di Kaltim ini masih terkait dengan kasus korupsi lainnya yang sedang berlangsung?
 
 ### 8. workflow_08.json
-- **Prompt ID**: `62a4b3b9-7286-4e71-aec4-b20961abf285`
+- **Prompt ID**: `a3ef9d2e-9830-45dc-be45-dccb6775901b`
 - **类型**: 图生图
 - **节点数**: 21
 - **模型** (3):
@@ -95,10 +95,10 @@
   - flux2-vae.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Apa keunggulan J-20 China dibandingkan pesawat generasi ke-5 lainnya?
+  - [CLIPTextEncode::text] coba ubah foto ini menjadi berbagai stiker lucu untuk chat
 
 ### 9. workflow_09.json
-- **Prompt ID**: `dc87c266-1581-4542-9b07-720c9062f5e9`
+- **Prompt ID**: `ef731410-cfe6-4df9-8f65-0187bb1f956e`
 - **类型**: 文生图
 - **节点数**: 15
 - **模型** (3):
@@ -106,10 +106,10 @@
   - full_encoder_small_decoder.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] A cute cat with soft fur is sitting comfortably while wearing round reading glasses, intently focused on a thick open book in front of it. The setting is a warm, cozy library with tall wooden shelves 
+  - [CLIPTextEncode::text] A clinical medical illustration depicting a uterus with leiomyoma (uterine fibroids) in sagittal cross-section view. The image shows an enlarged, pear-shaped uterus positioned centrally within the pel
 
 ### 10. workflow_10.json
-- **Prompt ID**: `7f5de5a8-1c5d-460b-a72f-7c67ed23b9ba`
+- **Prompt ID**: `411da09d-97c0-4604-b1cd-fe03920c9aa9`
 - **类型**: 文生图
 - **节点数**: 15
 - **模型** (3):
@@ -117,4 +117,4 @@
   - full_encoder_small_decoder.safetensors
   - qwen_3_8b_fp8mixed.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Seekor kucing lucu dengan bulu halus berwarna cokelat keemasan duduk santai di atas kursi kayu kecil di tengah perpustakaan. Kucing tersebut memakai kacamata bulat berbingkai tipis berwarna perak yang
+  - [CLIPTextEncode::text] A detailed medical illustration showing an ovary with ovarian cysts, rendered in anatomical accuracy against a soft clinical background. The image depicts a cross-section of the ovary revealing multip

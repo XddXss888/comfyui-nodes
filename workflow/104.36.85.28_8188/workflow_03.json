@@ -37,7 +37,7 @@
   },
   "7": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl beach,swimsuit,bikini,barefoot,blonde hair,blush,smile,earrings,choker,bracelet,navel,piercing,ear piercing,floral print,(Sexe à la plage:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl ,(if you kiss me with tongue and give me a blowjob i might delete it:1.0),(nude:0.8)",
       "clip": [
         "1",
         1
@@ -63,7 +63,7 @@
   },
   "9": {
     "inputs": {
-      "seed": 247696008,
+      "seed": 1641748487,
       "steps": 20,
       "cfg": 6.5,
       "sampler_name": "dpmpp_sde",
@@ -133,7 +133,7 @@
   },
   "14": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20257/5/b09a5efcb43f421f8deea382ef328c3a.png",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202511/28/1a93a509234841dd8bbfa0d7f31e99e7.png",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

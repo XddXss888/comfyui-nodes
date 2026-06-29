@@ -1,35 +1,21 @@
 {
   "1": {
-    "class_type": "UnetLoaderGGUF",
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "unet_name": "sd3.5_large_turbo-Q8_0.gguf"
+      "ckpt_name": "flux1-schnell.safetensors"
     }
   },
   "2": {
-    "class_type": "DualCLIPLoader",
-    "inputs": {
-      "clip_name1": "t5xxl_fp8_e4m3fn.safetensors",
-      "clip_name2": "clip_l.safetensors",
-      "type": "sd3"
-    }
-  },
-  "3": {
-    "class_type": "VAELoader",
-    "inputs": {
-      "vae_name": "sd3_vae.safetensors"
-    }
-  },
-  "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Ancient Chinese martial arts scene: protagonist with fierce expression, sword blade glinting near cheek, rain-soaked night, dramatic lightning flash, cinematic lighting, intricate hanfu details, 8K ultra-detailed CG rendering, masterpiece, best quality, professional digital painting, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "Ancient Chinese martial arts scene: warrior with bloodied cheek, staring at a gleaming sword blade, rain-soaked night with dramatic lightning strikes, cinematic lighting, intricate armor and fabric details, 8K ultra-detailed CG masterpiece, best quality, professional digital painting, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
-        "2",
-        0
+        "1",
+        1
       ]
     }
   },
-  "5": {
+  "3": {
     "class_type": "EmptyLatentImage",
     "inputs": {
       "width": 1024,
@@ -37,71 +23,71 @@
       "batch_size": 1
     }
   },
-  "6": {
+  "4": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 1799538295,
+      "seed": 335185826,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "sgm_uniform",
       "denoise": 1.0,
       "model": [
-        "12",
+        "10",
         0
       ],
       "positive": [
-        "4",
+        "2",
         0
       ],
       "negative": [
-        "7",
+        "5",
         0
       ],
       "latent_image": [
-        "5",
-        0
-      ]
-    }
-  },
-  "7": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "text": "",
-      "clip": [
-        "2",
-        0
-      ]
-    }
-  },
-  "8": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "samples": [
-        "6",
-        0
-      ],
-      "vae": [
         "3",
         0
       ]
     }
   },
-  "9": {
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "6": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "4",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "7": {
     "class_type": "SaveImage",
     "inputs": {
       "filename_prefix": "DOOOOR_1K",
       "images": [
-        "8",
+        "6",
         0
       ]
     }
   },
-  "10": {
+  "8": {
     "class_type": "ImageScale",
     "inputs": {
       "image": [
-        "8",
+        "6",
         0
       ],
       "width": 400,
@@ -110,17 +96,17 @@
       "upscale_method": "nearest-exact"
     }
   },
-  "11": {
+  "9": {
     "class_type": "SaveImage",
     "inputs": {
       "filename_prefix": "DOOOOR_1K_TH",
       "images": [
-        "10",
+        "8",
         0
       ]
     }
   },
-  "12": {
+  "10": {
     "class_type": "LoraLoader",
     "inputs": {
       "model": [
@@ -128,10 +114,10 @@
         0
       ],
       "clip": [
-        "2",
-        0
+        "1",
+        1
       ],
-      "lora_name": "bfs_head_v1_flux-klein_9b_step3500_rank128.safetensors",
+      "lora_name": "动漫转真人.safetensors",
       "strength_model": 0.8,
       "strength_clip": 0.8
     }

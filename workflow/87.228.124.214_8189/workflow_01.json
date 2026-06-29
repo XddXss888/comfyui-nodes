@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "l34n0r, chubby woman, A woman in delicate lingerie poses confidently in a photo studio, standing with one hand resting on her hip and her body angled slightly toward the camera, soft professional lighting gently illuminating her form against a simple studio backdrop, medium close-up framing with a warm yet composed expression and direct gaze, clean and stable composition.",
+      "text": "e1st_asn, a beautiful woman, soft lighting, realistic photography",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "z-3l34n0r.safetensors",
-      "strength_model": 0.78,
-      "strength_clip": 0.8,
+      "lora_name": "nano_Korean.safetensors",
+      "strength_model": 0.81,
+      "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -133,11 +133,11 @@
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 699584008911822,
+      "seed": 585375340973065,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

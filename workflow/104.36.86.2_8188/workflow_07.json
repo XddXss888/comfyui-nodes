@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 127578073,
+      "seed": 1895131283,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,flower,plant,shorts,white shorts,standing,arm at side,hand up,fingernails,(sind wir allein im Bad:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,Leg photo, sitting, red panties,(Leg photo:1.0),(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20249/6/d620e865a25942fdae6e5b03a87b4244.png",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202412/21/8146416c329e433bbede053cbc563100.webp",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

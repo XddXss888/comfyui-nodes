@@ -20,15 +20,25 @@
       "vae_name": "ae.safetensors"
     }
   },
-  "4": {
+  "11": {
     "class_type": "LoraLoaderModelOnly",
     "inputs": {
       "model": [
         "1",
         0
       ],
-      "lora_name": "flux_korean_girl.safetensors",
-      "strength_model": 0.85
+      "lora_name": "sakura_korean_flux.safetensors",
+      "strength_model": 0.82
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "A stunning Korean idol-style woman standing in a traditional hanok courtyard with wooden pillars and curved tiled roof. Natural black hair with blue sheen, long and flowing past her shoulders, wispy bangs framing her baby face with aegyo-sal under-eye charm. She wears a fitted black leather jacket over a pleated burgundy mini skirt with heeled boots. Warm approachable smile, one hand resting on a wooden column, weight shifted to one hip in a relaxed confident pose. Shot on 50mm lens, ground-level upward angle, cowboy shot framing from thighs up. Cross lighting from two sides casting dramatic yet flattering shadows. Golden afternoon light filtering through the courtyard. Flawless porcelain skin, dewy makeup, soft pink lips. Photorealistic, editorial fashion quality."
     }
   },
   "5": {
@@ -38,42 +48,32 @@
         "2",
         0
       ],
-      "text": "A stunning Korean woman with a natural black bob cut shimmering with blue sheen, diamond face shape and defined arched brows, caught in a mirror reflection at a rooftop cafe during golden hour. She wears an elegant black dress, her bright cheerful smile radiating warmth as amber light wraps around her. Shot on 135mm telephoto, compressed background of blurred city skyline bathed in peach and gold. Wide environmental portrait, she appears small within the expansive frame of glass and sky. Window light creates a perfect Rembrandt triangle shadow on her cheek. Flawless porcelain skin, dewy rose-tinted makeup, lashes catching the fading sun. The reflection doubles the dreamy atmosphere, cinematic and ethereal."
+      "text": "cropped legs, cropped feet, cropped shoes, text, watermark, logo"
     }
   },
   "6": {
     "class_type": "FluxGuidance",
     "inputs": {
       "conditioning": [
-        "5",
+        "4",
         0
       ],
-      "guidance": 3.5
+      "guidance": 3.7
     }
   },
   "7": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": ""
-    }
-  },
-  "8": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "width": 896,
-      "height": 1280,
+      "width": 1024,
+      "height": 1536,
       "batch_size": 1
     }
   },
-  "9": {
+  "8": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "4",
+        "11",
         0
       ],
       "positive": [
@@ -81,27 +81,27 @@
         0
       ],
       "negative": [
-        "7",
+        "5",
         0
       ],
       "latent_image": [
-        "8",
+        "7",
         0
       ],
-      "seed": 883174545,
+      "seed": 1378253910,
       "control_after_generate": "fixed",
-      "steps": 22,
+      "steps": 20,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0
     }
   },
-  "10": {
+  "9": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "9",
+        "8",
         0
       ],
       "vae": [
@@ -110,14 +110,14 @@
       ]
     }
   },
-  "11": {
+  "10": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "10",
+        "9",
         0
       ],
-      "filename_prefix": "portrait_883174545"
+      "filename_prefix": "portrait_1378253910"
     }
   }
 }

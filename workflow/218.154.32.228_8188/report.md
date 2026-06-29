@@ -4,13 +4,13 @@
 **内存**: 31 GB (空闲 10 GB)
 **版本**: 0.19.0
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-28 08:07:53
-**历史总数**: 668 | **成功**: 10
+**扫描时间**: 2026-06-29 08:07:40
+**历史总数**: 96 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `7674785a-87d0-420b-a5b0-a5c75ddef4b9`
+- **Prompt ID**: `78b008ab-2a4d-4d1c-9d19-6f6d57b4df8c`
 - **类型**: 文生视频
 - **节点数**: 23
 - **模型** (3):
@@ -19,7 +19,7 @@
   - waiIllustriousSDXL_v160.safetensors
 
 ### 2. workflow_02.json
-- **Prompt ID**: `b8fa021a-86ad-40ec-830b-c475b62ce946`
+- **Prompt ID**: `95bdb473-a404-492b-9917-ac41037123df`
 - **类型**: 文生视频
 - **节点数**: 23
 - **模型** (3):
@@ -28,7 +28,7 @@
   - waiIllustriousSDXL_v160.safetensors
 
 ### 3. workflow_03.json
-- **Prompt ID**: `837696b7-000e-4c75-a3f7-437908219e0f`
+- **Prompt ID**: `3f060ef0-37fc-4b0e-9320-d72c251eb0a6`
 - **类型**: 文生视频
 - **节点数**: 23
 - **模型** (3):
@@ -37,7 +37,7 @@
   - waiIllustriousSDXL_v160.safetensors
 
 ### 4. workflow_04.json
-- **Prompt ID**: `db02432b-e57a-45a3-80bf-dd2fc89dfc57`
+- **Prompt ID**: `5795c54b-03a8-4bdc-b6d3-5ba627d889ee`
 - **类型**: 文生视频
 - **节点数**: 23
 - **模型** (3):
@@ -46,7 +46,7 @@
   - waiIllustriousSDXL_v160.safetensors
 
 ### 5. workflow_05.json
-- **Prompt ID**: `716e7ad9-78f8-4264-aab6-bce4eb09d1a3`
+- **Prompt ID**: `4879c554-8e27-45e0-8c49-71dfffacfcd5`
 - **类型**: 文生视频
 - **节点数**: 23
 - **模型** (3):
@@ -55,7 +55,7 @@
   - waiIllustriousSDXL_v160.safetensors
 
 ### 6. workflow_06.json
-- **Prompt ID**: `eb3bcd45-9a70-41f8-8489-e00251afa5f5`
+- **Prompt ID**: `c7c9f7df-f74a-48e3-b889-d6fb75a8fd66`
 - **类型**: 文生视频
 - **节点数**: 23
 - **模型** (3):
@@ -64,7 +64,7 @@
   - waiIllustriousSDXL_v160.safetensors
 
 ### 7. workflow_07.json
-- **Prompt ID**: `50acf87d-1cc5-4134-9098-5d2812c88c29`
+- **Prompt ID**: `d6c432ad-47cd-4258-9482-568e6bc4b5cd`
 - **类型**: 文生视频
 - **节点数**: 23
 - **模型** (3):
@@ -73,7 +73,7 @@
   - waiIllustriousSDXL_v160.safetensors
 
 ### 8. workflow_08.json
-- **Prompt ID**: `45e6d9b8-6ed7-46c6-8360-4904b1d15d90`
+- **Prompt ID**: `9483a591-11a1-45f0-a989-f486a4590ddf`
 - **类型**: 文生视频
 - **节点数**: 23
 - **模型** (3):
@@ -82,7 +82,7 @@
   - waiIllustriousSDXL_v160.safetensors
 
 ### 9. workflow_09.json
-- **Prompt ID**: `4e7f1337-418e-42f7-b782-c4932dff44ee`
+- **Prompt ID**: `6203083a-9d75-4156-a2e9-fad65b42b3f8`
 - **类型**: 文生视频
 - **节点数**: 23
 - **模型** (3):
@@ -91,7 +91,7 @@
   - waiIllustriousSDXL_v160.safetensors
 
 ### 10. workflow_10.json
-- **Prompt ID**: `62dfd602-3306-4795-bd62-14f23fc871db`
+- **Prompt ID**: `bf80a77c-282a-48f2-93a0-dd9aeb9f6b71`
 - **类型**: 文生视频
 - **节点数**: 23
 - **模型** (3):

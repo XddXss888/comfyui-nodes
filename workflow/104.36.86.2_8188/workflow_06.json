@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 1677916695,
+      "seed": 1351610656,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,bathing,water,navel,shorts,teeth,midriff,hand up,grin,fingernails,plant,arm at side,(Foto während des Bades:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,looking at viewer,navel,jewelry,sitting,window,chair,realistic,nose,kitchen,mole on stomach,beach,sex,(Beach sex:1.0),(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20249/6/d620e865a25942fdae6e5b03a87b4244.png",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2024/12/03/1733249473602.jpg",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

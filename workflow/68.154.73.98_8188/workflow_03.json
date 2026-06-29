@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_142895e9b9994d8ebb5c0c0d092aea31.png"
+      "image": "ref_5a5b235cf3a44eaeb8e48209c75fefdc.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "faire que sont derriere soit gros",
+      "prompt": "清除女人前的雜物和檯面，女人開胸襯衫，露出乳溝。",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 673943905289966,
-      "steps": 4,
+      "seed": 268509784863118,
+      "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

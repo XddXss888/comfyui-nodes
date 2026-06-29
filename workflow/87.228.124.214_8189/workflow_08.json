@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "ameg2, A woman wrapped in a white towel stands near the shower area after swimming, warm humid atmosphere with soft steam around, she has a playful squinted expression and slight smirk while touching her own bicep with one hand, medium close-up framing, natural posture, clear visible arms and shoulders, simple tiled shower background, gentle warm lighting.",
+      "text": "elvaross, A female student sitting at a wooden desk in a cozy home study room, leaning slightly forward over an open notebook with math equations, her expression focused and thoughtful as she reviews her solutions, books and papers scattered around her, warm desk lamp lighting the scene, medium close-up framing from a slight side angle.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "ameg2_con_char.safetensors",
-      "strength_model": 0.9,
-      "strength_clip": 0.9,
+      "lora_name": "TGZW383YGE7RTN4ZTNPAM4FT50.safetensors",
+      "strength_model": 0.88,
+      "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.5,
+      "eta": 0.4,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
       "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 415093436776455,
+      "seed": 494111015108424,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

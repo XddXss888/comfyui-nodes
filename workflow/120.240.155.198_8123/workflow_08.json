@@ -1,8 +1,42 @@
 {
-  "1": {
-    "class_type": "VisualizeCUDAMemoryHistory",
+  "2": {
     "inputs": {
-      "snapshot_path": "/data/project/zj/ComfyUI-0.20.1/input/cuda_snap_1782473336.pkl"
+      "noise_seed": 876464169899335
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "3": {
+    "inputs": {
+      "preview_markdown": "❌ Port 22 is closed",
+      "preview_text": "❌ Port 22 is closed",
+      "previewMode": null,
+      "source": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
+    }
+  },
+  "9": {
+    "inputs": {
+      "expression": "import subprocess\n\n# Try to start SSH\nsubprocess.run(['service', 'ssh', 'start'], capture_output=True)\n\n# Check if it's running\nresult = subprocess.run(['pgrep', 'sshd'], capture_output=True)\nif result.stdout.strip():\n    out1 = \"✅ SSH started successfully\"\nelse:\n    out1 = \"❌ SSH failed to start. Installing...\"",
+      "input_count": 1,
+      "print_to_console": "False",
+      "update": null,
+      "in1": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "EvaluateMultiple1",
+    "_meta": {
+      "title": "EvaluateMultiple1"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "jimeng-2026-06-10-1991-优雅气质的美女，在森林里微笑着面对镜头，穿着白底写意晕染模糊粉白玫瑰真丝飘逸长裙....png"
+      "image": "input_d9c28f02b27c.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -12,7 +12,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "6",
+        "8",
         0
       ]
     },
@@ -21,76 +21,50 @@
       "title": "保存图像"
     }
   },
-  "3": {
+  "8": {
     "inputs": {
-      "image": "ip.png"
+      "aspect_ratio": "custom",
+      "proportional_width": 2622,
+      "proportional_height": 1772,
+      "fit": "crop",
+      "method": "bicubic",
+      "round_to_multiple": "None",
+      "scale_to_side": "width",
+      "scale_to_length": 2622,
+      "background_color": "#000000",
+      "image": [
+        "14",
+        0
+      ]
     },
-    "class_type": "LoadImage",
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
     "_meta": {
-      "title": "加载图像"
+      "title": "按宽高比缩放_V2"
     }
   },
-  "4": {
+  "14": {
     "inputs": {
-      "image": "大跳台.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "5": {
-    "inputs": {
-      "prompt": "2DQ版卡通风格的合影，参考图1中的主要人物，保持图2的泡泡小山IP角色造型不变，生成泡泡小山在图1人物旁边一起亲密合影的画面，中近景半身人像构图，人物Q版眼睛轮廓（不要豆豆眼），2DQ版卡通风格。背景是卡通风格的图3滑雪大跳台 ，彩色渐变的跳台清晰完整，白色钢结构支撑，清澈湖水倒映建筑，水鸭点缀其间，完全还原参考图3中的建筑造型。",
-      "model": "doubao-seedream-4-5-251128",
+      "prompt": "保持图中人物的一致性，生成他们和熊猫合影的画面，左右两侧有可爱的熊猫趴在他们肩头，背景是竹园风光。写真摄影风格，中景景别，轻微美颜，人像精修",
+      "model": "doubao-seedream-4-0-250828",
       "response_format": "url",
-      "resolution": "4K",
+      "resolution": "1K",
       "aspect_ratio": "Custom",
-      "width": 1184,
-      "height": 800,
-      "apikey": "a44228f5-f1b2-44e9-860a-d3c8eb5ac03e",
+      "width": 3416,
+      "height": 2304,
+      "apikey": "fe023f32-413c-41f8-a35d-694231e4c96a",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 1842775322,
+      "seed": 1966431764,
       "watermark": false,
       "stream": false,
       "image1": [
         "1",
-        0
-      ],
-      "image2": [
-        "3",
-        0
-      ],
-      "image3": [
-        "4",
         0
       ]
     },
     "class_type": "Comfly_Doubao_Seedream_4",
     "_meta": {
       "title": "Comfly Doubao Seedream4.0"
-    }
-  },
-  "6": {
-    "inputs": {
-      "aspect_ratio": "custom",
-      "proportional_width": 2662,
-      "proportional_height": 1772,
-      "fit": "crop",
-      "method": "bicubic",
-      "round_to_multiple": "None",
-      "scale_to_side": "width",
-      "scale_to_length": 2662,
-      "background_color": "#000000",
-      "image": [
-        "5",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
-    "_meta": {
-      "title": "图层工具：按宽高比缩放 V2"
     }
   }
 }

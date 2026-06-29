@@ -8,7 +8,7 @@
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Logo discord avec les lettres RS pour un developpeur",
+      "text": "A beautiful sunset over the ocean, photorealistic",
       "clip": [
         "1",
         1
@@ -18,7 +18,7 @@
   "3": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality",
+      "text": "ugly, blurry",
       "clip": [
         "1",
         1
@@ -28,19 +28,19 @@
   "4": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 1024,
-      "height": 1024,
+      "width": 768,
+      "height": 512,
       "batch_size": 1
     }
   },
   "5": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 2307660281,
-      "steps": 25,
-      "cfg": 7.0,
-      "sampler_name": "dpmpp_2m",
-      "scheduler": "karras",
+      "seed": 3708031432,
+      "steps": 4,
+      "cfg": 2.0,
+      "sampler_name": "euler",
+      "scheduler": "normal",
       "denoise": 1.0,
       "model": [
         "1",
@@ -76,11 +76,11 @@
   "7": {
     "class_type": "SaveImage",
     "inputs": {
+      "filename_prefix": "test_turbo",
       "images": [
         "6",
         0
-      ],
-      "filename_prefix": "fantasy"
+      ]
     }
   }
 }

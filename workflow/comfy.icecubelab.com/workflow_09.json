@@ -21,13 +21,14 @@
     }
   },
   "4": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "LoraLoaderModelOnly",
     "inputs": {
-      "clip": [
-        "2",
+      "model": [
+        "1",
         0
       ],
-      "text": "A vast cinematic landscape split by a monumental stone aqueduct stretching across an endless golden valley, one side wild overgrown meadows with scattered campfires, the other side geometric terraced gardens with precise irrigation channels, both sides thriving and connected through the ancient engineered bridge, dramatic golden hour lighting casting long shadows, aerial perspective, volumetric fog rolling through the valley, 16:9 composition, hyper-detailed matte painting style"
+      "lora_name": "flux_casey_baugh_impressionist.safetensors",
+      "strength_model": 0.85
     }
   },
   "5": {
@@ -37,20 +38,30 @@
         "2",
         0
       ],
-      "text": "text, watermark, logo, muddy colors"
+      "text": "A solitary figure standing at the base of an impossibly tall staircase dissolving into soft fog, each step crumbling slightly under warm amber and cool blue impressionist brushstrokes. The lower steps are small and gentle, bathed in golden light, while upper steps loom massive and shadowed. Delicate cracks in the stone emit faint glowing warmth beneath. Atmospheric perspective, muted pastel tones, dreamlike quality, 16:9 landscape composition, no text."
     }
   },
   "6": {
     "class_type": "FluxGuidance",
     "inputs": {
       "conditioning": [
-        "4",
+        "5",
         0
       ],
-      "guidance": 4.1
+      "guidance": 3.0
     }
   },
   "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
+    }
+  },
+  "8": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
       "width": 1344,
@@ -58,11 +69,11 @@
       "batch_size": 1
     }
   },
-  "8": {
+  "9": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "1",
+        "4",
         0
       ],
       "positive": [
@@ -70,27 +81,27 @@
         0
       ],
       "negative": [
-        "5",
-        0
-      ],
-      "latent_image": [
         "7",
         0
       ],
-      "seed": 2131166255,
+      "latent_image": [
+        "8",
+        0
+      ],
+      "seed": 340510893,
       "control_after_generate": "fixed",
-      "steps": 20,
+      "steps": 24,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0
     }
   },
-  "9": {
+  "10": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "8",
+        "9",
         0
       ],
       "vae": [
@@ -99,14 +110,14 @@
       ]
     }
   },
-  "10": {
+  "11": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "9",
+        "10",
         0
       ],
-      "filename_prefix": "blog_2131166255"
+      "filename_prefix": "blog_340510893"
     }
   }
 }

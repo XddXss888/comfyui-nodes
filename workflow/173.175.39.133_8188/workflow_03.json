@@ -1,0 +1,357 @@
+{
+  "2": {
+    "inputs": {
+      "seed": 825506148775351,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "er_sde",
+      "scheduler": "simple",
+      "denoise": [
+        "90",
+        0
+      ],
+      "model": [
+        "52",
+        0
+      ],
+      "positive": [
+        "52",
+        1
+      ],
+      "negative": [
+        "8",
+        0
+      ],
+      "latent_image": [
+        "72",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "3": {
+    "inputs": {
+      "samples": [
+        "2",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "4": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "VAE Loader"
+    }
+  },
+  "8": {
+    "inputs": {
+      "conditioning": [
+        "52",
+        1
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "Negative (Zero Out)"
+    }
+  },
+  "10": {
+    "inputs": {
+      "width": [
+        "19",
+        0
+      ],
+      "height": [
+        "20",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "15": {
+    "inputs": {
+      "unet_name": "krea-2-turbo-fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "17": {
+    "inputs": {
+      "any_01": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "model Switcher"
+    }
+  },
+  "18": {
+    "inputs": {
+      "clip_name": "qwen3vl_4b_fp8_scaled.safetensors",
+      "type": "krea2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "19": {
+    "inputs": {
+      "value": 1080
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "Width"
+    }
+  },
+  "20": {
+    "inputs": {
+      "value": 1920
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "Height"
+    }
+  },
+  "29": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": false,
+        "lora": "krea2/darkbrush.safetensors",
+        "strength": 1
+      },
+      "lora_2": {
+        "on": false,
+        "lora": "krea2/kidsdrawing.safetensors",
+        "strength": 1
+      },
+      "lora_3": {
+        "on": false,
+        "lora": "krea2/vintagetarot.safetensors",
+        "strength": 1
+      },
+      "lora_4": {
+        "on": false,
+        "lora": "krea2/dotmatrix.safetensors",
+        "strength": 1
+      },
+      "lora_5": {
+        "on": false,
+        "lora": "krea2/retroanime.safetensors",
+        "strength": 1
+      },
+      "lora_6": {
+        "on": false,
+        "lora": "krea2/rainywindow.safetensors",
+        "strength": 1
+      },
+      "lora_7": {
+        "on": false,
+        "lora": "krea2/softwatercolor.safetensors",
+        "strength": 1
+      },
+      "lora_8": {
+        "on": false,
+        "lora": "krea2/neondrip.safetensors",
+        "strength": 1
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "17",
+        0
+      ],
+      "clip": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree)"
+    }
+  },
+  "52": {
+    "inputs": {
+      "prompt": "A woman stands facing away from the camera, waist-deep in a rippling body of water, entirely enveloped in a dense, glowing cyan and twilight atmospheric fog. She wears a dress with long, bell-shaped sleeves and a deep scoop back, her exposed skin and the wet fabric exhibiting a high-gloss, nearly metallic specular sheen that catches intense, fiery edge-lighting. The dark water surrounding her waist forms concentric ripples, displaying a clear reflection of her silhouette against the vivid, burning surface. The composition is defined by cinematic, volumetric lighting heavily drenched in a monochromatic palette of blazing cyan, radiant purple highlights, and deep space-black shadows. An intense, blooming light source permeates the thick, volumetric mist, casting extreme chiaroscuro contrast and heavy backlighting across the subject. Tiny, luminescent particles drift through the heavy atmosphere, enhancing the surreal, ethereal, and hyper-realistic rendering style, with the sharply defined, dramatically illuminated figure contrasting against the soft-focus, deeply shadowed background.",
+      "vision_megapixels": 1.0,
+      "mask_padding": 0.0,
+      "conditioning_rescaling": false,
+      "multiplier": 4.0,
+      "per_layer_weights": "1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.5,5.0,1.1,4.0,1.0",
+      "prompt_adherence_enhancer": false,
+      "strength": 1.0,
+      "clip": [
+        "18",
+        0
+      ],
+      "model": [
+        "29",
+        0
+      ],
+      "system_prompt": [
+        "97",
+        0
+      ],
+      "images": [
+        "59",
+        0
+      ]
+    },
+    "class_type": "VantageTextEncodeKrea2",
+    "_meta": {
+      "title": "Vantage Text Encode (Krea2)"
+    }
+  },
+  "59": {
+    "inputs": {
+      "any_02": [
+        "70",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Image Source"
+    }
+  },
+  "70": {
+    "inputs": {
+      "image_paths": "",
+      "width": [
+        "19",
+        0
+      ],
+      "height": [
+        "20",
+        0
+      ],
+      "interpolation": "lanczos",
+      "resize_method": "pad",
+      "multiple_of": 0,
+      "img_compression": 0,
+      "rmbg_model": "RMBG-2.0",
+      "rmbg_sensitivity": 1,
+      "rmbg_process_res": 1024,
+      "rmbg_mask_blur": 0,
+      "rmbg_mask_offset": 0,
+      "rmbg_invert_output": false,
+      "rmbg_refine_foreground": false,
+      "rmbg_background": "Alpha"
+    },
+    "class_type": "VantageMultiImageLoader",
+    "_meta": {
+      "title": "Vantage Multiple Image Loader"
+    }
+  },
+  "72": {
+    "inputs": {
+      "any_02": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Switch Latent"
+    }
+  },
+  "90": {
+    "inputs": {
+      "any_02": [
+        "91",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Denoising Select"
+    }
+  },
+  "91": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Default denoise"
+    }
+  },
+  "97": {
+    "inputs": {
+      "any_02": [
+        "94:95",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Switch System Prompt"
+    }
+  },
+  "105": {
+    "inputs": {
+      "images": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "94:93": {
+    "inputs": {
+      "choice": "Image Reference",
+      "index": 0,
+      "option1": "Image Reference",
+      "option2": "Style Transfer",
+      "option3": ""
+    },
+    "class_type": "CustomCombo",
+    "_meta": {
+      "title": "Custom Combo"
+    }
+  },
+  "94:95": {
+    "inputs": {
+      "text": "Describe the key features of the reference image (color, shape, size, texture, objects, background), then explain how the user's instruction should combine with or alter it, and generate a new image meeting the instruction while staying consistent with the reference where appropriate:\nUse the reference image only for style transfer. Ignore its scene, subject, objects, and narrative entirely. Extract only visual style signals such as palette, texture, lighting, contrast, rendering medium, and aesthetic tone. Apply those style signals to the user’s target image or prompt while preserving the target content exactly.",
+      "index": [
+        "94:93",
+        1
+      ],
+      "include_empty": false
+    },
+    "class_type": "StringListIndex",
+    "_meta": {
+      "title": "Multiline String → Item & Count"
+    }
+  }
+}

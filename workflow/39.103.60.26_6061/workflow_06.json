@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "jimeng-2026-06-10-1991-优雅气质的美女，在森林里微笑着面对镜头，穿着白底写意晕染模糊粉白玫瑰真丝飘逸长裙....png"
+      "image": "input_4e764aa1c03e.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -12,7 +12,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "28",
+        "12",
         0
       ]
     },
@@ -21,76 +21,73 @@
       "title": "保存图像"
     }
   },
-  "15": {
+  "12": {
     "inputs": {
-      "prompt": "参考图一中的主要人物和图二的吉祥物，保持图二吉祥物头部外形不变，图一人物轻微美颜、磨皮和美白，花野治愈陪伴风格。主体为图一人物和图二吉祥物并肩坐在草地花海中，人物靠在吉祥物肩上，二者都佩戴花环，占据视觉中心。人物和吉祥物互动亲密自然，吉祥物面向镜头，自然微笑。前景有茂密的花花草草，背景是茂密的草地花海边，河流、草甸和远山，整体为温柔、梦幻、治愈的插画写意风，氛围轻柔，复古色调，高对比度。",
-      "model": "doubao-seedream-4-5-251128",
+      "rounded_rect_radius": 100,
+      "anti_aliasing": 2,
+      "top": 0.0,
+      "bottom": 0.0,
+      "left": 0.0,
+      "right": 0.0,
+      "detect": "max_inscribed_rect",
+      "obj_ext_top": 0.0,
+      "obj_ext_bottom": 0.0,
+      "obj_ext_left": 0.0,
+      "obj_ext_right": 0.0,
+      "image": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: RoundedRectangle",
+    "_meta": {
+      "title": "LayerUtility: RoundedRectangle"
+    }
+  },
+  "13": {
+    "inputs": {
+      "aspect_ratio": "1:1",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "crop",
+      "method": "bicubic",
+      "round_to_multiple": "8",
+      "scale_to_side": "shortest",
+      "scale_to_length": 928,
+      "background_color": "#000000",
+      "image": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "按宽高比缩放_V2"
+    }
+  },
+  "16": {
+    "inputs": {
+      "prompt": "保持图中人物的一致性，生成他们和熊猫合影的画面，左右两侧有可爱的熊猫趴在他们肩头，背景是竹园风光。写真摄影风格，轻微美颜，人像精修",
+      "model": "doubao-seedream-4-0-250828",
       "response_format": "url",
       "resolution": "4K",
-      "aspect_ratio": "Custom",
-      "width": 1184,
-      "height": 800,
-      "apikey": "a44228f5-f1b2-44e9-860a-d3c8eb5ac03e",
+      "aspect_ratio": "1:1",
+      "width": 1024,
+      "height": 1024,
+      "apikey": "fe023f32-413c-41f8-a35d-694231e4c96a",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 869343101,
+      "seed": 1947357542,
       "watermark": false,
       "stream": false,
       "image1": [
         "1",
-        0
-      ],
-      "image2": [
-        "26",
         0
       ]
     },
     "class_type": "Comfly_Doubao_Seedream_4",
     "_meta": {
       "title": "Comfly Doubao Seedream4.0"
-    }
-  },
-  "18": {
-    "inputs": {
-      "aspect_ratio": "custom",
-      "proportional_width": 2622,
-      "proportional_height": 1772,
-      "fit": "crop",
-      "method": "bicubic",
-      "round_to_multiple": "None",
-      "scale_to_side": "width",
-      "scale_to_length": 2622,
-      "background_color": "#000000",
-      "image": [
-        "15",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
-    "_meta": {
-      "title": "图层工具：按宽高比缩放 V2"
-    }
-  },
-  "26": {
-    "inputs": {
-      "image": "cym.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "28": {
-    "inputs": {
-      "rotation": "270 degrees",
-      "image": [
-        "18",
-        0
-      ]
-    },
-    "class_type": "ImageRotate",
-    "_meta": {
-      "title": "图像旋转"
     }
   }
 }

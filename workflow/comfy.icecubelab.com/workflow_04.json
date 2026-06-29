@@ -1,45 +1,64 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "UNETLoader",
     "inputs": {
-      "ckpt_name": "RealVisXL_V5.0.safetensors"
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
     }
   },
   "2": {
-    "class_type": "VAELoader",
+    "class_type": "DualCLIPLoader",
     "inputs": {
-      "vae_name": "sdxl_vae.safetensors"
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp16.safetensors",
+      "type": "flux"
     }
   },
   "3": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip": [
-        "1",
-        1
-      ],
-      "text": "RAW photo, ultra realistic skin texture, stunning Korean idol woman on an urban rooftop at twilight, long straight black hair with dark face-framing highlights cascading over one shoulder, oval face with monolid eyes lined in smudged charcoal, mysterious and alluring expression with lips barely parted, flawless porcelain skin with natural texture, styled smoky makeup with gradient berry lips, wearing an oversized cream knit sweater slipping off one shoulder, shot on 35mm lens environmental portrait, Dutch angle tilted frame creating dramatic tension, off-center rule of thirds composition, ring light beauty lighting reflecting twin catchlights in her eyes mixed with golden twilight glow, city skyline blurred behind her, wind catching loose strands of hair, atmospheric haze, cinematic mood, no text, no watermarks"
+      "vae_name": "ae.safetensors"
     }
   },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
-        "1",
-        1
+        "2",
+        0
       ],
-      "text": "cartoon, anime, illustration, painting, low quality, blurry, deformed, extra fingers, bad anatomy, watermark, text, signature, oversaturated"
+      "text": "A striking Korean idol woman with platinum blonde textured shag cut, diamond face shape and defined arched brows, radiating playful energy with a bright teasing smile. She stands full body in a flowing champagne satin slip dress at an ancient misty mountain temple, stone steps and weathered wooden pillars disappearing into fog behind her. One hand playfully tosses her hair while she shifts weight onto one hip, barefoot on cool stone. Cross lighting from two sides sculpts her cheekbones and collarbones with dramatic warmth and cool contrast. Flawless porcelain skin, dewy highlighted makeup, soft rose lip tint. Shot on 50mm lens, eye-level straight on, standard portrait framing head to toe. Ethereal morning mist wraps around her ankles. Ultra photorealistic, editorial fashion photography."
     }
   },
   "5": {
-    "class_type": "EmptyLatentImage",
+    "class_type": "FluxGuidance",
     "inputs": {
-      "width": 896,
-      "height": 1280,
-      "batch_size": 1
+      "conditioning": [
+        "4",
+        0
+      ],
+      "guidance": 3.5
     }
   },
   "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
+    }
+  },
+  "7": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "8": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
@@ -47,47 +66,47 @@
         0
       ],
       "positive": [
-        "3",
-        0
-      ],
-      "negative": [
-        "4",
-        0
-      ],
-      "latent_image": [
         "5",
         0
       ],
-      "seed": 1919359042,
-      "control_after_generate": "fixed",
-      "steps": 30,
-      "cfg": 4.5,
-      "sampler_name": "dpmpp_2m_sde",
-      "scheduler": "karras",
-      "denoise": 1.0
-    }
-  },
-  "7": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "samples": [
+      "negative": [
         "6",
         0
       ],
+      "latent_image": [
+        "7",
+        0
+      ],
+      "seed": 430598538,
+      "control_after_generate": "fixed",
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
       "vae": [
-        "2",
+        "3",
         0
       ]
     }
   },
-  "8": {
+  "10": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "7",
+        "9",
         0
       ],
-      "filename_prefix": "portrait_1919359042"
+      "filename_prefix": "portrait_430598538"
     }
   }
 }

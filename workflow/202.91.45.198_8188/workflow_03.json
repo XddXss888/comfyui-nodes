@@ -1,177 +1,194 @@
 {
-  "1": {
-    "inputs": {
-      "image": "c5-before.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Загрузить изображение"
-    }
-  },
-  "2": {
-    "inputs": {
-      "iterations": 3,
-      "model_name": "GFPGANv1.4.pth",
-      "weight": 0.25,
-      "upscale": 1,
-      "only_center_face": false,
-      "aligned": false,
-      "use_bg_upsampler": false,
-      "image": [
-        "19",
-        0
-      ]
-    },
-    "class_type": "IterativeGFPGANNode",
-    "_meta": {
-      "title": "Iterative GFPGAN Node"
-    }
-  },
-  "3": {
-    "inputs": {
-      "expand_mask": true,
-      "dilation_size": 5,
-      "image": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "MouthDetectionNode",
-    "_meta": {
-      "title": "Mouth Detection Node"
-    }
-  },
-  "4": {
-    "inputs": {
-      "match_brightness": false,
-      "match_contrast": false,
-      "source_image": [
-        "22",
-        0
-      ],
-      "target_image": [
-        "19",
-        0
-      ]
-    },
-    "class_type": "ColorMatchingNode",
-    "_meta": {
-      "title": "Color Matching Node"
-    }
-  },
-  "5": {
-    "inputs": {
-      "feather_distance": 50,
-      "feather_strength": 1.5,
-      "source_image": [
-        "4",
-        0
-      ],
-      "target_image": [
-        "19",
-        0
-      ],
-      "mask": [
-        "3",
-        1
-      ]
-    },
-    "class_type": "SeamlessBlendingNode",
-    "_meta": {
-      "title": "Seamless Blending Node"
-    }
-  },
   "6": {
     "inputs": {
-      "images": [
-        "5",
+      "text": "An amateur video shot on a smartphone camera showing a closeup of a vagina from below, her labia is spread by her fingers, she has light pink nail polish with long square-shaped nails, a patch of pubic hair is visible above her vagina, her skin is light-toned, she has long dark brown hair and brown eyes, her body is slender, natural indoor lighting with soft shadows, in the background there are vertical string curtains and a green circular object partially visible.",
+      "clip": [
+        "38",
         0
       ]
     },
-    "class_type": "PreviewImage",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "Предварительный просмотр изображения"
+      "title": "CLIP Text Encode (Positive Prompt)"
     }
   },
   "7": {
     "inputs": {
-      "images": [
-        "2",
+      "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "clip": [
+        "38",
         0
       ]
     },
-    "class_type": "PreviewImage",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "Предварительный просмотр изображения"
+      "title": "CLIP Text Encode (Negative Prompt)"
     }
   },
   "8": {
     "inputs": {
+      "samples": [
+        "58",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "Декодировать VAE"
+    }
+  },
+  "37": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Загрузить модель диффузии"
+    }
+  },
+  "38": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Загрузить CLIP"
+    }
+  },
+  "39": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Загрузить VAE"
+    }
+  },
+  "54": {
+    "inputs": {
+      "shift": 8.000000000000002,
+      "model": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "Выборка модели SD3"
+    }
+  },
+  "55": {
+    "inputs": {
+      "shift": 8.0,
+      "model": [
+        "56",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "Выборка модели SD3"
+    }
+  },
+  "56": {
+    "inputs": {
+      "unet_name": "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Загрузить модель диффузии"
+    }
+  },
+  "57": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 347478738085968,
+      "steps": 20,
+      "cfg": 3.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 10,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "54",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "61",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "KSamplerHigh"
+    }
+  },
+  "58": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 0,
+      "steps": 20,
+      "cfg": 3.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 10,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "55",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "57",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "KSamplerLow"
+    }
+  },
+  "61": {
+    "inputs": {
+      "width": 928,
+      "height": 528,
+      "length": 81,
+      "batch_size": 1
+    },
+    "class_type": "EmptyHunyuanLatentVideo",
+    "_meta": {
+      "title": "Пустой HunyuanLatentVideo"
+    }
+  },
+  "74": {
+    "inputs": {
       "images": [
-        "3",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Предварительный просмотр изображения"
-    }
-  },
-  "9": {
-    "inputs": {
-      "images": [
-        "4",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Предварительный просмотр изображения"
-    }
-  },
-  "10": {
-    "inputs": {
-      "mask": [
-        "3",
-        1
-      ]
-    },
-    "class_type": "MaskPreview+",
-    "_meta": {
-      "title": "🔧 Mask Preview"
-    }
-  },
-  "19": {
-    "inputs": {
-      "max_pixels": 1080,
-      "upscale_method": "nearest-exact",
-      "image": [
-        "1",
-        0
-      ]
-    },
-    "class_type": "ConditionalRescale",
-    "_meta": {
-      "title": "Conditional Rescale"
-    }
-  },
-  "22": {
-    "inputs": {
-      "amount": 0.8,
-      "image": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "ContrastAdaptiveSharpeningNode",
-    "_meta": {
-      "title": "CAS Sharpening"
-    }
-  },
-  "23": {
-    "inputs": {
-      "images": [
-        "22",
+        "8",
         0
       ]
     },

