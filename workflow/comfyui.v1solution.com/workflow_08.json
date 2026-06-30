@@ -186,7 +186,7 @@
   },
   "77": {
     "inputs": {
-      "image": "example_1782392866029.jpg"
+      "image": "example_1782777118605.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -195,34 +195,16 @@
   },
   "78": {
     "inputs": {
-      "text": "House"
+      "text": "HOME_AI"
     },
     "class_type": "ttN text",
     "_meta": {
-      "title": "building type"
-    }
-  },
-  "79": {
-    "inputs": {
-      "text": "Mint"
-    },
-    "class_type": "ttN text",
-    "_meta": {
-      "title": "palette"
-    }
-  },
-  "80": {
-    "inputs": {
-      "text": "Modern"
-    },
-    "class_type": "ttN text",
-    "_meta": {
-      "title": "style"
+      "title": "manual prompt"
     }
   },
   "81": {
     "inputs": {
-      "text": "High quality, masterpiece, 8k, high definition"
+      "text": "High quality, masterpiece, 8k, high definition,"
     },
     "class_type": "ttN text",
     "_meta": {
@@ -239,14 +221,6 @@
       ],
       "text_b": [
         "78",
-        0
-      ],
-      "text_c": [
-        "80",
-        0
-      ],
-      "text_d": [
-        "79",
         0
       ]
     },
@@ -283,7 +257,7 @@
   },
   "89": {
     "inputs": {
-      "filename_prefix": "homeai_exterior",
+      "filename_prefix": "homeai_autodesign",
       "images": [
         "8",
         0

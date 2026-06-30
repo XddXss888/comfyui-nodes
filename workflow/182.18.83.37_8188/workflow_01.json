@@ -1,14 +1,14 @@
 {
   "3": {
     "inputs": {
-      "seed": 782675014271,
+      "seed": 782764837042,
       "steps": 25,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0,
       "model": [
-        "60",
+        "48",
         0
       ],
       "positive": [
@@ -33,8 +33,8 @@
         0
       ],
       "clip": [
-        "60",
-        1
+        "47",
+        0
       ]
     },
     "class_type": "CLIPTextEncode"
@@ -43,8 +43,8 @@
     "inputs": {
       "text": "low quality, blurry, distorted, ugly, watermark, text, logo, nsfw, realistic photo, 3d render",
       "clip": [
-        "60",
-        1
+        "47",
+        0
       ]
     },
     "class_type": "CLIPTextEncode"
@@ -61,7 +61,7 @@
   },
   "36": {
     "inputs": {
-      "filename_prefix": "drama_20260628_1524_ep14_sc10_f2",
+      "filename_prefix": "realtest",
       "images": [
         "37",
         0
@@ -110,7 +110,7 @@
   },
   "46": {
     "inputs": {
-      "value": "vibrant colorful anime style, detailed digital illustration, cinematic lighting, rich color palette, Japanese anime aesthetic, high quality, masterpiece, 22yo and 45yo back-to-back on whale-deck, surrounded by glowing saplings. Her cybernetic eye now green, his bone flute shattered into data rain.. 陆昭然: 22yo female, 168cm, silver-streaked black hair in messy bob, left eye cybernetic prosthetic with glowing crimson grid, w 叶燃: 45yo male, 185cm, scarred right cheek covered in metallic tattoo, wears olive-green trench coat with hidden pockets, alw, close-up on character face, emotional expression"
+      "value": "photorealistic cinematic movie still, real 22yo asian woman, silver-streaked black messy bob hair, left eye cybernetic implant glowing crimson red, wearing fitted black leather jacket, standing in neon cyberpunk city at night, rain, wet skin and hair, cinematic dramatic lighting, shallow depth of field, bokeh, 8k ultra detailed, realistic skin texture with pores, natural film grain, hyperrealistic, masterpiece"
     },
     "class_type": "PrimitiveStringMultiline"
   },
@@ -135,21 +135,5 @@
       "vae_name": "ae.safetensors"
     },
     "class_type": "VAELoader"
-  },
-  "60": {
-    "inputs": {
-      "lora_name": "comicstrips_flux_lora_v1.safetensors",
-      "strength_model": 0.8,
-      "model": [
-        "48",
-        0
-      ],
-      "clip": [
-        "47",
-        0
-      ],
-      "strength_clip": 0.8
-    },
-    "class_type": "LoraLoader"
   }
 }

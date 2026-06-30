@@ -20,25 +20,15 @@
       "vae_name": "ae.safetensors"
     }
   },
-  "11": {
+  "4": {
     "class_type": "LoraLoaderModelOnly",
     "inputs": {
       "model": [
         "1",
         0
       ],
-      "lora_name": "sakura_korean_flux.safetensors",
-      "strength_model": 0.82
-    }
-  },
-  "4": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": "A stunning Korean idol-style woman standing in a traditional hanok courtyard with wooden pillars and curved tiled roof. Natural black hair with blue sheen, long and flowing past her shoulders, wispy bangs framing her baby face with aegyo-sal under-eye charm. She wears a fitted black leather jacket over a pleated burgundy mini skirt with heeled boots. Warm approachable smile, one hand resting on a wooden column, weight shifted to one hip in a relaxed confident pose. Shot on 50mm lens, ground-level upward angle, cowboy shot framing from thighs up. Cross lighting from two sides casting dramatic yet flattering shadows. Golden afternoon light filtering through the courtyard. Flawless porcelain skin, dewy makeup, soft pink lips. Photorealistic, editorial fashion quality."
+      "lora_name": "flux_korean_girl.safetensors",
+      "strength_model": 0.8
     }
   },
   "5": {
@@ -48,32 +38,42 @@
         "2",
         0
       ],
-      "text": "cropped legs, cropped feet, cropped shoes, text, watermark, logo"
+      "text": "Extreme close-up capturing only eyes and lips of a stunning Korean idol-style woman reflected in a rain-spotted car window inside a dimly lit parking garage. Platinum blonde hair swept into an elegant sculptural updo with wispy tendrils framing her diamond-shaped face. Defined arched brows above luminous almond eyes with shimmering copper eyeshadow. Playful smirk with glossy berry-tinted lips. Flawless porcelain skin with natural dewy finish, every pore hyper-detailed. Wrap dress in warm terracotta visible at collar. Shot on 85mm f/1.4, creamy bokeh dissolving fluorescent ceiling lights into dreamy green-white orbs. Blue hour twilight seeping through garage entrance creating cool-warm contrast. Shallow depth of field, cinematic color grading, editorial beauty photography."
     }
   },
   "6": {
     "class_type": "FluxGuidance",
     "inputs": {
       "conditioning": [
-        "4",
+        "5",
         0
       ],
-      "guidance": 3.7
+      "guidance": 3.5
     }
   },
   "7": {
-    "class_type": "EmptySD3LatentImage",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "width": 1024,
-      "height": 1536,
-      "batch_size": 1
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
     }
   },
   "8": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "9": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "11",
+        "4",
         0
       ],
       "positive": [
@@ -81,27 +81,27 @@
         0
       ],
       "negative": [
-        "5",
-        0
-      ],
-      "latent_image": [
         "7",
         0
       ],
-      "seed": 1378253910,
+      "latent_image": [
+        "8",
+        0
+      ],
+      "seed": 794238577,
       "control_after_generate": "fixed",
-      "steps": 20,
+      "steps": 24,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0
     }
   },
-  "9": {
+  "10": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "8",
+        "9",
         0
       ],
       "vae": [
@@ -110,14 +110,14 @@
       ]
     }
   },
-  "10": {
+  "11": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "9",
+        "10",
         0
       ],
-      "filename_prefix": "portrait_1378253910"
+      "filename_prefix": "portrait_794238577"
     }
   }
 }

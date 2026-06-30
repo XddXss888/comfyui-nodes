@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 2621912216,
+      "seed": 4229463228,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -140,7 +140,7 @@
   },
   "100": {
     "inputs": {
-      "lora_name": "HULU-Image.safetensors",
+      "lora_name": "君佩.safetensors",
       "strength_model": 1.0,
       "model": [
         "37",

@@ -1,123 +1,93 @@
 {
   "1": {
-    "class_type": "UNETLoader",
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "unet_name": "flux1-dev.safetensors",
-      "weight_dtype": "default"
+      "ckpt_name": "RealVisXL_V5.0.safetensors"
     }
   },
   "2": {
-    "class_type": "DualCLIPLoader",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip_name1": "clip_l.safetensors",
-      "clip_name2": "t5xxl_fp16.safetensors",
-      "type": "flux"
+      "vae_name": "sdxl_vae.safetensors"
     }
   },
   "3": {
-    "class_type": "VAELoader",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "vae_name": "ae.safetensors"
-    }
-  },
-  "11": {
-    "class_type": "LoraLoaderModelOnly",
-    "inputs": {
-      "model": [
+      "clip": [
         "1",
-        0
+        1
       ],
-      "lora_name": "sakura_korean_flux.safetensors",
-      "strength_model": 0.82
+      "text": "RAW photo, ultra realistic skin texture, stunning Korean idol woman with honey blonde highlights in sleek center-parted long hair cascading past her shoulders, diamond face shape with defined arched brows, gentle soft expression with barely parted lips, flawless porcelain skin with natural dewy finish, styled subtle makeup with warm peachy tones, wearing a structured charcoal power suit with sharp lapels, seated among lush tropical leaves in a sunlit greenhouse, golden afternoon light filtering through glass panes, candlelight warm intimate glow from a nearby lantern casting amber highlights across her cheekbones, macro lens extreme close-up capturing every skin texture and pore detail, slight low angle looking up creating empowering perspective, negative space on the left with soft bokeh foliage, serene contemplative atmosphere, no text, no watermarks"
     }
   },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
-        "2",
-        0
+        "1",
+        1
       ],
-      "text": "A stunning Korean idol-style woman with honey blonde highlights swept into a high ponytail, soft round face with doe eyes and warm approachable smile, standing small in frame on a rain-soaked city street at night. Bohemian layered outfit with flowing fabrics and earthy tones, caught mid-stride through puddles reflecting pink and blue neon signs. Shot on 24mm wide angle lens, eye-level straight on, dynamic perspective stretching the wet asphalt. Backlit rim light creating a glowing silhouette edge around her figure, rain droplets illuminated like tiny diamonds. Wide environmental portrait, cinematic atmosphere, flawless porcelain skin, styled dewy makeup, soft bokeh neon reflections. No text, no watermarks."
+      "text": "cartoon, anime, illustration, painting, low quality, blurry, deformed, extra fingers, bad anatomy, watermark, text, signature, oversaturated"
     }
   },
   "5": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "EmptyLatentImage",
     "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": "cropped legs, cropped feet, cropped shoes, text, watermark, logo"
-    }
-  },
-  "6": {
-    "class_type": "FluxGuidance",
-    "inputs": {
-      "conditioning": [
-        "4",
-        0
-      ],
-      "guidance": 3.7
-    }
-  },
-  "7": {
-    "class_type": "EmptySD3LatentImage",
-    "inputs": {
-      "width": 1024,
-      "height": 1536,
+      "width": 896,
+      "height": 1280,
       "batch_size": 1
     }
   },
-  "8": {
+  "6": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "11",
+        "1",
         0
       ],
       "positive": [
-        "6",
+        "3",
         0
       ],
       "negative": [
-        "5",
+        "4",
         0
       ],
       "latent_image": [
-        "7",
+        "5",
         0
       ],
-      "seed": 1392188509,
+      "seed": 618027982,
       "control_after_generate": "fixed",
-      "steps": 20,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
+      "steps": 30,
+      "cfg": 4.5,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
       "denoise": 1.0
     }
   },
-  "9": {
+  "7": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "8",
+        "6",
         0
       ],
       "vae": [
-        "3",
+        "2",
         0
       ]
     }
   },
-  "10": {
+  "8": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "9",
+        "7",
         0
       ],
-      "filename_prefix": "portrait_1392188509"
+      "filename_prefix": "portrait_618027982"
     }
   }
 }

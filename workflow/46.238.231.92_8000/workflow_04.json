@@ -1,0 +1,188 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 625153080062545,
+      "steps": 20,
+      "cfg": 6.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1.0,
+      "model": [
+        "60",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "waiIllustriousSDXL_v160.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "5": {
+    "inputs": {
+      "width": 800,
+      "height": 1200,
+      "batch_size": 6
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "masterpiece, best quality, amazing quality, very aesthetic, absurdres, newest, solo, 1boy, teenager, teen, 17 years old, \ngoat, boy, 1boy, furry male, medium hair, goat boy, yellow hair, white fur, green eyes, teenager, teen, goatee,\ntomfb,  chun13, white horns, fit, \n\nmuscular, small muscles,\n\n\n\n\nclosed eyes, cottage interior, naked, furry, candlelight, dark, asleep, sleeping, on bed, arm dangling off side of bed, side view, front down, mouth wide open, tongue, snoring, drooling, close view, face focus, upper body view, side of bed, bed frame, mattress,",
+      "clip": [
+        "60",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "bad quality,worst quality,worst detail,sketch,censor, 3d, deformed, ugly, ((more than one character)), bulge, digitigrade, long stomach, short legs, abs",
+      "clip": [
+        "60",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "10": {
+    "inputs": {
+      "image": "ComfyUI_10653_.png",
+      "emoji_in_readable_text": true,
+      "show_info": "both"
+    },
+    "class_type": "SimpleReadableMetadataSG",
+    "_meta": {
+      "title": "Simple Readable Metadata-SG"
+    }
+  },
+  "11": {
+    "inputs": {
+      "textDisplay": "=== ComfyUI Generation Parameters ===\n\n800x1200 | 0.96MP | Ratio: 2:3 or 0.67:1 | 0.84MB\n\n🧠 MODEL: waiNSFWIllustrious_v140.safetensors\n\n🎯 SAMPLING SETTINGS:\n  Seed: 527785681398266\n  Steps: 20\n  CFG Scale: 6.0\n  Sampler: dpmpp_2m\n  Scheduler: karras\n  Denoise: 1.0\n\n📝 PROMPTS: |If empty, Check fail-safe below|\n\n  Positive:\n           masterpiece, best quality, amazing quality, very aesthetic, absurdres, newest, solo, 1boy, teenager, teen, 17 years old, \ngoat, boy, 1boy, furry male, medium hair, goat boy, yellow hair, white fur, green eyes, teenager, teen, goatee, \ntomfb,  chun13, white horns, fit, \n\ntopless, muscular, small muscles, penis, balls, standing,  \n\n\n\n<lora:Male_Pregnancy_-_Early_stage:1>, mpr3g, early mpreg, small belly, navel, linea nigra, small bump, 1st trimester, pregnant:0.5\n\n  Negative:\n           bad quality,worst quality,worst detail,sketch,censor, 3d, deformed, ugly, ((more than one character)), bulge, digitigrade, long stomach, short legs, abs\n\n🎨 LORA MODELS:\n  {'__value__': [{'name': 'tom_fischbach_style_illustrious_v1.5', 'strength': 0.4, 'active': True, 'expanded': False, 'clipStrength': 0.4, 'locked': False}, {'name': 'chunie_ill', 'strength': '0.60', 'active': True, 'expanded': False, 'clipStrength': '0.60', 'locked': False}, {'name': 'Ralsie_IL', 'strength': 0.5, 'active': True, 'expanded': False, 'clipStrength': 0.5, 'locked': False}, {'name': 'Male_Pregnancy_-_Early_stage', 'strength': '1.00', 'active': True, 'expanded': False, 'clipStrength': '1.00', 'locked': False}]} (Strength: 1.0)\n\n🧠 MODELS & COMPONENTS:\n  CHECKPOINT: waiNSFWIllustrious_v140.safetensors\n\n\n=== ALL DETECTED TEXT IN WORKFLOW ===\n(Fail-safe dump of all text-like values)\n\n[CLIPTextEncode (ID 6)]\nmasterpiece, best quality, amazing quality, very aesthetic, absurdres, newest, solo, 1boy, teenager, teen, 17 years old, \ngoat, boy, 1boy, furry male, medium hair, goat boy, yellow hair, white fur, green eyes, teenager, teen, goatee, \ntomfb,  chun13, white horns, fit, \n\ntopless, muscular, small muscles, penis, balls, standing,  \n\n\n\n<lora:Male_Pregnancy_-_Early_stage:1>, mpr3g, early mpreg, small belly, navel, linea nigra, small bump, 1st trimester, pregnant:0.5\n\n------\n\n[CLIPTextEncode (ID 7)]\nbad quality,worst quality,worst detail,sketch,censor, 3d, deformed, ugly, ((more than one character)), bulge, digitigrade, long stomach, short legs, abs\n\n------\n\n[Lora Loader (LoraManager) (ID 60)]\n<lora:tom_fischbach_style_illustrious_v1.5:0.40> <lora:chunie_ill:0.60> <lora:Ralsie_IL:0.50> <lora:Ralsie_IL:0.50> <lora:Male_Pregnancy_-_Early_stage:1.00>",
+      "text": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "Simple Readable Metadata Text Viewer-SG",
+    "_meta": {
+      "title": "Simple Readable Metadata 🧾 Text Viewer-SG"
+    }
+  },
+  "59": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "60": {
+    "inputs": {
+      "__lm_autocomplete_meta_text": {
+        "version": 1,
+        "textWidgetName": "text"
+      },
+      "text": "<lora:tom_fischbach_style_illustrious_v1.5:0.40> <lora:chunie_ill:0.60> <lora:Ralsie_IL:0.50> <lora:Ralsie_IL:0.50> <lora:Male_Pregnancy_-_Late_stage:0.50>",
+      "loras": {
+        "__value__": [
+          {
+            "name": "tom_fischbach_style_illustrious_v1.5",
+            "strength": 0.4,
+            "active": true,
+            "expanded": false,
+            "clipStrength": 0.4,
+            "locked": false
+          },
+          {
+            "name": "chunie_ill",
+            "strength": 0.6,
+            "active": true,
+            "expanded": false,
+            "clipStrength": 0.6,
+            "locked": false
+          },
+          {
+            "name": "Ralsie_IL",
+            "strength": 0.5,
+            "active": true,
+            "expanded": false,
+            "clipStrength": 0.5,
+            "locked": false
+          },
+          {
+            "name": "Male_Pregnancy_-_Late_stage",
+            "strength": "0.50",
+            "active": false,
+            "expanded": false,
+            "clipStrength": "0.50",
+            "locked": false
+          }
+        ]
+      },
+      "model": [
+        "4",
+        0
+      ],
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "Lora Loader (LoraManager)",
+    "_meta": {
+      "title": "Lora Loader (LoraManager)"
+    }
+  }
+}

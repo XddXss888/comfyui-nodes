@@ -4,13 +4,13 @@
 **内存**: 31 GB (空闲 21 GB)
 **版本**: 0.26.0
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-29 08:07:42
-**历史总数**: 39 | **成功**: 10
+**扫描时间**: 2026-06-30 08:06:52
+**历史总数**: 68 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `4a63e48d-0c03-4921-8287-fa5b5efc8c17`
+- **Prompt ID**: `48aa9b77-60a3-44b3-9e48-98de727f299d`
 - **类型**: 文生图
 - **节点数**: 9
 - **模型** (3):
@@ -18,10 +18,14 @@
   - flux2-vae.safetensors
   - ministral-3-3b.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Faça um coelho divulgando os chocolates do mr beast
+  - [CLIPTextEncode::text] O ash espancando o pikachu
+Cadê o ash espancando o pikachu?
+
+Faz o pikachu sendo completamente espancado pelo ash
+O pikachu tem que estar cheio de arranhões
 
 ### 2. workflow_02.json
-- **Prompt ID**: `9e844bd5-4765-456f-b603-4aa12dfe775f`
+- **Prompt ID**: `05430be4-ce96-48f9-9999-d0480562634c`
 - **类型**: 文生图
 - **节点数**: 9
 - **模型** (3):
@@ -29,10 +33,10 @@
   - flux2-vae.safetensors
   - ministral-3-3b.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Faça um coelho com a cabeça laranja e o corpo amarelo com um coração na barriga
+  - [CLIPTextEncode::text] Faz a jesi e o James vendo isso
 
 ### 3. workflow_03.json
-- **Prompt ID**: `48e0a903-a0e3-4083-b922-d9309aeedfdd`
+- **Prompt ID**: `9e0e9f03-5e16-452b-b770-3b3263c44da8`
 - **类型**: 文生图
 - **节点数**: 9
 - **模型** (3):
@@ -40,21 +44,19 @@
   - flux2-vae.safetensors
   - ministral-3-3b.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Faça a peppa pig com o  george pig, e deixa eles chorando
+  - [CLIPTextEncode::text] Faz o brock dando em cima da mãe do ash
 
 ### 4. workflow_04.json
-- **Prompt ID**: `804fadd1-9549-4c00-9030-d1c55776df4c`
+- **Prompt ID**: `83a0bac1-18c2-48f4-a8fe-071d3399966e`
 - **类型**: 文生图
 - **节点数**: 9
 - **模型** (3):
   - ernie-image-turbo.safetensors
   - flux2-vae.safetensors
   - ministral-3-3b.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] Faça o Shrek lutando
 
 ### 5. workflow_05.json
-- **Prompt ID**: `68398f1e-8c0a-43b0-a133-5824237ad598`
+- **Prompt ID**: `40b884d1-aa36-4bea-b0a6-408af441ca3d`
 - **类型**: 文生图
 - **节点数**: 9
 - **模型** (3):
@@ -62,10 +64,10 @@
   - flux2-vae.safetensors
   - ministral-3-3b.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Faça uma girafa e um canguru amarelo com manchas azuis, o canguru não tem perna
+  - [CLIPTextEncode::text] Novela  fagunde
 
 ### 6. workflow_06.json
-- **Prompt ID**: `5f761a4d-84cd-485b-93c6-5889f6d2e45c`
+- **Prompt ID**: `860f6e78-17c5-4ab2-bbf7-0736ff75b2f0`
 - **类型**: 文生图
 - **节点数**: 9
 - **模型** (3):
@@ -73,10 +75,10 @@
   - flux2-vae.safetensors
   - ministral-3-3b.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Faça o cebolinha plantando bananeira
+  - [CLIPTextEncode::text] Novela  fagunde
 
 ### 7. workflow_07.json
-- **Prompt ID**: `5b9c9051-bb05-4bbe-a4e4-58d603fe0e0c`
+- **Prompt ID**: `99f64747-7dcb-4d51-aa9c-e40fcdc93e71`
 - **类型**: 文生图
 - **节点数**: 9
 - **模型** (3):
@@ -84,10 +86,10 @@
   - flux2-vae.safetensors
   - ministral-3-3b.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Faça o tom friends juntos
+  - [CLIPTextEncode::text] Novela  Antônio fangude
 
 ### 8. workflow_08.json
-- **Prompt ID**: `10529240-a8dc-496f-ad9d-19437886f609`
+- **Prompt ID**: `ae8693c1-5809-4196-8168-505c5ab7fd46`
 - **类型**: 文生图
 - **节点数**: 9
 - **模型** (3):
@@ -95,10 +97,10 @@
   - flux2-vae.safetensors
   - ministral-3-3b.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Faça o meu canal do YouTube
+  - [CLIPTextEncode::text] Vamos ser hexa Brasil
 
 ### 9. workflow_09.json
-- **Prompt ID**: `457b2eef-1cad-4825-95ab-79ffc8549e28`
+- **Prompt ID**: `28c824e8-210b-4471-914a-8e35420f111d`
 - **类型**: 文生图
 - **节点数**: 9
 - **模型** (3):
@@ -106,10 +108,10 @@
   - flux2-vae.safetensors
   - ministral-3-3b.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Faça o chaves com kiko e seu madruga
+  - [CLIPTextEncode::text] Michael Jackson
 
 ### 10. workflow_10.json
-- **Prompt ID**: `f0179c7a-0937-49f5-9b72-0d3632ef75b5`
+- **Prompt ID**: `719b3c41-2ea7-4bc7-9f77-c8a52e58d20b`
 - **类型**: 文生图
 - **节点数**: 9
 - **模型** (3):
@@ -117,4 +119,5 @@
   - flux2-vae.safetensors
   - ministral-3-3b.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] IA VOCÊ É TONTA
+  - [CLIPTextEncode::text] Gere uma foto de brasil sendo campeão da copa
+2026

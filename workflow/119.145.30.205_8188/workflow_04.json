@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 1593392954,
+      "seed": 2383333797,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -31,7 +31,7 @@
   },
   "6": {
     "inputs": {
-      "text": "1、黄金 2、古法工艺 3、气球狗形态 4、时尚潮流 5、镶钻石或宝石",
+      "text": "拆分为2只\n",
       "clip": [
         "38",
         0
@@ -140,7 +140,7 @@
   },
   "100": {
     "inputs": {
-      "lora_name": "HULU-Image.safetensors",
+      "lora_name": "佛像.safetensors",
       "strength_model": 1.0,
       "model": [
         "37",

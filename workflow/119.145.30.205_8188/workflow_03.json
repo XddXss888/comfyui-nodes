@@ -1,12 +1,12 @@
 {
   "3": {
     "inputs": {
-      "seed": 3359238712,
+      "seed": 1593392954,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 1.0,
+      "denoise": 0.6,
       "model": [
         "66",
         0
@@ -31,7 +31,7 @@
   },
   "6": {
     "inputs": {
-      "text": "1.黄金材质\n2.古法工艺\n3.汽球小狗形态\n4.时尚潮流\n5.性格呆萌可爱",
+      "text": "1、黄金 2、古法工艺 3、气球狗形态 4、时尚潮流 5、镶钻石或宝石",
       "clip": [
         "38",
         0
@@ -140,7 +140,7 @@
   },
   "100": {
     "inputs": {
-      "lora_name": "六福.safetensors",
+      "lora_name": "HULU-Image.safetensors",
       "strength_model": 1.0,
       "model": [
         "37",

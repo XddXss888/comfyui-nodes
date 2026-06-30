@@ -80,7 +80,7 @@
   "83": {
     "inputs": {
       "lora_name": "20260625181631.safetensors",
-      "strength_model": 0.6,
+      "strength_model": 0.8,
       "model": [
         "75",
         0
@@ -94,7 +94,7 @@
   "85": {
     "inputs": {
       "lora_name": "20260625181631.safetensors",
-      "strength_model": 0.6,
+      "strength_model": 0.8,
       "model": [
         "76",
         0
@@ -136,7 +136,7 @@
   },
   "89": {
     "inputs": {
-      "text": "A young girl with soft, wavy hair adorned with a delicate bow sits at a table in a cozy café. Her soft, light pink blouse complements the warm, inviting ambiance of the setting, where soft lights hang from the ceiling, casting a gentle glow. She rests her chin on her hand, gazing thoughtfully, with a cup of coffee or tea in front of her, featuring a straw. The background reveals blurred tables and chairs, suggesting a relaxed and pleasant atmosphere.2222",
+      "text": "A young girl with soft",
       "clip": [
         "71",
         0
@@ -149,8 +149,8 @@
   },
   "117": {
     "inputs": {
-      "seed": 751445676016326,
-      "steps": 10,
+      "seed": 635307630519037,
+      "steps": 25,
       "cfg": 1.5,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -179,8 +179,8 @@
   },
   "118": {
     "inputs": {
-      "seed": 29783049045249,
-      "steps": 10,
+      "seed": 950057244138364,
+      "steps": 25,
       "cfg": 1.5,
       "sampler_name": "euler",
       "scheduler": "simple",

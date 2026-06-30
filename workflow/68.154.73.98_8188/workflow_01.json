@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_0188cc4111ce4846876fdcc223b6e77e.png"
+      "image": "ref_7bde5f7d108a4bf6bcafeb138bf75cdd.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "중간에 텐트랑 있는 곳이 여수세계섬박락회 공사현장이야 현재는 공정율이 80%이상 진행되어가고 있어 경과 영상에 삽입할 영상으로 처음 허허벌판 흙밭에서 토지 다지고 나무가 심어지고 마지막에는 건물이 올라가는 과거부터 현재까지 결과가 이루어지는 모습을 역동적으로 모습을 담고 싶어 멋지게 표현해줘,Movie style, movie angle , movie light, spotlight",
+      "prompt": "Photo du même modèle en lingerie fine, dans un village andalou, avec une pose très différente",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 445242134948046,
-      "steps": 4,
+      "seed": 390600548518409,
+      "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -214,7 +214,7 @@
   },
   "91:69": {
     "inputs": {
-      "prompt": ",anime, manga, illustration, cartoon, 3d, Photoshop, sketch, video game, draw, paint, cgi, canvas frame, watermark, signature, username, artist name",
+      "prompt": "",
       "clip": [
         "91:61",
         0

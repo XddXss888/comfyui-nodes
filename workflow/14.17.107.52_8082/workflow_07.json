@@ -79,7 +79,7 @@
   },
   "83": {
     "inputs": {
-      "lora_name": "20260625181631.safetensors",
+      "lora_name": "20260629142355.safetensors",
       "strength_model": 0.8,
       "model": [
         "75",
@@ -93,7 +93,7 @@
   },
   "85": {
     "inputs": {
-      "lora_name": "20260625181631.safetensors",
+      "lora_name": "20260629142355.safetensors",
       "strength_model": 0.8,
       "model": [
         "76",
@@ -136,7 +136,7 @@
   },
   "89": {
     "inputs": {
-      "text": "A young girl with soft",
+      "text": "A young girl with long, light brown hair styled in a playful bun, adorned with a delicate white ribbon and a small pink flower, sits at a table in a cozy café. She holds a glass of creamy coffee with a straw, her expression gentle and content. The background features warm, bokeh-lit windows and hanging light fixtures, creating a serene and inviting atmosphere.",
       "clip": [
         "71",
         0
@@ -149,8 +149,8 @@
   },
   "117": {
     "inputs": {
-      "seed": 635307630519037,
-      "steps": 25,
+      "seed": 1101544868287006,
+      "steps": 30,
       "cfg": 1.5,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -179,8 +179,8 @@
   },
   "118": {
     "inputs": {
-      "seed": 950057244138364,
-      "steps": 25,
+      "seed": 425673650020520,
+      "steps": 30,
       "cfg": 1.5,
       "sampler_name": "euler",
       "scheduler": "simple",

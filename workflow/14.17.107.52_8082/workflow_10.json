@@ -46,7 +46,7 @@
   },
   "75": {
     "inputs": {
-      "unet_name": "wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors",
+      "unet_name": "wan2.2_t2v_high_noise_14B_fp16.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -56,7 +56,7 @@
   },
   "76": {
     "inputs": {
-      "unet_name": "wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
+      "unet_name": "wan2.2_t2v_low_noise_14B_fp16.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -79,8 +79,8 @@
   },
   "83": {
     "inputs": {
-      "lora_name": "20260624155825.safetensors",
-      "strength_model": 0.6,
+      "lora_name": "20260629142355.safetensors",
+      "strength_model": 0.8,
       "model": [
         "75",
         0
@@ -93,8 +93,8 @@
   },
   "85": {
     "inputs": {
-      "lora_name": "20260624155825.safetensors",
-      "strength_model": 0.6,
+      "lora_name": "20260629142355.safetensors",
+      "strength_model": 0.8,
       "model": [
         "76",
         0
@@ -136,7 +136,7 @@
   },
   "89": {
     "inputs": {
-      "text": "完整匀称人体，修长纤细身材，白色U领紧身短袖，紧身面料凸显饱满胸部曲线，紧致细腰，高腰毛边牛仔热裤，修长笔直双腿，自然舒展站姿，肢体完整无畸形，真实柔和女性身材比例，自然衣物褶皱，贴合身体的紧身衣质感",
+      "text": "A young girl with long, light brown hair styled in a braid adorned with delicate flowers and ribbons sits at a table, her hand gently resting on her chin. She wears a white blouse with ruffled sleeves and a pink dress underneath, exuding a serene and thoughtful demeanor. In front of her, a clear plastic cup filled with a pink beverage sits on the table, with a straw partially submerged. The background is softly blurred, suggesting a cozy café or restaurant setting with warm, ambient lighting., 深大是",
       "clip": [
         "71",
         0
@@ -149,8 +149,8 @@
   },
   "117": {
     "inputs": {
-      "seed": 27935778957391,
-      "steps": 10,
+      "seed": 305367348358499,
+      "steps": 30,
       "cfg": 1.5,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -179,8 +179,8 @@
   },
   "118": {
     "inputs": {
-      "seed": 998698259054766,
-      "steps": 10,
+      "seed": 842513858916731,
+      "steps": 30,
       "cfg": 1.5,
       "sampler_name": "euler",
       "scheduler": "simple",

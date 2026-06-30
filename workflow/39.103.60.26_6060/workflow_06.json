@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "input_5cc00c07bbe3.jpg"
+      "image": "input_a3b27fe807b1.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -12,7 +12,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "19",
+        "16",
         0
       ]
     },
@@ -21,19 +21,40 @@
       "title": "保存图像"
     }
   },
-  "17": {
+  "8": {
     "inputs": {
-      "prompt": "参考图中主要人物，严格保持人物面部和动作一致，生成喜庆吉祥的新春插画风格图像，人物面部写实，超高清真人写真，电影级光影，人物服装改为国潮风的重工刺绣正红吉服，衣身布满金线织就的缠枝莲纹样，质感厚重奢华。身旁是一只拟人化的熊猫，熊猫穿着红色中山装，手里拿着一个金色的“福”字，拱手给大家拜年。背景为橙红渐变放射状条纹，空中悬浮大量金元宝与金币，动态飘落特效，身后是一颗巨大的金色金币摇钱树。整体色调红金交织，质感华丽，光影对比强烈，氛围喜庆震撼，商业级精修，8K 分辨率。",
+      "aspect_ratio": "custom",
+      "proportional_width": 1152,
+      "proportional_height": 848,
+      "fit": "crop",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "width",
+      "scale_to_length": 1152,
+      "background_color": "#000000",
+      "image": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "按宽高比缩放_V2"
+    }
+  },
+  "15": {
+    "inputs": {
+      "prompt": "保持图中人物的一致性，生成他们和熊猫合影的画面，左右两侧有可爱的熊猫趴在他们肩头，背景是竹林和五颜六色的花朵，有一只熊猫抱着竹子，画面是3D卡通风格，色彩活泼",
       "model": "doubao-seedream-4-0-250828",
       "response_format": "url",
       "resolution": "4K",
-      "aspect_ratio": "1:1",
+      "aspect_ratio": "4:3",
       "width": 1024,
       "height": 1024,
       "apikey": "fe023f32-413c-41f8-a35d-694231e4c96a",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 313133802,
+      "seed": 1779362532,
       "watermark": false,
       "stream": false,
       "image1": [
@@ -46,25 +67,19 @@
       "title": "Comfly Doubao Seedream4.0"
     }
   },
-  "19": {
+  "16": {
     "inputs": {
-      "aspect_ratio": "custom",
-      "proportional_width": 800,
-      "proportional_height": 880,
-      "fit": "crop",
-      "method": "bicubic",
-      "round_to_multiple": "8",
-      "scale_to_side": "width",
-      "scale_to_length": 800,
-      "background_color": "#000000",
-      "image": [
-        "17",
+      "mode": "transpose",
+      "rotation": 90,
+      "sampler": "nearest",
+      "images": [
+        "8",
         0
       ]
     },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "class_type": "Image Rotate",
     "_meta": {
-      "title": "图层工具：按宽高比缩放 V2"
+      "title": "图像旋转"
     }
   }
 }

@@ -1,23 +1,22 @@
 {
   "9": {
     "inputs": {
-      "filename_prefix": "z-image-base",
       "images": [
         "76:65",
         0
       ]
     },
-    "class_type": "SaveImage",
+    "class_type": "PreviewImage",
     "_meta": {
-      "title": "Save Image"
+      "title": "Preview Image"
     }
   },
   "76:67": {
     "inputs": {
-      "text": "Portrait of a female veterinarian in medical coat, looking directly into camera, holding a small dog, modern veterinary clinic background, medical equipment visible, warm lighting, friendly professional atmosphere, 85mm lens, f/1.8, shallow depth of field, vertical portrait composition, photorealistic, high detail",
+      "text": "Medium portrait of a demonic entity composed of shadows and darkness, glowing red eyes, three spectral scythes orbiting menacingly, swirling green and white harvested souls around him, dark purple and black shadowy form, dark void background with demonic energy, ominous lighting with red eye glow, cinematic photograph, dark purple black and green color palette",
       "clip": [
-        "76:80",
-        1
+        "76:62",
+        0
       ]
     },
     "class_type": "CLIPTextEncode",
@@ -27,8 +26,8 @@
   },
   "76:68": {
     "inputs": {
-      "width": 1024,
-      "height": 1536,
+      "width": 832,
+      "height": 1248,
       "batch_size": 1
     },
     "class_type": "EmptySD3LatentImage",
@@ -76,7 +75,7 @@
     "inputs": {
       "shift": 3.0,
       "model": [
-        "76:80",
+        "76:66",
         0
       ]
     },
@@ -85,28 +84,9 @@
       "title": "ModelSamplingAuraFlow"
     }
   },
-  "76:80": {
-    "inputs": {
-      "lora_name": "Portrait_SoloLoRA_ZIBv1.safetensors",
-      "strength_model": 0.6,
-      "strength_clip": 0.6,
-      "model": [
-        "76:66",
-        0
-      ],
-      "clip": [
-        "76:62",
-        0
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Load LoRA"
-    }
-  },
   "76:66": {
     "inputs": {
-      "unet_name": "z_image_bf16.safetensors",
+      "unet_name": "z_image_turbo_bf16.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -118,8 +98,8 @@
     "inputs": {
       "text": "",
       "clip": [
-        "76:80",
-        1
+        "76:62",
+        0
       ]
     },
     "class_type": "CLIPTextEncode",
@@ -129,10 +109,10 @@
   },
   "76:69": {
     "inputs": {
-      "seed": 6281218072641630726,
-      "steps": 40,
-      "cfg": 4.0,
-      "sampler_name": "res_multistep",
+      "seed": 8960629529501277478,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0,
       "model": [

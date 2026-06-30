@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "elvaross, A female student sitting at a wooden desk in a cozy home study room, leaning slightly forward over an open notebook with math equations, her expression focused and thoughtful as she reviews her solutions, books and papers scattered around her, warm desk lamp lighting the scene, medium close-up framing from a slight side angle.",
+      "text": "wh1te, short white hair, extremely thin woman, A nude woman standing confidently in an empty moonlit park at night, moonlight casting soft highlights across her bare skin and natural curves, gesturing toward an old shadowed fountain with one hand while the other rests at her side, her expression bold and playful with a slight wink and soft smile, simple park benches visible in the background, mysterious nighttime atmosphere, medium shot framing from knees up, clear readable pose with natural proportions and believable posture.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 1.73,
+      "shift": 12.0,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "TGZW383YGE7RTN4ZTNPAM4FT50.safetensors",
-      "strength_model": 0.88,
-      "strength_clip": 1.0,
+      "lora_name": "White_short_ZiT.safetensors",
+      "strength_model": 0.73,
+      "strength_clip": 0.8,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.4,
+      "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 8,
+      "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 494111015108424,
+      "seed": 177176581693080,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

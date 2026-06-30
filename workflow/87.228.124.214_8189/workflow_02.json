@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "e1st_asn, A naked woman kneeling on the floor facing forward in a sexual pose, legs spread, using both hands to spread her pussy open with her fingers while masturbating, saliva dripping down her chest, visible intimate contact, natural proportions, clear hands and posture, simple indoor background, soft lighting, medium close-up framing.",
+      "text": "seductive young curvy woman with long black hair, A woman standing in a dimly lit apartment hallway at late evening, stopping abruptly to stare directly at the viewer with an intense focused gaze and slightly parted lips, wearing simple fitted clothing, soft mysterious corridor lighting casting gentle shadows across her figure, medium close-up framing, natural posture with shoulders forward and hands at her sides, simple background, coherent low-key lighting, stable composition.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 1.73,
+      "shift": 12.0,
       "model": [
         "72",
         0
@@ -109,8 +109,8 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "nano_Korean.safetensors",
-      "strength_model": 0.81,
+      "lora_name": "izumi_v.2.safetensors",
+      "strength_model": 0.9,
       "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
@@ -133,11 +133,11 @@
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 8,
+      "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 585375340973065,
+      "seed": 26161571962184,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

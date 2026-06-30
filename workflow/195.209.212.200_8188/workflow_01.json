@@ -13,8 +13,8 @@
   },
   "16": {
     "inputs": {
-      "positive_prompt": "d2z0h2a6yv, portrait of a man with snow-white hair without streaks or dark patches, one person. The man's back is visible",
-      "negative_prompt": "nose,highlighted hair, multicolored strands of hair, black and gray spots, shadow, fingers, cloth, bandages, leaves, mask, hats, gray and black spots, grey and black stripes, tattoos, glasses, mustache, beard, sideburns, imperial beard, stubble, shaggy mustache, horseshoe mustache, Italian mustache, Fu Manchu mustache, pencil mustache, horseshoe mustache, full beard, goatee, Van Dyke beard, Hollywood beard, Garfield beard, skate beard, Amish beard, Balbo beard, Verdi beard, three-day stubble, week-long stubble, Mexican stubble, Bredin sideburns/cheeks, Elvis sideburns, skipper beard, French fork split beard",
+      "positive_prompt": "d2z0h2a6yv, portrait of a man with snow-white hair, one person. The man's back is visible",
+      "negative_prompt": "flicker,highlighting of hair,bald patches and dark spots in the hair, highlighted hair, multicolored strands of hair, black and gray spots, shadow, fingers, cloth, bandages, leaves, mask, hats, gray and black spots, grey and black stripes, tattoos, glasses, mustache, beard, sideburns, imperial beard, stubble, shaggy mustache, horseshoe mustache, Italian mustache, Fu Manchu mustache, pencil mustache, horseshoe mustache, full beard, goatee, Van Dyke beard, Hollywood beard, Garfield beard, skate beard, Amish beard, Balbo beard, Verdi beard, three-day stubble, week-long stubble, Mexican stubble, Bredin sideburns/cheeks, Elvis sideburns, skipper beard, French fork split beard",
       "force_offload": true,
       "use_disk_cache": false,
       "device": "gpu",
@@ -98,7 +98,7 @@
       ],
       "cfg": 3.0,
       "shift": 8.0,
-      "seed": 36,
+      "seed": 41,
       "force_offload": true,
       "scheduler": "dpm++_sde",
       "riflex_freq_index": 0,
@@ -189,7 +189,7 @@
   },
   "124": {
     "inputs": {
-      "value": 60
+      "value": 232
     },
     "class_type": "JWInteger",
     "_meta": {
@@ -198,7 +198,7 @@
   },
   "125": {
     "inputs": {
-      "value": 354
+      "value": 0
     },
     "class_type": "JWInteger",
     "_meta": {
@@ -605,7 +605,7 @@
   },
   "215": {
     "inputs": {
-      "value": "_0270_s_rogojan_epoch2_36"
+      "value": "_0270_s_rogojan_epoch2_41"
     },
     "class_type": "PrimitiveString",
     "_meta": {

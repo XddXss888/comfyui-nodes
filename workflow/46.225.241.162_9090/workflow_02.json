@@ -1,38 +1,11 @@
 {
   "9": {
     "inputs": {
-      "filename_prefix": "image_gen",
+      "filename_prefix": "image_go",
       "images": [
         "75:65",
         0
       ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
-    }
-  },
-  "76": {
-    "inputs": {
-      "image": "cb2209d9-8b75-43f3-9fce-c35deaa6294d.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "81": {
-    "inputs": {
-      "image": "bg.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "94": {
-    "inputs": {
-      "filename_prefix": "image_gen"
     },
     "class_type": "SaveImage",
     "_meta": {
@@ -48,139 +21,16 @@
       "title": "KSamplerSelect"
     }
   },
-  "75:73": {
-    "inputs": {
-      "noise_seed": 845802383558951
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "RandomNoise"
-    }
-  },
-  "75:71": {
-    "inputs": {
-      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
-      "type": "flux2",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "Load CLIP"
-    }
-  },
-  "75:72": {
-    "inputs": {
-      "vae_name": "flux2-vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Load VAE"
-    }
-  },
-  "75:123": {
-    "inputs": {
-      "unet_name": "flux-2-klein-9b-Q6_K.gguf"
-    },
-    "class_type": "UnetLoaderGGUF",
-    "_meta": {
-      "title": "Unet Loader (GGUF)"
-    }
-  },
-  "75:74": {
-    "inputs": {
-      "text": "Apa profesi dan latar belakang pendidikan Ria Putri Andiningsih?",
-      "clip": [
-        "75:71",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
-    }
-  },
-  "75:80": {
-    "inputs": {
-      "upscale_method": "nearest-exact",
-      "megapixels": 1.0,
-      "resolution_steps": 1,
-      "image": [
-        "76",
-        0
-      ]
-    },
-    "class_type": "ImageScaleToTotalPixels",
-    "_meta": {
-      "title": "Scale Image to Total Pixels"
-    }
-  },
-  "75:82": {
-    "inputs": {
-      "conditioning": [
-        "75:74",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "ConditioningZeroOut"
-    }
-  },
-  "75:99": {
-    "inputs": {
-      "image": [
-        "75:80",
-        0
-      ]
-    },
-    "class_type": "GetImageSize",
-    "_meta": {
-      "title": "Get Image Size"
-    }
-  },
-  "75:79:78": {
-    "inputs": {
-      "pixels": [
-        "75:80",
-        0
-      ],
-      "vae": [
-        "75:72",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE Encode"
-    }
-  },
-  "75:66": {
-    "inputs": {
-      "width": [
-        "75:99",
-        0
-      ],
-      "height": [
-        "75:99",
-        1
-      ],
-      "batch_size": 1
-    },
-    "class_type": "EmptyFlux2LatentImage",
-    "_meta": {
-      "title": "Empty Flux 2 Latent"
-    }
-  },
   "75:62": {
     "inputs": {
-      "steps": 4,
+      "steps": 20,
       "width": [
-        "75:99",
+        "75:68",
         0
       ],
       "height": [
-        "75:99",
-        1
+        "75:69",
+        0
       ]
     },
     "class_type": "Flux2Scheduler",
@@ -188,51 +38,19 @@
       "title": "Flux2Scheduler"
     }
   },
-  "75:79:100": {
-    "inputs": {
-      "conditioning": [
-        "75:82",
-        0
-      ],
-      "latent": [
-        "75:79:78",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "ReferenceLatent"
-    }
-  },
-  "75:79:77": {
-    "inputs": {
-      "conditioning": [
-        "75:74",
-        0
-      ],
-      "latent": [
-        "75:79:78",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "ReferenceLatent"
-    }
-  },
   "75:63": {
     "inputs": {
-      "cfg": 1.0,
+      "cfg": 5.0,
       "model": [
-        "75:123",
+        "75:114",
         0
       ],
       "positive": [
-        "75:79:77",
+        "75:74",
         0
       ],
       "negative": [
-        "75:79:100",
+        "75:67",
         0
       ]
     },
@@ -283,6 +101,106 @@
     "class_type": "VAEDecode",
     "_meta": {
       "title": "VAE Decode"
+    }
+  },
+  "75:66": {
+    "inputs": {
+      "width": [
+        "75:68",
+        0
+      ],
+      "height": [
+        "75:69",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "75:67": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "75:71",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "75:68": {
+    "inputs": {
+      "value": 1024
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Width"
+    }
+  },
+  "75:69": {
+    "inputs": {
+      "value": 1024
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Height"
+    }
+  },
+  "75:73": {
+    "inputs": {
+      "noise_seed": 504415123887008,
+      "seed": 1082129105067290
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "75:71": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "75:72": {
+    "inputs": {
+      "vae_name": "full_encoder_small_decoder.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "75:74": {
+    "inputs": {
+      "text": "A professional engineering presentation slide with a clean, modern design layout featuring a central circular diagram representing an Independent Power Producer (IPP) electricity project structure. The background is predominantly white with subtle blue gradients at the top and bottom edges. At the center of the slide sits a prominent circular flowchart divided into six interconnected segments arranged in a ring, each segment colored in varying shades of royal blue (#1E3A8A), navy blue (#0F172A), and light sky blue (#3B82F6). The segments contain simple icons: a lightning bolt for power generation, a factory silhouette for industrial facilities, transmission tower symbols for distribution lines, and financial chart indicators. Above the circular diagram, bold sans-serif typography in dark navy displays the title 'PROPOSAL PROYEK LISTRIK IPP' with a subtitle beneath reading 'Independent Power Producer Electricity Project Proposal' in smaller light gray text. On the left side of the slide, a vertical timeline bar extends downward with three milestone markers connected by thin blue lines, each marker containing small icons representing project phases: planning, construction, and operation. On the right side, a simplified line graph showing power output trends over time uses a gradient blue curve against a light gray grid background. Scattered subtly around the edges are geometric design elements including hexagonal shapes, circuit board patterns in very light blue, and thin horizontal accent lines in navy blue. The overall color palette consists primarily of white (#FFFFFF), royal blue (#1E3A8A), navy (#0F172A), sky blue (#3B82F6), and soft gray (#F8FAFC). The composition is balanced and symmetrical with generous white space around the central elements, creating a professional corporate aesthetic suitable for investor presentations.",
+      "clip": [
+        "75:71",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "75:114": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b-Q6_K.gguf"
+    },
+    "class_type": "UnetLoaderGGUF",
+    "_meta": {
+      "title": "Unet Loader (GGUF)"
     }
   }
 }

@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "A yellow Ferrari, ultra-detailed close-up shot from dynamic angle, glossy metallic finish, studio lighting, sharp focus, masterpiece, best quality, photorealistic, professional automotive photography, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "Nighttime island with rugged rocky shores, moonlit ocean waves crashing against jagged black basalt cliffs, soft ambient glow from starry sky and distant lighthouse beam, atmospheric mist, cinematic lighting, ultra-detailed, masterpiece, best quality, professional photography., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -32,15 +32,15 @@
   "5": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 576,
-      "height": 1024,
-      "batch_size": 4
+      "width": 1024,
+      "height": 512,
+      "batch_size": 1
     }
   },
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 764683685,
+      "seed": 1249441525,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",

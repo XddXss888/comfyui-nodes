@@ -1,16 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_1e3a845750e44edfb4262143f76a9a33.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "83": {
-    "inputs": {
-      "image": "ref_3362f3b73cd644dc96c9110d53190806.png"
+      "image": "ref_0fddcdb82f484c8bb78cc9f7aa75fad7.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -130,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "Using the second image as reference, draw the male dragon in the pose in the sketch of the first image! flexing their bicep while standing confidently. ",
+      "prompt": "A school girl is walking home when she sees a mysterious book she reads it out load she first feels lightheaded then black gooey tentacles come out of her mouth and back then red dragon wings come out of her back then her skin becomes leathery and bright red then she grows a tail then her eyes turn red then her legs morph into her tail then she grows to the size of her city then grows demon horns and a snake tongue then she grows spider legs. ,hand-drawn anime style, Japanese animation, anime illustration, TV anime aesthetic, cel shading, 2D animation style, vivid colors",
       "clip": [
         "91:61",
         0
@@ -141,10 +132,6 @@
       ],
       "image1": [
         "91:88",
-        0
-      ],
-      "image2": [
-        "83",
         0
       ]
     },
@@ -197,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 208449507174135,
+      "seed": 811826974160439,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -227,7 +214,7 @@
   },
   "91:69": {
     "inputs": {
-      "prompt": "",
+      "prompt": ",realistic, photo, 3D render, CGI, blur, watercolor, lowres, distorted face, overexposed",
       "clip": [
         "91:61",
         0
@@ -238,10 +225,6 @@
       ],
       "image1": [
         "91:88",
-        0
-      ],
-      "image2": [
-        "83",
         0
       ]
     },

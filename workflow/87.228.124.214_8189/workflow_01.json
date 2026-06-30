@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "e1st_asn, a beautiful woman, soft lighting, realistic photography",
+      "text": "seductive young curvy woman with long black hair, In a dimly lit apartment hallway late in the evening, a woman stands in a partially open doorway under soft corridor lighting, her body angled slightly forward with one hand resting on the door frame, head tilted as she looks toward the viewer with a calm, knowing expression, shadows falling naturally across her figure and the narrow space around her.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 1.73,
+      "shift": 12.0,
       "model": [
         "72",
         0
@@ -109,8 +109,8 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "nano_Korean.safetensors",
-      "strength_model": 0.81,
+      "lora_name": "izumi_v.2.safetensors",
+      "strength_model": 0.9,
       "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
@@ -133,11 +133,11 @@
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 8,
+      "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 585375340973065,
+      "seed": 26161571962184,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

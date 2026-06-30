@@ -1,93 +1,123 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "UNETLoader",
     "inputs": {
-      "ckpt_name": "juggernautXL_ragnarok.safetensors"
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
     }
   },
   "2": {
-    "class_type": "VAELoader",
+    "class_type": "DualCLIPLoader",
     "inputs": {
-      "vae_name": "sdxl_vae.safetensors"
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp16.safetensors",
+      "type": "flux"
     }
   },
   "3": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip": [
+      "vae_name": "ae.safetensors"
+    }
+  },
+  "11": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
         "1",
-        1
+        0
       ],
-      "text": "Stunning portrait of a Korean idol woman with honey blonde highlighted fluffy wolf cut, glancing back over her shoulder with a playful mischievous grin, button nose scrunched slightly, sparkling eyes full of energy. Half body waist up, wearing a sharply tailored lavender power suit with structured shoulders. Standing in endless rows of blooming Provence lavender fields at golden hour. Neon magenta and electric blue glow mixing with warm sunset light, casting prismatic reflections across her flawless porcelain skin. Shot on 135mm telephoto lens, background compressed into dreamy purple bokeh. Extremely detailed skin texture, visible pores, cinematic color grading, hyperrealistic SDXL render. Styled dewy makeup, glass skin highlight on cheekbones. No text, no watermarks."
+      "lora_name": "sakura_korean_flux.safetensors",
+      "strength_model": 0.82
     }
   },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
-        "1",
-        1
+        "2",
+        0
       ],
-      "text": "lowres, blurry, bad anatomy, deformed, watermark, signature, extra fingers, cartoon, anime, painting"
+      "text": "A stunning Korean idol-style woman with long straight black hair and delicate face-framing caramel highlights, angular features with strong sculpted brows, dreamy ethereal expression with softly parted lips. She stands in a concrete parking garage under harsh fluorescent tubes, wearing an oversized black leather jacket draped off one shoulder paired with a high-waisted leather mini skirt. Half body waist up, reflected in the tinted window of a parked luxury sedan, her mirror image slightly ghosted. Shot on 35mm lens, environmental portrait, harsh midday sun streaming through the garage entrance casting sharp diagonal shadows across her flawless porcelain skin. Styled smoky eye makeup, glass-skin finish, editorial fashion lookbook aesthetic. No text, no watermarks."
     }
   },
   "5": {
-    "class_type": "EmptyLatentImage",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "width": 896,
-      "height": 1280,
-      "batch_size": 1
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "cropped legs, cropped feet, cropped shoes, text, watermark, logo"
     }
   },
   "6": {
-    "class_type": "KSampler",
+    "class_type": "FluxGuidance",
     "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "positive": [
-        "3",
-        0
-      ],
-      "negative": [
+      "conditioning": [
         "4",
         0
       ],
-      "latent_image": [
-        "5",
-        0
-      ],
-      "seed": 220199983,
-      "control_after_generate": "fixed",
-      "steps": 30,
-      "cfg": 4.0,
-      "sampler_name": "dpmpp_2m_sde",
-      "scheduler": "karras",
-      "denoise": 1.0
+      "guidance": 3.7
     }
   },
   "7": {
-    "class_type": "VAEDecode",
+    "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "samples": [
+      "width": 1024,
+      "height": 1536,
+      "batch_size": 1
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "11",
+        0
+      ],
+      "positive": [
         "6",
         0
       ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ],
+      "seed": 969726510,
+      "control_after_generate": "fixed",
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
       "vae": [
-        "2",
+        "3",
         0
       ]
     }
   },
-  "8": {
+  "10": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "7",
+        "9",
         0
       ],
-      "filename_prefix": "portrait_220199983"
+      "filename_prefix": "portrait_969726510"
     }
   }
 }

@@ -1,109 +1,15 @@
 # 117.50.221.40:8080
 
-**GPU**: RTX 3090 | **显存**: 24 GB | **空闲**: 10 GB
+**GPU**: RTX 3090 | **显存**: 24 GB | **空闲**: 23 GB
 **内存**: 62 GB (空闲 47 GB)
 **版本**: 0.13.0
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-29 08:07:37
-**历史总数**: 23 | **成功**: 10
+**扫描时间**: 2026-06-30 08:06:47
+**历史总数**: 33 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `85d268cb-6757-4ae1-b70a-ca764b482b0d`
-- **类型**: 文生图
-- **节点数**: 13
-- **模型** (5):
-  - 2xLexicaRRDBNet_Sharp.pth
-  - clip_l.safetensors
-  - sd3.5_large_turbo-Q8_0.gguf
-  - sd3_vae.safetensors
-  - t5xxl_fp8_e4m3fn.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] A yellow Ferrari, ultra-detailed close-up shot from dynamic angle, glossy metallic finish, studio lighting, sharp focus, masterpiece, best quality, photorealistic, professional automotive photography,
-
-### 2. workflow_02.json
-- **Prompt ID**: `6b99d1d3-073d-4683-82bc-07af4d2d31b7`
-- **类型**: 文生图
-- **节点数**: 13
-- **模型** (5):
-  - 2xLexicaRRDBNet_Sharp.pth
-  - clip_l.safetensors
-  - sd3.5_large_turbo-Q8_0.gguf
-  - sd3_vae.safetensors
-  - t5xxl_fp8_e4m3fn.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] Close-up of a yellow Ferrari’s window with iridescent, prismatic color effects, ultra-detailed reflections and glossy surface, cinematic lighting, masterpiece, best quality, photorealistic, 8K resolut
-
-### 3. workflow_03.json
-- **Prompt ID**: `062ba49c-1213-42f8-81ca-7dcaca0e1b0a`
-- **类型**: 文生图
-- **节点数**: 12
-- **模型** (5):
-  - clip_l.safetensors
-  - sd3.5_large_turbo-Q8_0.gguf
-  - sd3_vae.safetensors
-  - t5xxl_fp8_e4m3fn.safetensors
-  - 动漫转真人.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] Ancient Chinese martial combat scene, warriors in ornate hanfu clashing with swords and spears, dynamic motion blur, misty mountain backdrop, dramatic golden-hour lighting, ink-wash texture blended wi
-
-### 4. workflow_04.json
-- **Prompt ID**: `dcfc1d80-ce98-4b72-89b9-d39225daba3b`
-- **类型**: 文生图
-- **节点数**: 12
-- **模型** (5):
-  - clip_l.safetensors
-  - sd3.5_large_turbo-Q8_0.gguf
-  - sd3_vae.safetensors
-  - t5xxl_fp8_e4m3fn.safetensors
-  - 动漫转真人.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] Ancient Chinese martial combat scene, warriors in ornate hanfu clashing with swords and spears, dynamic action pose, misty mountain backdrop, ink-wash painting style blended with realistic detail, dra
-
-### 5. workflow_05.json
-- **Prompt ID**: `5bb0902c-ee73-4048-beb0-46685d2ee05f`
-- **类型**: 文生图
-- **节点数**: 12
-- **模型** (5):
-  - bfs_head_v1_flux-klein_9b_step3500_rank128.safetensors
-  - clip_l.safetensors
-  - sd3.5_large_turbo-Q8_0.gguf
-  - sd3_vae.safetensors
-  - t5xxl_fp8_e4m3fn.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] Ancient Chinese martial arts scene: protagonist with fierce expression, sword blade glinting near cheek, rain-soaked night, dramatic lightning flash, cinematic lighting, intricate hanfu details, 8K ul
-
-### 6. workflow_06.json
-- **Prompt ID**: `290a77ae-7246-4980-b912-3a53365b23df`
-- **类型**: 文生图
-- **节点数**: 12
-- **模型** (5):
-  - clip_l.safetensors
-  - sd3.5_large_turbo-Q8_0.gguf
-  - sd3_vae.safetensors
-  - t5xxl_fp8_e4m3fn.safetensors
-  - 动漫转真人.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] Ancient Chinese martial arts scene: protagonist with sharp blade grazing cheek, eyes reflecting cold steel light, standing in torrential rain at night, dramatic lightning flash illuminating face and f
-
-### 7. workflow_07.json
-- **Prompt ID**: `46364fb6-71cc-402b-a36b-e602c1833cc4`
-- **类型**: 文生图
-- **节点数**: 10
-- **模型** (2):
-  - flux1-schnell.safetensors
-  - 动漫转真人.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] Ancient Chinese martial arts scene: warrior with bloodied cheek, staring at a gleaming sword blade, rain-soaked night with dramatic lightning strikes, cinematic lighting, intricate armor and fabric de
-
-### 8. workflow_08.json
-- **Prompt ID**: `13c0ef88-15b0-40f7-951a-daaf915b6f65`
-- **类型**: 文生视频
-- **节点数**: 3
-- **模型** (0):
-
-### 9. workflow_09.json
 - **Prompt ID**: `6b22dedc-1d05-4913-9252-959921dbca6b`
 - **类型**: 文生图
 - **节点数**: 13
@@ -116,7 +22,7 @@
 - **提示词**:
   - [CLIPTextEncode::text] Nighttime island with rugged rocky shores, moonlit ocean waves crashing against jagged black basalt cliffs, soft ambient glow from starry sky and distant lighthouse beam, atmospheric mist, cinematic l
 
-### 10. workflow_10.json
+### 2. workflow_02.json
 - **Prompt ID**: `7a416a5f-a156-4f11-a0d7-abe0894e8de0`
 - **类型**: 文生图
 - **节点数**: 11
@@ -127,3 +33,93 @@
   - t5xxl_fp8_e4m3fn.safetensors
 - **提示词**:
   - [CLIPTextEncode::text] Minimalist modern vector logo for "Dingjun Laojiao" baijiu brand: circular/elliptical composition featuring stylized hibiscus (drought-tolerant lotus), evoking Sichuan’s Dingjun Mountain heritage, pur
+
+### 3. workflow_03.json
+- **Prompt ID**: `c58a561b-bb21-4bae-8a4c-da9d5c03273d`
+- **类型**: 文生图
+- **节点数**: 11
+- **模型** (4):
+  - clip_l.safetensors
+  - sd3.5_large_turbo-Q8_0.gguf
+  - sd3_vae.safetensors
+  - t5xxl_fp8_e4m3fn.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] A vibrant, close-up macro shot of succulent plants with plump, glossy leaves in shades of green, pink, and purple, arranged on a natural wooden surface; soft diffused lighting, ultra-detailed texture,
+
+### 4. workflow_04.json
+- **Prompt ID**: `4ef5acd4-cda1-468c-b462-602bcd19b3c3`
+- **类型**: 文生图
+- **节点数**: 11
+- **模型** (4):
+  - clip_l.safetensors
+  - sd3.5_large_turbo-Q8_0.gguf
+  - sd3_vae.safetensors
+  - t5xxl_fp8_e4m3fn.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Succulent plants in a vibrant botanical arrangement, macro photography, soft natural lighting, shallow depth of field, highly detailed textures, lush green tones with subtle pink and purple accents, s
+
+### 5. workflow_05.json
+- **Prompt ID**: `078a485f-676a-45fa-8ad9-8d5aa9a9d567`
+- **类型**: 文生图
+- **节点数**: 11
+- **模型** (4):
+  - clip_l.safetensors
+  - sd3.5_large_turbo-Q8_0.gguf
+  - sd3_vae.safetensors
+  - t5xxl_fp8_e4m3fn.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Tuna swimming in deep ocean, dramatic bioluminescent light rays piercing dark water, ultra-detailed marine environment, cinematic lighting, masterpiece, best quality, photorealistic, professional unde
+
+### 6. workflow_06.json
+- **Prompt ID**: `f5d0c372-92ae-487e-9099-dd3f968b6bc7`
+- **类型**: 文生图
+- **节点数**: 11
+- **模型** (4):
+  - clip_l.safetensors
+  - sd3.5_large_turbo-Q8_0.gguf
+  - sd3_vae.safetensors
+  - t5xxl_fp8_e4m3fn.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Tuna swimming in deep ocean, dramatic volumetric light rays piercing dark blue water, photorealistic, masterpiece, best quality, highly detailed, professional underwater photography, cinematic lightin
+
+### 7. workflow_07.json
+- **Prompt ID**: `7220b1bc-ccf7-48af-9f29-c706e7e0ce92`
+- **类型**: 文生图
+- **节点数**: 9
+- **模型** (1):
+  - flux1-schnell.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] A robust, muscular middle-aged man, athletic build, confident pose, natural lighting, realistic skin texture, detailed anatomy, masterpiece, best quality, professional photography style, absolutely no
+
+### 8. workflow_08.json
+- **Prompt ID**: `6d1d47cc-6e12-4e37-a5de-3c8397061338`
+- **类型**: 文生图
+- **节点数**: 9
+- **模型** (1):
+  - flux1-schnell.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Over-the-shoulder conversation shot, two people talking intimately in soft natural light, shallow depth of field, cinematic framing, realistic skin texture, detailed clothing folds, masterpiece, best 
+
+### 9. workflow_09.json
+- **Prompt ID**: `7807ba0e-899c-4cec-9759-72452dbb25ce`
+- **类型**: 文生图
+- **节点数**: 11
+- **模型** (4):
+  - clip_l.safetensors
+  - sd3.5_large_turbo-Q8_0.gguf
+  - sd3_vae.safetensors
+  - t5xxl_fp8_e4m3fn.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Over-the-shoulder dialogue shot, cinematic framing, shallow depth of field, natural lighting, two characters conversing, expressive faces, detailed clothing textures, professional color grading, maste
+
+### 10. workflow_10.json
+- **Prompt ID**: `860dce82-d4bb-4df2-a6dc-71b719172b25`
+- **类型**: 文生图
+- **节点数**: 11
+- **模型** (4):
+  - clip_l.safetensors
+  - sd3.5_large_turbo-Q8_0.gguf
+  - sd3_vae.safetensors
+  - t5xxl_fp8_e4m3fn.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Classic over-the-shoulder dialogue reverse shot, minimalist black-and-white sketch line art, clean contours, high-contrast ink style, professional storyboard composition, masterpiece, best quality, de

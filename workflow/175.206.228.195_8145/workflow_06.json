@@ -33,7 +33,7 @@
   },
   "4": {
     "inputs": {
-      "seed": 707977148,
+      "seed": 1320802299,
       "steps": [
         "13",
         0
@@ -102,8 +102,8 @@
   },
   "13": {
     "inputs": {
-      "steps": 30,
-      "cfg": 6.0
+      "steps": 32,
+      "cfg": 9.0
     },
     "class_type": "StepsAndCfg",
     "_meta": {
@@ -125,7 +125,7 @@
   },
   "20": {
     "inputs": {
-      "seed": 707977148,
+      "seed": 1320802299,
       "steps": 10,
       "cfg": [
         "13",
@@ -205,7 +205,7 @@
   },
   "32": {
     "inputs": {
-      "text": "Love_Nini(eversoul), 1girl, from front, all fours, furrowed brow, torogao, female orgasm, open mouth, heart, blush, bottomless, long sleeves, pussy, puckered anus, dark anus, dark room, multiple views,\n\n1boy, sex from behind,\n\nintricate details, perfect anatomy, correct proportions, anatomically correct, proportional body, detailed face, detailed eyes, detailed fingers,, masterpiece, best quality, amazing quality"
+      "text": "ever_sakuyo_inferno_base, light rays, in Japanese daimyo mansion, facing viewer, (from side, happy, light blush: 0.7), proud face, unrestrained expression, clear eyes, light red eyeshadow around the corner of eyes, delicate skin, fanning a folding fan, hand on underbelly, naked kimono, breasts out, (pussy, pussy juice:0.8), solo, full body, ultra-detailed, masterpiece, best quality, amazing quality"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -214,7 +214,7 @@
   },
   "33": {
     "inputs": {
-      "text": "bad quality,worst quality,worst detail,sketch,censor,{muscular}, extra hands, fat, (worst quality, low quality, normal quality:1.4), blurry, jpeg artifacts, lowres, cropped, text, watermark, signature, extra limbs, fused fingers, too many fingers, hand up"
+      "text": "bad quality,worst quality,worst detail,sketch,censor, wrong foot, wrong hand, bad hands, bad feet, watermark, mosaic censoring"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -277,7 +277,7 @@
   },
   "65": {
     "inputs": {
-      "data": "[{\"name\": \"os_Love_Ninieversoul.safetensors\", \"strength\": 0.67, \"strength_clip\": 0.9}]",
+      "data": "[{\"name\": \"sakuyo_inferno_base.safetensors\", \"strength\": 0.8, \"strength_clip\": 1.0}]",
       "model": [
         "36",
         0

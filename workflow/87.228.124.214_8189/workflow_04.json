@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "eurameg1, A woman lying on her back with knees bent and thighs parted, eyes closed in submissive pleasure, as a man performs intense cunnilingus with his tongue pressed firmly against her exposed vulva, her hands gripping the sheets, detailed intimate anatomy and visible contact, soft warm bedroom lighting, medium close-up framing on the torso and hips, natural skin textures and fabric folds.",
+      "text": "seductive young curvy woman with long black hair, In a softly lit cozy apartment during evening, a dominant woman stands in control, firmly gripping a wrist with one hand while her body leans forward assertively, legs slightly parted in a stable stance, wearing fitted pants that show fabric tension at the hips, her gaze steady and authoritative, medium close-up framing her upper body, arms, and expression against a simple intimate background.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "zimg-eurameg1-refine-con-char.safetensors",
-      "strength_model": 0.8,
-      "strength_clip": 0.8,
+      "lora_name": "izumi_v.2.safetensors",
+      "strength_model": 0.9,
+      "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -132,12 +132,12 @@
     "inputs": {
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
-      "scheduler": "beta57",
+      "scheduler": "bong_tangent",
       "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 453373455444780,
+      "seed": 26161571962184,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

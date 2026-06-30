@@ -46,7 +46,7 @@
   },
   "75": {
     "inputs": {
-      "unet_name": "wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors",
+      "unet_name": "wan2.2_t2v_high_noise_14B_fp16.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -56,7 +56,7 @@
   },
   "76": {
     "inputs": {
-      "unet_name": "wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
+      "unet_name": "wan2.2_t2v_low_noise_14B_fp16.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -80,7 +80,7 @@
   "83": {
     "inputs": {
       "lora_name": "20260625181631.safetensors",
-      "strength_model": 0.6,
+      "strength_model": 0.8,
       "model": [
         "75",
         0
@@ -94,7 +94,7 @@
   "85": {
     "inputs": {
       "lora_name": "20260625181631.safetensors",
-      "strength_model": 0.6,
+      "strength_model": 0.8,
       "model": [
         "76",
         0
@@ -149,8 +149,8 @@
   },
   "117": {
     "inputs": {
-      "seed": 278814832609122,
-      "steps": 10,
+      "seed": 758188320651941,
+      "steps": 20,
       "cfg": 1.5,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -179,8 +179,8 @@
   },
   "118": {
     "inputs": {
-      "seed": 101579186033559,
-      "steps": 10,
+      "seed": 760610854214669,
+      "steps": 20,
       "cfg": 1.5,
       "sampler_name": "euler",
       "scheduler": "simple",

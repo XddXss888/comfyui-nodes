@@ -22,7 +22,7 @@
   "27": {
     "class_type": "LoadImage",
     "inputs": {
-      "image": "https://genai.holopix.cn/uploads/20260625/1782377484519-vIX63hgt2WJTvYSlP-Zx3.jpg"
+      "image": "https://genai.holopix.cn/uploads/20260623/1782206268167-Fdyl2ddebLjESNqviZueY.webp"
     },
     "_meta": {
       "title": "加载图像"
@@ -116,7 +116,7 @@
         0
       ],
       "steps": 4,
-      "value": 1118220189831516884
+      "value": 2218920700677666894
     },
     "_meta": {
       "title": "K采样器"
@@ -274,7 +274,7 @@
   "14": {
     "class_type": "Text Multiline",
     "inputs": {
-      "text": "<sks> left side view eye-level shot medium shot"
+      "text": "<sks> front view eye-level shot medium shot"
     },
     "_meta": {
       "title": "Prompt"

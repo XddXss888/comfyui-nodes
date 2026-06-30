@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Ancient Chinese martial arts scene: protagonist with sharp blade grazing cheek, eyes reflecting cold steel light, standing in torrential rain at night, dramatic lightning flash illuminating face and flowing raindrops, cinematic composition, ultra-detailed 8K CG rendering, masterpiece, best quality, professional lighting, hyper-realistic texture., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "Tuna swimming in deep ocean, dramatic volumetric light rays piercing dark blue water, photorealistic, masterpiece, best quality, highly detailed, professional underwater photography, cinematic lighting, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -40,14 +40,14 @@
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 1865170770,
+      "seed": 1489108950,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "sgm_uniform",
       "denoise": 1.0,
       "model": [
-        "12",
+        "1",
         0
       ],
       "positive": [
@@ -118,22 +118,6 @@
         "10",
         0
       ]
-    }
-  },
-  "12": {
-    "class_type": "LoraLoader",
-    "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "clip": [
-        "2",
-        0
-      ],
-      "lora_name": "动漫转真人.safetensors",
-      "strength_model": 0.8,
-      "strength_clip": 0.8
     }
   }
 }

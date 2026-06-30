@@ -1,93 +1,245 @@
 {
   "1": {
-    "class_type": "LoadImageOutput",
-    "widgets_values": [
-      "YOUR_FILE_NAME.png [output]",
-      false,
-      "refresh",
-      "image"
-    ],
+    "class_type": "LoadImage",
     "inputs": {
-      "image": "ai_input_8201319E-861E-4ED0-A26D-DB364CE36EBA.png"
+      "image": "ai_edit_src_7D033F21-C3CC-4237-A979-4652A2A6255E.png"
+    },
+    "_meta": {
+      "title": "Load Input Image"
     }
   },
   "2": {
-    "class_type": "UpscaleModelLoader",
+    "class_type": "UNETLoader",
     "inputs": {
-      "model_name": "RealESRGAN_x4plus.safetensors"
+      "weight_dtype": "default",
+      "unet_name": "flux1-dev-kontext_fp8_scaled.safetensors"
     },
     "_meta": {
-      "title": "Load Upscale Model"
+      "title": "Load FLUX Kontext Model"
     }
   },
   "3": {
-    "class_type": "ImageUpscaleWithModel",
+    "class_type": "DualCLIPLoader",
     "inputs": {
-      "image": [
-        "1",
-        0
-      ],
-      "upscale_model": [
-        "2",
-        0
-      ]
+      "clip_name1": "t5xxl_fp8_e4m3fn_scaled.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "device": "default",
+      "type": "flux"
     },
     "_meta": {
-      "title": "Upscale x4 (Model)"
-    }
-  },
-  "5": {
-    "class_type": "AILab_ImageMaskResize",
-    "inputs": {
-      "width": 0,
-      "height": 0,
-      "scale_by": 1.0,
-      "upscale_method": "bicubic",
-      "resize_mode": "resize",
-      "pad_color": "#ffffff",
-      "crop_position": "center",
-      "divisible_by": 1,
-      "device": "gpu",
-      "image": [
-        "3",
-        0
-      ],
-      "mask": [
-        "1",
-        1
-      ]
-    },
-    "_meta": {
-      "title": "Resize Alpha to Upscaled Size (no padding)"
-    }
-  },
-  "6": {
-    "class_type": "JoinImageWithAlpha",
-    "inputs": {
-      "image": [
-        "3",
-        0
-      ],
-      "alpha": [
-        "5",
-        1
-      ]
-    },
-    "_meta": {
-      "title": "Join Upscaled Image + Alpha Mask"
+      "title": "Load FLUX Text Encoders"
     }
   },
   "4": {
-    "class_type": "SaveImage",
+    "class_type": "VAELoader",
     "inputs": {
-      "images": [
+      "vae_name": "ae.safetensors"
+    },
+    "_meta": {
+      "title": "Load FLUX VAE"
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "3",
+        0
+      ],
+      "text": "decrease the saturation by 25%"
+    },
+    "_meta": {
+      "title": "Positive Prompt"
+    }
+  },
+  "6": {
+    "class_type": "FluxGuidance",
+    "inputs": {
+      "conditioning": [
+        "5",
+        0
+      ],
+      "guidance": 2.5
+    },
+    "_meta": {
+      "title": "FLUX Guidance"
+    }
+  },
+  "7": {
+    "class_type": "FluxKontextImageScale",
+    "inputs": {
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Scale Image for FLUX Kontext"
+    }
+  },
+  "8": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "7",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Encode Reference Image"
+    }
+  },
+  "9": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "batch_size": 1,
+      "height": 1024,
+      "width": 1024
+    },
+    "_meta": {
+      "title": "Empty Output Latent"
+    }
+  },
+  "10": {
+    "class_type": "ReferenceLatent",
+    "inputs": {
+      "conditioning": [
         "6",
         0
       ],
-      "filename_prefix": "iqueue_upscale_8201319E-861E-4ED0-A26D-DB364CE36EBA"
+      "latent": [
+        "8",
+        0
+      ]
     },
     "_meta": {
-      "title": "Save Upscaled"
+      "title": "Attach Reference Latent"
+    }
+  },
+  "11": {
+    "class_type": "ModelSamplingFlux",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "base_shift": 0.5,
+      "height": 1024,
+      "max_shift": 1.15,
+      "width": 1024
+    },
+    "_meta": {
+      "title": "FLUX Model Sampling"
+    }
+  },
+  "12": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "11",
+        0
+      ],
+      "conditioning": [
+        "10",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Basic Guider"
+    }
+  },
+  "13": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "model": [
+        "11",
+        0
+      ],
+      "denoise": 1.0,
+      "scheduler": "simple",
+      "steps": 20
+    },
+    "_meta": {
+      "title": "Basic Scheduler"
+    }
+  },
+  "14": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "_meta": {
+      "title": "Sampler Select"
+    }
+  },
+  "15": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 151565283299813
+    },
+    "_meta": {
+      "title": "Noise"
+    }
+  },
+  "16": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "15",
+        0
+      ],
+      "guider": [
+        "12",
+        0
+      ],
+      "sampler": [
+        "14",
+        0
+      ],
+      "sigmas": [
+        "13",
+        0
+      ],
+      "latent_image": [
+        "9",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Advanced Sampler"
+    }
+  },
+  "17": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "16",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "18": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "17",
+        0
+      ],
+      "filename_prefix": "iqueue_flux_kontext_7D033F21-C3CC-4237-A979-4652A2A6255E"
+    },
+    "_meta": {
+      "title": "Save Image"
     }
   }
 }

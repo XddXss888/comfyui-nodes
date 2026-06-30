@@ -1,327 +1,21 @@
 {
-  "265": {
+  "1": {
     "inputs": {
-      "video": "Depth0001-0075.mp4",
-      "force_rate": 0.0,
-      "custom_width": [
-        "2845:2852",
-        0
-      ],
-      "custom_height": [
-        "2845:2852",
-        1
-      ],
-      "frame_load_cap": [
-        "2845:1556",
-        0
-      ],
-      "skip_first_frames": [
-        "2845:361",
-        0
-      ],
-      "select_every_nth": 1,
-      "format": "AnimateDiff"
-    },
-    "class_type": "VHS_LoadVideo",
-    "_meta": {
-      "title": "INPUT VIDEO"
-    }
-  },
-  "280": {
-    "inputs": {
-      "width": [
-        "2845:2852",
-        0
-      ],
-      "height": [
-        "2845:2852",
-        1
-      ],
-      "upscale_method": "lanczos",
-      "keep_proportion": "pad_edge_pixel",
-      "pad_color": "0, 0, 0",
-      "crop_position": "center",
-      "divisible_by": 2,
-      "device": "cpu",
-      "image": [
-        "282",
-        0
-      ]
-    },
-    "class_type": "ImageResizeKJv2",
-    "_meta": {
-      "title": "Resize Image v2"
-    }
-  },
-  "282": {
-    "inputs": {
-      "image": "QwenImage/qwen_00013_.png [output]"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Start Image / Reference Image 1"
-    }
-  },
-  "2607": {
-    "inputs": {
-      "video_info": [
-        "265",
-        3
-      ]
-    },
-    "class_type": "VHS_VideoInfo",
-    "_meta": {
-      "title": "Video Info 🎥🅥🅗🅢"
-    }
-  },
-  "3001": {
-    "inputs": {
-      "frame_rate": 24.0,
-      "loop_count": 0,
-      "filename_prefix": "hamid/video/cannydepth/aya_canny_depthj",
-      "format": "video/h264-mp4",
-      "pix_fmt": "yuv420p",
-      "crf": 19,
-      "save_metadata": true,
-      "trim_to_audio": false,
-      "pingpong": false,
-      "save_output": false,
-      "images": [
-        "3272:3278",
-        0
-      ]
-    },
-    "class_type": "VHS_VideoCombine",
-    "_meta": {
-      "title": "PREVIEW PREPROCESS"
-    }
-  },
-  "3326": {
-    "inputs": {
-      "unet_name": "wan/wan-14B_vace_skyreels_v3_R2V_e4m3fn_v1.safetensors",
-      "weight_dtype": "fp8_e4m3fn"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Load Diffusion Model"
-    }
-  },
-  "3327": {
-    "inputs": {
-      "lora_name": "Wan2.1_T2V_14B_FusionX_LoRA.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "3326",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "Load LoRA"
-    }
-  },
-  "3328": {
-    "inputs": {
-      "lora_name": "wan/Lenovo.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "3327",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "Load LoRA"
-    }
-  },
-  "3329": {
-    "inputs": {
-      "shift": 6.000000000000001,
-      "model": [
-        "3328",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingSD3",
-    "_meta": {
-      "title": "ModelSamplingSD3"
-    }
-  },
-  "3333": {
-    "inputs": {
-      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
-      "type": "wan",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "Load CLIP"
-    }
-  },
-  "3334": {
-    "inputs": {
-      "vae_name": "wan_2.1_vae.safetensors"
+      "vae_name": "qwen_image_vae.safetensors"
     },
     "class_type": "VAELoader",
     "_meta": {
       "title": "Load VAE"
     }
   },
-  "3345": {
-    "inputs": {
-      "video": "Canny0001-0075.mp4",
-      "force_rate": 0.0,
-      "custom_width": [
-        "2845:2852",
-        0
-      ],
-      "custom_height": [
-        "2845:2852",
-        1
-      ],
-      "frame_load_cap": [
-        "2845:1556",
-        0
-      ],
-      "skip_first_frames": [
-        "2845:361",
-        0
-      ],
-      "select_every_nth": 1,
-      "format": "AnimateDiff"
-    },
-    "class_type": "VHS_LoadVideo",
-    "_meta": {
-      "title": "INPUT VIDEO"
-    }
-  },
-  "3348": {
-    "inputs": {
-      "method": "lanczos",
-      "image_1": [
-        "280",
-        0
-      ]
-    },
-    "class_type": "ImageBatchMultiple+",
-    "_meta": {
-      "title": "🔧 Images Batch Multiple [Max 4 for Phantom]"
-    }
-  },
-  "3372": {
-    "inputs": {
-      "frame_rate": [
-        "2607",
-        0
-      ],
-      "loop_count": 0,
-      "filename_prefix": "hamid/video/cannydepth/aya_end",
-      "format": "video/h264-mp4",
-      "pix_fmt": "yuv420p",
-      "crf": 19,
-      "save_metadata": true,
-      "trim_to_audio": false,
-      "pingpong": false,
-      "save_output": true,
-      "images": [
-        "3228:3252",
-        0
-      ]
-    },
-    "class_type": "VHS_VideoCombine",
-    "_meta": {
-      "title": "Video Combine 🎥🅥🅗🅢"
-    }
-  },
-  "2845:1556": {
-    "inputs": {
-      "value": 0
-    },
-    "class_type": "INTConstant",
-    "_meta": {
-      "title": "frame_load_cap"
-    }
-  },
-  "2845:361": {
-    "inputs": {
-      "value": 0
-    },
-    "class_type": "INTConstant",
-    "_meta": {
-      "title": "skip"
-    }
-  },
-  "2845:2852": {
-    "inputs": {
-      "resolution": "576p",
-      "aspect_ratio": "16:9",
-      "custom_width": 1280,
-      "custom_height": 720
-    },
-    "class_type": "WanResolutionPicker",
-    "_meta": {
-      "title": "WAN Resolution Picker"
-    }
-  },
-  "3228:3268": {
-    "inputs": {
-      "trim_amount": [
-        "3228:3255",
-        5
-      ],
-      "samples": [
-        "3228:3253",
-        0
-      ]
-    },
-    "class_type": "TrimVideoLatent",
-    "_meta": {
-      "title": "TrimVideoLatent"
-    }
-  },
-  "3228:3254": {
-    "inputs": {
-      "anything": [
-        "3228:3268",
-        0
-      ]
-    },
-    "class_type": "easy cleanGpuUsed",
-    "_meta": {
-      "title": "Clean VRAM Used"
-    }
-  },
-  "3228:3261": {
-    "inputs": {
-      "num_frames": [
-        "3228:3375",
-        3
-      ],
-      "empty_frame_level": 0.5,
-      "start_index": 0,
-      "end_index": -1,
-      "start_image": [
-        "3228:3290:3280",
-        0
-      ],
-      "control_images": [
-        "3228:3375",
-        0
-      ]
-    },
-    "class_type": "WanVideoVACEStartToEndFrame",
-    "_meta": {
-      "title": "WanVideo VACE Start To End Frame"
-    }
-  },
-  "3228:3252": {
+  "2": {
     "inputs": {
       "samples": [
-        "3228:3254",
+        "16",
         0
       ],
       "vae": [
-        "3334",
+        "1",
         0
       ]
     },
@@ -330,264 +24,72 @@
       "title": "VAE Decode"
     }
   },
-  "3228:3375": {
+  "8": {
     "inputs": {
-      "image": [
-        "3272:3278",
-        0
-      ]
+      "clip_name": "qwen_3_06b_base.safetensors",
+      "type": "stable_diffusion",
+      "device": "default"
     },
-    "class_type": "GetImageSizeAndCount",
+    "class_type": "CLIPLoader",
     "_meta": {
-      "title": "Get Image Size & Count"
+      "title": "Load CLIP"
     }
   },
-  "3228:3258": {
-    "inputs": {
-      "conditioning_1": [
-        "3228:3255",
-        2
-      ],
-      "conditioning_2": [
-        "3228:3255",
-        3
-      ]
-    },
-    "class_type": "ConditioningCombine",
-    "_meta": {
-      "title": "Conditioning (Combine)"
-    }
-  },
-  "3228:3257": {
-    "inputs": {
-      "nag_scale": 11.0,
-      "nag_alpha": 0.25,
-      "nag_tau": 2.5,
-      "input_type": "default",
-      "inplace": false,
-      "model": [
-        "3228:3255",
-        0
-      ],
-      "conditioning": [
-        "3228:3258",
-        0
-      ]
-    },
-    "class_type": "WanVideoNAG",
-    "_meta": {
-      "title": "WanVideoNAG"
-    }
-  },
-  "3228:3249": {
-    "inputs": {
-      "text": "masterpiece, best quality, anime style, cute cafe waitress, young woman with long brown hair in high ponytail tied with yellow ribbons, brown eyes, white rolled-sleeve button-up shirt, orange-yellow apron with coffee bean logo, brown waist pouch, short black skirt, black thigh-high stockings, black loafers, warm smile, full white background, detailed face, consistent outfit, side profile, looking forward, clean lineart guidance from canny",
-      "clip": [
-        "3333",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
-    }
-  },
-  "3228:3295": {
-    "inputs": {
-      "conditioning": [
-        "3228:3249",
-        0
-      ],
-      "latent": [
-        "3228:3294",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "ReferenceLatent"
-    }
-  },
-  "3228:3294": {
-    "inputs": {
-      "pixels": [
-        "3228:3375",
-        0
-      ],
-      "vae": [
-        "3334",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE Encode"
-    }
-  },
-  "3228:3255": {
+  "11": {
     "inputs": {
       "width": [
-        "3228:3375",
-        1
+        "97",
+        0
       ],
       "height": [
-        "3228:3375",
-        2
-      ],
-      "length": [
-        "3228:3375",
-        3
-      ],
-      "batch_size": 1,
-      "vace_strength": 1.0,
-      "vace_ref_strength": 0.0,
-      "model": [
-        "3329",
+        "98",
         0
       ],
-      "positive": [
-        "3228:3295",
-        0
-      ],
-      "negative": [
-        "3228:3262",
-        0
-      ],
-      "vae": [
-        "3334",
-        0
-      ],
-      "control_video": [
-        "3228:3261",
-        0
-      ],
-      "vace_reference": [
-        "280",
-        0
-      ],
-      "phantom_images": [
-        "3348",
-        0
-      ]
+      "batch_size": 1
     },
-    "class_type": "WanVacePhantomSimpleV2",
+    "class_type": "EmptyLatentImage",
     "_meta": {
-      "title": "WanVacePhantomSimpleV2"
+      "title": "Empty Latent Image"
     }
   },
-  "3228:3290:3376": {
+  "16": {
     "inputs": {
-      "value": 1
-    },
-    "class_type": "PrimitiveInt",
-    "_meta": {
-      "title": "1"
-    }
-  },
-  "3228:3290:3280": {
-    "inputs": {
-      "boolean": [
-        "3228:3290:3284",
+      "seed": [
+        "19",
         0
       ],
-      "on_true": [
-        "280",
+      "steps": [
+        "135",
         0
       ],
-      "on_false": [
-        "3228:3290:3288",
-        0
-      ]
-    },
-    "class_type": "easy ifElse",
-    "_meta": {
-      "title": "If else"
-    }
-  },
-  "3228:3290:3288": {
-    "inputs": {
-      "select": 1,
-      "sel_mode": false
-    },
-    "class_type": "ImpactSwitch",
-    "_meta": {
-      "title": "Disable Input"
-    }
-  },
-  "3228:3290:3287": {
-    "inputs": {
-      "images": [
-        "3348",
-        0
-      ]
-    },
-    "class_type": "VHS_GetImageCount",
-    "_meta": {
-      "title": "Get Image Count 🎥🅥🅗🅢"
-    }
-  },
-  "3228:3290:3284": {
-    "inputs": {
-      "cmp": "a <= b",
-      "a": [
-        "3228:3290:3287",
+      "cfg": [
+        "136",
         0
       ],
-      "b": [
-        "3228:3290:3376",
+      "sampler_name": [
+        "133",
         0
-      ]
-    },
-    "class_type": "ImpactCompare",
-    "_meta": {
-      "title": "ImpactCompare"
-    }
-  },
-  "3228:3290:3292": {
-    "inputs": {
-      "text1": "This node is just to get the RES4LYF nodepack in the missing nodes list of the manager."
-    },
-    "class_type": "TextBox1",
-    "_meta": {
-      "title": "Install RES4LYF"
-    }
-  },
-  "3228:3262": {
-    "inputs": {
-      "text": "low quality, blurry, extra arms, extra legs, extra fingers, missing fingers, bad anatomy, wrong outfit, different clothes, different hair color, short hair, twin tails, hat, glasses, text, watermark, logo, cropped, deformed face, duplicate body, nsfw",
-      "clip": [
-        "3333",
+      ],
+      "scheduler": [
+        "140",
         0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
-    }
-  },
-  "3228:3253": {
-    "inputs": {
-      "seed": 2,
-      "steps": 4,
-      "cfg": 1.0,
-      "sampler_name": "res_2s",
-      "scheduler": "beta57",
+      ],
       "denoise": 1.0,
       "model": [
-        "3228:3257",
+        "212",
         0
       ],
       "positive": [
-        "3228:3255",
-        1
+        "20",
+        0
       ],
       "negative": [
-        "3228:3258",
+        "18",
         0
       ],
       "latent_image": [
-        "3228:3255",
-        4
+        "11",
+        0
       ]
     },
     "class_type": "KSampler",
@@ -595,53 +97,486 @@
       "title": "KSampler"
     }
   },
-  "3272:3278": {
+  "18": {
     "inputs": {
-      "boolean": true,
-      "on_true": [
-        "3272:3273",
+      "text": [
+        "121",
         0
       ],
-      "on_false": [
-        "265",
+      "clip": [
+        "206",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "19": {
+    "inputs": {
+      "seed": 284121254346544
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "Seed (rgthree)"
+    }
+  },
+  "20": {
+    "inputs": {
+      "text": [
+        "120",
+        0
+      ],
+      "clip": [
+        "206",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "66": {
+    "inputs": {
+      "images": [
+        "67",
         0
       ]
     },
-    "class_type": "easy ifElse",
+    "class_type": "PreviewImage",
     "_meta": {
-      "title": "If else"
+      "title": "Preview Image"
     }
   },
-  "3272:3286": {
+  "67": {
     "inputs": {
-      "value": 0.2,
-      "min": 0.0,
-      "max": 1.0
-    },
-    "class_type": "ClampFloat",
-    "_meta": {
-      "title": "Clamp Float"
-    }
-  },
-  "3272:3273": {
-    "inputs": {
-      "blend_factor": [
-        "3272:3286",
+      "preprocessor": "CannyEdgePreprocessor",
+      "resolution": [
+        "97",
         0
       ],
-      "blend_mode": "normal",
-      "image1": [
-        "265",
-        0
-      ],
-      "image2": [
-        "3345",
+      "image": [
+        "74",
         0
       ]
     },
-    "class_type": "ImageBlend",
+    "class_type": "AIO_Preprocessor",
     "_meta": {
-      "title": "Blend Images"
+      "title": "AIO Aux Preprocessor"
+    }
+  },
+  "72": {
+    "inputs": {
+      "lllite_name": "anima-lllite-any-test-like-v2.safetensors",
+      "strength": 0.65,
+      "start_percent": 0.0,
+      "end_percent": 0.9,
+      "preserve_wrapper": true,
+      "model": [
+        "206",
+        0
+      ],
+      "image": [
+        "67",
+        0
+      ]
+    },
+    "class_type": "AnimaLLLiteApply",
+    "_meta": {
+      "title": "Apply Anima ControlNet-LLLite"
+    }
+  },
+  "74": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "width": [
+        "97",
+        0
+      ],
+      "height": [
+        "98",
+        0
+      ],
+      "crop": "disabled",
+      "image": [
+        "209",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Upscale Image"
+    }
+  },
+  "97": {
+    "inputs": {
+      "value": 1322
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Width"
+    }
+  },
+  "98": {
+    "inputs": {
+      "value": 924
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Height"
+    }
+  },
+  "111": {
+    "inputs": {
+      "modelname": [
+        "132",
+        1
+      ],
+      "positive": [
+        "203",
+        0
+      ],
+      "negative": [
+        "121",
+        0
+      ],
+      "width": [
+        "97",
+        0
+      ],
+      "height": [
+        "98",
+        0
+      ],
+      "seed_value": [
+        "19",
+        0
+      ],
+      "steps": [
+        "135",
+        0
+      ],
+      "cfg": [
+        "136",
+        0
+      ],
+      "sampler_name": [
+        "133",
+        1
+      ],
+      "scheduler_name": [
+        "134",
+        1
+      ],
+      "denoise": 1.0,
+      "clip_skip": 0,
+      "additional_hashes": "",
+      "download_civitai_data": true,
+      "easy_remix": true,
+      "custom": ""
+    },
+    "class_type": "Image Saver Metadata",
+    "_meta": {
+      "title": "Metadata"
+    }
+  },
+  "120": {
+    "inputs": {
+      "string": "@n1s4kus4, masterpiece, best quality, absurdres\n, \naya_beta2, jumping energetically, one arm raised high, dynamic pose, rabbit girl, long white hair flowing, big rabbit ears, dark skin, muscular female body, wearing hero costume, excited expression, open mouth, in front of school building, outdoors, trees, daytime\n\nMidoriya Izuku seen from behind in foreground, green hair, school uniform, watching Mirko, hand near head"
+    },
+    "class_type": "String Literal (Image Saver)",
+    "_meta": {
+      "title": "Positive"
+    }
+  },
+  "121": {
+    "inputs": {
+      "string": "bad quality, low quality, lowres, score_1, score_2, artist name, english text, watermark, artist logo, patreon logo, patreon username, text, outline, logo, blur, blurry, depth of field, signature, web address, backlighting, text, 6 fingers, extra fingers, bubble speech, bad anatomy, fewer fingers"
+    },
+    "class_type": "String Literal (Image Saver)",
+    "_meta": {
+      "title": "Negative"
+    }
+  },
+  "132": {
+    "inputs": {
+      "unet_name": "anima_baseV10.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNet loader with Name (Image Saver)",
+    "_meta": {
+      "title": "UNet loader with Name (Image Saver)"
+    }
+  },
+  "133": {
+    "inputs": {
+      "sampler_name": "er_sde"
+    },
+    "class_type": "Sampler Selector (Image Saver)",
+    "_meta": {
+      "title": "Sampler"
+    }
+  },
+  "134": {
+    "inputs": {
+      "scheduler": "beta"
+    },
+    "class_type": "Scheduler Selector (Image Saver)",
+    "_meta": {
+      "title": "Scheduler"
+    }
+  },
+  "135": {
+    "inputs": {
+      "Xi": 25,
+      "Xf": 25.0,
+      "isfloatX": 0
+    },
+    "class_type": "mxSlider",
+    "_meta": {
+      "title": "Steps"
+    }
+  },
+  "136": {
+    "inputs": {
+      "Xi": 5,
+      "Xf": 5.0,
+      "isfloatX": 1
+    },
+    "class_type": "mxSlider",
+    "_meta": {
+      "title": "CFG"
+    }
+  },
+  "137": {
+    "inputs": {
+      "Xi": 2,
+      "Xf": 2,
+      "isfloatX": 1
+    },
+    "class_type": "mxSlider",
+    "_meta": {
+      "title": "Upscale factor"
+    }
+  },
+  "138": {
+    "inputs": {
+      "filename": "Final_%time_%seed",
+      "path": "Anima/%date/cafe",
+      "extension": "png",
+      "lossless_webp": true,
+      "quality_jpeg_or_webp": 100,
+      "optimize_png": false,
+      "embed_workflow": true,
+      "save_workflow_as_json": false,
+      "counter": 0,
+      "time_format": "%Y-%m-%d-%H%M",
+      "show_preview": false,
+      "images": [
+        "2",
+        0
+      ],
+      "metadata": [
+        "111",
+        0
+      ]
+    },
+    "class_type": "Image Saver Simple",
+    "_meta": {
+      "title": "Image Saver Simple"
+    }
+  },
+  "139": {
+    "inputs": {
+      "filename": "Anima_%time_%seed",
+      "path": "Anima/%date/",
+      "extension": "png",
+      "lossless_webp": true,
+      "quality_jpeg_or_webp": 100,
+      "optimize_png": false,
+      "embed_workflow": true,
+      "save_workflow_as_json": false,
+      "counter": 0,
+      "time_format": "%Y-%m-%d-%H%M",
+      "show_preview": false,
+      "images": [
+        "2",
+        0
+      ],
+      "metadata": [
+        "111",
+        0
+      ]
+    },
+    "class_type": "Image Saver Simple",
+    "_meta": {
+      "title": "Image Saver Simple"
+    }
+  },
+  "140": {
+    "inputs": {
+      "value": [
+        "134",
+        0
+      ]
+    },
+    "class_type": "ReroutePrimitive|pysssss",
+    "_meta": {
+      "title": "Reroute Primitive 🐍"
+    }
+  },
+  "202": {
+    "inputs": {
+      "lora_stack": [
+        "205",
+        0
+      ]
+    },
+    "class_type": "LoRA Stack to String converter",
+    "_meta": {
+      "title": "LoRA Stack to String converter"
+    }
+  },
+  "203": {
+    "inputs": {
+      "separator": "",
+      "text1": [
+        "120",
+        0
+      ],
+      "text2": [
+        "202",
+        0
+      ]
+    },
+    "class_type": "CR Text Concatenate",
+    "_meta": {
+      "title": "🔤 CR Text Concatenate"
+    }
+  },
+  "205": {
+    "inputs": {
+      "toggle": false,
+      "mode": "advanced",
+      "num_loras": 1,
+      "lora_1_name": "aya/aya_beta2.safetensors",
+      "lora_1_strength": 1.0,
+      "lora_1_model_strength": 1.0,
+      "lora_1_clip_strength": 1.0,
+      "lora_2_name": "ANIMA\\TEST\\@bzerostyle.safetensors",
+      "lora_2_strength": 1.0,
+      "lora_2_model_strength": 0.5,
+      "lora_2_clip_strength": 0.5,
+      "lora_3_name": "ANIMA\\TEST\\icereiz.safetensors",
+      "lora_3_strength": 0.2,
+      "lora_3_model_strength": 1.0,
+      "lora_3_clip_strength": 1.0,
+      "lora_4_name": "None",
+      "lora_4_strength": 1.0,
+      "lora_4_model_strength": 1.0,
+      "lora_4_clip_strength": 1.0,
+      "lora_5_name": "None",
+      "lora_5_strength": 0.45,
+      "lora_5_model_strength": 1.0,
+      "lora_5_clip_strength": 1.0,
+      "lora_6_name": "ANIMA\\TEST\\p3r0t055-000003.safetensors",
+      "lora_6_strength": 0.5,
+      "lora_6_model_strength": 1.0,
+      "lora_6_clip_strength": 1.0,
+      "lora_7_name": "None",
+      "lora_7_strength": 1.0,
+      "lora_7_model_strength": 1.0,
+      "lora_7_clip_strength": 1.0,
+      "lora_8_name": "None",
+      "lora_8_strength": 1.0,
+      "lora_8_model_strength": 1.0,
+      "lora_8_clip_strength": 1.0,
+      "lora_9_name": "None",
+      "lora_9_strength": 1.0,
+      "lora_9_model_strength": 1.0,
+      "lora_9_clip_strength": 1.0,
+      "lora_10_name": "None",
+      "lora_10_strength": 1.0,
+      "lora_10_model_strength": 1.0,
+      "lora_10_clip_strength": 1.0
+    },
+    "class_type": "easy loraStack",
+    "_meta": {
+      "title": "EasyLoraStack"
+    }
+  },
+  "206": {
+    "inputs": {
+      "lora_stack": [
+        "205",
+        0
+      ],
+      "model": [
+        "132",
+        0
+      ],
+      "optional_clip": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "easy loraStackApply",
+    "_meta": {
+      "title": "Easy Apply LoraStack"
+    }
+  },
+  "208": {
+    "inputs": {
+      "rgthree_comparer": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_mefer_00073_.png&type=temp&subfolder=&rand=0.8491461370252271"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_mefer_00074_.png&type=temp&subfolder=&rand=0.5930703322326347"
+          }
+        ]
+      },
+      "image_a": [
+        "2",
+        0
+      ],
+      "image_b": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "Image Comparer (rgthree)",
+    "_meta": {
+      "title": "Image Comparer (rgthree)"
+    }
+  },
+  "209": {
+    "inputs": {
+      "image": "9 c (1).jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "212": {
+    "inputs": {
+      "shift": 9.0,
+      "model": [
+        "72",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
     }
   }
 }

@@ -10,7 +10,7 @@
   },
   "5": {
     "inputs": {
-      "text": "镜头推进到近景，看到小男孩和小女孩站在桌子后面",
+      "text": "镜头推进到近景，看到短发小男孩和长发小女孩两个人站在桌子后面，男孩站在左边，女孩站在右边。\r\n男孩不动，右边的女孩问，你知道我喜欢喝什么酒吗\r\n左边的男孩说，你喜欢喝什么酒呀\r\n右边的女孩指着男孩的鼻子说，喜欢你天长地久呀",
       "clip": [
         "26",
         0
@@ -23,7 +23,7 @@
   },
   "6": {
     "inputs": {
-      "text": "worst quality, blurry, jittery, distorted, inconsistent appearance，duplicate character, extra character, clone, crowd, multiple demons, multiple masters, multiple disciples, character duplication, orbit camera, circular camera movement, spinning camera, rotating camera around character, aerial orbit, drone shot, face change, costume change, hairstyle change, character fusion, floating character, flying combat, exaggerated martial arts, acrobatic jump, low quality, blurry, bad anatomy, extra limbs, distorted body, unstable composition",
+      "text": "两个人同时说话",
       "clip": [
         "26",
         0
@@ -349,7 +349,7 @@
   },
   "29": {
     "inputs": {
-      "image": "msr_ref0_1782626634.png"
+      "image": "msr_ref0_1782632425.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -358,7 +358,7 @@
   },
   "30": {
     "inputs": {
-      "image": "msr_bg_1782626634.png"
+      "image": "msr_bg_1782632425.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -367,7 +367,7 @@
   },
   "33": {
     "inputs": {
-      "image": "msr_ref0_1782626634.png"
+      "image": "msr_ref0_1782632425.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -413,7 +413,7 @@
   },
   "40": {
     "inputs": {
-      "image": "msr_ref1_1782626634.png"
+      "image": "msr_ref1_1782632425.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -440,7 +440,7 @@
   },
   "50": {
     "inputs": {
-      "value": 200
+      "value": 501
     },
     "class_type": "INTConstant",
     "_meta": {
@@ -449,7 +449,7 @@
   },
   "80": {
     "inputs": {
-      "image": "msr_ref0_1782626634.png"
+      "image": "msr_ref0_1782632425.png"
     },
     "class_type": "LoadImage",
     "_meta": {

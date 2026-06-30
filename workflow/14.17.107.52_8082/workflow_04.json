@@ -80,7 +80,7 @@
   "83": {
     "inputs": {
       "lora_name": "20260625181631.safetensors",
-      "strength_model": 0.6,
+      "strength_model": 0.8,
       "model": [
         "75",
         0
@@ -94,7 +94,7 @@
   "85": {
     "inputs": {
       "lora_name": "20260625181631.safetensors",
-      "strength_model": 0.6,
+      "strength_model": 0.8,
       "model": [
         "76",
         0
@@ -136,7 +136,7 @@
   },
   "89": {
     "inputs": {
-      "text": "A young girl with soft",
+      "text": "A young girl with long",
       "clip": [
         "71",
         0
@@ -149,8 +149,8 @@
   },
   "117": {
     "inputs": {
-      "seed": 921580280669672,
-      "steps": 20,
+      "seed": 496867477423765,
+      "steps": 30,
       "cfg": 1.5,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -179,8 +179,8 @@
   },
   "118": {
     "inputs": {
-      "seed": 760816986339912,
-      "steps": 20,
+      "seed": 791392890565603,
+      "steps": 30,
       "cfg": 1.5,
       "sampler_name": "euler",
       "scheduler": "simple",

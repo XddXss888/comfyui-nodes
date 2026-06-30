@@ -1,7 +1,16 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_75a81fc4543c4199ad7414bc8752fa8d.png"
+      "image": "ref_e75269d790f54656b03a6c62381f031c.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "83": {
+    "inputs": {
+      "image": "ref_e53295f4baa14f80a1768faf6ffe5738.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +130,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "Fill in the masked part: J罩杯\n",
+      "prompt": "Remove the model knee and leg, the model is on his knees on the floor, replace the model black shirt with this product, the product is pink, replace the model jeans with a tiny panties matching the product, do NOT move the model head, the model head is EXACTLY in the same position as the original image, the model hand is behind her back",
       "clip": [
         "91:61",
         0
@@ -132,6 +141,10 @@
       ],
       "image1": [
         "91:88",
+        0
+      ],
+      "image2": [
+        "83",
         0
       ]
     },
@@ -184,8 +197,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 413268832789035,
-      "steps": 4,
+      "seed": 572010323035828,
+      "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -225,6 +238,10 @@
       ],
       "image1": [
         "91:88",
+        0
+      ],
+      "image2": [
+        "83",
         0
       ]
     },

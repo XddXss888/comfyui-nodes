@@ -8,7 +8,7 @@
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Create a large 3D Minecraft build of a medieval Templar treasury hall.  \nRender it on a flat superflat grass world under a clear blue sky, with no UI and no player hand visible.  \nUse a 3/4 perspective view from slightly above player height, showing the front, one side, and part of the back.  \n\nThe hall should look grand and sacred, built with stone bricks, pillars, arches, and red‑and‑white Templar banners.  \nInside, design a symmetrical layout with rows of treasure chests, gold blocks, and ornate details.  \nAt the center, place a symbolic focal point — either a large knight statue kneeling with a sword, or a sacred tree surrounded by light and relics.  \nAdd torches, lanterns, and stained‑glass windows to create a warm, holy atmosphere.  \nEnsure the lighting highlights the central monument and the richness of the room, evoking the power and honor of the Templar Order.",
+      "text": "un chat dans lespace",
       "clip": [
         "1",
         1
@@ -36,7 +36,7 @@
   "5": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 2529413525,
+      "seed": 3466494096,
       "steps": 25,
       "cfg": 7.0,
       "sampler_name": "dpmpp_2m",

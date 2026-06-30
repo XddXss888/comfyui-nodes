@@ -10,7 +10,7 @@
   },
   "7": {
     "inputs": {
-      "image": "高晓冉 - 副本.jpg"
+      "image": "1 (4).png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -19,17 +19,17 @@
   },
   "10": {
     "inputs": {
-      "text": "保持图中女人五官不变。\n8K超高清, 细节拉满, 电影级质感, 构图完美, 主体突出, 色彩自然, HDR高动态范围, 锐化抗锯齿, 无噪点, RAW格式, 杰作, 最佳质量, 精细CG, 壁纸级画质\n女人穿着新中式改良旗袍，哑光暗纹提花墨绿面料，立领盘扣搭配珍珠流苏，高开叉边缘绣银线海棠花纹。\n女人的衣服半透明，乳房和阴部隐约可见。\n显示女人全身。"
+      "text": "保持照片中的人物五官不变。\n女人脱掉衣服，裸体巨乳。\n（pov:1.5），俯视着女人，她以小狗般的姿势四肢着地跪着，同时回头看向观众。\n在画面底部，可以看到一个男人的阴茎刺入女人的阴道，男人的双手抓住女人的臀部，屁眼清晰可见。\n背景一家酒店的床上。\n照片角度是从男人的角度来看的，重点放在他的阴茎、女人的上半身和桌子上。这名女子的背部呈拱形，突出了她的脊椎和身体的弯曲。"
     },
     "class_type": "Text Multiline",
     "_meta": {
-      "title": "Text Multiline"
+      "title": "多行文本"
     }
   },
   "33": {
     "inputs": {
-      "width": 576,
-      "height": 1024,
+      "width": 1080,
+      "height": 1920,
       "batch_size": 1
     },
     "class_type": "EmptyLatentImage",
@@ -37,9 +37,21 @@
       "title": "Final Image Size"
     }
   },
+  "37": {
+    "inputs": {
+      "images": [
+        "50:49",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
   "40": {
     "inputs": {
-      "lora_name": "Qwen/Qwen-Image-Edit-F2P.safetensors",
+      "lora_name": "Qwen\\Qwen-Image-Edit-F2P.safetensors",
       "strength_model": 0.35,
       "model": [
         "1",
@@ -71,18 +83,8 @@
       },
       "lora_1": {
         "on": false,
-        "lora": "qwen/双腿抬高.safetensors",
+        "lora": "IMAGE\\花朵.safetensors",
         "strength": 1
-      },
-      "lora_2": {
-        "on": false,
-        "lora": "qwen/屁眼.safetensors",
-        "strength": 0.45
-      },
-      "lora_3": {
-        "on": false,
-        "lora": "qwen/假阳具.safetensors",
-        "strength": 0.5
       },
       "➕ Add Lora": "",
       "model": [
@@ -92,7 +94,7 @@
     },
     "class_type": "Power Lora Loader (rgthree)",
     "_meta": {
-      "title": "Power Lora Loader (rgthree)"
+      "title": "权重Lora加载器"
     }
   },
   "50:47": {
@@ -136,37 +138,9 @@
       "title": "TextEncodeQwenImageEditPlus Input Prompt"
     }
   },
-  "50:44": {
-    "inputs": {
-      "samples": [
-        "50:45",
-        0
-      ],
-      "vae": [
-        "1",
-        2
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "50:49": {
-    "inputs": {
-      "any_02": [
-        "7",
-        0
-      ]
-    },
-    "class_type": "Any Switch (rgthree)",
-    "_meta": {
-      "title": "Any Switch (rgthree)"
-    }
-  },
   "50:45": {
     "inputs": {
-      "seed": 536578423955627,
+      "seed": 162020323008266,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler_ancestral",
@@ -192,6 +166,34 @@
     "class_type": "KSampler",
     "_meta": {
       "title": "K采样器"
+    }
+  },
+  "50:49": {
+    "inputs": {
+      "any_02": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "任意切换"
+    }
+  },
+  "50:44": {
+    "inputs": {
+      "samples": [
+        "50:45",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
     }
   }
 }

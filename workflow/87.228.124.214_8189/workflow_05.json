@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "asig2, A shy young woman sits on the edge of a bed, completely nude, with soft flushed cheeks and a hesitant expression. Her legs are gently parted, one hand resting between her thighs as her fingers press against her exposed vagina and clit in a slow, intimate masturbation motion. Her other hand supports her on the mattress behind her, torso slightly leaned back, gaze directed downward with a mix of embarrassment and building pleasure. Soft warm bedroom lighting highlights the natural curves of her body and the visible contact of her fingers on her intimate areas, medium close-up framing from the waist up with clear focus on her pose and expression, stable natural proportions and readable anatomy.",
+      "text": "e1st_asn, A nude woman in a stable doggy style pose, bent forward over a wooden park bench at night with moonlight illuminating her bare skin, knees on the bench seat and hands gripping the edge, back arched, hips raised, head turned to look back over her shoulder with a calm seductive expression, simple dark foliage and night sky in the soft background, natural body proportions, clear readable pose, gentle moonlight lighting, medium shot framing from side angle.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "zimg_asig2_conchar.safetensors",
-      "strength_model": 0.63,
-      "strength_clip": 0.7,
+      "lora_name": "nano_Korean.safetensors",
+      "strength_model": 0.81,
+      "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.33,
+      "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
       "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 661743540426963,
+      "seed": 585375340973065,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

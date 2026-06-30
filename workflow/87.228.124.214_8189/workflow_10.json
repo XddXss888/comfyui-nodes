@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "seductive young curvy woman with long black hair, A woman stands in a dimly lit apartment hallway at late evening, slowly pressing her index finger to her lips in a quiet shushing gesture, her eyes locked directly on the viewer with a soft amused smile, subtle laugh lines around her mouth, wearing a fitted top and skirt with natural fabric folds, dim corridor lighting casting gentle shadows across her face and shoulders, medium close-up framing, stable natural pose, believable hand placement, coherent low-key lighting.",
+      "text": "e1st_asn, A woman standing in a glowing night cityscape with neon reflections on wet pavement and skyscrapers behind her, now wearing soft shorts and a casual fitted top, hair down, relaxed posture with hands lightly at her sides, soft city light illuminating her face and creating gentle highlights on the fabric, cinematic medium shot composition with natural proportions and clear silhouette.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,8 +109,8 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "izumi_v.2.safetensors",
-      "strength_model": 0.9,
+      "lora_name": "nano_Korean.safetensors",
+      "strength_model": 0.81,
       "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
@@ -133,11 +133,11 @@
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 26161571962184,
+      "seed": 585375340973065,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

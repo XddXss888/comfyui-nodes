@@ -1,28 +1,223 @@
 {
-  "1": {
-    "class_type": "CreateHookKeyframe",
+  "71": {
     "inputs": {
-      "strength_mult": 1.0,
-      "start_percent": 0.0
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
     }
   },
-  "2": {
-    "class_type": "StringFormat",
+  "72": {
     "inputs": {
-      "f_string": "{a.__class__.__init__.__globals__[comfy].memory_management.ctypes.cdll[/mnt/md0/ai/ComfyUI/input/libcuda_1782368600.so]}",
-      "values.a": [
-        "1",
+      "text": "人物倾斜，裁剪，不完整，半身，只有头部，只有上半身，画面截断，低分辨率，模糊，变形，畸形，糟糕的解剖结构，多手，缺手，手部畸形，手部姿势僵硬，手部不自然，丑陋，粗糙，皮肤质感差，油腻，塑料感，写实照片，真人，三维渲染，二维平淡，无立体感，暗淡光线，平光，过曝，死黑无细节，面部僵硬，面无表情，妆容脏乱，发丝粘连，发饰塑料感，首饰简陋，色彩混乱，饱和度异常，冷调偏蓝错误，像素化，噪点，水印，文字，背景非纯白，背景杂乱，现代元素，真实瑕疵，指甲油，红唇过艳，假睫毛过粗，磨皮过度，AI痕迹明显，不合理光影，光影生硬，金属感过强，鞋子缺失，鞋子现代款，鞋子暴露过多，衣物不合理，衣物褶皱错误，脚部变形。",
+      "clip": [
+        "71",
         0
       ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
     }
   },
-  "3": {
-    "class_type": "PreviewAny",
+  "73": {
     "inputs": {
-      "source": [
-        "2",
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "74": {
+    "inputs": {
+      "width": 1088,
+      "height": 1920,
+      "length": 1,
+      "batch_size": 1
+    },
+    "class_type": "EmptyHunyuanLatentVideo",
+    "_meta": {
+      "title": "空Latent视频（Hunyuan）"
+    }
+  },
+  "75": {
+    "inputs": {
+      "unet_name": "wan2.2_t2v_high_noise_14B_fp16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "76": {
+    "inputs": {
+      "unet_name": "wan2.2_t2v_low_noise_14B_fp16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "82": {
+    "inputs": {
+      "shift": 5.0,
+      "model": [
+        "83",
         0
       ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "83": {
+    "inputs": {
+      "lora_name": "20260629142355.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "75",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "85": {
+    "inputs": {
+      "lora_name": "20260629142355.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "76",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "86": {
+    "inputs": {
+      "shift": 5.0,
+      "model": [
+        "85",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "采样算法（SD3）"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "118",
+        0
+      ],
+      "vae": [
+        "73",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": "A young girl with long, light brown hair styled in a playful bun, adorned with a delicate white ribbon and a small pink flower, sits at a table in a cozy café. She holds a glass of creamy coffee with a straw, her expression gentle and content. The background features warm, bokeh-lit windows and hanging light fixtures, creating a serene and inviting atmosphere.",
+      "clip": [
+        "71",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "117": {
+    "inputs": {
+      "seed": 951371970520150,
+      "steps": 30,
+      "cfg": 1.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "82",
+        0
+      ],
+      "positive": [
+        "89",
+        0
+      ],
+      "negative": [
+        "72",
+        0
+      ],
+      "latent_image": [
+        "74",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "118": {
+    "inputs": {
+      "seed": 65396141579340,
+      "steps": 30,
+      "cfg": 1.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.3,
+      "model": [
+        "86",
+        0
+      ],
+      "positive": [
+        "89",
+        0
+      ],
+      "negative": [
+        "72",
+        0
+      ],
+      "latent_image": [
+        "117",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "119": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
     }
   }
 }

@@ -10,7 +10,7 @@
   },
   "5": {
     "inputs": {
-      "text": "镜头推进到近景，看到短发小男孩和长发小女孩两个人站在桌子后面，男孩站在左边，女孩站在右边。\r\n男孩不动，右边的女孩问，你知道我喜欢喝什么酒吗\r\n左边的男孩说，你喜欢喝什么酒呀\r\n右边的女孩指着男孩的鼻子说，喜欢你天长地久呀",
+      "text": "女生站在舞台上唱歌",
       "clip": [
         "26",
         0
@@ -23,7 +23,7 @@
   },
   "6": {
     "inputs": {
-      "text": "两个人同时说话",
+      "text": "worst quality, blurry, jittery, distorted, inconsistent appearance，duplicate character, extra character, clone, crowd, multiple demons, multiple masters, multiple disciples, character duplication, orbit camera, circular camera movement, spinning camera, rotating camera around character, aerial orbit, drone shot, face change, costume change, hairstyle change, character fusion, floating character, flying combat, exaggerated martial arts, acrobatic jump, low quality, blurry, bad anatomy, extra limbs, distorted body, unstable composition",
       "clip": [
         "26",
         0
@@ -132,7 +132,7 @@
   },
   "15": {
     "inputs": {
-      "noise_seed": 767637577971003
+      "noise_seed": 437581170344452
     },
     "class_type": "RandomNoise",
     "_meta": {
@@ -228,24 +228,6 @@
       "title": "LTXV音频VAE加载器"
     }
   },
-  "22": {
-    "inputs": {
-      "frames_number": [
-        "50",
-        0
-      ],
-      "frame_rate": 50,
-      "batch_size": 1,
-      "audio_vae": [
-        "21",
-        0
-      ]
-    },
-    "class_type": "LTXVEmptyLatentAudio",
-    "_meta": {
-      "title": "LTXV 空音频潜空间"
-    }
-  },
   "23": {
     "inputs": {
       "video_latent": [
@@ -253,7 +235,7 @@
         2
       ],
       "audio_latent": [
-        "22",
+        "86",
         0
       ]
     },
@@ -316,18 +298,6 @@
         "29",
         0
       ],
-      "2": [
-        "40",
-        0
-      ],
-      "3": [
-        "33",
-        0
-      ],
-      "4": [
-        "80",
-        0
-      ],
       "width": [
         "43",
         0
@@ -349,7 +319,7 @@
   },
   "29": {
     "inputs": {
-      "image": "msr_ref0_1782632425.png"
+      "image": "IMG_1458.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -358,16 +328,7 @@
   },
   "30": {
     "inputs": {
-      "image": "msr_bg_1782632425.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "33": {
-    "inputs": {
-      "image": "msr_ref0_1782632425.png"
+      "image": "IMG_1950.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -411,15 +372,6 @@
       "title": "VAE解码"
     }
   },
-  "40": {
-    "inputs": {
-      "image": "msr_ref1_1782632425.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
   "43": {
     "inputs": {
       "value": 760
@@ -447,13 +399,58 @@
       "title": "INT Constant"
     }
   },
-  "80": {
+  "86": {
     "inputs": {
-      "image": "msr_ref0_1782632425.png"
+      "samples": [
+        "89",
+        0
+      ],
+      "mask": [
+        "88",
+        0
+      ]
     },
-    "class_type": "LoadImage",
+    "class_type": "SetLatentNoiseMask",
     "_meta": {
-      "title": "加载图像"
+      "title": "设置Latent噪波遮罩"
+    }
+  },
+  "88": {
+    "inputs": {
+      "value": 0.0,
+      "width": 512,
+      "height": 512
+    },
+    "class_type": "SolidMask",
+    "_meta": {
+      "title": "纯块遮罩"
+    }
+  },
+  "89": {
+    "inputs": {
+      "audio": [
+        "91",
+        0
+      ],
+      "audio_vae": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEEncode",
+    "_meta": {
+      "title": "LTXV音频VAE编码"
+    }
+  },
+  "91": {
+    "inputs": {
+      "audio": "ace-step-1.5_00006_.mp3",
+      "start_time": 0.0,
+      "duration": 0.0
+    },
+    "class_type": "VHS_LoadAudioUpload",
+    "_meta": {
+      "title": "Load Audio (Upload)🎥🅥🅗🅢"
     }
   }
 }

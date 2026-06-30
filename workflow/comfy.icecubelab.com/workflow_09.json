@@ -27,8 +27,8 @@
         "1",
         0
       ],
-      "lora_name": "flux_casey_baugh_impressionist.safetensors",
-      "strength_model": 0.85
+      "lora_name": "flux_illustration.safetensors",
+      "strength_model": 0.9
     }
   },
   "5": {
@@ -38,7 +38,7 @@
         "2",
         0
       ],
-      "text": "A solitary figure standing at the base of an impossibly tall staircase dissolving into soft fog, each step crumbling slightly under warm amber and cool blue impressionist brushstrokes. The lower steps are small and gentle, bathed in golden light, while upper steps loom massive and shadowed. Delicate cracks in the stone emit faint glowing warmth beneath. Atmospheric perspective, muted pastel tones, dreamlike quality, 16:9 landscape composition, no text."
+      "text": "A seamless relay race captured mid-baton-pass between three runners of different heights on a minimalist glass track suspended in twilight sky, each runner morphing into translucent geometric forms — cube, sphere, prism — representing different devices, golden thread of light connecting their hands through the baton, emphasizing unbroken continuity over individual speed, cool blue-violet atmosphere with warm amber highlights at connection points, architectural precision, 16:9 wide composition"
     }
   },
   "6": {
@@ -48,7 +48,7 @@
         "5",
         0
       ],
-      "guidance": 3.0
+      "guidance": 3.5
     }
   },
   "7": {
@@ -88,9 +88,9 @@
         "8",
         0
       ],
-      "seed": 340510893,
+      "seed": 1573897647,
       "control_after_generate": "fixed",
-      "steps": 24,
+      "steps": 22,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -117,7 +117,7 @@
         "10",
         0
       ],
-      "filename_prefix": "blog_340510893"
+      "filename_prefix": "blog_1573897647"
     }
   }
 }

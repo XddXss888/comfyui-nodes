@@ -1,7 +1,7 @@
 {
   "278": {
     "inputs": {
-      "image": "cmquqhh1p0088lv01k6i3os75.png"
+      "image": "cmqyzt0sp000olv01ppssa9ep.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -10,7 +10,7 @@
   },
   "352": {
     "inputs": {
-      "text": "PD, transform the real photograph into PDstyle,保持五官特征和服装完全一致"
+      "text": "让照片的这个女生手上戴着劳力士手表，保持脸部一致，穿着白色衬衫、黑色马甲和领带，坐着身体半侧靠在米色办公椅上，自信的微笑着看向镜头,背景是带有暖色灯光的书架，摆放着书籍和装饰物，营造出温馨而有质感的室内环境。前景有桌面和文件本，奢华，整体色调柔和，光线自然，给人一种商务、精英、理性且沉稳的感觉。"
     },
     "class_type": "CR Text",
     "_meta": {
@@ -35,7 +35,7 @@
         "379",
         0
       ],
-      "seed": 310514438848442,
+      "seed": 1068571844696767,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -167,7 +167,7 @@
         "394",
         0
       ],
-      "lora_name": "training/皮克斯GPT-KB2_v1-4000.safetensors",
+      "lora_name": "training/霸道总裁KB2_v2_000003000.safetensors",
       "strength_model": 1.0
     },
     "class_type": "PD_lora_loader",
@@ -223,7 +223,7 @@
   },
   "403": {
     "inputs": {
-      "aspect_ratio": "2:3",
+      "aspect_ratio": "1:1",
       "max_size": 1024
     },
     "class_type": "PDRatioSelector",

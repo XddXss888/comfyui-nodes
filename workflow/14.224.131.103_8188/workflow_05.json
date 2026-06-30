@@ -2,16 +2,16 @@
   "3": {
     "inputs": {
       "seed": [
-        "87",
+        "78",
         0
       ],
       "steps": 25,
-      "cfg": 7.0,
+      "cfg": 5.0,
       "sampler_name": "dpmpp_sde",
       "scheduler": "karras",
       "denoise": 1.0,
       "model": [
-        "4",
+        "63",
         0
       ],
       "positive": [
@@ -60,7 +60,7 @@
   },
   "7": {
     "inputs": {
-      "text": "nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing",
+      "text": "nsfw,,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing,nsfw,lowres, normal quality, worst quality, cropped, blurry, drawing, painting, glowing,nsfw",
       "clip": [
         "4",
         1
@@ -93,7 +93,7 @@
       "start_percent": 0.0,
       "end_percent": 0.8,
       "positive": [
-        "83",
+        "52",
         0
       ],
       "negative": [
@@ -139,10 +139,32 @@
       "title": "Generation Resolution From Image"
     }
   },
+  "23": {
+    "inputs": {
+      "preset": "PLUS (high strength)",
+      "model": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "IPAdapterUnifiedLoader",
+    "_meta": {
+      "title": "IPAdapter Unified Loader"
+    }
+  },
+  "24": {
+    "inputs": {
+      "image": "example_1782776865022.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image ref"
+    }
+  },
   "38": {
     "inputs": {
       "merge_with_lineart": "lineart_standard",
-      "resolution": 1080,
+      "resolution": 1280,
       "lineart_lower_bound": 0.0,
       "lineart_upper_bound": 1.0,
       "object_min_size": 36,
@@ -157,14 +179,36 @@
       "title": "AnyLine Lineart"
     }
   },
+  "52": {
+    "inputs": {
+      "text": "High quality, masterpiece, 8k, high definition, anime artwork,",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "57": {
+    "inputs": {
+      "clip_name": "CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors"
+    },
+    "class_type": "CLIPVisionLoader",
+    "_meta": {
+      "title": "Load CLIP Vision"
+    }
+  },
   "61": {
     "inputs": {
-      "width": 1080,
-      "height": 1080,
+      "width": 1224,
+      "height": 1224,
       "upscale_method": "nearest-exact",
       "keep_proportion": true,
       "divisible_by": 2,
-      "crop": "disabled",
+      "crop": "center",
       "image": [
         "38",
         0
@@ -173,6 +217,36 @@
     "class_type": "ImageResizeKJ",
     "_meta": {
       "title": "Resize Image (deprecated)"
+    }
+  },
+  "63": {
+    "inputs": {
+      "weight": 1.0,
+      "weight_type": "style transfer",
+      "combine_embeds": "concat",
+      "start_at": 0.0,
+      "end_at": 1.0,
+      "embeds_scaling": "V only",
+      "model": [
+        "23",
+        0
+      ],
+      "ipadapter": [
+        "23",
+        1
+      ],
+      "image": [
+        "24",
+        0
+      ],
+      "clip_vision": [
+        "57",
+        0
+      ]
+    },
+    "class_type": "IPAdapterAdvanced",
+    "_meta": {
+      "title": "IPAdapter Advanced"
     }
   },
   "64": {
@@ -186,104 +260,26 @@
   },
   "77": {
     "inputs": {
-      "image": "1782431782061.jpg"
+      "image": "example_1782776856614.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
-      "title": "Load Image"
+      "title": "Load Image source"
     }
   },
   "78": {
     "inputs": {
-      "text": "House"
-    },
-    "class_type": "ttN text",
-    "_meta": {
-      "title": "building type"
-    }
-  },
-  "79": {
-    "inputs": {
-      "text": "Randomly choose a new option that best fits the image. Do not preserve the original selection."
-    },
-    "class_type": "ttN text",
-    "_meta": {
-      "title": "palette"
-    }
-  },
-  "80": {
-    "inputs": {
-      "text": "Modern"
-    },
-    "class_type": "ttN text",
-    "_meta": {
-      "title": "style"
-    }
-  },
-  "81": {
-    "inputs": {
-      "text": "High quality, masterpiece, 8k, high definition"
-    },
-    "class_type": "ttN text",
-    "_meta": {
-      "title": "default"
-    }
-  },
-  "82": {
-    "inputs": {
-      "delimiter": ", ",
-      "clean_whitespace": "true",
-      "text_a": [
-        "81",
-        0
-      ],
-      "text_b": [
-        "78",
-        0
-      ],
-      "text_c": [
-        "80",
-        0
-      ],
-      "text_d": [
-        "79",
-        0
-      ]
-    },
-    "class_type": "Text Concatenate",
-    "_meta": {
-      "title": "Text Concatenate"
-    }
-  },
-  "83": {
-    "inputs": {
-      "clip": [
-        "4",
-        1
-      ],
-      "text": [
-        "82",
-        0
-      ]
-    },
-    "class_type": "Text to Conditioning",
-    "_meta": {
-      "title": "Text to Conditioning"
-    }
-  },
-  "87": {
-    "inputs": {
       "min": 0,
-      "max": 999999999999999
+      "max": 999999999999
     },
     "class_type": "RandomInt",
     "_meta": {
       "title": "Random Int"
     }
   },
-  "89": {
+  "79": {
     "inputs": {
-      "filename_prefix": "homeai_exterior",
+      "filename_prefix": "homeai_refstyle",
       "images": [
         "8",
         0
@@ -291,7 +287,7 @@
     },
     "class_type": "SaveImage",
     "_meta": {
-      "title": "save img"
+      "title": "Save Image"
     }
   }
 }

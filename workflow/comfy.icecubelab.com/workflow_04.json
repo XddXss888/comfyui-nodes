@@ -20,6 +20,17 @@
       "vae_name": "ae.safetensors"
     }
   },
+  "11": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "lora_name": "sakura_korean_flux.safetensors",
+      "strength_model": 0.82
+    }
+  },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
@@ -27,34 +38,34 @@
         "2",
         0
       ],
-      "text": "A striking Korean idol woman with platinum blonde textured shag cut, diamond face shape and defined arched brows, radiating playful energy with a bright teasing smile. She stands full body in a flowing champagne satin slip dress at an ancient misty mountain temple, stone steps and weathered wooden pillars disappearing into fog behind her. One hand playfully tosses her hair while she shifts weight onto one hip, barefoot on cool stone. Cross lighting from two sides sculpts her cheekbones and collarbones with dramatic warmth and cool contrast. Flawless porcelain skin, dewy highlighted makeup, soft rose lip tint. Shot on 50mm lens, eye-level straight on, standard portrait framing head to toe. Ethereal morning mist wraps around her ankles. Ultra photorealistic, editorial fashion photography."
+      "text": "A melancholic Korean woman with a jet black short bob cut and angular features stands in a dimly lit parking garage, her reflection caught in a rain-streaked glass partition. She wears an oversized vintage band t-shirt tucked loosely into nothing but tall black leather boots, her strong brows furrowed with quiet sorrow. Shot on 85mm f/1.4 with creamy bokeh dissolving the harsh fluorescent tubes into soft orbs of light behind her. Warm candlelight from a phone screen casts an intimate golden glow across her flawless porcelain skin, styled with smudged eyeliner and nude lips. Off-center rule of thirds composition, her gaze distant and poetic. Full body fashion lookbook, editorial portrait, no text, no watermarks."
     }
   },
   "5": {
-    "class_type": "FluxGuidance",
-    "inputs": {
-      "conditioning": [
-        "4",
-        0
-      ],
-      "guidance": 3.5
-    }
-  },
-  "6": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
         "2",
         0
       ],
-      "text": ""
+      "text": "cropped legs, cropped feet, cropped shoes, text, watermark, logo"
+    }
+  },
+  "6": {
+    "class_type": "FluxGuidance",
+    "inputs": {
+      "conditioning": [
+        "4",
+        0
+      ],
+      "guidance": 3.7
     }
   },
   "7": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
       "width": 1024,
-      "height": 1024,
+      "height": 1536,
       "batch_size": 1
     }
   },
@@ -62,22 +73,22 @@
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "1",
+        "11",
         0
       ],
       "positive": [
-        "5",
+        "6",
         0
       ],
       "negative": [
-        "6",
+        "5",
         0
       ],
       "latent_image": [
         "7",
         0
       ],
-      "seed": 430598538,
+      "seed": 901361607,
       "control_after_generate": "fixed",
       "steps": 20,
       "cfg": 1.0,
@@ -106,7 +117,7 @@
         "9",
         0
       ],
-      "filename_prefix": "portrait_430598538"
+      "filename_prefix": "portrait_901361607"
     }
   }
 }

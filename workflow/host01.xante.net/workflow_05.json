@@ -1,93 +1,119 @@
 {
   "1": {
-    "class_type": "LoadImageOutput",
-    "widgets_values": [
-      "YOUR_FILE_NAME.png [output]",
-      false,
-      "refresh",
-      "image"
-    ],
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "image": "ai_input_6B0889A1-A9F4-4769-B852-E273C68DA082.png"
+      "ckpt_name": "mdjrny-v4.safetensors"
+    },
+    "_meta": {
+      "title": "Checkpoint Loader (Model/CLIP/VAE)"
     }
   },
   "2": {
-    "class_type": "UpscaleModelLoader",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "model_name": "RealESRGAN_x4plus.safetensors"
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "Chevy trax lowered with ground effects. dark red color\r\nfull view"
     },
     "_meta": {
-      "title": "Load Upscale Model"
+      "title": "Positive Prompt"
     }
   },
   "3": {
-    "class_type": "ImageUpscaleWithModel",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "image": [
-        "1",
-        0
-      ],
-      "upscale_model": [
-        "2",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "Upscale x4 (Model)"
-    }
-  },
-  "5": {
-    "class_type": "AILab_ImageMaskResize",
-    "inputs": {
-      "width": 0,
-      "height": 0,
-      "scale_by": 1.0,
-      "upscale_method": "bicubic",
-      "resize_mode": "resize",
-      "pad_color": "#ffffff",
-      "crop_position": "center",
-      "divisible_by": 1,
-      "device": "gpu",
-      "image": [
-        "3",
-        0
-      ],
-      "mask": [
+      "clip": [
         "1",
         1
-      ]
-    },
-    "_meta": {
-      "title": "Resize Alpha to Upscaled Size (no padding)"
-    }
-  },
-  "6": {
-    "class_type": "JoinImageWithAlpha",
-    "inputs": {
-      "image": [
-        "3",
-        0
       ],
-      "alpha": [
-        "5",
-        1
-      ]
+      "text": ""
     },
     "_meta": {
-      "title": "Join Upscaled Image + Alpha Mask"
+      "title": "Negative Prompt"
     }
   },
   "4": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "batch_size": 1,
+      "height": 512,
+      "width": 512
+    },
+    "_meta": {
+      "title": "Empty Latent (Width/Height/Batch)"
+    }
+  },
+  "5": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "latent_image": [
+        "4",
+        0
+      ],
+      "cfg": 6.4,
+      "denoise": 1.0,
+      "sampler_name": "dpmpp_sde",
+      "scheduler": "karras",
+      "seed": 1088418844097619,
+      "steps": 34
+    },
+    "_meta": {
+      "title": "Sampler (Seed/Steps/CFG/Sampler/Scheduler)"
+    }
+  },
+  "6": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "7": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
         "6",
         0
       ],
-      "filename_prefix": "iqueue_upscale_6B0889A1-A9F4-4769-B852-E273C68DA082"
+      "filename_prefix": "iqueue_500B6766-1702-4C2B-81AC-411415F5375D"
     },
     "_meta": {
-      "title": "Save Upscaled"
+      "title": "Save to Disk"
+    }
+  },
+  "8": {
+    "class_type": "SaveImageWebsocket",
+    "inputs": {
+      "images": [
+        "6",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Stream via Websocket"
     }
   }
 }

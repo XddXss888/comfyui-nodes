@@ -1,123 +1,93 @@
 {
   "1": {
-    "class_type": "UNETLoader",
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "unet_name": "flux1-dev.safetensors",
-      "weight_dtype": "default"
+      "ckpt_name": "RealVisXL_V5.0.safetensors"
     }
   },
   "2": {
-    "class_type": "DualCLIPLoader",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip_name1": "clip_l.safetensors",
-      "clip_name2": "t5xxl_fp16.safetensors",
-      "type": "flux"
+      "vae_name": "sdxl_vae.safetensors"
     }
   },
   "3": {
-    "class_type": "VAELoader",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "vae_name": "ae.safetensors"
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "RAW photo, ultra realistic skin texture, stunning Korean idol woman with chestnut brown high ponytail, baby face with natural aegyo-sal under-eye charm, bright cheerful smile showing perfect teeth, flawless porcelain skin with dewy finish, soft styled makeup with peachy blush and gradient coral lips, wearing retro 90s oversized denim jacket with vintage band tee underneath, bust shot shoulders up, shot on 50mm lens, eye-level straight on, candlelight warm intimate glow casting golden amber tones across her face, autumn park background with falling maple leaves in bokeh, gentle warm breeze lifting loose strands of hair, nostalgic dreamy atmosphere, natural window light mixing with candle warmth, sharp focus on eyes, creamy shallow depth of field, no text, no watermarks"
     }
   },
   "4": {
-    "class_type": "LoraLoaderModelOnly",
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "cartoon, anime, illustration, painting, low quality, blurry, deformed, extra fingers, bad anatomy, watermark, text, signature, oversaturated"
+    }
+  },
+  "5": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 896,
+      "height": 1280,
+      "batch_size": 1
+    }
+  },
+  "6": {
+    "class_type": "KSampler",
     "inputs": {
       "model": [
         "1",
         0
       ],
-      "lora_name": "flux_korean_girl.safetensors",
-      "strength_model": 0.8
-    }
-  },
-  "5": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": "A striking silhouette of a Korean woman framed against golden hour light streaming through floor-to-ceiling gallery windows, shot with a macro lens capturing extreme close-up skin texture and individual eyelash detail. Dark hair with honey-toned face-framing highlights falls in a blunt cut with wispy bangs across her forehead. Sharp jawline catches warm side light creating dramatic shadow play. Cat-like eyes gaze serenely past camera, contemplative and distant. Positioned off-center using rule of thirds, her profile partially backlit. She wears a faded denim jacket, collar casually popped. Flawless dewy skin, gradient lip tint, subtle champagne eyeshadow. Modern minimalist white gallery walls with abstract sculpture soft-focused behind her. Ethereal, magazine editorial quality."
-    }
-  },
-  "6": {
-    "class_type": "FluxGuidance",
-    "inputs": {
-      "conditioning": [
-        "5",
-        0
-      ],
-      "guidance": 3.5
-    }
-  },
-  "7": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": ""
-    }
-  },
-  "8": {
-    "class_type": "EmptySD3LatentImage",
-    "inputs": {
-      "width": 896,
-      "height": 1280,
-      "batch_size": 4
-    }
-  },
-  "9": {
-    "class_type": "KSampler",
-    "inputs": {
-      "model": [
-        "4",
-        0
-      ],
       "positive": [
-        "6",
+        "3",
         0
       ],
       "negative": [
-        "7",
+        "4",
         0
       ],
       "latent_image": [
-        "8",
+        "5",
         0
       ],
-      "seed": 1880111556,
+      "seed": 398004420,
       "control_after_generate": "fixed",
-      "steps": 22,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
+      "steps": 30,
+      "cfg": 4.5,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
       "denoise": 1.0
     }
   },
-  "10": {
+  "7": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "9",
+        "6",
         0
       ],
       "vae": [
-        "3",
+        "2",
         0
       ]
     }
   },
-  "11": {
+  "8": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "10",
+        "7",
         0
       ],
-      "filename_prefix": "portrait_1880111556"
+      "filename_prefix": "portrait_398004420"
     }
   }
 }

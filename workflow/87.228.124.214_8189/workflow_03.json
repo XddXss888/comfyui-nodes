@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "eurameg1, A beautiful naked MILF bending slightly forward, soft waist glowing under warm intimate light, thighs parted with visible wetness from squirting, looking directly at the viewer with a slow intimate smile and steady gaze, upper body framed in medium close-up, simple dark background, soft directional lighting highlighting skin and curves, natural proportions, clear readable pose.",
+      "text": "seductive young curvy woman with long black hair, In a cozy apartment with soft evening lighting, a woman leans slightly forward while maintaining steady eye contact, a slow smile crossing her lips, dressed in fitted casual clothing, intimate trust-game atmosphere, medium close-up framing, warm and gentle lighting on her face and shoulders, simple background, natural pose and proportions.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "zimg-eurameg1-refine-con-char.safetensors",
-      "strength_model": 0.8,
-      "strength_clip": 0.8,
+      "lora_name": "izumi_v.2.safetensors",
+      "strength_model": 0.9,
+      "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -132,12 +132,12 @@
     "inputs": {
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
-      "scheduler": "beta57",
+      "scheduler": "bong_tangent",
       "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 453373455444780,
+      "seed": 26161571962184,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

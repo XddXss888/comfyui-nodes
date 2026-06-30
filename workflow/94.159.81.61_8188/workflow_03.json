@@ -1,23 +1,22 @@
 {
   "9": {
     "inputs": {
-      "filename_prefix": "z-image-base",
       "images": [
         "76:65",
         0
       ]
     },
-    "class_type": "SaveImage",
+    "class_type": "PreviewImage",
     "_meta": {
-      "title": "Save Image"
+      "title": "Preview Image"
     }
   },
   "76:67": {
     "inputs": {
-      "text": "Portrait of a female police officer in Russian police uniform with badge, looking directly into camera, standing in front of police station, Russian police car visible, daytime lighting, neat uniform with Russian police insignia, professional atmosphere, 35mm lens, f/2.8, realistic color reproduction, vertical portrait composition, photorealistic, high detail",
+      "text": "Medium portrait of a Blood Elf mage with blonde hair and red eyes, wearing an elaborate arcane robe, three glowing orbs floating above him (blue water, red fire, purple lightning), wielding an arcane staff, scholarly expression, mystical academy background with arcane symbols, ethereal magical lighting with orb glow, cinematic photograph, white gold and multicolor orb palette",
       "clip": [
-        "76:80",
-        1
+        "76:62",
+        0
       ]
     },
     "class_type": "CLIPTextEncode",
@@ -27,8 +26,8 @@
   },
   "76:68": {
     "inputs": {
-      "width": 1024,
-      "height": 1536,
+      "width": 832,
+      "height": 1248,
       "batch_size": 1
     },
     "class_type": "EmptySD3LatentImage",
@@ -76,7 +75,7 @@
     "inputs": {
       "shift": 3.0,
       "model": [
-        "76:80",
+        "76:66",
         0
       ]
     },
@@ -85,28 +84,9 @@
       "title": "ModelSamplingAuraFlow"
     }
   },
-  "76:80": {
-    "inputs": {
-      "lora_name": "Portrait_SoloLoRA_ZIBv1.safetensors",
-      "strength_model": 0.6,
-      "strength_clip": 0.6,
-      "model": [
-        "76:66",
-        0
-      ],
-      "clip": [
-        "76:62",
-        0
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Load LoRA"
-    }
-  },
   "76:66": {
     "inputs": {
-      "unet_name": "z_image_bf16.safetensors",
+      "unet_name": "z_image_turbo_bf16.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -118,8 +98,8 @@
     "inputs": {
       "text": "",
       "clip": [
-        "76:80",
-        1
+        "76:62",
+        0
       ]
     },
     "class_type": "CLIPTextEncode",
@@ -129,10 +109,10 @@
   },
   "76:69": {
     "inputs": {
-      "seed": 5091647358770456654,
-      "steps": 40,
-      "cfg": 4.0,
-      "sampler_name": "res_multistep",
+      "seed": 6469672829031679333,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0,
       "model": [

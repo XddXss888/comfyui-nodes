@@ -2,10 +2,24 @@
   "22": {
     "class_type": "Text Multiline",
     "inputs": {
-      "text": "【画面】金毛前爪按住钢琴琴键，尾巴卷住琴凳，后爪悬空轻点琴盖"
+      "text": "纯正面角度的笔记本电脑图像，电脑屏幕完全展开，掌托右下角印有thinkpad标志， 男性，短发，手持竹杖，穿行于假山叠石间，晨雾缭绕的牡丹园中，花瓣随风轻舞"
     },
     "_meta": {
       "title": "多行文本"
+    }
+  },
+  "44": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "lora_name": "ThinkPadx9_zimageTurbo_model.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "1",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "LoRA加载器(仅模型)"
     }
   },
   "37": {
@@ -80,7 +94,7 @@
       "cfg": 1.0,
       "sampler_name": "euler",
       "model": [
-        "1",
+        "44",
         0
       ],
       "positive": [
@@ -97,7 +111,7 @@
     "class_type": "CLIPTextEncode",
     "inputs": {
       "text": [
-        "22",
+        "42",
         0
       ],
       "clip": [
@@ -175,7 +189,7 @@
   "20": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "3e5ac7a38a824b479b151a35abc657ed/3e5ac7a38a824b479b151a35abc657ed",
+      "filename_prefix": "d111f381a9fc40a89ec7f7badd700b13/d111f381a9fc40a89ec7f7badd700b13",
       "images": [
         "8",
         0
@@ -183,6 +197,33 @@
     },
     "_meta": {
       "title": "保存图像"
+    }
+  },
+  "42": {
+    "class_type": "Text Concatenate",
+    "inputs": {
+      "delimiter": ", ",
+      "text_a": [
+        "43",
+        0
+      ],
+      "clean_whitespace": "true",
+      "text_b": [
+        "22",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "文本连锁"
+    }
+  },
+  "43": {
+    "class_type": "Text Multiline",
+    "inputs": {
+      "text": ""
+    },
+    "_meta": {
+      "title": "多行文本"
     }
   }
 }

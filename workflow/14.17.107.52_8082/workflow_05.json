@@ -79,7 +79,7 @@
   },
   "83": {
     "inputs": {
-      "lora_name": "20260625181631.safetensors",
+      "lora_name": "20260629142355.safetensors",
       "strength_model": 0.8,
       "model": [
         "75",
@@ -93,7 +93,7 @@
   },
   "85": {
     "inputs": {
-      "lora_name": "20260625181631.safetensors",
+      "lora_name": "20260629142355.safetensors",
       "strength_model": 0.8,
       "model": [
         "76",
@@ -136,7 +136,7 @@
   },
   "89": {
     "inputs": {
-      "text": "A young girl with soft",
+      "text": "A young girl with long",
       "clip": [
         "71",
         0
@@ -149,8 +149,8 @@
   },
   "117": {
     "inputs": {
-      "seed": 758188320651941,
-      "steps": 20,
+      "seed": 338538082225077,
+      "steps": 30,
       "cfg": 1.5,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -179,8 +179,8 @@
   },
   "118": {
     "inputs": {
-      "seed": 760610854214669,
-      "steps": 20,
+      "seed": 929015436652998,
+      "steps": 30,
       "cfg": 1.5,
       "sampler_name": "euler",
       "scheduler": "simple",

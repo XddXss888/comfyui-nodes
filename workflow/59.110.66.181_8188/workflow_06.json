@@ -2,10 +2,24 @@
   "22": {
     "class_type": "Text Multiline",
     "inputs": {
-      "text": "【画面】小猪在唱歌，尾巴卷住琴凳"
+      "text": "纯正面角度的笔记本电脑图像，电脑屏幕完全展开，掌托右下角印有thinkpad标志， 女性，短发，黑色连衣裙，手持竹杖，穿行于假山叠石间，晨雾缭绕的牡丹园中，花瓣随风轻舞"
     },
     "_meta": {
       "title": "多行文本"
+    }
+  },
+  "44": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "lora_name": "ThinkPadx9_zimageTurbo_model.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "1",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "LoRA加载器(仅模型)"
     }
   },
   "37": {
@@ -80,7 +94,7 @@
       "cfg": 1.0,
       "sampler_name": "euler",
       "model": [
-        "1",
+        "44",
         0
       ],
       "positive": [
@@ -97,7 +111,7 @@
     "class_type": "CLIPTextEncode",
     "inputs": {
       "text": [
-        "22",
+        "42",
         0
       ],
       "clip": [
@@ -175,7 +189,7 @@
   "20": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "18f009b3f6874819819aa39738b6f5fa/18f009b3f6874819819aa39738b6f5fa",
+      "filename_prefix": "07f210614d464688ad9202603e9e4406/07f210614d464688ad9202603e9e4406",
       "images": [
         "8",
         0
@@ -183,6 +197,33 @@
     },
     "_meta": {
       "title": "保存图像"
+    }
+  },
+  "42": {
+    "class_type": "Text Concatenate",
+    "inputs": {
+      "delimiter": ", ",
+      "text_a": [
+        "43",
+        0
+      ],
+      "clean_whitespace": "true",
+      "text_b": [
+        "22",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "文本连锁"
+    }
+  },
+  "43": {
+    "class_type": "Text Multiline",
+    "inputs": {
+      "text": ""
+    },
+    "_meta": {
+      "title": "多行文本"
     }
   }
 }

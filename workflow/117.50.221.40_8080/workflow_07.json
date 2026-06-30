@@ -8,7 +8,7 @@
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Ancient Chinese martial arts scene: warrior with bloodied cheek, staring at a gleaming sword blade, rain-soaked night with dramatic lightning strikes, cinematic lighting, intricate armor and fabric details, 8K ultra-detailed CG masterpiece, best quality, professional digital painting, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "A robust, muscular middle-aged man, athletic build, confident pose, natural lighting, realistic skin texture, detailed anatomy, masterpiece, best quality, professional photography style, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "1",
         1
@@ -19,21 +19,21 @@
     "class_type": "EmptyLatentImage",
     "inputs": {
       "width": 1024,
-      "height": 576,
+      "height": 1024,
       "batch_size": 1
     }
   },
   "4": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 335185826,
+      "seed": 1335902045,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "sgm_uniform",
       "denoise": 1.0,
       "model": [
-        "10",
+        "1",
         0
       ],
       "positive": [
@@ -104,22 +104,6 @@
         "8",
         0
       ]
-    }
-  },
-  "10": {
-    "class_type": "LoraLoader",
-    "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "clip": [
-        "1",
-        1
-      ],
-      "lora_name": "动漫转真人.safetensors",
-      "strength_model": 0.8,
-      "strength_clip": 0.8
     }
   }
 }

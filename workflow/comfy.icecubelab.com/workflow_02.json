@@ -20,6 +20,17 @@
       "vae_name": "ae.safetensors"
     }
   },
+  "11": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "lora_name": "korean_realism_flux.safetensors",
+      "strength_model": 0.8
+    }
+  },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
@@ -27,34 +38,34 @@
         "2",
         0
       ],
-      "text": "Overhead bird's eye view of a stunning Korean woman lying on a snow-covered cobblestone street at night, platinum blonde long hair fanning out across fresh powder snow, wispy bangs framing her slim fox-like face. She gazes up at the camera with wide surprised eyes, lips slightly parted in a candid caught-off-guard moment. Champagne satin slip dress contrasts against the white snow. Blue hour twilight ambient light mixed with distant warm streetlamp glow creates ethereal atmosphere. Flawless porcelain skin, editorial makeup with subtle shimmer highlight. Shot on 35mm lens, environmental portrait, medium shot showing the snowy street context around her. Snowflakes suspended mid-air. Photorealistic, fashion editorial quality."
+      "text": "A stunning Korean idol-style woman with jet black long straight black hair cascading past her shoulders, angular features and strong defined brows, gentle soft expression with a subtle warm smile. Half body waist up composition, shot on 24mm wide angle lens with dynamic perspective and Dutch angle tilted frame. Standing in a concrete parking garage under harsh fluorescent ceiling lights contrasting with blue hour twilight ambient light streaming through the entrance. Wearing a retro 90s oversized denim jacket over a white crop top with high-waisted mom jeans. Flawless porcelain skin, dewy makeup with soft gradient lips. One hand resting on a concrete pillar, body slightly turned, chin tilted down with eyes gazing upward. Cinematic atmosphere, cool teal and warm amber tones."
     }
   },
   "5": {
-    "class_type": "FluxGuidance",
-    "inputs": {
-      "conditioning": [
-        "4",
-        0
-      ],
-      "guidance": 3.5
-    }
-  },
-  "6": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
         "2",
         0
       ],
-      "text": ""
+      "text": "text, watermark, logo"
+    }
+  },
+  "6": {
+    "class_type": "FluxGuidance",
+    "inputs": {
+      "conditioning": [
+        "4",
+        0
+      ],
+      "guidance": 3.3
     }
   },
   "7": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
       "width": 1024,
-      "height": 1024,
+      "height": 1280,
       "batch_size": 1
     }
   },
@@ -62,22 +73,22 @@
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "1",
+        "11",
         0
       ],
       "positive": [
-        "5",
+        "6",
         0
       ],
       "negative": [
-        "6",
+        "5",
         0
       ],
       "latent_image": [
         "7",
         0
       ],
-      "seed": 1452490937,
+      "seed": 1418543497,
       "control_after_generate": "fixed",
       "steps": 20,
       "cfg": 1.0,
@@ -106,7 +117,7 @@
         "9",
         0
       ],
-      "filename_prefix": "portrait_1452490937"
+      "filename_prefix": "portrait_1418543497"
     }
   }
 }

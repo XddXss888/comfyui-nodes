@@ -1,7 +1,7 @@
 {
   "100": {
     "inputs": {
-      "value": false
+      "value": true
     },
     "class_type": "PrimitiveBoolean",
     "_meta": {
@@ -19,7 +19,7 @@
   },
   "102": {
     "inputs": {
-      "value": 885021219
+      "value": 10366323
     },
     "class_type": "PrimitiveInt",
     "_meta": {
@@ -351,7 +351,7 @@
   },
   "81": {
     "inputs": {
-      "image": "wu65wjdraq_2026-06-28-23-45-05"
+      "image": "fqqjxsxxwx_2026-06-29-23-41-21"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -361,7 +361,7 @@
   "84": {
     "inputs": {
       "crf": 19,
-      "filename_prefix": "uebym7s9p6_2026-06-28-23-45-05",
+      "filename_prefix": "fwkdeptbsq_2026-06-29-23-41-21",
       "format": "video/h264-mp4",
       "frame_rate": 16.0,
       "images": [
@@ -400,10 +400,10 @@
   },
   "92": {
     "inputs": {
-      "String": "camera parada, ela começa a pular , pulus pequenos como se esticesse pulando corda e rápidos de frente para camera",
-      "positive": "camera parada, ela começa a pular , pulus pequenos como se esticesse pulando corda e rápidos de frente para camera",
-      "text": "camera parada, ela começa a pular , pulus pequenos como se esticesse pulando corda e rápidos de frente para camera",
-      "value": "camera parada, ela começa a pular , pulus pequenos como se esticesse pulando corda e rápidos de frente para camera"
+      "String": "((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her bra and looks at the camera. Her movements are fluid and natural. The subjects must perfectly match the attached image.\n",
+      "positive": "((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her bra and looks at the camera. Her movements are fluid and natural. The subjects must perfectly match the attached image.\n",
+      "text": "((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her bra and looks at the camera. Her movements are fluid and natural. The subjects must perfectly match the attached image.\n",
+      "value": "((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her bra and looks at the camera. Her movements are fluid and natural. The subjects must perfectly match the attached image.\n"
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
