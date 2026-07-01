@@ -1,0 +1,122 @@
+name: Daily Codespace Scan
+
+on:
+  schedule:
+    # Beijing time 08:00 = UTC 00:00
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-codespace-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    name: Run scan in Codespace
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      GH_TOKEN: ${{ secrets.CODESPACE_PAT }}
+      CODESPACE_REPO: ${{ github.repository }}
+      CODESPACE_BRANCH: ${{ github.ref_name }}
+      CODESPACE_MACHINE: basicLinux32gb
+      CODESPACE_NAME: comfyui-daily-scan-${{ github.run_id }}
+    steps:
+      - name: Check required secret
+        run: |
+          if [ -z "${GH_TOKEN}" ]; then
+            echo "Missing repository secret CODESPACE_PAT. Create a classic/fine-grained PAT with Codespaces access and repo contents access."
+            exit 1
+          fi
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ github.token }}
+
+      - name: Create Codespace
+        id: codespace
+        run: |
+          set -euo pipefail
+          codespace_name=$(gh codespace create \
+            --repo "${CODESPACE_REPO}" \
+            --branch "${CODESPACE_BRANCH}" \
+            --machine "${CODESPACE_MACHINE}" \
+            --display-name "${CODESPACE_NAME}" \
+            --idle-timeout 30m \
+            --retention-period 1h \
+            --default-permissions | tail -n 1)
+          echo "name=${codespace_name}" >> "${GITHUB_OUTPUT}"
+
+      - name: Wait for Codespace
+        run: |
+          set -euo pipefail
+          codespace="${{ steps.codespace.outputs.name }}"
+          for attempt in $(seq 1 60); do
+            state=$(gh codespace list --repo "${CODESPACE_REPO}" --json name,state --jq ".[] | select(.name == \"${codespace}\") | .state")
+            echo "Codespace ${codespace} state: ${state:-unknown}"
+            if [ "${state}" = "Available" ]; then
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Codespace did not become available in time"
+          exit 1
+
+      - name: Run scan inside Codespace
+        run: |
+          set -euo pipefail
+          codespace="${{ steps.codespace.outputs.name }}"
+          gh codespace ssh -c "${codespace}" -- \
+            'cd /workspaces/comfyui-nodes && git pull --ff-only && python3 comfyui_scan.py -f comfyui.csv -w 200'
+
+      - name: Copy report from Codespace
+        run: |
+          set -euo pipefail
+          codespace="${{ steps.codespace.outputs.name }}"
+          gh codespace cp -c "${codespace}" -e 'remote:/workspaces/comfyui-nodes/report.md' report.md
+
+      - name: Validate report sorting
+        run: |
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+
+          text = Path('report.md').read_text(encoding='utf-8')
+          count = re.search(r'^共 (\d+) 台$', text, re.M)
+          rows = []
+          for line in text.splitlines():
+              if line.startswith('| ') and not line.startswith('| #') and not line.startswith('|---'):
+                  cols = [c.strip() for c in line.strip('|').split('|')]
+                  if len(cols) >= 5:
+                      m = re.match(r'(\d+)', cols[4])
+                      rows.append((cols[1], cols[3], int(m.group(1)) if m else 0))
+          if not rows:
+              raise SystemExit('No report rows found')
+          bad = [(i, rows[i], rows[i + 1]) for i in range(len(rows) - 1) if rows[i][2] < rows[i + 1][2]]
+          if bad:
+              raise SystemExit(f'Report is not sorted by VRAM descending: {bad[:3]}')
+          print(f"alive_count={count.group(1) if count else 'unknown'}")
+          print(f"top_row={rows[0]}")
+          PY
+
+      - name: Commit report if changed
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- report.md; then
+            echo "report.md unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add report.md
+          git commit -m "auto: 每日 Codespace 扫描报告"
+          git push
+
+      - name: Delete Codespace
+        if: always() && steps.codespace.outputs.name != ''
+        run: |
+          gh codespace delete -c "${{ steps.codespace.outputs.name }}" --force || true
