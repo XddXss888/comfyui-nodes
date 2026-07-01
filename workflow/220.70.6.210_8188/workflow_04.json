@@ -2,7 +2,7 @@
   "3": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 129773080,
+      "seed": 129814071,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -43,7 +43,7 @@
   "6": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "CRITICAL CONSTRAINTS: ZERO humans, ZERO hands, ZERO arms, ZERO faces, ZERO body parts, ZERO floating limbs, ZERO ghostly figures. Background MUST be empty of any living creatures. ZERO additional products in the scene (no olive oil, no unrelated objects). PLACEMENT ZONE: Reserve a clear empty area at the composition center with a flat horizontal surface (table / counter / floor / pedestal) at appropriate height. DO NOT place any cup, bowl, plate, vase, or other object where the main product will go. The center placement area must be completely empty for an external product to be composited. Dramatic dark studio backdrop with single soft rim backlight from behind, glowing halo around empty center, deep shadows on edges, mysterious cinematic mood, soft natural tones, balanced exposure, abstract gradient. No props, no objects in background, just atmospheric lighting., high quality, professional photography, natural soft lighting. Negative: blurry, low quality, distorted, ugly, bad anatomy, deformed, disfigured, mutation, out of frame, poorly drawn, extra limbs, extra hands, multiple hands, three hands, too many fingers, extra fingers, fused fingers, missing fingers, deformed hands, malformed hands, duplicate, duplicate person, multiple people, cloned face, watermark, signature, text overlay, logo, jpeg artifacts, compression artifacts, pixelated, off-topic background, irrelevant objects, unrelated product, random clutter",
+      "text": "CRITICAL CONSTRAINTS: ZERO humans, ZERO hands, ZERO arms, ZERO faces, ZERO body parts, ZERO floating limbs, ZERO ghostly figures. Background MUST be empty of any living creatures. ZERO additional products in the scene (no olive oil, no unrelated objects). PLACEMENT ZONE: Reserve a clear empty area at the composition center with a flat horizontal surface (table / counter / floor / pedestal) at appropriate height. DO NOT place any cup, bowl, plate, vase, or other object where the main product will go. The center placement area must be completely empty for an external product to be composited. Lifestyle setting backdrop with empty central placement zone, edge props only (blurred), soft natural light, warm inviting atmosphere, soft natural tones, balanced exposure, magazine still-life mood., high quality, professional photography, natural soft lighting. Negative: blurry, low quality, distorted, ugly, bad anatomy, deformed, disfigured, mutation, out of frame, poorly drawn, extra limbs, extra hands, multiple hands, three hands, too many fingers, extra fingers, fused fingers, missing fingers, deformed hands, malformed hands, duplicate, duplicate person, multiple people, cloned face, watermark, signature, text overlay, logo, jpeg artifacts, compression artifacts, pixelated, off-topic background, irrelevant objects, unrelated product, random clutter",
       "clip": [
         "4",
         1
@@ -76,7 +76,7 @@
   "9": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "goagent_c889e066",
+      "filename_prefix": "goagent_6034a1ae",
       "images": [
         "8",
         0

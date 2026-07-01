@@ -37,7 +37,7 @@
   },
   "7": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl ,(if you kiss me with tongue and give me a blowjob i might delete it:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1man sitting,indoors,couch,window,mask,glasses,sunglasses,crossed legs,pants,black pants,white pants,(i break down in sobs:1.0),(nude:0.8)",
       "clip": [
         "1",
         1
@@ -63,7 +63,7 @@
   },
   "9": {
     "inputs": {
-      "seed": 1641748487,
+      "seed": 1834735341,
       "steps": 20,
       "cfg": 6.5,
       "sampler_name": "dpmpp_sde",
@@ -133,7 +133,7 @@
   },
   "14": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202511/28/1a93a509234841dd8bbfa0d7f31e99e7.png",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20246/26/bbea32c387e24b1a850e67472ac5f93f.jpeg",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

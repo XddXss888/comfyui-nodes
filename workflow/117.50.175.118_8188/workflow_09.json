@@ -1,0 +1,384 @@
+{
+  "159": {
+    "class_type": "AudioCrop",
+    "inputs": {
+      "audio": [
+        "125",
+        0
+      ],
+      "start_time": "0:00",
+      "end_time": "2:00"
+    }
+  },
+  "173": {
+    "class_type": "CLIPVisionLoader",
+    "inputs": {
+      "clip_name": "clip_vision_h.safetensors"
+    }
+  },
+  "122": {
+    "class_type": "WanVideoModelLoader",
+    "inputs": {
+      "compile_args": [
+        "177",
+        0
+      ],
+      "block_swap_args": [
+        "134",
+        0
+      ],
+      "lora": [
+        "138",
+        0
+      ],
+      "multitalk_model": [
+        "120",
+        0
+      ],
+      "model": "wan2.1/wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors",
+      "base_precision": "fp16",
+      "quantization": "fp8_e4m3fn_scaled",
+      "load_device": "offload_device",
+      "attention_mode": "sageattn",
+      "rms_norm_function": "default"
+    }
+  },
+  "138": {
+    "class_type": "WanVideoLoraSelect",
+    "inputs": {
+      "lora": "Lightx2v/lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank32_bf16.safetensors",
+      "strength": 0.8000000000000002,
+      "low_mem_load": false,
+      "merge_loras": false
+    }
+  },
+  "129": {
+    "class_type": "WanVideoVAELoader",
+    "inputs": {
+      "model_name": "Wan2_1_VAE_bf16.safetensors",
+      "precision": "bf16"
+    }
+  },
+  "137": {
+    "class_type": "DownloadAndLoadWav2VecModel",
+    "inputs": {
+      "model": "TencentGameMate/chinese-wav2vec2-base",
+      "base_precision": "fp16",
+      "load_device": "main_device"
+    }
+  },
+  "193": {
+    "class_type": "WanVideoClipVisionEncode",
+    "inputs": {
+      "clip_vision": [
+        "173",
+        0
+      ],
+      "image_1": [
+        "171",
+        0
+      ],
+      "strength_1": 1.0,
+      "strength_2": 1.0,
+      "crop": "center",
+      "combine_embeds": "average",
+      "force_offload": true,
+      "tiles": 0,
+      "ratio": 0.5000000000000001
+    }
+  },
+  "177": {
+    "class_type": "WanVideoTorchCompileSettings",
+    "inputs": {
+      "backend": "inductor",
+      "fullgraph": false,
+      "mode": "default",
+      "dynamic": false,
+      "dynamo_cache_size_limit": 64,
+      "compile_transformer_blocks_only": true,
+      "dynamo_recompile_limit": 128
+    }
+  },
+  "134": {
+    "class_type": "WanVideoBlockSwap",
+    "inputs": {
+      "blocks_to_swap": 30,
+      "offload_img_emb": false,
+      "offload_txt_emb": false,
+      "use_non_blocking": true,
+      "vace_blocks_to_swap": 0,
+      "prefetch_blocks": 0,
+      "block_swap_debug": false
+    }
+  },
+  "136": {
+    "class_type": "LoadWanVideoT5TextEncoder",
+    "inputs": {
+      "model_name": "umt5-xxl-enc-bf16.safetensors",
+      "precision": "bf16",
+      "load_device": "offload_device",
+      "quantization": "disabled"
+    }
+  },
+  "198": {
+    "class_type": "ToInt",
+    "inputs": {
+      "any": [
+        "203",
+        0
+      ],
+      "round_method": "floor"
+    }
+  },
+  "170": {
+    "class_type": "AudioSeparation",
+    "inputs": {
+      "audio": [
+        "159",
+        0
+      ],
+      "chunk_fade_shape": "linear",
+      "chunk_length": 10.0,
+      "chunk_overlap": 0.1
+    }
+  },
+  "194": {
+    "class_type": "MultiTalkWav2VecEmbeds",
+    "inputs": {
+      "wav2vec_model": [
+        "137",
+        0
+      ],
+      "audio_1": [
+        "170",
+        3
+      ],
+      "num_frames": [
+        "199",
+        0
+      ],
+      "normalize_loudness": true,
+      "audio_1_loudness": 275,
+      "fps": 25.0,
+      "audio_scale": 1.0,
+      "audio_cfg_scale": 1.0,
+      "multi_audio_type": "para"
+    }
+  },
+  "202": {
+    "class_type": "easy showAnything",
+    "inputs": {
+      "anything": [
+        "199",
+        0
+      ]
+    }
+  },
+  "201": {
+    "class_type": "Int",
+    "inputs": {
+      "Number": "25"
+    }
+  },
+  "199": {
+    "class_type": "SimpleMath+",
+    "inputs": {
+      "a": [
+        "198",
+        0
+      ],
+      "b": [
+        "201",
+        0
+      ],
+      "value": "a*b+25"
+    }
+  },
+  "203": {
+    "class_type": "Audio Duration (mtb)",
+    "inputs": {
+      "audio": [
+        "125",
+        0
+      ]
+    }
+  },
+  "133": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "batch_test/image_01.png",
+      "upload": "image"
+    }
+  },
+  "120": {
+    "class_type": "MultiTalkModelLoader",
+    "inputs": {
+      "model": "kijai/WanVideo_comfy/InfiniteTalk/Wan2_1-InfiniTetalk-Single_fp16.safetensors"
+    }
+  },
+  "130": {
+    "class_type": "WanVideoDecode",
+    "inputs": {
+      "vae": [
+        "129",
+        0
+      ],
+      "samples": [
+        "128",
+        0
+      ],
+      "enable_vae_tiling": false,
+      "tile_x": 272,
+      "tile_y": 272,
+      "tile_stride_x": 144,
+      "tile_stride_y": 128,
+      "normalization": "default"
+    }
+  },
+  "128": {
+    "class_type": "WanVideoSampler",
+    "inputs": {
+      "model": [
+        "122",
+        0
+      ],
+      "image_embeds": [
+        "192",
+        0
+      ],
+      "text_embeds": [
+        "135",
+        0
+      ],
+      "multitalk_embeds": [
+        "194",
+        0
+      ],
+      "steps": 4,
+      "cfg": 1.0,
+      "shift": 11.000000000000002,
+      "seed": 1,
+      "force_offload": true,
+      "scheduler": "flowmatch_distill",
+      "riflex_freq_index": 0,
+      "denoise_strength": 1.0,
+      "batched_cfg": false,
+      "rope_function": "comfy",
+      "start_step": 0,
+      "end_step": -1,
+      "add_noise_to_samples": false
+    }
+  },
+  "192": {
+    "class_type": "WanVideoImageToVideoMultiTalk",
+    "inputs": {
+      "vae": [
+        "129",
+        0
+      ],
+      "start_image": [
+        "171",
+        0
+      ],
+      "clip_embeds": [
+        "193",
+        0
+      ],
+      "width": [
+        "171",
+        1
+      ],
+      "height": [
+        "171",
+        2
+      ],
+      "frame_window_size": 81,
+      "motion_frame": 9,
+      "force_offload": false,
+      "colormatch": "mkl",
+      "tiled_vae": false,
+      "mode": "infinitetalk"
+    }
+  },
+  "125": {
+    "class_type": "LoadAudio",
+    "inputs": {
+      "audio": "batch_test/audio.mp3"
+    }
+  },
+  "171": {
+    "class_type": "ImageResizeKJv2",
+    "inputs": {
+      "image": [
+        "133",
+        0
+      ],
+      "width": 480,
+      "height": 854,
+      "upscale_method": "lanczos",
+      "keep_proportion": "pad",
+      "pad_color": "0, 0, 0",
+      "crop_position": "center",
+      "divisible_by": 2,
+      "device": "cpu",
+      "per_batch": 0
+    }
+  },
+  "204": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "有疑问联系@好奇漫步个人微信、公众号、群.png",
+      "upload": "image"
+    }
+  },
+  "205": {
+    "class_type": "VHS_VideoCombine",
+    "inputs": {
+      "images": [
+        "130",
+        0
+      ],
+      "audio": [
+        "159",
+        0
+      ],
+      "frame_rate": 25.0,
+      "loop_count": 0,
+      "filename_prefix": "Infinitetalk_TEST_19",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": false,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true,
+      "videopreview": {
+        "hidden": false,
+        "paused": false,
+        "params": {
+          "filename": "WanVideo_InfiniteTalk_00002-audio.mp4",
+          "subfolder": "",
+          "type": "output",
+          "format": "video/h264-mp4",
+          "frame_rate": 25,
+          "workflow": "WanVideo_InfiniteTalk_00002.png",
+          "fullpath": "/root/ComfyUI/output/WanVideo_InfiniteTalk_00002-audio.mp4"
+        }
+      }
+    }
+  },
+  "135": {
+    "class_type": "WanVideoTextEncode",
+    "inputs": {
+      "t5": [
+        "136",
+        0
+      ],
+      "positive_prompt": "女孩在舞台上唱歌，声情并茂，富有感情，配合合适恰当的唱歌肢体动作",
+      "negative_prompt": "bright tones, overexposed, static, blurred details, subtitles, style, works, paintings, images, static, overall gray, worst quality, low quality, JPEG compression residue, ugly, incomplete, extra fingers, poorly drawn hands, poorly drawn faces, deformed, disfigured, misshapen limbs, fused fingers, still picture, messy background, three legs, many people in the background, walking backwards",
+      "force_offload": true,
+      "use_disk_cache": false,
+      "device": "gpu"
+    }
+  }
+}

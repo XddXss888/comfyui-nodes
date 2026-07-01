@@ -1,121 +1,363 @@
 {
-  "11": {
-    "class_type": "VHS_LoadVideoPath",
+  "12": {
+    "class_type": "UNETLoader",
     "inputs": {
-      "custom_height": 0,
-      "force_rate": 0.0,
-      "custom_width": 0,
-      "select_every_nth": 1,
-      "frame_load_cap": 0,
-      "format": "AnimateDiff",
-      "video": "http://59.110.66.181:9201/file/upload/material/videos/e12511cffccc490b9889eba1e679e530.mp4",
-      "skip_first_frames": 0
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_edit_2511_bf16.safetensors"
     },
     "_meta": {
-      "title": "加载视频（路径）"
+      "title": "UNet加载器"
     }
   },
-  "3": {
-    "class_type": "ImageUpscaleWithModel",
+  "67": {
+    "class_type": "ModelSamplingAuraFlow",
     "inputs": {
-      "image": [
-        "11",
-        0
-      ],
-      "upscale_model": [
-        "4",
+      "shift": 3.1,
+      "model": [
+        "93",
         0
       ]
     },
     "_meta": {
-      "title": "图像通过模型放大"
+      "title": "采样算法（AuraFlow）"
     }
   },
-  "4": {
-    "class_type": "UpscaleModelLoader",
+  "68": {
+    "class_type": "TextEncodeQwenImageEditPlus",
     "inputs": {
-      "model_name": "4x-ClearRealityV1.pth"
-    },
-    "_meta": {
-      "title": "放大模型加载器"
-    }
-  },
-  "5": {
-    "class_type": "ImageScale",
-    "inputs": {
-      "image": [
-        "3",
+      "vae": [
+        "10",
         0
       ],
-      "width": [
-        "9",
+      "image1": [
+        "73",
         0
       ],
-      "upscale_method": "area",
-      "crop": "center",
-      "height": [
-        "8",
+      "prompt": [
+        "111",
+        0
+      ],
+      "clip": [
+        "61",
         0
       ]
     },
     "_meta": {
-      "title": "图像缩放"
+      "title": "TextEncodeQwenImageEditPlus (Positive)"
     }
   },
-  "6": {
-    "class_type": "VHS_VideoCombine",
+  "69": {
+    "class_type": "TextEncodeQwenImageEditPlus",
     "inputs": {
-      "save_output": true,
-      "filename_prefix": "bf4f9a933d9842aba685e53ccf83f793/bf4f9a933d9842aba685e53ccf83f793",
+      "vae": [
+        "10",
+        0
+      ],
+      "image1": [
+        "73",
+        0
+      ],
+      "prompt": "低质量，最差质量，坏的图片",
+      "clip": [
+        "61",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "文本编码（QwenImageEditPlus）"
+    }
+  },
+  "111": {
+    "class_type": "Text Multiline",
+    "inputs": {
+      "text": "123456"
+    },
+    "_meta": {
+      "title": "Text Multiline"
+    }
+  },
+  "112": {
+    "class_type": "easy int",
+    "inputs": {
+      "value": 1920
+    },
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "102": {
+    "class_type": "ReservedVRAMSetter",
+    "inputs": {
+      "mode": "auto",
+      "seed": 605613374246717,
+      "reserved": 0.8,
+      "auto_max_reserved": 0.0,
+      "clean_gpu_before": true
+    },
+    "_meta": {
+      "title": "Set Reserved VRAM(GB) ⚙️"
+    }
+  },
+  "113": {
+    "class_type": "easy int",
+    "inputs": {
+      "value": 1080
+    },
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "103": {
+    "class_type": "Seed (rgthree)",
+    "inputs": {
+      "seed": -1
+    },
+    "_meta": {
+      "title": "Seed (rgthree)"
+    }
+  },
+  "114": {
+    "class_type": "LoadImageFromUrl",
+    "inputs": {
+      "image": "http://59.110.66.181:9201/file/upload/material/images/7eb75cc6d04346ce972f9d96df14fa58_thumb.png",
+      "keep_alpha_channel": false,
+      "output_mode": true
+    },
+    "_meta": {
+      "title": "Load Image From URL"
+    }
+  },
+  "104": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "vae": [
+        "10",
+        0
+      ],
+      "samples": [
+        "108",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "105": {
+    "class_type": "LatentUpscaleBy",
+    "inputs": {
+      "scale_by": 1.5,
+      "upscale_method": "nearest-exact",
+      "samples": [
+        "65",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "缩放Latent（比例）"
+    }
+  },
+  "106": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "b80f63c367f1449bbb0f036473c8ca16/b80f63c367f1449bbb0f036473c8ca16",
       "images": [
-        "7",
+        "104",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "70": {
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "inputs": {
+      "conditioning": [
+        "68",
         0
       ],
-      "loop_count": 0,
-      "pix_fmt": "yuv420p",
-      "save_metadata": true,
-      "crf": 19,
-      "trim_to_audio": false,
-      "format": "video/h264-mp4",
-      "frame_rate": 30.0,
-      "pingpong": false
+      "reference_latents_method": "index_timestep_zero"
     },
     "_meta": {
-      "title": "合并为视频"
+      "title": "Edit Model Reference Method"
     }
   },
-  "7": {
-    "class_type": "IFRNet VFI",
+  "108": {
+    "class_type": "KSamplerAdvanced",
     "inputs": {
-      "ckpt_name": "IFRNet_L_Vimeo90K.pth",
-      "frames": [
-        "5",
+      "latent_image": [
+        "105",
         0
       ],
-      "multiplier": 2,
-      "clear_cache_after_n_frames": 10,
-      "scale_factor": 1
+      "cfg": 1.0,
+      "return_with_leftover_noise": "disable",
+      "end_at_step": 10000,
+      "positive": [
+        "70",
+        0
+      ],
+      "add_noise": "enable",
+      "steps": 5,
+      "scheduler": "simple",
+      "negative": [
+        "71",
+        0
+      ],
+      "start_at_step": 2,
+      "sampler_name": "euler",
+      "noise_seed": [
+        "103",
+        0
+      ],
+      "model": [
+        "64",
+        0
+      ]
     },
     "_meta": {
-      "title": "IFRNet VFI"
+      "title": "K采样器（高级）"
     }
   },
-  "8": {
-    "class_type": "easy int",
+  "71": {
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
     "inputs": {
-      "value": 720
+      "conditioning": [
+        "69",
+        0
+      ],
+      "reference_latents_method": "index_timestep_zero"
     },
     "_meta": {
-      "title": "整数"
+      "title": "Edit Model Reference Method"
     }
   },
-  "9": {
-    "class_type": "easy int",
+  "82": {
+    "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "value": 1280
+      "batch_size": 1,
+      "width": [
+        "112",
+        0
+      ],
+      "height": [
+        "113",
+        0
+      ]
     },
     "_meta": {
-      "title": "整数"
+      "title": "空Latent图像（SD3）"
+    }
+  },
+  "93": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "lora_name": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "12",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "61": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "73": {
+    "class_type": "ImageScaleToTotalPixels",
+    "inputs": {
+      "image": [
+        "114",
+        0
+      ],
+      "megapixels": 1.5,
+      "resolution_steps": 1,
+      "upscale_method": "lanczos"
+    },
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "74": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "73",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "64": {
+    "class_type": "CFGNorm",
+    "inputs": {
+      "strength": 1.0,
+      "model": [
+        "67",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "CFG归一化"
+    }
+  },
+  "10": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "65": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "negative": [
+        "71",
+        0
+      ],
+      "denoise": 1.0,
+      "latent_image": [
+        "82",
+        0
+      ],
+      "seed": [
+        "103",
+        0
+      ],
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "model": [
+        "64",
+        0
+      ],
+      "positive": [
+        "70",
+        0
+      ],
+      "steps": 6
+    },
+    "_meta": {
+      "title": "K采样器"
     }
   }
 }

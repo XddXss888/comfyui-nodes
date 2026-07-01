@@ -3,7 +3,7 @@
     "class_type": "VHS_VideoCombine",
     "inputs": {
       "save_output": true,
-      "filename_prefix": "3746638a42c7467ba7de1ffb5b4055cb/3746638a42c7467ba7de1ffb5b4055cb",
+      "filename_prefix": "7583a848b18943448140dbd8fb83d2a8/7583a848b18943448140dbd8fb83d2a8",
       "images": [
         "100",
         0
@@ -19,6 +19,32 @@
     },
     "_meta": {
       "title": "合并为视频"
+    }
+  },
+  "66": {
+    "class_type": "ImageResizeKJv2",
+    "inputs": {
+      "crop_position": "center",
+      "image": [
+        "73",
+        0
+      ],
+      "pad_color": "0, 0, 0",
+      "divisible_by": 1,
+      "width": [
+        "61",
+        0
+      ],
+      "keep_proportion": "crop",
+      "upscale_method": "lanczos",
+      "device": "cpu",
+      "height": [
+        "62",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Resize Image v2"
     }
   },
   "89": {
@@ -66,6 +92,10 @@
         0
       ],
       "force_offload": true,
+      "image_2": [
+        "66",
+        0
+      ],
       "clip_vision": [
         "70",
         0
@@ -100,7 +130,7 @@
   "72": {
     "class_type": "LoadImageFromUrl",
     "inputs": {
-      "image": "http://172.31.32.1:8187/api/view?filename=a1c67ffc2b704ae59efc14fcc835d93b_00001_.png&type=output&subfolder=a1c67ffc2b704ae59efc14fcc835d93b",
+      "image": "http://59.110.66.181:9201/file/upload/material/images/ca65416de6074260a8ec2dd3a6e01944.png",
       "keep_alpha_channel": false,
       "output_mode": true
     },
@@ -119,6 +149,17 @@
     },
     "_meta": {
       "title": "简易运算"
+    }
+  },
+  "73": {
+    "class_type": "LoadImageFromUrl",
+    "inputs": {
+      "image": "http://172.31.32.1:8187/api/view?filename=29f5b36dcf5646deaee2d1d309cf860c_00001_.png&type=output&subfolder=29f5b36dcf5646deaee2d1d309cf860c",
+      "keep_alpha_channel": false,
+      "output_mode": true
+    },
+    "_meta": {
+      "title": "Load Image From URL"
     }
   },
   "52": {
@@ -265,7 +306,9 @@
     "class_type": "WanVideoVAELoader",
     "inputs": {
       "model_name": "wan_2.1_vae_comfyorg.safetensors",
-      "precision": "fp16"
+      "precision": "fp16",
+      "use_cpu_cache": false,
+      "verbose": false
     },
     "_meta": {
       "title": "WanVideo VAE Loader"
@@ -274,13 +317,18 @@
   "58": {
     "class_type": "WanVideoImageToVideoEncode",
     "inputs": {
+      "augment_empty_frames": 0.0,
+      "start_latent_strength": 1.0000000000000002,
       "clip_embeds": [
         "71",
         0
       ],
+      "end_image": [
+        "66",
+        0
+      ],
       "fun_or_fl2v_model": false,
       "noise_aug_strength": 0.02,
-      "start_latent_strength": 1.0000000000000002,
       "tiled_vae": false,
       "width": [
         "60",
@@ -371,6 +419,26 @@
     },
     "_meta": {
       "title": "WanVideo Sampler"
+    }
+  },
+  "17": {
+    "class_type": "WanVideoEmptyEmbeds",
+    "inputs": {
+      "width": [
+        "61",
+        0
+      ],
+      "num_frames": [
+        "94",
+        0
+      ],
+      "height": [
+        "62",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "WanVideo Empty Embeds"
     }
   },
   "18": {
@@ -613,7 +681,7 @@
   "65": {
     "class_type": "Text Multiline",
     "inputs": {
-      "text": "橘猫（同上）蹲坐在不锈钢操作台边缘，前爪悬空轻拍台面，水流从水槽溢出形成细线，猫尾尖雪白部分在水雾中若隐若现 [描述主体和环境+镜头逐渐向前推进，展示……描述画面变化]"
+      "text": "项目"
     },
     "_meta": {
       "title": "多行文本"

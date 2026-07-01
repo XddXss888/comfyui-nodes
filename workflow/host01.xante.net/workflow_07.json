@@ -1,38 +1,213 @@
 {
   "1": {
-    "class_type": "LoadImage",
     "inputs": {
-      "image": "ai_3d_input_32294704-1274-44F4-9202-AC655E56C00D.png"
+      "image": "ai_edit_src_4C077383-FDF3-48A3-B648-838DF32FDE91.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
     }
   },
   "2": {
-    "class_type": "DownloadAndLoadDepthAnythingV2Model",
     "inputs": {
-      "model": "depth_anything_v2_vitl_fp32.safetensors",
-      "precision": "fp32"
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
     }
   },
-  "3": {
-    "class_type": "DepthAnything_V2",
+  "6": {
     "inputs": {
-      "da_model": [
-        "2",
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "37": {
+    "inputs": {
+      "unet_name": "qwen_image_edit_2509_fp8_e4m3fn.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "89": {
+    "inputs": {
+      "lora_name": "Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "37",
         0
-      ],
-      "images": [
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoraLoaderModelOnly"
+    }
+  },
+  "66": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "89",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "75": {
+    "inputs": {
+      "strength": 1.0,
+      "model": [
+        "66",
+        0
+      ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "CFGNorm"
+    }
+  },
+  "93": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 64,
+      "image": [
         "1",
         0
       ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "Scale Image to Total Pixels"
+    }
+  },
+  "88": {
+    "inputs": {
+      "pixels": [
+        "93",
+        0
+      ],
+      "vae": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "3": {
+    "inputs": {
+      "clip": [
+        "6",
+        0
+      ],
+      "vae": [
+        "2",
+        0
+      ],
+      "image1": [
+        "93",
+        0
+      ],
+      "prompt": "Add CON #13654 in font that matches the Caballeros de Colon in white letter"
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus (positive)"
     }
   },
   "4": {
-    "class_type": "SaveImage",
     "inputs": {
-      "images": [
+      "prompt": "",
+      "clip": [
+        "6",
+        0
+      ],
+      "vae": [
+        "2",
+        0
+      ],
+      "image1": [
+        "93",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus (negative)"
+    }
+  },
+  "5": {
+    "inputs": {
+      "model": [
+        "75",
+        0
+      ],
+      "positive": [
         "3",
         0
       ],
-      "filename_prefix": "iqueue_3dmodel_32294704-1274-44F4-9202-AC655E56C00D"
+      "negative": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "88",
+        0
+      ],
+      "cfg": 1.0,
+      "denoise": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "seed": 6392656102357488,
+      "steps": 4
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "7": {
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ],
+      "filename_prefix": "iqueue_edit_4C077383-FDF3-48A3-B648-838DF32FDE91"
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
     }
   }
 }

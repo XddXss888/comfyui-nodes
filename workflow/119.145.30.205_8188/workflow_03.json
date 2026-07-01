@@ -1,12 +1,12 @@
 {
   "3": {
     "inputs": {
-      "seed": 1593392954,
+      "seed": 3569318115,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 0.6,
+      "denoise": 1.0,
       "model": [
         "66",
         0
@@ -31,7 +31,7 @@
   },
   "6": {
     "inputs": {
-      "text": "1、黄金 2、古法工艺 3、气球狗形态 4、时尚潮流 5、镶钻石或宝石",
+      "text": "生成一款貔貅时尚款，要求头戴醒狮帽，手捧大元宝，",
       "clip": [
         "38",
         0
@@ -114,7 +114,7 @@
   },
   "60": {
     "inputs": {
-      "filename_prefix": "user_7/HULU",
+      "filename_prefix": "user_45/HULU",
       "images": [
         "8",
         0
@@ -129,7 +129,7 @@
     "inputs": {
       "shift": 3.1000000000000005,
       "model": [
-        "100",
+        "101",
         0
       ]
     },
@@ -150,6 +150,20 @@
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
       "title": "LORA #1 (系统)"
+    }
+  },
+  "101": {
+    "inputs": {
+      "lora_name": "佛像.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "100",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LORA #2 (系统)"
     }
   }
 }

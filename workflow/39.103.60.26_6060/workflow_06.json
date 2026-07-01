@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "input_a3b27fe807b1.jpg"
+      "image": "input_c97c0d66952e.jpg"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -12,7 +12,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "16",
+        "12",
         0
       ]
     },
@@ -21,19 +21,42 @@
       "title": "保存图像"
     }
   },
-  "8": {
+  "12": {
     "inputs": {
-      "aspect_ratio": "custom",
-      "proportional_width": 1152,
-      "proportional_height": 848,
+      "rounded_rect_radius": 100,
+      "anti_aliasing": 2,
+      "top": 0.0,
+      "bottom": 0.0,
+      "left": 0.0,
+      "right": 0.0,
+      "detect": "max_inscribed_rect",
+      "obj_ext_top": 0.0,
+      "obj_ext_bottom": 0.0,
+      "obj_ext_left": 0.0,
+      "obj_ext_right": 0.0,
+      "image": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: RoundedRectangle",
+    "_meta": {
+      "title": "图层工具：圆角矩形"
+    }
+  },
+  "13": {
+    "inputs": {
+      "aspect_ratio": "1:1",
+      "proportional_width": 1,
+      "proportional_height": 1,
       "fit": "crop",
-      "method": "lanczos",
+      "method": "bicubic",
       "round_to_multiple": "8",
-      "scale_to_side": "width",
-      "scale_to_length": 1152,
+      "scale_to_side": "shortest",
+      "scale_to_length": 928,
       "background_color": "#000000",
       "image": [
-        "15",
+        "14",
         0
       ]
     },
@@ -42,19 +65,19 @@
       "title": "按宽高比缩放_V2"
     }
   },
-  "15": {
+  "14": {
     "inputs": {
-      "prompt": "保持图中人物的一致性，生成他们和熊猫合影的画面，左右两侧有可爱的熊猫趴在他们肩头，背景是竹林和五颜六色的花朵，有一只熊猫抱着竹子，画面是3D卡通风格，色彩活泼",
+      "prompt": "保持图中人物的一致性，生成他们和熊猫合影的画面，左右两侧有可爱的熊猫趴在他们肩头，背景是竹林和五颜六色的花朵，有一只熊猫抱着竹子，画面是2D卡通风格",
       "model": "doubao-seedream-4-0-250828",
       "response_format": "url",
       "resolution": "4K",
-      "aspect_ratio": "4:3",
+      "aspect_ratio": "1:1",
       "width": 1024,
       "height": 1024,
       "apikey": "fe023f32-413c-41f8-a35d-694231e4c96a",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 1779362532,
+      "seed": 1355203547,
       "watermark": false,
       "stream": false,
       "image1": [
@@ -65,21 +88,6 @@
     "class_type": "Comfly_Doubao_Seedream_4",
     "_meta": {
       "title": "Comfly Doubao Seedream4.0"
-    }
-  },
-  "16": {
-    "inputs": {
-      "mode": "transpose",
-      "rotation": 90,
-      "sampler": "nearest",
-      "images": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "Image Rotate",
-    "_meta": {
-      "title": "图像旋转"
     }
   }
 }

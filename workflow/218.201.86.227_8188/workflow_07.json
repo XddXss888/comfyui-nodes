@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "A realistic photographic wide panoramic view of Tiananmen Gate in Beijing, accurate traditional Chinese imperial architecture, red city wall, golden glazed tile roofs, early morning natural sunlight, clear blue sky, subtle clouds, empty foreground plaza, clean composition, ultra realistic, high detail, DSLR photography, 35mm lens, balanced symmetry, natural colors, no illustration style, no painting style",
+      "text": "A peaceful early morning illustration of the Great Wall of China winding over quiet mountains, soft dawn light, pale blue and warm peach sky, gentle sunrise glow on ancient stone walls, thin morning mist floating through the valleys, serene traditional Chinese landscape atmosphere, clean detailed digital illustration, painterly style, wide composition, no text, no watermark",
       "clip": [
         "30",
         1
@@ -30,7 +30,7 @@
   },
   "9": {
     "inputs": {
-      "filename_prefix": "tiananmen_realistic_2048x768",
+      "filename_prefix": "ComfyUI",
       "images": [
         "8",
         0
@@ -43,7 +43,7 @@
   },
   "27": {
     "inputs": {
-      "width": 2048,
+      "width": 1024,
       "height": 768,
       "batch_size": 1
     },
@@ -63,8 +63,8 @@
   },
   "31": {
     "inputs": {
-      "seed": 439110412505194,
-      "steps": 24,
+      "seed": 614998351715487,
+      "steps": 20,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -93,7 +93,7 @@
   },
   "33": {
     "inputs": {
-      "text": "illustration, cartoon, vector art, anime, watercolor, oil painting, sketch, 3d render, CGI, unreal engine, distorted architecture, warped roof, text, watermark, logo, blurry, low quality, oversaturated, crowded foreground",
+      "text": "text, watermark, logo, blurry, low quality, harsh noon light, night scene, crowded people, distorted architecture",
       "clip": [
         "30",
         1

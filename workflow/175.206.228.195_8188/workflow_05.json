@@ -33,7 +33,7 @@
   },
   "4": {
     "inputs": {
-      "seed": 7576320545,
+      "seed": 6631623140,
       "steps": [
         "13",
         0
@@ -103,7 +103,7 @@
   "13": {
     "inputs": {
       "steps": 32,
-      "cfg": 9.0
+      "cfg": 5.5
     },
     "class_type": "StepsAndCfg",
     "_meta": {
@@ -112,8 +112,8 @@
   },
   "17": {
     "inputs": {
-      "Width": 888,
-      "Height": 1184,
+      "Width": 1024,
+      "Height": 1024,
       "Batch": 1,
       "Landscape": false,
       "HiResMultiplier": 1.7000000000000002
@@ -125,7 +125,7 @@
   },
   "20": {
     "inputs": {
-      "seed": 7576320545,
+      "seed": 6631623140,
       "steps": 10,
       "cfg": [
         "13",
@@ -205,7 +205,7 @@
   },
   "32": {
     "inputs": {
-      "text": "ever_sakuyo_inferno_base, light rays, in Japanese daimyo mansion, facing viewer, (from side, happy, light blush: 0.7), proud face, unrestrained expression, clear eyes, light red eyeshadow around the corner of eyes, delicate skin, fanning a folding fan, hand on underbelly, naked furisode kimono, breasts out, (delicate pussy, pussy juice:0.7), solo, full body, ultra-detailed, bottomless, masterpiece, best quality, amazing quality"
+      "text": "ever_garnet_base, rape, mother and son, living room, molestation, groping, skirt flip, pantyshot, huge breasts, sex,penis, bouncing, upright straddle, panties aside, knees up, alternate costume, casual, masterpiece, best quality, amazing quality"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -214,7 +214,7 @@
   },
   "33": {
     "inputs": {
-      "text": "bad quality,worst quality,worst detail,sketch,censor, wrong foot, wrong hand, bad hands, bad feet, watermark, mosaic censoring"
+      "text": "bad quality,worst quality,worst detail,sketch,censor, [], text focus,text,, watermark,ugly, puffy sleeves, puffy short sleeves,"
     },
     "class_type": "TextBoxMira",
     "_meta": {
@@ -277,7 +277,7 @@
   },
   "65": {
     "inputs": {
-      "data": "[{\"name\": \"sakuyo_inferno_base.safetensors\", \"strength\": 0.8, \"strength_clip\": 1.0}]",
+      "data": "[{\"name\": \"garnet_base.safetensors\", \"strength\": 0.68, \"strength_clip\": 0.6}]",
       "model": [
         "36",
         0

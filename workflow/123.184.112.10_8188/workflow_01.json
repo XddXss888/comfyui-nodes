@@ -1,0 +1,334 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 419546685668003,
+      "steps": 16,
+      "cfg": 2.5,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
+      "denoise": 0.9,
+      "positive": [
+        "44",
+        0
+      ],
+      "negative": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "2026-07-01",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "11": {
+    "inputs": {
+      "text_positive": "masterpiece, absurdres, highres, best quality, neon genesis evangelion, retro artstyle, anime coloring, ayanami rei,medium breasts, nipples, breasts squeezed together, v arms, looking at viewer, bored, half-closed eyes, upper body, empty room, bed, moonbeam, dark, sidelighting, light particles, shadow,",
+      "text_negative": "lowres, text, error, cropped, worst quality, low quality, jpeg artifacts, duplicate, deformed, blurry, bad anatomy, bad proportions, disfigured, username, watermark, signature, 3d, realistic, interface headset \\(evangelion\\),",
+      "style": "base",
+      "log_prompt": true,
+      "style_positive": true,
+      "style_negative": true
+    },
+    "class_type": "SDXLPromptStyler",
+    "_meta": {
+      "title": "SDXL Prompt Styler"
+    }
+  },
+  "15": {
+    "inputs": {
+      "text": [
+        "11",
+        1
+      ],
+      "clip": [
+        "62",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "17": {
+    "inputs": {
+      "text_0": "lowres, text, error, cropped, worst quality, low quality, jpeg artifacts, duplicate, deformed, blurry, bad anatomy, bad proportions, disfigured, username, watermark, signature, 3d, realistic, interface headset \\(evangelion\\),",
+      "text": [
+        "11",
+        1
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "33": {
+    "inputs": {
+      "image": "37ecd469a8cbc9bb6bd045edfb757124.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "38": {
+    "inputs": {
+      "image": [
+        "33",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "获取图像尺寸"
+    }
+  },
+  "39": {
+    "inputs": {
+      "width": [
+        "40",
+        0
+      ],
+      "height": [
+        "41",
+        0
+      ],
+      "batch_size": 2
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "40": {
+    "inputs": {
+      "value": 832
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "41": {
+    "inputs": {
+      "value": 1216
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "44": {
+    "inputs": {
+      "text": "masterpiece, best quality, ultra-detailed, absurdres, high resolution, \n\n1boy, 2girls, incest, sisters, \n\ndark skin, dark-skinned male, huge penis, veiny penis, erection, \n\nolder sister, mature female, voluptuous, large breasts, D-cup, heart-shaped pupils, ahegao, \n\nsecond sister, slim, perky breasts, B-cup, \n\nblack pussy, loose pussy, stretched pussy, gaping pussy, \n\ntight pussy, \n\nvaginal, deep penetration, rough sex, intense sex, \n\nkissing, tongue kiss, french kiss, \n\nmissionary, \n\nsweat, saliva, fluids, \n\nsex from behind, \n\nnude, completely naked, \n\ndetailed background, bedroom, dim lighting",
+      "clip": [
+        "62",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "56": {
+    "inputs": {
+      "clip_name": "anima_baseV10_txt.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "57": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "62": {
+    "inputs": {
+      "clip_name1": "anima_baseV10_txt.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "sdxl",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "双CLIP加载器"
+    }
+  },
+  "73": {
+    "inputs": {
+      "value": -1001802013225938
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "78": {
+    "inputs": {
+      "images": [
+        "103",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "79": {
+    "inputs": {},
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "97": {
+    "inputs": {
+      "unet_name": "miaomiaoHarem_anima13.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "98": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "99": {
+    "inputs": {
+      "text": "1girl,light_blush,curvy,(medium breasts:1.5),areola,(loli:1.6),black hair,very long hair,ahoge,messy hair,crossed bangs,hair wings,Side ponytail,red eyes,fang,fox ears,slender_waist,naughty_face,seductive_smile,rolling_eyes,thick_thighs,kindergarten_uniform,skirt_around_one_leg,white_thighhighs,transparent,public_indecency,torso_grab,(pubic hair:2),1boy,tall,muscular,(stomach bulge:1.2),hovering,anal,anal_sex,library,panty pull,anal juice,(cum_in_ass:2),upside-down,",
+      "clip": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "100": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "101": {
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "空Latent图像"
+    }
+  },
+  "102": {
+    "inputs": {
+      "seed": 180475268878937,
+      "steps": 21,
+      "cfg": 4.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "model": [
+        "97",
+        0
+      ],
+      "positive": [
+        "99",
+        0
+      ],
+      "negative": [
+        "100",
+        0
+      ],
+      "latent_image": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "103": {
+    "inputs": {
+      "samples": [
+        "102",
+        0
+      ],
+      "vae": [
+        "98",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "104": {
+    "inputs": {
+      "clip_name": "anima_baseV10_txt.safetensors",
+      "type": "stable_diffusion",
+      "device": "cpu"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  }
+}

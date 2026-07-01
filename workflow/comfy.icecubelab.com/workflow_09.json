@@ -27,7 +27,7 @@
         "1",
         0
       ],
-      "lora_name": "flux_illustration.safetensors",
+      "lora_name": "flux_softpasty.safetensors",
       "strength_model": 0.9
     }
   },
@@ -38,7 +38,7 @@
         "2",
         0
       ],
-      "text": "A seamless relay race captured mid-baton-pass between three runners of different heights on a minimalist glass track suspended in twilight sky, each runner morphing into translucent geometric forms — cube, sphere, prism — representing different devices, golden thread of light connecting their hands through the baton, emphasizing unbroken continuity over individual speed, cool blue-violet atmosphere with warm amber highlights at connection points, architectural precision, 16:9 wide composition"
+      "text": "A vast mosaic floor seen from above, its tiles gradually shifting from a single uniform color into a rich spectrum of soft pastel hues — lavender, peach, sage, powder blue — each tile a different geometric shape fitting together seamlessly. Warm diffused lighting from multiple directions casts no single dominant shadow. The mosaic expands outward toward the edges, suggesting infinite growth. Minimalist architectural space, clean white walls, 16:9 landscape composition, no text, no people."
     }
   },
   "6": {
@@ -48,7 +48,7 @@
         "5",
         0
       ],
-      "guidance": 3.5
+      "guidance": 3.0
     }
   },
   "7": {
@@ -88,7 +88,7 @@
         "8",
         0
       ],
-      "seed": 1573897647,
+      "seed": 1268734624,
       "control_after_generate": "fixed",
       "steps": 22,
       "cfg": 1.0,
@@ -117,7 +117,7 @@
         "10",
         0
       ],
-      "filename_prefix": "blog_1573897647"
+      "filename_prefix": "blog_1268734624"
     }
   }
 }

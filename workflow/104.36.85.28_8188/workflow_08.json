@@ -37,7 +37,7 @@
   },
   "7": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl nudity, bathing, intimate conversation, apology, invasion of personal space, blush, sweat, shiny, wet, shiny skin, skindentation, thighs, doorway,(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl sitting,indoors,bed,thighs,long hair,black hair,red eyes,hair between eyes,wavy hair,blush,sweatdrop,(nude:0.8)",
       "clip": [
         "1",
         1
@@ -63,7 +63,7 @@
   },
   "9": {
     "inputs": {
-      "seed": 1377882642,
+      "seed": 1082469196,
       "steps": 20,
       "cfg": 6.5,
       "sampler_name": "dpmpp_sde",
@@ -133,7 +133,7 @@
   },
   "14": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202512/22/1a89d432167a4e99807016a9e4fc01a6.webp",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202411/30/d11375ce8b0b43428065b3403d2ce3f5.png",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

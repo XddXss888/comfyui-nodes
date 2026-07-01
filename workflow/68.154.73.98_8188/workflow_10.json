@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_24e5fdf6f4904a3bbf719193466e2398.png"
+      "image": "ref_85066744d6f14fae9f0b477815c2bc41.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "[Image 2] の人物の顔立ち、髪型、全身のポーズ、および背景環境を完全に維持したまま、衣装のみを [Image 1] に描かれているものに正確に差し替えた写実的な写真。生成結果は、[Image 1] の服の詳細、質感、カットを [Image 2] の人物の上に精確に再現する必要があります。人物の同一性と背景を保ちながら、[Image 1] の衣装への高精度な着せ替えを実現してください。全身ショット、シャープフォーカス、8k、傑作。",
+      "prompt": "I Love You Kiss,Movie style, movie angle , movie light, spotlight",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 42068349674017,
+      "seed": 664905367730449,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -214,7 +214,7 @@
   },
   "91:69": {
     "inputs": {
-      "prompt": "",
+      "prompt": ",anime, manga, illustration, cartoon, 3d, Photoshop, sketch, video game, draw, paint, cgi, canvas frame, watermark, signature, username, artist name",
       "clip": [
         "91:61",
         0

@@ -69,7 +69,7 @@
         "45",
         0
       ],
-      "text": "A beautiful phone camera selfie of the girl in the background. Himari is smiling playfully at the camera, while in the background, Nanoha is bent over at the window, with her JK skirt lifted, revealing her white panties and bare legs, while zy stands close behind her. BREAK 1girl, Himari, female_focus, 18yo, selfie, blonde_hair, twin_tails, gold_eyes, white_t_shirt, playful_smile. BREAK 1girl, Nanoha, in_background, bent_over, leaning_forward, short_black_hair, red_face, lifted_skirt, white_panties. BREAK 1boy, zy, in_background, standing_behind. BREAK indoors, bedroom, window, phone_camera_quality, depth_of_field."
+      "text": "A candid high-quality phone photo of beautiful twin sisters walking in a luxury shopping mall. One is wearing a black silk slip dress, looking extremely flushed and dazed, leaning slightly towards a tall man. The other twin is wearing a sharp professional business suit, looking cold and composed. High contrast lighting, cinematic bokeh, luxury store background."
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
@@ -91,8 +91,8 @@
   },
   "9": {
     "inputs": {
-      "width": 832,
-      "height": 1216,
+      "width": 1024,
+      "height": 1024,
       "batch_size": 1
     },
     "class_type": "EmptyLatentImage",
@@ -118,7 +118,7 @@
         "9",
         0
       ],
-      "seed": 3841721303,
+      "seed": 1406084496,
       "steps": 12,
       "cfg": 1.0,
       "sampler_name": "euler",

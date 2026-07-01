@@ -128,7 +128,7 @@
   },
   "11": {
     "inputs": {
-      "image": "ComfyUI_00261_.png"
+      "image": "ComfyUI_00266_.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -156,6 +156,1124 @@
       "filename_prefix": "ComfyUI",
       "images": [
         "12",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "14": {
+    "inputs": {
+      "image": "ComfyUI_00265_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "15": {
+    "inputs": {
+      "prompt": "keep everything exactly the same, but with clean and neat sofa, not torn",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "16:9",
+      "images.image_1": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "16": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "17": {
+    "inputs": {
+      "prompt": "change the guy into a young smart indian guy with glasses, in his 25s, ",
+      "aspect_ratio": "9:16",
+      "image_resolution": "2K",
+      "random_seed": 1,
+      "images.image_1": [
+        "65",
+        0
+      ]
+    },
+    "class_type": "Kie_Seedream4EditNode",
+    "_meta": {
+      "title": "Seedream 4 Image to Image"
+    }
+  },
+  "18": {
+    "inputs": {
+      "prompt": "he says with confidence and enthusiasm, energetic\n\" Problem meri content mein nahi thi — mujhe pata hi nahi tha algorithm kaise kaam karta hai. Seekho pe ek 3 minute ka video tha — Instagram pehle 3 second dekhta hai. \"",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "19": {
+    "inputs": {
+      "prompt": "he says with confidence and enthusiasm, energetic\n\" Mere reels 200 views pe atke the. Seekho ne bataya kyun — aur maine fix kiya. Hashtag, timing, trending audio — sab try kiya. Kuch kaam nahi aaya. \"",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "20": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "21": {
+    "inputs": {
+      "image": "ComfyUI_00044_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "22": {
+    "inputs": {
+      "image": "ComfyUI_00036_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "23": {
+    "inputs": {
+      "image": "ComfyUI_00045_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "24": {
+    "inputs": {
+      "prompt": "he says with confidence and enthusiasm, energetic\n\" Maine sirf apna pehla frame fix kiya. Agle hafte 6,400 views aaye. Yeh magic nahi tha — yeh sirf sahi cheez pehli baar seekhna tha. Main guarantee nahi de sakta tumhare views kal viral honge. \"",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "25": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "26": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "27": {
+    "inputs": {
+      "prompt": "Use the uploaded image as the composition reference.\n\nA young Indian male creator stands beside a large vertical monitor in a modern RGB-lit content studio, speaking confidently and enthusiastically directly to camera.\n\nThe monitor never displays the spoken words.\n\nInstead, it displays supporting visual evidence synchronized with the narration:\nMonitor shows:\n\nReel Analytics Dashboard\nViews: 200\nReach: 187\nShares: 1\nSaves: 0\nFlat performance graph\nLast 30 days stagnant growth",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "28": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "29": {
+    "inputs": {
+      "prompt": "Use the uploaded image as the exact composition reference.\nUse the uploaded frame as composition reference, but generate only the monitor screen content. The guy will be added separately. User will upload the Seekho logo reference in ComfyUI.\n\nCreate a clean vertical monitor UI for the Seekho app offer page. Premium Indian ed-tech creator growth landing screen, white background, minimal modern layout, sharp readable typography, realistic app interface.\n\nAt the top, place the Seekho logo from the uploaded logo reference.\n\nMain screen content:\n\n500+ Creator Growth Videos\n\nCourse categories listed below:\n\nInstagram Reels Strategy\nAlgorithm Secrets\nFirst 3 Seconds Hook Formula\nContent Growth Framework\nProfile Optimization\nEditing Basics\n\nMiddle section shows a subscription trial card:\n\n₹1 mein 3 din ka trial\n\nLarge green button:\n\nStart Now\n\nSmall text below:\n\nCancel anytime\n\nBottom trust section:\n\n⭐ 4.8 | 25k+ learners\n\nBottom CTA:\n\nInstall karo, ₹1 mein shuru karo\n\nClean app-store style interface, soft shadows, rounded cards, green CTA button, premium Seekho brand colors, high-resolution UI, designed for a large vertical monitor, no human subject.",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "65",
+        0
+      ],
+      "images.image_2": [
+        "53",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "30": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "29",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "31": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "32": {
+    "inputs": {
+      "image": "ComfyUI_00036_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "33": {
+    "inputs": {
+      "image": "ComfyUI_00046_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "34": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "77",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "35": {
+    "inputs": {
+      "prompt": "he says with confidence and enthusiasm, energetic - the camera stays still through the video\n\" But agar tum seriously samajhna chahte ho ki algorithm kaise kaam karta hai. Seekho exactly yahi sikhata hai. Step by step. \"",
+      "duration": "8",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "36": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "35",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "37": {
+    "inputs": {
+      "image": "ComfyUI_00047_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "38": {
+    "inputs": {
+      "prompt": "he says with confidence and enthusiasm, energetic - the camera stays still through the video\n\" Seekho app mein 500+ aisi videos hain. Pehle teen din sirf ek rupaye mein try karo.\"",
+      "duration": "8",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "39": {
+    "inputs": {
+      "image": "videoframe_8000.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "40": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "41": {
+    "inputs": {
+      "prompt": "Ultra-realistic portrait of a beautiful young South Asian woman, standing outdoors on an elegant pedestrian street during golden hour. She has long, naturally wavy dark hair, symmetrical facial features, warm medium-fair skin tone, expressive brown eyes, subtle natural makeup, soft pink lips, and delicate crystal drop earrings.\n\nShe wears a sophisticated sleeveless deep-red Indian kurti with a matching flowing dupatta draped around her shoulders. The fabric has rich texture and natural folds, moving gently in a light breeze.\n\nShe stands confidently facing the camera with a calm, graceful expression and direct eye contact.\n\nBackground features creamy golden bokeh, soft greenery, luxury residential architecture softly blurred, shallow depth of field.\n\nLens: 85mm portrait lens\nAperture: f/1.8\nLighting: Natural golden-hour sunlight, soft facial highlights, realistic skin rendering\nStyle: Hyperrealistic photography, premium fashion portrait, ultra-detailed skin texture, realistic hair strands, photorealistic fabric detail, cinematic color grading, DSLR quality, 8K.",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16"
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "42": {
+    "inputs": {
+      "image": "ChatGPT Image Jun 19, 2026, 02_13_25 PM.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "43": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "44": {
+    "inputs": {
+      "image": "ComfyUI_00044_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "45": {
+    "inputs": {
+      "image": "ComfyUI_00045_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "46": {
+    "inputs": {
+      "image": "ComfyUI_00036_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "47": {
+    "inputs": {
+      "prompt": "keep everything exactly the same, just change the guy to the female in image 2",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "48": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "51",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "49": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "50": {
+    "inputs": {
+      "image": "ComfyUI_00050_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "51": {
+    "inputs": {
+      "prompt": "keep everything exactly the same, the girl in the image wears a classic black tshirt with glasses",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "50",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "52": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "51",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "53": {
+    "inputs": {
+      "image": "seekho-icon-filled-256.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "54": {
+    "inputs": {
+      "image": "Screenshot 2026-06-23 123827.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "55": {
+    "inputs": {
+      "image": "ComfyUI_00044_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "56": {
+    "inputs": {
+      "image": "girl 1.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "57": {
+    "inputs": {
+      "prompt": "keep everything exactly the same, replace the guy in the monitor to the girl ",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "56",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "58": {
+    "inputs": {
+      "prompt": "keep everything exactly the same of image 2, replace the monitor data of image 1 to image 2",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "55",
+        0
+      ],
+      "images.image_2": [
+        "56",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "59": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "57",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "60": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "58",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "61": {
+    "inputs": {
+      "image": "ComfyUI_00056_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "62": {
+    "inputs": {
+      "image": "ComfyUI_00056_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "63": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "64",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "64": {
+    "inputs": {
+      "prompt": "Use the uploaded image as the exact composition reference.\n\nA young Indian female creator stands beside a large vertical monitor in a modern creator studio with purple and blue RGB lighting, speaking confidently to camera. The monitor displays a single professional Instagram retention analytics dashboard throughout the entire shot.\n\nThe dashboard focuses exclusively on First 3 Second Performance Analysis.\n\nVisible on screen:\n\nReel thumbnail at top\nAudience Retention Graph\nStrong retention during first 3 seconds\nRetention starts at 100%\n92% still watching at 1 second\n85% still watching at 2 seconds\n78% still watching at 3 seconds\nCurve remains relatively stable after the hook\nGreen highlighted zone covering first 3 seconds\n\"Above Average Retention\" indicator\nViewer attention heatmap concentrated at video opening\nAverage watch duration increasing\nPositive engagement prediction metrics\nReach expansion indicator showing algorithm confidence\nProfessional Instagram-style creator analytics interface\n\nNo promotional text. No captions. No explanation boxes. Only authentic creator analytics and retention data proving that the opening hook is successfully holding viewer attention.\n\n35mm lens, realistic monitor reflections, photorealistic UI, ultra-sharp readability, premium creator studio lighting, natural skin texture, realistic glass reflections.",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "62",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "65": {
+    "inputs": {
+      "image": "ComfyUI_00036_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "66": {
+    "inputs": {
+      "image": "ComfyUI_00056_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "67": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "68",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "68": {
+    "inputs": {
+      "prompt": "Use the uploaded image as the exact composition reference.\n\nA young Indian female creator stands beside a large vertical monitor in a modern RGB-lit creator studio, confidently speaking directly to camera. The monitor remains on a single analytics dashboard throughout the shot.\n\nThe dashboard shows reel performance growth after optimizing the opening frame.\n\nVisible data on screen:\n\nReel Analytics Overview\nViews: 6,400\nPrevious Period: 200\nGrowth: +3100%\nReach: 5,870\nAverage Watch Time: 11.4s\nAudience Retention: 78%\nShares: 94\nSaves: 127\nEngagement Rate: 12.8%\n\nLarge upward performance graph:\n\nStarts at 200 views\nGradually climbs\nSharp acceleration after optimization point\nEnds at 6,400 views\n\nA small marker appears on the graph:\n\nHook Updated\n\nAfter that marker, growth increases significantly.\n\nProfessional Instagram-style analytics interface, realistic creator dashboard, clean UI hierarchy, readable metrics, authentic social-media growth data.\n\n35mm lens, photorealistic monitor reflections, realistic monitor glow, ultra-sharp analytics screen, premium creator studio lighting.",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "66",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "69": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "74",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "70": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "68",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "71": {
+    "inputs": {
+      "image": "ComfyUI_00059_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "72": {
+    "inputs": {
+      "prompt": "Generate a high-quality, photorealistic image",
+      "model": "Flash",
+      "model.resolution": "1K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "73",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "73": {
+    "inputs": {
+      "image": "ComfyUI_00047_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "74": {
+    "inputs": {
+      "prompt": "she says with confidence and enthusiasm, energetic, camera stays still through out the video, keep the monitor girl static\n\" Mere reels 200 views pe atke the. Seekho ne bataya kyun — aur maine fix kiya. Hashtag, timing, trending audio — sab try kiya. Kuch kaam nahi aaya. \"",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "61",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "75": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "79",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "76": {
+    "inputs": {
+      "image": "ComfyUI_00060_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "77": {
+    "inputs": {
+      "prompt": "keep everything exactly the same of image 1, just replace the monitor data with image 2, and make sure the lighting and everyhtign matches of image 2 with 1",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "76",
+        0
+      ],
+      "images.image_2": [
+        "33",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "78": {
+    "inputs": {
+      "image": "ComfyUI_00060_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "79": {
+    "inputs": {
+      "prompt": "he says with confidence and enthusiasm, energetic, camera stays still through out the video, keep the monitor girl static\n\" Problem meri content mein nahi thi — mujhe pata hi nahi tha algorithm kaise kaam karta hai. Seekho pe ek 3 minute ka video tha — Instagram pehle 3 second dekhta hai. \"",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "71",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "80": {
+    "inputs": {
+      "prompt": "he says with confidence and enthusiasm, energetic, camera stays still through out the video\n\" Maine sirf apna pehla frame fix kiya. Agle hafte 6,400 views aaye. Yeh magic nahi tha — yeh sirf sahi cheez pehli baar seekhna tha. Main guarantee nahi de sakti tumhare views kal viral honge. \"",
+      "duration": "10",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "78",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "81": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "80",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "82": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "77",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "83": {
+    "inputs": {
+      "image": "ComfyUI_00064_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "84": {
+    "inputs": {
+      "prompt": "keep everyhting exactly the same just remove the content in foreground and the gradient",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "85": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "86": {
+    "inputs": {
+      "image": "ComfyUI_00065_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "87": {
+    "inputs": {
+      "prompt": "she says with confidence and enthusiasm, energetic, the camera stays still through the video\n\" But agar tum seriously samajhna chahte ho ki algorithm kaise kaam karta hai. Seekho exactly yahi sikhata hai. Step by step. \"",
+      "duration": "8",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "86",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "88": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "89": {
+    "inputs": {
+      "image": "videoframe_8000 (1).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "90": {
+    "inputs": {
+      "prompt": "she says with confidence and enthusiasm, energetic, the camera stays still through the video\n\" सीखो ऐप में 500+ ऐसी वीडियो हैं। पहले तीन दिन सिर्फ़ ek rupaye में ट्राय करो।\"",
+      "duration": "8",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "seed": 0,
+      "images.image_1": [
+        "89",
+        0
+      ]
+    },
+    "class_type": "Kie_GeminiOmniVideoNode",
+    "_meta": {
+      "title": "Gemini Omni Video"
+    }
+  },
+  "91": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "92": {
+    "inputs": {
+      "prompt": "जिस लड़के को मैं हमेशा अपने से कम समझता था, एक दिन वो Instagram से मुझसे ज़्यादा कमाने लगा।\nकुछ महीने पहले तक हमारी ज़िंदगी लगभग एक जैसी थी—एक जैसी नौकरी, एक जैसी सैलरी।\nफिर उसने Instagram पर काम शुरू किया।\nशुरू में मैंने मज़ाक उड़ाया। सोचा, \"रील्स बनाकर कौन पैसे कमाता है?\"\nलेकिन धीरे-धीरे वो आगे बढ़ने लगा।\nनया फोन, नए कपड़े, और मैं अब भी महीने के आखिर में पैसों का हिसाब लगा रहा था।\nआखिर मैंने उससे पूछा,\n\"भाई, ये सब कैसे हो रहा है?\"\nवो बोला,\n\"मैंने Seekho App पर Instagram Growth Secrets सीखा।\"\nपहले मुझे लगा, Instagram भी कोई सीखने की चीज़ है?\nलेकिन फिर समझ आया कि शायद मैं सिर्फ़ मेहनत कर रहा था, सही तरीका नहीं सीख रहा था।\nमैंने भी Seekho App डाउनलोड किया।\nवहाँ पता चला कि Instagram पर सिर्फ़ वीडियो डालना काफी नहीं है।\nलोग रील पर रुकते क्यों हैं, फॉलोवर्स कैसे बढ़ते हैं, और एल्गोरिदम कैसे काम करता है—सब आसान भाषा में, छोटे-छोटे वीडियो में समझाया गया था।\nमैंने सीखी हुई चीज़ें लागू करनी शुरू कीं।\nधीरे-धीरे व्यूज़ बढ़े, फॉलोवर्स बढ़े, और Instagram से कमाई भी शुरू हो गई।\nतब समझ आया कि कमी मेहनत में नहीं थी, सही स्ट्रैटेजी में थी।\nअगर आप भी Instagram से कमाना चाहते हैं, तो अंदाज़े से काम मत करो।\nSeekho App पर Instagram Growth Secrets सीखो, अपनी ऑडियंस बनाओ और कमाई शुरू करो।\nअभी इंस्टॉल बटन पर क्लिक करो और Seekho App डाउनलोड करो।",
+      "model": "3.1 Flash",
+      "voice_name": "Algenib (Gravelly)"
+    },
+    "class_type": "Official_GeminiTTSSingleNode",
+    "_meta": {
+      "title": "Gemini Text to Speech"
+    }
+  },
+  "93": {
+    "inputs": {
+      "filename_prefix": "audio/ComfyUI",
+      "quality": "V0",
+      "audioUI": "",
+      "audio": [
+        "92",
+        0
+      ]
+    },
+    "class_type": "SaveAudioMP3",
+    "_meta": {
+      "title": "Save Audio (MP3)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "prompt": "A realistic Indian tier-2 town hardware shop during daytime, packed with everyday electrical and hardware items, hanging wires, PVC pipes, switches, tools, paint cans, and small boxes stacked behind the counter. A playful 6-year-old Indian boy stands at the shop counter holding a bright-colored plastic toy gun. The child enthusiastically shouts \"Dhaishoom!\" while pointing the toy gun toward the shopkeeper. The kid quickly grabs a small rectangular hardware soundbox/intercom device from the counter and holds it close to his mouth like a police walkie-talkie, pretending to communicate: \"Hello control room, chor bhag gaya!\" Across the counter, a middle-aged Indian shopkeeper named Ramesh, wearing a simple checked shirt, looks panicked and reaches forward with both hands, desperately trying to snatch the soundbox back before the child runs away with it. The child's expression is mischievous and full of imagination, while Ramesh's face shows comic frustration. Authentic Indian tier-2 atmosphere, natural daylight entering from the shop entrance, realistic skin tones, cluttered hardware store details, documentary-style realism, shallow depth of field, 35mm lens, handheld  cinematic framing, ultra-photorealistic, highly detailed textures, expressive faces, subtle motion blur from the action, warm Indian color grading.",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "95": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "96": {
+    "inputs": {
+      "image": "soundbox.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "97": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "99": {
+    "inputs": {
+      "prompt": "A realistic Indian tier-2 town hardware shop during daytime, packed with everyday electrical and hardware items, hanging wires, PVC pipes, switches, tools, paint cans, and small boxes stacked behind the counter. A playful 6-year-old Indian boy stands at the shop counter holding a bright-colored plastic toy gun. The child enthusiastically shouts \"Dhaishoom!\" while pointing the toy gun toward the shopkeeper. The kid quickly grabs a small rectangular hardware soundbox/intercom device from the counter and holds it close to his mouth like a police walkie-talkie, pretending to communicate: \"Hello control room, chor bhag gaya!\" Across the counter, a middle-aged Indian shopkeeper named Ramesh, wearing a simple checked shirt, looks panicked and reaches forward with both hands, desperately trying to snatch the soundbox back before the child runs away with it. The child's expression is mischievous and full of imagination, while Ramesh's face shows comic frustration. Authentic Indian tier-2 atmosphere, natural daylight entering from the shop entrance, realistic skin tones, cluttered hardware store details, documentary-style realism, shallow depth of field, 35mm lens, handheld  cinematic framing, ultra-photorealistic, highly detailed textures, expressive faces, subtle motion blur from the action, warm Indian color grading.",
+      "aspect_ratio": "9:16",
+      "image_resolution": "2K",
+      "random_seed": 1,
+      "images.image_1": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "Kie_Seedream4EditNode",
+    "_meta": {
+      "title": "Seedream 4 Image to Image"
+    }
+  },
+  "100": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "99",
         0
       ]
     },

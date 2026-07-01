@@ -1,93 +1,193 @@
 {
   "1": {
     "inputs": {
-      "ckpt_name": "anima\\waiANIMA_v10Base10.safetensors"
+      "ckpt_name": "NoobAi\\oneObsessionBranch_v6MatureEPS.safetensors",
+      "clip_skip": 2
     },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "Checkpoint加载器（简易）"
-    }
+    "class_type": "CheckpointLoaderSimple"
   },
   "2": {
     "inputs": {
-      "lora_name": "anima\\anima-turbo-lora-v0.2.safetensors",
-      "strength_model": 0.8,
       "model": [
         "1",
         0
-      ]
+      ],
+      "clip": [
+        "1",
+        1
+      ],
+      "lora_name": "pony\\Expressive_H-000001.safetensors",
+      "strength_model": 1.0,
+      "strength_clip": 1.0
     },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA 1：Turbo加速"
-    }
+    "class_type": "LoraLoader"
   },
   "3": {
     "inputs": {
-      "lora_name": "anima\\anima-base-1-masterpiece-v51.safetensors",
-      "strength_model": 0.3,
       "model": [
         "2",
         0
-      ]
+      ],
+      "clip": [
+        "2",
+        1
+      ],
+      "lora_name": "il\\动态光影1-5.safetensors",
+      "strength_model": 0.0,
+      "strength_clip": 0.0
     },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA 2：大师之作增强"
-    }
+    "class_type": "LoraLoader"
   },
   "4": {
     "inputs": {
-      "lora_name": "anima\\Meion_anima_style_lokr_2-000034.safetensors",
-      "strength_model": 0.3,
       "model": [
         "3",
         0
-      ]
+      ],
+      "clip": [
+        "3",
+        1
+      ],
+      "lora_name": "fg2\\暗光.safetensors",
+      "strength_model": 0.5,
+      "strength_clip": 0.5
     },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA 3：Meion风格"
-    }
+    "class_type": "LoraLoader"
+  },
+  "18": {
+    "inputs": {
+      "model": [
+        "4",
+        0
+      ],
+      "clip": [
+        "4",
+        1
+      ],
+      "lora_name": "noob\\人民的.safetensors",
+      "strength_model": 0.5,
+      "strength_clip": 0.5
+    },
+    "class_type": "LoraLoader"
+  },
+  "19": {
+    "inputs": {
+      "model": [
+        "18",
+        0
+      ],
+      "clip": [
+        "18",
+        1
+      ],
+      "lora_name": "noob\\稳定剂.safetensors",
+      "strength_model": 0.2,
+      "strength_clip": 0.2
+    },
+    "class_type": "LoraLoader"
+  },
+  "20": {
+    "inputs": {
+      "model": [
+        "19",
+        0
+      ],
+      "clip": [
+        "19",
+        1
+      ],
+      "lora_name": "noob\\添加微观细节-addmicrodetails.safetensors",
+      "strength_model": 0.25,
+      "strength_clip": 0.25
+    },
+    "class_type": "LoraLoader"
+  },
+  "21": {
+    "inputs": {
+      "model": [
+        "20",
+        0
+      ],
+      "clip": [
+        "20",
+        1
+      ],
+      "lora_name": "pony\\body-wonderful.safetensors",
+      "strength_model": 0.3,
+      "strength_clip": 0.3
+    },
+    "class_type": "LoraLoader"
+  },
+  "24": {
+    "inputs": {
+      "model": [
+        "21",
+        0
+      ],
+      "clip": [
+        "21",
+        1
+      ],
+      "lora_name": "il油腻熟女\\光滑-0.2.safetensors",
+      "strength_model": 0.2,
+      "strength_clip": 0.2
+    },
+    "class_type": "LoraLoader"
   },
   "5": {
     "inputs": {
       "model": [
-        "48",
+        "24",
         0
       ],
       "method": "from cond"
     },
-    "class_type": "Support empty uncond",
-    "_meta": {
-      "title": "支持空负向条件"
-    }
+    "class_type": "Support empty uncond"
+  },
+  "6": {
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "object_to_patch": "diffusion_model",
+      "residual_diff_threshold": 0.2,
+      "start": 0.2,
+      "end": 0.8,
+      "max_consecutive_cache_hits": 5
+    },
+    "class_type": "ApplyFBCacheOnModel"
   },
   "7": {
     "inputs": {
       "clip": [
-        "45",
-        0
+        "24",
+        1
       ],
-      "text": "A beautiful phone camera selfie of the girl in the background. Himari is smiling at the camera with a playful expression, while in the background, Nanoha is sitting on the floor, looking towards the viewer's direction with an extremely flushed face and wide, watery eyes. BREAK 1girl, Himari, female_focus, 18yo, selfie, looking_at_viewer, blonde_hair, twin_tails, gold_eyes, white_t_shirt, teasing_smile. BREAK 1girl, Nanoha, in_background, sitting, short_black_hair, dark_brown_eyes, heavy_blush, embarrassed_expression. BREAK indoors, bedroom, tatami, phone_camera_quality, depth_of_field."
+      "text": "lansane:0.7, nababa, k4w4iim1r41,mamimi_(mamamimi:0.7),zmzq,Expressiveh,BREAK,eye_reflection,glistening_skin,nsfw, artificial_lighting, cinematic_lighting, bloom, bright_focus, 2girls, 1boy, sex, threesome, train_position, anal_sex, futa_on_female, double_anal, depth_of_field, side_view BREAK\n1girl, Lin Wanning, futanari, futa, female_focus, 26yo, chinese, in_middle, behind_partner, kneeling_in_bathtub, bent_over, penetrating_partner, erect_futa_penis, penis_in_anus, being_penetrated, anal_penetration, completely_nude, naked, wet_body, black_hair, hair_updo, big_ass, face_focus, open_mouth, heavy_blush, sweat, ahegao BREAK\n1girl, Lin Wanqing, front, kneeling, bent_over, leaning_on_bathtub_edge, arched_back, being_penetrated, futa_penetration, penis_in_anus, completely_nude, naked, wet_body, long_hair, black_hair, wet_hair, big_ass, dripping_water, face_focus, crying, ahegao, mind_break BREAK\n1boy, male_focus, back, standing_behind, grabbing_hips, penetrating_partner, penis_in_anus BREAK\nindoors, large_bathroom, luxury_bathtub, steam, mist, bubbles BREAK masterpiece,realistic, mature,extremely detailed,4k,8k,photo background,colorful aesthetic,soft colors,detailed eyes,mature,photorealistic, detailed background,flat color,shiny skin, matte skin, shiny hair,addmicrodetails"
     },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "正向提示词"
-    }
+    "class_type": "CLIPTextEncode"
   },
   "8": {
     "inputs": {
       "clip": [
-        "45",
+        "24",
+        1
+      ],
+      "text": "low quality,worst quality,normal quality,shadow_on_face,shaded_face,text,signature,jpeg artifacts,bad anatomy,bad hands,old,early,copyright name,watermark,artist name,signature"
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "16": {
+    "inputs": {
+      "conditioning": [
+        "8",
         0
       ],
-      "text": ""
+      "start": 0.0,
+      "end": 0.7
     },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "负向提示词"
-    }
+    "class_type": "ConditioningSetTimestepRange"
   },
   "9": {
     "inputs": {
@@ -95,15 +195,12 @@
       "height": 1216,
       "batch_size": 1
     },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "空Latent图像"
-    }
+    "class_type": "EmptyLatentImage"
   },
   "10": {
     "inputs": {
       "model": [
-        "5",
+        "6",
         0
       ],
       "positive": [
@@ -111,24 +208,21 @@
         0
       ],
       "negative": [
-        "8",
+        "16",
         0
       ],
       "latent_image": [
         "9",
         0
       ],
-      "seed": 580833738,
-      "steps": 12,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
+      "seed": 123456789,
+      "steps": 26,
+      "cfg": 4.5,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
       "denoise": 1.0
     },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
+    "class_type": "KSampler"
   },
   "11": {
     "inputs": {
@@ -137,87 +231,39 @@
         0
       ],
       "vae": [
-        "15",
-        0
+        "1",
+        2
       ]
     },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
+    "class_type": "VAEDecode"
   },
-  "12": {
+  "25": {
     "inputs": {
-      "images": [
+      "model_name": "RealESRGAN_x2plus.pth"
+    },
+    "class_type": "UpscaleModelLoader"
+  },
+  "26": {
+    "inputs": {
+      "upscale_model": [
+        "25",
+        0
+      ],
+      "image": [
         "11",
         0
       ]
     },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
-    }
+    "class_type": "ImageUpscaleWithModel"
   },
-  "15": {
+  "12": {
     "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载Qwen VAE"
-    }
-  },
-  "45": {
-    "inputs": {
-      "clip_name": "qwen_3_06b_base.safetensors",
-      "type": "stable_diffusion",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载Qwen CLIP"
-    }
-  },
-  "46": {
-    "inputs": {
-      "lora_name": "anima\\gpt-image-2_anima-base1_v1-1.safetensors",
-      "strength_model": 0.2,
-      "model": [
-        "4",
+      "images": [
+        "26",
         0
-      ]
+      ],
+      "filename_prefix": "Realistic_Raw_Upscale_2K"
     },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA 4：GPT-Image画质增强"
-    }
-  },
-  "47": {
-    "inputs": {
-      "lora_name": "anima\\虹甜蜜点-@NJSW33T.safetensors",
-      "strength_model": 0.5,
-      "model": [
-        "46",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA 5：虹甜蜜点风格"
-    }
-  },
-  "48": {
-    "inputs": {
-      "lora_name": "anima\\baohedu1-4.safetensors",
-      "strength_model": 0.0,
-      "model": [
-        "47",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA 6：饱和度增强"
-    }
+    "class_type": "SaveImage"
   }
 }

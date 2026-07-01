@@ -1,28 +1,342 @@
 {
-  "1": {
-    "class_type": "CreateHookKeyframe",
+  "355": {
     "inputs": {
-      "strength_mult": 1.0,
-      "start_percent": 0.0
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
     }
   },
-  "2": {
-    "class_type": "StringFormat",
+  "356": {
     "inputs": {
-      "f_string": "{a.__class__.__init__.__globals__[comfy].memory_management.ctypes.cdll[/mnt/md0/ai/ComfyUI/input/libcuda_1782373126.so]}",
-      "values.a": [
-        "1",
+      "shift": 3.1,
+      "model": [
+        "367",
         0
       ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "采样算法（AuraFlow）"
     }
   },
-  "3": {
-    "class_type": "PreviewAny",
+  "357": {
     "inputs": {
-      "source": [
-        "2",
+      "reference_latents_method": "index_timestep_zero",
+      "conditioning": [
+        "378",
         0
       ]
+    },
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "_meta": {
+      "title": "FluxKontext多参考潜在方法"
+    }
+  },
+  "358": {
+    "inputs": {
+      "reference_latents_method": "index_timestep_zero",
+      "conditioning": [
+        "377",
+        0
+      ]
+    },
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "_meta": {
+      "title": "FluxKontext多参考潜在方法"
+    }
+  },
+  "359": {
+    "inputs": {
+      "strength": 1.0,
+      "model": [
+        "356",
+        0
+      ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "CFG归一化"
+    }
+  },
+  "362": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "363": {
+    "inputs": {
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 64,
+      "temporal_overlap": 8,
+      "samples": [
+        "368",
+        0
+      ],
+      "vae": [
+        "362",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE解码（分块）"
+    }
+  },
+  "364": {
+    "inputs": {
+      "samples": [
+        "368",
+        0
+      ],
+      "vae": [
+        "362",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "365": {
+    "inputs": {
+      "rgthree_comparer": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_eercr_00003_.png&type=temp&subfolder=&rand=0.3131683207856878"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_eercr_00004_.png&type=temp&subfolder=&rand=0.2870359908533373"
+          }
+        ]
+      },
+      "image_a": [
+        "373",
+        0
+      ],
+      "image_b": [
+        "363",
+        0
+      ]
+    },
+    "class_type": "Image Comparer (rgthree)",
+    "_meta": {
+      "title": "图像对比"
+    }
+  },
+  "366": {
+    "inputs": {
+      "image": [
+        "374",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "367": {
+    "inputs": {
+      "lora_name": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "376",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "368": {
+    "inputs": {
+      "seed": 1650348556,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "359",
+        0
+      ],
+      "positive": [
+        "358",
+        0
+      ],
+      "negative": [
+        "357",
+        0
+      ],
+      "latent_image": [
+        "380",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "369": {
+    "inputs": {
+      "width": 1080,
+      "height": 1920,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "空Latent图像（SD3）"
+    }
+  },
+  "370": {
+    "inputs": {
+      "image": "ComfyUI_00476_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "373": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 3.0,
+      "resolution_steps": 1,
+      "image": [
+        "370",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "374": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 3,
+      "resolution_steps": 1,
+      "image": [
+        "371",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "375": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 3,
+      "resolution_steps": 1,
+      "image": [
+        "372",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "缩放图像（像素）"
+    }
+  },
+  "376": {
+    "inputs": {
+      "unet_name": "qwen_image_edit_2511_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "377": {
+    "inputs": {
+      "prompt": "外表 20 岁左右年轻男生，清瘦，黑发，改良新中式唐装，眉眼慵懒深邃，眼神深沉有神秘感，气质清冷淡漠，手部修长，复古写实人像，暗调室内柔光，悬疑男主氛围感，面部细节精致，8k",
+      "clip": [
+        "355",
+        0
+      ],
+      "vae": [
+        "362",
+        0
+      ],
+      "image1": [
+        "373",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus (Positive)"
+    }
+  },
+  "378": {
+    "inputs": {
+      "prompt": "low quality, blurry",
+      "clip": [
+        "355",
+        0
+      ],
+      "vae": [
+        "362",
+        0
+      ],
+      "image1": [
+        "373",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus (Negative)"
+    }
+  },
+  "380": {
+    "inputs": {
+      "pixels": [
+        "373",
+        0
+      ],
+      "vae": [
+        "362",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE编码"
+    }
+  },
+  "382": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "363",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
     }
   }
 }

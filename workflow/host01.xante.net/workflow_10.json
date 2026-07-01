@@ -1,38 +1,93 @@
 {
   "1": {
-    "class_type": "LoadImage",
+    "class_type": "LoadImageOutput",
+    "widgets_values": [
+      "YOUR_FILE_NAME.png [output]",
+      false,
+      "refresh",
+      "image"
+    ],
     "inputs": {
-      "image": "ai_3d_input_45D258F3-B666-4E3E-9AFD-0C763F0A5AB8.png"
+      "image": "ai_input_8B40E037-8072-45A6-BC07-96125CC26439.png"
     }
   },
   "2": {
-    "class_type": "DownloadAndLoadDepthAnythingV2Model",
+    "class_type": "UpscaleModelLoader",
     "inputs": {
-      "model": "depth_anything_v2_vitl_fp32.safetensors",
-      "precision": "fp32"
+      "model_name": "RealESRGAN_x4plus.safetensors"
+    },
+    "_meta": {
+      "title": "Load Upscale Model"
     }
   },
   "3": {
-    "class_type": "DepthAnything_V2",
+    "class_type": "ImageUpscaleWithModel",
     "inputs": {
-      "da_model": [
-        "2",
-        0
-      ],
-      "images": [
+      "image": [
         "1",
         0
+      ],
+      "upscale_model": [
+        "2",
+        0
       ]
+    },
+    "_meta": {
+      "title": "Upscale x4 (Model)"
+    }
+  },
+  "5": {
+    "class_type": "AILab_ImageMaskResize",
+    "inputs": {
+      "width": 0,
+      "height": 0,
+      "scale_by": 1.0,
+      "upscale_method": "bicubic",
+      "resize_mode": "resize",
+      "pad_color": "#ffffff",
+      "crop_position": "center",
+      "divisible_by": 1,
+      "device": "gpu",
+      "image": [
+        "3",
+        0
+      ],
+      "mask": [
+        "1",
+        1
+      ]
+    },
+    "_meta": {
+      "title": "Resize Alpha to Upscaled Size (no padding)"
+    }
+  },
+  "6": {
+    "class_type": "JoinImageWithAlpha",
+    "inputs": {
+      "image": [
+        "3",
+        0
+      ],
+      "alpha": [
+        "5",
+        1
+      ]
+    },
+    "_meta": {
+      "title": "Join Upscaled Image + Alpha Mask"
     }
   },
   "4": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "3",
+        "6",
         0
       ],
-      "filename_prefix": "iqueue_3dmodel_45D258F3-B666-4E3E-9AFD-0C763F0A5AB8"
+      "filename_prefix": "iqueue_upscale_8B40E037-8072-45A6-BC07-96125CC26439"
+    },
+    "_meta": {
+      "title": "Save Upscaled"
     }
   }
 }

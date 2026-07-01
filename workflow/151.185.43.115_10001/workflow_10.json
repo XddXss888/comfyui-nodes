@@ -1191,7 +1191,7 @@
     "inputs": {
       "filename_prefix": "audio/ComfyUI",
       "quality": "V0",
-      "audioUI": "/api/view?filename=ComfyUI_00018_.mp3&type=output&subfolder=audio&rand=0.7474720267339953",
+      "audioUI": "",
       "audio": [
         "92",
         0
@@ -1200,6 +1200,165 @@
     "class_type": "SaveAudioMP3",
     "_meta": {
       "title": "Save Audio (MP3)"
+    }
+  },
+  "94": {
+    "inputs": {
+      "prompt": "A realistic Indian tier-2 town hardware shop during daytime, packed with everyday electrical and hardware items, hanging wires, PVC pipes, switches, tools, paint cans, and small boxes stacked behind the counter. A playful 6-year-old Indian boy stands at the shop counter holding a bright-colored plastic toy gun. The child enthusiastically shouts \"Dhaishoom!\" while pointing the toy gun toward the shopkeeper. The kid quickly grabs a small rectangular hardware soundbox/intercom device from the counter and holds it close to his mouth like a police walkie-talkie, pretending to communicate: \"Hello control room, chor bhag gaya!\" Across the counter, a middle-aged Indian shopkeeper named Ramesh, wearing a simple checked shirt, looks panicked and reaches forward with both hands, desperately trying to snatch the soundbox back before the child runs away with it. The child's expression is mischievous and full of imagination, while Ramesh's face shows comic frustration. Authentic Indian tier-2 atmosphere, natural daylight entering from the shop entrance, realistic skin tones, cluttered hardware store details, documentary-style realism, shallow depth of field, 35mm lens, handheld   cinematic framing, ultra-photorealistic, highly detailed textures, expressive faces, subtle motion blur from the action, warm Indian color grading.  - use the soundbox from the reference image",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "95": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "96": {
+    "inputs": {
+      "image": "soundbox.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "97": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "99": {
+    "inputs": {
+      "prompt": "A realistic Indian tier-2 town hardware shop during daytime, packed with everyday electrical and hardware items, hanging wires, PVC pipes, switches, tools, paint cans, and small boxes stacked behind the counter. A playful 6-year-old Indian boy stands at the shop counter holding a bright-colored plastic toy gun. The child enthusiastically shouts \"Dhaishoom!\" while pointing the toy gun toward the shopkeeper. The kid quickly grabs a small rectangular hardware soundbox/intercom device from the counter and holds it close to his mouth like a police walkie-talkie, pretending to communicate: \"Hello control room, chor bhag gaya!\" Across the counter, a middle-aged Indian shopkeeper named Ramesh, wearing a simple checked shirt, looks panicked and reaches forward with both hands, desperately trying to snatch the soundbox back before the child runs away with it. The child's expression is mischievous and full of imagination, while Ramesh's face shows comic frustration. Authentic Indian tier-2 atmosphere, natural daylight entering from the shop entrance, realistic skin tones, cluttered hardware store details, documentary-style realism, shallow depth of field, 35mm lens, handheld  cinematic framing, ultra-photorealistic, highly detailed textures, expressive faces, subtle motion blur from the action, warm Indian color grading.",
+      "aspect_ratio": "9:16",
+      "image_resolution": "2K",
+      "random_seed": 1,
+      "images.image_1": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "Kie_Seedream4EditNode",
+    "_meta": {
+      "title": "Seedream 4 Image to Image"
+    }
+  },
+  "100": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "99",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "102": {
+    "inputs": {
+      "prompt": "A realistic Indian tier-2 town hardware shop during daytime, packed with everyday electrical and hardware items, hanging wires, PVC pipes, switches, tools, paint cans, and small boxes stacked behind the counter. A playful 6-year-old Indian boy stands at the shop counter holding a bright-colored plastic toy gun. The child enthusiastically shouts \"Dhaishoom!\" while pointing the toy gun toward the shopkeeper. The kid quickly grabs a small rectangular hardware soundbox/intercom device from the counter and holds it close to his mouth like a police walkie-talkie, pretending to communicate: \"Hello control room, chor bhag gaya!\" Across the counter, a middle-aged Indian shopkeeper named Ramesh, wearing a simple checked shirt, looks panicked and reaches forward with both hands, desperately trying to snatch the soundbox back before the child runs away with it. The child's expression is mischievous and full of imagination, while Ramesh's face shows comic frustration. Authentic Indian tier-2 atmosphere, natural daylight entering from the shop entrance, realistic skin tones, cluttered hardware store details, documentary-style realism, shallow depth of field, 35mm lens, handheld cinematic framing, ultra-photorealistic, highly detailed textures, expressive faces, subtle motion blur from the action, warm Indian color grading. - use the soundbox from the reference image",
+      "aspect_ratio": "9:16",
+      "quality": "medium",
+      "image": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "Fal_GPTImage2ImageToImageNode",
+    "_meta": {
+      "title": "GPT Image 2 Image to Image"
+    }
+  },
+  "103": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "104": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "105": {
+    "inputs": {
+      "image": "ComfyUI_00276_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "108": {
+    "inputs": {
+      "prompt": "make the lighting even throughout, the soundbox should match the lighting",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "109": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "108",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
     }
   }
 }

@@ -182,7 +182,7 @@
   },
   "48": {
     "inputs": {
-      "seed": 468712214601847,
+      "seed": 815030056534305,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -358,7 +358,7 @@
   },
   "64": {
     "inputs": {
-      "aspect_ratio": "3:2",
+      "aspect_ratio": "1:1",
       "max_size": 1024
     },
     "class_type": "PDRatioSelector",
@@ -531,7 +531,7 @@
   },
   "200": {
     "inputs": {
-      "image": "MaskPreview_temp_cc27v_00002_ (1).png"
+      "image": "3.png"
     },
     "class_type": "PD_load_image_v1",
     "_meta": {
@@ -540,7 +540,7 @@
   },
   "201": {
     "inputs": {
-      "image": "透明底.png"
+      "image": "2.png"
     },
     "class_type": "PD_load_image_v1",
     "_meta": {
@@ -549,7 +549,7 @@
   },
   "202": {
     "inputs": {
-      "image": "e02e93b8-6731-447f-b6fe-3d480a8df338.png"
+      "image": "3 (1).png"
     },
     "class_type": "PD_load_image_v1",
     "_meta": {
@@ -576,7 +576,7 @@
   },
   "206": {
     "inputs": {
-      "image": "cmqq3hr0g009qlv01hdce13l9.png"
+      "image": "cmr0hjodh00kblv018txzx04b.png"
     },
     "class_type": "LoadImage",
     "_meta": {

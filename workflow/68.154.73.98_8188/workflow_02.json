@@ -1,16 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_ecdf2490a83841a1be8f33ca3e7e69ff.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "83": {
-    "inputs": {
-      "image": "ref_5d1ee7daebca44a2b0e32d2eedffabb1.png"
+      "image": "ref_63dce97b0c3e4c70b7ce420ac16a64ed.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -130,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "Remove the model knee and leg, the model is on his knees on the floor, replace the model black shirt with this product, the product is pink, replace the model jeans with a tiny panties matching the product, do NOT move the model head, the model head is EXACTLY in the same position as the original image",
+      "prompt": "faire que ces cuisses soit ouvertes",
       "clip": [
         "91:61",
         0
@@ -141,10 +132,6 @@
       ],
       "image1": [
         "91:88",
-        0
-      ],
-      "image2": [
-        "83",
         0
       ]
     },
@@ -197,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 907925269575294,
-      "steps": 8,
+      "seed": 259279337420614,
+      "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -238,10 +225,6 @@
       ],
       "image1": [
         "91:88",
-        0
-      ],
-      "image2": [
-        "83",
         0
       ]
     },

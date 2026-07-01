@@ -1,11 +1,11 @@
 {
   "3": {
     "inputs": {
-      "seed": 852147286,
-      "steps": 15,
+      "seed": 156680208700286,
+      "steps": 20,
       "cfg": 8.0,
-      "sampler_name": "dpmpp_sde",
-      "scheduler": "karras",
+      "sampler_name": "euler",
+      "scheduler": "normal",
       "denoise": 1.0,
       "model": [
         "4",
@@ -31,7 +31,7 @@
   },
   "4": {
     "inputs": {
-      "ckpt_name": "realDream_sdxlPony12.safetensors"
+      "ckpt_name": "Alouarn_2.5D.safetensors"
     },
     "class_type": "CheckpointLoaderSimple",
     "_meta": {
@@ -40,8 +40,8 @@
   },
   "5": {
     "inputs": {
-      "width": 600,
-      "height": 800,
+      "width": 512,
+      "height": 512,
       "batch_size": 1
     },
     "class_type": "EmptyLatentImage",
@@ -51,8 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,kneeling,looking at viewer,short,large,navel,cleavage,parted lips,midriff,indoors,ring,mole on breast,wedding ring,bathroom,kitchen,sink,faucet,(Kneel down:1.0),(nude:0.8)",
-      "speak_and_recognation": true,
+      "text": "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,",
       "clip": [
         "4",
         1
@@ -65,8 +64,7 @@
   },
   "7": {
     "inputs": {
-      "text": "anime,cartoon,3d render,child,old,overexposed,underexposed,monochrome,watermark",
-      "speak_and_recognation": true,
+      "text": "text, watermark",
       "clip": [
         "4",
         1
@@ -93,84 +91,17 @@
       "title": "VAE Decode"
     }
   },
-  "10": {
-    "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2025/10/15/1760519291222.png",
-      "upload": "image"
-    },
-    "class_type": "LoadImageFromUrl",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "11": {
-    "inputs": {
-      "enabled": true,
-      "boost_model": "GFPGANv1.3.pth",
-      "interpolation": "Bicubic",
-      "visibility": 1.0,
-      "codeformer_weight": 0.4,
-      "restore_with_main_after": false
-    },
-    "class_type": "ReActorFaceBoost",
-    "_meta": {
-      "title": "ReActor 🌌 Face Booster"
-    }
-  },
-  "16": {
-    "inputs": {
-      "enabled": true,
-      "swap_model": "inswapper_128.onnx",
-      "facedetection": "retinaface_resnet50",
-      "face_restore_model": "none",
-      "face_restore_visibility": 1.0,
-      "codeformer_weight": 0.5,
-      "detect_gender_input": "no",
-      "detect_gender_source": "no",
-      "input_faces_index": "0",
-      "source_faces_index": "0",
-      "console_log_level": 1,
-      "input_image": [
-        "8",
-        0
-      ],
-      "source_image": [
-        "10",
-        0
-      ],
-      "face_boost": [
-        "11",
-        0
-      ]
-    },
-    "class_type": "ReActorFaceSwap",
-    "_meta": {
-      "title": "ReActor 🌌 Fast Face Swap"
-    }
-  },
-  "20": {
+  "9": {
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "16",
+        "8",
         0
       ]
     },
     "class_type": "SaveImage",
     "_meta": {
-      "title": "SaveImage"
-    }
-  },
-  "21": {
-    "inputs": {
-      "images": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
+      "title": "Save Image"
     }
   }
 }

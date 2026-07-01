@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image_path_or_URL": "https://cos.credit99.cn/2026-05-27/69d367054c6e2e96ca9f00fc/upload/20260527232924084-1-fzjti2.jpg",
+      "image_path_or_URL": "https://cos.credit99.cn/2026-06-05/6a17e2300eae9fa57b61d09b/upload/20260605152839473-xa1pkl.png",
       "image": "",
       "upscale_method": "lanczos",
       "megapixels": 0.0,
@@ -16,7 +16,7 @@
   },
   "2": {
     "inputs": {
-      "image_path_or_URL": "https://cos.credit99.cn/image/temps/69d367054c6e2e96ca9f00fc/cloth150_00299_-20260625130321812.png",
+      "image_path_or_URL": "https://cos.credit99.cn/image/temps/69a40ed0705e729351ccc999/410_0042-20260326084230771.png",
       "image": "",
       "upscale_method": "lanczos",
       "megapixels": 0,
@@ -33,8 +33,8 @@
     "inputs": {
       "action": "append",
       "tidy_tags": "no",
-      "text_a": "    \"Model hand type selection (Caucasian female model) with auto-adapted body proportions and skin tone, 100% consistent across all wear views\",",
-      "text_b": "5 Short Square nail shape,",
+      "text_a": "{\n  \"task_objective\": \"Product Detail Page Generator - Generate complete detail page strictly following Image 1 framework structure, with Image 2 product as variable input, auto-adapting copywriting and visuals\",\n  \"input_assets\": {\n    \"layout_framework\": {\n      \"source\": \"Image 1 - Detail Page Layout Framework\",\n      \"focus\": \"Page layout structure, module order, column arrangement, component positioning, visual hierarchy, text block placement, section proportions, copywriting format, image treatment style, layer effects\",\n      \"role\": \"Definitive structural blueprint — all output must strictly follow this framework\",\n      \"constraints\": \"1:1 replica of this framework's layout structure, visual style, and copywriting format\"\n    },\n    \"product_image\": {\n      \"source\": \"Image 2 - Uploaded Product Image (VARIABLE)\",\n      \"focus\": \"Product appearance, color variants, material texture, design details, craftsmanship features, visual selling points\",\n      \"role\": \"Core product visual content for all product showcase sections\",\n      \"constraints\": \"Present product exactly as shown — no design modifications. Image treatment must match framework's style\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Analyze Image 1 framework: extract layout structure, module order, visual hierarchy, copywriting format, image treatment style, and all layer effects\",\n    \"step_2\": \"Analyze Image 2 product: extract type, shape, color, material, design details, selling points. Place product visuals into framework zones with matching effects\",\n    \"step_3\": \"Generate all copywriting following framework style + campaign section + color system from product image, assemble complete detail page\"\n  },\n  \"outputs\": {\n    \"page_header\": \"Header with dynamic product title following framework layout\",\n    \"main_content_modules\": \"All framework content modules with product visuals in corresponding zones\",\n    \"campaign_section\": \"Campaign featuring uploaded product following framework layout\",\n    \"color_system\": \"Color palette extracted from product image in framework format\",\n    \"footer_section\": \"Footer following framework layout and style\"\n  },\n  \"output_requirements\": [\n    \"FRAMEWORK FIDELITY: Strictly follow Image 1 layout — no module additions, deletions, or reordering\",\n    \"VISUAL FIDELITY: All visual effects (overlays, gradients, shadows, masks, blending modes, color grading) must match Image 1\",\n    \"COPYWRITING FIDELITY: Text style, tone, format, heading hierarchy, and bilingual pattern must replicate Image 1\",\n    \"PRODUCT FIDELITY: Product must be presented exactly as shown in Image 2 without modifications\",\n    \"DYNAMIC ADAPTATION: Auto-detect product category, extract selling points, generate context-aware copywriting, apply framework visual style to product images\",\n    \"Premium atmosphere: product-color gradient bg, cinematic vignette, unified color grading, luxury white space, editorial retouching\",\n    \"AI copywriting: Chinese-primary + English-secondary, series title + feature highlights + material recommendations + craftsmanship details + style positioning, elegant typography matching framework\"\n  ]\n}\n",
+      "text_b": "",
       "text_c": ""
     },
     "class_type": "StringFunction|pysssss",
@@ -44,30 +44,13 @@
   },
   "4": {
     "inputs": {
-      "index": 0,
-      "text0": [
-        "10",
-        0
-      ],
-      "text1": [
-        "11",
-        0
-      ]
-    },
-    "class_type": "easy textIndexSwitch",
-    "_meta": {
-      "title": "文本编号切换"
-    }
-  },
-  "5": {
-    "inputs": {
       "inputcount": 2,
       "prompt": [
-        "4",
+        "3",
         0
       ],
       "aspect_ratio": [
-        "7",
+        "6",
         0
       ],
       "resolution": "2k",
@@ -87,18 +70,18 @@
       "trd_node": true
     }
   },
-  "6": {
+  "5": {
     "inputs": {
       "prompt": [
-        "4",
+        "3",
         0
       ],
       "temperature": 0.9,
       "top_p": 0.95,
-      "seed": 454246024,
+      "seed": 940501341,
       "max_tokens": 32768,
       "aspect_ratio": [
-        "7",
+        "6",
         0
       ],
       "resolution": "2K",
@@ -121,24 +104,24 @@
       "trd_node": true
     }
   },
-  "7": {
+  "6": {
     "inputs": {
-      "ratio": "3:4"
+      "ratio": "9:16"
     },
     "class_type": "ratio_selector",
     "_meta": {
       "title": "ratio selector"
     }
   },
-  "8": {
+  "7": {
     "inputs": {
       "index": 0,
       "image0": [
-        "5",
+        "4",
         0
       ],
       "image1": [
-        "6",
+        "5",
         0
       ]
     },
@@ -147,49 +130,17 @@
       "title": "图像编号切换"
     }
   },
-  "9": {
+  "8": {
     "inputs": {
-      "filename_prefix": "shoe350",
+      "filename_prefix": "cloth150",
       "images": [
-        "8",
+        "7",
         0
       ]
     },
     "class_type": "SaveImage",
     "_meta": {
       "title": "保存图像"
-    }
-  },
-  "10": {
-    "inputs": {
-      "action": "append",
-      "tidy_tags": "no",
-      "text_a": "{\n  \"task_objective\": \"Nail Art Promo Page & 3+1 Layout - 3-top (inspiration→sketch→render) + 1-bottom (campaign)\",\n  \"input_assets\": {\n    \"structural_reference\": {\n      \"source\": \"Figure 1 Line Art\",\n      \"focus\": \"EXACT nail structural framework - nail shape, length, curvature, outline, proportions, spacing - ABSOLUTE PRESERVATION REQUIRED\",\n      \"role\": \"Provide locked structural blueprint for nail design generation\"\n    },\n    \"aesthetic_reference\": {\n      \"source\": \"Figure 2 Inspiration\",\n      \"focus\": \"Color system, texture, pattern or detailing, and overall style tone\",\n      \"role\": \"Provide aesthetic elements to be applied onto the nail structure\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Analyze Figure 2 inspiration + parse Figure 1 nail structure\",\n    \"step_2\": \"Generate sketch → render from Figure 1 structure + Figure 2 aesthetics, pixel-precise, NO structural deviation\",\n    \"step_3\": \"Generate brand campaign, assemble 3-top + 1-bottom layout with premium atmosphere & transformation flow\"\n  },\n  \"outputs\": {\n    \"top_left\": \"Inspiration Source - Figure 2 original image with premium framing. Label: 灵感溯源 INSPIRATION\",\n    \"top_center\": \"Sketch Design - Figure 1 structure + Figure 2 aesthetics sketch. Label: 草图设计 SKETCH\",\n    \"top_right\": \"Nail Render - High-fidelity render, realistic texture. Label: 美甲渲染 RENDER. SOURCE OF TRUTH\",\n    \"bottom_full\": \"Brand Campaign - Model hand in elegant editorial pose, stylish setting matching Figure 2 mood, spanning full width. Label: 品牌时尚 FASHION CAMPAIGN\"\n  },\n  \"output_requirements\": [\n    \"Figure 1 nail structure LOCKED; Figure 2 aesthetics pixel-precise\",\n    \"Campaign nail design 100% identical to top_right render\",\n\n",
-      "text_b": [
-        "3",
-        0
-      ],
-      "text_c": " \n    \"SFW; realistic nail texture (gloss, matte, shimmer); consistent lighting; NO oily shine; NO oversaturation\",\n    \"3-top + 1-bottom layout - gradient bg from Figure 2 colors, glow around top-left, cinematic vignette, luxury white space\",\n    \"Subtle flow lines connecting inspiration→sketch→render→campaign, indicating creative transformation journey\",\n    \"Coherent lighting: nail highlights & shadows, ambient occlusion, consistent light direction\",\n    \"Premium atmosphere: Figure 2 color gradient bg, glow around center, cinematic vignette, unified color grading, luxury white space, editorial retouching\",\n    \"AI copywriting: Chinese-primary + English-secondary, series poetic title + inspiration analysis, elegant typography with theme-matching decorative icons\"\n  ]\n}"
-    },
-    "class_type": "StringFunction|pysssss",
-    "_meta": {
-      "title": "String Function 🐍"
-    }
-  },
-  "11": {
-    "inputs": {
-      "action": "append",
-      "tidy_tags": "no",
-      "text_a": "{\n  \"task_objective\": \"Nail Art Promo Page & 6-View Fashion Layout - center inspiration with surrounding design views\",\n  \"input_assets\": {\n    \"structural_reference\": {\n      \"source\": \"Figure 1 Line Art\",\n      \"focus\": \"EXACT nail structural framework - nail shape, length, curvature, outline, proportions, spacing - ABSOLUTE PRESERVATION REQUIRED\",\n      \"role\": \"Provide locked structural blueprint for nail design generation\"\n    },\n    \"aesthetic_reference\": {\n      \"source\": \"Figure 2 Inspiration\",\n      \"focus\": \"Color system, texture, pattern or detailing, and overall style tone\",\n      \"role\": \"Provide aesthetic elements to be applied onto the nail structure\"\n    }\n  },\n  \"workflow\": {\n    \"step_1\": \"Analyze Figure 2 inspiration + parse Figure 1 nail structure\",\n    \"step_2\": \"Generate sketch → render from Figure 1 structure + Figure 2 aesthetics, pixel-precise, NO structural deviation\",\n    \"step_3\": \"Generate model hand wearing views + brand campaign, assemble diamond layout with premium atmosphere\"\n  },\n  \"outputs\": {\n    \"center_inspiration\": \"Figure 2 Inspiration - Original image at center with premium framing & glow. Label: 灵感溯源 INSPIRATION SOURCE\",\n    \"top_left\": \"Sketch Design - Figure 1 structure + Figure 2 aesthetics sketch. Label: 草图设计 SKETCH\",\n    \"top_right\": \"Nail Render - High-fidelity render, realistic texture. Label: 美甲渲染 NAIL RENDER. SOURCE OF TRUTH\",\n    \"left_view\": \"Back of Hand - Model hand fingers spread, full nail design display. Label: 手背展示 BACK\",\n    \"right_view\": \"Detail Closeup - Dutch angle nail close-up, pattern & craftsmanship. Label: 细节特写 DETAIL\",\n    \"bottom_campaign\": \"Brand Campaign - Elegant hand editorial pose, stylish setting matching Figure 2 mood. Label: 品牌时尚 FASHION CAMPAIGN\"\n  },\n  \"output_requirements\": [\n    \"Figure 1 nail structure LOCKED; Figure 2 aesthetics pixel-precise\",\n    \"All wear views nail design 100% identical to top_right render\",\n",
-      "text_b": [
-        "3",
-        0
-      ],
-      "text_c": "\n    \"SFW; realistic nail texture (gloss, matte, shimmer); consistent lighting; NO oily shine; NO oversaturation\",\n    \"Coherent lighting: nail highlights & shadows, ambient occlusion, consistent light direction\",\n    \"Premium atmosphere: Figure 2 color gradient bg, glow around center, cinematic vignette, unified color grading, luxury white space, editorial retouching\",\n    \"AI copywriting: Chinese-primary + English-secondary, series poetic title + inspiration analysis + nail spec + DNA mapping (icon-annotated), elegant typography with theme-matching decorative icons\"\n  ]\n}\n"
-    },
-    "class_type": "StringFunction|pysssss",
-    "_meta": {
-      "title": "String Function 🐍"
     }
   }
 }

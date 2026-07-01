@@ -19,22 +19,6 @@
       "title": "VAE 로드"
     }
   },
-  "45": {
-    "inputs": {
-      "text": [
-        "133",
-        0
-      ],
-      "clip": [
-        "39",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "아니마 긍정 프롬프트"
-    }
-  },
   "46": {
     "inputs": {
       "unet_name": "anima-preview3-base.safetensors",
@@ -49,7 +33,7 @@
     "inputs": {
       "shift": 8.0,
       "model": [
-        "153",
+        "149",
         0
       ]
     },
@@ -126,7 +110,7 @@
   "120": {
     "inputs": {
       "lora_name": "nihirumaanima_preview3_1.safetensors",
-      "strength_model": 1.0,
+      "strength_model": 0.6,
       "model": [
         "46",
         0
@@ -167,7 +151,7 @@
   "133": {
     "inputs": {
       "use_naia_settings": false,
-      "pre_prompt": "(@na tarapisu153), @nihirumastyle, (@healthyman:0.5), (@eonsang:0.4), (@moni monico:0.4), \n\nreal world background, (real world location), masterpiece, best quality, hyper detail, very aesthetic, newest, year2025, \n\nhighres, HDR, absurdres, finely detailed, (beautiful eyes and detailed face), (realistic:2), (photorealistic:2), detailed eyes, deepblue and purple eyes, \n\nnorma hollowell, 1girl, solo, (loli:0.2), looking at viewer, no gloves, closed mouth, (blush),\n\n(large breasts:0.8), no hat, (thickthigh), bare neck, ",
+      "pre_prompt": "(@na tarapisu153:1.8), @nihirumastyle, (@healthyman:0.3), (@eonsang:0.9), (@moni monico:0.5), \n\nphoto background, (real world location), masterpiece, best quality, hyper detail, very aesthetic, newest, year2025, \n\nhighres, HDR, absurdres, finely detailed, (beautiful eyes and detailed face), (realistic:2), (photorealistic:2), detailed eyes, cinematic outline, \n\n1girl, solo, looking at vieweer, \n\nthickthigh, \n\n(Amate Yuzuriha, Machu), \n\n",
       "post_prompt": "",
       "auto_hide": "robot joints, dark skin",
       "remove_author": "on",
@@ -177,7 +161,7 @@
       "remove_clothes": "skip",
       "remove_color": "skip",
       "remove_location_and_background_color": "skip",
-      "remove_expression": "on",
+      "remove_expression": "skip",
       "remove_pose_action": "skip",
       "remove_meta_tags": "on",
       "remove_object_tags": "skip",
@@ -221,13 +205,13 @@
   },
   "150": {
     "inputs": {
-      "seed": 134158812683336,
+      "seed": 959586635480651,
       "steps": 30,
       "cfg": 4.0,
       "sampler_name": "er_sde_cns",
       "scheduler": "simple",
       "denoise": 1.0,
-      "quality_tags": "absurdres, highres, masterpiece, best quality, score_9, score_8, newest, year 2025, year 2024",
+      "quality_tags": "(absurdres, highres, masterpiece, best quality, score_9, score_8, newest, year 2025, year 2024:2)",
       "mod_w_profile": "step_i8_skip27",
       "adaptive_smc_alpha": 0.1,
       "model": [
@@ -235,7 +219,7 @@
         0
       ],
       "positive": [
-        "45",
+        "168",
         0
       ],
       "negative": [
@@ -243,7 +227,7 @@
         0
       ],
       "latent_image": [
-        "167",
+        "119",
         0
       ],
       "clip": [
@@ -254,20 +238,6 @@
     "class_type": "SpectrumKSamplerModGuidance",
     "_meta": {
       "title": "KSampler (Spectrum + Mod Guidance)"
-    }
-  },
-  "153": {
-    "inputs": {
-      "lora_name": "norma_hollowell_v1.safetensors",
-      "strength_model": 0.8,
-      "model": [
-        "149",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "ANIMA 추가 로라"
     }
   },
   "154": {
@@ -396,15 +366,20 @@
       "title": "VAE 디코드"
     }
   },
-  "167": {
+  "168": {
     "inputs": {
-      "width": 1216,
-      "height": 832,
-      "batch_size": 1
+      "text": [
+        "133",
+        0
+      ],
+      "clip": [
+        "39",
+        0
+      ]
     },
-    "class_type": "EmptyLatentImage",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "빈 잠재 이미지"
+      "title": "아니마 긍정 프롬프트"
     }
   }
 }

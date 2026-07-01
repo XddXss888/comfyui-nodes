@@ -1,11 +1,11 @@
 # 211.206.164.162:8188
 
 **GPU**: RTX A5000 | **显存**: 24 GB | **空闲**: 3 GB
-**内存**: 188 GB (空闲 90 GB)
+**内存**: 188 GB (空闲 72 GB)
 **版本**: 0.3.71
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-29 08:07:38
-**历史总数**: 9 | **成功**: 9
+**扫描时间**: 2026-07-01 08:08:26
+**历史总数**: 10 | **成功**: 10
 
 ## 工作流列表
 
@@ -110,3 +110,15 @@ exposed skin, exposed
 - **提示词**:
   - [CLIPTextEncode::text] Logo discord avec les lettres RS pour un developpeur
   - [CLIPTextEncode::text] blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality
+
+### 10. workflow_10.json
+- **Prompt ID**: `2598c10e-c87a-4279-a9c1-e4daf0b1b870`
+- **类型**: 图生图
+- **节点数**: 15
+- **模型** (4):
+  - ae.safetensors
+  - clip_l.safetensors
+  - flux1-dev-fp8-MYHuman_墨幽随拍.safetensors
+  - t5xxl_fp16.safetensors
+- **提示词**:
+  - [CLIPTextEncode::text] Using this elegant style, create a portrait of a swan wearing a pearl tiara and lace collar, maintaining the same refined quality and soft color tones.

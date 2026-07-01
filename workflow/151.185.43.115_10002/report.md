@@ -4,192 +4,107 @@
 **内存**: 29 GB (空闲 9 GB)
 **版本**: 0.14.1
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-30 08:07:12
-**历史总数**: 515 | **成功**: 10
+**扫描时间**: 2026-07-01 08:08:42
+**历史总数**: 551 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `e66d49bd-fb53-44a9-a877-85cadbe0adb8`
+- **Prompt ID**: `65c93a3d-7036-46fe-9be8-915fe7f13de8`
 - **类型**: 视频编辑
-- **节点数**: 242
+- **节点数**: 41
 - **模型** (0):
 - **提示词**:
-  - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
-A tiny rented Mumbai room, Iter 3 housing style, cramped but clean. Single bed against the wall, plastic chair, old study table, notebook filled with handwritten ideas, ring light in one c
-  - [Kie_GeminiOmniVideoNode::prompt] FRIEND DIALOGUE
-Duration: 3–4 sec
-Dialogue
-
-Friend(the girl in green is talking):
-"Tu try toh kar rahi hai lekin tareeka nahi aata tujhe. Seekho App khol."
-
-pause
-
-"Wahaan se script likhna seekh."
-
-OM
-  - [Kie_GeminiOmniVideoNode::prompt] nisha says
-" Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
+  - [Kie_GrokImagineVideo15PreviewNode::prompt] ultra-realistic cinematic video inside an authentic Indian tier-2 hardware shop during the afternoon. The shop is filled with hanging electrical wires, PVC pipes, switch boxes, paint buckets, tools, a
+  - [Official_NanoBananaNode::prompt] remove the message bubbles from the image, keeping everythign else exactly the same
+  - [Kie_GeminiOmniVideoNode::prompt] camera rotates and a customer walks into the frame and the owner is in a bit anxious while th custormer and th child are  laughing
 
 ### 2. workflow_02.json
-- **Prompt ID**: `abc323b3-70ce-4a0e-9c12-a8806e74008e`
+- **Prompt ID**: `ecec65ae-8d90-4a9e-8366-c9350da58308`
 - **类型**: 视频编辑
-- **节点数**: 242
+- **节点数**: 39
 - **模型** (0):
 - **提示词**:
-  - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
-A tiny rented Mumbai room, Iter 3 housing style, cramped but clean. Single bed against the wall, plastic chair, old study table, notebook filled with handwritten ideas, ring light in one c
-  - [Kie_GeminiOmniVideoNode::prompt] FRIEND DIALOGUE
-Duration: 3–4 sec
-Dialogue
-
-Friend(the girl in green is talking):
-"Tu try toh kar rahi hai lekin tareeka nahi aata tujhe. Seekho App khol."
-
-pause
-
-"Wahaan se script likhna seekh."
-
-OM
-  - [Kie_GeminiOmniVideoNode::prompt] nisha says
-" Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
+  - [Kie_GrokImagineVideo15PreviewNode::prompt] ultra-realistic cinematic video inside an authentic Indian tier-2 hardware shop during the afternoon. The shop is filled with hanging electrical wires, PVC pipes, switch boxes, paint buckets, tools, a
+  - [Official_NanoBananaNode::prompt] remove the message bubbles from the image, keeping everythign else exactly the same
+  - [Kie_GeminiOmniVideoNode::prompt] camera rotates and a customer walks into the frame and the owner is in a bit anxious while th custormer and th child are  laughing
 
 ### 3. workflow_03.json
-- **Prompt ID**: `539987cc-a684-48a6-809c-e41c8e73f18b`
+- **Prompt ID**: `63b80acc-d2bd-40c3-81d9-81eac4be71cf`
 - **类型**: 视频编辑
-- **节点数**: 244
+- **节点数**: 43
 - **模型** (0):
 - **提示词**:
-  - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
-A tiny rented Mumbai room, Iter 3 housing style, cramped but clean. Single bed against the wall, plastic chair, old study table, notebook filled with handwritten ideas, ring light in one c
-  - [Kie_GeminiOmniVideoNode::prompt] FRIEND DIALOGUE
-Duration: 3–4 sec
-Dialogue
-
-Friend(the girl in green is talking):
-"Tu try toh kar rahi hai lekin tareeka nahi aata tujhe. Seekho App khol."
-
-pause
-
-"Wahaan se script likhna seekh."
-
-OM
-  - [Kie_GeminiOmniVideoNode::prompt] nisha says
-" Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
+  - [Kie_GrokImagineVideo15PreviewNode::prompt] ultra-realistic cinematic video inside an authentic Indian tier-2 hardware shop during the afternoon. The shop is filled with hanging electrical wires, PVC pipes, switch boxes, paint buckets, tools, a
+  - [Official_NanoBananaNode::prompt] remove the message bubbles from the image, keeping everythign else exactly the same
+  - [Kie_GeminiOmniVideoNode::prompt] camera rotates and a customer walks into the frame and the owner is in a bit anxious while th custormer and th child are  laughing
 
 ### 4. workflow_04.json
-- **Prompt ID**: `27f753ee-5166-40a2-a1c1-2e2202fd1766`
+- **Prompt ID**: `d7f2735b-2a31-497e-890d-ffcf174a8c96`
 - **类型**: 视频编辑
-- **节点数**: 244
+- **节点数**: 43
 - **模型** (0):
 - **提示词**:
-  - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
-A tiny rented Mumbai room, Iter 3 housing style, cramped but clean. Single bed against the wall, plastic chair, old study table, notebook filled with handwritten ideas, ring light in one c
-  - [Kie_GeminiOmniVideoNode::prompt] FRIEND DIALOGUE
-Duration: 3–4 sec
-Dialogue
-
-Friend(the girl in green is talking):
-"Tu try toh kar rahi hai lekin tareeka nahi aata tujhe. Seekho App khol."
-
-pause
-
-"Wahaan se script likhna seekh."
-
-OM
-  - [Kie_GeminiOmniVideoNode::prompt] nisha says
-" Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
+  - [Kie_GrokImagineVideo15PreviewNode::prompt] ultra-realistic cinematic video inside an authentic Indian tier-2 hardware shop during the afternoon. The shop is filled with hanging electrical wires, PVC pipes, switch boxes, paint buckets, tools, a
+  - [Official_NanoBananaNode::prompt] remove the message bubbles from the image, keeping everythign else exactly the same
+  - [Kie_GeminiOmniVideoNode::prompt] camera rotates and a customer walks into the frame and the owner is in a bit anxious while th custormer and th child are  laughing
 
 ### 5. workflow_05.json
-- **Prompt ID**: `e0b15491-3b20-4966-abfe-875b83fc09a2`
+- **Prompt ID**: `49f4b9e2-887c-478b-9e0e-9a27d48e9867`
 - **类型**: 视频编辑
-- **节点数**: 244
+- **节点数**: 44
 - **模型** (0):
 - **提示词**:
-  - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
-A tiny rented Mumbai room, Iter 3 housing style, cramped but clean. Single bed against the wall, plastic chair, old study table, notebook filled with handwritten ideas, ring light in one c
-  - [Kie_GeminiOmniVideoNode::prompt] FRIEND DIALOGUE
-Duration: 3–4 sec
-Dialogue
-
-Friend(the girl in green is talking):
-"Tu try toh kar rahi hai lekin tareeka nahi aata tujhe. Seekho App khol."
-
-pause
-
-"Wahaan se script likhna seekh."
-
-OM
-  - [Kie_GeminiOmniVideoNode::prompt] nisha says
-" Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
+  - [Kie_GrokImagineVideo15PreviewNode::prompt] ultra-realistic cinematic video inside an authentic Indian tier-2 hardware shop during the afternoon. The shop is filled with hanging electrical wires, PVC pipes, switch boxes, paint buckets, tools, a
+  - [Official_NanoBananaNode::prompt] remove the message bubbles from the image, keeping everythign else exactly the same
+  - [Kie_GeminiOmniVideoNode::prompt] camera rotates and a customer walks into the frame and the owner is in a bit anxious while th custormer and th child are  laughing
 
 ### 6. workflow_06.json
-- **Prompt ID**: `ff4098ee-e547-4b50-aab0-5f16012c99ca`
+- **Prompt ID**: `442c0ff0-bc1f-4188-b307-b67c3b583215`
 - **类型**: 视频编辑
-- **节点数**: 244
+- **节点数**: 44
 - **模型** (0):
 - **提示词**:
-  - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
-A tiny rented Mumbai room, Iter 3 housing style, cramped but clean. Single bed against the wall, plastic chair, old study table, notebook filled with handwritten ideas, ring light in one c
-  - [Kie_GeminiOmniVideoNode::prompt] FRIEND DIALOGUE
-Duration: 3–4 sec
-Dialogue
-
-Friend(the girl in green is talking):
-"Tu try toh kar rahi hai lekin tareeka nahi aata tujhe. Seekho App khol."
-
-pause
-
-"Wahaan se script likhna seekh."
-
-OM
-  - [Kie_GeminiOmniVideoNode::prompt] nisha says
-" Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
+  - [Kie_GrokImagineVideo15PreviewNode::prompt] ultra-realistic cinematic video inside an authentic Indian tier-2 hardware shop during the afternoon. The shop is filled with hanging electrical wires, PVC pipes, switch boxes, paint buckets, tools, a
+  - [Official_NanoBananaNode::prompt] remove the message bubbles from the image, keeping everythign else exactly the same
+  - [Kie_GeminiOmniVideoNode::prompt] camera rotates and a customer walks into the frame and the owner is in a bit anxious while th custormer and th child are  laughing
 
 ### 7. workflow_07.json
-- **Prompt ID**: `e0231005-8659-48d1-9540-d6813d63e447`
+- **Prompt ID**: `a8e00a7b-a555-47ed-bdfd-334c09070e88`
 - **类型**: 视频编辑
-- **节点数**: 244
+- **节点数**: 44
 - **模型** (0):
 - **提示词**:
-  - [Kie_GeminiOmniVideoNode::prompt] ACTION ONLY
-A tiny rented Mumbai room, Iter 3 housing style, cramped but clean. Single bed against the wall, plastic chair, old study table, notebook filled with handwritten ideas, ring light in one c
-  - [Kie_GeminiOmniVideoNode::prompt] FRIEND DIALOGUE
-Duration: 3–4 sec
-Dialogue
-
-Friend(the girl in green is talking):
-"Tu try toh kar rahi hai lekin tareeka nahi aata tujhe. Seekho App khol."
-
-pause
-
-"Wahaan se script likhna seekh."
-
-OM
-  - [Kie_GeminiOmniVideoNode::prompt] nisha says
-" Mujhe banana toh aata hai lekin grow karna bilkul bhi nahi. Ek din ek friend boli....Growth ka raasta waha pe samjhi maine. Writing Viral Instagram Reel Script' — yahaan se script likhna 
+  - [Kie_GrokImagineVideo15PreviewNode::prompt] ultra-realistic cinematic video inside an authentic Indian tier-2 hardware shop during the afternoon. The shop is filled with hanging electrical wires, PVC pipes, switch boxes, paint buckets, tools, a
+  - [Official_NanoBananaNode::prompt] remove the message bubbles from the image, keeping everythign else exactly the same
+  - [Kie_GeminiOmniVideoNode::prompt] camera rotates and a customer walks into the frame and the owner is in a bit anxious while th custormer and th child are  laughing
 
 ### 8. workflow_08.json
-- **Prompt ID**: `599d45bd-31f1-4eed-bdaa-409a63a20903`
-- **类型**: 其他
-- **节点数**: 3
+- **Prompt ID**: `1d1a7000-ff63-4e70-be09-c1e47d65bd66`
+- **类型**: 视频编辑
+- **节点数**: 44
 - **模型** (0):
 - **提示词**:
-  - [Kie_GrokImagineVideo15PreviewNode::prompt] 她坐在一个男人身上，抖动了起来
+  - [Kie_GrokImagineVideo15PreviewNode::prompt] ultra-realistic cinematic video inside an authentic Indian tier-2 hardware shop during the afternoon. The shop is filled with hanging electrical wires, PVC pipes, switch boxes, paint buckets, tools, a
+  - [Official_NanoBananaNode::prompt] remove the message bubbles from the image, keeping everythign else exactly the same
+  - [Kie_GeminiOmniVideoNode::prompt] camera rotates and a customer walks into the frame and the owner is in a bit anxious while th custormer and th child are  laughing
 
 ### 9. workflow_09.json
-- **Prompt ID**: `e064b597-afb5-4d1e-827d-ff99e441bab8`
-- **类型**: 其他
-- **节点数**: 3
+- **Prompt ID**: `b9b942d0-4221-4c4c-873a-b7d7f94b2ddc`
+- **类型**: 视频编辑
+- **节点数**: 46
 - **模型** (0):
 - **提示词**:
-  - [Kie_GrokImagineVideo15PreviewNode::prompt] 她坐在一个男人身上，抖动了起来
+  - [Kie_GrokImagineVideo15PreviewNode::prompt] ultra-realistic cinematic video inside an authentic Indian tier-2 hardware shop during the afternoon. The shop is filled with hanging electrical wires, PVC pipes, switch boxes, paint buckets, tools, a
+  - [Official_NanoBananaNode::prompt] remove the message bubbles from the image, keeping everythign else exactly the same
+  - [Kie_GeminiOmniVideoNode::prompt] camera rotates and a customer walks into the frame and the owner is in a bit anxious while th custormer and th child are  laughing
 
 ### 10. workflow_10.json
-- **Prompt ID**: `d710babb-45af-43bf-be82-3179c653db06`
-- **类型**: 其他
-- **节点数**: 3
+- **Prompt ID**: `c997d5cb-5fad-4cb4-8807-1dd9d7c16286`
+- **类型**: 视频编辑
+- **节点数**: 46
 - **模型** (0):
 - **提示词**:
-  - [Kie_GrokImagineVideo15PreviewNode::prompt] 她坐在一个男人身上，抖动了起来, 镜头环绕身体一圈
+  - [Kie_GrokImagineVideo15PreviewNode::prompt] ultra-realistic cinematic video inside an authentic Indian tier-2 hardware shop during the afternoon. The shop is filled with hanging electrical wires, PVC pipes, switch boxes, paint buckets, tools, a
+  - [Official_NanoBananaNode::prompt] remove the message bubbles from the image, keeping everythign else exactly the same
+  - [Kie_GeminiOmniVideoNode::prompt] camera rotates and a customer walks into the frame and the owner is in a bit anxious while th custormer and th child are  laughing

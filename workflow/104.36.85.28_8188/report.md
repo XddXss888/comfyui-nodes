@@ -4,13 +4,13 @@
 **内存**: 58 GB (空闲 48 GB)
 **版本**: v0.2.4-6-g5281090
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-29 08:07:41
-**历史总数**: 1056 | **成功**: 10
+**扫描时间**: 2026-07-01 08:08:32
+**历史总数**: 2379 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `7c7e98e6-f0ed-4ba0-ac9b-08946564af8d`
+- **Prompt ID**: `f74a6837-0a60-45c1-8912-606c8b4b9143`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (4):
@@ -19,11 +19,11 @@
   - ip-adapter-plus-face_sd15.safetensors
   - vae-ft-mse-840000-ema-pruned.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl yoga, thighs, feet, toes, soles, shiny skin, purple eyes, earrings, indoors, plant, potted plant, couch,(Do yoga:1.0),(nude
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl brown eyes,blush,navel,collarbone,tongue out,collar,(show me you getting fucked hard with your tongue out and collar on:1.0
   - [CLIPTextEncode::text] EasyNegative, badhandv4,(worst quality, low quality:1.4), (bad hands, bad fingers, deformed hands, deformed fingers, malformed hands, malformed fingers, fewer digits, wrong hand:1.2,bad legs, malforme
 
 ### 2. workflow_02.json
-- **Prompt ID**: `6a824e12-fd7c-4971-ac05-1b0fd98a7465`
+- **Prompt ID**: `5aa4c0f4-92fa-43fc-95f5-4a082b7a109b`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (4):
@@ -32,11 +32,11 @@
   - ip-adapter-plus-face_sd15.safetensors
   - vae-ft-mse-840000-ema-pruned.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl sex,beach,thighs,feet,toes,soles,foot focus,shoes removed,panties,white panties,plant,potted plant,(Beach sex:1.0),(nude:0.
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1man sobs, carried, pants, indoors, couch, window, mask, glasses, sunglasses, multiple boys, 5boys, crossed legs,(* i break down 
   - [CLIPTextEncode::text] EasyNegative, badhandv4,(worst quality, low quality:1.4), (bad hands, bad fingers, deformed hands, deformed fingers, malformed hands, malformed fingers, fewer digits, wrong hand:1.2,bad legs, malforme
 
 ### 3. workflow_03.json
-- **Prompt ID**: `844ac461-e0b3-425c-a2ae-01443a9815a5`
+- **Prompt ID**: `f9fa6a71-9828-451e-9ab8-60ccc5c12f13`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (4):
@@ -45,11 +45,11 @@
   - ip-adapter-plus-face_sd15.safetensors
   - vae-ft-mse-840000-ema-pruned.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl ,(if you kiss me with tongue and give me a blowjob i might delete it:1.0),(nude:0.8)
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1man sitting,indoors,couch,window,mask,glasses,sunglasses,crossed legs,pants,black pants,white pants,(i break down in sobs:1.0),(
   - [CLIPTextEncode::text] EasyNegative, badhandv4,(worst quality, low quality:1.4), (bad hands, bad fingers, deformed hands, deformed fingers, malformed hands, malformed fingers, fewer digits, wrong hand:1.2,bad legs, malforme
 
 ### 4. workflow_04.json
-- **Prompt ID**: `0dab3ba2-f06c-4790-bdd0-4e35f1a9e54d`
+- **Prompt ID**: `612df4c8-18ae-4485-88e9-917f7690d987`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (4):
@@ -58,11 +58,11 @@
   - ip-adapter-plus-face_sd15.safetensors
   - vae-ft-mse-840000-ema-pruned.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl standing,indoors,door,doorway,(прости хотел сделать комплимент но не подумал что ты так это воспринимаешь :1.0),(nude:0.8)
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl thighs,thighhighs,underwear,panties,thong,ass,curtains,window,couch,leopard print,grabbing own ass,hand on own ass,ass focu
   - [CLIPTextEncode::text] EasyNegative, badhandv4,(worst quality, low quality:1.4), (bad hands, bad fingers, deformed hands, deformed fingers, malformed hands, malformed fingers, fewer digits, wrong hand:1.2,bad legs, malforme
 
 ### 5. workflow_05.json
-- **Prompt ID**: `cee5f695-3a3a-4f42-a3cf-66bdb972dcea`
+- **Prompt ID**: `41fa74f8-2281-4c06-aeb5-1423ac2b12c9`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (4):
@@ -71,11 +71,11 @@
   - ip-adapter-plus-face_sd15.safetensors
   - vae-ft-mse-840000-ema-pruned.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl long hair,blush,bangs,black hair,cleavage,thighs,sweat,shiny,indoors,wet,shiny skin,skindentation,(прости хотел сделать ком
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl naked,legs spread,lying down,table,indoors,thighs,thigh gap,curtains,window,ass,ass focus,grabbing own ass,hand on own ass,
   - [CLIPTextEncode::text] EasyNegative, badhandv4,(worst quality, low quality:1.4), (bad hands, bad fingers, deformed hands, deformed fingers, malformed hands, malformed fingers, fewer digits, wrong hand:1.2,bad legs, malforme
 
 ### 6. workflow_06.json
-- **Prompt ID**: `607e9d50-1c0a-4650-9d5d-5fec46620913`
+- **Prompt ID**: `30f80dae-a9ad-4202-b55d-fade1dcfce19`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (4):
@@ -84,11 +84,11 @@
   - ip-adapter-plus-face_sd15.safetensors
   - vae-ft-mse-840000-ema-pruned.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl indoors,window,wet,shiny skin,glasses,black-framed eyewear,(Brustnahaufnahme:1.0),(nude:0.8)
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl long hair,black hair,red eyes,hair between eyes,blush,sidelocks,wavy hair,thighs,indoors,bed,sweatdrop,(nude:0.8)
   - [CLIPTextEncode::text] EasyNegative, badhandv4,(worst quality, low quality:1.4), (bad hands, bad fingers, deformed hands, deformed fingers, malformed hands, malformed fingers, fewer digits, wrong hand:1.2,bad legs, malforme
 
 ### 7. workflow_07.json
-- **Prompt ID**: `29e9b36b-30de-439e-aabc-ac0c6bfb7dd1`
+- **Prompt ID**: `773db7fd-4a24-4a22-b26e-50547b4ddae2`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (4):
@@ -97,11 +97,11 @@
   - ip-adapter-plus-face_sd15.safetensors
   - vae-ft-mse-840000-ema-pruned.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl blowjob,looking at viewer,blue eyes,shiny,indoors,wet,shiny skin,window,leaning forward,naked,(show me blowjob:1.0),(nude:0
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl thighhighs,thighs,thigh gap,curtains,window,couch,leopard print,ass,grabbing own ass,hand on own ass,mature,looking back,in
   - [CLIPTextEncode::text] EasyNegative, badhandv4,(worst quality, low quality:1.4), (bad hands, bad fingers, deformed hands, deformed fingers, malformed hands, malformed fingers, fewer digits, wrong hand:1.2,bad legs, malforme
 
 ### 8. workflow_08.json
-- **Prompt ID**: `7f0926bc-2a7a-459d-9e3e-591e7104e61d`
+- **Prompt ID**: `d4bff02d-04ae-45fd-8885-af55d0ce71ba`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (4):
@@ -110,11 +110,11 @@
   - ip-adapter-plus-face_sd15.safetensors
   - vae-ft-mse-840000-ema-pruned.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl nudity, bathing, intimate conversation, apology, invasion of personal space, blush, sweat, shiny, wet, shiny skin, skindent
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl sitting,indoors,bed,thighs,long hair,black hair,red eyes,hair between eyes,wavy hair,blush,sweatdrop,(nude:0.8)
   - [CLIPTextEncode::text] EasyNegative, badhandv4,(worst quality, low quality:1.4), (bad hands, bad fingers, deformed hands, deformed fingers, malformed hands, malformed fingers, fewer digits, wrong hand:1.2,bad legs, malforme
 
 ### 9. workflow_09.json
-- **Prompt ID**: `949d86f8-5dcb-42ab-b3a2-cd4f54d6904f`
+- **Prompt ID**: `cc61c2e8-e35e-4681-9372-73e4aca335e3`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (4):
@@ -123,11 +123,11 @@
   - ip-adapter-plus-face_sd15.safetensors
   - vae-ft-mse-840000-ema-pruned.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl indoors,window,skirt,pantyhose,thighs,arms up,arms behind head,curvy,apron,bracelet,green apron,(nude:0.8)
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl wet, indoors, bathroom, shower, blush,(покажи жлпу:1.0),(nude:0.8)
   - [CLIPTextEncode::text] EasyNegative, badhandv4,(worst quality, low quality:1.4), (bad hands, bad fingers, deformed hands, deformed fingers, malformed hands, malformed fingers, fewer digits, wrong hand:1.2,bad legs, malforme
 
 ### 10. workflow_10.json
-- **Prompt ID**: `c7f0b432-99a2-495e-8d53-70ae576986b2`
+- **Prompt ID**: `e2256223-aee4-4086-b4ee-cbc8fd72df7f`
 - **类型**: 文生图
 - **节点数**: 12
 - **模型** (4):
@@ -136,5 +136,5 @@
   - ip-adapter-plus-face_sd15.safetensors
   - vae-ft-mse-840000-ema-pruned.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl thighs,curvy,thick thighs,shiny skin,indoors,window,(nude:0.8)
+  - [CLIPTextEncode::text] score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl blush,short hair,bangs,purple eyes,pink hair,wet,indoors,bathroom,shower place,(эм прости:1.0),(nude:0.8)
   - [CLIPTextEncode::text] EasyNegative, badhandv4,(worst quality, low quality:1.4), (bad hands, bad fingers, deformed hands, deformed fingers, malformed hands, malformed fingers, fewer digits, wrong hand:1.2,bad legs, malforme

@@ -8,7 +8,7 @@
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Logo discord avec les lettres RS pour un developpeur",
+      "text": "🔬 Hyperrealistic, ultra-detailed 8K visualization of an intricate fractal pattern, featuring infinite geometric recursion, glowing neon filaments, and iridescent color gradients shifting from deep violet to electric cyan. Subsurface scattering illuminates crystalline nodes at each iteration, while HDR lighting casts soft, volumetric rays through translucent, self-similar branches. The composition centers on a spiraling golden ratio vortex, surrounded by microscopic, lace-like details and floating luminescent particles. Rendered in photorealistic CG with sharp focus, ambient occlusion, and a dark, cosmic background to enhance depth and luminosity.",
       "clip": [
         "1",
         1
@@ -18,7 +18,7 @@
   "3": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "blurry, low quality, lowres, jpeg artifacts, watermark, signature, text, deformed, bad anatomy, bad hands, extra fingers, mutation, ugly, worst quality",
+      "text": "",
       "clip": [
         "1",
         1
@@ -36,10 +36,10 @@
   "5": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 1670847896,
-      "steps": 20,
+      "seed": 376725285,
+      "steps": 8,
       "cfg": 7.0,
-      "sampler_name": "dpmpp_2m",
+      "sampler_name": "euler",
       "scheduler": "karras",
       "denoise": 1.0,
       "model": [
@@ -76,11 +76,11 @@
   "7": {
     "class_type": "SaveImage",
     "inputs": {
+      "filename_prefix": "sd_web",
       "images": [
         "6",
         0
-      ],
-      "filename_prefix": "fantasy"
+      ]
     }
   }
 }

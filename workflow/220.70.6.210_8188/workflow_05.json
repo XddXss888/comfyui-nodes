@@ -2,7 +2,7 @@
   "3": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 129789143,
+      "seed": 129838107,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -76,7 +76,7 @@
   "9": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "goagent_a2d6e2cf",
+      "filename_prefix": "goagent_04531389",
       "images": [
         "8",
         0

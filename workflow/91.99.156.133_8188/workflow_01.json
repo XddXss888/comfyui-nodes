@@ -1,86 +1,116 @@
 {
-  "1": {
-    "class_type": "CheckpointLoaderSimple",
-    "inputs": {
-      "ckpt_name": "dreamshaper_8.safetensors"
-    }
-  },
-  "2": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "text": "cat",
-      "clip": [
-        "1",
-        1
-      ]
-    }
-  },
   "3": {
-    "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "",
-      "clip": [
-        "1",
-        1
+      "seed": 837441971828682,
+      "steps": 20,
+      "cfg": 8.0,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
       ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
     }
   },
   "4": {
-    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "ckpt_name": "v1-5-pruned-emaonly.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "5": {
     "inputs": {
       "width": 512,
       "height": 512,
       "batch_size": 1
-    }
-  },
-  "5": {
-    "class_type": "KSampler",
-    "inputs": {
-      "seed": 42,
-      "steps": 1,
-      "cfg": 7.0,
-      "sampler_name": "euler",
-      "scheduler": "karras",
-      "denoise": 1.0,
-      "model": [
-        "1",
-        0
-      ],
-      "positive": [
-        "2",
-        0
-      ],
-      "negative": [
-        "3",
-        0
-      ],
-      "latent_image": [
-        "4",
-        0
-      ]
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
     }
   },
   "6": {
-    "class_type": "VAEDecode",
     "inputs": {
-      "samples": [
-        "5",
-        0
-      ],
-      "vae": [
-        "1",
-        2
+      "text": "Immagina un magnifico tramonto sull'orizzonte. Il cielo è un mosaico di colori pastello che si spenge gradualmente, passando da un rosa acceso a una sfumata turchese, poi a un blu scuro e nero profondo. I nuvole, sparse nel cielo serale, assumono forme suggestive e cambiano colore lentamente. Nell'orizzonte appaiono i primi riflessi d'oro sulle onde di un oceano sereno che si estende fino all'orizzonte. Luce del tramonto crea una soave luce dorata sui palazzi in lontananza, rendendoli quasi trasparenti. Nelle distanze più remote, i primi lucernari cominciano a brillare, mentre le stelle emergono poco a poco nel firmamento notturno.",
+      "clip": [
+        "4",
+        1
       ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
     }
   },
   "7": {
-    "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "sd_web",
-      "images": [
-        "6",
+      "text": "text, watermark",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "10",
         0
       ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "10": {
+    "inputs": {
+      "vae_name": "vae-ft-mse-840000-ema-pruned.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
     }
   }
 }

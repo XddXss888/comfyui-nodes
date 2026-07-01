@@ -1,0 +1,107 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 585915214008956,
+      "steps": 20,
+      "cfg": 8.0,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "DreamShaper_8.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Cargar Punto de Control"
+    }
+  },
+  "5": {
+    "inputs": {
+      "width": 256,
+      "height": 256,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Imagen Latente Vacía"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "Hyperrealistic 16mm film, 1970s British teenage bedroom at night, the CRT television as the only light source in the room — the screen emitting a cold blue-white cathode glow that lights the immediate surroundings, front-facing view of the television perfectly parallel to camera frame, Ferguson or Bush model teak wood cabinet, the screen itself showing the cold luminous glow of a television on but between channels — the compositing placeholder light that suggests the video is about to appear, the blue-white TV light falling on the bedroom carpet in a rectangle, catching the edge of a record sleeve on the floor — Magnific Voltage album artwork facing up, the corner of the bed visible in the TV light, band posters on the wall lit only by the TV glow — Sweet and Slade faces emerging from the darkness in cold blue light, the room otherwise in complete darkness, 16mm grain rendering the cold TV light against the warm darkness of the room, the screen rectangle sharp and parallel to camera — compositing-ready, the television as the altar of the teenage rock fan bedroom, the screen waiting",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Codificar Texto CLIP (Prompt)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "text, watermark",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Codificar Texto CLIP (Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "Decodificación VAE"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Guardar Imagen"
+    }
+  }
+}

@@ -1,98 +1,56 @@
 {
-  "9": {
-    "inputs": {
-      "filename_prefix": "z-image",
-      "images": [
-        "43",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
-    }
-  },
-  "39": {
+  "4": {
     "inputs": {
       "clip_name": "qwen_3_4b.safetensors",
-      "type": "lumina2",
+      "type": "qwen_image",
       "device": "default"
     },
     "class_type": "CLIPLoader",
     "_meta": {
-      "title": "Load CLIP"
+      "title": "Загрузить CLIP"
     }
   },
-  "40": {
+  "5": {
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Загрузить модель диффузии"
+    }
+  },
+  "9": {
     "inputs": {
       "vae_name": "ae.safetensors"
     },
     "class_type": "VAELoader",
     "_meta": {
-      "title": "Load VAE"
+      "title": "Загрузить VAE"
     }
   },
-  "41": {
+  "10": {
     "inputs": {
-      "width": 800,
-      "height": 1200,
-      "batch_size": 1
-    },
-    "class_type": "EmptySD3LatentImage",
-    "_meta": {
-      "title": "EmptySD3LatentImage"
-    }
-  },
-  "42": {
-    "inputs": {
-      "conditioning": [
-        "45",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "ConditioningZeroOut"
-    }
-  },
-  "43": {
-    "inputs": {
-      "samples": [
-        "44",
-        0
-      ],
-      "vae": [
-        "40",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
-    }
-  },
-  "44": {
-    "inputs": {
-      "seed": 726795975267431,
-      "steps": 9,
-      "cfg": 1.0,
-      "sampler_name": "res_multistep",
-      "scheduler": "simple",
-      "denoise": 1.0,
+      "seed": 975496416078325,
+      "steps": 20,
+      "cfg": 0.4,
+      "sampler_name": "euler_ancestral_cfg_pp",
+      "scheduler": "beta",
+      "denoise": 0.7,
       "model": [
-        "47",
+        "5",
         0
       ],
       "positive": [
-        "45",
+        "25",
         0
       ],
       "negative": [
-        "42",
+        "13",
         0
       ],
       "latent_image": [
-        "41",
+        "15",
         0
       ]
     },
@@ -101,40 +59,93 @@
       "title": "KSampler"
     }
   },
-  "45": {
+  "13": {
     "inputs": {
-      "text": "Generate a photorealistic amateur selfie picture of a young woman in her 20s. She is Caucasian, has blonde hair and C cup breasts.  \n\nShe is taking the picture of herself and the image is taken from the perspective of the camera. The photo was somewhat grainy and has a mid 2000s of vibe. \n\nShes in her bedroom, lying on her bed. She just woke up and is feeling horny and wants to tease her boyfriend. She's wearing a sheer top, but her tits are about to pop out\n\nThe picture is angled downwards to hide her face. ",
+      "text": "ugly, deformed, low quality, bad anatomy, extra limbs, mutated hands, poorly drawn face, bad proportions, bad lighting, worst quality, lowres, blurry, overexposed, underexposed, watermark, text, error, jpeg artifacts, signature, username, artist name, multiple girls, different girl, wrong person, changed face, altered features, different hair, different skin, wrong body, extra fingers, fused fingers, too many fingers, extra toes, fused toes, realistic skin artifact",
       "clip": [
-        "39",
+        "4",
         0
       ]
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
+      "title": "Кодирование текста CLIP (Запрос)"
     }
   },
-  "46": {
+  "14": {
     "inputs": {
-      "unet_name": "z_image_turbo_bf16.safetensors",
-      "weight_dtype": "default"
+      "image": "Безымянный (1).png"
     },
-    "class_type": "UNETLoader",
+    "class_type": "LoadImage",
     "_meta": {
-      "title": "Load Diffusion Model"
+      "title": "Загрузить изображение"
     }
   },
-  "47": {
+  "15": {
     "inputs": {
-      "shift": 3.0,
-      "model": [
-        "46",
+      "pixels": [
+        "14",
+        0
+      ],
+      "vae": [
+        "9",
         0
       ]
     },
-    "class_type": "ModelSamplingAuraFlow",
+    "class_type": "VAEEncode",
     "_meta": {
-      "title": "ModelSamplingAuraFlow"
+      "title": "Кодировать VAE"
+    }
+  },
+  "16": {
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "Декодировать VAE"
+    }
+  },
+  "17": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Сохранить изображение"
+    }
+  },
+  "23": {
+    "inputs": {
+      "clip_name": "clip_vision_h.safetensors"
+    },
+    "class_type": "CLIPVisionLoader",
+    "_meta": {
+      "title": "Загрузить видение CLIP"
+    }
+  },
+  "25": {
+    "inputs": {
+      "text": "Same girl ully naked, sitting relaxed on gray sofa in wide W pose with legs spread wide, looking directly at camera with soft gentle smile. Highly detailed realistic skin texture, natural soft lighting, photorealistic, intimate view, cinematic, masterpiece, best quality",
+      "clip": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Кодирование текста CLIP (Запрос)"
     }
   }
 }

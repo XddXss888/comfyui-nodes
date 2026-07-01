@@ -1,123 +1,93 @@
 {
   "1": {
-    "class_type": "UNETLoader",
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "unet_name": "flux1-dev.safetensors",
-      "weight_dtype": "default"
+      "ckpt_name": "epicRealismXL_pureFix.safetensors"
     }
   },
   "2": {
-    "class_type": "DualCLIPLoader",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip_name1": "clip_l.safetensors",
-      "clip_name2": "t5xxl_fp16.safetensors",
-      "type": "flux"
+      "vae_name": "sdxl_vae.safetensors"
     }
   },
   "3": {
-    "class_type": "VAELoader",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "vae_name": "ae.safetensors"
-    }
-  },
-  "11": {
-    "class_type": "LoraLoaderModelOnly",
-    "inputs": {
-      "model": [
+      "clip": [
         "1",
-        0
+        1
       ],
-      "lora_name": "sakura_korean_flux.safetensors",
-      "strength_model": 0.78
+      "text": "A stunning Korean idol-style woman with a subtle auburn tint short bob cut, standing on a foggy forest trail at dawn. Sharp jawline and mesmerizing cat-like eyes convey elegant sophistication. She wears a fitted crop top and high-waisted pants, one hand lightly touching her collarbone. Shot on 24mm wide angle with dynamic perspective, her silhouette framed against a soft golden light source breaking through misty trees. Studio butterfly lighting from above sculpts her flawless porcelain skin, casting refined shadows beneath her cheekbones. Half body waist up composition. Styled dewy makeup with gradient lips and subtle smoky eyes. Ethereal fog wraps around her figure, creating dreamy depth separation. Cinematic film grain, dramatic contrast, photogenic beauty radiating quiet confidence."
     }
   },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
-        "2",
-        0
+        "1",
+        1
       ],
-      "text": "A melancholic Korean woman with rose gold braided half-up hair glances back over her shoulder, diamond face shape with sculpted defined brows and dewy flawless skin. Half body waist up, wearing a sharply tailored charcoal blazer over a champagne silk top, delicate gold chain at her collarbone. Shot on 85mm f/1.4 with creamy bokeh, golden hour warm side light catching the edges of her hair and jawline. Behind her, a busy night market dissolves into dreamy bokeh lights — amber, crimson, soft white lanterns. Her expression is distant and poetic, lips slightly parted, smoky mauve eyeshadow blending into luminous highlight. Editorial fashion portrait, cinematic color grading, no text, no watermarks."
+      "text": "lowres, blurry, bad anatomy, watermark, signature, oversaturated, harsh lighting, plastic skin"
     }
   },
   "5": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "EmptyLatentImage",
     "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": "text, watermark, logo, low detail"
-    }
-  },
-  "6": {
-    "class_type": "FluxGuidance",
-    "inputs": {
-      "conditioning": [
-        "4",
-        0
-      ],
-      "guidance": 3.9
-    }
-  },
-  "7": {
-    "class_type": "EmptySD3LatentImage",
-    "inputs": {
-      "width": 1024,
+      "width": 896,
       "height": 1280,
       "batch_size": 1
     }
   },
-  "8": {
+  "6": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "11",
+        "1",
         0
       ],
       "positive": [
-        "6",
+        "3",
         0
       ],
       "negative": [
-        "5",
+        "4",
         0
       ],
       "latent_image": [
-        "7",
+        "5",
         0
       ],
-      "seed": 583698579,
+      "seed": 1797734125,
       "control_after_generate": "fixed",
-      "steps": 20,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
+      "steps": 30,
+      "cfg": 5.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
       "denoise": 1.0
     }
   },
-  "9": {
+  "7": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "8",
+        "6",
         0
       ],
       "vae": [
-        "3",
+        "2",
         0
       ]
     }
   },
-  "10": {
+  "8": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "9",
+        "7",
         0
       ],
-      "filename_prefix": "portrait_583698579"
+      "filename_prefix": "portrait_1797734125"
     }
   }
 }

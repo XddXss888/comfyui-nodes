@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "e1st_asn, A woman standing in a glowing night cityscape with neon reflections on wet pavement and skyscrapers behind her, now wearing soft shorts and a casual fitted top, hair down, relaxed posture with hands lightly at her sides, soft city light illuminating her face and creating gentle highlights on the fabric, cinematic medium shot composition with natural proportions and clear silhouette.",
+      "text": "A woman with a strict teacher appearance and glasses sits at a table covered with open notebooks and textbooks in a quiet apartment after a tutoring session, slowly removing her glasses with one hand while maintaining a composed expression, her gaze directed forward with a hint of restrained interest, soft indoor lighting, medium close-up framing, natural posture with shoulders relaxed and arms visible.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 1.73,
+      "shift": 12.0,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "nano_Korean.safetensors",
-      "strength_model": 0.81,
-      "strength_clip": 1.0,
+      "lora_name": "ULRIKANB_SYNTH_zimg_v1.safetensors",
+      "strength_model": 0.82,
+      "strength_clip": 0.86,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -133,11 +133,11 @@
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 8,
+      "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 585375340973065,
+      "seed": 1109815001262350,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

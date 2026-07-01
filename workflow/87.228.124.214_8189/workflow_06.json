@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "ohwx woman, messy red hair, green eyes, curvy body, A woman standing in a stylish living room under dim lighting, completely nude with only black high heels on, relaxed confident pose with one hand resting on her hip and the other lightly touching her thigh, body facing forward, head turned slightly toward the viewer with a teasing expression, soft shadows accentuating her curves, simple elegant background, medium close-up framing, natural proportions, clear posture.",
+      "text": "asig2, A shy woman sits on the edge of a simple bed, blushing intensely with her fingers lightly intertwined in front of her, legs gently parted to reveal her exposed vagina in clear view, head slightly lowered with a timid expression and soft gaze directed downward, natural skin tones and realistic anatomy, soft warm indoor lighting, medium close-up framing focused on her upper body and intimate area, clean simple background.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "FZXTSS9MFQBP0RKFF1MGXHS1W0.safetensors",
-      "strength_model": 0.66,
-      "strength_clip": 0.8,
+      "lora_name": "zimg_asig2_conchar.safetensors",
+      "strength_model": 0.63,
+      "strength_clip": 0.7,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.5,
+      "eta": 0.33,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 882600789108041,
+      "seed": 661743540426963,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

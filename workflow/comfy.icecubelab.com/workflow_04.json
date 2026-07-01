@@ -20,17 +20,6 @@
       "vae_name": "ae.safetensors"
     }
   },
-  "11": {
-    "class_type": "LoraLoaderModelOnly",
-    "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "lora_name": "sakura_korean_flux.safetensors",
-      "strength_model": 0.82
-    }
-  },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
@@ -38,34 +27,34 @@
         "2",
         0
       ],
-      "text": "A melancholic Korean woman with a jet black short bob cut and angular features stands in a dimly lit parking garage, her reflection caught in a rain-streaked glass partition. She wears an oversized vintage band t-shirt tucked loosely into nothing but tall black leather boots, her strong brows furrowed with quiet sorrow. Shot on 85mm f/1.4 with creamy bokeh dissolving the harsh fluorescent tubes into soft orbs of light behind her. Warm candlelight from a phone screen casts an intimate golden glow across her flawless porcelain skin, styled with smudged eyeliner and nude lips. Off-center rule of thirds composition, her gaze distant and poetic. Full body fashion lookbook, editorial portrait, no text, no watermarks."
+      "text": "A stunning Korean woman in profile view, subtle auburn-tinted hair swept into a high ponytail with loose tendrils catching the light. High cheekbones and an elegant nose define her silhouette against a foggy forest trail at dawn. She wears a sharply tailored charcoal power suit with structured shoulders, standing among misty pines. Neon glow from mixed magenta and teal light sources filters through the fog, casting colorful halos around her figure. Gentle, soft expression with eyes gazing into the distance. Flawless porcelain skin, dewy highlight on cheekbone, gradient lip tint. Shot on 35mm lens, environmental portrait, centered symmetrical composition. Cinematic atmosphere, volumetric fog, photorealistic, 8K detail."
     }
   },
   "5": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": "cropped legs, cropped feet, cropped shoes, text, watermark, logo"
-    }
-  },
-  "6": {
     "class_type": "FluxGuidance",
     "inputs": {
       "conditioning": [
         "4",
         0
       ],
-      "guidance": 3.7
+      "guidance": 3.5
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
     }
   },
   "7": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
       "width": 1024,
-      "height": 1536,
+      "height": 1024,
       "batch_size": 1
     }
   },
@@ -73,22 +62,22 @@
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "11",
+        "1",
         0
       ],
       "positive": [
-        "6",
+        "5",
         0
       ],
       "negative": [
-        "5",
+        "6",
         0
       ],
       "latent_image": [
         "7",
         0
       ],
-      "seed": 901361607,
+      "seed": 2036757022,
       "control_after_generate": "fixed",
       "steps": 20,
       "cfg": 1.0,
@@ -117,7 +106,7 @@
         "9",
         0
       ],
-      "filename_prefix": "portrait_901361607"
+      "filename_prefix": "portrait_2036757022"
     }
   }
 }

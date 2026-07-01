@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_a5121d00f99a400b9060d082d1a63a61.png"
+      "image": "ref_16aa716815bb4e63b7e9a785c9a0bff5.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "photograph of the specific subject from maintaining her original face, hair, full-body pose, and background environment, but now make her a litle bikini",
+      "prompt": "Bikini\n",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 990372719578852,
-      "steps": 4,
+      "seed": 374400969065157,
+      "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

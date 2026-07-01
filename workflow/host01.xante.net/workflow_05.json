@@ -1,119 +1,213 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "ckpt_name": "mdjrny-v4.safetensors"
+      "image": "ai_edit_src_EE1B5C65-3CBF-439E-9284-0E964F6FCAC6.png"
     },
+    "class_type": "LoadImage",
     "_meta": {
-      "title": "Checkpoint Loader (Model/CLIP/VAE)"
+      "title": "Load Image"
     }
   },
   "2": {
-    "class_type": "CLIPTextEncode",
     "inputs": {
-      "clip": [
-        "1",
-        1
-      ],
-      "text": "Chevy trax lowered with ground effects. dark red color\r\nfull view"
+      "vae_name": "qwen_image_vae.safetensors"
     },
+    "class_type": "VAELoader",
     "_meta": {
-      "title": "Positive Prompt"
-    }
-  },
-  "3": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "1",
-        1
-      ],
-      "text": ""
-    },
-    "_meta": {
-      "title": "Negative Prompt"
-    }
-  },
-  "4": {
-    "class_type": "EmptyLatentImage",
-    "inputs": {
-      "batch_size": 1,
-      "height": 512,
-      "width": 512
-    },
-    "_meta": {
-      "title": "Empty Latent (Width/Height/Batch)"
-    }
-  },
-  "5": {
-    "class_type": "KSampler",
-    "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "positive": [
-        "2",
-        0
-      ],
-      "negative": [
-        "3",
-        0
-      ],
-      "latent_image": [
-        "4",
-        0
-      ],
-      "cfg": 6.4,
-      "denoise": 1.0,
-      "sampler_name": "dpmpp_sde",
-      "scheduler": "karras",
-      "seed": 1088418844097619,
-      "steps": 34
-    },
-    "_meta": {
-      "title": "Sampler (Seed/Steps/CFG/Sampler/Scheduler)"
+      "title": "Load VAE"
     }
   },
   "6": {
-    "class_type": "VAEDecode",
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "37": {
+    "inputs": {
+      "unet_name": "qwen_image_edit_2509_fp8_e4m3fn.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "89": {
+    "inputs": {
+      "lora_name": "Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoraLoaderModelOnly"
+    }
+  },
+  "66": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "89",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "75": {
+    "inputs": {
+      "strength": 1.0,
+      "model": [
+        "66",
+        0
+      ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "CFGNorm"
+    }
+  },
+  "93": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 64,
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "Scale Image to Total Pixels"
+    }
+  },
+  "88": {
+    "inputs": {
+      "pixels": [
+        "93",
+        0
+      ],
+      "vae": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "3": {
+    "inputs": {
+      "clip": [
+        "6",
+        0
+      ],
+      "vae": [
+        "2",
+        0
+      ],
+      "image1": [
+        "93",
+        0
+      ],
+      "prompt": "White background with red cursive write COLOMBIAN MAMI. On the Right side add the colombian flag. Center MAMI below COLOMBIAN. Remove any wave effective from the lettering and flag.\r\n\r\n\r\n"
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus (positive)"
+    }
+  },
+  "4": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "6",
+        0
+      ],
+      "vae": [
+        "2",
+        0
+      ],
+      "image1": [
+        "93",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus (negative)"
+    }
+  },
+  "5": {
+    "inputs": {
+      "model": [
+        "75",
+        0
+      ],
+      "positive": [
+        "3",
+        0
+      ],
+      "negative": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "88",
+        0
+      ],
+      "cfg": 1.0,
+      "denoise": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "seed": 3270942537980404,
+      "steps": 4
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "8": {
     "inputs": {
       "samples": [
         "5",
         0
       ],
       "vae": [
-        "1",
-        2
+        "2",
+        0
       ]
     },
+    "class_type": "VAEDecode",
     "_meta": {
       "title": "VAE Decode"
     }
   },
   "7": {
-    "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "6",
+        "8",
         0
       ],
-      "filename_prefix": "iqueue_500B6766-1702-4C2B-81AC-411415F5375D"
+      "filename_prefix": "iqueue_edit_EE1B5C65-3CBF-439E-9284-0E964F6FCAC6"
     },
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "Save to Disk"
-    }
-  },
-  "8": {
-    "class_type": "SaveImageWebsocket",
-    "inputs": {
-      "images": [
-        "6",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "Stream via Websocket"
+      "title": "Save Image"
     }
   }
 }

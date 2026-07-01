@@ -1,244 +1,45 @@
 {
-  "3": {
-    "inputs": {
-      "seed": 2955797438,
-      "steps": 8,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 0.7,
-      "model": [
-        "75",
-        0
-      ],
-      "positive": [
-        "111",
-        0
-      ],
-      "negative": [
-        "110",
-        0
-      ],
-      "latent_image": [
-        "88",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "8": {
-    "inputs": {
-      "samples": [
-        "3",
-        0
-      ],
-      "vae": [
-        "39",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
-  },
-  "37": {
-    "inputs": {
-      "unet_name": "qwen_image_edit_fp8_e4m3fn.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "38": {
-    "inputs": {
-      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
-      "type": "qwen_image",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载CLIP"
-    }
-  },
-  "39": {
-    "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "60": {
-    "inputs": {
-      "filename_prefix": "user_7/HULU",
-      "images": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
-    }
-  },
-  "66": {
-    "inputs": {
-      "shift": 3,
-      "model": [
-        "89",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingAuraFlow",
-    "_meta": {
-      "title": "采样算法（AuraFlow）"
-    }
-  },
-  "75": {
-    "inputs": {
-      "strength": 1.0,
-      "model": [
-        "89",
-        0
-      ]
-    },
-    "class_type": "CFGNorm",
-    "_meta": {
-      "title": "CFGNorm"
-    }
-  },
-  "78": {
-    "inputs": {
-      "image": "1.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "88": {
-    "inputs": {
-      "pixels": [
-        "113",
-        0
-      ],
-      "vae": [
-        "39",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE编码"
-    }
-  },
-  "89": {
-    "inputs": {
-      "lora_name": "HULU-Image-Edit.safetensors",
-      "strength_model": 0.0,
-      "model": [
-        "37",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA加载器（仅模型）"
-    }
-  },
-  "93": {
-    "inputs": {
-      "upscale_method": "lanczos",
-      "megapixels": 1.0,
-      "image": [
-        "78",
-        0
-      ]
-    },
-    "class_type": "ImageScaleToTotalPixels",
-    "_meta": {
-      "title": "缩放图像（像素）"
-    }
-  },
-  "110": {
-    "inputs": {
-      "prompt": "",
-      "clip": [
-        "38",
-        0
-      ],
-      "vae": [
-        "39",
-        0
-      ],
-      "image1": [
-        "113",
-        0
-      ]
-    },
-    "class_type": "TextEncodeQwenImageEditPlus",
-    "_meta": {
-      "title": "TextEncodeQwenImageEditPlus"
-    }
-  },
-  "111": {
-    "inputs": {
-      "prompt": "个性时尚",
-      "clip": [
-        "38",
-        0
-      ],
-      "vae": [
-        "39",
-        0
-      ],
-      "image1": [
-        "113",
-        0
-      ]
-    },
-    "class_type": "TextEncodeQwenImageEditPlus",
-    "_meta": {
-      "title": "TextEncodeQwenImageEditPlus"
-    }
-  },
-  "112": {
-    "inputs": {
-      "width": 1024,
-      "height": 1024,
-      "batch_size": 1
-    },
-    "class_type": "EmptySD3LatentImage",
-    "_meta": {
-      "title": "空Latent图像（SD3）"
-    }
-  },
-  "113": {
+  "13": {
     "inputs": {
       "model": "RMBG-2.0",
       "sensitivity": 1.0,
       "process_res": 1024,
       "mask_blur": 1,
-      "mask_offset": 0,
+      "mask_offset": -1,
       "invert_output": false,
       "refine_foreground": false,
       "background": "Color",
       "background_color": "#ffffff",
       "image": [
-        "93",
+        "14",
         0
       ]
     },
     "class_type": "RMBG",
     "_meta": {
       "title": "Remove Background (RMBG)"
+    }
+  },
+  "14": {
+    "inputs": {
+      "image": "txt_0_c421e20e.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "16": {
+    "inputs": {
+      "filename_prefix": "white_bg",
+      "images": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
     }
   }
 }

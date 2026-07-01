@@ -12,7 +12,7 @@
   },
   "72": {
     "inputs": {
-      "text": "人物倾斜，裁剪，不完整，半身，只有头部，只有上半身，画面截断，低分辨率，模糊，变形，畸形，糟糕的解剖结构，多手，缺手，手部畸形，手部姿势僵硬，手部不自然，丑陋，粗糙，皮肤质感差，油腻，塑料感，写实照片，真人，三维渲染，二维平淡，无立体感，暗淡光线，平光，过曝，死黑无细节，面部僵硬，面无表情，妆容脏乱，发丝粘连，发饰塑料感，首饰简陋，色彩混乱，饱和度异常，冷调偏蓝错误，像素化，噪点，水印，文字，背景非纯白，背景杂乱，现代元素，真实瑕疵，指甲油，红唇过艳，假睫毛过粗，磨皮过度，AI痕迹明显，不合理光影，光影生硬，金属感过强，鞋子缺失，鞋子现代款，鞋子暴露过多，衣物不合理，衣物褶皱错误，脚部变形。",
+      "text": "低画质，模糊，变形，过曝，画面太暗，死黑阴影，阴天，赛博朋克，卡通，Q版，萌系，嘈杂混乱，低画质，模糊，变形，过曝，画面太暗，死黑阴影，阴天，赛博朋克，卡通，Q版，萌系，嘈杂混乱，畸形肢体，多余手指，少手指，断手，扭曲手臂，畸形腿，姿势不自然，面部崩坏，歪嘴，斜眼，斗鸡眼，五官不对称，脸部模糊，没有眼睛，三只眼，鼻子缺失，嘴巴畸形，雀斑过多，皮肤纹理异常，皮肤过滑如塑料，油光满面，身体比例失调，脖子过长或过短，头身比怪异。",
       "clip": [
         "71",
         0
@@ -34,10 +34,10 @@
   },
   "74": {
     "inputs": {
-      "width": 1088,
+      "width": 1080,
       "height": 1920,
       "length": 1,
-      "batch_size": 1
+      "batch_size": 2
     },
     "class_type": "EmptyHunyuanLatentVideo",
     "_meta": {
@@ -46,7 +46,7 @@
   },
   "75": {
     "inputs": {
-      "unet_name": "wan2.2_t2v_high_noise_14B_fp16.safetensors",
+      "unet_name": "wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -56,7 +56,7 @@
   },
   "76": {
     "inputs": {
-      "unet_name": "wan2.2_t2v_low_noise_14B_fp16.safetensors",
+      "unet_name": "wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -79,8 +79,8 @@
   },
   "83": {
     "inputs": {
-      "lora_name": "20260625181631.safetensors",
-      "strength_model": 0.8,
+      "lora_name": "lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors",
+      "strength_model": 1.0,
       "model": [
         "75",
         0
@@ -93,8 +93,8 @@
   },
   "85": {
     "inputs": {
-      "lora_name": "20260625181631.safetensors",
-      "strength_model": 0.8,
+      "lora_name": "lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors",
+      "strength_model": 1.0,
       "model": [
         "76",
         0
@@ -136,7 +136,7 @@
   },
   "89": {
     "inputs": {
-      "text": "A young girl with soft",
+      "text": "高质量动漫玄幻古风插画漫画角色：\n男，24岁，长方脸，下颌方正，颧骨略高，轮廓分明，剑眉，眉尾上扬，眉峰锐利，狭长的瑞凤眼，眼尾略下垂，瞳孔深黑，鼻梁高且直，鼻翼略宽，侧面看有轻微的驼峰，唇形清晰，俊秀帅气冷冽的气质，半束发，发髻高耸，其余长发随风飘散。银白的战袍被血污浸透。精致的银色发冠，带有复杂的金属镂空工艺，穿着白蓝色的内衬丝绸长袍，衣褶自然垂坠，肩甲银色兽首肩甲，细节丰富，带有金色描边，显得威严霸气，胸甲亮面金属胸甲，上面刻有繁复的金色云纹或龙纹，脚穿深灰色长靴。人物全身图，细腻渲染，细节五官，漫画感丰富细节，面部阴影，面部聚焦，空灵感，细腻肌理。\n画面：（（全身正面构图，人物双手自然垂下。背景纯白色底。））",
       "clip": [
         "71",
         0
@@ -147,10 +147,26 @@
       "title": "CLIP Text Encode (Positive Prompt)"
     }
   },
+  "114": {
+    "inputs": {
+      "samples": [
+        "117",
+        0
+      ],
+      "vae": [
+        "73",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
   "117": {
     "inputs": {
-      "seed": 758188320651941,
-      "steps": 20,
+      "seed": 1262699820,
+      "steps": 10,
       "cfg": 1.5,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -179,8 +195,8 @@
   },
   "118": {
     "inputs": {
-      "seed": 760610854214669,
-      "steps": 20,
+      "seed": 1262699820,
+      "steps": 10,
       "cfg": 1.5,
       "sampler_name": "euler",
       "scheduler": "simple",

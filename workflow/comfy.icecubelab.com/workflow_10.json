@@ -1,93 +1,123 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "UNETLoader",
     "inputs": {
-      "ckpt_name": "RealVisXL_V5.0.safetensors"
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
     }
   },
   "2": {
-    "class_type": "VAELoader",
+    "class_type": "DualCLIPLoader",
     "inputs": {
-      "vae_name": "sdxl_vae.safetensors"
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp16.safetensors",
+      "type": "flux"
     }
   },
   "3": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip": [
-        "1",
-        1
-      ],
-      "text": "RAW photo, ultra realistic skin texture, stunning Korean idol woman with chestnut brown high ponytail, baby face with natural aegyo-sal under-eye charm, bright cheerful smile showing perfect teeth, flawless porcelain skin with dewy finish, soft styled makeup with peachy blush and gradient coral lips, wearing retro 90s oversized denim jacket with vintage band tee underneath, bust shot shoulders up, shot on 50mm lens, eye-level straight on, candlelight warm intimate glow casting golden amber tones across her face, autumn park background with falling maple leaves in bokeh, gentle warm breeze lifting loose strands of hair, nostalgic dreamy atmosphere, natural window light mixing with candle warmth, sharp focus on eyes, creamy shallow depth of field, no text, no watermarks"
+      "vae_name": "ae.safetensors"
     }
   },
   "4": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "1",
-        1
-      ],
-      "text": "cartoon, anime, illustration, painting, low quality, blurry, deformed, extra fingers, bad anatomy, watermark, text, signature, oversaturated"
-    }
-  },
-  "5": {
-    "class_type": "EmptyLatentImage",
-    "inputs": {
-      "width": 896,
-      "height": 1280,
-      "batch_size": 1
-    }
-  },
-  "6": {
-    "class_type": "KSampler",
+    "class_type": "LoraLoaderModelOnly",
     "inputs": {
       "model": [
         "1",
         0
       ],
-      "positive": [
-        "3",
+      "lora_name": "flux_korean_girl.safetensors",
+      "strength_model": 0.8
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
         0
       ],
-      "negative": [
-        "4",
-        0
-      ],
-      "latent_image": [
+      "text": "A stunning Korean idol-style woman on a rain-slicked city street at noon, harsh midday sun cutting sharp diagonal shadows across her face. Dutch angle composition, half body from waist up. She wears a white ribbed crop top and black high-waisted wide-leg pants, rain droplets caught mid-fall around her. Chestnut brown layered curtain bangs frame her baby face, damp strands clinging to her temples. Aegyo-sal under-eye charm accentuated by dewy highlight makeup. Gentle, soft expression with a barely-there smile, eyes glancing downward. Macro lens capturing extreme close-up skin texture, individual water beads on her collarbone. Neon signs reflect pink and cyan across wet asphalt behind her. Flawless porcelain skin, editorial beauty photography."
+    }
+  },
+  "6": {
+    "class_type": "FluxGuidance",
+    "inputs": {
+      "conditioning": [
         "5",
         0
       ],
-      "seed": 398004420,
-      "control_after_generate": "fixed",
-      "steps": 30,
-      "cfg": 4.5,
-      "sampler_name": "dpmpp_2m_sde",
-      "scheduler": "karras",
-      "denoise": 1.0
+      "guidance": 3.5
     }
   },
   "7": {
-    "class_type": "VAEDecode",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "samples": [
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
+    }
+  },
+  "8": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 896,
+      "height": 1280,
+      "batch_size": 4
+    }
+  },
+  "9": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
         "6",
         0
       ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "8",
+        0
+      ],
+      "seed": 1110222728,
+      "control_after_generate": "fixed",
+      "steps": 22,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "10": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "9",
+        0
+      ],
       "vae": [
-        "2",
+        "3",
         0
       ]
     }
   },
-  "8": {
+  "11": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "7",
+        "10",
         0
       ],
-      "filename_prefix": "portrait_398004420"
+      "filename_prefix": "portrait_1110222728"
     }
   }
 }

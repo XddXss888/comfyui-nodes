@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 156680208700286,
+      "seed": 1069518019775491,
       "steps": 20,
       "cfg": 8.0,
       "sampler_name": "euler",
@@ -24,13 +24,19 @@
         0
       ]
     },
-    "class_type": "KSampler"
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
   },
   "4": {
     "inputs": {
       "ckpt_name": "sd_xl_turbo_1.0_fp16.safetensors"
     },
-    "class_type": "CheckpointLoaderSimple"
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
   },
   "5": {
     "inputs": {
@@ -38,17 +44,23 @@
       "height": 512,
       "batch_size": 1
     },
-    "class_type": "EmptyLatentImage"
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
   },
   "6": {
     "inputs": {
-      "text": "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,",
+      "text": "pussy sex woman ",
       "clip": [
         "4",
         1
       ]
     },
-    "class_type": "CLIPTextEncode"
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
   },
   "7": {
     "inputs": {
@@ -58,7 +70,10 @@
         1
       ]
     },
-    "class_type": "CLIPTextEncode"
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
   },
   "8": {
     "inputs": {
@@ -71,7 +86,10 @@
         2
       ]
     },
-    "class_type": "VAEDecode"
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
   },
   "9": {
     "inputs": {
@@ -81,6 +99,9 @@
         0
       ]
     },
-    "class_type": "SaveImage"
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
   }
 }

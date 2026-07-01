@@ -20,25 +20,15 @@
       "vae_name": "ae.safetensors"
     }
   },
-  "11": {
+  "4": {
     "class_type": "LoraLoaderModelOnly",
     "inputs": {
       "model": [
         "1",
         0
       ],
-      "lora_name": "sakura_korean_flux.safetensors",
-      "strength_model": 0.82
-    }
-  },
-  "4": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": "A stunning Korean idol-style woman with long straight black hair and delicate face-framing caramel highlights, angular features with strong sculpted brows, dreamy ethereal expression with softly parted lips. She stands in a concrete parking garage under harsh fluorescent tubes, wearing an oversized black leather jacket draped off one shoulder paired with a high-waisted leather mini skirt. Half body waist up, reflected in the tinted window of a parked luxury sedan, her mirror image slightly ghosted. Shot on 35mm lens, environmental portrait, harsh midday sun streaming through the garage entrance casting sharp diagonal shadows across her flawless porcelain skin. Styled smoky eye makeup, glass-skin finish, editorial fashion lookbook aesthetic. No text, no watermarks."
+      "lora_name": "flux_korean_girl.safetensors",
+      "strength_model": 0.85
     }
   },
   "5": {
@@ -48,32 +38,42 @@
         "2",
         0
       ],
-      "text": "cropped legs, cropped feet, cropped shoes, text, watermark, logo"
+      "text": "A stunning Korean idol-style woman in a sequined evening gown stands silhouetted against warm pendant lights inside a cozy vintage bookstore. Shot on a 50mm lens, standard portrait framing, positioned off-center using the rule of thirds. Harsh midday sunlight streams through a large window, casting sharp dramatic shadows across towering bookshelves. Her dark hair is swept into an elegant updo with soft face-framing caramel highlights catching the light. Sharp jawline, captivating cat-like eyes with smoky liner, expression gentle and softly inviting. Flawless porcelain skin with dewy finish, styled editorial makeup. She leans slightly against a wooden ladder, one hand resting on aged leather-bound spines. Golden dust particles float in the light beams. Cinematic depth of field, warm amber tones, editorial fashion photography."
     }
   },
   "6": {
     "class_type": "FluxGuidance",
     "inputs": {
       "conditioning": [
-        "4",
+        "5",
         0
       ],
-      "guidance": 3.7
+      "guidance": 3.5
     }
   },
   "7": {
-    "class_type": "EmptySD3LatentImage",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "width": 1024,
-      "height": 1536,
-      "batch_size": 1
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
     }
   },
   "8": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 896,
+      "height": 1280,
+      "batch_size": 1
+    }
+  },
+  "9": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "11",
+        "4",
         0
       ],
       "positive": [
@@ -81,27 +81,27 @@
         0
       ],
       "negative": [
-        "5",
-        0
-      ],
-      "latent_image": [
         "7",
         0
       ],
-      "seed": 969726510,
+      "latent_image": [
+        "8",
+        0
+      ],
+      "seed": 1856512074,
       "control_after_generate": "fixed",
-      "steps": 20,
+      "steps": 22,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0
     }
   },
-  "9": {
+  "10": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "8",
+        "9",
         0
       ],
       "vae": [
@@ -110,14 +110,14 @@
       ]
     }
   },
-  "10": {
+  "11": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "9",
+        "10",
         0
       ],
-      "filename_prefix": "portrait_969726510"
+      "filename_prefix": "portrait_1856512074"
     }
   }
 }

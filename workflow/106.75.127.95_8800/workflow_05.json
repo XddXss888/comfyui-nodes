@@ -1,7 +1,7 @@
 {
   "81": {
     "inputs": {
-      "image": "image (173).jpg"
+      "image": "image (522).png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -83,7 +83,7 @@
   },
   "172": {
     "inputs": {
-      "seed": 533378074,
+      "seed": 1329940376,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -127,18 +127,6 @@
       "title": "EditUtils: Crop With Pad Info lrzjason"
     }
   },
-  "263": {
-    "inputs": {
-      "source": [
-        "384",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "预览任意"
-    }
-  },
   "364": {
     "inputs": {
       "prompt": "Convert this image to grayscale while preserving all original structures,black background",
@@ -168,6 +156,27 @@
     "class_type": "UpscaleModelLoader",
     "_meta": {
       "title": "加载放大模型"
+    }
+  },
+  "373": {
+    "inputs": {
+      "filename_prefix": [
+        "385",
+        2
+      ],
+      "tonemap": "linear",
+      "version": 1,
+      "start_frame": 0,
+      "frame_pad": 1,
+      "save_workflow": "ui",
+      "images": [
+        "375",
+        0
+      ]
+    },
+    "class_type": "SaveEXR",
+    "_meta": {
+      "title": "Save EXR"
     }
   },
   "375": {
@@ -206,7 +215,7 @@
   },
   "377": {
     "inputs": {
-      "lora_name": "klein_3mm_0130_000010000.safetensors",
+      "lora_name": "klein_8mm_0130_000010000.safetensors",
       "strength_model": 1.0,
       "model": [
         "128",
@@ -240,37 +249,16 @@
       "title": "FLUX.2 Klein Enhancer"
     }
   },
-  "384": {
-    "inputs": {
-      "task_id": [
-        "385",
-        4
-      ],
-      "png_done": [
-        "386",
-        0
-      ],
-      "vsm_done": "",
-      "tif_done": [
-        "389",
-        0
-      ]
-    },
-    "class_type": "OSSUploadNode",
-    "_meta": {
-      "title": "OSS Upload"
-    }
-  },
   "385": {
     "inputs": {
-      "seed": 1326487418
+      "seed": 1837951164
     },
     "class_type": "GenerateUniquePrefix",
     "_meta": {
       "title": "生成唯一文件名前缀"
     }
   },
-  "386": {
+  "388": {
     "inputs": {
       "filename_prefix": [
         "385",
@@ -281,25 +269,9 @@
         0
       ]
     },
-    "class_type": "SaveImageWithStatus",
+    "class_type": "SaveImage",
     "_meta": {
-      "title": "保存图像(带状态)"
-    }
-  },
-  "389": {
-    "inputs": {
-      "filename_prefix": [
-        "385",
-        3
-      ],
-      "images": [
-        "375",
-        0
-      ]
-    },
-    "class_type": "Save16TIFF",
-    "_meta": {
-      "title": "保存TIFF格式图片"
+      "title": "保存图像"
     }
   }
 }

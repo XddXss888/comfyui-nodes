@@ -1,459 +1,133 @@
 {
   "3": {
     "inputs": {
-      "ckpt_name": "ltx-2.3-22b-distilled-1.1.safetensors"
-    },
-    "class_type": "LowVRAMCheckpointLoader",
-    "_meta": {
-      "title": "🅛🅣🅧 Low VRAM Checkpoint Loader"
-    }
-  },
-  "5": {
-    "inputs": {
-      "text": "镜头推进到近景，看到短发小男孩和长发小女孩两个人站在桌子后面，男孩站在左边，女孩站在右边。\r\n右边的女孩问，你知道我喜欢喝什么酒吗\r\n左边的男孩说，你喜欢喝什么酒呀\r\n右边的女孩指着男孩的鼻子说，喜欢你天长地久呀",
-      "clip": [
-        "26",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
-    }
-  },
-  "6": {
-    "inputs": {
-      "text": "两个人同时说话",
-      "clip": [
-        "26",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
-    }
-  },
-  "7": {
-    "inputs": {
-      "frame_rate": 50.0,
-      "positive": [
-        "5",
-        0
-      ],
-      "negative": [
-        "6",
-        0
-      ]
-    },
-    "class_type": "LTXVConditioning",
-    "_meta": {
-      "title": "LTXV条件"
-    }
-  },
-  "8": {
-    "inputs": {
-      "width": [
-        "43",
-        0
-      ],
-      "height": [
-        "44",
-        0
-      ],
-      "length": [
-        "50",
-        0
-      ],
-      "batch_size": 1
-    },
-    "class_type": "EmptyLTXVLatentVideo",
-    "_meta": {
-      "title": "空Latent视频（LTXV）"
-    }
-  },
-  "9": {
-    "inputs": {
-      "frame_idx": 0,
-      "strength": 1.0,
-      "latent_downscale_factor": 1.0,
-      "crop": "center",
-      "use_tiled_encode": false,
-      "tile_size": 256,
-      "tile_overlap": 64,
-      "positive": [
-        "7",
-        0
-      ],
-      "negative": [
-        "7",
-        1
-      ],
-      "vae": [
-        "3",
-        2
-      ],
-      "latent": [
-        "8",
-        0
-      ],
-      "image": [
-        "28",
-        0
-      ]
-    },
-    "class_type": "LTXAddVideoICLoRAGuide",
-    "_meta": {
-      "title": "🅛🅣🅧 Add Video IC-LoRA Guide"
-    }
-  },
-  "10": {
-    "inputs": {
-      "lora_name": "LTX-2.3-Licon-MSR-V1.safetensors",
-      "strength_model": 1.0,
+      "seed": 31,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
       "model": [
-        "3",
-        0
-      ]
-    },
-    "class_type": "LTXICLoRALoaderModelOnly",
-    "_meta": {
-      "title": "🅛🅣🅧 IC-LoRA Loader Model Only"
-    }
-  },
-  "13": {
-    "inputs": {
-      "sampler_name": "euler"
-    },
-    "class_type": "KSamplerSelect",
-    "_meta": {
-      "title": "K采样器选择"
-    }
-  },
-  "15": {
-    "inputs": {
-      "noise_seed": 767637577971003
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "随机噪波"
-    }
-  },
-  "16": {
-    "inputs": {
-      "noise": [
-        "15",
+        "78",
         0
       ],
-      "guider": [
-        "37",
+      "positive": [
+        "94",
         0
       ],
-      "sampler": [
-        "13",
-        0
-      ],
-      "sigmas": [
-        "27",
+      "negative": [
+        "47",
         0
       ],
       "latent_image": [
-        "23",
+        "98",
         0
       ]
     },
-    "class_type": "SamplerCustomAdvanced",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "自定义采样器（高级）"
+      "title": "K采样器"
     }
   },
-  "17": {
-    "inputs": {
-      "positive": [
-        "9",
-        0
-      ],
-      "negative": [
-        "9",
-        1
-      ],
-      "latent": [
-        "24",
-        0
-      ]
-    },
-    "class_type": "LTXVCropGuides",
-    "_meta": {
-      "title": "LTXV裁剪指导"
-    }
-  },
-  "19": {
-    "inputs": {
-      "fps": 50.0,
-      "images": [
-        "38",
-        0
-      ],
-      "audio": [
-        "25",
-        0
-      ]
-    },
-    "class_type": "CreateVideo",
-    "_meta": {
-      "title": "创建视频"
-    }
-  },
-  "20": {
-    "inputs": {
-      "filename_prefix": "LTX-2/MSR_verify_iclora_guide",
-      "format": "auto",
-      "codec": "auto",
-      "video": [
-        "19",
-        0
-      ]
-    },
-    "class_type": "SaveVideo",
-    "_meta": {
-      "title": "保存视频"
-    }
-  },
-  "21": {
-    "inputs": {
-      "ckpt_name": "ltx-2.3-22b-distilled-1.1.safetensors"
-    },
-    "class_type": "LTXVAudioVAELoader",
-    "_meta": {
-      "title": "LTXV音频VAE加载器"
-    }
-  },
-  "22": {
-    "inputs": {
-      "frames_number": [
-        "50",
-        0
-      ],
-      "frame_rate": 50,
-      "batch_size": 1,
-      "audio_vae": [
-        "21",
-        0
-      ]
-    },
-    "class_type": "LTXVEmptyLatentAudio",
-    "_meta": {
-      "title": "LTXV 空音频潜空间"
-    }
-  },
-  "23": {
-    "inputs": {
-      "video_latent": [
-        "9",
-        2
-      ],
-      "audio_latent": [
-        "22",
-        0
-      ]
-    },
-    "class_type": "LTXVConcatAVLatent",
-    "_meta": {
-      "title": "LTXVConcatAVLatent"
-    }
-  },
-  "24": {
-    "inputs": {
-      "av_latent": [
-        "16",
-        0
-      ]
-    },
-    "class_type": "LTXVSeparateAVLatent",
-    "_meta": {
-      "title": "LTXV分离音视频潜空间"
-    }
-  },
-  "25": {
+  "18": {
     "inputs": {
       "samples": [
-        "24",
-        1
-      ],
-      "audio_vae": [
-        "21",
+        "3",
         0
-      ]
-    },
-    "class_type": "LTXVAudioVAEDecode",
-    "_meta": {
-      "title": "LTXV音频VAE解码"
-    }
-  },
-  "26": {
-    "inputs": {
-      "text_encoder": "gemma_3_12B_it_fp4_mixed.safetensors",
-      "ckpt_name": "ltx-2.3-22b-distilled-1.1.safetensors",
-      "device": "default"
-    },
-    "class_type": "LTXAVTextEncoderLoader",
-    "_meta": {
-      "title": "LTXV音频文本编码器加载器"
-    }
-  },
-  "27": {
-    "inputs": {
-      "sigmas": "1.0, 0.99375, 0.9875, 0.98125, 0.975, 0.909375, 0.725, 0.421875, 0.0"
-    },
-    "class_type": "ManualSigmas",
-    "_meta": {
-      "title": "自定义Sigmas"
-    }
-  },
-  "28": {
-    "inputs": {
-      "1": [
-        "29",
-        0
-      ],
-      "2": [
-        "40",
-        0
-      ],
-      "3": [
-        "33",
-        0
-      ],
-      "4": [
-        "80",
-        0
-      ],
-      "width": [
-        "43",
-        0
-      ],
-      "height": [
-        "44",
-        0
-      ],
-      "frame_count": 33,
-      "background": [
-        "30",
-        0
-      ]
-    },
-    "class_type": "LiconMSR",
-    "_meta": {
-      "title": "Licon MSR"
-    }
-  },
-  "29": {
-    "inputs": {
-      "image": "msr_ref0_1782631311.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "30": {
-    "inputs": {
-      "image": "msr_bg_1782631311.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "33": {
-    "inputs": {
-      "image": "msr_ref0_1782631311.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "37": {
-    "inputs": {
-      "cfg": 1.0,
-      "model": [
-        "10",
-        0
-      ],
-      "positive": [
-        "9",
-        0
-      ],
-      "negative": [
-        "9",
-        1
-      ]
-    },
-    "class_type": "CFGGuider",
-    "_meta": {
-      "title": "CFG引导器"
-    }
-  },
-  "38": {
-    "inputs": {
-      "samples": [
-        "17",
-        2
       ],
       "vae": [
-        "3",
+        "97",
         2
       ]
     },
-    "class_type": "VAEDecode",
+    "class_type": "VAEDecodeAudio",
     "_meta": {
-      "title": "VAE解码"
+      "title": "VAE解码（音频）"
     }
   },
-  "40": {
+  "47": {
     "inputs": {
-      "image": "msr_ref1_1782631311.png"
+      "conditioning": [
+        "94",
+        0
+      ]
     },
-    "class_type": "LoadImage",
+    "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "加载图像"
+      "title": "条件零化"
     }
   },
-  "43": {
+  "78": {
     "inputs": {
-      "value": 760
+      "shift": 3.0,
+      "model": [
+        "97",
+        0
+      ]
     },
-    "class_type": "INTConstant",
+    "class_type": "ModelSamplingAuraFlow",
     "_meta": {
-      "title": "INT Constant"
+      "title": "采样算法（AuraFlow）"
     }
   },
-  "44": {
+  "94": {
     "inputs": {
-      "value": 1280
+      "tags": "这是一首伤感压抑的情歌，情绪层次丰富。开篇是甜蜜热烈的爱恋，彼此许下真挚诺言；紧接着慢慢发现层层谎言，温情之下全是伪装；随后陷入无休止的猜忌与争吵，美好假象彻底破碎；最终两个人潦草走散。整首歌结尾，主人公反复复盘过往相处的细节，才看清这段感情从头到尾布满虚伪，满心失望与唏嘘。",
+      "lyrics": "【Intro 前奏】\n（温柔低缓钢琴，轻微氛围底噪）\n【Verse 1 主歌 1】\n最初温柔 伪装得太完美\n满眼热忱 骗我坠入暧昧\n情话温柔 句句都像珍贵\n我义无反顾 掏尽真心奉陪\n慢慢发觉 温柔藏着虚伪\n热烈氛围 只是一时暧昧\n太多敷衍 藏在沉默细微\n所有心动 不过是一场虚伪点缀\n【Chorus 副歌】\n看清爱恋里 所有虚假与狼狈\n甜蜜是铺垫 最后只剩崩溃落泪\n炙热的相拥 全是刻意的虚伪\n深情的过往 全是演好的对位\n从温柔沉醉 走到失望的颓废\n所有的真心 败给虚假的暧昧\n爱过一场后 终于彻底领会\n最伤人的爱 从来都藏着虚伪\n【Verse 2 主歌 2】\n无数争吵 撕开所有完美\n温柔假面 碎得支离破碎\n所谓偏爱 从来不曾纯粹\n我执着过往 困在谎言轮回\n热烈褪去 只剩敷衍疲惫\n所有承诺 全都随风作废\n认真的我 输得太过绝对\n原来爱情本质 皆是虚假虚伪\n【Chorus 副歌】\n看清爱恋里 所有虚假与狼狈\n甜蜜是铺垫 最后只剩崩溃落泪\n炙热的相拥 全是刻意的虚伪\n深情的过往 全是演好的对位\n从温柔沉醉 走到失望的颓废\n所有的真心 败给虚假的暧昧\n爱过一场后 终于彻底领会\n最伤人的爱 从来都藏着虚伪\n【Bridge 桥段】\n我反复回想 相处所有细节\n才看懂所有温柔都是演技\n那些心动 那些朝夕\n全是虚假剧本 骗我入戏\n真心终究 抵不过虚伪假意\n炙热过往 只剩遗憾堆积\n耗尽热忱 彻底清醒\n爱情最真的真相 是谎言藏底\n【Chorus 副歌（升调加厚）】\n看清爱恋里 所有虚假与狼狈\n甜蜜是铺垫 最后只剩崩溃落泪\n炙热的相拥 全是刻意的虚伪\n深情的过往 全是演好的对位\n从温柔沉醉 走到失望的颓废\n所有的真心 败给虚假的暧昧\n爱过一场后 终于彻底领会\n最伤人的爱 从来都藏着虚伪\n【Outro 尾奏】\n（渐弱、温柔留白）\n所有温柔…… 皆是虚伪\n所有热爱…… 终成作废",
+      "seed": 31,
+      "bpm": 105,
+      "duration": 240.0,
+      "timesignature": "2",
+      "language": "zh",
+      "keyscale": "D minor",
+      "generate_audio_codes": true,
+      "cfg_scale": 2.0,
+      "temperature": 0.85,
+      "top_p": 0.9,
+      "top_k": 0,
+      "min_p": 0.0,
+      "clip": [
+        "97",
+        1
+      ]
     },
-    "class_type": "INTConstant",
+    "class_type": "TextEncodeAceStepAudio1.5",
     "_meta": {
-      "title": "INT Constant"
+      "title": "TextEncodeAceStepAudio1.5"
     }
   },
-  "50": {
+  "97": {
     "inputs": {
-      "value": 501
+      "ckpt_name": "Ace_Step_1.5\\ace_step_1.5_turbo_aio.safetensors"
     },
-    "class_type": "INTConstant",
+    "class_type": "CheckpointLoaderSimple",
     "_meta": {
-      "title": "INT Constant"
+      "title": "Checkpoint加载器（简易）"
     }
   },
-  "80": {
+  "98": {
     "inputs": {
-      "image": "msr_ref0_1782631311.png"
+      "seconds": 240.0,
+      "batch_size": 1
     },
-    "class_type": "LoadImage",
+    "class_type": "EmptyAceStep1.5LatentAudio",
     "_meta": {
-      "title": "加载图像"
+      "title": "Empty Ace Step 1.5 Latent Audio"
+    }
+  },
+  "104": {
+    "inputs": {
+      "filename_prefix": "audio/ace-step-1.5",
+      "quality": "128k",
+      "audioUI": "",
+      "audio": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "SaveAudioMP3",
+    "_meta": {
+      "title": "保存音频 (MP3)"
     }
   }
 }

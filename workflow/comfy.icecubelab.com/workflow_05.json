@@ -1,64 +1,45 @@
 {
   "1": {
-    "class_type": "UNETLoader",
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "unet_name": "flux1-dev.safetensors",
-      "weight_dtype": "default"
+      "ckpt_name": "zavychromaxl_v10.safetensors"
     }
   },
   "2": {
-    "class_type": "DualCLIPLoader",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip_name1": "clip_l.safetensors",
-      "clip_name2": "t5xxl_fp16.safetensors",
-      "type": "flux"
+      "vae_name": "sdxl_vae.safetensors"
     }
   },
   "3": {
-    "class_type": "VAELoader",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "vae_name": "ae.safetensors"
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "Extreme close-up of eyes and lips only, reflected in a rain-speckled glass pane, Korean idol woman with rose gold wet-look slicked back hair catching blue hour twilight. Baby face with subtle aegyo-sal under-eye charm, cool edgy expression, lips slightly parted in defiance. Shot on 50mm lens, standard portrait framing. She wears a vintage floral dress with delicate lace collar barely visible at frame edge. Cherry blossom petals drift past the glass surface creating soft pink bokeh. Blue hour ambient light casts cool indigo tones across her flawless porcelain skin while warm golden highlights trace her cheekbones. Styled editorial makeup with smoky gradient lids and glass-skin finish. Vivid chromatic palette, fashion-forward aesthetic, ultra high detail."
     }
   },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
-        "2",
-        0
+        "1",
+        1
       ],
-      "text": "A young Korean woman with dark brown wavy shoulder-length hair stands in profile view, framed through a mossy stone archway on a foggy forest trail at dawn. Shot on 35mm lens, environmental portrait. Soft window-like diffused morning light creates a Rembrandt triangle shadow across her delicate features and button nose. She wears a school uniform inspired preppy look — navy blazer, pleated skirt, knee socks, loosened tie. Her expression is elegant and sophisticated, chin slightly lifted, gazing into the mist. Dewy flawless skin, subtle gradient lip tint, soft brown eyeshadow. Wisps of fog curl around her silhouette. Shallow depth of field, muted earth tones, ethereal atmosphere. Photorealistic, editorial fashion photography, no text, no watermarks."
+      "text": "lowres, deformed, blurry, watermark, ugly, low quality"
     }
   },
   "5": {
-    "class_type": "FluxGuidance",
+    "class_type": "EmptyLatentImage",
     "inputs": {
-      "conditioning": [
-        "4",
-        0
-      ],
-      "guidance": 3.5
-    }
-  },
-  "6": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": ""
-    }
-  },
-  "7": {
-    "class_type": "EmptySD3LatentImage",
-    "inputs": {
-      "width": 1024,
-      "height": 1024,
+      "width": 896,
+      "height": 1280,
       "batch_size": 1
     }
   },
-  "8": {
+  "6": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
@@ -66,47 +47,47 @@
         0
       ],
       "positive": [
-        "5",
+        "3",
         0
       ],
       "negative": [
-        "6",
+        "4",
         0
       ],
       "latent_image": [
-        "7",
+        "5",
         0
       ],
-      "seed": 1910717982,
+      "seed": 1747421885,
       "control_after_generate": "fixed",
-      "steps": 20,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
+      "steps": 28,
+      "cfg": 6.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
       "denoise": 1.0
     }
   },
-  "9": {
+  "7": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "8",
+        "6",
         0
       ],
       "vae": [
-        "3",
+        "2",
         0
       ]
     }
   },
-  "10": {
+  "8": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "9",
+        "7",
         0
       ],
-      "filename_prefix": "portrait_1910717982"
+      "filename_prefix": "portrait_1747421885"
     }
   }
 }

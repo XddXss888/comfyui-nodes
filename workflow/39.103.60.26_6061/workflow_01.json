@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "input_2faaa0210f00.jpg"
+      "image": "jimeng-2026-07-01-7898-高级时尚照片，肤色白皙、五官精致的年轻亚洲男生的全身像，站在朴素柔和的灰色背景下....png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -12,7 +12,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "16",
+        "18",
         0
       ]
     },
@@ -21,73 +21,72 @@
       "title": "保存图像"
     }
   },
-  "15": {
+  "18": {
     "inputs": {
-      "aspect_ratio": "1:1",
-      "proportional_width": 1,
-      "proportional_height": 1,
+      "aspect_ratio": "custom",
+      "proportional_width": 1120,
+      "proportional_height": 800,
       "fit": "crop",
       "method": "bicubic",
-      "round_to_multiple": "8",
-      "scale_to_side": "shortest",
-      "scale_to_length": 928,
+      "round_to_multiple": "None",
+      "scale_to_side": "width",
+      "scale_to_length": 1120,
       "background_color": "#000000",
       "image": [
-        "17",
+        "29",
         0
       ]
     },
     "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
     "_meta": {
-      "title": "按宽高比缩放_V2"
+      "title": "图层工具：按宽高比缩放 V2"
     }
   },
-  "16": {
+  "29": {
     "inputs": {
-      "rounded_rect_radius": 100,
-      "anti_aliasing": 2,
-      "top": 0.0,
-      "bottom": 0.0,
-      "left": 0.0,
-      "right": 0.0,
-      "detect": "max_inscribed_rect",
-      "obj_ext_top": 0.0,
-      "obj_ext_bottom": 0.0,
-      "obj_ext_left": 0.0,
-      "obj_ext_right": 0.0,
-      "image": [
-        "15",
-        0
-      ]
-    },
-    "class_type": "LayerUtility: RoundedRectangle",
-    "_meta": {
-      "title": "LayerUtility: RoundedRectangle"
-    }
-  },
-  "17": {
-    "inputs": {
-      "prompt": "保持图中人物的一致性，生成他们和熊猫合影的画面。人物正面半身居中，一只熊猫端着一盘热气腾腾的饺子微笑。背景是飘雪的庭院和红灯笼。有雪花落在身上，空气中弥漫热气，氛围温馨喜庆。画面明亮立体，充满立冬团圆气息。梦幻3D半写实风格，毛发细节清晰，轻微美颜，人像精修，光影自然，色彩明亮鲜明。",
-      "model": "doubao-seedream-4-0-250828",
+      "prompt": "保持图1中主要人物一致，轻微美颜和美白；人物在画面中下方，侧身站立回眸，身体微微转向镜头，回头露出温柔笑意，背景为图2，清晰对焦，细节丰富，蓝天草地，彩铅手绘质感，笔触细腻柔和，温暖治愈氛围感，多彩缤纷明亮",
+      "model": "doubao-seedream-4-5-251128",
       "response_format": "url",
       "resolution": "4K",
-      "aspect_ratio": "1:1",
-      "width": 1024,
-      "height": 1024,
-      "apikey": "fe023f32-413c-41f8-a35d-694231e4c96a",
+      "aspect_ratio": "Custom",
+      "width": 1120,
+      "height": 800,
+      "apikey": "a44228f5-f1b2-44e9-860a-d3c8eb5ac03e",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 1574690316,
+      "seed": 975946827,
       "watermark": false,
       "stream": false,
       "image1": [
         "1",
+        0
+      ],
+      "image2": [
+        "38",
         0
       ]
     },
     "class_type": "Comfly_Doubao_Seedream_4",
     "_meta": {
       "title": "Comfly Doubao Seedream4.0"
+    }
+  },
+  "34": {
+    "inputs": {
+      "image": "朝阳检察院活动logo.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "38": {
+    "inputs": {
+      "image": "wycy.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
     }
   }
 }

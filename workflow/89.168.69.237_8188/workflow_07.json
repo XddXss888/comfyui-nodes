@@ -8,7 +8,7 @@
   "2": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "A beautiful sunset over mountains, photorealistic, 4K",
+      "text": "A beautiful sunset over the ocean, photorealistic",
       "clip": [
         "1",
         1
@@ -18,7 +18,7 @@
   "3": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "ugly, blurry, low quality",
+      "text": "ugly, blurry",
       "clip": [
         "1",
         1
@@ -28,7 +28,7 @@
   "4": {
     "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 512,
+      "width": 768,
       "height": 512,
       "batch_size": 1
     }
@@ -36,9 +36,9 @@
   "5": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 3135777594,
-      "steps": 20,
-      "cfg": 7.0,
+      "seed": 3708031432,
+      "steps": 4,
+      "cfg": 2.0,
       "sampler_name": "euler",
       "scheduler": "normal",
       "denoise": 1.0,
@@ -76,7 +76,7 @@
   "7": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "nsfw_test",
+      "filename_prefix": "test_turbo",
       "images": [
         "6",
         0

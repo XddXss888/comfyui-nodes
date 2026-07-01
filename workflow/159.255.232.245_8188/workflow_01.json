@@ -1,11 +1,10 @@
 {
   "3": {
-    "class_type": "KSampler",
     "inputs": {
-      "seed": 994794974,
-      "steps": 28,
-      "cfg": 7.0,
-      "sampler_name": "euler_ancestral",
+      "seed": 573562842498335,
+      "steps": 25,
+      "cfg": 2.0,
+      "sampler_name": "euler",
       "scheduler": "normal",
       "denoise": 1.0,
       "model": [
@@ -24,44 +23,59 @@
         "5",
         0
       ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
     }
   },
   "4": {
-    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "ckpt_name": "anything-v3-full.safetensors"
+      "ckpt_name": "epiCPhotoGasmVAE.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
     }
   },
   "5": {
-    "class_type": "EmptyLatentImage",
     "inputs": {
-      "width": 1080,
-      "height": 1920,
+      "width": 512,
+      "height": 512,
       "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
     }
   },
   "6": {
-    "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "silver wolf, full body, sexy body art",
+      "text": "score_9, score_8_up, score_7_up, score_6_up, rating_explicit,\nrealistic,\n1girl,\nyoung woman,\nlong hair,\nlarge breasts,\nstanding,\nfull body,\nnude,",
       "clip": [
-        "9980",
-        0
+        "4",
+        1
       ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
     }
   },
   "7": {
-    "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "blurry, lowres, watermark, text, bad anatomy, ugly",
+      "text": "text, watermark",
       "clip": [
-        "9980",
-        0
+        "4",
+        1
       ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
     }
   },
   "8": {
-    "class_type": "VAEDecode",
     "inputs": {
       "samples": [
         "3",
@@ -71,26 +85,23 @@
         "4",
         2
       ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
     }
   },
   "9": {
-    "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "tgbot",
+      "filename_prefix": "ComfyUI",
       "images": [
         "8",
         0
       ]
-    }
-  },
-  "9980": {
-    "class_type": "CLIPSetLastLayer",
-    "inputs": {
-      "clip": [
-        "4",
-        1
-      ],
-      "stop_at_clip_layer": -2
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
     }
   }
 }

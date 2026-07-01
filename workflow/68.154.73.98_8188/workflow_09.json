@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_bb7778a9c8b94464b5ef53081c86e668.png"
+      "image": "ref_a82cc32009314438baddbaa0555a25d2.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "保持原图比列，原图人物脸保持原图不变，原图人物保持原图腿大小保持，蹲下开腿，换酒红薄透睡衣和酒红袜内搭三角杯酒红蕾丝比基尼内衣内裤，胸变为H杯尺寸",
+      "prompt": "poner ropa interior de 2 piezas coordinado en coordinado parte de arriba en color rojo de encaje y parte de abajo color blanco de encaje, mantener volumen y figura corporal, postura y tono de piel, quitar ropa playera, blusa, pantalón ",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 424583474734775,
+      "seed": 84860478457357,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",

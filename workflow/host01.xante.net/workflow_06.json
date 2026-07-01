@@ -1,243 +1,211 @@
 {
   "1": {
-    "class_type": "LoadImage",
     "inputs": {
-      "image": "ai_edit_src_7D033F21-C3CC-4237-A979-4652A2A6255E.png"
+      "image": "ai_edit_src_44CD3DA9-CC8E-444E-BC39-D05E53F8F161.png"
     },
+    "class_type": "LoadImage",
     "_meta": {
-      "title": "Load Input Image"
+      "title": "Load Image"
     }
   },
   "2": {
-    "class_type": "UNETLoader",
     "inputs": {
-      "weight_dtype": "default",
-      "unet_name": "flux1-dev-kontext_fp8_scaled.safetensors"
+      "vae_name": "qwen_image_vae.safetensors"
     },
-    "_meta": {
-      "title": "Load FLUX Kontext Model"
-    }
-  },
-  "3": {
-    "class_type": "DualCLIPLoader",
-    "inputs": {
-      "clip_name1": "t5xxl_fp8_e4m3fn_scaled.safetensors",
-      "clip_name2": "clip_l.safetensors",
-      "device": "default",
-      "type": "flux"
-    },
-    "_meta": {
-      "title": "Load FLUX Text Encoders"
-    }
-  },
-  "4": {
     "class_type": "VAELoader",
-    "inputs": {
-      "vae_name": "ae.safetensors"
-    },
     "_meta": {
-      "title": "Load FLUX VAE"
-    }
-  },
-  "5": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "3",
-        0
-      ],
-      "text": "decrease the saturation by 25%"
-    },
-    "_meta": {
-      "title": "Positive Prompt"
+      "title": "Load VAE"
     }
   },
   "6": {
-    "class_type": "FluxGuidance",
     "inputs": {
-      "conditioning": [
-        "5",
-        0
-      ],
-      "guidance": 2.5
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
     },
+    "class_type": "CLIPLoader",
     "_meta": {
-      "title": "FLUX Guidance"
+      "title": "Load CLIP"
     }
   },
-  "7": {
-    "class_type": "FluxKontextImageScale",
+  "37": {
     "inputs": {
+      "unet_name": "qwen_image_edit_2509_fp8_e4m3fn.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "89": {
+    "inputs": {
+      "lora_name": "Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoraLoaderModelOnly"
+    }
+  },
+  "66": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "89",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "75": {
+    "inputs": {
+      "strength": 1.0,
+      "model": [
+        "66",
+        0
+      ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "CFGNorm"
+    }
+  },
+  "93": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 64,
       "image": [
         "1",
         0
       ]
     },
+    "class_type": "ImageScaleToTotalPixels",
     "_meta": {
-      "title": "Scale Image for FLUX Kontext"
+      "title": "Scale Image to Total Pixels"
     }
   },
-  "8": {
-    "class_type": "VAEEncode",
+  "88": {
     "inputs": {
       "pixels": [
-        "7",
+        "93",
         0
       ],
       "vae": [
-        "4",
+        "2",
         0
       ]
     },
+    "class_type": "VAEEncode",
     "_meta": {
-      "title": "Encode Reference Image"
+      "title": "VAE Encode"
     }
   },
-  "9": {
-    "class_type": "EmptySD3LatentImage",
+  "3": {
     "inputs": {
-      "batch_size": 1,
-      "height": 1024,
-      "width": 1024
-    },
-    "_meta": {
-      "title": "Empty Output Latent"
-    }
-  },
-  "10": {
-    "class_type": "ReferenceLatent",
-    "inputs": {
-      "conditioning": [
+      "clip": [
         "6",
         0
       ],
-      "latent": [
-        "8",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "Attach Reference Latent"
-    }
-  },
-  "11": {
-    "class_type": "ModelSamplingFlux",
-    "inputs": {
-      "model": [
+      "vae": [
         "2",
         0
       ],
-      "base_shift": 0.5,
-      "height": 1024,
-      "max_shift": 1.15,
-      "width": 1024
-    },
-    "_meta": {
-      "title": "FLUX Model Sampling"
-    }
-  },
-  "12": {
-    "class_type": "BasicGuider",
-    "inputs": {
-      "model": [
-        "11",
+      "image1": [
+        "93",
         0
       ],
-      "conditioning": [
-        "10",
-        0
-      ]
+      "prompt": "White background with red cursive write COLOMBIAN MAMI. On the Right side add the colombian flag. Center MAMI below COLOMBIAN. Remove any wave effective from the lettering and flag. Spell MAMI correctly. \r\n\r\n\r\n"
     },
+    "class_type": "TextEncodeQwenImageEditPlus",
     "_meta": {
-      "title": "Basic Guider"
+      "title": "TextEncodeQwenImageEditPlus (positive)"
     }
   },
-  "13": {
-    "class_type": "BasicScheduler",
+  "4": {
     "inputs": {
-      "model": [
-        "11",
-        0
-      ],
-      "denoise": 1.0,
-      "scheduler": "simple",
-      "steps": 20
-    },
-    "_meta": {
-      "title": "Basic Scheduler"
-    }
-  },
-  "14": {
-    "class_type": "KSamplerSelect",
-    "inputs": {
-      "sampler_name": "euler"
-    },
-    "_meta": {
-      "title": "Sampler Select"
-    }
-  },
-  "15": {
-    "class_type": "RandomNoise",
-    "inputs": {
-      "noise_seed": 151565283299813
-    },
-    "_meta": {
-      "title": "Noise"
-    }
-  },
-  "16": {
-    "class_type": "SamplerCustomAdvanced",
-    "inputs": {
-      "noise": [
-        "15",
-        0
-      ],
-      "guider": [
-        "12",
-        0
-      ],
-      "sampler": [
-        "14",
-        0
-      ],
-      "sigmas": [
-        "13",
-        0
-      ],
-      "latent_image": [
-        "9",
-        0
-      ]
-    },
-    "_meta": {
-      "title": "Advanced Sampler"
-    }
-  },
-  "17": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "samples": [
-        "16",
+      "prompt": "",
+      "clip": [
+        "6",
         0
       ],
       "vae": [
-        "4",
+        "2",
+        0
+      ],
+      "image1": [
+        "93",
         0
       ]
     },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "TextEncodeQwenImageEditPlus (negative)"
+    }
+  },
+  "5": {
+    "inputs": {
+      "model": [
+        "75",
+        0
+      ],
+      "positive": [
+        "3",
+        0
+      ],
+      "negative": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "88",
+        0
+      ],
+      "cfg": 1.0,
+      "denoise": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "seed": 4456426457266075,
+      "steps": 4
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
     "_meta": {
       "title": "VAE Decode"
     }
   },
-  "18": {
-    "class_type": "SaveImage",
+  "7": {
     "inputs": {
       "images": [
-        "17",
+        "8",
         0
       ],
-      "filename_prefix": "iqueue_flux_kontext_7D033F21-C3CC-4237-A979-4652A2A6255E"
+      "filename_prefix": "iqueue_edit_44CD3DA9-CC8E-444E-BC39-D05E53F8F161"
     },
+    "class_type": "SaveImage",
     "_meta": {
       "title": "Save Image"
     }

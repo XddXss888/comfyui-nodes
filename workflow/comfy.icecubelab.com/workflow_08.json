@@ -1,93 +1,123 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "UNETLoader",
     "inputs": {
-      "ckpt_name": "RealVisXL_V5.0.safetensors"
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
     }
   },
   "2": {
-    "class_type": "VAELoader",
+    "class_type": "DualCLIPLoader",
     "inputs": {
-      "vae_name": "sdxl_vae.safetensors"
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp16.safetensors",
+      "type": "flux"
     }
   },
   "3": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip": [
-        "1",
-        1
-      ],
-      "text": "RAW photo, ultra realistic skin texture, stunning Korean idol woman with honey blonde highlights in sleek center-parted long hair cascading past her shoulders, diamond face shape with defined arched brows, gentle soft expression with barely parted lips, flawless porcelain skin with natural dewy finish, styled subtle makeup with warm peachy tones, wearing a structured charcoal power suit with sharp lapels, seated among lush tropical leaves in a sunlit greenhouse, golden afternoon light filtering through glass panes, candlelight warm intimate glow from a nearby lantern casting amber highlights across her cheekbones, macro lens extreme close-up capturing every skin texture and pore detail, slight low angle looking up creating empowering perspective, negative space on the left with soft bokeh foliage, serene contemplative atmosphere, no text, no watermarks"
+      "vae_name": "ae.safetensors"
     }
   },
   "4": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "LoraLoaderModelOnly",
     "inputs": {
-      "clip": [
+      "model": [
         "1",
-        1
+        0
       ],
-      "text": "cartoon, anime, illustration, painting, low quality, blurry, deformed, extra fingers, bad anatomy, watermark, text, signature, oversaturated"
+      "lora_name": "flux_korean_girl.safetensors",
+      "strength_model": 0.85
     }
   },
   "5": {
-    "class_type": "EmptyLatentImage",
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "A stunning Korean idol-style woman with platinum blonde hair in twin low buns, oval face with delicate monolid eyes and flawless porcelain skin, elegant sophisticated expression with a subtle knowing smile. Over-the-shoulder pose glancing back at the camera, cowboy shot framing from thighs up, wearing a casual white blouse with rolled sleeves and fitted high-waist jeans. Standing in a luxury hotel lobby with marble floors and golden chandeliers softly blurred behind her. Window light casting a Rembrandt triangle shadow across her cheek, warm golden hour glow wrapping her silhouette. Shot on 135mm telephoto lens, compressed creamy bokeh background, shallow depth of field. Styled editorial makeup with gradient lips, luminous highlighted skin, editorial fashion photography."
+    }
+  },
+  "6": {
+    "class_type": "FluxGuidance",
+    "inputs": {
+      "conditioning": [
+        "5",
+        0
+      ],
+      "guidance": 3.5
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
+    }
+  },
+  "8": {
+    "class_type": "EmptySD3LatentImage",
     "inputs": {
       "width": 896,
       "height": 1280,
       "batch_size": 1
     }
   },
-  "6": {
+  "9": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "1",
-        0
-      ],
-      "positive": [
-        "3",
-        0
-      ],
-      "negative": [
         "4",
         0
       ],
-      "latent_image": [
-        "5",
-        0
-      ],
-      "seed": 618027982,
-      "control_after_generate": "fixed",
-      "steps": 30,
-      "cfg": 4.5,
-      "sampler_name": "dpmpp_2m_sde",
-      "scheduler": "karras",
-      "denoise": 1.0
-    }
-  },
-  "7": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "samples": [
+      "positive": [
         "6",
         0
       ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "8",
+        0
+      ],
+      "seed": 15776976,
+      "control_after_generate": "fixed",
+      "steps": 22,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "10": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "9",
+        0
+      ],
       "vae": [
-        "2",
+        "3",
         0
       ]
     }
   },
-  "8": {
+  "11": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "7",
+        "10",
         0
       ],
-      "filename_prefix": "portrait_618027982"
+      "filename_prefix": "portrait_15776976"
     }
   }
 }

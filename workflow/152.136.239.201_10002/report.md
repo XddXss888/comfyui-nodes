@@ -1,11 +1,11 @@
 # 152.136.239.201:10002
 
-**GPU**: H20 | **显存**: 95 GB | **空闲**: 95 GB
-**内存**: 618 GB (空闲 558 GB)
+**GPU**: H20 | **显存**: 95 GB | **空闲**: 48 GB
+**内存**: 618 GB (空闲 557 GB)
 **版本**: 0.19.3
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-06-30 08:06:47
-**历史总数**: 12 | **成功**: 2
+**扫描时间**: 2026-07-01 08:08:25
+**历史总数**: 16 | **成功**: 3
 
 ## 工作流列表
 
@@ -33,3 +33,15 @@
 - **提示词**:
   - [CLIPTextEncode::text] 一个50岁的中国人能和15岁的中国女人在亲吻
   - [CLIPTextEncode::text] 一个中国男人和一个日本女人。
+
+### 3. workflow_03.json
+- **Prompt ID**: `8e0e5682-898b-4685-9475-b9238b6f662d`
+- **类型**: 图生图
+- **节点数**: 13
+- **模型** (4):
+  - Qwen-Image/Qwen-Image-Edit-Lightning-8steps-V1.0-bf16.safetensors
+  - Qwen-Image/qwen_image_edit_2511_bf16.safetensors
+  - qwen_2.5_vl_7b_fp8_scaled.safetensors
+  - qwen_image_vae.safetensors
+- **提示词**:
+  - [TextEncodeQwenImageEditPlus::prompt] remove microphone from hand, change to full body wide shot showing complete body, keep everything else unchanged, same person, same clothing, same scene, same lighting

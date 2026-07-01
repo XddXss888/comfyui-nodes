@@ -21,37 +21,26 @@
     }
   },
   "4": {
-    "class_type": "LoraLoaderModelOnly",
-    "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "lora_name": "flux_korean_girl.safetensors",
-      "strength_model": 0.8
-    }
-  },
-  "5": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
         "2",
         0
       ],
-      "text": "Extreme close-up capturing only eyes and lips of a stunning Korean idol-style woman reflected in a rain-spotted car window inside a dimly lit parking garage. Platinum blonde hair swept into an elegant sculptural updo with wispy tendrils framing her diamond-shaped face. Defined arched brows above luminous almond eyes with shimmering copper eyeshadow. Playful smirk with glossy berry-tinted lips. Flawless porcelain skin with natural dewy finish, every pore hyper-detailed. Wrap dress in warm terracotta visible at collar. Shot on 85mm f/1.4, creamy bokeh dissolving fluorescent ceiling lights into dreamy green-white orbs. Blue hour twilight seeping through garage entrance creating cool-warm contrast. Shallow depth of field, cinematic color grading, editorial beauty photography."
+      "text": "A stunning Korean idol portrait photographed from ground level looking upward, shot on 135mm telephoto with compressed background. Bust shot of a young woman with honey blonde highlighted hair swept into a high ponytail, loose strands framing her oval face and monolid eyes lined with soft peach shimmer. She wears an oversized cream hoodie, sleeves pulled over her hands. Cross lighting from two sides sculpts her flawless porcelain skin, one side warm amber, the other cool blue moonlight. Behind her, a rooftop infinity pool reflects the night sky, city lights dissolving into anamorphic bokeh orbs. Her expression is gentle, lips slightly parted in a serene almost-smile. Cinematic 21:9 widescreen, subtle film grain, dreamy atmosphere."
     }
   },
-  "6": {
+  "5": {
     "class_type": "FluxGuidance",
     "inputs": {
       "conditioning": [
-        "5",
+        "4",
         0
       ],
       "guidance": 3.5
     }
   },
-  "7": {
+  "6": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
@@ -61,47 +50,47 @@
       "text": ""
     }
   },
-  "8": {
+  "7": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "width": 1024,
-      "height": 1024,
+      "width": 1920,
+      "height": 816,
       "batch_size": 1
     }
   },
-  "9": {
+  "8": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "4",
+        "1",
         0
       ],
       "positive": [
-        "6",
+        "5",
         0
       ],
       "negative": [
-        "7",
+        "6",
         0
       ],
       "latent_image": [
-        "8",
+        "7",
         0
       ],
-      "seed": 794238577,
+      "seed": 665304926,
       "control_after_generate": "fixed",
-      "steps": 24,
+      "steps": 22,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0
     }
   },
-  "10": {
+  "9": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "9",
+        "8",
         0
       ],
       "vae": [
@@ -110,14 +99,14 @@
       ]
     }
   },
-  "11": {
+  "10": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "10",
+        "9",
         0
       ],
-      "filename_prefix": "portrait_794238577"
+      "filename_prefix": "portrait_665304926"
     }
   }
 }

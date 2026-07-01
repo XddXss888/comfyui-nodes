@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 2114169704,
+      "seed": 14824898,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,sitting,indoors,spread legs,stomach,parted lips,blue panties,realistic,lingerie,(Blowjob:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,long hair, brown eyes, freckles, nose, lips, earrings, necklace, cow ears, cow horns, realistic, portrait, gradient, gradient background, grey background, animal print, cow print,(Foto durante un baño:1.0),(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://d1geezib455z5s.cloudfront.net/album/2024/09/19/1726722430364.jpg",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20249/26/06377b9da0d14a8a821b95d51e06f8b6.png",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

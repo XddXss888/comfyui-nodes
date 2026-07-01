@@ -1,32 +1,58 @@
 {
   "3": {
     "inputs": {
-      "seed": 336549434,
+      "seed": 82112823,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 0.7,
+      "denoise": 1.0,
       "model": [
-        "75",
+        "66",
         0
       ],
       "positive": [
-        "111",
+        "6",
         0
       ],
       "negative": [
-        "110",
+        "7",
         0
       ],
       "latent_image": [
-        "88",
+        "58",
         0
       ]
     },
     "class_type": "KSampler",
     "_meta": {
       "title": "K采样器"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "生成一款貔貅时尚款，前脚踩着大元宝，脚底下踩着铜钱，尾巴往背上翘，角往后生叉，背上放着金丝底垫。",
+      "clip": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
     }
   },
   "8": {
@@ -47,7 +73,7 @@
   },
   "37": {
     "inputs": {
-      "unet_name": "qwen_image_edit_fp8_e4m3fn.safetensors",
+      "unet_name": "qwen_image_2512_fp8_e4m3fn.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -75,9 +101,20 @@
       "title": "加载VAE"
     }
   },
+  "58": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 2
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "空Latent图像（SD3）"
+    }
+  },
   "60": {
     "inputs": {
-      "filename_prefix": "user_7/HULU",
+      "filename_prefix": "user_45/HULU",
       "images": [
         "8",
         0
@@ -90,9 +127,9 @@
   },
   "66": {
     "inputs": {
-      "shift": 3,
+      "shift": 3.1000000000000005,
       "model": [
-        "89",
+        "101",
         0
       ]
     },
@@ -101,48 +138,10 @@
       "title": "采样算法（AuraFlow）"
     }
   },
-  "75": {
+  "101": {
     "inputs": {
-      "strength": 1.0,
-      "model": [
-        "89",
-        0
-      ]
-    },
-    "class_type": "CFGNorm",
-    "_meta": {
-      "title": "CFGNorm"
-    }
-  },
-  "78": {
-    "inputs": {
-      "image": "1.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "88": {
-    "inputs": {
-      "pixels": [
-        "113",
-        0
-      ],
-      "vae": [
-        "39",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE编码"
-    }
-  },
-  "89": {
-    "inputs": {
-      "lora_name": "HULU-Image-Edit.safetensors",
-      "strength_model": 0.0,
+      "lora_name": "佛像.safetensors",
+      "strength_model": 0.8,
       "model": [
         "37",
         0
@@ -150,95 +149,7 @@
     },
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "LoRA加载器（仅模型）"
-    }
-  },
-  "93": {
-    "inputs": {
-      "upscale_method": "lanczos",
-      "megapixels": 1.0,
-      "image": [
-        "78",
-        0
-      ]
-    },
-    "class_type": "ImageScaleToTotalPixels",
-    "_meta": {
-      "title": "缩放图像（像素）"
-    }
-  },
-  "110": {
-    "inputs": {
-      "prompt": "",
-      "clip": [
-        "38",
-        0
-      ],
-      "vae": [
-        "39",
-        0
-      ],
-      "image1": [
-        "113",
-        0
-      ]
-    },
-    "class_type": "TextEncodeQwenImageEditPlus",
-    "_meta": {
-      "title": "TextEncodeQwenImageEditPlus"
-    }
-  },
-  "111": {
-    "inputs": {
-      "prompt": "腿部镶嵌红宝石\n",
-      "clip": [
-        "38",
-        0
-      ],
-      "vae": [
-        "39",
-        0
-      ],
-      "image1": [
-        "113",
-        0
-      ]
-    },
-    "class_type": "TextEncodeQwenImageEditPlus",
-    "_meta": {
-      "title": "TextEncodeQwenImageEditPlus"
-    }
-  },
-  "112": {
-    "inputs": {
-      "width": 1024,
-      "height": 1024,
-      "batch_size": 1
-    },
-    "class_type": "EmptySD3LatentImage",
-    "_meta": {
-      "title": "空Latent图像（SD3）"
-    }
-  },
-  "113": {
-    "inputs": {
-      "model": "RMBG-2.0",
-      "sensitivity": 1.0,
-      "process_res": 1024,
-      "mask_blur": 1,
-      "mask_offset": 0,
-      "invert_output": false,
-      "refine_foreground": false,
-      "background": "Color",
-      "background_color": "#ffffff",
-      "image": [
-        "93",
-        0
-      ]
-    },
-    "class_type": "RMBG",
-    "_meta": {
-      "title": "Remove Background (RMBG)"
+      "title": "LORA #2 (系统)"
     }
   }
 }
