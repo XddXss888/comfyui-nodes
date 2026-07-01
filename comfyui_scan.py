@@ -486,7 +486,7 @@ def write_output(alive):
         v = x.get("gpu_vram_fmt", "") or ""
         try: return int(v.split()[0]) if v and v[0].isdigit() else 0
         except: return 0
-    alive_sorted = sorted(alive, key=lambda x: (gpu_rank(x.get("gpu_simple", "")), vram_val(x)), reverse=True)
+    alive_sorted = sorted(alive, key=lambda x: (vram_val(x), gpu_rank(x.get("gpu_simple", ""))), reverse=True)
 
     md_out = os.path.join(SCRIPT_DIR, "report.md")
     with open(md_out, "w", encoding="utf-8") as f:
