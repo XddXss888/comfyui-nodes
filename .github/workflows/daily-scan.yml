@@ -100,6 +100,20 @@ jobs:
           gh codespace cp -c "${cs}" -e "remote:${WS}/llamacpp/noauth_chat.jsonl" llamacpp/noauth_chat.jsonl || true
 
       # ────────────────────────────────────────────
+      # Project: antigravity
+      # ────────────────────────────────────────────
+      - name: "antigravity: scan"
+        run: |
+          cs="${{ steps.codespace.outputs.name }}"
+          gh codespace ssh -c "${cs}" -- \
+            "cd ${WS}/antigravity && python3 run_pipeline.py"
+
+      - name: "antigravity: copy report"
+        run: |
+          cs="${{ steps.codespace.outputs.name }}"
+          gh codespace cp -c "${cs}" -e "remote:${WS}/antigravity/report.md" antigravity/report.md || true
+
+      # ────────────────────────────────────────────
       # 添加新项目时，复制上面的 block，改目录和命令即可
       # ────────────────────────────────────────────
 
@@ -109,7 +123,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add comfyui/report.md llamacpp/noauth_chat.md llamacpp/noauth_chat.jsonl 2>/dev/null || true
+          git add comfyui/report.md llamacpp/noauth_chat.md llamacpp/noauth_chat.jsonl antigravity/report.md 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No changes"; exit 0
           fi

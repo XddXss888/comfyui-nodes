@@ -8,13 +8,14 @@
 |------|------|------|
 | `comfyui/` | ComfyUI 节点扫描（GPU/模型/工作流/安全） | `comfyui/report.md` |
 | `llamacpp/` | Llama.cpp 推理节点巡检（免鉴权/速度/审查） | `llamacpp/noauth_chat.md` |
+| `antigravity/` | Antigravity Console 扫描（Claude/Gemini 代理） | `antigravity/report.md` |
 
 ## 自动化
 
 每天北京时间 **08:00** 自动执行（一个 Codespace 串行跑所有项目）：
 
 ```
-创建 Codespace → comfyui 扫描 → llamacpp 扫描 → 提交报告 → 删除 Codespace
+创建 Codespace → comfyui 扫描 → llamacpp 扫描 → antigravity 扫描 → 提交报告 → 删除 Codespace
 ```
 
 手动触发：Actions → `Daily Scan` → Run workflow
@@ -60,11 +61,15 @@
 │   ├── report.md              # 扫描报告（按显存降序）
 │   ├── security_report.md     # 安全检测报告
 │   └── workflow/              # 各节点工作流 JSON
-└── llamacpp/
+├── llamacpp/
+│   ├── run_pipeline.py        # 巡检脚本
+│   ├── Llama.json             # 节点地址源
+│   ├── noauth_chat.md         # 扫描报告
+│   └── noauth_chat.jsonl      # 结果数据
+└── antigravity/
     ├── run_pipeline.py        # 巡检脚本
-    ├── Llama.json             # 节点地址源
-    ├── noauth_chat.md         # 扫描报告
-    └── noauth_chat.jsonl      # 结果数据
+    ├── nodes.jsonl            # 节点地址源
+    └── report.md              # 扫描报告
 ```
 
 ---
@@ -106,3 +111,19 @@ body="rolldown-runtime" && body="vendor-vue-core" && body="ComfyUI"
 ```
 body="comfyui_version" && body="devices" && body="vram_total" && body="NVIDIA"
 ```
+
+## Antigravity Console 扫描
+
+```bash
+cd antigravity
+python3 run_pipeline.py                    # 全流程
+python3 run_pipeline.py --仅测试           # 跳过扫描，用上次结果直接测试
+python3 run_pipeline.py --并发 20          # 自定义并发
+```
+
+流程：节点扫描（/v1/models）→ 逐模型请求测试 → 报告
+
+检测内容：
+- Claude (opus-4-6-thinking, sonnet-4-6)
+- Gemini (2.5-pro/flash, 3-flash, 3.1-pro/flash 等)
+- 账户状态、配额、密码保护
