@@ -17,10 +17,9 @@ import urllib.error
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-PARENT_DIR = os.path.dirname(SCRIPT_DIR)
 
-REPORT_PATH = os.path.join(PARENT_DIR, "report.md")
-OUTPUT_DIR = os.path.join(PARENT_DIR, "workflow")
+REPORT_PATH = os.path.join(SCRIPT_DIR, "report.md")
+OUTPUT_DIR = os.path.join(SCRIPT_DIR, "workflow")
 MAX_WORKFLOWS = 10
 REQUEST_TIMEOUT = 30
 RETRY_COUNT = 2
