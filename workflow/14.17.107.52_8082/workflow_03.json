@@ -12,7 +12,7 @@
   },
   "72": {
     "inputs": {
-      "text": "人物倾斜，裁剪，不完整，半身，只有头部，只有上半身，画面截断，低分辨率，模糊，变形，畸形，糟糕的解剖结构，多手，缺手，手部畸形，手部姿势僵硬，手部不自然，丑陋，粗糙，皮肤质感差，油腻，塑料感，写实照片，真人，三维渲染，二维平淡，无立体感，暗淡光线，平光，过曝，死黑无细节，面部僵硬，面无表情，妆容脏乱，发丝粘连，发饰塑料感，首饰简陋，色彩混乱，饱和度异常，冷调偏蓝错误，像素化，噪点，水印，文字，背景非纯白，背景杂乱，现代元素，真实瑕疵，指甲油，红唇过艳，假睫毛过粗，磨皮过度，AI痕迹明显，不合理光影，光影生硬，金属感过强，鞋子缺失，鞋子现代款，鞋子暴露过多，衣物不合理，衣物褶皱错误，脚部变形。",
+      "text": "low quality, worst quality, blurry, deformed, bad anatomy, bad hands, missing fingers, extra limbs, poorly drawn face, bad proportions, watermark, text, logo, signature, overexposed, underexposed, plastic skin, doll, lowres, jpeg artifacts, grainybad anime, deformed anime, low quality anime, flat color, flat shading, 3d render, cgi",
       "clip": [
         "71",
         0
@@ -34,10 +34,10 @@
   },
   "74": {
     "inputs": {
-      "width": 1088,
+      "width": 1080,
       "height": 1920,
       "length": 1,
-      "batch_size": 1
+      "batch_size": 2
     },
     "class_type": "EmptyHunyuanLatentVideo",
     "_meta": {
@@ -46,7 +46,7 @@
   },
   "75": {
     "inputs": {
-      "unet_name": "wan2.2_t2v_high_noise_14B_fp16.safetensors",
+      "unet_name": "wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -56,7 +56,7 @@
   },
   "76": {
     "inputs": {
-      "unet_name": "wan2.2_t2v_low_noise_14B_fp16.safetensors",
+      "unet_name": "wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -79,8 +79,8 @@
   },
   "83": {
     "inputs": {
-      "lora_name": "20260625181631.safetensors",
-      "strength_model": 0.8,
+      "lora_name": "lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors",
+      "strength_model": 1.0,
       "model": [
         "75",
         0
@@ -93,8 +93,8 @@
   },
   "85": {
     "inputs": {
-      "lora_name": "20260625181631.safetensors",
-      "strength_model": 0.8,
+      "lora_name": "lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors",
+      "strength_model": 1.0,
       "model": [
         "76",
         0
@@ -136,7 +136,7 @@
   },
   "89": {
     "inputs": {
-      "text": "A young girl with soft",
+      "text": "视觉风格：动漫\n画面风格：国漫\n\n高质量电影级动漫场景画面，超详细环境氛围：\n国风江南徽派古院落，高俯视全景构图；一座三开间的小院，正中是双层中式古建筑堂屋，白墙灰瓦飞檐翘角，深木色木构门窗，屋檐悬挂竹编古风灯笼；左侧是卧房，右侧是厨房和储物间，四方石板庭院，庭院摆放着一张原木圆桌和两个木凳、造型盆景松树、2个竹制晾药架，架上晾晒着药材；院子被泛黄的白墙灰瓦飞围住，围墙院门简单的深木色木门，不设锁，轻轻一推就开。全院四周及山坡上种满桃树。因设定为“春日”，花开极盛，满院粉白，如云如雾。花瓣每日飘落，铺满青石板和木桌面。地面铺满飘落桃花瓣，散落青灰色山石、复古陶土陶罐；远景被密林和雾墙环绕，外界极难发现，多层景深；春日清晨柔和漫射天光，薄雾朦胧柔光，细腻手绘笔触，无强烈硬阴影，画面空无一人，静谧雅致中式山居世外桃源氛围，干净平涂色彩，8K 超高清，极致细节，电影级柔和浅景深，空灵温柔春日古风意境\n镜头方向：\n画面主体位置：画面正中\n\n画面要求：\n- 超高细节，8k分辨率，极致锐度与纹理\n- 电影感景深，f/2.8～f/5.6，视觉层次丰富\n- 专业电影场景摄影风格 + 当代剧照质感\n- 真实光影与氛围，光源方向明确，环境粒子/雾气/雨丝/光斑自然\n- 优秀构图，引导线、层次感强，前中后景分明\n- 完美贴合动漫视觉语言与国漫整体氛围，风格高度一致",
       "clip": [
         "71",
         0
@@ -147,10 +147,26 @@
       "title": "CLIP Text Encode (Positive Prompt)"
     }
   },
+  "114": {
+    "inputs": {
+      "samples": [
+        "117",
+        0
+      ],
+      "vae": [
+        "73",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
   "117": {
     "inputs": {
-      "seed": 635307630519037,
-      "steps": 25,
+      "seed": 494647822,
+      "steps": 10,
       "cfg": 1.5,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -179,8 +195,8 @@
   },
   "118": {
     "inputs": {
-      "seed": 950057244138364,
-      "steps": 25,
+      "seed": 494647822,
+      "steps": 10,
       "cfg": 1.5,
       "sampler_name": "euler",
       "scheduler": "simple",

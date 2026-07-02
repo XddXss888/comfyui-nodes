@@ -12,7 +12,8 @@
   "2": {
     "inputs": {
       "clip_name": "qwen_3_8b_fp8mixed.safetensors",
-      "type": "flux2"
+      "type": "flux2",
+      "device": "default"
     },
     "class_type": "CLIPLoader",
     "_meta": {
@@ -30,7 +31,7 @@
   },
   "4": {
     "inputs": {
-      "text": "A photorealistic close‑up of Korean 양념치킨 (seasoned fried chicken) displayed on a simple white ceramic plate. The chicken pieces are medium‑sized, with a crisp, golden‑brown crust that shows a faint, flaky texture. They are generously coated in a glossy, deep reddish‑brown sauce that has a slightly sticky sheen, suggesting a sweet and spicy glaze made from gochujang, garlic, and honey. The sauce drips delicately down the sides of the chicken, creating small, glossy puddles on the plate. Sprinkled atop the chicken are a handful of toasted sesame seeds and thinly sliced green onions, adding contrast with their light tan and vibrant green colors. A few small, bright yellow slices of pickled radish (danmuji) rest on the side of the plate for garnish. The lighting is soft, natural daylight from the left, highlighting the glossy sauce and giving the chicken a warm, appetizing glow, while subtle shadows emphasize its crisp texture. The background is a shallow depth‑of‑field, out‑of‑focus kitchen countertop with muted pastel tones, keeping the focus entirely on the deliciously coated chicken.",
+      "text": "흰색 사무실 배경 앞에 서 있는 남성이 손에 들고 있는 서류를 클로즈업한 사진. 남성은 짙은 회색 정장 재킷과 흰 셔츠를 입고, 검은 머리를 짧게 정리한 모습이다. 그의 오른손은 서류의 왼쪽 상단을 잡고, 왼손은 서류의 오른쪽 하단을 가볍게 받치고 있다. 서류는 A4 크기의 흰색 종이로, 상단에 굵은 검은 글씨로 \"보고서\"라는 제목이 적혀 있고, 아래쪽에 몇 줄의 회색 텍스트가 흐릿하게 보인다. 남성의 표정은 진지하고 집중된 눈빛으로 서류를 바라보고 있다. 부드러운 자연광이 왼쪽에서 비추어 얼굴에 은은한 그림자를 만들며, 서류와 옷에 부드러운 하이라이트가 나타난다. 배경은 흐릿한 회색 벽과 몇 개의 사무용품(예: 책장, 컴퓨터 모니터)이 희미하게 보인다.",
       "clip": [
         "2",
         0
@@ -66,14 +67,14 @@
   },
   "7": {
     "inputs": {
-      "model": [
-        "1",
-        0
-      ],
       "max_shift": 1.15,
       "base_shift": 0.5,
       "width": 1024,
-      "height": 1024
+      "height": 1024,
+      "model": [
+        "1",
+        0
+      ]
     },
     "class_type": "ModelSamplingFlux",
     "_meta": {
@@ -102,13 +103,13 @@
   },
   "10": {
     "inputs": {
+      "add_noise": true,
+      "noise_seed": 490004984888620,
+      "cfg": 1.0,
       "model": [
         "7",
         0
       ],
-      "add_noise": true,
-      "noise_seed": 247104177821433,
-      "cfg": 1.0,
       "positive": [
         "4",
         0

@@ -1,7 +1,97 @@
 {
+  "5033": {
+    "inputs": {
+      "frame_rate": [
+        "5073",
+        0
+      ],
+      "loop_count": 0,
+      "filename_prefix": "LTX-2.3/Manga/FINAL/Fin",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 16,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "5027:5077",
+        0
+      ],
+      "audio": [
+        "5027:4848",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "Video Combine 🎥🅥🅗🅢"
+    }
+  },
+  "5034": {
+    "inputs": {
+      "frame_rate": [
+        "5073",
+        0
+      ],
+      "loop_count": 0,
+      "filename_prefix": "LTX-2",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": false,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": false,
+      "images": [
+        "5036",
+        0
+      ],
+      "audio": [
+        "5037",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "2nd Sampler Preview"
+    }
+  },
+  "5036": {
+    "inputs": {
+      "samples": [
+        "5001:4973",
+        0
+      ],
+      "vae": [
+        "5025:5029",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "5037": {
+    "inputs": {
+      "samples": [
+        "5001:4973",
+        1
+      ],
+      "audio_vae": [
+        "5025:5030",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEDecode",
+    "_meta": {
+      "title": "LTXV Audio VAE Decode"
+    }
+  },
   "5038": {
     "inputs": {
-      "seed": 285570623150573
+      "seed": 33590057467044
     },
     "class_type": "easy seed",
     "_meta": {
@@ -10,7 +100,7 @@
   },
   "5039": {
     "inputs": {
-      "seed": 111056404827035
+      "seed": 826216608803919
     },
     "class_type": "easy seed",
     "_meta": {
@@ -49,7 +139,7 @@
   },
   "5052": {
     "inputs": {
-      "image": "Page10_5A_01.png"
+      "image": "Page06_03.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -102,7 +192,7 @@
         0
       ],
       "loop_count": 0,
-      "filename_prefix": "LTX-2.3/Manga/SubProcess/Sub",
+      "filename_prefix": "LTX-2",
       "format": "video/h264-mp4",
       "pix_fmt": "yuv420p",
       "crf": 19,
@@ -169,8 +259,8 @@
   },
   "5074": {
     "inputs": {
-      "Xi": 10,
-      "Xf": 10,
+      "Xi": 5,
+      "Xf": 5,
       "isfloatX": 1
     },
     "class_type": "mxSlider",
@@ -186,7 +276,7 @@
       "lora_1": {
         "on": true,
         "lora": "LTX2\\LTX-2.3-OmniNFT-RL-Lora_bf16.safetensors",
-        "strength": 1
+        "strength": 2
       },
       "lora_2": {
         "on": true,
@@ -211,7 +301,7 @@
         0
       ],
       "loop_count": 0,
-      "filename_prefix": "LTX-2.3/Manga/SubProcess/Sub",
+      "filename_prefix": "LTX-2",
       "format": "video/h264-mp4",
       "pix_fmt": "yuv420p",
       "crf": 19,
@@ -312,7 +402,7 @@
         0
       ],
       "loop_count": 0,
-      "filename_prefix": "LTX-2.3/Manga/SubProcess/Sub",
+      "filename_prefix": "LTX-2",
       "format": "video/h264-mp4",
       "pix_fmt": "yuv420p",
       "crf": 19,
@@ -385,7 +475,7 @@
         0
       ],
       "loop_count": 0,
-      "filename_prefix": "LTX-2.3/Manga/SubProcess/Sub",
+      "filename_prefix": "LTX-2",
       "format": "video/h264-mp4",
       "pix_fmt": "yuv420p",
       "crf": 19,
@@ -435,15 +525,56 @@
       "title": "LTXV Audio VAE Decode"
     }
   },
+  "5140": {
+    "inputs": {
+      "av_latent": [
+        "5152",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXVSeparateAVLatent"
+    }
+  },
   "5144": {
     "inputs": {
-      "Xi": 1,
-      "Xf": 1,
-      "isfloatX": 1
+      "Xi": 4,
+      "Xf": 4.0,
+      "isfloatX": 0
     },
     "class_type": "mxSlider",
     "_meta": {
       "title": "Which Gen To Proceed with?"
+    }
+  },
+  "5152": {
+    "inputs": {
+      "select": [
+        "5144",
+        0
+      ],
+      "sel_mode": false,
+      "input1": [
+        "5087:4829",
+        0
+      ],
+      "input2": [
+        "5134:5172",
+        0
+      ],
+      "input3": [
+        "5108:5167",
+        0
+      ],
+      "input4": [
+        "5100:5162",
+        0
+      ]
+    },
+    "class_type": "ImpactSwitch",
+    "_meta": {
+      "title": "video latent selected"
     }
   },
   "5157": {
@@ -455,6 +586,11 @@
         "on": true,
         "lora": "LTX2\\LTX-2.3-OmniNFT-RL-Lora_bf16.safetensors",
         "strength": 2
+      },
+      "lora_2": {
+        "on": true,
+        "lora": "animeflatLTX.2.3.safetensors",
+        "strength": 1
       },
       "➕ Add Lora": "",
       "model": [
@@ -531,6 +667,17 @@
       "title": "Load VAE (video VAE)"
     }
   },
+  "5025:5030": {
+    "inputs": {
+      "vae_name": "LTX23_audio_vae_bf16.safetensors",
+      "device": "main_device",
+      "weight_dtype": "bf16"
+    },
+    "class_type": "VAELoaderKJ",
+    "_meta": {
+      "title": "VAELoader KJ (audio VAE)"
+    }
+  },
   "5025:5032": {
     "inputs": {
       "clip_name1": "gemma_3_12B_it_fp8_scaled.safetensors",
@@ -574,17 +721,6 @@
     "class_type": "PathchSageAttentionKJ",
     "_meta": {
       "title": "Patch Sage Attention KJ"
-    }
-  },
-  "5025:5030": {
-    "inputs": {
-      "vae_name": "LTX23_audio_vae_bf16.safetensors",
-      "device": "main_device",
-      "weight_dtype": "bf16"
-    },
-    "class_type": "VAELoaderKJ",
-    "_meta": {
-      "title": "VAELoader KJ (audio VAE)"
     }
   },
   "5026:5020": {
@@ -659,7 +795,7 @@
   },
   "5026:5018": {
     "inputs": {
-      "text": "Static shot, The girl is introducing herself in front of the class while the man is accompanying her in silent. The girl says \"Hello everyone, my name is Mika. Nice to meet you!\" No Camera Movement.",
+      "text": "A static shot of a girl waving away at the boy. Do not add camera movement",
       "clip": [
         "5025:5032",
         0
@@ -761,7 +897,7 @@
   },
   "5013:5215": {
     "inputs": {
-      "value": 1748
+      "value": 3496
     },
     "class_type": "PrimitiveInt",
     "_meta": {
@@ -783,7 +919,7 @@
   },
   "5013:5216": {
     "inputs": {
-      "value": 2480
+      "value": 1632
     },
     "class_type": "PrimitiveInt",
     "_meta": {
@@ -1169,6 +1305,356 @@
     "class_type": "SimpleCalculatorKJ",
     "_meta": {
       "title": "SimpleCalculatorKJ"
+    }
+  },
+  "5001:4985": {
+    "inputs": {
+      "sigmas": "0.85, 0.7250, 0.4219, 0.0"
+    },
+    "class_type": "ManualSigmas",
+    "_meta": {
+      "title": "ManualSigmas"
+    }
+  },
+  "5001:4964": {
+    "inputs": {
+      "cfg": 1.0,
+      "model": [
+        "5157",
+        0
+      ],
+      "positive": [
+        "5026:5020",
+        0
+      ],
+      "negative": [
+        "5026:5020",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG Guider"
+    }
+  },
+  "5001:4967": {
+    "inputs": {
+      "noise_seed": [
+        "5039",
+        0
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "5001:4971": {
+    "inputs": {
+      "noise": [
+        "5001:4967",
+        0
+      ],
+      "guider": [
+        "5001:4964",
+        0
+      ],
+      "sampler": [
+        "5001:4976",
+        0
+      ],
+      "sigmas": [
+        "5001:4985",
+        0
+      ],
+      "latent_image": [
+        "5001:4969",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "2nd"
+    }
+  },
+  "5001:4973": {
+    "inputs": {
+      "av_latent": [
+        "5001:4971",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXVSeparateAVLatent"
+    }
+  },
+  "5001:4969": {
+    "inputs": {
+      "video_latent": [
+        "5001:5177",
+        0
+      ],
+      "audio_latent": [
+        "5140",
+        1
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "5001:4975": {
+    "inputs": {
+      "samples": [
+        "5140",
+        0
+      ],
+      "upscale_model": [
+        "5025:5021",
+        0
+      ],
+      "vae": [
+        "5025:5029",
+        0
+      ]
+    },
+    "class_type": "LTXVLatentUpsampler",
+    "_meta": {
+      "title": "LTXVLatentUpsampler"
+    }
+  },
+  "5001:5177": {
+    "inputs": {
+      "strength": 1.0,
+      "bypass": false,
+      "vae": [
+        "5025:5029",
+        0
+      ],
+      "image": [
+        "5053",
+        0
+      ],
+      "latent": [
+        "5001:4975",
+        0
+      ]
+    },
+    "class_type": "LTXVImgToVideoInplace",
+    "_meta": {
+      "title": "LTXVImgToVideoInplace"
+    }
+  },
+  "5001:4976": {
+    "inputs": {
+      "sampler_name": "euler_ancestral_cfg_pp"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "5012:5010": {
+    "inputs": {
+      "samples": [
+        "5001:4973",
+        0
+      ],
+      "upscale_model": [
+        "5025:5021",
+        0
+      ],
+      "vae": [
+        "5025:5029",
+        0
+      ]
+    },
+    "class_type": "LTXVLatentUpsampler",
+    "_meta": {
+      "title": "LTXVLatentUpsampler"
+    }
+  },
+  "5012:5007": {
+    "inputs": {
+      "video_latent": [
+        "5012:5178",
+        0
+      ],
+      "audio_latent": [
+        "5001:4973",
+        1
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "5012:5006": {
+    "inputs": {
+      "sigmas": "0.85, 0.7250, 0.4219, 0.0"
+    },
+    "class_type": "ManualSigmas",
+    "_meta": {
+      "title": "ManualSigmas"
+    }
+  },
+  "5012:5005": {
+    "inputs": {
+      "cfg": 1.0,
+      "model": [
+        "5157",
+        0
+      ],
+      "positive": [
+        "5026:5020",
+        0
+      ],
+      "negative": [
+        "5026:5020",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG Guider"
+    }
+  },
+  "5012:5009": {
+    "inputs": {
+      "noise_seed": [
+        "5040",
+        0
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "5012:5004": {
+    "inputs": {
+      "noise": [
+        "5012:5009",
+        0
+      ],
+      "guider": [
+        "5012:5005",
+        0
+      ],
+      "sampler": [
+        "5012:5003",
+        0
+      ],
+      "sigmas": [
+        "5012:5006",
+        0
+      ],
+      "latent_image": [
+        "5012:5007",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "3rd"
+    }
+  },
+  "5012:5011": {
+    "inputs": {
+      "av_latent": [
+        "5012:5004",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXVSeparateAVLatent"
+    }
+  },
+  "5012:5178": {
+    "inputs": {
+      "strength": 1.0,
+      "bypass": false,
+      "vae": [
+        "5025:5029",
+        0
+      ],
+      "image": [
+        "5053",
+        0
+      ],
+      "latent": [
+        "5012:5010",
+        0
+      ]
+    },
+    "class_type": "LTXVImgToVideoInplace",
+    "_meta": {
+      "title": "LTXVImgToVideoInplace"
+    }
+  },
+  "5012:5003": {
+    "inputs": {
+      "sampler_name": "euler_ancestral_cfg_pp"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "5027:4848": {
+    "inputs": {
+      "samples": [
+        "5012:5011",
+        1
+      ],
+      "audio_vae": [
+        "5025:5030",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEDecode",
+    "_meta": {
+      "title": "LTXV Audio VAE Decode"
+    }
+  },
+  "5027:5077": {
+    "inputs": {
+      "samples": [
+        "5012:5011",
+        0
+      ],
+      "vae": [
+        "5025:5029",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "5027:4851": {
+    "inputs": {
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 512,
+      "temporal_overlap": 4,
+      "samples": [
+        "5012:5011",
+        0
+      ],
+      "vae": [
+        "5025:5029",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE Decode (Tiled)"
     }
   }
 }

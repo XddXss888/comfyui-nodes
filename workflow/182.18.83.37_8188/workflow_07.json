@@ -1,123 +1,319 @@
 {
-  "10": {
+  "11": {
     "inputs": {
-      "image": "drama_20260628_1524_ep14_sc10_f6.png",
-      "upload": "image"
+      "model_name": "umt5-xxl-enc-bf16.safetensors",
+      "precision": "bf16",
+      "load_device": "offload_device",
+      "quantization": "disabled"
     },
-    "class_type": "LoadImage"
-  },
-  "13": {
-    "inputs": {
-      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
-      "type": "wan"
-    },
-    "class_type": "CLIPLoader"
-  },
-  "14": {
-    "inputs": {
-      "text": "Data rain merges with saplings. 陆昭然 spins, her grudge stick now green. 叶燃’s singed hand touches glowing bark, revealing hologram of child., 22yo and 45yo back-to-back on whale-deck, surrounded by glowing saplings. Her cybernetic eye now green, his bone flute shattered into data rain.. 陆昭然: 22yo female, 168cm, silver-streaked black hair in messy bob, left eye cybernetic prosthetic with glowing crimson grid, w 叶燃: 45yo male, 185cm, scarred right cheek covered in metallic tattoo, wears olive-green trench coat with hidden pockets, alw, medium shot, focusing on main character",
-      "clip": [
-        "13",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode"
-  },
-  "15": {
-    "inputs": {
-      "text": "static, blurry, low quality, distorted, deformed, ugly, watermark, text",
-      "clip": [
-        "13",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode"
+    "class_type": "LoadWanVideoT5TextEncoder"
   },
   "16": {
     "inputs": {
-      "unet_name": "wan2.2_ti2v_5B_fp16.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader"
-  },
-  "17": {
-    "inputs": {
-      "vae_name": "wan2.2_vae.safetensors"
-    },
-    "class_type": "VAELoader"
-  },
-  "20": {
-    "inputs": {
-      "vae": [
-        "17",
-        0
-      ],
-      "width": 832,
-      "height": 480,
-      "length": 81,
-      "batch_size": 1,
-      "start_image": [
-        "10",
+      "positive_prompt": "male catches female as they fall, hologram flickers violently, 22yo female and 35yo male collide in underground chamber. Her lab coat torn, his exoskeleton smoking. Between them hovers corrupted hologram of 14yo girl with glowing blue eye patch. Radiation haze swirls around ancient-looking data vault.. 林夏: 22yo female with silver hair in messy bobcut, glowing blue cybernetic left eye, wearing faded lab coat over black compre 陈锐: 35yo male with military buzzcut and burn scars, 2.1m height, combat exoskeleton right arm with visible damage, wearing t, wide establishing shot, full scene visible",
+      "negative_prompt": "色调艳丽，过曝，静态，细节模糊不清，字幕，静止，最差质量，低质量，丑陋，畸形",
+      "force_offload": true,
+      "use_disk_cache": false,
+      "device": "gpu",
+      "t5": [
+        "11",
         0
       ]
     },
-    "class_type": "Wan22ImageToVideoLatent"
-  },
-  "25": {
-    "inputs": {
-      "seed": 782675208245,
-      "steps": 20,
-      "cfg": 1.0,
-      "sampler_name": "uni_pc_bh2",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "16",
-        0
-      ],
-      "positive": [
-        "14",
-        0
-      ],
-      "negative": [
-        "15",
-        0
-      ],
-      "latent_image": [
-        "20",
-        0
-      ]
-    },
-    "class_type": "KSampler"
-  },
-  "21": {
-    "inputs": {
-      "samples": [
-        "25",
-        0
-      ],
-      "vae": [
-        "17",
-        0
-      ]
-    },
-    "class_type": "VAEDecode"
+    "class_type": "WanVideoTextEncode"
   },
   "22": {
     "inputs": {
-      "frame_rate": 16.0,
-      "loop_count": 0,
-      "filename_prefix": "drama_20260628_1524_ep14_sc10_f6_i2v",
-      "format": "video/h264-mp4",
-      "pix_fmt": "yuv420p",
-      "crf": 20,
-      "images": [
-        "21",
+      "model": "Wan21_SkyReelsV3-R2V_fp8_scaled_mixed.safetensors",
+      "base_precision": "fp16_fast",
+      "quantization": "disabled",
+      "load_device": "offload_device",
+      "attention_mode": "sageattn",
+      "rms_norm_function": "default"
+    },
+    "class_type": "WanVideoModelLoader"
+  },
+  "27": {
+    "inputs": {
+      "steps": 8,
+      "cfg": 1.0,
+      "shift": 5.0,
+      "seed": 45,
+      "force_offload": true,
+      "scheduler": "dpm++_sde",
+      "riflex_freq_index": 0,
+      "denoise_strength": 1.0,
+      "batched_cfg": false,
+      "rope_function": "comfy",
+      "start_step": 0,
+      "end_step": -1,
+      "add_noise_to_samples": false,
+      "model": [
+        "83",
         0
       ],
+      "image_embeds": [
+        "74",
+        0
+      ],
+      "text_embeds": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "WanVideoSampler"
+  },
+  "28": {
+    "inputs": {
+      "enable_vae_tiling": false,
+      "tile_x": 272,
+      "tile_y": 272,
+      "tile_stride_x": 144,
+      "tile_stride_y": 128,
+      "normalization": "default",
+      "vae": [
+        "38",
+        0
+      ],
+      "samples": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "WanVideoDecode"
+  },
+  "30": {
+    "inputs": {
+      "frame_rate": 24.0,
+      "loop_count": 0,
+      "filename_prefix": "drama_20260701_1730_ep1_sc10_f5_i2v",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": true,
+      "trim_to_audio": false,
       "pingpong": false,
-      "save_output": true
+      "save_output": true,
+      "images": [
+        "28",
+        0
+      ]
     },
     "class_type": "VHS_VideoCombine"
+  },
+  "38": {
+    "inputs": {
+      "model_name": "wan_2.1_vae.safetensors",
+      "precision": "bf16",
+      "use_cpu_cache": false,
+      "verbose": false
+    },
+    "class_type": "WanVideoVAELoader"
+  },
+  "39": {
+    "inputs": {
+      "blocks_to_swap": 20,
+      "offload_img_emb": false,
+      "offload_txt_emb": false,
+      "use_non_blocking": false,
+      "vace_blocks_to_swap": 0,
+      "prefetch_blocks": 0,
+      "block_swap_debug": false
+    },
+    "class_type": "WanVideoBlockSwap"
+  },
+  "56": {
+    "inputs": {
+      "enable_vae_tiling": false,
+      "tile_x": 272,
+      "tile_y": 272,
+      "tile_stride_x": 144,
+      "tile_stride_y": 128,
+      "noise_aug_strength": 0.0,
+      "latent_strength": 1.0,
+      "vae": [
+        "38",
+        0
+      ],
+      "image": [
+        "81",
+        0
+      ]
+    },
+    "class_type": "WanVideoEncode"
+  },
+  "57": {
+    "inputs": {
+      "image": "drama_20260701_1730_ep1_sc10_f5.png"
+    },
+    "class_type": "LoadImage"
+  },
+  "61": {
+    "inputs": {
+      "value": 832
+    },
+    "class_type": "INTConstant"
+  },
+  "62": {
+    "inputs": {
+      "value": 480
+    },
+    "class_type": "INTConstant"
+  },
+  "66": {
+    "inputs": {
+      "inputcount": 2,
+      "direction": "down",
+      "match_image_size": false,
+      "image_1": [
+        "81",
+        0
+      ],
+      "image_2": [
+        "80",
+        0
+      ]
+    },
+    "class_type": "ImageConcatMulti"
+  },
+  "67": {
+    "inputs": {
+      "image": "drama_20260701_1730_ep1_sc10_f5.png"
+    },
+    "class_type": "LoadImage"
+  },
+  "73": {
+    "inputs": {
+      "enable_vae_tiling": false,
+      "tile_x": 272,
+      "tile_y": 272,
+      "tile_stride_x": 144,
+      "tile_stride_y": 128,
+      "noise_aug_strength": 0.0,
+      "latent_strength": 1.0,
+      "vae": [
+        "38",
+        0
+      ],
+      "image": [
+        "80",
+        0
+      ]
+    },
+    "class_type": "WanVideoEncode"
+  },
+  "74": {
+    "inputs": {
+      "num_frames": 121,
+      "phantom_cfg_scale": 2.0,
+      "phantom_start_percent": 0.0,
+      "phantom_end_percent": 1.0,
+      "phantom_latent_1": [
+        "56",
+        0
+      ],
+      "phantom_latent_2": [
+        "73",
+        0
+      ]
+    },
+    "class_type": "WanVideoPhantomEmbeds"
+  },
+  "79": {
+    "inputs": {
+      "inputcount": 2,
+      "direction": "left",
+      "match_image_size": true,
+      "image_1": [
+        "28",
+        0
+      ],
+      "image_2": [
+        "66",
+        0
+      ]
+    },
+    "class_type": "ImageConcatMulti"
+  },
+  "80": {
+    "inputs": {
+      "width": [
+        "81",
+        1
+      ],
+      "height": [
+        "81",
+        2
+      ],
+      "upscale_method": "lanczos",
+      "keep_proportion": "pad",
+      "pad_color": "255,255,255",
+      "crop_position": "center",
+      "divisible_by": 16,
+      "device": "cpu",
+      "image": [
+        "57",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJv2"
+  },
+  "81": {
+    "inputs": {
+      "width": [
+        "61",
+        0
+      ],
+      "height": [
+        "62",
+        0
+      ],
+      "upscale_method": "lanczos",
+      "keep_proportion": "pad",
+      "pad_color": "255,255,255",
+      "crop_position": "center",
+      "divisible_by": 16,
+      "device": "cpu",
+      "image": [
+        "67",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJv2"
+  },
+  "84": {
+    "inputs": {
+      "model": [
+        "22",
+        0
+      ],
+      "block_swap_args": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "WanVideoSetBlockSwap"
+  },
+  "78": {
+    "inputs": {
+      "lora": "WanVideo/Lightx2v/lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank64_bf16.safetensors",
+      "strength": 0.8,
+      "low_mem_load": false,
+      "merge_loras": false
+    },
+    "class_type": "WanVideoLoraSelect"
+  },
+  "83": {
+    "inputs": {
+      "model": [
+        "84",
+        0
+      ],
+      "lora": [
+        "78",
+        0
+      ]
+    },
+    "class_type": "WanVideoSetLoRAs"
   }
 }

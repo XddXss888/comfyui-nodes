@@ -1,0 +1,40 @@
+{
+  "220": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "269",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "269": {
+    "inputs": {
+      "prompt": "A two-layer cheesecake on white plate, white background, cartoon illustration style, fluffy cream on top, green leaves decoration, delicious",
+      "aspect_ratio": "auto",
+      "resolution": "4k",
+      "api_key": "",
+      "model": "gpt-image-2",
+      "n": 1,
+      "quality": "high",
+      "background": "auto",
+      "output_format": "png",
+      "moderation": "auto",
+      "response_format": "url",
+      "async_mode": true,
+      "seed": 111222333,
+      "image1": [
+        "303",
+        0
+      ]
+    },
+    "class_type": "Comfly_gpt_image_2_official_ratio"
+  },
+  "303": {
+    "inputs": {
+      "image": "img_bbcab04a7105.jpg"
+    },
+    "class_type": "LoadImage"
+  }
+}

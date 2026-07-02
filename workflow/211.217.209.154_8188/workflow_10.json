@@ -1,48 +1,32 @@
 {
-  "4": {
+  "7": {
     "inputs": {
-      "clip_name": "qwen_3_4b.safetensors",
-      "type": "qwen_image",
-      "device": "default"
+      "lora_name": "change_clothes_to_nothing_000012800.safetensors",
+      "strength_model": 0.4,
+      "model": [
+        "32",
+        0
+      ]
     },
-    "class_type": "CLIPLoader",
+    "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "Загрузить CLIP"
-    }
-  },
-  "5": {
-    "inputs": {
-      "unet_name": "z_image_turbo_bf16.safetensors",
-      "weight_dtype": "fp8_e4m3fn"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "Загрузить модель диффузии"
-    }
-  },
-  "9": {
-    "inputs": {
-      "vae_name": "ae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "Загрузить VAE"
+      "title": "Загрузчик LoRA (Только модель)"
     }
   },
   "10": {
     "inputs": {
-      "seed": 975496416078325,
-      "steps": 20,
-      "cfg": 0.4,
-      "sampler_name": "euler_ancestral_cfg_pp",
+      "seed": 768230865483911,
+      "steps": 10,
+      "cfg": 1.0,
+      "sampler_name": "euler",
       "scheduler": "beta",
-      "denoise": 0.7,
+      "denoise": 1.0,
       "model": [
-        "5",
+        "7",
         0
       ],
       "positive": [
-        "25",
+        "29",
         0
       ],
       "negative": [
@@ -50,7 +34,7 @@
         0
       ],
       "latent_image": [
-        "15",
+        "33",
         0
       ]
     },
@@ -63,7 +47,7 @@
     "inputs": {
       "text": "ugly, deformed, low quality, bad anatomy, extra limbs, mutated hands, poorly drawn face, bad proportions, bad lighting, worst quality, lowres, blurry, overexposed, underexposed, watermark, text, error, jpeg artifacts, signature, username, artist name, multiple girls, different girl, wrong person, changed face, altered features, different hair, different skin, wrong body, extra fingers, fused fingers, too many fingers, extra toes, fused toes, realistic skin artifact",
       "clip": [
-        "4",
+        "30",
         0
       ]
     },
@@ -81,22 +65,6 @@
       "title": "Загрузить изображение"
     }
   },
-  "15": {
-    "inputs": {
-      "pixels": [
-        "14",
-        0
-      ],
-      "vae": [
-        "9",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "Кодировать VAE"
-    }
-  },
   "16": {
     "inputs": {
       "samples": [
@@ -104,7 +72,7 @@
         0
       ],
       "vae": [
-        "9",
+        "31",
         0
       ]
     },
@@ -126,26 +94,66 @@
       "title": "Сохранить изображение"
     }
   },
-  "23": {
+  "29": {
     "inputs": {
-      "clip_name": "clip_vision_h.safetensors"
-    },
-    "class_type": "CLIPVisionLoader",
-    "_meta": {
-      "title": "Загрузить видение CLIP"
-    }
-  },
-  "25": {
-    "inputs": {
-      "text": "Same girl ully naked, sitting relaxed on gray sofa in wide W pose with legs spread wide, looking directly at camera with soft gentle smile. Highly detailed realistic skin texture, natural soft lighting, photorealistic, intimate view, cinematic, masterpiece, best quality",
+      "prompt": "Same girl ully naked, sitting relaxed on gray sofa in wide W pose with legs spread wide, looking directly at camera with soft gentle smile. Highly detailed realistic skin texture, natural soft lighting, photorealistic, intimate view, cinematic, masterpiece, best quality",
       "clip": [
-        "4",
+        "30",
+        0
+      ],
+      "vae": [
+        "31",
+        0
+      ],
+      "image1": [
+        "14",
         0
       ]
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "TextEncodeQwenImageEditPlus",
     "_meta": {
-      "title": "Кодирование текста CLIP (Запрос)"
+      "title": "TextEncodeQwenImageEditPlus"
+    }
+  },
+  "30": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "stable_diffusion",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Загрузить CLIP"
+    }
+  },
+  "31": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Загрузить VAE"
+    }
+  },
+  "32": {
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Загрузить модель диффузии"
+    }
+  },
+  "33": {
+    "inputs": {
+      "width": 608,
+      "height": 1080,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Пустое латентное изображение"
     }
   }
 }

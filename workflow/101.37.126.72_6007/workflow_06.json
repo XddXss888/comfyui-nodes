@@ -1,50 +1,105 @@
 {
-  "278": {
+  "380": {
     "inputs": {
-      "image": "286132070d691346667ba77dfc156b79.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "LoadImage"
-    }
-  },
-  "352": {
-    "inputs": {
-      "text": "双手抱在胸前，保持人脸服装完全一致，保持一致构图。"
-    },
-    "class_type": "CR Text",
-    "_meta": {
-      "title": "CR Text"
-    }
-  },
-  "378": {
-    "inputs": {
-      "seed": 1000238748761483,
-      "steps": 8,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "394",
-        0
-      ],
-      "positive": [
-        "385",
-        0
-      ],
-      "negative": [
-        "383",
-        0
-      ],
-      "latent_image": [
-        "414",
+      "aspect_ratio": "original",
+      "proportional_width": 2,
+      "proportional_height": 3,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": 1280,
+      "background_color": "#000000",
+      "image": [
+        "278",
         0
       ]
     },
-    "class_type": "KSampler",
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
     "_meta": {
-      "title": "KSampler"
+      "title": "LayerUtility: ImageScaleByAspectRatio V2"
+    }
+  },
+  "383": {
+    "inputs": {
+      "conditioning": [
+        "384",
+        0
+      ],
+      "latent": [
+        "382",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "390": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "VAELoader"
+    }
+  },
+  "382": {
+    "inputs": {
+      "pixels": [
+        "380",
+        0
+      ],
+      "vae": [
+        "390",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAEEncode"
+    }
+  },
+  "384": {
+    "inputs": {
+      "conditioning": [
+        "381",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "407": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "393",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "SaveImage"
+    }
+  },
+  "381": {
+    "inputs": {
+      "text": [
+        "352",
+        0
+      ],
+      "clip": [
+        "389",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIPTextEncode"
     }
   },
   "379": {
@@ -64,101 +119,38 @@
       "title": "EmptyFlux2LatentImage"
     }
   },
-  "380": {
+  "408": {
     "inputs": {
-      "aspect_ratio": "original",
-      "proportional_width": 2,
-      "proportional_height": 3,
-      "fit": "letterbox",
-      "method": "lanczos",
-      "round_to_multiple": "8",
-      "scale_to_side": "longest",
-      "scale_to_length": 1024,
-      "background_color": "#000000",
-      "image": [
-        "408",
+      "lora_name": "training/F2K9B-随意蜡笔-v1_000003250.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "394",
         0
       ]
     },
-    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "LayerUtility: ImageScaleByAspectRatio V2"
+      "title": "LoraLoaderModelOnly"
     }
   },
-  "381": {
+  "403": {
     "inputs": {
-      "text": [
-        "352",
-        0
-      ],
-      "clip": [
-        "389",
-        0
-      ]
+      "aspect_ratio": "2:3",
+      "max_size": 1024
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "PDRatioSelector",
     "_meta": {
-      "title": "CLIPTextEncode"
+      "title": "PDRatioSelector"
     }
   },
-  "382": {
+  "394": {
     "inputs": {
-      "pixels": [
-        "380",
-        0
-      ],
-      "vae": [
-        "390",
-        0
-      ]
+      "unet_name": "flux-2-klein-9b-fp8.safetensors",
+      "weight_dtype": "default"
     },
-    "class_type": "VAEEncode",
+    "class_type": "UNETLoader",
     "_meta": {
-      "title": "VAEEncode"
-    }
-  },
-  "383": {
-    "inputs": {
-      "conditioning": [
-        "384",
-        0
-      ],
-      "latent": [
-        "382",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "ReferenceLatent"
-    }
-  },
-  "384": {
-    "inputs": {
-      "conditioning": [
-        "381",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "ConditioningZeroOut"
-    }
-  },
-  "385": {
-    "inputs": {
-      "conditioning": [
-        "381",
-        0
-      ],
-      "latent": [
-        "382",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "ReferenceLatent"
+      "title": "UNETLoader"
     }
   },
   "389": {
@@ -172,13 +164,34 @@
       "title": "CLIPLoader"
     }
   },
-  "390": {
+  "378": {
     "inputs": {
-      "vae_name": "flux2-vae.safetensors"
+      "seed": 932898321221737,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "408",
+        0
+      ],
+      "positive": [
+        "385",
+        0
+      ],
+      "negative": [
+        "383",
+        0
+      ],
+      "latent_image": [
+        "379",
+        0
+      ]
     },
-    "class_type": "VAELoader",
+    "class_type": "KSampler",
     "_meta": {
-      "title": "VAELoader"
+      "title": "KSampler"
     }
   },
   "393": {
@@ -197,215 +210,38 @@
       "title": "VAEDecode"
     }
   },
-  "394": {
+  "278": {
     "inputs": {
-      "unet_name": "flux-2-klein-9b-fp8.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNETLoader"
-    }
-  },
-  "403": {
-    "inputs": {
-      "aspect_ratio": "2:3",
-      "max_size": 1024
-    },
-    "class_type": "PDRatioSelector",
-    "_meta": {
-      "title": "PDRatioSelector"
-    }
-  },
-  "407": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "393",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "SaveImage"
-    }
-  },
-  "408": {
-    "inputs": {
-      "blend_mode": "normal",
-      "opacity": 100,
-      "x_percent": 50.0,
-      "y_percent": 50.0,
-      "scale": 1.0,
-      "align_mode": "default",
-      "invert_mask": false,
-      "background_image": [
-        "278",
-        0
-      ],
-      "layer_image": [
-        "413",
-        0
-      ],
-      "layer_mask": [
-        "413",
-        1
-      ]
-    },
-    "class_type": "ImageBlendV1",
-    "_meta": {
-      "title": "PD:Image Blend V1"
-    }
-  },
-  "409": {
-    "inputs": {
-      "image": "c998307553e24808afd0556d9696f5e9.jpg"
+      "image": "cmr1tyefu003mlv01pneehged.png"
     },
     "class_type": "LoadImage",
     "_meta": {
-      "title": "加载图像"
+      "title": "LoadImage"
     }
   },
-  "410": {
+  "385": {
     "inputs": {
-      "detail_method": "VITMatte",
-      "detail_erode": 4,
-      "detail_dilate": 2,
-      "black_point": 0.01,
-      "white_point": 0.99,
-      "process_detail": false,
-      "device": "cuda",
-      "max_megapixels": 2.0,
-      "image": [
-        "417",
+      "conditioning": [
+        "381",
         0
       ],
-      "birefnet_model": [
-        "411",
+      "latent": [
+        "382",
         0
       ]
     },
-    "class_type": "LayerMask: BiRefNetUltraV2",
+    "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "图层遮罩：BiRefNet Ultra V2（高级）"
+      "title": "ReferenceLatent"
     }
   },
-  "411": {
+  "352": {
     "inputs": {
-      "version": "RMBG-2.0"
+      "text": "把图中的人物转化为PD-style,合照保持露出全身，蜡笔笔触，白色的纸张上的纸面手绘风格，依据照片元素构思来添加一些手绘元素在白色纸张背景上"
     },
-    "class_type": "LayerMask: LoadBiRefNetModelV2",
+    "class_type": "CR Text",
     "_meta": {
-      "title": "图层遮罩：加载BiRefNet模型 V2（高级）"
-    }
-  },
-  "412": {
-    "inputs": {
-      "images": [
-        "408",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
-    }
-  },
-  "413": {
-    "inputs": {
-      "invert_mask": false,
-      "detect": "mask_area",
-      "top_reserve": 20,
-      "bottom_reserve": 20,
-      "left_reserve": 20,
-      "right_reserve": 20,
-      "round_to_multiple": "8",
-      "image": [
-        "410",
-        0
-      ],
-      "mask": [
-        "410",
-        1
-      ]
-    },
-    "class_type": "LayerUtility: CropByMask V2",
-    "_meta": {
-      "title": "图层工具：遮罩裁剪 V2"
-    }
-  },
-  "414": {
-    "inputs": {
-      "pixels": [
-        "380",
-        0
-      ],
-      "vae": [
-        "390",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE编码"
-    }
-  },
-  "417": {
-    "inputs": {
-      "size": 2048,
-      "interpolation": "bicubic",
-      "image": [
-        "409",
-        0
-      ]
-    },
-    "class_type": "PDIMAGE_LongerSize",
-    "_meta": {
-      "title": "PDIMAGE:LongerSize"
-    }
-  },
-  "419": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "380",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
-    }
-  },
-  "422": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "423",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
-    }
-  },
-  "423": {
-    "inputs": {
-      "prompt": "双手抱在胸前，保持人脸服装完全一致，保持一致构图。",
-      "aspect_ratio": "2:3",
-      "guidance": 3.0,
-      "steps": 50,
-      "seed": 1234,
-      "prompt_upsampling": false,
-      "input_image": [
-        "380",
-        0
-      ]
-    },
-    "class_type": "FluxKontextProImageNode",
-    "_meta": {
-      "title": "Flux.1 Kontext [pro] 图像"
+      "title": "CR Text"
     }
   }
 }

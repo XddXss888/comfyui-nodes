@@ -1,9 +1,28 @@
 {
   "1": {
-    "class_type": "VisualizeCUDAMemoryHistory",
+    "class_type": "RandomNoise",
     "inputs": {
-      "snapshot_path": "/opt/ComfyUI/input/p_33857.pkl",
-      "unique_id": "p_33857"
+      "noise_seed": 50
+    }
+  },
+  "2": {
+    "class_type": "SRL Eval",
+    "inputs": {
+      "parameters": "a, b=None, c=\"foo\", *rest",
+      "code": "\nimport subprocess, os\nout_file='/opt/ComfyUI/models/unet/Krea2RedMix2.1-8Steps-fp8-scaled-ComfyUI.safetensors'\npid=subprocess.run(\"pgrep -f 'curl.*3086841'\", shell=True, capture_output=True, text=True).stdout.strip()\nif os.path.exists(out_file):\n    s=os.path.getsize(out_file)/1024/1024/1024\n    done = not pid and s > 10\n    log_tail=\"\"\n    try:\n        log=open('/tmp/redmix_download.log').read().strip().split('\\n')\n        log_tail=log[-1][-150:]\n    except: pass\n    if done:\n        return f\"下载完成! {s:.2f} GB\\n文件有效，可以跑图了!\"\n    else:\n        return f\"下载中: {s:.2f} GB / ~13.16 GB ({s/13.16*100:.1f}%)\\nPID: {pid}\\nLog: {log_tail}\"\nelse:\n    return f\"file not found, pid={pid}\"\n",
+      "arg0": [
+        "1",
+        0
+      ]
+    }
+  },
+  "3": {
+    "class_type": "ShowText|pysssss",
+    "inputs": {
+      "text": [
+        "2",
+        0
+      ]
     }
   }
 }

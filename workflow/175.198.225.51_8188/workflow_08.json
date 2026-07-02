@@ -1,86 +1,343 @@
 {
-  "1": {
-    "inputs": {
-      "ckpt_name": "fabricationXL_v40.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple"
-  },
-  "2": {
-    "inputs": {
-      "text": "2girls, yuri, theo_radiant + maimai_ace, silver short elegant, navy short bob with cyan inner, heterochromia golden crimson eyes, lace lingerie, see-through, school swimsuit, wet, transparent, cunnilingus, licking, tongue on clit, heavy blush, hotel suite, rose petals, warm light, (masterpiece, best quality:1.2), (extreme detailed), photorealistic, 8k uhd, raw photo, (glossy skin:1.3), (shiny body:1.25), (sweaty skin:1.35), (realistic skin texture)",
-      "clip": [
-        "1",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode"
-  },
   "3": {
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "text": "(worst quality, low quality:1.4), (bad anatomy), (bad hands), (missing fingers), extra digit, fewer digits, text, error, jpeg artifacts, signature, watermark, username, blurry, artist name, greyscale, 3d render, cgi, deformed, merged legs, (detached penis:1.6), cartoon, sketch, monochrome, child, loli, petite, childish face, childish body, small breasts, flat chest, 1girl, solo, 1boy, male, 3girls",
+      "ckpt_name": "majicmixRealistic_v7.safetensors"
+    }
+  },
+  "clip_skip": {
+    "class_type": "CLIPSetLastLayer",
+    "inputs": {
+      "stop_at_clip_layer": -2,
       "clip": [
-        "1",
+        "3",
         1
       ]
-    },
-    "class_type": "CLIPTextEncode"
+    }
   },
-  "4": {
+  "lora": {
+    "class_type": "LoraLoader",
     "inputs": {
-      "width": 480,
-      "height": 832,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage"
-  },
-  "5": {
-    "inputs": {
-      "seed": 86694716,
-      "steps": 30,
-      "cfg": 6.5,
-      "sampler_name": "dpmpp_2m",
-      "scheduler": "karras",
-      "denoise": 1.0,
       "model": [
-        "1",
-        0
-      ],
-      "positive": [
-        "2",
-        0
-      ],
-      "negative": [
         "3",
         0
       ],
-      "latent_image": [
-        "4",
+      "clip": [
+        "clip_skip",
         0
+      ],
+      "lora_name": "Detail_Tweaker_XL.safetensors",
+      "strength_model": 1.0,
+      "strength_clip": 0.7
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "((extremely high quality:1.2), (masterpiece:1.2), (ultra-sharp focus:1.1), (soft cinematic lighting:1.1), best aesthetics, blush, (anatomically correct body:1.2), (stable anatomy:1.2), (highly detailed face:1.3), (8k resolution:1.1), (raw photo:1.1):1.3), (hyper-realistic skin:1.3), (extremely detailed skin:1.2), (perfect facial symmetry:1.3), (1girl:1.3), (extremely detailed eyes:1.3), (masterpiece:1.2), (photorealistic:1.3), (sharp focus:1.2), (hyper-realistic skin texture:1.3), (visible pores:1.2), (subsurface scattering:1.3), (cinematic lighting:1.3), (rim lighting:1.2), (8k wallpaper:1.1), (korean idol:1.2), stunning korean goddess, pastel pink hair messy wavy twin tails bouncy playful, long bangs slightly messy, heterochromia eyes golden left crimson right, big round sparkling eyes, playful aegyo expression, V-line face, porcelain fair skin, glass skin, flawless dewy complexion, straight nose bridge, plump glossy lips, slim model body, cute mischievous aura, natural body proportions. She is wearing a cropped white cardigan front open with lace bralette underneath, tiny plaid mini skirt, barefoot. She is standing and doing a slow grinding dance, hands running through hair, hips moving in figure-eight, chest gently rolling, eyes half-closed in the rhythm, alluring smile. in a luxurious marble bathroom, vanity mirror with warm light bulbs, bathtub with candles, spa-like atmosphere, beauty photography",
+      "clip": [
+        "lora",
+        1
       ]
-    },
-    "class_type": "KSampler"
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "EasyNegative, (worst quality, low quality:1.4), (blurry:1.2), (multiple people, 2girls, 2boys, group, twins:1.6), (split screen, horizontal split, vertical split:1.6), 3d render, cgi, cartoon, painting, illustration, doll, bad anatomy, deformed, (pillar:1.5), (column:1.5), (object focus:1.3), macro, close-up, bad hands, missing fingers, extra fingers, extra digits, fewer fingers, fused fingers, malformed hands, mutated hands, extra arms, extra legs, extra hands, extra feet, multiple arms, multiple legs, cropped, ugly, bad proportions, cloned face, disfigured, typical korean actress, plain face, round face, double chin, tanned skin, fat, chubby, extremely large breasts, fake breasts, old face, masculine, harsh features, yellow skin, olive skin, elongated torso, excessively long waist, stretched body, elongated body, long neck, tiny head, airbrushed, plastic skin, oversaturated, HDR, artificial lighting, willowy, extremely slender, anorexic",
+      "clip": [
+        "lora",
+        1
+      ]
+    }
+  },
+  "5": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 512,
+      "height": 768,
+      "batch_size": 1
+    }
   },
   "6": {
+    "class_type": "KSampler",
     "inputs": {
-      "samples": [
+      "model": [
+        "lora",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
         "5",
         0
       ],
-      "vae": [
-        "1",
-        2
-      ]
-    },
-    "class_type": "VAEDecode"
+      "seed": 74302776,
+      "steps": 30,
+      "cfg": 7.5,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 1.0
+    }
   },
-  "7": {
+  "10": {
+    "class_type": "UpscaleModelLoader",
     "inputs": {
-      "filename_prefix": "NSFW_25Random",
-      "images": [
+      "model_name": "RealESRGAN_x4plus.pth"
+    }
+  },
+  "11": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
         "6",
         0
+      ],
+      "vae": [
+        "3",
+        2
       ]
-    },
-    "class_type": "SaveImage"
+    }
+  },
+  "12": {
+    "class_type": "ImageUpscaleWithModel",
+    "inputs": {
+      "upscale_model": [
+        "10",
+        0
+      ],
+      "image": [
+        "11",
+        0
+      ]
+    }
+  },
+  "15": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "upscale_method": "lanczos",
+      "width": 592,
+      "height": 864,
+      "crop": "disabled",
+      "image": [
+        "12",
+        0
+      ]
+    }
+  },
+  "ip_loader": {
+    "class_type": "IPAdapterUnifiedLoader",
+    "inputs": {
+      "model": [
+        "3",
+        0
+      ],
+      "preset": "STANDARD (medium strength)"
+    }
+  },
+  "face_image": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "mimi_bedroom_source.png"
+    }
+  },
+  "ip_apply": {
+    "class_type": "IPAdapterAdvanced",
+    "inputs": {
+      "model": [
+        "ip_loader",
+        0
+      ],
+      "ipadapter": [
+        "ip_loader",
+        1
+      ],
+      "image": [
+        "face_image",
+        0
+      ],
+      "weight": 0.55,
+      "weight_type": "linear",
+      "combine_embeds": "concat",
+      "start_at": 0.0,
+      "end_at": 1.0,
+      "embeds_scaling": "V only"
+    }
+  },
+  "cnet_loader": {
+    "class_type": "ControlNetLoader",
+    "inputs": {
+      "control_net_name": "control_v11f1p_sd15_depth.pth"
+    }
+  },
+  "cnet_apply": {
+    "class_type": "ControlNetApply",
+    "inputs": {
+      "strength": 0.2,
+      "conditioning": [
+        "4",
+        0
+      ],
+      "control_net": [
+        "cnet_loader",
+        0
+      ],
+      "image": [
+        "11",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "15",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    }
+  },
+  "14": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "ip_apply",
+        0
+      ],
+      "positive": [
+        "cnet_apply",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "13",
+        0
+      ],
+      "seed": 74302776,
+      "steps": 30,
+      "cfg": 7.5,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.35
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "14",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    }
+  },
+  "yolo_loader": {
+    "class_type": "UltralyticsDetectorProvider",
+    "inputs": {
+      "model_name": "face_yolov8m.pt"
+    }
+  },
+  "face_pos": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "(korean idol face:1.6), (highly detailed face:1.5), (perfect facial symmetry:1.5), (beautiful face:1.4), (gorgeous face:1.3), (stunning face:1.3), V-line face, sharp jawline, double eyelids, large aegyo-sal, glass skin, (big sparkling eyes:1.3), (detailed iris:1.2), long eyelashes, straight nose bridge, refined nose tip, (plump glossy lips:1.2), cupid bow lips, flawless dewy complexion, natural skin texture, visible pores, subsurface scattering on cheeks, soft blush, sharp focus on face, photorealistic, 8k, masterpiece",
+      "clip": [
+        "lora",
+        1
+      ]
+    }
+  },
+  "face_neg": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "(worst quality, low quality:1.4), blurry, deformed face, ugly face, asymmetric eyes, crooked nose, bad teeth, cross-eyed, typical korean actress, plain face, round face, double chin, flat face, wide face, square jaw, small eyes, mono eyelids, thick lips, uneven skin, blemishes, wrinkles, cartoon, anime, 3d render, painting, illustration, airbrushed, plastic skin, oversaturated, fake, doll-like, masculine, harsh features, old face",
+      "clip": [
+        "lora",
+        1
+      ]
+    }
+  },
+  "face_detail": {
+    "class_type": "FaceDetailer",
+    "inputs": {
+      "image": [
+        "8",
+        0
+      ],
+      "model": [
+        "ip_apply",
+        0
+      ],
+      "clip": [
+        "lora",
+        1
+      ],
+      "vae": [
+        "3",
+        2
+      ],
+      "guide_size": 768.0,
+      "guide_size_for": true,
+      "max_size": 1024.0,
+      "seed": 74302776,
+      "steps": 25,
+      "cfg": 8.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "positive": [
+        "face_pos",
+        0
+      ],
+      "negative": [
+        "face_neg",
+        0
+      ],
+      "denoise": 0.5,
+      "feather": 8,
+      "noise_mask": true,
+      "force_inpaint": true,
+      "bbox_threshold": 0.4,
+      "bbox_dilation": 15,
+      "bbox_crop_factor": 3.5,
+      "sam_detection_hint": "center-1",
+      "sam_dilation": 0,
+      "sam_threshold": 0.93,
+      "sam_bbox_expansion": 0,
+      "sam_mask_hint_threshold": 0.7,
+      "sam_mask_hint_use_negative": "False",
+      "drop_size": 10,
+      "bbox_detector": [
+        "yolo_loader",
+        0
+      ],
+      "wildcard": "",
+      "cycle": 2
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "face_detail",
+        0
+      ],
+      "filename_prefix": "AVATAR_Mimi_RC_075850"
+    }
   }
 }

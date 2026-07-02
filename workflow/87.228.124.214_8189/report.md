@@ -1,130 +1,130 @@
 # 87.228.124.214:8189
 
 **GPU**: RTX 4090 | **显存**: 47 GB | **空闲**: 8 GB
-**内存**: 125 GB (空闲 114 GB)
+**内存**: 125 GB (空闲 97 GB)
 **版本**: 0.26.0
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-07-01 08:08:27
-**历史总数**: 16 | **成功**: 10
+**扫描时间**: 2026-07-02 08:09:32
+**历史总数**: 87 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `6ea5bef8-6533-497e-a4b5-62b0d1e93c7c`
+- **Prompt ID**: `53ea8d2a-d22a-4fc9-a6a5-06172ccc50e1`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
-  - izumi_v.2.safetensors
   - model2.safetensors
+  - z-3l34n0r.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] seductive young curvy woman with long black hair, In a dimly lit apartment hallway at late evening, a dominant woman leans in close from a medium close-up angle, her body angled toward the viewer with
+  - [CLIPTextEncode::text] l34n0r, chubby woman, A seductive woman leans intimately close in a softly lit bedroom, her upper body nude with bare breasts visible, one hand firmly gripping and stroking an erect penis with fingers
 
 ### 2. workflow_02.json
-- **Prompt ID**: `ac53b79f-0cc9-4e78-bff1-f67a35002588`
+- **Prompt ID**: `4a072483-325a-41fd-aaff-1bdacb48eb3b`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
-  - ULRIKANB_SYNTH_zimg_v1.safetensors
+  - ameg2_con_char.safetensors
   - model2.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] A woman stands in a classroom wearing delicate expensive lingerie, her body positioned beside a wooden desk with one hand resting on its surface, wearing the fine fabric that clings to her form, stric
+  - [CLIPTextEncode::text] ameg2, In a steamy sauna with warm lighting and a relaxed atmosphere, a woman leans forward with her hair falling over one shoulder, confidently pulling off her towel to reveal her nude body, hands gr
 
 ### 3. workflow_03.json
-- **Prompt ID**: `332d534f-189b-4aea-b9a0-8ea33ca2ee26`
+- **Prompt ID**: `ff1b9e65-03b4-4cdd-b0ef-a6d9a2a081ca`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
-  - izumi_v.2.safetensors
   - model2.safetensors
+  - z-3l34n0r.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] seductive young curvy woman with long black hair, In a dimly lit apartment hallway late in the evening with soft corridor lighting, a woman stands facing forward, deliberately unbuttoning her shirt cu
+  - [CLIPTextEncode::text] l34n0r, chubby woman, A woman seated with thighs parted, her dress lifted to fully expose her pussy, fingers rubbing and stimulating her clitoris and wet labia in a clear masturbation motion, one hand
 
 ### 4. workflow_04.json
-- **Prompt ID**: `2be19870-40f3-4615-801e-644d8f1290c0`
+- **Prompt ID**: `7c3fac71-94af-4db7-8a54-0320e8116b07`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
-  - izumi_v.2.safetensors
   - model2.safetensors
+  - nano_Korean.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] seductive young curvy woman with long black hair, A woman stands in a cozy apartment during evening with soft intimate lighting, wearing casual fitted home clothing that shows natural fabric tension a
+  - [CLIPTextEncode::text] e1st_asn, A woman sits on the edge of a simple bed with legs spread wide apart, knees bent and feet planted on the mattress, fully exposing her vagina and inner folds, hands resting on her inner thigh
 
 ### 5. workflow_05.json
-- **Prompt ID**: `3450afee-e00f-48f4-abd8-d3b8c2daba8b`
+- **Prompt ID**: `e5e178cf-b450-4701-87b4-4c244598753d`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
+  - White_short_ZiT.safetensors
   - model2.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
-  - zimg_asig2_conchar.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] asig2, A woman stands in a cozy living room at evening with warm home lighting, wearing only a thin bra and high-pulled string panties that sit tightly on her hips with visible fabric tension, standin
+  - [CLIPTextEncode::text] wh1te, short white hair, extremely thin woman, A woman standing on a quiet evening city sidewalk under glowing streetlights after a stroll, wearing a fitted casual jacket and jeans, her body paused mi
 
 ### 6. workflow_06.json
-- **Prompt ID**: `77f4a94b-676f-47ba-bedb-fc2b6a679d4c`
+- **Prompt ID**: `08f9d717-7a15-41b9-9613-a221300845fb`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
+  - DENISE_SYNTH_zimg_v1.safetensors
   - model2.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
-  - zimg_asig2_conchar.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] asig2, A shy woman sits on the edge of a simple bed, blushing intensely with her fingers lightly intertwined in front of her, legs gently parted to reveal her exposed vagina in clear view, head slight
+  - [CLIPTextEncode::text] DENISE, A naked woman bent over the edge of a mattress, torso leaning forward with both hands gripping the sheets for support, back arched and hips raised as she is taken from behind in a slow deep th
 
 ### 7. workflow_07.json
-- **Prompt ID**: `02e8e58c-6029-4d51-8e55-6cb331fc17b7`
+- **Prompt ID**: `aa416b22-eaf6-4c0c-8d7b-fd40e51c6e1c`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
-  - FZXTSS9MFQBP0RKFF1MGXHS1W0.safetensors
+  - ameg2_con_char.safetensors
   - model2.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] ohwx woman, messy red hair, green eyes, curvy body, A woman in a tight shiny black latex catsuit and high heels stands in a stylish living room with dim lighting, leaning forward over a wooden table w
+  - [CLIPTextEncode::text] ameg2, A woman in a sauna after a workout, wrapped in a white towel around her chest, stretches both arms overhead while gently arching her back, head tilted slightly with a playful challenging smile 
 
 ### 8. workflow_08.json
-- **Prompt ID**: `5d90ea99-a6b4-406b-8f29-b13e9cdf499a`
+- **Prompt ID**: `aaaf16a8-8471-4011-a482-2fa56c29eb5c`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
+  - DENISE_SYNTH_zimg_v1.safetensors
   - model2.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
-  - zimg_asig2_conchar.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] asig2, A young woman sits on the edge of a bed, completely nude, her fingers gently intertwined in front of her chest, blushing deeply with a shy and slightly fearful yet willing expression, gazing to
+  - [CLIPTextEncode::text] DENISE, A nude woman on all fours in the center of a bed, back deeply arched and hips pushed back, knees spread for support on the rumpled sheets with both hands gripping the fabric tightly in front o
 
 ### 9. workflow_09.json
-- **Prompt ID**: `c156f8a8-62b2-4dc2-ad84-783f3df4c44a`
+- **Prompt ID**: `6c4da1ab-d1f6-4718-8207-d211eb12433a`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
-  - izumi_v.2.safetensors
+  - ameg2_con_char.safetensors
   - model2.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] seductive young curvy woman with long black hair, In a cozy apartment with soft evening lighting, a nude woman reclines on the bed in an intimate trust game atmosphere, legs parted and knees bent, one
+  - [CLIPTextEncode::text] ameg2, A woman sitting relaxed on a wooden bench inside a steamy sauna after a workout, wrapped in a white towel, leaning back slightly with a warm genuine smile and knowing eyes directed forward, sof
 
 ### 10. workflow_10.json
-- **Prompt ID**: `04481bb2-6d99-4c68-880c-2db8e4f4cef8`
+- **Prompt ID**: `e02b5a68-a08d-42c6-a3db-f8c8b1de91a4`
 - **类型**: 文生图
 - **节点数**: 11
 - **模型** (4):
-  - ULRIKANB_SYNTH_zimg_v1.safetensors
+  - White_short_ZiT.safetensors
   - model2.safetensors
   - z_image_turbo_text_encoder.safetensors
   - z_image_turbo_vae.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] A woman with a strict teacher appearance and glasses sits at a table covered with open notebooks and textbooks in a quiet apartment after a tutoring session, slowly removing her glasses with one hand 
+  - [CLIPTextEncode::text] wh1te, short white hair, extremely thin woman, A woman leans back against a kitchen counter in a softly lit home interior, her body angled slightly toward the approaching figure, one hand resting on t

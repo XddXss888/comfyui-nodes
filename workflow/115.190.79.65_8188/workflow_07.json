@@ -1,12 +1,55 @@
 {
+  "3": {
+    "inputs": {
+      "seed": 75279983838212,
+      "steps": 10,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "beta",
+      "denoise": 1.0,
+      "model": [
+        "15",
+        0
+      ],
+      "positive": [
+        "26",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "text, watermark",
+      "clip": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
   "8": {
     "inputs": {
       "samples": [
-        "40",
+        "3",
         0
       ],
       "vae": [
-        "10",
+        "14",
         0
       ]
     },
@@ -15,59 +58,7 @@
       "title": "VAE解码"
     }
   },
-  "10": {
-    "inputs": {
-      "vae_name": "ae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "11": {
-    "inputs": {
-      "clip_name1": "t5xxl_fp16.safetensors",
-      "clip_name2": "clip_l.safetensors",
-      "type": "flux",
-      "device": "default"
-    },
-    "class_type": "DualCLIPLoader",
-    "_meta": {
-      "title": "双CLIP加载器"
-    }
-  },
-  "17": {
-    "inputs": {
-      "scheduler": "normal",
-      "steps": 25,
-      "denoise": 1.0,
-      "model": [
-        "46",
-        0
-      ]
-    },
-    "class_type": "BasicScheduler",
-    "_meta": {
-      "title": "基本调度器"
-    }
-  },
-  "38": {
-    "inputs": {
-      "model": [
-        "46",
-        0
-      ],
-      "conditioning": [
-        "42",
-        0
-      ]
-    },
-    "class_type": "BasicGuider",
-    "_meta": {
-      "title": "基本引导器"
-    }
-  },
-  "39": {
+  "9": {
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
@@ -80,113 +71,86 @@
       "title": "保存图像"
     }
   },
-  "40": {
+  "12": {
     "inputs": {
-      "noise": [
-        "45",
+      "image": "Безымянный (1).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "13": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "14": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "15": {
+    "inputs": {
+      "unet_name": "qwen_image_fp8_e4m3fn.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "18": {
+    "inputs": {
+      "pixels": [
+        "12",
         0
       ],
-      "guider": [
-        "38",
-        0
-      ],
-      "sampler": [
-        "47",
-        0
-      ],
-      "sigmas": [
-        "17",
-        0
-      ],
-      "latent_image": [
-        "44",
+      "vae": [
+        "14",
         0
       ]
     },
-    "class_type": "SamplerCustomAdvanced",
+    "class_type": "VAEEncode",
     "_meta": {
-      "title": "自定义采样器（高级）"
+      "title": "VAE编码"
     }
   },
-  "42": {
+  "19": {
     "inputs": {
-      "guidance": 3.5,
-      "conditioning": [
-        "43",
+      "upscale_method": "nearest-exact",
+      "scale_by": 1.0000000000000002,
+      "samples": [
+        "18",
         0
       ]
     },
-    "class_type": "FluxGuidance",
+    "class_type": "LatentUpscaleBy",
     "_meta": {
-      "title": "Flux引导"
+      "title": "缩放Latent（比例）"
     }
   },
-  "43": {
+  "26": {
     "inputs": {
-      "text": "Amateur selfie of young tween girl nude standing in bedroom. wearing thigh high socks.",
+      "text": "Fully naked",
       "clip": [
-        "11",
+        "13",
         0
       ]
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
       "title": "CLIP文本编码"
-    }
-  },
-  "44": {
-    "inputs": {
-      "width": 1024,
-      "height": 1024,
-      "batch_size": 1
-    },
-    "class_type": "EmptySD3LatentImage",
-    "_meta": {
-      "title": "空Latent图像（SD3）"
-    }
-  },
-  "45": {
-    "inputs": {
-      "noise_seed": 625126702399646
-    },
-    "class_type": "RandomNoise",
-    "_meta": {
-      "title": "随机噪波"
-    }
-  },
-  "46": {
-    "inputs": {
-      "max_shift": 1.15,
-      "base_shift": 0.5,
-      "width": 1024,
-      "height": 1024,
-      "model": [
-        "48",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingFlux",
-    "_meta": {
-      "title": "采样算法（Flux）"
-    }
-  },
-  "47": {
-    "inputs": {
-      "sampler_name": "euler"
-    },
-    "class_type": "KSamplerSelect",
-    "_meta": {
-      "title": "K采样器选择"
-    }
-  },
-  "48": {
-    "inputs": {
-      "unet_name": "flux1-dev.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
     }
   }
 }

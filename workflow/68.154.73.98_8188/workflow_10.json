@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_85066744d6f14fae9f0b477815c2bc41.png"
+      "image": "ref_94557dc4414d45cea79b8ae429ae031a.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "I Love You Kiss,Movie style, movie angle , movie light, spotlight",
+      "prompt": "蕾丝半透明衣服很短的迷你裙坐在凳子上。爽腿直接里面有一根粗棍子。",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 664905367730449,
-      "steps": 4,
+      "seed": 56035815042804,
+      "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -214,7 +214,7 @@
   },
   "91:69": {
     "inputs": {
-      "prompt": ",anime, manga, illustration, cartoon, 3d, Photoshop, sketch, video game, draw, paint, cgi, canvas frame, watermark, signature, username, artist name",
+      "prompt": "",
       "clip": [
         "91:61",
         0

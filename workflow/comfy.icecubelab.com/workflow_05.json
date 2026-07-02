@@ -1,45 +1,64 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "UNETLoader",
     "inputs": {
-      "ckpt_name": "zavychromaxl_v10.safetensors"
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
     }
   },
   "2": {
-    "class_type": "VAELoader",
+    "class_type": "DualCLIPLoader",
     "inputs": {
-      "vae_name": "sdxl_vae.safetensors"
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp16.safetensors",
+      "type": "flux"
     }
   },
   "3": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip": [
-        "1",
-        1
-      ],
-      "text": "Extreme close-up of eyes and lips only, reflected in a rain-speckled glass pane, Korean idol woman with rose gold wet-look slicked back hair catching blue hour twilight. Baby face with subtle aegyo-sal under-eye charm, cool edgy expression, lips slightly parted in defiance. Shot on 50mm lens, standard portrait framing. She wears a vintage floral dress with delicate lace collar barely visible at frame edge. Cherry blossom petals drift past the glass surface creating soft pink bokeh. Blue hour ambient light casts cool indigo tones across her flawless porcelain skin while warm golden highlights trace her cheekbones. Styled editorial makeup with smoky gradient lids and glass-skin finish. Vivid chromatic palette, fashion-forward aesthetic, ultra high detail."
+      "vae_name": "ae.safetensors"
     }
   },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
-        "1",
-        1
+        "2",
+        0
       ],
-      "text": "lowres, deformed, blurry, watermark, ugly, low quality"
+      "text": "Stunning portrait of a Korean woman with dark hair featuring honey-blonde face-framing highlights, blunt cut falling just past her shoulders with wispy curtain bangs. V-line jaw, luminous double-lid eyes catching moonlight reflections. Shot on 135mm telephoto lens, compressed bokeh of a rooftop infinity pool shimmering under a full moon. Slight low angle looking up, tight headshot framing. Rembrandt triangle shadow from soft window light mixing with cool lunar glow. She wears a fitted ribbed crop top and high-waisted tailored pants, chin tilted with quiet confidence, lips slightly parted. Flawless porcelain skin, dewy editorial makeup with smoked mauve lids. Cinematic atmosphere, midnight blue tones, ethereal and magnetic."
     }
   },
   "5": {
-    "class_type": "EmptyLatentImage",
+    "class_type": "FluxGuidance",
     "inputs": {
-      "width": 896,
-      "height": 1280,
-      "batch_size": 1
+      "conditioning": [
+        "4",
+        0
+      ],
+      "guidance": 3.5
     }
   },
   "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
+    }
+  },
+  "7": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "8": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
@@ -47,47 +66,47 @@
         0
       ],
       "positive": [
-        "3",
-        0
-      ],
-      "negative": [
-        "4",
-        0
-      ],
-      "latent_image": [
         "5",
         0
       ],
-      "seed": 1747421885,
-      "control_after_generate": "fixed",
-      "steps": 28,
-      "cfg": 6.0,
-      "sampler_name": "dpmpp_2m",
-      "scheduler": "karras",
-      "denoise": 1.0
-    }
-  },
-  "7": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "samples": [
+      "negative": [
         "6",
         0
       ],
+      "latent_image": [
+        "7",
+        0
+      ],
+      "seed": 55849378,
+      "control_after_generate": "fixed",
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
       "vae": [
-        "2",
+        "3",
         0
       ]
     }
   },
-  "8": {
+  "10": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "7",
+        "9",
         0
       ],
-      "filename_prefix": "portrait_1747421885"
+      "filename_prefix": "portrait_55849378"
     }
   }
 }

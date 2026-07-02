@@ -1,76 +1,116 @@
 {
-  "1": {
-    "class_type": "CheckpointLoaderSimple",
-    "inputs": {
-      "ckpt_name": "dreamshaper_8.safetensors"
-    }
-  },
-  "2": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "text": "test",
-      "clip": [
-        "1",
-        1
-      ]
-    }
-  },
   "3": {
-    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "seed": 166270079213906,
+      "steps": 20,
+      "cfg": 8.0,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "v1-5-pruned-emaonly.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "5": {
     "inputs": {
       "width": 512,
       "height": 512,
       "batch_size": 1
-    }
-  },
-  "4": {
-    "class_type": "KSampler",
-    "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "seed": 42,
-      "steps": 1,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "normal",
-      "positive": [
-        "2",
-        0
-      ],
-      "negative": [
-        "2",
-        0
-      ],
-      "latent_image": [
-        "3",
-        0
-      ],
-      "denoise": 1.0
-    }
-  },
-  "5": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "vae": [
-        "1",
-        2
-      ],
-      "samples": [
-        "4",
-        0
-      ]
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
     }
   },
   "6": {
-    "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "ft",
-      "images": [
-        "5",
+      "text": "Immagine di una piscina quadrata con un lato di circa 15 metri, situata fuori dall'edificio principale in giardino. La piscina è circondata da pietrisco e piante intorno, creando un'atmosfera rilassante e estiva. Il bordo della piscina è fatto di mattoni bianchi che contrastano con il blu scuro dell'acqua. Nel centro della piscina c'è una barca da sole in legno chiaro. I gradini laterali sono in acciaio rustico, che si uniscono a una terrazza di pietra su cui è posizionata una tavola da picnic con bottiglie vuote e un bicchiere sul tavolo. Nella parte anteriore della piscina c'è un minuscolo spazio coperto dove possono ripararsi dal sole, con poltrone in tela e uno scaffale accanto a un bidet di gesso bianco. Gli alberi intorno alla piscina forniscono ombra durante il giorno, contribuendo ulteriormente al suo aspetto rilassante.",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "text, watermark",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "10",
         0
       ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "10": {
+    "inputs": {
+      "vae_name": "vae-ft-mse-840000-ema-pruned.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
     }
   }
 }

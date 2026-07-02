@@ -37,7 +37,7 @@
   },
   "7": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl naked,legs spread,lying down,table,indoors,thighs,thigh gap,curtains,window,ass,ass focus,grabbing own ass,hand on own ass,leopard print,thong,animal print,short,medium hair,glasses,lips,nail polish,(лежит на столе голая раздвинув ноги:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl ,(nude:0.8)",
       "clip": [
         "1",
         1
@@ -63,7 +63,7 @@
   },
   "9": {
     "inputs": {
-      "seed": 1937077950,
+      "seed": 1523410454,
       "steps": 20,
       "cfg": 6.5,
       "sampler_name": "dpmpp_sde",
@@ -133,7 +133,7 @@
   },
   "14": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202512/5/f601e780bb87431fb005395db79c47cd.png",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20246/6/135b507cf23b4fa09117f4e50ff0d84a.jpeg",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

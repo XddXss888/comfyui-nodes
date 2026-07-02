@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "ai_edit_src_EE1B5C65-3CBF-439E-9284-0E964F6FCAC6.png"
+      "image": "ai_edit_src_CC410E99-A043-4439-9F8A-447D3ED4A6A4.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -123,7 +123,7 @@
         "93",
         0
       ],
-      "prompt": "White background with red cursive write COLOMBIAN MAMI. On the Right side add the colombian flag. Center MAMI below COLOMBIAN. Remove any wave effective from the lettering and flag.\r\n\r\n\r\n"
+      "prompt": "Keep the original logo exactly the same with no distortions, modifications, or redesigns. Only change all blue/navy text and lettering to pure white while preserving the original font style, spacing, sizing, sharpness, and logo proportions. Keep all gold, red, and emblem colors unchanged. Remove the background completely and make it transparent. Output as a high-resolution PNG with crisp edges suitable for printing and embroidery\r\n"
     },
     "class_type": "TextEncodeQwenImageEditPlus",
     "_meta": {
@@ -173,7 +173,7 @@
       "denoise": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "seed": 3270942537980404,
+      "seed": 6483057847793908,
       "steps": 4
     },
     "class_type": "KSampler",
@@ -203,7 +203,7 @@
         "8",
         0
       ],
-      "filename_prefix": "iqueue_edit_EE1B5C65-3CBF-439E-9284-0E964F6FCAC6"
+      "filename_prefix": "iqueue_edit_CC410E99-A043-4439-9F8A-447D3ED4A6A4"
     },
     "class_type": "SaveImage",
     "_meta": {

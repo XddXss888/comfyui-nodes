@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "seductive young curvy woman with long black hair, In a cozy apartment with soft evening lighting, a nude woman reclines on the bed in an intimate trust game atmosphere, legs parted and knees bent, one hand between her thighs with fingers touching her exposed vulva, the other resting on her breast, torso slightly arched, head tilted back with eyes half-closed in pleasure and lips parted, simple bedroom background, warm low light casting gentle shadows across her skin, medium close-up framing from waist up emphasizing her pose and expression.",
+      "text": "ameg2, A woman sitting relaxed on a wooden bench inside a steamy sauna after a workout, wrapped in a white towel, leaning back slightly with a warm genuine smile and knowing eyes directed forward, soft warm lighting glowing through the rising steam, simple towels folded nearby, medium close-up framing on her upper body and expression, natural posture with one hand resting on the bench, calm and intimate atmosphere.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "izumi_v.2.safetensors",
+      "lora_name": "ameg2_con_char.safetensors",
       "strength_model": 0.9,
-      "strength_clip": 1.0,
+      "strength_clip": 0.9,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -133,11 +133,11 @@
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 26161571962184,
+      "seed": 415093436776455,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

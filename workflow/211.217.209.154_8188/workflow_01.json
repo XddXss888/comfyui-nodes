@@ -20,27 +20,6 @@
       "title": "Загрузить модель диффузии"
     }
   },
-  "8": {
-    "inputs": {
-      "prompt": "Same exact pose as the reference image, same girl, same face, no changes to facial features, long wavy light brown hair, fully naked, sitting relaxed on gray sofa in wide W pose with legs spread wide, looking directly at camera with soft gentle smile. Highly detailed realistic skin texture, natural soft lighting, photorealistic, intimate view, cinematic, masterpiece, best quality",
-      "clip": [
-        "4",
-        0
-      ],
-      "vae": [
-        "9",
-        0
-      ],
-      "image": [
-        "14",
-        0
-      ]
-    },
-    "class_type": "TextEncodeQwenImageEdit",
-    "_meta": {
-      "title": "TextEncodeQwenImageEdit"
-    }
-  },
   "9": {
     "inputs": {
       "vae_name": "ae.safetensors"
@@ -52,18 +31,18 @@
   },
   "10": {
     "inputs": {
-      "seed": 1006801177597396,
-      "steps": 5,
-      "cfg": 1.0,
+      "seed": 975496416078325,
+      "steps": 20,
+      "cfg": 0.4,
       "sampler_name": "euler_ancestral_cfg_pp",
-      "scheduler": "normal",
-      "denoise": 0.6,
+      "scheduler": "beta",
+      "denoise": 0.7,
       "model": [
         "5",
         0
       ],
       "positive": [
-        "8",
+        "25",
         0
       ],
       "negative": [
@@ -71,7 +50,7 @@
         0
       ],
       "latent_image": [
-        "18",
+        "15",
         0
       ]
     },
@@ -147,15 +126,26 @@
       "title": "Сохранить изображение"
     }
   },
-  "18": {
+  "23": {
     "inputs": {
-      "width": 608,
-      "height": 1080,
-      "batch_size": 1
+      "clip_name": "clip_vision_h.safetensors"
     },
-    "class_type": "EmptyLatentImage",
+    "class_type": "CLIPVisionLoader",
     "_meta": {
-      "title": "Пустое латентное изображение"
+      "title": "Загрузить видение CLIP"
+    }
+  },
+  "25": {
+    "inputs": {
+      "text": "Same girl ully naked, sitting relaxed on gray sofa in wide W pose with legs spread wide, looking directly at camera with soft gentle smile. Highly detailed realistic skin texture, natural soft lighting, photorealistic, intimate view, cinematic, masterpiece, best quality",
+      "clip": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Кодирование текста CLIP (Запрос)"
     }
   }
 }

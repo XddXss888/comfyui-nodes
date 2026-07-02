@@ -1,93 +1,123 @@
 {
   "1": {
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "UNETLoader",
     "inputs": {
-      "ckpt_name": "epicRealismXL_pureFix.safetensors"
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
     }
   },
   "2": {
-    "class_type": "VAELoader",
+    "class_type": "DualCLIPLoader",
     "inputs": {
-      "vae_name": "sdxl_vae.safetensors"
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp16.safetensors",
+      "type": "flux"
     }
   },
   "3": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "VAELoader",
     "inputs": {
-      "clip": [
+      "vae_name": "ae.safetensors"
+    }
+  },
+  "11": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
         "1",
-        1
+        0
       ],
-      "text": "A stunning Korean idol-style woman with a subtle auburn tint short bob cut, standing on a foggy forest trail at dawn. Sharp jawline and mesmerizing cat-like eyes convey elegant sophistication. She wears a fitted crop top and high-waisted pants, one hand lightly touching her collarbone. Shot on 24mm wide angle with dynamic perspective, her silhouette framed against a soft golden light source breaking through misty trees. Studio butterfly lighting from above sculpts her flawless porcelain skin, casting refined shadows beneath her cheekbones. Half body waist up composition. Styled dewy makeup with gradient lips and subtle smoky eyes. Ethereal fog wraps around her figure, creating dreamy depth separation. Cinematic film grain, dramatic contrast, photogenic beauty radiating quiet confidence."
+      "lora_name": "sakura_korean_flux.safetensors",
+      "strength_model": 0.78
     }
   },
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
-        "1",
-        1
+        "2",
+        0
       ],
-      "text": "lowres, blurry, bad anatomy, watermark, signature, oversaturated, harsh lighting, plastic skin"
+      "text": "Extreme close-up of eyes and lips, stunning Korean idol woman with warm caramel balayage blunt cut and wispy bangs framing her baby face. Aegyo-sal under-eye charm with dewy luminous skin, soft peach lip tint catching light. Shot on 135mm telephoto, compressed bokeh of a zen garden with glistening morning dew on moss and raked sand patterns. Slight low angle looking up, empowering perspective. Harsh midday sun casting sharp geometric shadows across her face from bamboo lattice overhead. Athletic wear visible at neckline, sporty chic mesh detail. Warm approachable expression, eyes radiating quiet confidence. Editorial fashion portrait, dramatic contrast between sun-drenched highlights and deep crisp shadows. Flawless photogenic skin, magazine-quality."
     }
   },
   "5": {
-    "class_type": "EmptyLatentImage",
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "width": 896,
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "text, watermark, logo, low detail"
+    }
+  },
+  "6": {
+    "class_type": "FluxGuidance",
+    "inputs": {
+      "conditioning": [
+        "4",
+        0
+      ],
+      "guidance": 3.9
+    }
+  },
+  "7": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 1024,
       "height": 1280,
       "batch_size": 1
     }
   },
-  "6": {
+  "8": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "1",
+        "11",
         0
       ],
       "positive": [
-        "3",
-        0
-      ],
-      "negative": [
-        "4",
-        0
-      ],
-      "latent_image": [
-        "5",
-        0
-      ],
-      "seed": 1797734125,
-      "control_after_generate": "fixed",
-      "steps": 30,
-      "cfg": 5.0,
-      "sampler_name": "dpmpp_2m",
-      "scheduler": "karras",
-      "denoise": 1.0
-    }
-  },
-  "7": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "samples": [
         "6",
         0
       ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ],
+      "seed": 371207846,
+      "control_after_generate": "fixed",
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
       "vae": [
-        "2",
+        "3",
         0
       ]
     }
   },
-  "8": {
+  "10": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "7",
+        "9",
         0
       ],
-      "filename_prefix": "portrait_1797734125"
+      "filename_prefix": "portrait_371207846"
     }
   }
 }

@@ -4,13 +4,13 @@
 **内存**: 62 GB (空闲 17 GB)
 **版本**: 0.3.65
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-07-01 08:08:25
-**历史总数**: 32 | **成功**: 10
+**扫描时间**: 2026-07-02 08:09:26
+**历史总数**: 42 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `af41e57a-eb4f-4f2c-b991-811f6ab20640`
+- **Prompt ID**: `6dc48844-704c-48da-841e-e04b078ee40c`
 - **类型**: 图生视频
 - **节点数**: 27
 - **模型** (6):
@@ -22,7 +22,7 @@
   - wan2.1/wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors
 
 ### 2. workflow_02.json
-- **Prompt ID**: `11488e4d-2963-4dc6-9de1-a85d0dc89278`
+- **Prompt ID**: `3747f099-393a-4099-92e4-e3d0886eb96f`
 - **类型**: 图生视频
 - **节点数**: 27
 - **模型** (6):
@@ -34,7 +34,7 @@
   - wan2.1/wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors
 
 ### 3. workflow_03.json
-- **Prompt ID**: `c22f333d-cf8a-400f-bb6d-33fba67433cc`
+- **Prompt ID**: `77be2e70-e941-48c1-9c23-9d9435066be5`
 - **类型**: 图生视频
 - **节点数**: 27
 - **模型** (6):
@@ -46,7 +46,7 @@
   - wan2.1/wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors
 
 ### 4. workflow_04.json
-- **Prompt ID**: `07ad80ec-addb-4d20-961e-7c187c977ef9`
+- **Prompt ID**: `f8f8676f-557f-4ad0-9a01-a0636d10eb41`
 - **类型**: 图生视频
 - **节点数**: 27
 - **模型** (6):
@@ -58,7 +58,7 @@
   - wan2.1/wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors
 
 ### 5. workflow_05.json
-- **Prompt ID**: `3d9547b5-7a53-4232-a733-9d2df7727468`
+- **Prompt ID**: `86171e77-7664-4f27-b6a4-4a6eefccfaf0`
 - **类型**: 图生视频
 - **节点数**: 27
 - **模型** (6):
@@ -70,7 +70,7 @@
   - wan2.1/wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors
 
 ### 6. workflow_06.json
-- **Prompt ID**: `fd598be4-5f73-44cb-beee-7e55cc27c91e`
+- **Prompt ID**: `4a8dc46f-6ef1-4df1-a05a-203012e60e59`
 - **类型**: 图生视频
 - **节点数**: 27
 - **模型** (6):
@@ -82,7 +82,7 @@
   - wan2.1/wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors
 
 ### 7. workflow_07.json
-- **Prompt ID**: `9699cc25-3546-421e-8df6-d6b5622ed99c`
+- **Prompt ID**: `320fc529-2460-4e51-91d8-f595c5d468c6`
 - **类型**: 图生视频
 - **节点数**: 27
 - **模型** (6):
@@ -94,7 +94,7 @@
   - wan2.1/wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors
 
 ### 8. workflow_08.json
-- **Prompt ID**: `b7780157-281f-4585-96fb-4a39c80eb4b9`
+- **Prompt ID**: `6f7800ef-21c7-4aee-9cbb-73f9121147cf`
 - **类型**: 图生视频
 - **节点数**: 27
 - **模型** (6):
@@ -106,7 +106,7 @@
   - wan2.1/wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors
 
 ### 9. workflow_09.json
-- **Prompt ID**: `73162912-360a-4fec-a0a0-2bdb366431b7`
+- **Prompt ID**: `216959a3-3026-41e1-8143-6c4588769771`
 - **类型**: 图生视频
 - **节点数**: 27
 - **模型** (6):
@@ -118,7 +118,7 @@
   - wan2.1/wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors
 
 ### 10. workflow_10.json
-- **Prompt ID**: `b634f576-c04e-4cc5-85c5-4e5ad8081985`
+- **Prompt ID**: `3be1004a-ce3a-4e58-914c-2a4d2cd2bf9d`
 - **类型**: 图生视频
 - **节点数**: 27
 - **模型** (6):

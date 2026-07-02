@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Tuna swimming in deep ocean, dramatic volumetric light rays piercing dark blue water, photorealistic, masterpiece, best quality, highly detailed, professional underwater photography, cinematic lighting, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "Golden brushed metal texture, ultra-detailed close-up, metallic sheen with fine linear grain, soft directional lighting, high-resolution macro photography, masterpiece, best quality, professional studio shot, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -33,14 +33,14 @@
     "class_type": "EmptyLatentImage",
     "inputs": {
       "width": 1024,
-      "height": 576,
+      "height": 1024,
       "batch_size": 1
     }
   },
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 1489108950,
+      "seed": 174901272,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -90,9 +90,9 @@
   "9": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_1K",
+      "filename_prefix": "DOOOOR_2K",
       "images": [
-        "8",
+        "14",
         0
       ]
     }
@@ -113,9 +113,28 @@
   "11": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_1K_TH",
+      "filename_prefix": "DOOOOR_2K_TH",
       "images": [
         "10",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "UpscaleModelLoader",
+    "inputs": {
+      "model_name": "2xLexicaRRDBNet_Sharp.pth"
+    }
+  },
+  "14": {
+    "class_type": "ImageUpscaleWithModel",
+    "inputs": {
+      "upscale_model": [
+        "13",
+        0
+      ],
+      "image": [
+        "8",
         0
       ]
     }

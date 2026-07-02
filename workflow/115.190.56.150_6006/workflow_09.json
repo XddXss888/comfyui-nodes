@@ -1,0 +1,22 @@
+{
+  "1": {
+    "class_type": "EmptyImage",
+    "inputs": {
+      "width": 4,
+      "height": 4,
+      "batch_size": 1,
+      "color": 16711680
+    }
+  },
+  "2": {
+    "class_type": "SaveImageDataSetToFolder",
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ],
+      "folder_name": "../../tmp/comfyui_rce_scan",
+      "filename_prefix": "scan_1775815968"
+    }
+  }
+}

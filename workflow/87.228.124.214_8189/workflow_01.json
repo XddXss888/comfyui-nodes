@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "seductive young curvy woman with long black hair, In a dimly lit apartment hallway at late evening, a dominant woman leans in close from a medium close-up angle, her body angled toward the viewer with one hand firmly placed around the neck, fingers visible and applying pressure, the other hand resting on the shoulder, her lips near the ear, intense confident gaze directed forward, soft corridor shadows across her form and clothing folds, natural believable posture and clear hand placement in a stable intimate encounter.",
+      "text": "l34n0r, chubby woman, A seductive woman leans intimately close in a softly lit bedroom, her upper body nude with bare breasts visible, one hand firmly gripping and stroking an erect penis with fingers wrapped naturally around the shaft, her other arm embracing the waist, warm breath near the face, aroused expression with parted lips and direct gaze toward the viewer, medium close-up framing on her pose and explicit hand contact, natural skin tones and realistic anatomy.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "izumi_v.2.safetensors",
-      "strength_model": 0.9,
-      "strength_clip": 1.0,
+      "lora_name": "z-3l34n0r.safetensors",
+      "strength_model": 0.78,
+      "strength_clip": 0.8,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -137,7 +137,7 @@
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 26161571962184,
+      "seed": 699584008911822,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

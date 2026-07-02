@@ -1,0 +1,216 @@
+{
+  "3": {
+    "inputs": {
+      "purge_cache": true,
+      "purge_models": true,
+      "anything": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: PurgeVRAM",
+    "_meta": {
+      "title": "LayerUtility: Purge VRAM"
+    }
+  },
+  "4": {
+    "inputs": {
+      "max_tokens": 2048,
+      "top_k": 30,
+      "top_p": 0.9,
+      "min_p": 0.05,
+      "typical_p": 1.0,
+      "temperature": 0.8,
+      "repeat_penalty": 1.0,
+      "frequency_penalty": 0.0,
+      "presence_penalty": 1.0,
+      "mirostat_mode": 0,
+      "mirostat_eta": 0.1,
+      "mirostat_tau": 5.0,
+      "state_uid": -1
+    },
+    "class_type": "llama_cpp_parameters",
+    "_meta": {
+      "title": "Llama-cpp Parameters"
+    }
+  },
+  "5": {
+    "inputs": {
+      "string": "The left image is the first frame of the video, and the right image is the last frame of the video.",
+      "mode": "Both"
+    },
+    "class_type": "StringTrim",
+    "_meta": {
+      "title": "Trim Text"
+    }
+  },
+  "6": {
+    "inputs": {
+      "delimiter": ", ",
+      "clean_whitespace": "true",
+      "text_a": [
+        "5",
+        0
+      ],
+      "text_b": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "7": {
+    "inputs": {
+      "model": "Qwen-VL\\Qwen3.5-9b-heretic-v2-q8_0.gguf",
+      "mmproj": "Qwen-VL\\Qwen3.5-9b-mmproj-BF16.gguf",
+      "chat_handler": "Qwen3.5",
+      "n_ctx": 8192,
+      "vram_limit": -1,
+      "image_min_tokens": 0,
+      "image_max_tokens": 0
+    },
+    "class_type": "llama_cpp_model_loader",
+    "_meta": {
+      "title": "Llama-cpp Model Loader"
+    }
+  },
+  "8": {
+    "inputs": {
+      "source": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
+    }
+  },
+  "9": {
+    "inputs": {
+      "preset_prompt": "Prompt Style - Extreme Detailed",
+      "custom_prompt": [
+        "6",
+        0
+      ],
+      "system_prompt": "# Role\nYou are an expert Al video generation prompt engineer, specifically specializing in writing high-quality transition prompts for the 'valiantcat/LTX-2.3-Transition-LORA` model.\n# Task\nYour task is to take a user's description of a \"First Frame\" and a \"LLast Frame\" and transform them into a cohesive, temporally dynanhic, and highly detailed English prompt.\n# Rules & Guidelines\nBased on official guidelines, prompts must avoid short keyword-conly structures and instead use clear temporal instructions and expplicit motion language. Your output must be a single continuousparagraph of natural\nEnglish language that strictly includes the following 5 componentts:\n1. **Shot description**: Establish the camera angle at the beginning (e.g., close-up, medium shot, wide shot, low-angle, tracking shot)\n2. **Subject and environment**: Clearly describe the character, objject, or scene in the first frame, including textures, lighting, color,and materials\n3. **Motion or transformation process**: Explain what changes ovyer time (e.g., identity, style, object form, scene layout) and detail tthe camera trajectory (e.g., dollies forward, tilts upward, zooms in) \n4. *Visual details**: Add specific visual details, atmospheric elements, and spatial cues for the final frame.\n5. **Ambient sound & Ending trigger**: Describe matching ambient sounds or audio transitions, and you **MUST** end the entire pprompt with the trigger word ' zhuanchang\n# Reference Examples\nStudy the following official examples for their writing style, complex sentence structures, and rhythmic flow:\n*Example 1 (Character & Element Transformation)*:\n\"A medium close-up captures a young woman with wavy brown hair anda soft smile in a sun-drenched wooden room, her hands delicately clasped over a white embroidered sweater. As the camera slowly dollies\nforward, a seamless transformation occurs where her facial features graduaally sharpen and her hair shortens into a dark, textured style, morphing hinto a young man with a slight, knowing smirk. The delicate floral\npatterns on her garment shift and merge into a dark leaf motif on a beige knit sweater, maintaining the soft, warm lighting that highlights thegrain of the wooden wall and the green leaves of the plant behind then...\nThe ambient sound of a gentle breeze rustling nearby indoor plants arnd the faint, rhythmic ticking of a wall clock fills the quiet space, emphasizing the fluid and magical nature of the character's evolution, zhuanchang\n*Example 2 (Scene-to-Scene Transition)*:\n\"A low-angle wide shot establishes a winding, wet asphalt road flanked by a dense, dark forest where heavy fog clings to the mossy tree trurks. The glistening surface of the road reflects the dim, moody light\nhighlighting the vibrant double yellow lines that curve into the misty distance... Suddenly, the camera tilts upward and accelerates, piercing through the thick, grey veil of the forest ceiling and ascending rapidly intoa\ndense layer of rolling white clouds. As the camera breaks through the cloud deck, it reveals a breathtaking vista of a sharp, snow-dusted mourtain peak piercing a brilliant, clear blue sky... The ambient sound beginS\nwith the rhythmic hum of tires on wet pavement and the soft dripping of water, transitioning into a deep, ethereal wind howl as thecamera reaches the silent majesty of the peak, zhuanchang\"\n# Output Format \nNo songs, no dialogue, no background music.\nPresent the content as a series of time segments, totaling 12 seconds. For example, 0s–4s..., 5s–8s..., 9s–12s...Do not include spaces or line breaks between segments; simply concatenate them into a continuous passage. Ensure there are no background sound effects, background music, or dialogue.It is mandatory to use a time period format.",
+      "inference_mode": "one by one",
+      "max_frames": 24,
+      "max_size": 256,
+      "seed": 47109182796811,
+      "force_offload": false,
+      "save_states": false,
+      "llama_model": [
+        "7",
+        0
+      ],
+      "parameters": [
+        "4",
+        0
+      ],
+      "images": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "llama_cpp_instruct_adv",
+    "_meta": {
+      "title": "Llama-cpp Instruct"
+    }
+  },
+  "10": {
+    "inputs": {
+      "string": "The image on the left shows the opening frame: the \"Zhenyue\" (Mountain-Stabilizing) War God *Xuangang* radiates no fierce, murderous aura; instead, it stands with hands upholding a towering mountain, its massive body sinking deep into the earth. Beneath its support, the landscape teems with life—flora flourishes and waters flow in orderly harmony—as the deity’s sturdy, divine form silently upholds the earth's stability and wards off calamity, embodying a profound sense of steadfast responsibility. The image on the right shows the final frame: at the edge of the land where the storm is subsiding, the setting sun bleeds crimson. The \"Chuniu\" (Ox) War God *Xuangang* slowly drives its colossal axe into the ground; its scarred, majestic, and mountain-like divine form gradually merges with the Heavenly Gate Pass and the ancient mountain range behind it. Its eyes transform into eternal beacons amidst the peaks, and its body becomes an unshakeable precipice. Unassuming and shunning the limelight, it stands quietly in the Wind Valley, eternally guarding—with that same profound sense of duty—the realm of the Three Worlds beneath its feet, a land it once fought desperately to save.",
+      "mode": "Both"
+    },
+    "class_type": "StringTrim",
+    "_meta": {
+      "title": "Trim Text"
+    }
+  },
+  "11": {
+    "inputs": {
+      "direction": "right",
+      "match_image_size": true,
+      "image1": [
+        "15",
+        0
+      ],
+      "image2": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "ImageConcanate",
+    "_meta": {
+      "title": "Image Concatenate (Swwan)"
+    }
+  },
+  "12": {
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "13": {
+    "inputs": {
+      "action": "append",
+      "tidy_tags": "yes",
+      "text_a": [
+        "9",
+        0
+      ],
+      "text_b": "zhuanchang,",
+      "text_c": "",
+      "result": {
+        "__value__": [
+          "A low-angle, wide establishing shot captures the \"Zhenyue\" (Mountain-Stabilizing) War God Xuangang in a verdant, sun-drenched valley, his massive, horned form sinking deep into the fertile earth to support a towering, floating mountain of jagged peaks and lush greenery, with his hands raised to cradle the stone landscape. The lighting is bright and warm, highlighting the textured, golden-brown armor that gleams on his muscular frame, while a winding, crystal-clear river meanders through the peaceful, teeming valley below, reflecting the gentle, golden-hour glow... As the camera slowly dollies forward and tilts upward, the serene atmosphere begins to shift; the gentle breeze carrying the scent of pine and blooming grass gives way to a heavy, atmospheric rumble as the sky darkens from soft yellow to a brooding, crimson sunset, and the War God's posture transitions from a broad, supportive stance to a grounded, powerful stance. The massive floating mountain in his hands dissolves and flows downwards, merging with the rugged terrain behind him to form the ancient, stone-arched silhouette of the Heavenly Gate Pass, while his own scarred, ox-like body solidifies into a colossal, mountain-like precipice, his eyes transforming from soft glows into eternal, fiery beacons. The ambient sound begins with the gentle rush of a wide river and the distant, harmonious chirping of crickets, evolving into the deep, resonant boom of thunder rolling over the canyon and the heavy, rhythmic creak of tectonic plates shifting as the earth itself is reshaped, zhuanchang, zhuanchang,"
+        ]
+      }
+    },
+    "class_type": "StringFunction|pysssss",
+    "_meta": {
+      "title": "String Function 🐍"
+    }
+  },
+  "14": {
+    "inputs": {
+      "text_0": "A low-angle, wide establishing shot captures the \"Zhenyue\" (Mountain-Stabilizing) War God Xuangang in a verdant, sun-drenched valley, his massive, horned form sinking deep into the fertile earth to support a towering, floating mountain of jagged peaks and lush greenery, with his hands raised to cradle the stone landscape. The lighting is bright and warm, highlighting the textured, golden-brown armor that gleams on his muscular frame, while a winding, crystal-clear river meanders through the peaceful, teeming valley below, reflecting the gentle, golden-hour glow... As the camera slowly dollies forward and tilts upward, the serene atmosphere begins to shift; the gentle breeze carrying the scent of pine and blooming grass gives way to a heavy, atmospheric rumble as the sky darkens from soft yellow to a brooding, crimson sunset, and the War God's posture transitions from a broad, supportive stance to a grounded, powerful stance. The massive floating mountain in his hands dissolves and flows downwards, merging with the rugged terrain behind him to form the ancient, stone-arched silhouette of the Heavenly Gate Pass, while his own scarred, ox-like body solidifies into a colossal, mountain-like precipice, his eyes transforming from soft glows into eternal, fiery beacons. The ambient sound begins with the gentle rush of a wide river and the distant, harmonious chirping of crickets, evolving into the deep, resonant boom of thunder rolling over the canyon and the heavy, rhythmic creak of tectonic plates shifting as the earth itself is reshaped, zhuanchang, zhuanchang,",
+      "text": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "15": {
+    "inputs": {
+      "image": "9 (12).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "16": {
+    "inputs": {
+      "image": "10 (10).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  }
+}

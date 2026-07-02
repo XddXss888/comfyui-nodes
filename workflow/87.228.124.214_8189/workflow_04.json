@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "seductive young curvy woman with long black hair, A woman stands in a cozy apartment during evening with soft intimate lighting, wearing casual fitted home clothing that shows natural fabric tension and folds, body weight shifted to one leg with one hand lightly resting on her hip and the other arm relaxed at her side, head slightly tilted, gazing toward the viewer with a faint playful smile and confident expression, trust game atmosphere, medium close-up framing, simple background with subtle unfinished paintings visible behind her, natural believable posture and proportions, warm soft lighting.",
+      "text": "e1st_asn, A woman sits on the edge of a simple bed with legs spread wide apart, knees bent and feet planted on the mattress, fully exposing her vagina and inner folds, hands resting on her inner thighs to hold the position open, upper body leaning slightly back for balance, neutral expression with direct gaze toward the viewer, soft warm indoor lighting, medium close-up framing from a low angle focusing on the hips and exposed area, clean simple background, natural skin tones and realistic anatomy.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 12.0,
+      "shift": 1.73,
       "model": [
         "72",
         0
@@ -109,8 +109,8 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "izumi_v.2.safetensors",
-      "strength_model": 0.9,
+      "lora_name": "nano_Korean.safetensors",
+      "strength_model": 0.81,
       "strength_clip": 1.0,
       "prompt": "",
       "example": "[none]",
@@ -133,11 +133,11 @@
       "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 10,
+      "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 26161571962184,
+      "seed": 585375340973065,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

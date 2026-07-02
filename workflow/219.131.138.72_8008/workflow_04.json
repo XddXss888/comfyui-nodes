@@ -1,0 +1,680 @@
+{
+  "3": {
+    "inputs": {
+      "text": [
+        "306",
+        0
+      ],
+      "嵌入提示词": null,
+      "clip": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码器"
+    }
+  },
+  "4": {
+    "inputs": {
+      "text": "bad video，Extra hands",
+      "嵌入提示词": null,
+      "clip": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码器"
+    }
+  },
+  "6": {
+    "inputs": {
+      "samples": [
+        "331",
+        0
+      ],
+      "vae": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "7": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "8": {
+    "inputs": {
+      "frame_rate": [
+        "239",
+        0
+      ],
+      "loop_count": 0,
+      "filename_prefix": "Wan21_SCAIL2",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "351",
+        0
+      ],
+      "audio": [
+        "33",
+        2
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "合并为视频"
+    }
+  },
+  "9": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "11": {
+    "inputs": {
+      "lora_name": "SCALL2\\lightx2v_I2V_14B_480p_cfg_step_distill_rank128_bf16.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "241",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器(仅模型)"
+    }
+  },
+  "30": {
+    "inputs": {
+      "image": "Work-Fisher_00369_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "33": {
+    "inputs": {
+      "video": "娴娴_bongbong这个超简单！#手势舞#甜妹#一学就会系列_7622682205299418993.mp4",
+      "force_rate": [
+        "355",
+        0
+      ],
+      "custom_width": 0,
+      "custom_height": 0,
+      "frame_load_cap": [
+        "285",
+        0
+      ],
+      "skip_first_frames": 0,
+      "select_every_nth": 1,
+      "format": "AnimateDiff"
+    },
+    "class_type": "VHS_LoadVideo",
+    "_meta": {
+      "title": "加载视频"
+    }
+  },
+  "74": {
+    "inputs": {
+      "model_name": "SCAIL_2\\wan2.1_14B_SCAIL_2_fp8_scaled.safetensors",
+      "weight_dtype": "fp8_e4m3fn",
+      "compute_dtype": "default",
+      "patch_cublaslinear": false,
+      "sage_attention": "disabled",
+      "enable_fp16_accumulation": true
+    },
+    "class_type": "DiffusionModelLoaderKJ",
+    "_meta": {
+      "title": "扩散模型加载器(KJ)"
+    }
+  },
+  "75": {
+    "inputs": {
+      "clip_name": "clip_vision_vit_h.safetensors"
+    },
+    "class_type": "CLIPVisionLoader",
+    "_meta": {
+      "title": "CLIP视觉加载器"
+    }
+  },
+  "76": {
+    "inputs": {
+      "crop": "none",
+      "clip_vision": [
+        "75",
+        0
+      ],
+      "image": [
+        "270",
+        0
+      ]
+    },
+    "class_type": "CLIPVisionEncode",
+    "_meta": {
+      "title": "CLIP视觉编码"
+    }
+  },
+  "85": {
+    "inputs": {
+      "detection_threshold": 0.5,
+      "max_objects": [
+        "320",
+        0
+      ],
+      "detect_interval": 2,
+      "images": [
+        "89",
+        0
+      ],
+      "model": [
+        "86",
+        0
+      ],
+      "conditioning": [
+        "275",
+        0
+      ]
+    },
+    "class_type": "SAM3_VideoTrack",
+    "_meta": {
+      "title": "SAM3 视频轨迹"
+    }
+  },
+  "86": {
+    "inputs": {
+      "ckpt_name": "Sam3\\sam3.1_multiplex_fp16.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Checkpoint大模型加载器(简易)"
+    }
+  },
+  "87": {
+    "inputs": {
+      "text": "person",
+      "嵌入提示词": null,
+      "clip": [
+        "86",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码器"
+    }
+  },
+  "89": {
+    "inputs": {
+      "width": [
+        "287",
+        0
+      ],
+      "height": [
+        "288",
+        0
+      ],
+      "upscale_method": "lanczos",
+      "keep_proportion": "crop",
+      "pad_color": "0, 0, 0",
+      "crop_position": "center",
+      "divisible_by": 16,
+      "device": "cpu",
+      "image": [
+        "33",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJv2",
+    "_meta": {
+      "title": "图像缩放 v2(KJ)"
+    }
+  },
+  "91": {
+    "inputs": {
+      "detection_threshold": 0.5,
+      "max_objects": [
+        "320",
+        0
+      ],
+      "detect_interval": 2,
+      "images": [
+        "270",
+        0
+      ],
+      "model": [
+        "86",
+        0
+      ],
+      "conditioning": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "SAM3_VideoTrack",
+    "_meta": {
+      "title": "SAM3 视频轨迹"
+    }
+  },
+  "92": {
+    "inputs": {
+      "images": [
+        "104",
+        1
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "95": {
+    "inputs": {
+      "shift": 5.0,
+      "model": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "模型采样算法SD3"
+    }
+  },
+  "104": {
+    "inputs": {
+      "object_indices": "",
+      "sort_by": "left_to_right",
+      "replacement_mode": [
+        "271",
+        0
+      ],
+      "driving_track_data": [
+        "85",
+        0
+      ],
+      "ref_track_data": [
+        "91",
+        0
+      ]
+    },
+    "class_type": "SCAIL2ColoredMask",
+    "_meta": {
+      "title": "创建 SCAIL-2 颜色遮罩"
+    }
+  },
+  "239": {
+    "inputs": {
+      "video_info": [
+        "33",
+        3
+      ]
+    },
+    "class_type": "VHS_VideoInfoLoaded",
+    "_meta": {
+      "title": "视频信息（已选中）"
+    }
+  },
+  "241": {
+    "inputs": {
+      "lora_name": "SCALL2\\wan2.1_SCAIL_2_DPO_lora_bf16.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "74",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器(仅模型)"
+    }
+  },
+  "270": {
+    "inputs": {
+      "cond": [
+        "271",
+        0
+      ],
+      "tt_value": [
+        "298",
+        0
+      ],
+      "ff_value": [
+        "308",
+        0
+      ]
+    },
+    "class_type": "ImpactConditionalBranch",
+    "_meta": {
+      "title": "条件切换"
+    }
+  },
+  "271": {
+    "inputs": {
+      "value": false
+    },
+    "class_type": "PrimitiveBoolean",
+    "_meta": {
+      "title": "布尔值"
+    }
+  },
+  "273": {
+    "inputs": {
+      "images": [
+        "270",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "275": {
+    "inputs": {
+      "text": "person",
+      "嵌入提示词": null,
+      "clip": [
+        "86",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码器"
+    }
+  },
+  "285": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "287": {
+    "inputs": {
+      "value": 544
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "288": {
+    "inputs": {
+      "value": 960
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "298": {
+    "inputs": {
+      "rem_mode": "BEN2",
+      "image_output": "Preview",
+      "save_prefix": "ComfyUI",
+      "torchscript_jit": false,
+      "add_background": "black",
+      "refine_foreground": false,
+      "images": [
+        "308",
+        0
+      ]
+    },
+    "class_type": "easy imageRemBg",
+    "_meta": {
+      "title": "图像背景移除"
+    }
+  },
+  "306": {
+    "inputs": {
+      "编辑文本": "女人在跳舞"
+    },
+    "class_type": "MuyeTextEditOutput",
+    "_meta": {
+      "title": "文本"
+    }
+  },
+  "308": {
+    "inputs": {
+      "width": [
+        "287",
+        0
+      ],
+      "height": [
+        "288",
+        0
+      ],
+      "upscale_method": "lanczos",
+      "keep_proportion": "crop",
+      "pad_color": "0, 0, 0",
+      "crop_position": "center",
+      "divisible_by": 16,
+      "device": "cpu",
+      "image": [
+        "30",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJv2",
+    "_meta": {
+      "title": "图像缩放 v2(KJ)"
+    }
+  },
+  "320": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "整数"
+    }
+  },
+  "322": {
+    "inputs": {
+      "text": "24.0",
+      "anything": [
+        "239",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
+    }
+  },
+  "329": {
+    "inputs": {
+      "context_length": 81,
+      "context_overlap": 30,
+      "context_schedule": "standard_static",
+      "context_stride": 4,
+      "closed_loop": false,
+      "fuse_method": "overlap-linear",
+      "freenoise": true,
+      "model": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "WanContextWindowsManual",
+    "_meta": {
+      "title": "Wan Context Windows 万 上下文窗口（手册）"
+    }
+  },
+  "331": {
+    "inputs": {
+      "seed": 696208031709794,
+      "steps": 6,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "329",
+        0
+      ],
+      "positive": [
+        "335",
+        0
+      ],
+      "negative": [
+        "335",
+        1
+      ],
+      "latent_image": [
+        "335",
+        2
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "335": {
+    "inputs": {
+      "width": [
+        "89",
+        1
+      ],
+      "height": [
+        "89",
+        2
+      ],
+      "length": [
+        "239",
+        1
+      ],
+      "batch_size": 1,
+      "pose_strength": 0.8,
+      "pose_start": 0.0,
+      "pose_end": 1.0,
+      "video_frame_offset": 0,
+      "previous_frame_count": 5,
+      "replacement_mode": [
+        "271",
+        0
+      ],
+      "positive": [
+        "3",
+        0
+      ],
+      "negative": [
+        "4",
+        0
+      ],
+      "vae": [
+        "7",
+        0
+      ],
+      "pose_video": [
+        "89",
+        0
+      ],
+      "pose_video_mask": [
+        "104",
+        0
+      ],
+      "reference_image": [
+        "270",
+        0
+      ],
+      "reference_image_mask": [
+        "104",
+        1
+      ],
+      "clip_vision_output": [
+        "76",
+        0
+      ]
+    },
+    "class_type": "WanSCAILToVideo",
+    "_meta": {
+      "title": "Wan SCAIL转视频"
+    }
+  },
+  "351": {
+    "inputs": {
+      "tile_size": 768,
+      "overlap": 64,
+      "temporal_size": 4096,
+      "temporal_overlap": 4,
+      "samples": [
+        "331",
+        0
+      ],
+      "vae": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE解码(分块)"
+    }
+  },
+  "352": {
+    "inputs": {
+      "batch_index": 24,
+      "length": 1,
+      "image": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "ImageFromBatch",
+    "_meta": {
+      "title": "从批次获取图像"
+    }
+  },
+  "353": {
+    "inputs": {
+      "images": [
+        "352",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "355": {
+    "inputs": {
+      "value": 24
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "整数"
+    }
+  }
+}

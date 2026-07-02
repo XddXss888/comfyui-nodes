@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "ai_edit_src_375254AC-954E-42DC-8410-EF2AB3476670.png"
+      "image": "ai_edit_src_2A58376A-ABD1-4B3C-9DBB-F1B75310BE0C.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -123,7 +123,7 @@
         "93",
         0
       ],
-      "prompt": "make colombian flag small next to the text. only do one flag on the right side of the text. Seperate the flag from the text. Remove the waves from the flag and make the letters cursive. \r\n\r\n"
+      "prompt": "color swap the blue/navy font to white color. keep the rest of the image original\r\n"
     },
     "class_type": "TextEncodeQwenImageEditPlus",
     "_meta": {
@@ -173,7 +173,7 @@
       "denoise": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "seed": 6542821479911893,
+      "seed": 2089807143181244,
       "steps": 4
     },
     "class_type": "KSampler",
@@ -203,7 +203,7 @@
         "8",
         0
       ],
-      "filename_prefix": "iqueue_edit_375254AC-954E-42DC-8410-EF2AB3476670"
+      "filename_prefix": "iqueue_edit_2A58376A-ABD1-4B3C-9DBB-F1B75310BE0C"
     },
     "class_type": "SaveImage",
     "_meta": {

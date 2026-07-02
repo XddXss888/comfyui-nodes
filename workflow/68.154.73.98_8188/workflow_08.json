@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_16aa716815bb4e63b7e9a785c9a0bff5.png"
+      "image": "ref_eca1ac410fba48c0a9416e28549f074e.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "Bikini\n",
+      "prompt": "線をすこしだけきれいにして\n全裸\n痩せている",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 374400969065157,
+      "seed": 879497660190200,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",

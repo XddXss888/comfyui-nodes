@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Nighttime island with rugged rocky shores, moonlit ocean waves crashing against jagged black basalt cliffs, soft ambient glow from starry sky and distant lighthouse beam, atmospheric mist, cinematic lighting, ultra-detailed, masterpiece, best quality, professional photography., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "Masterpiece, best quality, 8K ultra-detailed Chinese intangible cultural heritage poster, neo-Chinese 3D render in elegant cyan-blue, gold-foil, and warm ivory palette. Realistic 3D modeling with guochao lighting: antique bronze movable-type characters with gold edging, crisp立体 Hanzi; soft-gradient ivory background of scattered type matrix with ethereal glow; foreground features Qinglü landscape, misty clouds, and dynamic modern-clothed silhouettes walking on luminous path. Cinematic lighting, rich depth, translucent atmosphere, “cultural inheritance” grandeur. No text visible., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -33,14 +33,14 @@
     "class_type": "EmptyLatentImage",
     "inputs": {
       "width": 1024,
-      "height": 512,
+      "height": 576,
       "batch_size": 1
     }
   },
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 1249441525,
+      "seed": 1374217660,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -90,9 +90,9 @@
   "9": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_2K",
+      "filename_prefix": "DOOOOR_1K",
       "images": [
-        "14",
+        "8",
         0
       ]
     }
@@ -113,28 +113,9 @@
   "11": {
     "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "DOOOOR_2K_TH",
+      "filename_prefix": "DOOOOR_1K_TH",
       "images": [
         "10",
-        0
-      ]
-    }
-  },
-  "13": {
-    "class_type": "UpscaleModelLoader",
-    "inputs": {
-      "model_name": "2xLexicaRRDBNet_Sharp.pth"
-    }
-  },
-  "14": {
-    "class_type": "ImageUpscaleWithModel",
-    "inputs": {
-      "upscale_model": [
-        "13",
-        0
-      ],
-      "image": [
-        "8",
         0
       ]
     }

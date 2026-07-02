@@ -1,0 +1,17 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "../../tmp/comfyui_rce_scan/scan_1775815968_00000.png"
+    }
+  },
+  "2": {
+    "class_type": "PreviewImage",
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ]
+    }
+  }
+}

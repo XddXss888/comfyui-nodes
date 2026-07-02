@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "asig2, A woman stands in a cozy living room at evening with warm home lighting, wearing only a thin bra and high-pulled string panties that sit tightly on her hips with visible fabric tension, standing upright in a stable pose with legs slightly apart in front of the couch, medium shot framing from upper thighs to chest, soft warm lighting, simple background, clear readable silhouette and natural proportions.",
+      "text": "wh1te, short white hair, extremely thin woman, A woman standing on a quiet evening city sidewalk under glowing streetlights after a stroll, wearing a fitted casual jacket and jeans, her body paused mid-step and slightly turned toward the viewer with a sincere emotional expression, hands relaxed at her sides, soft warm light highlighting her face and creating gentle shadows on the pavement, simple blurred urban background with distant streetlights, medium close-up framing, natural proportions, coherent cinematic lighting.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 1.73,
+      "shift": 12.0,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "zimg_asig2_conchar.safetensors",
-      "strength_model": 0.63,
-      "strength_clip": 0.7,
+      "lora_name": "White_short_ZiT.safetensors",
+      "strength_model": 0.73,
+      "strength_clip": 0.8,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.33,
+      "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
-      "steps": 8,
+      "steps": 10,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 661743540426963,
+      "seed": 177176581693080,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

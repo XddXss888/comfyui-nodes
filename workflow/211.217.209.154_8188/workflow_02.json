@@ -20,25 +20,18 @@
       "title": "Загрузить модель диффузии"
     }
   },
-  "8": {
+  "7": {
     "inputs": {
-      "prompt": "Same exact pose as the reference image, same girl, same face, no changes to facial features, long wavy light brown hair, fully naked, sitting relaxed on gray sofa in wide W pose with legs spread wide, looking directly at camera with soft gentle smile. Highly detailed realistic skin texture, natural soft lighting, photorealistic, intimate view, cinematic, masterpiece, best quality",
-      "clip": [
-        "4",
-        0
-      ],
-      "vae": [
-        "9",
-        0
-      ],
-      "image": [
-        "14",
+      "lora_name": "change_clothes_to_nothing_000012800.safetensors",
+      "strength_model": 0.4,
+      "model": [
+        "5",
         0
       ]
     },
-    "class_type": "TextEncodeQwenImageEdit",
+    "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "TextEncodeQwenImageEdit"
+      "title": "Загрузчик LoRA (Только модель)"
     }
   },
   "9": {
@@ -52,18 +45,18 @@
   },
   "10": {
     "inputs": {
-      "seed": 968878049891465,
-      "steps": 5,
-      "cfg": 1.0,
+      "seed": 932391474731483,
+      "steps": 20,
+      "cfg": 0.4,
       "sampler_name": "euler_ancestral_cfg_pp",
-      "scheduler": "normal",
-      "denoise": 0.8,
+      "scheduler": "beta",
+      "denoise": 0.7,
       "model": [
-        "5",
+        "7",
         0
       ],
       "positive": [
-        "8",
+        "25",
         0
       ],
       "negative": [
@@ -71,7 +64,7 @@
         0
       ],
       "latent_image": [
-        "18",
+        "15",
         0
       ]
     },
@@ -147,15 +140,17 @@
       "title": "Сохранить изображение"
     }
   },
-  "18": {
+  "25": {
     "inputs": {
-      "width": 608,
-      "height": 1080,
-      "batch_size": 1
+      "text": "Same girl ully naked, sitting relaxed on gray sofa in wide W pose with legs spread wide, looking directly at camera with soft gentle smile. Highly detailed realistic skin texture, natural soft lighting, photorealistic, intimate view, cinematic, masterpiece, best quality",
+      "clip": [
+        "4",
+        0
+      ]
     },
-    "class_type": "EmptyLatentImage",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "Пустое латентное изображение"
+      "title": "Кодирование текста CLIP (Запрос)"
     }
   }
 }

@@ -1,277 +1,100 @@
 {
-  "173": {
-    "inputs": {
-      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
-      "type": "flux2",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "CLIP Loader"
-    }
-  },
-  "174": {
-    "inputs": {
-      "vae_name": "flux2-vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "VAE Loader"
-    }
-  },
-  "175": {
-    "inputs": {
-      "unet_name": "flux-2-klein-9b-fp8.safetensors",
-      "weight_dtype": "default"
-    },
+  "1": {
     "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNET Loader"
+    "inputs": {
+      "unet_name": "Krea2RedMix2.1-8Steps-fp8-scaled-ComfyUI.safetensors",
+      "weight_dtype": "default"
     }
   },
-  "336": {
+  "2": {
+    "class_type": "CLIPLoader",
     "inputs": {
-      "image": "ComfyUI_01157_.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Source Image"
+      "clip_name": "qwen3vl_4b_fp8_scaled.safetensors",
+      "type": "krea2",
+      "device": "default"
     }
   },
-  "338": {
+  "3": {
+    "class_type": "VAELoader",
     "inputs": {
-      "text": [
-        "340",
-        0
-      ],
-      "clip": [
-        "616",
-        1
-      ]
-    },
+      "vae_name": "qwen_image_vae.safetensors"
+    }
+  },
+  "4": {
     "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "Positive Prompt Encode"
-    }
-  },
-  "340": {
     "inputs": {
-      "text": "The Exact same girl from the reference photo. A close-up POV shot of her on her knees in front of me in a dimly lit bedroom. She looks up at me with lust-filled eyes as her huge, plump, glossy bimbo lips stretch wide around my thick cock. She takes me deep into her warm, wet mouth, sucking passionately while her tongue swirls around the head and underside. Thick saliva drips down her chin onto her massive tits. Her eyes never leave mine, full of submission and desire. Warm candlelight flickers on her face, ultra-realistic, maximum detail."
-    },
-    "class_type": "CR Text",
-    "_meta": {
-      "title": "Positive Prompt"
-    }
-  },
-  "341": {
-    "inputs": {
-      "pixels": [
-        "617",
-        0
-      ],
-      "vae": [
-        "174",
+      "text": "这是一张以人体动态为核心的户外摄影照片，主角为一位年轻中国女性运动员，在晨曦或午后柔和阳光下沿公园步道奔跑。她身着亮粉色运动短裤与同色系跑鞋，上半身赤裸无衣，仅佩戴白色入耳式耳机线从颈后垂落至腰际的随身听上，左臂轻握拳状摆动，右腿抬膝呈冲刺姿势，发丝被疾驰气流扬起成流动弧线，面部表情轻松充满朝气，眼神直望前方；背景为城市绿意盎然之公共休闲区——左侧粗壮树干挺立，枝叶繁茂形成天然框架，远处模糊可见楼宇轮廓与散步人群剪影，地面铺装红褐色塑胶跑道边缘散落枯黄落叶，整体光线采用黄金时刻侧逆打光营造温暖层次分明的阴影过渡，色彩呈现清新通透的冷暖交融基调，前景清晰锐利突出人物肌肉线条与皮肤质感，背景则经柔焦处理制造浅景深纵深感，相机角度略微俯拍并配合慢速快门捕捉动感轨迹，整幅影像兼具纪实活力与时尚美学表达，呈现出一种充满生命力的城市健身文化气息，并非传统意义上的暴露而是强调健康自信的身体表现形式。",
+      "clip": [
+        "2",
         0
       ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE Encode"
     }
   },
-  "342": {
+  "5": {
+    "class_type": "ConditioningZeroOut",
     "inputs": {
       "conditioning": [
-        "338",
-        0
-      ],
-      "latent": [
-        "341",
+        "4",
         0
       ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "Reference Latent (Positive)"
     }
   },
-  "343": {
+  "6": {
+    "class_type": "EmptyLatentImage",
     "inputs": {
-      "text": "blurry, fake, cartoon, animated, low quality, bad anatomy, small penis, tiny penis, micro penis, deformed penis, clothed, partially clothed, covered, censored, mosaic censor, black bars, pixel censor, dry mouth, dry lips, no drool, no saliva, low saliva, minimal drool, closed mouth, pursed lips, thin lips, small lips, narrow lips, no lip stretch, bad mouth anatomy, poorly drawn mouth, no tears, no mascara run, static pose, no motion, no thrusting, bad proportions, extra limbs, mutated hands, poorly drawn hands, out of frame, cropped, low detail saliva, cartoonish drool, ascii, text, watermark, signature, logo, ugly, disfigured, deformed face, bad lip texture, matte lips, no gloss, no shine on lips",
-      "clip": [
-        "616",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "Negative Prompt"
-    }
-  },
-  "344": {
-    "inputs": {
-      "conditioning": [
-        "343",
-        0
-      ],
-      "latent": [
-        "341",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "Reference Latent (Negative)"
-    }
-  },
-  "345": {
-    "inputs": {
-      "max_shift": 1.15,
-      "base_shift": 0.0,
-      "width": [
-        "618",
-        0
-      ],
-      "height": [
-        "618",
-        1
-      ],
-      "model": [
-        "616",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingFlux",
-    "_meta": {
-      "title": "ModelSamplingFlux"
-    }
-  },
-  "347": {
-    "inputs": {
-      "width": [
-        "618",
-        0
-      ],
-      "height": [
-        "618",
-        1
-      ],
+      "width": 1440,
+      "height": 2160,
       "batch_size": 1
-    },
-    "class_type": "EmptyFlux2LatentImage",
-    "_meta": {
-      "title": "Empty Latent"
     }
   },
-  "348": {
+  "7": {
+    "class_type": "KSampler",
     "inputs": {
-      "seed": 721044742746018,
-      "steps": 4,
+      "seed": 799802190365512,
+      "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
-      "scheduler": "beta",
+      "scheduler": "simple",
       "denoise": 1.0,
       "model": [
-        "345",
+        "1",
         0
       ],
       "positive": [
-        "342",
+        "4",
         0
       ],
       "negative": [
-        "344",
+        "5",
         0
       ],
       "latent_image": [
-        "347",
+        "6",
         0
       ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler i2i"
     }
   },
-  "349": {
+  "8": {
+    "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "348",
+        "7",
         0
       ],
       "vae": [
-        "174",
+        "3",
         0
       ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
     }
   },
-  "353": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "349",
-        0
-      ]
-    },
+  "9": {
     "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
-    }
-  },
-  "616": {
     "inputs": {
-      "lora_01": "POV_blowjobV1_A.safetensors",
-      "strength_01": 1.0,
-      "lora_02": "Huge_lips_blowjob-000039.safetensors",
-      "strength_02": 0.7,
-      "lora_03": "klein-9b-turn2real_v1.5_ep9.safetensors",
-      "strength_03": 0.5,
-      "lora_04": "Huge_fake_lips_FLUX.safetensors",
-      "strength_04": 0.6,
-      "model": [
-        "175",
+      "images": [
+        "8",
         0
       ],
-      "clip": [
-        "173",
-        0
-      ]
-    },
-    "class_type": "Lora Loader Stack (rgthree)",
-    "_meta": {
-      "title": "LoRA Stack"
-    }
-  },
-  "617": {
-    "inputs": {
-      "upscale_method": "lanczos",
-      "width": 1536,
-      "height": 1536,
-      "crop": "disabled",
-      "image": [
-        "336",
-        0
-      ]
-    },
-    "class_type": "ImageScale",
-    "_meta": {
-      "title": "Scale Image"
-    }
-  },
-  "618": {
-    "inputs": {
-      "image": [
-        "617",
-        0
-      ]
-    },
-    "class_type": "GetImageSize",
-    "_meta": {
-      "title": "Get Image Size"
+      "filename_prefix": "DarkBeast_gen"
     }
   }
 }

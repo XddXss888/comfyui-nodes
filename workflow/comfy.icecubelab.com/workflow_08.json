@@ -21,37 +21,26 @@
     }
   },
   "4": {
-    "class_type": "LoraLoaderModelOnly",
-    "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "lora_name": "flux_korean_girl.safetensors",
-      "strength_model": 0.85
-    }
-  },
-  "5": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
         "2",
         0
       ],
-      "text": "A stunning Korean idol-style woman with platinum blonde hair in twin low buns, oval face with delicate monolid eyes and flawless porcelain skin, elegant sophisticated expression with a subtle knowing smile. Over-the-shoulder pose glancing back at the camera, cowboy shot framing from thighs up, wearing a casual white blouse with rolled sleeves and fitted high-waist jeans. Standing in a luxury hotel lobby with marble floors and golden chandeliers softly blurred behind her. Window light casting a Rembrandt triangle shadow across her cheek, warm golden hour glow wrapping her silhouette. Shot on 135mm telephoto lens, compressed creamy bokeh background, shallow depth of field. Styled editorial makeup with gradient lips, luminous highlighted skin, editorial fashion photography."
+      "text": "A striking Korean woman with burgundy red layered curtain bangs cascading past her cheekbones, captured in profile view on a 35mm lens. Environmental portrait, bust shot from shoulders up. She has a sharp V-line jaw and bright double-lid eyes that catch the moonlight with fierce confidence. Shot at a rooftop infinity pool under overcast skies, the city skyline blurred behind her. She wears a vintage denim jacket with cutoff shorts, one shoulder slightly turned toward camera. Soft diffused light wraps her flawless porcelain skin, styled with glass-skin makeup and gradient berry lips. Her expression is powerful and commanding, chin slightly lifted. Wind catches her hair mid-movement. Photorealistic, editorial fashion photography, no text, no watermarks."
     }
   },
-  "6": {
+  "5": {
     "class_type": "FluxGuidance",
     "inputs": {
       "conditioning": [
-        "5",
+        "4",
         0
       ],
       "guidance": 3.5
     }
   },
-  "7": {
+  "6": {
     "class_type": "CLIPTextEncode",
     "inputs": {
       "clip": [
@@ -61,47 +50,47 @@
       "text": ""
     }
   },
-  "8": {
+  "7": {
     "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "width": 896,
-      "height": 1280,
+      "width": 1024,
+      "height": 1024,
       "batch_size": 1
     }
   },
-  "9": {
+  "8": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "4",
+        "1",
         0
       ],
       "positive": [
-        "6",
+        "5",
         0
       ],
       "negative": [
-        "7",
+        "6",
         0
       ],
       "latent_image": [
-        "8",
+        "7",
         0
       ],
-      "seed": 15776976,
+      "seed": 1246929754,
       "control_after_generate": "fixed",
-      "steps": 22,
+      "steps": 20,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0
     }
   },
-  "10": {
+  "9": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "9",
+        "8",
         0
       ],
       "vae": [
@@ -110,14 +99,14 @@
       ]
     }
   },
-  "11": {
+  "10": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "10",
+        "9",
         0
       ],
-      "filename_prefix": "portrait_15776976"
+      "filename_prefix": "portrait_1246929754"
     }
   }
 }

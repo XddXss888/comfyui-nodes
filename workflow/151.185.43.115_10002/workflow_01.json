@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "ComfyUI_00276_.png"
+      "image": "SC1.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -10,69 +10,22 @@
   },
   "2": {
     "inputs": {
-      "prompt": "ultra-realistic cinematic video inside an authentic Indian tier-2 hardware shop during the afternoon. The shop is filled with hanging electrical wires, PVC pipes, switch boxes, paint buckets, tools, and hardware products. Warm natural sunlight enters from the storefront.\n\nA 6-year-old Indian boy stands at the counter holding a bright orange plastic toy gun. He is enthusiastically playing \"Chor-Sipahi.\" In excitement, he points the toy gun toward the counter and loudly shouts,\n\nKid (excited, playful): \"Dhiishoooom!\"\n\nImmediately, the child grabs the small blue-and-white hardware payment soundbox from the counter and holds it to his mouth like a police walkie-talkie. He speaks dramatically with complete confidence:\n\nKid: \"Hello control room... chor bhag gaya!\"\n\nThe middle-aged Indian shopkeeper, Ramesh, wearing a checked shirt, instantly reacts with comic panic. He quickly but gently reaches across the counter with both hands, trying to pull the soundbox away without hurting the child. His facial expression shows genuine concern mixed with humorous frustration.\n\nAs he carefully tugs the soundbox back, he says naturally:\n\nRamesh (panicking): \"Arre beta! Yeh khilona nahi hai, chhod do! Isse dukan ka payment pata chalta hai. Agar toot gaya toh naya dabba khareedna padega!\"\n\nThe child keeps smiling and continues pretending to be a police officer while lightly resisting.\n\nCamera Direction:\n\nSingle continuous handheld shot.\nEye-level perspective.\nBegin with a medium shot of the child, then subtly push in as the child grabs the soundbox.\nSlight handheld movement during Ramesh's reaction to enhance realism.\nEnd on a close two-shot capturing both the child's playful grin and Ramesh's worried expression.\n\nStyle:\nUltra-photorealistic, natural Indian faces, authentic Tier-2 hardware shop, documentary realism, warm afternoon sunlight, realistic body language, synchronized Hindi lip movement, expressive facial acting, subtle motion blur, 35mm lens, shallow depth of field, premium commercial quality, no subtitles, no background music, only natural shop ambience and spoken dialogue.",
+      "prompt": "A vertical 9:16 cinematic 3D animated scene inside a modest tier-3 Indian home decorated for a birthday. The room has faded painted walls, plastic purple and golden balloons, cheap \"HAPPY BIRTHDAY BISO\" paper banner, fairy lights, a small homemade birthday cake on a floral tablecloth, plastic gift boxes, an old wooden sofa with printed covers, and a slightly worn cement floor. Warm yellow tungsten lighting creates a cozy village-town atmosphere.\n\nBiso is an anthropomorphic ₹20 Indian note female with the exact same cute Pixar-inspired face, expressive big eyes, and black printed salwar suit with beige dupatta and slippers from the reference. She stands near the birthday table, repeatedly glancing toward the front door with hopeful eyes, nervously clasping her hands and shifting her weight, clearly waiting for someone special.\n\nStanding beside her is her best friend, an anthropomorphic ₹50 Indian note female wearing a simple green printed salwar kameez with matching dupatta and slippers, expressive and slightly mischievous. She folds one arm while talking casually, teasing Biso with playful expressions and hand gestures.\n\nThe wooden front door remains closed throughout the shot. Biso keeps looking toward it every few seconds with anticipation.\n\nDialogue (Hindi):\n\nBiso (hopeful, looking at the door):\n\"आज मेरा बर्थडे है... और ये सौका अभी तक नहीं आया...\"\n\n₹50 Friend (smirking, teasing):\n\"अरे बीसो, छोड़ उसे... वो नहीं आएगा तो क्या? वैसे भी... बेचारा खुद पैसे नहीं कमा पाता। गिफ्ट क्या लाएगा?\"\n\nBiso doesn't respond immediately. She smiles nervously while continuing to stare at the door with hope, believing Souka will arrive. The camera slowly dollies toward them, ending on Biso's anxious face as warm birthday lights softly flicker in the background.\n\nStyle: Premium Pixar-inspired 3D animation, expressive facial acting, natural lip sync, subtle idle movements, cinematic warm lighting, emotional storytelling, consistent character design, shallow depth of field, smooth camera movement, 24fps, ultra-high quality, 9:16 vertical.",
+      "duration": "10",
       "aspect_ratio": "9:16",
       "resolution": "720p",
-      "duration": 15,
-      "nsfw_checker": true,
-      "image": [
+      "seed": 0,
+      "images.image_1": [
         "1",
         0
       ]
     },
-    "class_type": "Kie_GrokImagineVideo15PreviewNode",
+    "class_type": "Kie_GeminiOmniVideoNode",
     "_meta": {
-      "title": "Grok Imagine Video 1.5 Preview"
+      "title": "Gemini Omni Video"
     }
   },
   "3": {
-    "inputs": {
-      "image": "ChatGPT Image Jun 30, 2026, 11_21_35 AM.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "4": {
-    "inputs": {
-      "prompt": "remove the message bubbles from the image, keeping everythign else exactly the same",
-      "model": "Pro",
-      "model.resolution": "2K",
-      "aspect_ratio": "9:16",
-      "images.image_1": [
-        "3",
-        0
-      ]
-    },
-    "class_type": "Official_NanoBananaNode",
-    "_meta": {
-      "title": "Nano Banana Image Generation"
-    }
-  },
-  "5": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "4",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
-    }
-  },
-  "6": {
-    "inputs": {
-      "image": "ComfyUI_00128_.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "7": {
     "inputs": {
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
@@ -88,87 +41,15 @@
       "title": "Save Video"
     }
   },
-  "9": {
+  "4": {
     "inputs": {
-      "prompt": "camera rotates and a customer walks into the frame and the owner is in a bit anxious while th custormer and th child are  laughing",
-      "duration": "4",
-      "aspect_ratio": "9:16",
-      "resolution": "720p",
-      "seed": 0,
-      "images.image_1": [
-        "19",
-        0
-      ],
-      "images.image_2": [
-        "6",
-        0
-      ]
-    },
-    "class_type": "Kie_GeminiOmniVideoNode",
-    "_meta": {
-      "title": "Gemini Omni Video"
-    }
-  },
-  "10": {
-    "inputs": {
-      "image": "ComfyUI_00276_.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "11": {
-    "inputs": {
-      "prompt": "remove the soundbox from the childs hand, and place the soundbox on the table in fornt of the owner, the child points the gun at the owner, and the owner acts handsup",
-      "model": "Pro",
-      "model.resolution": "2K",
-      "aspect_ratio": "9:16",
-      "images.image_1": [
-        "10",
-        0
-      ],
-      "images.image_2": [
-        "16",
-        0
-      ]
-    },
-    "class_type": "Official_NanoBananaNode",
-    "_meta": {
-      "title": "Nano Banana Image Generation"
-    }
-  },
-  "12": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "11",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
-    }
-  },
-  "13": {
-    "inputs": {
-      "image": "ComfyUI_00123_.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "14": {
-    "inputs": {
-      "prompt": "ultra-realistic cinematic video inside an authentic Indian tier-2 hardware shop during the afternoon. The shop is filled with hanging electrical wires, PVC pipes, switchboards, paint buckets, tools, and hardware products. Warm sunlight streams in from the shop entrance.\n\nOn the wooden counter, a blue-and-white hardware payment soundbox is clearly visible, standing upright near the edge of the counter. The soundbox remains untouched at the beginning of the scene.\n\nA 6-year-old Indian boy stands in front of the counter holding a bright orange plastic toy gun in one hand. He is excitedly playing \"Chor-Sipahi.\"\n\nThe boy suddenly points the toy gun toward the counter and loudly shouts:\n\nKid (excited): \"Dhiishoom!\"\n\nOnly after saying \"Dhaishoom!\", the child notices the payment soundbox sitting on the counter. He quickly reaches forward with his free hand, grabs the soundbox off the counter, lifts it to his mouth like a police walkie-talkie, and confidently says:\n\nKid: \"Hello control room... chor bhag gaya!\"\n\nThe moment the child picks up the soundbox, Ramesh, a middle-aged Indian shopkeeper in a checked shirt standing behind the counter, immediately reacts with comic panic. He quickly leans forward and gently tries to take the soundbox back without frightening the child.\n\nWhile carefully pulling the soundbox, he says:\n\nRamesh (panicking): \"Arre beta! Yeh khilona nahi hai, chhod do! Isse dukan ka payment pata chalta hai. Agar toot gaya toh naya dabba khareedna padega!\"\n\nThe child keeps smiling, lightly resists, and continues pretending to be a police officer while holding the soundbox.\n\nCamera Blocking\n0–3 sec: Medium shot. The soundbox is clearly visible on the counter. Child points the toy gun and says \"Dhaishoom!\"\n3–5 sec: Close-up as the child reaches forward and picks up the soundbox from the counter.\n5–8 sec: Child holds the soundbox like a walkie-talkie and says, \"Hello control room... chor bhag gaya!\"\n8–15 sec: Ramesh immediately reaches in, gently pulls the soundbox back while delivering his dialogue. End on both characters in frame with the child grinning and Ramesh looking worried.\nStyle\n\nPhotorealistic, authentic Indian Tier-2 hardware shop, natural Indian faces, realistic body language, documentary-style handheld camera, 35mm lens, shallow depth of field, synchronized Hindi lip movement, warm afternoon lighting, premium commercial quality, no subtitles, no background music, only natural shop ambience and dialogue. Emphasize clear sequential action: the soundbox starts on the counter, then the child picks it up, then Ramesh reacts.",
+      "prompt": "A vertical 9:16 cinematic 3D animated scene inside a modest tier-3 Indian home decorated for a birthday. The room has faded painted walls, plastic purple and golden balloons, cheap \"HAPPY BIRTHDAY BISO\" paper banner, fairy lights, a small homemade birthday cake on a floral tablecloth, plastic gift boxes, an old wooden sofa with printed covers, and a slightly worn cement floor. Warm yellow tungsten lighting creates a cozy village-town atmosphere.\n\nBiso is an anthropomorphic ₹20 Indian note female with the exact same cute Pixar-inspired face, expressive big eyes, and black printed salwar suit with beige dupatta and slippers from the reference. She stands near the birthday table, repeatedly glancing toward the front door with hopeful eyes, nervously clasping her hands and shifting her weight, clearly waiting for someone special.\n\nStanding beside her is her best friend, an anthropomorphic ₹50 Indian note female wearing a simple green printed salwar kameez with matching dupatta and slippers, expressive and slightly mischievous. She folds one arm while talking casually, teasing Biso with playful expressions and hand gestures.\n\nThe wooden front door remains closed throughout the shot. Biso keeps looking toward it every few seconds with anticipation.\n\nDialogue (Hindi):\n\nBiso (hopeful, looking at the door):\n\"आज मेरा बर्थडे है... और ये सौका अभी तक नहीं आया...\"\n\n₹50 Friend (smirking, teasing):\n\"अरे बीसो, छोड़ उसे... वो नहीं आएगा तो क्या? वैसे भी... बेचारा खुद पैसे नहीं कमा पाता। गिफ्ट क्या लाएगा?\"\n\nBiso doesn't respond immediately. She smiles nervously while continuing to stare at the door with hope, believing Souka will arrive. The camera slowly dollies toward them, ending on Biso's anxious face as warm birthday lights softly flicker in the background.\n\nStyle: Premium Pixar-inspired 3D animation, expressive facial acting, natural lip sync, subtle idle movements, cinematic warm lighting, emotional storytelling, consistent character design, shallow depth of field, smooth camera movement, 24fps, ultra-high quality, 9:16 vertical.",
       "aspect_ratio": "9:16",
       "resolution": "720p",
       "duration": 15,
       "nsfw_checker": true,
       "image": [
-        "13",
+        "1",
         0
       ]
     },
@@ -177,14 +58,14 @@
       "title": "Grok Imagine Video 1.5 Preview"
     }
   },
-  "15": {
+  "5": {
     "inputs": {
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
       "video-preview": "",
       "video": [
-        "14",
+        "4",
         0
       ]
     },
@@ -193,9 +74,152 @@
       "title": "Save Video"
     }
   },
+  "6": {
+    "inputs": {
+      "prompt": "A vertical 9:16 cinematic 3D animated scene inside a modest Tier-3 Indian home decorated for a birthday. The room has faded painted walls, purple and golden balloons, a handmade \"HAPPY BIRTHDAY BISO\" banner, warm fairy lights, a small pink birthday cake on a floral tablecloth, plastic chairs, an old wooden sofa with printed covers, and a rustic wooden front door. The atmosphere feels authentic, middle-class, and emotionally warm.\n\nTwo anthropomorphic Indian currency-note characters stand beside the birthday table.\n\nBiso is a cute ₹20 Indian note female with large expressive Pixar-style eyes, wearing a simple black printed salwar suit with a beige dupatta and black sandals. She looks repeatedly toward the closed front door with hopeful, slightly worried eyes, nervously holding her hands together.\n\nBeside her stands her talkative best friend, a cheerful ₹50 Indian note female wearing a faded mint-green printed salwar kameez with matching dupatta and slippers. She is playful, expressive, and slightly sarcastic, using animated hand gestures while teasing Biso.\n\nThe camera begins as a medium two-shot with both characters in frame. Biso keeps glancing at the door while the ₹50 friend talks. The friend shrugs dramatically, folds her arms, then points toward the empty doorway while speaking. Biso looks disappointed for a moment, then suddenly raises one hand to stop her friend. She turns confidently toward her with a gentle smile and hopeful eyes, speaking with complete faith.\n\nDialogue (Natural Hindi Lip Sync):\n\nBiso (looking at the door, softly):\n\"आज मेरा बर्थडे है... और ये सौका अभी तक नहीं आया।\"\n\n₹50 Friend (teasing, playful):\n\"अरे बीसो, छोड़ उसे... वो नहीं आएगा तो क्या? वैसे भी... बेचारा खुद पैसे नहीं कमा पाता। गिफ्ट क्या लाएगा?\"\n\nBiso (smiling with confidence):\n\"वो मुझसे बहुत प्यार करता है।\"\n\nBiso finishes her line while looking back toward the front door with a hopeful smile, convinced Souka will arrive any moment. The friend rolls her eyes with a faint amused smile. The shot ends with both characters looking toward the door as the fairy lights softly twinkle, creating anticipation for Souka's entrance.\nbiso to face 50 and talk, the camera can cut to their expressions and at the end as biso says that woh mujse bohuth pyaar karta hai, i want biso to have a closeup shot where her eyes goes teary and shes happy and she makes puppy eyes\nStyle: Premium Pixar-inspired 3D animation, expressive facial acting, authentic Tier-3 Indian home, realistic body language, cinematic warm tungsten lighting, subtle idle movements, natural eye darts, smooth lip sync, shallow depth of field, slow cinematic push-in, consistent character design, 24fps, ultra-high quality, vertical 9:16.",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "duration": 15,
+      "nsfw_checker": true,
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "Kie_GrokImagineVideo15PreviewNode",
+    "_meta": {
+      "title": "Grok Imagine Video 1.5 Preview"
+    }
+  },
+  "7": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video-preview": "",
+      "video": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "8": {
+    "inputs": {
+      "prompt": "तभी... सौका आ जाता है। उसके हाथ में एक सुंदर-सा गिफ्ट होता है। बीसो हैरान होकर पूछती है,\n\nसौका मुस्कुराकर बोला\n\nबीसो हैरान होकर बोली,\n\nसौका बोला,",
+      "model": "3.1 Flash",
+      "voice_name": "Algenib (Gravelly)"
+    },
+    "class_type": "Official_GeminiTTSSingleNode",
+    "_meta": {
+      "title": "Gemini Text to Speech"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "audio/ComfyUI",
+      "quality": "V0",
+      "audioUI": "/api/view?filename=ComfyUI_00018_.mp3&type=output&subfolder=audio&rand=0.3397687747697101",
+      "audio": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveAudioMP3",
+    "_meta": {
+      "title": "Save Audio (MP3)"
+    }
+  },
+  "10": {
+    "inputs": {
+      "prompt": "Biso in black kurti and 50 in green kurti \nStyle: Premium Pixar-inspired 3D animation, expressive anthropomorphic Indian currency characters, consistent with previous character designs. Set inside a modest Tier-3 Indian home decorated for a birthday with faded walls, plastic purple and golden balloons, a handmade \"HAPPY BIRTHDAY BISO\" banner, warm yellow fairy lights, a floral tablecloth with a small homemade birthday cake, old wooden furniture, and a cozy middle-class atmosphere. Warm tungsten lighting, cinematic depth of field, natural facial animation, high-quality lip sync, smooth camera transitions.\n\nSHOT 1 (0–3 sec)\nMedium two-shot. Biso (₹20 note female) and her friend (₹50 note female) stand beside the birthday table. Biso keeps glancing toward the closed wooden front door every few moments, anxiously waiting. She softly says while looking at the door:\n\n\"आज मेरा बर्थडे है...\nऔर ये सौका अभी तक नहीं आया।\"\n\nHer voice is hopeful but slightly disappointed.\n\nSHOT 2 (3–9 sec)\nCut to an over-the-shoulder shot from behind Biso toward the ₹50 friend. The friend smiles teasingly, folds one arm, gestures casually with the other hand, and speaks with playful confidence:\n\n\"अरे बीसो, छोड़ उसे...\nवो नहीं आएगा तो क्या?\nवैसे भी...\nबेचारा खुद पैसे नहीं कमा पाता।\nगिफ्ट क्या लाएगा?\"\n\nAs she speaks, cut between her expressive face and Biso's reaction. Biso lowers her eyes briefly, then looks back toward the door, still hopeful despite the teasing.\n\nThe friend pauses mid-gesture and looks at Biso.\n\nSHOT 4 (11–15 sec)\nSlow cinematic push-in to a tight close-up of Biso's face. She turns fully toward her friend while her eyes slowly become glossy with tears—not crying, just overwhelmed with love and hope. Her eyebrows lift gently, her lips form a warm emotional smile, and she makes adorable puppy eyes filled with unwavering trust.\n\nShe softly says:\n\n\"वो मुझसे बहुत प्यार करता है।\"\n\nHold for one second after the dialogue. Biso keeps her emotional puppy-eye expression with a tiny hopeful smile, warm fairy lights softly glowing as beautiful circular bokeh behind her. The background gently falls out of focus, emphasizing her emotional expression.\n\nCamera Style:\n• Smooth cinematic cuts\n• Natural eye-line matching\n• Slow push-in during the emotional ending\n• Shallow depth of field\n• Expressive facial animation\n• Subtle idle body movement\n• Natural lip sync\n• Premium emotional acting\n\nMood:\nHeartwarming, innocent, emotional, hopeful, cute, relatable, grounded Tier-3 Indian middle-class birthday atmosphere.",
+      "aspect_ratio": "9:16",
+      "resolution": "720p",
+      "duration": 15,
+      "nsfw_checker": true,
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "Kie_GrokImagineVideo15PreviewNode",
+    "_meta": {
+      "title": "Grok Imagine Video 1.5 Preview"
+    }
+  },
+  "11": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video-preview": "",
+      "video": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save Video"
+    }
+  },
+  "12": {
+    "inputs": {
+      "image": "ChatGPT Image Jul 1, 2026, 02_56_51 PM.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "13": {
+    "inputs": {
+      "prompt": "upscale this image, and in the 100 note character - replace 1100 to 100, keeping everyhting else exactly the same and the character in black kurti is happy and surprised ",
+      "model": "Pro",
+      "model.resolution": "2K",
+      "aspect_ratio": "9:16",
+      "images.image_1": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "Official_NanoBananaNode",
+    "_meta": {
+      "title": "Nano Banana Image Generation"
+    }
+  },
+  "14": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "15": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
   "16": {
     "inputs": {
-      "image": "soundbox.png"
+      "image": "ComfyUI_00135_.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -204,43 +228,51 @@
   },
   "18": {
     "inputs": {
-      "filename_prefix": "video/ComfyUI",
-      "format": "auto",
-      "codec": "auto",
-      "video-preview": "",
-      "video": [
-        "14",
+      "prompt": "souka (100 rupee note character), opens the door and enters and shows the diamond ring to biso (black kurti character)",
+      "resolution": "720p",
+      "duration": 8,
+      "seed": 0,
+      "image": [
+        "16",
         0
       ]
     },
-    "class_type": "SaveVideo",
+    "class_type": "Kie_HappyhorseImageToVideoNode",
     "_meta": {
-      "title": "Save Video"
+      "title": "Happyhorse Image to Video"
     }
   },
   "19": {
     "inputs": {
-      "image": "videoframe_10374.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "20": {
-    "inputs": {
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
       "video-preview": "",
       "video": [
-        "9",
+        "18",
         0
       ]
     },
     "class_type": "SaveVideo",
     "_meta": {
       "title": "Save Video"
+    }
+  },
+  "20": {
+    "inputs": {
+      "prompt": "souka (100 rupee note character), opens the door and enters and shows the diamond ring to biso (black kurti character)\n\nBiso (in black kurti)Her expression changes from surprise to genuine curiosity.\n\nHer eyes remain wide with amazement, eyebrows slightly raised, lips softly parted. her friend is standing right there surprised in disbeliefe\n\nbiso - She takes one small step forward and softly asks,\n\n\"सौका...\nइतने पैसे आए कहाँ से?\"\n\nHold on Biso's curious expression for a brief beat after the dialogue while Souka smiles warmly without answering yet, setting up the next scene.\n\nCamera Style:\n• Smooth cinematic cuts\n• Slow dolly movements\n• Natural eye-line matching\n• Shallow depth of field\n• Warm cinematic lighting\n• Soft lens bloom from the sparkling diamond\n• Premium facial animation\n• Natural lip sync\n• Subtle idle body movement\n\nMood:\nEmotional surprise, heartwarming, wholesome, magical yet grounded, relatable Tier-3 Indian birthday celebration with strong curiosity leading into the earning reveal.",
+      "aspect_ratio": "9:16",
+      "resolution": "480p",
+      "duration": 15,
+      "nsfw_checker": true,
+      "image": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "Kie_GrokImagineVideo15PreviewNode",
+    "_meta": {
+      "title": "Grok Imagine Video 1.5 Preview"
     }
   },
   "21": {
@@ -248,8 +280,9 @@
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
+      "video-preview": "",
       "video": [
-        "9",
+        "20",
         0
       ]
     },
@@ -260,310 +293,102 @@
   },
   "22": {
     "inputs": {
-      "prompt": "based on image 2, add the customer of image 1 to image 2, also keep the same angle as in image 1",
-      "model": "Pro",
-      "model.resolution": "2K",
-      "aspect_ratio": "9:16",
-      "images.image_1": [
-        "6",
-        0
-      ],
-      "images.image_2": [
-        "19",
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video-preview": "",
+      "video": [
+        "20",
         0
       ]
     },
-    "class_type": "Official_NanoBananaNode",
+    "class_type": "SaveVideo",
     "_meta": {
-      "title": "Nano Banana Image Generation"
+      "title": "Save Video"
     }
   },
   "23": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "24",
-        0
-      ]
+      "image": "videoframe_2780.png"
     },
-    "class_type": "SaveImage",
+    "class_type": "LoadImage",
     "_meta": {
-      "title": "Save Image"
+      "title": "Load Image"
     }
   },
   "24": {
     "inputs": {
-      "prompt": "based on image 2, add the customer of image 1 to image 2, also keep the same angle as in image  1",
+      "prompt": "\nBiso (in black kurti)Her expression changes from surprise to genuine curiosity.\n\nHer eyes remain wide with amazement, eyebrows slightly raised, lips softly parted. her friend is standing right there surprised in disbeliefe\n\nbiso - She takes one small step forward and softly asks, and looks at her boyfriend holding the ring and says\n\n\"सौका...इतने पैसे आए कहाँ से?\"\n",
       "aspect_ratio": "9:16",
-      "image_resolution": "2K",
-      "random_seed": 1,
-      "images.image_1": [
-        "19",
-        0
-      ],
-      "images.image_2": [
-        "6",
+      "resolution": "720p",
+      "duration": 6,
+      "nsfw_checker": true,
+      "image": [
+        "23",
         0
       ]
     },
-    "class_type": "Kie_Seedream4EditNode",
+    "class_type": "Kie_GrokImagineVideo15PreviewNode",
     "_meta": {
-      "title": "Seedream 4 Image to Image"
+      "title": "Grok Imagine Video 1.5 Preview"
     }
   },
   "25": {
     "inputs": {
-      "image": "ChatGPT Image Jun 30, 2026, 12_19_51 PM.png"
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video-preview": "",
+      "video": [
+        "24",
+        0
+      ]
     },
-    "class_type": "LoadImage",
+    "class_type": "SaveVideo",
     "_meta": {
-      "title": "Load Image"
+      "title": "Save Video"
     }
   },
   "26": {
     "inputs": {
-      "prompt": "upscale the image",
-      "model": "Pro",
-      "model.resolution": "2K",
+      "prompt": "Biso's (in black kurti)curious expression for a brief beat after the dialogue while Souka smiles warmly without answering yet, setting up the next scene. her friend also in disbelief\nCut to Closeup of Souka (biso's boyfriend with diamond ring)says\n\"पहले मुझे भी लगता था... Instagram से कमाने के लिए लाखों Followers चाहिए. फिर मैंने **Seekho App** पर Instagram Mastery देखी. वहीं पता चला... Brands Followers नहीं... Views देखते हैं. बस मैंने Reels बनाना... Views लाना... और Brand Collaboration करना सीख लिया.आज ये गिफ्ट...उसी कमाई से लाया हूँ.\" \"",
       "aspect_ratio": "9:16",
-      "images.image_1": [
-        "25",
+      "resolution": "720p",
+      "duration": 15,
+      "nsfw_checker": true,
+      "image": [
+        "27",
         0
       ]
     },
-    "class_type": "Official_NanoBananaNode",
+    "class_type": "Kie_GrokImagineVideo15PreviewNode",
     "_meta": {
-      "title": "Nano Banana Image Generation"
+      "title": "Grok Imagine Video 1.5 Preview"
     }
   },
   "27": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "26",
-        0
-      ]
+      "image": "videoframe_4938.png"
     },
-    "class_type": "SaveImage",
+    "class_type": "LoadImage",
     "_meta": {
-      "title": "Save Image"
+      "title": "Load Image"
     }
   },
   "28": {
     "inputs": {
-      "image": "ComfyUI_00128_.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "29": {
-    "inputs": {
-      "prompt": "CUSTOMER: (Laughing) Ramesh bhai, ye dabba khilona hi toh hai! bss payment alert hi toh deta hai, isse acha Alert Pay download karo\n\nRAMESH(Confused): Alert pay kya hai?",
-      "aspect_ratio": "9:16",
-      "resolution": "720p",
-      "duration": 10,
-      "nsfw_checker": true,
-      "image": [
-        "28",
-        0
-      ]
-    },
-    "class_type": "Kie_GrokImagineVideo15PreviewNode",
-    "_meta": {
-      "title": "Grok Imagine Video 1.5 Preview"
-    }
-  },
-  "30": {
-    "inputs": {
       "filename_prefix": "video/ComfyUI",
       "format": "auto",
       "codec": "auto",
       "video-preview": "",
       "video": [
-        "29",
+        "26",
         0
       ]
     },
     "class_type": "SaveVideo",
     "_meta": {
       "title": "Save Video"
-    }
-  },
-  "31": {
-    "inputs": {
-      "image": "videoframe_7803.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "32": {
-    "inputs": {
-      "prompt": "CUSTOMER: \"अलर्ट पे एक ऐप है जिससे हर पेमेंट का लाउड और क्लियर अलर्ट सीधा फोन पर ही आ जाता है और इसमें KYC की भी कोई ज़रूरत नहीं।\"\nchild is just listening t the conversation saying nothing\nRAMESH(Excited): \"Arre waah\"",
-      "aspect_ratio": "9:16",
-      "resolution": "720p",
-      "duration": 14,
-      "nsfw_checker": true,
-      "image": [
-        "31",
-        0
-      ]
-    },
-    "class_type": "Kie_GrokImagineVideo15PreviewNode",
-    "_meta": {
-      "title": "Grok Imagine Video 1.5 Preview"
-    }
-  },
-  "33": {
-    "inputs": {
-      "filename_prefix": "video/ComfyUI",
-      "format": "auto",
-      "codec": "auto",
-      "video-preview": "",
-      "video": [
-        "32",
-        0
-      ]
-    },
-    "class_type": "SaveVideo",
-    "_meta": {
-      "title": "Save Video"
-    }
-  },
-  "34": {
-    "inputs": {
-      "image": "ChatGPT Image Jun 30, 2026, 12_57_18 PM.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "35": {
-    "inputs": {
-      "prompt": "upscale the image ",
-      "model": "Pro",
-      "model.resolution": "2K",
-      "aspect_ratio": "9:16",
-      "images.image_1": [
-        "34",
-        0
-      ]
-    },
-    "class_type": "Official_NanoBananaNode",
-    "_meta": {
-      "title": "Nano Banana Image Generation"
-    }
-  },
-  "36": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "35",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
-    }
-  },
-  "37": {
-    "inputs": {
-      "image": "ComfyUI_00129_.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "38": {
-    "inputs": {
-      "prompt": "CUSTOMER: \"इतना ही नहीं, इसमें पासबुक फीचर है जिससे दिन का सारा खाता एक ही जगह मिल जाएगा, तो कोई कन्फ्यूजन भी नहीं। Dabba Hatao, Alertpay Lagao!\"",
-      "aspect_ratio": "9:16",
-      "resolution": "720p",
-      "duration": 12,
-      "nsfw_checker": true,
-      "image": [
-        "37",
-        0
-      ]
-    },
-    "class_type": "Kie_GrokImagineVideo15PreviewNode",
-    "_meta": {
-      "title": "Grok Imagine Video 1.5 Preview"
-    }
-  },
-  "39": {
-    "inputs": {
-      "filename_prefix": "video/ComfyUI",
-      "format": "auto",
-      "codec": "auto",
-      "video-preview": "",
-      "video": [
-        "38",
-        0
-      ]
-    },
-    "class_type": "SaveVideo",
-    "_meta": {
-      "title": "Save Video"
-    }
-  },
-  "40": {
-    "inputs": {
-      "image": "ChatGPT Image Jun 30, 2026, 12_57_18 PM.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "41": {
-    "inputs": {
-      "filename_prefix": "video/ComfyUI",
-      "format": "auto",
-      "codec": "auto",
-      "video": [
-        "38",
-        0
-      ]
-    },
-    "class_type": "SaveVideo",
-    "_meta": {
-      "title": "Save Video"
-    }
-  },
-  "42": {
-    "inputs": {
-      "prompt": "upscale the image ",
-      "aspect_ratio": "9:16",
-      "image_resolution": "2K",
-      "random_seed": 1,
-      "images.image_1": [
-        "34",
-        0
-      ]
-    },
-    "class_type": "Kie_Seedream4EditNode",
-    "_meta": {
-      "title": "Seedream 4 Image to Image"
-    }
-  },
-  "43": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "42",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
     }
   }
 }

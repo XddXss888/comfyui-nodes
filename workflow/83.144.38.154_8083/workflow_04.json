@@ -1,0 +1,43 @@
+{
+  "2": {
+    "inputs": {
+      "image": "DANCE_FACE_01063_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Charger Image"
+    }
+  },
+  "3": {
+    "inputs": {
+      "prompt": "retire le maquillage et viellis le model pour qu'elle semble avoir 70 ans mais en gardant ces trait du visage et sa position",
+      "model": "gemini-3-pro-image-preview",
+      "seed": 406731632702627,
+      "aspect_ratio": "auto",
+      "resolution": "4K",
+      "response_modalities": "IMAGE+TEXT",
+      "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+      "images": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "GeminiImage2Node",
+    "_meta": {
+      "title": "Nano Banana Pro (Google Gemini Image)"
+    }
+  },
+  "4": {
+    "inputs": {
+      "filename_prefix": "DANCE_FACE",
+      "images": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Enregistrer Image"
+    }
+  }
+}

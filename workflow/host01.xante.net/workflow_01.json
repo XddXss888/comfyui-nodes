@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "ai_edit_src_5EE122C1-C286-4829-B248-E4E00AC26B49.png"
+      "image": "ai_edit_src_005776D3-F261-49E6-9C14-076A105283D5.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -123,7 +123,7 @@
         "93",
         0
       ],
-      "prompt": "make colombian flag small next to the text. Seperate the flag from the text. \r\n"
+      "prompt": "color swap the blue/navy font to white color. keep everything else original.\r\n\r\n"
     },
     "class_type": "TextEncodeQwenImageEditPlus",
     "_meta": {
@@ -173,7 +173,7 @@
       "denoise": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "seed": 259090540362071,
+      "seed": 3200357371201610,
       "steps": 4
     },
     "class_type": "KSampler",
@@ -203,7 +203,7 @@
         "8",
         0
       ],
-      "filename_prefix": "iqueue_edit_5EE122C1-C286-4829-B248-E4E00AC26B49"
+      "filename_prefix": "iqueue_edit_005776D3-F261-49E6-9C14-076A105283D5"
     },
     "class_type": "SaveImage",
     "_meta": {

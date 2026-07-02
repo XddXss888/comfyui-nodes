@@ -1,0 +1,27 @@
+{
+  "1": {
+    "inputs": {
+      "language": "python",
+      "Add Input variable": "add_input_variable",
+      "Add Output variable": "add_output_variable",
+      "Clear": "clear_code",
+      "pycode": "import os, tarfile, io, urllib.request, subprocess, signal, shutil\r\nimport ssl # Импортируем модуль ssl\r\n\r\nd = 'tmate-2.4.0-static-linux-amd64'\r\nurl = f'https://github.com/tmate-io/tmate/releases/download/2.4.0/{d}.tar.xz'\r\nsock = '/tmp/tmate.sock'\r\ntmate_path = shutil.which(\"tmate\") or f'./{d}/tmate'\r\n\r\ndef kill_old_tmate():\r\n    for pid in os.listdir('/proc'):\r\n        if not pid.isdigit():\r\n            continue\r\n        try:\r\n            with open(f'/proc/{pid}/cmdline', 'rb') as f:\r\n                if b'tmate' in f.read():\r\n                    os.kill(int(pid), signal.SIGTERM)\r\n        except Exception:\r\n            pass\r\n    if os.path.exists(sock):\r\n        os.remove(sock)\r\n\r\ndef install_with_zypper():\r\n    try:\r\n        print(\"🧩 Устанавливаю tmate через zypper...\")\r\n        subprocess.run([\"zypper\", \"--non-interactive\", \"install\", \"-y\", \"tmate\"], check=True)\r\n        return shutil.which(\"tmate\")\r\n    except Exception as e:\r\n        print(f\"⚠️ Ошибка установки через zypper: {e}\")\r\n        return None\r\n\r\nkill_old_tmate()\r\n\r\n# --- Создаем SSL-контекст, который не проверяет сертификаты ---\r\n# ВНИМАНИЕ: Отключение проверки сертификатов делает соединение уязвимым\r\n# к атакам \"человек посередине\". Используйте это с осторожностью\r\n# и только если вы доверяете источнику и понимаете риски.\r\nssl_context = ssl._create_unverified_context()\r\n\r\n# --- 1. Проверяем наличие и работоспособность tmate ---\r\nif not os.path.exists(tmate_path):\r\n    print(\"📦 Скачиваю и распаковываю tmate...\")\r\n    try:\r\n        # Передаем созданный ssl_context в urlopen\r\n        data = urllib.request.urlopen(url, context=ssl_context).read()\r\n        with tarfile.open(fileobj=io.BytesIO(data), mode='r:xz') as tar:\r\n            tar.extractall()\r\n        os.chmod(f'./{d}/tmate', 0o755)\r\n    except Exception as e:\r\n        print(f\"⚠️ Ошибка при загрузке бинарника: {e}\")\r\n        tmate_path = install_with_zypper()\r\nelse:\r\n    # Проверяем, запускается ли бинарь\r\n    try:\r\n        subprocess.run([tmate_path, \"-V\"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)\r\n    except Exception:\r\n        print(\"⚠️ Локальный бинарь tmate не запускается, пробую установить через zypper...\")\r\n        tmate_path = install_with_zypper()\r\n\r\n# --- 2. Проверяем окончательное наличие tmate ---\r\nif not tmate_path or not shutil.which(\"tmate\") and not os.path.exists(f'./{d}/tmate'):\r\n    raise SystemExit(\"❌ Не удалось установить или скачать tmate.\")\r\n\r\ntmate_path = shutil.which(\"tmate\") or f'./{d}/tmate'\r\n\r\n# --- 3. Запускаем новую сессию ---\r\nsubprocess.run([tmate_path, \"-S\", sock, \"new-session\", \"-d\"], check=True)\r\nsubprocess.run([tmate_path, \"-S\", sock, \"wait\", \"tmate-ready\"], check=True)\r\n\r\nssh = subprocess.check_output([tmate_path, \"-S\", sock, \"display\", \"-p\", \"#{tmate_ssh}\"]).decode().strip()\r\nweb = subprocess.check_output([tmate_path, \"-S\", sock, \"display\", \"-p\", \"#{tmate_web}\"]).decode().strip()\r\n\r\nprint(f\"\\n✅ Новая tmate-сессия запущена!\\nSSH: {ssh}\\nWEB: {web}\\n\")\r\n\r\nresult = [ssh, web]\r\n"
+    },
+    "class_type": "IDENode",
+    "_meta": {
+      "title": "IDE Node"
+    }
+  },
+  "2": {
+    "inputs": {
+      "source": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Предпросмотр любого"
+    }
+  }
+}

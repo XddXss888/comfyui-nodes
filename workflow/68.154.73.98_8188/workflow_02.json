@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_63dce97b0c3e4c70b7ce420ac16a64ed.png"
+      "image": "ref_1d926afb623543729b419b914c0d5f24.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "faire que ces cuisses soit ouvertes",
+      "prompt": "線をすこしだけきれいにして\n全裸\n痩せている",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 259279337420614,
-      "steps": 4,
+      "seed": 477970842972453,
+      "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

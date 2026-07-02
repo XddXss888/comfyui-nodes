@@ -1,120 +1,86 @@
 {
-  "6": {
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "text": "A stunning wide panoramic travel banner featuring a modern white passenger airplane flying low over a tropical coastline, sparkling turquoise ocean, gentle waves, golden sandy beach, a few palm leaves framing the edges, bright summer sunlight, clear blue sky with soft clouds, clean premium tourism advertising style, cinematic wide composition, vibrant yet natural colors, high detail, professional digital illustration, spacious composition suitable for website hero banner, no text, no logo, no watermark",
+      "ckpt_name": "DreamShaper_XL_v2.1_Turbo.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "masterpiece, best quality, cyberpunk cat, neon",
       "clip": [
-        "30",
+        "1",
         1
       ]
-    },
+    }
+  },
+  "3": {
     "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
-    }
-  },
-  "8": {
     "inputs": {
-      "samples": [
-        "31",
-        0
-      ],
-      "vae": [
-        "30",
-        2
+      "text": "worst quality, low quality, blurry, deformed",
+      "clip": [
+        "1",
+        1
       ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
     }
   },
-  "9": {
+  "4": {
+    "class_type": "EmptyLatentImage",
     "inputs": {
-      "filename_prefix": "airplane_ocean_beach_banner_2048x768",
-      "images": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
-    }
-  },
-  "27": {
-    "inputs": {
-      "width": 2048,
+      "width": 768,
       "height": 768,
       "batch_size": 1
-    },
-    "class_type": "EmptySD3LatentImage",
-    "_meta": {
-      "title": "Empty Latent Image"
     }
   },
-  "30": {
+  "5": {
+    "class_type": "KSampler",
     "inputs": {
-      "ckpt_name": "flux1-dev-fp8.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "Load Checkpoint"
-    }
-  },
-  "31": {
-    "inputs": {
-      "seed": 346635614588223,
-      "steps": 24,
+      "seed": 42,
+      "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
-      "scheduler": "simple",
+      "scheduler": "normal",
       "denoise": 1.0,
       "model": [
-        "30",
+        "1",
         0
       ],
       "positive": [
-        "35",
+        "2",
         0
       ],
       "negative": [
-        "33",
+        "3",
         0
       ],
       "latent_image": [
-        "27",
+        "4",
         0
       ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
     }
   },
-  "33": {
+  "6": {
+    "class_type": "VAEDecode",
     "inputs": {
-      "text": "text, logo, watermark, words, letters, people, crowded, distorted airplane, extra wings, blurry, low quality, ugly, deformed, dark, gloomy",
-      "clip": [
-        "30",
-        1
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "1",
+        2
       ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
     }
   },
-  "35": {
+  "7": {
+    "class_type": "SaveImage",
     "inputs": {
-      "guidance": 3.5,
-      "conditioning": [
+      "filename_prefix": "nova_bench",
+      "images": [
         "6",
         0
       ]
-    },
-    "class_type": "FluxGuidance",
-    "_meta": {
-      "title": "Flux Guidance"
     }
   }
 }

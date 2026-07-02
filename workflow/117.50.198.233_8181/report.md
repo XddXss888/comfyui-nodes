@@ -1,16 +1,16 @@
 # 117.50.198.233:8181
 
 **GPU**: RTX 4090 | **显存**: 24 GB | **空闲**: 4 GB
-**内存**: 432 GB (空闲 410 GB)
+**内存**: 432 GB (空闲 409 GB)
 **版本**: 0.17.2
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-07-01 08:08:25
-**历史总数**: 45 | **成功**: 10
+**扫描时间**: 2026-07-02 08:09:26
+**历史总数**: 7 | **成功**: 7
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `b8e0549d-73fd-4185-9d0f-2c75cd1a105a`
+- **Prompt ID**: `a180b35a-0118-4973-b808-1b72065f7f80`
 - **类型**: 文生图
 - **节点数**: 10
 - **模型** (3):
@@ -18,10 +18,17 @@
   - qwen_3_4b.safetensors
   - z_image_turbo_bf16.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Split screen. Left side: a man sitting in a chair, eyes closed, seeming to float, his body language relaxed. Right side: fragmented images—a clock face blurred, a number "3" out of focus, a hand reach
+  - [CLIPTextEncode::text] 【整体美学】
+真人实拍摄影质感。
+
+【画面规格】
+角色设定图，"路枭"。16:9 横版，纯白背景，平视视角。仅一个角色，画面中不得出现其他人物。
+版面：左 40%、右 60% 两区。
+左区（占画面宽度 40%，全高，纯白背景）：正面面部特写，头顶贴近画面上沿留 5% 留白，画面下沿到锁骨位置，面部横向居中，无表情闭嘴，脸部无阴影。
+右区（占画面宽度 60%，纯白背景）：三张等尺全身像横向排列，依次
 
 ### 2. workflow_02.json
-- **Prompt ID**: `d919ccfe-4c7d-43c8-bc6e-020d31ee719a`
+- **Prompt ID**: `5502825b-560d-49db-9ed0-6a532fe296f1`
 - **类型**: 文生图
 - **节点数**: 10
 - **模型** (3):
@@ -29,10 +36,18 @@
   - qwen_3_4b.safetensors
   - z_image_turbo_bf16.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Dual perspective composition. Top half: from the patient's perspective—he stands facing a therapist, his expression defiant, as if he believes he is in control. Bottom half: from an overhead omniscien
+  - [CLIPTextEncode::text] 【整体美学】
+真人实拍摄影质感。
+偶像剧棚拍高级柔光，冷暖反差，粉蓝暧昧调，细腻肌肤质感与 Bloom 泛光，Editorial
+
+【画面规格】
+环境概念图，"夏凝的出租屋"。宽银幕构图，16:9比例，大全景，超广角镜头，平视视角，大气透视，建筑纹理细致。
+
+【环境档案】
+空间类型：室内一间城中村廉价出租屋。空间尺度：面积约十二平米，层高较低，仅有一扇南向窗户，空间促狭。布局：进门左侧靠墙摆放一张
 
 ### 3. workflow_03.json
-- **Prompt ID**: `a6354444-f981-470b-9cab-620c989ee956`
+- **Prompt ID**: `8d5fc314-66f8-4d8a-864b-a2d66c8815a9`
 - **类型**: 文生图
 - **节点数**: 10
 - **模型** (3):
@@ -40,10 +55,17 @@
   - qwen_3_4b.safetensors
   - z_image_turbo_bf16.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Medium shot, a man sits at his desk in a modern office, typing. He looks different than in earlier scenes—calmer, his expression softer. A colleague passes behind him and does a double-take. The man d
+  - [CLIPTextEncode::text] 【整体美学】
+真人实拍摄影质感。
+
+【画面规格】
+物品参考图，"和田玉镯"。完整物品展示，单个物品，垂直放置，居中构图，纯白背景，正面视角，清晰展示物品全貌与表面质感。
+
+【物品档案】
+形状：一只圆形手镯，器型端正。尺寸：内径约五厘米半，镯身宽约一厘米。材质：和田白玉，附有A货鉴定证书。颜色：乳白色，间有极淡的青灰色絮状纹理。表面处理：表面抛光至镜面级光泽，肉眼可见天然玉石的细微絮状包裹体，光线下
 
 ### 4. workflow_04.json
-- **Prompt ID**: `5f1f99a6-68d1-4078-9c0a-c333feaaa9a0`
+- **Prompt ID**: `56c4165f-e035-41eb-bccd-b5186a4e0abd`
 - **类型**: 文生图
 - **节点数**: 10
 - **模型** (3):
@@ -51,10 +73,17 @@
   - qwen_3_4b.safetensors
   - z_image_turbo_bf16.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Medium shot, a man in his early 40s with graying short hair sits at a reception desk. He wears a crisp light blue shirt with a white collar, posture perfect, expression calm. His eyes are clear—not va
+  - [CLIPTextEncode::text] 【整体美学】
+真人实拍摄影质感。
+
+【画面规格】
+角色设定图，"林北"。16:9 横版，纯白背景，平视视角。仅一个角色，画面中不得出现其他人物。
+版面：左 40%、右 60% 两区。
+左区（占画面宽度 40%，全高，纯白背景）：正面面部特写，头顶贴近画面上沿留 5% 留白，画面下沿到锁骨位置，面部横向居中，无表情闭嘴，脸部无阴影。
+右区（占画面宽度 60%，纯白背景）：三张等尺全身像横向排列，依次
 
 ### 5. workflow_05.json
-- **Prompt ID**: `91553b5a-e739-4fa6-82ca-bf7a7bf321aa`
+- **Prompt ID**: `26fa8eaa-6fb3-45df-9a69-04dee353a7e9`
 - **类型**: 文生图
 - **节点数**: 10
 - **模型** (3):
@@ -62,61 +91,30 @@
   - qwen_3_4b.safetensors
   - z_image_turbo_bf16.safetensors
 - **提示词**:
-  - [CLIPTextEncode::text] Split screen. Left: a man in a suit, tired, anxious, gripping a briefcase—the beginner. Right: the same man (or his future self) in a light blue uniform shirt, calm, serene, hands folded on the desk—t
+  - [CLIPTextEncode::text] 【整体美学】
+真人实拍摄影质感。
+院线电影现实主义，冷暖光强烈反差，DI数字微去饱和调色，胶片颗粒，粗粝生活质感，Cinematic
+
+【画面规格】
+环境概念图，"大伯家堂屋"。宽银幕构图，16:9比例，大全景，超广角镜头，平视视角，大气透视，建筑纹理细致。
+
+【环境档案】
+空间类型：室内一间农村堂屋。空间尺度：面积约三十平米，开间方正，层高较高，由砖墙围合。布局：北墙贴着手写春联与福字，下方摆一
 
 ### 6. workflow_06.json
-- **Prompt ID**: `8b1d51b8-71f9-48b4-8dc7-9ce21805937b`
+- **Prompt ID**: `cc29bc97-56df-4b10-97c7-42aaf39a634e`
 - **类型**: 文生图
 - **节点数**: 10
 - **模型** (3):
   - ae.safetensors
   - qwen_3_4b.safetensors
   - z_image_turbo_bf16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] Still life composition on a wooden desk. Five objects arranged in a horizontal line: (1) a small steel chastity device (body), (2) a pocket watch with roman numerals (time), (3) a gold coin (finances)
 
 ### 7. workflow_07.json
-- **Prompt ID**: `673cf28c-70a3-488c-94b1-5254b360f19a`
+- **Prompt ID**: `844652f8-3984-4170-ba3f-3807273a6dc7`
 - **类型**: 文生图
 - **节点数**: 10
 - **模型** (3):
   - ae.safetensors
   - qwen_3_4b.safetensors
   - z_image_turbo_bf16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] Close-up, a white uniform shirt collar. Below it, the skin of a neck. A single small key on a chain rests against the skin, visible just above the collar line. The chain disappears beneath the collar.
-
-### 8. workflow_08.json
-- **Prompt ID**: `104f0093-d3bc-40d8-b67f-bfccf7581a2e`
-- **类型**: 文生图
-- **节点数**: 10
-- **模型** (3):
-  - ae.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] Wide shot, a man in a white short-sleeve uniform stands in a small garden behind an office, watering plants. His posture is relaxed but purposeful. The sun is low, casting long shadows. A small smile 
-
-### 9. workflow_09.json
-- **Prompt ID**: `967cbc28-a5a4-47f6-95fb-199487cfd6f1`
-- **类型**: 文生图
-- **节点数**: 10
-- **模型** (3):
-  - ae.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] In a bathroom during the afternoon with strong sidelighting from the side, a thin woman with small breasts, pale blue eyes and short black hair in a pixie cut stands close behind a young man. She wear
-
-### 10. workflow_10.json
-- **Prompt ID**: `ab3c807c-34ba-47fb-8a89-5110fcfb555f`
-- **类型**: 文生图
-- **节点数**: 10
-- **模型** (3):
-  - ae.safetensors
-  - qwen_3_4b.safetensors
-  - z_image_turbo_bf16.safetensors
-- **提示词**:
-  - [CLIPTextEncode::text] candid amateur photography, slice of life, couple, love.
-
-In a bathroom during the afternoon with strong sidelighting from the side, a thin woman with small breasts, pale blue eyes and short black hai

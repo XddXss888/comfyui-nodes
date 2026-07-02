@@ -1,16 +1,16 @@
 # 182.140.218.229:20000
 
-**GPU**: RTX 4090 | **显存**: 47 GB | **空闲**: 47 GB
-**内存**: 944 GB (空闲 370 GB)
+**GPU**: RTX 4090 | **显存**: 47 GB | **空闲**: 33 GB
+**内存**: 944 GB (空闲 385 GB)
 **版本**: 0.3.46
 **ComfyUI报告历史**: 有
-**扫描时间**: 2026-07-01 08:11:34
+**扫描时间**: 2026-07-02 08:12:37
 **历史总数**: 10001 | **成功**: 10
 
 ## 工作流列表
 
 ### 1. workflow_01.json
-- **Prompt ID**: `a44d27a0-ad11-4d14-b4bd-bcd65ef933f9`
+- **Prompt ID**: `1423ec0f-575e-4ad6-9ea4-c1c703d6618d`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -21,11 +21,11 @@
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] La chica se baja los pantalones, luego se pone de espaldas y soba su culo (panties blancos)
-  - [PrimitiveStringMultiline::text] La chica se baja los pantalones, luego se pone de espaldas y soba su culo (panties blancos)
+  - [PrimitiveStringMultiline::positive] Hombre con chaqueta azul y camisa clara, de pie junto a otras personas frente a un letrero de neón que dice "Dreams" en un ambiente nocturno urbano con vegetación decorativa iluminada. Leve movimiento
+  - [PrimitiveStringMultiline::text] Hombre con chaqueta azul y camisa clara, de pie junto a otras personas frente a un letrero de neón que dice "Dreams" en un ambiente nocturno urbano con vegetación decorativa iluminada. Leve movimiento
 
 ### 2. workflow_02.json
-- **Prompt ID**: `531dc96e-9e7a-4d6c-a992-d29bf42733b7`
+- **Prompt ID**: `8b4de77a-e60a-47b3-bf9c-97b0fcf2675a`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -36,56 +36,11 @@
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] Cria um vídeo delas se beijando 
-  - [PrimitiveStringMultiline::text] Cria um vídeo delas se beijando 
+  - [PrimitiveStringMultiline::positive]  Subject opens both towel, and throws towel to the side. There is nothing underneath showing female chest and bush between legs. Subject then turns around facing away 
+  - [PrimitiveStringMultiline::text]  Subject opens both towel, and throws towel to the side. There is nothing underneath showing female chest and bush between legs. Subject then turns around facing away 
 
 ### 3. workflow_03.json
-- **Prompt ID**: `b27aee8c-f371-4126-ba61-ef61a72eecdb`
-- **类型**: 图生视频
-- **节点数**: 31
-- **模型** (6):
-  - Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors
-  - Wan2_1_VAE_bf16.safetensors
-  - Wan2_2-I2V-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
-  - Wan2_2-I2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
-  - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
-  - umt5-xxl-enc-bf16.safetensors
-- **提示词**:
-  - [PrimitiveStringMultiline::positive] She is feeling very agitated  shocked and confused. He  and the guys just checking to make sure she has no lumps he pulls her top off, opens up. Takes  off the bra so we can make sure there’s nothing 
-  - [PrimitiveStringMultiline::text] She is feeling very agitated  shocked and confused. He  and the guys just checking to make sure she has no lumps he pulls her top off, opens up. Takes  off the bra so we can make sure there’s nothing 
-
-### 4. workflow_04.json
-- **Prompt ID**: `a5755b69-9c65-4538-8f8a-e072f17c9b00`
-- **类型**: 图生视频
-- **节点数**: 31
-- **模型** (6):
-  - Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors
-  - Wan2_1_VAE_bf16.safetensors
-  - Wan2_2-I2V-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
-  - Wan2_2-I2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
-  - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
-  - umt5-xxl-enc-bf16.safetensors
-- **提示词**:
-  - [PrimitiveStringMultiline::positive] She is feeling very agitated  shocked and confused. He  and the guys just checking to make sure she has no lumps he pulls her top off, opens up. Takes  off the bra so we can make sure there’s nothing 
-  - [PrimitiveStringMultiline::text] She is feeling very agitated  shocked and confused. He  and the guys just checking to make sure she has no lumps he pulls her top off, opens up. Takes  off the bra so we can make sure there’s nothing 
-
-### 5. workflow_05.json
-- **Prompt ID**: `a19645d4-e8f3-483d-a1c5-a4c891f719b8`
-- **类型**: 图生视频
-- **节点数**: 31
-- **模型** (6):
-  - Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors
-  - Wan2_1_VAE_bf16.safetensors
-  - Wan2_2-I2V-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
-  - Wan2_2-I2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
-  - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
-  - umt5-xxl-enc-bf16.safetensors
-- **提示词**:
-  - [PrimitiveStringMultiline::positive] ((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her jumpsuit an
-  - [PrimitiveStringMultiline::text] ((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her jumpsuit an
-
-### 6. workflow_06.json
-- **Prompt ID**: `f344ae33-1a7f-40d6-b953-0da94c13f473`
+- **Prompt ID**: `d7788348-c3e9-4d03-ad7b-efd125627660`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -99,8 +54,53 @@
   - [PrimitiveStringMultiline::positive] ((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her bra and loo
   - [PrimitiveStringMultiline::text] ((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her bra and loo
 
+### 4. workflow_04.json
+- **Prompt ID**: `b751dc08-dfe9-4504-a7e8-30110956938f`
+- **类型**: 图生视频
+- **节点数**: 31
+- **模型** (6):
+  - Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors
+  - Wan2_1_VAE_bf16.safetensors
+  - Wan2_2-I2V-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
+  - umt5-xxl-enc-bf16.safetensors
+- **提示词**:
+  - [PrimitiveStringMultiline::positive] ((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her bra and loo
+  - [PrimitiveStringMultiline::text] ((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her bra and loo
+
+### 5. workflow_05.json
+- **Prompt ID**: `6ce194ae-5240-4d62-9f31-14ffce8c05f9`
+- **类型**: 图生视频
+- **节点数**: 31
+- **模型** (6):
+  - Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors
+  - Wan2_1_VAE_bf16.safetensors
+  - Wan2_2-I2V-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
+  - umt5-xxl-enc-bf16.safetensors
+- **提示词**:
+  - [PrimitiveStringMultiline::positive] Beautiful professional model Dancings all her clothing, falling off naked, smiling, sits down on the floor facing camera with her right hand on her right knee and her left hand on her left knee legs s
+  - [PrimitiveStringMultiline::text] Beautiful professional model Dancings all her clothing, falling off naked, smiling, sits down on the floor facing camera with her right hand on her right knee and her left hand on her left knee legs s
+
+### 6. workflow_06.json
+- **Prompt ID**: `0e53474e-2e95-47b9-9fac-9c2ea3e1e088`
+- **类型**: 图生视频
+- **节点数**: 31
+- **模型** (6):
+  - Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors
+  - Wan2_1_VAE_bf16.safetensors
+  - Wan2_2-I2V-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan2_2-I2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+  - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
+  - umt5-xxl-enc-bf16.safetensors
+- **提示词**:
+  - [PrimitiveStringMultiline::positive] ((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her shirt and l
+  - [PrimitiveStringMultiline::text] ((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her shirt and l
+
 ### 7. workflow_07.json
-- **Prompt ID**: `e3cea3fe-4532-41b0-95f8-9d80374baa98`
+- **Prompt ID**: `e174e8c7-75d9-4244-b7b3-b5ae800ab4ec`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -115,7 +115,7 @@
   - [PrimitiveStringMultiline::text] ((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her bra and loo
 
 ### 8. workflow_08.json
-- **Prompt ID**: `52eeb679-6644-4780-8826-72c4f60e109e`
+- **Prompt ID**: `7266680b-2205-4b55-8ece-50f9c6b24bbd`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -126,11 +126,11 @@
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] Cria um vídeo delas se beijando na boca
-  - [PrimitiveStringMultiline::text] Cria um vídeo delas se beijando na boca
+  - [PrimitiveStringMultiline::positive] ((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her bra and loo
+  - [PrimitiveStringMultiline::text] ((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her bra and loo
 
 ### 9. workflow_09.json
-- **Prompt ID**: `502c4606-0465-46ae-a27d-f26645fa9e09`
+- **Prompt ID**: `ce6f8223-d073-4694-8c21-aa989d2e70ea`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -145,7 +145,7 @@
   - [PrimitiveStringMultiline::text] ((The character Character described in ADN above) [START: ACTION_IN_PROGRESS, FAST DYNAMICS] ACTION:Realistic video where the woman in the attached image (same face, same body) removes her bra and loo
 
 ### 10. workflow_10.json
-- **Prompt ID**: `8be8bba8-6952-4dee-a28e-9fcfb96c0b2c`
+- **Prompt ID**: `8987007a-8ca0-43c1-a2a3-36a2e88b58c5`
 - **类型**: 图生视频
 - **节点数**: 31
 - **模型** (6):
@@ -156,5 +156,5 @@
   - Wan_2_2_I2V_A14B_HIGH_lightx2v_MoE_distill_lora_rank_64_bf16.safetensors
   - umt5-xxl-enc-bf16.safetensors
 - **提示词**:
-  - [PrimitiveStringMultiline::positive] She is feeling very agitated  shocked and confused. He  and the guys just checking to make sure she has no lumps he pulls her top off, opens up. Takes  off the bra so we can make sure there’s nothing 
-  - [PrimitiveStringMultiline::text] She is feeling very agitated  shocked and confused. He  and the guys just checking to make sure she has no lumps he pulls her top off, opens up. Takes  off the bra so we can make sure there’s nothing 
+  - [PrimitiveStringMultiline::positive] women’s swim attire disappears instantly, revealing their large bare breasts
+  - [PrimitiveStringMultiline::text] women’s swim attire disappears instantly, revealing their large bare breasts

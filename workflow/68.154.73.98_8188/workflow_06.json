@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_5668676d4b9f4e51a9f81cb72310f84a.png"
+      "image": "ref_eca1ac410fba48c0a9416e28549f074e.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "Undress all clothes ",
+      "prompt": "線をすこしだけきれいにして\n全裸\n痩せている",
       "clip": [
         "91:61",
         0
@@ -184,8 +184,8 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 656505862677274,
-      "steps": 4,
+      "seed": 904092288507602,
+      "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",

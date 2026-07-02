@@ -12,7 +12,8 @@
   "2": {
     "inputs": {
       "clip_name": "qwen_3_8b_fp8mixed.safetensors",
-      "type": "flux2"
+      "type": "flux2",
+      "device": "default"
     },
     "class_type": "CLIPLoader",
     "_meta": {
@@ -66,14 +67,14 @@
   },
   "7": {
     "inputs": {
-      "model": [
-        "1",
-        0
-      ],
       "max_shift": 1.15,
       "base_shift": 0.5,
       "width": 1024,
-      "height": 1024
+      "height": 1024,
+      "model": [
+        "1",
+        0
+      ]
     },
     "class_type": "ModelSamplingFlux",
     "_meta": {
@@ -102,13 +103,13 @@
   },
   "10": {
     "inputs": {
+      "add_noise": true,
+      "noise_seed": 596985643190642,
+      "cfg": 1.0,
       "model": [
         "7",
         0
       ],
-      "add_noise": true,
-      "noise_seed": 596985643190642,
-      "cfg": 1.0,
       "positive": [
         "4",
         0

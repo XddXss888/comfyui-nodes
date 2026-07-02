@@ -1,109 +1,238 @@
 {
   "1": {
     "inputs": {
-      "ckpt_name": "anima\\waiANIMA_v10Base10.safetensors"
+      "ckpt_name": "il\\beretmixrealV100vae.43BO.safetensors",
+      "clip_skip": "2"
     },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "Checkpoint加载器（简易）"
-    }
+    "class_type": "CheckpointLoaderSimple"
   },
   "2": {
     "inputs": {
-      "lora_name": "anima\\anima-turbo-lora-v0.2.safetensors",
-      "strength_model": 0.8,
       "model": [
         "1",
         0
-      ]
+      ],
+      "clip": [
+        "1",
+        1
+      ],
+      "lora_name": "il\\真实皮肤滑块0-5.safetensors",
+      "strength_model": 2.0,
+      "strength_clip": 2.0
     },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA 1：Turbo加速"
-    }
+    "class_type": "LoraLoader"
   },
   "3": {
     "inputs": {
-      "lora_name": "anima\\anima-base-1-masterpiece-v51.safetensors",
-      "strength_model": 0.3,
       "model": [
         "2",
         0
-      ]
+      ],
+      "clip": [
+        "2",
+        1
+      ],
+      "lora_name": "il\\动态光影1-5.safetensors",
+      "strength_model": 0.0,
+      "strength_clip": 0.0
     },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA 2：大师之作增强"
-    }
+    "class_type": "LoraLoader"
   },
   "4": {
     "inputs": {
-      "lora_name": "anima\\Meion_anima_style_lokr_2-000034.safetensors",
-      "strength_model": 0.3,
       "model": [
         "3",
         0
-      ]
+      ],
+      "clip": [
+        "3",
+        1
+      ],
+      "lora_name": "fg2\\暗光.safetensors",
+      "strength_model": 0.0,
+      "strength_clip": 0.0
     },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA 3：Meion风格"
-    }
+    "class_type": "LoraLoader"
+  },
+  "18": {
+    "inputs": {
+      "model": [
+        "4",
+        0
+      ],
+      "clip": [
+        "4",
+        1
+      ],
+      "lora_name": "pony\\亚洲美化.safetensors",
+      "strength_model": 0.0,
+      "strength_clip": 0.0
+    },
+    "class_type": "LoraLoader"
+  },
+  "19": {
+    "inputs": {
+      "model": [
+        "18",
+        0
+      ],
+      "clip": [
+        "18",
+        1
+      ],
+      "lora_name": "il\\亚洲人.safetensors",
+      "strength_model": 0.6,
+      "strength_clip": 0.6
+    },
+    "class_type": "LoraLoader"
+  },
+  "20": {
+    "inputs": {
+      "model": [
+        "19",
+        0
+      ],
+      "clip": [
+        "19",
+        1
+      ],
+      "lora_name": "il\\稳定剂0.5.safetensors",
+      "strength_model": 0.3,
+      "strength_clip": 0.3
+    },
+    "class_type": "LoraLoader"
+  },
+  "21": {
+    "inputs": {
+      "model": [
+        "20",
+        0
+      ],
+      "clip": [
+        "20",
+        1
+      ],
+      "lora_name": "common\\body-wonderful-sdxl.safetensors",
+      "strength_model": 0.5,
+      "strength_clip": 0.5
+    },
+    "class_type": "LoraLoader"
+  },
+  "24": {
+    "inputs": {
+      "model": [
+        "21",
+        0
+      ],
+      "clip": [
+        "21",
+        1
+      ],
+      "lora_name": "il油腻熟女\\光滑-0.2.safetensors",
+      "strength_model": 0.2,
+      "strength_clip": 0.2
+    },
+    "class_type": "LoraLoader"
+  },
+  "25": {
+    "inputs": {
+      "model": [
+        "24",
+        0
+      ],
+      "clip": [
+        "24",
+        1
+      ],
+      "lora_name": "pony\\美女-现实混合-btiflgrlsnrv7.safetensors",
+      "strength_model": 0.3,
+      "strength_clip": 0.3
+    },
+    "class_type": "LoraLoader"
+  },
+  "26": {
+    "inputs": {
+      "model": [
+        "25",
+        0
+      ],
+      "clip": [
+        "25",
+        1
+      ],
+      "lora_name": "il\\细节增强-addmicrodetails.safetensors",
+      "strength_model": 0.1,
+      "strength_clip": 0.1
+    },
+    "class_type": "LoraLoader"
   },
   "5": {
     "inputs": {
       "model": [
-        "48",
+        "26",
         0
       ],
       "method": "from cond"
     },
-    "class_type": "Support empty uncond",
-    "_meta": {
-      "title": "支持空负向条件"
-    }
+    "class_type": "Support empty uncond"
+  },
+  "6": {
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "object_to_patch": "diffusion_model",
+      "residual_diff_threshold": 0.15,
+      "start": 0.2,
+      "end": 0.8,
+      "max_consecutive_cache_hits": 5
+    },
+    "class_type": "ApplyFBCacheOnModel"
   },
   "7": {
     "inputs": {
       "clip": [
-        "45",
-        0
+        "26",
+        1
       ],
-      "text": "A candid high-quality phone photo of beautiful twin sisters walking in a luxury shopping mall. One is wearing a black silk slip dress, looking extremely flushed and dazed, leaning slightly towards a tall man. The other twin is wearing a sharp professional business suit, looking cold and composed. High contrast lighting, cinematic bokeh, luxury store background."
+      "text": "masterpiece, ultra-HD, photorealistic, high detail, best quality, 8k, best quality, sharp focus, ray-tracing,\nrealistic, depth of field, shallow depth of field, raw photo ,teenager,detailed eyes,Korean,btiflgrlsnrv7,jpn-girl,addmicrodetails,BREAK A woman stepping forward in dojo looking at viewer. pov from male, full body, shallow depth of field. WanLingQiu, mature chinese female. High-cold martial beauty, top tier asian face, flawless pale skin, half-tied black ponytail with white jade hairpin. Delicate daily makeup, light grey eyeshadow, matte nude lips. Stern expression, frowning slightly. Tall strong figure, wide hips, huge breasts. Accessories: no accessories. Clothing: [Top: loose white martial arts robe], [Bottom: wide white martial arts pants], [Footwear: traditional cloth shoes with silver dragon embroidery]. Positioned approaching viewer. Stepping forward with confident stride. Glowing skin, soft breathing. Foreground: blurred male hand edge, Midground: wooden dojo floor, Background: blurred martial arts equipment, Lighting: morning daylight, cinematic lighting"
     },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "正向提示词"
-    }
+    "class_type": "CLIPTextEncode"
   },
   "8": {
     "inputs": {
       "clip": [
-        "45",
+        "26",
+        1
+      ],
+      "text": "embedding:lazyhand,embedding:lazyloli,embedding:lazyneg,consored,caucasian, anime, 2d, bad anatomy,illustration, sketch, comic, flat art, cartoon, toon,  bad hands, signature, watermarks, ugly, error, extra limb, missing limbs, muscular, missing fingers,lipstick,\noversaturated,  vibrant colors,  red lipstick, heavy makeup, bright red lips, clown"
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "16": {
+    "inputs": {
+      "conditioning": [
+        "8",
         0
       ],
-      "text": ""
+      "start": 0.0,
+      "end": 0.7
     },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "负向提示词"
-    }
+    "class_type": "ConditioningSetTimestepRange"
   },
   "9": {
     "inputs": {
-      "width": 1024,
-      "height": 1024,
+      "width": 832,
+      "height": 1216,
       "batch_size": 1
     },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "空Latent图像"
-    }
+    "class_type": "EmptyLatentImage"
   },
   "10": {
     "inputs": {
       "model": [
-        "5",
+        "6",
         0
       ],
       "positive": [
@@ -111,24 +240,21 @@
         0
       ],
       "negative": [
-        "8",
+        "16",
         0
       ],
       "latent_image": [
         "9",
         0
       ],
-      "seed": 1406084496,
-      "steps": 12,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0
+      "seed": 339190301416779,
+      "steps": 26,
+      "cfg": 4.5,
+      "sampler_name": "er_sde",
+      "scheduler": "beta",
+      "denoise": 0.85
     },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
+    "class_type": "KSampler"
   },
   "11": {
     "inputs": {
@@ -137,87 +263,39 @@
         0
       ],
       "vae": [
-        "15",
-        0
+        "1",
+        2
       ]
     },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE解码"
-    }
+    "class_type": "VAEDecode"
   },
-  "12": {
+  "27": {
     "inputs": {
-      "images": [
+      "model_name": "RealESRGAN_x2plus.pth"
+    },
+    "class_type": "UpscaleModelLoader"
+  },
+  "28": {
+    "inputs": {
+      "upscale_model": [
+        "27",
+        0
+      ],
+      "image": [
         "11",
         0
       ]
     },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
-    }
+    "class_type": "ImageUpscaleWithModel"
   },
-  "15": {
+  "12": {
     "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载Qwen VAE"
-    }
-  },
-  "45": {
-    "inputs": {
-      "clip_name": "qwen_3_06b_base.safetensors",
-      "type": "stable_diffusion",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载Qwen CLIP"
-    }
-  },
-  "46": {
-    "inputs": {
-      "lora_name": "anima\\gpt-image-2_anima-base1_v1-1.safetensors",
-      "strength_model": 0.2,
-      "model": [
-        "4",
+      "images": [
+        "28",
         0
-      ]
+      ],
+      "filename_prefix": "Realistic_Raw_Upscale_2K"
     },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA 4：GPT-Image画质增强"
-    }
-  },
-  "47": {
-    "inputs": {
-      "lora_name": "anima\\虹甜蜜点-@NJSW33T.safetensors",
-      "strength_model": 0.5,
-      "model": [
-        "46",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA 5：虹甜蜜点风格"
-    }
-  },
-  "48": {
-    "inputs": {
-      "lora_name": "anima\\baohedu1-4.safetensors",
-      "strength_model": 0.0,
-      "model": [
-        "47",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA 6：饱和度增强"
-    }
+    "class_type": "SaveImage"
   }
 }

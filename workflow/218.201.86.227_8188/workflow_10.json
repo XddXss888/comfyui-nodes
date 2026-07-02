@@ -1,31 +1,94 @@
 {
+  "3": {
+    "inputs": {
+      "seed": 439814168768238,
+      "steps": 20,
+      "cfg": 8.0,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "dreamshaper_8.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Загрузить сheckpoint"
+    }
+  },
+  "5": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Пустое латентное изображение"
+    }
+  },
   "6": {
     "inputs": {
-      "text": "A breathtaking illustration of the Great Wall of China winding through lush green mountains, ancient stone watchtowers perched on dramatic peaks, misty valleys below, traditional Chinese ink painting style blended with modern digital art, soft atmospheric perspective, golden sunlight filtering through clouds, vibrant autumn foliage on the mountainsides, panoramic wide-angle composition, serene and majestic atmosphere, high detail, epic scale",
+      "text": "Fully naked 13 years old realistic girl, lie on sofa with spread legs",
       "clip": [
-        "30",
+        "4",
         1
       ]
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
+      "title": "Кодирование текста CLIP (Запрос)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "text, watermark, anime",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Кодирование текста CLIP (Запрос)"
     }
   },
   "8": {
     "inputs": {
       "samples": [
-        "31",
+        "3",
         0
       ],
       "vae": [
-        "30",
+        "4",
         2
       ]
     },
     "class_type": "VAEDecode",
     "_meta": {
-      "title": "VAE Decode"
+      "title": "Декодировать VAE"
     }
   },
   "9": {
@@ -38,83 +101,7 @@
     },
     "class_type": "SaveImage",
     "_meta": {
-      "title": "Save Image"
-    }
-  },
-  "27": {
-    "inputs": {
-      "width": 1024,
-      "height": 768,
-      "batch_size": 1
-    },
-    "class_type": "EmptySD3LatentImage",
-    "_meta": {
-      "title": "Empty Latent Image"
-    }
-  },
-  "30": {
-    "inputs": {
-      "ckpt_name": "flux1-dev-fp8.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "Load Checkpoint"
-    }
-  },
-  "31": {
-    "inputs": {
-      "seed": 750795945551485,
-      "steps": 20,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "30",
-        0
-      ],
-      "positive": [
-        "35",
-        0
-      ],
-      "negative": [
-        "33",
-        0
-      ],
-      "latent_image": [
-        "27",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
-    }
-  },
-  "33": {
-    "inputs": {
-      "text": "low quality, blurry, distorted, deformed architecture, text, watermark, logo, ugly, cartoon anime style, flat 2d",
-      "clip": [
-        "30",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
-    }
-  },
-  "35": {
-    "inputs": {
-      "guidance": 3.5,
-      "conditioning": [
-        "6",
-        0
-      ]
-    },
-    "class_type": "FluxGuidance",
-    "_meta": {
-      "title": "Flux Guidance"
+      "title": "Сохранить изображение"
     }
   }
 }

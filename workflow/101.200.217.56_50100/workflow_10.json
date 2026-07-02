@@ -1,43 +1,104 @@
 {
-  "20": {
+  "455": {
     "inputs": {
-      "image": "input_1782377858263_7602505f-d60e-4d1a-ad32-7820749bc80f_6fa8925c-8af0-4d8b-ad45-02e8b65dbbb5.png",
-      "upload": "image"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "21": {
-    "inputs": {
-      "model": "BiRefNet-general",
-      "mask_blur": 0,
-      "mask_offset": 0,
-      "background": "Alpha",
-      "invert_output": false,
-      "refine_foreground": true,
-      "image": [
-        "20",
+      "structured_text": "`你是只能生成中文？`",
+      "model_version": "IndexTTS-1.5",
+      "language": "auto",
+      "speed": 1.0,
+      "seed": 1307641792,
+      "temperature": 1.0,
+      "top_p": 0.8,
+      "top_k": 30,
+      "repetition_penalty": 10.0,
+      "length_penalty": 0.0,
+      "num_beams": 3,
+      "max_mel_tokens": 600,
+      "narrator_audio": [
+        "461",
         0
       ]
     },
-    "class_type": "BiRefNetRMBG",
+    "class_type": "IndexTTSProNode",
     "_meta": {
-      "title": "BiRefNet (RMBG)"
+      "title": "Index TTS Pro"
     }
   },
-  "22": {
+  "459": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "21",
+      "audio": "",
+      "audioUI": ""
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "加载音频"
+    }
+  },
+  "460": {
+    "inputs": {
+      "audio": "",
+      "audioUI": ""
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "加载音频"
+    }
+  },
+  "461": {
+    "inputs": {
+      "audio": "audio_1782924950422_oikw7x.wav",
+      "audioUI": ""
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "加载音频"
+    }
+  },
+  "466": {
+    "inputs": {
+      "AudioPlay": {
+        "__value__": [
+          "/api/view?filename=._00001_.wav&type=temp&subfolder=&rand=0.9554657411717299",
+          null
+        ]
+      },
+      "audio": [
+        "455",
         0
       ]
     },
-    "class_type": "SaveImage",
+    "class_type": "AudioPlay",
     "_meta": {
-      "title": "保存图像"
+      "title": "Audio Play ♾️Mixlab"
+    }
+  },
+  "467": {
+    "inputs": {
+      "audio": "",
+      "audioUI": ""
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "加载音频"
+    }
+  },
+  "468": {
+    "inputs": {
+      "audio": "",
+      "audioUI": ""
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "加载音频"
+    }
+  },
+  "469": {
+    "inputs": {
+      "audio": "",
+      "audioUI": ""
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "加载音频"
     }
   }
 }

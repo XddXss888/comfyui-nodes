@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "ai_edit_src_6185ADD6-C52F-4DAA-8AF0-A9038451AC98.png"
+      "image": "ai_edit_src_EC0DAC39-E965-4673-8E0D-4FC9143E56D0.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -123,7 +123,7 @@
         "93",
         0
       ],
-      "prompt": "In red cursaive wording write COLOMBIAN MAMI. On the Right side add the colombian flag. Center MAMI below COLOMBIAN. And center the flag with the text\r\n\r\n\r\n"
+      "prompt": "color swap the blue/navy font to white color. \r\n"
     },
     "class_type": "TextEncodeQwenImageEditPlus",
     "_meta": {
@@ -173,7 +173,7 @@
       "denoise": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "seed": 4735372728854212,
+      "seed": 7004522174196424,
       "steps": 4
     },
     "class_type": "KSampler",
@@ -203,7 +203,7 @@
         "8",
         0
       ],
-      "filename_prefix": "iqueue_edit_6185ADD6-C52F-4DAA-8AF0-A9038451AC98"
+      "filename_prefix": "iqueue_edit_EC0DAC39-E965-4673-8E0D-4FC9143E56D0"
     },
     "class_type": "SaveImage",
     "_meta": {

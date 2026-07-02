@@ -1,43 +1,217 @@
 {
+  "4": {
+    "inputs": {
+      "model_name": "Hunyuan3D-vae-v2-1-fp16.ckpt"
+    },
+    "class_type": "Hy3D21VAELoader",
+    "_meta": {
+      "title": "Hunyuan 3D 2.1 VAE Loader"
+    }
+  },
+  "9": {
+    "inputs": {
+      "box_v": 1.01,
+      "octree_resolution": 256,
+      "num_chunks": 64000,
+      "mc_level": 0.0,
+      "mc_algo": "mc",
+      "enable_flash_vdm": true,
+      "force_offload": false,
+      "vae": [
+        "4",
+        0
+      ],
+      "latents": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "Hy3D21VAEDecode",
+    "_meta": {
+      "title": "Hunyuan 3D 2.1 VAE Decoder"
+    }
+  },
+  "14": {
+    "inputs": {
+      "image": "input_1782899311991.png"
+    },
+    "class_type": "Hy3D21LoadImageWithTransparency",
+    "_meta": {
+      "title": "Hunyuan 3D 2.1 Load Image with Transparency"
+    }
+  },
+  "19": {
+    "inputs": {
+      "camera_azimuths": "0, 90, 180, 270, 0, 180",
+      "camera_elevations": "0, 0, 0, 0, 90, -90",
+      "view_weights": "1, 0.5, 1, 0.5, 1, 1",
+      "ortho_scale": 1.1
+    },
+    "class_type": "Hy3D21CameraConfig",
+    "_meta": {
+      "title": "Hunyuan 3D 2.1 Camera Config"
+    }
+  },
   "20": {
     "inputs": {
-      "image": "input_1782282266595_e7ef82d6-cef1-4474-8b95-75830e74a997_42b253e9-65ac-4cc1-9fce-3e88fcc82b05.png",
-      "upload": "image"
+      "view_size": 768,
+      "steps": 10,
+      "guidance_scale": 3.0,
+      "texture_size": 2048,
+      "unwrap_mesh": false,
+      "seed": 1782900065096,
+      "trimesh": [
+        "45",
+        0
+      ],
+      "camera_config": [
+        "19",
+        0
+      ],
+      "image": [
+        "14",
+        0
+      ]
     },
-    "class_type": "LoadImage",
+    "class_type": "Hy3DMultiViewsGenerator",
     "_meta": {
-      "title": "加载图像"
+      "title": "Hunyuan 3D 2.1 MultiViews Generator"
     }
   },
   "21": {
     "inputs": {
-      "model": "BiRefNet-general",
-      "mask_blur": 0,
-      "mask_offset": 0,
-      "background": "Alpha",
-      "invert_output": false,
-      "refine_foreground": true,
-      "image": [
+      "pipeline": [
         "20",
         0
+      ],
+      "camera_config": [
+        "19",
+        0
+      ],
+      "albedo": [
+        "20",
+        1
+      ],
+      "mr": [
+        "20",
+        2
       ]
     },
-    "class_type": "BiRefNetRMBG",
+    "class_type": "Hy3DBakeMultiViews",
     "_meta": {
-      "title": "BiRefNet (RMBG)"
+      "title": "Hunyuan 3D 2.1 Bake MultiViews"
     }
   },
-  "22": {
+  "27": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "21",
+      "model_file": [
+        "49",
+        3
+      ],
+      "image": ""
+    },
+    "class_type": "Preview3D",
+    "_meta": {
+      "title": "预览3D"
+    }
+  },
+  "30": {
+    "inputs": {
+      "value": 700000
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "整数常量"
+    }
+  },
+  "32": {
+    "inputs": {
+      "string": "Hy21_Mesh_1782899316228"
+    },
+    "class_type": "StringConstant",
+    "_meta": {
+      "title": "字符串常量"
+    }
+  },
+  "37": {
+    "inputs": {
+      "model": "hunyuan3d-dit-v2-1-fp16.ckpt",
+      "steps": 25,
+      "guidance_scale": 7.5,
+      "seed": 1782900063759,
+      "attention_mode": "sdpa",
+      "image": [
+        "14",
         0
       ]
     },
-    "class_type": "SaveImage",
+    "class_type": "Hy3DMeshGenerator",
     "_meta": {
-      "title": "保存图像"
+      "title": "Hunyuan 3D 2.1 Mesh Generator"
+    }
+  },
+  "43": {
+    "inputs": {
+      "remove_floaters": true,
+      "remove_degenerate_faces": true,
+      "reduce_faces": true,
+      "max_facenum": [
+        "30",
+        0
+      ],
+      "smooth_normals": false,
+      "trimesh": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "Hy3D21PostprocessMesh",
+    "_meta": {
+      "title": "Hunyuan 3D 2.1 Post Process Trimesh"
+    }
+  },
+  "45": {
+    "inputs": {
+      "trimesh": [
+        "43",
+        0
+      ]
+    },
+    "class_type": "Hy3D21MeshUVWrap",
+    "_meta": {
+      "title": "Hunyuan 3D 2.1 Mesh UV Wrap"
+    }
+  },
+  "49": {
+    "inputs": {
+      "output_mesh_name": [
+        "32",
+        0
+      ],
+      "pipeline": [
+        "21",
+        0
+      ],
+      "albedo": [
+        "21",
+        1
+      ],
+      "albedo_mask": [
+        "21",
+        2
+      ],
+      "mr": [
+        "21",
+        3
+      ],
+      "mr_mask": [
+        "21",
+        4
+      ]
+    },
+    "class_type": "Hy3DInPaint",
+    "_meta": {
+      "title": "Hunyuan 3D 2.1 InPaint"
     }
   }
 }

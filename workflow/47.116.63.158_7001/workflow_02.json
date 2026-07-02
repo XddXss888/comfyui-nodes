@@ -1,0 +1,205 @@
+{
+  "9": {
+    "inputs": {
+      "filename_prefix": [
+        "61",
+        0
+      ],
+      "images": [
+        "43",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "39": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "40": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "41": {
+    "inputs": {
+      "width": 1280,
+      "height": 1280,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "空Latent图像（SD3）"
+    }
+  },
+  "43": {
+    "inputs": {
+      "samples": [
+        "44",
+        0
+      ],
+      "vae": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "44": {
+    "inputs": {
+      "seed": 1049022336748848,
+      "steps": 40,
+      "cfg": 3.0,
+      "sampler_name": "res_multistep",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "47",
+        0
+      ],
+      "positive": [
+        "45",
+        0
+      ],
+      "negative": [
+        "48",
+        0
+      ],
+      "latent_image": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "45": {
+    "inputs": {
+      "text": [
+        "62",
+        0
+      ],
+      "clip": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "46": {
+    "inputs": {
+      "unet_name": "z_image_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "47": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "53",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "采样算法（AuraFlow）"
+    }
+  },
+  "48": {
+    "inputs": {
+      "text": "畸形，色斑，额外的手，额外的脚，额外的腿，瘦小身材，细小手臂，细小大腿，瘦小大腿，色差，补丁",
+      "clip": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "53": {
+    "inputs": {
+      "lora_name": "zloras/scott_cnman_v1_000003000.safetensors",
+      "strength_model": 1.0,
+      "model": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "60": {
+    "inputs": {
+      "string": "zimage"
+    },
+    "class_type": "StringConstant",
+    "_meta": {
+      "title": "String Constant"
+    }
+  },
+  "61": {
+    "inputs": {
+      "text": [
+        "60",
+        0
+      ]
+    },
+    "class_type": "DateStrGenerator",
+    "_meta": {
+      "title": "Date String Generator"
+    }
+  },
+  "62": {
+    "inputs": {
+      "trigger": 2,
+      "probability": 0.0
+    },
+    "class_type": "ManPrompts",
+    "_meta": {
+      "title": "Man Prompts"
+    }
+  },
+  "63": {
+    "inputs": {
+      "text_0": "A realistic photo of a Chinese man, cnman, wide shot, eye-level shot, three-quarter view, 36-year-old with a fade cut and light stubble, wrestler body with thick beefy muscles and a bit of belly, wearing a light blue uniform shirt with a small black logo on the chest, dark gray men's gym tights, white and blue UA sneakers, leaning against a weathered concrete wall near a park, serious expression with slightly furrowed brows, outdoor scene in late afternoon natural sunlight, warm golden rays casting soft shadows on the ground, a few fallen leaves around his feet, little tenting in the crotch visible through the tight tights, background shows a blurred tree line and a distant bench, atmosphere of quiet determination.",
+      "text": [
+        "62",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "1": {
+    "inputs": {
+      "image": "visage vielle droite.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Charger Image"
+    }
+  },
+  "3": {
+    "inputs": {
+      "filename_prefix": "DANCE_FACE",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Enregistrer Image"
+    }
+  },
+  "4": {
+    "inputs": {
+      "image": "IMG_4138.JPG"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Charger Image"
+    }
+  },
+  "7": {
+    "inputs": {
+      "images.image0": [
+        "1",
+        0
+      ],
+      "images.image1": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "BatchImagesNode",
+    "_meta": {
+      "title": "Images par lot"
+    }
+  },
+  "8": {
+    "inputs": {
+      "prompt": "change le model par le model que je t'ai envoyé, en gardant la position initial",
+      "model": "gemini-3-pro-image-preview",
+      "seed": 406731632702627,
+      "aspect_ratio": "auto",
+      "resolution": "4K",
+      "response_modalities": "IMAGE+TEXT",
+      "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+      "images": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "GeminiImage2Node",
+    "_meta": {
+      "title": "Nano Banana Pro (Google Gemini Image)"
+    }
+  }
+}

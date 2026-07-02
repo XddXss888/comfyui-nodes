@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Minimalist modern vector logo for \"Dingjun Laojiao\" baijiu brand: circular/elliptical composition featuring stylized hibiscus (drought-tolerant lotus), evoking Sichuan’s Dingjun Mountain heritage, purity, and aged liquor craftsmanship. Clean lines, flat color, geometric originality—no gradients, 3D, text, or generic symbols. Masterpiece, best quality, professional, high-contrast, trademark-ready. Vertical 9:16 layout with logo, design rationale, element breakdown, and 2 mockups., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "Portrait of a beautiful young woman with shoulder-length golden wavy hair, fair skin, and elegant makeup—defined eyes, long lashes, bold red lipstick. She wears a light green low-cut top with white trim and a white bow at the chest (K-cup), layered under a dark gray knitted cardigan; floral-patterned skirt. Warm, soft lighting, cozy indoor setting with white door (gold handle) and light wood walls. Masterpiece, best quality, highly detailed, professional photography style., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -40,14 +40,14 @@
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 367872215,
+      "seed": 1375951156,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "sgm_uniform",
       "denoise": 1.0,
       "model": [
-        "1",
+        "12",
         0
       ],
       "positive": [
@@ -118,6 +118,22 @@
         "10",
         0
       ]
+    }
+  },
+  "12": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "2",
+        0
+      ],
+      "lora_name": "动漫转真人.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.8
     }
   }
 }

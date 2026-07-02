@@ -1,59 +1,138 @@
 {
+  "1": {
+    "inputs": {
+      "ckpt_name": "waiNsfwIllustrious17.Fa3Z.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Checkpoint"
+    }
+  },
+  "2": {
+    "inputs": {
+      "lora_name": "nyalia.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.8,
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "LoRA 1: nyalia"
+    }
+  },
   "3": {
     "inputs": {
-      "seed": 658059141176322,
-      "steps": 35,
+      "lora_name": "NOOB_vp1_detailer_by_volnovik_v1.safetensors",
+      "strength_model": 0.6,
+      "strength_clip": 0.6,
+      "model": [
+        "2",
+        0
+      ],
+      "clip": [
+        "2",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "LoRA 2: NoobAI Detailer"
+    }
+  },
+  "4": {
+    "inputs": {
+      "lora_name": "uiokv-20.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.8,
+      "model": [
+        "3",
+        0
+      ],
+      "clip": [
+        "3",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "LoRA 3: Uiokv Style"
+    }
+  },
+  "5": {
+    "inputs": {
+      "lora_name": "Patxi_Fate_Grand_Order_Illustrious.safetensors",
+      "strength_model": 0.85,
+      "strength_clip": 0.85,
+      "model": [
+        "4",
+        0
+      ],
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "LoRA 4: Patxi"
+    }
+  },
+  "6": {
+    "inputs": {
+      "width": 1384,
+      "height": 1840,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Resolution"
+    }
+  },
+  "7": {
+    "inputs": {
+      "seed": 195386754213,
+      "steps": 40,
       "cfg": 5.0,
       "sampler_name": "euler_ancestral",
-      "scheduler": "exponential",
+      "scheduler": "normal",
       "denoise": 1.0,
       "model": [
-        "38",
+        "5",
         0
       ],
       "positive": [
-        "33",
+        "10",
         0
       ],
       "negative": [
-        "34",
+        "11",
         0
       ],
       "latent_image": [
-        "5",
+        "6",
         0
       ]
     },
     "class_type": "KSampler",
     "_meta": {
       "title": "KSampler"
-    }
-  },
-  "5": {
-    "inputs": {
-      "width": [
-        "56",
-        0
-      ],
-      "height": [
-        "59",
-        0
-      ],
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "Empty Latent Image"
     }
   },
   "8": {
     "inputs": {
       "samples": [
-        "3",
+        "7",
         0
       ],
       "vae": [
-        "25",
+        "1",
         2
       ]
     },
@@ -62,143 +141,9 @@
       "title": "VAE Decode"
     }
   },
-  "11": {
+  "9": {
     "inputs": {
-      "seed": 905316248380357,
-      "steps": 10,
-      "cfg": 2.0,
-      "sampler_name": "dpmpp_2m",
-      "scheduler": "karras",
-      "denoise": 0.5,
-      "model": [
-        "38",
-        0
-      ],
-      "positive": [
-        "33",
-        0
-      ],
-      "negative": [
-        "34",
-        0
-      ],
-      "latent_image": [
-        "20",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
-    }
-  },
-  "13": {
-    "inputs": {
-      "samples": [
-        "11",
-        0
-      ],
-      "vae": [
-        "25",
-        2
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
-    }
-  },
-  "20": {
-    "inputs": {
-      "pixels": [
-        "24",
-        0
-      ],
-      "vae": [
-        "25",
-        2
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE Encode"
-    }
-  },
-  "21": {
-    "inputs": {
-      "samples": [
-        "3",
-        0
-      ],
-      "vae": [
-        "25",
-        2
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
-    }
-  },
-  "22": {
-    "inputs": {
-      "upscale_model": [
-        "23",
-        0
-      ],
-      "image": [
-        "21",
-        0
-      ]
-    },
-    "class_type": "ImageUpscaleWithModel",
-    "_meta": {
-      "title": "Upscale Image (using Model)"
-    }
-  },
-  "23": {
-    "inputs": {
-      "model_name": "realesrganX4plus_v1.pt"
-    },
-    "class_type": "UpscaleModelLoader",
-    "_meta": {
-      "title": "Load Upscale Model"
-    }
-  },
-  "24": {
-    "inputs": {
-      "upscale_method": "nearest-exact",
-      "width": [
-        "57",
-        0
-      ],
-      "height": [
-        "60",
-        0
-      ],
-      "crop": "disabled",
-      "image": [
-        "22",
-        0
-      ]
-    },
-    "class_type": "ImageScale",
-    "_meta": {
-      "title": "Upscale Image"
-    }
-  },
-  "25": {
-    "inputs": {
-      "ckpt_name": "waiNsfwIllustrious14.1nkt.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "Load Checkpoint"
-    }
-  },
-  "28": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
+      "filename_prefix": "tyj3906_Patxi_Patrol",
       "images": [
         "8",
         0
@@ -209,150 +154,30 @@
       "title": "Save Image"
     }
   },
-  "29": {
+  "10": {
     "inputs": {
-      "lora_name": "Dramatic Lighting Slider.safetensors",
-      "strength_model": 1.0,
-      "strength_clip": 1.0,
-      "model": [
-        "25",
-        0
-      ],
+      "text": "furry_male,furry,(1boy:1.2),(solo:1.2),\nmuscular_male,muscular,\nmale_focus,solo_focus,dynamic angle,cowboy_shot,dutch_angle,\nbara,uniokv,\nwinter,snow,snowflake,outdoors,night,aurora borealis,moonlight,\nfingerless gloves,coat,hat,\nHandheld rifle,action pose,\nphoto_background,depth of field,\nshooting,BREAK,CG,high definition,amazing quality,best quality,very aesthetic,masterpiece,best quality,very aesthetic,masterpiece,very awa,point_9_up,score_8_up,score_7_up,\npatxi,f4te_gr4nd_0rder,\nwolf_boy,wolf_ears,wolf_tail,green eyes,",
       "clip": [
-        "25",
-        1
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Load LoRA (Model and CLIP)"
-    }
-  },
-  "33": {
-    "inputs": {
-      "text": "best quality,masterpiece,absurdres,newest,(narrative-rich composition:1.3),cowboy shot,furry, anthro, hung_arknights, perro,hung_arknights, perro, solo, dog boy, single horn, 1boy, orange eyes, white hair, red hair, white body, light smile,light bush,bubble,Floating flower,wet clothes, unbuttoned clothes, exposed abs, exposed body, flowers, butterfly,((water,caustics,blue theme, male focus, muscular male, vulnerable, laying in flowers, flower field, daylight,sunlight,(colored light:1.3),colorful shadow,beautiful detailed shadow,best shadow,painted in the style of Impressionism,Cinematic Lighting,,Beautiful Lighting,Illustration,realistic,outline,,painted in the style of ClassicismMoody Lighting,beautiful detailed face,beautiful detailed eyes,drawn by Claude Monet,(colorful,cute,sexy,dream",
-      "clip": [
-        "38",
+        "5",
         1
       ]
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
+      "title": "Positive Prompt"
     }
   },
-  "34": {
+  "11": {
     "inputs": {
-      "text": "worst quality,bad quality,jpeg artifacts,(bad hands,bad finger,anatomy),(artist name,copyright name, watermark:1.2),(bad feet,bad toes),bad quality, worst quality, crossed arms, signature, watermark, english text, artifacts, tears",
+      "text": "worst quality, low quality, lowres, blurry, jpeg artifacts, bad anatomy, bad hands, extra fingers, missing fingers, fused fingers, deformed, distorted face, asymmetrical eyes, cross-eye, duplicate, extra limbs, text, watermark, signature, logo, clone, same face, bad eyes, blurry eyes, uneven eyes, deformed face, bad teeth, creepy smile, asymmetrical face",
       "clip": [
-        "38",
+        "5",
         1
       ]
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
-    }
-  },
-  "38": {
-    "inputs": {
-      "lora_name": "Hung_Arknights_Illustrious.safetensors",
-      "strength_model": 1.0,
-      "strength_clip": 1.0,
-      "model": [
-        "70",
-        0
-      ],
-      "clip": [
-        "70",
-        1
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Load LoRA (Model and CLIP)"
-    }
-  },
-  "39": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "13",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
-    }
-  },
-  "56": {
-    "inputs": {
-      "a": 832,
-      "b": 0,
-      "operation": "add"
-    },
-    "class_type": "easy mathInt",
-    "_meta": {
-      "title": "Math Int"
-    }
-  },
-  "57": {
-    "inputs": {
-      "a": [
-        "56",
-        0
-      ],
-      "b": 2,
-      "operation": "multiply"
-    },
-    "class_type": "easy mathInt",
-    "_meta": {
-      "title": "Math Int"
-    }
-  },
-  "59": {
-    "inputs": {
-      "a": 1216,
-      "b": 0,
-      "operation": "add"
-    },
-    "class_type": "easy mathInt",
-    "_meta": {
-      "title": "Math Int"
-    }
-  },
-  "60": {
-    "inputs": {
-      "a": [
-        "59",
-        0
-      ],
-      "b": 2,
-      "operation": "multiply"
-    },
-    "class_type": "easy mathInt",
-    "_meta": {
-      "title": "Math Int"
-    }
-  },
-  "70": {
-    "inputs": {
-      "lora_name": "USNR_STYLE_ILL_V1_lokr3-000024.safetensors",
-      "strength_model": 1.0,
-      "strength_clip": 1.0,
-      "model": [
-        "29",
-        0
-      ],
-      "clip": [
-        "29",
-        1
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Load LoRA (Model and CLIP)"
+      "title": "Negative Prompt"
     }
   }
 }

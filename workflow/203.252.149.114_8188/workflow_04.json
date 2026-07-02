@@ -1,7 +1,7 @@
 {
   "6": {
     "inputs": {
-      "text": "A life-sized realistic female puppet stands completely still, expressionless, eyes empty and lifeless. A man violently grabs her hair and pulls her head toward him. He forces his tongue deep into her throat, deepthroating her mouth aggressively. Rough brutal kissing, deep throat, savage oral, dominant, aggressive, raw, intense, cinematic lighting.",
+      "text": "两人面对面紧紧拥抱，降落伞在头顶完全张开，伞绳绷直拉扯，身体悬空急速下坠，风从身下猛烈往上吹，头发狂舞，衣服紧贴身体剧烈抖动，两人在空中猛烈性交，双腿缠绕在对方腰间，身体随着下坠的节奏剧烈起伏，喘息急促，皮肤因风力而紧绷，背景是快速掠过的云层和天空，高速运动导致画面边缘带动态模糊，电影级特写镜头，强烈的速度感和冲击力，光线对比鲜明，真实震撼",
       "clip": [
         "97",
         0
@@ -61,7 +61,7 @@
   "57": {
     "inputs": {
       "add_noise": "enable",
-      "noise_seed": 854586840147,
+      "noise_seed": 1142712048,
       "steps": 8,
       "cfg": 2.0,
       "sampler_name": "euler",
@@ -91,7 +91,7 @@
   "58": {
     "inputs": {
       "add_noise": "disable",
-      "noise_seed": 854586840147,
+      "noise_seed": 0,
       "steps": 8,
       "cfg": 2.0,
       "sampler_name": "euler",
@@ -152,7 +152,7 @@
   },
   "106": {
     "inputs": {
-      "image": "2.png"
+      "image": "7.png"
     },
     "class_type": "LoadImage"
   },
@@ -187,7 +187,7 @@
         "99",
         0
       ],
-      "filename_prefix": "seg6_puppet",
+      "filename_prefix": "parachute_fall_7",
       "format": "mp4",
       "codec": "h264"
     },

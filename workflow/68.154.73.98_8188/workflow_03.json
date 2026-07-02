@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_7f960019009a4b569106ee9fb8060cb9.png"
+      "image": "ref_1d926afb623543729b419b914c0d5f24.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "Based on the person in the uploaded photo create me  a photo of a woman with the same likeness sitting up body straight clothed on single bed with her hands behind her head showing both her large bare feet and soles straight and flat together, both legs laying together straight on the bed with both feet and soles together straight and flat",
+      "prompt": "線をすこしだけきれいにして\n全裸\n痩せている",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 649581950303679,
+      "seed": 381371213904547,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",

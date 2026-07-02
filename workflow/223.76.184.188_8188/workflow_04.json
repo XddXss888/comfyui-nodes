@@ -1,0 +1,354 @@
+{
+  "10": {
+    "_meta": {
+      "title": "Load VAE"
+    },
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    }
+  },
+  "11": {
+    "_meta": {
+      "title": "DualCLIPLoader"
+    },
+    "class_type": "DualCLIPLoader",
+    "inputs": {
+      "clip_name1": "t5xxl_fp8_e4m3fn.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "device": "default",
+      "type": "flux"
+    }
+  },
+  "12": {
+    "_meta": {
+      "title": "Load Diffusion Model"
+    },
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    }
+  },
+  "13": {
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "guider": [
+        "22",
+        0
+      ],
+      "latent_image": [
+        "27",
+        0
+      ],
+      "noise": [
+        "25",
+        0
+      ],
+      "sampler": [
+        "16",
+        0
+      ],
+      "sigmas": [
+        "17",
+        0
+      ]
+    }
+  },
+  "16": {
+    "_meta": {
+      "title": "KSamplerSelect"
+    },
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "17": {
+    "_meta": {
+      "title": "BasicScheduler"
+    },
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "denoise": 1.0,
+      "model": [
+        "30",
+        0
+      ],
+      "scheduler": "simple",
+      "steps": 30
+    }
+  },
+  "22": {
+    "_meta": {
+      "title": "BasicGuider"
+    },
+    "class_type": "BasicGuider",
+    "inputs": {
+      "conditioning": [
+        "26",
+        0
+      ],
+      "model": [
+        "30",
+        0
+      ]
+    }
+  },
+  "25": {
+    "_meta": {
+      "title": "RandomNoise"
+    },
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 911102715734018
+    }
+  },
+  "26": {
+    "_meta": {
+      "title": "FluxGuidance"
+    },
+    "class_type": "FluxGuidance",
+    "inputs": {
+      "conditioning": [
+        "62",
+        0
+      ],
+      "guidance": 3.5
+    }
+  },
+  "27": {
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    },
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "batch_size": 1,
+      "height": 1024,
+      "width": 752
+    }
+  },
+  "30": {
+    "_meta": {
+      "title": "ModelSamplingFlux"
+    },
+    "class_type": "ModelSamplingFlux",
+    "inputs": {
+      "base_shift": 0.5,
+      "height": 1024,
+      "max_shift": 1.1500000000000001,
+      "model": [
+        "90",
+        0
+      ],
+      "width": 1024
+    }
+  },
+  "38": {
+    "_meta": {
+      "title": "LoraLoaderModelOnly"
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "lora_name": "AWPortrait-FL-lora.safetensors",
+      "model": [
+        "76",
+        0
+      ],
+      "strength_model": 0.6
+    }
+  },
+  "60": {
+    "_meta": {
+      "title": "🔤 CR Text"
+    },
+    "class_type": "CR Text",
+    "inputs": {
+      "text": "Best quality, 1male, 22 years old, poet, swordsman, wanderer, tall and slim figure, (long flowing black hair:1.2), (deep brown eyes:1.1), slightly tanned skin, handsome facial features with sharp and spirited eyebrows, piercing gaze, prominent nose, styled with a carefree smile, (long beard:1.2), wearing a wide-sleeved silk robe in white or azure color, casually elegant yet refined, a sword hung on the waistband, Chinese ethnicity, standing in a lush mountain landscape with flowing rivers, amidst the grandeur of nature, bright sunny day with gentle wind, full body shot, 8k, realistic, photograph style."
+    }
+  },
+  "62": {
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    },
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "11",
+        0
+      ],
+      "text": [
+        "60",
+        0
+      ]
+    }
+  },
+  "72": {
+    "_meta": {
+      "title": "仅加载LoRA模型"
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "lora_name": "Hand_v2.safetensors",
+      "model": [
+        "38",
+        0
+      ],
+      "strength_model": 0.0
+    }
+  },
+  "76": {
+    "_meta": {
+      "title": "仅加载LoRA模型"
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "lora_name": "FLUX-dev-lora-AntiBlur.safetensors",
+      "model": [
+        "12",
+        0
+      ],
+      "strength_model": 1.5
+    }
+  },
+  "77": {
+    "_meta": {
+      "title": "保存图像"
+    },
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    }
+  },
+  "79": {
+    "_meta": {
+      "title": "CLIP文本编码（提示）"
+    },
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "11",
+        0
+      ],
+      "text": ""
+    }
+  },
+  "8": {
+    "_meta": {
+      "title": "VAE Decode"
+    },
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "13",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    }
+  },
+  "80": {
+    "_meta": {
+      "title": "CLIP文本编码（提示）"
+    },
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "11",
+        0
+      ],
+      "text": ""
+    }
+  },
+  "81": {
+    "_meta": {
+      "title": "FromBasicPipe"
+    },
+    "class_type": "FromBasicPipe",
+    "inputs": {
+      "basic_pipe": [
+        "82",
+        0
+      ]
+    }
+  },
+  "82": {
+    "_meta": {
+      "title": "ToBasicPipe"
+    },
+    "class_type": "ToBasicPipe",
+    "inputs": {
+      "clip": [
+        "11",
+        0
+      ],
+      "model": [
+        "38",
+        0
+      ],
+      "negative": [
+        "80",
+        0
+      ],
+      "positive": [
+        "79",
+        0
+      ],
+      "vae": [
+        "10",
+        0
+      ]
+    }
+  },
+  "83": {
+    "_meta": {
+      "title": "UltralyticsDetectorProvider"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "inputs": {
+      "model_name": "bbox/face_yolov8m.pt"
+    }
+  },
+  "84": {
+    "_meta": {
+      "title": "UltralyticsDetectorProvider"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "inputs": {
+      "model_name": "bbox/face_yolov8m.pt"
+    }
+  },
+  "85": {
+    "_meta": {
+      "title": "SAMLoader (Impact)"
+    },
+    "class_type": "SAMLoader",
+    "inputs": {
+      "device_mode": "AUTO",
+      "model_name": "sam_vit_b_01ec64.pth"
+    }
+  },
+  "90": {
+    "_meta": {
+      "title": "仅加载LoRA模型"
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "lora_name": "flux_realism_lora.safetensors",
+      "model": [
+        "72",
+        0
+      ],
+      "strength_model": 0.2
+    }
+  }
+}

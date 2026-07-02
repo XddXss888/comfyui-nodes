@@ -1,119 +1,141 @@
 {
-  "3": {
+  "1": {
     "inputs": {
-      "seed": 278220733053863,
-      "steps": 20,
-      "cfg": 8.0,
-      "sampler_name": "euler",
-      "scheduler": "normal",
-      "denoise": 1.0,
-      "model": [
-        "4",
-        0
-      ],
-      "positive": [
-        "6",
-        0
-      ],
-      "negative": [
-        "7",
-        0
-      ],
-      "latent_image": [
-        "5",
+      "image": "input_1782898998606.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "10": {
+    "inputs": {
+      "mask": [
+        "11",
         0
       ]
     },
-    "class_type": "KSampler",
+    "class_type": "MaskPreview",
     "_meta": {
-      "title": "K采样器"
+      "title": "预览遮罩"
     }
   },
-  "4": {
+  "11": {
     "inputs": {
-      "ckpt_name": "XL写实\\万享XL_超写实摄影_V8.4.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "Checkpoint加载器（简易）"
-    }
-  },
-  "5": {
-    "inputs": {
-      "width": 512,
-      "height": 512,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "空Latent图像"
-    }
-  },
-  "6": {
-    "inputs": {
-      "text": "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,",
-      "speak_and_recognation": {
-        "__value__": [
-          false,
-          true
-        ]
-      },
-      "clip": [
-        "4",
+      "mask": [
+        "1",
         1
       ]
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "InvertMask",
     "_meta": {
-      "title": "CLIP文本编码"
+      "title": "反转遮罩"
     }
   },
-  "7": {
+  "64": {
     "inputs": {
-      "text": "text, watermark",
-      "speak_and_recognation": {
-        "__value__": [
-          false,
-          true
-        ]
-      },
-      "clip": [
-        "4",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP文本编码"
-    }
-  },
-  "8": {
-    "inputs": {
-      "samples": [
-        "3",
+      "model_file": [
+        "74",
         0
       ],
-      "vae": [
-        "4",
-        2
-      ]
+      "image": "input_1782898998606.png"
     },
-    "class_type": "VAEDecode",
+    "class_type": "Preview3D",
     "_meta": {
-      "title": "VAE解码"
+      "title": "预览3D"
     }
   },
-  "9": {
+  "68": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "8",
+      "resolution": "512",
+      "precision": "auto",
+      "attn_backend": "auto"
+    },
+    "class_type": "LoadTrellis2Models",
+    "_meta": {
+      "title": "Load TRELLIS.2 Models"
+    }
+  },
+  "69": {
+    "inputs": {
+      "background_color": "black",
+      "model_config": [
+        "68",
+        0
+      ],
+      "image": [
+        "1",
+        0
+      ],
+      "mask": [
+        "11",
         0
       ]
     },
-    "class_type": "SaveImage",
+    "class_type": "Trellis2GetConditioning",
     "_meta": {
-      "title": "保存图像"
+      "title": "TRELLIS.2 Get Conditioning"
+    }
+  },
+  "73": {
+    "inputs": {
+      "seed": 1936370342,
+      "ss_guidance_strength": 7.5,
+      "ss_sampling_steps": 12,
+      "shape_guidance_strength": 7.5,
+      "shape_sampling_steps": 12,
+      "max_tokens": 49152,
+      "model_config": [
+        "68",
+        0
+      ],
+      "conditioning": [
+        "69",
+        0
+      ]
+    },
+    "class_type": "Trellis2ImageToShape",
+    "_meta": {
+      "title": "TRELLIS.2 Image to Shape"
+    }
+  },
+  "74": {
+    "inputs": {
+      "voxelgrid_path": [
+        "75",
+        1
+      ],
+      "decimation_target": 500000,
+      "texture_size": 2048,
+      "remesh": true,
+      "filename_prefix": "trellis2_1782899001082"
+    },
+    "class_type": "Trellis2ExportGLB",
+    "_meta": {
+      "title": "TRELLIS.2 Export GLB"
+    }
+  },
+  "75": {
+    "inputs": {
+      "seed": 1936371679,
+      "tex_guidance_strength": 7.5,
+      "tex_sampling_steps": 12,
+      "model_config": [
+        "68",
+        0
+      ],
+      "conditioning": [
+        "69",
+        0
+      ],
+      "shape_result": [
+        "73",
+        0
+      ]
+    },
+    "class_type": "Trellis2ShapeToTexturedMesh",
+    "_meta": {
+      "title": "TRELLIS.2 Shape to Textured Mesh"
     }
   }
 }

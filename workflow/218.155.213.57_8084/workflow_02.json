@@ -1,0 +1,599 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "anima_baseV10.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "확산 모델 로드"
+    }
+  },
+  "3": {
+    "inputs": {
+      "wildcard_text": "score_7, masterpiece, best quality, highres, highly detailed, anime style, \n\nsmall breasts, slender build, multicolored_hair, [baby_blue]_two-tone_hair, ([baby_blue]_hair:1.3), [blue]_inner_hair, short hair,  low_twintails,hair_ornament, bangs, cat ears, white fluffy ear tufts, light blue eyes,low-tied long hair,  blue tail white tip,long ahoge, black hair clip, \n\nwhite highleg one-piece swimsuit , black choker with o-ring, crop puffer jacket, off-shoulder jacket,black hairclip, black jacket with blue single lining, quilted lining, striped cuffs, striped collar, black thigh strap, one black gloved hand,\n\n   __06.camera/camera__,  __04.place/place_indoors__,  __10.nsfw/sexo-v2__, __05.face/all_nsfw__",
+      "populated_text": "score_7, masterpiece, best quality, highres, highly detailed, anime style, \n\nsmall breasts, slender build, multicolored_hair, [baby_blue]_two-tone_hair, ([baby_blue]_hair:1.3), [blue]_inner_hair, short hair,  low_twintails,hair_ornament, bangs, cat ears, white fluffy ear tufts, light blue eyes,low-tied long hair,  blue tail white tip,long ahoge, black hair clip, \n\nwhite highleg one-piece swimsuit , black choker with o-ring, crop puffer jacket, off-shoulder jacket,black hairclip, black jacket with blue single lining, quilted lining, striped cuffs, striped collar, black thigh strap, one black gloved hand,\n\n   straight-on, centered_composition,  tatami, ryokan, (dark lighting, dark:1.8), candle, huton,  from behind, 1girl, shiny skin, looking at viewer, ass, pussy, looking back, completely nude, wet, anus, back, bent over, partially submerged, ass focus, huge ass, buttjob, assjob, thong, penis squeeze, penis between ass, butt squeeze, hands on butt, excessive cum, cum on back, full-face blush, heavy breathing, (heart-shaped pupils, ecstasy), one eye closed, female orgasm",
+      "mode": "reproduce",
+      "seed": [
+        "34",
+        0
+      ],
+      "Select to add Wildcard": "Select the Wildcard to add to the text"
+    },
+    "class_type": "ImpactWildcardProcessor",
+    "_meta": {
+      "title": "POSITIVE"
+    }
+  },
+  "4": {
+    "inputs": {
+      "wildcard_text": "worst quality, low quality, lowres, score_1, score_2, score_3, blurry, jpeg artifacts, bad anatomy, watermark, artist name, two-tone bangs, tail spread out, censored, Two characters with the same design,concept art, ",
+      "populated_text": "worst quality, low quality, lowres, score_1, score_2, score_3, blurry, jpeg artifacts, bad anatomy, watermark, artist name, two-tone bangs, tail spread out, censored, Two characters with the same design,concept art, ",
+      "mode": "reproduce",
+      "seed": [
+        "34",
+        0
+      ],
+      "Select to add Wildcard": "Select the Wildcard to add to the text"
+    },
+    "class_type": "ImpactWildcardProcessor",
+    "_meta": {
+      "title": "NEGATIVE"
+    }
+  },
+  "5": {
+    "inputs": {
+      "__lm_autocomplete_meta_text": {
+        "version": 1,
+        "textWidgetName": "text",
+        "lastAccepted": {
+          "start": 272,
+          "end": 296,
+          "insertedText": "<lora:tentacle-pitXL:1>,",
+          "textSnapshot": "<lora:BlueArchiveStyleB1:0.80><lora:Lucy_bluecat_ior_loar:0.80>, <lora:MeMaAni_V1_x1792:1.00>, <lora:mixed_styles_anima-base1_v5:1.00>, <lora:NikkeB1:1.00>, <lora:normal chibi:1.00>, <lora:FComic1to1000_Anima_V1:1.00>, <lora:Brown_Dust_2_style:1.00>, <lora:pixel_f2:1.26>,<lora:tentacle-pitXL:1>,"
+        }
+      },
+      "text": "<lora:BlueArchiveStyleB1:0.80><lora:Lucy_bluecat_ior_loar:0.80>, <lora:MeMaAni_V1_x1792:1.00>, <lora:mixed_styles_anima-base1_v5:1.00>, <lora:NikkeB1:1.00>, <lora:normal chibi:1.00>, <lora:FComic1to1000_Anima_V1:1.00>, <lora:Brown_Dust_2_style:1.00>, <lora:pixel_f2:1.26>, <lora:tentacle-pitXL:0.80>",
+      "loras": {
+        "__value__": [
+          {
+            "name": "pixel_f2",
+            "strength": "1.26",
+            "active": false,
+            "expanded": false,
+            "clipStrength": "1.26",
+            "locked": false
+          },
+          {
+            "name": "BlueArchiveStyleB1",
+            "strength": "0.80",
+            "active": false,
+            "expanded": false,
+            "clipStrength": "0.80",
+            "locked": false
+          },
+          {
+            "name": "Lucy_bluecat_ior_loar",
+            "strength": "0.80",
+            "active": true,
+            "expanded": false,
+            "clipStrength": "0.80",
+            "locked": false
+          },
+          {
+            "name": "MeMaAni_V1_x1792",
+            "strength": 1,
+            "active": true,
+            "expanded": false,
+            "clipStrength": 1,
+            "locked": false
+          },
+          {
+            "name": "mixed_styles_anima-base1_v5",
+            "strength": 1,
+            "active": false,
+            "expanded": false,
+            "clipStrength": 1,
+            "locked": false
+          },
+          {
+            "name": "NikkeB1",
+            "strength": 1,
+            "active": false,
+            "expanded": false,
+            "clipStrength": 1,
+            "locked": false
+          },
+          {
+            "name": "normal chibi",
+            "strength": 1,
+            "active": false,
+            "expanded": false,
+            "clipStrength": 1,
+            "locked": false
+          },
+          {
+            "name": "FComic1to1000_Anima_V1",
+            "strength": 1,
+            "active": false,
+            "expanded": false,
+            "clipStrength": 1,
+            "locked": false
+          },
+          {
+            "name": "Brown_Dust_2_style",
+            "strength": 1,
+            "active": false,
+            "expanded": false,
+            "clipStrength": 1,
+            "locked": false
+          },
+          {
+            "name": "tentacle-pitXL",
+            "strength": "0.80",
+            "active": true,
+            "expanded": false,
+            "clipStrength": "0.80",
+            "locked": false
+          }
+        ]
+      },
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "Lora Loader (LoraManager)",
+    "_meta": {
+      "title": "Lora Loader (LoraManager)"
+    }
+  },
+  "6": {
+    "inputs": {
+      "seed": [
+        "34",
+        0
+      ],
+      "steps": [
+        "24",
+        1
+      ],
+      "cfg": [
+        "24",
+        2
+      ],
+      "sampler_name": [
+        "41",
+        0
+      ],
+      "scheduler": [
+        "40",
+        0
+      ],
+      "denoise": [
+        "24",
+        5
+      ],
+      "model": [
+        "5",
+        0
+      ],
+      "positive": [
+        "54",
+        0
+      ],
+      "negative": [
+        "55",
+        0
+      ],
+      "latent_image": [
+        "42",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "13": {
+    "inputs": {
+      "filename": "%time_%basemodelname_%seed",
+      "path": "E:\\comfy\\lucy_nsfw",
+      "extension": "png",
+      "lossless_webp": true,
+      "quality_jpeg_or_webp": 100,
+      "optimize_png": false,
+      "embed_workflow": true,
+      "save_workflow_as_json": false,
+      "counter": 0,
+      "time_format": "%Y-%m-%d-%H%M%S",
+      "show_preview": true,
+      "images": [
+        "60",
+        1
+      ],
+      "metadata": [
+        "58",
+        0
+      ]
+    },
+    "class_type": "Image Saver Simple",
+    "_meta": {
+      "title": "Image Saver Simple"
+    }
+  },
+  "18": {
+    "inputs": {
+      "clip_name": "qwen_3_06b_base.safetensors",
+      "type": "stable_diffusion",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "CLIP 로드"
+    }
+  },
+  "23": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "VAE 로드"
+    }
+  },
+  "24": {
+    "inputs": {
+      "seed": [
+        "34",
+        0
+      ],
+      "steps": 30,
+      "cfg": 4.0,
+      "sampler": "er_sde",
+      "scheduler": "simple",
+      "denoise": 1.0
+    },
+    "class_type": "Input Parameters (Image Saver)",
+    "_meta": {
+      "title": "Input Parameters (Image Saver)"
+    }
+  },
+  "34": {
+    "inputs": {
+      "seed": 969653839237941
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "Seed (rgthree)"
+    }
+  },
+  "37": {
+    "inputs": {
+      "group_mode": false,
+      "default_active": false,
+      "allow_strength_adjustment": false,
+      "toggle_trigger_words": {
+        "__value__": [
+          {
+            "text": "@BoTro",
+            "active": false,
+            "highlighted": false,
+            "strength": null
+          },
+          {
+            "text": "lucy_bluecat_ori",
+            "active": true,
+            "highlighted": false,
+            "strength": null
+          },
+          {
+            "text": "tentacle-pit",
+            "active": false,
+            "highlighted": false,
+            "strength": null
+          }
+        ]
+      },
+      "orinalMessage": "@BoTro,lucy_bluecat_ori,,, tentacle-pit",
+      "trigger_words": [
+        "5",
+        2
+      ]
+    },
+    "class_type": "TriggerWord Toggle (LoraManager)",
+    "_meta": {
+      "title": "TriggerWord Toggle (LoraManager)"
+    }
+  },
+  "39": {
+    "inputs": {
+      "value": 1536
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Width"
+    }
+  },
+  "40": {
+    "inputs": {
+      "text": "simple",
+      "anything": [
+        "24",
+        4
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "41": {
+    "inputs": {
+      "text": "er_sde",
+      "anything": [
+        "24",
+        3
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "42": {
+    "inputs": {
+      "select": 1,
+      "sel_mode": false,
+      "input1": [
+        "56",
+        0
+      ]
+    },
+    "class_type": "ImpactSwitch",
+    "_meta": {
+      "title": "Switch (Any)"
+    }
+  },
+  "43": {
+    "inputs": {
+      "samples": [
+        "6",
+        0
+      ],
+      "vae": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE 디코드"
+    }
+  },
+  "46": {
+    "inputs": {
+      "string_a": [
+        "37",
+        0
+      ],
+      "string_b": [
+        "3",
+        0
+      ],
+      "delimiter": ","
+    },
+    "class_type": "StringConcatenate",
+    "_meta": {
+      "title": "연결"
+    }
+  },
+  "47": {
+    "inputs": {
+      "value": 1152
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Height"
+    }
+  },
+  "48": {
+    "inputs": {
+      "string": [
+        "46",
+        0
+      ],
+      "regex_pattern": "^,|,$",
+      "replace": "",
+      "case_insensitive": true,
+      "multiline": false,
+      "dotall": false,
+      "count": 0
+    },
+    "class_type": "RegexReplace",
+    "_meta": {
+      "title": "정규식 치환"
+    }
+  },
+  "51": {
+    "inputs": {
+      "string_a": [
+        "48",
+        0
+      ],
+      "string_b": [
+        "5",
+        3
+      ],
+      "delimiter": ""
+    },
+    "class_type": "StringConcatenate",
+    "_meta": {
+      "title": "연결"
+    }
+  },
+  "52": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Batch Size"
+    }
+  },
+  "54": {
+    "inputs": {
+      "text": [
+        "48",
+        0
+      ],
+      "clip": [
+        "5",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "55": {
+    "inputs": {
+      "text": [
+        "4",
+        0
+      ],
+      "clip": [
+        "5",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "56": {
+    "inputs": {
+      "width": [
+        "39",
+        0
+      ],
+      "height": [
+        "47",
+        0
+      ],
+      "batch_size": [
+        "52",
+        0
+      ]
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "빈 잠재 이미지"
+    }
+  },
+  "57": {
+    "inputs": {
+      "id": 1,
+      "widget_name": "unet_name",
+      "return_all": false,
+      "node_title": "",
+      "allowed_float_decimals": 2
+    },
+    "class_type": "WidgetToString",
+    "_meta": {
+      "title": "Widget To String"
+    }
+  },
+  "58": {
+    "inputs": {
+      "modelname": [
+        "57",
+        0
+      ],
+      "positive": [
+        "51",
+        0
+      ],
+      "negative": [
+        "4",
+        0
+      ],
+      "width": [
+        "39",
+        0
+      ],
+      "height": [
+        "47",
+        0
+      ],
+      "seed_value": [
+        "34",
+        0
+      ],
+      "steps": [
+        "24",
+        1
+      ],
+      "cfg": [
+        "24",
+        2
+      ],
+      "sampler_name": [
+        "41",
+        0
+      ],
+      "scheduler_name": [
+        "40",
+        0
+      ],
+      "denoise": [
+        "24",
+        5
+      ],
+      "clip_skip": 0,
+      "additional_hashes": "",
+      "download_civitai_data": true,
+      "easy_remix": false,
+      "custom": ""
+    },
+    "class_type": "Image Saver Metadata",
+    "_meta": {
+      "title": "Image Saver Metadata"
+    }
+  },
+  "60": {
+    "inputs": {
+      "model_name": "realesrganX4plusAnime_v1.pt",
+      "rescale_after_model": true,
+      "rescale_method": "lanczos",
+      "rescale": "by percentage",
+      "percent": 50,
+      "width": 1024,
+      "height": 1024,
+      "longer_side": 1024,
+      "crop": "disabled",
+      "image_output": "Hide",
+      "link_id": 0,
+      "save_prefix": "ComfyUI",
+      "image": [
+        "43",
+        0
+      ],
+      "vae": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "easy hiresFix",
+    "_meta": {
+      "title": "HiresFix"
+    }
+  }
+}

@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "Tuna swimming in deep ocean, dramatic bioluminescent light rays piercing dark water, ultra-detailed marine environment, cinematic lighting, masterpiece, best quality, photorealistic, professional underwater photography, absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "Portrait of a beautiful young woman with shoulder-length golden wavy hair, fair skin, and elegant makeup—defined eyes, long lashes, bold red lipstick. She wears a light green low-cut top with white trim and a white bow at the chest (K-cup), layered under a dark gray knit cardigan; floral-patterned dress visible below. Warm, soft lighting, cozy indoor setting with white door (gold handle) and light wood walls. Masterpiece, best quality, detailed, professional, photorealistic, gentle pastel tones., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -33,21 +33,21 @@
     "class_type": "EmptyLatentImage",
     "inputs": {
       "width": 1024,
-      "height": 576,
+      "height": 1024,
       "batch_size": 1
     }
   },
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 1356274632,
+      "seed": 427978747,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "sgm_uniform",
       "denoise": 1.0,
       "model": [
-        "1",
+        "12",
         0
       ],
       "positive": [
@@ -118,6 +118,22 @@
         "10",
         0
       ]
+    }
+  },
+  "12": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "2",
+        0
+      ],
+      "lora_name": "动漫转真人.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.8
     }
   }
 }

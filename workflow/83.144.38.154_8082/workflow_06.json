@@ -1,0 +1,69 @@
+{
+  "10": {
+    "inputs": {
+      "image": "ChatGPT Image 1 jul 2026, 18_03_40.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Charger Image"
+    }
+  },
+  "11": {
+    "inputs": {
+      "filename_prefix": "DET923 GDI029 KAY250_008",
+      "images": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Enregistrer Image"
+    }
+  },
+  "12": {
+    "inputs": {
+      "model_name": "gemini-3-pro-image",
+      "prompt": "AJUSTA LOS DETALLES DEL ROSTRO A LO MÁS PARECIDO A LA MODELO DE LA IMAGEN 1 Y 2\n\n",
+      "image_count": 1,
+      "use_search": false,
+      "aspect_ratio": "2:3",
+      "image_size": "4K",
+      "temperature": 2.0,
+      "image_1": [
+        "13",
+        0
+      ],
+      "image_2": [
+        "14",
+        0
+      ],
+      "image_3": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "NanoBananaAIO",
+    "_meta": {
+      "title": "Nano Banana AIO"
+    }
+  },
+  "13": {
+    "inputs": {
+      "image": "Captura de pantalla 2026-07-01 a la(s) 17.25.27.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Charger Image"
+    }
+  },
+  "14": {
+    "inputs": {
+      "image": "WhatsApp Image 2026-06-30 at 15.38.31.jpeg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Charger Image"
+    }
+  }
+}

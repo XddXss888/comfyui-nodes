@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 606390611987948,
+      "seed": 723634693799559,
       "steps": 16,
       "cfg": 2.5,
       "sampler_name": "dpmpp_2m_sde",
@@ -192,23 +192,11 @@
   },
   "73": {
     "inputs": {
-      "value": 993986809743291
+      "value": -794344196139207
     },
     "class_type": "PrimitiveInt",
     "_meta": {
       "title": "整数"
-    }
-  },
-  "78": {
-    "inputs": {
-      "images": [
-        "103",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
     }
   },
   "79": {
@@ -220,7 +208,7 @@
   },
   "97": {
     "inputs": {
-      "unet_name": "miaomiaoHarem_anima13.safetensors",
+      "unet_name": "unholyDesireLunar_v10.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -239,10 +227,10 @@
   },
   "99": {
     "inputs": {
-      "text": "1girl,light_blush,curvy,(medium breasts:1.5),areola,(loli:1.6),black hair,very long hair,ahoge,messy hair,crossed bangs,hair wings,Side ponytail,red eyes,fang,fox ears,slender_waist,naughty_face,seductive_smile,rolling_eyes,thick_thighs,kindergarten_uniform,skirt_around_one_leg,white_thighhighs,transparent,public_indecency,torso_grab,(pubic hair:2),1boy,tall,muscular,(stomach bulge:1.2),hovering,anal,anal_sex,library,panty pull,anal juice,(cum_in_ass:2),((upside-down)),",
+      "text": "After school in the sports teacher's office, a powerful dark-skinned muscular teacher is passionately fucking a fox girl while holding her up in a standing carry position. Her legs wrap around his waist as he grips her ass and thrusts upward powerfully. The girl, a total cum addict, has her upper body pressed tightly against his chest, head tilted back in pleasure, kissing him sloppily with tongue. Long messy black hair, fox ears, red eyes, ahegao expression. Obvious belly bulge, C-cup breasts bouncing, kindergarten uniform half-torn, panties dangling from one leg. Cum overflowing and dripping. Intense motion, speed lines, dramatic lighting, lewd fluids, anime style, masterpiece.",
       "clip": [
-        "104",
-        0
+        "111",
+        1
       ]
     },
     "class_type": "CLIPTextEncode",
@@ -252,7 +240,7 @@
   },
   "100": {
     "inputs": {
-      "text": "",
+      "text": "worst quality,normal quality,anatomical nonsense,bad anatomy,interlocked fingers,extra fingers,watermark,simple background,transparent,low quality,logo,text,signature,face backlighting,backlighting,",
       "clip": [
         "104",
         0
@@ -267,7 +255,7 @@
     "inputs": {
       "width": 832,
       "height": 1216,
-      "batch_size": 1
+      "batch_size": 2
     },
     "class_type": "EmptyLatentImage",
     "_meta": {
@@ -276,14 +264,14 @@
   },
   "102": {
     "inputs": {
-      "seed": 866684720157901,
-      "steps": 21,
-      "cfg": 4.0,
-      "sampler_name": "euler_ancestral",
+      "seed": 26427809803455,
+      "steps": 20,
+      "cfg": 3.0,
+      "sampler_name": "euler",
       "scheduler": "normal",
       "denoise": 1.0,
       "model": [
-        "97",
+        "111",
         0
       ],
       "positive": [
@@ -322,13 +310,54 @@
   },
   "104": {
     "inputs": {
-      "clip_name": "anima_baseV10_txt.safetensors",
-      "type": "stable_diffusion",
+      "clip_name": "t5xxl_fp16.safetensors",
+      "type": "sd3",
       "device": "cpu"
     },
     "class_type": "CLIPLoader",
     "_meta": {
       "title": "加载CLIP"
+    }
+  },
+  "105": {
+    "inputs": {
+      "filename_prefix": "2026-07-01UDL_V10",
+      "images": [
+        "103",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "109": {
+    "inputs": {
+      "image": "7D926E836147D90BE4E42E24BDDE925E.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "111": {
+    "inputs": {
+      "lora_name": "rurudo_2.safetensors",
+      "strength_model": 2.0,
+      "strength_clip": 0.8,
+      "model": [
+        "97",
+        0
+      ],
+      "clip": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "加载LoRA"
     }
   }
 }

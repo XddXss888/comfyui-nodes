@@ -2,7 +2,7 @@
   "6": {
     "inputs": {
       "text": [
-        "160",
+        "161",
         0
       ],
       "clip": [
@@ -47,7 +47,7 @@
   },
   "16": {
     "inputs": {
-      "unet_name": "z_image_turbo_bf16.safetensors",
+      "unet_name": "z-image-turbo_fp8_scaled_e4m3fn_KJ.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -111,7 +111,7 @@
   },
   "97": {
     "inputs": {
-      "image": "13.jpg"
+      "image": "wechat_2026-06-09_154347_179.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   "99": {
     "inputs": {
       "add_noise": "enable",
-      "noise_seed": 796145309085735,
+      "noise_seed": 2997764905,
       "steps": 9,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -170,7 +170,7 @@
   "102": {
     "inputs": {
       "add_noise": "disable",
-      "noise_seed": 131199314821440,
+      "noise_seed": 944188573298840,
       "steps": 9,
       "cfg": 1.0,
       "sampler_name": "euler",
@@ -240,8 +240,8 @@
   },
   "120": {
     "inputs": {
-      "target_width": 1664,
-      "target_height": 936,
+      "target_width": 1229,
+      "target_height": 504,
       "padding_color": "black",
       "interpolation": "area",
       "image": [
@@ -256,10 +256,10 @@
   },
   "129": {
     "inputs": {
-      "left": 128,
-      "top": 112,
-      "right": 128,
-      "bottom": 40,
+      "left": 26,
+      "top": 202,
+      "right": 25,
+      "bottom": 14,
       "feathering": 40,
       "image": [
         "120",
@@ -291,9 +291,9 @@
   },
   "148": {
     "inputs": {
-      "seed": 2702852522,
-      "resolution": 3840,
-      "max_resolution": 3840,
+      "seed": 3414066084,
+      "resolution": 2560,
+      "max_resolution": 2560,
       "batch_size": 1,
       "uniform_batch_size": false,
       "color_correction": "lab",
@@ -323,7 +323,7 @@
   },
   "150": {
     "inputs": {
-      "model": "seedvr2_ema_7b_fp8_e4m3fn.safetensors",
+      "model": "seedvr2_ema_7b_fp16.safetensors",
       "device": "cuda:0",
       "blocks_to_swap": 0,
       "swap_io_components": false,
@@ -357,8 +357,8 @@
   },
   "157": {
     "inputs": {
-      "width": 3840,
-      "height": 2160,
+      "width": 2560,
+      "height": 1440,
       "position": "center",
       "x_offset": 0,
       "y_offset": 0,
@@ -374,7 +374,7 @@
   },
   "158": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
+      "filename_prefix": "generate_s1",
       "images": [
         "157",
         0
@@ -397,14 +397,31 @@
       "title": "预览图像"
     }
   },
-  "160": {
+  "161": {
     "inputs": {
-      "seed": 3154662784,
-      "scene_type": ""
+      "keywords": "简约建筑",
+      "top_k": 1,
+      "mode": "random",
+      "scene_type": "",
+      "light_tag": "",
+      "reload": false
     },
-    "class_type": "PromptLibraryRandom",
+    "class_type": "PromptLibrarySearch",
     "_meta": {
-      "title": "🎲 提示词库随机"
+      "title": "🔍 提示词库搜索"
+    }
+  },
+  "162": {
+    "inputs": {
+      "text": "8K 超写实汽车商业宣传大片，采用专业低角度静态取景视角，主体为一辆深蓝金属漆吉利豪越 R7 豪华轿跑 SUV，以沉稳优雅的静态姿态静停于现代简约城市海岸盘山公路。车身全程极致清晰无模糊，深海蓝珠光漆面在午后暖调日光下折射出温润细腻的金属光泽，溜背线条与车身棱角光影层次分明，清晰反射澄澈天光、海面波光与远处城市楼宇虚影；19 英寸双色轮毂质感锐利清晰，轮毂边缘沾有自然的海风水汽痕迹，无任何虚化拖影，尽显精致豪华的静态气场。\n公路蜿蜒于城市与海岸之间，左侧是岩石峭壁与低矮耐旱绿植，纹理细节清晰可辨，右侧是蔚蓝海岸与现代简约城市天际线，景致轮廓完整鲜明，背景无任何动态模糊效果：海面粼粼波光清晰灵动，光影细节层次丰富，远处线条简洁的现代城市楼宇、玻璃幕墙写字楼与滨海地标轮廓分明、质感写实，楼宇表面反射午后暖调日光，与海岸景致自然衔接；天空澄澈湛蓝、薄云轻飘且形态舒展，所有景致与清晰车身相融，呈现出静谧和谐又兼具都市精致感的视觉效果。\n\n午后暖光斜洒，侧逆光精准勾勒车身轮廓，路面干净泛着温润淡光，整体画面以深蓝 + 海蓝 + 暖金 + 浅灰为主调，电影级开阔构图，商业大片质感拉满，精准传递 “城市海岸间静赏的轻奢都市度假氛围”。",
+      "anything": [
+        "161",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "展示任何"
     }
   }
 }

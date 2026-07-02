@@ -1,7 +1,7 @@
 {
   "1": {
     "inputs": {
-      "image": "jimeng-2026-03-19-3088-一个亚洲男生，年轻正脸微笑，全身正脸摄影，长袖商务主持人淡色正装，硬挺高级面料，....png"
+      "image": "jimeng-2025-08-15-9345-韩系淑女模特，摄影棚灯光效果，简洁背景.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -12,7 +12,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "18",
+        "36",
         0
       ]
     },
@@ -24,13 +24,13 @@
   "18": {
     "inputs": {
       "aspect_ratio": "custom",
-      "proportional_width": 1120,
-      "proportional_height": 800,
+      "proportional_width": 2622,
+      "proportional_height": 1772,
       "fit": "crop",
       "method": "bicubic",
       "round_to_multiple": "None",
       "scale_to_side": "width",
-      "scale_to_length": 1120,
+      "scale_to_length": 2622,
       "background_color": "#000000",
       "image": [
         "29",
@@ -44,21 +44,25 @@
   },
   "29": {
     "inputs": {
-      "prompt": "保持图1中主要人物一致，轻微美颜和美白，手绘风格，中近景景别沟通；人物在透明数字屏前指向专利线稿，正在讲解。远处背景为北京CBD、望京SOHO夜景，融合专利线稿、光线线条，可视化风格，紫色为主色调，银色、金色和紫色数据光效，画面稳重、精密、开放，适合金融论坛主视觉",
+      "prompt": "保持图1中主要人物一致，轻微美颜和美白；人物在画面中下方，侧身站立回眸，身体微微转向镜头，回头露出温柔笑意，背景为图2，清晰对焦，细节丰富，蓝天草地，彩铅手绘质感，笔触细腻柔和，温暖治愈氛围感，多彩缤纷明亮",
       "model": "doubao-seedream-4-5-251128",
       "response_format": "url",
       "resolution": "4K",
       "aspect_ratio": "Custom",
-      "width": 1120,
+      "width": 1184,
       "height": 800,
       "apikey": "a44228f5-f1b2-44e9-860a-d3c8eb5ac03e",
       "sequential_image_generation": "disabled",
       "max_images": 1,
-      "seed": 1291600797,
+      "seed": 344275360,
       "watermark": false,
       "stream": false,
       "image1": [
         "1",
+        0
+      ],
+      "image2": [
+        "38",
         0
       ]
     },
@@ -74,6 +78,51 @@
     "class_type": "LoadImage",
     "_meta": {
       "title": "加载图像"
+    }
+  },
+  "36": {
+    "inputs": {
+      "invert_mask": true,
+      "blend_mode": "normal",
+      "opacity": 100,
+      "background_image": [
+        "18",
+        0
+      ],
+      "layer_image": [
+        "34",
+        0
+      ],
+      "layer_mask": [
+        "34",
+        1
+      ]
+    },
+    "class_type": "LayerUtility: ImageBlend",
+    "_meta": {
+      "title": "图层工具：图像混合"
+    }
+  },
+  "38": {
+    "inputs": {
+      "image": "wycy.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "39": {
+    "inputs": {
+      "rotation": "270 degrees",
+      "image": [
+        "36",
+        0
+      ]
+    },
+    "class_type": "ImageRotate",
+    "_meta": {
+      "title": "图像旋转"
     }
   }
 }

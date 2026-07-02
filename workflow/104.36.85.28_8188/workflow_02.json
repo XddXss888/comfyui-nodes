@@ -37,7 +37,7 @@
   },
   "7": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1man sobs, carried, pants, indoors, couch, window, mask, glasses, sunglasses, multiple boys, 5boys, crossed legs,(* i break down in sobs as im just carried off*:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl sex,blush,smile,closed mouth,thighs,shorts,midriff,indoors,stomach,window,couch,denim,on couch,(bed sex:1.0),(nude:0.8)",
       "clip": [
         "1",
         1
@@ -63,7 +63,7 @@
   },
   "9": {
     "inputs": {
-      "seed": 1115442643,
+      "seed": 303291109,
       "steps": 20,
       "cfg": 6.5,
       "sampler_name": "dpmpp_sde",
@@ -133,7 +133,7 @@
   },
   "14": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/20246/26/bbea32c387e24b1a850e67472ac5f93f.jpeg",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2025/08/13/1755060967023.webp",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

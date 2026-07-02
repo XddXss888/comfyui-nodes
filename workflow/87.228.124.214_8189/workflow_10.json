@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "A woman with a strict teacher appearance and glasses sits at a table covered with open notebooks and textbooks in a quiet apartment after a tutoring session, slowly removing her glasses with one hand while maintaining a composed expression, her gaze directed forward with a hint of restrained interest, soft indoor lighting, medium close-up framing, natural posture with shoulders relaxed and arms visible.",
+      "text": "wh1te, short white hair, extremely thin woman, A woman leans back against a kitchen counter in a softly lit home interior, her body angled slightly toward the approaching figure, one hand resting on the edge of the counter. She meets the gaze directly with parted lips and a knowing, expectant expression, breath visibly caught, tension in her posture. Warm evening indoor lighting casts gentle shadows across her form and the countertop. Medium close-up framing, natural proportions, clear eye contact and readable body language, simple background.",
       "clip": [
         "72",
         1
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "ULRIKANB_SYNTH_zimg_v1.safetensors",
-      "strength_model": 0.82,
-      "strength_clip": 0.86,
+      "lora_name": "White_short_ZiT.safetensors",
+      "strength_model": 0.73,
+      "strength_clip": 0.8,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -137,7 +137,7 @@
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 1109815001262350,
+      "seed": 177176581693080,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

@@ -1,0 +1,224 @@
+{
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "144:136",
+        0
+      ],
+      "filename_prefix": "Flux2-Klein"
+    }
+  },
+  "76": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image (27).jpeg"
+    }
+  },
+  "144:126": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "144:127": {
+    "class_type": "EmptyFlux2LatentImage",
+    "inputs": {
+      "width": [
+        "144:132",
+        0
+      ],
+      "height": [
+        "144:132",
+        1
+      ],
+      "batch_size": 1
+    }
+  },
+  "144:128": {
+    "class_type": "ImageScaleToTotalPixels",
+    "inputs": {
+      "image": [
+        "76",
+        0
+      ],
+      "upscale_method": "nearest-exact",
+      "megapixels": 1.0,
+      "resolution_steps": 1
+    }
+  },
+  "144:129": {
+    "class_type": "Flux2Scheduler",
+    "inputs": {
+      "width": [
+        "144:132",
+        0
+      ],
+      "height": [
+        "144:132",
+        1
+      ],
+      "steps": 4
+    }
+  },
+  "144:130": {
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "144:142",
+        0
+      ]
+    }
+  },
+  "144:131": {
+    "class_type": "ReferenceLatent",
+    "inputs": {
+      "conditioning": [
+        "144:130",
+        0
+      ],
+      "latent": [
+        "144:134",
+        0
+      ]
+    }
+  },
+  "144:132": {
+    "class_type": "GetImageSize",
+    "inputs": {
+      "image": [
+        "144:128",
+        0
+      ]
+    }
+  },
+  "144:133": {
+    "class_type": "ReferenceLatent",
+    "inputs": {
+      "conditioning": [
+        "144:142",
+        0
+      ],
+      "latent": [
+        "144:134",
+        0
+      ]
+    }
+  },
+  "144:134": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "144:128",
+        0
+      ],
+      "vae": [
+        "144:139",
+        0
+      ]
+    }
+  },
+  "144:135": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "144:137",
+        0
+      ],
+      "guider": [
+        "144:138",
+        0
+      ],
+      "sampler": [
+        "144:126",
+        0
+      ],
+      "sigmas": [
+        "144:129",
+        0
+      ],
+      "latent_image": [
+        "144:127",
+        0
+      ]
+    }
+  },
+  "144:136": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "144:135",
+        0
+      ],
+      "vae": [
+        "144:139",
+        0
+      ]
+    }
+  },
+  "144:137": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 192423856
+    }
+  },
+  "144:138": {
+    "class_type": "CFGGuider",
+    "inputs": {
+      "model": [
+        "144:143",
+        0
+      ],
+      "positive": [
+        "144:133",
+        0
+      ],
+      "negative": [
+        "144:131",
+        0
+      ],
+      "cfg": 1.0
+    }
+  },
+  "144:139": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    }
+  },
+  "144:140": {
+    "class_type": "CLIPLoaderGGUF",
+    "inputs": {
+      "clip_name": "qwen3-4b-abl-q4_0.gguf",
+      "type": "flux2"
+    }
+  },
+  "144:141": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "flux-2-klein-4b-fp8.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "144:143": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "144:141",
+        0
+      ],
+      "lora_name": "ExcellentFullNude_F2K4B_1.safetensors",
+      "strength_model": 1.5
+    }
+  },
+  "144:142": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "144:140",
+        0
+      ],
+      "text": "裸体，什么都没穿，张开双腿"
+    }
+  }
+}

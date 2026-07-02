@@ -1,0 +1,117 @@
+{
+  "1": {
+    "inputs": {
+      "api_base": "阿波罗AI(推荐)",
+      "apikey": "sk-zuX5uh7aE0sFocpwDat3VZ1o7wMuvimLfoQRpsHjMnRVRNle",
+      "custom_ip": ""
+    },
+    "class_type": "Comfly_api_set",
+    "_meta": {
+      "title": "ABL API Settings"
+    }
+  },
+  "18": {
+    "inputs": {
+      "image_url": [
+        "20",
+        2
+      ],
+      "force_upload": true
+    },
+    "class_type": "AIIY_SmartImageLoader",
+    "_meta": {
+      "title": "🌐 AIIY-智能图像加载器"
+    }
+  },
+  "19": {
+    "inputs": {
+      "images": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "20": {
+    "inputs": {
+      "prompt": "测试",
+      "mode": "text2img",
+      "model": "nano-banana-2",
+      "aspect_ratio": "auto",
+      "image_size": "1K",
+      "apikey": [
+        "1",
+        0
+      ],
+      "task_id": "",
+      "response_format": "url",
+      "seed": 2092778474
+    },
+    "class_type": "Comfly_nano_banana2_edit_S2A",
+    "_meta": {
+      "title": "ABL_nano_banana2_edit_S2A"
+    }
+  },
+  "21": {
+    "inputs": {
+      "image_url": [
+        "20",
+        3
+      ],
+      "force_upload": true
+    },
+    "class_type": "AIIY_SmartImageLoader",
+    "_meta": {
+      "title": "🌐 AIIY-智能图像加载器"
+    }
+  },
+  "22": {
+    "inputs": {
+      "images": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "23": {
+    "inputs": {
+      "image_url": "https://comfyui.aiiy.cn/output/20260103/81896/e9d52128-3393-4031-8b08-5a9170c7da74.jpg",
+      "force_upload": false
+    },
+    "class_type": "AIIY_SmartImageLoader",
+    "_meta": {
+      "title": "🌐 AIIY-智能图像加载器"
+    }
+  },
+  "24": {
+    "inputs": {
+      "images": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "25": {
+    "inputs": {
+      "images": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  }
+}

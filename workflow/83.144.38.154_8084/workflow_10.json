@@ -1,0 +1,67 @@
+{
+  "15": {
+    "inputs": {
+      "images": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Aperçu Image"
+    }
+  },
+  "20": {
+    "inputs": {
+      "images.image0": [
+        "38",
+        0
+      ],
+      "images.image1": [
+        "50",
+        0
+      ]
+    },
+    "class_type": "BatchImagesNode",
+    "_meta": {
+      "title": "Images par lot"
+    }
+  },
+  "21": {
+    "inputs": {
+      "prompt": "Create the back view of this model and her outfit",
+      "model": "gemini-3-pro-image-preview",
+      "seed": 379831991483787,
+      "aspect_ratio": "4:5",
+      "resolution": "4K",
+      "response_modalities": "IMAGE+TEXT",
+      "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+      "images": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "GeminiImage2Node",
+    "_meta": {
+      "title": "Nano Banana Pro (Google Gemini Image)"
+    }
+  },
+  "38": {
+    "inputs": {
+      "image": "NEW_LOOK_2_MODEL.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Charger Image"
+    }
+  },
+  "50": {
+    "inputs": {
+      "image": "IMG_2787.jpeg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Charger Image"
+    }
+  }
+}

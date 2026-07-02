@@ -1,7 +1,7 @@
 {
   "278": {
     "inputs": {
-      "image": "286132070d691346667ba77dfc156b79.png"
+      "image": "cmr1ttp6v001glv01wxqmpt7x.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -10,7 +10,7 @@
   },
   "352": {
     "inputs": {
-      "text": "双手抱在胸前，保持人脸服装完全一致，保持一致构图。"
+      "text": "让照片的这个男人手上戴着劳力士手表，穿着白色衬衫、黑色马甲和领带，坐着身体半侧靠在米色办公椅上，保持脸部一致，自信的微笑着看向镜头,背景是带有暖色灯光的书架，摆放着书籍和装饰物，营造出温馨而有质感的室内环境。前景有桌面和文件本，奢华，整体色调柔和，光线自然，给人一种商务、精英、理性且沉稳的感觉。"
     },
     "class_type": "CR Text",
     "_meta": {
@@ -19,14 +19,8 @@
   },
   "378": {
     "inputs": {
-      "seed": 730351696217840,
-      "steps": 8,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
       "model": [
-        "394",
+        "388",
         0
       ],
       "positive": [
@@ -38,9 +32,15 @@
         0
       ],
       "latent_image": [
-        "414",
+        "379",
         0
-      ]
+      ],
+      "seed": 484865308044076,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
     },
     "class_type": "KSampler",
     "_meta": {
@@ -66,6 +66,10 @@
   },
   "380": {
     "inputs": {
+      "image": [
+        "278",
+        0
+      ],
       "aspect_ratio": "original",
       "proportional_width": 2,
       "proportional_height": 3,
@@ -74,11 +78,7 @@
       "round_to_multiple": "8",
       "scale_to_side": "longest",
       "scale_to_length": 1024,
-      "background_color": "#000000",
-      "image": [
-        "408",
-        0
-      ]
+      "background_color": "#000000"
     },
     "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
     "_meta": {
@@ -87,12 +87,12 @@
   },
   "381": {
     "inputs": {
-      "text": [
-        "352",
-        0
-      ],
       "clip": [
         "389",
+        0
+      ],
+      "text": [
+        "352",
         0
       ]
     },
@@ -161,6 +161,20 @@
       "title": "ReferenceLatent"
     }
   },
+  "388": {
+    "inputs": {
+      "model": [
+        "394",
+        0
+      ],
+      "lora_name": "training/霸道总裁KB2_v2_000003000.safetensors",
+      "strength_model": 1.0
+    },
+    "class_type": "PD_lora_loader",
+    "_meta": {
+      "title": "PD_lora_loader"
+    }
+  },
   "389": {
     "inputs": {
       "clip_name": "qwen_3_8b_fp8mixed.safetensors",
@@ -219,193 +233,15 @@
   },
   "407": {
     "inputs": {
-      "filename_prefix": "ComfyUI",
       "images": [
         "393",
         0
-      ]
+      ],
+      "filename_prefix": "ComfyUI"
     },
     "class_type": "SaveImage",
     "_meta": {
       "title": "SaveImage"
-    }
-  },
-  "408": {
-    "inputs": {
-      "blend_mode": "normal",
-      "opacity": 100,
-      "x_percent": 50.0,
-      "y_percent": 50.0,
-      "scale": 1.0,
-      "align_mode": "default",
-      "invert_mask": false,
-      "background_image": [
-        "278",
-        0
-      ],
-      "layer_image": [
-        "413",
-        0
-      ],
-      "layer_mask": [
-        "413",
-        1
-      ]
-    },
-    "class_type": "ImageBlendV1",
-    "_meta": {
-      "title": "PD:Image Blend V1"
-    }
-  },
-  "409": {
-    "inputs": {
-      "image": "c998307553e24808afd0556d9696f5e9.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "加载图像"
-    }
-  },
-  "410": {
-    "inputs": {
-      "detail_method": "VITMatte",
-      "detail_erode": 4,
-      "detail_dilate": 2,
-      "black_point": 0.01,
-      "white_point": 0.99,
-      "process_detail": false,
-      "device": "cuda",
-      "max_megapixels": 2.0,
-      "image": [
-        "417",
-        0
-      ],
-      "birefnet_model": [
-        "411",
-        0
-      ]
-    },
-    "class_type": "LayerMask: BiRefNetUltraV2",
-    "_meta": {
-      "title": "图层遮罩：BiRefNet Ultra V2（高级）"
-    }
-  },
-  "411": {
-    "inputs": {
-      "version": "RMBG-2.0"
-    },
-    "class_type": "LayerMask: LoadBiRefNetModelV2",
-    "_meta": {
-      "title": "图层遮罩：加载BiRefNet模型 V2（高级）"
-    }
-  },
-  "412": {
-    "inputs": {
-      "images": [
-        "408",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "预览图像"
-    }
-  },
-  "413": {
-    "inputs": {
-      "invert_mask": false,
-      "detect": "mask_area",
-      "top_reserve": 20,
-      "bottom_reserve": 20,
-      "left_reserve": 20,
-      "right_reserve": 20,
-      "round_to_multiple": "8",
-      "image": [
-        "410",
-        0
-      ],
-      "mask": [
-        "410",
-        1
-      ]
-    },
-    "class_type": "LayerUtility: CropByMask V2",
-    "_meta": {
-      "title": "图层工具：遮罩裁剪 V2"
-    }
-  },
-  "414": {
-    "inputs": {
-      "pixels": [
-        "380",
-        0
-      ],
-      "vae": [
-        "390",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE编码"
-    }
-  },
-  "417": {
-    "inputs": {
-      "size": 2048,
-      "interpolation": "bicubic",
-      "image": [
-        "409",
-        0
-      ]
-    },
-    "class_type": "PDIMAGE_LongerSize",
-    "_meta": {
-      "title": "PDIMAGE:LongerSize"
-    }
-  },
-  "419": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "380",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
-    }
-  },
-  "421": {
-    "inputs": {
-      "prompt": "双手抱在胸前，保持人脸服装完全一致，保持一致构图。",
-      "prompt_upsampling": false,
-      "seed": 428772387022518,
-      "aspect_ratio": "auto",
-      "raw": false,
-      "image_prompt_strength": 0.1,
-      "image_prompt": [
-        "380",
-        0
-      ]
-    },
-    "class_type": "FluxProUltraImageNode",
-    "_meta": {
-      "title": "Flux 1.1 [pro] Ultra Image"
-    }
-  },
-  "422": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "421",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "保存图像"
     }
   }
 }

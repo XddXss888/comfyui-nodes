@@ -72,7 +72,7 @@
   },
   "67": {
     "inputs": {
-      "text": "asig2, A shy woman sits on the edge of a simple bed, blushing intensely with her fingers lightly intertwined in front of her, legs gently parted to reveal her exposed vagina in clear view, head slightly lowered with a timid expression and soft gaze directed downward, natural skin tones and realistic anatomy, soft warm indoor lighting, medium close-up framing focused on her upper body and intimate area, clean simple background.",
+      "text": "DENISE, A naked woman bent over the edge of a mattress, torso leaning forward with both hands gripping the sheets for support, back arched and hips raised as she is taken from behind in a slow deep thrust, the man's cock visibly sliding fully into her pussy, her breasts hanging and pressing against the mattress, head turned slightly with parted lips and an expression of intense pleasure, soft warm bedroom lighting, medium close-up side angle framing her body and the clear intimate contact, natural proportions and stable pose.",
       "clip": [
         "72",
         1
@@ -96,7 +96,7 @@
   },
   "69": {
     "inputs": {
-      "shift": 1.73,
+      "shift": 12.0,
       "model": [
         "72",
         0
@@ -109,9 +109,9 @@
   },
   "72": {
     "inputs": {
-      "lora_name": "zimg_asig2_conchar.safetensors",
-      "strength_model": 0.63,
-      "strength_clip": 0.7,
+      "lora_name": "DENISE_SYNTH_zimg_v1.safetensors",
+      "strength_model": 0.78,
+      "strength_clip": 0.8,
       "prompt": "",
       "example": "[none]",
       "model": [
@@ -130,14 +130,14 @@
   },
   "74": {
     "inputs": {
-      "eta": 0.33,
+      "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "scheduler": "bong_tangent",
       "steps": 8,
       "steps_to_run": -1,
       "denoise": 1.0,
       "cfg": 1.0,
-      "seed": 661743540426963,
+      "seed": 1031310649651904,
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [

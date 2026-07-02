@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_a82cc32009314438baddbaa0555a25d2.png"
+      "image": "ref_9ec926037ebd4076a71d073b6ad7d643.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "poner ropa interior de 2 piezas coordinado en coordinado parte de arriba en color rojo de encaje y parte de abajo color blanco de encaje, mantener volumen y figura corporal, postura y tono de piel, quitar ropa playera, blusa, pantalón ",
+      "prompt": "蕾丝半透明衣服很短的迷你裙坐在凳子上。爽腿直接里面有一根粗棍子。俯视",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 84860478457357,
+      "seed": 468055090582725,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",

@@ -28,7 +28,7 @@
         0
       ],
       "lora_name": "flux_korean_girl.safetensors",
-      "strength_model": 0.8
+      "strength_model": 0.85
     }
   },
   "5": {
@@ -38,7 +38,7 @@
         "2",
         0
       ],
-      "text": "Bird's eye overhead view of a stunning Korean woman lying among fallen cherry blossom petals, jet black side-swept long hair fanning out across pink petals. Fox-like sharp eyes gazing up at camera with cool, edgy intensity, slim angular face with flawless porcelain skin, smoky charcoal eyeshadow and gradient berry lips. Wearing traditional hanbok in soft lavender and blush pink with delicate embroidered collar visible at shoulders. Single dramatic spotlight cuts through surrounding darkness, illuminating her face and upper bust while petals glow ethereally. Extreme macro close-up capturing every skin texture and individual eyelash. Soft natural light filtering through invisible canopy above. Spring atmosphere, cinematic portrait photography, shallow depth of field."
+      "text": "Profile view of a stunning Korean woman with a natural black pixie cut showing blue sheen highlights, angular jawline and strong defined brows catching harsh midday sunlight. Shot on 85mm f/1.4 with creamy bokeh dissolving a misty mountain temple into ethereal background. Sharp shadows carve across her serene, contemplative face as she gazes into the distance. She wears a preppy school uniform inspired outfit — navy blazer, pleated skirt, loosened tie. Flawless porcelain skin with dewy highlight on cheekbone, soft gradient lip tint, subtle smoky eye. Generous negative space on her left side filled with drifting temple mist. Cinematic atmosphere, editorial fashion photography, ultra-detailed skin texture, no text, no watermarks."
     }
   },
   "6": {
@@ -66,7 +66,7 @@
     "inputs": {
       "width": 896,
       "height": 1280,
-      "batch_size": 4
+      "batch_size": 1
     }
   },
   "9": {
@@ -88,7 +88,7 @@
         "8",
         0
       ],
-      "seed": 1042927688,
+      "seed": 792259920,
       "control_after_generate": "fixed",
       "steps": 22,
       "cfg": 1.0,
@@ -117,7 +117,7 @@
         "10",
         0
       ],
-      "filename_prefix": "portrait_1042927688"
+      "filename_prefix": "portrait_792259920"
     }
   }
 }

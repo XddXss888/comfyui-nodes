@@ -1,140 +1,204 @@
 {
-  "1": {
-    "class_type": "UNETLoader",
-    "inputs": {
-      "unet_name": "qwen_image_fp8_e4m3fn.safetensors",
-      "weight_dtype": "default"
-    }
-  },
-  "2": {
-    "class_type": "CLIPLoader",
-    "inputs": {
-      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
-      "type": "qwen_image"
-    }
-  },
-  "3": {
-    "class_type": "VAELoader",
-    "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    }
-  },
-  "4": {
-    "class_type": "EmptySD3LatentImage",
-    "inputs": {
-      "width": 1344,
-      "height": 768,
-      "batch_size": 1
-    }
-  },
-  "5": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": "A formal engineering blueprint / technical patent diagram of a plate of spaghetti and meatballs, drawn as precise white and pale-cyan line work on a deep blueprint-blue background. The pasta is rendered as an exploded technical schematic: individual strands of spaghetti labeled with part numbers and leader lines, cross-sectional cutaway views of a meatball showing concentric internal layers with callout annotations, and a fork mid-twirl diagrammed with curved motion arrows and angle-of-rotation degrees marked in dotted arcs. Dimension lines with arrowheads measure the plate's diameter and the noodle gauge, complete with tolerance notations. A neat title block in the lower-right corner reads like a patent header with grid coordinates, \"FIG. 1,\" and faux revision numbers. Sauce coverage shown as a hatched fill pattern with a density legend. Top-down orthographic projection plus a small isometric inset in the corner. Everything is monochromatic blueprint cyan-on-blue, crisp uniform line weights, faint grid paper texture underneath, slight aging and fold creases on the paper. Flat, even technical-document lighting with no shadows, as if scanned. Shot as a high-resolution flatbed scan, fine paper grain, the clean reproduction of archival drafting film. Precise, deadpan, wonderfully over-engineered."
-    }
-  },
   "6": {
-    "class_type": "CLIPTextEncode",
     "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": ""
+      "text": "A sexy, muscualr, masculine, man. with an erect penis and ({devilish|ghoulish|classic|rugged|evil|hypnotic|sinister|creepy|ancient|occult|chaotic|super powered|possessed|alien|magical|dark magical|aggressive|murderous|insane|psychotic|enchanting|malevolent|clinical|psychopathic|dark|mysterious|ghostly|haunting} demeanor to him). Is ({getting fucked|fucking another guy|kissing another man|staring|seducing|stalking a victim|hiding|emerging from the below|being possessed by a demon|being possesesed by the devil|is being hypnotized by Satan being baptized in blood|killing  someone|emerging from the darkness|emerging from below|flashing into reality|materializing into reality|arriving|manifesting into reality|arising from the dead|arising from hell|blooming into reality|pleading with Satan|demanding the man worship him|propositioning|soliciting|bashing someones head in|clobbering|battling|ambushing|striking|combating|raiding|smiting|charging|storming|assailing|bombarding|breaking|shattering the crystal|dismantling the mans reality|detonating the bomb|activating the device|fracturing reality|cracking the mans shell|cracking the alien's shell|cracking his mind|snapping his consciousness|snapping reality in two|snapping the monsters bones in two|bursting from below|bursting from the walls|tearing through the walls|tearing through the demon|tearing through the veil|gathering men to bring to Satan|delivering men to the tentacle pit|returning to the darkness|creating a monster|constructing a shelter|constructing a defense|raising the devil|raising the demon|becoming a sinister clown|shifting forms into a demon|transforming into a demon|mutating into a tentacle ceature|modifying his thoughts through brainwashing|distorting the prisoners sense of reality|evolving into a creature with tentacles|altaring his dna|warping his body into an alien vessel|hunting his victim|tracking the demon|haunting the man|following the man through the dark|tailing the creature as it tries to escape|stalking his victim|shadowing his demonic mentor|pursuing the killer|electing Satan to president|voting for the devil|drawing the devil|drawing the demon|committing to satan|sealing the demon in an amulet|sealing the victim in the walls|fastening his seat belt|caging himself in a magical prison|plugging his ass|approaching the temple|approaching the tentacle pit|approaching the darkness|approaching the colorful slime|arriving in hell|arriving to the mass grave|entering the tentacle cavern|entering the slime pit|entering the rave|entering the mans ass|entering hell|entering the alien ship|advancing on his  victim|attending the brainwashing|attending the dark baptism|emerging from the slime pit|arising from the lake|arising from the slime|hiding from the devil|cloaking from the demons|concealed by the tentacles ensnaring him|enveloped by the tentacles coiling around him|carving into his victim|carving out a hole in the wall|dividing the rations among everyone|parting the ocean|parting the river|drilling into the depths of hell|piercing the veil of reality|infiltrating hell|penetrating the mans mind|invading the alien ship|boarding the alien vessel|accessing the dark caverns below the city|tumbling into the tentacle's grasp|plummeting to hell|tripping over his words|staggering as he submits to the hypnosis|staggering as he submits to the devil|slips into hypnosis|slumps back and accepts the brainwashing|plunging into the slime pit|crashing into reality|sidestepping his captors|dodging the brainwashing slime being as it slithers toward him|cramming his penis into the devils ass|nesting with the tentacles|presing his hard body against the window|pouding the man in the ass|curing the man of his alien disease|tethering himself to satan|merging with the alien symbiote|fusing with thentacle|melding his mind with the tentacle|weaving in and out of the tentacles grasp|jumping over the hole|detecting danger around him|mourning the loss of his partner|disappearing into the darkness|raising the creature from the slime|raising the artifact above his head|mounting the man to fuck him|hiking up to the vantage point|glaring at you|surveying the area for danger|inspecting the man|flirting with satan|teasing the demon|shoving the creature away from him|smiling as the brainwashing completes|smiling as he chases after his victim|smiling at Satan|smiling a creepy smile in the darkness|smiling sinisterly|smiling ominously|smiling as the hypnotist takes him deeper|smiling as he becomes possessed|smiling as he flexes his muscles}). ({creepy|homoerotic|sexual|Scary|dark|creepy|psychological|cerebral|unnerving} atmosphere) in 8K high fidelity photographic realism. {Shallow|deep|medium|medium far} depth of field and visible skin textures in ultrasharp 8K resolution. ",
+      "Select to add LoRA": "Select the LoRA to add to the text",
+      "Select to add Wildcard": "Select the Wildcard to add to the text",
+      "seed": 817139341811881,
+      "multiline_mode": true
+    },
+    "class_type": "easy wildcards",
+    "_meta": {
+      "title": "Wildcards"
     }
   },
   "7": {
-    "class_type": "CFGGuider",
     "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "positive": [
-        "5",
-        0
-      ],
-      "negative": [
+      "text": [
         "6",
-        0
+        1
       ],
-      "cfg": 2.5
+      "clip": [
+        "8",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
     }
   },
   "8": {
-    "class_type": "BasicScheduler",
     "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "scheduler": "beta",
-      "steps": 20,
-      "denoise": 1.0
+      "ckpt_name": "albedobaseXL_v31Large.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
     }
   },
   "9": {
-    "class_type": "RandomNoise",
     "inputs": {
-      "noise_seed": 1463307961
+      "text": "Animation, 2d, anime, ugly, unaesthetic, bad face, cross-eyed, derp face, cleft palate, lack of detail, blurry, comic, illustration, digital painting, pixel art, pixel bloom, jpeg artifacts, out of focus, female, feminine, 1girl",
+      "clip": [
+        "8",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
     }
   },
   "10": {
-    "class_type": "KSamplerSelect",
     "inputs": {
-      "sampler_name": "euler"
-    }
-  },
-  "11": {
-    "class_type": "SamplerCustomAdvanced",
-    "inputs": {
-      "noise": [
-        "9",
-        0
-      ],
-      "guider": [
-        "7",
-        0
-      ],
-      "sampler": [
-        "10",
-        0
-      ],
-      "sigmas": [
+      "seed": 1061579752158903,
+      "steps": 30,
+      "cfg": 5.0,
+      "sampler_name": "ddim",
+      "scheduler": "ddim_uniform",
+      "denoise": 1.0,
+      "model": [
         "8",
         0
       ],
+      "positive": [
+        "33",
+        0
+      ],
+      "negative": [
+        "33",
+        1
+      ],
       "latent_image": [
-        "4",
+        "11",
         0
       ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "11": {
+    "inputs": {
+      "width": 848,
+      "height": 1232,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
     }
   },
   "12": {
-    "class_type": "VAEDecode",
     "inputs": {
-      "vae": [
-        "3",
+      "samples": [
+        "10",
         0
       ],
-      "samples": [
-        "11",
-        1
+      "vae": [
+        "8",
+        2
       ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
     }
   },
   "13": {
-    "class_type": "ETN_SaveImageCache",
     "inputs": {
+      "filename_prefix": "ComfyUI",
       "images": [
         "12",
         0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "25": {
+    "inputs": {
+      "ipadapter_file": "ip-adapter-faceid-plusv2_sd15.bin"
+    },
+    "class_type": "IPAdapterModelLoader",
+    "_meta": {
+      "title": "IPAdapter Model Loader"
+    }
+  },
+  "28": {
+    "inputs": {
+      "image": "0109.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "30": {
+    "inputs": {
+      "clip_name": "IP Adapter encoder 1-5.safetensors"
+    },
+    "class_type": "CLIPVisionLoader",
+    "_meta": {
+      "title": "Load CLIP Vision"
+    }
+  },
+  "32": {
+    "inputs": {
+      "control_net_name": "control_sdxl_depth-fp16.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "33": {
+    "inputs": {
+      "strength": 0.44,
+      "start_percent": 0.215,
+      "end_percent": 0.792,
+      "positive": [
+        "7",
+        0
       ],
-      "format": "PNG"
+      "negative": [
+        "9",
+        0
+      ],
+      "control_net": [
+        "32",
+        0
+      ],
+      "image": [
+        "35",
+        0
+      ],
+      "vae": [
+        "8",
+        2
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet"
+    }
+  },
+  "35": {
+    "inputs": {
+      "preprocessor": "Zoe_DepthAnythingPreprocessor",
+      "resolution": 1600,
+      "image": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "AIO_Preprocessor",
+    "_meta": {
+      "title": "AIO Aux Preprocessor"
     }
   }
 }

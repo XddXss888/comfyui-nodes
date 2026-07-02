@@ -22,7 +22,7 @@
   "4": {
     "class_type": "CLIPTextEncode",
     "inputs": {
-      "text": "A vibrant, close-up macro shot of succulent plants with plump, glossy leaves in shades of green, pink, and purple, arranged on a natural wooden surface; soft diffused lighting, ultra-detailed texture, shallow depth of field, masterpiece, best quality, professional photography., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
+      "text": "Portrait of a beautiful young woman with shoulder-length golden wavy hair, fair skin, and elegant makeup—defined eyes, long lashes, bold red lipstick. She wears a light green low-cut top with white trim and a white bow at the chest (K-cup), layered under a dark gray knitted cardigan; floral-patterned skirt. Warm, soft lighting, cozy indoor setting with white door (gold handle) and light wood walls. Masterpiece, best quality, ultra-detailed, professional photography style., absolutely no text, no words, no letters, no characters, no watermarks, no signatures, no logos, pure visual art",
       "clip": [
         "2",
         0
@@ -40,14 +40,14 @@
   "6": {
     "class_type": "KSampler",
     "inputs": {
-      "seed": 518202444,
+      "seed": 1758543086,
       "steps": 4,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "sgm_uniform",
       "denoise": 1.0,
       "model": [
-        "1",
+        "12",
         0
       ],
       "positive": [
@@ -118,6 +118,22 @@
         "10",
         0
       ]
+    }
+  },
+  "12": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "2",
+        0
+      ],
+      "lora_name": "动漫转真人.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.8
     }
   }
 }

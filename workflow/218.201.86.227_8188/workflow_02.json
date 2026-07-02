@@ -1,120 +1,85 @@
 {
-  "6": {
-    "inputs": {
-      "text": "A beautiful wide landscape of rice paddies in the countryside, lush golden-green rice field, gentle breeze implied by flowing rice stalks, reflective irrigation water channels, distant blue mountains, soft white clouds drifting in a bright sky, warm late afternoon sunlight, cinematic peaceful atmosphere, highly detailed natural scenery, photorealistic digital art, no people, no text, 16:9 composition",
-      "clip": [
-        "30",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
-    }
-  },
-  "8": {
-    "inputs": {
-      "samples": [
-        "31",
-        0
-      ],
-      "vae": [
-        "30",
-        2
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
-    }
-  },
-  "9": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
-    }
-  },
-  "27": {
-    "inputs": {
-      "width": 1024,
-      "height": 576,
-      "batch_size": 1
-    },
-    "class_type": "EmptySD3LatentImage",
-    "_meta": {
-      "title": "Empty Latent Image"
-    }
-  },
-  "30": {
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
     "inputs": {
       "ckpt_name": "flux1-dev-fp8.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "Load Checkpoint"
     }
   },
-  "31": {
+  "2": {
+    "class_type": "CLIPTextEncode",
     "inputs": {
-      "seed": 993778131594979,
-      "steps": 28,
-      "cfg": 1.0,
+      "text": "masterpiece, best quality, cat wearing a cyberpunk helmet, neon",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "3": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "worst quality, low quality, blurry, deformed, ugly",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "4": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    }
+  },
+  "5": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 42,
+      "steps": 6,
+      "cfg": 7.0,
       "sampler_name": "euler",
-      "scheduler": "simple",
+      "scheduler": "normal",
       "denoise": 1.0,
       "model": [
-        "30",
+        "1",
         0
       ],
       "positive": [
-        "35",
+        "2",
         0
       ],
       "negative": [
-        "33",
+        "3",
         0
       ],
       "latent_image": [
-        "27",
+        "4",
         0
       ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
     }
   },
-  "33": {
+  "6": {
+    "class_type": "VAEDecode",
     "inputs": {
-      "text": "text, watermark, logo, people, buildings, blurry, low quality, distorted horizon, overexposed",
-      "clip": [
-        "30",
-        1
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "1",
+        2
       ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
     }
   },
-  "35": {
+  "7": {
+    "class_type": "PreviewImage",
     "inputs": {
-      "guidance": 3.5,
-      "conditioning": [
+      "images": [
         "6",
         0
       ]
-    },
-    "class_type": "FluxGuidance",
-    "_meta": {
-      "title": "Flux Guidance"
     }
   }
 }

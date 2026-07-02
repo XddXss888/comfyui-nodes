@@ -1,0 +1,161 @@
+{
+  "65": {
+    "inputs": {
+      "samples": [
+        "155",
+        0
+      ],
+      "vae": [
+        "171",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "66": {
+    "inputs": {
+      "filename_prefix": "ComfyUI_Sana",
+      "images": [
+        "181",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像"
+    }
+  },
+  "155": {
+    "inputs": {
+      "seed": 229289270,
+      "steps": 10,
+      "cfg": 4.0,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "model": [
+        "164",
+        0
+      ],
+      "positive": [
+        "167",
+        0
+      ],
+      "negative": [
+        "168",
+        0
+      ],
+      "latent_image": [
+        "176",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "164": {
+    "inputs": {
+      "ckpt_name": "Sana_600M_1024px_MultiLing.pth",
+      "model": "SanaMS_600M_P1_D28"
+    },
+    "class_type": "SanaCheckpointLoader",
+    "_meta": {
+      "title": "Sana Checkpoint Loader"
+    }
+  },
+  "165": {
+    "inputs": {
+      "model": "SanaMS_600M_P1_D28",
+      "ratio": "1.00"
+    },
+    "class_type": "SanaResolutionSelect",
+    "_meta": {
+      "title": "Sana Resolution Select"
+    }
+  },
+  "167": {
+    "inputs": {
+      "text": "画无数量赛车。",
+      "GEMMA": [
+        "169",
+        0
+      ]
+    },
+    "class_type": "SanaTextEncode",
+    "_meta": {
+      "title": "Sana Text Encode"
+    }
+  },
+  "168": {
+    "inputs": {
+      "text": "",
+      "GEMMA": [
+        "169",
+        0
+      ]
+    },
+    "class_type": "SanaTextEncode",
+    "_meta": {
+      "title": "Sana Text Encode"
+    }
+  },
+  "169": {
+    "inputs": {
+      "model_name": "unsloth/gemma-2-2b-it-bnb-4bit",
+      "device": "cuda",
+      "dtype": "default"
+    },
+    "class_type": "GemmaLoader",
+    "_meta": {
+      "title": "Gemma Loader"
+    }
+  },
+  "171": {
+    "inputs": {
+      "vae_name": "diffusion_pytorch_model.safetensors",
+      "vae_type": "dcae-f32c32-sana-1.0",
+      "dtype": "BF16"
+    },
+    "class_type": "ExtraVAELoader",
+    "_meta": {
+      "title": "ExtraVAELoader"
+    }
+  },
+  "176": {
+    "inputs": {
+      "width": [
+        "165",
+        0
+      ],
+      "height": [
+        "165",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptySanaLatentImage",
+    "_meta": {
+      "title": "Empty Sana Latent Image"
+    }
+  },
+  "181": {
+    "inputs": {
+      "resize_type": "scale by multiplier",
+      "resize_type.multiplier": 0.5,
+      "scale_method": "area",
+      "input": [
+        "65",
+        0
+      ]
+    },
+    "class_type": "ResizeImageMaskNode",
+    "_meta": {
+      "title": "Resize Image/Mask"
+    }
+  }
+}

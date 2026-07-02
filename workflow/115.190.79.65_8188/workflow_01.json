@@ -1,68 +1,12 @@
 {
-  "3": {
-    "inputs": {
-      "seed": 734520678337026,
-      "steps": 20,
-      "cfg": 2.5,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1.0,
-      "model": [
-        "66",
-        0
-      ],
-      "positive": [
-        "6",
-        0
-      ],
-      "negative": [
-        "7",
-        0
-      ],
-      "latent_image": [
-        "58",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "K采样器"
-    }
-  },
-  "6": {
-    "inputs": {
-      "text": "Video of girl in bathroom. she is deeply asleep, slid down on toilet. Head lolled, arms dangle, mouth slightly open, slumped. She wears a top and is nude bare bottomless with sneakers.",
-      "clip": [
-        "38",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
-    }
-  },
-  "7": {
-    "inputs": {
-      "text": " ",
-      "clip": [
-        "38",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
-    }
-  },
   "8": {
     "inputs": {
       "samples": [
-        "3",
+        "40",
         0
       ],
       "vae": [
-        "39",
+        "10",
         0
       ]
     },
@@ -71,48 +15,59 @@
       "title": "VAE解码"
     }
   },
-  "37": {
+  "10": {
     "inputs": {
-      "unet_name": "qwen_image_fp8_e4m3fn.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "38": {
-    "inputs": {
-      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
-      "type": "qwen_image",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载CLIP"
-    }
-  },
-  "39": {
-    "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
+      "vae_name": "ae.safetensors"
     },
     "class_type": "VAELoader",
     "_meta": {
       "title": "加载VAE"
     }
   },
-  "58": {
+  "11": {
     "inputs": {
-      "width": 1088,
-      "height": 1920,
-      "batch_size": 1
+      "clip_name1": "t5xxl_fp16.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "flux",
+      "device": "default"
     },
-    "class_type": "EmptySD3LatentImage",
+    "class_type": "DualCLIPLoader",
     "_meta": {
-      "title": "空Latent图像（SD3）"
+      "title": "双CLIP加载器"
     }
   },
-  "60": {
+  "17": {
+    "inputs": {
+      "scheduler": "normal",
+      "steps": 25,
+      "denoise": 1.0,
+      "model": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "基本调度器"
+    }
+  },
+  "38": {
+    "inputs": {
+      "model": [
+        "46",
+        0
+      ],
+      "conditioning": [
+        "42",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "基本引导器"
+    }
+  },
+  "39": {
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
@@ -125,17 +80,113 @@
       "title": "保存图像"
     }
   },
-  "66": {
+  "40": {
     "inputs": {
-      "shift": 3.1000000000000005,
-      "model": [
-        "37",
+      "noise": [
+        "45",
+        0
+      ],
+      "guider": [
+        "38",
+        0
+      ],
+      "sampler": [
+        "47",
+        0
+      ],
+      "sigmas": [
+        "17",
+        0
+      ],
+      "latent_image": [
+        "44",
         0
       ]
     },
-    "class_type": "ModelSamplingAuraFlow",
+    "class_type": "SamplerCustomAdvanced",
     "_meta": {
-      "title": "采样算法（AuraFlow）"
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "42": {
+    "inputs": {
+      "guidance": 3.5,
+      "conditioning": [
+        "43",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "Flux引导"
+    }
+  },
+  "43": {
+    "inputs": {
+      "text": "Moody Photography, 20岁可爱中国女生，精致妆容，韩风冷色调网红美白滤镜，极致冷白皮，通体雪白。\n\n幽暗、阴凉、充满混凝土回音。她倚靠在一根方形水泥柱上，一条腿笔直支撑，另一条腿屈起，双腿张开，脚底踩在柱面，膝盖几乎顶到下巴。穿的是亮橘色编织细带高跟凉鞋，带子只覆盖脚趾和脚踝，脚弓完全裸露，因用力而凹陷。牛仔短裤是撕裂毛边款，从侧面能看见髋骨突出的棘点。黑色宽带工字背心，领口低到胸骨剑突。远处安全指示灯发出唯一的红色微光，在她大腿内侧的皮肤上打出病态光泽。她正低头检查手机，屏幕蓝光从下方照亮她的下巴和鼻翼，制造出阴森的底光效果。\n",
+      "clip": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "44": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "空Latent图像（SD3）"
+    }
+  },
+  "45": {
+    "inputs": {
+      "noise_seed": 625126702399646
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "随机噪波"
+    }
+  },
+  "46": {
+    "inputs": {
+      "max_shift": 1.15,
+      "base_shift": 0.5,
+      "width": 1024,
+      "height": 1024,
+      "model": [
+        "48",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingFlux",
+    "_meta": {
+      "title": "采样算法（Flux）"
+    }
+  },
+  "47": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "48": {
+    "inputs": {
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
     }
   }
 }

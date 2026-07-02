@@ -1,277 +1,100 @@
 {
-  "173": {
-    "inputs": {
-      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
-      "type": "flux2",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "CLIP Loader"
-    }
-  },
-  "174": {
-    "inputs": {
-      "vae_name": "flux2-vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "VAE Loader"
-    }
-  },
-  "175": {
-    "inputs": {
-      "unet_name": "flux-2-klein-9b-fp8.safetensors",
-      "weight_dtype": "default"
-    },
+  "1": {
     "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNET Loader"
+    "inputs": {
+      "unet_name": "Krea2RedMix2.1-8Steps-fp8-scaled-ComfyUI.safetensors",
+      "weight_dtype": "default"
     }
   },
-  "336": {
+  "2": {
+    "class_type": "CLIPLoader",
     "inputs": {
-      "image": "655689709_18097112636072357_6166416974650446882_n.jpg"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Source Image"
+      "clip_name": "qwen3vl_4b_fp8_scaled.safetensors",
+      "type": "krea2",
+      "device": "default"
     }
   },
-  "338": {
+  "3": {
+    "class_type": "VAELoader",
     "inputs": {
-      "text": [
-        "340",
-        0
-      ],
-      "clip": [
-        "616",
-        1
-      ]
-    },
+      "vae_name": "qwen_image_vae.safetensors"
+    }
+  },
+  "4": {
     "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "Positive Prompt Encode"
-    }
-  },
-  "340": {
     "inputs": {
-      "text": "The Exact same girl from the reference photo. A close-up POV shot of her lovingly sucking your dick. Her big fat glossy bimbo lips wrapped tightly around your cock, taking you deep with soft moans. Eyes looking up submissively at you, tongue swirling around the head. Candlelight flickering on her face, ultra-realistic."
-    },
-    "class_type": "CR Text",
-    "_meta": {
-      "title": "Positive Prompt"
-    }
-  },
-  "341": {
-    "inputs": {
-      "pixels": [
-        "617",
-        0
-      ],
-      "vae": [
-        "174",
+      "text": "A young Chinese female runner jogging along a park trail during golden hour. She wears bright pink running shorts and matching pink sneakers with a light gray sports bra. White earbuds in her ears. Left arm swings forward in a fist, right knee lifted in a sprint stride, hair flowing in dynamic arcs. Relaxed energetic expression, eyes looking straight ahead. Background: lush green urban park, thick tree trunk on the left forming a natural frame, distant blurred buildings, reddish-brown rubber track with scattered autumn leaves. Golden hour side-backlighting, warm layered shadows, sharp foreground, soft bokeh background, slight overhead angle with motion blur.",
+      "clip": [
+        "2",
         0
       ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE Encode"
     }
   },
-  "342": {
+  "5": {
+    "class_type": "ConditioningZeroOut",
     "inputs": {
       "conditioning": [
-        "338",
-        0
-      ],
-      "latent": [
-        "341",
+        "4",
         0
       ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "Reference Latent (Positive)"
     }
   },
-  "343": {
+  "6": {
+    "class_type": "EmptyLatentImage",
     "inputs": {
-      "text": "blurry, fake, cartoon, animated, low quality, bad anatomy, small penis, tiny penis, micro penis, deformed penis, clothed, partially clothed, covered, censored, mosaic censor, black bars, pixel censor, dry mouth, dry lips, no drool, no saliva, low saliva, minimal drool, closed mouth, pursed lips, thin lips, small lips, narrow lips, no lip stretch, bad mouth anatomy, poorly drawn mouth, no tears, no mascara run, static pose, no motion, no thrusting, bad proportions, extra limbs, mutated hands, poorly drawn hands, out of frame, cropped, low detail saliva, cartoonish drool, ascii, text, watermark, signature, logo, ugly, disfigured, deformed face, bad lip texture, matte lips, no gloss, no shine on lips",
-      "clip": [
-        "616",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "Negative Prompt"
-    }
-  },
-  "344": {
-    "inputs": {
-      "conditioning": [
-        "343",
-        0
-      ],
-      "latent": [
-        "341",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "Reference Latent (Negative)"
-    }
-  },
-  "345": {
-    "inputs": {
-      "max_shift": 1.15,
-      "base_shift": 0.0,
-      "width": [
-        "618",
-        0
-      ],
-      "height": [
-        "618",
-        1
-      ],
-      "model": [
-        "616",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingFlux",
-    "_meta": {
-      "title": "ModelSamplingFlux"
-    }
-  },
-  "347": {
-    "inputs": {
-      "width": [
-        "618",
-        0
-      ],
-      "height": [
-        "618",
-        1
-      ],
+      "width": 1024,
+      "height": 1820,
       "batch_size": 1
-    },
-    "class_type": "EmptyFlux2LatentImage",
-    "_meta": {
-      "title": "Empty Latent"
     }
   },
-  "348": {
+  "7": {
+    "class_type": "KSampler",
     "inputs": {
-      "seed": 389778463019353,
-      "steps": 4,
+      "seed": 5762623539625401,
+      "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",
-      "scheduler": "beta",
+      "scheduler": "simple",
       "denoise": 1.0,
       "model": [
-        "345",
+        "1",
         0
       ],
       "positive": [
-        "342",
+        "4",
         0
       ],
       "negative": [
-        "344",
+        "5",
         0
       ],
       "latent_image": [
-        "347",
+        "6",
         0
       ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler i2i"
     }
   },
-  "349": {
+  "8": {
+    "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "348",
+        "7",
         0
       ],
       "vae": [
-        "174",
+        "3",
         0
       ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
     }
   },
-  "353": {
-    "inputs": {
-      "filename_prefix": "ComfyUI",
-      "images": [
-        "349",
-        0
-      ]
-    },
+  "9": {
     "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Image"
-    }
-  },
-  "616": {
     "inputs": {
-      "lora_01": "POV_blowjobV1_A.safetensors",
-      "strength_01": 1.0,
-      "lora_02": "Huge_lips_blowjob-000039.safetensors",
-      "strength_02": 0.7,
-      "lora_03": "klein-9b-turn2real_v1.5_ep9.safetensors",
-      "strength_03": 0.5,
-      "lora_04": "Huge_fake_lips_FLUX.safetensors",
-      "strength_04": 0.6,
-      "model": [
-        "175",
+      "images": [
+        "8",
         0
       ],
-      "clip": [
-        "173",
-        0
-      ]
-    },
-    "class_type": "Lora Loader Stack (rgthree)",
-    "_meta": {
-      "title": "LoRA Stack"
-    }
-  },
-  "617": {
-    "inputs": {
-      "upscale_method": "lanczos",
-      "width": 1536,
-      "height": 1536,
-      "crop": "disabled",
-      "image": [
-        "336",
-        0
-      ]
-    },
-    "class_type": "ImageScale",
-    "_meta": {
-      "title": "Scale Image"
-    }
-  },
-  "618": {
-    "inputs": {
-      "image": [
-        "617",
-        0
-      ]
-    },
-    "class_type": "GetImageSize",
-    "_meta": {
-      "title": "Get Image Size"
+      "filename_prefix": "DarkBeast_gen"
     }
   }
 }

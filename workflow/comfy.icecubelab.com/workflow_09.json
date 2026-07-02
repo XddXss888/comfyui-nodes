@@ -27,7 +27,7 @@
         "1",
         0
       ],
-      "lora_name": "flux_softpasty.safetensors",
+      "lora_name": "flux_frostinglane.safetensors",
       "strength_model": 0.9
     }
   },
@@ -38,7 +38,7 @@
         "2",
         0
       ],
-      "text": "A vast mosaic floor seen from above, its tiles gradually shifting from a single uniform color into a rich spectrum of soft pastel hues — lavender, peach, sage, powder blue — each tile a different geometric shape fitting together seamlessly. Warm diffused lighting from multiple directions casts no single dominant shadow. The mosaic expands outward toward the edges, suggesting infinite growth. Minimalist architectural space, clean white walls, 16:9 landscape composition, no text, no people."
+      "text": "A warm storybook illustration of a child standing before a towering ancient library door carved with mysterious symbols, the door cracking open to reveal golden light streaming through, inside visible floating open books with pages transforming from illegible runes into clear readable text, soft amber and honey-toned lighting, cozy atmospheric glow, miniature architectural details on doorframe suggesting wisdom and craft, 16:9 landscape composition"
     }
   },
   "6": {
@@ -48,7 +48,7 @@
         "5",
         0
       ],
-      "guidance": 3.0
+      "guidance": 3.5
     }
   },
   "7": {
@@ -88,7 +88,7 @@
         "8",
         0
       ],
-      "seed": 1268734624,
+      "seed": 1942747008,
       "control_after_generate": "fixed",
       "steps": 22,
       "cfg": 1.0,
@@ -117,7 +117,7 @@
         "10",
         0
       ],
-      "filename_prefix": "blog_1268734624"
+      "filename_prefix": "blog_1942747008"
     }
   }
 }

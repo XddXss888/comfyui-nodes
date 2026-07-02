@@ -1,0 +1,86 @@
+{
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "flux1-schnell-fp8.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "Seasonality icon, Sun and snowflake on calendar, clearly visible Seasonality, clearly communicates Sun and snowflake on calendar, simple outline icon, lucide icon style, minimalist vector icon, monoline black line art, uniform stroke width, rounded stroke caps, clean geometric curves, centered composition, white background, no fill, professional dashboard icon, suitable for BPMN diagram and ontology visualization, high contrast, crisp edges, SVG icon aesthetic, 24x24 icon design, scalable vector look",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "3": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "realistic photo, 3d render, colorful, gradient, shadow, complex background, detailed face, eyes, mouth, hair, skin texture, horror, skull, blood, weapon, aggressive violence, messy lines, sketch, hand drawn, painterly, filled silhouette, thick uneven strokes, low contrast, blurry, pixelated, text, letters, watermark, logo, UI mockup, multiple icons, cropped, off center",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "4": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 4
+    }
+  },
+  "5": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "seed": 319263131,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "latent_image": [
+        "4",
+        0
+      ],
+      "denoise": 1.0
+    }
+  },
+  "6": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "6",
+        0
+      ],
+      "filename_prefix": "codex_48_Seasonality"
+    }
+  }
+}

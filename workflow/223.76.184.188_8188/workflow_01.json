@@ -1,0 +1,777 @@
+{
+  "116": {
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    },
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "118",
+        0
+      ],
+      "text": [
+        "156",
+        0
+      ]
+    }
+  },
+  "117": {
+    "_meta": {
+      "title": "Load VAE"
+    },
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    }
+  },
+  "118": {
+    "_meta": {
+      "title": "DualCLIPLoader"
+    },
+    "class_type": "DualCLIPLoader",
+    "inputs": {
+      "clip_name1": "t5xxl_fp8_e4m3fn.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "device": "default",
+      "type": "flux"
+    }
+  },
+  "119": {
+    "_meta": {
+      "title": "Load Diffusion Model"
+    },
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "stoiqoNewrealityFLUXSD35_f1DAlphaTwo.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    }
+  },
+  "121": {
+    "_meta": {
+      "title": "KSamplerSelect"
+    },
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "122": {
+    "_meta": {
+      "title": "BasicScheduler"
+    },
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "denoise": 1.0,
+      "model": [
+        "119",
+        0
+      ],
+      "scheduler": "normal",
+      "steps": 25
+    }
+  },
+  "124": {
+    "_meta": {
+      "title": "RandomNoise"
+    },
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 98392882799876
+    }
+  },
+  "125": {
+    "_meta": {
+      "title": "VAE Decode"
+    },
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "186",
+        0
+      ],
+      "vae": [
+        "117",
+        0
+      ]
+    }
+  },
+  "126": {
+    "_meta": {
+      "title": "Preview Image"
+    },
+    "class_type": "PreviewImage",
+    "inputs": {
+      "images": [
+        "125",
+        0
+      ]
+    }
+  },
+  "133": {
+    "_meta": {
+      "title": "LoraLoaderModelOnly"
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "lora_name": "苏-FLUX小红书男生帅哥_v1.0.safetensors",
+      "model": [
+        "119",
+        0
+      ],
+      "strength_model": 0.8
+    }
+  },
+  "134": {
+    "_meta": {
+      "title": "LoraLoaderModelOnly"
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "lora_name": "AWPortrait-FL-lora.safetensors",
+      "model": [
+        "133",
+        0
+      ],
+      "strength_model": 0.32
+    }
+  },
+  "135": {
+    "_meta": {
+      "title": "LoraLoaderModelOnly"
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "lora_name": "ZOZ_漫梦_琉璃.safetensors",
+      "model": [
+        "134",
+        0
+      ],
+      "strength_model": 0.0
+    }
+  },
+  "137": {
+    "_meta": {
+      "title": "For循环-开始"
+    },
+    "class_type": "easy forLoopStart",
+    "inputs": {
+      "total": 3
+    }
+  },
+  "138": {
+    "_meta": {
+      "title": "For循环-结束"
+    },
+    "class_type": "easy forLoopEnd",
+    "inputs": {
+      "flow": [
+        "137",
+        0
+      ],
+      "initial_value1": [
+        "139",
+        0
+      ],
+      "initial_value2": [
+        "137",
+        3
+      ]
+    }
+  },
+  "139": {
+    "_meta": {
+      "title": "任何批次组合"
+    },
+    "class_type": "easy batchAnything",
+    "inputs": {
+      "any_1": [
+        "137",
+        2
+      ],
+      "any_2": [
+        "196",
+        0
+      ]
+    }
+  },
+  "140": {
+    "_meta": {
+      "title": "保存图像"
+    },
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "138",
+        0
+      ]
+    }
+  },
+  "141": {
+    "_meta": {
+      "title": "随机噪波"
+    },
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 830184655137814
+    }
+  },
+  "142": {
+    "_meta": {
+      "title": "编号切换"
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "inputs": {
+      "index": [
+        "137",
+        1
+      ],
+      "value0": [
+        "160",
+        3
+      ],
+      "value1": [
+        "161",
+        3
+      ],
+      "value2": [
+        "162",
+        3
+      ],
+      "value3": [
+        "163",
+        3
+      ],
+      "value4": [
+        "164",
+        3
+      ]
+    }
+  },
+  "144": {
+    "_meta": {
+      "title": "场景1"
+    },
+    "class_type": "ttN text",
+    "inputs": {
+      "text": "1 man, single person, solo, one person only, appropriate attire, alone, 22 years old, Chinese ethnicity, poet and scholar, slim build with sturdy and scholarly essence, height at 170cm, weight at 60kg, long straight black hair tied neatly with a hairpin falling down the back, deep brown eyes filled with melancholy and wisdom, pale skin touched lightly by travel's wear, high cheekbones giving him a refined look, subtle furrowed brows carrying a gentle sorrow, lips slightly pursed as if holding innumerable words, wearing a traditional Chinese deep-colored hanfu of simple texture and modest design, exuding an aura of restrained elegance and dignity, seated at an outdoor cozy cafe illuminated by warm candlelight, under a quiet starry evening sky, gentle breeze stirring softly, immersed in contemplation."
+    }
+  },
+  "145": {
+    "_meta": {
+      "title": "场景2"
+    },
+    "class_type": "ttN text",
+    "inputs": {
+      "text": "1 man, single person, solo, one person only, appropriate attire, alone, 22 years old, Chinese ethnicity, poet and scholar, slender build, height at 170 cm, weight at 60 kg, long hair neatly tied with a traditional ornamental hairpin, black hair, deep brown eyes, pale skin tinged with subtle travel weariness, wearing simple yet elegant deep-colored traditional Hanfu made of modest fabrics, high cheekbones, slightly furrowed brows hinting at subdued melancholy, lips faintly pursed with untold words, calm and introspective demeanor, seated in an outdoor cafe lit by romantic candlelight, evening setting, warm golden glow, gentle breeze wafting through a quiet street, surrounded by a cozy and tranquil atmosphere."
+    }
+  },
+  "146": {
+    "_meta": {
+      "title": "场景3"
+    },
+    "class_type": "ttN text",
+    "inputs": {
+      "text": "1 handsome man, single person, solo, one person only, appropriate attire, alone, 22 years old, Chinese ethnicity, stands tall at 170cm, weight at 60kg, poet and scholar, long black hair tied with a traditional hairpin, deep brown eyes, clear pale skin with subtle signs of wear from travel, high cheekbones, slightly furrowed brows with a touch of melancholy, lips slightly pursed as if holding countless untold stories, wearing simple yet refined traditional Hanfu in muted or dark tones, elegant and dignified, exuding the quiet charm of a literati, outdoor, romantic park, evening, sunset, warm light, blooming flowers, gentle breeze, peaceful atmosphere."
+    }
+  },
+  "147": {
+    "_meta": {
+      "title": "场景4"
+    },
+    "class_type": "ttN text",
+    "inputs": {
+      "text": ""
+    }
+  },
+  "148": {
+    "_meta": {
+      "title": "场景5"
+    },
+    "class_type": "ttN text",
+    "inputs": {
+      "text": ""
+    }
+  },
+  "149": {
+    "_meta": {
+      "title": "文本编号切换"
+    },
+    "class_type": "easy textIndexSwitch",
+    "inputs": {
+      "index": [
+        "137",
+        1
+      ],
+      "text0": [
+        "144",
+        0
+      ],
+      "text1": [
+        "145",
+        0
+      ],
+      "text2": [
+        "146",
+        0
+      ],
+      "text3": [
+        "147",
+        0
+      ],
+      "text4": [
+        "148",
+        0
+      ],
+      "text5": [
+        "191",
+        0
+      ]
+    }
+  },
+  "150": {
+    "_meta": {
+      "title": "随机噪波"
+    },
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 718756845467159
+    }
+  },
+  "151": {
+    "_meta": {
+      "title": "随机噪波"
+    },
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 865011786790378
+    }
+  },
+  "152": {
+    "_meta": {
+      "title": "随机噪波"
+    },
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 389363153311627
+    }
+  },
+  "153": {
+    "_meta": {
+      "title": "描述"
+    },
+    "class_type": "ttN text",
+    "inputs": {
+      "text": "sfw,best quality,realistic,Augmented reality photography,8k,Clear facial features,"
+    }
+  },
+  "154": {
+    "_meta": {
+      "title": "场景"
+    },
+    "class_type": "ttN text",
+    "inputs": {
+      "text": [
+        "149",
+        0
+      ]
+    }
+  },
+  "155": {
+    "_meta": {
+      "title": "触发词"
+    },
+    "class_type": "ttN text",
+    "inputs": {
+      "text": ""
+    }
+  },
+  "156": {
+    "_meta": {
+      "title": "String Function 🐍"
+    },
+    "class_type": "StringFunction|pysssss",
+    "inputs": {
+      "action": "append",
+      "text_a": [
+        "155",
+        0
+      ],
+      "text_b": [
+        "153",
+        0
+      ],
+      "text_c": [
+        "154",
+        0
+      ],
+      "tidy_tags": "yes"
+    }
+  },
+  "160": {
+    "_meta": {
+      "title": "Seed"
+    },
+    "class_type": "Seed",
+    "inputs": {
+      "seed": 46453814554985
+    }
+  },
+  "161": {
+    "_meta": {
+      "title": "Seed"
+    },
+    "class_type": "Seed",
+    "inputs": {
+      "seed": 881613220877914
+    }
+  },
+  "162": {
+    "_meta": {
+      "title": "Seed"
+    },
+    "class_type": "Seed",
+    "inputs": {
+      "seed": 748542270481247
+    }
+  },
+  "163": {
+    "_meta": {
+      "title": "Seed"
+    },
+    "class_type": "Seed",
+    "inputs": {
+      "seed": 87817677508430
+    }
+  },
+  "164": {
+    "_meta": {
+      "title": "Seed"
+    },
+    "class_type": "Seed",
+    "inputs": {
+      "seed": 282760982567262
+    }
+  },
+  "166": {
+    "_meta": {
+      "title": "CLIP文本编码"
+    },
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "118",
+        0
+      ],
+      "text": "cartoon,comic,watercolor,painting,eye patch,eyeshade,nsfw"
+    }
+  },
+  "172": {
+    "_meta": {
+      "title": "ReActor 🌌 Fast Face Swap"
+    },
+    "class_type": "ReActorFaceSwap",
+    "inputs": {
+      "codeformer_weight": 0.7000000000000001,
+      "console_log_level": 1,
+      "detect_gender_input": "no",
+      "detect_gender_source": "no",
+      "enabled": true,
+      "face_restore_model": "codeformer-v0.1.0.pth",
+      "face_restore_visibility": 0.5,
+      "facedetection": "YOLOv5l",
+      "input_faces_index": "0",
+      "input_image": [
+        "125",
+        0
+      ],
+      "source_faces_index": "0",
+      "source_image": [
+        "198",
+        0
+      ],
+      "swap_model": "inswapper_128.onnx"
+    }
+  },
+  "173": {
+    "_meta": {
+      "title": "预览图像"
+    },
+    "class_type": "PreviewImage",
+    "inputs": {
+      "images": [
+        "172",
+        0
+      ]
+    }
+  },
+  "175": {
+    "_meta": {
+      "title": "CLIP文本编码"
+    },
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "118",
+        0
+      ],
+      "text": [
+        "176",
+        0
+      ]
+    }
+  },
+  "176": {
+    "_meta": {
+      "title": "String Function 🐍"
+    },
+    "class_type": "StringFunction|pysssss",
+    "inputs": {
+      "action": "append",
+      "text_a": "Clear face, front face,handsome,Big Close-Up,8k,",
+      "text_b": [
+        "144",
+        0
+      ],
+      "text_c": "",
+      "tidy_tags": "yes"
+    }
+  },
+  "179": {
+    "_meta": {
+      "title": "基本调度器"
+    },
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "denoise": 1,
+      "model": [
+        "119",
+        0
+      ],
+      "scheduler": "simple",
+      "steps": 10
+    }
+  },
+  "183": {
+    "_meta": {
+      "title": "基本引导器"
+    },
+    "class_type": "BasicGuider",
+    "inputs": {
+      "conditioning": [
+        "175",
+        0
+      ],
+      "model": [
+        "135",
+        0
+      ]
+    }
+  },
+  "184": {
+    "_meta": {
+      "title": "随机噪波"
+    },
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 970621878216791
+    }
+  },
+  "185": {
+    "_meta": {
+      "title": "空Latent图像"
+    },
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "batch_size": 1,
+      "height": 1024,
+      "width": 752
+    }
+  },
+  "186": {
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "guider": [
+        "190",
+        0
+      ],
+      "latent_image": [
+        "195",
+        0
+      ],
+      "noise": [
+        "189",
+        0
+      ],
+      "sampler": [
+        "121",
+        0
+      ],
+      "sigmas": [
+        "122",
+        0
+      ]
+    }
+  },
+  "187": {
+    "_meta": {
+      "title": "随机噪波"
+    },
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 728911809101319
+    }
+  },
+  "188": {
+    "_meta": {
+      "title": "随机噪波"
+    },
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 966481175234438
+    }
+  },
+  "189": {
+    "_meta": {
+      "title": "编号切换"
+    },
+    "class_type": "easy anythingIndexSwitch",
+    "inputs": {
+      "index": [
+        "137",
+        1
+      ],
+      "value0": [
+        "141",
+        0
+      ],
+      "value1": [
+        "150",
+        0
+      ],
+      "value2": [
+        "151",
+        0
+      ],
+      "value3": [
+        "188",
+        0
+      ],
+      "value4": [
+        "152",
+        0
+      ],
+      "value5": [
+        "193",
+        0
+      ]
+    }
+  },
+  "190": {
+    "_meta": {
+      "title": "基本引导器"
+    },
+    "class_type": "BasicGuider",
+    "inputs": {
+      "conditioning": [
+        "116",
+        0
+      ],
+      "model": [
+        "135",
+        0
+      ]
+    }
+  },
+  "191": {
+    "_meta": {
+      "title": "场景6"
+    },
+    "class_type": "ttN text",
+    "inputs": {
+      "text": ""
+    }
+  },
+  "192": {
+    "_meta": {
+      "title": "Seed"
+    },
+    "class_type": "Seed",
+    "inputs": {
+      "seed": 252681066365065
+    }
+  },
+  "193": {
+    "_meta": {
+      "title": "随机噪波"
+    },
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 821382118536416
+    }
+  },
+  "194": {
+    "_meta": {
+      "title": "NSFWDetection"
+    },
+    "class_type": "NSFWDetection",
+    "inputs": {
+      "alternative_image": [
+        "198",
+        0
+      ],
+      "image": [
+        "172",
+        0
+      ],
+      "score": 0.6
+    }
+  },
+  "195": {
+    "_meta": {
+      "title": "Latent Scale to side"
+    },
+    "class_type": "DF_Latent_Scale_to_side",
+    "inputs": {
+      "crop": "disabled",
+      "latent": [
+        "185",
+        0
+      ],
+      "scale_method": "lanczos",
+      "side": "Longest",
+      "side_length": 1280
+    }
+  },
+  "196": {
+    "_meta": {
+      "title": "Image scale to side"
+    },
+    "class_type": "DF_Image_scale_to_side",
+    "inputs": {
+      "crop": "disabled",
+      "image": [
+        "194",
+        0
+      ],
+      "side": "Longest",
+      "side_length": 1024,
+      "upscale_method": "lanczos"
+    }
+  },
+  "198": {
+    "_meta": {
+      "title": "Load Image From URL"
+    },
+    "class_type": "LoadImageFromUrl",
+    "inputs": {
+      "choose image to upload": "image",
+      "image": "https://res.theact.ai/nsfw/avatar/2026-07-01/seo_real_text2img___8feafa5f-7525-11f1-a087-08bfb88182a2_nZdA.webp",
+      "keep_alpha_channel": false,
+      "output_mode": false
+    }
+  }
+}

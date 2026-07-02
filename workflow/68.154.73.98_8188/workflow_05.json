@@ -1,7 +1,7 @@
 {
   "41": {
     "inputs": {
-      "image": "ref_ab8c81141e2045fa93fd1ea78c32e3ea.png"
+      "image": "ref_59ff8994fad3488abd395246b57ecb38.png"
     },
     "class_type": "LoadImage",
     "_meta": {
@@ -121,7 +121,7 @@
   },
   "91:68": {
     "inputs": {
-      "prompt": "poner ropa interior de 2 piezas coordinado en coordinado parte de arriba en color azul marino con encaje y tanga dorada para la persona de la izquierda, poner ropa interior de 2 piezas coordinado en color rojo de encaje parte de abajo tanga para la persona de la derecha, mantener volumen y figura corporal, postura y tono de piel, quitar ropa blusas, playeras, vestidos, pantalones jeans",
+      "prompt": "해당 그림을 실사화로 만들어줘 ",
       "clip": [
         "91:61",
         0
@@ -184,7 +184,7 @@
   },
   "91:65": {
     "inputs": {
-      "seed": 45069507508689,
+      "seed": 836068312267047,
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "euler",

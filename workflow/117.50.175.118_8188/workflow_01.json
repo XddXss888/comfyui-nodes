@@ -7,7 +7,7 @@
         0
       ],
       "start_time": "0:00",
-      "end_time": "0:20"
+      "end_time": "2:00"
     }
   },
   "173": {
@@ -153,11 +153,15 @@
         "170",
         3
       ],
-      "num_frames": 275,
+      "num_frames": [
+        "199",
+        0
+      ],
       "normalize_loudness": true,
+      "audio_1_loudness": 275,
       "fps": 25.0,
-      "audio_scale": 1.0,
-      "audio_cfg_scale": 1.0,
+      "audio_scale": 1.5,
+      "audio_cfg_scale": 1.5,
       "multi_audio_type": "para"
     }
   },
@@ -202,7 +206,7 @@
   "133": {
     "class_type": "LoadImage",
     "inputs": {
-      "image": "batch_test/image_01.png",
+      "image": "batch_infinite/inf_001.png",
       "upload": "image"
     }
   },
@@ -252,7 +256,7 @@
       ],
       "steps": 4,
       "cfg": 1.0,
-      "shift": 11.0,
+      "shift": 11.000000000000002,
       "seed": 1,
       "force_offload": true,
       "scheduler": "flowmatch_distill",
@@ -261,7 +265,7 @@
       "batched_cfg": false,
       "rope_function": "comfy",
       "start_step": 0,
-      "end_step": 100,
+      "end_step": -1,
       "add_noise_to_samples": false
     }
   },
@@ -280,21 +284,26 @@
         "193",
         0
       ],
-      "width": 320,
-      "height": 576,
-      "frame_window_size": 400,
+      "width": [
+        "171",
+        1
+      ],
+      "height": [
+        "171",
+        2
+      ],
+      "frame_window_size": 81,
       "motion_frame": 9,
-      "force_offload": true,
+      "force_offload": false,
       "colormatch": "mkl",
-      "tiled_vae": true,
-      "mode": "infinitetalk",
-      "output_path": ""
+      "tiled_vae": false,
+      "mode": "infinitetalk"
     }
   },
   "125": {
     "class_type": "LoadAudio",
     "inputs": {
-      "audio": "batch_test/audio.mp3"
+      "audio": "batch_infinite/audio.mp3"
     }
   },
   "171": {
@@ -335,7 +344,7 @@
       ],
       "frame_rate": 25.0,
       "loop_count": 0,
-      "filename_prefix": "Infinitetalk_TEST_16",
+      "filename_prefix": "Infinitetalk_DREAMINA_01",
       "format": "video/h264-mp4",
       "pix_fmt": "yuv420p",
       "crf": 19,

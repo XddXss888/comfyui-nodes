@@ -1,29 +1,279 @@
 {
-  "115": {
-    "_meta": {
-      "title": "K采样器选择"
-    },
-    "class_type": "KSamplerSelect",
+  "9": {
     "inputs": {
-      "sampler_name": "euler"
+      "filename_prefix": "Flux2-Klein",
+      "images": [
+        "117",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
     }
   },
-  "116": {
-    "_meta": {
-      "title": "自定义采样器（高级）"
-    },
-    "class_type": "SamplerCustomAdvanced",
+  "76": {
     "inputs": {
+      "image": "1000007187.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "81": {
+    "inputs": {
+      "image": "0ca417875ec2f8173b5e6c23027e64fc913666132626a7cb623a47d8abfbc976.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "94": {
+    "inputs": {
+      "filename_prefix": "Flux2-Klein",
+      "images": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "98": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "99": {
+    "inputs": {
+      "steps": 4,
+      "width": [
+        "114",
+        0
+      ],
+      "height": [
+        "114",
+        1
+      ]
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "Flux2Scheduler"
+    }
+  },
+  "100": {
+    "inputs": {
+      "cfg": 1.0,
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "138",
+        0
+      ],
+      "negative": [
+        "136",
+        0
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFGGuider"
+    }
+  },
+  "101": {
+    "inputs": {
+      "noise": [
+        "103",
+        0
+      ],
       "guider": [
-        "124",
+        "100",
+        0
+      ],
+      "sampler": [
+        "98",
+        0
+      ],
+      "sigmas": [
+        "99",
         0
       ],
       "latent_image": [
-        "122",
+        "113",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "102": {
+    "inputs": {
+      "samples": [
+        "101",
         0
       ],
+      "vae": [
+        "107",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "103": {
+    "inputs": {
+      "noise_seed": 773622298798695
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "104": {
+    "inputs": {
+      "unet_name": "flux-2-klein-4b.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "105": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "106": {
+    "inputs": {
+      "text": "将图2的logo印在图1的白色水杯上",
+      "clip": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "107": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "108": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "158",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
+    }
+  },
+  "109": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
+      "image": [
+        "81",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
+    }
+  },
+  "112": {
+    "inputs": {
+      "conditioning": [
+        "106",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "113": {
+    "inputs": {
+      "width": [
+        "114",
+        0
+      ],
+      "height": [
+        "114",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "114": {
+    "inputs": {
+      "image": [
+        "108",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "Get Image Size"
+    }
+  },
+  "115": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "116": {
+    "inputs": {
       "noise": [
         "118",
+        0
+      ],
+      "guider": [
+        "124",
         0
       ],
       "sampler": [
@@ -33,14 +283,18 @@
       "sigmas": [
         "125",
         0
+      ],
+      "latent_image": [
+        "122",
+        0
       ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
     }
   },
   "117": {
-    "_meta": {
-      "title": "VAE解码"
-    },
-    "class_type": "VAEDecode",
     "inputs": {
       "samples": [
         "116",
@@ -50,147 +304,159 @@
         "121",
         0
       ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
     }
   },
   "118": {
-    "_meta": {
-      "title": "随机噪波"
+    "inputs": {
+      "noise_seed": 188625108099564
     },
     "class_type": "RandomNoise",
-    "inputs": {
-      "noise_seed": 870747048679020
+    "_meta": {
+      "title": "RandomNoise"
     }
   },
   "119": {
-    "_meta": {
-      "title": "UNet加载器"
+    "inputs": {
+      "unet_name": "flux-2-klein-base-4b-fp8.safetensors",
+      "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
-    "inputs": {
-      "unet_name": "flux-2-klein-4b.safetensors",
-      "weight_dtype": "default"
+    "_meta": {
+      "title": "Load Diffusion Model"
     }
   },
   "120": {
-    "_meta": {
-      "title": "加载CLIP"
-    },
-    "class_type": "CLIPLoader",
     "inputs": {
       "clip_name": "qwen_3_4b.safetensors",
-      "device": "default",
-      "type": "flux2"
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
     }
   },
   "121": {
-    "_meta": {
-      "title": "加载VAE"
-    },
-    "class_type": "VAELoader",
     "inputs": {
       "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
     }
   },
   "122": {
-    "_meta": {
-      "title": "空Latent图像（Flux2）"
+    "inputs": {
+      "width": [
+        "128",
+        0
+      ],
+      "height": [
+        "128",
+        1
+      ],
+      "batch_size": 1
     },
     "class_type": "EmptyFlux2LatentImage",
-    "inputs": {
-      "batch_size": 1,
-      "height": 240,
-      "width": 400
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
     }
   },
   "123": {
-    "_meta": {
-      "title": "缩放图像（像素）"
-    },
-    "class_type": "ImageScaleToTotalPixels",
     "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 1.0,
+      "resolution_steps": 1,
       "image": [
         "76",
         0
-      ],
-      "megapixels": 1.0,
-      "resolution_steps": 1,
-      "upscale_method": "nearest-exact"
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
     }
   },
   "124": {
-    "_meta": {
-      "title": "CFG引导器"
-    },
-    "class_type": "CFGGuider",
     "inputs": {
       "cfg": 1.0,
       "model": [
         "119",
         0
       ],
-      "negative": [
-        "130",
-        0
-      ],
       "positive": [
         "132",
         0
+      ],
+      "negative": [
+        "130",
+        0
       ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFGGuider"
     }
   },
   "125": {
-    "_meta": {
-      "title": "Flux2调度器"
+    "inputs": {
+      "steps": 4,
+      "width": [
+        "128",
+        0
+      ],
+      "height": [
+        "128",
+        1
+      ]
     },
     "class_type": "Flux2Scheduler",
-    "inputs": {
-      "height": 240,
-      "steps": 4,
-      "width": 400
+    "_meta": {
+      "title": "Flux2Scheduler"
     }
   },
   "126": {
-    "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
-    },
-    "class_type": "CLIPTextEncode",
     "inputs": {
+      "text": "Fully remove dress",
       "clip": [
         "120",
         0
-      ],
-      "text": "cyberpunk, neon lights, futuristic, high tech"
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
     }
   },
   "127": {
-    "_meta": {
-      "title": "条件零化"
-    },
-    "class_type": "ConditioningZeroOut",
     "inputs": {
       "conditioning": [
         "126",
         0
       ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
     }
   },
   "128": {
-    "_meta": {
-      "title": "获取图像尺寸"
-    },
-    "class_type": "GetImageSize",
     "inputs": {
       "image": [
         "123",
         0
       ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "Get Image Size"
     }
   },
   "130": {
-    "_meta": {
-      "title": "参考Latent"
-    },
-    "class_type": "ReferenceLatent",
     "inputs": {
       "conditioning": [
         "127",
@@ -200,13 +466,13 @@
         "131",
         0
       ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
     }
   },
   "131": {
-    "_meta": {
-      "title": "VAE编码"
-    },
-    "class_type": "VAEEncode",
     "inputs": {
       "pixels": [
         "123",
@@ -216,13 +482,13 @@
         "121",
         0
       ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
     }
   },
   "132": {
-    "_meta": {
-      "title": "参考Latent"
-    },
-    "class_type": "ReferenceLatent",
     "inputs": {
       "conditioning": [
         "126",
@@ -232,28 +498,288 @@
         "131",
         0
       ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
     }
   },
-  "76": {
-    "_meta": {
-      "title": "加载图像"
-    },
-    "class_type": "LoadImage",
+  "133": {
     "inputs": {
-      "image": "49e7d719-ab8f-45dc-81a2-7934fcfc7189.png"
-    }
-  },
-  "9": {
-    "_meta": {
-      "title": "Save Image to OSS"
-    },
-    "class_type": "SaveImageToOSS",
-    "inputs": {
-      "images": [
-        "117",
+      "conditioning": [
+        "112",
         0
       ],
-      "upload_url": "https://aispea.z33.fun/api/role/file/upload"
+      "latent": [
+        "134",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "134": {
+    "inputs": {
+      "pixels": [
+        "108",
+        0
+      ],
+      "vae": [
+        "107",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "135": {
+    "inputs": {
+      "conditioning": [
+        "106",
+        0
+      ],
+      "latent": [
+        "134",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "136": {
+    "inputs": {
+      "conditioning": [
+        "133",
+        0
+      ],
+      "latent": [
+        "137",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "137": {
+    "inputs": {
+      "pixels": [
+        "109",
+        0
+      ],
+      "vae": [
+        "107",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "138": {
+    "inputs": {
+      "conditioning": [
+        "135",
+        0
+      ],
+      "latent": [
+        "137",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "139": {
+    "inputs": {
+      "filename_prefix": "Flux2-Klein",
+      "images": [
+        "142",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "140": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "141": {
+    "inputs": {
+      "noise": [
+        "143",
+        0
+      ],
+      "guider": [
+        "148",
+        0
+      ],
+      "sampler": [
+        "140",
+        0
+      ],
+      "sigmas": [
+        "157",
+        0
+      ],
+      "latent_image": [
+        "147",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "142": {
+    "inputs": {
+      "samples": [
+        "141",
+        0
+      ],
+      "vae": [
+        "146",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "143": {
+    "inputs": {
+      "noise_seed": 185051132872219
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "144": {
+    "inputs": {
+      "unet_name": "flux-2-klein-4b.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "145": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "146": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "147": {
+    "inputs": {
+      "width": 1088,
+      "height": 1920,
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "148": {
+    "inputs": {
+      "cfg": 1.0,
+      "model": [
+        "144",
+        0
+      ],
+      "positive": [
+        "149",
+        0
+      ],
+      "negative": [
+        "150",
+        0
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFGGuider"
+    }
+  },
+  "149": {
+    "inputs": {
+      "text": "Bare bottomless young girl posing wild in bedroom wearing thigh high socks. No panties, no bottoms",
+      "clip": [
+        "145",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "150": {
+    "inputs": {
+      "conditioning": [
+        "149",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "157": {
+    "inputs": {
+      "steps": 4,
+      "width": 1536,
+      "height": 864
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "Flux2Scheduler"
+    }
+  },
+  "158": {
+    "inputs": {
+      "image": "9cbd9d245c36f636509ce9236ec6a59bfecd74777294fb8a3ee95258be5df706.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
     }
   }
 }

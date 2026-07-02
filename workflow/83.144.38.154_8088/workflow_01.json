@@ -1,0 +1,56 @@
+{
+  "10": {
+    "inputs": {
+      "filename_prefix": "EMR545 EMR544_024",
+      "images": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Enregistrer Image"
+    }
+  },
+  "11": {
+    "inputs": {
+      "model_name": "gemini-3-pro-image",
+      "prompt": "Image A is the base image and the structural source.\nImage B is the identity and appearance reference only.\n\nTask:\nEdit Image A so the person becomes the person from Image B, while keeping the exact facial pose, facial attitude, and expression of Image A.\n\nAbsolute rule:\nEverything related to composition, body position, head position, facial attitude, gaze, and expression must come from Image A.\nEverything related to identity and appearance must come from Image B.\n\n\nPreserve from Image A exactly:\n- full composition\n- framing and crop\n- camera angle\n- body pose\n- shoulder position\n- neck position\n- head position\n- head rotation\n- head tilt\n- chin angle\n- gaze direction\n- eye direction\n- eyelid openness\n- eyebrow expression\n- mouth position\n- lip tension\n- facial expression\n- facial attitude\n- emotion\n- lighting\n- shadows\n- environment\n- clothing\n- fabric\n- hands\n- body proportions\n- accessories like sunglasses if present\n\n\n\nTransfer from Image B only:\n- face identity\n- recognizable facial features\n- eyebrow shape\n- eye shape\n- nose shape\n- lips shape\n- jawline\n- cheekbones\n- facial proportions\n- skin tone\n- skin undertone\n- complexion\n- hairline\n- hairstyle\n- hair texture\n- hair volume\n- hair color\n\n\nImportant identity-transfer rule:\nEven if Image B has a different pose, different head angle, different expression, different gaze, different camera angle, or different attitude, do not copy those elements from Image B.\n\n\nImportant pose-preservation rule:\nThe final result must keep the exact face orientation and expression of Image A, including:\n- same yaw\n- same pitch\n- same roll\n- same gaze direction\n- same mouth expression\n- same eyebrow expression\n- same overall facial attitude\n\nThe output must look like:\nthe person from Image B placed naturally inside the exact photograph of Image A.\n\nDo not reconstruct the scene from Image B.\nDo not use Image B as a composition source.\nDo not copy head pose from Image B.\nDo not copy gaze from Image B.\nDo not copy expression from Image B.\nDo not change the pose or attitude from Image A.\n\nStrict pose/expression preservation from Image A.\n\nVisible skin consistency rule:\nAll visible skin areas must have a consistent complexion matching Image B.\nIf hands, arms, legs, feet, neck, shoulders, or any other skin areas are visible, their skin tone, undertone, and overall complexion must remain coherent with the face and with each other.\n\nDo not create mismatched skin color between the face and the rest of the body.\nDo not leave the original skin tone on the hands, legs, feet, or other visible body parts if it conflicts with the transferred identity.\nMaintain natural realism, local lighting, and shadows from Image A, but ensure that all visible skin areas belong to the same person and have a visually consistent skin appearance.\n\nSkin color must be uniform across all visible body parts.\nThe face, neck, arms, hands, legs, feet, and any visible skin must share the same identity-consistent skin tone and undertone derived from Image B, while still respecting the lighting and shadows of Image A.\nNo visible mismatch between facial skin and body skin.\n",
+      "image_count": 1,
+      "use_search": false,
+      "aspect_ratio": "2:3",
+      "image_size": "4K",
+      "temperature": 0.2,
+      "image_1": [
+        "12",
+        0
+      ],
+      "image_2": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "NanoBananaAIO",
+    "_meta": {
+      "title": "Nano Banana AIO"
+    }
+  },
+  "12": {
+    "inputs": {
+      "image": "EMR545 EMR544_024.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Charger Image"
+    }
+  },
+  "13": {
+    "inputs": {
+      "image": "WhatsApp Image 2026-06-30 at 15.38.31.jpeg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Charger Image"
+    }
+  }
+}

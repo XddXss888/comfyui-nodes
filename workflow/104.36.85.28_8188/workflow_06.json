@@ -37,7 +37,7 @@
   },
   "7": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl long hair,black hair,red eyes,hair between eyes,blush,sidelocks,wavy hair,thighs,indoors,bed,sweatdrop,(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,masterpiece,best quality, ultra detailed, 1girl breasts,blush,bangs,blue eyes,large breasts,gloves,navel,closed mouth,collarbone,sunglasses,eyewear on head,beach,sex,(Sexo na praia:1.0),(nude:0.8)",
       "clip": [
         "1",
         1
@@ -63,7 +63,7 @@
   },
   "9": {
     "inputs": {
-      "seed": 1188679183,
+      "seed": 488613612,
       "steps": 20,
       "cfg": 6.5,
       "sampler_name": "dpmpp_sde",
@@ -133,7 +133,7 @@
   },
   "14": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202411/30/d11375ce8b0b43428065b3403d2ce3f5.png",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2025/01/14/1736844360577.png",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

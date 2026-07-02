@@ -20,15 +20,25 @@
       "vae_name": "ae.safetensors"
     }
   },
-  "4": {
+  "11": {
     "class_type": "LoraLoaderModelOnly",
     "inputs": {
       "model": [
         "1",
         0
       ],
-      "lora_name": "flux_korean_girl.safetensors",
-      "strength_model": 0.8
+      "lora_name": "sakura_korean_flux.safetensors",
+      "strength_model": 0.82
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "A stunning Korean idol on a rooftop helipad at blue hour, city skyline glowing behind her. Platinum blonde short bob cut with soft waves framing her oval face, monolid eyes lined with smudged charcoal liner, dewy flawless skin catching the last ambient twilight. She wears an oversized cream cable-knit sweater slipping off one shoulder, hands tucked inside the long sleeves. Coy half-smile, gaze drifting away from camera. Three-quarter view, shot on 35mm lens, environmental portrait with generous negative space to the left revealing the dusky cityscape. Wind barely lifting her hair. Soft bokeh of distant buildings. Full body fashion lookbook composition, clean and editorial. No text, no watermarks."
     }
   },
   "5": {
@@ -38,42 +48,32 @@
         "2",
         0
       ],
-      "text": "A stunning Korean idol-style woman on a rain-slicked city street at noon, harsh midday sun cutting sharp diagonal shadows across her face. Dutch angle composition, half body from waist up. She wears a white ribbed crop top and black high-waisted wide-leg pants, rain droplets caught mid-fall around her. Chestnut brown layered curtain bangs frame her baby face, damp strands clinging to her temples. Aegyo-sal under-eye charm accentuated by dewy highlight makeup. Gentle, soft expression with a barely-there smile, eyes glancing downward. Macro lens capturing extreme close-up skin texture, individual water beads on her collarbone. Neon signs reflect pink and cyan across wet asphalt behind her. Flawless porcelain skin, editorial beauty photography."
+      "text": "cropped legs, cropped feet, cropped shoes, text, watermark, logo"
     }
   },
   "6": {
     "class_type": "FluxGuidance",
     "inputs": {
       "conditioning": [
-        "5",
+        "4",
         0
       ],
-      "guidance": 3.5
+      "guidance": 3.7
     }
   },
   "7": {
-    "class_type": "CLIPTextEncode",
+    "class_type": "EmptySD3LatentImage",
     "inputs": {
-      "clip": [
-        "2",
-        0
-      ],
-      "text": ""
+      "width": 1024,
+      "height": 1536,
+      "batch_size": 1
     }
   },
   "8": {
-    "class_type": "EmptySD3LatentImage",
-    "inputs": {
-      "width": 896,
-      "height": 1280,
-      "batch_size": 4
-    }
-  },
-  "9": {
     "class_type": "KSampler",
     "inputs": {
       "model": [
-        "4",
+        "11",
         0
       ],
       "positive": [
@@ -81,27 +81,27 @@
         0
       ],
       "negative": [
-        "7",
+        "5",
         0
       ],
       "latent_image": [
-        "8",
+        "7",
         0
       ],
-      "seed": 1110222728,
+      "seed": 541057177,
       "control_after_generate": "fixed",
-      "steps": 22,
+      "steps": 20,
       "cfg": 1.0,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1.0
     }
   },
-  "10": {
+  "9": {
     "class_type": "VAEDecode",
     "inputs": {
       "samples": [
-        "9",
+        "8",
         0
       ],
       "vae": [
@@ -110,14 +110,14 @@
       ]
     }
   },
-  "11": {
+  "10": {
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "10",
+        "9",
         0
       ],
-      "filename_prefix": "portrait_1110222728"
+      "filename_prefix": "portrait_541057177"
     }
   }
 }

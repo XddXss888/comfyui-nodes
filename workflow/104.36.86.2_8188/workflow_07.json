@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 1457897520,
+      "seed": 826364714,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,beach,spread legs,feet,lips,toes,masturbation,realistic,(Sexo en la playa:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,outdoors,tree,grass,fence,horse,(Stretch:1.0),(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202411/30/63c3b53bd0aa40b489f59504b29bf723.webp",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2025/10/15/1760518855218.png",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

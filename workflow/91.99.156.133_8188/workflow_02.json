@@ -1,76 +1,116 @@
 {
-  "1": {
-    "class_type": "CheckpointLoaderSimple",
-    "inputs": {
-      "ckpt_name": "dreamshaper_8.safetensors"
-    }
-  },
-  "2": {
-    "class_type": "CLIPTextEncode",
-    "inputs": {
-      "text": "test",
-      "clip": [
-        "1",
-        1
-      ]
-    }
-  },
   "3": {
-    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "seed": 847731571963564,
+      "steps": 20,
+      "cfg": 8.0,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "v1-5-pruned-emaonly.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "5": {
     "inputs": {
       "width": 512,
       "height": 512,
       "batch_size": 1
-    }
-  },
-  "4": {
-    "class_type": "KSampler",
-    "inputs": {
-      "model": [
-        "1",
-        0
-      ],
-      "seed": 42,
-      "steps": 1,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "normal",
-      "positive": [
-        "2",
-        0
-      ],
-      "negative": [
-        "2",
-        0
-      ],
-      "latent_image": [
-        "3",
-        0
-      ],
-      "denoise": 1.0
-    }
-  },
-  "5": {
-    "class_type": "VAEDecode",
-    "inputs": {
-      "vae": [
-        "1",
-        2
-      ],
-      "samples": [
-        "4",
-        0
-      ]
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
     }
   },
   "6": {
-    "class_type": "SaveImage",
     "inputs": {
-      "filename_prefix": "free_test",
-      "images": [
-        "5",
+      "text": "Immagina una piscina quadrata di circa 15 metri per lato, situata all'esterno. La superficie della piscina è piatta e lucida, riflettendo il cielo sopra di essa. I bordi sono fatti di pietra bianca che contrastano con lo sfondo verde intorno alla piscina. Attorno alla piscina c'è un prato erboso ben mantenuto, con poche rose colorate accanto ai bordi. Nell'angolo opposto c'è una piccola terrazza con poltrone e un tavolino da picnic, dove potrebbero sedersi a godere del sole o del pomeriggio sereno. La piscina è vuota per il momento, pronto per essere riempita con dell'acqua cristallina.",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "text, watermark",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "10",
         0
       ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "10": {
+    "inputs": {
+      "vae_name": "vae-ft-mse-840000-ema-pruned.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
     }
   }
 }

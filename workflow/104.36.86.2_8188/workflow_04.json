@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 478870630,
+      "seed": 1494654739,
       "steps": 15,
       "cfg": 8.0,
       "sampler_name": "dpmpp_sde",
@@ -51,7 +51,7 @@
   },
   "6": {
     "inputs": {
-      "text": "score_9, score_8_up, score_8,1 girl,blonde hair,jewelry,necklace,praying,church,dildo,(*i pick up a ribbed dildo from the newrby table and turn it in my hand* well now you are~:1.0),(nude:0.8)",
+      "text": "score_9, score_8_up, score_8,1 girl,sitting, indoors, makeup, lipstick, freckles, mole, realistic, crying, wiping tears, passing by, exiting, walking, turning, talking, clapping chest,(nude:0.8)",
       "speak_and_recognation": true,
       "clip": [
         "4",
@@ -95,7 +95,7 @@
   },
   "10": {
     "inputs": {
-      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://rushchat.s3.us-east-1.amazonaws.com/album/2025/06/08/1749396980275.jpg",
+      "image": "http://rushchat.net/cdn-cgi/image/w=600,h=800,q=90,anim=false,fit=cover/https://cdn.rushchat.ai/character/202410/16/4d00278c61af475c9d74daeef528892a.png",
       "upload": "image"
     },
     "class_type": "LoadImageFromUrl",

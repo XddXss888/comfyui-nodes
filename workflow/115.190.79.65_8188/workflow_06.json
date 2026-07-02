@@ -1,18 +1,18 @@
 {
   "3": {
     "inputs": {
-      "seed": 1029053277486756,
-      "steps": 20,
-      "cfg": 2.5,
-      "sampler_name": "euler",
-      "scheduler": "simple",
+      "seed": 265422354517053,
+      "steps": 10,
+      "cfg": 1.0,
+      "sampler_name": "euler_ancestral_cfg_pp",
+      "scheduler": "beta",
       "denoise": 1.0,
       "model": [
-        "66",
+        "15",
         0
       ],
       "positive": [
-        "6",
+        "26",
         0
       ],
       "negative": [
@@ -20,7 +20,7 @@
         0
       ],
       "latent_image": [
-        "58",
+        "19",
         0
       ]
     },
@@ -29,30 +29,17 @@
       "title": "K采样器"
     }
   },
-  "6": {
-    "inputs": {
-      "text": "Amateur selfie of young tween girl nude standing in bedroom. wearing thigh high socks.",
-      "clip": [
-        "38",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Positive Prompt)"
-    }
-  },
   "7": {
     "inputs": {
-      "text": " ",
+      "text": "text, watermark",
       "clip": [
-        "38",
+        "13",
         0
       ]
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "CLIP Text Encode (Negative Prompt)"
+      "title": "CLIP文本编码"
     }
   },
   "8": {
@@ -62,7 +49,7 @@
         0
       ],
       "vae": [
-        "39",
+        "14",
         0
       ]
     },
@@ -71,48 +58,7 @@
       "title": "VAE解码"
     }
   },
-  "37": {
-    "inputs": {
-      "unet_name": "qwen_image_fp8_e4m3fn.safetensors",
-      "weight_dtype": "default"
-    },
-    "class_type": "UNETLoader",
-    "_meta": {
-      "title": "UNet加载器"
-    }
-  },
-  "38": {
-    "inputs": {
-      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
-      "type": "qwen_image",
-      "device": "default"
-    },
-    "class_type": "CLIPLoader",
-    "_meta": {
-      "title": "加载CLIP"
-    }
-  },
-  "39": {
-    "inputs": {
-      "vae_name": "qwen_image_vae.safetensors"
-    },
-    "class_type": "VAELoader",
-    "_meta": {
-      "title": "加载VAE"
-    }
-  },
-  "58": {
-    "inputs": {
-      "width": 1088,
-      "height": 1920,
-      "batch_size": 1
-    },
-    "class_type": "EmptySD3LatentImage",
-    "_meta": {
-      "title": "空Latent图像（SD3）"
-    }
-  },
-  "60": {
+  "9": {
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
@@ -125,17 +71,86 @@
       "title": "保存图像"
     }
   },
-  "66": {
+  "12": {
     "inputs": {
-      "shift": 3.1000000000000005,
-      "model": [
-        "37",
+      "image": "Безымянный (1).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "13": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "14": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "15": {
+    "inputs": {
+      "unet_name": "qwen_image_fp8_e4m3fn.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "18": {
+    "inputs": {
+      "pixels": [
+        "12",
+        0
+      ],
+      "vae": [
+        "14",
         0
       ]
     },
-    "class_type": "ModelSamplingAuraFlow",
+    "class_type": "VAEEncode",
     "_meta": {
-      "title": "采样算法（AuraFlow）"
+      "title": "VAE编码"
+    }
+  },
+  "19": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "scale_by": 1.0000000000000002,
+      "samples": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "LatentUpscaleBy",
+    "_meta": {
+      "title": "缩放Latent（比例）"
+    }
+  },
+  "26": {
+    "inputs": {
+      "text": "Fully naked",
+      "clip": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
     }
   }
 }
